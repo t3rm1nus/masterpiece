@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    {
+      "category": "podcast",
+      "description": "Un podcast sobre desarrollo de software y tecnología.",
+      "host": "Juan Pérez",
+      "language": "es",
+      "name": "Desarrollo y Tecnología",
+      "url": "http://ejemplo.com/podcast1"
+    },
+    {
+      "category": "podcast",
+      "description": "Aprende sobre ciencia y tecnología con estos interesantes episodios.",
+      "host": "María Gómez",
+      "language": "es",
+      "name": "Ciencia y Tecnología",
+      "url": "http://ejemplo.com/podcast2"
+    }
+  ]
+}

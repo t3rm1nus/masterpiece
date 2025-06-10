@@ -1,0 +1,74 @@
+{
+  "recommendations": [
+    {
+      "id": 1,
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "platform": "Nintendo Switch",
+      "category": "videogames",
+      "price": 59.99
+    },
+    {
+      "id": 2,
+      "title": "Super Mario Odyssey",
+      "platform": "Nintendo Switch",
+      "category": "videogames",
+      "price": 49.99
+    },
+    {
+      "id": 3,
+      "title": "Minecraft",
+      "platform": "PC",
+      "category": "videogames",
+      "price": 26.95
+    },
+    {
+      "id": 4,
+      "title": "Fortnite",
+      "platform": "PC",
+      "category": "videogames",
+      "price": 0.00
+    },
+    {
+      "id": 5,
+      "title": "Call of Duty: Warzone",
+      "platform": "PC",
+      "category": "videogames",
+      "price": 0.00
+    },
+    {
+      "id": 6,
+      "title": "The Witcher 3: Wild Hunt",
+      "platform": "PC",
+      "category": "videogames",
+      "price": 39.99
+    },
+    {
+      "id": 7,
+      "title": "Doom Eternal",
+      "platform": "PC",
+      "category": "videogames",
+      "price": 29.99
+    },
+    {
+      "id": 8,
+      "title": "Overwatch",
+      "platform": "PC",
+      "category": "videogames",
+      "price": 39.99
+    },
+    {
+      "id": 9,
+      "title": "Apex Legends",
+      "platform": "PC",
+      "category": "videogames",
+      "price": 0.00
+    },
+    {
+      "id": 10,
+      "title": "Counter-Strike: Global Offensive",
+      "platform": "PC",
+      "category": "videogames",
+      "price": 14.99
+    }
+  ]
+}

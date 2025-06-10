@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    {
+      "id": 4,
+      "category": "music",
+      "subcategory": "rock",
+      "title": {
+        "es": "Pink Floyd - The Dark Side of the Moon",
+        "en": "Pink Floyd - The Dark Side of the Moon"
+      },
+      "description": {
+        "es": "Uno de los álbumes más icónicos de la historia del rock.",
+        "en": "One of the most iconic albums in rock history."
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png",
+      "masterpiece": false
+    }
+  ]
+}

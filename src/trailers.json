@@ -1,0 +1,436 @@
+{
+  "Blade Runner": {
+    "es": "https://www.youtube.com/watch?v=4USFH9n8tNk",
+    "en": "https://www.youtube.com/watch?v=eogpIG53Cis",
+    "director": "Ridley Scott"
+  },
+  "Alien (1979)": {
+    "es": "https://www.youtube.com/watch?v=Eu9ZFTXXEiw",
+    "en": "https://www.youtube.com/watch?v=LjLamj-b0I8",
+    "director": "Ridley Scott"
+  },
+  "300": {
+    "es": "https://www.youtube.com/watch?v=mi4xUUJSuro",
+    "en": "https://www.youtube.com/watch?v=UrIbxk7idYA",
+    "director": "Zack Snyder"
+  },
+  "La Llegada": {
+    "es": "https://www.youtube.com/watch?v=uWs5lsWXLbo",
+    "en": "https://www.youtube.com/watch?v=tFMo3UJ4B4g",
+    "director": "Denis Villeneuve"
+  },
+  "Arrival": {
+    "es": "https://www.youtube.com/watch?v=uWs5lsWXLbo",
+    "en": "https://www.youtube.com/watch?v=tFMo3UJ4B4g",
+    "director": "Denis Villeneuve"
+  },
+  "Avatar": {
+    "es": "https://www.youtube.com/watch?v=Xg8kYk6uHN0",
+    "en": "https://www.youtube.com/watch?v=5PSNL1qE6VY",
+    "director": "James Cameron"
+  },
+  "Operación Dragón": {
+    "es": "https://www.youtube.com/watch?v=5RGju9NuoOU",
+    "en": "https://www.youtube.com/watch?v=5RGju9NuoOU",
+    "director": "Robert Clouse"
+  },
+  "Enter the Dragon": {
+    "es": "https://www.youtube.com/watch?v=5RGju9NuoOU",
+    "en": "https://www.youtube.com/watch?v=5RGju9NuoOU",
+    "director": "Robert Clouse"
+  },
+  "Ciudad de Dios": {
+    "es": "https://www.youtube.com/watch?v=63kaF1n5sz0",
+    "en": "https://www.youtube.com/watch?v=dcUOO4Itgmw",
+    "director": "Fernando Meirelles, Kátia Lund"
+  },
+  "City of God": {
+    "es": "https://www.youtube.com/watch?v=63kaF1n5sz0",
+    "en": "https://www.youtube.com/watch?v=dcUOO4Itgmw",
+    "director": "Fernando Meirelles, Kátia Lund"
+  },
+  "Contact": {
+    "es": "https://www.youtube.com/watch?v=2uMnZJFUX8c",
+    "en": "https://www.youtube.com/watch?v=Q399v-pMG30",
+    "director": "Robert Zemeckis"
+  },
+  "Canino": {
+    "es": "https://www.youtube.com/watch?v=VQT8LCohdUk",
+    "en": "https://www.youtube.com/watch?v=s0J8Y6McHVI",
+    "director": "Yorgos Lanthimos"
+  },
+  "Dogtooth": {
+    "es": "https://www.youtube.com/watch?v=VQT8LCohdUk",
+    "en": "https://www.youtube.com/watch?v=s0J8Y6McHVI",
+    "director": "Yorgos Lanthimos"
+  },
+  "El indomable Will Hunting": {
+    "es": "https://www.youtube.com/watch?v=H4eUj8XLqD0",
+    "en": "https://www.youtube.com/watch?v=ReIJ1lbL-Q8",
+    "director": "Gus Van Sant"
+  },
+  "Good Will Hunting": {
+    "es": "https://www.youtube.com/watch?v=H4eUj8XLqD0",
+    "en": "https://www.youtube.com/watch?v=ReIJ1lbL-Q8",
+    "director": "Gus Van Sant"
+  },
+  "El verdugo": {
+    "es": "https://www.youtube.com/watch?v=lUwO3YDulg0",
+    "en": "https://www.youtube.com/watch?v=lUwO3YDulg0",
+    "director": "Luis García Berlanga"
+  },
+  "The Executioner": {
+    "es": "https://www.youtube.com/watch?v=lUwO3YDulg0",
+    "en": "https://www.youtube.com/watch?v=lUwO3YDulg0",
+    "director": "Luis García Berlanga"
+  },
+  "The Lord of the Rings: The Fellowship of the Ring": {
+    "es": "https://www.youtube.com/watch?v=iFOucwxKRFE",
+    "en": "https://www.youtube.com/watch?v=V75dMMIW2B4",
+    "director": "Peter Jackson"
+  },
+  "El Señor de los Anillos: La Comunidad del Anillo": {
+    "es": "https://www.youtube.com/watch?v=iFOucwxKRFE",
+    "en": "https://www.youtube.com/watch?v=V75dMMIW2B4",
+    "director": "Peter Jackson"
+  },
+  "The Lord of the Rings: The Two Towers": {
+    "es": "https://www.youtube.com/watch?v=f9W1l7E5bHg",
+    "en": "https://www.youtube.com/watch?v=nuTU5XcZTLA",
+    "director": "Peter Jackson"
+  },
+  "El Señor de los Anillos: Las Dos Torres": {
+    "es": "https://www.youtube.com/watch?v=f9W1l7E5bHg",
+    "en": "https://www.youtube.com/watch?v=nuTU5XcZTLA",
+    "director": "Peter Jackson"
+  },
+  "The Lord of the Rings: The Return of the King": {
+    "es": "https://www.youtube.com/watch?v=E0nBBwXHfYI",
+    "en": "https://www.youtube.com/watch?v=r5X-hFf6Bwo",
+    "director": "Peter Jackson"
+  },
+  "El Señor de los Anillos: El Retorno del Rey": {
+    "es": "https://www.youtube.com/watch?v=E0nBBwXHfYI",
+    "en": "https://www.youtube.com/watch?v=r5X-hFf6Bwo",
+    "director": "Peter Jackson"
+  },
+  "El Bar": {
+    "es": "https://www.youtube.com/watch?v=vBeL7crOfB8",
+    "en": "https://www.youtube.com/watch?v=wcOqUb5Z7xg",
+    "director": "Álex de la Iglesia"
+  },
+  "The Bar": {
+    "es": "https://www.youtube.com/watch?v=vBeL7crOfB8",
+    "en": "https://www.youtube.com/watch?v=wcOqUb5Z7xg",
+    "director": "Álex de la Iglesia"
+  },
+  "Resacón en Las Vegas": {
+    "es": "https://www.youtube.com/watch?v=MckEHmSMg-0",
+    "en": "https://www.youtube.com/watch?v=tcdUhdOlz9M",
+    "director": "Todd Phillips"
+  },
+  "The Hangover": {
+    "es": "https://www.youtube.com/watch?v=MckEHmSMg-0",
+    "en": "https://www.youtube.com/watch?v=tcdUhdOlz9M",
+    "director": "Todd Phillips"
+  },
+  "Resacón 2: ¡Ahora en Tailandia!": {
+    "es": "https://www.youtube.com/watch?v=zKSnp7Unjxw",
+    "en": "https://www.youtube.com/watch?v=ohF5ZO_zOYU",
+    "director": "Todd Phillips"
+  },
+  "The Hangover Part II": {
+    "es": "https://www.youtube.com/watch?v=zKSnp7Unjxw",
+    "en": "https://www.youtube.com/watch?v=ohF5ZO_zOYU",
+    "director": "Todd Phillips"
+  },
+  "Resacón 3": {
+    "es": "https://www.youtube.com/watch?v=LBgtf8FoTb8",
+    "en": "https://www.youtube.com/watch?v=96TelFMZwHc",
+    "director": "Todd Phillips"
+  },
+  "The Hangover Part III": {
+    "es": "https://www.youtube.com/watch?v=LBgtf8FoTb8",
+    "en": "https://www.youtube.com/watch?v=96TelFMZwHc",
+    "director": "Todd Phillips"
+  },
+  "Harry Potter y la piedra filosofal": {
+    "es": "https://www.youtube.com/watch?v=WE4AJuIvG1Y",
+    "en": "https://www.youtube.com/watch?v=VyHV0BRtdxo",
+    "director": "Chris Columbus"
+  },
+  "Harry Potter and the Sorcerer's Stone": {
+    "es": "https://www.youtube.com/watch?v=WE4AJuIvG1Y",
+    "en": "https://www.youtube.com/watch?v=VyHV0BRtdxo",
+    "director": "Chris Columbus"
+  },
+  "Harry Potter y la cámara secreta": {
+    "es": "https://www.youtube.com/watch?v=C8CL5TbiFwY",
+    "en": "https://www.youtube.com/watch?v=1bq0qff4iF8",
+    "director": "Chris Columbus"
+  },
+  "Harry Potter and the Chamber of Secrets": {
+    "es": "https://www.youtube.com/watch?v=C8CL5TbiFwY",
+    "en": "https://www.youtube.com/watch?v=1bq0qff4iF8",
+    "director": "Chris Columbus"
+  },
+  "Harry Potter y el prisionero de Azkaban": {
+    "es": "https://www.youtube.com/watch?v=cCC_mdE5rJk",
+    "en": "https://www.youtube.com/watch?v=lAxgztbYDbs",
+    "director": "Alfonso Cuarón"
+  },
+  "Harry Potter and the Prisoner of Azkaban": {
+    "es": "https://www.youtube.com/watch?v=cCC_mdE5rJk",
+    "en": "https://www.youtube.com/watch?v=lAxgztbYDbs",
+    "director": "Alfonso Cuarón"
+  },
+  "Harry Potter y el cáliz de fuego": {
+    "es": "https://www.youtube.com/watch?v=AUMOURumGSo",
+    "en": "https://www.youtube.com/watch?v=PFWAOnvMd1Q",
+    "director": "Mike Newell"
+  },
+  "Harry Potter and the Goblet of Fire": {
+    "es": "https://www.youtube.com/watch?v=AUMOURumGSo",
+    "en": "https://www.youtube.com/watch?v=PFWAOnvMd1Q",
+    "director": "Mike Newell"
+  },
+  "Harry Potter y la Orden del Fénix": {
+    "es": "https://www.youtube.com/watch?v=NaM7nKvX4Es",
+    "en": "https://www.youtube.com/watch?v=y6ZW7KXaXYk",
+    "director": "David Yates"
+  },
+  "Harry Potter and the Order of the Phoenix": {
+    "es": "https://www.youtube.com/watch?v=NaM7nKvX4Es",
+    "en": "https://www.youtube.com/watch?v=y6ZW7KXaXYk",
+    "director": "David Yates"
+  },
+  "Harry Potter y el misterio del príncipe": {
+    "es": "https://www.youtube.com/watch?v=NaM7nKvX4Es",
+    "en": "https://www.youtube.com/watch?v=sg81Lts5kYY",
+    "director": "David Yates"
+  },
+  "Harry Potter and the Half-Blood Prince": {
+    "es": "https://www.youtube.com/watch?v=NaM7nKvX4Es",
+    "en": "https://www.youtube.com/watch?v=sg81Lts5kYY",
+    "director": "David Yates"
+  },
+  "Harry Potter y las Reliquias de la Muerte - Parte 1": {
+    "es": "https://www.youtube.com/watch?v=PtjvAO_NV20&t=10s",
+    "en": "https://www.youtube.com/watch?v=MxqsmsA8y5k",
+    "director": "David Yates"
+  },
+  "Harry Potter and the Deathly Hallows: Part 1": {
+    "es": "https://www.youtube.com/watch?v=PtjvAO_NV20&t=10s",
+    "en": "https://www.youtube.com/watch?v=MxqsmsA8y5k",
+    "director": "David Yates"
+  },
+  "Harry Potter y las Reliquias de la Muerte - Parte 2": {
+    "es": "https://www.youtube.com/watch?v=HguSMW8XveQ",
+    "en": "https://www.youtube.com/watch?v=mObK5XD8udk",
+    "director": "David Yates"
+  },
+  "Harry Potter and the Deathly Hallows: Part 2": {
+    "es": "https://www.youtube.com/watch?v=HguSMW8XveQ",
+    "en": "https://www.youtube.com/watch?v=mObK5XD8udk",
+    "director": "David Yates"
+  },
+  "El Hobbit: Un viaje inesperado": {
+    "es": "https://www.youtube.com/watch?v=sI8OQRXhcZE",
+    "en": "https://www.youtube.com/watch?v=SDnYMbYB-nU",
+    "director": "Peter Jackson"
+  },
+  "The Hobbit: An Unexpected Journey": {
+    "es": "https://www.youtube.com/watch?v=sI8OQRXhcZE",
+    "en": "https://www.youtube.com/watch?v=SDnYMbYB-nU",
+    "director": "Peter Jackson"
+  },
+  "El Hobbit: La desolación de Smaug": {
+    "es": "https://www.youtube.com/watch?v=4SLBizx05Bo",
+    "en": "https://www.youtube.com/watch?v=OPVWy1tFXuc",
+    "director": "Peter Jackson"
+  },
+  "The Hobbit: The Desolation of Smaug": {
+    "es": "https://www.youtube.com/watch?v=4SLBizx05Bo",
+    "en": "https://www.youtube.com/watch?v=OPVWy1tFXuc",
+    "director": "Peter Jackson"
+  },
+  "El Hobbit: La batalla de los cinco ejércitos": {
+    "es": "https://www.youtube.com/watch?v=L-jb4GtXyKY",
+    "en": "https://www.youtube.com/watch?v=iVAgTiBrrDA",
+    "director": "Peter Jackson"
+  },
+  "The Hobbit: The Battle of the Five Armies": {
+    "es": "https://www.youtube.com/watch?v=L-jb4GtXyKY",
+    "en": "https://www.youtube.com/watch?v=iVAgTiBrrDA",
+    "director": "Peter Jackson"
+  },
+  "Indiana Jones y los cazadores del arca perdida": {
+    "es": "https://www.youtube.com/watch?v=htHMMjfefYE",
+    "en": "https://www.youtube.com/watch?v=XkkzKHCx154",
+    "director": "Steven Spielberg"
+  },
+  "Indiana Jones: Raiders of the Lost Ark": {
+    "es": "https://www.youtube.com/watch?v=htHMMjfefYE",
+    "en": "https://www.youtube.com/watch?v=XkkzKHCx154",
+    "director": "Steven Spielberg"
+  },
+  "Indiana Jones y el templo maldito": {
+    "es": "https://www.youtube.com/watch?v=EdRx5HPYnlQ",
+    "en": "https://www.youtube.com/watch?v=5tK7rcy4k9M",
+    "director": "Steven Spielberg"
+  },
+  "Indiana Jones and the Temple of Doom": {
+    "es": "https://www.youtube.com/watch?v=EdRx5HPYnlQ",
+    "en": "https://www.youtube.com/watch?v=5tK7rcy4k9M",
+    "director": "Steven Spielberg"
+  },
+  "Indiana Jones y la última cruzada": {
+    "es": "https://www.youtube.com/watch?v=5YbMpOOonJs",
+    "en": "https://www.youtube.com/watch?v=sagmdpkWUqc",
+    "director": "Steven Spielberg"
+  },
+  "Indiana Jones and the Last Crusade": {
+    "es": "https://www.youtube.com/watch?v=5YbMpOOonJs",
+    "en": "https://www.youtube.com/watch?v=sagmdpkWUqc",
+    "director": "Steven Spielberg"
+  },
+  "Interstellar": {
+    "es": "https://www.youtube.com/watch?v=UoSSbmD9vqc",
+    "en": "https://www.youtube.com/watch?v=zSWdZVtXT7E",
+    "director": "Christopher Nolan"
+  },
+  "La mesita del comedor": {
+    "es": "https://www.youtube.com/watch?v=XKlTkmRSwIo",
+    "en": "https://www.youtube.com/watch?v=14dmDiYA8YM",
+    "director": "Caye Casas"
+  },
+  "La vendedora de rosas": {
+    "es": "https://www.youtube.com/watch?v=cYZMMRZR90w",
+    "en": "https://www.youtube.com/watch?v=cYZMMRZR90w",
+    "director": "Víctor Gaviria"
+  },
+  "The Rose Seller": {
+    "es": "https://www.youtube.com/watch?v=cYZMMRZR90w",
+    "en": "https://www.youtube.com/watch?v=cYZMMRZR90w",
+    "director": "Víctor Gaviria"
+  },
+  "Mad Max: Furia en la carretera": {
+    "es": "https://www.youtube.com/watch?v=BOgm6QTjOmw",
+    "en": "https://www.youtube.com/watch?v=hEJnMQG9ev8",
+    "director": "George Miller"
+  },
+  "Mad Max: Fury Road": {
+    "es": "https://www.youtube.com/watch?v=BOgm6QTjOmw",
+    "en": "https://www.youtube.com/watch?v=hEJnMQG9ev8",
+    "director": "George Miller"
+  },
+  "Furiosa: de la saga Mad Max": {
+    "es": "https://www.youtube.com/watch?v=S3Vx7TZ0yZw",
+    "en": "https://www.youtube.com/watch?v=FVswuip0-co",
+    "director": "George Miller"
+  },
+  "Furiosa: A Mad Max Saga": {
+    "es": "https://www.youtube.com/watch?v=S3Vx7TZ0yZw",
+    "en": "https://www.youtube.com/watch?v=FVswuip0-co",
+    "director": "George Miller"
+  },
+  "Matrix": {
+    "es": "https://www.youtube.com/watch?v=Pl_H2Lmjn6k&t=16s",
+    "en": "https://www.youtube.com/watch?v=m8e-FF8MsqU",
+    "director": "Lana Wachowski, Lilly Wachowski"
+  },
+  "The Matrix": {
+    "es": "https://www.youtube.com/watch?v=Pl_H2Lmjn6k&t=16s",
+    "en": "https://www.youtube.com/watch?v=m8e-FF8MsqU",
+    "director": "Lana Wachowski, Lilly Wachowski"
+  },
+  "Matrix Reloaded": {
+    "es": "https://www.youtube.com/watch?v=dvauYuYX4Jc&t=1s",
+    "en": "https://www.youtube.com/watch?v=kYzz0FSgpSU",
+    "director": "Lana Wachowski, Lilly Wachowski"
+  },
+  "The Matrix Reloaded": {
+    "es": "https://www.youtube.com/watch?v=dvauYuYX4Jc&t=1s",
+    "en": "https://www.youtube.com/watch?v=kYzz0FSgpSU",
+    "director": "Lana Wachowski, Lilly Wachowski"
+  },
+  "Matrix Revolutions": {
+    "es": "https://www.youtube.com/watch?v=L2CdRlEJ7_Q",
+    "en": "https://www.youtube.com/watch?v=hMbexEPAOQI",
+    "director": "Lana Wachowski, Lilly Wachowski"
+  },
+  "The Matrix Revolutions": {
+    "es": "https://www.youtube.com/watch?v=L2CdRlEJ7_Q",
+    "en": "https://www.youtube.com/watch?v=hMbexEPAOQI",
+    "director": "Lana Wachowski, Lilly Wachowski"
+  },
+  "The Bucket List": {
+    "es": "https://www.youtube.com/watch?v=63kaF1n5sz0",
+    "en": "https://www.youtube.com/watch?v=vc3mkG21ob4",
+    "director": "Rob Reiner"
+  },
+  "Ahora o nunca": {
+    "es": "https://www.youtube.com/watch?v=V_MME1YrhHU",
+    "director": "María Ripoll"
+  },
+  "As Good as It Gets": {
+    "es": "https://www.youtube.com/watch?v=ssMbPxpSoiw",
+    "en": "https://www.youtube.com/watch?v=t2d89afgtqg",
+    "director": "James L. Brooks"
+  },
+  "Assault on Precinct 13": {
+    "es": "https://www.youtube.com/watch?v=ARt0IQVivGs",
+    "en": "https://www.youtube.com/watch?v=ARt0IQVivGs",
+    "director": "John Carpenter"
+  },
+  "The Babadook": {
+    "es": "https://www.youtube.com/watch?v=29qrvJMui0c",
+    "en": "https://www.youtube.com/watch?v=k5WQZzDRVtw",
+    "director": "Jennifer Kent"
+  },
+  "Battle Royale": {
+    "es": "https://www.youtube.com/watch?v=sxDPaVwjYik",
+    "en": "https://www.youtube.com/watch?v=oKCN6hzD5J4",
+    "director": "Kinji Fukasaku"
+  },
+  "Be Kind Rewind": {
+    "es": "https://www.youtube.com/watch?v=XjwrknarHq0",
+    "en": "https://www.youtube.com/watch?v=sCdCzrsaSeg",
+    "director": "Michel Gondry"
+  },
+  "Beetlejuice": {
+    "es": "https://www.youtube.com/watch?v=Gpg6OzvwuiA",
+    "en": "https://www.youtube.com/watch?v=ickbVzajrk0",
+    "director": "Tim Burton"
+  },
+  "Beetlejuice Beetlejuice": {
+    "es": "https://www.youtube.com/watch?v=9SzBZZhN0fQ",
+    "en": "https://www.youtube.com/watch?v=As-vKW4ZboU",
+    "director": "Tim Burton"
+  },
+  "Belle Époque": {
+    "es": "https://www.youtube.com/watch?v=Fej2LCDtcss",
+    "en": "https://www.youtube.com/watch?v=Fej2LCDtcss",
+    "director": "Fernando Trueba"
+  },
+  "Bienvenido, Mister Marshall": {
+    "es": "https://www.youtube.com/watch?v=pFcaobDW42g",
+    "en": "https://www.youtube.com/watch?v=pFcaobDW42g",
+    "director": "Luis García Berlanga"
+  },
+  "Braveheart": {
+    "es": "https://www.youtube.com/watch?v=OwJGElRruv8",
+    "en": "https://www.youtube.com/watch?v=1NJO0jxBtMo",
+    "director": "Mel Gibson"
+  },
+  "Brazil": {
+    "es": "https://www.youtube.com/watch?v=ei1Mov2GTMI",
+    "en": "https://www.youtube.com/watch?v=ZKPFC8DA9_8",
+    "director": "Terry Gilliam"
+  },
+  "carretera perdida": {
+    "es": "https://www.youtube.com/watch?v=fivLYRuTUhY",
+    "en": "https://www.youtube.com/watch?v=fivLYRuTUhY",
+    "director": "David Lynch"
+  }
+}

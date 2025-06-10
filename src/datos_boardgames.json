@@ -1,0 +1,49 @@
+{
+  "recommendations": [
+    {
+      "id": 1,
+      "name": "Aventureros al Tren",
+      "category": "boardgames",
+      "description": "Un juego de mesa clásico donde los jugadores compiten para construir las rutas de tren más largas.",
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 30
+    },
+    {
+      "id": 2,
+      "name": "Catan",
+      "category": "boardgames",
+      "description": "Los jugadores asumen el papel de colonos en la isla de Catan, comerciando y construyendo para expandir sus asentamientos.",
+      "minPlayers": 3,
+      "maxPlayers": 4,
+      "playTime": 60
+    },
+    {
+      "id": 3,
+      "name": "Carcassonne",
+      "category": "boardgames",
+      "description": "Un juego de colocación de losetas donde los jugadores construyen un paisaje medieval con ciudades, caminos y campos.",
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 35
+    },
+    {
+      "id": 4,
+      "name": "Pandemic",
+      "category": "boardgames",
+      "description": "Los jugadores trabajan juntos como un equipo de especialistas para detener la propagación de enfermedades y salvar al mundo.",
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 45
+    },
+    {
+      "id": 5,
+      "name": "7 Wonders",
+      "category": "boardgames",
+      "description": "Un juego de cartas donde los jugadores desarrollan una civilización a lo largo de tres eras, construyendo maravillas y comerciando con otros jugadores.",
+      "minPlayers": 3,
+      "maxPlayers": 7,
+      "playTime": 30
+    }
+  ]
+}

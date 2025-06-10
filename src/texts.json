@@ -1,0 +1,32 @@
+{
+  "es": {
+    "home_title": "Nuevas recomendaciones",
+    "categoriesTitle": "Categorías",
+    "categories": {
+      "movies": "Películas",
+      "videogames": "Videojuegos",
+      "comics": "Cómics",
+      "books": "Libros",
+      "boardgames": "Juegos de mesa",
+      "music": "Música",
+      "podcast": "Podcast"
+    },
+    "see_all": "Ver todas",
+    "change_language": "Cambiar idioma"
+  },
+  "en": {
+    "home_title": "New Recommendations",
+    "categoriesTitle": "Categories",
+    "categories": {
+      "movies": "Movies",
+      "videogames": "Videogames",
+      "comics": "Comics",
+      "books": "Books",
+      "boardgames": "Board Games",
+      "music": "Music",
+      "podcast": "Podcast"
+    },
+    "see_all": "See all",
+    "change_language": "Change language"
+  }
+}
