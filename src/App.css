@@ -362,15 +362,20 @@ h1 {
   }
   .recommendations-list {
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 0.2rem;
     margin-top: 0.5rem;
   }
   .recommendation-card {
-    width: 100%;
-    min-width: 0;
+    width: 66vw;
+    min-width: 80px;
     max-width: 100vw;
-    padding: 0.2rem;
-    font-size: 0.85rem;
+    padding: 0.1rem;
+    font-size: 0.7rem;
+  }
+  .recommendation-card img {
+    width: 50vw !important;
+    max-width: 80px;
+    height: auto !important;
   }
   .item-detail {
     max-width: 98vw;
@@ -381,11 +386,6 @@ h1 {
   .item-detail img {
     width: 80vw !important;
     max-width: 180px;
-    height: auto !important;
-  }
-  .recommendation-card img {
-    width: 70vw !important;
-    max-width: 120px;
     height: auto !important;
   }
   h1, h2, h3 {
