@@ -185,7 +185,8 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
         const title = typeof rec.title === 'object' ? (rec.title[lang] || rec.title.es || rec.title.en || '') : (rec.title || '');
         const description = typeof rec.description === 'object' ? (rec.description[lang] || rec.description.es || rec.description.en || '') : (rec.description || '');
         const recKey = `${rec.category}_${rec.id !== undefined ? rec.id : idx}`;
-        if (isHome && isMobile) {
+        if (isMobile && (isHome || !isHome)) {
+          // Usar el layout móvil especial para todos los listados en móvil
           return (
             <div
               className={`recommendation-card mobile-home-layout ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
