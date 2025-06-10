@@ -345,52 +345,60 @@ h1 {
 
 @media (max-width: 600px) {
   #root, .container {
-    padding: 0.5rem !important;
+    padding: 0.2rem !important;
     max-width: 100vw;
   }
   .main-menu {
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 0.7rem 0.5rem;
+    gap: 0.2rem;
+    padding: 0.3rem 0.2rem;
     position: static;
     width: 100%;
   }
   .categories-list {
     flex-direction: column;
-    gap: 0.7rem;
-    margin-top: 1rem;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
   }
   .recommendations-list {
     flex-direction: column;
-    gap: 0.7rem;
-    margin-top: 1rem;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
   }
   .recommendation-card {
     width: 100%;
     min-width: 0;
     max-width: 100vw;
-    padding: 0.5rem;
+    padding: 0.2rem;
+    font-size: 0.85rem;
   }
   .item-detail {
     max-width: 98vw;
-    padding: 1rem;
-    margin-top: 1rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
   }
   .item-detail img {
-    width: 90vw !important;
-    max-width: 320px;
+    width: 80vw !important;
+    max-width: 180px;
     height: auto !important;
   }
   .recommendation-card img {
-    width: 80vw !important;
-    max-width: 220px;
+    width: 70vw !important;
+    max-width: 120px;
     height: auto !important;
   }
   h1, h2, h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin: 0.2rem 0;
   }
   button, .category-btn, .main-menu button, .main-menu select {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.7rem;
+    height: 32px;
+  }
+  .download-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
 }
