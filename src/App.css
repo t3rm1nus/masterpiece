@@ -561,34 +561,44 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.1rem;
+    gap: 5px; /* solo 5px entre categoría y subcategoría */
   }
   .rec-home-cat {
     color: #666;
     font-size: 0.97rem;
     font-weight: 500;
     text-align: center;
+    background: none;
   }
   .rec-home-subcat {
     color: #888;
     font-size: 0.97rem;
     text-align: center;
-    margin-top: 0.1rem;
+    margin-top: 0;
     display: block;
+    background: none;
   }
-  .rec-home-desc {
-    font-size: 0.98rem;
-    color: #444;
-    margin: 0;
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    line-clamp: 6;
-    box-orient: vertical;
-    white-space: normal;
+  /* Forzar color de fondo en items de la home (no masterpiece) */
+  .recommendation-card.mobile-home-layout.movies:not(.masterpiece) {
+    background: #e3f2fd !important;
+  }
+  .recommendation-card.mobile-home-layout.videogames:not(.masterpiece) {
+    background: #f3e5f5 !important;
+  }
+  .recommendation-card.mobile-home-layout.comics:not(.masterpiece) {
+    background: #fffde7 !important;
+  }
+  .recommendation-card.mobile-home-layout.books:not(.masterpiece) {
+    background: #e8f5e9 !important;
+  }
+  .recommendation-card.mobile-home-layout.boardgames:not(.masterpiece) {
+    background: #fce4ec !important;
+  }
+  .recommendation-card.mobile-home-layout.music:not(.masterpiece) {
+    background: #e0f7fa !important;
+  }
+  .recommendation-card.mobile-home-layout.podcast:not(.masterpiece) {
+    background: #f9fbe7 !important;
   }
 }
 
