@@ -169,7 +169,6 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
 function RecommendationsList({ recommendations, onItemClick, isHome }) {
   const { lang, t } = useLanguage();
   const categoryNames = t.categories;
-  // Diccionario para traducir subcategorías conocidas
   const subcategoryTranslations = {
     'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
     'acción': lang === 'en' ? 'action' : 'acción',
@@ -179,7 +178,6 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
     'aventura': lang === 'en' ? 'adventure' : 'aventura',
     'comedia': lang === 'en' ? 'comedy' : 'comedia'
   };
-  // Detectar móvil (solo client-side)
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
   return (
     <div className="recommendations-list">
@@ -187,7 +185,6 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
         const title = typeof rec.title === 'object' ? (rec.title[lang] || rec.title.es || rec.title.en || '') : (rec.title || '');
         const description = typeof rec.description === 'object' ? (rec.description[lang] || rec.description.es || rec.description.en || '') : (rec.description || '');
         const recKey = `${rec.category}_${rec.id !== undefined ? rec.id : idx}`;
-        // Layout especial SOLO en home y SOLO en móvil
         if (isHome && isMobile) {
           return (
             <div
@@ -196,16 +193,22 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
               onClick={() => onItemClick && onItemClick(rec.id)}
               style={{cursor: onItemClick ? 'pointer' : 'default', position: 'relative'}}
             >
-              {/* Fila superior: nombre, categoría, subcategoría */}
+              {/* Fila superior: solo el nombre, centrado */}
               <div className="rec-home-row rec-home-row-top">
                 <span className="rec-home-title">{title}</span>
-                <span className="rec-home-cat">{categoryNames[rec.category]}</span>
-                <span className="rec-home-subcat">{subcategoryTranslations[rec.subcategory] || rec.subcategory}</span>
               </div>
-              {/* Fila inferior: imagen y descripción */}
+              {/* Fila inferior: imagen, debajo género y subgénero, y a la derecha la descripción */}
               <div className="rec-home-row rec-home-row-bottom">
-                <img src={rec.image} alt={title} width={80} height={110} style={{objectFit:'cover', borderRadius:8, flexShrink:0}} />
-                <p className="rec-home-desc">{description}</p>
+                <div style={{display:'flex',flexDirection:'column',alignItems:'center',minWidth:0}}>
+                  <img src={rec.image} alt={title} width={80} height={110} style={{objectFit:'cover', borderRadius:8, flexShrink:0, marginBottom:4}} />
+                  <div className="rec-home-cats">
+                    <span className="rec-home-cat">{categoryNames[rec.category]}</span>
+                    <span className="rec-home-subcat">{subcategoryTranslations[rec.subcategory] || rec.subcategory}</span>
+                  </div>
+                </div>
+                <div className="rec-home-info">
+                  <p className="rec-home-desc">{description}</p>
+                </div>
               </div>
               {rec.masterpiece && (
                 <span className="masterpiece-badge" title="Obra maestra">
