@@ -201,9 +201,9 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
               <div className="rec-home-row rec-home-row-bottom">
                 <div style={{display:'flex',flexDirection:'column',alignItems:'center',minWidth:0}}>
                   <img src={rec.image} alt={title} width={80} height={110} style={{objectFit:'cover', borderRadius:8, flexShrink:0, marginBottom:4}} />
-                  <div className="rec-home-cats">
-                    <span className="rec-home-cat">{categoryNames[rec.category]}</span>
-                    <span className="rec-home-subcat">{subcategoryTranslations[rec.subcategory] || rec.subcategory}</span>
+                  <div className="rec-home-cats" style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'5px',marginTop:0,marginBottom:0}}>
+                    <span className="rec-home-cat" style={{marginBottom:0, lineHeight:'1.1'}}>{categoryNames[rec.category]}</span>
+                    <span className="rec-home-subcat" style={{marginTop:0, lineHeight:'1.1'}}>{subcategoryTranslations[rec.subcategory] || rec.subcategory}</span>
                   </div>
                 </div>
                 <div className="rec-home-info">
