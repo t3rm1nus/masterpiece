@@ -366,6 +366,10 @@ h1 {
     height: 48px;
   }
   h1 {
+    font-size: 1.2rem !important;
+    max-width: 100vw;
+    overflow-wrap: break-word;
+    word-break: break-word;
     margin-top: 3.5rem !important;
   }
   .mobile-menu-overlay {
@@ -415,6 +419,47 @@ h1 {
     cursor: pointer;
     padding: 0;
     width: auto;
+  }
+  .recommendations-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .recommendation-card {
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.9rem;
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+  .recommendation-card img {
+    width: 80px !important;
+    height: 110px !important;
+    max-width: 30vw;
+    min-width: 60px;
+    border-radius: 8px;
+    margin: 0 0.7rem 0 0;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .recommendation-card > div {
+    flex: 1 1 0;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .recommendation-card h3 {
+    font-size: 1rem;
+    margin: 0.2rem 0 0.1rem 0;
+    text-align: left;
+  }
+  .recommendation-card p {
+    font-size: 0.9rem;
+    text-align: left;
+    margin: 0.1rem 0 0 0;
   }
 }
 
