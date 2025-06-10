@@ -370,7 +370,8 @@ h1 {
     max-width: 100vw;
     overflow-wrap: break-word;
     word-break: break-word;
-    margin-top: 4.7rem !important; /* sube 20px más respecto a antes */
+    margin-top: 4.8rem !important; /* +10px */
+    margin-bottom: 1.1rem !important; /* +10px */
   }
   .mobile-menu-overlay {
     position: fixed;
@@ -516,7 +517,7 @@ h1 {
   .rec-home-row-top {
     justify-content: center;
     align-items: center;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem; /* más margen inferior al nombre */
     font-size: 1.08rem;
     font-weight: bold;
     color: #222;
@@ -558,18 +559,22 @@ h1 {
     color: #666;
     margin-bottom: 0.2rem;
     display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
+    flex-direction: column;
     align-items: center;
+    gap: 0.1rem;
   }
   .rec-home-cat {
     color: #666;
     font-size: 0.97rem;
     font-weight: 500;
+    text-align: center;
   }
   .rec-home-subcat {
     color: #888;
     font-size: 0.97rem;
+    text-align: center;
+    margin-top: 0.1rem;
+    display: block;
   }
   .rec-home-desc {
     font-size: 0.98rem;
