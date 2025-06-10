@@ -1,6 +1,6 @@
 import { LanguageProvider, useLanguage } from "./LanguageContext";
 import './App.css'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import datosMovies from "./datos_movies.json";
 import datosComics from "./datos_comics.json";
 import datosBooks from "./datos_books.json";
@@ -345,10 +345,40 @@ function ItemDetailPage({ itemId, onBack }) {
   );
 }
 
+function MobileMenuBar({ onOpen }) {
+  return (
+    <div className="mobile-menu-bar">
+      <button aria-label="Abrir menú" onClick={onOpen} style={{background:'none',border:'none',fontSize:'2rem',color:'#0078d4',cursor:'pointer',padding:0}}>
+        <span style={{fontWeight:'bold'}}>&#9776;</span>
+      </button>
+      <span style={{fontWeight:'bold',fontSize:'1.1rem'}}>Masterpiece</span>
+      <span></span>
+    </div>
+  );
+}
+
+function MobileMenu({ open, onClose, onNavigate, showBack, onBack, backLabel }) {
+  if (!open) return null;
+  return (
+    <div className="mobile-menu-overlay" onClick={onClose}>
+      <nav className="mobile-menu" onClick={e => e.stopPropagation()}>
+        <button className="close-btn" onClick={onClose} aria-label="Cerrar menú">&times;</button>
+        {showBack && (
+          <button className="category-btn" onClick={onBack}>&larr; {backLabel}</button>
+        )}
+        <button onClick={() => {onNavigate({view: 'home'}); onClose();}}>Inicio</button>
+        <button onClick={() => {onNavigate({view: 'categories'}); onClose();}}>Categorías</button>
+        <LanguageSelector />
+      </nav>
+    </div>
+  );
+}
+
 function AppContent() {
   const [view, setView] = useState({view: 'home'});
   const [lastCategory, setLastCategory] = useState(null);
   const { lang } = useLanguage();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleCategory = cat => {
     setLastCategory(cat);
@@ -423,9 +453,25 @@ function AppContent() {
     backLabel = lang === 'en' ? 'Back' : 'Volver';
   }
 
+  // Detectar móvil (solo client-side)
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 600);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div className="container">
-      <Menu onNavigate={setView} showBack={showBack} onBack={onBack} backLabel={backLabel} />
+      {isMobile ? (
+        <>
+          <MobileMenuBar onOpen={() => setMobileMenuOpen(true)} />
+          <MobileMenu open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} onNavigate={setView} showBack={showBack} onBack={onBack} backLabel={backLabel} />
+        </>
+      ) : (
+        <Menu onNavigate={setView} showBack={showBack} onBack={onBack} backLabel={backLabel} />
+      )}
       {content}
     </div>
   );
