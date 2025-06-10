@@ -122,7 +122,10 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
 
   return (
     <div>
-      <Menu showBack={true} onBack={onBack} backLabel={lang === 'en' ? 'Back' : 'Volver'} onNavigate={onNavigate} />
+      {/* Solo mostrar el menú superior en desktop/tablet, no en móviles aquí */}
+      {!(typeof window !== 'undefined' && window.innerWidth <= 600) && (
+        <Menu showBack={true} onBack={onBack} backLabel={lang === 'en' ? 'Back' : 'Volver'} onNavigate={onNavigate} />
+      )}
       <h2 className="subcategories-title">{t.categories[category]}</h2>
       {isMobile ? (
         <div className="categories-list">
