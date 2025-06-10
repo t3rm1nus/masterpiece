@@ -1,6 +1,6 @@
 import { LanguageProvider, useLanguage } from "./LanguageContext";
 import './App.css'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import datosMovies from "./datos_movies.json";
 import datosComics from "./datos_comics.json";
 import datosBooks from "./datos_books.json";
@@ -35,7 +35,46 @@ function LanguageSelector() {
   );
 }
 
+function MobileMenu({ onNavigate, showBack, onBack, backLabel }) {
+  const { t } = useLanguage();
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [open]);
+  return (
+    <>
+      <div className="mobile-menu-bar">
+        {showBack && (
+          <button className="category-btn" onClick={onBack}>&larr; {backLabel}</button>
+        )}
+        <button className="menu-icon" onClick={() => setOpen(true)}>
+          <span>&#9776;</span>
+        </button>
+      </div>
+      {open && (
+        <div className="mobile-menu-overlay" onClick={() => setOpen(false)}>
+          <nav className="mobile-menu" onClick={e => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setOpen(false)}>&times;</button>
+            <button onClick={() => { setOpen(false); onNavigate({view: 'home'}); }}>{t.home_title}</button>
+            <button onClick={() => { setOpen(false); onNavigate({view: 'categories'}); }}>{t.categoriesTitle}</button>
+            <LanguageSelector />
+          </nav>
+        </div>
+      )}
+    </>
+  );
+}
+
 function Menu({ onNavigate, showBack, onBack, backLabel }) {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
+  if (isMobile) {
+    return <MobileMenu onNavigate={onNavigate} showBack={showBack} onBack={onBack} backLabel={backLabel} />;
+  }
   const { t } = useLanguage();
   return (
     <nav className="main-menu">

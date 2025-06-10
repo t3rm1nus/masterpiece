@@ -349,56 +349,77 @@ h1 {
     max-width: 100vw;
   }
   .main-menu {
+    display: none !important;
+  }
+  .mobile-menu-bar {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+  }
+  .menu-icon {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #0078d4;
+    cursor: pointer;
+    padding: 0 0.5rem;
+  }
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 300;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .mobile-menu {
+    background: #fff;
+    width: 75vw;
+    max-width: 320px;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
-    gap: 0.2rem;
-    padding: 0.3rem 0.2rem;
-    position: static;
+    align-items: flex-start;
+    padding: 2rem 1.2rem 1.2rem 1.2rem;
+    box-shadow: -2px 0 12px rgba(0,0,0,0.12);
+    position: relative;
+    animation: slideInMenu 0.2s ease;
+  }
+  @keyframes slideInMenu {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+  .mobile-menu button, .mobile-menu select {
+    background: #f3f3f3;
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
     width: 100%;
+    text-align: left;
   }
-  .categories-list {
-    flex-direction: column;
-    gap: 0.3rem;
-    margin-top: 0.5rem;
-  }
-  .recommendations-list {
-    flex-direction: column;
-    gap: 0.2rem;
-    margin-top: 0.5rem;
-  }
-  .recommendation-card {
-    width: 66vw;
-    min-width: 80px;
-    max-width: 100vw;
-    padding: 0.1rem;
-    font-size: 0.7rem;
-  }
-  .recommendation-card img {
-    width: 50vw !important;
-    max-width: 80px;
-    height: auto !important;
-  }
-  .item-detail {
-    max-width: 98vw;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    font-size: 0.95rem;
-  }
-  .item-detail img {
-    width: 80vw !important;
-    max-width: 180px;
-    height: auto !important;
-  }
-  h1, h2, h3 {
-    font-size: 1rem;
-    margin: 0.2rem 0;
-  }
-  button, .category-btn, .main-menu button, .main-menu select {
-    font-size: 0.85rem;
-    padding: 0.3rem 0.7rem;
-    height: 32px;
-  }
-  .download-link {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
+  .mobile-menu .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #0078d4;
+    cursor: pointer;
+    padding: 0;
+    width: auto;
   }
 }
+
+/* --- END MOBILE SLIDING MENU --- */
