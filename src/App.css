@@ -363,14 +363,10 @@ h1 {
     top: 0;
     left: 0;
     z-index: 200;
+    height: 48px;
   }
-  .menu-icon {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #0078d4;
-    cursor: pointer;
-    padding: 0 0.5rem;
+  h1 {
+    margin-top: 3.5rem !important;
   }
   .mobile-menu-overlay {
     position: fixed;
