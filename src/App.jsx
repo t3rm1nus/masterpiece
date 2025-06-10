@@ -67,10 +67,8 @@ function CategoriesPage({ onCategory }) {
 
 function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const { t, lang } = useLanguage();
-  // Obtener el dataset correcto según la categoría
   const datos = datosByCategory[category] || { recommendations: [] };
   const items = datos.recommendations.filter(r => r.category === category);
-  // Diccionario para traducir subcategorías conocidas
   const subcategoryTranslations = {
     'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
     'acción': lang === 'en' ? 'action' : 'acción',
@@ -80,7 +78,6 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     'aventura': lang === 'en' ? 'adventure' : 'aventura',
     'comedia': lang === 'en' ? 'comedy' : 'comedia'
   };
-  // Normalizar subcategorías según idioma
   let subs = Array.from(new Set(items.map(r => {
     if (lang === 'es' && r.subcategory === 'action') return 'acción';
     if (lang === 'en' && (r.subcategory === 'acción' || r.subcategory === 'acción')) return 'action';
@@ -92,15 +89,12 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     if (lang === 'en' && r.subcategory === 'aventura') return 'adventure';
     return r.subcategory;
   })));
-  // Agregar tag especial para cine español
   const hasSpanishCinema = items.some(r => r.tags && r.tags.includes('cine español'));
   if (hasSpanishCinema) {
     subs.push(lang === 'es' ? 'cine español' : 'spanish cinema');
   }
-  const [activeSub, setActiveSub] = useState(null);
-  // --- MODIFICADO: Añadir botón para filtrar solo obras maestras como subcategoría exclusiva ---
   const masterpiecesKey = '__masterpieces__';
-  // Filtrar ítems según subcategoría normalizada, tag especial o masterpieces
+  const [activeSub, setActiveSub] = useState(null);
   let filtered;
   if (activeSub === masterpiecesKey) {
     filtered = items.filter(r => r.masterpiece);
@@ -114,7 +108,6 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
       if (lang === 'en' && r.subcategory === 'comedia' && activeSub === 'comedy') return true;
       if (lang === 'es' && r.subcategory === 'adventure' && activeSub === 'aventura') return true;
       if (lang === 'en' && r.subcategory === 'aventura' && activeSub === 'adventure') return true;
-      // Filtro especial para cine español
       if ((lang === 'es' && activeSub === 'cine español') || (lang === 'en' && activeSub === 'spanish cinema')) {
         return r.tags && r.tags.includes('cine español');
       }
@@ -124,27 +117,47 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     filtered = items;
   }
 
+  // --- Responsive: usar select en móviles ---
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
+
   return (
     <div>
       <Menu showBack={true} onBack={onBack} backLabel={lang === 'en' ? 'Back' : 'Volver'} onNavigate={onNavigate} />
       <h2 className="subcategories-title">{t.categories[category]}</h2>
-      <div className="categories-list">
-        {subs.map(sub => (
-          <button
-            key={sub}
-            className={`category-btn${activeSub === sub ? ' active' : ''}`}
-            onClick={() => setActiveSub(sub)}
+      {isMobile ? (
+        <div className="categories-list">
+          <select
+            className="subcategory-select"
+            value={activeSub || ''}
+            onChange={e => setActiveSub(e.target.value || null)}
+            style={{width:'100%',maxWidth:320,marginBottom:'1rem'}}
           >
-            {subcategoryTranslations[sub] || sub}
+            <option value="">{lang === 'en' ? 'All' : 'Todas'}</option>
+            {subs.map(sub => (
+              <option key={sub} value={sub}>{subcategoryTranslations[sub] || sub}</option>
+            ))}
+            <option value={masterpiecesKey}>{lang === 'en' ? 'Masterpieces' : 'Obras maestras'}</option>
+          </select>
+        </div>
+      ) : (
+        <div className="categories-list">
+          {subs.map(sub => (
+            <button
+              key={sub}
+              className={`category-btn${activeSub === sub ? ' active' : ''}`}
+              onClick={() => setActiveSub(sub)}
+            >
+              {subcategoryTranslations[sub] || sub}
+            </button>
+          ))}
+          <button
+            className={`category-btn${activeSub === masterpiecesKey ? ' active' : ''}`}
+            onClick={() => setActiveSub(activeSub === masterpiecesKey ? null : masterpiecesKey)}
+          >
+            {lang === 'en' ? 'Masterpieces' : 'Obras maestras'}
           </button>
-        ))}
-        <button
-          className={`category-btn${activeSub === masterpiecesKey ? ' active' : ''}`}
-          onClick={() => setActiveSub(activeSub === masterpiecesKey ? null : masterpiecesKey)}
-        >
-          {lang === 'en' ? 'Masterpieces' : 'Obras maestras'}
-        </button>
-      </div>
+        </div>
+      )}
       <RecommendationsList recommendations={filtered} onItemClick={onItemClick} />
     </div>
   );
