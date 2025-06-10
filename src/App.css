@@ -431,10 +431,42 @@ h1 {
     max-width: 100vw;
     padding: 0.3rem 0.5rem;
     font-size: 0.9rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .recommendation-card .top-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+  .recommendation-card .top-row h3 {
+    font-size: 1rem;
+    margin: 0;
+    flex: 1 1 0;
+    text-align: left;
+    font-weight: bold;
+  }
+  .recommendation-card .top-row .cat {
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: 500;
+    margin-left: 0.5rem;
+  }
+  .recommendation-card .top-row .subcat {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-left: 0.5rem;
+  }
+  .recommendation-card .bottom-row {
+    display: flex;
     flex-direction: row;
     align-items: flex-start;
-    box-sizing: border-box;
-    justify-content: flex-start;
+    gap: 0.7rem;
   }
   .recommendation-card img {
     width: 80px !important;
@@ -442,24 +474,109 @@ h1 {
     max-width: 30vw;
     min-width: 60px;
     border-radius: 8px;
-    margin: 0 0.7rem 0 0;
     object-fit: cover;
     flex-shrink: 0;
+    margin: 0;
   }
-  .recommendation-card > div {
+  .recommendation-card .desc-col {
     flex: 1 1 0;
     text-align: left;
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
-  .recommendation-card h3 {
-    font-size: 1rem;
-    margin: 0.2rem 0 0.1rem 0;
-    text-align: left;
-  }
-  .recommendation-card p {
+  .recommendation-card .desc-col p {
     font-size: 0.9rem;
     text-align: left;
     margin: 0.1rem 0 0 0;
+  }
+}
+
+/* Layout especial para la home en móviles */
+@media (max-width: 600px) {
+  .recommendation-card.mobile-home-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    margin: 0 0 1.2rem 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    background: #fff;
+    padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .rec-home-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    min-width: 0;
+  }
+  .rec-home-row-top {
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+    font-size: 1.01rem;
+    font-weight: 500;
+    color: #333;
+    flex-wrap: wrap;
+  }
+  .rec-home-title {
+    font-weight: bold;
+    font-size: 1.08rem;
+    flex: 2 1 0;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .rec-home-cat {
+    color: #666;
+    font-size: 0.98rem;
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: right;
+    white-space: nowrap;
+  }
+  .rec-home-subcat {
+    color: #888;
+    font-size: 0.97rem;
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: right;
+    white-space: nowrap;
+  }
+  .rec-home-row-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.7rem;
+    width: 100%;
+    min-width: 0;
+  }
+  .rec-home-row-bottom img {
+    width: 80px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  .rec-home-desc {
+    font-size: 0.98rem;
+    color: #444;
+    margin: 0;
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    line-clamp: 6;
+    box-orient: vertical;
+    white-space: normal;
   }
 }
 

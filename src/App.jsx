@@ -1,6 +1,6 @@
 import { LanguageProvider, useLanguage } from "./LanguageContext";
 import './App.css'
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import datosMovies from "./datos_movies.json";
 import datosComics from "./datos_comics.json";
 import datosBooks from "./datos_books.json";
@@ -35,46 +35,7 @@ function LanguageSelector() {
   );
 }
 
-function MobileMenu({ onNavigate, showBack, onBack, backLabel }) {
-  const { t } = useLanguage();
-  const [open, setOpen] = useState(false);
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => { document.body.style.overflow = ''; };
-  }, [open]);
-  return (
-    <>
-      <div className="mobile-menu-bar">
-        {showBack && (
-          <button className="category-btn" onClick={onBack}>&larr; {backLabel}</button>
-        )}
-        <button className="menu-icon" onClick={() => setOpen(true)}>
-          <span>&#9776;</span>
-        </button>
-      </div>
-      {open && (
-        <div className="mobile-menu-overlay" onClick={() => setOpen(false)}>
-          <nav className="mobile-menu" onClick={e => e.stopPropagation()}>
-            <button className="close-btn" onClick={() => setOpen(false)}>&times;</button>
-            <button onClick={() => { setOpen(false); onNavigate({view: 'home'}); }}>{t.home_title}</button>
-            <button onClick={() => { setOpen(false); onNavigate({view: 'categories'}); }}>{t.categoriesTitle}</button>
-            <LanguageSelector />
-          </nav>
-        </div>
-      )}
-    </>
-  );
-}
-
 function Menu({ onNavigate, showBack, onBack, backLabel }) {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
-  if (isMobile) {
-    return <MobileMenu onNavigate={onNavigate} showBack={showBack} onBack={onBack} backLabel={backLabel} />;
-  }
   const { t } = useLanguage();
   return (
     <nav className="main-menu">
@@ -205,7 +166,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   );
 }
 
-function RecommendationsList({ recommendations, onItemClick }) {
+function RecommendationsList({ recommendations, onItemClick, isHome }) {
   const { lang, t } = useLanguage();
   const categoryNames = t.categories;
   // Diccionario para traducir subcategorías conocidas
@@ -218,14 +179,46 @@ function RecommendationsList({ recommendations, onItemClick }) {
     'aventura': lang === 'en' ? 'adventure' : 'aventura',
     'comedia': lang === 'en' ? 'comedy' : 'comedia'
   };
+  // Detectar móvil (solo client-side)
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
   return (
     <div className="recommendations-list">
       {recommendations.map((rec, idx) => {
-        // Protección: si rec.title no es objeto, mostrar string plano
         const title = typeof rec.title === 'object' ? (rec.title[lang] || rec.title.es || rec.title.en || '') : (rec.title || '');
         const description = typeof rec.description === 'object' ? (rec.description[lang] || rec.description.es || rec.description.en || '') : (rec.description || '');
-        // Usar una clave única combinando categoría e id, pero si id no existe usar idx
         const recKey = `${rec.category}_${rec.id !== undefined ? rec.id : idx}`;
+        // Layout especial SOLO en home y SOLO en móvil
+        if (isHome && isMobile) {
+          return (
+            <div
+              className={`recommendation-card mobile-home-layout ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
+              key={recKey}
+              onClick={() => onItemClick && onItemClick(rec.id)}
+              style={{cursor: onItemClick ? 'pointer' : 'default', position: 'relative'}}
+            >
+              {/* Fila superior: nombre, categoría, subcategoría */}
+              <div className="rec-home-row rec-home-row-top">
+                <span className="rec-home-title">{title}</span>
+                <span className="rec-home-cat">{categoryNames[rec.category]}</span>
+                <span className="rec-home-subcat">{subcategoryTranslations[rec.subcategory] || rec.subcategory}</span>
+              </div>
+              {/* Fila inferior: imagen y descripción */}
+              <div className="rec-home-row rec-home-row-bottom">
+                <img src={rec.image} alt={title} width={80} height={110} style={{objectFit:'cover', borderRadius:8, flexShrink:0}} />
+                <p className="rec-home-desc">{description}</p>
+              </div>
+              {rec.masterpiece && (
+                <span className="masterpiece-badge" title="Obra maestra">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="12" fill="#ffd700"/>
+                    <text x="12" y="17" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">1</text>
+                  </svg>
+                </span>
+              )}
+            </div>
+          );
+        }
+        // Layout normal para desktop/tablet o fuera de home
         return (
           <div
             className={`recommendation-card ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
@@ -272,7 +265,7 @@ function HomePage({ onItemClick }) {
   return (
     <>
       <h1>{homeTitle}</h1>
-      <RecommendationsList recommendations={random} onItemClick={onItemClick} />
+      <RecommendationsList recommendations={random} onItemClick={onItemClick} isHome={true} />
     </>
   );
 }
