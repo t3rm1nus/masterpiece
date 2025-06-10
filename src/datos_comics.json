@@ -9,7 +9,7 @@
         "es": "Obra maestra de Alejandro Jodorowsky y Moebius, referente del cómic de ciencia ficción.",
         "en": "Masterpiece by Alejandro Jodorowsky and Moebius, a reference in science fiction comics."
       },
-      "image": "/src/assets/imagenes/comics/elincal.jpg",
+      "image": "/imagenes/comics/elincal.jpg",
       "download": "https://archive.org/download/ElIncal/ElIncal.pdf",
       "masterpiece": true,
       "author": "Alejandro Jodorowsky, Moebius"
@@ -37,7 +37,7 @@
         "es": "Cómic de Alan Moore y David Lloyd sobre la lucha contra el totalitarismo.",
         "en": "Comic by Alan Moore and David Lloyd about the fight against totalitarianism."
       },
-      "image": "/src/assets/imagenes/comics/v_de_vendetta.jpeg",
+      "image": "/imagenes/comics/v_de_vendetta.jpeg",
       "download": "https://archive.org/download/VdeVendetta/VdeVendetta.pdf",
       "masterpiece": true,
       "author": "Alan Moore, David Lloyd"
@@ -51,7 +51,7 @@
         "es": "Clásico argentino de Oesterheld y Solano López sobre la resistencia y la esperanza.",
         "en": "Argentinian classic by Oesterheld and Solano López about resistance and hope."
       },
-      "image": "/src/assets/imagenes/comics/el_eternauta.jpg",
+      "image": "/imagenes/comics/el_eternauta.jpg",
       "download": "https://archive.org/download/ElEternauta/ElEternauta.pdf",
       "masterpiece": true,
       "author": "Héctor Germán Oesterheld, Francisco Solano López"
@@ -65,7 +65,7 @@
         "es": "La historia del Holocausto contada por Art Spiegelman a través de ratones y gatos.",
         "en": "The story of the Holocaust told by Art Spiegelman through mice and cats."
       },
-      "image": "/src/assets/imagenes/comics/maus.jpg",
+      "image": "/imagenes/comics/maus.jpg",
       "download": "https://archive.org/download/MausComic/MausComic.pdf",
       "masterpiece": true,
       "author": "Art Spiegelman"
@@ -79,7 +79,7 @@
         "es": "Cómic de Joe Sacco que narra la vida en los territorios ocupados.",
         "en": "Comic by Joe Sacco that narrates life in the occupied territories."
       },
-      "image": "/src/assets/imagenes/comics/palestina.jpg",
+      "image": "/imagenes/comics/palestina.jpg",
       "download": "https://archive.org/download/PalestinaJoeSacco/PalestinaJoeSacco.pdf",
       "masterpiece": false,
       "author": "Joe Sacco"
@@ -93,7 +93,7 @@
         "es": "Relato gráfico sobre las consecuencias de la bomba atómica en Hiroshima.",
         "en": "Graphic account of the consequences of the atomic bomb in Hiroshima."
       },
-      "image": "/src/assets/imagenes/comics/hiroshima.jpg",
+      "image": "/imagenes/comics/hiroshima.jpg",
       "download": "https://archive.org/download/HiroshimaJohnHersey/HiroshimaJohnHersey.pdf",
       "masterpiece": false,
       "author": "John Hersey"
@@ -107,7 +107,7 @@
         "es": "Obra de Neil Gaiman que mezcla mitología, fantasía y terror en una de las series más influyentes del cómic moderno.",
         "en": "Work by Neil Gaiman that mixes mythology, fantasy, and horror in one of the most influential series of modern comics."
       },
-      "image": "/src/assets/imagenes/comics/sandman.jpg",
+      "image": "/imagenes/comics/sandman.jpg",
       "download": "https://archive.org/download/SandmanComic/SandmanComic.pdf",
       "masterpiece": true,
       "author": "Neil Gaiman"
@@ -121,7 +121,7 @@
         "es": "Cómic de Frank Miller que redefine el mito de Batman en una historia oscura y adulta.",
         "en": "Comic by Frank Miller that redefines the Batman myth in a dark and adult story."
       },
-      "image": "/src/assets/imagenes/comics/batman.jpg",
+      "image": "/imagenes/comics/batman.jpg",
       "download": "https://archive.org/download/BatmanCaballeroDeLaNoche/BatmanCaballeroDeLaNoche.pdf",
       "masterpiece": false,
       "author": "Frank Miller"
@@ -135,7 +135,7 @@
         "es": "Cómic de Alan Moore y Eddie Campbell que explora los asesinatos de Jack el Destripador en el Londres victoriano.",
         "en": "Comic by Alan Moore and Eddie Campbell that explores the murders of Jack the Ripper in Victorian London."
       },
-      "image": "/src/assets/imagenes/comics/from_hell.jpg",
+      "image": "/imagenes/comics/from_hell.jpg",
       "download": "https://archive.org/download/FromHellComic/FromHellComic.pdf",
       "masterpiece": false,
       "author": "Alan Moore, Eddie Campbell"
@@ -149,7 +149,7 @@
         "es": "Cómic de Frank Miller que narra historias de crimen y corrupción en la ciudad ficticia de Basin City, con un estilo visual inconfundible.",
         "en": "Comic by Frank Miller that narrates stories of crime and corruption in the fictional city of Basin City, with a distinctive visual style."
       },
-      "image": "/src/assets/imagenes/comics/sin_city.jpg",
+      "image": "/imagenes/comics/sin_city.jpg",
       "download": "https://archive.org/download/SinCityComic/SinCityComic.pdf",
       "masterpiece": false,
       "author": "Frank Miller"
@@ -163,7 +163,7 @@
         "es": "Cómic de Osamu Tezuka que narra la vida de tres hombres llamados Adolf en el contexto de la Segunda Guerra Mundial.",
         "en": "Comic by Osamu Tezuka that tells the life of three men named Adolf in the context of World War II."
       },
-      "image": "/src/assets/imagenes/comics/adolf.jpg",
+      "image": "/imagenes/comics/adolf.jpg",
       "download": "https://archive.org/download/AdolfTezuka/AdolfTezuka.pdf",
       "masterpiece": false,
       "author": "Osamu Tezuka"
@@ -177,7 +177,7 @@
         "es": "Cómic de Brian K. Vaughan y Fiona Staples que mezcla ciencia ficción y fantasía en una épica historia de amor y guerra intergaláctica.",
         "en": "Comic by Brian K. Vaughan and Fiona Staples that mixes science fiction and fantasy in an epic tale of love and intergalactic war."
       },
-      "image": "/src/assets/imagenes/comics/saga.jpg",
+      "image": "/imagenes/comics/saga.jpg",
       "masterpiece": false,
       "author": "Brian K. Vaughan, Fiona Staples"
     },
@@ -190,7 +190,7 @@
         "es": "Cómic de Mike Carey basado en el personaje de Neil Gaiman, que explora temas de libre albedrío, poder y redención en un universo de fantasía oscura.",
         "en": "Comic by Mike Carey based on the character by Neil Gaiman, exploring themes of free will, power, and redemption in a dark fantasy universe."
       },
-      "image": "/src/assets/imagenes/comics/lucifer.jpg",
+      "image": "/imagenes/comics/lucifer.jpg",
       "download": "https://archive.org/download/LuciferComic/LuciferComic.pdf",
       "masterpiece": false,
       "author": "Mike Carey"
@@ -204,7 +204,7 @@
         "es": "Cómic de Frank Miller y Lynn Varley que narra la batalla de las Termópilas con un estilo visual impactante y épico.",
         "en": "Comic by Frank Miller and Lynn Varley that narrates the battle of Thermopylae with an impactful and epic visual style."
       },
-      "image": "/src/assets/imagenes/comics/300.jpg",
+      "image": "/imagenes/comics/300.jpg",
       "masterpiece": false,
       "author": "Frank Miller, Lynn Varley"
     },
@@ -217,7 +217,7 @@
         "es": "Cómic de Joe Sacco que narra la guerra de Bosnia a través de testimonios reales, combinando periodismo y novela gráfica.",
         "en": "Comic by Joe Sacco that narrates the war in Bosnia through real testimonies, combining journalism and graphic novel."
       },
-      "image": "/src/assets/imagenes/comics/gorazde.jpg",
+      "image": "/imagenes/comics/gorazde.jpg",
       "masterpiece": false,
       "author": "Joe Sacco"
     }
