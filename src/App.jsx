@@ -8,22 +8,7 @@ import datosMusic from "./datos_music.json";
 import datosVideogames from "./datos_videogames.json";
 import datosBoardgames from "./datos_boardgames.json";
 import datosPodcast from "./datos_podcast.json";
-
-// IMPORTACIÓN DE TRAILERS: para compatibilidad universal, usar importación dinámica
-let trailers = {};
-try {
-  trailers = await import('./trailers.json', { assert: { type: 'json' } }).then(m => m.default);
-} catch (e) {
-  try {
-    trailers = await import('./trailers.json', { with: { type: 'json' } }).then(m => m.default);
-  } catch (e2) {
-    try {
-      trailers = require('./trailers.json');
-    } catch (e3) {
-      trailers = {};
-    }
-  }
-}
+import trailers from "./trailers.json";
 
 // Utilidad para obtener el dataset según la categoría
 const datosByCategory = {
