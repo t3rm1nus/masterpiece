@@ -891,7 +891,7 @@
     {
       "id": "arrugas",
       "category": "movies",
-      "subcategory": "animation",
+      "subcategory": "animación",
       "tags": ["cine español"],
       "title": { "es": "Arrugas", "en": "Wrinkles" },
       "description": {
@@ -1481,7 +1481,7 @@
     {
       "id": 2126,
       "category": "movies",
-      "subcategory": "action",
+      "subcategory": "acción",
       "title": {"es": "Jungla de cristal", "en": "Die Hard"},
       "description": {
         "es": "Un policía de Nueva York debe enfrentarse a un grupo de terroristas que toma rehenes en un rascacielos de Los Ángeles en Nochebuena. Protagonizada por Bruce Willis y dirigida por John McTiernan.",
@@ -1625,7 +1625,7 @@
     {
       "id": 2134,
       "category": "movies",
-      "subcategory": "animation",
+      "subcategory": "animación",
       "title": {"es": "Your Name", "en": "Your Name"},
       "description": {
         "es": "Dos adolescentes, un chico de ciudad y una chica de pueblo, descubren que están misteriosamente conectados a través de sus sueños. Película de animación japonesa dirigida por Makoto Shinkai.",
@@ -1788,7 +1788,7 @@
     {
       "id": 2143,
       "category": "movies",
-      "subcategory": "animation",
+      "subcategory": "animación",
       "title": {"es": "Chico y Rita", "en": "Chico & Rita"},
       "description": {
         "es": "Una historia de amor entre un pianista y una cantante en la Cuba de los años 40 y 50, con música y animación vibrantes. Dirigida por Fernando Trueba, Javier Mariscal y Tono Errando.",
@@ -1807,7 +1807,7 @@
     {
       "id": 2144,
       "category": "movies",
-      "subcategory": "action",
+      "subcategory": "acción",
       "title": {
         "es": "Tigre y Dragón",
         "en": "Crouching Tiger, Hidden Dragon"
@@ -1888,7 +1888,7 @@
     {
       "id": 2148,
       "category": "movies",
-      "subcategory": "action",
+      "subcategory": "acción",
       "title": {
         "es": "Predator",
         "en": "Predator"
@@ -1930,7 +1930,7 @@
     {
       "id": 2150,
       "category": "movies",
-      "subcategory": "action",
+      "subcategory": "acción",
       "title": {
         "es": "The Dirty Dozen",
         "en": "The Dirty Dozen"
@@ -1951,7 +1951,7 @@
     {
       "id": 2151,
       "category": "movies",
-      "subcategory": "action",
+      "subcategory": "acción",
       "title": {
         "es": "Los cañones de Navarone",
         "en": "The Guns of Navarone"
@@ -2244,7 +2244,7 @@
     {
       "id": 1000,
       "category": "movies",
-      "subcategory": "animation",
+      "subcategory": "animación",
       "title": {"es": "Castillo en el cielo", "en": "Castle in the Sky"},
       "description": {
         "es": "Una película de animación dirigida por Hayao Miyazaki, que sigue la aventura de dos jóvenes en busca de una legendaria ciudad flotante.",
@@ -2262,7 +2262,7 @@
     {
       "id": 1001,
       "category": "movies",
-      "subcategory": "animation",
+      "subcategory": "animación",
       "title": {"es": "Mi Vecino Totoro", "en": "My Neighbor Totoro"},
       "description": {
         "es": "Una película de animación dirigida por Hayao Miyazaki, que cuenta la historia de dos hermanas que se mudan al campo y descubren un mundo mágico habitado por criaturas fantásticas.",
@@ -2280,7 +2280,7 @@
     {
       "id": 1002,
       "category": "movies",
-      "subcategory": "animation",
+      "subcategory": "animación",
       "title": {"es": "Porco Rosso", "en": "Porco Rosso"},
       "description": {
         "es": "Una película de animación dirigida por Hayao Miyazaki, que narra la historia de un piloto italiano convertido en cerdo que lucha contra piratas aéreos en el Adriático.",
@@ -2298,7 +2298,7 @@
     {
       "id": 1003,
       "category": "movies",
-      "subcategory": "animation",
+      "subcategory": "animación",
       "title": {"es": "La Princesa Mononoke", "en": "Princess Mononoke"},
       "description": {
         "es": "Una película de animación dirigida por Hayao Miyazaki, que explora el conflicto entre la naturaleza y la industrialización a través de la historia de un príncipe maldito y una princesa criada por lobos.",
@@ -2316,7 +2316,7 @@
     {
       "id": 1004,
       "category": "movies",
-      "subcategory": "animation",
+      "subcategory": "animación",
       "title": {"es": "El Viaje de Chihiro", "en": "Spirited Away"},
       "description": {
         "es": "Una película de animación dirigida por Hayao Miyazaki, que cuenta la historia de una niña que debe rescatar a sus padres después de que son convertidos en cerdos en un mundo mágico.",
