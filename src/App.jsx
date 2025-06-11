@@ -69,70 +69,66 @@ function CategoriesPage({ onCategory }) {
 
 function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const { t, lang } = useLanguage();
-  // Obtener siempre el array plano de recomendaciones
+  // Obtener array plano de items para cualquier categoría
   const datos = datosByCategory[category] || { recommendations: [] };
-  const items = Array.isArray(datos.recommendations) ? datos.recommendations : datos;
+  // Si tiene .recommendations, usarlo; si no, usar el array directamente
+  const items = Array.isArray(datos.recommendations) ? datos.recommendations : (Array.isArray(datos) ? datos : []);
 
+  const subcategoryTranslations = {
+    'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
+    'acción': lang === 'en' ? 'action' : 'acción',
+    'action': lang === 'es' ? 'acción' : 'action',
+    'comedy': lang === 'es' ? 'comedia' : 'comedy',
+    'adventure': lang === 'es' ? 'aventura' : 'adventure',
+    'aventura': lang === 'en' ? 'adventure' : 'aventura',
+    'comedia': lang === 'en' ? 'comedy' : 'comedia'
+  };
+  // subs definido ANTES del return
+  let subs = Array.from(new Set(items.map(r => {
+    if (lang === 'es' && r.subcategory === 'action') return 'acción';
+    if (lang === 'en' && (r.subcategory === 'acción' || r.subcategory === 'acción')) return 'action';
+    if (lang === 'es' && r.subcategory === 'fantasy') return 'fantasía';
+    if (lang === 'en' && r.subcategory === 'fantasía') return 'fantasy';
+    if (lang === 'es' && r.subcategory === 'comedy') return 'comedia';
+    if (lang === 'en' && r.subcategory === 'comedia') return 'comedy';
+    if (lang === 'es' && r.subcategory === 'adventure') return 'aventura';
+    if (lang === 'en' && r.subcategory === 'aventura') return 'adventure';
+    return r.subcategory;
+  })));
+  const hasSpanishCinema = items.some(r => r.tags && r.tags.includes('cine español'));
+  if (hasSpanishCinema) {
+    subs.push(lang === 'es' ? 'cine español' : 'spanish cinema');
+  }
   const masterpiecesKey = '__masterpieces__';
   const [activeSub, setActiveSub] = useState(null);
-
-  // Filtrar items usando la función de utilidad
-  const filtered = React.useMemo(() => {
-    let subs = Array.from(new Set(items.map(r => {
-      if (lang === 'es' && r.subcategory === 'action') return 'acción';
-      if (lang === 'en' && (r.subcategory === 'acción' || r.subcategory === 'acción')) return 'action';
-      if (lang === 'es' && r.subcategory === 'fantasy') return 'fantasía';
-      if (lang === 'en' && r.subcategory === 'fantasía') return 'fantasy';
-      if (lang === 'es' && r.subcategory === 'comedy') return 'comedia';
-      if (lang === 'en' && r.subcategory === 'comedia') return 'comedy';
-      if (lang === 'es' && r.subcategory === 'adventure') return 'aventura';
-      if (lang === 'en' && r.subcategory === 'aventura') return 'adventure';
-      return r.subcategory;
-    })));
-    let filtered;
-    if (activeSub === masterpiecesKey) {
-      filtered = items.filter(r => r.masterpiece);
-    } else if (activeSub) {
-      filtered = items.filter(r => {
-        if (lang === 'es' && r.subcategory === 'action' && activeSub === 'acción') return true;
-        if (lang === 'en' && r.subcategory === 'acción' && activeSub === 'action') return true;
-        if (lang === 'es' && r.subcategory === 'fantasy' && activeSub === 'fantasía') return true;
-        if (lang === 'en' && r.subcategory === 'fantasía' && activeSub === 'fantasy') return true;
-        if (lang === 'es' && r.subcategory === 'comedy' && activeSub === 'comedia') return true;
-        if (lang === 'en' && r.subcategory === 'comedia' && activeSub === 'comedy') return true;
-        if (lang === 'es' && r.subcategory === 'adventure' && activeSub === 'aventura') return true;
-        if (lang === 'en' && r.subcategory === 'aventura' && activeSub === 'adventure') return true;
-        if ((lang === 'es' && activeSub === 'cine español') || (lang === 'en' && activeSub === 'spanish cinema')) {
-          return r.tags && r.tags.includes('cine español');
-        }
-        return r.subcategory === activeSub;
-      });
-    } else {
-      filtered = items;
-    }
-    return filtered;
-  }, [items, activeSub, lang]);
+  let filtered;
+  if (activeSub === masterpiecesKey) {
+    filtered = items.filter(r => r.masterpiece);
+  } else if (activeSub) {
+    filtered = items.filter(r => {
+      if (lang === 'es' && r.subcategory === 'action' && activeSub === 'acción') return true;
+      if (lang === 'en' && r.subcategory === 'acción' && activeSub === 'action') return true;
+      if (lang === 'es' && r.subcategory === 'fantasy' && activeSub === 'fantasía') return true;
+      if (lang === 'en' && r.subcategory === 'fantasía' && activeSub === 'fantasy') return true;
+      if (lang === 'es' && r.subcategory === 'comedy' && activeSub === 'comedia') return true;
+      if (lang === 'en' && r.subcategory === 'comedia' && activeSub === 'comedy') return true;
+      if (lang === 'es' && r.subcategory === 'adventure' && activeSub === 'aventura') return true;
+      if (lang === 'en' && r.subcategory === 'aventura' && activeSub === 'adventure') return true;
+      if ((lang === 'es' && activeSub === 'cine español') || (lang === 'en' && activeSub === 'spanish cinema')) {
+        return r.tags && r.tags.includes('cine español');
+      }
+      return r.subcategory === activeSub;
+    });
+  } else {
+    filtered = items;
+  }
 
   // --- Responsive: usar select en móviles ---
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
 
-  // Función para obtener el nombre traducido de la subcategoría
-  const getSubcategoryName = (sub) => {
-    if (sub === masterpiecesKey) {
-      return lang === 'en' ? 'Masterpieces' : 'Obras maestras';
-    }
-    return normalizeSubcategory(sub, lang);
-  };
-
-  // Función para manejar el cambio de subcategoría
-  const handleSubcategoryChange = (sub) => {
-    console.log('Cambiando subcategoría a:', sub);
-    console.log('Subcategoría normalizada:', normalizeSubcategoryInternal(sub));
-    setActiveSub(sub);
-  };
-
   return (
     <div>
+      {/* Solo mostrar el menú superior en desktop/tablet, no en móviles aquí */}
       {!(typeof window !== 'undefined' && window.innerWidth <= 600) && (
         <Menu showBack={true} onBack={onBack} backLabel={lang === 'en' ? 'Back' : 'Volver'} onNavigate={onNavigate} />
       )}
@@ -142,106 +138,36 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
           <select
             className="subcategory-select"
             value={activeSub || ''}
-            onChange={e => handleSubcategoryChange(e.target.value || null)}
+            onChange={e => setActiveSub(e.target.value || null)}
             style={{width:'100%',maxWidth:320,marginBottom:'1rem'}}
           >
             <option value="">{lang === 'en' ? 'All' : 'Todas'}</option>
             {subs.map(sub => (
-              <option key={sub} value={sub}>{getSubcategoryName(sub)}</option>
+              <option key={sub} value={sub}>{subcategoryTranslations[sub] || sub}</option>
             ))}
-            <option value={masterpiecesKey}>{getSubcategoryName(masterpiecesKey)}</option>
+            <option value={masterpiecesKey}>{lang === 'en' ? 'Masterpieces' : 'Obras maestras'}</option>
           </select>
         </div>
       ) : (
         <div className="categories-list">
-          <button
-            className={`category-btn${!activeSub ? ' active' : ''}`}
-            onClick={() => handleSubcategoryChange(null)}
-          >
-            {lang === 'en' ? 'All' : 'Todas'}
-          </button>
           {subs.map(sub => (
             <button
               key={sub}
               className={`category-btn${activeSub === sub ? ' active' : ''}`}
-              onClick={() => handleSubcategoryChange(sub)}
+              onClick={() => setActiveSub(sub)}
             >
-              {getSubcategoryName(sub)}
+              {subcategoryTranslations[sub] || sub}
             </button>
           ))}
           <button
             className={`category-btn${activeSub === masterpiecesKey ? ' active' : ''}`}
-            onClick={() => handleSubcategoryChange(activeSub === masterpiecesKey ? null : masterpiecesKey)}
+            onClick={() => setActiveSub(activeSub === masterpiecesKey ? null : masterpiecesKey)}
           >
-            {getSubcategoryName(masterpiecesKey)}
+            {lang === 'en' ? 'Masterpieces' : 'Obras maestras'}
           </button>
         </div>
       )}
-      <div className="recommendations-list">
-        {filtered.map((rec, idx) => {
-          const title = typeof rec.title === 'object' ? (rec.title[lang] || rec.title.es || rec.title.en || '') : (rec.title || '');
-          const description = typeof rec.description === 'object' ? (rec.description[lang] || rec.description.es || rec.description.en || '') : (rec.description || '');
-          const recKey = `${rec.category}_${rec.id !== undefined ? rec.id : idx}`;
-          if (isMobile) {
-            return (
-              <div
-                className={`recommendation-card mobile-home-layout ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
-                key={recKey}
-                onClick={() => onItemClick && onItemClick(rec.id)}
-                style={{cursor: onItemClick ? 'pointer' : 'default', position: 'relative'}}
-              >
-                <div className="rec-home-row rec-home-row-top">
-                  <span className="rec-home-title">{title}</span>
-                </div>
-                <div className="rec-home-row rec-home-row-bottom">
-                  <div style={{display:'flex',flexDirection:'column',alignItems:'center',minWidth:0}}>
-                    <img src={rec.image} alt={title} width={80} height={110} style={{objectFit:'cover', borderRadius:8, flexShrink:0, marginBottom:4}} />
-                    <div className="rec-home-cats" style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'5px',marginTop:0,marginBottom:0}}>
-                      <span className="rec-home-cat" style={{marginBottom:0, lineHeight:'1.1'}}>{t.categories[rec.category]}</span>
-                      <span className="rec-home-subcat" style={{marginTop:0, lineHeight:'1.1'}}>{normalizeSubcategory(rec.subcategory, lang)}</span>
-                    </div>
-                  </div>
-                  <div className="rec-home-info">
-                    <p className="rec-home-desc">{description}</p>
-                  </div>
-                </div>
-                {rec.masterpiece && (
-                  <span className="masterpiece-badge" title="Obra maestra">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="12" cy="12" r="12" fill="#ffd700"/>
-                      <text x="12" y="17" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">1</text>
-                    </svg>
-                  </span>
-                )}
-              </div>
-            );
-          }
-          return (
-            <div
-              className={`recommendation-card ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
-              key={recKey}
-              onClick={() => onItemClick && onItemClick(rec.id)}
-              style={{cursor: onItemClick ? 'pointer' : 'default', position: 'relative'}}
-            >
-              {rec.masterpiece && (
-                <span className="masterpiece-badge" title="Obra maestra">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="12" fill="#ffd700"/>
-                    <text x="12" y="17" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">1</text>
-                  </svg>
-                </span>
-              )}
-              <img src={rec.image} alt={title} width={120} height={170} style={{objectFit:'cover'}} />
-              <div style={{marginBottom: '0.2rem'}}>
-                <span style={{fontWeight: 'bold', display: 'block'}}>{t.categories[rec.category]}</span>
-                <span style={{fontWeight: 500, color: '#888'}}>{normalizeSubcategory(rec.subcategory, lang)}</span>
-              </div>
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </div>
-          );
-        })}
-      </div>
+      <RecommendationsList recommendations={filtered} onItemClick={onItemClick} />
     </div>
   );
 }
@@ -277,8 +203,8 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
                 <div style={{display:'flex',flexDirection:'column',alignItems:'center',minWidth:0}}>
                   <img src={rec.image} alt={title} width={80} height={110} style={{objectFit:'cover', borderRadius:8, flexShrink:0, marginBottom:4}} />
                   <div className="rec-home-cats" style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'5px',marginTop:0,marginBottom:0}}>
-                    <span className="rec-home-cat" style={{marginBottom:0, lineHeight:'1.1'}}>{categoryNames[rec.category]}</span>
-                    <span className="rec-home-subcat" style={{marginTop:0, lineHeight:'1.1'}}>{getSubcategoryName(rec.subcategory)}</span>
+                    <span className="rec-home-cat" style={{marginBottom:0, lineHeight:'1.1'}}>{t.categories[rec.category]}</span>
+                    <span className="rec-home-subcat" style={{marginTop:0, lineHeight:'1.1'}}>{normalizeSubcategory(rec.subcategory, lang)}</span>
                   </div>
                 </div>
                 <div className="rec-home-info">
@@ -313,8 +239,8 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
             )}
             <img src={rec.image} alt={title} width={120} height={170} style={{objectFit:'cover'}} />
             <div style={{marginBottom: '0.2rem'}}>
-              <span style={{fontWeight: 'bold', display: 'block'}}>{categoryNames[rec.category]}</span>
-              <span style={{fontWeight: 500, color: '#888'}}>{getSubcategoryName(rec.subcategory)}</span>
+              <span style={{fontWeight: 'bold', display: 'block'}}>{t.categories[rec.category]}</span>
+              <span style={{fontWeight: 500, color: '#888'}}>{normalizeSubcategory(rec.subcategory, lang)}</span>
             </div>
             <h3>{title}</h3>
             <p>{description}</p>
