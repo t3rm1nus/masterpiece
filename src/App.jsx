@@ -70,6 +70,7 @@ function CategoriesPage({ onCategory }) {
 function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const { t, lang } = useLanguage();
   const datos = datosByCategory[category] || { recommendations: [] };
+  const [activeSub, setActiveSub] = useState(null);
   
   // Asegurarnos de que los datos se filtran correctamente
   const items = React.useMemo(() => {
@@ -107,7 +108,11 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   );
 
   const masterpiecesKey = '__masterpieces__';
-  const [activeSub, setActiveSub] = useState(null);
+
+  // Función para manejar el cambio de subcategoría
+  const handleSubcategoryChange = React.useCallback((subcategory) => {
+    setActiveSub(subcategory);
+  }, []);
 
   // Memoizar los items filtrados
   const filtered = React.useMemo(() => {
@@ -139,7 +144,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
           <select
             className="subcategory-select"
             value={activeSub || ''}
-            onChange={e => setActiveSub(e.target.value || null)}
+            onChange={e => handleSubcategoryChange(e.target.value || null)}
             style={{width:'100%',maxWidth:320,marginBottom:'1rem'}}
           >
             <option value="">{lang === 'en' ? 'All' : 'Todas'}</option>
@@ -153,7 +158,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
         <div className="categories-list">
           <button
             className={`category-btn${!activeSub ? ' active' : ''}`}
-            onClick={() => setActiveSub(null)}
+            onClick={() => handleSubcategoryChange(null)}
           >
             {lang === 'en' ? 'All' : 'Todas'}
           </button>
@@ -161,14 +166,14 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
             <button
               key={sub}
               className={`category-btn${activeSub === sub ? ' active' : ''}`}
-              onClick={() => setActiveSub(sub)}
+              onClick={() => handleSubcategoryChange(sub)}
             >
               {subcategoryTranslations[sub] || sub}
             </button>
           ))}
           <button
             className={`category-btn${activeSub === masterpiecesKey ? ' active' : ''}`}
-            onClick={() => setActiveSub(activeSub === masterpiecesKey ? null : masterpiecesKey)}
+            onClick={() => handleSubcategoryChange(activeSub === masterpiecesKey ? null : masterpiecesKey)}
           >
             {lang === 'en' ? 'Masterpieces' : 'Obras maestras'}
           </button>
