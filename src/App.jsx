@@ -169,10 +169,71 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
           </button>
         </div>
       )}
-      <RecommendationsList 
-        recommendations={filtered} 
-        onItemClick={onItemClick} 
-      />
+      <div className="recommendations-list">
+        {filtered.map((rec, idx) => {
+          const title = typeof rec.title === 'object' ? (rec.title[lang] || rec.title.es || rec.title.en || '') : (rec.title || '');
+          const description = typeof rec.description === 'object' ? (rec.description[lang] || rec.description.es || rec.description.en || '') : (rec.description || '');
+          const recKey = `${rec.category}_${rec.id !== undefined ? rec.id : idx}`;
+          if (isMobile) {
+            return (
+              <div
+                className={`recommendation-card mobile-home-layout ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
+                key={recKey}
+                onClick={() => onItemClick && onItemClick(rec.id)}
+                style={{cursor: onItemClick ? 'pointer' : 'default', position: 'relative'}}
+              >
+                <div className="rec-home-row rec-home-row-top">
+                  <span className="rec-home-title">{title}</span>
+                </div>
+                <div className="rec-home-row rec-home-row-bottom">
+                  <div style={{display:'flex',flexDirection:'column',alignItems:'center',minWidth:0}}>
+                    <img src={rec.image} alt={title} width={80} height={110} style={{objectFit:'cover', borderRadius:8, flexShrink:0, marginBottom:4}} />
+                    <div className="rec-home-cats" style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'5px',marginTop:0,marginBottom:0}}>
+                      <span className="rec-home-cat" style={{marginBottom:0, lineHeight:'1.1'}}>{t.categories[rec.category]}</span>
+                      <span className="rec-home-subcat" style={{marginTop:0, lineHeight:'1.1'}}>{normalizeSubcategory(rec.subcategory, lang)}</span>
+                    </div>
+                  </div>
+                  <div className="rec-home-info">
+                    <p className="rec-home-desc">{description}</p>
+                  </div>
+                </div>
+                {rec.masterpiece && (
+                  <span className="masterpiece-badge" title="Obra maestra">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12" cy="12" r="12" fill="#ffd700"/>
+                      <text x="12" y="17" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">1</text>
+                    </svg>
+                  </span>
+                )}
+              </div>
+            );
+          }
+          return (
+            <div
+              className={`recommendation-card ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
+              key={recKey}
+              onClick={() => onItemClick && onItemClick(rec.id)}
+              style={{cursor: onItemClick ? 'pointer' : 'default', position: 'relative'}}
+            >
+              {rec.masterpiece && (
+                <span className="masterpiece-badge" title="Obra maestra">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="12" fill="#ffd700"/>
+                    <text x="12" y="17" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">1</text>
+                  </svg>
+                </span>
+              )}
+              <img src={rec.image} alt={title} width={120} height={170} style={{objectFit:'cover'}} />
+              <div style={{marginBottom: '0.2rem'}}>
+                <span style={{fontWeight: 'bold', display: 'block'}}>{t.categories[rec.category]}</span>
+                <span style={{fontWeight: 500, color: '#888'}}>{normalizeSubcategory(rec.subcategory, lang)}</span>
+              </div>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
