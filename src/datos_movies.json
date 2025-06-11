@@ -2289,7 +2289,7 @@
       "director": "Hayao Miyazaki",
       "image": "/imagenes/peliculas/porco_rosso.jpg",
       "year": 1992,
-      "masterpiece": true,
+      "masterpiece": false,
       "trailer": {
         "en": "https://www.youtube.com/watch?v=3LRyNwYg1f8",
         "es": "https://www.youtube.com/watch?v=oD6yrU1SEuk"
@@ -2311,6 +2311,24 @@
       "trailer": {
         "es": "https://www.youtube.com/watch?v=xhh8PzDnhiI",
         "en": "https://www.youtube.com/watch?v=vf6c6n35wr4"
+      }
+    },
+    {
+      "id": 1004,
+      "category": "movies",
+      "subcategory": "animation",
+      "title": {"es": "El Viaje de Chihiro", "en": "Spirited Away"},
+      "description": {
+        "es": "Una película de animación dirigida por Hayao Miyazaki, que cuenta la historia de una niña que debe rescatar a sus padres después de que son convertidos en cerdos en un mundo mágico.",
+        "en": "An animated film directed by Hayao Miyazaki, telling the story of a young girl who must rescue her parents after they are turned into pigs in a magical world."
+      },
+      "director": "Hayao Miyazaki",
+      "image": "/imagenes/peliculas/chihiro.jpg",
+      "year": 2001,
+      "masterpiece": true,
+      "trailer": {
+        "en": "https://www.youtube.com/watch?v=fDUFP7EeXLE",
+        "es": "https://www.youtube.com/watch?v=5Fgq4Osh6XQ"
       }
     }
   ]
