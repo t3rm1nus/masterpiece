@@ -12,7 +12,7 @@ import trailers from "./trailers.json";
 
 // Utilidad para obtener el dataset según la categoría
 const datosByCategory = {
-  movies: datosMovies,
+  movies: { recommendations: datosMovies.recommendations },
   comics: datosComics,
   books: datosBooks,
   music: datosMusic,
@@ -80,10 +80,26 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     'animación': lang === 'en' ? 'animation' : 'animación',
     'animation': lang === 'es' ? 'animación' : 'animation'
   };
-  let subs = Array.from(new Set(items.map(r => {
-    const subcategory = r.subcategory;
-    return subcategoryTranslations[subcategory] || subcategory;
-  })));
+
+  // Función para normalizar subcategorías
+  const normalizeSubcategory = (subcategory) => {
+    if (lang === 'es') {
+      if (subcategory === 'action') return 'acción';
+      if (subcategory === 'animation') return 'animación';
+      if (subcategory === 'fantasy') return 'fantasía';
+      if (subcategory === 'comedy') return 'comedia';
+      if (subcategory === 'adventure') return 'aventura';
+    } else {
+      if (subcategory === 'acción') return 'action';
+      if (subcategory === 'animación') return 'animation';
+      if (subcategory === 'fantasía') return 'fantasy';
+      if (subcategory === 'comedia') return 'comedy';
+      if (subcategory === 'aventura') return 'adventure';
+    }
+    return subcategory;
+  };
+
+  let subs = Array.from(new Set(items.map(r => normalizeSubcategory(r.subcategory))));
   const hasSpanishCinema = items.some(r => r.tags && r.tags.includes('cine español'));
   if (hasSpanishCinema) {
     subs.push(lang === 'es' ? 'cine español' : 'spanish cinema');
@@ -94,11 +110,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   if (activeSub === masterpiecesKey) {
     filtered = items.filter(r => r.masterpiece);
   } else if (activeSub) {
-    filtered = items.filter(r => {
-      const subcategory = r.subcategory;
-      const translatedSubcategory = subcategoryTranslations[subcategory] || subcategory;
-      return translatedSubcategory === activeSub;
-    });
+    filtered = items.filter(r => normalizeSubcategory(r.subcategory) === activeSub);
   } else {
     filtered = items;
   }
