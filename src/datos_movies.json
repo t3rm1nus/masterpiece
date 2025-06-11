@@ -2253,10 +2253,28 @@
       "director": "Hayao Miyazaki",
       "image": "/imagenes/peliculas/castillo_en_el_cielo.jpg",
       "year": 1986,
-      "masterpiece": true,
+      "masterpiece": false,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=FgWd39ziFe8",
         "en": "https://www.youtube.com/watch?v=FgWd39ziFe8"
+      }
+    },
+    {
+      "id": 1001,
+      "category": "movies",
+      "subcategory": "animation",
+      "title": {"es": "Mi Vecino Totoro", "en": "My Neighbor Totoro"},
+      "description": {
+        "es": "Una película de animación dirigida por Hayao Miyazaki, que cuenta la historia de dos hermanas que se mudan al campo y descubren un mundo mágico habitado por criaturas fantásticas.",
+        "en": "An animated film directed by Hayao Miyazaki, telling the story of two sisters who move to the countryside and discover a magical world inhabited by fantastic creatures."
+      },
+      "director": "Hayao Miyazaki",
+      "image": "/imagenes/peliculas/totoro.jpg",
+      "year": 1988,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=BjeBG8Xrci8",
+        "en": "https://www.youtube.com/watch?v=HaLISMAGdOE"
       }
     }
   ]
