@@ -72,14 +72,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const datos = datosByCategory[category] || { recommendations: [] };
   const [activeSub, setActiveSub] = useState(null);
   
-  // Obtener items de la categoría actual
-  const items = React.useMemo(() => {
-    const filtered = datos.recommendations.filter(r => r.category === category);
-    console.log('Items filtrados por categoría:', filtered.length);
-    return filtered;
-  }, [datos.recommendations, category]);
-
-  // Mapeo directo de subcategorías
+  // Mapeo unificado de subcategorías
   const subcategoryMap = {
     'sci-fi': { es: 'ciencia ficción', en: 'sci-fi' },
     'action': { es: 'acción', en: 'action' },
@@ -92,8 +85,16 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     'horror': { es: 'terror', en: 'horror' },
     'adventure': { es: 'aventura', en: 'adventure' },
     'animación': { es: 'animación', en: 'animation' },
-    'animation': { es: 'animación', en: 'animation' }
+    'animation': { es: 'animación', en: 'animation' },
+    'western': { es: 'western', en: 'western' }
   };
+
+  // Obtener items de la categoría actual
+  const items = React.useMemo(() => {
+    const filtered = datos.recommendations.filter(r => r.category === category);
+    console.log('Items filtrados por categoría:', filtered.length);
+    return filtered;
+  }, [datos.recommendations, category]);
 
   // Obtener subcategorías únicas
   const subs = React.useMemo(() => {
@@ -187,26 +188,26 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
           </button>
         </div>
       )}
-      <RecommendationsList recommendations={filtered} onItemClick={onItemClick} />
+      <RecommendationsList 
+        recommendations={filtered} 
+        onItemClick={onItemClick} 
+        subcategoryMap={subcategoryMap}
+      />
     </div>
   );
 }
 
-function RecommendationsList({ recommendations, onItemClick, isHome }) {
+function RecommendationsList({ recommendations, onItemClick, isHome, subcategoryMap }) {
   const { lang, t } = useLanguage();
   const categoryNames = t.categories;
-  const subcategoryTranslations = {
-    'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
-    'acción': lang === 'en' ? 'action' : 'acción',
-    'action': lang === 'es' ? 'acción' : 'action',
-    'comedy': lang === 'es' ? 'comedia' : 'comedy',
-    'adventure': lang === 'es' ? 'aventura' : 'adventure',
-    'aventura': lang === 'en' ? 'adventure' : 'aventura',
-    'comedia': lang === 'en' ? 'comedy' : 'comedia',
-    'animación': lang === 'en' ? 'animation' : 'animación',
-    'animation': lang === 'es' ? 'animación' : 'animation'
-  };
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
+
+  // Función para obtener el nombre traducido de la subcategoría
+  const getSubcategoryName = (sub) => {
+    const translation = subcategoryMap?.[sub];
+    return translation ? translation[lang] : sub;
+  };
+
   return (
     <div className="recommendations-list">
       {recommendations.map((rec, idx) => {
@@ -214,7 +215,6 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
         const description = typeof rec.description === 'object' ? (rec.description[lang] || rec.description.es || rec.description.en || '') : (rec.description || '');
         const recKey = `${rec.category}_${rec.id !== undefined ? rec.id : idx}`;
         if (isMobile && (isHome || !isHome)) {
-          // Usar el layout móvil especial para todos los listados en móvil
           return (
             <div
               className={`recommendation-card mobile-home-layout ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
@@ -222,17 +222,15 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
               onClick={() => onItemClick && onItemClick(rec.id)}
               style={{cursor: onItemClick ? 'pointer' : 'default', position: 'relative'}}
             >
-              {/* Fila superior: solo el nombre, centrado */}
               <div className="rec-home-row rec-home-row-top">
                 <span className="rec-home-title">{title}</span>
               </div>
-              {/* Fila inferior: imagen, debajo género y subgénero, y a la derecha la descripción */}
               <div className="rec-home-row rec-home-row-bottom">
                 <div style={{display:'flex',flexDirection:'column',alignItems:'center',minWidth:0}}>
                   <img src={rec.image} alt={title} width={80} height={110} style={{objectFit:'cover', borderRadius:8, flexShrink:0, marginBottom:4}} />
                   <div className="rec-home-cats" style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'5px',marginTop:0,marginBottom:0}}>
                     <span className="rec-home-cat" style={{marginBottom:0, lineHeight:'1.1'}}>{categoryNames[rec.category]}</span>
-                    <span className="rec-home-subcat" style={{marginTop:0, lineHeight:'1.1'}}>{subcategoryTranslations[rec.subcategory] || rec.subcategory}</span>
+                    <span className="rec-home-subcat" style={{marginTop:0, lineHeight:'1.1'}}>{getSubcategoryName(rec.subcategory)}</span>
                   </div>
                 </div>
                 <div className="rec-home-info">
@@ -250,7 +248,6 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
             </div>
           );
         }
-        // Layout normal para desktop/tablet o fuera de home
         return (
           <div
             className={`recommendation-card ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
@@ -269,7 +266,7 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
             <img src={rec.image} alt={title} width={120} height={170} style={{objectFit:'cover'}} />
             <div style={{marginBottom: '0.2rem'}}>
               <span style={{fontWeight: 'bold', display: 'block'}}>{categoryNames[rec.category]}</span>
-              <span style={{fontWeight: 500, color: '#888'}}>{subcategoryTranslations[rec.subcategory] || rec.subcategory}</span>
+              <span style={{fontWeight: 500, color: '#888'}}>{getSubcategoryName(rec.subcategory)}</span>
             </div>
             <h3>{title}</h3>
             <p>{description}</p>
