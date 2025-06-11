@@ -10,6 +10,7 @@ import datosBoardgames from "./datos_boardgames.json";
 import datosPodcast from "./datos_podcast.json";
 import trailers from "./trailers.json";
 import React from "react";
+import { normalizeSubcategory, filterItemsBySubcategory, getUniqueSubcategories } from './utils/categoryUtils';
 
 // Utilidad para obtener el dataset según la categoría
 const datosByCategory = {
@@ -87,36 +88,10 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     'animation': lang === 'es' ? 'animación' : 'animation'
   };
 
-  // Función para normalizar subcategorías
-  const normalizeSubcategory = React.useCallback((subcategory) => {
-    if (!subcategory) return '';
-    const normalizedSubcategory = subcategory.toLowerCase().trim();
-    if (lang === 'es') {
-      switch (normalizedSubcategory) {
-        case 'action': return 'acción';
-        case 'animation': return 'animación';
-        case 'fantasy': return 'fantasía';
-        case 'comedy': return 'comedia';
-        case 'adventure': return 'aventura';
-        default: return normalizedSubcategory;
-      }
-    } else {
-      switch (normalizedSubcategory) {
-        case 'acción': return 'action';
-        case 'animación': return 'animation';
-        case 'fantasía': return 'fantasy';
-        case 'comedia': return 'comedy';
-        case 'aventura': return 'adventure';
-        default: return normalizedSubcategory;
-      }
-    }
-  }, [lang]);
-
   // Memoizar las subcategorías para evitar recálculos innecesarios
   const subs = React.useMemo(() => {
-    const uniqueSubs = new Set(items.map(r => normalizeSubcategory(r.subcategory)));
-    return Array.from(uniqueSubs).filter(Boolean);
-  }, [items, normalizeSubcategory]);
+    return getUniqueSubcategories(items, lang);
+  }, [items, lang]);
 
   const hasSpanishCinema = React.useMemo(() => 
     items.some(r => r.tags && r.tags.includes('cine español')),
@@ -131,10 +106,10 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     if (activeSub === masterpiecesKey) {
       return items.filter(r => r.masterpiece);
     } else if (activeSub) {
-      return items.filter(r => normalizeSubcategory(r.subcategory) === activeSub);
+      return filterItemsBySubcategory(items, activeSub, lang);
     }
     return items;
-  }, [items, activeSub, normalizeSubcategory]);
+  }, [items, activeSub, lang]);
 
   // --- Responsive: usar select en móviles ---
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
