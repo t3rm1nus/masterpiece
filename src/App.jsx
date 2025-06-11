@@ -187,8 +187,9 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
       {recommendations.map((rec, idx) => {
         const title = typeof rec.title === 'object' ? (rec.title[lang] || rec.title.es || rec.title.en || '') : (rec.title || '');
         const description = typeof rec.description === 'object' ? (rec.description[lang] || rec.description.es || rec.description.en || '') : (rec.description || '');
-        const recKey = `${rec.category}_${rec.id !== undefined ? rec.id : idx}`;
-        if (isMobile && (isHome || !isHome)) {
+        // Clave única: añade siempre el índice para evitar duplicados
+        const recKey = `${rec.category}_${rec.id !== undefined ? rec.id : idx}_${idx}`;
+        if (isHome && isMobile) {
           return (
             <div
               className={`recommendation-card mobile-home-layout ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
@@ -196,15 +197,17 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
               onClick={() => onItemClick && onItemClick(rec.id)}
               style={{cursor: onItemClick ? 'pointer' : 'default', position: 'relative'}}
             >
+              {/* Fila superior: solo el nombre, centrado */}
               <div className="rec-home-row rec-home-row-top">
                 <span className="rec-home-title">{title}</span>
               </div>
+              {/* Fila inferior: imagen, debajo género y subgénero, y a la derecha la descripción */}
               <div className="rec-home-row rec-home-row-bottom">
                 <div style={{display:'flex',flexDirection:'column',alignItems:'center',minWidth:0}}>
                   <img src={rec.image} alt={title} width={80} height={110} style={{objectFit:'cover', borderRadius:8, flexShrink:0, marginBottom:4}} />
                   <div className="rec-home-cats" style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'5px',marginTop:0,marginBottom:0}}>
-                    <span className="rec-home-cat" style={{marginBottom:0, lineHeight:'1.1'}}>{t.categories[rec.category]}</span>
-                    <span className="rec-home-subcat" style={{marginTop:0, lineHeight:'1.1'}}>{normalizeSubcategory(rec.subcategory, lang)}</span>
+                    <span className="rec-home-cat" style={{marginBottom:0, lineHeight:'1.1'}}>{categoryNames[rec.category]}</span>
+                    <span className="rec-home-subcat" style={{marginTop:0, lineHeight:'1.1'}}>{subcategoryTranslations[rec.subcategory] || rec.subcategory}</span>
                   </div>
                 </div>
                 <div className="rec-home-info">
@@ -222,6 +225,7 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
             </div>
           );
         }
+        // Layout normal para desktop/tablet o fuera de home
         return (
           <div
             className={`recommendation-card ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
@@ -239,8 +243,8 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
             )}
             <img src={rec.image} alt={title} width={120} height={170} style={{objectFit:'cover'}} />
             <div style={{marginBottom: '0.2rem'}}>
-              <span style={{fontWeight: 'bold', display: 'block'}}>{t.categories[rec.category]}</span>
-              <span style={{fontWeight: 500, color: '#888'}}>{normalizeSubcategory(rec.subcategory, lang)}</span>
+              <span style={{fontWeight: 'bold', display: 'block'}}>{categoryNames[rec.category]}</span>
+              <span style={{fontWeight: 500, color: '#888'}}>{subcategoryTranslations[rec.subcategory] || rec.subcategory}</span>
             </div>
             <h3>{title}</h3>
             <p>{description}</p>
