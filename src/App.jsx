@@ -83,20 +83,28 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
 
   // Función para normalizar subcategorías
   const normalizeSubcategory = (subcategory) => {
+    // Primero normalizamos a español
+    const normalizedSubcategory = subcategory.toLowerCase();
     if (lang === 'es') {
-      if (subcategory === 'action') return 'acción';
-      if (subcategory === 'animation') return 'animación';
-      if (subcategory === 'fantasy') return 'fantasía';
-      if (subcategory === 'comedy') return 'comedia';
-      if (subcategory === 'adventure') return 'aventura';
+      switch (normalizedSubcategory) {
+        case 'action': return 'acción';
+        case 'animation': return 'animación';
+        case 'fantasy': return 'fantasía';
+        case 'comedy': return 'comedia';
+        case 'adventure': return 'aventura';
+        default: return normalizedSubcategory;
+      }
     } else {
-      if (subcategory === 'acción') return 'action';
-      if (subcategory === 'animación') return 'animation';
-      if (subcategory === 'fantasía') return 'fantasy';
-      if (subcategory === 'comedia') return 'comedy';
-      if (subcategory === 'aventura') return 'adventure';
+      // Luego normalizamos a inglés
+      switch (normalizedSubcategory) {
+        case 'acción': return 'action';
+        case 'animación': return 'animation';
+        case 'fantasía': return 'fantasy';
+        case 'comedia': return 'comedy';
+        case 'aventura': return 'adventure';
+        default: return normalizedSubcategory;
+      }
     }
-    return subcategory;
   };
 
   let subs = Array.from(new Set(items.map(r => normalizeSubcategory(r.subcategory))));
