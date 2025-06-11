@@ -76,18 +76,13 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     'comedy': lang === 'es' ? 'comedia' : 'comedy',
     'adventure': lang === 'es' ? 'aventura' : 'adventure',
     'aventura': lang === 'en' ? 'adventure' : 'aventura',
-    'comedia': lang === 'en' ? 'comedy' : 'comedia'
+    'comedia': lang === 'en' ? 'comedy' : 'comedia',
+    'animación': lang === 'en' ? 'animation' : 'animación',
+    'animation': lang === 'es' ? 'animación' : 'animation'
   };
   let subs = Array.from(new Set(items.map(r => {
-    if (lang === 'es' && r.subcategory === 'action') return 'acción';
-    if (lang === 'en' && (r.subcategory === 'acción' || r.subcategory === 'acción')) return 'action';
-    if (lang === 'es' && r.subcategory === 'fantasy') return 'fantasía';
-    if (lang === 'en' && r.subcategory === 'fantasía') return 'fantasy';
-    if (lang === 'es' && r.subcategory === 'comedy') return 'comedia';
-    if (lang === 'en' && r.subcategory === 'comedia') return 'comedy';
-    if (lang === 'es' && r.subcategory === 'adventure') return 'aventura';
-    if (lang === 'en' && r.subcategory === 'aventura') return 'adventure';
-    return r.subcategory;
+    const subcategory = r.subcategory;
+    return subcategoryTranslations[subcategory] || subcategory;
   })));
   const hasSpanishCinema = items.some(r => r.tags && r.tags.includes('cine español'));
   if (hasSpanishCinema) {
@@ -100,18 +95,9 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     filtered = items.filter(r => r.masterpiece);
   } else if (activeSub) {
     filtered = items.filter(r => {
-      if (lang === 'es' && r.subcategory === 'action' && activeSub === 'acción') return true;
-      if (lang === 'en' && r.subcategory === 'acción' && activeSub === 'action') return true;
-      if (lang === 'es' && r.subcategory === 'fantasy' && activeSub === 'fantasía') return true;
-      if (lang === 'en' && r.subcategory === 'fantasía' && activeSub === 'fantasy') return true;
-      if (lang === 'es' && r.subcategory === 'comedy' && activeSub === 'comedia') return true;
-      if (lang === 'en' && r.subcategory === 'comedia' && activeSub === 'comedy') return true;
-      if (lang === 'es' && r.subcategory === 'adventure' && activeSub === 'aventura') return true;
-      if (lang === 'en' && r.subcategory === 'aventura' && activeSub === 'adventure') return true;
-      if ((lang === 'es' && activeSub === 'cine español') || (lang === 'en' && activeSub === 'spanish cinema')) {
-        return r.tags && r.tags.includes('cine español');
-      }
-      return r.subcategory === activeSub;
+      const subcategory = r.subcategory;
+      const translatedSubcategory = subcategoryTranslations[subcategory] || subcategory;
+      return translatedSubcategory === activeSub;
     });
   } else {
     filtered = items;
@@ -176,7 +162,9 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
     'comedy': lang === 'es' ? 'comedia' : 'comedy',
     'adventure': lang === 'es' ? 'aventura' : 'adventure',
     'aventura': lang === 'en' ? 'adventure' : 'aventura',
-    'comedia': lang === 'en' ? 'comedy' : 'comedia'
+    'comedia': lang === 'en' ? 'comedy' : 'comedia',
+    'animación': lang === 'en' ? 'animation' : 'animación',
+    'animation': lang === 'es' ? 'animación' : 'animation'
   };
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
   return (
@@ -319,7 +307,9 @@ function ItemDetailPage({ itemId, onBack }) {
     'comedy': lang === 'es' ? 'comedia' : 'comedy',
     'adventure': lang === 'es' ? 'aventura' : 'adventure',
     'aventura': lang === 'en' ? 'adventure' : 'aventura',
-    'comedia': lang === 'en' ? 'comedy' : 'comedia'
+    'comedia': lang === 'en' ? 'comedy' : 'comedia',
+    'animación': lang === 'en' ? 'animation' : 'animación',
+    'animation': lang === 'es' ? 'animación' : 'animation'
   };
 
   return (
