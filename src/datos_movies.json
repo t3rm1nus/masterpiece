@@ -45,22 +45,22 @@
     {
       "id": 25,
       "category": "movies",
-      "subcategory": "action",
+      "subcategory": "thriller",
       "title": {
-        "es": "300",
-        "en": "300"
+        "es": "El Nombre de la Rosa",
+        "en": "The Name of the Rose"
       },
       "description": {
-        "es": "Una épica película de acción dirigida por Zack Snyder.",
-        "en": "An epic action film directed by Zack Snyder."
+        "es": "Una película de misterio basada en la novela de Umberto Eco.",
+        "en": "A mystery film based on Umberto Eco's novel."
       },
-      "director": "Zack Snyder",
-      "image": "/imagenes/peliculas/300.jpg",
-      "year": 2006,
+      "director": "Jean-Jacques Annaud",
+      "image": "/imagenes/peliculas/nombre_de_la_rosa.jpg",
+      "year": 1986,
       "masterpiece": true,
       "trailer": {
-        "es": "https://www.youtube.com/watch?v=mi4xUUJSuro",
-        "en": "https://www.youtube.com/watch?v=UrIbxk7idYA"
+        "es": "https://www.youtube.com/watch?v=es_trailer_url",
+        "en": "https://www.youtube.com/watch?v=en_trailer_url"
       }
     },
     {
@@ -1628,7 +1628,7 @@
       "year": 2014,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=clRX9RXOb64&t=17s",
-        "en": "https://www.youtube.com/watch?v=iVAgTiBrrDA&t=3s"
+        "en": "https://www.youtube.com/watch?v=iVAgTiBrrDA&t=4s"
       },
       "masterpiece": false
     },
@@ -2887,6 +2887,154 @@
       },
       "year": 1974,
       "masterpiece": true
+    },
+    
+    {
+      "id": 161,
+      "category": "movies",
+      "subcategory": "horror",
+      "title": {
+        "es": "El Exorcista",
+        "en": "The Exorcist"
+      },
+      "description": {
+        "es": "Una película de terror icónica sobre posesión demoníaca.",
+        "en": "An iconic horror film about demonic possession."
+      },
+      "director": "William Friedkin",
+      "image": "/imagenes/peliculas/exorcista.jpg",
+      "year": 1973,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=7iCJssW8XiI",
+        "en": "https://www.youtube.com/watch?v=BU2eYAO31Cc"
+      }
+    },
+    {
+      "id": 162,
+      "category": "movies",
+      "subcategory": "western",
+      "title": {
+        "es": "El Tren de las 3 y Diez",
+        "en": "3:10 to Yuma"
+      },
+      "description": {
+        "es": "Un emocionante western sobre honor y sacrificio.",
+        "en": "An exciting western about honor and sacrifice."
+      },
+      "director": "James Mangold",
+      "image": "/imagenes/peliculas/tren_310.jpg",
+      "year": 2007,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=aPSZY355FeM",
+        "en": "https://www.youtube.com/watch?v=jX1m45CwvJ8"
+      }
+    },
+    {
+      "id": 163,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Un Día de Furia",
+        "en": "Falling Down"
+      },
+      "description": {
+        "es": "Una película sobre un hombre que enfrenta su límite en un día caluroso en Los Ángeles.",
+        "en": "A film about a man reaching his breaking point on a hot day in Los Angeles."
+      },
+      "director": "Joel Schumacher",
+      "image": "/imagenes/peliculas/un_dia_de_furia.jpg",
+      "year": 1993,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=dEnj4CFQxiY",
+        "en": "https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/"
+      }
+    },
+    {
+      "id": 164,
+      "category": "movies",
+      "subcategory": "thriller",
+      "title": {
+        "es": "Fargo",
+        "en": "Fargo"
+      },
+      "description": {
+        "es": "Una película de crimen y humor negro dirigida por los hermanos Coen.",
+        "en": "A crime and dark comedy film directed by the Coen brothers."
+      },
+      "director": "Joel Coen",
+      "image": "/imagenes/peliculas/fargo.jpg",
+      "year": 1996,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=-vFPtCfVBOo",
+        "en": "https://www.youtube.com/watch?v=ju75Sd4yAZw"
+      }
+    },
+    {
+      "id": 165,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Forrest Gump",
+        "en": "Forrest Gump"
+      },
+      "description": {
+        "es": "Una película inspiradora sobre la vida de un hombre extraordinario.",
+        "en": "An inspiring film about the life of an extraordinary man."
+      },
+      "director": "Robert Zemeckis",
+      "image": "/imagenes/peliculas/forrest_gump.jpg",
+      "year": 1994,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Cyh1LpxnaxI",
+        "en": "https://www.youtube.com/watch?v=bLvqoHBptjg"
+      }
+    },
+    {
+      "id": 166,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Four Rooms",
+        "en": "Four Rooms"
+      },
+      "description": {
+        "es": "Una película de comedia que cuenta cuatro historias en un hotel.",
+        "en": "A comedy film that tells four stories in a hotel."
+      },
+      "director": "Quentin Tarantino",
+      "image": "/imagenes/peliculas/four_rooms.jpg",
+      "year": 1995,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=6IPseYWyYcw",
+        "en": "https://www.youtube.com/watch?v=0hu12MP7b1U"
+      }
+    },
+    {
+      "id": 167,
+      "category": "movies",
+      "subcategory": "war",
+      "title": {
+        "es": "Full Metal Jacket",
+        "en": "Full Metal Jacket"
+      },
+      "description": {
+        "es": "Una película de guerra dirigida por Stanley Kubrick.",
+        "en": "A war film directed by Stanley Kubrick."
+      },
+      "director": "Stanley Kubrick",
+      "image": "/imagenes/peliculas/full_metal_jacket.jpg",
+      "year": 1987,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=7115nOKRFD8",
+        "en": "https://www.youtube.com/watch?v=n2i917l5RFc"
+      }
     }
   ]
 }
