@@ -56,11 +56,11 @@
   max-width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
-  padding-top: 4.5rem; /* Espacio para separar el h1 del menú fijo */
+  padding-top: 1rem; /* Ajustar espacio para pegar al menú superior */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start; /* Eliminar centrado vertical */
+  justify-content: flex-start; /* Eliminar centrado vertical */
   min-height: 80vh;
 }
 
