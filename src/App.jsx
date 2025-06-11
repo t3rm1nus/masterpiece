@@ -74,7 +74,9 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   
   // Obtener items de la categoría actual
   const items = React.useMemo(() => {
-    return datos.recommendations.filter(r => r.category === category);
+    const filtered = datos.recommendations.filter(r => r.category === category);
+    console.log('Items filtrados por categoría:', filtered.length);
+    return filtered;
   }, [datos.recommendations, category]);
 
   // Mapeo directo de subcategorías
@@ -96,20 +98,29 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   // Obtener subcategorías únicas
   const subs = React.useMemo(() => {
     const uniqueSubs = new Set(items.map(r => r.subcategory));
-    return Array.from(uniqueSubs).filter(Boolean);
+    const subArray = Array.from(uniqueSubs).filter(Boolean);
+    console.log('Subcategorías únicas:', subArray);
+    return subArray;
   }, [items]);
 
   const masterpiecesKey = '__masterpieces__';
 
   // Filtrar items
   const filtered = React.useMemo(() => {
-    if (!activeSub) return items;
+    if (!activeSub) {
+      console.log('Mostrando todos los items:', items.length);
+      return items;
+    }
     
     if (activeSub === masterpiecesKey) {
-      return items.filter(r => r.masterpiece);
+      const masterpieces = items.filter(r => r.masterpiece);
+      console.log('Mostrando obras maestras:', masterpieces.length);
+      return masterpieces;
     }
 
-    return items.filter(r => r.subcategory === activeSub);
+    const filtered = items.filter(r => r.subcategory === activeSub);
+    console.log(`Filtrando por subcategoría ${activeSub}:`, filtered.length);
+    return filtered;
   }, [items, activeSub]);
 
   // --- Responsive: usar select en móviles ---
@@ -124,6 +135,12 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     return translation ? translation[lang] : sub;
   };
 
+  // Función para manejar el cambio de subcategoría
+  const handleSubcategoryChange = (sub) => {
+    console.log('Cambiando subcategoría a:', sub);
+    setActiveSub(sub);
+  };
+
   return (
     <div>
       {!(typeof window !== 'undefined' && window.innerWidth <= 600) && (
@@ -135,7 +152,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
           <select
             className="subcategory-select"
             value={activeSub || ''}
-            onChange={e => setActiveSub(e.target.value || null)}
+            onChange={e => handleSubcategoryChange(e.target.value || null)}
             style={{width:'100%',maxWidth:320,marginBottom:'1rem'}}
           >
             <option value="">{lang === 'en' ? 'All' : 'Todas'}</option>
@@ -149,7 +166,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
         <div className="categories-list">
           <button
             className={`category-btn${!activeSub ? ' active' : ''}`}
-            onClick={() => setActiveSub(null)}
+            onClick={() => handleSubcategoryChange(null)}
           >
             {lang === 'en' ? 'All' : 'Todas'}
           </button>
@@ -157,14 +174,14 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
             <button
               key={sub}
               className={`category-btn${activeSub === sub ? ' active' : ''}`}
-              onClick={() => setActiveSub(sub)}
+              onClick={() => handleSubcategoryChange(sub)}
             >
               {getSubcategoryName(sub)}
             </button>
           ))}
           <button
             className={`category-btn${activeSub === masterpiecesKey ? ' active' : ''}`}
-            onClick={() => setActiveSub(activeSub === masterpiecesKey ? null : masterpiecesKey)}
+            onClick={() => handleSubcategoryChange(activeSub === masterpiecesKey ? null : masterpiecesKey)}
           >
             {getSubcategoryName(masterpiecesKey)}
           </button>
