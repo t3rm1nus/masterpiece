@@ -73,15 +73,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   
   // Asegurarnos de que los datos se filtran correctamente
   const items = React.useMemo(() => {
-    return datos.recommendations.filter(r => {
-      // Verificar que la categoría coincida
-      if (r.category !== category) return false;
-      
-      // Verificar que la subcategoría exista
-      if (!r.subcategory) return false;
-      
-      return true;
-    });
+    return datos.recommendations.filter(r => r.category === category);
   }, [datos.recommendations, category]);
 
   const subcategoryTranslations = {
@@ -125,6 +117,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
       const normalizedActiveSub = normalizeSubcategory(activeSub);
       return items.filter(r => {
         const normalizedItemSub = normalizeSubcategory(r.subcategory);
+        // Asegurarnos de que la comparación sea exacta
         return normalizedItemSub === normalizedActiveSub;
       });
     }
