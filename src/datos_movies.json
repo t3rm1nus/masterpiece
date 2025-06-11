@@ -222,7 +222,7 @@
     {
       "id": 32,
       "category": "movies",
-      "subcategory": "drama",
+      "subcategory": "comedia",
       "tags": [
         "cine español"
       ],
@@ -283,7 +283,7 @@
         "en": "https://www.youtube.com/watch?v=qJr92K_hKl0"
       },
       "year": 1974,
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 35,
@@ -304,7 +304,7 @@
         "en": "https://www.youtube.com/watch?v=QJrG2C1b1y0"
       },
       "year": 1990,
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 36,
@@ -725,27 +725,6 @@
       "masterpiece": false
     },
     {
-      "id": 1012,
-      "category": "movies",
-      "subcategory": "drama",
-      "title": {
-        "es": "Pobres criaturas",
-        "en": "Poor Things"
-      },
-      "description": {
-        "es": "Una joven es devuelta a la vida por un científico poco convencional y emprende un viaje de autodescubrimiento y libertad en una versión alternativa de la época victoriana.",
-        "en": "A young woman is brought back to life by an unorthodox scientist and embarks on a journey of self-discovery and freedom in an alternative Victorian era."
-      },
-      "image": "/imagenes/peliculas/poor_things.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=SsEojV8hZ9I",
-        "en": "https://www.youtube.com/watch?v=RlbR5N6veqw"
-      },
-      "director": "Yorgos Lanthimos",
-      "year": 2023,
-      "masterpiece": false
-    },
-    {
       "id": 1013,
       "category": "movies",
       "subcategory": "sci-fi",
@@ -909,28 +888,6 @@
       "director": "Rob Reiner",
       "year": 2007,
       "masterpiece": false
-    },
-    {
-      "id": 2165,
-      "category": "movies",
-      "subcategory": "drama",
-      "title": {
-        "es": "American Beauty",
-        "en": "American Beauty"
-      },
-      "description": {
-        "es": "Un hombre de mediana edad atraviesa una crisis existencial mientras se obsesiona con la amiga de su hija, en una sátira oscura sobre la vida suburbana estadounidense.",
-        "en": "A middle-aged man experiences an existential crisis while becoming infatuated with his daughter's friend, in a dark satire of American suburban life."
-      },
-      "image": "/imagenes/peliculas/american_beauty.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=2nxHDGMOjgQ",
-        "en": "https://www.youtube.com/watch?v=2nxHDGMOjgQ"
-      },
-      "director": "Sam Mendes",
-      "year": 1999,
-      "masterpiece": true,
-      "tags": []
     },
     {
       "id": 2166,
@@ -1693,27 +1650,6 @@
       "trailer": {
         "es": "https://www.youtube.com/watch?v=y2ODwwI03OY",
         "en": "https://www.youtube.com/watch?v=S6bnGiyBXuU"
-      },
-      "masterpiece": false
-    },
-    {
-      "id": 2123,
-      "category": "movies",
-      "subcategory": "fantasy",
-      "title": {
-        "es": "El Hobbit: Un viaje inesperado",
-        "en": "The Hobbit: An Unexpected Journey"
-      },
-      "description": {
-        "es": "Primera parte de la trilogía basada en la novela de J.R.R. Tolkien. Bilbo Bolsón se une a un grupo de enanos en una aventura para recuperar su hogar. Dirigida por Peter Jackson.",
-        "en": "First part of the trilogy based on J.R.R. Tolkien's novel. Bilbo Baggins joins a group of dwarves on an adventure to reclaim their home. Directed by Peter Jackson."
-      },
-      "director": "Peter Jackson",
-      "image": "/imagenes/peliculas/hobbit1.jpg",
-      "year": 2012,
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=sI8OQRXhcZE&t=2s",
-        "en": "https://www.youtube.com/watch?v=9PSXjr1gbjc"
       },
       "masterpiece": false
     },
@@ -2496,7 +2432,7 @@
       "category": "movies",
       "subcategory": "drama",
       "title": {
-        "es": "Dead Poets Society",
+        "es": "El club de los poetas muertos",
         "en": "Dead Poets Society"
       },
       "description": {
@@ -2663,174 +2599,6 @@
       }
     },
     {
-      "id": 1002,
-      "category": "movies",
-      "subcategory": "drama",
-      "title": {
-        "es": "La vendedora de rosas",
-        "en": "The Rose Seller"
-      },
-      "description": {
-        "es": "Drama social colombiano que muestra la vida de los niños de la calle en Medellín.",
-        "en": "Colombian social drama that shows the life of street children in Medellín."
-      },
-      "image": "/imagenes/peliculas/la_vendedora_de_rosas.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=cYZMMRZR90w",
-        "en": "https://www.youtube.com/watch?v=cYZMMRZR90w"
-      },
-      "director": "Víctor Gaviria",
-      "year": 1998,
-      "masterpiece": false
-    },
-    {
-      "id": 1005,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Matrix",
-        "en": "The Matrix"
-      },
-      "description": {
-        "es": "Película revolucionaria de ciencia ficción dirigida por las hermanas Wachowski, donde Neo descubre la verdad sobre la realidad y la lucha contra las máquinas.",
-        "en": "Revolutionary science fiction film directed by the Wachowski sisters, where Neo discovers the truth about reality and the fight against the machines."
-      },
-      "director": "Lana Wachowski, Lilly Wachowski",
-      "image": "/imagenes/peliculas/matrix1.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=Pl_H2Lmjn6k&t=16s",
-        "en": "https://www.youtube.com/watch?v=m8e-FF8MsqU"
-      },
-      "year": 1999,
-      "masterpiece": true
-    },
-    {
-      "id": 1006,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Matrix Reloaded",
-        "en": "The Matrix Reloaded"
-      },
-      "description": {
-        "es": "Segunda parte de la saga Matrix, donde Neo y sus aliados luchan para salvar Sion y enfrentan nuevos desafíos dentro y fuera de la Matrix.",
-        "en": "Second part of the Matrix saga, where Neo and his allies fight to save Zion and face new challenges inside and outside the Matrix."
-      },
-      "director": "Lana Wachowski, Lilly Wachowski",
-      "image": "/imagenes/peliculas/matrix2.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=dvauYuYX4Jc&t=1s",
-        "en": "https://www.youtube.com/watch?v=kYzz0FSgpSU"
-      },
-      "year": 2003,
-      "masterpiece": false
-    },
-    {
-      "id": 1007,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Matrix Revolutions",
-        "en": "The Matrix Revolutions"
-      },
-      "description": {
-        "es": "La conclusión de la trilogía Matrix, donde la guerra entre humanos y máquinas llega a su clímax y Neo debe tomar una decisión final.",
-        "en": "The conclusion of the Matrix trilogy, where the war between humans and machines reaches its climax and Neo must make a final decision."
-      },
-      "director": "Lana Wachowski, Lilly Wachowski",
-      "image": "/imagenes/peliculas/matrix3.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=L2CdRlEJ7_Q",
-        "en": "https://www.youtube.com/watch?v=hMbexEPAOQI"
-      },
-      "year": 2003,
-      "masterpiece": false
-    },
-    {
-      "id": 1008,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Hombres de negro",
-        "en": "Men in Black"
-      },
-      "description": {
-        "es": "Comedia de ciencia ficción donde dos agentes secretos supervisan la actividad alienígena en la Tierra.",
-        "en": "Science fiction comedy where two secret agents oversee alien activity on Earth."
-      },
-      "director": "Barry Sonnenfeld",
-      "image": "/imagenes/peliculas/men_in_black_1.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=j9ReysSdQzc",
-        "en": "https://www.youtube.com/watch?v=UxUTTrU6PA4"
-      },
-      "year": 1997,
-      "masterpiece": false
-    },
-    {
-      "id": 1009,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Hombres de negro II",
-        "en": "Men in Black II"
-      },
-      "description": {
-        "es": "Los agentes J y K regresan para proteger la Tierra de una nueva amenaza alienígena.",
-        "en": "Agents J and K return to protect Earth from a new alien threat."
-      },
-      "director": "Barry Sonnenfeld",
-      "image": "/imagenes/peliculas/men_in_black_2.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=Y2iscsPp26Y",
-        "en": "https://www.youtube.com/watch?v=DMHlNR6x2Sw"
-      },
-      "year": 2002,
-      "masterpiece": false
-    },
-    {
-      "id": 1010,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Hombres de negro III",
-        "en": "Men in Black 3"
-      },
-      "description": {
-        "es": "El agente J viaja al pasado para salvar a su compañero K y el futuro de la humanidad.",
-        "en": "Agent J travels to the past to save his partner K and the future of humanity."
-      },
-      "director": "Barry Sonnenfeld",
-      "image": "/imagenes/peliculas/men_in_black_3.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=wqwmM1-7rSA",
-        "en": "https://www.youtube.com/watch?v=IyaFEBI_L24"
-      },
-      "year": 2012,
-      "masterpiece": false
-    },
-    {
-      "id": 1011,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Passengers",
-        "en": "Passengers"
-      },
-      "description": {
-        "es": "Dos pasajeros de una nave espacial rumbo a un nuevo planeta despiertan 90 años antes de lo previsto y deben enfrentarse juntos a la soledad y a un fallo crítico en la nave.",
-        "en": "Two passengers on a spaceship bound for a new planet wake up 90 years too early and must face loneliness and a critical failure on the ship together."
-      },
-      "image": "/imagenes/peliculas/passengers.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=8JuGv5xI52w",
-        "en": "https://www.youtube.com/watch?v=7BWWWQzTpNU"
-      },
-      "director": "Morten Tyldum",
-      "year": 2016,
-      "masterpiece": false
-    },
-    {
       "id": 1012,
       "category": "movies",
       "subcategory": "drama",
@@ -2852,90 +2620,6 @@
       "masterpiece": false
     },
     {
-      "id": 1013,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Regreso al Futuro",
-        "en": "Back to the Future"
-      },
-      "description": {
-        "es": "Marty McFly viaja accidentalmente al pasado en un DeLorean modificado y debe asegurarse de que sus padres se conozcan para poder regresar al futuro.",
-        "en": "Marty McFly accidentally travels to the past in a modified DeLorean and must ensure his parents meet so he can return to the future."
-      },
-      "director": "Robert Zemeckis",
-      "image": "/imagenes/peliculas/regreso_futuro_1.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=NDS1myoYUzs",
-        "en": "https://www.youtube.com/watch?v=qvsgGtivCgs"
-      },
-      "year": 1985,
-      "masterpiece": false
-    },
-    {
-      "id": 1014,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Regreso al Futuro II",
-        "en": "Back to the Future Part II"
-      },
-      "description": {
-        "es": "Marty y Doc viajan al futuro y luego al pasado alternativo, enfrentándose a las consecuencias de alterar la línea temporal.",
-        "en": "Marty and Doc travel to the future and then to an alternate past, facing the consequences of altering the timeline."
-      },
-      "director": "Robert Zemeckis",
-      "image": "/imagenes/peliculas/regreso_futuro_2.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=xOZuTdIKB0A",
-        "en": "https://www.youtube.com/watch?v=MdENmefJRpw"
-      },
-      "year": 1989,
-      "masterpiece": false
-    },
-    {
-      "id": 1015,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Regreso al Futuro III",
-        "en": "Back to the Future Part III"
-      },
-      "description": {
-        "es": "Marty viaja al Viejo Oeste para salvar a Doc y encontrar una forma de regresar a su tiempo.",
-        "en": "Marty travels to the Old West to save Doc and find a way back to his own time."
-      },
-      "director": "Robert Zemeckis",
-      "image": "/imagenes/peliculas/regreso_futuro_3.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=WmBX7CA-AAc",
-        "en": "https://www.youtube.com/watch?v=3C8c3EoEfw4"
-      },
-      "year": 1990,
-      "masterpiece": false
-    },
-    {
-      "id": 1016,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Stalker",
-        "en": "Stalker"
-      },
-      "description": {
-        "es": "Película de ciencia ficción filosófica dirigida por Andréi Tarkovski. Un guía conocido como 'Stalker' conduce a dos hombres a través de una misteriosa Zona que supuestamente cumple los deseos más profundos.",
-        "en": "Philosophical science fiction film directed by Andrei Tarkovsky. A guide known as the 'Stalker' leads two men through a mysterious Zone that supposedly fulfills one's deepest wishes."
-      },
-      "image": "/imagenes/peliculas/stalker.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=88P-XojbX4o",
-        "en": "https://www.youtube.com/watch?v=YuOnfQd-aTw"
-      },
-      "director": "Andréi Tarkovski",
-      "year": 1979,
-      "masterpiece": true
-    },
-    {
       "id": 1031,
       "category": "movies",
       "subcategory": "sci-fi",
@@ -2954,26 +2638,6 @@
       "director": "Stanley Kubrick",
       "year": 1968,
       "masterpiece": true
-    },
-    {
-      "id": 1032,
-      "category": "movies",
-      "subcategory": "drama",
-      "title": {
-        "es": "Una mente maravillosa",
-        "en": "A Beautiful Mind"
-      },
-      "description": {
-        "es": "La historia real del brillante matemático John Nash, que lucha contra la esquizofrenia mientras realiza importantes contribuciones a la economía y las matemáticas.",
-        "en": "The true story of brilliant mathematician John Nash, who battles schizophrenia while making major contributions to economics and mathematics."
-      },
-      "image": "/imagenes/peliculas/beautilful_mind.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=h_B16qD89aM"
-      },
-      "director": "Ron Howard",
-      "year": 2001,
-      "masterpiece": false
     },
     {
       "id": 1033,
@@ -3037,48 +2701,6 @@
       "year": 1999,
       "masterpiece": true,
       "tags": []
-    },
-    {
-      "id": 2173,
-      "category": "movies",
-      "subcategory": "drama",
-      "title": {
-        "es": "American History X",
-        "en": "American History X"
-      },
-      "description": {
-        "es": "Un joven neonazi intenta dejar atrás su pasado de odio y violencia tras salir de prisión, mientras trata de evitar que su hermano menor siga sus pasos. Protagonizada por Edward Norton.",
-        "en": "A former neo-Nazi tries to leave behind his past of hate and violence after being released from prison, while trying to prevent his younger brother from following in his footsteps. Starring Edward Norton."
-      },
-      "image": "/imagenes/peliculas/american_history.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=oi7bhRmJzec&t=13s",
-        "en": "https://www.youtube.com/watch?v=XfQYHqsiN5g"
-      },
-      "director": "Tony Kaye",
-      "year": 1998,
-      "masterpiece": false
-    },
-    {
-      "id": 2174,
-      "category": "movies",
-      "subcategory": "drama",
-      "title": {
-        "es": "Apocalypse Now",
-        "en": "Apocalypse Now"
-      },
-      "description": {
-        "es": "Obra maestra de Francis Ford Coppola que adapta 'El corazón de las tinieblas' al contexto de la guerra de Vietnam. Un viaje al horror y la locura protagonizado por Martin Sheen y Marlon Brando.",
-        "en": "Francis Ford Coppola's masterpiece adapts 'Heart of Darkness' to the Vietnam War. A journey into horror and madness starring Martin Sheen and Marlon Brando."
-      },
-      "image": "/imagenes/peliculas/apocalipse.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=h5iZf5kv354",
-        "en": "https://www.youtube.com/watch?v=9l-ViOOFH-s"
-      },
-      "director": "Francis Ford Coppola",
-      "year": 1979,
-      "masterpiece": true
     },
     {
       "id": 2175,
@@ -3167,27 +2789,6 @@
       "year": 1997,
       "masterpiece": false,
       "tags": []
-    },
-    {
-      "id": 2001,
-      "category": "movies",
-      "subcategory": "fantasy",
-      "title": {
-        "es": "Harry Potter y la piedra filosofal",
-        "en": "Harry Potter and the Sorcerer's Stone"
-      },
-      "description": {
-        "es": "El inicio de la saga mágica de Harry Potter.",
-        "en": "The beginning of the magical Harry Potter saga."
-      },
-      "director": "Chris Columbus",
-      "image": "/imagenes/peliculas/harry1.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=WE4AJuIvG1Y",
-        "en": "https://www.youtube.com/watch?v=VyHV0BRtdxo"
-      },
-      "year": 2001,
-      "masterpiece": false
     },
     {
       "id": 2002,
@@ -3334,216 +2935,6 @@
         "en": "https://www.youtube.com/watch?v=mObK5XD8udk"
       },
       "year": 2011,
-      "masterpiece": false
-    },
-    {
-      "id": 2101,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Star Wars: Episodio IV - Una nueva esperanza",
-        "en": "Star Wars: Episode IV – A New Hope"
-      },
-      "description": {
-        "es": "El inicio de la saga galáctica.",
-        "en": "The beginning of the galactic saga."
-      },
-      "director": "George Lucas",
-      "image": "/imagenes/peliculas/starwars4.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=1g3_CFmnU7k",
-        "en": "https://www.youtube.com/watch?v=vZ734NWnAHA"
-      },
-      "year": 1977,
-      "masterpiece": false
-    },
-    {
-      "id": 2102,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Star Wars: Episodio V - El Imperio contraataca",
-        "en": "Star Wars: Episode V – The Empire Strikes Back"
-      },
-      "description": {
-        "es": "La rebelión enfrenta su mayor desafío.",
-        "en": "The rebellion faces its greatest challenge."
-      },
-      "director": "Irvin Kershner",
-      "image": "/imagenes/peliculas/starwars5.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=JNwNXF9Y6kY",
-        "en": "https://www.youtube.com/watch?v=JNwNXF9Y6kY"
-      },
-      "year": 1980,
-      "masterpiece": false
-    },
-    {
-      "id": 2103,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Star Wars: Episodio VI - El retorno del Jedi",
-        "en": "Star Wars: Episode VI – Return of the Jedi"
-      },
-      "description": {
-        "es": "La batalla final contra el Imperio.",
-        "en": "The final battle against the Empire."
-      },
-      "director": "Richard Marquand",
-      "image": "/imagenes/peliculas/starwars6.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=7L8p7_SLzvU",
-        "en": "https://www.youtube.com/watch?v=5UfA_aKBGMc"
-      },
-      "year": 1983,
-      "masterpiece": false
-    },
-    {
-      "id": 2104,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Star Wars: Episodio I - La amenaza fantasma",
-        "en": "Star Wars: Episode I – The Phantom Menace"
-      },
-      "description": {
-        "es": "El origen de Anakin Skywalker.",
-        "en": "The origin of Anakin Skywalker."
-      },
-      "director": "George Lucas",
-      "image": "/imagenes/peliculas/starwars1.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=bD7bpG-zDJQ",
-        "en": "https://www.youtube.com/watch?v=bD7bpG-zDJQ"
-      },
-      "year": 1999,
-      "masterpiece": false
-    },
-    {
-      "id": 2105,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Star Wars: Episodio II - El ataque de los clones",
-        "en": "Star Wars: Episode II – Attack of the Clones"
-      },
-      "description": {
-        "es": "La República se tambalea y surgen los clones.",
-        "en": "The Republic falters and the clones emerge."
-      },
-      "director": "George Lucas",
-      "image": "/imagenes/peliculas/starwars2.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=gYbW1F_c9eM",
-        "en": "https://www.youtube.com/watch?v=gYbW1F_c9eM"
-      },
-      "year": 2002,
-      "masterpiece": false
-    },
-    {
-      "id": 2106,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Star Wars: Episodio III - La venganza de los Sith",
-        "en": "Star Wars: Episode III – Revenge of the Sith"
-      },
-      "description": {
-        "es": "La caída de Anakin y el ascenso de Darth Vader.",
-        "en": "The fall of Anakin and the rise of Darth Vader."
-      },
-      "director": "George Lucas",
-      "image": "/imagenes/peliculas/starwars3.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=5UnjrG_N8hU",
-        "en": "https://www.youtube.com/watch?v=5UnjrG_N8hU"
-      },
-      "year": 2005,
-      "masterpiece": false
-    },
-    {
-      "id": 2107,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Star Wars: Episodio VII - El despertar de la Fuerza",
-        "en": "Star Wars: Episode VII – The Force Awakens"
-      },
-      "description": {
-        "es": "Una nueva generación de héroes y villanos.",
-        "en": "A new generation of heroes and villains."
-      },
-      "director": "J.J. Abrams",
-      "image": "/imagenes/peliculas/starwars7.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=sGbxmsDFVnE",
-        "en": "https://www.youtube.com/watch?v=sGbxmsDFVnE"
-      },
-      "year": 2015,
-      "masterpiece": false
-    },
-    {
-      "id": 2108,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Star Wars: Episodio VIII - Los últimos Jedi",
-        "en": "Star Wars: Episode VIII – The Last Jedi"
-      },
-      "description": {
-        "es": "La Resistencia lucha por sobrevivir.",
-        "en": "The Resistance fights to survive."
-      },
-      "director": "Rian Johnson",
-      "image": "/imagenes/peliculas/starwars8.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=Q0CbN8sfihY",
-        "en": "https://www.youtube.com/watch?v=Q0CbN8sfihY"
-      },
-      "year": 2017,
-      "masterpiece": false
-    },
-    {
-      "id": 2109,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Star Wars: Episodio IX - El ascenso de Skywalker",
-        "en": "Star Wars: Episode IX – The Rise of Skywalker"
-      },
-      "description": {
-        "es": "El cierre de la saga Skywalker.",
-        "en": "The closure of the Skywalker saga."
-      },
-      "director": "J.J. Abrams",
-      "image": "/imagenes/peliculas/starwars9.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=8Qn_spdM5Zg",
-        "en": "https://www.youtube.com/watch?v=8Qn_spdM5Zg"
-      },
-      "year": 2019,
-      "masterpiece": false
-    },
-    {
-      "id": 2110,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Rogue One: Una historia de Star Wars",
-        "en": "Rogue One: A Star Wars Story"
-      },
-      "description": {
-        "es": "Un grupo de rebeldes se embarca en una misión para robar los planos de la Estrella de la Muerte, el arma definitiva del Imperio.",
-        "en": "A group of rebels embarks on a mission to steal the plans for the Death Star, the Empire's ultimate weapon."
-      },
-      "director": "Gareth Edwards",
-      "image": "/imagenes/peliculas/starwars_roge.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=Xcs4OpUJWrM&t=2s",
-        "en": "https://www.youtube.com/watch?v=frdj1zb9sMY"
-      },
-      "year": 2016,
       "masterpiece": false
     },
     {
@@ -3868,27 +3259,6 @@
       "masterpiece": false
     },
     {
-      "id": 2126,
-      "category": "movies",
-      "subcategory": "acción",
-      "title": {
-        "es": "Jungla de cristal",
-        "en": "Die Hard"
-      },
-      "description": {
-        "es": "Un policía de Nueva York debe enfrentarse a un grupo de terroristas que toma rehenes en un rascacielos de Los Ángeles en Nochebuena. Protagonizada por Bruce Willis y dirigida por John McTiernan.",
-        "en": "A New York cop must face a group of terrorists who take hostages in a Los Angeles skyscraper on Christmas Eve. Starring Bruce Willis and directed by John McTiernan."
-      },
-      "director": "John McTiernan",
-      "image": "/imagenes/peliculas/die_hard.jpg",
-      "year": 1988,
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=GAdvN7KLc2o",
-        "en": "https://www.youtube.com/watch?v=jaJuwKCmJbY"
-      },
-      "masterpiece": false
-    },
-    {
       "id": 2127,
       "category": "movies",
       "subcategory": "adventure",
@@ -3906,27 +3276,6 @@
       "trailer": {
         "es": "https://www.youtube.com/watch?v=dLDkNge_AhE",
         "en": "https://www.youtube.com/watch?v=lc0UehYemQA"
-      },
-      "masterpiece": false
-    },
-    {
-      "id": 2128,
-      "category": "movies",
-      "subcategory": "drama",
-      "title": {
-        "es": "Saló o los 120 días de Sodoma",
-        "en": "Salò, or the 120 Days of Sodom"
-      },
-      "description": {
-        "es": "Una controvertida y perturbadora película italiana dirigida por Pier Paolo Pasolini, basada en la novela de Sade. Un grupo de jóvenes es sometido a torturas y humillaciones por parte de autoridades fascistas.",
-        "en": "A controversial and disturbing Italian film directed by Pier Paolo Pasolini, based on Sade's novel. A group of youths is subjected to torture and humiliation by fascist authorities."
-      },
-      "director": "Pier Paolo Pasolini",
-      "image": "/imagenes/peliculas/salo.jpg",
-      "year": 1975,
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=0iJYAycEDII",
-        "en": "https://www.youtube.com/watch?v=0iJYAycEDII"
       },
       "masterpiece": false
     },
@@ -3973,89 +3322,6 @@
       "masterpiece": false
     },
     {
-      "id": 2131,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Terminator",
-        "en": "The Terminator"
-      },
-      "description": {
-        "es": "Un cyborg asesino es enviado del futuro para eliminar a Sarah Connor. Dirigida por James Cameron.",
-        "en": "A killer cyborg is sent from the future to eliminate Sarah Connor. Directed by James Cameron."
-      },
-      "director": "James Cameron",
-      "image": "/imagenes/peliculas/terminator1.jpg",
-      "year": 1984,
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=tMqGy1J0y6E",
-        "en": "https://www.youtube.com/watch?v=k64P4l2Wmeg"
-      },
-      "masterpiece": false
-    },
-    {
-      "id": 2132,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Terminator 2: El juicio final",
-        "en": "Terminator 2: Judgment Day"
-      },
-      "description": {
-        "es": "Un nuevo Terminator es enviado para proteger a John Connor del implacable T-1000. Dirigida por James Cameron.",
-        "en": "A new Terminator is sent to protect John Connor from the relentless T-1000. Directed by James Cameron."
-      },
-      "director": "James Cameron",
-      "image": "/imagenes/peliculas/terminator2.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=mVbYhayCdm0",
-        "en": "https://www.youtube.com/watch?v=CRRlbK5w8AE"
-      },
-      "year": 1991,
-      "masterpiece": false
-    },
-    {
-      "id": 2133,
-      "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "Terminator 3: La rebelión de las máquinas",
-        "en": "Terminator 3: Rise of the Machines"
-      },
-      "description": {
-        "es": "John Connor debe enfrentarse a una nueva amenaza cibernética, la T-X, mientras el día del juicio final se acerca. Dirigida por Jonathan Mostow.",
-        "en": "John Connor must face a new cybernetic threat, the T-X, as Judgment Day approaches. Directed by Jonathan Mostow."
-      },
-      "director": "Jonathan Mostow",
-      "image": "/imagenes/peliculas/terminator3.jpg",
-      "year": 2003,
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=vphJKzT0IWs",
-        "en": "https://www.youtube.com/watch?v=5UgPJhyJmlM"
-      },
-      "masterpiece": false
-    },
-    {
-      "id": 2135,
-      "category": "movies",
-      "subcategory": "thriller",
-      "title": {
-        "es": "Battle Royale",
-        "en": "Battle Royale"
-      },
-      "description": {
-        "es": "En un futuro distópico, un grupo de estudiantes es obligado a luchar a muerte en una isla. Película japonesa de culto dirigida por Kinji Fukasaku.",
-        "en": "In a dystopian future, a group of students is forced to fight to the death on an island. Japanese cult film directed by Kinji Fukasaku."
-      },
-      "director": "Kinji Fukasaku",
-      "image": "/imagenes/peliculas/battle_royale.jpg",
-      "year": 2000,
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=oKCN6hzD5J4",
-        "en": "https://www.youtube.com/watch?v=oKCN6hzD5J4"
-      },
-      "masterpiece": false
-    },{
       "id": 1003,
       "category": "movies",
       "subcategory": "acción",
