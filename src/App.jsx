@@ -73,13 +73,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   
   // Asegurarnos de que los datos se filtran correctamente
   const items = React.useMemo(() => {
-    return datos.recommendations.filter(r => {
-      // Verificar que la categoría coincida
-      if (r.category !== category) return false;
-      // Verificar que la subcategoría exista
-      if (!r.subcategory) return false;
-      return true;
-    });
+    return datos.recommendations.filter(r => r.category === category);
   }, [datos.recommendations, category]);
 
   const subcategoryTranslations = {
@@ -117,16 +111,17 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
 
   // Memoizar los items filtrados
   const filtered = React.useMemo(() => {
+    if (!activeSub) return items;
+    
     if (activeSub === masterpiecesKey) {
       return items.filter(r => r.masterpiece);
-    } else if (activeSub) {
-      const normalizedActiveSub = normalizeSubcategory(activeSub);
-      return items.filter(r => {
-        const normalizedItemSub = normalizeSubcategory(r.subcategory);
-        return normalizedItemSub === normalizedActiveSub;
-      });
     }
-    return items;
+
+    const normalizedActiveSub = normalizeSubcategory(activeSub);
+    return items.filter(r => {
+      const normalizedItemSub = normalizeSubcategory(r.subcategory);
+      return normalizedItemSub === normalizedActiveSub;
+    });
   }, [items, activeSub, normalizeSubcategory]);
 
   // --- Responsive: usar select en móviles ---
@@ -156,6 +151,12 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
         </div>
       ) : (
         <div className="categories-list">
+          <button
+            className={`category-btn${!activeSub ? ' active' : ''}`}
+            onClick={() => setActiveSub(null)}
+          >
+            {lang === 'en' ? 'All' : 'Todas'}
+          </button>
           {subs.map(sub => (
             <button
               key={sub}
