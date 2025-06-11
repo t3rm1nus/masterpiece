@@ -72,49 +72,38 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const datos = datosByCategory[category] || { recommendations: [] };
   const [activeSub, setActiveSub] = useState(null);
   
-  // Asegurarnos de que los datos se filtran correctamente
+  // Simplificar el filtrado inicial
   const items = React.useMemo(() => {
     return datos.recommendations.filter(r => r.category === category);
   }, [datos.recommendations, category]);
 
+  // Simplificar las traducciones
   const subcategoryTranslations = {
-    'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
+    'sci-fi': lang === 'es' ? 'ciencia ficción' : 'sci-fi',
     'acción': lang === 'en' ? 'action' : 'acción',
     'action': lang === 'es' ? 'acción' : 'action',
-    'comedy': lang === 'es' ? 'comedia' : 'comedy',
-    'adventure': lang === 'es' ? 'aventura' : 'adventure',
-    'aventura': lang === 'en' ? 'adventure' : 'aventura',
+    'drama': 'drama',
     'comedia': lang === 'en' ? 'comedy' : 'comedia',
+    'comedy': lang === 'es' ? 'comedia' : 'comedy',
     'animación': lang === 'en' ? 'animation' : 'animación',
     'animation': lang === 'es' ? 'animación' : 'animation'
   };
 
-  // Función para normalizar subcategorías
+  // Simplificar la normalización
   const normalizeSubcategory = React.useCallback((subcategory) => {
     if (!subcategory) return '';
-    const normalizedSubcategory = subcategory.toLowerCase().trim();
-    return subcategoryTranslations[normalizedSubcategory] || normalizedSubcategory;
-  }, [subcategoryTranslations]);
+    return subcategory.toLowerCase().trim();
+  }, []);
 
-  // Memoizar las subcategorías para evitar recálculos innecesarios
+  // Obtener subcategorías únicas
   const subs = React.useMemo(() => {
     const uniqueSubs = new Set(items.map(r => normalizeSubcategory(r.subcategory)));
     return Array.from(uniqueSubs).filter(Boolean);
   }, [items, normalizeSubcategory]);
 
-  const hasSpanishCinema = React.useMemo(() => 
-    items.some(r => r.tags && r.tags.includes('cine español')),
-    [items]
-  );
-
   const masterpiecesKey = '__masterpieces__';
 
-  // Función para manejar el cambio de subcategoría
-  const handleSubcategoryChange = React.useCallback((subcategory) => {
-    setActiveSub(subcategory);
-  }, []);
-
-  // Memoizar los items filtrados
+  // Simplificar el filtrado
   const filtered = React.useMemo(() => {
     if (!activeSub) return items;
     
@@ -122,11 +111,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
       return items.filter(r => r.masterpiece);
     }
 
-    const normalizedActiveSub = normalizeSubcategory(activeSub);
-    return items.filter(r => {
-      const normalizedItemSub = normalizeSubcategory(r.subcategory);
-      return normalizedItemSub === normalizedActiveSub;
-    });
+    return items.filter(r => normalizeSubcategory(r.subcategory) === normalizeSubcategory(activeSub));
   }, [items, activeSub, normalizeSubcategory]);
 
   // --- Responsive: usar select en móviles ---
@@ -134,7 +119,6 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
 
   return (
     <div>
-      {/* Solo mostrar el menú superior en desktop/tablet, no en móviles aquí */}
       {!(typeof window !== 'undefined' && window.innerWidth <= 600) && (
         <Menu showBack={true} onBack={onBack} backLabel={lang === 'en' ? 'Back' : 'Volver'} onNavigate={onNavigate} />
       )}
@@ -144,7 +128,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
           <select
             className="subcategory-select"
             value={activeSub || ''}
-            onChange={e => handleSubcategoryChange(e.target.value || null)}
+            onChange={e => setActiveSub(e.target.value || null)}
             style={{width:'100%',maxWidth:320,marginBottom:'1rem'}}
           >
             <option value="">{lang === 'en' ? 'All' : 'Todas'}</option>
@@ -158,7 +142,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
         <div className="categories-list">
           <button
             className={`category-btn${!activeSub ? ' active' : ''}`}
-            onClick={() => handleSubcategoryChange(null)}
+            onClick={() => setActiveSub(null)}
           >
             {lang === 'en' ? 'All' : 'Todas'}
           </button>
@@ -166,14 +150,14 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
             <button
               key={sub}
               className={`category-btn${activeSub === sub ? ' active' : ''}`}
-              onClick={() => handleSubcategoryChange(sub)}
+              onClick={() => setActiveSub(sub)}
             >
               {subcategoryTranslations[sub] || sub}
             </button>
           ))}
           <button
             className={`category-btn${activeSub === masterpiecesKey ? ' active' : ''}`}
-            onClick={() => handleSubcategoryChange(activeSub === masterpiecesKey ? null : masterpiecesKey)}
+            onClick={() => setActiveSub(activeSub === masterpiecesKey ? null : masterpiecesKey)}
           >
             {lang === 'en' ? 'Masterpieces' : 'Obras maestras'}
           </button>
