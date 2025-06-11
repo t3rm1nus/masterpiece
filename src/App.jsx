@@ -8,7 +8,6 @@ import datosMusic from "./datos_music.json";
 import datosVideogames from "./datos_videogames.json";
 import datosBoardgames from "./datos_boardgames.json";
 import datosPodcast from "./datos_podcast.json";
-import trailers from "./trailers.json";
 import React from "react";
 import { normalizeSubcategory, filterItemsBySubcategory, getUniqueSubcategories, normalizeSubcategoryInternal } from './utils/categoryUtils';
 
@@ -270,7 +269,7 @@ function HomePage({ onItemClick }) {
     ...datosBoardgames.recommendations,
     ...datosPodcast.recommendations
   ];
-  const random = all.sort(() => 0.5 - Math.random()).slice(0, 6);
+  const random = all.sort(() => 0.5 - Math.random()).slice(0, 12);
   const homeTitle = lang === 'en' ? 'Daily Recommendations' : 'Recomendaciones diarias';
   return (
     <>
@@ -310,11 +309,7 @@ function ItemDetailPage({ itemId, onBack }) {
 
   // Solo para películas, mostrar botón de trailer
   const isMovie = item.category === 'movies';
-  // Diccionario de trailers por título (puedes agregar más si lo deseas)
-  const trailerUrl = trailers[item.title[lang] || item.title.es]?.[lang] ||
-    trailers[item.title.es]?.[lang] ||
-    trailers[item.title.en]?.[lang] ||
-    item.trailer?.[lang] || item.trailer?.es || item.trailer?.en || null;
+  const trailerUrl = item.trailer?.[lang] || item.trailer?.es || item.trailer?.en || null;
   const trailerText = lang === 'en' ? 'Watch trailer on YouTube' : 'Ver tráiler en YouTube';
 
   // Diccionario para traducir subcategorías conocidas (mover aquí para usar en ficha)

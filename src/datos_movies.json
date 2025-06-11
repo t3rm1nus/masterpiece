@@ -15,52 +15,74 @@
       "director": "Ridley Scott",
       "image": "/imagenes/peliculas/blade_runner.jpg",
       "year": 1982,
-      "masterpiece": true
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=4USFH9n8tNk",
+        "en": "https://www.youtube.com/watch?v=eogpIG53Cis"
+      }
     },
     {
       "id": 24,
-      "category": "videogames",
-      "subcategory": "rpg",
+      "category": "movies",
+      "subcategory": "sci-fi",
       "title": {
-        "es": "The Witcher 3: Wild Hunt",
-        "en": "The Witcher 3: Wild Hunt"
+        "es": "Alien (1979)",
+        "en": "Alien (1979)"
       },
       "description": {
-        "es": "Un RPG de mundo abierto con una historia rica y un mundo inmersivo.",
-        "en": "An open-world RPG with a rich story and immersive world."
+        "es": "Una película de terror y ciencia ficción dirigida por Ridley Scott.",
+        "en": "A horror and science fiction film directed by Ridley Scott."
       },
-      "image": "https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg",
-      "masterpiece": false
+      "director": "Ridley Scott",
+      "image": "/imagenes/peliculas/alien.jpg",
+      "year": 1979,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Eu9ZFTXXEiw",
+        "en": "https://www.youtube.com/watch?v=LjLamj-b0I8"
+      }
     },
     {
       "id": 25,
-      "category": "books",
-      "subcategory": "fantasy",
+      "category": "movies",
+      "subcategory": "action",
       "title": {
-        "es": "El nombre del viento",
-        "en": "The Name of the Wind"
+        "es": "300",
+        "en": "300"
       },
       "description": {
-        "es": "La historia de Kvothe, un mago legendario.",
-        "en": "The story of Kvothe, a legendary wizard."
+        "es": "Una épica película de acción dirigida por Zack Snyder.",
+        "en": "An epic action film directed by Zack Snyder."
       },
-      "image": "https://upload.wikimedia.org/wikipedia/en/2/2e/TheNameoftheWind_cover.jpg",
-      "masterpiece": false
+      "director": "Zack Snyder",
+      "image": "/imagenes/peliculas/300.jpg",
+      "year": 2006,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=mi4xUUJSuro",
+        "en": "https://www.youtube.com/watch?v=UrIbxk7idYA"
+      }
     },
     {
       "id": 26,
-      "category": "music",
-      "subcategory": "rock",
+      "category": "movies",
+      "subcategory": "sci-fi",
       "title": {
-        "es": "Pink Floyd - The Dark Side of the Moon",
-        "en": "Pink Floyd - The Dark Side of the Moon"
+        "es": "La Llegada",
+        "en": "Arrival"
       },
       "description": {
-        "es": "Uno de los álbumes más icónicos de la historia del rock.",
-        "en": "One of the most iconic albums in rock history."
+        "es": "Una película de ciencia ficción dirigida por Denis Villeneuve.",
+        "en": "A science fiction film directed by Denis Villeneuve."
       },
-      "image": "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png",
-      "masterpiece": false
+      "director": "Denis Villeneuve",
+      "image": "/imagenes/peliculas/arrival.jpg",
+      "year": 2016,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=uWs5lsWXLbo",
+        "en": "https://www.youtube.com/watch?v=tFMo3UJ4B4g"
+      }
     },
     {
       "id": 27,
