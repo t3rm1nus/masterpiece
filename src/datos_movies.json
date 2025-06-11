@@ -2240,6 +2240,24 @@
         "en": "https://www.youtube.com/watch?v=htvYfe6wz_8"
       },
       "masterpiece": false
+    },
+    {
+      "id": 33,
+      "category": "movies",
+      "subcategory": "animation",
+      "title": {"es": "Castillo en el cielo", "en": "Castle in the Sky"},
+      "description": {
+        "es": "Una película de animación dirigida por Hayao Miyazaki, que sigue la aventura de dos jóvenes en busca de una legendaria ciudad flotante.",
+        "en": "An animated film directed by Hayao Miyazaki, following the adventure of two young people in search of a legendary floating city."
+      },
+      "director": "Hayao Miyazaki",
+      "image": "/imagenes/peliculas/castillo_en_el_cielo.jpg",
+      "year": 1986,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=FgWd39ziFe8",
+        "en": "https://www.youtube.com/watch?v=FgWd39ziFe8"
+      }
     }
   ]
 }
