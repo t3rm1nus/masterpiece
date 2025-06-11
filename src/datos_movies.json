@@ -3147,28 +3147,6 @@
       "masterpiece": false
     },
     {
-      "id": 2177,
-      "category": "movies",
-      "subcategory": "acción",
-      "title": {
-        "es": "El puente sobre el río Kwai",
-        "en": "The Bridge on the River Kwai"
-      },
-      "description": {
-        "es": "Un clásico del cine bélico y de aventuras, dirigido por David Lean, que narra la construcción de un puente por prisioneros británicos en la Segunda Guerra Mundial. Una reflexión sobre el honor, la obediencia y el absurdo de la guerra.",
-        "en": "A classic war and adventure film directed by David Lean, depicting British POWs forced to build a bridge for their Japanese captors in WWII. A powerful reflection on honor, obedience, and the absurdity of war."
-      },
-      "image": "/imagenes/peliculas/bridge_kwai.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=sIJd4_QQWxM&t=16s",
-        "en": "https://www.youtube.com/watch?v=PDVjulgOjrE"
-      },
-      "year": 1957,
-      "masterpiece": false,
-      "tags": [],
-      "director": "David Lean"
-    },
-    {
       "id": 2178,
       "category": "movies",
       "subcategory": "thriller",
