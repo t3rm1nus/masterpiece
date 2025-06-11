@@ -69,11 +69,9 @@ function CategoriesPage({ onCategory }) {
 
 function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const { t, lang } = useLanguage();
-  // Obtener array plano de items para cualquier categoría
   const datos = datosByCategory[category] || { recommendations: [] };
-  // Si tiene .recommendations, usarlo; si no, usar el array directamente
-  const items = Array.isArray(datos.recommendations) ? datos.recommendations : (Array.isArray(datos) ? datos : []);
-
+  const items = datos.recommendations ? datos.recommendations.filter(r => r.category === category) : [];
+  // Traducciones de subcategorías
   const subcategoryTranslations = {
     'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
     'acción': lang === 'en' ? 'action' : 'acción',
