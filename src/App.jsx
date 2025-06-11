@@ -71,9 +71,14 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const { t, lang } = useLanguage();
   const datos = datosByCategory[category] || { recommendations: [] };
   
-  // Asegurarnos de que los datos se filtran correctamente
+  // Asegurarnos de que los datos se filtran correctamente y eliminar duplicados
   const items = React.useMemo(() => {
-    return datos.recommendations.filter(r => r.category === category);
+    const filteredItems = datos.recommendations.filter(r => r.category === category);
+    // Eliminar duplicados basados en el título
+    const uniqueItems = Array.from(
+      new Map(filteredItems.map(item => [item.title, item])).values()
+    );
+    return uniqueItems;
   }, [datos.recommendations, category]);
 
   const subcategoryTranslations = {
@@ -92,26 +97,8 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const normalizeSubcategory = React.useCallback((subcategory) => {
     if (!subcategory) return '';
     const normalizedSubcategory = subcategory.toLowerCase().trim();
-    if (lang === 'es') {
-      switch (normalizedSubcategory) {
-        case 'action': return 'acción';
-        case 'animation': return 'animación';
-        case 'fantasy': return 'fantasía';
-        case 'comedy': return 'comedia';
-        case 'adventure': return 'aventura';
-        default: return normalizedSubcategory;
-      }
-    } else {
-      switch (normalizedSubcategory) {
-        case 'acción': return 'action';
-        case 'animación': return 'animation';
-        case 'fantasía': return 'fantasy';
-        case 'comedia': return 'comedy';
-        case 'aventura': return 'adventure';
-        default: return normalizedSubcategory;
-      }
-    }
-  }, [lang]);
+    return subcategoryTranslations[normalizedSubcategory] || normalizedSubcategory;
+  }, [subcategoryTranslations]);
 
   // Memoizar las subcategorías para evitar recálculos innecesarios
   const subs = React.useMemo(() => {
