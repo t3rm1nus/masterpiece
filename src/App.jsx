@@ -71,12 +71,9 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const { t, lang } = useLanguage();
   const datos = datosByCategory[category] || { recommendations: [] };
   
-  // Asegurarnos de que los datos se filtran correctamente y no hay duplicados
+  // Asegurarnos de que los datos se filtran correctamente
   const items = React.useMemo(() => {
-    const filteredItems = datos.recommendations.filter(r => r.category === category);
-    // Eliminar duplicados basados en el ID
-    const uniqueItems = Array.from(new Map(filteredItems.map(item => [item.id, item])).values());
-    return uniqueItems;
+    return datos.recommendations.filter(r => r.category === category);
   }, [datos.recommendations, category]);
 
   const subcategoryTranslations = {
@@ -136,7 +133,10 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
       return items.filter(r => r.masterpiece);
     } else if (activeSub) {
       const normalizedActiveSub = normalizeSubcategory(activeSub);
-      return items.filter(r => normalizeSubcategory(r.subcategory) === normalizedActiveSub);
+      return items.filter(r => {
+        const normalizedItemSub = normalizeSubcategory(r.subcategory);
+        return normalizedItemSub === normalizedActiveSub;
+      });
     }
     return items;
   }, [items, activeSub, normalizeSubcategory]);
