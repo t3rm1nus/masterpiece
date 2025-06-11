@@ -173,7 +173,6 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
 function RecommendationsList({ recommendations, onItemClick, isHome }) {
   const { lang, t } = useLanguage();
   const categoryNames = t.categories;
-  // Declarar subcategoryTranslations aquí para que esté disponible en todo el componente
   const subcategoryTranslations = {
     'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
     'acción': lang === 'en' ? 'action' : 'acción',
@@ -183,6 +182,8 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
     'aventura': lang === 'en' ? 'adventure' : 'aventura',
     'comedia': lang === 'en' ? 'comedy' : 'comedia'
   };
+  // Detectar móvil de forma robusta
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
 
   return (
     <div className="recommendations-list">
