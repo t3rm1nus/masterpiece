@@ -71,14 +71,20 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const { t, lang } = useLanguage();
   const datos = datosByCategory[category] || { recommendations: [] };
   
-  // Asegurarnos de que los datos se filtran correctamente y eliminar duplicados
+  // Asegurarnos de que los datos se filtran correctamente
   const items = React.useMemo(() => {
-    const filteredItems = datos.recommendations.filter(r => r.category === category);
-    // Eliminar duplicados basados en el título
-    const uniqueItems = Array.from(
-      new Map(filteredItems.map(item => [item.title, item])).values()
-    );
-    return uniqueItems;
+    return datos.recommendations.filter(r => {
+      // Verificar que la categoría coincida
+      if (r.category !== category) return false;
+      
+      // Normalizar la subcategoría
+      const normalizedSub = r.subcategory?.toLowerCase().trim() || '';
+      
+      // Asegurarnos de que la subcategoría sea válida
+      if (!normalizedSub) return false;
+      
+      return true;
+    });
   }, [datos.recommendations, category]);
 
   const subcategoryTranslations = {
