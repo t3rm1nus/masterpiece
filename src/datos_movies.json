@@ -1,7 +1,7 @@
 {
   "recommendations": [
     {
-      "id": 1,
+      "id": 23,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -18,7 +18,7 @@
       "masterpiece": true
     },
     {
-      "id": 2,
+      "id": 24,
       "category": "videogames",
       "subcategory": "rpg",
       "title": {
@@ -33,7 +33,7 @@
       "masterpiece": false
     },
     {
-      "id": 3,
+      "id": 25,
       "category": "books",
       "subcategory": "fantasy",
       "title": {
@@ -48,7 +48,7 @@
       "masterpiece": false
     },
     {
-      "id": 4,
+      "id": 26,
       "category": "music",
       "subcategory": "rock",
       "title": {
@@ -63,7 +63,7 @@
       "masterpiece": false
     },
     {
-      "id": 23,
+      "id": 27,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -80,7 +80,7 @@
       "masterpiece": false
     },
     {
-      "id": 24,
+      "id": 28,
       "category": "movies",
       "subcategory": "action",
       "title": {
@@ -97,7 +97,7 @@
       "masterpiece": false
     },
     {
-      "id": 25,
+      "id": 29,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -114,7 +114,7 @@
       "masterpiece": false
     },
     {
-      "id": 26,
+      "id": 30,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -131,7 +131,7 @@
       "masterpiece": false
     },
     {
-      "id": 27,
+      "id": 31,
       "category": "movies",
       "subcategory": "acción",
       "title": {
@@ -148,7 +148,7 @@
       "masterpiece": false
     },
     {
-      "id": 28,
+      "id": 32,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -165,7 +165,7 @@
       "masterpiece": true
     },
     {
-      "id": 29,
+      "id": 33,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -182,7 +182,7 @@
       "masterpiece": true
     },
     {
-      "id": 30,
+      "id": 34,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -199,7 +199,7 @@
       "masterpiece": false
     },
     {
-      "id": 31,
+      "id": 35,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -220,7 +220,7 @@
       "masterpiece": false
     },
     {
-      "id": 32,
+      "id": 36,
       "category": "movies",
       "subcategory": "comedia",
       "tags": [
@@ -244,7 +244,7 @@
       "masterpiece": true
     },
     {
-      "id": 33,
+      "id": 37,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -265,7 +265,7 @@
       "masterpiece": true
     },
     {
-      "id": 34,
+      "id": 38,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -286,7 +286,7 @@
       "masterpiece": true
     },
     {
-      "id": 35,
+      "id": 39,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -307,7 +307,7 @@
       "masterpiece": true
     },
     {
-      "id": 36,
+      "id": 40,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -328,7 +328,7 @@
       "masterpiece": false
     },
     {
-      "id": 37,
+      "id": 41,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -349,7 +349,7 @@
       "masterpiece": false
     },
     {
-      "id": 38,
+      "id": 42,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -370,7 +370,7 @@
       "masterpiece": false
     },
     {
-      "id": 39,
+      "id": 43,
       "category": "movies",
       "subcategory": "thriller",
       "tags": [
@@ -394,7 +394,7 @@
       "masterpiece": false
     },
     {
-      "id": 40,
+      "id": 44,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -415,7 +415,7 @@
       "masterpiece": false
     },
     {
-      "id": 41,
+      "id": 45,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -436,7 +436,7 @@
       "masterpiece": false
     },
     {
-      "id": 42,
+      "id": 46,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -457,7 +457,7 @@
       "masterpiece": false
     },
     {
-      "id": 55,
+      "id": 47,
       "category": "movies",
       "subcategory": "adventure",
       "title": {
@@ -478,7 +478,7 @@
       "masterpiece": false
     },
     {
-      "id": 56,
+      "id": 48,
       "category": "movies",
       "subcategory": "adventure",
       "title": {
@@ -499,7 +499,7 @@
       "masterpiece": false
     },
     {
-      "id": 57,
+      "id": 49,
       "category": "movies",
       "subcategory": "adventure",
       "title": {
@@ -520,7 +520,7 @@
       "masterpiece": false
     },
     {
-      "id": 59,
+      "id": 50,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -537,7 +537,7 @@
       "masterpiece": false
     },
     {
-      "id": 58,
+      "id": 51,
       "category": "movies",
       "subcategory": "thriller",
       "tags": [
@@ -557,7 +557,7 @@
       "masterpiece": true
     },
     {
-      "id": 999,
+      "id": 52,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -578,7 +578,7 @@
       "masterpiece": false
     },
     {
-      "id": 1005,
+      "id": 53,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -599,7 +599,7 @@
       "masterpiece": true
     },
     {
-      "id": 1006,
+      "id": 54,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -620,7 +620,7 @@
       "masterpiece": false
     },
     {
-      "id": 1007,
+      "id": 55,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -641,7 +641,7 @@
       "masterpiece": false
     },
     {
-      "id": 1008,
+      "id": 56,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -662,7 +662,7 @@
       "masterpiece": false
     },
     {
-      "id": 1009,
+      "id": 57,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -683,7 +683,7 @@
       "masterpiece": false
     },
     {
-      "id": 1010,
+      "id": 58,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -697,14 +697,14 @@
       "director": "Barry Sonnenfeld",
       "image": "/imagenes/peliculas/men_in_black_3.jpg",
       "trailer": {
-        "es": "https://www.youtube.com/watch?v=wqwmM1-7rSA",
+        "es": "https://www.youtube.com/watch?v=wNFWcR5dqlw&t=1s",
         "en": "https://www.youtube.com/watch?v=IyaFEBI_L24"
       },
       "year": 2012,
       "masterpiece": false
     },
     {
-      "id": 1011,
+      "id": 59,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -725,7 +725,7 @@
       "masterpiece": false
     },
     {
-      "id": 1013,
+      "id": 60,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -746,7 +746,7 @@
       "masterpiece": false
     },
     {
-      "id": 1014,
+      "id": 61,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -767,7 +767,7 @@
       "masterpiece": false
     },
     {
-      "id": 1015,
+      "id": 62,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -788,7 +788,7 @@
       "masterpiece": false
     },
     {
-      "id": 1016,
+      "id": 63,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -809,7 +809,7 @@
       "masterpiece": true
     },
     {
-      "id": 1031,
+      "id": 64,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -829,7 +829,7 @@
       "masterpiece": true
     },
     {
-      "id": 1032,
+      "id": 65,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -849,7 +849,7 @@
       "masterpiece": false
     },
     {
-      "id": 1033,
+      "id": 66,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -869,7 +869,7 @@
       "masterpiece": true
     },
     {
-      "id": 1034,
+      "id": 67,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -890,7 +890,7 @@
       "masterpiece": false
     },
     {
-      "id": 2166,
+      "id": 68,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -911,7 +911,7 @@
       "masterpiece": false
     },
     {
-      "id": 2167,
+      "id": 69,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -932,7 +932,7 @@
       "masterpiece": true
     },
     {
-      "id": 2169,
+      "id": 70,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -953,7 +953,7 @@
       "masterpiece": false
     },
     {
-      "id": 2170,
+      "id": 71,
       "category": "movies",
       "subcategory": "acción",
       "title": {
@@ -971,11 +971,10 @@
       },
       "year": 1957,
       "masterpiece": false,
-      "tags": [],
-      "director": "David Lean"
+      "tags": []
     },
     {
-      "id": 2171,
+      "id": 72,
       "category": "movies",
       "subcategory": "thriller",
       "title": {
@@ -997,7 +996,7 @@
       "tags": []
     },
     {
-      "id": 2001,
+      "id": 73,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -1018,7 +1017,7 @@
       "masterpiece": false
     },
     {
-      "id": 2002,
+      "id": 74,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -1039,7 +1038,7 @@
       "masterpiece": false
     },
     {
-      "id": 2003,
+      "id": 75,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -1060,7 +1059,7 @@
       "masterpiece": false
     },
     {
-      "id": 2004,
+      "id": 76,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -1081,7 +1080,7 @@
       "masterpiece": false
     },
     {
-      "id": 2005,
+      "id": 77,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -1102,7 +1101,7 @@
       "masterpiece": false
     },
     {
-      "id": 2006,
+      "id": 78,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -1123,7 +1122,7 @@
       "masterpiece": false
     },
     {
-      "id": 2007,
+      "id": 79,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -1144,7 +1143,7 @@
       "masterpiece": false
     },
     {
-      "id": 2008,
+      "id": 80,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -1165,7 +1164,7 @@
       "masterpiece": false
     },
     {
-      "id": 2101,
+      "id": 81,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -1186,7 +1185,7 @@
       "masterpiece": false
     },
     {
-      "id": 2102,
+      "id": 82,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -1207,7 +1206,7 @@
       "masterpiece": false
     },
     {
-      "id": 2103,
+      "id": 83,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -1228,7 +1227,7 @@
       "masterpiece": false
     },
     {
-      "id": 2104,
+      "id": 84,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -1249,7 +1248,7 @@
       "masterpiece": false
     },
     {
-      "id": 2105,
+      "id": 85,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -1270,7 +1269,7 @@
       "masterpiece": false
     },
     {
-      "id": 2106,
+      "id": 86,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -1291,7 +1290,7 @@
       "masterpiece": false
     },
     {
-      "id": 2107,
+      "id": 87,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -1312,7 +1311,7 @@
       "masterpiece": false
     },
     {
-      "id": 2108,
+      "id": 88,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -1333,7 +1332,7 @@
       "masterpiece": false
     },
     {
-      "id": 2109,
+      "id": 89,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -1354,7 +1353,7 @@
       "masterpiece": false
     },
     {
-      "id": 2110,
+      "id": 90,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -1375,7 +1374,7 @@
       "masterpiece": false
     },
     {
-      "id": 2111,
+      "id": 91,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -1396,7 +1395,7 @@
       "masterpiece": false
     },
     {
-      "id": 2112,
+      "id": 92,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -1417,7 +1416,7 @@
       "masterpiece": false
     },
     {
-      "id": 2113,
+      "id": 93,
       "category": "movies",
       "subcategory": "drama",
       "tags": [
@@ -1441,7 +1440,7 @@
       "masterpiece": false
     },
     {
-      "id": 2114,
+      "id": 94,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -1462,7 +1461,7 @@
       "masterpiece": false
     },
     {
-      "id": 2115,
+      "id": 95,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -1480,10 +1479,10 @@
         "es": "https://www.youtube.com/watch?v=M8jl94mbCJU",
         "en": "https://www.youtube.com/watch?v=8LuxOYIpu-I"
       },
-      "masterpiece": false
+      "masterpiece": true
     },
     {
-      "id": 2116,
+      "id": 96,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -1504,7 +1503,7 @@
       "masterpiece": false
     },
     {
-      "id": 2117,
+      "id": 97,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -1525,7 +1524,7 @@
       "masterpiece": false
     },
     {
-      "id": 2118,
+      "id": 98,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -1549,7 +1548,7 @@
       ]
     },
     {
-      "id": 2122,
+      "id": 99,
       "category": "movies",
       "subcategory": "thriller",
       "title": {
@@ -1570,7 +1569,7 @@
       "masterpiece": false
     },
     {
-      "id": 2124,
+      "id": 100,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -1591,7 +1590,7 @@
       "masterpiece": false
     },
     {
-      "id": 2125,
+      "id": 101,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -1612,7 +1611,7 @@
       "masterpiece": false
     },
     {
-      "id": 2126,
+      "id": 102,
       "category": "movies",
       "subcategory": "acción",
       "title": {
@@ -1633,7 +1632,7 @@
       "masterpiece": false
     },
     {
-      "id": 2127,
+      "id": 103,
       "category": "movies",
       "subcategory": "adventure",
       "title": {
@@ -1654,7 +1653,7 @@
       "masterpiece": false
     },
     {
-      "id": 2128,
+      "id": 104,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -1675,7 +1674,7 @@
       "masterpiece": false
     },
     {
-      "id": 2130,
+      "id": 105,
       "category": "movies",
       "subcategory": "horror",
       "title": {
@@ -1696,7 +1695,7 @@
       "masterpiece": false
     },
     {
-      "id": 2131,
+      "id": 106,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -1717,7 +1716,7 @@
       "masterpiece": false
     },
     {
-      "id": 2132,
+      "id": 107,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -1738,7 +1737,7 @@
       "masterpiece": false
     },
     {
-      "id": 2133,
+      "id": 108,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -1759,7 +1758,7 @@
       "masterpiece": false
     },
     {
-      "id": 2134,
+      "id": 109,
       "category": "movies",
       "subcategory": "animación",
       "title": {
@@ -1780,7 +1779,7 @@
       "masterpiece": false
     },
     {
-      "id": 2135,
+      "id": 110,
       "category": "movies",
       "subcategory": "thriller",
       "title": {
@@ -1801,7 +1800,7 @@
       "masterpiece": false
     },
     {
-      "id": 2136,
+      "id": 111,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -1822,7 +1821,7 @@
       "masterpiece": false
     },
     {
-      "id": 2137,
+      "id": 112,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -1843,7 +1842,7 @@
       "masterpiece": false
     },
     {
-      "id": 2138,
+      "id": 113,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -1864,7 +1863,7 @@
       "masterpiece": false
     },
     {
-      "id": 2139,
+      "id": 114,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -1888,7 +1887,7 @@
       ]
     },
     {
-      "id": 2140,
+      "id": 115,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -1909,7 +1908,7 @@
       "masterpiece": false
     },
     {
-      "id": 2141,
+      "id": 116,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -1930,7 +1929,7 @@
       "masterpiece": false
     },
     {
-      "id": 2142,
+      "id": 117,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -1951,7 +1950,7 @@
       "masterpiece": false
     },
     {
-      "id": 2143,
+      "id": 118,
       "category": "movies",
       "subcategory": "animación",
       "title": {
@@ -1975,7 +1974,7 @@
       ]
     },
     {
-      "id": 2144,
+      "id": 119,
       "category": "movies",
       "subcategory": "acción",
       "title": {
@@ -1996,7 +1995,7 @@
       "masterpiece": false
     },
     {
-      "id": 2145,
+      "id": 120,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -2017,7 +2016,7 @@
       "masterpiece": false
     },
     {
-      "id": 2146,
+      "id": 121,
       "category": "movies",
       "subcategory": "western",
       "title": {
@@ -2038,7 +2037,7 @@
       "masterpiece": false
     },
     {
-      "id": 2147,
+      "id": 122,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -2059,7 +2058,7 @@
       "masterpiece": true
     },
     {
-      "id": 2148,
+      "id": 123,
       "category": "movies",
       "subcategory": "acción",
       "title": {
@@ -2080,7 +2079,7 @@
       "masterpiece": true
     },
     {
-      "id": 2149,
+      "id": 124,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -2101,11 +2100,11 @@
       "masterpiece": false
     },
     {
-      "id": 2150,
+      "id": 125,
       "category": "movies",
       "subcategory": "acción",
       "title": {
-        "es": "The Dirty Dozen",
+        "es": "Doce del patíbulo",
         "en": "The Dirty Dozen"
       },
       "description": {
@@ -2122,7 +2121,7 @@
       "masterpiece": false
     },
     {
-      "id": 2151,
+      "id": 126,
       "category": "movies",
       "subcategory": "acción",
       "title": {
@@ -2143,7 +2142,7 @@
       "masterpiece": false
     },
     {
-      "id": 214,
+      "id": 127,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -2164,7 +2163,7 @@
       "masterpiece": true
     },
     {
-      "id": 2152,
+      "id": 128,
       "category": "movies",
       "subcategory": "western",
       "title": {
@@ -2188,7 +2187,7 @@
       ]
     },
     {
-      "id": 2153,
+      "id": 129,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -2212,7 +2211,7 @@
       ]
     },
     {
-      "id": 2154,
+      "id": 130,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -2233,7 +2232,7 @@
       "masterpiece": false
     },
     {
-      "id": 2155,
+      "id": 131,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -2254,7 +2253,7 @@
       "masterpiece": false
     },
     {
-      "id": 2156,
+      "id": 132,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -2278,7 +2277,7 @@
       ]
     },
     {
-      "id": 2157,
+      "id": 133,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -2302,7 +2301,7 @@
       ]
     },
     {
-      "id": 2158,
+      "id": 134,
       "category": "movies",
       "subcategory": "western",
       "title": {
@@ -2323,7 +2322,7 @@
       "masterpiece": true
     },
     {
-      "id": 2159,
+      "id": 135,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -2344,7 +2343,7 @@
       "masterpiece": true
     },
     {
-      "id": 2160,
+      "id": 136,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -2365,7 +2364,7 @@
       "masterpiece": false
     },
     {
-      "id": 2161,
+      "id": 137,
       "category": "movies",
       "subcategory": "comedia",
       "title": {
@@ -2389,7 +2388,7 @@
       ]
     },
     {
-      "id": 2162,
+      "id": 138,
       "category": "movies",
       "subcategory": "comedia",
       "title": {
@@ -2410,7 +2409,7 @@
       "masterpiece": false
     },
     {
-      "id": 2163,
+      "id": 139,
       "category": "movies",
       "subcategory": "comedia",
       "title": {
@@ -2431,7 +2430,7 @@
       "masterpiece": true
     },
     {
-      "id": 2164,
+      "id": 140,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -2452,7 +2451,7 @@
       "masterpiece": false
     },
     {
-      "id": 1000,
+      "id": 141,
       "category": "movies",
       "subcategory": "animación",
       "title": {
@@ -2473,7 +2472,7 @@
       }
     },
     {
-      "id": 1001,
+      "id": 142,
       "category": "movies",
       "subcategory": "animación",
       "title": {
@@ -2494,7 +2493,7 @@
       }
     },
     {
-      "id": 1012,
+      "id": 143,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -2515,7 +2514,7 @@
       "masterpiece": false
     },
     {
-      "id": 1031,
+      "id": 144,
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
@@ -2535,7 +2534,7 @@
       "masterpiece": true
     },
     {
-      "id": 2172,
+      "id": 145,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -2557,7 +2556,7 @@
       "tags": []
     },
     {
-      "id": 2175,
+      "id": 146,
       "category": "movies",
       "subcategory": "animación",
       "tags": [
@@ -2581,7 +2580,7 @@
       "masterpiece": false
     },
     {
-      "id": 1018,
+      "id": 147,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -2602,7 +2601,7 @@
       "masterpiece": false
     },
     {
-      "id": 2111,
+      "id": 148,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -2623,7 +2622,7 @@
       "masterpiece": false
     },
     {
-      "id": 2112,
+      "id": 149,
       "category": "movies",
       "subcategory": "comedy",
       "title": {
@@ -2644,7 +2643,7 @@
       "masterpiece": false
     },
     {
-      "id": 2119,
+      "id": 150,
       "category": "movies",
       "subcategory": "thriller",
       "title": {
@@ -2665,7 +2664,7 @@
       "masterpiece": false
     },
     {
-      "id": 2120,
+      "id": 151,
       "category": "movies",
       "subcategory": "thriller",
       "title": {
@@ -2686,7 +2685,7 @@
       "masterpiece": false
     },
     {
-      "id": 2121,
+      "id": 152,
       "category": "movies",
       "subcategory": "thriller",
       "title": {
@@ -2707,7 +2706,7 @@
       "masterpiece": false
     },
     {
-      "id": 2123,
+      "id": 153,
       "category": "movies",
       "subcategory": "fantasy",
       "title": {
@@ -2728,11 +2727,11 @@
       "masterpiece": false
     },
     {
-      "id": 2129,
+      "id": 154,
       "category": "movies",
       "subcategory": "horror",
       "title": {
-        "es": "Sinister",
+        "es": "Siniestro",
         "en": "Sinister"
       },
       "description": {
@@ -2749,7 +2748,7 @@
       "masterpiece": false
     },
     {
-      "id": 1003,
+      "id": 155,
       "category": "movies",
       "subcategory": "acción",
       "title": {
@@ -2765,8 +2764,8 @@
       "year": 2015,
       "masterpiece": false
     },
- {
-      "id": 1004,
+    {
+      "id": 156,
       "category": "movies",
       "subcategory": "acción",
       "title": {
@@ -2783,7 +2782,7 @@
       "masterpiece": false
     },
     {
-      "id": 2166,
+      "id": 157,
       "category": "movies",
       "subcategory": "animación",
       "title": {
@@ -2804,7 +2803,7 @@
       "masterpiece": true
     },
     {
-      "id": 2167,
+      "id": 158,
       "category": "movies",
       "subcategory": "animación",
       "title": {
@@ -2825,7 +2824,7 @@
       "masterpiece": false
     },
     {
-      "id": 2168,
+      "id": 159,
       "category": "movies",
       "subcategory": "drama",
       "title": {
@@ -2845,6 +2844,27 @@
       "year": 1963,
       "masterpiece": true,
       "tags": ["cine español"]
+    },
+    {
+      "id": 160,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "El Jovencito Frankenstein",
+        "en": "Young Frankenstein"
+      },
+      "description": {
+        "es": "Una comedia clásica dirigida por Mel Brooks, que parodia las películas de terror de Frankenstein con un humor único.",
+        "en": "A classic comedy directed by Mel Brooks, parodying Frankenstein horror films with unique humor."
+      },
+      "director": "Mel Brooks",
+      "image": "/imagenes/peliculas/young_frankenstein.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Y8v2YNOdwnM",
+        "en": "https://www.youtube.com/watch?v=sO8g8VmFf0M"
+      },
+      "year": 1974,
+      "masterpiece": true
     }
   ]
 }
