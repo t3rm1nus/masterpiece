@@ -69,52 +69,47 @@ function CategoriesPage({ onCategory }) {
 
 function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const { t, lang } = useLanguage();
+  // Obtener siempre el array plano de recomendaciones
   const datos = datosByCategory[category] || { recommendations: [] };
-  const [activeSub, setActiveSub] = useState(null);
-  
-  // Obtener items de la categoría actual
-  const items = React.useMemo(() => {
-    const filtered = datos.recommendations.filter(r => r.category === category);
-    console.log('Items filtrados por categoría:', filtered.length);
-    // Debug: Mostrar todas las subcategorías de los items
-    console.log('Subcategorías de los items:', filtered.map(r => ({
-      title: r.title,
-      subcategory: r.subcategory,
-      normalized: normalizeSubcategoryInternal(r.subcategory)
-    })));
-    return filtered;
-  }, [datos.recommendations, category]);
-
-  // Obtener subcategorías únicas usando la función de utilidad
-  const subs = React.useMemo(() => {
-    const uniqueSubs = getUniqueSubcategories(items, lang);
-    console.log('Subcategorías únicas:', uniqueSubs);
-    return uniqueSubs;
-  }, [items, lang]);
+  const items = Array.isArray(datos.recommendations) ? datos.recommendations : datos;
 
   const masterpiecesKey = '__masterpieces__';
+  const [activeSub, setActiveSub] = useState(null);
 
   // Filtrar items usando la función de utilidad
   const filtered = React.useMemo(() => {
-    if (!activeSub) {
-      console.log('Mostrando todos los items:', items.length);
-      return items;
-    }
-    
-    if (activeSub === masterpiecesKey) {
-      const masterpieces = items.filter(r => r.masterpiece);
-      console.log('Mostrando obras maestras:', masterpieces.length);
-      return masterpieces;
-    }
-
-    const filtered = filterItemsBySubcategory(items, activeSub, lang);
-    console.log(`Filtrando por subcategoría ${activeSub}:`, filtered.length);
-    // Debug: Mostrar los items filtrados
-    console.log('Items filtrados:', filtered.map(r => ({
-      title: r.title,
-      subcategory: r.subcategory,
-      normalized: normalizeSubcategoryInternal(r.subcategory)
+    let subs = Array.from(new Set(items.map(r => {
+      if (lang === 'es' && r.subcategory === 'action') return 'acción';
+      if (lang === 'en' && (r.subcategory === 'acción' || r.subcategory === 'acción')) return 'action';
+      if (lang === 'es' && r.subcategory === 'fantasy') return 'fantasía';
+      if (lang === 'en' && r.subcategory === 'fantasía') return 'fantasy';
+      if (lang === 'es' && r.subcategory === 'comedy') return 'comedia';
+      if (lang === 'en' && r.subcategory === 'comedia') return 'comedy';
+      if (lang === 'es' && r.subcategory === 'adventure') return 'aventura';
+      if (lang === 'en' && r.subcategory === 'aventura') return 'adventure';
+      return r.subcategory;
     })));
+    let filtered;
+    if (activeSub === masterpiecesKey) {
+      filtered = items.filter(r => r.masterpiece);
+    } else if (activeSub) {
+      filtered = items.filter(r => {
+        if (lang === 'es' && r.subcategory === 'action' && activeSub === 'acción') return true;
+        if (lang === 'en' && r.subcategory === 'acción' && activeSub === 'action') return true;
+        if (lang === 'es' && r.subcategory === 'fantasy' && activeSub === 'fantasía') return true;
+        if (lang === 'en' && r.subcategory === 'fantasía' && activeSub === 'fantasy') return true;
+        if (lang === 'es' && r.subcategory === 'comedy' && activeSub === 'comedia') return true;
+        if (lang === 'en' && r.subcategory === 'comedia' && activeSub === 'comedy') return true;
+        if (lang === 'es' && r.subcategory === 'adventure' && activeSub === 'aventura') return true;
+        if (lang === 'en' && r.subcategory === 'aventura' && activeSub === 'adventure') return true;
+        if ((lang === 'es' && activeSub === 'cine español') || (lang === 'en' && activeSub === 'spanish cinema')) {
+          return r.tags && r.tags.includes('cine español');
+        }
+        return r.subcategory === activeSub;
+      });
+    } else {
+      filtered = items;
+    }
     return filtered;
   }, [items, activeSub, lang]);
 
