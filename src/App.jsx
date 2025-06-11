@@ -76,6 +76,12 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const items = React.useMemo(() => {
     const filtered = datos.recommendations.filter(r => r.category === category);
     console.log('Items filtrados por categoría:', filtered.length);
+    // Debug: Mostrar todas las subcategorías de los items
+    console.log('Subcategorías de los items:', filtered.map(r => ({
+      title: r.title,
+      subcategory: r.subcategory,
+      normalized: normalizeSubcategoryInternal(r.subcategory)
+    })));
     return filtered;
   }, [datos.recommendations, category]);
 
@@ -103,6 +109,12 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
 
     const filtered = filterItemsBySubcategory(items, activeSub, lang);
     console.log(`Filtrando por subcategoría ${activeSub}:`, filtered.length);
+    // Debug: Mostrar los items filtrados
+    console.log('Items filtrados:', filtered.map(r => ({
+      title: r.title,
+      subcategory: r.subcategory,
+      normalized: normalizeSubcategoryInternal(r.subcategory)
+    })));
     return filtered;
   }, [items, activeSub, lang]);
 
@@ -120,6 +132,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   // Función para manejar el cambio de subcategoría
   const handleSubcategoryChange = (sub) => {
     console.log('Cambiando subcategoría a:', sub);
+    console.log('Subcategoría normalizada:', normalizeSubcategoryInternal(sub));
     setActiveSub(sub);
   };
 
