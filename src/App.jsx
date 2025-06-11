@@ -73,15 +73,15 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   
   // Asegurarnos de que los datos se filtran correctamente
   const items = React.useMemo(() => {
-    // Primero filtramos por categoría
-    const filteredItems = datos.recommendations.filter(r => r.category === category);
-    
-    // Luego eliminamos duplicados basados en el ID
-    const uniqueItems = Array.from(
-      new Map(filteredItems.map(item => [item.id, item])).values()
-    );
-    
-    return uniqueItems;
+    return datos.recommendations.filter(r => {
+      // Verificar que la categoría coincida
+      if (r.category !== category) return false;
+      
+      // Verificar que la subcategoría exista
+      if (!r.subcategory) return false;
+      
+      return true;
+    });
   }, [datos.recommendations, category]);
 
   const subcategoryTranslations = {
