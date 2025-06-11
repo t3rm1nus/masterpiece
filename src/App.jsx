@@ -73,7 +73,13 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   
   // Asegurarnos de que los datos se filtran correctamente
   const items = React.useMemo(() => {
-    return datos.recommendations.filter(r => r.category === category);
+    return datos.recommendations.filter(r => {
+      // Verificar que la categoría coincida
+      if (r.category !== category) return false;
+      // Verificar que la subcategoría exista
+      if (!r.subcategory) return false;
+      return true;
+    });
   }, [datos.recommendations, category]);
 
   const subcategoryTranslations = {
@@ -124,51 +130,62 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     return items;
   }, [items, activeSub, normalizeSubcategory]);
 
+  // Función para manejar el clic en una subcategoría
+  const handleSubcategoryClick = (sub) => {
+    setActiveSub(sub);
+  };
+
   // --- Responsive: usar select en móviles ---
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
 
   return (
-    <div>
-      {/* Solo mostrar el menú superior en desktop/tablet, no en móviles aquí */}
-      {!(typeof window !== 'undefined' && window.innerWidth <= 600) && (
-        <Menu showBack={true} onBack={onBack} backLabel={lang === 'en' ? 'Back' : 'Volver'} onNavigate={onNavigate} />
-      )}
-      <h2 className="subcategories-title">{t.categories[category]}</h2>
-      {isMobile ? (
-        <div className="categories-list">
-          <select
-            className="subcategory-select"
-            value={activeSub || ''}
-            onChange={e => setActiveSub(e.target.value || null)}
-            style={{width:'100%',maxWidth:320,marginBottom:'1rem'}}
-          >
-            <option value="">{lang === 'en' ? 'All' : 'Todas'}</option>
-            {subs.map(sub => (
-              <option key={sub} value={sub}>{subcategoryTranslations[sub] || sub}</option>
-            ))}
-            <option value={masterpiecesKey}>{lang === 'en' ? 'Masterpieces' : 'Obras maestras'}</option>
-          </select>
-        </div>
-      ) : (
-        <div className="categories-list">
-          {subs.map(sub => (
-            <button
-              key={sub}
-              className={`category-btn${activeSub === sub ? ' active' : ''}`}
-              onClick={() => setActiveSub(sub)}
-            >
-              {subcategoryTranslations[sub] || sub}
-            </button>
-          ))}
+    <div className="subcategories-page">
+      <div className="subcategories-header">
+        <button onClick={onBack} className="back-button">
+          {t('back')}
+        </button>
+        <h2>{t(category)}</h2>
+      </div>
+      
+      <div className="subcategories-list">
+        {hasSpanishCinema && (
           <button
-            className={`category-btn${activeSub === masterpiecesKey ? ' active' : ''}`}
-            onClick={() => setActiveSub(activeSub === masterpiecesKey ? null : masterpiecesKey)}
+            className={`subcategory-button ${activeSub === 'cine español' ? 'active' : ''}`}
+            onClick={() => handleSubcategoryClick('cine español')}
           >
-            {lang === 'en' ? 'Masterpieces' : 'Obras maestras'}
+            {t('spanish_cinema')}
           </button>
-        </div>
-      )}
-      <RecommendationsList recommendations={filtered} onItemClick={onItemClick} />
+        )}
+        <button
+          className={`subcategory-button ${activeSub === masterpiecesKey ? 'active' : ''}`}
+          onClick={() => handleSubcategoryClick(masterpiecesKey)}
+        >
+          {t('masterpieces')}
+        </button>
+        {subs.map((sub) => (
+          <button
+            key={sub}
+            className={`subcategory-button ${activeSub === sub ? 'active' : ''}`}
+            onClick={() => handleSubcategoryClick(sub)}
+          >
+            {t(sub)}
+          </button>
+        ))}
+      </div>
+
+      <div className="items-grid">
+        {filtered.map((item) => (
+          <div
+            key={item.id}
+            className="item-card"
+            onClick={() => onItemClick(item)}
+          >
+            <img src={item.image} alt={item.title[lang]} />
+            <h3>{item.title[lang]}</h3>
+            <p>{item.description[lang]}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
