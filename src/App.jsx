@@ -72,23 +72,6 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const datos = datosByCategory[category] || { recommendations: [] };
   const [activeSub, setActiveSub] = useState(null);
   
-  // Mapeo unificado de subcategorías
-  const subcategoryMap = {
-    'sci-fi': { es: 'ciencia ficción', en: 'sci-fi' },
-    'action': { es: 'acción', en: 'action' },
-    'acción': { es: 'acción', en: 'action' },
-    'drama': { es: 'drama', en: 'drama' },
-    'comedy': { es: 'comedia', en: 'comedy' },
-    'comedia': { es: 'comedia', en: 'comedy' },
-    'thriller': { es: 'thriller', en: 'thriller' },
-    'fantasy': { es: 'fantasía', en: 'fantasy' },
-    'horror': { es: 'terror', en: 'horror' },
-    'adventure': { es: 'aventura', en: 'adventure' },
-    'animación': { es: 'animación', en: 'animation' },
-    'animation': { es: 'animación', en: 'animation' },
-    'western': { es: 'western', en: 'western' }
-  };
-
   // Obtener items de la categoría actual
   const items = React.useMemo(() => {
     const filtered = datos.recommendations.filter(r => r.category === category);
@@ -96,17 +79,16 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     return filtered;
   }, [datos.recommendations, category]);
 
-  // Obtener subcategorías únicas
+  // Obtener subcategorías únicas usando la función de utilidad
   const subs = React.useMemo(() => {
-    const uniqueSubs = new Set(items.map(r => r.subcategory));
-    const subArray = Array.from(uniqueSubs).filter(Boolean);
-    console.log('Subcategorías únicas:', subArray);
-    return subArray;
-  }, [items]);
+    const uniqueSubs = getUniqueSubcategories(items, lang);
+    console.log('Subcategorías únicas:', uniqueSubs);
+    return uniqueSubs;
+  }, [items, lang]);
 
   const masterpiecesKey = '__masterpieces__';
 
-  // Filtrar items
+  // Filtrar items usando la función de utilidad
   const filtered = React.useMemo(() => {
     if (!activeSub) {
       console.log('Mostrando todos los items:', items.length);
@@ -119,10 +101,10 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
       return masterpieces;
     }
 
-    const filtered = items.filter(r => r.subcategory === activeSub);
+    const filtered = filterItemsBySubcategory(items, activeSub, lang);
     console.log(`Filtrando por subcategoría ${activeSub}:`, filtered.length);
     return filtered;
-  }, [items, activeSub]);
+  }, [items, activeSub, lang]);
 
   // --- Responsive: usar select en móviles ---
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
@@ -132,8 +114,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     if (sub === masterpiecesKey) {
       return lang === 'en' ? 'Masterpieces' : 'Obras maestras';
     }
-    const translation = subcategoryMap[sub];
-    return translation ? translation[lang] : sub;
+    return normalizeSubcategory(sub, lang);
   };
 
   // Función para manejar el cambio de subcategoría
@@ -191,21 +172,19 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
       <RecommendationsList 
         recommendations={filtered} 
         onItemClick={onItemClick} 
-        subcategoryMap={subcategoryMap}
       />
     </div>
   );
 }
 
-function RecommendationsList({ recommendations, onItemClick, isHome, subcategoryMap }) {
+function RecommendationsList({ recommendations, onItemClick, isHome }) {
   const { lang, t } = useLanguage();
   const categoryNames = t.categories;
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
 
   // Función para obtener el nombre traducido de la subcategoría
   const getSubcategoryName = (sub) => {
-    const translation = subcategoryMap?.[sub];
-    return translation ? translation[lang] : sub;
+    return normalizeSubcategory(sub, lang);
   };
 
   return (
