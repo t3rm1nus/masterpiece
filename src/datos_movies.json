@@ -2276,6 +2276,42 @@
         "es": "https://www.youtube.com/watch?v=BjeBG8Xrci8",
         "en": "https://www.youtube.com/watch?v=HaLISMAGdOE"
       }
+    },
+    {
+      "id": 1002,
+      "category": "movies",
+      "subcategory": "animation",
+      "title": {"es": "Porco Rosso", "en": "Porco Rosso"},
+      "description": {
+        "es": "Una película de animación dirigida por Hayao Miyazaki, que narra la historia de un piloto italiano convertido en cerdo que lucha contra piratas aéreos en el Adriático.",
+        "en": "An animated film directed by Hayao Miyazaki, telling the story of an Italian pilot turned into a pig who fights against air pirates in the Adriatic."
+      },
+      "director": "Hayao Miyazaki",
+      "image": "/imagenes/peliculas/porco_rosso.jpg",
+      "year": 1992,
+      "masterpiece": true,
+      "trailer": {
+        "en": "https://www.youtube.com/watch?v=3LRyNwYg1f8",
+        "es": "https://www.youtube.com/watch?v=oD6yrU1SEuk"
+      }
+    },
+    {
+      "id": 1003,
+      "category": "movies",
+      "subcategory": "animation",
+      "title": {"es": "La Princesa Mononoke", "en": "Princess Mononoke"},
+      "description": {
+        "es": "Una película de animación dirigida por Hayao Miyazaki, que explora el conflicto entre la naturaleza y la industrialización a través de la historia de un príncipe maldito y una princesa criada por lobos.",
+        "en": "An animated film directed by Hayao Miyazaki, exploring the conflict between nature and industrialization through the story of a cursed prince and a princess raised by wolves."
+      },
+      "director": "Hayao Miyazaki",
+      "image": "/imagenes/peliculas/mononoke.jpg",
+      "year": 1997,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=xhh8PzDnhiI",
+        "en": "https://www.youtube.com/watch?v=vf6c6n35wr4"
+      }
     }
   ]
 }
