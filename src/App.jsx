@@ -9,6 +9,7 @@ import datosVideogames from "./datos_videogames.json";
 import datosBoardgames from "./datos_boardgames.json";
 import datosPodcast from "./datos_podcast.json";
 import trailers from "./trailers.json";
+import React from "react";
 
 // Utilidad para obtener el dataset según la categoría
 const datosByCategory = {
@@ -68,7 +69,12 @@ function CategoriesPage({ onCategory }) {
 function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const { t, lang } = useLanguage();
   const datos = datosByCategory[category] || { recommendations: [] };
-  const items = datos.recommendations.filter(r => r.category === category);
+  
+  // Asegurarnos de que los datos se filtran correctamente
+  const items = React.useMemo(() => {
+    return datos.recommendations.filter(r => r.category === category);
+  }, [datos.recommendations, category]);
+
   const subcategoryTranslations = {
     'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
     'acción': lang === 'en' ? 'action' : 'acción',
@@ -82,9 +88,9 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   };
 
   // Función para normalizar subcategorías
-  const normalizeSubcategory = (subcategory) => {
-    // Primero normalizamos a español
-    const normalizedSubcategory = subcategory.toLowerCase();
+  const normalizeSubcategory = React.useCallback((subcategory) => {
+    if (!subcategory) return '';
+    const normalizedSubcategory = subcategory.toLowerCase().trim();
     if (lang === 'es') {
       switch (normalizedSubcategory) {
         case 'action': return 'acción';
@@ -95,7 +101,6 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
         default: return normalizedSubcategory;
       }
     } else {
-      // Luego normalizamos a inglés
       switch (normalizedSubcategory) {
         case 'acción': return 'action';
         case 'animación': return 'animation';
@@ -105,23 +110,31 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
         default: return normalizedSubcategory;
       }
     }
-  };
+  }, [lang]);
 
-  let subs = Array.from(new Set(items.map(r => normalizeSubcategory(r.subcategory))));
-  const hasSpanishCinema = items.some(r => r.tags && r.tags.includes('cine español'));
-  if (hasSpanishCinema) {
-    subs.push(lang === 'es' ? 'cine español' : 'spanish cinema');
-  }
+  // Memoizar las subcategorías para evitar recálculos innecesarios
+  const subs = React.useMemo(() => {
+    const uniqueSubs = new Set(items.map(r => normalizeSubcategory(r.subcategory)));
+    return Array.from(uniqueSubs).filter(Boolean);
+  }, [items, normalizeSubcategory]);
+
+  const hasSpanishCinema = React.useMemo(() => 
+    items.some(r => r.tags && r.tags.includes('cine español')),
+    [items]
+  );
+
   const masterpiecesKey = '__masterpieces__';
   const [activeSub, setActiveSub] = useState(null);
-  let filtered;
-  if (activeSub === masterpiecesKey) {
-    filtered = items.filter(r => r.masterpiece);
-  } else if (activeSub) {
-    filtered = items.filter(r => normalizeSubcategory(r.subcategory) === activeSub);
-  } else {
-    filtered = items;
-  }
+
+  // Memoizar los items filtrados
+  const filtered = React.useMemo(() => {
+    if (activeSub === masterpiecesKey) {
+      return items.filter(r => r.masterpiece);
+    } else if (activeSub) {
+      return items.filter(r => normalizeSubcategory(r.subcategory) === activeSub);
+    }
+    return items;
+  }, [items, activeSub, normalizeSubcategory]);
 
   // --- Responsive: usar select en móviles ---
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
