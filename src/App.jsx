@@ -173,11 +173,15 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
 function RecommendationsList({ recommendations, onItemClick, isHome }) {
   const { lang, t } = useLanguage();
   const categoryNames = t.categories;
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
-
-  // Función para obtener el nombre traducido de la subcategoría
-  const getSubcategoryName = (sub) => {
-    return normalizeSubcategory(sub, lang);
+  // Declarar subcategoryTranslations aquí para que esté disponible en todo el componente
+  const subcategoryTranslations = {
+    'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
+    'acción': lang === 'en' ? 'action' : 'acción',
+    'action': lang === 'es' ? 'acción' : 'action',
+    'comedy': lang === 'es' ? 'comedia' : 'comedy',
+    'adventure': lang === 'es' ? 'aventura' : 'adventure',
+    'aventura': lang === 'en' ? 'adventure' : 'aventura',
+    'comedia': lang === 'en' ? 'comedy' : 'comedia'
   };
 
   return (
