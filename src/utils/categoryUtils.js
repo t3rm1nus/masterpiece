@@ -1,5 +1,5 @@
 // Función para normalizar subcategorías (sin traducción)
-const normalizeSubcategoryInternal = (subcategory) => {
+export const normalizeSubcategoryInternal = (subcategory) => {
   if (!subcategory) return '';
   const normalized = subcategory.toLowerCase().trim();
   switch (normalized) {

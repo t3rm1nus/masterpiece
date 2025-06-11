@@ -10,7 +10,7 @@ import datosBoardgames from "./datos_boardgames.json";
 import datosPodcast from "./datos_podcast.json";
 import trailers from "./trailers.json";
 import React from "react";
-import { normalizeSubcategory, filterItemsBySubcategory, getUniqueSubcategories } from './utils/categoryUtils';
+import { normalizeSubcategory, filterItemsBySubcategory, getUniqueSubcategories, normalizeSubcategoryInternal } from './utils/categoryUtils';
 
 // Utilidad para obtener el dataset según la categoría
 const datosByCategory = {
