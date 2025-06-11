@@ -66,40 +66,44 @@
     {
       "id": 26,
       "category": "movies",
-      "subcategory": "sci-fi",
-      "title": {
-        "es": "La Llegada",
-        "en": "Arrival"
-      },
+      "subcategory": "thriller",
+      "tags": [
+        "cine español"
+      ],
+      "title": {"es": "Intacto", "en": "Intacto"},
       "description": {
-        "es": "Una película de ciencia ficción dirigida por Denis Villeneuve.",
-        "en": "A science fiction film directed by Denis Villeneuve."
+        "es": "Película española que explora el concepto de la suerte y el destino en un thriller psicológico único.",
+        "en": "Spanish film exploring the concept of luck and fate in a unique psychological thriller."
       },
-      "director": "Denis Villeneuve",
-      "image": "/imagenes/peliculas/arrival.jpg",
-      "year": 2016,
-      "masterpiece": true,
+      "image": "/imagenes/peliculas/intacto.jpg",
+      "year": 2001,
       "trailer": {
-        "es": "https://www.youtube.com/watch?v=uWs5lsWXLbo",
-        "en": "https://www.youtube.com/watch?v=tFMo3UJ4B4g"
-      }
+        "es": "https://www.youtube.com/watch?v=0x2H2a7tP5w",
+        "en": "https://www.youtube.com/watch?v=B9BQHKUGhgI"
+      },      
+      "masterpiece": true,
+      "director": "Juan Carlos Fresnadillo"
     },
     {
       "id": 27,
       "category": "movies",
-      "subcategory": "sci-fi",
+      "subcategory": "horror",
       "title": {
-        "es": "Alien (1979)",
-        "en": "Alien (1979)"
+        "es": "Gremlins",
+        "en": "Gremlins"
       },
       "description": {
-        "es": "Película de ciencia ficción y terror dirigida por Ridley Scott, considerada un clásico del género.",
-        "en": "Science fiction and horror film directed by Ridley Scott, considered a classic of the genre."
+        "es": "Una película de terror y comedia sobre criaturas traviesas.",
+        "en": "A horror-comedy film about mischievous creatures."
       },
-      "director": "Ridley Scott",
-      "image": "/imagenes/peliculas/alien.jpg",
-      "year": 1979,
-      "masterpiece": false
+      "director": "Joe Dante",
+      "image": "/imagenes/peliculas/gremlins.jpg",
+      "year": 1984,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=_zltf454tXk",
+        "en": "https://www.youtube.com/watch?v=XBEVwaJEgaA"
+      }
     },
     {
       "id": 28,
@@ -977,7 +981,7 @@
     {
       "id": 71,
       "category": "movies",
-      "subcategory": "acción",
+      "subcategory": "war",
       "title": {
         "es": "El puente sobre el río Kwai",
         "en": "The Bridge on the River Kwai"
@@ -1927,7 +1931,7 @@
         "es": "https://www.youtube.com/watch?v=aFP8CjozpkY",
         "en": "https://www.youtube.com/watch?v=EJXDMwGWhoA"
       },
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 116,
@@ -2124,7 +2128,7 @@
     {
       "id": 125,
       "category": "movies",
-      "subcategory": "acción",
+      "subcategory": "war",
       "title": {
         "es": "Doce del patíbulo",
         "en": "The Dirty Dozen"
@@ -2145,7 +2149,7 @@
     {
       "id": 126,
       "category": "movies",
-      "subcategory": "acción",
+      "subcategory": "war",
       "title": {
         "es": "Los cañones de Navarone",
         "en": "The Guns of Navarone"
@@ -2256,7 +2260,7 @@
     {
       "id": 131,
       "category": "movies",
-      "subcategory": "drama",
+      "subcategory": "war",
       "title": {
         "es": "Dunkerque",
         "en": "Dunkirk"
@@ -2313,10 +2317,6 @@
       "director": "José Luis Cuerda",
       "image": "/imagenes/peliculas/el_bosque_animado.jpg",
       "year": 1987,
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=Piu3tDDVH9o",
-        "en": "https://www.youtube.com/watch?v=Piu3tDDVH9o"
-      },
       "masterpiece": false,
       "tags": [
         "cine español"
@@ -2454,7 +2454,7 @@
     {
       "id": 140,
       "category": "movies",
-      "subcategory": "drama",
+      "subcategory": "war",
       "title": {
         "es": "El hundimiento",
         "en": "Downfall"
@@ -2545,6 +2545,10 @@
       },
       "description": {
         "es": "Obra maestra de Stanley Kubrick que explora la evolución humana, la inteligencia artificial y el misterio del universo.",
+        "en": "Stanley Kubrick's masterpiece exploring human evolution, artificial intelligence, and the mystery of the universe."
+      },
+      "image": "/imagenes/peliculas/2001.jpg",
+      "trailer": {
         "en": "Stanley Kubrick's masterpiece exploring human evolution, artificial intelligence, and the mystery of the universe."
       },
       "image": "/imagenes/peliculas/2001.jpg",
@@ -2888,7 +2892,6 @@
       "year": 1974,
       "masterpiece": true
     },
-    
     {
       "id": 161,
       "category": "movies",
@@ -2925,7 +2928,7 @@
       "director": "James Mangold",
       "image": "/imagenes/peliculas/tren_310.jpg",
       "year": 2007,
-      "masterpiece": true,
+      "masterpiece": false,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=aPSZY355FeM",
         "en": "https://www.youtube.com/watch?v=jX1m45CwvJ8"
@@ -3035,6 +3038,234 @@
         "es": "https://www.youtube.com/watch?v=7115nOKRFD8",
         "en": "https://www.youtube.com/watch?v=n2i917l5RFc"
       }
-    }
+    },
+    {
+      "id": 168,
+      "category": "movies",
+      "subcategory": "animación",
+      "title": {
+        "es": "Ghost in the Shell",
+        "en": "Ghost in the Shell"
+      },
+      "description": {
+        "es": "Una película de anime sobre inteligencia artificial y humanidad.",
+        "en": "An anime film about artificial intelligence and humanity."
+      },
+      "director": "Mamoru Oshii",
+      "image": "/imagenes/peliculas/ghost_in_the_shell.jpg",
+      "year": 1995,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=0H-8OI4ZJRk",
+        "en": "https://www.youtube.com/watch?v=8RF09G8Ymqg"
+      }
+    },
+    {
+      "id": 169,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Gladiator",
+        "en": "Gladiator"
+      },
+      "description": {
+        "es": "Una épica película histórica dirigida por Ridley Scott.",
+        "en": "An epic historical film directed by Ridley Scott."
+      },
+      "director": "Ridley Scott",
+      "image": "/imagenes/peliculas/gladiator.jpg",
+      "year": 2000,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=W3xjHIdaGww",
+        "en": "https://www.youtube.com/watch?v=P5ieIbInFpg"
+      }
+    },
+    {
+      "id": 170,
+      "category": "movies",
+      "subcategory": "sci-fi",
+      "title": {
+        "es": "Gravity",
+        "en": "Gravity"
+      },
+      "description": {
+        "es": "Una película de ciencia ficción sobre la supervivencia en el espacio.",
+        "en": "A science fiction film about survival in space."
+      },
+      "director": "Alfonso Cuarón",
+      "image": "/imagenes/peliculas/gravity.jpg",
+      "year": 2013,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=MEZWseaoZc8",
+        "en": "https://www.youtube.com/watch?v=OiTiKOy59o4"
+      }
+    },
+    {
+      "id": 171,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Goodfellas",
+        "en": "Goodfellas"
+      },
+      "description": {
+        "es": "Una película de crimen dirigida por Martin Scorsese.",
+        "en": "A crime film directed by Martin Scorsese."
+      },
+      "director": "Martin Scorsese",
+      "image": "/imagenes/peliculas/goodfellas.jpg",
+      "year": 1990,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Shj-QWYDn_M",
+        "en": "https://www.youtube.com/watch?v=2ilzidi_J8Q"
+      }
+    },
+    {
+      "id": 172,
+      "category": "movies",
+      "subcategory": "acción",
+      "title": {
+        "es": "Harakiri",
+        "en": "Harakiri"
+      },
+      "description": {
+        "es": "Una película clásica japonesa sobre honor y sacrificio.",
+        "en": "A classic Japanese film about honor and sacrifice."
+      },
+      "director": "Masaki Kobayashi",
+      "image": "/imagenes/peliculas/harakiri.jpg",
+      "year": 1962,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=gfABwM-Ppng",
+        "en": "https://www.youtube.com/watch?v=gfABwM-Ppng"
+      }
+    },
+    {
+      "id": 175,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "La Lista de Schindler",
+        "en": "Schindler's List"
+      },
+      "description": {
+        "es": "Una película histórica sobre el Holocausto dirigida por Steven Spielberg.",
+        "en": "A historical film about the Holocaust directed by Steven Spielberg."
+      },
+      "director": "Steven Spielberg",
+      "image": "/imagenes/peliculas/schindlers_list.jpg",
+      "year": 1993,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=7q-ETFeMxwI",
+        "en": "https://www.youtube.com/watch?v=gG22XNhtnoY"
+      }
+    },
+    {
+      "id": 176,
+      "category": "movies",
+      "subcategory": "western",
+      "title": {
+        "es": "Los Ocho Más Odiados",
+        "en": "The Hateful Eight"
+      },
+      "description": {
+        "es": "Una película de western dirigida por Quentin Tarantino.",
+        "en": "A western film directed by Quentin Tarantino."
+      },
+      "director": "Quentin Tarantino",
+      "image": "/imagenes/peliculas/hateful_eight.jpg",
+      "year": 2015,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=JxVRgBOL8jc",
+        "en": "https://www.youtube.com/watch?v=nIOmotayDMY"
+      }
+    },
+    {
+      "id": 177,
+      "category": "movies",
+      "subcategory": "sci-fi",
+      "title": {
+        "es": "Hijos de los Hombres",
+        "en": "Children of Men"
+      },
+      "description": {
+        "es": "Una película de ciencia ficción sobre un futuro distópico.",
+        "en": "A science fiction film about a dystopian future."
+      },
+      "director": "Alfonso Cuarón",
+      "image": "/imagenes/peliculas/children_of_men.jpg",
+      "year": 2006,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=T63mf2SrWTY",
+        "en": "https://www.youtube.com/watch?v=2VT2apoX90o"
+      }
+    },
+    {
+      "id": 178,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "En el Nombre del Padre",
+        "en": "In the Name of the Father"
+      },
+      "description": {
+        "es": "Una película dramática basada en hechos reales sobre la injusticia.",
+        "en": "A dramatic film based on true events about injustice."
+      },
+      "director": "Jim Sheridan",
+      "image": "/imagenes/peliculas/in_the_name_of_the_father.jpg",
+      "year": 1993,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=YDAU5B5ZMxI",
+        "en": "https://www.youtube.com/watch?v=_FVkvkiL6Qk"
+      }
+    },
+    {
+      "id": 179,
+      "category": "movies",
+      "subcategory": "sci-fi",
+      "title": {"es": "Inception", "en": "Inception"},
+      "description": {
+        "es": "Película de Christopher Nolan que explora los sueños y la realidad con una narrativa compleja y visualmente impresionante.",
+        "en": "Christopher Nolan's film exploring dreams and reality with a complex and visually stunning narrative."
+      },
+      "image": "/imagenes/peliculas/inception.jpg",
+      "year": 2010,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
+        "en": "https://www.youtube.com/watch?v=YoHD9XEInc0"
+      },
+      "masterpiece": false,
+      "director": "Christopher Nolan"
+    },
+    {
+    "id": 180,
+    "category": "movies",
+    "subcategory": "animation",
+    "title": {
+      "es": "El Viaje de Chihiro",
+      "en": "Spirited Away"
+    },
+    "description": {
+      "es": "Una obra maestra de la animación japonesa dirigida por Hayao Miyazaki, que narra la historia de una niña atrapada en un mundo mágico mientras busca salvar a sus padres.",
+      "en": "A masterpiece of Japanese animation directed by Hayao Miyazaki, telling the story of a girl trapped in a magical world while trying to save her parents."
+    },
+    "director": "Hayao Miyazaki",
+    "image": "/imagenes/peliculas/chihiro.jpg",
+    "year": 2001,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=5Fgq4Osh6XQ",
+      "en": "https://www.youtube.com/watch?v=fDUFP7EeXLE"
+    },
+    "masterpiece": true
+  }
   ]
 }

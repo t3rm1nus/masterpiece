@@ -70,31 +70,47 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const { t, lang } = useLanguage();
   const datos = datosByCategory[category] || { recommendations: [] };
   const items = datos.recommendations ? datos.recommendations.filter(r => r.category === category) : [];
-  // Traducciones de subcategorías
+  // Ajustar lógica de traducción y filtrado de subcategorías
   const subcategoryTranslations = {
-    'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
+    'ciencia ficción': lang === 'en' ? 'science fiction' : 'ciencia ficción',
+    'superhéroes': lang === 'en' ? 'superheroes' : 'superhéroes',
+    'distopía': lang === 'en' ? 'dystopia' : 'distopía',
+    'fantasía': lang === 'en' ? 'fantasy' : 'fantasía',
     'acción': lang === 'en' ? 'action' : 'acción',
     'action': lang === 'es' ? 'acción' : 'action',
     'comedy': lang === 'es' ? 'comedia' : 'comedy',
     'adventure': lang === 'es' ? 'aventura' : 'adventure',
     'aventura': lang === 'en' ? 'adventure' : 'aventura',
-    'comedia': lang === 'en' ? 'comedy' : 'comedia'
+    'comedia': lang === 'en' ? 'comedy' : 'comedia',
+    'histórico': lang === 'en' ? 'historical' : 'histórico',
+    'historical': lang === 'es' ? 'histórico' : 'historical',
+    'crónica': lang === 'en' ? 'chronicle' : 'crónica',
+    'chronicle': lang === 'es' ? 'crónica' : 'chronicle',
+    'war': lang === 'es' ? 'guerra' : 'war',
+    'guerra': lang === 'en' ? 'war' : 'guerra',
+    'animación': lang === 'en' ? 'animation' : 'animación'
+  };
+  const normalizeToEnglish = {
+    'ciencia ficción': 'science fiction',
+    'superhéroes': 'superheroes',
+    'distopía': 'dystopia',
+    'fantasía': 'fantasy',
+    'acción': 'action',
+    'comedia': 'comedy',
+    'aventura': 'adventure',
+    'histórico': 'historical',
+    'crónica': 'chronicle',
+    'guerra': 'war',
+    'animación': 'animation',
+    'cine español': 'spanish cinema'
   };
   // subs definido ANTES del return
   let subs = Array.from(new Set(items.map(r => {
-    if (lang === 'es' && r.subcategory === 'action') return 'acción';
-    if (lang === 'en' && (r.subcategory === 'acción' || r.subcategory === 'acción')) return 'action';
-    if (lang === 'es' && r.subcategory === 'fantasy') return 'fantasía';
-    if (lang === 'en' && r.subcategory === 'fantasía') return 'fantasy';
-    if (lang === 'es' && r.subcategory === 'comedy') return 'comedia';
-    if (lang === 'en' && r.subcategory === 'comedia') return 'comedy';
-    if (lang === 'es' && r.subcategory === 'adventure') return 'aventura';
-    if (lang === 'en' && r.subcategory === 'aventura') return 'adventure';
-    return r.subcategory;
+    const normalizedSub = normalizeToEnglish[r.subcategory] || r.subcategory;
+    return normalizedSub;
   })));
-  const hasSpanishCinema = items.some(r => r.tags && r.tags.includes('cine español'));
-  if (hasSpanishCinema) {
-    subs.push(lang === 'es' ? 'cine español' : 'spanish cinema');
+  if (items.some(r => r.tags && r.tags.includes('cine español'))) {
+    subs.push('spanish cinema');
   }
   const masterpiecesKey = '__masterpieces__';
   const [activeSub, setActiveSub] = useState(null);
@@ -103,18 +119,12 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     filtered = items.filter(r => r.masterpiece);
   } else if (activeSub) {
     filtered = items.filter(r => {
-      if (lang === 'es' && r.subcategory === 'action' && activeSub === 'acción') return true;
-      if (lang === 'en' && r.subcategory === 'acción' && activeSub === 'action') return true;
-      if (lang === 'es' && r.subcategory === 'fantasy' && activeSub === 'fantasía') return true;
-      if (lang === 'en' && r.subcategory === 'fantasía' && activeSub === 'fantasy') return true;
-      if (lang === 'es' && r.subcategory === 'comedy' && activeSub === 'comedia') return true;
-      if (lang === 'en' && r.subcategory === 'comedia' && activeSub === 'comedy') return true;
-      if (lang === 'es' && r.subcategory === 'adventure' && activeSub === 'aventura') return true;
-      if (lang === 'en' && r.subcategory === 'aventura' && activeSub === 'adventure') return true;
+      const normalizedSub = normalizeToEnglish[r.subcategory] || r.subcategory;
+      // Ajustar lógica de filtrado para incluir películas con el tag 'cine español'
       if ((lang === 'es' && activeSub === 'cine español') || (lang === 'en' && activeSub === 'spanish cinema')) {
         return r.tags && r.tags.includes('cine español');
       }
-      return r.subcategory === activeSub;
+      return activeSub === normalizedSub;
     });
   } else {
     filtered = items;
@@ -122,6 +132,27 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
 
   // --- Responsive: usar select en móviles ---
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
+
+  // Ajustar lógica para sincronizar correctamente el estado del botón y el listado
+  useEffect(() => {
+    if (activeSub) {
+      const originalSub = Object.keys(normalizeToEnglish).find(
+        key => normalizeToEnglish[key] === activeSub || key === activeSub
+      );
+      if (originalSub) {
+        setActiveSub(normalizeToEnglish[originalSub]);
+      }
+    }
+  }, [lang]);
+
+  // Ajustar lógica de filtrado para garantizar que el listado se mantenga
+  filtered = items.filter(r => {
+    const normalizedSub = normalizeToEnglish[r.subcategory] || r.subcategory;
+    if (activeSub === 'spanish cinema') {
+      return r.tags && r.tags.includes('cine español');
+    }
+    return activeSub === normalizedSub;
+  });
 
   return (
     <div>
@@ -179,7 +210,9 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
     'comedy': lang === 'es' ? 'comedia' : 'comedy',
     'adventure': lang === 'es' ? 'aventura' : 'adventure',
     'aventura': lang === 'en' ? 'adventure' : 'aventura',
-    'comedia': lang === 'en' ? 'comedy' : 'comedia'
+    'comedia': lang === 'en' ? 'comedy' : 'comedia',
+    'histórico': lang === 'en' ? 'historical' : 'histórico',
+    'crónica': lang === 'en' ? 'chronicle' : 'crónica'
   };
   // Detectar móvil de forma robusta
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
@@ -322,7 +355,8 @@ function ItemDetailPage({ itemId, onBack }) {
     'aventura': lang === 'en' ? 'adventure' : 'aventura',
     'comedia': lang === 'en' ? 'comedy' : 'comedia',
     'animación': lang === 'en' ? 'animation' : 'animación',
-    'animation': lang === 'es' ? 'animación' : 'animation'
+    'animation': lang === 'es' ? 'animación' : 'animation',
+    'war': lang === 'es' ? 'guerra' : 'war'
   };
 
   return (
