@@ -116,7 +116,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const [activeSub, setActiveSub] = useState(null);
   let filtered;
   if (activeSub === masterpiecesKey) {
-    filtered = items.filter(r => r.masterpiece);
+    filtered = items.filter(r => r.masterpiece === true);
   } else if (activeSub) {
     filtered = items.filter(r => {
       const normalizedSub = normalizeToEnglish[r.subcategory] || r.subcategory;
@@ -144,15 +144,6 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
       }
     }
   }, [lang]);
-
-  // Ajustar lógica de filtrado para garantizar que el listado se mantenga
-  filtered = items.filter(r => {
-    const normalizedSub = normalizeToEnglish[r.subcategory] || r.subcategory;
-    if (activeSub === 'spanish cinema') {
-      return r.tags && r.tags.includes('cine español');
-    }
-    return activeSub === normalizedSub;
-  });
 
   return (
     <div>
