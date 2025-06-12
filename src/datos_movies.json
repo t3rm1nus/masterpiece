@@ -159,7 +159,7 @@
     {
       "id": 31,
       "category": "movies",
-      "subcategory": "acción",
+      "subcategory": "action",
       "title": {
         "es": "Operación Dragón",
         "en": "Enter the Dragon"
@@ -248,7 +248,7 @@
     {
       "id": 36,
       "category": "movies",
-      "subcategory": "comedia",
+      "subcategory": "comedy",
       "tags": [
         "cine español"
       ],
@@ -1639,7 +1639,7 @@
     {
       "id": 102,
       "category": "movies",
-      "subcategory": "acción",
+      "subcategory": "action",
       "title": {
         "es": "Jungla de cristal",
         "en": "Die Hard"
@@ -2002,7 +2002,7 @@
     {
       "id": 119,
       "category": "movies",
-      "subcategory": "acción",
+      "subcategory": "action",
       "title": {
         "es": "Tigre y Dragón",
         "en": "Crouching Tiger, Hidden Dragon"
@@ -2086,7 +2086,7 @@
     {
       "id": 123,
       "category": "movies",
-      "subcategory": "acción",
+      "subcategory": "action",
       "title": {
         "es": "Predator",
         "en": "Predator"
@@ -2231,10 +2231,7 @@
         "es": "https://www.youtube.com/watch?v=m5XqG2tS1XE",
         "en": "https://www.youtube.com/watch?v=-8UW-O-rhv0"
       },
-      "masterpiece": true,
-      "tags": [
-        "comedia"
-      ]
+      "masterpiece": true
     },
     {
       "id": 130,
@@ -2388,7 +2385,7 @@
     {
       "id": 137,
       "category": "movies",
-      "subcategory": "comedia",
+      "subcategory": "comedy",
       "title": {
         "es": "El día de la bestia",
         "en": "The Day of the Beast"
@@ -2412,7 +2409,7 @@
     {
       "id": 138,
       "category": "movies",
-      "subcategory": "comedia",
+      "subcategory": "comedy",
       "title": {
         "es": "El gran dictador",
         "en": "The Great Dictator"
@@ -2433,7 +2430,7 @@
     {
       "id": 139,
       "category": "movies",
-      "subcategory": "comedia",
+      "subcategory": "comedy",
       "title": {
         "es": "El gran Lebowski",
         "en": "The Big Lebowski"
@@ -2776,7 +2773,7 @@
     {
       "id": 155,
       "category": "movies",
-      "subcategory": "acción",
+      "subcategory": "action",
       "title": {
         "es": "Mad Max: Furia en la carretera",
         "en": "Mad Max: Fury Road"
@@ -2793,7 +2790,7 @@
     {
       "id": 156,
       "category": "movies",
-      "subcategory": "acción",
+      "subcategory": "action",
       "title": {
         "es": "Furiosa: de la saga Mad Max",
         "en": "Furiosa: A Mad Max Saga"
@@ -3126,7 +3123,7 @@
     {
       "id": 172,
       "category": "movies",
-      "subcategory": "acción",
+      "subcategory": "action",
       "title": {
         "es": "Harakiri",
         "en": "Harakiri"
@@ -4078,6 +4075,681 @@
     "trailer": {
       "es": "https://www.youtube.com/watch?v=d-CQ5BI9nds",
       "en": "https://www.youtube.com/watch?v=xCZ9TguVOIA"
+    }
+  },
+  {
+    "id": 219,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Relatos Salvajes",
+      "en": "Wild Tales"
+    },
+    "description": {
+      "es": "Una antología de seis historias cortas que exploran la violencia, la venganza y la corrupción en la sociedad argentina contemporánea. Una película que combina el humor negro con la crítica social.",
+      "en": "An anthology of six short stories that explore violence, revenge, and corruption in contemporary Argentine society. A film that combines black humor with social criticism."
+    },
+    "director": "Damián Szifron",
+    "image": "/imagenes/peliculas/relatos_salvajes.jpg",
+    "year": 2014,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=CzJM3jYKjAg",
+      "en": "https://www.youtube.com/watch?v=Utq0aDEp084"
+    }
+  },
+  {
+    "id": 220,
+    "category": "movies",
+    "subcategory": "thriller",
+    "title": {
+      "es": "Reservoir Dogs",
+      "en": "Reservoir Dogs"
+    },
+    "description": {
+      "es": "El debut cinematográfico de Quentin Tarantino, que narra las consecuencias de un robo a mano armada que sale mal. Una película que revolucionó el cine independiente con su narrativa no lineal, diálogos afilados y violencia estilizada.",
+      "en": "Quentin Tarantino's feature film debut, which tells the aftermath of a botched armed robbery. A film that revolutionized independent cinema with its non-linear narrative, sharp dialogue, and stylized violence."
+    },
+    "director": "Quentin Tarantino",
+    "image": "/imagenes/peliculas/reservoir_dogs.jpg",
+    "year": 1992,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=x6HFOb3tHEM",
+      "en": "https://www.youtube.com/watch?v=vayksn4Y93A"
+    }
+  },
+  {
+    "id": 221,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Samba",
+      "en": "Samba"
+    },
+    "description": {
+      "es": "Un inmigrante senegalés en Francia lucha por obtener sus papeles mientras trabaja como lavaplatos. Una historia sobre la inmigración, la solidaridad y la esperanza en medio de las dificultades.",
+      "en": "A Senegalese immigrant in France struggles to obtain his papers while working as a dishwasher. A story about immigration, solidarity, and hope in the midst of difficulties."
+    },
+    "director": "Olivier Nakache, Éric Toledano",
+    "image": "/imagenes/peliculas/samba.jpg",
+    "year": 2014,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=1xIomK9BpGs",
+      "en": "https://www.youtube.com/watch?v=VBknhcuPCfs"
+    }
+  },
+  {
+    "id": 222,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Intocables",
+      "en": "The Intouchables"
+    },
+    "description": {
+      "es": "Basada en una historia real, narra la inusual amistad entre un millonario tetrapléjico y su cuidador, un joven de los suburbios con antecedentes penales. Una conmovedora historia sobre la amistad, la superación y la dignidad humana.",
+      "en": "Based on a true story, it tells the unusual friendship between a quadriplegic millionaire and his caregiver, a young man from the suburbs with a criminal record. A moving story about friendship, overcoming adversity, and human dignity."
+    },
+    "director": "Olivier Nakache, Éric Toledano",
+    "image": "/imagenes/peliculas/intocables.jpg",
+    "year": 2011,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=drQRl0-nZw4",
+      "en": "https://www.youtube.com/watch?v=oK5hMNxqsFA"
+    }
+  },
+  {
+    "id": 223,
+    "category": "movies",
+    "subcategory": "comedy",
+    "title": {
+      "es": "Amelie",
+      "en": "Amélie"
+    },
+    "description": {
+      "es": "Una joven camarera en París decide cambiar la vida de quienes la rodean mientras busca su propia felicidad. Una película mágica y encantadora que captura la esencia del París bohemio y la belleza de los pequeños momentos de la vida.",
+      "en": "A young waitress in Paris decides to change the lives of those around her while seeking her own happiness. A magical and charming film that captures the essence of bohemian Paris and the beauty of life's small moments."
+    },
+    "director": "Jean-Pierre Jeunet",
+    "image": "/imagenes/peliculas/amelie.jpg",
+    "year": 2001,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=JMPOXWSL_PY",
+      "en": "https://www.youtube.com/watch?v=Py7cDXQae2U"
+    }
+  },
+  {
+    "id": 224,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Rebelión",
+      "en": "Samurai Rebellion"
+    },
+    "description": {
+      "es": "Un samurái retirado y su hijo se enfrentan a su señor feudal cuando este exige que la nuera regrese a su palacio. Una poderosa historia sobre el honor, la lealtad y la rebelión contra la injusticia en el Japón feudal.",
+      "en": "A retired samurai and his son face their feudal lord when he demands the return of their daughter-in-law to his palace. A powerful story about honor, loyalty, and rebellion against injustice in feudal Japan."
+    },
+    "director": "Masaki Kobayashi",
+    "image": "/imagenes/peliculas/samurai_rebellion.jpg",
+    "year": 1967,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=GTkERWlcJB0",
+      "en": "https://www.youtube.com/watch?v=GTkERWlcJB0"
+    }
+  },
+  {
+    "id": 225,
+    "category": "movies",
+    "subcategory": "war",
+    "title": {
+      "es": "Salvar al Soldado Ryan",
+      "en": "Saving Private Ryan"
+    },
+    "description": {
+      "es": "Durante la Segunda Guerra Mundial, un grupo de soldados es enviado tras las líneas enemigas para encontrar y rescatar a un soldado, el último de cuatro hermanos que aún vive. Una película épica que muestra los horrores de la guerra con un realismo impactante.",
+      "en": "During World War II, a group of soldiers is sent behind enemy lines to find and rescue a soldier, the last of four brothers still alive. An epic film that shows the horrors of war with striking realism."
+    },
+    "director": "Steven Spielberg",
+    "image": "/imagenes/peliculas/salvar_ryan.jpg",
+    "year": 1998,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=Y3dH5bBt1sw",
+      "en": "https://www.youtube.com/watch?v=9CiW_DgxCnQ"
+    }
+  },
+  {
+    "id": 226,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Scarface",
+      "en": "Scarface"
+    },
+    "description": {
+      "es": "Un inmigrante cubano llega a Miami y se convierte en un poderoso narcotraficante. Una historia épica sobre la ambición, el poder y la caída, protagonizada por Al Pacino en uno de sus papeles más icónicos.",
+      "en": "A Cuban immigrant arrives in Miami and becomes a powerful drug lord. An epic story about ambition, power, and downfall, starring Al Pacino in one of his most iconic roles."
+    },
+    "director": "Brian De Palma",
+    "image": "/imagenes/peliculas/scarface.jpg",
+    "year": 1983,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=Q7TbPvMBmzM",
+      "en": "https://www.youtube.com/watch?v=7pQQHnqBa2E"
+    }
+  },
+  {
+    "id": 227,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Taxi Driver",
+      "en": "Taxi Driver"
+    },
+    "description": {
+      "es": "Un veterano de Vietnam con insomnio trabaja como taxista nocturno en las calles de Nueva York, donde se ve envuelto en un mundo de violencia y corrupción. Una obra maestra de Martin Scorsese que explora la soledad y la alienación en la sociedad moderna.",
+      "en": "A Vietnam veteran with insomnia works as a night taxi driver in the streets of New York, where he becomes involved in a world of violence and corruption. A Martin Scorsese masterpiece that explores loneliness and alienation in modern society."
+    },
+    "director": "Martin Scorsese",
+    "image": "/imagenes/peliculas/taxi_driver.jpg",
+    "year": 1976,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=f-WNguoS_QA",
+      "en": "https://www.youtube.com/watch?v=T5IligQP7Fo"
+    }
+  },
+  {
+    "id": 228,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Esencia de Mujer",
+      "en": "Scent of a Woman"
+    },
+    "description": {
+      "es": "Un estudiante universitario acepta un trabajo cuidando a un teniente coronel ciego y amargado durante el fin de semana de Acción de Gracias. Una historia conmovedora sobre la amistad, la integridad y la redención, con una actuación memorable de Al Pacino.",
+      "en": "A college student takes a job looking after a bitter, blind retired lieutenant colonel over Thanksgiving weekend. A moving story about friendship, integrity, and redemption, featuring a memorable performance by Al Pacino."
+    },
+    "director": "Martin Brest",
+    "image": "/imagenes/peliculas/scent_of_a_woman.jpg",
+    "year": 1992,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=jJl4uZgc_BM",
+      "en": "https://www.youtube.com/watch?v=losLAzU9YCk"
+    }
+  },
+  {
+    "id": 229,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Cadena Perpetua",
+      "en": "The Shawshank Redemption"
+    },
+    "description": {
+      "es": "La historia de amistad entre dos hombres encarcelados durante varias décadas en la prisión de Shawshank. Una conmovedora historia sobre la esperanza, la amistad y la redención, considerada una de las mejores películas de todos los tiempos.",
+      "en": "The story of friendship between two men imprisoned for several decades in Shawshank prison. A moving story about hope, friendship, and redemption, considered one of the greatest films of all time."
+    },
+    "director": "Frank Darabont",
+    "image": "/imagenes/peliculas/cadena_perpetua.jpg",
+    "year": 1994,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=FyP4rXUmQ2U",
+      "en": "https://www.youtube.com/watch?v=PLl99DlL6b4"
+    }
+  },
+  {
+    "id": 230,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "El Resplandor",
+      "en": "The Shining"
+    },
+    "description": {
+      "es": "Un escritor y su familia se alojan en un hotel aislado durante el invierno, donde fuerzas sobrenaturales comienzan a afectar su cordura. Una obra maestra del terror psicológico dirigida por Stanley Kubrick, con una actuación icónica de Jack Nicholson.",
+      "en": "A writer and his family stay at an isolated hotel during the winter, where supernatural forces begin to affect his sanity. A masterpiece of psychological horror directed by Stanley Kubrick, featuring an iconic performance by Jack Nicholson."
+    },
+    "director": "Stanley Kubrick",
+    "image": "/imagenes/peliculas/el_resplandor.jpg",
+    "year": 1980,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=IiSjPcRWjYA",
+      "en": "https://www.youtube.com/watch?v=S014oGZiSdI"
+    }
+  },
+  {
+    "id": 231,
+    "category": "movies",
+    "subcategory": "thriller",
+    "title": {
+      "es": "El Silencio de los Corderos",
+      "en": "The Silence of the Lambs"
+    },
+    "description": {
+      "es": "Una joven agente del FBI busca la ayuda de un brillante pero peligroso asesino en serie para atrapar a otro asesino que está aterrorizando a la población. Un thriller psicológico magistral que combina suspense, terror y drama policial.",
+      "en": "A young FBI agent seeks the help of a brilliant but dangerous serial killer to catch another murderer who is terrorizing the population. A masterful psychological thriller that combines suspense, horror, and police drama."
+    },
+    "director": "Jonathan Demme",
+    "image": "/imagenes/peliculas/silencio_corderos.jpg",
+    "year": 1991,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=mDKn4VL8o10",
+      "en": "https://www.youtube.com/watch?v=6iB21hsprAQ"
+    }
+  }, 
+  {
+    "id": 232,
+    "category": "movies",
+    "subcategory": "thriller",
+    "title": {
+      "es": "Instinto Básico",
+      "en": "Basic Instinct"
+    },
+    "description": {
+      "es": "Un detective de homicidios investiga el asesinato de un ex estrella del rock, involucrándose con una seductora novelista que podría ser la principal sospechosa. Un thriller psicológico que explora la seducción, el poder y la manipulación.",
+      "en": "A homicide detective investigates the murder of a former rock star, becoming involved with a seductive novelist who may be the prime suspect. A psychological thriller that explores seduction, power, and manipulation."
+    },
+    "director": "Paul Verhoeven",
+    "image": "/imagenes/peliculas/instinto_basico.jpg",
+    "year": 1992,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=mthZkjOor8A",
+      "en": "https://www.youtube.com/watch?v=EhRhuJOJkGg"
+    }
+  },
+  {
+    "id": 233,
+    "category": "movies",
+    "subcategory": "western",
+    "title": {
+      "es": "Sin Perdón",
+      "en": "Unforgiven"
+    },
+    "description": {
+      "es": "Un antiguo pistolero y forajido, ahora granjero y viudo, acepta un último trabajo para vengar a una prostituta maltratada. Una reflexiva y poderosa revisión del género western que desmitifica la violencia y la leyenda del Oeste.",
+      "en": "An aging gunslinger and former outlaw, now a farmer and widower, takes on one last job to avenge a battered prostitute. A thoughtful and powerful revision of the western genre that demystifies violence and the legend of the West."
+    },
+    "director": "Clint Eastwood",
+    "image": "/imagenes/peliculas/sin_perdon.jpg",
+    "year": 1992,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=Ertbb3GyS8Y",
+      "en": "https://www.youtube.com/watch?v=ftTX4FoBWlE"
+    }
+  },
+  {
+    "id": 234,
+    "category": "movies",
+    "subcategory": "comedy",
+    "title": {
+      "es": "Teléfono Rojo, ¿Volamos hacia Moscú?",
+      "en": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"
+    },
+    "description": {
+      "es": "Una sátira sobre la Guerra Fría donde un general estadounidense enloquecido ordena un ataque nuclear contra la Unión Soviética. Una obra maestra de Stanley Kubrick que combina el humor negro con una crítica mordaz a la carrera armamentística.",
+      "en": "A satire on the Cold War where a deranged American general orders a nuclear attack on the Soviet Union. A Stanley Kubrick masterpiece that combines black humor with a biting critique of the arms race."
+    },
+    "director": "Stanley Kubrick",
+    "image": "/imagenes/peliculas/telefono_rojo.jpg",
+    "year": 1964,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=a8NwIBA8rJA",
+      "en": "https://www.youtube.com/watch?v=a8NwIBA8rJA"
+    }
+  },
+  {
+    "id": 235,
+    "category": "movies",
+    "subcategory": "comedy",
+    "title": {
+      "es": "Tenacious D: El Destino de la Roca",
+      "en": "Tenacious D in The Pick of Destiny"
+    },
+    "description": {
+      "es": "La historia ficticia de cómo Jack Black y Kyle Gass formaron la banda Tenacious D y su búsqueda de un plectro legendario que les dará el poder de convertirse en los mejores músicos del mundo. Una comedia musical irreverente y llena de cameos.",
+      "en": "The fictional story of how Jack Black and Kyle Gass formed the band Tenacious D and their quest for a legendary pick that will give them the power to become the greatest musicians in the world. An irreverent musical comedy full of cameos."
+    },
+    "director": "Liam Lynch",
+    "image": "/imagenes/peliculas/tenacious_d.jpg",
+    "year": 2006,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=qLKWKPEdWj0",
+      "en": "https://www.youtube.com/watch?v=qLKWKPEdWj0"
+    }
+  },
+  {
+    "id": 236,
+    "category": "movies",
+    "subcategory": "thriller",
+    "title": {
+      "es": "Tesis",
+      "en": "Thesis"
+    },
+    "description": {
+      "es": "Una estudiante de periodismo encuentra una cinta de video que muestra un asesinato real mientras investiga para su tesis sobre la violencia en los medios. Un thriller psicológico que explora los límites de la ética periodística y la fascinación por la violencia.",
+      "en": "A journalism student finds a video tape showing a real murder while researching for her thesis on violence in the media. A psychological thriller that explores the boundaries of journalistic ethics and the fascination with violence."
+    },
+    "director": "Alejandro Amenábar",
+    "image": "/imagenes/peliculas/tesis.jpg",
+    "year": 1996,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=Ku4CbW2m7Sg",
+      "en": "https://www.youtube.com/watch?v=6-RsSaBjpaI"
+    },
+    "tags": [
+      "cine español"
+    ]
+  },
+  {
+    "id": 237,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Thelma y Louise",
+      "en": "Thelma & Louise"
+    },
+    "description": {
+      "es": "Dos amigas emprenden un viaje por carretera que se convierte en una huida cuando una de ellas mata a un hombre en defensa propia. Un road movie que se ha convertido en un ícono del feminismo y la amistad femenina.",
+      "en": "Two friends embark on a road trip that turns into a flight when one of them kills a man in self-defense. A road movie that has become an icon of feminism and female friendship."
+    },
+    "director": "Ridley Scott",
+    "image": "/imagenes/peliculas/thelma_louise.jpg",
+    "year": 1991,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=nFNB7BSCRig",
+      "en": "https://www.youtube.com/watch?v=2iBFmKlO4BY"
+    }
+  },
+  {
+    "id": 238,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "El Hombre de la Tierra",
+      "en": "The Man from Earth"
+    },
+    "description": {
+      "es": "Un profesor universitario revela a sus colegas que ha vivido durante 14,000 años, desencadenando un intenso debate filosófico y científico. Una película de ciencia ficción minimalista que explora conceptos profundos a través del diálogo.",
+      "en": "A university professor reveals to his colleagues that he has lived for 14,000 years, triggering an intense philosophical and scientific debate. A minimalist science fiction film that explores deep concepts through dialogue."
+    },
+    "director": "Richard Schenkman",
+    "image": "/imagenes/peliculas/man_from_earth.jpg",
+    "year": 2007,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=MjW2hv_Uw2U",
+      "en": "https://www.youtube.com/watch?v=MjW2hv_Uw2U"
+    }
+  },
+  {
+    "id": 239,
+    "category": "movies",
+    "subcategory": "sci-fi",
+    "title": {
+      "es": "They Live",
+      "en": "They Live"
+    },
+    "description": {
+      "es": "Un vagabundo descubre unas gafas de sol que le permiten ver la verdadera naturaleza de la sociedad: una conspiración alienígena que controla a la humanidad a través de los medios y la publicidad. Una sátira social y crítica al consumismo.",
+      "en": "A drifter discovers sunglasses that allow him to see the true nature of society: an alien conspiracy controlling humanity through media and advertising. A social satire and critique of consumerism."
+    },
+    "director": "John Carpenter",
+    "image": "/imagenes/peliculas/they_live.jpg",
+    "year": 1988,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=ampNU-oYGZQ",
+      "en": "https://www.youtube.com/watch?v=PeB3vdxF_jM"
+    }
+  },
+  {
+    "id": 240,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "La Cosa",
+      "en": "The Thing"
+    },
+    "description": {
+      "es": "Un grupo de investigadores en la Antártida se enfrenta a una forma de vida alienígena que puede imitar perfectamente a cualquier ser vivo. Un clásico del terror de John Carpenter con efectos especiales revolucionarios y una atmósfera de paranoia.",
+      "en": "A group of researchers in Antarctica faces an alien life form that can perfectly mimic any living being. A John Carpenter horror classic with revolutionary special effects and an atmosphere of paranoia."
+    },
+    "director": "John Carpenter",
+    "image": "/imagenes/peliculas/the_thing.jpg",
+    "year": 1982,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=Cv4ClwklftQ",
+      "en": "https://www.youtube.com/watch?v=5ftmr17M-a4"
+    }
+  },
+  {
+    "id": 241,
+    "category": "movies",
+    "subcategory": "comedy",
+    "title": {
+      "es": "Top Secret",
+      "en": "Top Secret!"
+    },
+    "description": {
+      "es": "Un cantante de rock americano se ve involucrado en una misión de espionaje en Alemania Oriental durante la Guerra Fría. Una comedia absurda de los creadores de 'Aterriza como puedas' que parodia las películas de espías y musicales.",
+      "en": "An American rock singer gets involved in a spy mission in East Germany during the Cold War. An absurd comedy from the creators of 'Airplane!' that parodies spy films and musicals."
+    },
+    "director": "Jim Abrahams, David Zucker, Jerry Zucker",
+    "image": "/imagenes/peliculas/top_secret.jpg",
+    "year": 1984,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=uXv6Gm8_npQ",
+      "en": "https://www.youtube.com/watch?v=Q5zen7sHQFI"
+    }
+  },
+  {
+    "id": 242,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "El Último Samurái",
+      "en": "The Twilight Samurai"
+    },
+    "description": {
+      "es": "Un samurái de bajo rango en el Japón del siglo XIX lucha por mantener a su familia mientras el país se moderniza. Una historia íntima y conmovedora sobre el honor, la familia y el cambio social en el Japón feudal.",
+      "en": "A low-ranking samurai in 19th century Japan struggles to support his family as the country modernizes. An intimate and moving story about honor, family, and social change in feudal Japan."
+    },
+    "director": "Yoji Yamada",
+    "image": "/imagenes/peliculas/twilight_samurai.jpg",
+    "year": 2002,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=ZZ2vWyhjXDw",
+      "en": "https://www.youtube.com/watch?v=VAepcd9zwgg"
+    }
+  },
+  {
+    "id": 243,
+    "category": "movies",
+    "subcategory": "comedy",
+    "title": {
+      "es": "Un Pez Llamado Wanda",
+      "en": "A Fish Called Wanda"
+    },
+    "description": {
+      "es": "Un grupo de estafadores intenta recuperar un botín de joyas robadas, pero sus planes se complican por la traición, el amor y un pez llamado Wanda. Una comedia negra con diálogos ingeniosos y situaciones hilarantes.",
+      "en": "A group of con artists tries to recover stolen jewels, but their plans are complicated by betrayal, love, and a fish called Wanda. A black comedy with witty dialogue and hilarious situations."
+    },
+    "director": "Charles Crichton",
+    "image": "/imagenes/peliculas/wanda.jpg",
+    "year": 1988,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=jBoW-d3lVbg",
+      "en": "https://www.youtube.com/watch?v=0WTwVpEEMps"
+    }
+  },
+  {
+    "id": 244,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Uno de los Nuestros",
+      "en": "Goodfellas"
+    },
+    "description": {
+      "es": "La historia real de Henry Hill y su vida en la mafia neoyorquina, desde su juventud hasta su caída. Una obra maestra de Martin Scorsese que retrata con crudeza y realismo el mundo del crimen organizado.",
+      "en": "The true story of Henry Hill and his life in the New York mafia, from his youth to his downfall. A Martin Scorsese masterpiece that portrays the world of organized crime with rawness and realism."
+    },
+    "director": "Martin Scorsese",
+    "image": "/imagenes/peliculas/goodfellas.jpg",
+    "year": 1990,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=Shj-QWYDn_M",
+      "en": "https://www.youtube.com/watch?v=2ilzidi_J8Q"
+    }
+  },
+  {
+    "id": 245,
+    "category": "movies",
+    "subcategory": "sci-fi",
+    "title": {
+      "es": "V de Vendetta",
+      "en": "V for Vendetta"
+    },
+    "description": {
+      "es": "En un futuro distópico, un misterioso revolucionario conocido como V lucha contra un gobierno totalitario en una Gran Bretaña controlada por el miedo. Una historia sobre la libertad, la resistencia y la justicia.",
+      "en": "In a dystopian future, a mysterious revolutionary known as V fights against a totalitarian government in a fear-controlled Britain. A story about freedom, resistance, and justice."
+    },
+    "director": "James McTeigue",
+    "image": "/imagenes/peliculas/v_de_vendetta.jpg",
+    "year": 2005,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=5I-mKP2Hz4Q",
+      "en": "https://www.youtube.com/watch?v=lSA7mAHolAw"
+    }
+  },
+  {
+    "id": 246,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Videodrome",
+      "en": "Videodrome"
+    },
+    "description": {
+      "es": "Un ejecutivo de televisión descubre una señal pirata que muestra violencia extrema, lo que le lleva a una espiral de alucinaciones y transformaciones corporales. Una visión profética de David Cronenberg sobre la relación entre los medios y la realidad.",
+      "en": "A television executive discovers a pirate signal showing extreme violence, leading him into a spiral of hallucinations and bodily transformations. A prophetic vision by David Cronenberg about the relationship between media and reality."
+    },
+    "director": "David Cronenberg",
+    "image": "/imagenes/peliculas/videodrome.jpg",
+    "year": 1983,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=rSGSeFyD3yU",
+      "en": "https://www.youtube.com/watch?v=wFRAwig4rU8"
+    }
+  },
+  {
+    "id": 247,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "El Guerrero",
+      "en": "The Warrior"
+    },
+    "description": {
+      "es": "Un guerrero feudal japonés abandona su vida de violencia y emprende un viaje de redención a través de un Japón devastado por la guerra. Una historia épica sobre la búsqueda de la paz interior y la redención.",
+      "en": "A feudal Japanese warrior abandons his life of violence and embarks on a journey of redemption through a war-torn Japan. An epic story about the search for inner peace and redemption."
+    },
+    "director": "Asif Kapadia",
+    "image": "/imagenes/peliculas/the_warrior.jpg",
+    "year": 2001,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=4Tv284k2OkU",
+      "en": "https://www.youtube.com/watch?v=--gdB-nnQkU"
+    }
+  },
+  {
+    "id": 248,
+    "category": "movies",
+    "subcategory": "sci-fi",
+    "title": {
+      "es": "Watchmen",
+      "en": "Watchmen"
+    },
+    "description": {
+      "es": "En un mundo alternativo donde los superhéroes existen y han sido prohibidos, la muerte de uno de ellos desencadena una investigación que revela una conspiración que podría cambiar el mundo. Una adaptación fiel de la novela gráfica de Alan Moore.",
+      "en": "In an alternate world where superheroes exist and have been outlawed, the death of one of them triggers an investigation that reveals a conspiracy that could change the world. A faithful adaptation of Alan Moore's graphic novel."
+    },
+    "director": "Zack Snyder",
+    "image": "/imagenes/peliculas/watchmen.jpg",
+    "year": 2009,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=bKxWdMTv0FY",
+      "en": "https://www.youtube.com/watch?v=wglmbroElU0"
+    }
+  },
+  {
+    "id": 249,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Yojimbo",
+      "en": "Yojimbo"
+    },
+    "description": {
+      "es": "Un ronin sin amo llega a un pueblo dividido por dos bandas criminales y decide enfrentarlas entre sí. Una obra maestra de Akira Kurosawa que influyó en el género western y estableció nuevos estándares para el cine de acción.",
+      "en": "A masterless samurai arrives in a town divided by two criminal gangs and decides to pit them against each other. An Akira Kurosawa masterpiece that influenced the western genre and set new standards for action cinema."
+    },
+    "director": "Akira Kurosawa",
+    "image": "/imagenes/peliculas/yojimbo.jpg",
+    "year": 1961,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=tAeUV8fw00A",
+      "en": "https://www.youtube.com/watch?v=y_1iT_GmHTE"
+    }
+  },
+  {
+    "id": 250,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Gran Torino",
+      "en": "Gran Torino"
+    },
+    "description": {
+      "es": "Un veterano de la Guerra de Corea, racista y gruñón, se ve forzado a confrontar sus prejuicios cuando se hace amigo de su vecino hmong. Una poderosa historia sobre la redención, la amistad y el cambio generacional.",
+      "en": "A racist, grumpy Korean War veteran is forced to confront his prejudices when he befriends his Hmong neighbor. A powerful story about redemption, friendship, and generational change."
+    },
+    "director": "Clint Eastwood",
+    "image": "/imagenes/peliculas/gran_torino.jpg",
+    "year": 2008,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=U_bZWFLTp-c",
+      "en": "https://www.youtube.com/watch?v=RMhbr2XQblk"
     }
   }
   ]
