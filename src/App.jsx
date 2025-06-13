@@ -33,10 +33,11 @@ function LanguageSelector() {
 function Menu() {
   const { t, lang } = useLanguage();
   const { resetAllFilters } = useFiltersStore();
-  const { currentView, goBackFromDetail } = useUIStore();
+  const { currentView, goBackFromDetail, navigate } = useUIStore();
   
   const handleNewRecommendations = () => {
     resetAllFilters(lang);
+    navigate('home'); // Asegurar que navegamos a home
   };
   
   const isDetailView = currentView === 'detail';
@@ -133,11 +134,11 @@ function RecommendationsList({ recommendations, isHome }) {
             </div>
           </div>
         </div>
-      ) : (
-        recommendations.map((rec, idx) => {
+      ) : (        recommendations.map((rec, idx) => {
           const title = processTitle(rec.title, lang);
           const description = processDescription(rec.description, lang);
-          const recKey = generateRecommendationKey(rec, idx);
+          // Usar globalId si está disponible, sino usar la función de fallback
+          const recKey = rec.globalId || generateRecommendationKey(rec, idx);
           const cardClasses = getRecommendationCardClasses(rec, isHome, isMobile);
             if (isHome && isMobile) {
             return (
@@ -396,6 +397,7 @@ function MobileMenu() {
   
   const handleNewRecommendations = () => {
     resetAllFilters(lang);
+    navigate('home'); // Asegurar que navegamos a home
     closeMobileMenu();
   };
   

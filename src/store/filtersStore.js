@@ -13,6 +13,9 @@ import datosPodcast from "../datos_podcast.json";
 // Importar el store de datos de la app
 import useAppDataStore from './appDataStore';
 
+// Importar utilidades para IDs únicos
+import { processItemsWithUniqueIds } from '../utils/appUtils';
+
 // Store para los filtros de la aplicación
 const useFiltersStore = create(
   devtools(
@@ -21,10 +24,9 @@ const useFiltersStore = create(
       selectedCategory: null,
       activeSubcategory: null,
       isSpanishCinemaActive: false,
-      isMasterpieceActive: false,
-      title: '',
+      isMasterpieceActive: false,      title: '',
       randomNotFoundImage: '', // Nueva propiedad para la imagen not found
-      allItems: [
+      allItems: processItemsWithUniqueIds([
         ...datosMovies.recommendations,
         ...datosComics.recommendations,
         ...datosBooks.recommendations,
@@ -32,7 +34,7 @@ const useFiltersStore = create(
         ...datosVideogames.recommendations,
         ...datosBoardgames.recommendations,
         ...datosPodcast.recommendations
-      ],
+      ]),
       filteredItems: [],
       
       // Categorías disponibles (función para obtener traducciones dinámicas)

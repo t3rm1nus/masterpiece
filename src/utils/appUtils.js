@@ -51,3 +51,52 @@ export const getRandomNotFoundImage = () => {
   const randomIndex = Math.floor(Math.random() * notFoundImages.length);
   return `/imagenes/notfound/${notFoundImages[randomIndex]}`;
 };
+
+/**
+ * Genera un ID único global para cualquier item
+ * @param {Object} item - El item (película, libro, etc.)
+ * @returns {string} - Un ID único global
+ */
+export const generateUniqueId = (item) => {
+  // Si el item ya tiene un ID único global, lo devolvemos
+  if (item.globalId) return item.globalId;
+  
+  // Si no tiene ID local, usar el título como fallback
+  const localId = item.id !== undefined ? item.id : item.title?.es || item.title || 'unknown';
+  
+  // Crear ID único: categoria_idLocal
+  return `${item.category}_${localId}`;
+};
+
+/**
+ * Transforma un item para asegurar que tenga un ID único global
+ * @param {Object} item - El item original
+ * @param {number} fallbackIndex - Índice como fallback si no hay otro ID
+ * @returns {Object} - El item con ID único garantizado
+ */
+export const ensureUniqueId = (item, fallbackIndex = 0) => {
+  return {
+    ...item,
+    globalId: generateUniqueId(item),
+    originalId: item.id // Preservar el ID original
+  };
+};
+
+/**
+ * Procesa una lista de items para asegurar IDs únicos
+ * @param {Array} items - Lista de items
+ * @returns {Array} - Lista con IDs únicos garantizados
+ */
+export const processItemsWithUniqueIds = (items) => {
+  return items.map((item, index) => ensureUniqueId(item, index));
+};
+
+/**
+ * Busca un item por su ID único global
+ * @param {Array} items - Lista de items
+ * @param {string} globalId - ID único global a buscar
+ * @returns {Object|null} - El item encontrado o null
+ */
+export const findItemByGlobalId = (items, globalId) => {
+  return items.find(item => generateUniqueId(item) === globalId) || null;
+};
