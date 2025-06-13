@@ -280,12 +280,14 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fff;
+  background: var(--card-background);
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px var(--shadow-color);
   padding: 2rem;
-  margin-top: 2rem;
-  max-width: 400px;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
 }
 
 .item-detail h2 {
@@ -834,4 +836,664 @@ h1 {
   color: white;
   border: 1px solid #66BB6A;
   font-weight: bold;
+}
+
+.item-detail.movies {
+  background: #e3f2fd !important; /* azul suave */
+}
+
+.item-detail.videogames {
+  background: #f3e5f5 !important; /* violeta suave */
+}
+
+.item-detail.comics {
+  background: #fffde7 !important; /* amarillo suave */
+}
+
+.item-detail.books {
+  background: #e8f5e9 !important; /* verde suave */
+}
+
+.item-detail.boardgames {
+  background: #fce4ec !important; /* rosa suave */
+}
+
+.item-detail.music {
+  background: #e0f7fa !important; /* celeste suave */
+}
+
+.item-detail.podcast {
+  background: #f9fbe7 !important; /* lima suave */
+}
+
+.item-detail.masterpiece {
+  border: 3px solid #ffd700 !important;
+  background: linear-gradient(135deg, #fffbe6 60%, #ffe066 100%) !important;
+  position: relative;
+  box-shadow: 0 0 0 4px #ffe066, 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.item-detail .masterpiece-badge {
+  display: none !important;
+}
+
+.item-detail.masterpiece img[alt="Masterpiece icon"] {
+  display: block;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  z-index: 10;
+}
+
+/* Estilos para el botón de trailer en la vista de detalle */
+.item-detail .trailer-link:hover {
+  background: #005fa3 !important;
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* Asegurar que los colores de categoría funcionen en tema oscuro */
+html[data-theme='dark'] .item-detail.movies {
+  background: #1a237e !important; /* azul más oscuro */
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .item-detail.videogames {
+  background: #4a148c !important; /* violeta más oscuro */
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .item-detail.comics {
+  background: #f57f17 !important; /* amarillo más oscuro */
+  color: #000000;
+}
+
+html[data-theme='dark'] .item-detail.books {
+  background: #1b5e20 !important; /* verde más oscuro */
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .item-detail.boardgames {
+  background: #880e4f !important; /* rosa más oscuro */
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .item-detail.music {
+  background: #006064 !important; /* celeste más oscuro */
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .item-detail.podcast {
+  background: #33691e !important; /* lima más oscuro */
+  color: #ffffff;
+}
+
+.item-detail.masterpiece {
+  border: 3px solid #ffd700 !important;
+  background: linear-gradient(135deg, #fffbe6 60%, #ffe066 100%) !important;
+  position: relative;
+  box-shadow: 0 0 0 4px #ffe066, 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.item-detail .masterpiece-badge {
+  display: none !important;
+}
+
+.item-detail.masterpiece img[alt="Masterpiece icon"] {
+  display: block;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  z-index: 10;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 900px) {
+  .container {
+    max-width: 100vw;
+    padding: 0 1rem;
+    padding-top: 4.5rem;
+  }
+  .recommendations-list {
+    gap: 1rem;
+    margin-top: 1.5rem; /* Reducimos para ser consistente */
+  }
+  .recommendation-card {
+    width: 45vw;
+    min-width: 160px;
+    max-width: 240px;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #root, .container {
+    padding: 0.2rem !important;
+    padding-top: 68px !important; /* 48px de la barra móvil + 20px extra */
+    max-width: 100vw;
+  }
+  .main-menu {
+    display: none !important;
+  }
+  .mobile-menu-bar {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    height: 48px;
+  }
+  h1 {
+    font-size: 1.2rem !important;
+    max-width: 100vw;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    margin-top: 1rem !important; /* Reducido para ser más consistente */
+    margin-bottom: 1.1rem !important; /* +10px */
+  }
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 300;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .mobile-menu {
+    background: #fff;
+    width: 75vw;
+    max-width: 320px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.2rem 1.2rem 1.2rem;
+    box-shadow: -2px 0 12px rgba(0,0,0,0.12);
+    position: relative;
+    animation: slideInMenu 0.2s ease;
+  }
+  @keyframes slideInMenu {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+  .mobile-menu button, .mobile-menu select {
+    background: #f3f3f3;
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: left;
+  }
+  .mobile-menu .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #0078d4;
+    cursor: pointer;
+    padding: 0;
+    width: auto;
+  }
+  .recommendations-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem; /* Reducimos a 1rem para ser consistente */
+  }
+  .recommendation-card {
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .recommendation-card .top-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+  .recommendation-card .top-row h3 {
+    font-size: 1rem;
+    margin: 0;
+    flex: 1 1 0;
+    text-align: left;
+    font-weight: bold;
+  }
+  .recommendation-card .top-row .cat {
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: 500;
+    margin-left: 0.5rem;
+  }
+  .recommendation-card .top-row .subcat {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-left: 0.5rem;
+  }
+  .recommendation-card .bottom-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+  .recommendation-card img {
+    width: 80px !important;
+    height: 110px !important;
+    max-width: 30vw;
+    min-width: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  .recommendation-card .desc-col {
+    flex: 1 1 0;
+    text-align: left;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .recommendation-card .desc-col p {
+    font-size: 0.9rem;
+    text-align: left;
+    margin: 0.1rem 0 0 0;
+  }
+}
+
+/* Layout especial para la home en móviles */
+@media (max-width: 600px) {
+  .recommendation-card.mobile-home-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    margin: 0 0 1.2rem 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    background: #fff;
+    padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .rec-home-row {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+  }
+  .rec-home-row-top {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem; /* más margen inferior al nombre */
+    font-size: 1.08rem;
+    font-weight: bold;
+    color: #222;
+  }
+  .rec-home-title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.08rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .rec-home-row-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.7rem;
+    width: 100%;
+    min-width: 0;
+  }
+  .rec-home-row-bottom img {
+    width: 80px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+  }
+  .rec-home-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 0;
+    flex: 1 1 0;
+  }
+  .rec-home-cats {
+    font-size: 0.97rem;
+    color: #666;
+    margin-bottom: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* solo 5px entre categoría y subcategoría */
+  }
+  .rec-home-cat {
+    color: #666;
+    font-size: 0.97rem;
+    font-weight: 500;
+    text-align: center;
+    background: none;
+  }
+  .rec-home-subcat {
+    color: #888;
+    font-size: 0.97rem;
+    text-align: center;
+    margin-top: 0;
+    display: block;
+    background: none;
+  }
+  /* Forzar color de fondo en items de la home (no masterpiece) */
+  .recommendation-card.mobile-home-layout.movies:not(.masterpiece) {
+    background: #e3f2fd !important;
+  }
+  .recommendation-card.mobile-home-layout.videogames:not(.masterpiece) {
+    background: #f3e5f5 !important;
+  }
+  .recommendation-card.mobile-home-layout.comics:not(.masterpiece) {
+    background: #fffde7 !important;
+  }
+  .recommendation-card.mobile-home-layout.books:not(.masterpiece) {
+    background: #e8f5e9 !important;
+  }
+  .recommendation-card.mobile-home-layout.boardgames:not(.masterpiece) {
+    background: #fce4ec !important;
+  }
+  .recommendation-card.mobile-home-layout.music:not(.masterpiece) {
+    background: #e0f7fa !important;
+  }
+  .recommendation-card.mobile-home-layout.podcast:not(.masterpiece) {
+    background: #f9fbe7 !important;
+  }
+}
+
+/* Estilos para cuando no hay resultados */
+.no-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100vw; /* Cambiado a viewport width */
+  max-width: 100vw; /* Cambiado a viewport width */
+  margin: 0;
+  animation: fadeIn 0.5s ease-in-out;
+  box-sizing: border-box; /* Para incluir padding en el cálculo del ancho */
+}
+
+/* Contenedor para la imagen que evita el scroll */
+.no-results-image-container {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  overflow: hidden; /* Evita que el hover cause scroll */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-results-image {
+  width: 100%;
+  max-width: 100%; /* Ahora es relativo al contenedor padre */
+  display: block; /* Asegura que se comporte como bloque para centrado */
+  object-fit: contain; /* Asegura que la imagen mantenga su relación de aspecto */
+  transition: transform 0.3s ease; /* Transición suave para efectos */
+  box-sizing: border-box; /* Para incluir padding en el cálculo del ancho */
+}
+
+.no-results-image:hover {
+  transform: scale(1.02); /* Efecto de aumento al pasar el ratón */
+}
+
+.no-results-title {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.75rem; /* Aumentado para mayor visibilidad */
+  margin-top: 1rem;
+}
+
+.no-results-message {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem; /* Mayor espacio antes de la imagen */
+  font-size: 1.15rem; /* Aumentado para mayor visibilidad */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .no-results-container {
+    padding: 1rem;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+  }
+  
+  
+  .no-results-image-container {
+    max-width: 312.5px; /* Ampliado un 25% del tamaño para móviles (250px * 1.25 = 312.5px) */
+  }
+  
+  .no-results-image {
+    width: 100%;
+  }
+  
+  .no-results-title {
+    font-size: 1.5rem; /* Ajustado para móviles */
+    width: 100%;
+  }
+  
+  .no-results-message {
+    font-size: 1rem; /* Ajustado para móviles */
+    width: 100%;
+  }
+}
+
+/* Asegurar que toda la aplicación tenga ancho completo */
+#root, body, html {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevenir scroll horizontal */
+}
+
+.App, .container, .recommendations-list, .no-results-container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Mantener para prevenir scroll horizontal */
+  overflow-y: visible; /* Permitir que el contenido sea visible verticalmente */
+  position: relative; /* Añadimos position relative para asegurar el contexto */
+}
+
+/* Estilos para los botones de subcategoría */
+.subcategory-btn {
+  background: #E6F3FF; /* Azul muy suave como fondo base */
+  color: #333;
+  border: 1px solid #B3D9FF; /* Borde azul suave */
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(135, 206, 235, 0.2); /* Sombra azul suave */
+  transition: background 0.2s, border 0.2s, transform 0.2s, color 0.2s;
+  margin: 0.25rem;
+}
+
+.subcategory-btn:hover {
+  background: #CCE7FF; /* Azul un poco más intenso en hover */
+  border: 1px solid #87CEEB;
+  transform: translateY(-1px);
+}
+
+.subcategory-btn.active {
+  background: #87CEEB; /* Azul más intenso cuando está activo */
+  color: white;
+  border: 1px solid #87CEEB;
+  font-weight: bold;
+}
+
+/* Estilos específicos para botones de Cine Español y Masterpiece */
+.subcategory-btn.spanish-cinema,
+.subcategory-btn.masterpiece-btn {
+  background: #E8F5E8; /* Verde muy suave como fondo base */
+  color: #333;
+  border: 1px solid #C8E6C9; /* Borde verde suave */
+}
+
+.subcategory-btn.spanish-cinema:hover,
+.subcategory-btn.masterpiece-btn:hover {
+  background: #D4EDDA; /* Verde un poco más intenso en hover */
+  border: 1px solid #81C784;
+}
+
+.subcategory-btn.spanish-cinema.active,
+.subcategory-btn.masterpiece-btn.active {
+  background: #81C784; /* Verde más intenso cuando está activo */
+  color: white;
+  border: 1px solid #66BB6A;
+  font-weight: bold;
+}
+
+.item-detail.movies {
+  background: #e3f2fd !important; /* azul suave */
+}
+
+.item-detail.videogames {
+  background: #f3e5f5 !important; /* violeta suave */
+}
+
+.item-detail.comics {
+  background: #fffde7 !important; /* amarillo suave */
+}
+
+.item-detail.books {
+  background: #e8f5e9 !important; /* verde suave */
+}
+
+.item-detail.boardgames {
+  background: #fce4ec !important; /* rosa suave */
+}
+
+.item-detail.music {
+  background: #e0f7fa !important; /* celeste suave */
+}
+
+.item-detail.podcast {
+  background: #f9fbe7 !important; /* lima suave */
+}
+
+.item-detail.masterpiece {
+  border: 3px solid #ffd700 !important;
+  background: linear-gradient(135deg, #fffbe6 60%, #ffe066 100%) !important;
+  position: relative;
+  box-shadow: 0 0 0 4px #ffe066, 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.item-detail .masterpiece-badge {
+  display: none !important;
+}
+
+.item-detail.masterpiece img[alt="Masterpiece icon"] {
+  display: block;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  z-index: 10;
+}
+
+/* Estilos para el botón de trailer en la vista de detalle */
+.item-detail .trailer-link:hover {
+  background: #005fa3 !important;
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* Asegurar que los colores de categoría funcionen en tema oscuro */
+html[data-theme='dark'] .item-detail.movies {
+  background: #1a237e !important; /* azul más oscuro */
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .item-detail.videogames {
+  background: #4a148c !important; /* violeta más oscuro */
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .item-detail.comics {
+  background: #f57f17 !important; /* amarillo más oscuro */
+  color: #000000;
+}
+
+html[data-theme='dark'] .item-detail.books {
+  background: #1b5e20 !important; /* verde más oscuro */
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .item-detail.boardgames {
+  background: #880e4f !important; /* rosa más oscuro */
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .item-detail.music {
+  background: #006064 !important; /* celeste más oscuro */
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .item-detail.podcast {
+  background: #33691e !important; /* lima más oscuro */
+  color: #ffffff;
+}
+
+.item-detail.masterpiece {
+  border: 3px solid #ffd700 !important;
+  background: linear-gradient(135deg, #fffbe6 60%, #ffe066 100%) !important;
+  position: relative;
+  box-shadow: 0 0 0 4px #ffe066, 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.item-detail .masterpiece-badge {
+  display: none !important;
+}
+
+.item-detail.masterpiece img[alt="Masterpiece icon"] {
+  display: block;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  z-index: 10;
 }

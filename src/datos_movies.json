@@ -2537,24 +2537,21 @@
       "category": "movies",
       "subcategory": "sci-fi",
       "title": {
-        "es": "2001: Una odisea del espacio",
-        "en": "2001: A Space Odyssey"
+        "es": "Ready Player One",
+        "en": "Ready Player One"
       },
       "description": {
-        "es": "Obra maestra de Stanley Kubrick que explora la evolución humana, la inteligencia artificial y el misterio del universo.",
-        "en": "Stanley Kubrick's masterpiece exploring human evolution, artificial intelligence, and the mystery of the universe."
+        "es": "En el año 2045, la realidad es tan terrible que la gente busca refugio en el OASIS, un universo virtual donde todo es posible. Cuando el creador del OASIS muere, deja su fortuna escondida en el juego.",
+        "en": "In 2045, reality is so terrible that people seek refuge in the OASIS, a virtual universe where everything is possible. When the creator of OASIS dies, he leaves his fortune hidden in the game."
       },
-      "image": "/imagenes/peliculas/2001.jpg",
+      "director": "Steven Spielberg",
+      "image": "/imagenes/peliculas/ready_player_one.jpg",
+      "year": 2018,
+      "masterpiece": false,
       "trailer": {
-        "en": "Stanley Kubrick's masterpiece exploring human evolution, artificial intelligence, and the mystery of the universe."
-      },
-      "image": "/imagenes/peliculas/2001.jpg",
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=yf52KZnje_8"
-      },
-      "director": "Stanley Kubrick",
-      "year": 1968,
-      "masterpiece": true
+        "es": "https://www.youtube.com/watch?v=J0ZKannF6l4",
+        "en": "https://www.youtube.com/watch?v=cSp1dM2Vj48"
+      }
     },
     {
       "id": 145,
@@ -5505,8 +5502,7 @@
     "description": {
       "es": "Una comedia surrealista que narra la peculiar vida de P. Tinto, un hombre que espera un milagro mientras enfrenta situaciones absurdas y personajes extravagantes.",
       "en": "A surreal comedy that tells the peculiar life of P. Tinto, a man waiting for a miracle while facing absurd situations and extravagant characters."
-    },
-    "director": "Javier Fesser",
+    },    "director": "Javier Fesser",
     "image": "/imagenes/peliculas/el_milagro_de_p_tinto.jpg",
     "year": 1998,
     "masterpiece": true,
@@ -5516,5 +5512,6 @@
       "en": "https://www.youtube.com/watch?v=Q0GMTc6TBf0"
     }
   }
+  
   ]
 }

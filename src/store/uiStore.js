@@ -11,6 +11,10 @@ const useUIStore = create(
       currentView: 'home', // Vista actual (home, etc.)
       lastCategory: null, // Última categoría visitada
       
+      // Estado para la vista de detalle
+      selectedItem: null, // Item seleccionado para mostrar detalles
+      previousView: 'home', // Vista anterior para poder volver
+      
       // Acciones
       setMobile: (isMobile) => set(
         { isMobile },
@@ -58,7 +62,35 @@ const useUIStore = create(
         } else {
           set({ currentView: 'home' }, false, 'goBack');
         }
-      }
+      },
+      
+      // Navegar a la vista de detalle de un item
+      navigateToDetail: (item) => {
+        const currentView = get().currentView;
+        set(
+          { 
+            selectedItem: item,
+            previousView: currentView,
+            currentView: 'detail'
+          },
+          false,
+          'navigateToDetail'
+        );
+      },
+      
+      // Volver de la vista de detalle
+      goBackFromDetail: () => {
+        const previousView = get().previousView;
+        set(
+          {
+            selectedItem: null,
+            currentView: previousView,
+            previousView: 'home'
+          },
+          false,
+          'goBackFromDetail'
+        );
+      },
     }),
     { name: 'ui-store' } // Nombre para DevTools
   )

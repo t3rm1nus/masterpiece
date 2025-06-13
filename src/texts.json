@@ -1,5 +1,4 @@
-{
-  "es": {
+{  "es": {
     "home_title": "Nuevas Recomendaciones",
     "categoriesTitle": "Categorías",
     "categories": {
@@ -14,7 +13,11 @@
     "see_all": "Ver todas",
     "change_language": "Cambiar idioma",
     "no_results": "No se encontraron resultados",
-    "try_different_filters": "Intenta con otros filtros o categorías"
+    "try_different_filters": "Intenta con otros filtros o categorías",
+    "back": "Volver",
+    "watch_trailer": "Ver Trailer",
+    "director": "Director",
+    "year": "Año"
   },  "en": {
     "home_title": "New Recommendations",
     "categoriesTitle": "Categories",
@@ -30,6 +33,10 @@
     "see_all": "See all",
     "change_language": "Change language",
     "no_results": "No results found",
-    "try_different_filters": "Try with different filters or categories"
+    "try_different_filters": "Try with different filters or categories",
+    "back": "Back",
+    "watch_trailer": "Watch Trailer",
+    "director": "Director",
+    "year": "Year"
   }
 }

@@ -30,13 +30,16 @@ function LanguageSelector() {
   );
 }
 
-function Menu({ showBack, onBack, backLabel }) {
+function Menu() {
   const { t, lang } = useLanguage();
   const { resetAllFilters } = useFiltersStore();
+  const { currentView, goBackFromDetail } = useUIStore();
   
   const handleNewRecommendations = () => {
     resetAllFilters(lang);
   };
+  
+  const isDetailView = currentView === 'detail';
   
   return (
     <nav className="main-menu" style={{ 
@@ -50,9 +53,6 @@ function Menu({ showBack, onBack, backLabel }) {
       position: 'relative'
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-        {showBack && (
-          <button className="category-btn" onClick={onBack}>&larr; {backLabel}</button>
-        )}
         {/* Botón de inicio a la izquierda que resetea todos los filtros */}
         <button 
           onClick={handleNewRecommendations} 
@@ -60,6 +60,23 @@ function Menu({ showBack, onBack, backLabel }) {
         >
           {t.home_title}
         </button>
+        {/* Mostrar botón volver solo en vista de detalle */}
+        {isDetailView && (
+          <button 
+            className="category-btn" 
+            onClick={goBackFromDetail}
+            style={{ 
+              background: 'var(--hover-color)',
+              border: '1px solid var(--border-color)',
+              color: 'var(--text-color)',
+              padding: '0.5rem 1rem',
+              borderRadius: '6px',
+              cursor: 'pointer'
+            }}
+          >
+            ← {t.back || 'Volver'}
+          </button>
+        )}
       </div>
         {/* Selector de idioma - siempre a la derecha */}
       <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -72,7 +89,7 @@ function Menu({ showBack, onBack, backLabel }) {
 
 function RecommendationsList({ recommendations, isHome }) {
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
-  const { isMobile } = useUIStore();
+  const { isMobile, navigateToDetail } = useUIStore();
   
   // Obtener la imagen not found del store
   const { randomNotFoundImage } = useFiltersStore();
@@ -89,7 +106,14 @@ function RecommendationsList({ recommendations, isHome }) {
   
   // Obtener configuración de estilos
   const { getMasterpieceBadgeConfig } = useStylesStore();
-  const badgeConfig = getMasterpieceBadgeConfig();  return (
+  const badgeConfig = getMasterpieceBadgeConfig();
+  
+  // Handler para hacer clic en un item
+  const handleItemClick = (item) => {
+    navigateToDetail(item);
+  };
+  
+  return (
     <div className="recommendations-list" style={{ width: '100%', paddingTop: '2rem' }}>
       {recommendations.length === 0 ? (
         <div className="no-results-container" style={noResultsConfig.containerStyle}>
@@ -115,13 +139,13 @@ function RecommendationsList({ recommendations, isHome }) {
           const description = processDescription(rec.description, lang);
           const recKey = generateRecommendationKey(rec, idx);
           const cardClasses = getRecommendationCardClasses(rec, isHome, isMobile);
-          
-          if (isHome && isMobile) {
+            if (isHome && isMobile) {
             return (
               <div
                 className={cardClasses}
                 key={recKey}
-                style={mobileHomeStyles.cardStyle}
+                style={{...mobileHomeStyles.cardStyle, cursor: 'pointer'}}
+                onClick={() => handleItemClick(rec)}
               >
                 {/* Fila superior: solo el nombre, centrado */}
                 <div className="rec-home-row rec-home-row-top">
@@ -188,6 +212,7 @@ function RecommendationsList({ recommendations, isHome }) {
               className={cardClasses}
               key={recKey}
               style={desktopStyles.cardStyle}
+              onClick={() => handleItemClick(rec)} // Agregar handler de clic
             >
               {rec.masterpiece && (
                 <span className="masterpiece-badge" title="Obra maestra">
@@ -364,15 +389,17 @@ function MobileMenuBar() {
   );
 }
 
-function MobileMenu({ showBack, onBack, backLabel }) {
+function MobileMenu() {
   const { t, lang } = useLanguage();
-  const { mobileMenuOpen, closeMobileMenu, navigate } = useUIStore();
+  const { mobileMenuOpen, closeMobileMenu, navigate, currentView, goBackFromDetail } = useUIStore();
   const { resetAllFilters } = useFiltersStore();
   
   const handleNewRecommendations = () => {
     resetAllFilters(lang);
     closeMobileMenu();
   };
+  
+  const isDetailView = currentView === 'detail';
   
   if (!mobileMenuOpen) return null;
   
@@ -382,9 +409,11 @@ function MobileMenu({ showBack, onBack, backLabel }) {
       <nav className="mobile-menu" onClick={e => e.stopPropagation()}>
         <button className="close-btn" onClick={closeMobileMenu} aria-label="Cerrar menú">&times;</button>
         
-        {/* Botón de volver - solo visible cuando showBack es true */}
-        {showBack && (
-          <button className="category-btn" onClick={onBack}>&larr; {backLabel}</button>
+        {/* Botón de volver - solo visible en vista de detalle */}
+        {isDetailView && (
+          <button className="category-btn" onClick={() => {goBackFromDetail(); closeMobileMenu();}}>
+            ← {t.back || 'Volver'}
+          </button>
         )}
         
         {/* Botón de inicio */}        <button onClick={() => {navigate('home'); closeMobileMenu();}}>
@@ -421,11 +450,13 @@ function AppContent() {
     navigate,
     lastCategory
   } = useUIStore();
-
   let content;
   switch (currentView) {
     case 'home':
       content = <HomePage />;
+      break;
+    case 'detail':
+      content = <ItemDetail />;
       break;
     default:
       content = <div>Página no encontrada</div>;
@@ -446,6 +477,149 @@ function AppContent() {
         <Menu />
       )}
       {content}
+    </div>
+  );
+}
+
+function ItemDetail() {
+  const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
+  const { selectedItem, goBackFromDetail } = useUIStore();
+  const { processTitle, processDescription } = useRenderStore();
+  const { getMasterpieceBadgeConfig } = useStylesStore();
+  
+  if (!selectedItem) return null;
+  
+  const title = processTitle(selectedItem.title, lang);
+  const description = processDescription(selectedItem.description, lang);
+  const badgeConfig = getMasterpieceBadgeConfig();
+  
+  // Determinar qué trailer mostrar según el idioma
+  const getTrailerUrl = () => {
+    if (!selectedItem.trailer) return null;
+    
+    // Priorizar el idioma actual, si no existe usar el disponible
+    if (lang === 'es' && selectedItem.trailer.es) {
+      return selectedItem.trailer.es;
+    } else if (lang === 'en' && selectedItem.trailer.en) {
+      return selectedItem.trailer.en;
+    } else if (selectedItem.trailer.es) {
+      return selectedItem.trailer.es;
+    } else if (selectedItem.trailer.en) {
+      return selectedItem.trailer.en;
+    }
+    return null;
+  };
+  
+  const trailerUrl = getTrailerUrl();
+    return (
+    <div className="item-detail-container" style={{ 
+      width: '100%', 
+      maxWidth: '800px', 
+      margin: '0 auto', 
+      padding: '2rem',
+      textAlign: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
+    }}>
+      <div className={`item-detail ${selectedItem.category}${selectedItem.masterpiece ? ' masterpiece' : ''}`}>
+        {selectedItem.masterpiece && (
+          <span className="masterpiece-badge" title="Obra maestra">
+            <svg 
+              width={badgeConfig.svg.width} 
+              height={badgeConfig.svg.height} 
+              viewBox={badgeConfig.svg.viewBox} 
+              fill={badgeConfig.svg.fill} 
+              xmlns={badgeConfig.svg.xmlns}
+            >
+              <circle 
+                cx={badgeConfig.circle.cx} 
+                cy={badgeConfig.circle.cy} 
+                r={badgeConfig.circle.r} 
+                fill={badgeConfig.circle.fill}
+              />
+              <text 
+                x={badgeConfig.text.x} 
+                y={badgeConfig.text.y} 
+                textAnchor={badgeConfig.text.textAnchor} 
+                fontSize={badgeConfig.text.fontSize} 
+                fontWeight={badgeConfig.text.fontWeight} 
+                fill={badgeConfig.text.fill}
+              >
+                {badgeConfig.text.content}
+              </text>
+            </svg>
+          </span>
+        )}
+        
+        <img 
+          src={selectedItem.image} 
+          alt={title}
+          style={{
+            maxWidth: '300px',
+            width: '100%',
+            height: 'auto',
+            borderRadius: '12px',
+            marginBottom: '1.5rem'
+          }}
+        />
+        
+        <h2 style={{ marginBottom: '1rem', fontSize: '2rem' }}>{title}</h2>
+        
+        <div style={{ marginBottom: '1rem', fontSize: '1.1rem', color: '#666' }}>
+          <span style={{ fontWeight: 'bold' }}>
+            {getCategoryTranslation(selectedItem.category)}
+          </span>
+          {selectedItem.subcategory && (
+            <span> - {getSubcategoryTranslation(selectedItem.subcategory)}</span>
+          )}
+        </div>
+        
+        {selectedItem.director && (
+          <p style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
+            <strong>{t.director || 'Director'}:</strong> {selectedItem.director}
+          </p>
+        )}
+        
+        {selectedItem.year && (
+          <p style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
+            <strong>{t.year || 'Año'}:</strong> {selectedItem.year}
+          </p>
+        )}
+          <p style={{ 
+          fontSize: '1.2rem', 
+          lineHeight: '1.6', 
+          marginBottom: '2rem',
+          textAlign: 'left',
+          maxWidth: '600px',
+          margin: '0 auto 2rem auto'
+        }}>
+          {description}
+        </p>
+        
+        {trailerUrl && (
+          <div style={{ marginTop: '2rem' }}>
+            <a 
+              href={trailerUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="trailer-link"
+              style={{
+                display: 'inline-block',
+                padding: '0.8rem 1.5rem',
+                background: '#0078d4',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                transition: 'background 0.2s'
+              }}
+            >
+              {t.watch_trailer || 'Ver Trailer'}
+            </a>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
