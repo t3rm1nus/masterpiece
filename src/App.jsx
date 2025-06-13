@@ -1,26 +1,18 @@
+// Eliminar imports innecesarios ya que están en los stores
 import { LanguageProvider, useLanguage } from "./LanguageContext";
 import './App.css'
 import { useState, useEffect } from "react";
-import datosMovies from "./datos_movies.json";
-import datosComics from "./datos_comics.json";
-import datosBooks from "./datos_books.json";
-import datosMusic from "./datos_music.json";
-import datosVideogames from "./datos_videogames.json";
-import datosBoardgames from "./datos_boardgames.json";
-import datosPodcast from "./datos_podcast.json";
 import React from "react";
 import { normalizeSubcategory, filterItemsBySubcategory, getUniqueSubcategories, normalizeSubcategoryInternal } from './utils/categoryUtils';
-
-// Utilidad para obtener el dataset según la categoría
-const datosByCategory = {
-  movies: { recommendations: datosMovies.recommendations },
-  comics: datosComics,
-  books: datosBooks,
-  music: datosMusic,
-  videogames: datosVideogames,
-  boardgames: datosBoardgames,
-  podcast: datosPodcast
-};
+import useFiltersStore from './store/filtersStore';
+import useUIStore from './store/uiStore';
+import useAppDataStore from './store/appDataStore';
+import useStylesStore from './store/stylesStore';
+import useRenderStore from './store/renderStore';
+import ErrorDisplay from './components/ErrorDisplay';
+import { getDefaultTitle, isMobileDevice, generateRecommendationKey, getRandomNotFoundImage } from './utils/appUtils';
+import ThemeToggle from './components/ThemeToggle';
+import { useTitleSync } from './hooks/useTitleSync';
 
 function LanguageSelector() {
   const { lang, changeLanguage } = useLanguage();
@@ -38,7 +30,7 @@ function LanguageSelector() {
   );
 }
 
-function Menu({ onNavigate, showBack, onBack, backLabel }) {
+function Menu({ showBack, onBack, backLabel }) {
   const { t, lang } = useLanguage();
   
   return (
@@ -64,9 +56,9 @@ function Menu({ onNavigate, showBack, onBack, backLabel }) {
           {t.home_title}
         </button>
       </div>
-      
-      {/* Selector de idioma - siempre a la derecha */}
+        {/* Selector de idioma - siempre a la derecha */}
       <div style={{ display: 'flex', alignItems: 'center' }}>
+        <ThemeToggle />
         <LanguageSelector />
       </div>
     </nav>
@@ -74,254 +66,219 @@ function Menu({ onNavigate, showBack, onBack, backLabel }) {
 }
 
 function RecommendationsList({ recommendations, isHome }) {
-  const { lang, t } = useLanguage();
-  const categoryNames = t.categories;
-  const subcategoryTranslations = {
-    'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
-    'acción': lang === 'en' ? 'action' : 'acción',
-    'action': lang === 'es' ? 'acción' : 'action',
-    'comedy': lang === 'es' ? 'comedia' : 'comedy',
-    'adventure': lang === 'es' ? 'aventura' : 'adventure',
-    'aventura': lang === 'en' ? 'adventure' : 'aventura',
-    'comedia': lang === 'en' ? 'comedy' : 'comedia',
-    'histórico': lang === 'en' ? 'historical' : 'histórico',
-    'crónica': lang === 'en' ? 'chronicle' : 'crónica'
-  };
-  // Detectar móvil de forma robusta
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
-
-  return (
-    <div className="recommendations-list">
-      {recommendations.map((rec, idx) => {
-        const title = typeof rec.title === 'object' ? (rec.title[lang] || rec.title.es || rec.title.en || '') : (rec.title || '');
-        const description = typeof rec.description === 'object' ? (rec.description[lang] || rec.description.es || rec.description.en || '') : (rec.description || '');
-        // Clave única: añade siempre el índice para evitar duplicados
-        const recKey = `${rec.category}_${rec.id !== undefined ? rec.id : idx}_${idx}`;
-        if (isHome && isMobile) {
-          return (            <div
-              className={`recommendation-card mobile-home-layout ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
-              key={recKey}
-              style={{position: 'relative'}}
-            >
-              {/* Fila superior: solo el nombre, centrado */}
-              <div className="rec-home-row rec-home-row-top">
-                <span className="rec-home-title">{title}</span>
-              </div>
-              {/* Fila inferior: imagen, debajo género y subgénero, y a la derecha la descripción */}
-              <div className="rec-home-row rec-home-row-bottom">
-                <div style={{display:'flex',flexDirection:'column',alignItems:'center',minWidth:0}}>
-                  <img src={rec.image} alt={title} width={80} height={110} style={{objectFit:'cover', borderRadius:8, flexShrink:0, marginBottom:4}} />
-                  <div className="rec-home-cats" style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'5px',marginTop:0,marginBottom:0}}>
-                    <span className="rec-home-cat" style={{marginBottom:0, lineHeight:'1.1'}}>{categoryNames[rec.category]}</span>
-                    <span className="rec-home-subcat" style={{marginTop:0, lineHeight:'1.1'}}>{subcategoryTranslations[rec.subcategory] || rec.subcategory}</span>
+  const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
+  const { isMobile } = useUIStore();
+  
+  // Obtener la imagen not found del store
+  const { randomNotFoundImage } = useFiltersStore();
+  
+  // Obtener funciones de renderizado del store
+  const { 
+    processTitle, 
+    processDescription, 
+    getRecommendationCardClasses,
+    noResultsConfig,
+    mobileHomeStyles,
+    desktopStyles
+  } = useRenderStore();
+  
+  // Obtener configuración de estilos
+  const { getMasterpieceBadgeConfig } = useStylesStore();
+  const badgeConfig = getMasterpieceBadgeConfig();  return (
+    <div className="recommendations-list" style={{ width: '100%', paddingTop: '2rem' }}>
+      {recommendations.length === 0 ? (
+        <div className="no-results-container" style={noResultsConfig.containerStyle}>
+          <h3 className="no-results-title">
+            {t.no_results}
+          </h3>
+          <p className="no-results-message">
+            {t.try_different_filters}
+          </p>
+          <div style={noResultsConfig.imageContainerStyle}>
+            <div className="no-results-image-container">
+              <img 
+                src={randomNotFoundImage}
+                alt={t.no_results} 
+                className="no-results-image"
+              />
+            </div>
+          </div>
+        </div>
+      ) : (
+        recommendations.map((rec, idx) => {
+          const title = processTitle(rec.title, lang);
+          const description = processDescription(rec.description, lang);
+          const recKey = generateRecommendationKey(rec, idx);
+          const cardClasses = getRecommendationCardClasses(rec, isHome, isMobile);
+          
+          if (isHome && isMobile) {
+            return (
+              <div
+                className={cardClasses}
+                key={recKey}
+                style={mobileHomeStyles.cardStyle}
+              >
+                {/* Fila superior: solo el nombre, centrado */}
+                <div className="rec-home-row rec-home-row-top">
+                  <span className="rec-home-title">{title}</span>
+                </div>
+                {/* Fila inferior: imagen, debajo género y subgénero, y a la derecha la descripción */}
+                <div className="rec-home-row rec-home-row-bottom">
+                  <div style={{display:'flex',flexDirection:'column',alignItems:'center',minWidth:0}}>
+                    <img 
+                      src={rec.image} 
+                      alt={title} 
+                      width={80} 
+                      height={110} 
+                      style={mobileHomeStyles.imageStyle} 
+                    />
+                    <div className="rec-home-cats" style={mobileHomeStyles.categoryContainer}>
+                      <span className="rec-home-cat" style={mobileHomeStyles.categoryStyle}>
+                        {getCategoryTranslation(rec.category)}
+                      </span>
+                      <span className="rec-home-subcat" style={mobileHomeStyles.subcategoryStyle}>
+                        {getSubcategoryTranslation(rec.subcategory)}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="rec-home-info">
+                    <p className="rec-home-desc">{description}</p>
                   </div>
                 </div>
-                <div className="rec-home-info">
-                  <p className="rec-home-desc">{description}</p>
-                </div>
+                {rec.masterpiece && (
+                  <span className="masterpiece-badge" title="Obra maestra">
+                    <svg 
+                      width={badgeConfig.svg.width} 
+                      height={badgeConfig.svg.height} 
+                      viewBox={badgeConfig.svg.viewBox} 
+                      fill={badgeConfig.svg.fill} 
+                      xmlns={badgeConfig.svg.xmlns}
+                    >
+                      <circle 
+                        cx={badgeConfig.circle.cx} 
+                        cy={badgeConfig.circle.cy} 
+                        r={badgeConfig.circle.r} 
+                        fill={badgeConfig.circle.fill}
+                      />
+                      <text 
+                        x={badgeConfig.text.x} 
+                        y={badgeConfig.text.y} 
+                        textAnchor={badgeConfig.text.textAnchor} 
+                        fontSize={badgeConfig.text.fontSize} 
+                        fontWeight={badgeConfig.text.fontWeight} 
+                        fill={badgeConfig.text.fill}
+                      >
+                        {badgeConfig.text.content}
+                      </text>
+                    </svg>
+                  </span>
+                )}
               </div>
+            );
+          }
+          
+          // Layout normal para desktop/tablet o fuera de home
+          return (
+            <div
+              className={cardClasses}
+              key={recKey}
+              style={desktopStyles.cardStyle}
+            >
               {rec.masterpiece && (
                 <span className="masterpiece-badge" title="Obra maestra">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="12" fill="#ffd700"/>
-                    <text x="12" y="17" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">1</text>
+                  <svg 
+                    width={badgeConfig.svg.width} 
+                    height={badgeConfig.svg.height} 
+                    viewBox={badgeConfig.svg.viewBox} 
+                    fill={badgeConfig.svg.fill} 
+                    xmlns={badgeConfig.svg.xmlns}
+                  >
+                    <circle 
+                      cx={badgeConfig.circle.cx} 
+                      cy={badgeConfig.circle.cy} 
+                      r={badgeConfig.circle.r} 
+                      fill={badgeConfig.circle.fill}
+                    />
+                    <text 
+                      x={badgeConfig.text.x} 
+                      y={badgeConfig.text.y} 
+                      textAnchor={badgeConfig.text.textAnchor} 
+                      fontSize={badgeConfig.text.fontSize} 
+                      fontWeight={badgeConfig.text.fontWeight} 
+                      fill={badgeConfig.text.fill}
+                    >
+                      {badgeConfig.text.content}
+                    </text>
                   </svg>
                 </span>
               )}
+              <img 
+                src={rec.image} 
+                alt={title} 
+                width={120} 
+                height={170} 
+                style={desktopStyles.imageStyle} 
+              />
+              <div style={desktopStyles.categoryContainer}>
+                <span style={desktopStyles.categoryStyle}>
+                  {getCategoryTranslation(rec.category)}
+                </span>
+                <span style={desktopStyles.subcategoryStyle}>
+                  {getSubcategoryTranslation(rec.subcategory)}
+                </span>
+              </div>
+              <h3>{title}</h3>
+              <p>{description}</p>
             </div>
           );
-        }
-        // Layout normal para desktop/tablet o fuera de home
-        return (          <div
-            className={`recommendation-card ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
-            key={recKey}
-            style={{position: 'relative'}}
-          >
-            {rec.masterpiece && (
-              <span className="masterpiece-badge" title="Obra maestra">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="12" fill="#ffd700"/>
-                  <text x="12" y="17" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#fff">1</text>
-                </svg>
-              </span>
-            )}
-            <img src={rec.image} alt={title} width={120} height={170} style={{objectFit:'cover'}} />
-            <div style={{marginBottom: '0.2rem'}}>
-              <span style={{fontWeight: 'bold', display: 'block'}}>{categoryNames[rec.category]}</span>
-              <span style={{fontWeight: 500, color: '#888'}}>{subcategoryTranslations[rec.subcategory] || rec.subcategory}</span>
-            </div>
-            <h3>{title}</h3>
-            <p>{description}</p>
-          </div>
-        );
-      })}
+        })
+      )}
     </div>
   );
 }
 
 function HomePage({ onCategory }) {
-  const { lang, t } = useLanguage();
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [activeSubcategory, setActiveSubcategory] = useState(null);
-  const [title, setTitle] = useState(lang === 'en' ? 'Daily Recommendations' : 'Recomendaciones diarias');
-  const [isSpanishCinemaActive, setIsSpanishCinemaActive] = useState(false);
-  const [isMasterpieceActive, setIsMasterpieceActive] = useState(false);
-
-  const categories = [
-    { key: 'movies', label: lang === 'en' ? 'Movies' : 'Películas' },
-    { key: 'comics', label: lang === 'en' ? 'Comics' : 'Cómics' },
-    { key: 'books', label: lang === 'en' ? 'Books' : 'Libros' },
-    { key: 'music', label: lang === 'en' ? 'Music' : 'Música' },
-    { key: 'videogames', label: lang === 'en' ? 'Video Games' : 'Videojuegos' },
-    { key: 'boardgames', label: lang === 'en' ? 'Board Games' : 'Juegos de Mesa' },
-    { key: 'podcast', label: lang === 'en' ? 'Podcasts' : 'Podcasts' }
-  ];
-
-  // Efecto para actualizar el título cuando cambia el idioma o la categoría
-  useEffect(() => {
-    if (selectedCategory) {
-      // Si hay una categoría seleccionada, buscar su etiqueta traducida
-      const category = categories.find(cat => cat.key === selectedCategory);
-      if (category) {
-        setTitle(category.label);
-      }
-    } else {
-      // Si no hay categoría seleccionada, mostrar el título por defecto
-      setTitle(lang === 'en' ? 'Daily Recommendations' : 'Recomendaciones diarias');
-    }
-  }, [lang, selectedCategory, categories]);
-  const subcategoryTranslations = {
-    'fantasy': 'fantasía',
-    'action': 'acción',
-    'comedy': 'comedia',
-    'adventure': 'aventura',
-    'animation': 'animación',
-    'war': 'guerra',
-    'spanish cinema': 'cine español',
-    'sci-fi': 'ciencia ficción',
-    'thriller': 'suspense',
-    'horror': 'terror',
-    'drama': 'drama',
-    'western': 'western',
-    'superhéroes': 'superheroes',
-    'superheroes': 'superhéroes'
-  };
-
-  // Función para obtener subcategorías según la categoría seleccionada
-  const getSubcategoriesForCategory = (category) => {
-    if (!category) return [];
-    
-    const categoryData = datosByCategory[category];
-    if (!categoryData || !categoryData.recommendations) return [];
-    
-    // Extraer subcategorías únicas de la categoría seleccionada
-    const uniqueSubcategories = Array.from(
-      new Set(
-        categoryData.recommendations
-          .filter(item => item.category === category && item.subcategory)
-          .map(item => {
-            // Normalizar subcategorías para consistencia
-            return item.subcategory.toLowerCase();
-          })
-      )
-    );
-    
-    // Convertir a formato de objeto para el componente
-    return uniqueSubcategories.map(sub => ({ sub }));
+  const { lang, t, getSubcategoryTranslation } = useLanguage();
+  
+  // Hook para sincronizar títulos automáticamente
+  useTitleSync();
+  
+  // Importar stores
+  const { 
+    selectedCategory, 
+    activeSubcategory, 
+    isSpanishCinemaActive, 
+    isMasterpieceActive, 
+    title,
+    filteredItems,
+    setSelectedCategory,
+    setActiveSubcategory,
+    toggleSpanishCinema,
+    toggleMasterpiece,
+    setTitle,    
+    getSubcategoriesForCategory
+  } = useFiltersStore();
+    // Obtener categorías del store de datos de app
+  const { getCategories } = useAppDataStore();
+  const categories = getCategories(lang);
+  
+  // Obtener configuración de estilos del store
+  const { getSpecialButtonLabel, containerStyles } = useStylesStore();
+    // Obtener subcategorías del store para la categoría seleccionada
+  const categorySubcategories = getSubcategoriesForCategory();
+    const resetCategory = () => {
+    useFiltersStore.getState().resetCategory();
   };
   
-  // Obtener subcategorías para la categoría seleccionada
-  const categorySubcategories = getSubcategoriesForCategory(selectedCategory);
-
-  function renderRecommendations(allRecommendations) {
-    return allRecommendations.sort(() => 0.5 - Math.random()).slice(0, 11);
-  }
-
-  function renderCategoriesAndSubcategories(categories, selectedCategory, activeSubcategory, isMasterpiecesActive, isSpanishCinemaActive) {
-    let filteredRecommendations = selectedCategory
-      ? categories.filter(item => item.category === selectedCategory && (!activeSubcategory || item.subcategory === activeSubcategory))
-      : categories;
-
-    if (isMasterpiecesActive) {
-      filteredRecommendations = filteredRecommendations.filter(item => item.masterpiece === true);
-    }
-
-    if (isSpanishCinemaActive) {
-      filteredRecommendations = filteredRecommendations.filter(item => {
-        const hasTag = Array.isArray(item.tags) && item.tags.includes('spanish');
-        return hasTag;
-      });
-    }
-
-    console.log('Filtered items:', filteredRecommendations);
-    return filteredRecommendations;
-  }
-
-  const all = [
-    ...datosMovies.recommendations,
-    ...datosComics.recommendations,
-    ...datosBooks.recommendations,
-    ...datosMusic.recommendations,
-    ...datosVideogames.recommendations,
-    ...datosBoardgames.recommendations,
-    ...datosPodcast.recommendations
-  ];
-
-  // Aplicar filtros en cadena
-  let filteredRecommendations = all;
-  
-  // Aplicar filtro de categoría
-  if (selectedCategory) {
-    filteredRecommendations = filteredRecommendations.filter(item => item.category === selectedCategory);
-  }
-
-  // Aplicar filtro de subcategoría
-  if (activeSubcategory && activeSubcategory !== '__masterpieces__') {
-    filteredRecommendations = filteredRecommendations.filter(item => item.subcategory === activeSubcategory);
-  }
-
-  // Aplicar filtro de cine español si está activo
-  if (isSpanishCinemaActive) {
-    filteredRecommendations = filteredRecommendations.filter(item => 
-      Array.isArray(item.tags) && item.tags.includes('spanish')
-    );
-  }
-
-  // Aplicar filtro de obras maestras si está activo
-  if (isMasterpieceActive) {
-    filteredRecommendations = filteredRecommendations.filter(item => item.masterpiece === true);
-  }
-
-  // Si no hay filtros activos y no hay categoría seleccionada, mostrar recomendaciones aleatorias
-  if (!selectedCategory && !isSpanishCinemaActive && !isMasterpieceActive) {
-    filteredRecommendations = renderRecommendations(all);
-  }
-
-  console.log('Filter status:', {
-    selectedCategory,
-    activeSubcategory,
-    isSpanishCinemaActive,
-    isMasterpieceActive,
-    totalItems: filteredRecommendations.length,
-    spanishItems: filteredRecommendations.filter(item => Array.isArray(item.tags) && item.tags.includes('spanish')).length,
-    masterpieces: filteredRecommendations.filter(item => item.masterpiece).length
-  });  const resetCategory = () => {
-    setSelectedCategory(null);
-    setActiveSubcategory(null);
-    setTitle(lang === 'en' ? 'Daily Recommendations' : 'Recomendaciones diarias');
-    // Mantener el estado de los filtros incluso al resetear
-  };  const handleCategoryClick = (key, label) => {
-    setSelectedCategory(key);
-    // Buscar la etiqueta traducida actual para la categoría
-    const category = categories.find(cat => cat.key === key);
-    setTitle(category ? category.label : label);
-    setActiveSubcategory(null); // Reset subcategory when changing main category
-    setIsSpanishCinemaActive(false); // Reset Spanish Cinema filter when changing category
+  const handleCategoryClick = (key, label) => {
+    // Usar la etiqueta traducida según el idioma actual
+    const translatedLabel = categories.find(cat => cat.key === key)?.label || label;
+    // En lugar de usar el hook, usamos getState().acción para evitar re-renderizados
+    useFiltersStore.getState().setSelectedCategory(key, translatedLabel);
   };
-
   return (
     <>
-      <div className="categories-list" style={{ textAlign: 'center', marginTop: '4rem', marginBottom: '1rem', width: '100%' }}>
+      <div className="categories-list" style={containerStyles.categoriesList}>
         {categories.map(({ key, label }) => (
           <button
             key={key}
@@ -332,79 +289,68 @@ function HomePage({ onCategory }) {
             {label}
           </button>
         ))}
-      </div>      {selectedCategory && (
-        <>          <div className="subcategories-list" style={{ textAlign: 'center', marginBottom: '0.5rem', width: '100%' }}>
+      </div>
+      
+      {selectedCategory && (
+        <>
+          <div className="subcategories-list" style={containerStyles.subcategoriesList}>
             {categorySubcategories.map(({ sub }) => (
               <button
                 key={sub}
                 className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
                 style={{ display: 'inline-block', margin: '0.5rem' }}
-                onClick={() => setActiveSubcategory(activeSubcategory === sub ? null : sub)}
+                onClick={() => setActiveSubcategory(sub)}
               >
-                {lang === 'es' ? subcategoryTranslations[sub] || sub : sub}
+                {getSubcategoryTranslation(sub)}
               </button>
             ))}
-          </div>          <div style={{ 
-              display: 'flex', 
-              justifyContent: 'center', 
-              gap: '1rem', 
-              marginBottom: '1rem',
-              width: '100%',
-              textAlign: 'center'
-            }}>
-            {/* Mostrar botón de Cine Español solo si NO estamos en cómics */}
-            {selectedCategory !== 'comics' && (
+          </div>
+
+          <div style={containerStyles.specialButtonsContainer}>
+            {/* Mostrar botón de Cine Español solo en la categoría de películas */}
+            {selectedCategory === 'movies' && (
               <button
-                className="subcategory-btn"              
-                style={{ 
-                  display: 'inline-block',
-                  backgroundColor: isSpanishCinemaActive ? '#4A90E2' : '#E8E8E8',
-                  color: isSpanishCinemaActive ? 'white' : 'black',
-                  padding: '0.5rem 1.5rem',
-                  minWidth: '150px',
-                  transition: 'all 0.3s ease'
-                }}
+                className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
                 onClick={() => {
-                  setIsSpanishCinemaActive(!isSpanishCinemaActive);
+                  toggleSpanishCinema();
                   console.log('Toggling Spanish Cinema:', !isSpanishCinemaActive);
                 }}
               >
-                {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
+                {getSpecialButtonLabel('spanishCinema', lang)}
               </button>
             )}
             <button
-              className="subcategory-btn"              
-              style={{ 
-                display: 'inline-block',
-                backgroundColor: isMasterpieceActive ? '#4A90E2' : '#E8E8E8',
-                color: isMasterpieceActive ? 'white' : 'black',
-                padding: '0.5rem 1.5rem',
-                minWidth: '150px',
-                transition: 'all 0.3s ease'
-              }}
+              className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}              
               onClick={() => {
-                setIsMasterpieceActive(!isMasterpieceActive);
+                toggleMasterpiece();
               }}
             >
-              {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
+              {getSpecialButtonLabel('masterpiece', lang)}
             </button>
           </div>
         </>
       )}
-      <h1>{title}</h1>      <RecommendationsList
-        recommendations={filteredRecommendations}
-        isHome={!selectedCategory && !activeSubcategory}
-      />
+      
+      <h1>{title}</h1>
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <RecommendationsList
+          recommendations={filteredItems}
+          isHome={!selectedCategory && !activeSubcategory}
+        />
+      </div>
     </>
   );
 }
 
 
 
-function MobileMenuBar({ onOpen }) {
+function MobileMenuBar() {
+  // Utilizamos directamente la acción del store
+  const { openMobileMenu } = useUIStore();
+  
   return (
     <div className="mobile-menu-bar">
-      <button aria-label="Abrir menú" onClick={onOpen} style={{background:'none',border:'none',fontSize:'2rem',color:'#0078d4',cursor:'pointer',padding:0}}>
+      <button aria-label="Abrir menú" onClick={openMobileMenu} style={{background:'none',border:'none',fontSize:'2rem',color:'#0078d4',cursor:'pointer',padding:0}}>
         <span style={{fontWeight:'bold'}}>&#9776;</span>
       </button>
       <span style={{fontWeight:'bold',fontSize:'1.1rem'}}>Masterpiece</span>
@@ -413,15 +359,17 @@ function MobileMenuBar({ onOpen }) {
   );
 }
 
-function MobileMenu({ open, onClose, onNavigate, showBack, onBack, backLabel }) {
-  const { lang } = useLanguage();
-  if (!open) return null;
+function MobileMenu({ showBack, onBack, backLabel }) {
+  const { t } = useLanguage();
+  const { mobileMenuOpen, closeMobileMenu, navigate } = useUIStore();
+  
+  if (!mobileMenuOpen) return null;
   
   // Componente simplificado y reescrito para evitar duplicaciones
   return (
-    <div className="mobile-menu-overlay" onClick={onClose}>
+    <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
       <nav className="mobile-menu" onClick={e => e.stopPropagation()}>
-        <button className="close-btn" onClick={onClose} aria-label="Cerrar menú">&times;</button>
+        <button className="close-btn" onClick={closeMobileMenu} aria-label="Cerrar menú">&times;</button>
         
         {/* Botón de volver - solo visible cuando showBack es true */}
         {showBack && (
@@ -429,14 +377,18 @@ function MobileMenu({ open, onClose, onNavigate, showBack, onBack, backLabel }) 
         )}
         
         {/* Botón de inicio */}
-        <button onClick={() => {onNavigate({view: 'home'}); onClose();}}>
-          {lang === 'es' ? 'Inicio' : 'Home'}
+        <button onClick={() => {navigate('home'); closeMobileMenu();}}>
+          {t.categories ? t.categoriesTitle : (t.home_title || 'Inicio')}
+        </button>
+          {/* Botón de nuevas recomendaciones */}
+        <button onClick={() => window.location.reload()}>
+          {t.home_title}
         </button>
         
-        {/* Botón de nuevas recomendaciones */}
-        <button onClick={() => window.location.reload()}>
-          {lang === 'es' ? 'Nuevas recomendaciones' : 'New Recommendations'}
-        </button>
+        {/* Selector de tema */}
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '0.5rem 0' }}>
+          <ThemeToggle />
+        </div>
         
         {/* Selector de idioma */}
         <LanguageSelector />
@@ -445,43 +397,43 @@ function MobileMenu({ open, onClose, onNavigate, showBack, onBack, backLabel }) 
   );
 }
 
-function AppContent() {  const [view, setView] = useState({view: 'home'});
-  const [lastCategory, setLastCategory] = useState(null);
+function AppContent() {  
   const { lang } = useLanguage();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // Removed handleItemClick function since we don't need it anymore
   
-  const navigate = newView => {
-    setView(newView);
-  };
+  // Usando el store de UI para toda la gestión de UI
+  const { 
+    isMobile: isMobileUI, 
+    mobileMenuOpen, 
+    setMobile, 
+    openMobileMenu, 
+    closeMobileMenu,
+    currentView,
+    navigate,
+    lastCategory
+  } = useUIStore();
 
   let content;
-  switch (view.view) {
+  switch (currentView) {
     case 'home':
       content = <HomePage />;
       break;
     default:
       content = <div>Página no encontrada</div>;
   }
-
-  const [isMobile, setIsMobile] = useState(false);
+  // Usando useEffect para detectar cambios de tamaño y actualizar el estado en el store de UI
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 600);
+    const checkMobile = () => setMobile(isMobileDevice(window.innerWidth));
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  return (
-    <div className="container">
-      {isMobile ? (
+  }, [setMobile]);return (
+    <div className="container" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>      {isMobileUI ? (
         <>
-          <MobileMenuBar onOpen={() => setMobileMenuOpen(true)} />
-          <MobileMenu open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} onNavigate={setView} />
+          <MobileMenuBar />
+          <MobileMenu />
         </>
       ) : (
-        <Menu onNavigate={setView} />
+        <Menu />
       )}
       {content}
     </div>
@@ -491,8 +443,9 @@ function AppContent() {  const [view, setView] = useState({view: 'home'});
 export default function App() {
   return (
     <LanguageProvider>
-      <div className="App">
+      <div className="App" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
         <AppContent />
+        <ErrorDisplay />
       </div>
     </LanguageProvider>
   );

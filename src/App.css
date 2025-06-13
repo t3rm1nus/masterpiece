@@ -1,3 +1,56 @@
+/* Variables para los temas */
+:root {
+  /* Tema claro (por defecto) */
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #4A90E2;
+  --secondary-color: #E8E8E8;
+  --border-color: #ddd;
+  --card-background: #f9f9f9;
+  --hover-color: #f0f0f0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Tema oscuro */
+html[data-theme='dark'] {
+  --background-color: #282c34;
+  --text-color: #f0f0f0;
+  --primary-color: #61dafb;
+  --secondary-color: #444;
+  --border-color: #555;
+  --card-background: #383c44;
+  --hover-color: #3a3f4b;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Tamaños de fuente */
+html[data-font-size='small'] {
+  font-size: 14px;
+}
+
+html[data-font-size='normal'] {
+  font-size: 16px;
+}
+
+html[data-font-size='large'] {
+  font-size: 18px;
+}
+
+/* Aplicar variables al cuerpo del documento */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Desactivar animaciones si el usuario lo prefiere */
+html[data-animations='false'] * {
+  animation: none !important;
+  transition: none !important;
+}
+
 #root {
   max-width: 100%;
   margin: 0 auto;
@@ -56,7 +109,7 @@
   max-width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
-  padding-top: 1rem; /* Ajustar espacio para pegar al menú superior */
+  padding-top: 90px; /* Usamos píxeles específicos: 70px del menú + 20px extra */
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Eliminar centrado vertical */
@@ -75,24 +128,29 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem; /* Reducimos a 1rem ya que ahora el contenedor tiene más padding */
+  padding-top: 0.5rem; /* Mantenemos un padding pequeño */
   justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .recommendation-card {
-  background: #fff;
+  background: var(--card-background);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px var(--shadow-color);
   padding: 1rem;
   width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid var(--border-color);
 }
 
 .recommendation-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px var(--shadow-color);
+  transform: translateY(-4px);
 }
 
 .recommendation-card img {
@@ -108,7 +166,7 @@
 
 .recommendation-card p {
   font-size: 0.95rem;
-  color: #444;
+  color: var(--text-color);
   text-align: center;
 }
 
@@ -138,6 +196,7 @@ button:hover {
   top: 0;
   left: 0;
   width: 100vw;
+  height: 70px; /* Añadimos altura específica */
   z-index: 100;
   background: #fff;
   display: flex;
@@ -179,7 +238,7 @@ button:hover {
 
 h1 {
   text-align: center;
-  margin: 4rem auto 0; /* Espacio para evitar que se meta debajo del menú */
+  margin: 1rem auto 2rem auto; /* Añadimos margin-top de 1rem y aumentamos margin-bottom a 2rem */
   display: block;
 }
 
@@ -188,6 +247,7 @@ h1 {
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1.5rem;
+  padding-top: 20px; /* Añadimos padding extra como margen de seguridad */
   justify-content: center;
 }
 
@@ -200,12 +260,13 @@ h1 {
   font-size: 1.1rem;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(255, 229, 143, 0.1);
-  transition: background 0.2s, border 0.2s;
+  transition: background 0.2s, border 0.2s, transform 0.2s;
 }
 
 .category-btn:hover {
   background: #fff1b8;
   border: 1px solid #ffd666;
+  transform: translateY(-2px);
 }
 
 .category-btn.active {
@@ -350,6 +411,7 @@ h1 {
   }
   .recommendations-list {
     gap: 1rem;
+    margin-top: 1.5rem; /* Reducimos para ser consistente */
   }
   .recommendation-card {
     width: 45vw;
@@ -362,6 +424,7 @@ h1 {
 @media (max-width: 600px) {
   #root, .container {
     padding: 0.2rem !important;
+    padding-top: 68px !important; /* 48px de la barra móvil + 20px extra */
     max-width: 100vw;
   }
   .main-menu {
@@ -386,7 +449,7 @@ h1 {
     max-width: 100vw;
     overflow-wrap: break-word;
     word-break: break-word;
-    margin-top: 4.8rem !important; /* +10px */
+    margin-top: 1rem !important; /* Reducido para ser más consistente */
     margin-bottom: 1.1rem !important; /* +10px */
   }
   .mobile-menu-overlay {
@@ -440,7 +503,7 @@ h1 {
   .recommendations-list {
     flex-direction: column;
     gap: 0.5rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem; /* Reducimos a 1rem para ser consistente */
   }
   .recommendation-card {
     width: 100vw;
@@ -618,4 +681,157 @@ h1 {
   }
 }
 
-/* --- END MOBILE SLIDING MENU --- */
+/* Estilos para cuando no hay resultados */
+.no-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100vw; /* Cambiado a viewport width */
+  max-width: 100vw; /* Cambiado a viewport width */
+  margin: 0;
+  animation: fadeIn 0.5s ease-in-out;
+  box-sizing: border-box; /* Para incluir padding en el cálculo del ancho */
+}
+
+/* Contenedor para la imagen que evita el scroll */
+.no-results-image-container {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  overflow: hidden; /* Evita que el hover cause scroll */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-results-image {
+  width: 100%;
+  max-width: 100%; /* Ahora es relativo al contenedor padre */
+  display: block; /* Asegura que se comporte como bloque para centrado */
+  object-fit: contain; /* Asegura que la imagen mantenga su relación de aspecto */
+  transition: transform 0.3s ease; /* Transición suave para efectos */
+  box-sizing: border-box; /* Para incluir padding en el cálculo del ancho */
+}
+
+.no-results-image:hover {
+  transform: scale(1.02); /* Efecto de aumento al pasar el ratón */
+}
+
+.no-results-title {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.75rem; /* Aumentado para mayor visibilidad */
+  margin-top: 1rem;
+}
+
+.no-results-message {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem; /* Mayor espacio antes de la imagen */
+  font-size: 1.15rem; /* Aumentado para mayor visibilidad */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .no-results-container {
+    padding: 1rem;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+  }
+  
+  
+  .no-results-image-container {
+    max-width: 312.5px; /* Ampliado un 25% del tamaño para móviles (250px * 1.25 = 312.5px) */
+  }
+  
+  .no-results-image {
+    width: 100%;
+  }
+  
+  .no-results-title {
+    font-size: 1.5rem; /* Ajustado para móviles */
+    width: 100%;
+  }
+  
+  .no-results-message {
+    font-size: 1rem; /* Ajustado para móviles */
+    width: 100%;
+  }
+}
+
+/* Asegurar que toda la aplicación tenga ancho completo */
+#root, body, html {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevenir scroll horizontal */
+}
+
+.App, .container, .recommendations-list, .no-results-container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Mantener para prevenir scroll horizontal */
+  overflow-y: visible; /* Permitir que el contenido sea visible verticalmente */
+  position: relative; /* Añadimos position relative para asegurar el contexto */
+}
+
+/* Estilos para los botones de subcategoría */
+.subcategory-btn {
+  background: #E6F3FF; /* Azul muy suave como fondo base */
+  color: #333;
+  border: 1px solid #B3D9FF; /* Borde azul suave */
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(135, 206, 235, 0.2); /* Sombra azul suave */
+  transition: background 0.2s, border 0.2s, transform 0.2s, color 0.2s;
+  margin: 0.25rem;
+}
+
+.subcategory-btn:hover {
+  background: #CCE7FF; /* Azul un poco más intenso en hover */
+  border: 1px solid #87CEEB;
+  transform: translateY(-1px);
+}
+
+.subcategory-btn.active {
+  background: #87CEEB; /* Azul más intenso cuando está activo */
+  color: white;
+  border: 1px solid #87CEEB;
+  font-weight: bold;
+}
+
+/* Estilos específicos para botones de Cine Español y Masterpiece */
+.subcategory-btn.spanish-cinema,
+.subcategory-btn.masterpiece-btn {
+  background: #E8F5E8; /* Verde muy suave como fondo base */
+  color: #333;
+  border: 1px solid #C8E6C9; /* Borde verde suave */
+}
+
+.subcategory-btn.spanish-cinema:hover,
+.subcategory-btn.masterpiece-btn:hover {
+  background: #D4EDDA; /* Verde un poco más intenso en hover */
+  border: 1px solid #81C784;
+}
+
+.subcategory-btn.spanish-cinema.active,
+.subcategory-btn.masterpiece-btn.active {
+  background: #81C784; /* Verde más intenso cuando está activo */
+  color: white;
+  border: 1px solid #66BB6A;
+  font-weight: bold;
+}

@@ -1,20 +1,31 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
-import texts from "./texts.json";
+import React, { createContext, useContext } from "react";
+import useLanguageStore from "./store/languageStore";
 
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState("es");
-  const [t, setT] = useState(texts[lang]);
+  // Usamos el store de idioma
+  const { 
+    lang, 
+    translations: t, 
+    setLanguage, 
+    getTranslation, 
+    getCategoryTranslation,
+    getSubcategoryTranslation 
+  } = useLanguageStore();
 
-  useEffect(() => {
-    setT(texts[lang]);
-  }, [lang]);
+  const changeLanguage = (lng) => setLanguage(lng);
 
-  const changeLanguage = (lng) => setLang(lng);
-
+  // Proporcionamos tanto el acceso al store como funciones de conveniencia
   return (
-    <LanguageContext.Provider value={{ lang, t, changeLanguage }}>
+    <LanguageContext.Provider value={{ 
+      lang, 
+      t, 
+      changeLanguage, 
+      getTranslation,
+      getCategoryTranslation,
+      getSubcategoryTranslation
+    }}>
       {children}
     </LanguageContext.Provider>
   );

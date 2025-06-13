@@ -12,7 +12,9 @@
       "podcast": "Podcast"
     },
     "see_all": "Ver todas",
-    "change_language": "Cambiar idioma"
+    "change_language": "Cambiar idioma",
+    "no_results": "No se encontraron resultados",
+    "try_different_filters": "Intenta con otros filtros o categorías"
   },  "en": {
     "home_title": "New Recommendations",
     "categoriesTitle": "Categories",
@@ -26,6 +28,8 @@
       "podcast": "Podcast"
     },
     "see_all": "See all",
-    "change_language": "Change language"
+    "change_language": "Change language",
+    "no_results": "No results found",
+    "try_different_filters": "Try with different filters or categories"
   }
 }
