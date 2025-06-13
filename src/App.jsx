@@ -33,7 +33,7 @@ function LanguageSelector() {
 function Menu() {
   const { t, lang } = useLanguage();
   const { resetAllFilters } = useFiltersStore();
-  const { currentView, goBackFromDetail, navigate } = useUIStore();
+  const { currentView, goBackFromDetail, goBackFromCoffee, navigate, navigateToCoffee } = useUIStore();
   
   const handleNewRecommendations = () => {
     resetAllFilters(lang);
@@ -41,6 +41,7 @@ function Menu() {
   };
   
   const isDetailView = currentView === 'detail';
+  const isCoffeeView = currentView === 'coffee';
   
   return (
     <nav className="main-menu" style={{ 
@@ -76,6 +77,44 @@ function Menu() {
             }}
           >
             ← {t.back || 'Volver'}
+          </button>
+        )}
+        {/* Mostrar botón volver en vista de café */}
+        {isCoffeeView && (
+          <button 
+            className="category-btn" 
+            onClick={goBackFromCoffee}
+            style={{ 
+              background: 'var(--hover-color)',
+              border: '1px solid var(--border-color)',
+              color: 'var(--text-color)',
+              padding: '0.5rem 1rem',
+              borderRadius: '6px',
+              cursor: 'pointer'
+            }}
+          >
+            ← {t.back || 'Volver'}
+          </button>
+        )}
+        {/* Botón de donación - solo mostrar si no estamos en la página de café */}
+        {!isCoffeeView && (
+          <button 
+            onClick={navigateToCoffee}
+            style={{ 
+              background: '#ffc439',
+              color: '#333',
+              border: 'none',
+              padding: '0.5rem 1rem',
+              borderRadius: '20px',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+              fontSize: '0.9rem',
+              transition: 'all 0.2s ease'
+            }}
+            onMouseOver={(e) => e.target.style.background = '#ffb700'}
+            onMouseOut={(e) => e.target.style.background = '#ffc439'}
+          >
+            ☕ {t.buy_me_coffee}
           </button>
         )}
       </div>
@@ -392,7 +431,7 @@ function MobileMenuBar() {
 
 function MobileMenu() {
   const { t, lang } = useLanguage();
-  const { mobileMenuOpen, closeMobileMenu, navigate, currentView, goBackFromDetail } = useUIStore();
+  const { mobileMenuOpen, closeMobileMenu, navigate, currentView, goBackFromDetail, goBackFromCoffee, navigateToCoffee } = useUIStore();
   const { resetAllFilters } = useFiltersStore();
   
   const handleNewRecommendations = () => {
@@ -401,7 +440,13 @@ function MobileMenu() {
     closeMobileMenu();
   };
   
+  const handleCoffeeNavigation = () => {
+    navigateToCoffee();
+    closeMobileMenu();
+  };
+  
   const isDetailView = currentView === 'detail';
+  const isCoffeeView = currentView === 'coffee';
   
   if (!mobileMenuOpen) return null;
   
@@ -410,21 +455,44 @@ function MobileMenu() {
     <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
       <nav className="mobile-menu" onClick={e => e.stopPropagation()}>
         <button className="close-btn" onClick={closeMobileMenu} aria-label="Cerrar menú">&times;</button>
-        
-        {/* Botón de volver - solo visible en vista de detalle */}
+          {/* Botón de volver - solo visible en vista de detalle */}
         {isDetailView && (
           <button className="category-btn" onClick={() => {goBackFromDetail(); closeMobileMenu();}}>
             ← {t.back || 'Volver'}
           </button>
         )}
         
+        {/* Botón de volver - solo visible en vista de café */}
+        {isCoffeeView && (
+          <button className="category-btn" onClick={() => {goBackFromCoffee(); closeMobileMenu();}}>
+            ← {t.back || 'Volver'}
+          </button>
+        )}
+        
         {/* Botón de inicio */}        <button onClick={() => {navigate('home'); closeMobileMenu();}}>
           {t.categories ? t.categoriesTitle : (t.home_title || 'Inicio')}
-        </button>
-          {/* Botón de nuevas recomendaciones */}
+        </button>        {/* Botón de nuevas recomendaciones */}
         <button onClick={handleNewRecommendations}>
           {t.home_title}
         </button>
+        
+        {/* Botón de donación - solo mostrar si no estamos en la página de café */}
+        {!isCoffeeView && (
+          <button 
+            onClick={handleCoffeeNavigation}
+            style={{ 
+              background: '#ffc439',
+              color: '#333',
+              border: 'none',
+              padding: '0.8rem 1.2rem',
+              borderRadius: '20px',
+              fontWeight: 'bold',
+              margin: '0.5rem 0'
+            }}
+          >
+            ☕ {t.buy_me_coffee}
+          </button>
+        )}
         
         {/* Selector de tema */}
         <div style={{ display: 'flex', justifyContent: 'center', margin: '0.5rem 0' }}>
@@ -434,6 +502,50 @@ function MobileMenu() {
         {/* Selector de idioma */}
         <LanguageSelector />
       </nav>
+    </div>
+  );
+}
+
+function CoffeePage() {
+  const { t } = useLanguage();
+  
+  return (
+    <div className="coffee-page">
+      {/* Icono de café animado */}
+      <div className="coffee-icon">☕</div>
+      
+      {/* Título principal */}
+      <h1 className="coffee-title">{t.coffee_page_title}</h1>
+      
+      {/* Subtítulo */}
+      <p className="coffee-subtitle">{t.coffee_page_subtitle}</p>
+      
+      {/* Descripción principal */}
+      <p className="coffee-description">
+        {t.coffee_description}
+      </p>
+      
+      {/* Lista de beneficios */}
+      <div className="coffee-benefits">
+        <p className="coffee-benefits-title">{t.coffee_benefits_title}</p>
+        <div className="coffee-benefits-list">
+          <p>{t.coffee_benefit_1}</p>
+          <p>{t.coffee_benefit_2}</p>
+          <p>{t.coffee_benefit_3}</p>
+          <p>{t.coffee_benefit_4}</p>
+        </div>
+      </div>
+      
+      {/* Call to action */}
+      <p className="coffee-cta">{t.coffee_cta}</p>
+      <p className="coffee-legend">{t.coffee_legend}</p>
+        {/* Contenedor del botón de PayPal */}
+      <div className="paypal-button-container" id="paypal-button-wrapper">
+        <div id="paypal-container-MRSQEQV646EPA"></div>
+      </div>
+      
+      {/* Footer divertido */}
+      <p className="coffee-footer">{t.coffee_footer}</p>
     </div>
   );
 }
@@ -451,14 +563,16 @@ function AppContent() {
     currentView,
     navigate,
     lastCategory
-  } = useUIStore();
-  let content;
+  } = useUIStore();  let content;
   switch (currentView) {
     case 'home':
       content = <HomePage />;
       break;
     case 'detail':
       content = <ItemDetail />;
+      break;
+    case 'coffee':
+      content = <CoffeePage />;
       break;
     default:
       content = <div>Página no encontrada</div>;

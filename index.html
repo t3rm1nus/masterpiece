@@ -5,6 +5,91 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
+    <!-- PayPal SDK Script -->
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=BAArspW7KDEKg5gwovm8GgU9VyFznam0pK8opZaMXusHM_4ykQsGvLInGZv_vu5J9DDrqXIMHnlBmGWubw&components=hosted-buttons&disable-funding=venmo&currency=EUR" 
+      crossorigin="anonymous" 
+      async>
+    </script>
+    
+    <!-- PayPal Button Initialization Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        // Función para inicializar PayPal cuando esté disponible
+        function initPayPal() {
+          const container = document.getElementById("paypal-container-MRSQEQV646EPA");
+          const wrapper = document.getElementById("paypal-button-wrapper");
+          
+          if (window.paypal && window.paypal.HostedButtons && container) {
+            // Marcar como cargando
+            if (wrapper) wrapper.classList.add('loading');
+            
+            // Limpiar el contenedor antes de renderizar
+            container.innerHTML = '';
+            
+            try {
+              paypal.HostedButtons({
+                hostedButtonId: "MRSQEQV646EPA"
+              })
+              .render("#paypal-container-MRSQEQV646EPA")
+              .then(function() {
+                // Marcar como cargado cuando termine
+                if (wrapper) {
+                  wrapper.classList.remove('loading');
+                  wrapper.classList.add('loaded');
+                }
+                console.log('Botón PayPal renderizado correctamente');
+              })
+              .catch(function(err) {
+                console.warn('Error al renderizar botón PayPal:', err);
+                if (wrapper) wrapper.classList.remove('loading');
+                // Reintentar después de 2 segundos
+                setTimeout(initPayPal, 2000);
+              });
+            } catch (error) {
+              console.warn('Error en inicialización PayPal:', error);
+              if (wrapper) wrapper.classList.remove('loading');
+              // Reintentar después de 2 segundos
+              setTimeout(initPayPal, 2000);
+            }
+          } else {
+            // Reintentar después de 500ms si PayPal no está listo
+            setTimeout(initPayPal, 500);
+          }
+        }
+        
+        // Inicializar cuando esté listo
+        initPayPal();
+      });
+    </script>
+    
+    <!-- Script para suprimir warnings específicos de PayPal que no afectan la funcionalidad -->
+    <script>
+      // Interceptar y filtrar warnings de PayPal en desarrollo
+      const originalError = console.error;
+      const originalWarn = console.warn;
+      
+      console.error = function(...args) {
+        const message = args.join(' ');
+        // Filtrar el warning específico de PayPal Pay Later ineligible
+        if (message.includes('ncps_standalone_paylater_ineligible') || 
+            message.includes('paylater_ineligible')) {
+          return; // No mostrar este warning
+        }
+        originalError.apply(console, args);
+      };
+      
+      console.warn = function(...args) {
+        const message = args.join(' ');
+        // Filtrar warnings relacionados con PayPal Pay Later
+        if (message.includes('ncps_standalone_paylater_ineligible') || 
+            message.includes('paylater_ineligible') ||
+            message.includes('Pay Later ineligible')) {
+          return; // No mostrar este warning
+        }
+        originalWarn.apply(console, args);
+      };
+    </script>
   </head>
   <body>
     <div id="root"></div>

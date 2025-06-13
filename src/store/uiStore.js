@@ -4,11 +4,10 @@ import { devtools } from 'zustand/middleware';
 // Store para el estado de UI de la aplicación
 const useUIStore = create(
   devtools(
-    (set, get) => ({
-      // Estado inicial
+    (set, get) => ({      // Estado inicial
       isMobile: false,
       mobileMenuOpen: false,
-      currentView: 'home', // Vista actual (home, etc.)
+      currentView: 'home', // Vista actual (home, detail, coffee, etc.)
       lastCategory: null, // Última categoría visitada
       
       // Estado para la vista de detalle
@@ -89,6 +88,32 @@ const useUIStore = create(
           },
           false,
           'goBackFromDetail'
+        );
+      },
+      
+      // Navegar a la página de donación
+      navigateToCoffee: () => {
+        const currentView = get().currentView;
+        set(
+          {
+            previousView: currentView,
+            currentView: 'coffee'
+          },
+          false,
+          'navigateToCoffee'
+        );
+      },
+      
+      // Volver de la página de donación
+      goBackFromCoffee: () => {
+        const previousView = get().previousView;
+        set(
+          {
+            currentView: previousView,
+            previousView: 'home'
+          },
+          false,
+          'goBackFromCoffee'
         );
       },
     }),
