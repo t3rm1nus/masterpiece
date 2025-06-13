@@ -112,18 +112,26 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   if (items.some(r => r.tags && r.tags.includes('cine español'))) {
     subs.push('spanish cinema');
   }
+  // Restore the 'Spanish Cinema' button and ensure it displays 'Spanish Cinema' in English and 'Cine Español' in Spanish
+  const spanishCinemaKey = 'spanishCinema';
+
+  if (items.some(r => r.tags && r.tags.includes('spanish'))) {
+    // Removed subs.push(spanishCinemaKey) to prevent 'Cine Español' from appearing in subcategories
+  }
   const masterpiecesKey = '__masterpieces__';
   const [activeSub, setActiveSub] = useState(null);
   let filtered;
   if (activeSub === masterpiecesKey) {
     filtered = items.filter(r => r.masterpiece === true);
+  } else if (activeSub === spanishCinemaKey) {
+    filtered = items.filter(r => {
+      const hasTag = Array.isArray(r.tags) && r.tags.includes('spanish');
+      console.log('Has spanish tag:', hasTag);
+      return hasTag;
+    });
   } else if (activeSub) {
     filtered = items.filter(r => {
       const normalizedSub = normalizeToEnglish[r.subcategory] || r.subcategory;
-      // Ajustar lógica de filtrado para incluir películas con el tag 'cine español'
-      if ((lang === 'es' && activeSub === 'cine español') || (lang === 'en' && activeSub === 'spanish cinema')) {
-        return r.tags && r.tags.includes('cine español');
-      }
       return activeSub === normalizedSub;
     });
   } else {
@@ -175,17 +183,27 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
               className={`category-btn${activeSub === sub ? ' active' : ''}`}
               onClick={() => setActiveSub(sub)}
             >
-              {subcategoryTranslations[sub] || sub}
+              {sub === masterpiecesKey ? (lang === 'es' ? 'Obras maestras' : 'Masterpieces') : subcategoryTranslations[sub] || sub}
             </button>
           ))}
-          <button
-            className={`category-btn${activeSub === masterpiecesKey ? ' active' : ''}`}
-            onClick={() => setActiveSub(activeSub === masterpiecesKey ? null : masterpiecesKey)}
-          >
-            {lang === 'en' ? 'Masterpieces' : 'Obras maestras'}
-          </button>
         </div>
       )}
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '1rem' }}>
+        <button
+          className={`category-btn${activeSub === masterpiecesKey ? ' active' : ''}`}
+          onClick={() => setActiveSub(masterpiecesKey)}
+          style={{ backgroundColor: '#f0f8ff' }}
+        >
+          {lang === 'es' ? 'Obras maestras' : 'Masterpieces'}
+        </button>
+        <button
+          className={`category-btn${activeSub === spanishCinemaKey ? ' active' : ''}`}
+          onClick={() => setActiveSub(spanishCinemaKey)}
+          style={{ backgroundColor: '#f0f8ff' }}
+        >
+          {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
+        </button>
+      </div>
       <RecommendationsList recommendations={filtered} onItemClick={onItemClick} />
     </div>
   );

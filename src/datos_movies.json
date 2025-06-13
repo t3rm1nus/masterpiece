@@ -68,7 +68,7 @@
       "category": "movies",
       "subcategory": "thriller",
       "tags": [
-        "cine español"
+        "spanish"
       ],
       "title": {"es": "Intacto", "en": "Intacto"},
       "description": {
@@ -250,7 +250,7 @@
       "category": "movies",
       "subcategory": "comedy",
       "tags": [
-        "cine español"
+        "spanish"
       ],
       "title": {
         "es": "Amanece, que no es poco",
@@ -284,7 +284,7 @@
       "director": "Francis Ford Coppola",
       "image": "/imagenes/peliculas/el_padrino_1.jpg",
       "trailer": {
-        "es": "https://www.youtube.com/watch?v=2ilzidi_J8Q",
+        "es": "https://www.youtube.com/watch?v=XLEnSN99ths",
         "en": "https://www.youtube.com/watch?v=sY1S34973zA"
       },
       "year": 1972,
@@ -400,7 +400,7 @@
       "category": "movies",
       "subcategory": "thriller",
       "tags": [
-        "cine español"
+        "spanish"
       ],
       "title": {
         "es": "El Bar",
@@ -565,9 +565,9 @@
     {
       "id": 51,
       "category": "movies",
-      "subcategory": "thriller",
+      "subcategory": "horror",
       "tags": [
-        "cine español"
+        "spanish"
       ],
       "title": {
         "es": "La mesita del comedor",
@@ -1446,7 +1446,7 @@
       "category": "movies",
       "subcategory": "drama",
       "tags": [
-        "cine español"
+        "spanish"
       ],
       "title": {
         "es": "Belle Époque",
@@ -1570,7 +1570,7 @@
       },
       "masterpiece": false,
       "tags": [
-        "cine español"
+        "spanish"
       ]
     },
     {
@@ -1909,7 +1909,7 @@
       },
       "masterpiece": false,
       "tags": [
-        "cine español"
+        "spanish"
       ]
     },
     {
@@ -1996,7 +1996,7 @@
       },
       "masterpiece": false,
       "tags": [
-        "cine español"
+        "spanish"
       ]
     },
     {
@@ -2296,7 +2296,7 @@
       "year": 1998,
       "masterpiece": false,
       "tags": [
-        "cine español"
+        "spanish"
       ]
     },
     {
@@ -2316,7 +2316,7 @@
       "year": 1987,
       "masterpiece": false,
       "tags": [
-        "cine español"
+        "spanish"
       ]
     },
     {
@@ -2338,7 +2338,7 @@
         "es": "https://www.youtube.com/watch?v=exJOy6uTkek",
         "en": "https://www.youtube.com/watch?v=IFNUGzCOQoI"
       },
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 135,
@@ -2403,7 +2403,7 @@
       },
       "masterpiece": true,
       "tags": [
-        "cine español"
+        "spanish"
       ]
     },
     {
@@ -2583,7 +2583,7 @@
       "category": "movies",
       "subcategory": "animación",
       "tags": [
-        "cine español"
+        "spanish"
       ],
       "title": {
         "es": "Arrugas",
@@ -2866,7 +2866,7 @@
       },
       "year": 1963,
       "masterpiece": true,
-      "tags": ["cine español"]
+      "tags": ["spanish"]
     },
     {
       "id": 160,
@@ -3330,328 +3330,329 @@
   {
     "id": 184,
     "category": "movies",
-    "subcategory": "action",
-    "title": {
-      "es": "Kill Bill: Volumen 1",
-      "en": "Kill Bill: Volume 1"
+      "subcategory": "action",
+      "title": {
+        "es": "Kill Bill: Volumen 1",
+        "en": "Kill Bill: Volume 1"
+      },
+      "description": {
+        "es": "Una antigua asesina despierta de un coma de cuatro años y decide vengarse de la banda de asesinos que intentó matarla y le arrebató a su bebé por nacer. Primera parte de la épica saga de venganza de Quentin Tarantino.",
+        "en": "A former assassin awakens from a four-year coma and decides to seek revenge against the band of assassins who attempted to murder her and took her unborn child. First part of Quentin Tarantino's epic revenge saga."
+      },
+      "director": "Quentin Tarantino",
+      "image": "/imagenes/peliculas/kill_bill1.jpg",
+      "year": 2003,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=otmfu72n2MU",
+        "en": "https://www.youtube.com/watch?v=w75pIkF6EQo"
+      }
     },
-    "description": {
-      "es": "Una antigua asesina despierta de un coma de cuatro años y decide vengarse de la banda de asesinos que intentó matarla y le arrebató a su bebé por nacer. Primera parte de la épica saga de venganza de Quentin Tarantino.",
-      "en": "A former assassin awakens from a four-year coma and decides to seek revenge against the band of assassins who attempted to murder her and took her unborn child. First part of Quentin Tarantino's epic revenge saga."
+    {
+      "id": 185,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "Kill Bill: Volumen 2",
+        "en": "Kill Bill: Volume 2"
+      },
+      "description": {
+        "es": "Continuación de la historia de venganza de La Novia, que ahora se enfrenta a su último objetivo: Bill, el líder de la organización que la traicionó. Una conclusión épica que mezcla acción, drama y western.",
+        "en": "Continuation of The Bride's revenge story, as she now faces her final target: Bill, the leader of the organization that betrayed her. An epic conclusion that mixes action, drama and western."
+      },
+      "director": "Quentin Tarantino",
+      "image": "/imagenes/peliculas/kill_bill2.jpg",
+      "year": 2004,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=s5RyiPijcWY",
+        "en": "https://www.youtube.com/watch?v=s5RyiPijcWY"
+      }
     },
-    "director": "Quentin Tarantino",
-    "image": "/imagenes/peliculas/kill_bill1.jpg",
-    "year": 2003,
-    "masterpiece": true,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=otmfu72n2MU",
-      "en": "https://www.youtube.com/watch?v=w75pIkF6EQo"
-    }
-  },
-  {
-    "id": 185,
-    "category": "movies",
-    "subcategory": "action",
-    "title": {
-      "es": "Kill Bill: Volumen 2",
-      "en": "Kill Bill: Volume 2"
+    {
+      "id": 186,
+      "category": "movies",
+      "subcategory": "thriller",
+      "title": {
+        "es": "Killing Zoe",
+        "en": "Killing Zoe"
+      },
+      "description": {
+        "es": "Un ladrón de bancos profesional es reclutado por un viejo amigo para participar en un atraco en París. Lo que comienza como un trabajo rutinario se convierte en una pesadilla cuando las cosas empiezan a salir mal.",
+        "en": "A professional bank robber is recruited by an old friend to participate in a heist in Paris. What starts as a routine job turns into a nightmare when things start going wrong."
+      },
+      "director": "Roger Avary",
+      "image": "/imagenes/peliculas/killing_zoe.jpg",
+      "year": 1993,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=u_4mhnd-098",
+        "en": "https://www.youtube.com/watch?v=u_4mhnd-098"
+      }
     },
-    "description": {
-      "es": "Continuación de la historia de venganza de La Novia, que ahora se enfrenta a su último objetivo: Bill, el líder de la organización que la traicionó. Una conclusión épica que mezcla acción, drama y western.",
-      "en": "Continuation of The Bride's revenge story, as she now faces her final target: Bill, the leader of the organization that betrayed her. An epic conclusion that mixes action, drama and western."
+    {
+      "id": 187,
+      "category": "movies",
+      "subcategory": "comedy",
+      "tags": [
+        "spanish"
+      ],
+      "title": {
+        "es": "La Comunidad",
+        "en": "Common Wealth"
+      },
+      "description": {
+        "es": "Una comedia negra española que sigue a los vecinos de un edificio cuando descubren una fortuna escondida en el apartamento de un anciano fallecido. La codicia y la locura se apoderan de la comunidad mientras intentan repartirse el botín.",
+        "en": "A Spanish black comedy that follows the neighbors of a building when they discover a hidden fortune in a deceased old man's apartment. Greed and madness take over the community as they try to split the loot."
+      },
+      "director": "Álex de la Iglesia",
+      "image": "/imagenes/peliculas/la_comunidad.jpg",
+      "year": 2000,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=MTpFTg30oM4",
+        "en": "https://www.youtube.com/watch?v=MTpFTg30oM4"
+      }
     },
-    "director": "Quentin Tarantino",
-    "image": "/imagenes/peliculas/kill_bill2.jpg",
-    "year": 2004,
-    "masterpiece": true,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=s5RyiPijcWY",
-      "en": "https://www.youtube.com/watch?v=s5RyiPijcWY"
-    }
-  },
-  {
-    "id": 186,
-    "category": "movies",
-    "subcategory": "thriller",
-    "title": {
-      "es": "Killing Zoe",
-      "en": "Killing Zoe"
+    {
+      "id": 188,
+      "category": "movies",
+      "subcategory": "comedy",
+      "tags": [
+        "spanish"
+      ],
+      "title": {
+        "es": "La Escopeta Nacional",
+        "en": "The National Shotgun"
+      },
+      "description": {
+        "es": "Una sátira política española que retrata las intrigas y corrupciones de la clase política durante una cacería. Dirigida por Luis García Berlanga, es una crítica mordaz a la sociedad española de la época.",
+        "en": "A Spanish political satire that portrays the intrigues and corruptions of the political class during a hunting trip. Directed by Luis García Berlanga, it's a biting critique of Spanish society of the time."
+      },
+      "director": "Luis García Berlanga",
+      "image": "/imagenes/peliculas/la_escopeta_nacional.jpg",
+      "year": 1978,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=fai35Ncpcfg",
+        "en": "https://www.youtube.com/watch?v=fai35Ncpcfg"
+      }
     },
-    "description": {
-      "es": "Un ladrón de bancos profesional es reclutado por un viejo amigo para participar en un atraco en París. Lo que comienza como un trabajo rutinario se convierte en una pesadilla cuando las cosas empiezan a salir mal.",
-      "en": "A professional bank robber is recruited by an old friend to participate in a heist in Paris. What starts as a routine job turns into a nightmare when things start going wrong."
+    {
+      "id": 189,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Odio",
+        "en": "La Haine"
+      },
+      "description": {
+        "es": "Un poderoso drama social que sigue a tres jóvenes de diferentes orígenes étnicos durante 24 horas en los suburbios de París, después de que un amigo suyo sea brutalmente golpeado por la policía. Una mirada cruda y realista a la violencia urbana y la tensión social.",
+        "en": "A powerful social drama that follows three young men from different ethnic backgrounds over 24 hours in the Paris suburbs, after their friend is brutally beaten by the police. A raw and realistic look at urban violence and social tension."
+      },
+      "director": "Mathieu Kassovitz",
+      "image": "/imagenes/peliculas/la_haine.jpg",
+      "year": 1995,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=-HJrtVbsKOE",
+        "en": "https://www.youtube.com/watch?v=OfE0o9B3dhI"
+      }
     },
-    "director": "Roger Avary",
-    "image": "/imagenes/peliculas/killing_zoe.jpg",
-    "year": 1993,
-    "masterpiece": false,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=u_4mhnd-098",
-      "en": "https://www.youtube.com/watch?v=u_4mhnd-098"
-    }
-  },
-  {
-    "id": 187,
-    "category": "movies",
-    "subcategory": "comedy",
-    "tags": [
-      "cine español"
-    ],
-    "title": {
-      "es": "La Comunidad",
-      "en": "Common Wealth"
+    {
+      "id": 190,
+      "category": "movies",
+      "subcategory": "drama",
+      "tags": [
+        "spanish"
+      ],
+      "title": {
+        "es": "La Lengua de las Mariposas",
+        "en": "Butterfly's Tongue"
+      },
+      "description": {
+        "es": "Un emotivo drama ambientado en la España de 1936 que narra la relación entre un niño y su maestro, y cómo la guerra civil española afecta a su amistad. Una historia sobre la inocencia, la educación y las consecuencias de la guerra.",
+        "en": "An emotional drama set in 1936 Spain that tells the story of a boy and his teacher, and how the Spanish Civil War affects their friendship. A story about innocence, education, and the consequences of war."
+      },
+      "director": "José Luis Cuerda",
+      "image": "/imagenes/peliculas/la_lengua_de_las_mariposas.jpg",
+      "year": 1999,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=IEzOxMriGTE",
+        "en": "https://www.youtube.com/watch?v=IEzOxMriGTE"
+      }
     },
-    "description": {
-      "es": "Una comedia negra española que sigue a los vecinos de un edificio cuando descubren una fortuna escondida en el apartamento de un anciano fallecido. La codicia y la locura se apoderan de la comunidad mientras intentan repartirse el botín.",
-      "en": "A Spanish black comedy that follows the neighbors of a building when they discover a hidden fortune in a deceased old man's apartment. Greed and madness take over the community as they try to split the loot."
+    {
+      "id": 191,
+      "category": "movies",
+      "subcategory": "animation",
+      "title": {
+        "es": "El Planeta Salvaje",
+        "en": "Fantastic Planet"
+      },
+      "description": {
+        "es": "Una obra maestra de la animación que cuenta la historia de un planeta habitado por gigantes azules que mantienen a los humanos como mascotas. Una alegoría política y social con una estética única y vanguardista.",
+        "en": "An animation masterpiece that tells the story of a planet inhabited by blue giants who keep humans as pets. A political and social allegory with a unique and avant-garde aesthetic."
+      },
+      "director": "René Laloux",
+      "image": "/imagenes/peliculas/la_planete.jpg",
+      "year": 1973,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=LE3AaxGKaEg",
+        "en": "https://www.youtube.com/watch?v=LE3AaxGKaEg"
+      }
     },
-    "director": "Álex de la Iglesia",
-    "image": "/imagenes/peliculas/la_comunidad.jpg",
-    "year": 2000,
-    "masterpiece": true,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=MTpFTg30oM4",
-      "en": "https://www.youtube.com/watch?v=MTpFTg30oM4"
-    }
-  },
-  {
-    "id": 188,
-    "category": "movies",
-    "subcategory": "comedy",
-    "tags": [
-      "cine español"
-    ],
-    "title": {
-      "es": "La Escopeta Nacional",
-      "en": "The National Shotgun"
+    {
+      "id": 192,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "La Secretaria",
+        "en": "Secretary"
+      },
+      "description": {
+        "es": "Una joven con problemas emocionales encuentra trabajo como secretaria de un abogado. Entre ellos se desarrolla una relación compleja que mezcla el poder, el control y el deseo, desafiando las convenciones sociales.",
+        "en": "A young woman with emotional problems gets a job as a lawyer's secretary. A complex relationship develops between them that mixes power, control, and desire, challenging social conventions."
+      },
+      "director": "Steven Shainberg",
+      "image": "/imagenes/peliculas/secretary.jpg",
+      "year": 2002,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=xn33mvWX9W8",
+        "en": "https://www.youtube.com/watch?v=xn33mvWX9W8"
+      }
     },
-    "description": {
-      "es": "Una sátira política española que retrata las intrigas y corrupciones de la clase política durante una cacería. Dirigida por Luis García Berlanga, es una crítica mordaz a la sociedad española de la época.",
-      "en": "A Spanish political satire that portrays the intrigues and corruptions of the political class during a hunting trip. Directed by Luis García Berlanga, it's a biting critique of Spanish society of the time."
+    {
+      "id": 193,
+      "category": "movies",
+      "subcategory": "comedy",
+      "tags": [
+        "spanish"
+      ],
+      "title": {
+        "es": "La Vaquilla",
+        "en": "The Heifer"
+      },
+      "description": {
+        "es": "Una comedia ambientada en la Guerra Civil Española que narra los intentos de un grupo de soldados republicanos por robar una vaquilla para celebrar una fiesta. Una sátira sobre la guerra y la humanidad en tiempos de conflicto.",
+        "en": "A comedy set during the Spanish Civil War that tells the story of a group of Republican soldiers trying to steal a heifer to celebrate a party. A satire about war and humanity in times of conflict."
+      },
+      "director": "Luis García Berlanga",
+      "image": "/imagenes/peliculas/la_vaquilla.jpg",
+      "year": 1985,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Z4qcSg99DNs",
+        "en": "https://www.youtube.com/watch?v=Z4qcSg99DNs"
+      }
     },
-    "director": "Luis García Berlanga",
-    "image": "/imagenes/peliculas/la_escopeta_nacional.jpg",
-    "year": 1978,
-    "masterpiece": true,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=fai35Ncpcfg",
-      "en": "https://www.youtube.com/watch?v=fai35Ncpcfg"
-    }
-  },
-  {
-    "id": 189,
-    "category": "movies",
-    "subcategory": "drama",
-    "title": {
-      "es": "El Odio",
-      "en": "La Haine"
+    {
+      "id": 194,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "La Vida de Brian",
+        "en": "Life of Brian"
+      },
+      "description": {
+        "es": "Una comedia satírica de los Monty Python que sigue la vida de Brian, un hombre que nace el mismo día que Jesucristo y es confundido con el Mesías. Una sátira irreverente y brillante sobre la religión y la sociedad.",
+        "en": "A satirical comedy by Monty Python that follows the life of Brian, a man born on the same day as Jesus Christ who is mistaken for the Messiah. A brilliant and irreverent satire on religion and society."
+      },
+      "director": "Terry Jones",
+      "image": "/imagenes/peliculas/brian_life.jpg",
+      "year": 1979,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=0-E6bKzb1lw",
+        "en": "https://www.youtube.com/watch?v=GeKzBQnAq5I"
+      }
     },
-    "description": {
-      "es": "Un poderoso drama social que sigue a tres jóvenes de diferentes orígenes étnicos durante 24 horas en los suburbios de París, después de que un amigo suyo sea brutalmente golpeado por la policía. Una mirada cruda y realista a la violencia urbana y la tensión social.",
-      "en": "A powerful social drama that follows three young men from different ethnic backgrounds over 24 hours in the Paris suburbs, after their friend is brutally beaten by the police. A raw and realistic look at urban violence and social tension."
+    {
+      "id": 195,
+      "category": "movies",
+      "subcategory": "adventure",
+      "title": {
+        "es": "La Vida de Pi",
+        "en": "Life of Pi"
+      },
+      "description": {
+        "es": "Un joven sobrevive a un naufragio y se encuentra compartiendo un bote salvavidas con un tigre de Bengala. Una historia sobre la supervivencia, la fe y la relación entre el hombre y la naturaleza, con impresionantes efectos visuales.",
+        "en": "A young man survives a shipwreck and finds himself sharing a lifeboat with a Bengal tiger. A story about survival, faith, and the relationship between man and nature, with impressive visual effects."
+      },
+      "director": "Ang Lee",
+      "image": "/imagenes/peliculas/la_vida_de_pi.jpg",
+      "year": 2012,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=gbGBK-wLtO8",
+        "en": "https://www.youtube.com/watch?v=3mMN693-F3U"
+      }
     },
-    "director": "Mathieu Kassovitz",
-    "image": "/imagenes/peliculas/la_haine.jpg",
-    "year": 1995,
-    "masterpiece": true,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=-HJrtVbsKOE",
-      "en": "https://www.youtube.com/watch?v=OfE0o9B3dhI"
-    }
-  },
-  {
-    "id": 190,
-    "category": "movies",
-    "subcategory": "drama",
-    "tags": [
-      "cine español"
-    ],
-    "title": {
-      "es": "La Lengua de las Mariposas",
-      "en": "Butterfly's Tongue"
+    {
+      "id": 196,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "La Vida es Bella",
+        "en": "Life is Beautiful"
+      },
+      "description": {
+        "es": "Un padre judío utiliza su imaginación para proteger a su hijo pequeño de los horrores de un campo de concentración nazi, convirtiendo su terrible realidad en un juego. Una conmovedora historia sobre el amor paternal y la esperanza en los momentos más oscuros.",
+        "en": "A Jewish father uses his imagination to protect his young son from the horrors of a Nazi concentration camp, turning their terrible reality into a game. A moving story about paternal love and hope in the darkest moments."
+      },
+      "director": "Roberto Benigni",
+      "image": "/imagenes/peliculas/la_vida_es_bella.jpg",
+      "year": 1997,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=e-Z062tRdbQ",
+        "en": "https://www.youtube.com/watch?v=8CTjcVr9Iao"
+      }
     },
-    "description": {
-      "es": "Un emotivo drama ambientado en la España de 1936 que narra la relación entre un niño y su maestro, y cómo la guerra civil española afecta a su amistad. Una historia sobre la inocencia, la educación y las consecuencias de la guerra.",
-      "en": "An emotional drama set in 1936 Spain that tells the story of a boy and his teacher, and how the Spanish Civil War affects their friendship. A story about innocence, education, and the consequences of war."
+    {
+      "id": 197,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Último Emperador",
+        "en": "The Last Emperor"
+      },
+      "description": {
+        "es": "La épica historia de Pu Yi, el último emperador de China, desde su infancia en la Ciudad Prohibida hasta su vida como ciudadano común en la China comunista. Una obra maestra cinematográfica que retrata la transformación de un país y un hombre.",
+        "en": "The epic story of Pu Yi, the last emperor of China, from his childhood in the Forbidden City to his life as an ordinary citizen in communist China. A cinematic masterpiece that portrays the transformation of a country and a man."
+      },
+      "director": "Bernardo Bertolucci",
+      "image": "/imagenes/peliculas/last_emperor.jpg",
+      "year": 1987,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=A4cH6g1wD5g",
+        "en": "https://www.youtube.com/watch?v=A4cH6g1wD5g"
+      }
     },
-    "director": "José Luis Cuerda",
-    "image": "/imagenes/peliculas/la_lengua_de_las_mariposas.jpg",
-    "year": 1999,
-    "masterpiece": false,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=IEzOxMriGTE",
-      "en": "https://www.youtube.com/watch?v=IEzOxMriGTE"
-    }
-  },
-  {
-    "id": 191,
-    "category": "movies",
-    "subcategory": "animation",
-    "title": {
-      "es": "El Planeta Salvaje",
-      "en": "Fantastic Planet"
-    },
-    "description": {
-      "es": "Una obra maestra de la animación que cuenta la historia de un planeta habitado por gigantes azules que mantienen a los humanos como mascotas. Una alegoría política y social con una estética única y vanguardista.",
-      "en": "An animation masterpiece that tells the story of a planet inhabited by blue giants who keep humans as pets. A political and social allegory with a unique and avant-garde aesthetic."
-    },
-    "director": "René Laloux",
-    "image": "/imagenes/peliculas/la_planete.jpg",
-    "year": 1973,
-    "masterpiece": true,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=LE3AaxGKaEg",
-      "en": "https://www.youtube.com/watch?v=LE3AaxGKaEg"
-    }
-  },
-  {
-    "id": 192,
-    "category": "movies",
-    "subcategory": "drama",
-    "title": {
-      "es": "La Secretaria",
-      "en": "Secretary"
-    },
-    "description": {
-      "es": "Una joven con problemas emocionales encuentra trabajo como secretaria de un abogado. Entre ellos se desarrolla una relación compleja que mezcla el poder, el control y el deseo, desafiando las convenciones sociales.",
-      "en": "A young woman with emotional problems gets a job as a lawyer's secretary. A complex relationship develops between them that mixes power, control, and desire, challenging social conventions."
-    },
-    "director": "Steven Shainberg",
-    "image": "/imagenes/peliculas/secretary.jpg",
-    "year": 2002,
-    "masterpiece": false,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=xn33mvWX9W8",
-      "en": "https://www.youtube.com/watch?v=xn33mvWX9W8"
-    }
-  },
-  {
-    "id": 193,
-    "category": "movies",
-    "subcategory": "comedy",
-    "tags": [
-      "cine español"
-    ],
-    "title": {
-      "es": "La Vaquilla",
-      "en": "The Heifer"
-    },
-    "description": {
-      "es": "Una comedia ambientada en la Guerra Civil Española que narra los intentos de un grupo de soldados republicanos por robar una vaquilla para celebrar una fiesta. Una sátira sobre la guerra y la humanidad en tiempos de conflicto.",
-      "en": "A comedy set during the Spanish Civil War that tells the story of a group of Republican soldiers trying to steal a heifer to celebrate a party. A satire about war and humanity in times of conflict."
-    },
-    "director": "Luis García Berlanga",
-    "image": "/imagenes/peliculas/la_vaquilla.jpg",
-    "year": 1985,
-    "masterpiece": false,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=Z4qcSg99DNs",
-      "en": "https://www.youtube.com/watch?v=Z4qcSg99DNs"
-    }
-  },
-  {
-    "id": 194,
-    "category": "movies",
-    "subcategory": "comedy",
-    "title": {
-      "es": "La Vida de Brian",
-      "en": "Life of Brian"
-    },
-    "description": {
-      "es": "Una comedia satírica de los Monty Python que sigue la vida de Brian, un hombre que nace el mismo día que Jesucristo y es confundido con el Mesías. Una sátira irreverente y brillante sobre la religión y la sociedad.",
-      "en": "A satirical comedy by Monty Python that follows the life of Brian, a man born on the same day as Jesus Christ who is mistaken for the Messiah. A brilliant and irreverent satire on religion and society."
-    },
-    "director": "Terry Jones",
-    "image": "/imagenes/peliculas/brian_life.jpg",
-    "year": 1979,
-    "masterpiece": true,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=0-E6bKzb1lw",
-      "en": "https://www.youtube.com/watch?v=GeKzBQnAq5I"
-    }
-  },
-  {
-    "id": 195,
-    "category": "movies",
-    "subcategory": "adventure",
-    "title": {
-      "es": "La Vida de Pi",
-      "en": "Life of Pi"
-    },
-    "description": {
-      "es": "Un joven sobrevive a un naufragio y se encuentra compartiendo un bote salvavidas con un tigre de Bengala. Una historia sobre la supervivencia, la fe y la relación entre el hombre y la naturaleza, con impresionantes efectos visuales.",
-      "en": "A young man survives a shipwreck and finds himself sharing a lifeboat with a Bengal tiger. A story about survival, faith, and the relationship between man and nature, with impressive visual effects."
-    },
-    "director": "Ang Lee",
-    "image": "/imagenes/peliculas/la_vida_de_pi.jpg",
-    "year": 2012,
-    "masterpiece": false,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=gbGBK-wLtO8",
-      "en": "https://www.youtube.com/watch?v=3mMN693-F3U"
-    }
-  },
-  {
-    "id": 196,
-    "category": "movies",
-    "subcategory": "drama",
-    "title": {
-      "es": "La Vida es Bella",
-      "en": "Life is Beautiful"
-    },
-    "description": {
-      "es": "Un padre judío utiliza su imaginación para proteger a su hijo pequeño de los horrores de un campo de concentración nazi, convirtiendo su terrible realidad en un juego. Una conmovedora historia sobre el amor paternal y la esperanza en los momentos más oscuros.",
-      "en": "A Jewish father uses his imagination to protect his young son from the horrors of a Nazi concentration camp, turning their terrible reality into a game. A moving story about paternal love and hope in the darkest moments."
-    },
-    "director": "Roberto Benigni",
-    "image": "/imagenes/peliculas/la_vida_es_bella.jpg",
-    "year": 1997,
-    "masterpiece": true,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=e-Z062tRdbQ",
-      "en": "https://www.youtube.com/watch?v=8CTjcVr9Iao"
-    }
-  },
-  {
-    "id": 197,
-    "category": "movies",
-    "subcategory": "drama",
-    "title": {
-      "es": "El Último Emperador",
-      "en": "The Last Emperor"
-    },
-    "description": {
-      "es": "La épica historia de Pu Yi, el último emperador de China, desde su infancia en la Ciudad Prohibida hasta su vida como ciudadano común en la China comunista. Una obra maestra cinematográfica que retrata la transformación de un país y un hombre.",
-      "en": "The epic story of Pu Yi, the last emperor of China, from his childhood in the Forbidden City to his life as an ordinary citizen in communist China. A cinematic masterpiece that portrays the transformation of a country and a man."
-    },
-    "director": "Bernardo Bertolucci",
-    "image": "/imagenes/peliculas/last_emperor.jpg",
-    "year": 1987,
-    "masterpiece": false,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=A4cH6g1wD5g",
-      "en": "https://www.youtube.com/watch?v=A4cH6g1wD5g"
-    }
-  },
+  
   {
     "id": 198,
     "category": "movies",
     "subcategory": "drama",
     "title": {
-      "es": "El Último Emperador",
-      "en": "The Last Emperor"
+      "es": "Gran Torino",
+      "en": "Gran Torino"
     },
     "description": {
-      "es": "La épica historia de Pu Yi, el último emperador de China, desde su infancia en la Ciudad Prohibida hasta su vida como ciudadano común en la China comunista. Una obra maestra cinematográfica que retrata la transformación de un país y un hombre.",
-      "en": "The epic story of Pu Yi, the last emperor of China, from his childhood in the Forbidden City to his life as an ordinary citizen in communist China. A cinematic masterpiece that portrays the transformation of a country and a man."
+      "es": "Un veterano de la Guerra de Corea, racista y gruñón, se ve forzado a confrontar sus prejuicios cuando se hace amigo de su vecino hmong. Una poderosa historia sobre la redención, la amistad y el cambio generacional.",
+      "en": "A racist, grumpy Korean War veteran is forced to confront his prejudices when he befriends his Hmong neighbor. A powerful story about redemption, friendship, and generational change."
     },
-    "director": "Bernardo Bertolucci",
-    "image": "/imagenes/peliculas/the_last_emperor.jpg",
-    "year": 1987,
-    "masterpiece": false,
+    "director": "Clint Eastwood",
+    "image": "/imagenes/peliculas/gran_torino.jpg",
+    "year": 2008,
+    "masterpiece": true,
     "trailer": {
-      "es": "https://www.youtube.com/watch?v=A4cH6g1wD5g",
-      "en": "https://www.youtube.com/watch?v=A4cH6g1wD5g"
+      "es": "https://www.youtube.com/watch?v=U_bZWFLTp-c",
+      "en": "https://www.youtube.com/watch?v=RMhbr2XQblk"
     }
   },
   {
@@ -3701,7 +3702,7 @@
     "category": "movies",
     "subcategory": "drama",
     "tags": [
-      "cine español"
+      "spanish"
     ],
     "title": {
       "es": "Los Santos Inocentes",
@@ -3796,7 +3797,7 @@
       "en": "A retired and bitter boxing trainer finds new purpose when a young female boxer asks him to train her. A moving story about determination, redemption, and the sacrifices necessary to achieve dreams."
     },
     "director": "Clint Eastwood",
-    "image": "/imagenes/peliculas/million_dollar_baby.jpg",
+    "image": "/imagenes/peliculas/million_dolar_baby.jpg",
     "year": 2004,
     "masterpiece": false,
     "trailer": {
@@ -4342,14 +4343,14 @@
       "en": "A young FBI agent seeks the help of a brilliant but dangerous serial killer to catch another murderer who is terrorizing the population. A masterful psychological thriller that combines suspense, horror, and police drama."
     },
     "director": "Jonathan Demme",
-    "image": "/imagenes/peliculas/silencio_corderos.jpg",
+    "image": "/imagenes/peliculas/el_silencio_de_los_corderos.jpg",
     "year": 1991,
     "masterpiece": true,
     "trailer": {
       "es": "https://www.youtube.com/watch?v=mDKn4VL8o10",
       "en": "https://www.youtube.com/watch?v=6iB21hsprAQ"
     }
-  }, 
+  },
   {
     "id": 232,
     "category": "movies",
@@ -4405,7 +4406,7 @@
       "en": "A satire on the Cold War where a deranged American general orders a nuclear attack on the Soviet Union. A Stanley Kubrick masterpiece that combines black humor with a biting critique of the arms race."
     },
     "director": "Stanley Kubrick",
-    "image": "/imagenes/peliculas/telefono_rojo.jpg",
+    "image": "/imagenes/peliculas/telefono_rojo.jpeg",
     "year": 1964,
     "masterpiece": true,
     "trailer": {
@@ -4426,7 +4427,7 @@
       "en": "The fictional story of how Jack Black and Kyle Gass formed the band Tenacious D and their quest for a legendary pick that will give them the power to become the greatest musicians in the world. An irreverent musical comedy full of cameos."
     },
     "director": "Liam Lynch",
-    "image": "/imagenes/peliculas/tenacious_d.jpg",
+    "image": "/imagenes/peliculas/tenaciusd.jpg",
     "year": 2006,
     "masterpiece": false,
     "trailer": {
@@ -4455,7 +4456,7 @@
       "en": "https://www.youtube.com/watch?v=6-RsSaBjpaI"
     },
     "tags": [
-      "cine español"
+      "spanish"
     ]
   },
   {
@@ -4471,7 +4472,7 @@
       "en": "Two friends embark on a road trip that turns into a flight when one of them kills a man in self-defense. A road movie that has become an icon of feminism and female friendship."
     },
     "director": "Ridley Scott",
-    "image": "/imagenes/peliculas/thelma_louise.jpg",
+    "image": "/imagenes/peliculas/thelma_y_louise.jpg",
     "year": 1991,
     "masterpiece": false,
     "trailer": {
@@ -4492,7 +4493,7 @@
       "en": "A university professor reveals to his colleagues that he has lived for 14,000 years, triggering an intense philosophical and scientific debate. A minimalist science fiction film that explores deep concepts through dialogue."
     },
     "director": "Richard Schenkman",
-    "image": "/imagenes/peliculas/man_from_earth.jpg",
+    "image": "/imagenes/peliculas/the_man_from_earth.jpg",
     "year": 2007,
     "masterpiece": false,
     "trailer": {
@@ -4576,7 +4577,7 @@
       "en": "A low-ranking samurai in 19th century Japan struggles to support his family as the country modernizes. An intimate and moving story about honor, family, and social change in feudal Japan."
     },
     "director": "Yoji Yamada",
-    "image": "/imagenes/peliculas/twilight_samurai.jpg",
+    "image": "/imagenes/peliculas/the_twilight_samurai.jpg",
     "year": 2002,
     "masterpiece": true,
     "trailer": {
@@ -4677,12 +4678,12 @@
       "en": "The Warrior"
     },
     "description": {
-      "es": "Un guerrero feudal japonés abandona su vida de violencia y emprende un viaje de redención a través de un Japón devastado por la guerra. Una historia épica sobre la búsqueda de la paz interior y la redención.",
-      "en": "A feudal Japanese warrior abandons his life of violence and embarks on a journey of redemption through a war-torn Japan. An epic story about the search for inner peace and redemption."
+      "es": "Una pandilla llamada los Warriors debe luchar para regresar a su territorio en Nueva York después de ser acusados de un asesinato que no cometieron. Una historia de supervivencia urbana y lealtad.",
+      "en": "A gang called the Warriors must fight their way back to their turf in New York after being framed for a murder they didn't commit. A story of urban survival and loyalty."
     },
-    "director": "Asif Kapadia",
-    "image": "/imagenes/peliculas/the_warrior.jpg",
-    "year": 2001,
+    "director": "Walter Hill",
+    "year": 1979,
+    "image": "/imagenes/peliculas/the_warriors.jpg",
     "masterpiece": true,
     "trailer": {
       "es": "https://www.youtube.com/watch?v=4Tv284k2OkU",
@@ -4734,22 +4735,785 @@
   {
     "id": 250,
     "category": "movies",
-    "subcategory": "drama",
+    "subcategory": "horror",
     "title": {
-      "es": "Gran Torino",
-      "en": "Gran Torino"
+      "es": "Hellraiser",
+      "en": "Hellraiser"
     },
     "description": {
-      "es": "Un veterano de la Guerra de Corea, racista y gruñón, se ve forzado a confrontar sus prejuicios cuando se hace amigo de su vecino hmong. Una poderosa historia sobre la redención, la amistad y el cambio generacional.",
-      "en": "A racist, grumpy Korean War veteran is forced to confront his prejudices when he befriends his Hmong neighbor. A powerful story about redemption, friendship, and generational change."
+      "es": "Un puzzle misterioso abre la puerta a una dimensión de dolor y placer, liberando a los Cenobitas, seres que buscan nuevas experiencias extremas.",
+      "en": "A mysterious puzzle opens the door to a dimension of pain and pleasure, releasing the Cenobites, beings who seek new extreme experiences."
     },
-    "director": "Clint Eastwood",
-    "image": "/imagenes/peliculas/gran_torino.jpg",
-    "year": 2008,
+    "director": "Clive Barker",
+    "image": "/imagenes/peliculas/hellraiser.JPG",
+    "year": 1987,
     "masterpiece": true,
     "trailer": {
-      "es": "https://www.youtube.com/watch?v=U_bZWFLTp-c",
-      "en": "https://www.youtube.com/watch?v=RMhbr2XQblk"
+      "es": "https://www.youtube.com/watch?v=DdHRmOEWEfI",
+      "en": "https://www.youtube.com/watch?v=8mOn4h0lgKQ"
+    }
+  },
+  {
+    "id": 251,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Pesadilla en Elm Street",
+      "en": "A Nightmare on Elm Street"
+    },
+    "description": {
+      "es": "Un asesino sobrenatural ataca a los adolescentes en sus sueños, causando su muerte en la vida real. Freddy Krueger se ha convertido en uno de los villanos más icónicos del cine de terror.",
+      "en": "A supernatural killer attacks teenagers in their dreams, causing their death in real life. Freddy Krueger has become one of the most iconic villains in horror cinema."
+    },
+    "director": "Wes Craven",
+    "image": "/imagenes/peliculas/elm_street.jpg",
+    "year": 1984,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=jeWAqWCHu6c",
+      "en": "https://www.youtube.com/watch?v=dCVh4lBfW-c"
+    }
+  },
+  {
+    "id": 252,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Halloween",
+      "en": "Halloween"
+    },
+    "description": {
+      "es": "Michael Myers, un asesino en serie, escapa de un hospital psiquiátrico y regresa a su pueblo natal para continuar su matanza. Un clásico del slasher que redefinió el género.",
+      "en": "Michael Myers, a serial killer, escapes from a psychiatric hospital and returns to his hometown to continue his killing spree. A slasher classic that redefined the genre."
+    },
+    "director": "John Carpenter",
+    "image": "/imagenes/peliculas/halloween.jpg",
+    "year": 1978,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=rHoQtfgp7OY",
+      "en": "https://www.youtube.com/watch?v=T5ke9IPTIJQ"
+    }
+  },
+  {
+    "id": 253,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Psicosis",
+      "en": "Psycho"
+    },
+    "description": {
+      "es": "Una secretaria huye con dinero robado y se aloja en un motel remoto dirigido por un joven con una relación peculiar con su madre. Una obra maestra de Alfred Hitchcock que revolucionó el cine de terror.",
+      "en": "A secretary flees with stolen money and stays at a remote motel run by a young man with a peculiar relationship with his mother. An Alfred Hitchcock masterpiece that revolutionized horror cinema."
+    },
+    "director": "Alfred Hitchcock",
+    "image": "/imagenes/peliculas/psicosis.jpg",
+    "year": 1960,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=mC2gOyWuSEY",
+      "en": "https://www.youtube.com/watch?v=NG3-GlvKPcg"
+    }
+  },
+  {
+    "id": 254,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "La Matanza de Texas",
+      "en": "The Texas Chain Saw Massacre"
+    },
+    "description": {
+      "es": "Un grupo de amigos se encuentra con una familia de caníbales en Texas, liderados por Leatherface. Una película que redefinió el terror y se convirtió en un clásico del género.",
+      "en": "A group of friends encounters a family of cannibals in Texas, led by Leatherface. A film that redefined horror and became a genre classic."
+    },
+    "director": "Tobe Hooper",
+    "image": "/imagenes/peliculas/texas_chainsaw.jpeg",
+    "year": 1974,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=74f1cJYQZoU",
+      "en": "https://www.youtube.com/watch?v=BKn9QIaMgtQ"
+    }
+  },
+  {
+    "id": 255,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Viernes 13",
+      "en": "Friday the 13th"
+    },
+    "description": {
+      "es": "Un grupo de consejeros de campamento es acechado por un asesino enmascarado en el Campamento Crystal Lake. La película que lanzó a Jason Voorhees como ícono del terror.",
+      "en": "A group of camp counselors is stalked by a masked killer at Camp Crystal Lake. The film that launched Jason Voorhees as a horror icon."
+    },
+    "director": "Sean S. Cunningham",
+    "image": "/imagenes/peliculas/viernes13.jpg",
+    "year": 1980,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=_S2XYCBrosM",
+      "en": "https://www.youtube.com/watch?v=aDrOvFtzyPQ"
+    }
+  },
+  {
+    "id": 256,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "La Semilla del Diablo",
+      "en": "Rosemary's Baby"
+    },
+    "description": {
+      "es": "Una joven pareja se muda a un edificio con un pasado oscuro, donde la mujer queda embarazada y comienza a sospechar que su bebé no es normal. Una obra maestra del terror psicológico.",
+      "en": "A young couple moves into a building with a dark past, where the woman becomes pregnant and begins to suspect her baby is not normal. A masterpiece of psychological horror."
+    },
+    "director": "Roman Polanski",
+    "image": "/imagenes/peliculas/rosemarys_baby.jpg",
+    "year": 1968,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=92P6J3aS9no",
+      "en": "https://www.youtube.com/watch?v=92P6J3aS9no"
+    }
+  },
+  {
+    "id": 257,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "La Profecía",
+      "en": "The Omen"
+    },
+    "description": {
+      "es": "Un diplomático americano adopta un niño que resulta ser el Anticristo. Una película que mezcla el terror sobrenatural con el drama familiar.",
+      "en": "An American diplomat adopts a child who turns out to be the Antichrist. A film that mixes supernatural horror with family drama."
+    },
+    "director": "Richard Donner",
+    "image": "/imagenes/peliculas/the_omen.jpg",
+    "year": 1976,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=4ABEi5PQsnQ",
+      "en": "https://www.youtube.com/watch?v=4ABEi5PQsnQ"
+    }
+  },
+  {
+    "id": 258,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Al Final de la Escalera",
+      "en": "The Changeling"
+    },
+    "description": {
+      "es": "Un compositor viudo se muda a una mansión histórica donde comienza a experimentar fenómenos paranormales. Un clásico del terror sobrenatural con una atmósfera inquietante.",
+      "en": "A widowed composer moves into a historic mansion where he begins to experience paranormal phenomena. A supernatural horror classic with a disturbing atmosphere."
+    },
+    "director": "Peter Medak",
+    "image": "/imagenes/peliculas/changeling.jpg",
+    "year": 1979,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=3Ikgcl14eRQ",
+      "en": "https://www.youtube.com/watch?v=UwUI7d5TgGA"
+    }
+  },
+  {
+    "id": 259,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Scream",
+      "en": "Scream"
+    },
+    "description": {
+      "es": "Un asesino enmascarado aterroriza a un grupo de adolescentes mientras hace referencias a las reglas del cine de terror. Una película que revitalizó el género slasher con su enfoque metatextual.",
+      "en": "A masked killer terrorizes a group of teenagers while referencing the rules of horror movies. A film that revitalized the slasher genre with its metatextual approach."
+    },
+    "director": "Wes Craven",
+    "image": "/imagenes/peliculas/scream.jpg",
+    "year": 1996,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=Zt3bqsMcz9g",
+      "en": "https://www.youtube.com/watch?v=AWm_mkbdpCA"
+    }
+  },
+  {
+    "id": 260,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "La Noche de los Muertos Vivientes",
+      "en": "Night of the Living Dead"
+    },
+    "description": {
+      "es": "Un grupo de personas se refugia en una granja mientras los muertos vuelven a la vida. La película que definió el género zombie y estableció sus reglas fundamentales.",
+      "en": "A group of people takes refuge in a farm while the dead come back to life. The film that defined the zombie genre and established its fundamental rules."
+    },
+    "director": "George A. Romero",
+    "image": "/imagenes/peliculas/night_living_dead.jpg",
+    "year": 1968,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=ob8vZhSjES8",
+      "en": "https://www.youtube.com/watch?v=ob8vZhSjES8"
+    }
+  },
+  {
+    "id": 261,
+    "category": "movies",
+    "subcategory": "thriller",
+    "title": {
+      "es": "M, el Vampiro de Düsseldorf",
+      "en": "M"
+    },
+    "description": {
+      "es": "Un asesino en serie de niños aterroriza Berlín, llevando tanto a la policía como al crimen organizado a perseguirlo. Una obra maestra del cine alemán que explora la psicología del mal.",
+      "en": "A child serial killer terrorizes Berlin, leading both the police and organized crime to hunt him down. A German cinema masterpiece that explores the psychology of evil."
+    },
+    "director": "Fritz Lang",
+    "image": "/imagenes/peliculas/m.jpg",
+    "year": 1931,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=CRkYlum1Y-c",
+      "en": "https://www.youtube.com/watch?v=nsVproWjN6c"
+    }
+  },
+  {
+    "id": 262,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Martyrs",
+      "en": "Martyrs"
+    },
+    "description": {
+      "es": "Una joven busca venganza por el abuso que sufrió de niña, desencadenando una espiral de violencia y tortura. Una película que explora los límites del horror físico y psicológico.",
+      "en": "A young woman seeks revenge for the abuse she suffered as a child, triggering a spiral of violence and torture. A film that explores the limits of physical and psychological horror."
+    },
+    "director": "Pascal Laugier",
+    "image": "/imagenes/peliculas/martyrs.jpg",
+    "year": 2008,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=PjMdcg48UFI",
+      "en": "https://www.youtube.com/watch?v=F8RDYD6VhpI"
+    }
+  },
+   {
+    "id": 263,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Déjame Entrar",
+      "en": "Let the Right One In"
+    },
+    "description": {
+      "es": "Un niño solitario entabla amistad con una misteriosa vecina que resulta ser un vampiro. Una historia de amor y amistad en un contexto de terror sobrenatural.",
+      "en": "A lonely boy befriends a mysterious neighbor who turns out to be a vampire. A story of love and friendship in a supernatural horror context."
+    },
+    "director": "Tomas Alfredson",
+    "image": "/imagenes/peliculas/let_right_one_in.jpg",
+    "year": 2008,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=M3MUx0t0avA",
+      "en": "https://www.youtube.com/watch?v=pujQphwdOjE"
+    }
+  },
+  {
+    "id": 264,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Poltergeist",
+      "en": "Poltergeist"
+    },
+    "description": {
+      "es": "Una familia se enfrenta a fenómenos paranormales en su nueva casa, que resultan ser más peligrosos de lo que parecen. Un clásico del terror sobrenatural producido por Steven Spielberg.",
+      "en": "A family faces paranormal phenomena in their new home, which turn out to be more dangerous than they seem. A supernatural horror classic produced by Steven Spielberg."
+    },
+    "director": "Tobe Hooper",
+    "image": "/imagenes/peliculas/poltergeist.jpg",
+    "year": 1982,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=WXcVp5887g4",
+      "en": "https://www.youtube.com/watch?v=9eZgEKjYJqA"
+    }
+  },
+  {
+    "id": 265,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Saw",
+      "en": "Saw"
+    },
+    "description": {
+      "es": "Dos hombres despiertan encadenados en un baño, siendo parte de un macabro juego diseñado por un asesino en serie conocido como Jigsaw. La película que inició una de las franquicias de terror más exitosas.",
+      "en": "Two men wake up chained in a bathroom, being part of a macabre game designed by a serial killer known as Jigsaw. The film that started one of the most successful horror franchises."
+    },
+    "director": "James Wan",
+    "image": "/imagenes/peliculas/saw.jpeg",
+    "year": 2004,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=roj2cj8veeU",
+      "en": "https://www.youtube.com/watch?v=S-1QgOMQ-ls"
+    }
+  },
+  {
+    "id": 266,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "It",
+      "en": "It"
+    },
+    "description": {
+      "es": "Un grupo de niños se enfrenta a sus peores pesadillas cuando un malvado payaso comienza a aterrorizar su pueblo. Una adaptación de la novela de Stephen King que explora el poder del miedo y la amistad.",
+      "en": "A group of children faces their worst nightmares when an evil clown begins to terrorize their town. An adaptation of Stephen King's novel that explores the power of fear and friendship."
+    },
+    "director": "Tommy Lee Wallace",
+    "image": "/imagenes/peliculas/it.jpg",
+    "year": 1990,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=eFGvFXhyfYQ",
+      "en": "https://www.youtube.com/watch?v=8i3_2iGTQi8"
+    }
+  },
+  {
+    "id": 267,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Suspiria",
+      "en": "Suspiria"
+    },
+    "description": {
+      "es": "Una joven bailarina se une a una prestigiosa academia de danza en Alemania, donde descubre que algo siniestro acecha tras sus muros. Una obra maestra del terror visual de Dario Argento.",
+      "en": "A young dancer joins a prestigious dance academy in Germany, where she discovers something sinister lurking behind its walls. A Dario Argento visual horror masterpiece."
+    },
+    "director": "Dario Argento",
+    "image": "/imagenes/peliculas/suspiria.jpg",
+    "year": 1977,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=kWL5RVxeIa0",
+      "en": "https://www.youtube.com/watch?v=hPs2ExUL_bc"
+    }
+  },
+  {
+    "id": 268,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Misery",
+      "en": "Misery"
+    },
+    "description": {
+      "es": "Un escritor es rescatado por su mayor fanática después de un accidente, pero pronto descubre que está prisionero de una obsesión peligrosa. Una adaptación de Stephen King dirigida por Rob Reiner.",
+      "en": "A writer is rescued by his biggest fan after an accident, but soon discovers he is a prisoner of a dangerous obsession. A Stephen King adaptation directed by Rob Reiner."
+    },
+    "director": "Rob Reiner",
+    "image": "/imagenes/peliculas/misery.jpg",
+    "year": 1990,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=hNNG0R0smk0",
+      "en": "https://www.youtube.com/watch?v=XHQ9CPRfDsw"
+    }
+  },
+  {
+    "id": 269,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Insidious",
+      "en": "Insidious"
+    },
+    "description": {
+      "es": "Una familia se enfrenta a fenómenos paranormales cuando su hijo entra en un estado de coma inexplicable. Una película que revitalizó el género del terror sobrenatural.",
+      "en": "A family faces paranormal phenomena when their son enters an unexplained coma. A film that revitalized the supernatural horror genre."
+    },
+    "director": "James Wan",
+    "image": "/imagenes/peliculas/insidious.jpg",
+    "year": 2010,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=FRW3K0LlsD0",
+      "en": "https://www.youtube.com/watch?v=zuZnRUcoWos"
+    }
+  },
+  {
+    "id": 270,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Nosotros",
+      "en": "Us"
+    },
+    "description": {
+      "es": "Una familia se enfrenta a sus doppelgängers siniestros en un ataque coordinado. Una película que explora temas de identidad, clase social y el lado oscuro de la humanidad.",
+      "en": "A family faces their sinister doppelgängers in a coordinated attack. A film that explores themes of identity, social class, and the dark side of humanity."
+    },
+    "director": "Jordan Peele",
+    "image": "/imagenes/peliculas/us.jpg",
+    "year": 2019,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=nzCyY_fTowA",
+      "en": "https://www.youtube.com/watch?v=hNCmb-4oXJA"
+    }
+  },
+  {
+    "id": 271,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "El Círculo",
+      "en": "Ringu"
+    },
+    "description": {
+      "es": "Una periodista investiga una cinta de video maldita que causa la muerte de quien la ve después de siete días. La película original japonesa que inició el fenómeno del terror asiático.",
+      "en": "A journalist investigates a cursed video tape that causes the death of whoever watches it after seven days. The original Japanese film that started the Asian horror phenomenon."
+    },
+    "director": "Hideo Nakata",
+    "image": "/imagenes/peliculas/ringu.jpg",
+    "year": 1998,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=1sT1DZhktb8",
+      "en": "https://www.youtube.com/watch?v=0_f3vfflnOE"
+    }
+  },
+  {
+    "id": 272,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Dark Water",
+      "en": "Dark Water"
+    },
+    "description": {
+      "es": "Una madre soltera y su hija se mudan a un apartamento donde comienzan a experimentar fenómenos paranormales relacionados con el agua. Un terror psicológico que explora la maternidad y el abandono.",
+      "en": "A single mother and her daughter move into an apartment where they begin to experience paranormal phenomena related to water. A psychological horror that explores motherhood and abandonment."
+    },
+    "director": "Hideo Nakata",
+    "image": "/imagenes/peliculas/dark_water.jpg",
+    "year": 2002,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=-ZVHz4NrkTI",
+      "en": "https://www.youtube.com/watch?v=lXaWH6lcp34"
+    }
+  },
+  {
+    "id": 273,
+    "category": "movies",
+    "subcategory": "animación",
+    "title": {
+      "es": "Los Mundos de Coraline",
+      "en": "Coraline"
+    },
+    "description": {
+      "es": "Una niña descubre una puerta secreta que lleva a una versión alternativa de su vida, donde todo parece perfecto pero esconde un siniestro secreto. Una obra maestra de la animación stop-motion.",
+      "en": "A girl discovers a secret door that leads to an alternative version of her life, where everything seems perfect but hides a sinister secret. A stop-motion animation masterpiece."
+    },
+    "director": "Henry Selick",
+    "image": "/imagenes/peliculas/coraline.jpg",
+    "year": 2009,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=ksOiRS2YO1U",
+      "en": "https://www.youtube.com/watch?v=m9bOpeuvNwY"
+    }
+  },
+  {
+    "id": 274,
+    "category": "movies",
+    "subcategory": "horror",
+    "title": {
+      "es": "Crudo",
+      "en": "Raw"
+    },
+    "description": {
+      "es": "Una estudiante de veterinaria desarrolla un apetito por la carne humana después de un ritual de iniciación. Una película que explora la sexualidad, la identidad y los límites de la humanidad.",
+      "en": "A veterinary student develops a taste for human flesh after an initiation ritual. A film that explores sexuality, identity, and the limits of humanity."
+    },
+    "director": "Julia Ducournau",
+    "image": "/imagenes/peliculas/raw.jpg",
+    "year": 2016,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=NcHfOMwxQG8",
+      "en": "https://www.youtube.com/watch?v=NcHfOMwxQG8"
+    }
+  },
+  {
+    "id": 275,
+    "category": "movies",
+    "subcategory": "sci-fi",
+    "title": {
+      "es": "Robocop",
+      "en": "RoboCop"
+    },
+    "description": {
+      "es": "Un policía gravemente herido es convertido en un cyborg para luchar contra el crimen en una Detroit futurista. Una sátira social y crítica al capitalismo disfrazada de película de acción.",
+      "en": "A severely injured police officer is turned into a cyborg to fight crime in a futuristic Detroit. A social satire and critique of capitalism disguised as an action movie."
+    },
+    "director": "Paul Verhoeven",
+    "image": "/imagenes/peliculas/robocop.jpg",
+    "year": 1987,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=sR3dBnIQq4E",
+      "en": "https://www.youtube.com/watch?v=6tC_5mp3udE"
+    }
+  },
+  {
+    "id": 276,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "El Caballero Oscuro",
+      "en": "The Dark Knight"
+    },
+    "description": {
+      "es": "Batman se enfrenta a su mayor desafío cuando el Joker siembra el caos en Gotham City. Una obra maestra que trasciende el género de superhéroes para convertirse en un drama psicológico.",
+      "en": "Batman faces his greatest challenge when the Joker sows chaos in Gotham City. A masterpiece that transcends the superhero genre to become a psychological drama."
+    },
+    "director": "Christopher Nolan",
+    "image": "/imagenes/peliculas/dark_knight.jpg",
+    "year": 2008,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=dzQtWkpc2-c",
+      "en": "https://www.youtube.com/watch?v=EXeTwQWrcwY"
+    }
+  },
+  {
+    "id": 278,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "El Club de la Lucha",
+      "en": "Fight Club"
+    },
+    "description": {
+      "es": "Un oficinista insomne y un carismático vendedor de jabón forman un club clandestino donde los hombres pueden liberar su agresividad. Una crítica a la sociedad de consumo y la masculinidad tóxica.",
+      "en": "An insomniac office worker and a charismatic soap salesman form an underground club where men can release their aggression. A critique of consumer society and toxic masculinity."
+    },
+    "director": "David Fincher",
+    "image": "/imagenes/peliculas/fight_club.jpg",
+    "year": 1999,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=eUm7FNowyNo",
+      "en": "https://www.youtube.com/watch?v=SUXWAEX2jlg"
+    }
+  },
+  {
+    "id": 279,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "La Milla Verde",
+      "en": "The Green Mile"
+    },
+    "description": {
+      "es": "Un guardia de prisión en los años 30 descubre que uno de los reclusos condenados a muerte posee un don sobrenatural. Una historia sobre la redención, la injusticia y la humanidad.",
+      "en": "A prison guard in the 1930s discovers that one of the death row inmates possesses a supernatural gift. A story about redemption, injustice, and humanity."
+    },
+    "director": "Frank Darabont",
+    "image": "/imagenes/peliculas/green_mile.jpg",
+    "year": 1999,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=hBtSF4-cnzk",
+      "en": "https://www.youtube.com/watch?v=Ki4haFrqSrw"
+    }
+  },
+  {
+    "id": 280,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Parásitos",
+      "en": "Parasite"
+    },
+    "description": {
+      "es": "Una familia pobre se infiltra en la vida de una familia adinerada, desencadenando una serie de eventos inesperados. Una sátira social que explora la desigualdad y el clasismo.",
+      "en": "A poor family infiltrates the life of a wealthy family, triggering a series of unexpected events. A social satire that explores inequality and classism."
+    },
+    "director": "Bong Joon-ho",
+    "image": "/imagenes/peliculas/parasite.jpg",
+    "year": 2019,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=90dWVETAdtI",
+      "en": "https://www.youtube.com/watch?v=5xH0HfJHsaY"
+    }
+  },
+  {
+    "id": 281,
+    "category": "movies",
+    "subcategory": "war",
+    "title": {
+      "es": "Malditos Bastardos",
+      "en": "Inglourious Basterds"
+    },
+    "description": {
+      "es": "Un grupo de soldados judíos y una joven propietaria de cine planean vengarse de los nazis durante la Segunda Guerra Mundial. Una reescritura de la historia con el estilo único de Tarantino.",
+      "en": "A group of Jewish soldiers and a young cinema owner plan revenge against the Nazis during World War II. A history rewrite with Tarantino's unique style."
+    },
+    "director": "Quentin Tarantino",
+    "image": "/imagenes/peliculas/inglourious_basterds.jpg",
+    "year": 2009,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=2jcTRi8D80k",
+      "en": "https://www.youtube.com/watch?v=KnrRy6kSFF0"
+    }
+  },
+  {
+    "id": 282,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "Ciudadano Kane",
+      "en": "Citizen Kane"
+    },
+    "description": {
+      "es": "La vida y el legado de Charles Foster Kane, un magnate de los medios, son investigados a través de diferentes perspectivas. Considerada una de las mejores películas de la historia del cine.",
+      "en": "The life and legacy of Charles Foster Kane, a media magnate, are investigated through different perspectives. Considered one of the greatest films in cinema history."
+    },
+    "director": "Orson Welles",
+    "image": "/imagenes/peliculas/citizen_kane.jpg",
+    "year": 1941,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=Ut7SlUa25l4",
+      "en": "https://www.youtube.com/watch?v=8dxh3lwdOFw"
+    }
+  },
+  {
+    "id": 283,
+    "category": "movies",
+    "subcategory": "animation",
+    "title": {
+      "es": "Up",
+      "en": "Up"
+    },
+    "description": {
+      "es": "Un viudo de 78 años cumple el sueño de su vida de viajar a Sudamérica, llevando su casa con globos. Una conmovedora historia sobre el amor, la pérdida y la aventura.",
+      "en": "A 78-year-old widower fulfills his lifelong dream of traveling to South America, taking his house with balloons. A touching story about love, loss, and adventure."
+    },
+    "director": "Pete Docter",
+    "image": "/imagenes/peliculas/up.jpg",
+    "year": 2009,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=GxcMeZDPAFQ",
+      "en": "https://www.youtube.com/watch?v=ORFWdXl_zJ4"
+    }
+  },
+  {
+    "id": 284,
+    "category": "movies",
+    "subcategory": "sci-fi",
+    "title": {
+      "es": "Metrópolis",
+      "en": "Metropolis"
+    },
+    "description": {
+      "es": "En una ciudad futurista, un joven rico descubre la dura realidad de los trabajadores que mantienen la ciudad funcionando. Una obra maestra del cine mudo que influyó en generaciones de cineastas.",
+      "en": "In a futuristic city, a wealthy young man discovers the harsh reality of the workers who keep the city running. A silent film masterpiece that influenced generations of filmmakers."
+    },
+    "director": "Fritz Lang",
+    "image": "/imagenes/peliculas/metropolis.jpg",
+    "year": 1927,
+    "masterpiece": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=6qiBk6oQ1RI&t=7130s",
+      "en": "https://www.youtube.com/watch?v=6qiBk6oQ1RI&t=7130s"
+    }
+  },
+  {
+    "id": 285,
+    "category": "movies",
+    "subcategory": "drama",
+    "title": {
+      "es": "El Show de Truman",
+      "en": "The Truman Show"
+    },
+    "description": {
+      "es": "Un hombre descubre que su vida entera ha sido un reality show televisado. Una sátira sobre los medios de comunicación y la privacidad en la era moderna.",
+      "en": "A man discovers that his entire life has been a televised reality show. A satire about media and privacy in the modern era."
+    },
+    "director": "Peter Weir",
+    "image": "/imagenes/peliculas/truman_show.jpg",
+    "year": 1998,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=U6jYmOnnImI",
+      "en": "https://www.youtube.com/watch?v=loTIzXAS7v4"
+    }
+  },
+  {
+    "id": 286,
+    "category": "movies",
+    "subcategory": "drama",
+    "tags": [
+        "spanish"
+      ],
+    "title": {
+      "es": "El Laberinto del Fauno",
+      "en": "Pan's Labyrinth"
+    },
+    "description": {
+      "es": "Una niña se refugia en un mundo de fantasía para escapar de la dura realidad de la posguerra española. Una mezcla magistral de realismo histórico y fantasía oscura.",
+      "en": "A girl takes refuge in a fantasy world to escape the harsh reality of post-war Spain. A masterful blend of historical realism and dark fantasy."
+    },
+    "director": "Guillermo del Toro",
+    "image": "/imagenes/peliculas/pans_labyrinth.jpg",
+    "year": 2006,
+    "masterpiece": false,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=FGzvvUBXj5M",
+      "en": "https://www.youtube.com/watch?v=EqYiSlkvRuw"
+    }
+  },
+  {
+    "id": 287,
+    "category": "movies",
+    "subcategory": "comedy",
+    "tags": [
+        "spanish"
+      ],
+    "title": {
+      "es": "El Milagro de P. Tinto",
+      "en": "The Miracle of P. Tinto"
+    },
+    "description": {
+      "es": "Una comedia surrealista que narra la peculiar vida de P. Tinto, un hombre que espera un milagro mientras enfrenta situaciones absurdas y personajes extravagantes.",
+      "en": "A surreal comedy that tells the peculiar life of P. Tinto, a man waiting for a miracle while facing absurd situations and extravagant characters."
+    },
+    "director": "Javier Fesser",
+    "image": "/imagenes/peliculas/el_milagro_de_p_tinto.jpg",
+    "year": 1998,
+    "masterpiece": true,
+    "cine_espanol": true,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=Q0GMTc6TBf0",
+      "en": "https://www.youtube.com/watch?v=Q0GMTc6TBf0"
     }
   }
   ]
