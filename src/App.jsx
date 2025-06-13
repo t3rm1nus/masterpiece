@@ -73,148 +73,7 @@ function Menu({ onNavigate, showBack, onBack, backLabel }) {
   );
 }
 
-function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
-  const { t, lang } = useLanguage();
-  const datos = datosByCategory[category] || { recommendations: [] };
-  const items = datos.recommendations ? datos.recommendations.filter(r => r.category === category) : [];
-
-  const normalizeToEnglish = {
-    'ciencia ficción': 'science fiction',
-    'superhéroes': 'superheroes',
-    'distopía': 'dystopia',
-    'fantasía': 'fantasy',
-    'acción': 'action',
-    'comedia': 'comedy',
-    'aventura': 'adventure',
-    'histórico': 'historical',
-    'crónica': 'chronicle',
-    'guerra': 'war',
-    'animación': 'animation',
-    'cine español': 'spanish cinema',
-    'sci-fi': 'science fiction',
-    'thriller': 'thriller',
-    'horror': 'horror',
-    'drama': 'drama',
-    'western': 'western'
-  };
-
-  let subs = Array.from(new Set(items.map(r => {
-    const normalizedSub = normalizeToEnglish[r.subcategory] || r.subcategory;
-    return normalizedSub;
-  })));
-  if (items.some(r => r.tags && r.tags.includes('cine español'))) {
-    subs.push('spanish cinema');
-  }
-
-  const masterpiecesKey = '__masterpieces__';
-  const [activeSub, setActiveSub] = useState(null);
-  const [isMasterpiecesActive, setIsMasterpiecesActive] = useState(false);
-  const [isSpanishCinemaActive, setIsSpanishCinemaActive] = useState(false);
-
-  let filtered = items;
-
-  if (activeSub) {
-    filtered = filtered.filter(r => {
-      const normalizedSub = normalizeToEnglish[r.subcategory] || r.subcategory;
-      return activeSub === normalizedSub;
-    });
-  }
-
-  if (isMasterpiecesActive) {
-    filtered = filtered.filter(r => r.masterpiece === true);
-  }
-
-  console.log('Initial items:', items);
-  console.log('isSpanishCinemaActive:', isSpanishCinemaActive);
-  console.log('Items structure:', items.map(item => ({ id: item.id, tags: item.tags })));
-  // Add detailed logging to debug filtering logic
-  if (isSpanishCinemaActive) {
-    console.log('Filtering for Spanish Cinema...');
-    console.log('Items before filtering:', items);
-    filtered = items.filter(r => {
-      console.log('Inspecting item:', r);
-      const hasTag = Array.isArray(r.tags) && r.tags.includes('spanish');
-      console.log('Item has "spanish" tag:', hasTag);
-      return hasTag;
-    });
-    console.log('Filtered items after applying Spanish Cinema filter:', filtered);
-  }
-  console.log('Filtered items:', filtered);
-  console.log('Final filtered count:', filtered.length);
-
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
-
-  useEffect(() => {
-    if (activeSub) {
-      const originalSub = Object.keys(normalizeToEnglish).find(
-        key => normalizeToEnglish[key] === activeSub || key === activeSub
-      );
-      if (originalSub) {
-        setActiveSub(normalizeToEnglish[originalSub]);
-      }
-    }
-  }, [lang]);
-
-  return (
-    <div>
-      {/* Solo mostrar el menú superior en desktop/tablet, no en móviles aquí */}
-      {!(typeof window !== 'undefined' && window.innerWidth <= 600) && (
-        <Menu showBack={true} onBack={onBack} backLabel={lang === 'en' ? 'Back' : 'Volver'} onNavigate={onNavigate} />
-      )}
-      <h2 className="subcategories-title">{t.categories[category]}</h2>
-      {isMobile ? (
-        <div className="categories-list">
-          <select
-            className="subcategory-select"
-            value={activeSub || ''}
-            onChange={e => setActiveSub(e.target.value || null)}
-            style={{width:'100%',maxWidth:320,marginBottom:'1rem'}}
-          >
-            <option value="">{lang === 'en' ? 'All' : 'Todas'}</option>
-            {subs.map(sub => (
-              <option key={sub} value={sub}>{normalizeToEnglish[sub] || sub}</option>
-            ))}
-            <option value={masterpiecesKey}>{lang === 'en' ? 'Masterpieces' : 'Obras maestras'}</option>
-          </select>
-        </div>
-      ) : (
-        <div className="categories-list">
-          {subs.map(sub => (
-            <button
-              key={sub}
-              className={`category-btn${activeSub === sub ? ' active' : ''}`}
-              onClick={() => setActiveSub(sub)}
-            >
-              {sub === masterpiecesKey ? (lang === 'es' ? 'Obras maestras' : 'Masterpieces') : normalizeToEnglish[sub] || sub}
-            </button>
-          ))}
-        </div>
-      )}
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '1rem' }}>
-        <button
-          className={`category-btn${isMasterpiecesActive ? ' active' : ''}`}
-          onClick={() => setIsMasterpiecesActive(!isMasterpiecesActive)}
-          style={{ backgroundColor: isMasterpiecesActive ? '#f0f8ff' : '' }}
-        >
-          {lang === 'es' ? 'Obras maestras' : 'Masterpieces'}
-        </button>
-        <button
-          className={`category-btn${isSpanishCinemaActive ? ' active' : ''}`}
-          onClick={() => {
-            console.log('Toggling isSpanishCinemaActive:', !isSpanishCinemaActive);
-            setIsSpanishCinemaActive(!isSpanishCinemaActive);
-          }}
-          style={{ backgroundColor: isSpanishCinemaActive ? '#f0f8ff' : '' }}
-        >
-          {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
-        </button>
-      </div>
-      <RecommendationsList recommendations={filtered} onItemClick={onItemClick} />
-    </div>
-  );
-}
-
-function RecommendationsList({ recommendations, onItemClick, isHome }) {
+function RecommendationsList({ recommendations, isHome }) {
   const { lang, t } = useLanguage();
   const categoryNames = t.categories;
   const subcategoryTranslations = {
@@ -239,12 +98,10 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
         // Clave única: añade siempre el índice para evitar duplicados
         const recKey = `${rec.category}_${rec.id !== undefined ? rec.id : idx}_${idx}`;
         if (isHome && isMobile) {
-          return (
-            <div
+          return (            <div
               className={`recommendation-card mobile-home-layout ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
               key={recKey}
-              onClick={() => onItemClick && onItemClick(rec.id)}
-              style={{cursor: onItemClick ? 'pointer' : 'default', position: 'relative'}}
+              style={{position: 'relative'}}
             >
               {/* Fila superior: solo el nombre, centrado */}
               <div className="rec-home-row rec-home-row-top">
@@ -275,12 +132,10 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
           );
         }
         // Layout normal para desktop/tablet o fuera de home
-        return (
-          <div
+        return (          <div
             className={`recommendation-card ${rec.category}${rec.masterpiece ? ' masterpiece' : ''}`}
             key={recKey}
-            onClick={() => onItemClick && onItemClick(rec.id)}
-            style={{cursor: onItemClick ? 'pointer' : 'default', position: 'relative'}}
+            style={{position: 'relative'}}
           >
             {rec.masterpiece && (
               <span className="masterpiece-badge" title="Obra maestra">
@@ -304,7 +159,7 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
   );
 }
 
-function HomePage({ onItemClick, onCategory }) {
+function HomePage({ onCategory }) {
   const { lang, t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [activeSubcategory, setActiveSubcategory] = useState(null);
@@ -536,89 +391,15 @@ function HomePage({ onItemClick, onCategory }) {
           </div>
         </>
       )}
-      <h1>{title}</h1>
-      <RecommendationsList
+      <h1>{title}</h1>      <RecommendationsList
         recommendations={filteredRecommendations}
-        onItemClick={onItemClick}
         isHome={!selectedCategory && !activeSubcategory}
       />
     </>
   );
 }
 
-function SubcategoryItemsPage({ category, subcategory, onBack, onItemClick }) {
-  const { t } = useLanguage();
-  const datos = datosByCategory[category] || { recommendations: [] };
-  const items = datos.recommendations.filter(r => r.category === category && r.subcategory === subcategory);
-  return (
-    <div>
-      <button className="category-btn" onClick={onBack}>&larr; {t.categories[category]}</button>
-      <h2>{subcategory}</h2>
-      <RecommendationsList recommendations={items} onItemClick={onItemClick} />
-    </div>
-  );
-}
 
-function ItemDetailPage({ itemId, onBack }) {
-  const { lang, t } = useLanguage();
-  // Buscar el item en todos los datasets
-  const all = [
-    ...datosMovies.recommendations,
-    ...datosComics.recommendations,
-    ...datosBooks.recommendations,
-    ...datosMusic.recommendations,
-    ...datosVideogames.recommendations,
-    ...datosBoardgames.recommendations,
-    ...datosPodcast.recommendations
-  ];
-  const item = all.find(r => r.id === itemId);
-  if (!item) return <div>Item no encontrado</div>;
-
-  // Solo para películas, mostrar botón de trailer
-  const isMovie = item.category === 'movies';
-  const trailerUrl = item.trailer?.[lang] || item.trailer?.es || item.trailer?.en || null;
-  const trailerText = lang === 'en' ? 'Watch trailer on YouTube' : 'Ver tráiler en YouTube';
-
-  // Diccionario para traducir subcategorías conocidas (mover aquí para usar en ficha)
-  const subcategoryTranslations = {
-    'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
-    'acción': lang === 'en' ? 'action' : 'acción',
-    'action': lang === 'es' ? 'acción' : 'action',
-    'comedy': lang === 'es' ? 'comedia' : 'comedy',
-    'adventure': lang === 'es' ? 'aventura' : 'adventure',
-    'aventura': lang === 'en' ? 'adventure' : 'aventura',
-    'comedia': lang === 'en' ? 'comedy' : 'comedia',
-    'animación': lang === 'en' ? 'animation' : 'animación',
-    'animation': lang === 'es' ? 'animación' : 'animation',
-    'war': lang === 'es' ? 'guerra' : 'war'
-  };
-
-  return (
-    <div className={`item-detail${item.masterpiece ? ' masterpiece' : ''}`} style={{position:'relative'}}>
-      {/* Botón volver eliminado del cuadro de detalles */}
-      <h2>{item.title[lang] || item.title.es}</h2>
-      <img src={item.image} alt={item.title[lang] || item.title.es} width={200} style={{borderRadius:12, margin:'1rem 0'}} />
-      <p><strong>{lang === 'es' ? 'Categoría' : 'Category'}:</strong> {t.categories[item.category] || item.category}</p>
-      <p><strong>{lang === 'es' ? 'Subcategoría' : 'Subcategory'}:</strong> {subcategoryTranslations[item.subcategory] || item.subcategory}</p>
-      <p><strong>{isMovie ? (lang === 'es' ? 'Director' : 'Director') : (lang === 'es' ? 'Autor' : 'Author')}:</strong> {isMovie ? (item.director || (lang === 'es' ? 'Desconocido' : 'Unknown')) : (item.author || (lang === 'es' ? 'Desconocido' : 'Unknown'))}</p>
-      {isMovie && (
-        <p><strong>{lang === 'es' ? 'Año' : 'Year'}:</strong> {item.year || (lang === 'es' ? 'Desconocido' : 'Unknown')}</p>
-      )}
-      <p><strong>{lang === 'es' ? 'Descripción' : 'Description'}:</strong> {item.description[lang] || item.description.es}</p>
-      {isMovie && (
-        <a
-          href={trailerUrl || '#'}
-          className={`download-link${trailerUrl ? '' : ' disabled'}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{marginTop: '1.5rem', pointerEvents: trailerUrl ? 'auto' : 'none', opacity: trailerUrl ? 1 : 0.5}}
-        >
-          {trailerText}
-        </a>
-      )}
-    </div>
-  );
-}
 
 function MobileMenuBar({ onOpen }) {
   return (
@@ -664,16 +445,13 @@ function MobileMenu({ open, onClose, onNavigate, showBack, onBack, backLabel }) 
   );
 }
 
-function AppContent() {
-  const [view, setView] = useState({view: 'home'});
+function AppContent() {  const [view, setView] = useState({view: 'home'});
   const [lastCategory, setLastCategory] = useState(null);
   const { lang } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleItemClick = id => {
-    setView({view: 'itemDetail', itemId: id});
-  };
-
+  // Removed handleItemClick function since we don't need it anymore
+  
   const navigate = newView => {
     setView(newView);
   };
@@ -681,35 +459,7 @@ function AppContent() {
   let content;
   switch (view.view) {
     case 'home':
-      content = <HomePage onItemClick={handleItemClick} />;
-      break;
-    case 'subcategories':
-      content = (
-        <SubcategoriesPage
-          category={view.category}
-          onBack={() => setView({view: 'home'})}
-          onItemClick={handleItemClick}
-          onNavigate={navigate}
-        />
-      );
-      break;
-    case 'subcategoryItems':
-      content = (
-        <SubcategoryItemsPage
-          category={view.category}
-          subcategory={view.subcategory}
-          onBack={() => setView({view: 'home'})}
-          onItemClick={handleItemClick}
-        />
-      );
-      break;
-    case 'itemDetail':
-      content = (
-        <ItemDetailPage
-          itemId={view.itemId}
-          onBack={() => setView({view: 'home'})}
-        />
-      );
+      content = <HomePage />;
       break;
     default:
       content = <div>Página no encontrada</div>;
