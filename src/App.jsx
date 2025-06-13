@@ -76,6 +76,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     'superhéroes': lang === 'en' ? 'superheroes' : 'superhéroes',
     'distopía': lang === 'en' ? 'dystopia' : 'distopía',
     'fantasía': lang === 'en' ? 'fantasy' : 'fantasía',
+    'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
     'acción': lang === 'en' ? 'action' : 'acción',
     'action': lang === 'es' ? 'acción' : 'action',
     'comedy': lang === 'es' ? 'comedia' : 'comedy',
@@ -88,7 +89,8 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     'chronicle': lang === 'es' ? 'crónica' : 'chronicle',
     'war': lang === 'es' ? 'guerra' : 'war',
     'guerra': lang === 'en' ? 'war' : 'guerra',
-    'animación': lang === 'en' ? 'animation' : 'animación'
+    'animación': lang === 'en' ? 'animation' : 'animación',
+    'animation': lang === 'es' ? 'animación' : 'animation'
   };
   const normalizeToEnglish = {
     'ciencia ficción': 'science fiction',
