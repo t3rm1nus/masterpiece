@@ -1786,7 +1786,7 @@
     {
       "id": 109,
       "category": "movies",
-      "subcategory": "animación",
+      "subcategory": "animation",
       "title": {
         "es": "Your Name",
         "en": "Your Name"
@@ -1978,7 +1978,7 @@
     {
       "id": 118,
       "category": "movies",
-      "subcategory": "animación",
+      "subcategory": "animation",
       "title": {
         "es": "Chico y Rita",
         "en": "Chico & Rita"
@@ -2472,7 +2472,7 @@
     {
       "id": 141,
       "category": "movies",
-      "subcategory": "animación",
+      "subcategory": "animation",
       "title": {
         "es": "Castillo en el cielo",
         "en": "Castle in the Sky"
@@ -2493,7 +2493,7 @@
     {
       "id": 142,
       "category": "movies",
-      "subcategory": "animación",
+      "subcategory": "animation",
       "title": {
         "es": "Mi Vecino Totoro",
         "en": "My Neighbor Totoro"
@@ -2581,7 +2581,7 @@
     {
       "id": 146,
       "category": "movies",
-      "subcategory": "animación",
+      "subcategory": "animation",
       "tags": [
         "spanish"
       ],
@@ -2807,7 +2807,7 @@
     {
       "id": 157,
       "category": "movies",
-      "subcategory": "animación",
+      "subcategory": "animation",
       "title": {
         "es": "La Princesa Mononoke",
         "en": "Princess Mononoke"
@@ -2828,7 +2828,7 @@
     {
       "id": 158,
       "category": "movies",
-      "subcategory": "animación",
+      "subcategory": "animation",
       "title": {
         "es": "Porco Rosso",
         "en": "Porco Rosso"
@@ -3039,7 +3039,7 @@
     {
       "id": 168,
       "category": "movies",
-      "subcategory": "animación",
+      "subcategory": "animation",
       "title": {
         "es": "Ghost in the Shell",
         "en": "Ghost in the Shell"
@@ -5218,7 +5218,7 @@
   {
     "id": 273,
     "category": "movies",
-    "subcategory": "animación",
+    "subcategory": "animation",
     "title": {
       "es": "Los Mundos de Coraline",
       "en": "Coraline"

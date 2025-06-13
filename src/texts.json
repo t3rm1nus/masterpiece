@@ -1,6 +1,6 @@
 {
   "es": {
-    "home_title": "Nuevas recomendaciones",
+    "home_title": "Nuevas Recomendaciones",
     "categoriesTitle": "Categorías",
     "categories": {
       "movies": "Películas",
@@ -13,8 +13,7 @@
     },
     "see_all": "Ver todas",
     "change_language": "Cambiar idioma"
-  },
-  "en": {
+  },  "en": {
     "home_title": "New Recommendations",
     "categoriesTitle": "Categories",
     "categories": {

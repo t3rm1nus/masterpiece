@@ -26,6 +26,8 @@ function LanguageSelector() {
   const { lang, changeLanguage } = useLanguage();
   return (
     <select
+      id="language-selector"
+      name="language-selector"
       value={lang}
       onChange={e => changeLanguage(e.target.value)}
       style={{ marginLeft: 8 }}
@@ -37,32 +39,37 @@ function LanguageSelector() {
 }
 
 function Menu({ onNavigate, showBack, onBack, backLabel }) {
-  const { t } = useLanguage();
-  return (
-    <nav className="main-menu">
-      {showBack && (
-        <button className="category-btn" onClick={onBack}>&larr; {backLabel}</button>
-      )}
-      <button onClick={() => onNavigate({view: 'home'})}>{t.home_title}</button>
-      <button onClick={() => onNavigate({view: 'categories'})}>{t.categoriesTitle}</button>
-      <LanguageSelector />
-    </nav>
-  );
-}
-
-function CategoriesPage({ onCategory }) {
   const { t, lang } = useLanguage();
-  // Título de la página según idioma
-  const title = t.categoriesTitle;
+  
   return (
-    <div>
-      <h1>{title}</h1>
-      <div className="categories-list">
-        {Object.entries(t.categories).map(([key, label]) => (
-          <button key={key} className="category-btn" onClick={() => onCategory(key)}>{label}</button>
-        ))}
+    <nav className="main-menu" style={{ 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'space-between',
+      padding: '1rem',
+      width: '100%',
+      maxWidth: '1200px',
+      margin: '0 auto',
+      position: 'relative'
+    }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        {showBack && (
+          <button className="category-btn" onClick={onBack}>&larr; {backLabel}</button>
+        )}
+        {/* Botón de inicio a la izquierda que recarga la página */}
+        <button 
+          onClick={() => window.location.reload()} 
+          style={{ fontWeight: 'bold' }}
+        >
+          {t.home_title}
+        </button>
       </div>
-    </div>
+      
+      {/* Selector de idioma - siempre a la derecha */}
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <LanguageSelector />
+      </div>
+    </nav>
   );
 }
 
@@ -70,28 +77,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   const { t, lang } = useLanguage();
   const datos = datosByCategory[category] || { recommendations: [] };
   const items = datos.recommendations ? datos.recommendations.filter(r => r.category === category) : [];
-  // Ajustar lógica de traducción y filtrado de subcategorías
-  const subcategoryTranslations = {
-    'ciencia ficción': lang === 'en' ? 'science fiction' : 'ciencia ficción',
-    'superhéroes': lang === 'en' ? 'superheroes' : 'superhéroes',
-    'distopía': lang === 'en' ? 'dystopia' : 'distopía',
-    'fantasía': lang === 'en' ? 'fantasy' : 'fantasía',
-    'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
-    'acción': lang === 'en' ? 'action' : 'acción',
-    'action': lang === 'es' ? 'acción' : 'action',
-    'comedy': lang === 'es' ? 'comedia' : 'comedy',
-    'adventure': lang === 'es' ? 'aventura' : 'adventure',
-    'aventura': lang === 'en' ? 'adventure' : 'aventura',
-    'comedia': lang === 'en' ? 'comedy' : 'comedia',
-    'histórico': lang === 'en' ? 'historical' : 'histórico',
-    'historical': lang === 'es' ? 'histórico' : 'historical',
-    'crónica': lang === 'en' ? 'chronicle' : 'crónica',
-    'chronicle': lang === 'es' ? 'crónica' : 'chronicle',
-    'war': lang === 'es' ? 'guerra' : 'war',
-    'guerra': lang === 'en' ? 'war' : 'guerra',
-    'animación': lang === 'en' ? 'animation' : 'animación',
-    'animation': lang === 'es' ? 'animación' : 'animation'
-  };
+
   const normalizeToEnglish = {
     'ciencia ficción': 'science fiction',
     'superhéroes': 'superheroes',
@@ -104,9 +90,14 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
     'crónica': 'chronicle',
     'guerra': 'war',
     'animación': 'animation',
-    'cine español': 'spanish cinema'
+    'cine español': 'spanish cinema',
+    'sci-fi': 'science fiction',
+    'thriller': 'thriller',
+    'horror': 'horror',
+    'drama': 'drama',
+    'western': 'western'
   };
-  // subs definido ANTES del return
+
   let subs = Array.from(new Set(items.map(r => {
     const normalizedSub = normalizeToEnglish[r.subcategory] || r.subcategory;
     return normalizedSub;
@@ -114,36 +105,45 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
   if (items.some(r => r.tags && r.tags.includes('cine español'))) {
     subs.push('spanish cinema');
   }
-  // Restore the 'Spanish Cinema' button and ensure it displays 'Spanish Cinema' in English and 'Cine Español' in Spanish
-  const spanishCinemaKey = 'spanishCinema';
 
-  if (items.some(r => r.tags && r.tags.includes('spanish'))) {
-    // Removed subs.push(spanishCinemaKey) to prevent 'Cine Español' from appearing in subcategories
-  }
   const masterpiecesKey = '__masterpieces__';
   const [activeSub, setActiveSub] = useState(null);
-  let filtered;
-  if (activeSub === masterpiecesKey) {
-    filtered = items.filter(r => r.masterpiece === true);
-  } else if (activeSub === spanishCinemaKey) {
-    filtered = items.filter(r => {
-      const hasTag = Array.isArray(r.tags) && r.tags.includes('spanish');
-      console.log('Has spanish tag:', hasTag);
-      return hasTag;
-    });
-  } else if (activeSub) {
-    filtered = items.filter(r => {
+  const [isMasterpiecesActive, setIsMasterpiecesActive] = useState(false);
+  const [isSpanishCinemaActive, setIsSpanishCinemaActive] = useState(false);
+
+  let filtered = items;
+
+  if (activeSub) {
+    filtered = filtered.filter(r => {
       const normalizedSub = normalizeToEnglish[r.subcategory] || r.subcategory;
       return activeSub === normalizedSub;
     });
-  } else {
-    filtered = items;
   }
 
-  // --- Responsive: usar select en móviles ---
+  if (isMasterpiecesActive) {
+    filtered = filtered.filter(r => r.masterpiece === true);
+  }
+
+  console.log('Initial items:', items);
+  console.log('isSpanishCinemaActive:', isSpanishCinemaActive);
+  console.log('Items structure:', items.map(item => ({ id: item.id, tags: item.tags })));
+  // Add detailed logging to debug filtering logic
+  if (isSpanishCinemaActive) {
+    console.log('Filtering for Spanish Cinema...');
+    console.log('Items before filtering:', items);
+    filtered = items.filter(r => {
+      console.log('Inspecting item:', r);
+      const hasTag = Array.isArray(r.tags) && r.tags.includes('spanish');
+      console.log('Item has "spanish" tag:', hasTag);
+      return hasTag;
+    });
+    console.log('Filtered items after applying Spanish Cinema filter:', filtered);
+  }
+  console.log('Filtered items:', filtered);
+  console.log('Final filtered count:', filtered.length);
+
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
 
-  // Ajustar lógica para sincronizar correctamente el estado del botón y el listado
   useEffect(() => {
     if (activeSub) {
       const originalSub = Object.keys(normalizeToEnglish).find(
@@ -172,7 +172,7 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
           >
             <option value="">{lang === 'en' ? 'All' : 'Todas'}</option>
             {subs.map(sub => (
-              <option key={sub} value={sub}>{subcategoryTranslations[sub] || sub}</option>
+              <option key={sub} value={sub}>{normalizeToEnglish[sub] || sub}</option>
             ))}
             <option value={masterpiecesKey}>{lang === 'en' ? 'Masterpieces' : 'Obras maestras'}</option>
           </select>
@@ -185,23 +185,26 @@ function SubcategoriesPage({ category, onBack, onItemClick, onNavigate }) {
               className={`category-btn${activeSub === sub ? ' active' : ''}`}
               onClick={() => setActiveSub(sub)}
             >
-              {sub === masterpiecesKey ? (lang === 'es' ? 'Obras maestras' : 'Masterpieces') : subcategoryTranslations[sub] || sub}
+              {sub === masterpiecesKey ? (lang === 'es' ? 'Obras maestras' : 'Masterpieces') : normalizeToEnglish[sub] || sub}
             </button>
           ))}
         </div>
       )}
       <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '1rem' }}>
         <button
-          className={`category-btn${activeSub === masterpiecesKey ? ' active' : ''}`}
-          onClick={() => setActiveSub(masterpiecesKey)}
-          style={{ backgroundColor: '#f0f8ff' }}
+          className={`category-btn${isMasterpiecesActive ? ' active' : ''}`}
+          onClick={() => setIsMasterpiecesActive(!isMasterpiecesActive)}
+          style={{ backgroundColor: isMasterpiecesActive ? '#f0f8ff' : '' }}
         >
           {lang === 'es' ? 'Obras maestras' : 'Masterpieces'}
         </button>
         <button
-          className={`category-btn${activeSub === spanishCinemaKey ? ' active' : ''}`}
-          onClick={() => setActiveSub(spanishCinemaKey)}
-          style={{ backgroundColor: '#f0f8ff' }}
+          className={`category-btn${isSpanishCinemaActive ? ' active' : ''}`}
+          onClick={() => {
+            console.log('Toggling isSpanishCinemaActive:', !isSpanishCinemaActive);
+            setIsSpanishCinemaActive(!isSpanishCinemaActive);
+          }}
+          style={{ backgroundColor: isSpanishCinemaActive ? '#f0f8ff' : '' }}
         >
           {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
         </button>
@@ -301,9 +304,104 @@ function RecommendationsList({ recommendations, onItemClick, isHome }) {
   );
 }
 
-function HomePage({ onItemClick }) {
-  const { lang } = useLanguage();
-  // Unir todas las recomendaciones de todas las categorías
+function HomePage({ onItemClick, onCategory }) {
+  const { lang, t } = useLanguage();
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [activeSubcategory, setActiveSubcategory] = useState(null);
+  const [title, setTitle] = useState(lang === 'en' ? 'Daily Recommendations' : 'Recomendaciones diarias');
+  const [isSpanishCinemaActive, setIsSpanishCinemaActive] = useState(false);
+  const [isMasterpieceActive, setIsMasterpieceActive] = useState(false);
+
+  const categories = [
+    { key: 'movies', label: lang === 'en' ? 'Movies' : 'Películas' },
+    { key: 'comics', label: lang === 'en' ? 'Comics' : 'Cómics' },
+    { key: 'books', label: lang === 'en' ? 'Books' : 'Libros' },
+    { key: 'music', label: lang === 'en' ? 'Music' : 'Música' },
+    { key: 'videogames', label: lang === 'en' ? 'Video Games' : 'Videojuegos' },
+    { key: 'boardgames', label: lang === 'en' ? 'Board Games' : 'Juegos de Mesa' },
+    { key: 'podcast', label: lang === 'en' ? 'Podcasts' : 'Podcasts' }
+  ];
+
+  // Efecto para actualizar el título cuando cambia el idioma o la categoría
+  useEffect(() => {
+    if (selectedCategory) {
+      // Si hay una categoría seleccionada, buscar su etiqueta traducida
+      const category = categories.find(cat => cat.key === selectedCategory);
+      if (category) {
+        setTitle(category.label);
+      }
+    } else {
+      // Si no hay categoría seleccionada, mostrar el título por defecto
+      setTitle(lang === 'en' ? 'Daily Recommendations' : 'Recomendaciones diarias');
+    }
+  }, [lang, selectedCategory, categories]);
+  const subcategoryTranslations = {
+    'fantasy': 'fantasía',
+    'action': 'acción',
+    'comedy': 'comedia',
+    'adventure': 'aventura',
+    'animation': 'animación',
+    'war': 'guerra',
+    'spanish cinema': 'cine español',
+    'sci-fi': 'ciencia ficción',
+    'thriller': 'suspense',
+    'horror': 'terror',
+    'drama': 'drama',
+    'western': 'western',
+    'superhéroes': 'superheroes',
+    'superheroes': 'superhéroes'
+  };
+
+  // Función para obtener subcategorías según la categoría seleccionada
+  const getSubcategoriesForCategory = (category) => {
+    if (!category) return [];
+    
+    const categoryData = datosByCategory[category];
+    if (!categoryData || !categoryData.recommendations) return [];
+    
+    // Extraer subcategorías únicas de la categoría seleccionada
+    const uniqueSubcategories = Array.from(
+      new Set(
+        categoryData.recommendations
+          .filter(item => item.category === category && item.subcategory)
+          .map(item => {
+            // Normalizar subcategorías para consistencia
+            return item.subcategory.toLowerCase();
+          })
+      )
+    );
+    
+    // Convertir a formato de objeto para el componente
+    return uniqueSubcategories.map(sub => ({ sub }));
+  };
+  
+  // Obtener subcategorías para la categoría seleccionada
+  const categorySubcategories = getSubcategoriesForCategory(selectedCategory);
+
+  function renderRecommendations(allRecommendations) {
+    return allRecommendations.sort(() => 0.5 - Math.random()).slice(0, 11);
+  }
+
+  function renderCategoriesAndSubcategories(categories, selectedCategory, activeSubcategory, isMasterpiecesActive, isSpanishCinemaActive) {
+    let filteredRecommendations = selectedCategory
+      ? categories.filter(item => item.category === selectedCategory && (!activeSubcategory || item.subcategory === activeSubcategory))
+      : categories;
+
+    if (isMasterpiecesActive) {
+      filteredRecommendations = filteredRecommendations.filter(item => item.masterpiece === true);
+    }
+
+    if (isSpanishCinemaActive) {
+      filteredRecommendations = filteredRecommendations.filter(item => {
+        const hasTag = Array.isArray(item.tags) && item.tags.includes('spanish');
+        return hasTag;
+      });
+    }
+
+    console.log('Filtered items:', filteredRecommendations);
+    return filteredRecommendations;
+  }
+
   const all = [
     ...datosMovies.recommendations,
     ...datosComics.recommendations,
@@ -313,12 +411,137 @@ function HomePage({ onItemClick }) {
     ...datosBoardgames.recommendations,
     ...datosPodcast.recommendations
   ];
-  const random = all.sort(() => 0.5 - Math.random()).slice(0, 12);
-  const homeTitle = lang === 'en' ? 'Daily Recommendations' : 'Recomendaciones diarias';
+
+  // Aplicar filtros en cadena
+  let filteredRecommendations = all;
+  
+  // Aplicar filtro de categoría
+  if (selectedCategory) {
+    filteredRecommendations = filteredRecommendations.filter(item => item.category === selectedCategory);
+  }
+
+  // Aplicar filtro de subcategoría
+  if (activeSubcategory && activeSubcategory !== '__masterpieces__') {
+    filteredRecommendations = filteredRecommendations.filter(item => item.subcategory === activeSubcategory);
+  }
+
+  // Aplicar filtro de cine español si está activo
+  if (isSpanishCinemaActive) {
+    filteredRecommendations = filteredRecommendations.filter(item => 
+      Array.isArray(item.tags) && item.tags.includes('spanish')
+    );
+  }
+
+  // Aplicar filtro de obras maestras si está activo
+  if (isMasterpieceActive) {
+    filteredRecommendations = filteredRecommendations.filter(item => item.masterpiece === true);
+  }
+
+  // Si no hay filtros activos y no hay categoría seleccionada, mostrar recomendaciones aleatorias
+  if (!selectedCategory && !isSpanishCinemaActive && !isMasterpieceActive) {
+    filteredRecommendations = renderRecommendations(all);
+  }
+
+  console.log('Filter status:', {
+    selectedCategory,
+    activeSubcategory,
+    isSpanishCinemaActive,
+    isMasterpieceActive,
+    totalItems: filteredRecommendations.length,
+    spanishItems: filteredRecommendations.filter(item => Array.isArray(item.tags) && item.tags.includes('spanish')).length,
+    masterpieces: filteredRecommendations.filter(item => item.masterpiece).length
+  });  const resetCategory = () => {
+    setSelectedCategory(null);
+    setActiveSubcategory(null);
+    setTitle(lang === 'en' ? 'Daily Recommendations' : 'Recomendaciones diarias');
+    // Mantener el estado de los filtros incluso al resetear
+  };  const handleCategoryClick = (key, label) => {
+    setSelectedCategory(key);
+    // Buscar la etiqueta traducida actual para la categoría
+    const category = categories.find(cat => cat.key === key);
+    setTitle(category ? category.label : label);
+    setActiveSubcategory(null); // Reset subcategory when changing main category
+    setIsSpanishCinemaActive(false); // Reset Spanish Cinema filter when changing category
+  };
+
   return (
     <>
-      <h1>{homeTitle}</h1>
-      <RecommendationsList recommendations={random} onItemClick={onItemClick} isHome={true} />
+      <div className="categories-list" style={{ textAlign: 'center', marginTop: '4rem', marginBottom: '1rem', width: '100%' }}>
+        {categories.map(({ key, label }) => (
+          <button
+            key={key}
+            className="category-btn"
+            style={{ display: 'inline-block' }}
+            onClick={() => handleCategoryClick(key, label)}
+          >
+            {label}
+          </button>
+        ))}
+      </div>      {selectedCategory && (
+        <>          <div className="subcategories-list" style={{ textAlign: 'center', marginBottom: '0.5rem', width: '100%' }}>
+            {categorySubcategories.map(({ sub }) => (
+              <button
+                key={sub}
+                className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
+                style={{ display: 'inline-block', margin: '0.5rem' }}
+                onClick={() => setActiveSubcategory(activeSubcategory === sub ? null : sub)}
+              >
+                {lang === 'es' ? subcategoryTranslations[sub] || sub : sub}
+              </button>
+            ))}
+          </div>          <div style={{ 
+              display: 'flex', 
+              justifyContent: 'center', 
+              gap: '1rem', 
+              marginBottom: '1rem',
+              width: '100%',
+              textAlign: 'center'
+            }}>
+            {/* Mostrar botón de Cine Español solo si NO estamos en cómics */}
+            {selectedCategory !== 'comics' && (
+              <button
+                className="subcategory-btn"              
+                style={{ 
+                  display: 'inline-block',
+                  backgroundColor: isSpanishCinemaActive ? '#4A90E2' : '#E8E8E8',
+                  color: isSpanishCinemaActive ? 'white' : 'black',
+                  padding: '0.5rem 1.5rem',
+                  minWidth: '150px',
+                  transition: 'all 0.3s ease'
+                }}
+                onClick={() => {
+                  setIsSpanishCinemaActive(!isSpanishCinemaActive);
+                  console.log('Toggling Spanish Cinema:', !isSpanishCinemaActive);
+                }}
+              >
+                {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
+              </button>
+            )}
+            <button
+              className="subcategory-btn"              
+              style={{ 
+                display: 'inline-block',
+                backgroundColor: isMasterpieceActive ? '#4A90E2' : '#E8E8E8',
+                color: isMasterpieceActive ? 'white' : 'black',
+                padding: '0.5rem 1.5rem',
+                minWidth: '150px',
+                transition: 'all 0.3s ease'
+              }}
+              onClick={() => {
+                setIsMasterpieceActive(!isMasterpieceActive);
+              }}
+            >
+              {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
+            </button>
+          </div>
+        </>
+      )}
+      <h1>{title}</h1>
+      <RecommendationsList
+        recommendations={filteredRecommendations}
+        onItemClick={onItemClick}
+        isHome={!selectedCategory && !activeSubcategory}
+      />
     </>
   );
 }
@@ -410,16 +633,31 @@ function MobileMenuBar({ onOpen }) {
 }
 
 function MobileMenu({ open, onClose, onNavigate, showBack, onBack, backLabel }) {
+  const { lang } = useLanguage();
   if (!open) return null;
+  
+  // Componente simplificado y reescrito para evitar duplicaciones
   return (
     <div className="mobile-menu-overlay" onClick={onClose}>
       <nav className="mobile-menu" onClick={e => e.stopPropagation()}>
         <button className="close-btn" onClick={onClose} aria-label="Cerrar menú">&times;</button>
+        
+        {/* Botón de volver - solo visible cuando showBack es true */}
         {showBack && (
           <button className="category-btn" onClick={onBack}>&larr; {backLabel}</button>
         )}
-        <button onClick={() => {onNavigate({view: 'home'}); onClose();}}>Inicio</button>
-        <button onClick={() => {onNavigate({view: 'categories'}); onClose();}}>Categorías</button>
+        
+        {/* Botón de inicio */}
+        <button onClick={() => {onNavigate({view: 'home'}); onClose();}}>
+          {lang === 'es' ? 'Inicio' : 'Home'}
+        </button>
+        
+        {/* Botón de nuevas recomendaciones */}
+        <button onClick={() => window.location.reload()}>
+          {lang === 'es' ? 'Nuevas recomendaciones' : 'New Recommendations'}
+        </button>
+        
+        {/* Selector de idioma */}
         <LanguageSelector />
       </nav>
     </div>
@@ -432,11 +670,6 @@ function AppContent() {
   const { lang } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleCategory = cat => {
-    setLastCategory(cat);
-    setView({view: 'subcategories', category: cat});
-  };
-
   const handleItemClick = id => {
     setView({view: 'itemDetail', itemId: id});
   };
@@ -445,20 +678,16 @@ function AppContent() {
     setView(newView);
   };
 
-  // Renderizar vista correspondiente
   let content;
   switch (view.view) {
     case 'home':
       content = <HomePage onItemClick={handleItemClick} />;
       break;
-    case 'categories':
-      content = <CategoriesPage onCategory={handleCategory} />;
-      break;
     case 'subcategories':
       content = (
         <SubcategoriesPage
           category={view.category}
-          onBack={() => setView({view: 'categories'})}
+          onBack={() => setView({view: 'home'})}
           onItemClick={handleItemClick}
           onNavigate={navigate}
         />
@@ -469,7 +698,7 @@ function AppContent() {
         <SubcategoryItemsPage
           category={view.category}
           subcategory={view.subcategory}
-          onBack={() => setView({view: 'subcategories', category: view.category})}
+          onBack={() => setView({view: 'home'})}
           onItemClick={handleItemClick}
         />
       );
@@ -478,14 +707,7 @@ function AppContent() {
       content = (
         <ItemDetailPage
           itemId={view.itemId}
-          onBack={() => {
-            // Volver a la subcategoría anterior si existe, sino a categorías
-            if (view.view === 'itemDetail' && lastCategory) {
-              setView({view: 'subcategories', category: lastCategory});
-            } else {
-              setView({view: 'categories'});
-            }
-          }}
+          onBack={() => setView({view: 'home'})}
         />
       );
       break;
@@ -493,19 +715,6 @@ function AppContent() {
       content = <div>Página no encontrada</div>;
   }
 
-  // --- AÑADIDO: Renderizar el menú superior SIEMPRE ---
-  let showBack = false;
-  let onBack = null;
-  let backLabel = '';
-  if (view.view === 'subcategories' || view.view === 'itemDetail' || view.view === 'subcategoryItems') {
-    showBack = true;
-    onBack = view.view === 'subcategories'
-      ? () => setView({view: 'categories'})
-      : () => setView({view: 'subcategories', category: lastCategory});
-    backLabel = lang === 'en' ? 'Back' : 'Volver';
-  }
-
-  // Detectar móvil (solo client-side)
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 600);
@@ -519,10 +728,10 @@ function AppContent() {
       {isMobile ? (
         <>
           <MobileMenuBar onOpen={() => setMobileMenuOpen(true)} />
-          <MobileMenu open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} onNavigate={setView} showBack={showBack} onBack={onBack} backLabel={backLabel} />
+          <MobileMenu open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} onNavigate={setView} />
         </>
       ) : (
-        <Menu onNavigate={setView} showBack={showBack} onBack={onBack} backLabel={backLabel} />
+        <Menu onNavigate={setView} />
       )}
       {content}
     </div>
