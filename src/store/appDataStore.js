@@ -59,11 +59,14 @@ const useAppDataStore = create(
           key: category.key,
           label: category[lang] || category.es
         } : null;
+      },      // Configuración de títulos por defecto (mismo que nuevas recomendaciones)
+      getDefaultTitle: (lang = 'es') => {
+        return lang === 'en' ? 'New Recommendations' : 'Nuevas Recomendaciones';
       },
       
-      // Configuración de títulos por defecto
-      getDefaultTitle: (lang = 'es') => {
-        return lang === 'en' ? 'Cultural Masterpieces' : 'Obras Maestras Culturales';
+      // Título para nuevas recomendaciones (usa el mismo que el defecto)
+      getNewRecommendationsTitle: (lang = 'es') => {
+        return get().getDefaultTitle(lang);
       }
     }),
     { name: 'app-data-store' }

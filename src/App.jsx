@@ -32,6 +32,11 @@ function LanguageSelector() {
 
 function Menu({ showBack, onBack, backLabel }) {
   const { t, lang } = useLanguage();
+  const { resetAllFilters } = useFiltersStore();
+  
+  const handleNewRecommendations = () => {
+    resetAllFilters(lang);
+  };
   
   return (
     <nav className="main-menu" style={{ 
@@ -48,9 +53,9 @@ function Menu({ showBack, onBack, backLabel }) {
         {showBack && (
           <button className="category-btn" onClick={onBack}>&larr; {backLabel}</button>
         )}
-        {/* Botón de inicio a la izquierda que recarga la página */}
+        {/* Botón de inicio a la izquierda que resetea todos los filtros */}
         <button 
-          onClick={() => window.location.reload()} 
+          onClick={handleNewRecommendations} 
           style={{ fontWeight: 'bold' }}
         >
           {t.home_title}
@@ -360,8 +365,14 @@ function MobileMenuBar() {
 }
 
 function MobileMenu({ showBack, onBack, backLabel }) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const { mobileMenuOpen, closeMobileMenu, navigate } = useUIStore();
+  const { resetAllFilters } = useFiltersStore();
+  
+  const handleNewRecommendations = () => {
+    resetAllFilters(lang);
+    closeMobileMenu();
+  };
   
   if (!mobileMenuOpen) return null;
   
@@ -376,12 +387,11 @@ function MobileMenu({ showBack, onBack, backLabel }) {
           <button className="category-btn" onClick={onBack}>&larr; {backLabel}</button>
         )}
         
-        {/* Botón de inicio */}
-        <button onClick={() => {navigate('home'); closeMobileMenu();}}>
+        {/* Botón de inicio */}        <button onClick={() => {navigate('home'); closeMobileMenu();}}>
           {t.categories ? t.categoriesTitle : (t.home_title || 'Inicio')}
         </button>
           {/* Botón de nuevas recomendaciones */}
-        <button onClick={() => window.location.reload()}>
+        <button onClick={handleNewRecommendations}>
           {t.home_title}
         </button>
         

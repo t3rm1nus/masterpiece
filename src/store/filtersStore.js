@@ -237,6 +237,25 @@ const useFiltersStore = create(
         } else {
           set({ title: getDefaultTitle(lang) }, false, 'updateTitleForLanguage');
         }
+      },      // Reset completo del estado (para "Nuevas Recomendaciones")
+      resetAllFilters: (lang = 'es') => {
+        const { getNewRecommendationsTitle } = useAppDataStore.getState();
+        const newRecommendationsTitle = getNewRecommendationsTitle(lang);
+        
+        set(
+          {
+            selectedCategory: null,
+            activeSubcategory: null,
+            isSpanishCinemaActive: false,
+            isMasterpieceActive: false,
+            title: newRecommendationsTitle
+          },
+          false,
+          'resetAllFilters'
+        );
+        
+        // Aplicar filtros después del reset completo
+        get().applyFilters();
       },
     }),
     { name: 'filters-store' } // Nombre para DevTools
