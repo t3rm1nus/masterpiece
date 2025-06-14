@@ -1354,11 +1354,10 @@ html[data-theme='dark'] .coffee-menu-button:hover {
 
 /* Ajustes específicos para móviles */
 @media (max-width: 768px) {
-  /* 1. Items de la home ocupando todo el width */
+  /* 1. Items de la home con pequeño margen de 5px */
   .recommendations-list {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    width: calc(100% - 10px) !important;
+    margin: 5px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     gap: 1rem;
@@ -1370,9 +1369,21 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     max-width: unset !important;
   }
 
-  /* 2. Quitar espacio entre menú y categorías */
+  /* 2. Colores de texto en items de la home para móviles */
+  .recommendation-card h3,
+  .recommendation-card .category,
+  .recommendation-card .subcategory {
+    color: #000000 !important; /* Título, categoría y subcategoría en negro */
+  }
+
+  .recommendation-card p,
+  .recommendation-card .description {
+    color: #666666 !important; /* Descripción en gris */
+  }
+
+  /* 3. Eliminar espacio entre menú y categorías */
   h1 {
-    margin: 0 auto 0.5rem auto !important;
+    margin: 0 auto 0 auto !important; /* Eliminado el margin-bottom */
     font-size: 1.8rem;
   }
 
@@ -1381,7 +1392,27 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     padding-top: 0 !important;
   }
 
-  /* 3. Página de detalle - item al 100% */
+  /* 4. Botón volver fuera del menú desplegable en página de detalle */
+  .back-button {
+    position: fixed !important;
+    top: 60px !important; /* Debajo del header */
+    left: 10px !important;
+    z-index: 1000 !important;
+    background: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
+    padding: 8px 12px !important;
+    border-radius: 20px !important;
+    font-size: 0.9rem !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .back-button:hover {
+    background: var(--hover-color) !important;
+    color: var(--text-color) !important;
+  }
+
+  /* 5. Página de detalle - item al 100% */
   .item-detail-container {
     width: 100% !important;
     max-width: 100% !important;
