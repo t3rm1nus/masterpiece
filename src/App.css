@@ -1036,7 +1036,7 @@ html[data-theme='dark'] .item-detail.podcast {
 .coffee-cta {
   font-size: 1.1rem;
   font-weight: bold;
-  margin-bottom: 0.25rem; /* Reducido de 0.5rem */
+  margin-bottom: 0 !important; /* Eliminado completamente el espacio */
   opacity: 0.95;
 }
 
@@ -1044,7 +1044,7 @@ html[data-theme='dark'] .item-detail.podcast {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1rem; /* Reducido de 2rem */
-  margin-top: 0.25rem; /* Añadido para controlar espacio superior */
+  margin-top: 0.5rem !important; /* Bajado el elemento añadiendo margen superior */
   color: #ffc439;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
@@ -1094,14 +1094,14 @@ html[data-theme='dark'] .donate-button:hover {
     font-size: 1rem;
   }
   
-  /* Espaciado reducido en textos de la página de donación */
+  /* Espaciado eliminado completamente en textos de la página de donación */
   .coffee-cta {
-    margin-bottom: 0.15rem !important;
+    margin-bottom: 0 !important; /* Completamente eliminado */
     font-size: 1rem;
   }
 
   .coffee-legend {
-    margin-top: 0.15rem !important;
+    margin-top: 0 !important; /* Completamente eliminado */
     margin-bottom: 0.75rem !important;
     font-size: 1.1rem;
   }
@@ -1152,7 +1152,7 @@ html[data-theme='dark'] .coffee-menu-button:hover {
 
 /* Contenedor del botón de PayPal */
 .paypal-button-container {
-  margin: 2rem 0;
+  margin: 0 !important; /* Eliminado el margin: 2rem 0 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1648,5 +1648,35 @@ button.rect.medium.gold.css-1565878 {
   justify-content: flex-start !important;
   align-items: center !important;
   margin-top: 19px !important;
+}
+
+/* Ajustar espaciado entre los textos específicos de donación con nueva separación */
+.coffee-cta + .coffee-legend,
+.coffee-legend {
+  margin-top: 0.5rem !important; /* Permitir el nuevo margen superior */
+  padding-top: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.coffee-cta {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 1.2 !important;
+}
+
+/* Ajustar espaciado para móviles con nueva separación */
+@media (max-width: 768px) {
+  .coffee-cta + .coffee-legend,
+  .coffee-legend {
+    margin-top: 0.3rem !important; /* Menor separación en móviles */
+    padding-top: 0 !important;
+    line-height: 1.1 !important;
+  }
+
+  .coffee-cta {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 1.1 !important;
+  }
 }
 
