@@ -1,8 +1,10 @@
 import React from 'react';
-import { useMediaQuery, useTheme, Box } from '@mui/material';
+import { useMediaQuery, useTheme, Box, Typography } from '@mui/material';
 import MaterialRecommendationCard from './MaterialRecommendationCard';
 import MaterialCategoryButtons from './MaterialCategoryButtons';
 import MaterialSubcategoryChips from './MaterialSubcategoryChips';
+import { getRandomNotFoundImage } from '../utils/appUtils';
+import { useLanguage } from '../LanguageContext';
 
 const MaterialContentWrapper = ({ 
   children, 
@@ -18,15 +20,21 @@ const MaterialContentWrapper = ({
 }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const { t } = useLanguage();
   
   // Si no es móvil, renderizar el contenido original
   if (!isMobile) {
     return children;
   }
-  
   // En móviles, usar componentes Material UI
   return (
-    <Box sx={{ width: '100%', padding: '8px' }}>
+    <Box sx={{ 
+      width: '100%',
+      maxWidth: '100vw', // Asegurar que ocupe todo el ancho de la ventana
+      padding: '0 4px', // Padding horizontal mínimo para evitar que toque los bordes
+      paddingTop: '64px', // Espacio para el AppBar fijo (48px) + padding extra (16px)
+      boxSizing: 'border-box' // Incluir padding en el cálculo del ancho
+    }}>
       {/* Botones de categorías Material UI */}
       {categories && (
         <MaterialCategoryButtons
@@ -34,27 +42,27 @@ const MaterialContentWrapper = ({
           selectedCategory={selectedCategory}
           onCategoryClick={onCategoryClick}
         />
-      )}
-      
-      {/* Chips de subcategorías Material UI */}
-      {subcategories && subcategories.length > 0 && (
+      )}      {/* Chips de subcategorías Material UI */}
+      {((subcategories && subcategories.length > 0) || selectedCategory) && (
         <MaterialSubcategoryChips
-          subcategories={subcategories}
+          subcategories={subcategories || []}
           activeSubcategory={activeSubcategory}
           onSubcategoryClick={onSubcategoryClick}
           categoryColor={categoryColor}
+          selectedCategory={selectedCategory}
         />
-      )}
-      
-      {/* Lista de recomendaciones Material UI */}
+      )}{/* Lista de recomendaciones Material UI */}
       {recommendations && recommendations.length > 0 && (
         <Box
           sx={{
             display: 'flex',
             flexDirection: 'column',
+            alignItems: 'center', // Centrar las tarjetas horizontalmente
             gap: isHome ? '8px' : '16px',
-            padding: '8px',
-            width: '100%'
+            padding: '4px', // Padding reducido para mejor uso del espacio
+            width: '100%',
+            maxWidth: '100%',
+            boxSizing: 'border-box'
           }}
         >
           {recommendations.map((recommendation, index) => (
@@ -64,11 +72,40 @@ const MaterialContentWrapper = ({
               isHome={isHome}
             />
           ))}
+        </Box>      )}
+        {/* Si no hay recomendaciones en móviles, mostrar mensaje e imagen apropiada en lugar del contenido desktop */}
+      {(!recommendations || recommendations.length === 0) && (
+        <Box sx={{ 
+          textAlign: 'center', 
+          padding: '2rem',
+          color: 'text.secondary',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '1rem'
+        }}>
+          {/* Imagen "not found" aleatoria */}          <Box
+            component="img"
+            src={getRandomNotFoundImage()}
+            alt={t.no_results || 'No se encontraron resultados'}
+            sx={{
+              maxWidth: '200px',
+              width: '100%',
+              height: 'auto',
+              borderRadius: '12px',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              marginBottom: '1rem'
+            }}
+          />
+          
+          <Typography variant="h6" sx={{ marginBottom: '0.5rem' }}>
+            {t.no_results || 'No se encontraron resultados'}
+          </Typography>
+          <Typography variant="body2">
+            {t.try_different_filters || 'Intenta cambiar los filtros seleccionados'}
+          </Typography>
         </Box>
       )}
-      
-      {/* Si no hay recomendaciones, mostrar el contenido original */}
-      {(!recommendations || recommendations.length === 0) && children}
     </Box>
   );
 };

@@ -88,6 +88,12 @@ export const ensureUniqueId = (item, fallbackIndex = 0) => {
  * @returns {Array} - Lista con IDs únicos garantizados
  */
 export const processItemsWithUniqueIds = (items) => {
+  // Validar que items sea un array
+  if (!Array.isArray(items)) {
+    console.error('processItemsWithUniqueIds: items no es un array:', items);
+    return [];
+  }
+  
   return items.map((item, index) => ensureUniqueId(item, index));
 };
 

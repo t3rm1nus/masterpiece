@@ -1,26 +1,109 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-// Store para gestionar temas y preferencias visuales
+// Store consolidado para tema y estilos
 const useThemeStore = create(
   devtools(
-    (set, get) => ({
-      // Estado inicial
+    (set, get) => ({      // ==========================================
+      // ESTADO DE TEMA
+      // ==========================================
       theme: 'light', // 'light' o 'dark'
+      isDarkTheme: false, // Computed property basada en theme
       fontSize: 'normal', // 'small', 'normal', 'large'
       animations: true, // Habilitar/deshabilitar animaciones
       
-      // Acciones
-      setTheme: (theme) => {
-        set({ theme }, false, 'setTheme');
+      // ==========================================
+      // CONFIGURACIÓN DE ESTILOS
+      // ==========================================
+      
+      // Configuración de estilos de botones especiales
+      specialButtonLabels: {
+        spanishCinema: {
+          es: 'Cine Español',
+          en: 'Spanish Cinema'
+        },
+        masterpiece: {
+          es: 'Obras Maestras',
+          en: 'Masterpieces'
+        }
+      },      // Configuración de badges y elementos SVG
+      masterpieceBadge: {
+        svg: {
+          width: "28",
+          height: "28",
+          viewBox: "0 0 28 28",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg"
+        },
+        circle: {
+          cx: "14",
+          cy: "14", 
+          r: "14",
+          fill: "#ffd700"
+        },
+        star: {
+          d: "M14 4l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z",
+          fill: "#fff"
+        },
+        text: {
+          x: "14",
+          y: "18",
+          textAnchor: "middle",
+          fontSize: "12",
+          fontWeight: "bold",
+          fill: "#fff",
+          content: "★"
+        }
+      },
+
+      // Configuración de layouts
+      layouts: {
+        mobileHome: {
+          imageSize: { width: 80, height: 110 },
+          desktopImageSize: { width: 120, height: 170 }
+        }
+      },
+
+      // Configuración de contenedores y espaciados
+      containerStyles: {
+        main: {
+          width: '100%',
+          maxWidth: '100%',
+          boxSizing: 'border-box'
+        },
+        categoriesList: {
+          textAlign: 'center',
+          marginTop: '4rem',
+          marginBottom: '1rem',
+          width: '100%'
+        },        subcategoriesList: {
+          textAlign: 'center',
+          marginBottom: '0.25rem', // Reducido de 0.5rem a 0.25rem para menor distancia con el h1
+          width: '100%'
+        },        specialButtonsContainer: {
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '1rem',
+          marginBottom: '0.5rem', // Reducido de 1rem a 0.5rem para menor distancia con el h1
+          width: '100%',
+          textAlign: 'center'
+        }
+      },
+
+      // ==========================================
+      // ACCIONES DE TEMA
+      // ==========================================
+        setTheme: (theme) => {
+        const isDarkTheme = theme === 'dark';
+        set({ theme, isDarkTheme }, false, 'setTheme');
         // Aplicar clase al elemento HTML para cambios globales de CSS
         document.documentElement.setAttribute('data-theme', theme);
       },
-      
-      toggleTheme: () => {
+        toggleTheme: () => {
         const currentTheme = get().theme;
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        set({ theme: newTheme }, false, 'toggleTheme');
+        const isDarkTheme = newTheme === 'dark';
+        set({ theme: newTheme, isDarkTheme }, false, 'toggleTheme');
         document.documentElement.setAttribute('data-theme', newTheme);
       },
       
@@ -35,25 +118,39 @@ const useThemeStore = create(
         set({ animations: !currentAnimations }, false, 'toggleAnimations');
         document.documentElement.setAttribute('data-animations', !currentAnimations);
       },
+
+      // ==========================================
+      // GETTERS DE ESTILOS
+      // ==========================================
       
-      // Método de inicialización para configurar el tema basado en preferencias del sistema
+      // Obtener etiquetas de botones especiales
+      getSpecialButtonLabel: (type, lang) => {
+        const { specialButtonLabels } = get();
+        return specialButtonLabels[type] ? specialButtonLabels[type][lang] : '';
+      },      // Obtener configuración de badge
+      getMasterpieceBadgeConfig: () => {
+        return get().masterpieceBadge;
+      },
+        // Método de inicialización para configurar el tema basado en preferencias del sistema
       initializeTheme: () => {
         // Detectar preferencia de color del sistema
         const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const initialTheme = prefersDarkMode ? 'dark' : 'light';
+        const isDarkTheme = initialTheme === 'dark';
         
-        set({ theme: initialTheme }, false, 'initializeTheme');
+        set({ theme: initialTheme, isDarkTheme }, false, 'initializeTheme');
         document.documentElement.setAttribute('data-theme', initialTheme);
         
         // Escuchar cambios en la preferencia del sistema
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
           const newTheme = e.matches ? 'dark' : 'light';
-          set({ theme: newTheme }, false, 'systemThemeChange');
+          const isDarkTheme = newTheme === 'dark';
+          set({ theme: newTheme, isDarkTheme }, false, 'systemThemeChange');
           document.documentElement.setAttribute('data-theme', newTheme);
         });
       }
     }),
-    { name: 'theme-store' } // Nombre para DevTools
+    { name: 'theme-store' }
   )
 );
 

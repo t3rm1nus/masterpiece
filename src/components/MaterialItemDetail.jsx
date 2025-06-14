@@ -20,13 +20,11 @@ import {
   Category as CategoryIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
-import useUIStore from '../store/uiStore';
-import useRenderStore from '../store/renderStore';
+import useViewStore from '../store/viewStore';
 
 const MaterialItemDetail = ({ item }) => {
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
-  const { goBackFromDetail } = useUIStore();
-  const { processTitle, processDescription } = useRenderStore();
+  const { goBackFromDetail, processTitle, processDescription } = useViewStore();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   

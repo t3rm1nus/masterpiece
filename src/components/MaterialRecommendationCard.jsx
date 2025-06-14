@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import {
   Card,
   CardContent,
@@ -21,11 +21,11 @@ import {
   AutoStories as ComicIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
-import useUIStore from '../store/uiStore';
+import useViewStore from '../store/viewStore';
 
 const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
   const { lang, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
-  const { navigateToDetail } = useUIStore();
+  const { navigateToDetail } = useViewStore();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   
@@ -63,8 +63,7 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
         return <StarIcon fontSize="small" />;
     }
   };
-  
-  const getCategoryColor = (category) => {
+    const getCategoryColor = (category) => {
     switch (category) {
       case 'movies':
       case 'peliculas':
@@ -74,7 +73,8 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
         return theme.palette.mode === 'dark' ? '#7b1fa2' : '#9c27b0';
       case 'books':
       case 'libros':
-        return theme.palette.mode === 'dark' ? '#388e3c' : '#4caf50';      case 'music':
+        return theme.palette.mode === 'dark' ? '#388e3c' : '#4caf50';
+      case 'music':
       case 'musica':
         return theme.palette.mode === 'dark' ? '#0097a7' : '#00bcd4';
       case 'podcast':
@@ -89,19 +89,18 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
         return theme.palette.primary.main;
     }
   };
-  
-  const handleClick = () => {
+    const handleClick = () => {
     navigateToDetail(recommendation);
   };
-    const cardContent = isHome ? (
+  return isHome ? (
     // Layout para la home (móvil)
     <Card
       sx={{
         width: '100%',
         maxWidth: 400,
-        margin: '0 auto 16px auto',
-        cursor: 'pointer',
+        margin: '0 auto 16px auto',        cursor: 'pointer',
         transition: 'all 0.3s ease',
+        boxShadow: recommendation.masterpiece ? theme.shadows[4] : theme.shadows[2], // Sombra base
         '&:hover': {
           transform: 'translateY(-4px)',
           boxShadow: theme.shadows[8],
@@ -109,16 +108,16 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
         border: recommendation.masterpiece ? '2px solid #ffd700' : 'none',
         backgroundColor: recommendation.masterpiece 
           ? (theme.palette.mode === 'dark' ? '#2a2600' : '#fffbe6')
-          : theme.palette.background.paper,
+          : (theme.palette.mode === 'dark' ? '#2d2d2d' : '#ffffff'), // Color de fondo más definido
         background: recommendation.masterpiece 
           ? (theme.palette.mode === 'dark' 
             ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
             : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
-          : theme.palette.background.paper
+          : (theme.palette.mode === 'dark' ? '#2d2d2d' : '#ffffff') // Color sólido para no-masterpieces
       }}
       onClick={handleClick}
     >
-      <CardContent sx={{ padding: '12px' }}>
+      <CardContent sx={{ padding: '12px', position: 'relative' }}>
         {/* Título centrado arriba */}
         <Typography 
           variant="h6" 
@@ -199,49 +198,50 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
             </Typography>
           </Box>
         </Box>
-        
-        {/* Badge de masterpiece */}
+          {/* Badge de masterpiece */}
         {recommendation.masterpiece && (
           <Badge
-            badgeContent={<StarIcon sx={{ fontSize: '14px', color: 'white' }} />}
+            badgeContent={<StarIcon sx={{ fontSize: '16px', color: 'white' }} />}
             sx={{
               position: 'absolute',
-              top: 8,
-              right: 8,
+              top: 4,
+              right: 4,
+              zIndex: 10, // Asegurar que esté siempre visible
               '& .MuiBadge-badge': {
                 backgroundColor: '#ffd700',
                 color: 'white',
-                width: 24,
-                height: 24,
+                width: 28,
+                height: 28,
                 borderRadius: '50%',
                 border: '2px solid white',
-                boxShadow: theme.shadows[2]
+                boxShadow: theme.shadows[4], // Sombra más prominente
+                display: 'flex', // Asegurar que siempre se muestre
+                visibility: 'visible' // Forzar visibilidad
               }
             }}
           />
         )}
       </CardContent>
-    </Card>
-  ) : (
-    // Layout para categorías (móvil)
+    </Card>  ) : (    // Layout para categorías (móvil)
     <Card
       sx={{
         width: '100%',
         maxWidth: 300,
-        cursor: 'pointer',
-        transition: 'all 0.3s ease',
-        '&:hover': {
+        margin: '0 auto', // Centrar la tarjeta        cursor: 'pointer',
+        transition: 'all 0.3s ease',boxShadow: recommendation.masterpiece ? theme.shadows[4] : theme.shadows[2], // Sombra base
+'&:hover': {
           transform: 'translateY(-4px)',
           boxShadow: theme.shadows[8],
-        },        border: recommendation.masterpiece ? '2px solid #ffd700' : 'none',
+        },
+        border: recommendation.masterpiece ? '2px solid #ffd700' : 'none',
         backgroundColor: recommendation.masterpiece 
           ? (theme.palette.mode === 'dark' ? '#2a2600' : '#fffbe6')
-          : theme.palette.background.paper,
+          : (theme.palette.mode === 'dark' ? '#2d2d2d' : '#ffffff'), // Color de fondo más definido
         background: recommendation.masterpiece 
           ? (theme.palette.mode === 'dark' 
             ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
             : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
-          : theme.palette.background.paper
+          : (theme.palette.mode === 'dark' ? '#2d2d2d' : '#ffffff') // Color sólido para no-masterpieces
       }}
       onClick={handleClick}
     >
@@ -254,7 +254,7 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
         image={recommendation.image}
         alt={title}
       />
-      <CardContent>
+      <CardContent sx={{ position: 'relative' }}>
         <Typography variant="h6" component="h3" sx={{ marginBottom: '8px', fontSize: '1rem' }}>
           {title}
         </Typography>
@@ -299,32 +299,31 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
         >
           {description}
         </Typography>
-        
-        {/* Badge de masterpiece */}
+          {/* Badge de masterpiece */}
         {recommendation.masterpiece && (
           <Badge
-            badgeContent={<StarIcon sx={{ fontSize: '14px', color: 'white' }} />}
+            badgeContent={<StarIcon sx={{ fontSize: '16px', color: 'white' }} />}
             sx={{
               position: 'absolute',
-              top: 8,
-              right: 8,
+              top: 4,
+              right: 4,
+              zIndex: 10, // Asegurar que esté siempre visible
               '& .MuiBadge-badge': {
                 backgroundColor: '#ffd700',
                 color: 'white',
-                width: 24,
-                height: 24,
+                width: 28,
+                height: 28,
                 borderRadius: '50%',
                 border: '2px solid white',
-                boxShadow: theme.shadows[2]
+                boxShadow: theme.shadows[4], // Sombra más prominente
+                display: 'flex', // Asegurar que siempre se muestre
+                visibility: 'visible' // Forzar visibilidad
               }
             }}
-          />
-        )}
+          />        )}
       </CardContent>
     </Card>
   );
-  
-  return cardContent;
 };
 
-export default MaterialRecommendationCard;
+export default memo(MaterialRecommendationCard);

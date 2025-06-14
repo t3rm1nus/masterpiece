@@ -1,13 +1,11 @@
 import { useEffect } from 'react';
 import { useLanguage } from '../LanguageContext';
-import useFiltersStore from '../store/filtersStore';
-import useAppDataStore from '../store/appDataStore';
+import useDataStore from '../store/dataStore';
 
 // Hook personalizado para sincronizar el título con el idioma
 export const useTitleSync = () => {
   const { lang } = useLanguage();
-  const { updateTitleForLanguage, selectedCategory, title } = useFiltersStore();
-  const { getDefaultTitle } = useAppDataStore();
+  const { updateTitleForLanguage, selectedCategory, title, getDefaultTitle, setTitle } = useDataStore();
 
   useEffect(() => {
     // Actualizar título cuando cambia el idioma
@@ -18,7 +16,7 @@ export const useTitleSync = () => {
     // Inicializar título si no existe
     if (!title && !selectedCategory) {
       const defaultTitle = getDefaultTitle(lang);
-      useFiltersStore.getState().setTitle(defaultTitle);
+      setTitle(defaultTitle);
     }
-  }, [title, selectedCategory, lang, getDefaultTitle]);
+  }, [title, selectedCategory, lang, getDefaultTitle, setTitle]);
 };

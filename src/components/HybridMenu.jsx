@@ -1,8 +1,8 @@
 import React from 'react';
 import { useMediaQuery, useTheme } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
-import useFiltersStore from '../store/filtersStore';
-import useUIStore from '../store/uiStore';
+import useDataStore from '../store/dataStore';
+import useViewStore from '../store/viewStore';
 import ThemeToggle from './ThemeToggle';
 import MaterialMobileMenu from './MaterialMobileMenu';
 
@@ -26,8 +26,8 @@ function LanguageSelector() {
 // Menú clásico para desktop
 function DesktopMenu() {
   const { t, lang } = useLanguage();
-  const { resetAllFilters } = useFiltersStore();
-  const { currentView, goBackFromDetail, goBackFromCoffee, navigate, navigateToCoffee } = useUIStore();
+  const { resetAllFilters } = useDataStore();
+  const { currentView, goBackFromDetail, goBackFromCoffee, navigate, navigateToCoffee } = useViewStore();
   
   const handleNewRecommendations = () => {
     resetAllFilters(lang);
@@ -36,18 +36,16 @@ function DesktopMenu() {
   
   const isDetailView = currentView === 'detail';
   const isCoffeeView = currentView === 'coffee';
-  
-  return (
-    <nav className="main-menu" style={{ 
-      display: 'flex', 
-      alignItems: 'center', 
-      justifyContent: 'space-between',
-      padding: '1rem',
-      width: '100%',
-      maxWidth: '1200px',
-      margin: '0 auto',
-      position: 'relative'
-    }}>
+    return (
+    <nav className="main-menu">
+      <div style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'space-between',
+        width: '100%',
+        maxWidth: '1200px',
+        margin: '0 auto'
+      }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
         {/* Botón de inicio a la izquierda que resetea todos los filtros */}
         <button 
@@ -114,8 +112,8 @@ function DesktopMenu() {
       </div>
       {/* Selector de idioma - siempre a la derecha */}
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <ThemeToggle />
-        <LanguageSelector />
+        <ThemeToggle />        <LanguageSelector />
+      </div>
       </div>
     </nav>
   );

@@ -37,12 +37,15 @@ html[data-font-size='large'] {
 }
 
 /* Aplicar variables al cuerpo del documento */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: 0;
-  padding-top: 0;
 }
 
 /* Desactivar animaciones si el usuario lo prefiere */
@@ -54,7 +57,7 @@ html[data-animations='false'] * {
 #root {
   max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0; /* Eliminamos padding para que el menú esté pegado al top */
   text-align: center;
 }
 
@@ -108,13 +111,12 @@ html[data-animations='false'] * {
 .container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
-  padding-top: 90px; /* Usamos píxeles específicos: 70px del menú + 20px extra */
+  padding: 0 2rem; /* Mantenemos padding horizontal para desktop */
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Eliminar centrado vertical */
   justify-content: flex-start; /* Eliminar centrado vertical */
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 @media (max-width: 768px) {
@@ -146,6 +148,8 @@ html[data-animations='false'] * {
   align-items: center;
   transition: box-shadow 0.2s, transform 0.2s;
   border: 1px solid var(--border-color);
+  position: relative;
+  overflow: visible;
 }
 
 .recommendation-card:hover {
@@ -198,14 +202,16 @@ button:hover {
   width: 100vw;
   height: 70px; /* Añadimos altura específica */
   z-index: 100;
-  background: #fff;
+  background: var(--background-color); /* Usar variable de tema en lugar de #fff fijo */
+  color: var(--text-color); /* Asegurar color de texto correcto */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 0;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px var(--shadow-color); /* Usar variable de sombra */
+  border-bottom: 1px solid var(--border-color); /* Añadir borde inferior para separación */
 }
 
 .main-menu button,
@@ -238,8 +244,13 @@ button:hover {
 
 h1 {
   text-align: center;
-  margin: 1rem auto 2rem auto; /* Añadimos margin-top de 1rem y aumentamos margin-bottom a 2rem */
+  margin: 90px auto 2rem auto; /* Añadimos margin-top de 90px para desktop (70px menú + 20px espacio) */
   display: block;
+}
+
+/* Clase específica para h1 que viene después de subcategorías */
+h1.after-subcategories {
+  margin-top: 1rem; /* Margen reducido para h1 después de subcategorías */
 }
 
 .categories-list {
@@ -363,8 +374,8 @@ h1 {
 
 .recommendation-card .masterpiece-badge {
   position: absolute;
-  top: -8px;
-  right: -8px;
+  top: -10px;
+  right: -10px;
   width: 28px;
   height: 28px;
   z-index: 10;
@@ -377,7 +388,8 @@ h1 {
   font-size: 0.9rem;
   font-weight: bold;
   border: 2px solid #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  overflow: visible;
 }
 
 .item-detail.masterpiece img[alt="Masterpiece icon"] {
@@ -394,25 +406,33 @@ h1 {
   .container {
     max-width: 100vw;
     padding: 0 1rem;
-    padding-top: 4.5rem;
   }
+  
+  h1 {
+    margin-top: 4.5rem; /* Espacio para el menú móvil Material UI */
+  }
+  
   .recommendations-list {
     gap: 1rem;
     margin-top: 1.5rem; /* Reducimos para ser consistente */
-  }
-  .recommendation-card {
+  }  .recommendation-card {
     width: 45vw;
     min-width: 160px;
     max-width: 240px;
     padding: 0.7rem;
+    position: relative;
+    overflow: visible;
   }
 }
 
 @media (max-width: 600px) {
   #root, .container {
     padding: 0.2rem !important;
-    padding-top: 24px !important; /* Reducido a la mitad: de 48px a 24px */
     max-width: 100vw;
+  }
+  
+  h1 {
+    margin-top: 24px !important; /* Espacio reducido para móviles */
   }
   
   /* Ocultar menú clásico en móviles ya que usamos Material UI */

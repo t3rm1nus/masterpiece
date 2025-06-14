@@ -52,11 +52,11 @@ const MaterialCoffeePage = () => {
     }
   ];
 
-  return (
-    <Container 
+  return (    <Container 
       maxWidth="sm" 
       sx={{ 
         padding: '16px',
+        paddingTop: '64px', // Espacio para el AppBar fijo (48px) + padding extra (16px)
         paddingBottom: '32px'
       }}
     >

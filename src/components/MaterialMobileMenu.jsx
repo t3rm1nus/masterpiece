@@ -26,15 +26,15 @@ import {
   DarkMode as DarkModeIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
-import useFiltersStore from '../store/filtersStore';
-import useUIStore from '../store/uiStore';
+import useDataStore from '../store/dataStore';
+import useViewStore from '../store/viewStore';
 import useThemeStore from '../store/themeStore';
 import ThemeToggle from './ThemeToggle';
 
 const MaterialMobileMenu = () => {
   const { t, lang, changeLanguage } = useLanguage();
-  const { resetAllFilters } = useFiltersStore();
-  const { currentView, goBackFromDetail, goBackFromCoffee, navigate, navigateToCoffee } = useUIStore();
+  const { resetAllFilters } = useDataStore();
+  const { currentView, goBackFromDetail, goBackFromCoffee, navigate, navigateToCoffee } = useViewStore();
   const { isDarkTheme, toggleTheme } = useThemeStore();
     const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();

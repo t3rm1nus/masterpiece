@@ -80,16 +80,17 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
         return theme.palette.primary.main;
     }
   };
-  
-  return (
+    return (
     <Box
       sx={{
         display: 'flex',
         flexWrap: 'wrap',
-        gap: '8px',
+        gap: '6px', // Reducido gap para que quepan mejor en pantallas pequeñas
         justifyContent: 'center',
-        padding: '16px',
-        maxWidth: '100%'
+        padding: '12px 4px', // Padding horizontal reducido
+        maxWidth: '100%',
+        width: '100%',
+        boxSizing: 'border-box'
       }}
     >
       {categories.map(({ key, label }) => (
@@ -97,18 +98,19 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
           key={key}
           variant={selectedCategory === key ? 'contained' : 'outlined'}
           startIcon={getCategoryIcon(key)}
-          onClick={() => onCategoryClick(key, label)}
-          sx={{
+          onClick={() => onCategoryClick(key, label)}          sx={{
             minWidth: 'auto',
+            maxWidth: 'calc(50% - 3px)', // Máximo 50% del ancho menos la mitad del gap
             borderRadius: '20px',
             textTransform: 'none',
-            fontSize: '0.875rem',
+            fontSize: '0.8rem', // Ligeramente más pequeño para móviles
             fontWeight: selectedCategory === key ? 'bold' : 'normal',
             backgroundColor: selectedCategory === key ? getCategoryColor(key) : 'transparent',
             borderColor: getCategoryColor(key),
             color: selectedCategory === key ? 'white' : getCategoryColor(key),
-            padding: '6px 16px',
+            padding: '6px 12px', // Padding horizontal reducido
             transition: 'all 0.3s ease',
+            flexShrink: 1, // Permitir que el botón se encoja si es necesario
             '&:hover': {
               backgroundColor: selectedCategory === key ? getCategoryColor(key) : `${getCategoryColor(key)}20`,
               borderColor: getCategoryColor(key),
@@ -116,8 +118,8 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
               boxShadow: theme.shadows[4]
             },
             '& .MuiButton-startIcon': {
-              marginRight: '6px',
-              fontSize: '18px'
+              marginRight: '4px', // Reducido para ahorrar espacio
+              fontSize: '16px'
             }
           }}
         >
