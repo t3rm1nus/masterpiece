@@ -193,40 +193,69 @@ const MaterialCoffeePage = () => {
           >
             {t.coffee_legend}
           </Typography>
-          
-          {/* Contenedor del botón PayPal con estilos Material UI */}
+            {/* Contenedor del botón PayPal con estilos Material UI mejorados para móviles */}
           <Paper 
             elevation={2}
             sx={{ 
-              padding: '16px',
+              padding: '20px',
               backgroundColor: theme.palette.background.paper,
               borderRadius: '12px',
               border: '1px solid',
-              borderColor: theme.palette.divider
+              borderColor: theme.palette.divider,
+              width: '100%',
+              maxWidth: '100%'
             }}
           >
             <Typography 
               variant="body2" 
               sx={{ 
-                marginBottom: '12px',
+                marginBottom: '16px',
                 color: theme.palette.text.secondary,
-                fontSize: '0.85rem'
+                fontSize: '0.9rem',
+                textAlign: 'center'
               }}
             >
               Donación segura a través de PayPal
             </Typography>
             
-            {/* Contenedor del botón de PayPal */}
+            {/* Contenedor del botón de PayPal optimizado para móviles */}
             <Box 
               id="paypal-button-wrapper"
               sx={{
+                width: '100%',
+                minHeight: '100px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
                 '& #paypal-container-MRSQEQV646EPA': {
                   borderRadius: '8px',
-                  overflow: 'hidden'
+                  overflow: 'hidden',
+                  width: '100% !important',
+                  maxWidth: '100% !important',
+                  '& > div': {
+                    width: '100% !important'
+                  },
+                  '& button': {
+                    width: '100% !important',
+                    minWidth: '200px !important',
+                    height: 'auto !important',
+                    minHeight: '48px !important',
+                    fontSize: '16px !important',
+                    lineHeight: '1.2 !important',
+                    whiteSpace: 'nowrap !important'
+                  },
+                  '& iframe': {
+                    width: '100% !important',
+                    minHeight: '48px !important'
+                  }
                 }
               }}
             >
-              <div id="paypal-container-MRSQEQV646EPA"></div>
+              <div 
+                id="paypal-container-MRSQEQV646EPA"
+                style={{ width: '100%', maxWidth: '300px' }}
+              ></div>
             </Box>
           </Paper>
         </CardContent>
