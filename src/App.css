@@ -563,7 +563,7 @@ h1 {
 /* Media query específico para móviles muy pequeños */
 @media (max-width: 480px) {
   #root, .container {
-    padding-top: 44px !important; /* Reducir aún más en pantallas muy pequeñas */
+    padding-top: 48px !important; /* Mantener consistente con la altura del AppBar */
   }
 }
 
@@ -717,5 +717,61 @@ h1 {
   /* Mejorar la apariencia del botón PayPal en el diseño Material UI */
   .MuiPaper-root #paypal-container-MRSQEQV646EPA button {
     border-radius: 8px !important;
+  }
+}
+
+/* Asegurar que el menú móvil esté pegado al top */
+@media (max-width: 768px) {
+  /* Remover cualquier margen o padding del html y body */
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Asegurar que el AppBar Material UI esté pegado al top */
+  .MuiAppBar-root {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1100 !important;
+  }
+  
+  /* Remover cualquier margen del container principal */
+  #root {
+    margin-top: 0 !important;
+    padding-top: 48px !important; /* Altura del AppBar */
+  }
+  
+  /* Asegurar que no hay scroll horizontal */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Estilos adicionales para asegurar el posicionamiento correcto del AppBar móvil */
+@media (max-width: 768px) {
+  /* Forzar posicionamiento del AppBar en la parte superior */
+  .MuiAppBar-positionFixed {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+  
+  /* Asegurar que el Toolbar del AppBar tenga la altura correcta */
+  .MuiToolbar-dense {
+    min-height: 48px !important;
+    height: 48px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  
+  /* Remover cualquier transformación o translateY que pueda afectar */
+  .MuiAppBar-root {
+    transform: translateY(0) !important;
+    -webkit-transform: translateY(0) !important;
   }
 }

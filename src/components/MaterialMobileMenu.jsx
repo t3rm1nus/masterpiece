@@ -93,14 +93,21 @@ const MaterialMobileMenu = () => {
   
   return (
     <>      <AppBar 
-        position="sticky" 
+        position="fixed" 
         elevation={1}
         sx={{ 
           backgroundColor: isDarkTheme ? '#1e1e1e' : '#ffffff',
           color: isDarkTheme ? '#ffffff' : '#000000',
           borderBottom: isDarkTheme ? '1px solid #333' : '1px solid #e0e0e0',
-          height: '48px', // Reducir altura del AppBar
-          minHeight: '48px'
+          height: '48px',
+          minHeight: '48px',
+          top: '0 !important',
+          left: '0 !important',
+          right: '0 !important',
+          margin: 0,
+          padding: 0,
+          zIndex: theme.zIndex.appBar || 1100,
+          position: 'fixed !important'
         }}
       >
         <Toolbar 
