@@ -417,267 +417,118 @@ h1 {
     display: none !important;
   }
   .mobile-menu-bar {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    padding: 0.5rem 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 200;
-    height: 48px;
-    flex-direction: row-reverse !important; /* Icono del menú a la derecha */
+    width: 100vw !important;
+    display: flex !important;
+    align-items: center !important;
     justify-content: space-between !important;
-  }
-  h1 {
-    font-size: 1.2rem !important;
-    max-width: 100vw;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    margin-top: 1rem !important; /* Reducido para ser más consistente */
-    margin-bottom: 1.1rem !important; /* +10px */
-  }
-  .mobile-menu-overlay {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.35);
-    z-index: 300;
-    display: flex;
-    justify-content: flex-start !important; /* Despliegue desde la izquierda */
-  }
-  .mobile-menu {
-    background: #fff;
-    width: 75vw !important;
-    max-width: 320px !important;
-    height: 100vh !important;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem 1.2rem 1.2rem 1.2rem;
-    box-shadow: -2px 0 12px rgba(0,0,0,0.12);
-    position: relative;
-    transform: translateX(-100%) !important; /* Posición inicial fuera de la pantalla por la izquierda */
-    animation: slideInMenuFromLeft 0.3s ease forwards !important;
-  }
-  @keyframes slideInMenuFromLeft {
-    from { 
-      transform: translateX(-100%) !important; 
-      opacity: 0.8 !important;
-    }
-    to { 
-      transform: translateX(0) !important; 
-      opacity: 1 !important;
-    }
-  }
-  /* También crear animación de salida */
-  .mobile-menu.closing {
-    animation: slideOutMenuToLeft 0.2s ease forwards !important;
-  }
-
-  @keyframes slideOutMenuToLeft {
-    from { 
-      transform: translateX(0) !important; 
-      opacity: 1 !important;
-    }
-    to { 
-      transform: translateX(-100%) !important; 
-      opacity: 0.8 !important;
-    }
-  }
-  .mobile-menu button, .mobile-menu select {
-    background: #f3f3f3;
-    color: #222;
-    border: none;
-    border-radius: 6px;
-    padding: 0.7rem 1.2rem;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    width: 100%;
-    text-align: left;
-  }
-  .mobile-menu .close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 2.2rem;
-    color: #0078d4;
-    cursor: pointer;
-    padding: 0;
-    width: auto;
-  }
-  .recommendations-list {
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem; /* Reducimos a 1rem para ser consistente */
-  }
-  .recommendation-card {
-    width: 100vw;
-    min-width: 0;
-    max-width: 100vw;
-    padding: 0.3rem 0.5rem;
-    font-size: 0.9rem;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-  }
-  /* Layout específico para items de categoría igual que recomendaciones - imagen flotada a la izquierda */
-  .category-item,
-  .item-card {
-    width: 100% !important;
-    min-width: unset !important;
-    max-width: unset !important;
-    margin-bottom: 1rem !important;
+    background: #fff !important;
+    padding: 0.5rem 1rem !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 200 !important;
+    height: 48px !important;
     box-sizing: border-box !important;
-    display: block !important;
-    position: relative !important;
-    padding: 1rem !important;
-    background: var(--card-background) !important;
-    border-radius: 12px !important;
-    border: 1px solid var(--border-color) !important;
-    box-shadow: 0 2px 8px var(--shadow-color) !important;
-    min-height: 140px !important;
-    overflow: visible !important;
   }
 
-  /* Imagen flotada a la izquierda en items de categoría */
-  .category-item img,
-  .item-card img {
-    float: left !important;
-    width: 80px !important;
-    height: 120px !important;
-    object-fit: cover !important;
-    border-radius: 8px !important;
-    margin: 0 1rem 0.5rem 0 !important;
-    display: block !important;
+  /* Icono del menú hamburguesa correctamente posicionado a la derecha */
+  .mobile-menu-bar .hamburger-icon,
+  .mobile-menu-bar .menu-toggle,
+  .mobile-menu-bar .mobile-menu-toggle,
+  .mobile-menu-bar button:last-child {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    padding: 0.5rem !important;
+    background: none !important;
+    border: none !important;
+    font-size: 1.5rem !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    min-width: 40px !important;
+    height: 40px !important;
   }
 
-  /* Título arriba del todo */
-  .category-item h3,
-  .item-card h3 {
-    margin: 0 0 0.5rem 0 !important;
-    font-size: 1.1rem !important;
-    font-weight: bold !important;
-    line-height: 1.3 !important;
-    width: 100% !important;
-    display: block !important;
-    clear: none !important;
-  }
-
-  /* Categoría y subcategoría debajo de la imagen (lado izquierdo) */
-  .category-item .category,
-  .item-card .category,
-  .category-item .subcategory,
-  .item-card .subcategory {
-    display: block !important;
-    font-size: 0.85rem !important;
-    margin: 0.2rem 0 !important;
-    width: 80px !important;
-    float: left !important;
-    clear: left !important;
-    text-align: center !important;
-    color: #000000 !important;
-  }
-
-  /* Descripción a la derecha de la imagen */
-  .category-item p,
-  .item-card p,
-  .category-item .description,
-  .item-card .description {
-    margin: 0.5rem 0 0 100px !important;
-    font-size: 0.95rem !important;
-    line-height: 1.4 !important;
+  /* Título/logo a la izquierda */
+  .mobile-menu-bar h1,
+  .mobile-menu-bar .logo,
+  .mobile-menu-bar .title,
+  .mobile-menu-bar *:first-child {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    font-size: 1.2rem !important;
+    flex-grow: 1 !important;
     text-align: left !important;
-    color: #666666 !important;
   }
 
-  .category-item::after,
-  .item-card::after {
-    content: "" !important;
-    display: table !important;
-    clear: both !important;
+  /* Overlay del menú desplegable desde la izquierda */
+  .mobile-menu-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(0,0,0,0.4) !important;
+    z-index: 300 !important;
+    display: flex !important;
+    justify-content: flex-start !important;
   }
 
-  /* OCULTAR BOTONES DEL MENÚ CON ESPECIFICIDAD MÁXIMA */
-  .main-menu button[class*="category"],
-  .main-menu button[class*="back"],
-  .main-menu .category-btn,
-  .main-menu .back-button,
-  .main-menu button:contains("Volver"),
-  .main-menu button:contains("Back"),
-  .main-menu button:contains("Categoría"),
-  .main-menu button:contains("Category") {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
-    overflow: hidden !important;
+  /* Panel del menú desplegable */
+  .mobile-menu {
+    background: #fff !important;
+    width: 75vw !important;
+    max-width: 300px !important;
+    height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 2rem 1.2rem 1.2rem 1.2rem !important;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.15) !important;
+    position: relative !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s ease !important;
+  }
+
+  .mobile-menu.open {
+    transform: translateX(0) !important;
+  }
+
+  /* Botones dentro del menú móvil */
+  .mobile-menu button,
+  .mobile-menu select {
+    background: #f3f3f3 !important;
+    color: #222 !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 0.7rem 1.2rem !important;
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+    width: 100% !important;
+    text-align: left !important;
+    cursor: pointer !important;
+  }
+
+  /* Botón de cerrar */
+  .mobile-menu .close-btn {
     position: absolute !important;
-    left: -9999px !important;
-  }
-
-/* Ocultar botones volver y categorías del menú hamburguesa en móviles */
-  .hamburger-menu .category-btn,
-  .hamburger-menu .back-button,
-  .hamburger-menu button[class*="category"],
-  .hamburger-menu button[class*="back"],
-  .hamburger-menu button[onclick*="category"],
-  .hamburger-menu button[onclick*="back"],
-  .hamburger-menu button[onclick*="volver"],
-  .hamburger-menu .category-button,
-  .hamburger-menu .categories-button,
-  .mobile-menu .category-btn,
-  .mobile-menu .back-button,
-  .mobile-menu button[class*="category"],
-  .mobile-menu button[class*="back"],
-  .mobile-menu button[onclick*="category"],
-  .mobile-menu button[onclick*="back"],
-  .mobile-menu button[onclick*="volver"],
-  .mobile-menu .category-button,
-  .mobile-menu .categories-button,
-  .dropdown-menu .category-btn,
-  .dropdown-menu .back-button,
-  .dropdown-menu button[class*="category"],
-  .dropdown-menu button[class*="back"],
-  .dropdown-menu button[onclick*="category"],
-  .dropdown-menu button[onclick*="back"],
-  .dropdown-menu button[onclick*="volver"],
-  .dropdown-menu .category-button,
-  .dropdown-menu .categories-button {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    height: 0 !important;
-    width: 0 !important;
-    overflow: hidden !important;
-    margin: 0 !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    background: none !important;
+    border: none !important;
+    font-size: 1.8rem !important;
+    color: #0078d4 !important;
+    cursor: pointer !important;
     padding: 0 !important;
-    position: absolute !important;
-    left: -9999px !important;
+    width: auto !important;
   }
 
-  /* Ocultar elementos por texto en menú hamburguesa */
-  .hamburger-menu button:contains("Volver"),
-  .hamburger-menu button:contains("Back"),
-  .hamburger-menu button:contains("Categoría"),
-  .hamburger-menu button:contains("Category"),
-  .mobile-menu button:contains("Volver"),
-  .mobile-menu button:contains("Back"),
-  .mobile-menu button:contains("Categoría"),
-  .mobile-menu button:contains("Category"),
-  .dropdown-menu button:contains("Volver"),
-  .dropdown-menu button:contains("Back"),
-  .dropdown-menu button:contains("Categoría"),
-  .dropdown-menu button:contains("Category") {
+  /* Ocultar el menú principal en móviles */
+  .main-menu {
     display: none !important;
-    visibility: hidden !important;
   }  }
 }
 
