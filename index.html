@@ -40,87 +40,150 @@
                 }
                 console.log('Botón PayPal renderizado correctamente');
                 
-                // Intentar cambiar el color del texto después de renderizar
+                // Solo aplicar ajustes básicos de espaciado sin ocultar elementos
                 setTimeout(function() {
                   try {
-                    // Cambiar color del texto
-                    const paypalElements = container.querySelectorAll('*');
-                    paypalElements.forEach(function(element) {
-                      element.style.color = '#000000';
-                      element.style.setProperty('color', '#000000', 'important');
-                      
-                      // Aplicar espaciado ultra compacto
-                      if (element.tagName === 'INPUT') {
-                        element.style.marginBottom = '0.2rem';
-                        element.style.paddingBottom = '0.2rem';
-                      }
-                      
-                      if (element.classList && (
-                          element.classList.contains('paypal-button') ||
-                          element.classList.contains('paypal-button-color-gold') ||
-                          element.getAttribute('data-funding-source') === 'paypal'
-                      )) {
-                        element.style.marginTop = '0.1rem';
-                        element.style.paddingTop = '0';
-                      }
-                      
-                      // Reducir line-height para todos los elementos
-                      element.style.lineHeight = '1';
-                      element.style.margin = '0.1rem 0';
-                    });
-                    
                     // Aplicar espaciado ultra específico al contenedor
                     container.style.display = 'flex';
                     container.style.flexDirection = 'column';
                     container.style.gap = '0.1rem';
                     container.style.lineHeight = '1';
                     
-                    // Reducir espaciado en elementos consecutivos
-                    const formElements = container.querySelectorAll('form > *, div > *');
-                    formElements.forEach(function(element, index) {
-                      if (index > 0) {
-                        element.style.marginTop = '0.1rem';
+                    // Forzar altura SOLO en el botón principal, no en todos los elementos (excluyendo checkout-button)
+                    const buttons = container.querySelectorAll('button:not(#checkout-button), .paypal-button');
+                    const iframes = container.querySelectorAll('iframe');
+                    
+                    buttons.forEach(function(button) {
+                      // Verificar que NO sea el checkout-button y que sea un botón PayPal válido
+                      if (button.id !== 'checkout-button' &&
+                          (button.getAttribute('data-funding-source') === 'paypal' || 
+                           button.classList.contains('paypal-button-color-gold') ||
+                           button.classList.contains('paypal-button'))) {
+                        button.style.setProperty('height', '92px', 'important');
+                        button.style.setProperty('min-height', '92px', 'important');
+                        button.style.setProperty('max-height', '92px', 'important');
                       }
                     });
                     
-                    // Ocultar mensajes de error específicos de forma menos agresiva
-                    const hideElement = function(element) {
-                      if (element && element.style) {
-                        // Solo ocultar, no eliminar del DOM para evitar errores de PayPal
-                        element.style.display = 'none';
-                        element.style.visibility = 'hidden';
-                        element.style.opacity = '0';
-                        element.style.height = '0';
-                        element.style.overflow = 'hidden';
-                        element.style.position = 'absolute';
-                        element.style.left = '-9999px';
+                    iframes.forEach(function(iframe) {
+                      iframe.style.setProperty('height', '92px', 'important');
+                      iframe.style.setProperty('min-height', '92px', 'important');
+                      iframe.style.setProperty('max-height', '92px', 'important');
+                    });
+                    
+                    // Aplicar altura específica de 95px SOLO al div principal de PayPal - múltiples intentos
+                    const applyMainPayPalHeight = function() {
+                      const selectors = [
+                        'div[role="link"][data-funding-source="paypal"].paypal-button-color-gold',
+                        '.paypal-button-color-gold[data-funding-source="paypal"]',
+                        '.paypal-button-color-gold.paypal-button-shape-rect',
+                        'div[data-funding-source="paypal"].paypal-button'
+                      ];
+                      
+                      let found = false;
+                      selectors.forEach(function(selector) {
+                        const mainPayPalDiv = container.querySelector(selector);
+                        if (mainPayPalDiv && !found) {
+                          mainPayPalDiv.style.setProperty('height', '95px', 'important');
+                          mainPayPalDiv.style.setProperty('min-height', '95px', 'important');
+                          mainPayPalDiv.style.setProperty('max-height', '95px', 'important');
+                          // También forzar con CSS direct
+                          mainPayPalDiv.style.cssText += 'height: 95px !important; min-height: 95px !important; max-height: 95px !important;';
+                          console.log('Altura de 95px aplicada al div principal PayPal con selector:', selector);
+                          found = true;
+                        }
+                      });
+                      
+                      if (!found) {
+                        console.log('No se encontró el div principal PayPal para aplicar altura de 95px');
                       }
                     };
                     
-                    // Buscar y ocultar elementos específicos sin eliminarlos
-                    const errorSelectors = [
-                      '#amount-decimal-err',
-                      '#amount-decimalplaces-err',
-                      '.error-label',
-                      'span[id*="decimal"]',
-                      'span[id*="amount-err"]',
-                      '*[class*="error-label"]'
-                    ];
+                    applyMainPayPalHeight();
+                    // Reintentar después de un momento por si el elemento se carga después
+                    setTimeout(applyMainPayPalHeight, 1000);
                     
-                    errorSelectors.forEach(function(selector) {
-                      try {
-                        const elements = container.querySelectorAll(selector);
-                        elements.forEach(hideElement);
-                      } catch (selectorError) {
-                        console.log('Error con selector:', selector, selectorError);
+                    // Ocultar el botón checkout-button específico sin eliminarlo
+                    const hideCheckoutButton = function() {
+                      const checkoutButton = document.getElementById('checkout-button');
+                      if (checkoutButton) {
+                        checkoutButton.style.display = 'none';
+                        checkoutButton.style.visibility = 'hidden';
+                        checkoutButton.style.opacity = '0';
+                        checkoutButton.style.height = '0';
+                        checkoutButton.style.overflow = 'hidden';
+                        checkoutButton.style.position = 'absolute';
+                        checkoutButton.style.left = '-9999px';
+                        checkoutButton.style.top = '-9999px';
+                        console.log('Botón checkout-button ocultado');
                       }
-                    });
+                      
+                      // También buscar por clases en caso de que el ID cambie
+                      const checkoutByClass = container.querySelector('button.rect.medium.gold.css-1565878');
+                      if (checkoutByClass && checkoutByClass !== checkoutButton) {
+                        checkoutByClass.style.display = 'none';
+                        checkoutByClass.style.visibility = 'hidden';
+                        checkoutByClass.style.opacity = '0';
+                        console.log('Botón checkout encontrado por clases y ocultado');
+                      }
+                    };
                     
-                    console.log('Texto PayPal modificado y errores ocultados (sin eliminar DOM)');
+                    hideCheckoutButton();
+                    // Reintentar la ocultación después de un momento
+                    setTimeout(hideCheckoutButton, 1000);
+                    setTimeout(hideCheckoutButton, 2000);
+                    
+                    // Aplicar estilos a la imagen de iconos de tarjetas PayPal
+                    const styleCardIconsImage = function() {
+                      const selectors = [
+                        'img.css-au42bs[src*="Debit_Credit_APM.svg"]',
+                        'img.css-au42bs[alt="card icons"]',
+                        'img.css-au42bs',
+                        '.css-au42bs'
+                      ];
+                      
+                      let found = false;
+                      selectors.forEach(function(selector) {
+                        const cardIconsImg = container.querySelector(selector);
+                        if (cardIconsImg && !found) {
+                          // Aplicar estilos directamente - alineación izquierda
+                          cardIconsImg.style.setProperty('margin-top', '19px', 'important');
+                          cardIconsImg.style.setProperty('display', 'block', 'important');
+                          cardIconsImg.style.setProperty('margin-left', '0', 'important');
+                          cardIconsImg.style.setProperty('margin-right', 'auto', 'important');
+                          cardIconsImg.style.setProperty('text-align', 'left', 'important');
+                          cardIconsImg.style.setProperty('width', 'auto', 'important');
+                          cardIconsImg.style.setProperty('float', 'left', 'important');
+                          
+                          // También alinear a la izquierda el contenedor padre
+                          if (cardIconsImg.parentElement) {
+                            cardIconsImg.parentElement.style.setProperty('text-align', 'left', 'important');
+                            cardIconsImg.parentElement.style.setProperty('display', 'flex', 'important');
+                            cardIconsImg.parentElement.style.setProperty('justify-content', 'flex-start', 'important');
+                            cardIconsImg.parentElement.style.setProperty('align-items', 'center', 'important');
+                          }
+                          
+                          console.log('Estilos aplicados a imagen de iconos PayPal con selector:', selector);
+                          found = true;
+                        }
+                      });
+                      
+                      if (!found) {
+                        console.log('No se encontró la imagen de iconos PayPal para aplicar estilos');
+                      }
+                    };
+                    
+                    styleCardIconsImage();
+                    // Reintentar múltiples veces por si la imagen se carga después
+                    setTimeout(styleCardIconsImage, 1000);
+                    setTimeout(styleCardIconsImage, 2000);
+                    setTimeout(styleCardIconsImage, 3000);
+                    
+                    console.log('Espaciado y altura PayPal aplicados de forma selectiva');
                   } catch (e) {
-                    console.log('No se pudo modificar el contenido PayPal:', e);
+                    console.log('No se pudo modificar el espaciado PayPal:', e);
                   }
-                }, 1000);
+                }, 500);
               })
               .catch(function(err) {
                 console.warn('Error al renderizar botón PayPal:', err);

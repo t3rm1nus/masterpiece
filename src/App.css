@@ -1344,6 +1344,14 @@ html[data-theme='dark'] .coffee-menu-button:hover {
   opacity: 0 !important;
 }
 
+/* Media query específico para botón PayPal */
+@media only screen and (min-width: 300px) {
+    .paypal-button.paypal-button-shape-rect {
+        border-radius: 4px !important;
+        height: 91px !important;
+    }
+}
+
 /* Ajustes específicos para móviles */
 @media (max-width: 768px) {
   /* 1. Items de la home con 98% width y 2% de margen total */
@@ -1501,11 +1509,17 @@ html[data-theme='dark'] .coffee-menu-button:hover {
   margin-top: 0.1rem !important;
 }
 
-/* Botón PayPal amarillo específico */
+/* Botón PayPal amarillo específico - múltiples selectores para asegurar aplicación (excluyendo checkout-button) */
 #paypal-container-MRSQEQV646EPA .paypal-button-color-gold,
-#paypal-container-MRSQEQV646EPA [data-funding-source="paypal"] {
+#paypal-container-MRSQEQV646EPA [data-funding-source="paypal"],
+#paypal-container-MRSQEQV646EPA .paypal-button,
+#paypal-container-MRSQEQV646EPA button:not(#checkout-button),
+#paypal-container-MRSQEQV646EPA iframe {
   margin-top: 0.1rem !important;
   padding-top: 0 !important;
+  height: 92px !important;
+  min-height: 92px !important;
+  max-height: 92px !important;
 }
 
 /* Contenedor del botón con espaciado mínimo */
@@ -1532,3 +1546,107 @@ html[data-theme='dark'] .coffee-menu-button:hover {
 #paypal-container-MRSQEQV646EPA form > *:last-child {
   margin-bottom: 0 !important;
 }
+
+/* Ocultar solo botones específicos sin afectar el botón principal PayPal */
+#paypal-container-MRSQEQV646EPA .paypal-button-color-blue {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+#paypal-container-MRSQEQV646EPA [data-funding-source="card"],
+#paypal-container-MRSQEQV646EPA [data-funding-source="credit"],
+#paypal-container-MRSQEQV646EPA [data-funding-source="debit"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Ocultar botones secundarios numerados */
+#paypal-container-MRSQEQV646EPA .paypal-button-number-1,
+#paypal-container-MRSQEQV646EPA .paypal-button-number-2,
+#paypal-container-MRSQEQV646EPA .paypal-button-number-3 {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Media query específico para botón PayPal con mayor especificidad (excluyendo checkout-button) */
+@media only screen and (min-width: 300px) {
+    #paypal-container-MRSQEQV646EPA .paypal-button,
+    #paypal-container-MRSQEQV646EPA .paypal-button-shape-rect,
+    #paypal-container-MRSQEQV646EPA button:not(#checkout-button),
+    #paypal-container-MRSQEQV646EPA iframe {
+        border-radius: 4px !important;
+        height: 92px !important;
+        min-height: 92px !important;
+        max-height: 92px !important;
+    }
+}
+
+/* Selector específico para el div PayPal principal - versión simplificada */
+#paypal-container-MRSQEQV646EPA div[role="link"][data-funding-source="paypal"].paypal-button-color-gold {
+  height: 95px !important;
+  min-height: 95px !important;
+  max-height: 95px !important;
+}
+
+/* Alternativa con mayor especificidad */
+#paypal-container-MRSQEQV646EPA .paypal-button-color-gold.paypal-button-shape-rect[data-funding-source="paypal"] {
+  height: 95px !important;
+  min-height: 95px !important;
+  max-height: 95px !important;
+}
+
+/* Ocultar el botón checkout-button específico sin eliminarlo del DOM */
+#checkout-button {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+}
+
+/* Ocultar también por clases en caso de que cambie el ID */
+button.rect.medium.gold.css-1565878 {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+}
+
+/* Estilo específico para la imagen de iconos de tarjetas PayPal - alineación izquierda */
+#paypal-container-MRSQEQV646EPA img.css-au42bs[src*="Debit_Credit_APM.svg"],
+#paypal-container-MRSQEQV646EPA img.css-au42bs[alt="card icons"],
+#paypal-container-MRSQEQV646EPA img.css-au42bs,
+#paypal-container-MRSQEQV646EPA .css-au42bs {
+  margin-top: 19px !important;
+  display: block !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  text-align: left !important;
+  width: auto !important;
+  transform: translateX(0) !important;
+  float: left !important;
+}
+
+/* Alinear a la izquierda también el contenedor padre de la imagen */
+#paypal-container-MRSQEQV646EPA div:has(img.css-au42bs),
+#paypal-container-MRSQEQV646EPA div:has(.css-au42bs) {
+  text-align: left !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  margin-top: 19px !important;
+}
+
