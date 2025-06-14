@@ -1037,14 +1037,15 @@ html[data-theme='dark'] .item-detail.podcast {
 .coffee-cta {
   font-size: 1.1rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem; /* Reducido de 0.5rem */
   opacity: 0.95;
 }
 
 .coffee-legend {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem; /* Reducido de 2rem */
+  margin-top: 0.25rem; /* Añadido para controlar espacio superior */
   color: #ffc439;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
@@ -1092,6 +1093,19 @@ html[data-theme='dark'] .donate-button:hover {
   
   .coffee-subtitle {
     font-size: 1rem;
+  }
+  
+  /* Espaciado reducido en textos de la página de donación */
+  .coffee-cta {
+    margin-bottom: 0.15rem !important;
+    font-size: 1rem;
+  }
+
+  .coffee-legend {
+    margin-top: 0.15rem !important;
+    margin-bottom: 0.75rem !important;
+    font-size: 1.1rem;
+  }
   }
   
   .coffee-description {
@@ -1179,11 +1193,29 @@ html[data-theme='dark'] .coffee-menu-button:hover {
   #paypal-container-MRSQEQV646EPA {
     max-width: 250px !important;
     min-width: 180px !important;
+    line-height: 0.9 !important;
   }
   
   #paypal-container-MRSQEQV646EPA iframe {
     max-width: 250px !important;
     min-width: 180px !important;
+  }
+
+  /* Espaciado ultra compacto en móviles */
+  #paypal-container-MRSQEQV646EPA input {
+    margin-bottom: 0.1rem !important;
+    padding-bottom: 0.1rem !important;
+  }
+
+  #paypal-container-MRSQEQV646EPA .paypal-button,
+  #paypal-container-MRSQEQV646EPA [data-funding-source="paypal"] {
+    margin-top: 0.05rem !important;
+    padding-top: 0 !important;
+  }
+
+  #paypal-container-MRSQEQV646EPA > * {
+    margin-top: 0.05rem !important;
+    margin-bottom: 0.05rem !important;
   }
 }
 
@@ -1246,6 +1278,73 @@ html[data-theme='dark'] .coffee-menu-button:hover {
   transition: opacity 0.3s ease;
 }
 
+/* Cambiar color del texto específico dentro del botón de PayPal */
+#paypal-container-MRSQEQV646EPA * {
+  color: #000000 !important;
+}
+
+/* Estilos adicionales para text styling del botón PayPal */
+#paypal-container-MRSQEQV646EPA {
+  filter: contrast(1.2) brightness(1.1) !important;
+}
+
+/* Intentar forzar el color con más especificidad */
+#paypal-container-MRSQEQV646EPA [role="button"] *,
+#paypal-container-MRSQEQV646EPA [role="textbox"] *,
+#paypal-container-MRSQEQV646EPA .paypal-button-text,
+#paypal-container-MRSQEQV646EPA .paypal-button-label {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+/* Si el texto sigue siendo difícil de ver, añadir contraste */
+#paypal-container-MRSQEQV646EPA button:hover,
+#paypal-container-MRSQEQV646EPA [role="button"]:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ocultar mensajes de error específicos del botón PayPal (versión no agresiva) */
+#amount-decimal-err,
+#amount-decimalplaces-err {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+}
+
+/* Ocultar elementos con clase error-label dentro del contenedor PayPal */
+#paypal-container-MRSQEQV646EPA .error-label {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* Ocultar spans específicos sin eliminar del DOM */
+#paypal-container-MRSQEQV646EPA span[id*="decimal-err"],
+#paypal-container-MRSQEQV646EPA span[id*="decimalplaces-err"],
+#paypal-container-MRSQEQV646EPA span[id*="amount-err"] {
+  display: none !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* Ocultar solo elementos específicos de error sin afectar funcionalidad */
+#paypal-container-MRSQEQV646EPA .error-label[id*="decimal"],
+#paypal-container-MRSQEQV646EPA .error-label[id*="amount"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
 /* Ajustes específicos para móviles */
 @media (max-width: 768px) {
   /* 1. Items de la home con 98% width y 2% de margen total */
@@ -1305,4 +1404,132 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     overflow-wrap: break-word !important;
     word-wrap: break-word !important;
   }
+}
+
+/* Reducir espacio entre input y botón PayPal */
+#paypal-container-MRSQEQV646EPA input,
+#paypal-container-MRSQEQV646EPA input[type="text"],
+#paypal-container-MRSQEQV646EPA input[type="number"] {
+  margin-bottom: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* Reducir margen superior del botón PayPal */
+.paypal-button,
+.paypal-button-number-0,
+[data-funding-source="paypal"],
+#paypal-container-MRSQEQV646EPA .paypal-button {
+  margin-top: 0.25rem !important;
+  padding-top: 0 !important;
+}
+
+/* Reducir espaciado general en el contenedor PayPal */
+#paypal-container-MRSQEQV646EPA > div {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* Espaciado específico para elementos dentro del contenedor PayPal */
+#paypal-container-MRSQEQV646EPA > * {
+  margin-top: 0.25rem !important;
+}
+
+#paypal-container-MRSQEQV646EPA > *:first-child {
+  margin-top: 0 !important;
+}
+
+#paypal-container-MRSQEQV646EPA > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Reducir gap entre elementos consecutivos */
+#paypal-container-MRSQEQV646EPA div + div {
+  margin-top: 0.25rem !important;
+}
+
+/* Espaciado específico para input seguido de botón */
+#paypal-container-MRSQEQV646EPA input + div,
+#paypal-container-MRSQEQV646EPA input + .paypal-button {
+  margin-top: 0.25rem !important;
+}
+
+/* Estilos específicos para layout vertical de PayPal */
+.paypal-button-layout-vertical {
+  margin-top: 0.25rem !important;
+  padding-top: 0 !important;
+}
+
+/* Reducir espaciado en contenedor del botón PayPal */
+.paypal-button-label-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Ajustar espaciado del formulario de PayPal completo */
+#paypal-container-MRSQEQV646EPA form,
+#paypal-container-MRSQEQV646EPA [role="form"] {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.25rem !important;
+}
+
+/* Forzar espaciado compacto en todos los elementos PayPal */
+#paypal-container-MRSQEQV646EPA * {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+#paypal-container-MRSQEQV646EPA *:first-child {
+  margin-top: 0 !important;
+}
+
+#paypal-container-MRSQEQV646EPA *:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Reducir aún más el espacio entre input y botón amarillo PayPal */
+#paypal-container-MRSQEQV646EPA {
+  line-height: 1 !important;
+}
+
+/* Espaciado ultra compacto para elementos PayPal */
+#paypal-container-MRSQEQV646EPA input {
+  margin-bottom: 0.2rem !important;
+  padding-bottom: 0.2rem !important;
+}
+
+#paypal-container-MRSQEQV646EPA input + * {
+  margin-top: 0.1rem !important;
+}
+
+/* Botón PayPal amarillo específico */
+#paypal-container-MRSQEQV646EPA .paypal-button-color-gold,
+#paypal-container-MRSQEQV646EPA [data-funding-source="paypal"] {
+  margin-top: 0.1rem !important;
+  padding-top: 0 !important;
+}
+
+/* Contenedor del botón con espaciado mínimo */
+#paypal-container-MRSQEQV646EPA .paypal-button-label-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Espaciado mínimo entre todos los elementos internos */
+#paypal-container-MRSQEQV646EPA > * + * {
+  margin-top: 0.1rem !important;
+}
+
+/* Forzar espaciado compacto en formularios PayPal */
+#paypal-container-MRSQEQV646EPA form > * {
+  margin-top: 0.1rem !important;
+  margin-bottom: 0.1rem !important;
+}
+
+#paypal-container-MRSQEQV646EPA form > *:first-child {
+  margin-top: 0 !important;
+}
+
+#paypal-container-MRSQEQV646EPA form > *:last-child {
+  margin-bottom: 0 !important;
 }
