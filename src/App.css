@@ -522,59 +522,82 @@ h1 {
     align-items: stretch;
     justify-content: flex-start;
   }
-  .recommendation-card .top-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.2rem;
+  /* Layout específico para items de categoría igual que recomendaciones - imagen flotada a la izquierda */
+  .category-item,
+  .item-card {
+    width: 100% !important;
+    min-width: unset !important;
+    max-width: unset !important;
+    margin-bottom: 1rem !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    position: relative !important;
+    padding: 1rem !important;
+    background: var(--card-background) !important;
+    border-radius: 12px !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 2px 8px var(--shadow-color) !important;
+    min-height: 140px !important;
+    overflow: visible !important;
   }
-  .recommendation-card .top-row h3 {
-    font-size: 1rem;
-    margin: 0;
-    flex: 1 1 0;
-    text-align: left;
-    font-weight: bold;
-  }
-  .recommendation-card .top-row .cat {
-    font-size: 0.85rem;
-    color: #888;
-    font-weight: 500;
-    margin-left: 0.5rem;
-  }
-  .recommendation-card .top-row .subcat {
-    font-size: 0.85rem;
-    color: #aaa;
-    margin-left: 0.5rem;
-  }
-  .recommendation-card .bottom-row {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 0.7rem;
-  }
-  .recommendation-card img {
+
+  /* Imagen flotada a la izquierda en items de categoría */
+  .category-item img,
+  .item-card img {
+    float: left !important;
     width: 80px !important;
-    height: 110px !important;
-    max-width: 30vw;
-    min-width: 60px;
-    border-radius: 8px;
-    object-fit: cover;
-    flex-shrink: 0;
-    margin: 0;
+    height: 120px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin: 0 1rem 0.5rem 0 !important;
+    display: block !important;
   }
-  .recommendation-card .desc-col {
-    flex: 1 1 0;
-    text-align: left;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+
+  /* Título arriba del todo */
+  .category-item h3,
+  .item-card h3 {
+    margin: 0 0 0.5rem 0 !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    line-height: 1.3 !important;
+    width: 100% !important;
+    display: block !important;
+    clear: none !important;
   }
-  .recommendation-card .desc-col p {
-    font-size: 0.9rem;
-    text-align: left;
-    margin: 0.1rem 0 0 0;
+
+  /* Categoría y subcategoría debajo de la imagen (lado izquierdo) */
+  .category-item .category,
+  .item-card .category,
+  .category-item .subcategory,
+  .item-card .subcategory {
+    display: block !important;
+    font-size: 0.85rem !important;
+    margin: 0.2rem 0 !important;
+    width: 80px !important;
+    float: left !important;
+    clear: left !important;
+    text-align: center !important;
+  }
+
+  /* Descripción a la derecha de la imagen */
+  .category-item p,
+  .item-card p,
+  .category-item .description,
+  .item-card .description {
+    margin: 0.5rem 0 0 100px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* Clearfix para limpiar floats */
+  .category-item::after,
+  .item-card::after {
+    content: "" !important;
+    display: table !important;
+    clear: both !important;
   }
 }
 
@@ -1412,40 +1435,49 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     margin-bottom: 1rem !important;
   }
 
-  /* 4. Botón volver fuera del menú desplegable en página de detalle - encima del detalle */
+  /* 4. Botón volver encima del detalle de la página - centrado y visible */
   .back-button {
     position: fixed !important;
-    top: 90px !important; /* Más abajo para estar claramente encima del contenido del detalle */
+    top: 85px !important; /* Justo encima del contenido del detalle */
     left: 50% !important;
     transform: translateX(-50%) !important; /* Centrado horizontalmente */
-    z-index: 1000 !important;
+    z-index: 1500 !important; /* Z-index alto para estar por encima de todo */
     background: var(--primary-color) !important;
     color: white !important;
     border: none !important;
-    padding: 12px 20px !important;
-    border-radius: 25px !important;
+    padding: 14px 24px !important;
+    border-radius: 30px !important;
     font-size: 1rem !important;
     font-weight: bold !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
-    min-width: 100px !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
+    min-width: 120px !important;
     text-align: center !important;
-    margin-bottom: 1rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
   }
 
   .back-button:hover {
     background: var(--hover-color) !important;
     color: var(--text-color) !important;
-    transform: translateX(-50%) translateY(-2px) !important;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
+    transform: translateX(-50%) translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5) !important;
+    scale: 1.05 !important;
   }
 
-  /* 5. Página de detalle - item al 100% */
+  /* Asegurar que el botón volver esté siempre visible */
+  .back-button:focus,
+  .back-button:active {
+    outline: 2px solid var(--primary-color) !important;
+    outline-offset: 2px !important;
+  }
+
+  /* 5. Página de detalle - item al 100% con espacio para botón volver */
   .item-detail-container {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
     padding: 1rem !important;
-    padding-top: 140px !important; /* Espacio suficiente para el botón volver centrado */
+    padding-top: 150px !important; /* Espacio suficiente para el botón volver mejorado */
     box-sizing: border-box !important;
   }
 
@@ -1492,28 +1524,74 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     max-width: unset !important;
     margin-bottom: 1rem !important;
     box-sizing: border-box !important;
+    display: block !important;
+    position: relative !important;
+    padding: 1rem !important;
+    background: var(--card-background) !important;
+    border-radius: 12px !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 2px 8px var(--shadow-color) !important;
+    min-height: 140px !important;
+    overflow: visible !important;
   }
 
-  /* Colores de texto en items de categoría igual que en home */
+  /* Imagen flotada a la izquierda en items de categoría */
+  .category-item img,
+  .item-card img {
+    float: left !important;
+    width: 80px !important;
+    height: 120px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin: 0 1rem 0.5rem 0 !important;
+    display: block !important;
+  }
+
+  /* Título arriba del todo */
   .category-item h3,
   .item-card h3 {
-    color: #000000 !important; /* Título en negro */
+    margin: 0 0 0.5rem 0 !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    line-height: 1.3 !important;
+    width: 100% !important;
+    display: block !important;
+    clear: none !important;
   }
-  
+
+  /* Categoría y subcategoría debajo de la imagen (lado izquierdo) */
   .category-item .category,
   .item-card .category,
   .category-item .subcategory,
-  .item-card .subcategory,
-  .category-item span:not(.description),
-  .item-card span:not(.description) {
-    color: #000000 !important; /* Categoría y subcategoría en negro */
+  .item-card .subcategory {
+    display: block !important;
+    font-size: 0.85rem !important;
+    margin: 0.2rem 0 !important;
+    width: 80px !important;
+    float: left !important;
+    clear: left !important;
+    text-align: center !important;
   }
 
+  /* Descripción a la derecha de la imagen */
   .category-item p,
   .item-card p,
   .category-item .description,
   .item-card .description {
-    color: #666666 !important; /* Descripción en gris */
+    margin: 0.5rem 0 0 100px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* Clearfix para limpiar floats */
+  .category-item::after,
+  .item-card::after {
+    content: "" !important;
+    display: table !important;
+    clear: both !important;
   }
 }
 
@@ -1651,237 +1729,49 @@ html[data-theme='dark'] .coffee-menu-button:hover {
   margin-bottom: 0 !important;
 }
 
-/* Ocultar solo botones específicos sin afectar el botón principal PayPal */
-#paypal-container-MRSQEQV646EPA .paypal-button-color-blue {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-}
-
-#paypal-container-MRSQEQV646EPA [data-funding-source="card"],
-#paypal-container-MRSQEQV646EPA [data-funding-source="credit"],
-#paypal-container-MRSQEQV646EPA [data-funding-source="debit"] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-}
-
-/* Ocultar botones secundarios numerados */
-#paypal-container-MRSQEQV646EPA .paypal-button-number-1,
-#paypal-container-MRSQEQV646EPA .paypal-button-number-2,
-#paypal-container-MRSQEQV646EPA .paypal-button-number-3 {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-/* Media query específico para botón PayPal con mayor especificidad (excluyendo checkout-button) */
-@media only screen and (min-width: 300px) {
-    #paypal-container-MRSQEQV646EPA .paypal-button,
-    #paypal-container-MRSQEQV646EPA .paypal-button-shape-rect,
-    #paypal-container-MRSQEQV646EPA button:not(#checkout-button),
-    #paypal-container-MRSQEQV646EPA iframe {
-        border-radius: 4px !important;
-        height: 92px !important;
-        min-height: 92px !important;
-        max-height: 92px !important;
-    }
-}
-
-/* Selector específico para el div PayPal principal - versión simplificada */
-#paypal-container-MRSQEQV646EPA div[role="link"][data-funding-source="paypal"].paypal-button-color-gold {
-  height: 95px !important;
-  min-height: 95px !important;
-  max-height: 95px !important;
-}
-
-/* Alternativa con mayor especificidad */
-#paypal-container-MRSQEQV646EPA .paypal-button-color-gold.paypal-button-shape-rect[data-funding-source="paypal"] {
-  height: 95px !important;
-  min-height: 95px !important;
-  max-height: 95px !important;
-}
-
-/* Ocultar el botón checkout-button específico sin eliminarlo del DOM */
-#checkout-button {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-  position: absolute !important;
-  left: -9999px !important;
-  top: -9999px !important;
-}
-
-/* Ocultar también por clases en caso de que cambie el ID */
-button.rect.medium.gold.css-1565878 {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-  position: absolute !important;
-  left: -9999px !important;
-  top: -9999px !important;
-}
-
-/* Estilo específico para la imagen de iconos de tarjetas PayPal - alineación izquierda */
-#paypal-container-MRSQEQV646EPA img.css-au42bs[src*="Debit_Credit_APM.svg"],
-#paypal-container-MRSQEQV646EPA img.css-au42bs[alt="card icons"],
-#paypal-container-MRSQEQV646EPA img.css-au42bs,
-#paypal-container-MRSQEQV646EPA .css-au42bs {
-  margin-top: 19px !important;
-  display: block !important;
-  margin-left: 0 !important;
-  margin-right: auto !important;
-  text-align: left !important;
-  width: auto !important;
-  transform: translateX(0) !important;
-  float: left !important;
-}
-
-/* Alinear a la izquierda también el contenedor padre de la imagen */
-#paypal-container-MRSQEQV646EPA div:has(img.css-au42bs),
-#paypal-container-MRSQEQV646EPA div:has(.css-au42bs) {
-  text-align: left !important;
-  display: flex !important;
-  justify-content: flex-start !important;
-  align-items: center !important;
-  margin-top: 19px !important;
-}
-
-/* Ajustar espaciado entre los textos específicos de donación con nueva separación */
-.coffee-cta + .coffee-legend,
-.coffee-legend {
-  margin-top: 0.5rem !important; /* Permitir el nuevo margen superior */
-  padding-top: 0 !important;
-  line-height: 1.2 !important;
-}
-
-.coffee-cta {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  line-height: 1.2 !important;
-}
-
-/* Ajustar espaciado para móviles con nueva separación */
-@media (max-width: 768px) {
-  .coffee-cta + .coffee-legend,
-  .coffee-legend {
-    margin-top: 0.3rem !important; /* Menor separación en móviles */
-    padding-top: 0 !important;
-    line-height: 1.1 !important;
-  }
-
-  .coffee-cta {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    line-height: 1.1 !important;
-  }
-}
-
-/* Ocultar botones de categorías y volver en menú superior para móviles */
+/* Ocultar botones de categorías y volver del menú superior en móviles */
   .main-menu .category-btn,
   .main-menu .back-button,
   .main-menu button[onclick*="category"],
   .main-menu button[onclick*="back"],
-  .main-menu button[onclick*="volver"] {
+  .main-menu button[onclick*="volver"],
+  .main-menu .category-button,
+  .main-menu .categories-button {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Ocultar botones por texto común */
+  .main-menu button[title*="Volver"],
+  .main-menu button[title*="Back"],
+  .main-menu button[title*="Categoría"],
+  .main-menu button[title*="Category"] {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Ocultar selectores y dropdowns de categoría */
+  .main-menu select[id*="category"],
+  .main-menu select[name*="category"],
+  .main-menu select.category-select,
+  .main-menu .category-selector {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
   }
 
-  /* Ocultar también por texto del botón */
-  .main-menu button:contains("Volver"),
-  .main-menu button:contains("Back") {
-    display: none !important;
-  }
-
-  /* Ocultar selectores de categoría en menú superior */
-  .main-menu select[id*="category"],
-  .main-menu select[name*="category"] {
+  /* Ocultar cualquier elemento con clase relacionada a categorías en el menú */
+  .main-menu .category,
+  .main-menu .categories,
+  .main-menu .cat-btn,
+  .main-menu .nav-category {
     display: none !important;
     visibility: hidden !important;
-  }
-
-/* Layout específico para items de categoría igual que recomendaciones - imagen flotada */
-.category-item,
-.item-card {
-    width: 100% !important;
-    min-width: unset !important;
-    max-width: unset !important;
-    margin-bottom: 1rem !important;
-    box-sizing: border-box !important;
-    display: block !important;
-    position: relative !important;
-    padding: 1rem !important;
-    background: var(--card-background) !important;
-    border-radius: 12px !important;
-    border: 1px solid var(--border-color) !important;
-    box-shadow: 0 2px 8px var(--shadow-color) !important;
-    min-height: 140px !important;
-    overflow: hidden !important;
-  }
-
-  /* Imagen flotada a la izquierda */
-  .category-item img,
-  .item-card img {
-    float: left !important;
-    width: 80px !important;
-    height: 120px !important;
-    object-fit: cover !important;
-    border-radius: 8px !important;
-    margin: 0 1rem 0.5rem 0 !important;
-    display: block !important;
-  }
-
-  /* Título arriba del todo */
-  .category-item h3,
-  .item-card h3 {
-    margin: 0 0 0.5rem 0 !important;
-    font-size: 1.1rem !important;
-    font-weight: bold !important;
-    line-height: 1.3 !important;
-    width: 100% !important;
-    display: block !important;
-  }
-
-  /* Contenedor para categoría y subcategoría debajo de la imagen */
-  .category-item .category,
-  .item-card .category,
-  .category-item .subcategory,
-  .item-card .subcategory {
-    display: block !important;
-    font-size: 0.85rem !important;
-    margin: 0.2rem 0 !important;
-    width: 80px !important;
-    float: left !important;
-    clear: left !important;
-    text-align: center !important;
-  }
-
-  /* Descripción a la derecha */
-  .category-item p,
-  .item-card p,
-  .category-item .description,
-  .item-card .description {
-    margin: 0.5rem 0 0 100px !important;
-    font-size: 0.95rem !important;
-    line-height: 1.4 !important;
-    text-align: left !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-  }
-
-  /* Clearfix para el contenedor */
-  .category-item::after,
-  .item-card::after {
-    content: "" !important;
-    display: table !important;
-    clear: both !important;
   }
 
