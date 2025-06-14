@@ -1354,18 +1354,18 @@ html[data-theme='dark'] .coffee-menu-button:hover {
 
 /* Ajustes específicos para móviles */
 @media (max-width: 768px) {
-  /* 1. Items de la home con 98% width y 2% de margen total */
+  /* 1. Items de la home ocupando todo el width */
   .recommendations-list {
-    width: 98% !important;
-    margin-left: 1% !important;
-    margin-right: 1% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     gap: 1rem;
   }
 
   .recommendation-card {
-    width: calc(50% - 0.5rem) !important;
+    width: 100% !important;
     min-width: unset !important;
     max-width: unset !important;
   }
