@@ -1354,9 +1354,9 @@ html[data-theme='dark'] .coffee-menu-button:hover {
 
 /* Ajustes específicos para móviles */
 @media (max-width: 768px) {
-  /* 1. Items de la home con margen de 10px a izquierda y derecha */
+  /* 1. Items de la home con margen de 10px a izquierda y derecha - reducido 2% */
   .recommendations-list {
-    width: calc(100% - 20px) !important;
+    width: calc(98% - 20px) !important;
     margin: 1rem 10px 0 10px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -1387,35 +1387,42 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     color: #666666 !important; /* Descripción en gris (el gris que tenía antes el título) */
   }
 
-  /* 3. Eliminar espacio entre menú y categorías */
+  /* 3. Eliminar completamente el espacio entre menú y categorías en la home */
   h1 {
-    margin: 0 auto 0 auto !important; /* Eliminado el margin-bottom */
+    margin: 0 auto !important; /* Eliminado completamente todos los márgenes */
     font-size: 1.8rem;
+    padding: 0 !important;
   }
 
   .categories-list {
     margin-top: 0 !important;
     padding-top: 0 !important;
+    margin-bottom: 1rem !important;
   }
 
-  /* 4. Botón volver fuera del menú desplegable en página de detalle */
+  /* 4. Botón volver fuera del menú desplegable en página de detalle - encima del detalle */
   .back-button {
     position: fixed !important;
-    top: 60px !important; /* Debajo del header */
-    left: 10px !important;
+    top: 80px !important; /* Más abajo del header para estar encima del detalle */
+    left: 15px !important;
     z-index: 1000 !important;
     background: var(--primary-color) !important;
     color: white !important;
     border: none !important;
-    padding: 8px 12px !important;
-    border-radius: 20px !important;
+    padding: 10px 15px !important;
+    border-radius: 25px !important;
     font-size: 0.9rem !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    min-width: 80px !important;
+    text-align: center !important;
   }
 
   .back-button:hover {
     background: var(--hover-color) !important;
     color: var(--text-color) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
   }
 
   /* 5. Página de detalle - item al 100% */
@@ -1424,6 +1431,7 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     max-width: 100% !important;
     margin: 0 !important;
     padding: 1rem !important;
+    padding-top: 120px !important; /* Espacio suficiente para el botón volver fijo */
     box-sizing: border-box !important;
   }
 
@@ -1433,6 +1441,7 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     margin-left: 0 !important;
     margin-right: 0 !important;
     padding: 1rem !important;
+    margin-top: 0 !important;
     box-sizing: border-box !important;
   }
 
@@ -1449,10 +1458,10 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     word-wrap: break-word !important;
   }
 
-  /* 4. Maquetado del listado de items de categoría igual que recomendados */
+  /* 4. Maquetado del listado de items de categoría igual que recomendados - reducido 2% */
   .category-items-list,
   .items-list {
-    width: calc(100% - 20px) !important;
+    width: calc(98% - 20px) !important;
     margin: 1rem 10px 0 10px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
