@@ -2624,22 +2624,25 @@
       "id": 148,
       "category": "movies",
       "subcategory": "comedy",
+      "tags": [
+          "spanish"
+        ],
       "title": {
-        "es": "Annie Hall",
-        "en": "Annie Hall"
+        "es": "El Milagro de P. Tinto",
+        "en": "The Miracle of P. Tinto"
       },
       "description": {
-        "es": "Una comedia romántica de Woody Allen que explora las complejidades de las relaciones modernas en Nueva York. Ganadora de 4 premios Oscar, incluyendo Mejor Película.",
-        "en": "A romantic comedy by Woody Allen exploring the complexities of modern relationships in New York. Winner of 4 Oscars, including Best Picture."
-      },
-      "director": "Woody Allen",
-      "image": "/imagenes/peliculas/annie_hall.jpg",
-      "year": 1977,
+        "es": "Una comedia surrealista que narra la peculiar vida de P. Tinto, un hombre que espera un milagro mientras enfrenta situaciones absurdas y personajes extravagantes.",
+        "en": "A surreal comedy that tells the peculiar life of P. Tinto, a man waiting for a miracle while facing absurd situations and extravagant characters."
+      },    "director": "Javier Fesser",
+      "image": "/imagenes/peliculas/el_milagro_de_p_tinto.jpg",
+      "year": 1998,
+      "masterpiece": true,
+      "cine_espanol": true,
       "trailer": {
-        "es": "https://www.youtube.com/watch?v=TBzHphcc2Jw",
-        "en": "https://www.youtube.com/watch?v=TBzHphcc2Jw"
-      },
-      "masterpiece": false
+        "es": "https://www.youtube.com/watch?v=Q0GMTc6TBf0",
+        "en": "https://www.youtube.com/watch?v=Q0GMTc6TBf0"
+      }
     },
     {
       "id": 149,
@@ -5487,31 +5490,8 @@
       "es": "https://www.youtube.com/watch?v=FGzvvUBXj5M",
       "en": "https://www.youtube.com/watch?v=EqYiSlkvRuw"
     }
-  },
-  {
-    "id": 287,
-    "category": "movies",
-    "subcategory": "comedy",
-    "tags": [
-        "spanish"
-      ],
-    "title": {
-      "es": "El Milagro de P. Tinto",
-      "en": "The Miracle of P. Tinto"
-    },
-    "description": {
-      "es": "Una comedia surrealista que narra la peculiar vida de P. Tinto, un hombre que espera un milagro mientras enfrenta situaciones absurdas y personajes extravagantes.",
-      "en": "A surreal comedy that tells the peculiar life of P. Tinto, a man waiting for a miracle while facing absurd situations and extravagant characters."
-    },    "director": "Javier Fesser",
-    "image": "/imagenes/peliculas/el_milagro_de_p_tinto.jpg",
-    "year": 1998,
-    "masterpiece": true,
-    "cine_espanol": true,
-    "trailer": {
-      "es": "https://www.youtube.com/watch?v=Q0GMTc6TBf0",
-      "en": "https://www.youtube.com/watch?v=Q0GMTc6TBf0"
-    }
   }
+  
   
   ]
 }
