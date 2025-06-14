@@ -13,7 +13,11 @@ import ErrorDisplay from './components/ErrorDisplay';
 import { getDefaultTitle, isMobileDevice, generateRecommendationKey, getRandomNotFoundImage } from './utils/appUtils';
 import ThemeToggle from './components/ThemeToggle';
 import { useTitleSync } from './hooks/useTitleSync';
+import MaterialThemeProvider from './components/MaterialThemeProvider';
+import HybridMenu from './components/HybridMenu';
 
+/*
+// Componente LanguageSelector movido a HybridMenu.jsx
 function LanguageSelector() {
   const { lang, changeLanguage } = useLanguage();
   return (
@@ -29,7 +33,10 @@ function LanguageSelector() {
     </select>
   );
 }
+*/
 
+/*
+// Función Menu movida a HybridMenu.jsx como DesktopMenu
 function Menu() {
   const { t, lang } = useLanguage();
   const { resetAllFilters } = useFiltersStore();
@@ -55,14 +62,12 @@ function Menu() {
       position: 'relative'
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-        {/* Botón de inicio a la izquierda que resetea todos los filtros */}
         <button 
           onClick={handleNewRecommendations} 
           style={{ fontWeight: 'bold' }}
         >
           {t.home_title}
         </button>
-        {/* Mostrar botón volver solo en vista de detalle */}
         {isDetailView && (
           <button 
             className="category-btn" 
@@ -79,7 +84,6 @@ function Menu() {
             ← {t.back || 'Volver'}
           </button>
         )}
-        {/* Mostrar botón volver en vista de café */}
         {isCoffeeView && (
           <button 
             className="category-btn" 
@@ -96,7 +100,6 @@ function Menu() {
             ← {t.back || 'Volver'}
           </button>
         )}
-        {/* Botón de donación - solo mostrar si no estamos en la página de café */}
         {!isCoffeeView && (
           <button 
             onClick={navigateToCoffee}
@@ -118,7 +121,6 @@ function Menu() {
           </button>
         )}
       </div>
-        {/* Selector de idioma - siempre a la derecha */}
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <ThemeToggle />
         <LanguageSelector />
@@ -126,6 +128,7 @@ function Menu() {
     </nav>
   );
 }
+*/
 
 function RecommendationsList({ recommendations, isHome }) {
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
@@ -414,6 +417,8 @@ function HomePage({ onCategory }) {
 
 
 
+/*
+// Funciones MobileMenuBar y MobileMenu movidas a MaterialMobileMenu.jsx
 function MobileMenuBar() {
   // Utilizamos directamente la acción del store
   const { openMobileMenu } = useUIStore();
@@ -455,28 +460,25 @@ function MobileMenu() {
     <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
       <nav className="mobile-menu" onClick={e => e.stopPropagation()}>
         <button className="close-btn" onClick={closeMobileMenu} aria-label="Cerrar menú">&times;</button>
-          {/* Botón de volver - solo visible en vista de detalle */}
-        {isDetailView && (
+          {isDetailView && (
           <button className="category-btn" onClick={() => {goBackFromDetail(); closeMobileMenu();}}>
             ← {t.back || 'Volver'}
           </button>
         )}
         
-        {/* Botón de volver - solo visible en vista de café */}
         {isCoffeeView && (
           <button className="category-btn" onClick={() => {goBackFromCoffee(); closeMobileMenu();}}>
             ← {t.back || 'Volver'}
           </button>
         )}
         
-        {/* Botón de inicio */}        <button onClick={() => {navigate('home'); closeMobileMenu();}}>
+        <button onClick={() => {navigate('home'); closeMobileMenu();}}>
           {t.categories ? t.categoriesTitle : (t.home_title || 'Inicio')}
-        </button>        {/* Botón de nuevas recomendaciones */}
+        </button>        
         <button onClick={handleNewRecommendations}>
           {t.home_title}
         </button>
         
-        {/* Botón de donación - solo mostrar si no estamos en la página de café */}
         {!isCoffeeView && (
           <button 
             onClick={handleCoffeeNavigation}
@@ -494,17 +496,16 @@ function MobileMenu() {
           </button>
         )}
         
-        {/* Selector de tema */}
         <div style={{ display: 'flex', justifyContent: 'center', margin: '0.5rem 0' }}>
           <ThemeToggle />
         </div>
         
-        {/* Selector de idioma */}
         <LanguageSelector />
       </nav>
     </div>
   );
 }
+*/
 
 function CoffeePage() {
   const { t } = useLanguage();
@@ -583,15 +584,9 @@ function AppContent() {
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
-  }, [setMobile]);return (
-    <div className="container" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>      {isMobileUI ? (
-        <>
-          <MobileMenuBar />
-          <MobileMenu />
-        </>
-      ) : (
-        <Menu />
-      )}
+  }, [setMobile]);  return (
+    <div className="container" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>      
+      <HybridMenu />
       {content}
     </div>
   );
@@ -743,10 +738,12 @@ function ItemDetail() {
 export default function App() {
   return (
     <LanguageProvider>
-      <div className="App" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
-        <AppContent />
-        <ErrorDisplay />
-      </div>
+      <MaterialThemeProvider>
+        <div className="App" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
+          <AppContent />
+          <ErrorDisplay />
+        </div>
+      </MaterialThemeProvider>
     </LanguageProvider>
   );
 }
