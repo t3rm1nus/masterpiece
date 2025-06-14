@@ -98,10 +98,15 @@ const MaterialMobileMenu = () => {
         sx={{ 
           backgroundColor: isDarkTheme ? '#1e1e1e' : '#ffffff',
           color: isDarkTheme ? '#ffffff' : '#000000',
-          borderBottom: isDarkTheme ? '1px solid #333' : '1px solid #e0e0e0'
+          borderBottom: isDarkTheme ? '1px solid #333' : '1px solid #e0e0e0',
+          minHeight: '56px' // Altura estándar del AppBar Material UI
         }}
       >
-        <Toolbar sx={{ justifyContent: 'space-between', padding: '0 16px' }}>
+        <Toolbar sx={{ 
+          justifyContent: 'space-between', 
+          padding: '0 16px',
+          minHeight: '56px !important' // Asegurar altura consistente
+        }}>
           <Typography 
             variant="h6" 
             component="div" 
