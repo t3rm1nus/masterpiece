@@ -120,7 +120,7 @@ html[data-animations='false'] * {
 @media (max-width: 768px) {
   .container {
     max-width: 100vw;
-    padding: 0 1rem;
+    padding: 0 0.5rem; /* Optimizado para móviles */
   }
 }
 
@@ -1244,4 +1244,35 @@ html[data-theme='dark'] .coffee-menu-button:hover {
 #paypal-button-wrapper.loaded {
   opacity: 1;
   transition: opacity 0.3s ease;
+}
+
+/* Ajustes específicos para móviles */
+@media (max-width: 768px) {
+  /* Reducir espacio del título principal */
+  h1 {
+    margin: 0.5rem auto 1rem auto; /* Reducido significativamente */
+    font-size: 1.8rem; /* Reducir tamaño de fuente para móviles */
+  }
+  
+  /* Reducir espacio entre menú superior y botones de categorías */
+  .categories-list {
+    margin-top: 0.5rem; /* Reducido de 1.5rem */
+    padding-top: 10px; /* Reducido de 20px */
+  }
+  
+  /* Añadir márgenes laterales para los items del listado en móviles */
+  .recommendations-list {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    gap: 1rem; /* Reducido de 1.5rem para mejor aprovechamiento del espacio */
+  }
+  
+  /* Ajustar ancho de las cards en móviles */
+  .recommendation-card {
+    width: calc(50% - 0.5rem); /* Ajustar para que quepan 2 por fila con márgenes */
+    min-width: 160px;
+    max-width: 180px;
+  }
 }
