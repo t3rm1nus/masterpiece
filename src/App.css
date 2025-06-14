@@ -362,17 +362,17 @@ h1 {
 
 .recommendation-card .masterpiece-badge {
   position: absolute;
-  top: -18px;
-  right: -18px;
+  top: -10px;
+  right: -10px;
   background: #ffd700;
   color: #fff;
   border-radius: 50%;
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   border: 2px solid #fffbe6;
@@ -396,11 +396,15 @@ h1 {
 .item-detail.masterpiece img[alt="Masterpiece icon"] {
   display: block;
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 48px;
-  height: 48px;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
   z-index: 10;
+  border-radius: 50%;
+  border: 2px solid #ffd700;
+  background: #fff;
+  padding: 2px;
 }
 
 /* --- RESPONSIVE DESIGN --- */
@@ -879,11 +883,15 @@ h1 {
 .item-detail.masterpiece img[alt="Masterpiece icon"] {
   display: block;
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 48px;
-  height: 48px;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
   z-index: 10;
+  border-radius: 50%;
+  border: 2px solid #ffd700;
+  background: #fff;
+  padding: 2px;
 }
 
 /* Estilos para el botón de trailer en la vista de detalle */
@@ -943,11 +951,15 @@ html[data-theme='dark'] .item-detail.podcast {
 .item-detail.masterpiece img[alt="Masterpiece icon"] {
   display: block;
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 48px;
-  height: 48px;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
   z-index: 10;
+  border-radius: 50%;
+  border: 2px solid #ffd700;
+  background: #fff;
+  padding: 2px;
 }
 
 /* ================================
@@ -1403,25 +1415,27 @@ html[data-theme='dark'] .coffee-menu-button:hover {
   /* 4. Botón volver fuera del menú desplegable en página de detalle - encima del detalle */
   .back-button {
     position: fixed !important;
-    top: 80px !important; /* Más abajo del header para estar encima del detalle */
-    left: 15px !important;
+    top: 90px !important; /* Más abajo para estar claramente encima del contenido del detalle */
+    left: 50% !important;
+    transform: translateX(-50%) !important; /* Centrado horizontalmente */
     z-index: 1000 !important;
     background: var(--primary-color) !important;
     color: white !important;
     border: none !important;
-    padding: 10px 15px !important;
+    padding: 12px 20px !important;
     border-radius: 25px !important;
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
     font-weight: bold !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
-    min-width: 80px !important;
+    min-width: 100px !important;
     text-align: center !important;
+    margin-bottom: 1rem !important;
   }
 
   .back-button:hover {
     background: var(--hover-color) !important;
     color: var(--text-color) !important;
-    transform: translateY(-2px) !important;
+    transform: translateX(-50%) translateY(-2px) !important;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
   }
 
@@ -1431,7 +1445,7 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     max-width: 100% !important;
     margin: 0 !important;
     padding: 1rem !important;
-    padding-top: 120px !important; /* Espacio suficiente para el botón volver fijo */
+    padding-top: 140px !important; /* Espacio suficiente para el botón volver centrado */
     box-sizing: border-box !important;
   }
 
@@ -1770,17 +1784,47 @@ button.rect.medium.gold.css-1565878 {
   }
 }
 
+/* Ocultar botones de categorías y volver en menú superior para móviles */
+  .main-menu .category-btn,
+  .main-menu .back-button,
+  .main-menu button[onclick*="category"],
+  .main-menu button[onclick*="back"],
+  .main-menu button[onclick*="volver"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+
+  /* Ocultar también por texto del botón */
+  .main-menu button:contains("Volver"),
+  .main-menu button:contains("Back") {
+    display: none !important;
+  }
+
+  /* Ocultar selectores de categoría en menú superior */
+  .main-menu select[id*="category"],
+  .main-menu select[name*="category"] {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
 /* Layout específico para items de categoría igual que recomendaciones - imagen flotada */
 .category-item,
 .item-card {
-    display: flex !important;
-    flex-direction: column !important;
+    width: 100% !important;
+    min-width: unset !important;
+    max-width: unset !important;
+    margin-bottom: 1rem !important;
+    box-sizing: border-box !important;
+    display: block !important;
     position: relative !important;
     padding: 1rem !important;
     background: var(--card-background) !important;
     border-radius: 12px !important;
     border: 1px solid var(--border-color) !important;
     box-shadow: 0 2px 8px var(--shadow-color) !important;
+    min-height: 140px !important;
+    overflow: hidden !important;
   }
 
   /* Imagen flotada a la izquierda */
@@ -1792,6 +1836,7 @@ button.rect.medium.gold.css-1565878 {
     object-fit: cover !important;
     border-radius: 8px !important;
     margin: 0 1rem 0.5rem 0 !important;
+    display: block !important;
   }
 
   /* Título arriba del todo */
@@ -1801,10 +1846,11 @@ button.rect.medium.gold.css-1565878 {
     font-size: 1.1rem !important;
     font-weight: bold !important;
     line-height: 1.3 !important;
-    clear: both !important;
+    width: 100% !important;
+    display: block !important;
   }
 
-  /* Categoría y subcategoría debajo de la imagen (lado izquierdo) */
+  /* Contenedor para categoría y subcategoría debajo de la imagen */
   .category-item .category,
   .item-card .category,
   .category-item .subcategory,
@@ -1812,9 +1858,10 @@ button.rect.medium.gold.css-1565878 {
     display: block !important;
     font-size: 0.85rem !important;
     margin: 0.2rem 0 !important;
-    clear: left !important;
-    width: 100px !important;
+    width: 80px !important;
     float: left !important;
+    clear: left !important;
+    text-align: center !important;
   }
 
   /* Descripción a la derecha */
@@ -1826,6 +1873,8 @@ button.rect.medium.gold.css-1565878 {
     font-size: 0.95rem !important;
     line-height: 1.4 !important;
     text-align: left !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
 
   /* Clearfix para el contenedor */
