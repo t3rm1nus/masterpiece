@@ -9,6 +9,7 @@
   --card-background: #f9f9f9;
   --hover-color: #f0f0f0;
   --shadow-color: rgba(0, 0, 0, 0.1);
+}
 
 /* Tema oscuro */
 html[data-theme='dark'] {
