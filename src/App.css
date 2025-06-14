@@ -766,6 +766,69 @@ h1 {
     margin-top: 4px !important;
   }
   
+  /* Corregir el label "¡Gracias por el coffee!" que sale recortado */
+  #paypal-container-MRSQEQV646EPA .input-label,
+  #paypal-container-MRSQEQV646EPA label.input-label {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    padding: 2px 4px !important;
+    margin: 2px 0 !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    max-width: 100% !important;
+    width: auto !important;
+    display: inline-block !important;
+    text-align: center !important;
+  }
+  
+  /* Corregir el span "EUR" que sale recortado */
+  #paypal-container-MRSQEQV646EPA .currency-label,
+  #paypal-container-MRSQEQV646EPA span.currency-label {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    padding: 2px 4px !important;
+    margin: 2px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    max-width: 100% !important;
+    width: auto !important;
+    text-align: center !important;
+  }
+  
+  /* Hacer que el logo de PayPal salte de línea */
+  #paypal-container-MRSQEQV646EPA .paypal-logo,
+  #paypal-container-MRSQEQV646EPA img.paypal-logo,
+  #paypal-container-MRSQEQV646EPA img[alt*="paypal"] {
+    display: block !important;
+    width: auto !important;
+    max-width: 80px !important;
+    height: auto !important;
+    max-height: 20px !important;
+    margin: 4px auto !important;
+    text-align: center !important;
+    clear: both !important;
+    float: none !important;
+  }
+  
+  /* Hacer que las imágenes de tarjetas salten de línea */
+  #paypal-container-MRSQEQV646EPA img[src*="Debit_Credit_APM.svg"],
+  #paypal-container-MRSQEQV646EPA .css-au42bs,
+  #paypal-container-MRSQEQV646EPA img[alt*="card icons"] {
+    display: block !important;
+    width: auto !important;
+    max-width: 120px !important;
+    height: auto !important;
+    max-height: 24px !important;
+    margin: 4px auto 0 auto !important;
+    text-align: center !important;
+    clear: both !important;
+    float: none !important;
+    margin-top: 8px !important;
+  }
+  
   /* Mejorar todos los botones PayPal */
   .MuiPaper-root #paypal-container-MRSQEQV646EPA button,
   #paypal-container-MRSQEQV646EPA button {
@@ -783,6 +846,14 @@ h1 {
     justify-content: center !important;
     margin: 2px 0 !important;
     box-sizing: border-box !important;
+    flex-wrap: wrap !important;
+  }
+  
+  /* Asegurar que elementos internos de botones también salten de línea */
+  #paypal-container-MRSQEQV646EPA button * {
+    display: inline-block !important;
+    margin: 0 2px !important;
+    line-height: 1.2 !important;
   }
   
   /* Botón principal de PayPal */
@@ -836,60 +907,195 @@ h1 {
     display: block !important;
     margin: 2px 0 !important;
   }
-}
-
-/* Asegurar que el menú móvil esté pegado al top */
-@media (max-width: 768px) {
-  /* Remover cualquier margen o padding del html y body */
-  html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
   
-  /* Asegurar que el AppBar Material UI esté pegado al top */
-  .MuiAppBar-root {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    z-index: 1100 !important;
-  }
-  
-  /* Remover cualquier margen del container principal y ajustar para el nuevo espaciado */
-  #root {
-    margin-top: 0 !important;
-    padding-top: 24px !important; /* Reducido para coincidir con el nuevo padding */
-  }
-  
-  /* Asegurar que no hay scroll horizontal */
-  body {
-    overflow-x: hidden;
+  /* Forzar que todos los elementos inline se vuelvan block en móviles */
+  #paypal-container-MRSQEQV646EPA span,
+  #paypal-container-MRSQEQV646EPA label,
+  #paypal-container-MRSQEQV646EPA img {
+    display: block !important;
+    width: auto !important;
+    margin: 2px auto !important;
+    text-align: center !important;
+    clear: both !important;
+    float: none !important;
   }
 }
 
-/* Estilos adicionales para asegurar el posicionamiento correcto del AppBar móvil */
+/* ===== CORRECCIONES ESPECÍFICAS PARA PAYPAL EN MÓVILES ===== */
 @media (max-width: 768px) {
-  /* Forzar posicionamiento del AppBar en la parte superior */
-  .MuiAppBar-positionFixed {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    margin: 0 !important;
+  /* Asegurar que todos los elementos de PayPal sean block y centrados en móviles */
+  #paypal-container-MRSQEQV646EPA * {
+    /* Forzar layout vertical en móviles */
+    display: block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 3px auto !important;
+    text-align: center !important;
+    clear: both !important;
+    float: none !important;
+    
+    /* Asegurar orientación horizontal del texto */
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    direction: ltr !important;
+    
+    /* Evitar recortes */
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: clip !important;
+    
+    /* Mejorar legibilidad */
+    line-height: 1.3 !important;
+  }
+  
+  /* Contenedor principal PayPal - Layout vertical forzado */
+  #paypal-container-MRSQEQV646EPA {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 6px !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Elementos internos - Forzar estructura vertical */
+  #paypal-container-MRSQEQV646EPA > div,
+  #paypal-container-MRSQEQV646EPA > div > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 4px !important;
+  }
+  
+  /* Labels y spans - Corrección específica para elementos recortados */
+  #paypal-container-MRSQEQV646EPA label,
+  #paypal-container-MRSQEQV646EPA span,
+  #paypal-container-MRSQEQV646EPA .input-label,
+  #paypal-container-MRSQEQV646EPA .currency-label {
+    display: block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 4px auto !important;
+    padding: 2px 4px !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    
+    /* Anti-recorte específico */
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: visible !important;
+    min-height: 16px !important;
+    height: auto !important;
+    
+    /* Asegurar orientación */
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    direction: ltr !important;
+  }
+  
+  /* Imágenes - Logos y tarjetas en líneas separadas */
+  #paypal-container-MRSQEQV646EPA img {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 6px auto !important;
+    text-align: center !important;
+    clear: both !important;
+    float: none !important;
+  }
+  
+  /* Logo PayPal específico */
+  #paypal-container-MRSQEQV646EPA img[alt*="paypal"],
+  #paypal-container-MRSQEQV646EPA .paypal-logo {
+    max-width: 80px !important;
+    max-height: 20px !important;
+    margin: 6px auto !important;
+  }
+  
+  /* Iconos de tarjetas específicos */
+  #paypal-container-MRSQEQV646EPA img[src*="Debit_Credit_APM"],
+  #paypal-container-MRSQEQV646EPA img[alt*="card icons"],
+  #paypal-container-MRSQEQV646EPA .css-au42bs {
+    max-width: 120px !important;
+    max-height: 24px !important;
+    margin: 8px auto !important;
+  }
+  
+  /* Botones - Mejora específica para móviles */
+  #paypal-container-MRSQEQV646EPA button {
+    display: block !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    height: auto !important;
+    min-height: 44px !important;
+    margin: 4px auto !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    
+    /* Layout interno del botón */
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    
+    /* Tipografía */
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    
+    /* Asegurar orientación */
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    direction: ltr !important;
+  }
+  
+  /* Elementos internos de botones */
+  #paypal-container-MRSQEQV646EPA button * {
+    display: inline !important;
+    margin: 0 2px !important;
+    line-height: 1.3 !important;
+    vertical-align: middle !important;
+  }
+  
+  /* iframes de PayPal */
+  #paypal-container-MRSQEQV646EPA iframe {
+    display: block !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 4px auto !important;
+    border-radius: 6px !important;
+    min-height: 44px !important;
+  }
+  
+  /* Texto "Powered by PayPal" */
+  #paypal-container-MRSQEQV646EPA [data-testid="powered-by-paypal"] {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    margin-top: 8px !important;
+    padding: 4px !important;
+    color: #666 !important;
+  }
+  
+  /* Prevenir problemas de posicionamiento */
+  #paypal-container-MRSQEQV646EPA * {
+    position: relative !important;
     transform: none !important;
+    -webkit-transform: none !important;
   }
   
-  /* Asegurar que el Toolbar del AppBar tenga la altura correcta */
-  .MuiToolbar-dense {
-    min-height: 48px !important;
-    height: 48px !important;
-    padding-left: 12px !important;
-    padding-right: 12px !important;
-  }
-  
-  /* Remover cualquier transformación o translateY que pueda afectar */
-  .MuiAppBar-root {
-    transform: translateY(0) !important;
-    -webkit-transform: translateY(0) !important;
+  /* Anti-float global para PayPal */
+  #paypal-container-MRSQEQV646EPA *:not(button):not(iframe) {
+    float: none !important;
+    clear: both !important;
   }
 }
+
+/* ===== FIN CORRECCIONES PAYPAL MÓVILES ===== */
