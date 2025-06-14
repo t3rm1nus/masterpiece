@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMediaQuery, useTheme, Box, Grid } from '@mui/material';
+import { useMediaQuery, useTheme, Box } from '@mui/material';
 import MaterialRecommendationCard from './MaterialRecommendationCard';
 import MaterialCategoryButtons from './MaterialCategoryButtons';
 import MaterialSubcategoryChips from './MaterialSubcategoryChips';

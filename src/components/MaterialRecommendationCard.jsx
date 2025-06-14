@@ -16,7 +16,7 @@ import {
   SportsEsports as GameIcon,
   MenuBook as BookIcon,
   LibraryMusic as MusicIcon,
-  Podcast as PodcastIcon,
+  Mic as PodcastIcon,
   Extension as BoardGameIcon,
   AutoStories as ComicIcon
 } from '@mui/icons-material';
@@ -74,10 +74,10 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
         return theme.palette.mode === 'dark' ? '#7b1fa2' : '#9c27b0';
       case 'books':
       case 'libros':
-        return theme.palette.mode === 'dark' ? '#388e3c' : '#4caf50';
-      case 'music':
+        return theme.palette.mode === 'dark' ? '#388e3c' : '#4caf50';      case 'music':
       case 'musica':
-        return theme.palette.mode === 'dark' ? '#0097a7' : '#00bcd4';      case 'podcast':
+        return theme.palette.mode === 'dark' ? '#0097a7' : '#00bcd4';
+      case 'podcast':
       case 'podcasts':
         return theme.palette.mode === 'dark' ? '#689f38' : '#8bc34a';
       case 'boardgames':

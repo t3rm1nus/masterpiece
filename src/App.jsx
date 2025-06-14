@@ -1,16 +1,15 @@
 // Eliminar imports innecesarios ya que están en los stores
 import { LanguageProvider, useLanguage } from "./LanguageContext";
 import './App.css'
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import React from "react";
-import { normalizeSubcategory, filterItemsBySubcategory, getUniqueSubcategories, normalizeSubcategoryInternal } from './utils/categoryUtils';
 import useFiltersStore from './store/filtersStore';
 import useUIStore from './store/uiStore';
 import useAppDataStore from './store/appDataStore';
 import useStylesStore from './store/stylesStore';
 import useRenderStore from './store/renderStore';
 import ErrorDisplay from './components/ErrorDisplay';
-import { getDefaultTitle, isMobileDevice, generateRecommendationKey, getRandomNotFoundImage } from './utils/appUtils';
+import { isMobileDevice, generateRecommendationKey } from './utils/appUtils';
 import ThemeToggle from './components/ThemeToggle';
 import { useTitleSync } from './hooks/useTitleSync';
 import MaterialThemeProvider from './components/MaterialThemeProvider';

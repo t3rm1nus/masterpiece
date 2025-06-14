@@ -1,9 +1,7 @@
 import React from 'react';
 import {
   Button,
-  ButtonGroup,
   Box,
-  Chip,
   useTheme,
   useMediaQuery
 } from '@mui/material';
@@ -12,7 +10,7 @@ import {
   SportsEsports as GameIcon,
   MenuBook as BookIcon,
   LibraryMusic as MusicIcon,
-  Podcast as PodcastIcon,
+  Mic as PodcastIcon,
   Extension as BoardGameIcon,
   AutoStories as ComicIcon,
   Category as CategoryIcon

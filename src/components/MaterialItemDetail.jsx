@@ -10,7 +10,6 @@ import {
   useTheme,
   useMediaQuery,
   Stack,
-  IconButton,
   Fab
 } from '@mui/material';
 import {
