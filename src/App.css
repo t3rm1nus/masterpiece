@@ -1485,11 +1485,11 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     word-wrap: break-word !important;
   }
 
-  /* 4. Maquetado del listado de items de categoría igual que recomendados - reducido 4% total */
+  /* 4. Maquetado del listado de items de categoría igual que recomendados - margen izquierdo reducido */
   .category-items-list,
   .items-list {
-    width: calc(96% - 20px) !important;
-    margin: 1rem 10px 0 10px !important;
+    width: calc(96% - 15px) !important; /* Reducido de 20px a 15px */
+    margin: 1rem 5px 0 5px !important; /* Margen izquierdo reducido de 10px a 5px */
     padding-left: 0 !important;
     padding-right: 0 !important;
     gap: 1rem !important;
@@ -1891,4 +1891,60 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     left: -9999px !important;
   }
 
-/* Estilos adicionales fuera del media query */
+/* Ocultar botones volver y categorías del menú hamburguesa en móviles */
+  .hamburger-menu .category-btn,
+  .hamburger-menu .back-button,
+  .hamburger-menu button[class*="category"],
+  .hamburger-menu button[class*="back"],
+  .hamburger-menu button[onclick*="category"],
+  .hamburger-menu button[onclick*="back"],
+  .hamburger-menu button[onclick*="volver"],
+  .hamburger-menu .category-button,
+  .hamburger-menu .categories-button,
+  .mobile-menu .category-btn,
+  .mobile-menu .back-button,
+  .mobile-menu button[class*="category"],
+  .mobile-menu button[class*="back"],
+  .mobile-menu button[onclick*="category"],
+  .mobile-menu button[onclick*="back"],
+  .mobile-menu button[onclick*="volver"],
+  .mobile-menu .category-button,
+  .mobile-menu .categories-button,
+  .dropdown-menu .category-btn,
+  .dropdown-menu .back-button,
+  .dropdown-menu button[class*="category"],
+  .dropdown-menu button[class*="back"],
+  .dropdown-menu button[onclick*="category"],
+  .dropdown-menu button[onclick*="back"],
+  .dropdown-menu button[onclick*="volver"],
+  .dropdown-menu .category-button,
+  .dropdown-menu .categories-button {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
+
+  /* Ocultar elementos por texto en menú hamburguesa */
+  .hamburger-menu button:contains("Volver"),
+  .hamburger-menu button:contains("Back"),
+  .hamburger-menu button:contains("Categoría"),
+  .hamburger-menu button:contains("Category"),
+  .mobile-menu button:contains("Volver"),
+  .mobile-menu button:contains("Back"),
+  .mobile-menu button:contains("Categoría"),
+  .mobile-menu button:contains("Category"),
+  .dropdown-menu button:contains("Volver"),
+  .dropdown-menu button:contains("Back"),
+  .dropdown-menu button:contains("Categoría"),
+  .dropdown-menu button:contains("Category") {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
