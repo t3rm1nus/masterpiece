@@ -1354,31 +1354,37 @@ html[data-theme='dark'] .coffee-menu-button:hover {
 
 /* Ajustes específicos para móviles */
 @media (max-width: 768px) {
-  /* 1. Items de la home con margen de 10px a izq y derecha */
+  /* 1. Items de la home con margen de 10px a izquierda y derecha */
   .recommendations-list {
     width: calc(100% - 20px) !important;
-    margin: 0 10px !important;
+    margin: 1rem 10px 0 10px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     gap: 1rem;
+    box-sizing: border-box !important;
   }
 
   .recommendation-card {
     width: 100% !important;
     min-width: unset !important;
     max-width: unset !important;
+    box-sizing: border-box !important;
   }
 
   /* 2. Colores de texto en items de la home para móviles */
-  .recommendation-card h3,
+  .recommendation-card h3 {
+    color: #000000 !important; /* Título en negro */
+  }
+  
   .recommendation-card .category,
-  .recommendation-card .subcategory {
-    color: #000000 !important; /* Título, categoría y subcategoría en negro */
+  .recommendation-card .subcategory,
+  .recommendation-card span:not(.description) {
+    color: #000000 !important; /* Categoría y subcategoría en negro */
   }
 
   .recommendation-card p,
   .recommendation-card .description {
-    color: #666666 !important; /* Descripción en gris */
+    color: #666666 !important; /* Descripción en gris (el gris que tenía antes el título) */
   }
 
   /* 3. Eliminar espacio entre menú y categorías */
@@ -1447,12 +1453,13 @@ html[data-theme='dark'] .coffee-menu-button:hover {
   .category-items-list,
   .items-list {
     width: calc(100% - 20px) !important;
-    margin: 0 10px !important;
+    margin: 1rem 10px 0 10px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     gap: 1rem !important;
     display: flex !important;
     flex-direction: column !important;
+    box-sizing: border-box !important;
   }
 
   .category-item,
@@ -1461,16 +1468,22 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     min-width: unset !important;
     max-width: unset !important;
     margin-bottom: 1rem !important;
+    box-sizing: border-box !important;
   }
 
   /* Colores de texto en items de categoría igual que en home */
   .category-item h3,
-  .item-card h3,
+  .item-card h3 {
+    color: #000000 !important; /* Título en negro */
+  }
+  
   .category-item .category,
   .item-card .category,
   .category-item .subcategory,
-  .item-card .subcategory {
-    color: #000000 !important; /* Título, categoría y subcategoría en negro */
+  .item-card .subcategory,
+  .category-item span:not(.description),
+  .item-card span:not(.description) {
+    color: #000000 !important; /* Categoría y subcategoría en negro */
   }
 
   .category-item p,
