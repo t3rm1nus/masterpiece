@@ -411,7 +411,7 @@ h1 {
 @media (max-width: 600px) {
   #root, .container {
     padding: 0.2rem !important;
-    padding-top: 56px !important; /* Reducido de 68px a 56px - altura del AppBar Material UI */
+    padding-top: 48px !important; /* Ajustado a la nueva altura del AppBar */
     max-width: 100vw;
   }
   
@@ -563,8 +563,28 @@ h1 {
 /* Media query específico para móviles muy pequeños */
 @media (max-width: 480px) {
   #root, .container {
-    padding-top: 52px !important; /* Reducir aún más en pantallas muy pequeñas */
+    padding-top: 44px !important; /* Reducir aún más en pantallas muy pequeñas */
   }
 }
 
-/* Final del media query para móviles */
+/* Estilos específicos para tarjetas Material UI en móviles */
+@media (max-width: 768px) {
+  .MuiCard-root {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border-color) !important;
+  }
+  
+  /* Asegurar que los badges de masterpiece no se salgan de la pantalla */
+  .MuiBadge-root {
+    position: absolute !important;
+    top: 4px !important;
+    right: 4px !important;
+    max-width: calc(100% - 8px) !important;
+  }
+  
+  .MuiBadge-badge {
+    position: relative !important;
+    transform: none !important;
+    z-index: 5 !important;
+  }
+}

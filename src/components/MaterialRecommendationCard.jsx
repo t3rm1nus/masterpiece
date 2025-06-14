@@ -93,8 +93,7 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
   const handleClick = () => {
     navigateToDetail(recommendation);
   };
-  
-  const cardContent = isHome ? (
+    const cardContent = isHome ? (
     // Layout para la home (móvil)
     <Card
       sx={{
@@ -108,8 +107,13 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
           boxShadow: theme.shadows[8],
         },
         border: recommendation.masterpiece ? '2px solid #ffd700' : 'none',
+        backgroundColor: recommendation.masterpiece 
+          ? (theme.palette.mode === 'dark' ? '#2a2600' : '#fffbe6')
+          : theme.palette.background.paper,
         background: recommendation.masterpiece 
-          ? 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)'
+          ? (theme.palette.mode === 'dark' 
+            ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
+            : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
           : theme.palette.background.paper
       }}
       onClick={handleClick}
@@ -229,10 +233,14 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
         '&:hover': {
           transform: 'translateY(-4px)',
           boxShadow: theme.shadows[8],
-        },
-        border: recommendation.masterpiece ? '2px solid #ffd700' : 'none',
+        },        border: recommendation.masterpiece ? '2px solid #ffd700' : 'none',
+        backgroundColor: recommendation.masterpiece 
+          ? (theme.palette.mode === 'dark' ? '#2a2600' : '#fffbe6')
+          : theme.palette.background.paper,
         background: recommendation.masterpiece 
-          ? 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)'
+          ? (theme.palette.mode === 'dark' 
+            ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
+            : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
           : theme.palette.background.paper
       }}
       onClick={handleClick}
