@@ -1354,9 +1354,9 @@ html[data-theme='dark'] .coffee-menu-button:hover {
 
 /* Ajustes específicos para móviles */
 @media (max-width: 768px) {
-  /* 1. Items de la home con margen de 10px a izquierda y derecha - reducido 2% */
+  /* 1. Items de la home con margen de 10px a izquierda y derecha - reducido 4% total */
   .recommendations-list {
-    width: calc(98% - 20px) !important;
+    width: calc(96% - 20px) !important;
     margin: 1rem 10px 0 10px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -1458,10 +1458,10 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     word-wrap: break-word !important;
   }
 
-  /* 4. Maquetado del listado de items de categoría igual que recomendados - reducido 2% */
+  /* 4. Maquetado del listado de items de categoría igual que recomendados - reducido 4% total */
   .category-items-list,
   .items-list {
-    width: calc(98% - 20px) !important;
+    width: calc(96% - 20px) !important;
     margin: 1rem 10px 0 10px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -1769,4 +1769,70 @@ button.rect.medium.gold.css-1565878 {
     line-height: 1.1 !important;
   }
 }
+
+/* Layout específico para items de categoría igual que recomendaciones - imagen flotada */
+.category-item,
+.item-card {
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    padding: 1rem !important;
+    background: var(--card-background) !important;
+    border-radius: 12px !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 2px 8px var(--shadow-color) !important;
+  }
+
+  /* Imagen flotada a la izquierda */
+  .category-item img,
+  .item-card img {
+    float: left !important;
+    width: 80px !important;
+    height: 120px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin: 0 1rem 0.5rem 0 !important;
+  }
+
+  /* Título arriba del todo */
+  .category-item h3,
+  .item-card h3 {
+    margin: 0 0 0.5rem 0 !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    line-height: 1.3 !important;
+    clear: both !important;
+  }
+
+  /* Categoría y subcategoría debajo de la imagen (lado izquierdo) */
+  .category-item .category,
+  .item-card .category,
+  .category-item .subcategory,
+  .item-card .subcategory {
+    display: block !important;
+    font-size: 0.85rem !important;
+    margin: 0.2rem 0 !important;
+    clear: left !important;
+    width: 100px !important;
+    float: left !important;
+  }
+
+  /* Descripción a la derecha */
+  .category-item p,
+  .item-card p,
+  .category-item .description,
+  .item-card .description {
+    margin: 0.5rem 0 0 100px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+  }
+
+  /* Clearfix para el contenedor */
+  .category-item::after,
+  .item-card::after {
+    content: "" !important;
+    display: table !important;
+    clear: both !important;
+  }
 
