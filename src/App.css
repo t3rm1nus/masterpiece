@@ -362,49 +362,30 @@ h1 {
 
 .recommendation-card .masterpiece-badge {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: -12px;
+  right: -12px;
+  width: 30px;
+  height: 30px;
+  z-index: 999;
   background: #ffd700;
   color: #fff;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  border: 2px solid #fffbe6;
-  z-index: 2;
-}
-
-.recommendation-card.masterpiece:hover {
-  box-shadow: 0 0 0 6px #ffd700, 0 4px 24px rgba(0, 0, 0, 0.22);
-}
-
-.item-detail.masterpiece {
-  border: 3px solid #ffd700 !important;
-  background: linear-gradient(135deg, #fffbe6 60%, #ffe066 100%) !important;
-  box-shadow: 0 0 0 4px #ffe066, 0 4px 16px rgba(0, 0, 0, 0.18);
-}
-
-.item-detail .masterpiece-badge {
-  display: none !important;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .item-detail.masterpiece img[alt="Masterpiece icon"] {
-  display: block;
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 32px;
-  height: 32px;
-  z-index: 10;
-  border-radius: 50%;
-  border: 2px solid #ffd700;
-  background: #fff;
-  padding: 2px;
+  width: 30px;
+  height: 30px;
+  z-index: 999;
 }
 
 /* --- RESPONSIVE DESIGN --- */
@@ -1774,4 +1755,140 @@ html[data-theme='dark'] .coffee-menu-button:hover {
     display: none !important;
     visibility: hidden !important;
   }
-}
+
+  /* ARREGLAR BADGE MASTERPIECE QUE SE CORTA - ESPECIFICIDAD MÁXIMA */
+  .recommendation-card.masterpiece,
+  .category-item.masterpiece,
+  .item-card.masterpiece,
+  .item-detail.masterpiece {
+    overflow: visible !important;
+    position: relative !important;
+    margin: 10px !important;
+    padding: 1rem 1rem 1rem 1rem !important;
+  }
+
+  .recommendation-card .masterpiece-badge,
+  .category-item .masterpiece-badge,
+  .item-card .masterpiece-badge {
+    position: absolute !important;
+    top: -12px !important;
+    right: -12px !important;
+    width: 30px !important;
+    height: 30px !important;
+    z-index: 999 !important;
+    background: #ffd700 !important;
+    color: #fff !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    border: 2px solid #fff !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3) !important;
+  }
+
+  .item-detail.masterpiece img[alt="Masterpiece icon"] {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    width: 30px !important;
+    height: 30px !important;
+    z-index: 999 !important;
+  }
+
+  /* Asegurar que los contenedores padre no corten */
+  .recommendations-list,
+  .category-items-list,
+  .items-list,
+  .item-detail-container {
+    overflow: visible !important;
+    padding: 15px 0 !important;
+  }
+
+  /* IMAGEN FLOTADA A LA IZQUIERDA EN ITEMS DE CATEGORÍA - FORZAR */
+  .category-item,
+  .item-card {
+    display: block !important;
+    overflow: visible !important;
+    min-height: 140px !important;
+    position: relative !important;
+    padding: 1rem !important;
+    background: var(--card-background) !important;
+    border-radius: 12px !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 2px 8px var(--shadow-color) !important;
+  }
+
+  .category-item img,
+  .item-card img {
+    float: left !important;
+    width: 80px !important;
+    height: 120px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin: 0 1rem 0.5rem 0 !important;
+    display: block !important;
+  }
+
+  .category-item h3,
+  .item-card h3 {
+    margin: 0 0 0.5rem 0 !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    line-height: 1.3 !important;
+    color: #000000 !important;
+  }
+
+  .category-item .category,
+  .item-card .category,
+  .category-item .subcategory,
+  .item-card .subcategory {
+    display: block !important;
+    font-size: 0.85rem !important;
+    margin: 0.2rem 0 !important;
+    width: 80px !important;
+    float: left !important;
+    clear: left !important;
+    text-align: center !important;
+    color: #000000 !important;
+  }
+
+  .category-item p,
+  .item-card p,
+  .category-item .description,
+  .item-card .description {
+    margin: 0.5rem 0 0 100px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+    color: #666666 !important;
+  }
+
+  .category-item::after,
+  .item-card::after {
+    content: "" !important;
+    display: table !important;
+    clear: both !important;
+  }
+
+  /* OCULTAR BOTONES DEL MENÚ CON ESPECIFICIDAD MÁXIMA */
+  .main-menu button[class*="category"],
+  .main-menu button[class*="back"],
+  .main-menu .category-btn,
+  .main-menu .back-button,
+  .main-menu button:contains("Volver"),
+  .main-menu button:contains("Back"),
+  .main-menu button:contains("Categoría"),
+  .main-menu button:contains("Category") {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
+
+/* Estilos adicionales fuera del media query */
