@@ -420,6 +420,11 @@ h1 {
     display: none !important;
   }
   
+  /* Ocultar el detalle clásico en móviles */
+  .item-detail-container {
+    display: none !important;
+  }
+
   /*
   * CSS del menú móvil anterior comentado para usar Material UI
   * Los estilos CSS están comentados porque ahora usamos Material UI real

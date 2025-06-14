@@ -15,6 +15,8 @@ import ThemeToggle from './components/ThemeToggle';
 import { useTitleSync } from './hooks/useTitleSync';
 import MaterialThemeProvider from './components/MaterialThemeProvider';
 import HybridMenu from './components/HybridMenu';
+import MaterialContentWrapper from './components/MaterialContentWrapper';
+import MaterialItemDetail from './components/MaterialItemDetail';
 
 /*
 // Componente LanguageSelector movido a HybridMenu.jsx
@@ -155,68 +157,111 @@ function RecommendationsList({ recommendations, isHome }) {
   const handleItemClick = (item) => {
     navigateToDetail(item);
   };
-  
-  return (
-    <div className="recommendations-list" style={{ width: '100%', paddingTop: '2rem' }}>
-      {recommendations.length === 0 ? (
-        <div className="no-results-container" style={noResultsConfig.containerStyle}>
-          <h3 className="no-results-title">
-            {t.no_results}
-          </h3>
-          <p className="no-results-message">
-            {t.try_different_filters}
-          </p>
-          <div style={noResultsConfig.imageContainerStyle}>
-            <div className="no-results-image-container">
-              <img 
-                src={randomNotFoundImage}
-                alt={t.no_results} 
-                className="no-results-image"
-              />
+    return (
+    <MaterialContentWrapper
+      recommendations={recommendations}
+      isHome={isHome}
+    >
+      <div className="recommendations-list" style={{ width: '100%', paddingTop: '2rem' }}>
+        {recommendations.length === 0 ? (
+          <div className="no-results-container" style={noResultsConfig.containerStyle}>
+            <h3 className="no-results-title">
+              {t.no_results}
+            </h3>
+            <p className="no-results-message">
+              {t.try_different_filters}
+            </p>
+            <div style={noResultsConfig.imageContainerStyle}>
+              <div className="no-results-image-container">
+                <img 
+                  src={randomNotFoundImage}
+                  alt={t.no_results} 
+                  className="no-results-image"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      ) : (        recommendations.map((rec, idx) => {
-          const title = processTitle(rec.title, lang);
-          const description = processDescription(rec.description, lang);
-          // Usar globalId si está disponible, sino usar la función de fallback
-          const recKey = rec.globalId || generateRecommendationKey(rec, idx);
-          const cardClasses = getRecommendationCardClasses(rec, isHome, isMobile);
-            if (isHome && isMobile) {
+        ) : (          recommendations.map((rec, idx) => {
+            const title = processTitle(rec.title, lang);
+            const description = processDescription(rec.description, lang);
+            // Usar globalId si está disponible, sino usar la función de fallback
+            const recKey = rec.globalId || generateRecommendationKey(rec, idx);
+            const cardClasses = getRecommendationCardClasses(rec, isHome, isMobile);
+              if (isHome && isMobile) {
+              return (
+                <div
+                  className={cardClasses}
+                  key={recKey}
+                  style={{...mobileHomeStyles.cardStyle, cursor: 'pointer'}}
+                  onClick={() => handleItemClick(rec)}
+                >
+                  {/* Fila superior: solo el nombre, centrado */}
+                  <div className="rec-home-row rec-home-row-top">
+                    <span className="rec-home-title">{title}</span>
+                  </div>
+                  {/* Fila inferior: imagen, debajo género y subgénero, y a la derecha la descripción */}
+                  <div className="rec-home-row rec-home-row-bottom">
+                    <div style={{display:'flex',flexDirection:'column',alignItems:'center',minWidth:0}}>
+                      <img 
+                        src={rec.image} 
+                        alt={title} 
+                        width={80} 
+                        height={110} 
+                        style={mobileHomeStyles.imageStyle} 
+                      />
+                      <div className="rec-home-cats" style={mobileHomeStyles.categoryContainer}>
+                        <span className="rec-home-cat" style={mobileHomeStyles.categoryStyle}>
+                          {getCategoryTranslation(rec.category)}
+                        </span>
+                        <span className="rec-home-subcat" style={mobileHomeStyles.subcategoryStyle}>
+                          {getSubcategoryTranslation(rec.subcategory)}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="rec-home-info">
+                      <p className="rec-home-desc">{description}</p>
+                    </div>
+                  </div>
+                  {rec.masterpiece && (
+                    <span className="masterpiece-badge" title="Obra maestra">
+                      <svg 
+                        width={badgeConfig.svg.width} 
+                        height={badgeConfig.svg.height} 
+                        viewBox={badgeConfig.svg.viewBox} 
+                        fill={badgeConfig.svg.fill} 
+                        xmlns={badgeConfig.svg.xmlns}
+                      >
+                        <circle 
+                          cx={badgeConfig.circle.cx} 
+                          cy={badgeConfig.circle.cy} 
+                          r={badgeConfig.circle.r} 
+                          fill={badgeConfig.circle.fill}
+                        />
+                        <text 
+                          x={badgeConfig.text.x} 
+                          y={badgeConfig.text.y} 
+                          textAnchor={badgeConfig.text.textAnchor} 
+                          fontSize={badgeConfig.text.fontSize} 
+                          fontWeight={badgeConfig.text.fontWeight} 
+                          fill={badgeConfig.text.fill}
+                        >
+                          {badgeConfig.text.content}
+                        </text>
+                      </svg>
+                    </span>
+                  )}
+                </div>
+              );
+            }
+            
+            // Layout normal para desktop/tablet o fuera de home
             return (
               <div
                 className={cardClasses}
                 key={recKey}
-                style={{...mobileHomeStyles.cardStyle, cursor: 'pointer'}}
-                onClick={() => handleItemClick(rec)}
+                style={desktopStyles.cardStyle}
+                onClick={() => handleItemClick(rec)} // Agregar handler de clic
               >
-                {/* Fila superior: solo el nombre, centrado */}
-                <div className="rec-home-row rec-home-row-top">
-                  <span className="rec-home-title">{title}</span>
-                </div>
-                {/* Fila inferior: imagen, debajo género y subgénero, y a la derecha la descripción */}
-                <div className="rec-home-row rec-home-row-bottom">
-                  <div style={{display:'flex',flexDirection:'column',alignItems:'center',minWidth:0}}>
-                    <img 
-                      src={rec.image} 
-                      alt={title} 
-                      width={80} 
-                      height={110} 
-                      style={mobileHomeStyles.imageStyle} 
-                    />
-                    <div className="rec-home-cats" style={mobileHomeStyles.categoryContainer}>
-                      <span className="rec-home-cat" style={mobileHomeStyles.categoryStyle}>
-                        {getCategoryTranslation(rec.category)}
-                      </span>
-                      <span className="rec-home-subcat" style={mobileHomeStyles.subcategoryStyle}>
-                        {getSubcategoryTranslation(rec.subcategory)}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="rec-home-info">
-                    <p className="rec-home-desc">{description}</p>
-                  </div>
-                </div>
                 {rec.masterpiece && (
                   <span className="masterpiece-badge" title="Obra maestra">
                     <svg 
@@ -245,68 +290,29 @@ function RecommendationsList({ recommendations, isHome }) {
                     </svg>
                   </span>
                 )}
+                <img 
+                  src={rec.image} 
+                  alt={title} 
+                  width={120} 
+                  height={170} 
+                  style={desktopStyles.imageStyle} 
+                />
+                <div style={desktopStyles.categoryContainer}>
+                  <span style={desktopStyles.categoryStyle}>
+                    {getCategoryTranslation(rec.category)}
+                  </span>
+                  <span style={desktopStyles.subcategoryStyle}>
+                    {getSubcategoryTranslation(rec.subcategory)}
+                  </span>
+                </div>
+                <h3>{title}</h3>
+                <p>{description}</p>
               </div>
             );
-          }
-          
-          // Layout normal para desktop/tablet o fuera de home
-          return (
-            <div
-              className={cardClasses}
-              key={recKey}
-              style={desktopStyles.cardStyle}
-              onClick={() => handleItemClick(rec)} // Agregar handler de clic
-            >
-              {rec.masterpiece && (
-                <span className="masterpiece-badge" title="Obra maestra">
-                  <svg 
-                    width={badgeConfig.svg.width} 
-                    height={badgeConfig.svg.height} 
-                    viewBox={badgeConfig.svg.viewBox} 
-                    fill={badgeConfig.svg.fill} 
-                    xmlns={badgeConfig.svg.xmlns}
-                  >
-                    <circle 
-                      cx={badgeConfig.circle.cx} 
-                      cy={badgeConfig.circle.cy} 
-                      r={badgeConfig.circle.r} 
-                      fill={badgeConfig.circle.fill}
-                    />
-                    <text 
-                      x={badgeConfig.text.x} 
-                      y={badgeConfig.text.y} 
-                      textAnchor={badgeConfig.text.textAnchor} 
-                      fontSize={badgeConfig.text.fontSize} 
-                      fontWeight={badgeConfig.text.fontWeight} 
-                      fill={badgeConfig.text.fill}
-                    >
-                      {badgeConfig.text.content}
-                    </text>
-                  </svg>
-                </span>
-              )}
-              <img 
-                src={rec.image} 
-                alt={title} 
-                width={120} 
-                height={170} 
-                style={desktopStyles.imageStyle} 
-              />
-              <div style={desktopStyles.categoryContainer}>
-                <span style={desktopStyles.categoryStyle}>
-                  {getCategoryTranslation(rec.category)}
-                </span>
-                <span style={desktopStyles.subcategoryStyle}>
-                  {getSubcategoryTranslation(rec.subcategory)}
-                </span>
-              </div>
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </div>
-          );
-        })
-      )}
-    </div>
+          })
+        )}
+      </div>
+    </MaterialContentWrapper>
   );
 }
 
@@ -349,69 +355,109 @@ function HomePage({ onCategory }) {
     // En lugar de usar el hook, usamos getState().acción para evitar re-renderizados
     useFiltersStore.getState().setSelectedCategory(key, translatedLabel);
   };
-  return (
-    <>
-      <div className="categories-list" style={containerStyles.categoriesList}>
-        {categories.map(({ key, label }) => (
-          <button
-            key={key}
-            className="category-btn"
-            style={{ display: 'inline-block' }}
-            onClick={() => handleCategoryClick(key, label)}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-      
-      {selectedCategory && (
-        <>
-          <div className="subcategories-list" style={containerStyles.subcategoriesList}>
-            {categorySubcategories.map(({ sub }) => (
-              <button
-                key={sub}
-                className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
-                style={{ display: 'inline-block', margin: '0.5rem' }}
-                onClick={() => setActiveSubcategory(sub)}
-              >
-                {getSubcategoryTranslation(sub)}
-              </button>
-            ))}
-          </div>
 
-          <div style={containerStyles.specialButtonsContainer}>
-            {/* Mostrar botón de Cine Español solo en la categoría de películas */}
-            {selectedCategory === 'movies' && (
+  // Función para obtener el color de la categoría
+  const getCategoryColor = (categoryKey) => {
+    switch (categoryKey) {
+      case 'movies':
+      case 'peliculas':
+        return '#2196f3';
+      case 'videogames':
+      case 'videojuegos':
+        return '#9c27b0';
+      case 'books':
+      case 'libros':
+        return '#4caf50';
+      case 'music':
+      case 'musica':
+        return '#00bcd4';
+      case 'podcast':
+      case 'podcasts':
+        return '#8bc34a';
+      case 'boardgames':
+      case 'juegos de mesa':
+        return '#e91e63';
+      case 'comics':
+        return '#ff9800';
+      default:
+        return '#0078d4';
+    }
+  };
+    return (
+    <MaterialContentWrapper
+      categories={categories}
+      selectedCategory={selectedCategory}
+      onCategoryClick={handleCategoryClick}
+      subcategories={selectedCategory ? categorySubcategories : []}
+      activeSubcategory={activeSubcategory}
+      onSubcategoryClick={setActiveSubcategory}
+      categoryColor={selectedCategory ? getCategoryColor(selectedCategory) : '#0078d4'}
+      recommendations={filteredItems}
+      isHome={!selectedCategory && !activeSubcategory}
+    >
+      <>
+        <div className="categories-list" style={containerStyles.categoriesList}>
+          {categories.map(({ key, label }) => (
+            <button
+              key={key}
+              className="category-btn"
+              style={{ display: 'inline-block' }}
+              onClick={() => handleCategoryClick(key, label)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        
+        {selectedCategory && (
+          <>
+            <div className="subcategories-list" style={containerStyles.subcategoriesList}>
+              {categorySubcategories.map(({ sub }) => (
+                <button
+                  key={sub}
+                  className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
+                  style={{ display: 'inline-block', margin: '0.5rem' }}
+                  onClick={() => setActiveSubcategory(sub)}
+                >
+                  {getSubcategoryTranslation(sub)}
+                </button>
+              ))}
+            </div>
+
+            <div style={containerStyles.specialButtonsContainer}>
+              {/* Mostrar botón de Cine Español solo en la categoría de películas */}
+              {selectedCategory === 'movies' && (
+                <button
+                  className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
+                  onClick={() => {
+                    toggleSpanishCinema();
+                    console.log('Toggling Spanish Cinema:', !isSpanishCinemaActive);
+                  }}
+                >
+                  {getSpecialButtonLabel('spanishCinema', lang)}
+                </button>
+              )}
               <button
-                className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
+                className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}              
                 onClick={() => {
-                  toggleSpanishCinema();
-                  console.log('Toggling Spanish Cinema:', !isSpanishCinemaActive);
+                  toggleMasterpiece();
                 }}
               >
-                {getSpecialButtonLabel('spanishCinema', lang)}
+                {getSpecialButtonLabel('masterpiece', lang)}
               </button>
-            )}
-            <button
-              className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}              
-              onClick={() => {
-                toggleMasterpiece();
-              }}
-            >
-              {getSpecialButtonLabel('masterpiece', lang)}
-            </button>
-          </div>
-        </>
-      )}
-      
-      <h1>{title}</h1>
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <RecommendationsList
-          recommendations={filteredItems}
-          isHome={!selectedCategory && !activeSubcategory}
-        />
-      </div>
-    </>
+            </div>
+          </>
+        )}
+        
+        <h1>{title}</h1>
+        <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+          <RecommendationsList
+            recommendations={filteredItems}
+            isHome={!selectedCategory && !activeSubcategory}
+          />
+        </div>
+      </>
+    </MaterialContentWrapper>
   );
 }
 
@@ -620,118 +666,128 @@ function ItemDetail() {
     }
     return null;
   };
-  
+
   const trailerUrl = getTrailerUrl();
-    return (
-    <div className="item-detail-container" style={{ 
-      width: '100%', 
-      maxWidth: '800px', 
-      margin: '0 auto', 
-      padding: '2rem',
-      textAlign: 'center',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center'
-    }}>
-      <div className={`item-detail ${selectedItem.category}${selectedItem.masterpiece ? ' masterpiece' : ''}`}>
-        {selectedItem.masterpiece && (
-          <span className="masterpiece-badge" title="Obra maestra">
-            <svg 
-              width={badgeConfig.svg.width} 
-              height={badgeConfig.svg.height} 
-              viewBox={badgeConfig.svg.viewBox} 
-              fill={badgeConfig.svg.fill} 
-              xmlns={badgeConfig.svg.xmlns}
-            >
-              <circle 
-                cx={badgeConfig.circle.cx} 
-                cy={badgeConfig.circle.cy} 
-                r={badgeConfig.circle.r} 
-                fill={badgeConfig.circle.fill}
-              />
-              <text 
-                x={badgeConfig.text.x} 
-                y={badgeConfig.text.y} 
-                textAnchor={badgeConfig.text.textAnchor} 
-                fontSize={badgeConfig.text.fontSize} 
-                fontWeight={badgeConfig.text.fontWeight} 
-                fill={badgeConfig.text.fill}
+  
+  return (
+    <>
+      {/* Componente Material UI para móviles */}
+      <MaterialItemDetail item={selectedItem} />
+      
+      {/* Componente clásico para desktop (oculto en móviles) */}
+      <div 
+        className="item-detail-container" 
+        style={{ 
+          width: '100%', 
+          maxWidth: '800px', 
+          margin: '0 auto', 
+          padding: '2rem',
+          textAlign: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}
+      >
+        <div className={`item-detail ${selectedItem.category}${selectedItem.masterpiece ? ' masterpiece' : ''}`}>
+          {selectedItem.masterpiece && (
+            <span className="masterpiece-badge" title="Obra maestra">
+              <svg 
+                width={badgeConfig.svg.width} 
+                height={badgeConfig.svg.height} 
+                viewBox={badgeConfig.svg.viewBox} 
+                fill={badgeConfig.svg.fill} 
+                xmlns={badgeConfig.svg.xmlns}
               >
-                {badgeConfig.text.content}
-              </text>
-            </svg>
-          </span>
-        )}
-        
-        <img 
-          src={selectedItem.image} 
-          alt={title}
-          style={{
-            maxWidth: '300px',
-            width: '100%',
-            height: 'auto',
-            borderRadius: '12px',
-            marginBottom: '1.5rem'
-          }}
-        />
-        
-        <h2 style={{ marginBottom: '1rem', fontSize: '2rem' }}>{title}</h2>
-        
-        <div style={{ marginBottom: '1rem', fontSize: '1.1rem', color: '#666' }}>
-          <span style={{ fontWeight: 'bold' }}>
-            {getCategoryTranslation(selectedItem.category)}
-          </span>
-          {selectedItem.subcategory && (
-            <span> - {getSubcategoryTranslation(selectedItem.subcategory)}</span>
+                <circle 
+                  cx={badgeConfig.circle.cx} 
+                  cy={badgeConfig.circle.cy} 
+                  r={badgeConfig.circle.r} 
+                  fill={badgeConfig.circle.fill}
+                />
+                <text 
+                  x={badgeConfig.text.x} 
+                  y={badgeConfig.text.y} 
+                  textAnchor={badgeConfig.text.textAnchor} 
+                  fontSize={badgeConfig.text.fontSize} 
+                  fontWeight={badgeConfig.text.fontWeight} 
+                  fill={badgeConfig.text.fill}
+                >
+                  {badgeConfig.text.content}
+                </text>
+              </svg>
+            </span>
+          )}
+          
+          <img 
+            src={selectedItem.image} 
+            alt={title}
+            style={{
+              maxWidth: '300px',
+              width: '100%',
+              height: 'auto',
+              borderRadius: '12px',
+              marginBottom: '1.5rem'
+            }}
+          />
+          
+          <h2 style={{ marginBottom: '1rem', fontSize: '2rem' }}>{title}</h2>
+          
+          <div style={{ marginBottom: '1rem', fontSize: '1.1rem', color: '#666' }}>
+            <span style={{ fontWeight: 'bold' }}>
+              {getCategoryTranslation(selectedItem.category)}
+            </span>
+            {selectedItem.subcategory && (
+              <span> - {getSubcategoryTranslation(selectedItem.subcategory)}</span>
+            )}
+          </div>
+          
+          {selectedItem.director && (
+            <p style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
+              <strong>{t.director || 'Director'}:</strong> {selectedItem.director}
+            </p>
+          )}
+          
+          {selectedItem.year && (
+            <p style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
+              <strong>{t.year || 'Año'}:</strong> {selectedItem.year}
+            </p>
+          )}
+            <p style={{ 
+            fontSize: '1.2rem', 
+            lineHeight: '1.6', 
+            marginBottom: '2rem',
+            textAlign: 'left',
+            maxWidth: '600px',
+            margin: '0 auto 2rem auto'
+          }}>
+            {description}
+          </p>
+          
+          {trailerUrl && (
+            <div style={{ marginTop: '2rem' }}>
+              <a 
+                href={trailerUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="trailer-link"
+                style={{
+                  display: 'inline-block',
+                  padding: '0.8rem 1.5rem',
+                  background: '#0078d4',
+                  color: 'white',
+                  textDecoration: 'none',
+                  borderRadius: '8px',
+                  fontWeight: 'bold',
+                  transition: 'background 0.2s'
+                }}
+              >
+                {t.watch_trailer || 'Ver Trailer'}
+              </a>
+            </div>
           )}
         </div>
-        
-        {selectedItem.director && (
-          <p style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
-            <strong>{t.director || 'Director'}:</strong> {selectedItem.director}
-          </p>
-        )}
-        
-        {selectedItem.year && (
-          <p style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
-            <strong>{t.year || 'Año'}:</strong> {selectedItem.year}
-          </p>
-        )}
-          <p style={{ 
-          fontSize: '1.2rem', 
-          lineHeight: '1.6', 
-          marginBottom: '2rem',
-          textAlign: 'left',
-          maxWidth: '600px',
-          margin: '0 auto 2rem auto'
-        }}>
-          {description}
-        </p>
-        
-        {trailerUrl && (
-          <div style={{ marginTop: '2rem' }}>
-            <a 
-              href={trailerUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="trailer-link"
-              style={{
-                display: 'inline-block',
-                padding: '0.8rem 1.5rem',
-                background: '#0078d4',
-                color: 'white',
-                textDecoration: 'none',
-                borderRadius: '8px',
-                fontWeight: 'bold',
-                transition: 'background 0.2s'
-              }}
-            >
-              {t.watch_trailer || 'Ver Trailer'}
-            </a>
-          </div>
-        )}
       </div>
-    </div>
+    </>
   );
 }
 
