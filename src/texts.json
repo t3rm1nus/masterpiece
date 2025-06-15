@@ -26,9 +26,9 @@
     "coffee_benefit_2": "• Pagar el hosting (y no mendigar Wi-Fi del vecino) 📡",
     "coffee_benefit_3": "• Alimentar al programador con comida real, no solo café y ansiedad ☕🧠",
     "coffee_benefit_4": "• Hacer que el botón de \"Donar\" no se sienta tan solo 😢",    "coffee_cta": "Así que ya sabes, si te nace…",
-    "coffee_legend": "¡Haz clic y conviértete en leyenda!",
-    "coffee_footer": "¡Gracias por el café! ☕\n\n(O al menos por demostrar que aún hay buenas personas sueltas por el mundo. ❤️)",
-    "thanks_message": "¡Gracias por tu apoyo!"
+    "coffee_legend": "¡Haz clic y conviértete en leyenda!",    "coffee_footer": "¡Gracias por el café! ☕\n\n(O al menos por demostrar que aún hay buenas personas sueltas por el mundo. ❤️)",
+    "thanks_message": "¡Gracias por tu apoyo!",
+    "amount_label": "Cantidad (EUR)"
   },  "en": {
     "home_title": "New Recommendations",
     "categoriesTitle": "Categories",
@@ -57,8 +57,8 @@
     "coffee_benefit_2": "• Pay for hosting (and not beg for the neighbor's Wi-Fi) 📡",
     "coffee_benefit_3": "• Feed the programmer real food, not just coffee and anxiety ☕🧠",
     "coffee_benefit_4": "• Make the \"Donate\" button feel less lonely 😢",    "coffee_cta": "So you know, if you feel like it…",
-    "coffee_legend": "Click and become a legend!",
-    "coffee_footer": "Thanks for the coffee! ☕\n\n(Or at least for proving there are still good people out there in the world. ❤️)",
-    "thanks_message": "Thank you for your support!"
+    "coffee_legend": "Click and become a legend!",    "coffee_footer": "Thanks for the coffee! ☕\n\n(Or at least for proving there are still good people out there in the world. ❤️)",
+    "thanks_message": "Thank you for your support!",
+    "amount_label": "Amount (EUR)"
   }
 }

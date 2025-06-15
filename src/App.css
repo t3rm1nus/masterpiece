@@ -739,22 +739,21 @@ h1.after-subcategories {
     font-weight: bold !important;
     height: 48px !important;
   }
-  
-  /* Botones de tarjetas de crédito */
+    /* Botones de tarjetas de crédito */
   #paypal-container-MRSQEQV646EPA [data-funding-source="card"] {
     background: #ffffff !important;
     color: #333333 !important;
-    border: 1px solid #cccccc !important;
+    border: none !important;
     height: 44px !important;
   }
-  
-  /* Asegurar que los iframes del botón PayPal tengan el tamaño correcto */
+    /* Asegurar que los iframes del botón PayPal tengan el tamaño correcto */
   .MuiPaper-root #paypal-container-MRSQEQV646EPA iframe,
   #paypal-container-MRSQEQV646EPA iframe {
     width: 100% !important;
     min-height: 44px !important;
     max-width: 280px !important;
-    border-radius: 6px !important;
+    border: none !important;
+    border-radius: 0 !important;
     margin: 2px 0 !important;
   }
   
@@ -938,14 +937,14 @@ h1.after-subcategories {
     line-height: 1.3 !important;
     vertical-align: middle !important;
   }
-  
-  /* iframes de PayPal */
+    /* iframes de PayPal */
   #paypal-container-MRSQEQV646EPA iframe {
     display: block !important;
     width: 100% !important;
     max-width: 280px !important;
     margin: 4px auto !important;
-    border-radius: 6px !important;
+    border: none !important;
+    border-radius: 0 !important;
     min-height: 44px !important;
   }
   
@@ -966,9 +965,9 @@ h1.after-subcategories {
     transform: none !important;
     -webkit-transform: none !important;
   }
-  
-  /* Anti-float global para PayPal */
-  #paypal-container-MRSQEQV646EPA *:not(button):not(iframe) {
+    /* Anti-float para elementos específicos de PayPal */
+  #paypal-container-MRSQEQV646EPA div:not([data-funding-source]):not([role="button"]),
+  #paypal-container-MRSQEQV646EPA span:not([data-funding-source]):not([role="button"]) {
     float: none !important;
     clear: both !important;
   }

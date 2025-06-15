@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Card,
   CardContent,
@@ -27,6 +27,21 @@ const MaterialCoffeePage = () => {
   const { t } = useLanguage();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  // Inicializar PayPal cuando el componente se monte (solo en móviles)
+  useEffect(() => {
+    if (isMobile) {
+      console.log('MaterialCoffeePage montado en móvil, inicializando PayPal...');
+      
+      const timer = setTimeout(() => {
+        if (window.initializePayPal) {
+          window.initializePayPal();
+        }
+      }, 500);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isMobile]);
 
   // Solo renderizar en móviles
   if (!isMobile) {
@@ -205,8 +220,7 @@ const MaterialCoffeePage = () => {
               width: '100%',
               maxWidth: '100%'
             }}
-          >
-            <Typography 
+          >            <Typography 
               variant="body2" 
               sx={{ 
                 marginBottom: '16px',
@@ -217,6 +231,45 @@ const MaterialCoffeePage = () => {
             >
               Donación segura a través de PayPal
             </Typography>
+            
+            {/* Input de cantidad */}
+            <Box sx={{ marginBottom: '16px', width: '100%' }}>
+              <Typography 
+                variant="body2" 
+                component="label" 
+                htmlFor="donation-amount-mobile"
+                sx={{ 
+                  display: 'block',
+                  marginBottom: '8px',
+                  color: theme.palette.text.primary,
+                  fontSize: '0.9rem',
+                  textAlign: 'center'
+                }}
+              >
+                {t.amount_label || 'Cantidad (EUR)'}
+              </Typography>
+              <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                <input 
+                  type="number" 
+                  id="donation-amount-mobile"
+                  name="amount"
+                  min="1" 
+                  max="100" 
+                  defaultValue="5"
+                  placeholder="5"
+                  style={{
+                    width: '100px',
+                    height: '40px',
+                    textAlign: 'center',
+                    fontSize: '16px',
+                    border: `1px solid ${theme.palette.divider}`,
+                    borderRadius: '8px',
+                    backgroundColor: theme.palette.background.default,
+                    color: theme.palette.text.primary
+                  }}
+                />
+              </Box>
+            </Box>
             
             {/* Contenedor del botón de PayPal optimizado para móviles */}
             <Box 

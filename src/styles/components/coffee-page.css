@@ -71,10 +71,52 @@
   color: var(--primary-color);
 }
 
-.coffee-legend {
-  color: var(--text-secondary);
+.coffee-legend {  color: var(--text-secondary);
   font-style: italic;
   margin-bottom: 2rem;
+}
+
+/* === INPUT DE CANTIDAD === */
+.amount-input-wrapper {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.amount-label {
+  display: block;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.amount-input {
+  width: 120px;
+  height: 44px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.amount-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(67, 56, 202, 0.1);
+}
+
+.amount-input::-webkit-outer-spin-button,
+.amount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.amount-input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .paypal-button-container {
@@ -87,6 +129,48 @@
   margin-left: auto;
   margin-right: auto;
   box-shadow: var(--shadow-md);
+}
+
+/* Estados de carga para PayPal */
+#paypal-button-wrapper.loading {
+  position: relative;
+  min-height: 60px;
+}
+
+#paypal-button-wrapper.loading::before {
+  content: 'Cargando PayPal...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-secondary);
+  font-size: 14px;
+  animation: pulse 1.5s infinite;
+}
+
+#paypal-button-wrapper.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: 80px;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-color);
+  border-top: 2px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .coffee-footer {
@@ -134,9 +218,394 @@
     align-items: center;
     justify-content: center;
   }
-
   #paypal-container-MRSQEQV646EPA {
     width: 100%;
     max-width: 300px;
+    position: relative;
+  }
+
+  /* Añadir label personalizado encima del input */
+  #paypal-container-MRSQEQV646EPA::before {
+    content: "Introduce lo que quieres donar:" !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #333 !important;
+    margin-bottom: 8px !important;
+    padding: 4px 0 !important;
+  }  /* Ocultar cualquier texto de debugging o clases CSS que aparezcan - CORREGIDO */
+  #paypal-container-MRSQEQV646EPA .css-*:not(input):not(.amount-container),
+  #paypal-button-wrapper .css-*:not(input):not(.amount-container),
+  .MaterialCoffeePage .css-*:not(input):not(.amount-container) {
+    display: none !important;
+  }
+  /* Ocultar elementos style de Material UI que se muestran como texto */
+  style[data-emotion],
+  style[data-emotion*="css"],
+  #paypal-button-wrapper style,
+  #paypal-container-MRSQEQV646EPA style,
+  .MaterialCoffeePage style {
+    display: none !important;
+    visibility: hidden !important;
+  }  /* Ocultar elementos específicos problemáticos de PayPal - CORREGIDO para no ocultar input */
+  #amount-decimal-err,
+  #amount-decimalplaces-err,
+  span.error-label:not(input),
+  #paypal-container-MRSQEQV646EPA .error-label:not(input),
+  #paypal-button-wrapper .error-label:not(input) {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Quitar márgenes y padding del contenedor de cantidad */
+  #paypal-container-MRSQEQV646EPA .amount-container,
+  #paypal-container-MRSQEQV646EPA div.amount-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+  /* Ocultar scripts de PayPal que se muestran como texto */
+  #paypal-container-MRSQEQV646EPA script,
+  #paypal-button-wrapper script,
+  .MaterialCoffeePage script {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  /* Ocultar y reposicionar elementos de moneda problemáticos */
+  #paypal-container-MRSQEQV646EPA .currency-symbol,
+  #paypal-container-MRSQEQV646EPA .currency-label,
+  #paypal-container-MRSQEQV646EPA span.currency-symbol,
+  #paypal-container-MRSQEQV646EPA span.currency-label {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }  /* Reestablecer estilos del input de cantidad y eliminar espacios */
+  #paypal-container-MRSQEQV646EPA input[type="number"],
+  #paypal-container-MRSQEQV646EPA input#amount,
+  #paypal-container-MRSQEQV646EPA input[name="amount"] {
+    position: relative !important;
+    padding-left: 25px !important;
+    padding-right: 35px !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    height: 40px !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 16px !important;
+    background: white !important;
+    color: #333 !important;
+    z-index: 1 !important;
+  }
+
+  /* Crear símbolo € posicionado dentro del input */
+  #paypal-container-MRSQEQV646EPA .amount-container::before {
+    content: "€" !important;
+    position: absolute !important;
+    left: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    font-weight: bold !important;
+    color: #333 !important;
+    z-index: 10 !important;
+    pointer-events: none !important;
+  }
+
+  /* Crear label EUR posicionado dentro del input */
+  #paypal-container-MRSQEQV646EPA .amount-container::after {
+    content: "EUR" !important;
+    position: absolute !important;
+    right: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    font-weight: bold !important;
+    color: #666 !important;
+    font-size: 12px !important;
+    z-index: 10 !important;
+    pointer-events: none !important;
+  }
+  /* Eliminar espacios de todos los elementos de PayPal */
+  #paypal-container-MRSQEQV646EPA > *,
+  #paypal-container-MRSQEQV646EPA div,
+  #paypal-container-MRSQEQV646EPA form,
+  #paypal-container-MRSQEQV646EPA button,
+  #form-container-MRSQEQV646EPA,
+  #form-container-MRSQEQV646EPA.medium {
+    margin: 0 !important;
+    padding: 2px !important;
+  }
+
+  /* Quitar margen superior específico del contenedor de formulario */
+  #form-container-MRSQEQV646EPA {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  /* Quitar borde del contenedor de la imagen de tarjetas */
+  #paypal-container-MRSQEQV646EPA img[src*="Debit_Credit_APM.svg"],
+  #paypal-container-MRSQEQV646EPA .css-au42bs,
+  #paypal-container-MRSQEQV646EPA img[alt*="card icons"] {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+  /* Quitar bordes y estilos de iframes de PayPal */
+  #paypal-container-MRSQEQV646EPA iframe,
+  #paypal-button-wrapper iframe,
+  iframe[name*="__detect_close_"],
+  iframe[name*="detect_close"],
+  .MuiPaper-root #paypal-container-MRSQEQV646EPA iframe {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-sizing: border-box !important;
+  }
+  /* Asegurar que el botón de PayPal funcione correctamente */
+  #paypal-container-MRSQEQV646EPA button,
+  #paypal-container-MRSQEQV646EPA input[type="submit"],
+  #paypal-container-MRSQEQV646EPA [data-funding-source],
+  #paypal-container-MRSQEQV646EPA [data-funding-source="card"],
+  #paypal-container-MRSQEQV646EPA [data-funding-source="paypal"] {
+    width: 100% !important;
+    min-height: 44px !important;
+    background: #0070ba !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    margin-top: 8px !important;
+    pointer-events: auto !important;
+    z-index: 999 !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  #paypal-container-MRSQEQV646EPA button:hover {
+    background: #005ea6 !important;
+  }  /* ELIMINADOS - Los pseudo-elementos ::before y ::after en input pueden interferir con PayPal */
+  /* Se mantienen solo los pseudo-elementos del contenedor para mostrar € y EUR */
+
+  /* Asegurar que el input de PayPal sea visible */
+  #paypal-container-MRSQEQV646EPA input,
+  #paypal-container-MRSQEQV646EPA input[type="number"],
+  #paypal-container-MRSQEQV646EPA input#amount,
+  #paypal-container-MRSQEQV646EPA .amount-container {
+    display: block !important;
+    visibility: visible !important;
+    font-size: 16px !important;
+    opacity: 1 !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  #paypal-container-MRSQEQV646EPA button,
+  #paypal-container-MRSQEQV646EPA iframe,
+  #paypal-container-MRSQEQV646EPA [data-funding-source],
+  #paypal-container-MRSQEQV646EPA [role="button"] {
+    font-size: 16px !important;
+    display: inline-block !important;
+    pointer-events: auto !important;
+  }
+  /* Estilos adicionales para eliminar bordes - SOLO en elementos específicos */
+  #paypal-container-MRSQEQV646EPA iframe,
+  #paypal-button-wrapper iframe,
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA iframe,
+  .MaterialCoffeePage #paypal-button-wrapper iframe {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* NO aplicar a botones y elementos funcionales */
+  #paypal-container-MRSQEQV646EPA button,
+  #paypal-container-MRSQEQV646EPA [data-funding-source],
+  #paypal-container-MRSQEQV646EPA [role="button"],
+  #paypal-container-MRSQEQV646EPA input[type="submit"] {
+    pointer-events: auto !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }  /* Elementos no funcionales sin borde */
+  #paypal-container-MRSQEQV646EPA div:not([data-funding-source]):not([role="button"]),
+  #paypal-container-MRSQEQV646EPA span:not([role]):not([data-funding-source]),
+  #paypal-container-MRSQEQV646EPA iframe,
+  #paypal-button-wrapper div:not([data-funding-source]):not([role="button"]),
+  #paypal-button-wrapper span:not([role]):not([data-funding-source]),
+  #paypal-button-wrapper iframe {
+    border-radius: 0 !important;
+    border: none !important;
+    outline: none !important;
+  }
+
+  /* Asegurar funcionalidad de botones y elementos interactivos */
+  #paypal-container-MRSQEQV646EPA [data-funding-source],
+  #paypal-container-MRSQEQV646EPA [role="button"],
+  #paypal-container-MRSQEQV646EPA button,
+  #paypal-container-MRSQEQV646EPA input[type="submit"],
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA [data-funding-source],
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA [role="button"] {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 16px !important;
+    z-index: 1000 !important;
+  }
+
+  /* === ESTILOS CRÍTICOS PARA FUNCIONALIDAD PAYPAL === */
+  /* Asegurar que TODOS los elementos interactivos de PayPal funcionen */
+  #paypal-container-MRSQEQV646EPA,
+  #paypal-button-wrapper,
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA,
+  .MaterialCoffeePage #paypal-button-wrapper {
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+  }
+
+  /* Contenedores y elementos funcionales de PayPal */
+  #paypal-container-MRSQEQV646EPA button,
+  #paypal-container-MRSQEQV646EPA [data-funding-source],
+  #paypal-container-MRSQEQV646EPA [role="button"],
+  #paypal-container-MRSQEQV646EPA input[type="submit"],
+  #paypal-container-MRSQEQV646EPA a,
+  #paypal-container-MRSQEQV646EPA iframe[src*="paypal"] {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1000 !important;
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  /* Restaurar eventos de click en elementos PayPal */
+  #paypal-container-MRSQEQV646EPA div[onclick],
+  #paypal-container-MRSQEQV646EPA div[onmousedown],
+  #paypal-container-MRSQEQV646EPA div[ontouchstart],
+  #paypal-container-MRSQEQV646EPA span[onclick],
+  #paypal-container-MRSQEQV646EPA span[onmousedown],
+  #paypal-container-MRSQEQV646EPA span[ontouchstart] {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+  }
+
+  /* Permitir interacción en formularios de PayPal */
+  #paypal-container-MRSQEQV646EPA form,
+  #paypal-container-MRSQEQV646EPA form *,
+  #form-container-MRSQEQV646EPA,
+  #form-container-MRSQEQV646EPA * {
+    pointer-events: auto !important;
+  }
+}
+
+/* FORZAR VISIBILIDAD DEL INPUT DE PAYPAL - MÁXIMA PRIORIDAD */
+@media (max-width: 768px) {
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA input,
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA input[type="number"],
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA input#amount,
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA input[name="amount"],
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA .amount-container input,
+  #paypal-container-MRSQEQV646EPA input:not([style*="display: none"]),
+  #paypal-container-MRSQEQV646EPA input[type="number"]:not([style*="display: none"]),
+  #paypal-container-MRSQEQV646EPA input#amount:not([style*="display: none"]) {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 40px !important;
+    position: relative !important;
+    z-index: 999 !important;
+    background: white !important;
+    color: #333 !important;
+    font-size: 16px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    margin: 0 !important;
+    padding: 0 30px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    max-width: none !important;
+    min-width: auto !important;
+    overflow: visible !important;
+    transform: none !important;
+    clip: auto !important;
+    clip-path: none !important;
+  }
+
+  /* Asegurar que el contenedor del input también sea visible */
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA .amount-container,
+  #paypal-container-MRSQEQV646EPA .amount-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    position: relative !important;
+    z-index: 998 !important;
+    overflow: visible !important;
+  }
+}
+
+/* SOBRESCRIBIR ESTILOS INLINE DE MATERIAL-UI PARA INPUTS */
+@media (max-width: 768px) {
+  /* Sobrescribir cualquier estilo inline que Material-UI pueda estar aplicando */
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA input[style],
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA input[type="number"][style],
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA input#amount[style] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 40px !important;
+  }
+
+  /* Forzar visibilidad incluso si PayPal aplica estilos inline */
+  .MaterialCoffeePage [id*="paypal"] input,
+  .MaterialCoffeePage [id*="paypal"] input[type="number"],
+  .MaterialCoffeePage [id*="amount"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Asegurar que todos los elementos de formulario de PayPal sean visibles */
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA form,
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA form *,
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA .amount-container,
+  .MaterialCoffeePage #paypal-container-MRSQEQV646EPA .amount-container * {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 }
