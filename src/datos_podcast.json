@@ -1,20 +1,21 @@
 {
   "recommendations": [
     {
+      "id": 1,
       "category": "podcast",
-      "description": "Un podcast sobre desarrollo de software y tecnología.",
-      "host": "Juan Pérez",
-      "language": "es",
-      "name": "Desarrollo y Tecnología",
-      "url": "http://ejemplo.com/podcast1"
-    },
-    {
-      "category": "podcast",
-      "description": "Aprende sobre ciencia y tecnología con estos interesantes episodios.",
-      "host": "María Gómez",
-      "language": "es",
-      "name": "Ciencia y Tecnología",
-      "url": "http://ejemplo.com/podcast2"
+      "subcategory": "audioblog",
+      "title": {
+        "es": "Sacred Whispers",  
+        "en": "Sacred Whispers"
+      },
+      "description": {
+        "es": "Este audioblog da vida a mis reflexiones con momentos crudos y sin filtros de mi camino. Un espacio para la espiritualidad, el crecimiento y la conexión — donde desaceleramos, escuchamos con profundidad y redescubrimos la sabiduría interior. Cada episodio es personal, real y sincero, compartido con valentía y amor.",
+        "en": "Experience Sacred Whispers by AnaLo in a new way. This audio blog brings my reflections to life with raw, unfiltered moments from my journey. A space for spirituality, growth, and connection—where we slow down, listen deeply and rediscover the wisdom within. Each episode is personal, real, and heartfelt, shared with courage and love."
+      },
+      "author": "Analo",
+      "image": "/imagenes/podcasts/sacred.jpg",
+      "link": "https://open.spotify.com/show/5XCcrAQ9LGeCRgmyNSkjJr",
+      "masterpiece": true
     }
   ]
 }

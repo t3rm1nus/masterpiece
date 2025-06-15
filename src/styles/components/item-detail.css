@@ -1,0 +1,254 @@
+/* Estilos para la página de detalle de item - Desktop */
+.item-detail-page.desktop-only {
+  position: relative;
+  padding: 120px 20px 40px 20px; /* Más margin-top */
+  background-color: #ffffff !important;
+  min-height: 100vh;
+  color: var(--text-color);
+  width: 100%;
+}
+
+/* Tema oscuro */
+html[data-theme='dark'] .item-detail-page.desktop-only {
+  background-color: #1a1a1a !important;
+}
+
+.item-detail-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid #dee2e6;
+}
+
+/* Fondo para elementos normales */
+.item-detail-container.normal-item {
+  background-color: #ffffff !important;
+}
+
+/* Fondo para elementos normales con color de categoría */
+.item-detail-container.normal-item.movies {
+  background: color-mix(in srgb, var(--color-movies) 8%, #ffffff) !important;
+}
+
+.item-detail-container.normal-item.videogames {
+  background: color-mix(in srgb, var(--color-videogames) 8%, #ffffff) !important;
+}
+
+.item-detail-container.normal-item.comics {
+  background: color-mix(in srgb, var(--color-comics) 8%, #ffffff) !important;
+}
+
+.item-detail-container.normal-item.books {
+  background: color-mix(in srgb, var(--color-books) 8%, #ffffff) !important;
+}
+
+.item-detail-container.normal-item.music {
+  background: color-mix(in srgb, var(--color-music) 8%, #ffffff) !important;
+}
+
+.item-detail-container.normal-item.boardgames {
+  background: color-mix(in srgb, var(--color-boardgames) 8%, #ffffff) !important;
+}
+
+.item-detail-container.normal-item.podcast {
+  background: color-mix(in srgb, var(--color-podcast) 8%, #ffffff) !important;
+}
+
+/* Fondo para elementos masterpiece */
+.item-detail-container.masterpiece-item {
+  background: linear-gradient(135deg, #fff9e6 0%, #fffaf0 100%) !important;
+  border-color: #ffd700;
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2);
+}
+
+/* Container en tema oscuro - elementos normales */
+html[data-theme='dark'] .item-detail-container.normal-item {
+  background-color: #2d2d2d !important;
+  border-color: #404040;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Container en tema oscuro - elementos normales con color de categoría */
+html[data-theme='dark'] .item-detail-container.normal-item.movies {
+  background: color-mix(in srgb, var(--color-movies) 8%, #2d2d2d) !important;
+}
+
+html[data-theme='dark'] .item-detail-container.normal-item.videogames {
+  background: color-mix(in srgb, var(--color-videogames) 8%, #2d2d2d) !important;
+}
+
+html[data-theme='dark'] .item-detail-container.normal-item.comics {
+  background: color-mix(in srgb, var(--color-comics) 8%, #2d2d2d) !important;
+}
+
+html[data-theme='dark'] .item-detail-container.normal-item.books {
+  background: color-mix(in srgb, var(--color-books) 8%, #2d2d2d) !important;
+}
+
+html[data-theme='dark'] .item-detail-container.normal-item.music {
+  background: color-mix(in srgb, var(--color-music) 8%, #2d2d2d) !important;
+}
+
+html[data-theme='dark'] .item-detail-container.normal-item.boardgames {
+  background: color-mix(in srgb, var(--color-boardgames) 8%, #2d2d2d) !important;
+}
+
+html[data-theme='dark'] .item-detail-container.normal-item.podcast {
+  background: color-mix(in srgb, var(--color-podcast) 8%, #2d2d2d) !important;
+}
+
+/* Container en tema oscuro - elementos masterpiece */
+html[data-theme='dark'] .item-detail-container.masterpiece-item {
+  background: linear-gradient(135deg, #3a3520 0%, #2d2d2d 100%) !important;
+  border-color: #ffd700;
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.1);
+}
+
+/* Badge de masterpiece en esquina superior derecha del container */
+.masterpiece-badge-container {
+  position: absolute;
+  top: -13px;
+  right: -10px;
+  z-index: 10;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+.masterpiece-badge-container svg {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.item-detail-image-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.item-detail-image {
+  max-width: 300px;
+  max-height: 450px;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.item-detail-image:hover {
+  transform: scale(1.02);
+}
+
+.item-detail-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.item-detail-category {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.category-name {
+  font-weight: bold;
+}
+
+.subcategory-name {
+  font-weight: normal;
+}
+
+.item-detail-director,
+.item-detail-year,
+.item-detail-author {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.item-detail-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  color: var(--text-color);
+}
+
+.item-detail-trailer {
+  margin-top: 2rem;
+}
+
+.item-detail-spotify {
+  margin-top: 1.5rem;
+}
+
+.trailer-link {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.trailer-link:hover {
+  background: var(--primary-color-hover);
+  transform: translateY(-1px);
+}
+
+.spotify-link {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--color-podcast);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.spotify-link:hover {
+  background: color-mix(in srgb, var(--color-podcast) 80%, #000000);
+  transform: translateY(-1px);
+}
+
+/* Responsive para tablets */
+@media (max-width: 768px) {
+  .item-detail-container {
+    padding: 1rem;
+  }
+  
+  .item-detail-image {
+    max-width: 250px;
+    max-height: 375px;
+  }
+  
+  .item-detail-title {
+    font-size: 1.5rem;
+  }
+  
+  .item-detail-description {
+    font-size: 1.1rem;
+  }
+}

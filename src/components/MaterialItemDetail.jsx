@@ -17,7 +17,9 @@ import {
   PlayArrow as PlayArrowIcon,
   Star as StarIcon,
   CalendarToday as CalendarIcon,
-  Category as CategoryIcon
+  Category as CategoryIcon,
+  Person as PersonIcon,
+  Launch as LaunchIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 import useViewStore from '../store/viewStore';
@@ -202,9 +204,7 @@ const MaterialItemDetail = ({ item }) => {
                 }}
               />
             )}
-          </Stack>
-          
-          {/* Año */}
+          </Stack>          {/* Año */}
           {item.year && (
             <Box 
               sx={{ 
@@ -217,6 +217,23 @@ const MaterialItemDetail = ({ item }) => {
               <CalendarIcon sx={{ marginRight: '8px', color: 'text.secondary' }} />
               <Typography variant="h6" color="text.secondary">
                 <strong>{t.year || 'Año'}:</strong> {item.year}
+              </Typography>
+            </Box>
+          )}
+          
+          {/* Información específica para podcast */}
+          {item.category === 'podcast' && item.author && (
+            <Box 
+              sx={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                marginBottom: '16px' 
+              }}
+            >
+              <PersonIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
+              <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                <strong>{t.author || 'Autor'}:</strong> {item.author}
               </Typography>
             </Box>
           )}
@@ -234,10 +251,9 @@ const MaterialItemDetail = ({ item }) => {
           >
             {description}
           </Typography>
-          
-          {/* Botón de trailer */}
+            {/* Botón de trailer */}
           {trailerUrl && (
-            <Box sx={{ textAlign: 'center' }}>
+            <Box sx={{ textAlign: 'center', marginBottom: '16px' }}>
               <Button
                 variant="contained"
                 startIcon={<PlayArrowIcon />}
@@ -261,6 +277,36 @@ const MaterialItemDetail = ({ item }) => {
                 }}
               >
                 {t.watch_trailer || 'Ver Trailer'}
+              </Button>
+            </Box>
+          )}
+          
+          {/* Botón de Spotify para podcast */}
+          {item.category === 'podcast' && item.link && (
+            <Box sx={{ textAlign: 'center' }}>
+              <Button
+                variant="contained"
+                startIcon={<LaunchIcon />}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  backgroundColor: getCategoryColor(item.category),
+                  color: 'white',
+                  padding: '12px 24px',
+                  fontSize: '1.1rem',
+                  fontWeight: 'bold',
+                  borderRadius: '25px',
+                  textTransform: 'none',
+                  boxShadow: theme.shadows[4],
+                  '&:hover': {
+                    backgroundColor: theme.palette.mode === 'dark' ? '#689f38' : '#7cb342',
+                    transform: 'translateY(-2px)',
+                    boxShadow: theme.shadows[8]
+                  }
+                }}
+              >
+                Escuchar en Spotify
               </Button>
             </Box>
           )}

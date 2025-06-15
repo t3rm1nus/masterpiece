@@ -116,10 +116,12 @@
       "description": {
         "es": "Película basada en la novela gráfica de Frank Miller y Lynn Varley, que narra la batalla de las Termópilas con un estilo visual impactante y épico.",
         "en": "Film based on the graphic novel by Frank Miller and Lynn Varley, depicting the Battle of Thermopylae with an impactful and epic visual style."
-      },
-      "director": "Zack Snyder",
+      },      "director": "Zack Snyder",
       "image": "/imagenes/peliculas/300.jpg",
-      "year": 2006,
+      "year": 2006,      "trailer": {
+        "es": "https://www.youtube.com/watch?v=mi4xUUJSuro",
+        "en": "https://www.youtube.com/watch?v=UrIbxk7idYA"
+      },
       "masterpiece": false
     },
     {
@@ -133,10 +135,12 @@
       "description": {
         "es": "Película de ciencia ficción dirigida por Denis Villeneuve, sobre el primer contacto con una civilización extraterrestre y la importancia del lenguaje.",
         "en": "Science fiction film directed by Denis Villeneuve, about first contact with an alien civilization and the importance of language."
-      },
-      "director": "Denis Villeneuve",
+      },      "director": "Denis Villeneuve",
       "image": "/imagenes/peliculas/arrival.jpg",
-      "year": 2016,
+      "year": 2016,      "trailer": {
+        "es": "https://www.youtube.com/watch?v=uWs5lsWXLbo",
+        "en": "https://www.youtube.com/watch?v=7W1m5ER3I1Y"
+      },
       "masterpiece": false
     },
     {
@@ -150,10 +154,12 @@
       "description": {
         "es": "Película de ciencia ficción dirigida por James Cameron, famosa por su innovador uso de efectos visuales y ambientada en el mundo de Pandora.",
         "en": "Science fiction film directed by James Cameron, famous for its innovative use of visual effects and set on the world of Pandora."
-      },
-      "director": "James Cameron",
+      },      "director": "James Cameron",
       "image": "/imagenes/peliculas/avatar.jpg",
-      "year": 2009,
+      "year": 2009,      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Xg8kYk6uHN0&t=3s",
+        "en": "https://www.youtube.com/watch?v=5PSNL1qE6VY&t=21s"
+      },
       "masterpiece": false
     },
     {
@@ -167,10 +173,12 @@
       "description": {
         "es": "Película de artes marciales protagonizada por Bruce Lee, considerada un clásico del género y una de las más influyentes de la historia.",
         "en": "Martial arts film starring Bruce Lee, considered a classic of the genre and one of the most influential in history."
-      },
-      "director": "Robert Clouse",
+      },      "director": "Robert Clouse",
       "image": "/imagenes/peliculas/enter_the_dragon.jpg",
-      "year": 1973,
+      "year": 1973,      "trailer": {
+        "es": "https://www.youtube.com/watch?v=xGPAuGUEIeg",
+        "en": "https://www.youtube.com/watch?v=xGPAuGUEIeg"
+      },
       "masterpiece": false
     },
     {
@@ -184,16 +192,18 @@
       "description": {
         "es": "Película brasileña dirigida por Fernando Meirelles y Kátia Lund, que retrata la vida en las favelas de Río de Janeiro y el ascenso del crimen organizado.",
         "en": "Brazilian film directed by Fernando Meirelles and Kátia Lund, depicting life in the favelas of Rio de Janeiro and the rise of organized crime."
-      },
-      "director": "Fernando Meirelles, Kátia Lund",
+      },      "director": "Fernando Meirelles, Kátia Lund",
       "image": "/imagenes/peliculas/ciudad_de_dios.jpg",
-      "year": 2002,
+      "year": 2002,      "trailer": {
+        "es": "https://www.youtube.com/watch?v=63kaF1n5sz0",
+        "en": "https://www.youtube.com/watch?v=JYKs35P2fZw"
+      },
       "masterpiece": true
     },
     {
       "id": 33,
       "category": "movies",
-      "subcategory": "drama",
+      "subcategory": "sci-fi",
       "title": {
         "es": "Contact",
         "en": "Contact"
@@ -201,10 +211,12 @@
       "description": {
         "es": "Película de ciencia ficción dirigida por Robert Zemeckis y protagonizada por Jodie Foster, basada en la novela de Carl Sagan sobre el primer contacto con vida extraterrestre.",
         "en": "Science fiction film directed by Robert Zemeckis and starring Jodie Foster, based on Carl Sagan's novel about first contact with extraterrestrial life."
-      },
-      "director": "Robert Zemeckis",
+      },      "director": "Robert Zemeckis",
       "image": "/imagenes/peliculas/contact.jpg",
-      "year": 1997,
+      "year": 1997,      "trailer": {
+        "es": "https://www.youtube.com/watch?v=2uMnZJFUX8c",
+        "en": "https://www.youtube.com/watch?v=Q399v-pMG30"
+      },
       "masterpiece": true
     },
     {
@@ -218,10 +230,12 @@
       "description": {
         "es": "Película griega dirigida por Yorgos Lanthimos, que explora la vida de una familia aislada del mundo exterior bajo reglas estrictas y absurdas.",
         "en": "Greek film directed by Yorgos Lanthimos, exploring the life of a family isolated from the outside world under strict and absurd rules."
-      },
-      "director": "Yorgos Lanthimos",
+      },      "director": "Yorgos Lanthimos",
       "image": "/imagenes/peliculas/dogtooth.jpg",
-      "year": 2009,
+      "year": 2009,      "trailer": {
+        "es": "https://www.youtube.com/watch?v=VQT8LCohdUk",
+        "en": "https://www.youtube.com/watch?v=VQT8LCohdUk"
+      },
       "masterpiece": false
     },
     {
@@ -556,10 +570,12 @@
       "description": {
         "es": "Una epopeya de ciencia ficción dirigida por Christopher Nolan, donde un grupo de exploradores viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad.",
         "en": "A science fiction epic directed by Christopher Nolan, where a group of explorers travel through a wormhole in search of a new home for humanity."
-      },
-      "image": "/imagenes/peliculas/interstellar.jpg",
+      },      "image": "/imagenes/peliculas/interstellar.jpg",
       "director": "Christopher Nolan",
-      "year": 2014,
+      "year": 2014,      "trailer": {
+        "es": "https://www.youtube.com/watch?v=UoSSbmD9vqc&t=1s",
+        "en": "https://www.youtube.com/watch?v=zSWdZVtXT7E&t=2s"
+      },
       "masterpiece": false
     },
     {
@@ -576,10 +592,12 @@
       "description": {
         "es": "Una película de terror y humor negro española dirigida por Caye Casas, que explora la incomodidad y el absurdo en la vida cotidiana a través de una simple mesa de comedor.",
         "en": "A Spanish horror and dark comedy film directed by Caye Casas, exploring discomfort and absurdity in daily life through a simple dining table."
-      },
-      "image": "/imagenes/peliculas/la_mesita_del_comedor.jpg",
+      },      "image": "/imagenes/peliculas/la_mesita_del_comedor.jpg",
       "director": "Caye Casas",
-      "year": 2019,
+      "year": 2019,      "trailer": {
+        "es": "https://www.youtube.com/watch?v=XKlTkmRSwIo",
+        "en": "https://www.youtube.com/watch?v=14dmDiYA8YM"
+      },
       "masterpiece": true
     },
     {
@@ -2310,10 +2328,12 @@
       "description": {
         "es": "En un bosque gallego, las vidas de sus peculiares habitantes se entrelazan en una historia llena de humor, ternura y realismo mágico. 'El bosque animado' es una de las grandes joyas del cine español.",
         "en": "In a Galician forest, the lives of its peculiar inhabitants intertwine in a story full of humor, tenderness, and magical realism. 'El bosque animado' is one of the great gems of Spanish cinema."
-      },
-      "director": "José Luis Cuerda",
+      },      "director": "José Luis Cuerda",
       "image": "/imagenes/peliculas/el_bosque_animado.jpg",
-      "year": 1987,
+      "year": 1987,      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Piu3tDDVH9o",
+        "en": "https://www.youtube.com/watch?v=Piu3tDDVH9o"
+      },
       "masterpiece": false,
       "tags": [
         "spanish"
@@ -2781,10 +2801,12 @@
       "description": {
         "es": "Una espectacular película de acción postapocalíptica dirigida por George Miller, donde Max y Furiosa luchan por sobrevivir en un mundo desértico y brutal.",
         "en": "A spectacular post-apocalyptic action film directed by George Miller, where Max and Furiosa fight to survive in a brutal desert world."
-      },
-      "image": "/imagenes/peliculas/madmax.jpg",
+      },      "image": "/imagenes/peliculas/madmax.jpg",
       "director": "George Miller",
-      "year": 2015,
+      "year": 2015,      "trailer": {
+        "es": "https://www.youtube.com/watch?v=BOgm6QTjOmw&t=1s",
+        "en": "https://www.youtube.com/watch?v=hEJnMQG9ev8&t=1s"
+      },
       "masterpiece": false
     },
     {
@@ -2798,10 +2820,12 @@
       "description": {
         "es": "La precuela de Mad Max: Furia en la carretera, centrada en el origen de Furiosa y su lucha por la libertad en un mundo salvaje.",
         "en": "The prequel to Mad Max: Fury Road, focusing on Furiosa's origin and her fight for freedom in a savage world."
-      },
-      "image": "/imagenes/peliculas/madmax2.jpg",
+      },      "image": "/imagenes/peliculas/madmax2.jpg",
       "director": "George Miller",
-      "year": 2023,
+      "year": 2023,      "trailer": {
+        "es": "https://www.youtube.com/watch?v=S3Vx7TZ0yZw&t=5s",
+        "en": "https://www.youtube.com/watch?v=XJMuhwVlca4&t=2s"
+      },
       "masterpiece": false
     },
     {

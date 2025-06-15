@@ -45,8 +45,7 @@ function DesktopMenu() {
         width: '100%',
         maxWidth: '1200px',
         margin: '0 auto'
-      }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+      }}>      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
         {/* Botón de inicio a la izquierda que resetea todos los filtros */}
         <button 
           onClick={handleNewRecommendations} 
@@ -54,65 +53,42 @@ function DesktopMenu() {
         >
           {t.home_title}
         </button>
+        
         {/* Mostrar botón volver solo en vista de detalle */}
         {isDetailView && (
           <button 
-            className="category-btn" 
+            className="back-btn" 
             onClick={goBackFromDetail}
-            style={{ 
-              background: 'var(--hover-color)',
-              border: '1px solid var(--border-color)',
-              color: 'var(--text-color)',
-              padding: '0.5rem 1rem',
-              borderRadius: '6px',
-              cursor: 'pointer'
-            }}
           >
             ← {t.back || 'Volver'}
           </button>
         )}
+        
         {/* Mostrar botón volver en vista de café */}
         {isCoffeeView && (
           <button 
-            className="category-btn" 
+            className="back-btn" 
             onClick={goBackFromCoffee}
-            style={{ 
-              background: 'var(--hover-color)',
-              border: '1px solid var(--border-color)',
-              color: 'var(--text-color)',
-              padding: '0.5rem 1rem',
-              borderRadius: '6px',
-              cursor: 'pointer'
-            }}
           >
             ← {t.back || 'Volver'}
           </button>
         )}
+      </div>
+      
+      {/* Controles de la derecha: café, tema e idioma */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
         {/* Botón de donación - solo mostrar si no estamos en la página de café */}
         {!isCoffeeView && (
           <button 
+            className="donation-btn"
             onClick={navigateToCoffee}
-            style={{ 
-              background: '#ffc439',
-              color: '#333',
-              border: 'none',
-              padding: '0.5rem 1rem',
-              borderRadius: '20px',
-              cursor: 'pointer',
-              fontWeight: 'bold',
-              fontSize: '0.9rem',
-              transition: 'all 0.2s ease'
-            }}
-            onMouseOver={(e) => e.target.style.background = '#ffb700'}
-            onMouseOut={(e) => e.target.style.background = '#ffc439'}
           >
             ☕ {t.buy_me_coffee}
           </button>
         )}
-      </div>
-      {/* Selector de idioma - siempre a la derecha */}
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <ThemeToggle />        <LanguageSelector />
+        
+        <ThemeToggle />
+        <LanguageSelector />
       </div>
       </div>
     </nav>

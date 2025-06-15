@@ -8,9 +8,9 @@ export const useTitleSync = () => {
   const { updateTitleForLanguage, selectedCategory, title, getDefaultTitle, setTitle } = useDataStore();
 
   useEffect(() => {
-    // Actualizar título cuando cambia el idioma
+    // Actualizar título cuando cambia el idioma o la categoría seleccionada
     updateTitleForLanguage(lang);
-  }, [lang, updateTitleForLanguage]);
+  }, [lang, selectedCategory, updateTitleForLanguage]);
 
   useEffect(() => {
     // Inicializar título si no existe

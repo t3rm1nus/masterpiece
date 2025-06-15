@@ -4,7 +4,8 @@ import useViewStore from '../store/viewStore';
 import useThemeStore from '../store/themeStore';
 import MaterialItemDetail from './MaterialItemDetail';
 
-const ItemDetail = () => {  const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
+const ItemDetail = () => {
+  const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
   
   // Stores consolidados
   const { 
@@ -38,35 +39,16 @@ const ItemDetail = () => {  const { lang, t, getCategoryTranslation, getSubcateg
     }
     return null;
   };
+    const trailerUrl = getTrailerUrl();
   
-  const trailerUrl = getTrailerUrl();
-
   return (
     <>
       {/* Componente Material UI solo para móviles */}
-      <MaterialItemDetail />
-      
-      {/* Vista clásica solo para desktop */}
-      <div className="item-detail desktop-only" style={{ textAlign: 'center', padding: '2rem' }}>
-        <button 
-          onClick={goBackFromDetail}
-          style={{
-            position: 'absolute',
-            top: '1rem',
-            left: '1rem',
-            background: 'var(--hover-color)',
-            border: '1px solid var(--border-color)',
-            color: 'var(--text-color)',
-            padding: '0.5rem 1rem',
-            borderRadius: '6px',
-            cursor: 'pointer'
-          }}
-        >
-          ← {t.back || 'Volver'}
-        </button>
-        
-        <div style={{ position: 'relative', display: 'inline-block' }}>          {selectedItem.masterpiece && (
-            <span className="masterpiece-badge" title="Obra maestra">
+      <MaterialItemDetail />      {/* Vista clásica solo para desktop */}
+      <div className="item-detail-page desktop-only">
+        <div className={`item-detail-container ${selectedItem.masterpiece ? 'masterpiece-item' : 'normal-item'} ${selectedItem.category}`}>
+          {selectedItem.masterpiece && (
+            <span className="masterpiece-badge-container" title="Obra maestra">
               <svg 
                 width={badgeConfig.svg.width} 
                 height={badgeConfig.svg.height} 
@@ -88,75 +70,70 @@ const ItemDetail = () => {  const { lang, t, getCategoryTranslation, getSubcateg
             </span>
           )}
           
-          <img 
-            src={selectedItem.image} 
-            alt={title}
-            style={{
-              maxWidth: '300px',
-              width: '100%',
-              height: 'auto',
-              borderRadius: '12px',
-              marginBottom: '1.5rem'
-            }}
-          />
-        </div>
-        
-        <h2 style={{ marginBottom: '1rem', fontSize: '2rem' }}>{title}</h2>
-        
-        <div style={{ marginBottom: '1rem', fontSize: '1.1rem', color: '#666' }}>
-          <span style={{ fontWeight: 'bold' }}>
-            {getCategoryTranslation(selectedItem.category)}
-          </span>
-          {selectedItem.subcategory && (
-            <span> - {getSubcategoryTranslation(selectedItem.subcategory)}</span>
+          <div className="item-detail-image-container">
+            <img 
+              src={selectedItem.image} 
+              alt={title}
+              className="item-detail-image"
+            />
+          </div>
+          
+          <h2 className="item-detail-title">{title}</h2>
+          
+          <div className="item-detail-category">
+            <span className="category-name">
+              {getCategoryTranslation(selectedItem.category)}
+            </span>
+            {selectedItem.subcategory && (
+              <span className="subcategory-name"> - {getSubcategoryTranslation(selectedItem.subcategory)}</span>
+            )}
+          </div>
+          
+          {selectedItem.director && (
+            <p className="item-detail-director">
+              <strong>{t.director || 'Director'}:</strong> {selectedItem.director}
+            </p>
+          )}          {selectedItem.year && (
+            <p className="item-detail-year">
+              <strong>{t.year || 'Año'}:</strong> {selectedItem.year}
+            </p>
+          )}
+          
+          {selectedItem.category === 'podcast' && selectedItem.author && (
+            <p className="item-detail-author">
+              <strong>{t.author || 'Autor'}:</strong> {selectedItem.author}
+            </p>
+          )}
+          
+          <p className="item-detail-description">
+            {description}
+          </p>
+            {trailerUrl && (
+            <div className="item-detail-trailer">
+              <a 
+                href={trailerUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="trailer-link"
+              >
+                {t.watch_trailer || 'Ver Trailer'}
+              </a>
+            </div>
+          )}
+          
+          {selectedItem.category === 'podcast' && selectedItem.link && (
+            <div className="item-detail-spotify">
+              <a 
+                href={selectedItem.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="spotify-link"
+              >
+                Escuchar en Spotify
+              </a>
+            </div>
           )}
         </div>
-        
-        {selectedItem.director && (
-          <p style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
-            <strong>{t.director || 'Director'}:</strong> {selectedItem.director}
-          </p>
-        )}
-        
-        {selectedItem.year && (
-          <p style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
-            <strong>{t.year || 'Año'}:</strong> {selectedItem.year}
-          </p>
-        )}
-        
-        <p style={{ 
-          fontSize: '1.2rem', 
-          lineHeight: '1.6', 
-          marginBottom: '2rem',
-          textAlign: 'left',
-          maxWidth: '600px',
-          margin: '0 auto 2rem auto'
-        }}>
-          {description}
-        </p>
-        
-        {trailerUrl && (
-          <div style={{ marginTop: '2rem' }}>
-            <a 
-              href={trailerUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="trailer-link"
-              style={{
-                display: 'inline-block',
-                padding: '0.8rem 1.5rem',
-                background: '#0078d4',
-                color: 'white',
-                textDecoration: 'none',
-                borderRadius: '8px',
-                fontWeight: 'bold',
-                transition: 'background 0.2s'
-              }}
-            >
-              {t.watch_trailer || 'Ver Trailer'}
-            </a>
-          </div>
-        )}
       </div>
     </>
   );

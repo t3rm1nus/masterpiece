@@ -178,9 +178,7 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
                 />
               )}
             </Box>
-          </Box>
-          
-          {/* Descripción */}
+          </Box>          {/* Descripción */}
           <Box sx={{ flex: 1, minWidth: 0 }}>
             <Typography 
               variant="body2" 
@@ -285,9 +283,7 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
               }}
             />
           )}
-        </Box>
-        
-        <Typography 
+        </Box>        <Typography 
           variant="body2" 
           color="text.secondary"
           sx={{ 

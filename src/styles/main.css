@@ -1,0 +1,136 @@
+/* ===================================
+   MASTERPIECE APP - ESTILOS PRINCIPALES
+   =================================== */
+
+/* === BASE STYLES === */
+@import './base/variables.css';
+@import './base/reset.css';
+
+/* === THEMES === */
+@import './themes/light.css';
+@import './themes/dark.css';
+
+/* === LAYOUT === */
+@import './layout/main.css';
+
+/* === COMPONENTS === */
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/item-detail.css';
+
+/* === LEGACY & SPECIFIC STYLES === */
+@import './legacy.css';
+
+/* === LEGACY COMPATIBILITY === */
+/* Estilos específicos que aún no se han migrado completamente */
+
+/* Detalles de items */
+.item-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--card-background);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2xl);
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.item-detail.masterpiece img[alt="Masterpiece icon"] {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  width: 28px;
+  height: 28px;
+  z-index: var(--z-dropdown);
+}
+
+/* Enlaces de trailer */
+.trailer-link {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-primary);
+  color: var(--text-inverse);
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-bold);
+  transition: background var(--transition-normal);
+  margin-top: var(--space-lg);
+}
+
+.trailer-link:hover {
+  background: var(--color-primary-hover);
+}
+
+/* Estilos de selector de idioma */
+.main-menu select {
+  border: none;
+  min-width: 120px;
+  margin: 0;
+  background: var(--background-secondary);
+  color: var(--text-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-sm) var(--space-md);
+  cursor: pointer;
+}
+
+/* Layouts móviles especiales */
+.mobile-home-layout {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: var(--space-sm);
+  width: 100%;
+  max-width: 400px;
+}
+
+.rec-home-content {
+  display: flex;
+  width: 100%;
+  gap: var(--space-sm);
+}
+
+.rec-home-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.rec-home-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.rec-home-cats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+}
+
+.rec-home-cat,
+.rec-home-subcat {
+  font-size: var(--font-size-xs);
+  text-align: center;
+  line-height: var(--line-height-tight);
+}
+
+.rec-home-cat {
+  font-weight: var(--font-weight-bold);
+}
+
+.rec-home-subcat {
+  color: var(--text-muted);
+  font-weight: var(--font-weight-normal);
+}
+
+.rec-home-desc {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  color: var(--text-secondary);
+  margin: 0;
+}

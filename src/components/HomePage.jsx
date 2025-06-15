@@ -28,7 +28,7 @@ const HomePage = () => {
   } = useDataStore();
   
   // Obtener configuración de estilos del store consolidado
-  const { getSpecialButtonLabel, containerStyles } = useThemeStore();  
+  const { getSpecialButtonLabel } = useThemeStore();  
   // Obtener categorías traducidas
   const categories = getCategories(lang);
   
@@ -81,13 +81,11 @@ const HomePage = () => {
       recommendations={filteredItems}
       isHome={!selectedCategory && !activeSubcategory}
     >
-      <>
-        <div className="categories-list" style={containerStyles.categoriesList}>
+      <>        <div className="categories-list">
           {categories.map(({ key, label }) => (
             <button
               key={key}
               className="category-btn"
-              style={{ display: 'inline-block' }}
               onClick={() => handleCategoryClick(key, label)}
             >
               {label}
@@ -96,13 +94,11 @@ const HomePage = () => {
         </div>
         
         {selectedCategory && (
-          <>
-            <div className="subcategories-list" style={containerStyles.subcategoriesList}>
+          <>            <div className="subcategories-list">
               {categorySubcategories.map(({ sub }) => (
                 <button
                   key={sub}
                   className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
-                  style={{ display: 'inline-block', margin: '0.5rem' }}
                   onClick={() => setActiveSubcategory(sub)}
                 >
                   {getSubcategoryTranslation(sub)}
@@ -110,7 +106,7 @@ const HomePage = () => {
               ))}
             </div>
 
-            <div style={containerStyles.specialButtonsContainer}>
+            <div className="special-buttons-container">
               {/* Mostrar botón de Cine Español solo en la categoría de películas */}
               {selectedCategory === 'movies' && (
                 <button

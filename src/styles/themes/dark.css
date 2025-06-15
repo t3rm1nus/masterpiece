@@ -1,0 +1,72 @@
+/* ===================================
+   TEMA OSCURO
+   =================================== */
+
+html[data-theme='dark'] {
+  /* === COLORES PRINCIPALES === */
+  --color-primary: #61dafb;
+  --color-primary-hover: #4FC3F7;
+  --color-primary-light: #1a365d;
+  
+  --primary-color: #61dafb;
+  --primary-color-hover: #4FC3F7;
+  
+  --color-secondary: #adb5bd;
+  --color-secondary-hover: #ced4da;
+  --color-secondary-light: #343a40;
+
+  /* === COLORES DE FONDO === */
+  --background-color: #1a1a1a;
+  --bg-color: #1a1a1a;
+  --background-secondary: #2d2d2d;
+  --background-tertiary: #3a3a3a;
+  
+  /* === COLORES DE TEXTO === */
+  --text-color: #f0f0f0;
+  --text-secondary: #adb5bd;
+  --text-muted: #6c757d;
+  --text-inverse: #000000;
+
+  /* === COLORES DE INTERFAZ === */
+  --border-color: #404040;
+  --border-color-hover: #555555;
+  
+  --card-background: #2d2d2d;
+  --card-border: #404040;
+  
+  --hover-color: #3a3f4b;
+  --active-color: #495057;
+  
+  /* === COLORES DE ESTADO === */
+  --color-success: #20c997;
+  --color-success-light: #155724;
+  
+  --color-warning: #ffc107;
+  --color-warning-light: #856404;
+  
+  --color-error: #e74c3c;
+  --color-error-light: #721c24;
+  
+  --color-info: #17a2b8;
+  --color-info-light: #0c5460;
+
+  /* === COLORES ESPECIALES === */
+  --color-masterpiece: #ffd700;
+  --color-masterpiece-hover: #ffed4e;
+  --color-masterpiece-light: #2a2600;
+
+  /* === SOMBRAS === */
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --shadow-color-strong: rgba(0, 0, 0, 0.6);
+}
+
+/* === COLORES POR CATEGORÍA (MODO OSCURO) === */
+html[data-theme='dark'] {
+  --color-movies: #1976d2;
+  --color-videogames: #7b1fa2;
+  --color-comics: #f57c00;
+  --color-books: #388e3c;
+  --color-boardgames: #c2185b;
+  --color-music: #0097a7;
+  --color-podcast: #689f38;
+}

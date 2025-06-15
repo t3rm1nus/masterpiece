@@ -226,14 +226,28 @@ const useDataStore = create(
       // Establecer título
       setTitle: (title) => {
         set({ title }, false, 'setTitle');
-      },
-
-      // Actualizar título para idioma
+      },      // Actualizar título para idioma
       updateTitleForLanguage: (lang) => {
-        const { selectedCategory } = get();
+        const { selectedCategory, allData } = get();
         if (!selectedCategory) {
           const defaultTitle = get().getDefaultTitle(lang);
           set({ title: defaultTitle }, false, 'updateTitleForLanguage');
+        } else {
+          // Si hay una categoría seleccionada, actualizar su título traducido
+          const categoryData = allData[selectedCategory];
+          if (categoryData && categoryData.length > 0) {
+            const categoryNames = {
+              movies: lang === 'en' ? 'Movies' : 'Películas',
+              videogames: lang === 'en' ? 'Video Games' : 'Videojuegos',
+              comics: lang === 'en' ? 'Comics' : 'Cómics',
+              books: lang === 'en' ? 'Books' : 'Libros',
+              boardgames: lang === 'en' ? 'Board Games' : 'Juegos de Mesa',
+              music: lang === 'en' ? 'Music' : 'Música',
+              podcast: lang === 'en' ? 'Podcasts' : 'Podcasts'
+            };
+            const translatedTitle = categoryNames[selectedCategory] || selectedCategory;
+            set({ title: translatedTitle }, false, 'updateTitleForLanguage');
+          }
         }
       },
 

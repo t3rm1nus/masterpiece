@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback } from 'react';
+import React, { useMemo, useCallback, lazy } from 'react';
 import { useLanguage } from '../LanguageContext';
 import useViewStore from '../store/viewStore';
 import useDataStore from '../store/dataStore';
@@ -6,16 +6,30 @@ import useThemeStore from '../store/themeStore';
 import { generateRecommendationKey } from '../utils/appUtils';
 import MaterialContentWrapper from './MaterialContentWrapper';
 
+// Separar chunks por funcionalidad
+const CoffeePage = lazy(() => 
+  import('./CoffeePage' /* webpackChunkName: "coffee" */)
+);
+
+// Implementar imagen optimizada
+const OptimizedImage = ({ src, alt, ...props }) => (
+  <img 
+    src={src}
+    alt={alt}
+    loading="lazy"
+    decoding="async"
+    {...props}
+  />
+);
+
 const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
-  
-  // Stores consolidados
+    // Stores consolidados
   const { 
     isMobile, 
     navigateToDetail,
     processTitle, 
     processDescription, 
     getRecommendationCardClasses,
-    noResultsConfig,
     mobileHomeStyles,
     desktopStyles
   } = useViewStore();
@@ -32,23 +46,15 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
   }, [navigateToDetail]);
 
   // Memoizar el contenido de recomendaciones para evitar re-renders innecesarios
-  const memoizedRecommendations = useMemo(() => {
-    if (!recommendations || recommendations.length === 0) {
+  const memoizedRecommendations = useMemo(() => {    if (!recommendations || recommendations.length === 0) {
       return (
-        <div style={noResultsConfig.containerStyle}>
-          <div style={noResultsConfig.imageContainerStyle}>
-            <img 
-              src={randomNotFoundImage} 
-              alt="No se encontraron resultados" 
-              style={{ 
-                maxWidth: '400px', 
-                width: '100%', 
-                height: 'auto',
-                borderRadius: '8px'
-              }} 
-            />
-          </div>
-          <p style={{ textAlign: 'center', margin: '2rem auto', fontSize: '1.2rem' }}>
+        <div className="no-results-container">
+          <img 
+            src={randomNotFoundImage} 
+            alt="No se encontraron resultados" 
+            className="no-results-image"
+          />
+          <p className="no-results-text">
             {t.no_results || 'No se encontraron resultados'}
           </p>
         </div>
@@ -93,7 +99,7 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
                   // Layout móvil para home
                   <div className="rec-home-content">
                     <div className="rec-home-media">
-                      <img 
+                      <OptimizedImage 
                         src={rec.image} 
                         alt={title} 
                         width={80} 
@@ -108,15 +114,14 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
                           {getSubcategoryTranslation(rec.subcategory)}
                         </span>
                       </div>
-                    </div>
-                    <div className="rec-home-info">
+                    </div>                    <div className="rec-home-info">
                       <p className="rec-home-desc">{description}</p>
                     </div>
                   </div>
                 ) : (
                   // Layout desktop y categorías
                   <>
-                    <img 
+                    <OptimizedImage 
                       src={rec.image} 
                       alt={title} 
                       width={120} 
@@ -129,23 +134,23 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
                       </span>
                       <span style={desktopStyles.subcategoryStyle}>
                         {getSubcategoryTranslation(rec.subcategory)}
-                      </span>                    </div>
-                    <h3>{title}</h3>
+                      </span>                    </div>                    <h3>{title}</h3>
                     <p>{description}</p>
                   </>
                 )}
               </div>
             );
           });
-  }, [recommendations, randomNotFoundImage, t.no_results, noResultsConfig, isMobile, handleItemClick, processTitle, processDescription, getRecommendationCardClasses, badgeConfig, isHome, mobileHomeStyles, desktopStyles, lang]);
-
+  }, [recommendations, randomNotFoundImage, t.no_results, isMobile, handleItemClick, processTitle, processDescription, getRecommendationCardClasses, badgeConfig, isHome, mobileHomeStyles, desktopStyles, lang]);
   return (
     <MaterialContentWrapper
       recommendations={recommendations}
       isHome={isHome}
     >
-      <div className="recommendations-list" style={{ width: '100%', maxWidth: '100%' }}>
-        {memoizedRecommendations}
+      <div className="recommendations-wrapper">
+        <div className="recommendations-list">
+          {memoizedRecommendations}
+        </div>
       </div>
     </MaterialContentWrapper>
   );

@@ -1,0 +1,126 @@
+/* ===================================
+   TARJETAS DE RECOMENDACIÓN
+   =================================== */
+
+.recommendation-card {
+  background: var(--card-background);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-md);
+  width: 220px;
+  min-width: 200px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow var(--transition-normal), 
+              transform var(--transition-normal);
+  border: var(--border-width) solid var(--border-color);
+  position: relative;
+  overflow: visible;
+}
+
+.recommendation-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.recommendation-card img {
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--space-sm);
+  object-fit: cover;
+}
+
+.recommendation-card h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  margin: var(--space-sm) 0 var(--space-xs) 0;
+  text-align: center;
+  line-height: var(--line-height-tight);
+}
+
+.recommendation-card p {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: var(--line-height-normal);
+}
+
+.recommendation-card span {
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+/* === VARIANTES POR CATEGORÍA === */
+.recommendation-card.movies {
+  background: color-mix(in srgb, var(--color-movies) 8%, var(--card-background));
+}
+
+.recommendation-card.videogames {
+  background: color-mix(in srgb, var(--color-videogames) 8%, var(--card-background));
+}
+
+.recommendation-card.comics {
+  background: color-mix(in srgb, var(--color-comics) 8%, var(--card-background));
+}
+
+.recommendation-card.books {
+  background: color-mix(in srgb, var(--color-books) 8%, var(--card-background));
+}
+
+.recommendation-card.boardgames {
+  background: color-mix(in srgb, var(--color-boardgames) 8%, var(--card-background));
+}
+
+.recommendation-card.music {
+  background: color-mix(in srgb, var(--color-music) 8%, var(--card-background));
+}
+
+.recommendation-card.podcast {
+  background: color-mix(in srgb, var(--color-podcast) 8%, var(--card-background));
+}
+
+/* === VARIANTE MASTERPIECE === */
+.recommendation-card.masterpiece {
+  border: 3px solid var(--color-masterpiece) !important;
+  background: linear-gradient(135deg, 
+    var(--color-masterpiece-light) 60%, 
+    color-mix(in srgb, var(--color-masterpiece) 20%, transparent) 100%) !important;
+  position: relative;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-masterpiece) 40%, transparent), 
+              var(--shadow-lg);
+}
+
+/* === BADGE DE MASTERPIECE === */
+.recommendation-card .masterpiece-badge {
+  position: absolute;
+  top: -23px;
+  right: -15px;
+  width: 28px;
+  height: 28px;
+  z-index: var(--z-dropdown);
+  background: var(--color-masterpiece);
+  color: var(--text-inverse);
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  border: 2px solid var(--card-background);
+  box-shadow: var(--shadow-md);
+  overflow: visible;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .recommendation-card {
+    width: 45vw;
+    min-width: 160px;
+    max-width: 240px;
+    padding: var(--space-sm);
+    position: relative;
+    overflow: visible;
+  }
+}

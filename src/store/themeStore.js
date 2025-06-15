@@ -61,39 +61,12 @@ const useThemeStore = create(
         mobileHome: {
           imageSize: { width: 80, height: 110 },
           desktopImageSize: { width: 120, height: 170 }
-        }
-      },
-
-      // Configuración de contenedores y espaciados
-      containerStyles: {
-        main: {
-          width: '100%',
-          maxWidth: '100%',
-          boxSizing: 'border-box'
-        },
-        categoriesList: {
-          textAlign: 'center',
-          marginTop: '4rem',
-          marginBottom: '1rem',
-          width: '100%'
-        },        subcategoriesList: {
-          textAlign: 'center',
-          marginBottom: '0.25rem', // Reducido de 0.5rem a 0.25rem para menor distancia con el h1
-          width: '100%'
-        },        specialButtonsContainer: {
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '1rem',
-          marginBottom: '0.5rem', // Reducido de 1rem a 0.5rem para menor distancia con el h1
-          width: '100%',
-          textAlign: 'center'
-        }
-      },
+        }      },
 
       // ==========================================
       // ACCIONES DE TEMA
       // ==========================================
-        setTheme: (theme) => {
+      setTheme: (theme) => {
         const isDarkTheme = theme === 'dark';
         set({ theme, isDarkTheme }, false, 'setTheme');
         // Aplicar clase al elemento HTML para cambios globales de CSS

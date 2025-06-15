@@ -1,6 +1,6 @@
 import React from 'react';
 import { LanguageProvider } from "./LanguageContext";
-import './App.css';
+import './styles/main.css';
 import MaterialThemeProvider from './components/MaterialThemeProvider';
 import AppContent from './components/AppContent';
 import ErrorDisplay from './components/ErrorDisplay';

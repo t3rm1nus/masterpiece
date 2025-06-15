@@ -15,24 +15,9 @@ const useViewStore = create(
       
       // Estado para la vista de detalle
       selectedItem: null, // Item seleccionado para mostrar detalles
-      previousView: 'home', // Vista anterior para poder volver
-
-      // ==========================================
+      previousView: 'home', // Vista anterior para poder volver      // ==========================================
       // CONFIGURACIÓN DE RENDERIZADO
       // ==========================================
-      
-      // Configuración de contenedores de resultados vacíos
-      noResultsConfig: {
-        containerStyle: { 
-          width: '100%', 
-          maxWidth: '100%' 
-        },
-        imageContainerStyle: { 
-          textAlign: 'center', 
-          width: '100%', 
-          maxWidth: '100%' 
-        }
-      },
 
       // Configuración de estilos para mobile home layout
       mobileHomeStyles: {
