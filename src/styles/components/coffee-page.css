@@ -16,7 +16,7 @@
 
 .coffee-icon {
   font-size: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   animation: bounce 2s infinite;
   display: block;
 }
@@ -24,7 +24,7 @@
 .coffee-title {
   color: var(--text-color);
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0px auto var(--space-lg) auto;
   font-weight: bold;
 }
 
@@ -124,26 +124,19 @@
 }
 
 /* === ESTILOS ESPECÍFICOS PARA PAYPAL === */
+/* Los estilos detallados de PayPal están en App.css para evitar conflictos */
 @media (max-width: 768px) {
   #paypal-button-wrapper {
-    border-radius: 8px !important;
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   #paypal-container-MRSQEQV646EPA {
-    width: 100% !important;
-    max-width: 300px !important;
-  }
-
-  /* Corregir el label "¡Gracias por el coffee!" que sale recortado */
-  .paypal-buttons .paypal-button .paypal-label {
-    font-size: 14px !important;
-    white-space: nowrap !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
+    width: 100%;
+    max-width: 300px;
   }
 }
