@@ -181,9 +181,9 @@
                     options
                   );
                 } catch (e) {
-                  console.log('Excepción en watchPosition, usando mock:', e);
-                  return mockGeolocation.watchPosition(success, error, options);
-                }              };
+                  console.log('Excepción en watchPosition, usando mock:', e);                  return mockGeolocation.watchPosition(success, error, options);
+                }
+              };
             }
           }
         };
@@ -251,15 +251,16 @@
             try {            window.paypal.Buttons({
               // Configuración para sandbox/testing
               env: 'sandbox', // Cambiar a 'production' cuando tengas permisos
-              
-              style: {
+                style: {
                 layout: 'vertical',
                 color: 'gold',
                 shape: 'rect',
                 label: 'donate',
                 height: 44,
                 tagline: false
-              },              // Configurar métodos de pago: solo restringir en localhost
+              },
+              
+              // Configurar métodos de pago: solo restringir en localhost
               fundingSource: window.isLocalhost ? window.paypal.FUNDING.PAYPAL : undefined,
               
               onClick: function(data, actions) {
