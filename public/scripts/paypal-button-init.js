@@ -6,16 +6,31 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log('Initializing PayPal...');
   
   let paypalInitialized = false;
+  let isInitializing = false; // Prevent concurrent initializations
   let initTimeout = null;
+  let lastInitTime = 0; // Prevent rapid re-initializations
   
   // Check if on coffee page
   function isOnCoffeePage() {
     return window.location.hash === '#/coffee' || 
            document.getElementById("paypal-container-MRSQEQV646EPA") !== null;
   }
-  
-  // Initialize PayPal button with mobile-optimized logic
+    // Initialize PayPal button with mobile-optimized logic and duplicate prevention
   function initPayPalButton() {
+    const now = Date.now();
+    
+    // Prevent rapid re-initializations (debounce)
+    if (now - lastInitTime < 1000) {
+      console.log('⏱️ PayPal init too soon, skipping...');
+      return;
+    }
+    
+    // Prevent concurrent initializations
+    if (isInitializing) {
+      console.log('🔄 PayPal already initializing, skipping...');
+      return;
+    }
+    
     const container = document.getElementById("paypal-container-MRSQEQV646EPA");
     
     if (!window.paypal) {
@@ -27,6 +42,12 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!container) {
       console.log('PayPal container not found, retrying...');
       setTimeout(initPayPalButton, 500);
+      return;
+    }
+    
+    // Check if already initialized and container has content
+    if (paypalInitialized && container.children.length > 0) {
+      console.log('✅ PayPal already initialized and rendered');
       return;
     }
     
@@ -45,6 +66,8 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
     
+    isInitializing = true;
+    lastInitTime = now;
     console.log('✅ Rendering PayPal button...');
     container.innerHTML = '';
     
@@ -183,13 +206,14 @@ document.addEventListener("DOMContentLoaded", function() {
         
         onCancel: function(data) {
           console.log('Payment cancelled:', data);
-        }
-      }).render('#paypal-container-MRSQEQV646EPA').then(function() {
+        }      }).render('#paypal-container-MRSQEQV646EPA').then(function() {
         console.log('✅ PayPal button rendered successfully');
         paypalInitialized = true;
+        isInitializing = false; // Clear initialization flag
       }).catch(function(err) {
         console.error('❌ Error rendering PayPal button:', err);
         paypalInitialized = false;
+        isInitializing = false; // Clear initialization flag on error
         
         // Handle specific mobile errors
         if (err.message && err.message.includes('container element removed from DOM')) {
@@ -318,9 +342,21 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   });
-  
-  // Global function for React with mobile optimization
+    // Global function for React with mobile optimization and duplicate prevention
   window.initializePayPal = function() {
+    const now = Date.now();
+    
+    // Enhanced duplicate prevention
+    if (isInitializing) {
+      console.log('🔄 PayPal initialization already in progress, skipping duplicate request');
+      return;
+    }
+    
+    if (paypalInitialized && now - lastInitTime < 2000) {
+      console.log('✅ PayPal recently initialized, skipping duplicate request');
+      return;
+    }
+    
     console.log('PayPal initialization requested from React');
     paypalInitialized = false; // Reset to allow re-initialization
     debouncedPayPalInit();

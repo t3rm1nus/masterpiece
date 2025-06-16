@@ -8,44 +8,14 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Vite + React</title>
 
-    <!-- CRITICAL INLINE SCRIPTS - Execute IMMEDIATELY before any external scripts -->
+    <!-- ULTRA-AGGRESSIVE Modular Scripts - Clean Structure with Maximum Effectiveness -->
     
-    <!-- 1. ULTRA-EARLY Geolocation Override (INLINE) -->
-    <script>
-      (function() {
-        console.log('🔒 INLINE Geolocation Override - IMMEDIATE execution');
-        const madridCoords = { latitude: 40.4168, longitude: -3.7038, altitude: 650, accuracy: 10, altitudeAccuracy: 5, heading: null, speed: null };
-        const mockPosition = { coords: madridCoords, timestamp: Date.now() };
-        const mockGeo = {
-          getCurrentPosition: function(success, error, options) { console.log('🇪🇸 INLINE Mock: Madrid, Spain'); if (success) setTimeout(() => success(mockPosition), 1); },
-          watchPosition: function(success, error, options) { console.log('🔄 INLINE Watch: Madrid, Spain'); if (success) setTimeout(() => success(mockPosition), 1); return Math.floor(Math.random() * 1000); },
-          clearWatch: function() { console.log('🛑 INLINE clearWatch'); }
-        };
-        try { Object.defineProperty(navigator, 'geolocation', { value: mockGeo, writable: false, configurable: false, enumerable: true }); } catch(e) { navigator.geolocation = mockGeo; }
-        try { Object.defineProperty(window.navigator, 'geolocation', { value: mockGeo, writable: false, configurable: false, enumerable: true }); } catch(e) { window.navigator.geolocation = mockGeo; }
-        const originalWarn = console.warn; const originalError = console.error;
-        console.warn = function(...args) { const msg = args.join(' '); if (msg.includes('geolocation') || msg.includes('Potential permissions policy violation')) { console.log('🤫 INLINE Suppressed:', msg.substring(0, 50) + '...'); return; } originalWarn.apply(console, args); };
-        console.error = function(...args) { const msg = args.join(' '); if (msg.includes('geolocation') || msg.includes('permissions policy')) { console.log('🤫 INLINE Suppressed:', msg.substring(0, 50) + '...'); return; } originalError.apply(console, args); };
-        console.log('✅ INLINE Geolocation override ACTIVE');
-      })();
-    </script>
+    <!-- 1. Geolocation Override (SYNC - Must be first) -->
+    <script src="/scripts/geolocation-override.js"></script>
     
-    <!-- 2. ULTRA-EARLY Symbol.observable Polyfill (INLINE) -->
-    <script>
-      (function() {
-        console.log('🔧 INLINE Symbol.observable - IMMEDIATE execution');
-        const existingObservable = (typeof Symbol !== 'undefined') ? Symbol.observable : undefined;
-        if (typeof Symbol === 'undefined') { window.Symbol = function(description) { return `@@${description || 'symbol'}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`; }; Symbol.for = function(key) { const registry = Symbol._registry = Symbol._registry || {}; if (!(key in registry)) { registry[key] = `@@${key}_global`; } return registry[key]; }; Symbol.iterator = Symbol.for('iterator'); }
-        const CONSISTENT_OBSERVABLE = existingObservable || Symbol.for('observable') || '@@observable';
-        Symbol.observable = CONSISTENT_OBSERVABLE;
-        try { Object.defineProperty(Symbol, 'observable', { value: CONSISTENT_OBSERVABLE, writable: false, configurable: false, enumerable: false }); } catch (e) { /* fallback already set */ }
-        if (typeof window !== 'undefined') { window.Symbol = window.Symbol || Symbol; if (window.Symbol) { window.Symbol.observable = CONSISTENT_OBSERVABLE; } }
-        const originalDefineProperty = Object.defineProperty;
-        Object.defineProperty = function(obj, prop, descriptor) { if (obj === Symbol && prop === 'observable') { console.log('🛡️ INLINE Intercepted Symbol.observable redefinition'); descriptor.value = CONSISTENT_OBSERVABLE; } return originalDefineProperty.call(this, obj, prop, descriptor); };
-        console.log('✅ INLINE Symbol.observable locked:', CONSISTENT_OBSERVABLE);
-      })();
-    </script>
-
+    <!-- 2. Symbol.observable Polyfill (SYNC - Before any React/Redux) -->
+    <script src="/scripts/symbol-observable-polyfill.js"></script>
+    
     <!-- 3. Environment Detection and PayPal SDK Loader -->
     <script src="/scripts/paypal-sdk-loader.js"></script>
     
