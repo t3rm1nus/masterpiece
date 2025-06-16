@@ -74,30 +74,7 @@ const CoffeePage = () => {
             width="1" 
             height="1" 
             style={{ border: '0' }} 
-          />
-        </form>
-        
-        {/* Input de cantidad - ELIMINADO */}
-        {/* <div className="amount-input-wrapper">
-          <label htmlFor="donation-amount" className="amount-label">
-            {t.amount_label || 'Cantidad (EUR)'}
-          </label>
-          <input 
-            type="number" 
-            id="donation-amount"
-            name="amount"
-            min="1" 
-            max="100" 
-            defaultValue="5"
-            className="amount-input"
-            placeholder="5"
-          />
-        </div> */}
-        
-        {/* Contenedor del botón de PayPal - ELIMINADO */}
-        {/* <div className="paypal-button-container" id="paypal-button-wrapper">
-          <div id="paypal-container-MRSQEQV646EPA"></div>
-        </div> */}
+          />        </form>
         
         {/* Footer divertido */}
         <p className="coffee-footer">{t.coffee_footer}</p>

@@ -8,7 +8,6 @@ export default defineConfig({
     https: false, // Cambiar a true si necesitas HTTPS
     host: true,
     port: 5173,
-    // Configuración para desarrollo con PayPal
     headers: {
       'Permissions-Policy': 'geolocation=*, camera=*, microphone=*, payment=*, accelerometer=*, gyroscope=*',
       'Referrer-Policy': 'strict-origin-when-cross-origin'

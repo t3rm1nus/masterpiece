@@ -2,71 +2,6 @@
    ESTILOS LEGACY Y ESPECÍFICOS
    =================================== */
 
-/* === ESTILOS DE PAYPAL === */
-/* Contenedor principal de PayPal */
-#paypal-container-MRSQEQV646EPA {
-  border-radius: var(--border-radius-md) !important;
-  overflow: hidden !important;
-  width: 100% !important;
-  max-width: 280px !important;
-  margin: 0 auto !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: var(--space-xs) !important;
-}
-
-#paypal-container-MRSQEQV646EPA > div {
-  width: 100% !important;
-  max-width: 100% !important;
-  border-radius: var(--border-radius-md) !important;
-  overflow: visible !important;
-}
-
-/* Botones PayPal */
-.MuiPaper-root #paypal-container-MRSQEQV646EPA button,
-#paypal-container-MRSQEQV646EPA button {
-  border-radius: var(--border-radius-md) !important;
-  width: 100% !important;
-  min-width: 200px !important;
-  height: auto !important;
-  min-height: 44px !important;
-  font-size: var(--font-size-sm) !important;
-  line-height: var(--line-height-tight) !important;
-  white-space: nowrap !important;
-  text-align: center !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin: 2px 0 !important;
-  box-sizing: border-box !important;
-  flex-wrap: wrap !important;
-}
-
-/* Botón principal de PayPal */
-#paypal-container-MRSQEQV646EPA [data-funding-source="paypal"] {
-  background: #ffc439 !important;
-  color: #003087 !important;
-  font-weight: var(--font-weight-bold) !important;
-  height: 48px !important;
-}
-
-/* Botones de tarjetas de crédito */
-#paypal-container-MRSQEQV646EPA [data-funding-source="card"] {
-  background: var(--card-background) !important;
-  color: var(--text-color) !important;
-  border: var(--border-width) solid var(--border-color) !important;
-  height: 44px !important;
-}
-
-/* iFrames de PayPal */
-.MuiPaper-root #paypal-container-MRSQEQV646EPA iframe,
-#paypal-container-MRSQEQV646EPA iframe {
-  width: 100% !important;
-  min-height: 44px !important;
-  max-width: 280px !important;
-  border-radius: var(--border-radius-md) !important;
-}
-
 /* === RESPONSIVE PARA MÓVILES === */
 @media (max-width: 600px) {
   #root, .container {
@@ -86,34 +21,6 @@
   /* Ocultar detalle clásico en móviles */
   .item-detail-container {
     display: none !important;
-  }
-
-  /* Asegurar elementos PayPal en móviles */
-  #paypal-container-MRSQEQV646EPA > div div {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  
-  #paypal-container-MRSQEQV646EPA * {
-    text-align: center !important;
-    width: auto !important;
-    display: inline-block !important;
-  }
-  
-  /* Logos y elementos gráficos */
-  #paypal-container-MRSQEQV646EPA .paypal-logo,
-  #paypal-container-MRSQEQV646EPA img[alt*="paypal"] {
-    display: block !important;
-    width: auto !important;
-    max-width: 80px !important;
-    height: auto !important;
-    max-height: 20px !important;
-    margin: var(--space-xs) auto !important;
-    text-align: center !important;
   }
 }
 
