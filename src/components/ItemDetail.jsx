@@ -77,15 +77,13 @@ const ItemDetail = () => {
             />
           </div>
             <h2 className="item-detail-title">{title}</h2>
-          
-          {/* Solo mostrar categoría para otras categorías, no para juegos de mesa */}
-          {selectedItem.category !== 'boardgames' && (
+            {/* Solo mostrar categoría para otras categorías, no para juegos de mesa ni videojuegos */}
+          {selectedItem.category !== 'boardgames' && selectedItem.category !== 'videogames' && (
             <div className="item-detail-category">
               <span className="category-name">
                 {getCategoryTranslation(selectedItem.category)}
-              </span>
-              {selectedItem.subcategory && (
-                <span className="subcategory-name"> - {getSubcategoryTranslation(selectedItem.subcategory)}</span>
+              </span>              {selectedItem.subcategory && (
+                <span className="subcategory-name">{getSubcategoryTranslation(selectedItem.subcategory)}</span>
               )}
             </div>
           )}
@@ -123,6 +121,22 @@ const ItemDetail = () => {
               {selectedItem.age && (
                 <p className="item-detail-age">
                   <strong>{lang === 'es' ? 'Edad' : 'Age'}:</strong> {selectedItem.age}
+                </p>
+              )}
+            </div>          )}
+          
+          {/* Datos específicos para videojuegos */}
+          {selectedItem.category === 'videogames' && (
+            <div className="videogame-details">
+              {selectedItem.author && (
+                <p className="item-detail-developer">
+                  <strong>{lang === 'es' ? 'Desarrollador' : 'Developer'}:</strong> {selectedItem.author}
+                </p>
+              )}
+              
+              {selectedItem.platfomrs && (
+                <p className="item-detail-platforms">
+                  <strong>{lang === 'es' ? 'Plataformas' : 'Platforms'}:</strong> {selectedItem.platfomrs}
                 </p>
               )}
             </div>

@@ -33,9 +33,19 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
   if (!isMobile) {
     return null;
   }
-  
-  const title = recommendation.title?.[lang] || recommendation.title || recommendation.name || 'Sin título';
+    const title = recommendation.title?.[lang] || recommendation.title || recommendation.name || 'Sin título';
   const description = recommendation.description?.[lang] || recommendation.description || '';
+    // Función para recortar descripciones largas
+  const truncateDescription = (desc, category, maxLength = 150) => {
+    if (!desc) return '';
+    
+    // Aplicar truncamiento a todas las categorías
+    if (desc.length > maxLength) {
+      return desc.substring(0, maxLength).trim() + '...';
+    }
+    
+    return desc;
+  };
   
   const getCategoryIcon = (category) => {
     switch (category) {
@@ -194,7 +204,7 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
                 overflow: 'hidden'
               }}
             >
-              {description}
+              {truncateDescription(description, recommendation.category)}
             </Typography>
           </Box>
         </Box>
@@ -297,9 +307,8 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
             WebkitLineClamp: 3,
             WebkitBoxOrient: 'vertical',
             overflow: 'hidden'
-          }}
-        >
-          {description}
+          }}        >
+          {truncateDescription(description, recommendation.category)}
         </Typography>
           {/* Badge de masterpiece */}
         {recommendation.masterpiece && (

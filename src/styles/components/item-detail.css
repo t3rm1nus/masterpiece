@@ -265,6 +265,18 @@ html[data-theme='dark'] .subcategory-name {
   margin-bottom: 1rem;
 }
 
+/* Estilos específicos para videojuegos */
+.videogame-details {
+  margin: 1.5rem 0;
+}
+
+.item-detail-developer,
+.item-detail-platforms {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
 /* Responsive para tablets */
 @media (max-width: 768px) {
   .item-detail-container {

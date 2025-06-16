@@ -1,74 +1,18 @@
 {
   "recommendations": [
     {
-      "id": 1,
+      "category": "videogames",
+      "subcategory": "mundo abierto",
       "title": "The Legend of Zelda: Breath of the Wild",
-      "platform": "Nintendo Switch",
-      "category": "videogames",
-      "price": 59.99
-    },
-    {
-      "id": 2,
-      "title": "Super Mario Odyssey",
-      "platform": "Nintendo Switch",
-      "category": "videogames",
-      "price": 49.99
-    },
-    {
-      "id": 3,
-      "title": "Minecraft",
-      "platform": "PC",
-      "category": "videogames",
-      "price": 26.95
-    },
-    {
-      "id": 4,
-      "title": "Fortnite",
-      "platform": "PC",
-      "category": "videogames",
-      "price": 0.00
-    },
-    {
-      "id": 5,
-      "title": "Call of Duty: Warzone",
-      "platform": "PC",
-      "category": "videogames",
-      "price": 0.00
-    },
-    {
-      "id": 6,
-      "title": "The Witcher 3: Wild Hunt",
-      "platform": "PC",
-      "category": "videogames",
-      "price": 39.99
-    },
-    {
-      "id": 7,
-      "title": "Doom Eternal",
-      "platform": "PC",
-      "category": "videogames",
-      "price": 29.99
-    },
-    {
-      "id": 8,
-      "title": "Overwatch",
-      "platform": "PC",
-      "category": "videogames",
-      "price": 39.99
-    },
-    {
-      "id": 9,
-      "title": "Apex Legends",
-      "platform": "PC",
-      "category": "videogames",
-      "price": 0.00
-    },
-    {
-      "id": 10,
-      "title": "Counter-Strike: Global Offensive",
-      "platform": "PC",
-      "category": "videogames",
-      "price": 14.99
+      "author": "Nintendo",
+      "year": 2017 ,
+      "description": {
+        "es": "The Legend of Zelda: Breath of the Wild es un innovador juego de acción-aventura en mundo abierto que redefine la saga Zelda. Los jugadores asumen el papel de Link, quien despierta en un Hyrule devastado tras un sueño de cien años para enfrentarse a la oscuridad que amenaza el reino. Con un enfoque sin precedentes en la libertad de exploración, el juego permite descubrir sus secretos a través de la intuición y la curiosidad, sin guías ni caminos predeterminados. Cada montaña, ruina y bosque esconde misterios por resolver, y las leyes de la física y la química del mundo interactúan de manera realista, ofreciendo infinitas posibilidades para la creatividad. Desde combatir enemigos hasta resolver antiguos acertijos, cada decisión moldea la experiencia única del jugador en este épico viaje para rescatar a la princesa Zelda y recuperar los recuerdos perdidos de Link.",
+        "en": "The Legend of Zelda: Breath of the Wild is a groundbreaking open-world action-adventure game that redefines the Zelda series. Players take on the role of Link, who awakens in a devastated Hyrule after a hundred-year slumber to confront the darkness threatening the kingdom. With an unprecedented emphasis on exploration freedom, the game encourages players to uncover its secrets through intuition and curiosity, without guides or predetermined paths. Every mountain, ruin, and forest holds mysteries to solve, and the world's realistic physics and chemistry systems interact seamlessly, offering endless possibilities for creativity. From battling enemies to solving ancient puzzles, every decision shapes the player's unique experience in this epic journey to rescue Princess Zelda and recover Link's lost memories."
+      },
+      "image": "/imagenes/videojuegos/The_Legend_of_Zelda_Breath_of_the_Wild.jpg",
+      "platfomrs":"Nintendo Switch, Wii U",
+      "masterpiece": true
     }
   ]
 }

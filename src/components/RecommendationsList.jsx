@@ -39,11 +39,21 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
   
   // Obtener configuración de estilos
   const { getMasterpieceBadgeConfig } = useThemeStore();
-  const badgeConfig = getMasterpieceBadgeConfig();
-  // Handler para hacer clic en un item (memoizado)
+  const badgeConfig = getMasterpieceBadgeConfig();  // Handler para hacer clic en un item (memoizado)
   const handleItemClick = useCallback((item) => {
     navigateToDetail(item);
   }, [navigateToDetail]);
+  // Función para recortar descripciones largas
+  const truncateDescription = useCallback((description, category, maxLength = 150) => {
+    if (!description) return '';
+    
+    // Aplicar truncamiento a todas las categorías
+    if (description.length > maxLength) {
+      return description.substring(0, maxLength).trim() + '...';
+    }
+    
+    return description;
+  }, []);
 
   // Memoizar el contenido de recomendaciones para evitar re-renders innecesarios
   const memoizedRecommendations = useMemo(() => {    if (!recommendations || recommendations.length === 0) {
@@ -115,7 +125,7 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
                         </span>
                       </div>
                     </div>                    <div className="rec-home-info">
-                      <p className="rec-home-desc">{description}</p>
+                      <p className="rec-home-desc">{truncateDescription(description, rec.category)}</p>
                     </div>
                   </div>                ) : (                  // Layout desktop y categorías
                   <>
@@ -138,13 +148,13 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
                         {getSubcategoryTranslation(rec.subcategory)}
                       </span>
                     </div>
-                    <p>{description}</p>
+                    <p>{truncateDescription(description, rec.category)}</p>
                   </>
                 )}
               </div>
             );
           });
-  }, [recommendations, randomNotFoundImage, t.no_results, isMobile, handleItemClick, processTitle, processDescription, getRecommendationCardClasses, badgeConfig, isHome, mobileHomeStyles, desktopStyles, lang]);
+  }, [recommendations, randomNotFoundImage, t.no_results, isMobile, handleItemClick, processTitle, processDescription, getRecommendationCardClasses, badgeConfig, isHome, mobileHomeStyles, desktopStyles, lang, truncateDescription]);
   return (
     <MaterialContentWrapper
       recommendations={recommendations}

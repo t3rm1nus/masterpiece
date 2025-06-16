@@ -1,166 +1,18 @@
 {
   "recommendations": [
     {
+      "id": 1,
       "category": "books",
-      "title": "The Great Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "year": 1925
-    },
-    {
-      "category": "books",
-      "title": "To Kill a Mockingbird",
-      "author": "Harper Lee",
-      "year": 1960
-    },
-    {
-      "category": "books",
-      "title": "1984",
-      "author": "George Orwell",
-      "year": 1949
-    },
-    {
-      "category": "books",
-      "title": "Pride and Prejudice",
-      "author": "Jane Austen",
-      "year": 1813
-    },
-    {
-      "category": "books",
-      "title": "The Catcher in the Rye",
-      "author": "J.D. Salinger",
-      "year": 1951
-    },
-    {
-      "category": "books",
-      "title": "The Hobbit",
-      "author": "J.R.R. Tolkien",
-      "year": 1937
-    },
-    {
-      "category": "books",
-      "title": "Fahrenheit 451",
-      "author": "Ray Bradbury",
-      "year": 1953
-    },
-    {
-      "category": "books",
-      "title": "Brave New World",
-      "author": "Aldous Huxley",
-      "year": 1932
-    },
-    {
-      "category": "books",
-      "title": "The Grapes of Wrath",
-      "author": "John Steinbeck",
-      "year": 1939
-    },
-    {
-      "category": "books",
-      "title": "Crime and Punishment",
-      "author": "Fyodor Dostoevsky",
-      "year": 1866
-    },
-    {
-      "category": "books",
-      "title": "The Picture of Dorian Gray",
-      "author": "Oscar Wilde",
-      "year": 1890
-    },
-    {
-      "category": "books",
-      "title": "Wuthering Heights",
-      "author": "Emily Brontë",
-      "year": 1847
-    },
-    {
-      "category": "books",
-      "title": "Jane Eyre",
-      "author": "Charlotte Brontë",
-      "year": 1847
-    },
-    {
-      "category": "books",
-      "title": "The Chronicles of Narnia",
-      "author": "C.S. Lewis",
-      "year": 1950
-    },
-    {
-      "category": "books",
-      "title": "The Lord of the Rings",
-      "author": "J.R.R. Tolkien",
-      "year": 1954
-    },
-    {
-      "category": "books",
-      "title": "The Hitchhiker's Guide to the Galaxy",
-      "author": "Douglas Adams",
-      "year": 1979
-    },
-    {
-      "category": "books",
-      "title": "The Handmaid's Tale",
-      "author": "Margaret Atwood",
-      "year": 1985
-    },
-    {
-      "category": "books",
-      "title": "The Bell Jar",
-      "author": "Sylvia Plath",
-      "year": 1963
-    },
-    {
-      "category": "books",
-      "title": "Slaughterhouse-Five",
-      "author": "Kurt Vonnegut",
-      "year": 1969
-    },
-    {
-      "category": "books",
-      "title": "The Road",
-      "author": "Cormac McCarthy",
-      "year": 2006
-    },
-    {
-      "category": "books",
-      "title": "Life of Pi",
-      "author": "Yann Martel",
-      "year": 2001
-    },
-    {
-      "category": "books",
-      "title": "The Kite Runner",
-      "author": "Khaled Hosseini",
-      "year": 2003
-    },
-    {
-      "category": "books",
-      "title": "The Book Thief",
-      "author": "Markus Zusak",
-      "year": 2005
-    },
-    {
-      "category": "books",
-      "title": "The Fault in Our Stars",
-      "author": "John Green",
-      "year": 2012
-    },
-    {
-      "category": "books",
-      "title": "Looking for Alaska",
-      "author": "John Green",
-      "year": 2005
-    },
-    {
-      "category": "books",
-      "title": "The Perks of Being a Wallflower",
-      "author": "Stephen Chbosky",
-      "year": 1999
-    },
-    {
-      "category": "books",
-      "title": "Eleanor & Park",
-      "author": "Rainbow Rowell",
-      "year": 2012
+      "subcategory": "Terror",
+      "title": "Misery",
+      "author": "Sthephen King",
+      "year": 1987,
+      "description": {
+        "es": "Paul Sheldon es un novelista superventas que por fin ha conocido a su fan número uno. Se llama Annie Wilkes, y es más que una lectora obsesiva: es la enfermera de Paul, cuidando su cuerpo destrozado tras un accidente automovilístico. Pero también está furiosa porque el autor ha matado a su personaje favorito en su último libro. Annie se convierte en su captora, manteniéndolo prisionero en su casa aislada. Annie quiere que Paul escriba un libro que devuelva a la vida a Misery (la protagonista de sus novelas) —solo para ella. Tiene muchas formas de motivarlo. Una es una aguja. Otra es un hacha. Y si no funcionan, puede volverse realmente cruel.",
+        "en": "Paul Sheldon is a bestselling novelist who has finally met his number one fan. Her name is Annie Wilkes, and she is more than a rabid reader—she is Paul’s nurse, tending his shattered body after an automobile accident. But she is also furious that the author has killed off her favorite character in his latest book. Annie becomes his captor, keeping him prisoner in her isolated house. Annie wants Paul to write a book that brings Misery back to life—just for her. She has a lot of ways to spur him on. One is a needle. Another is an axe. And if they don’t work, she can get really nasty."
+      },
+      "image": "/imagenes/libros/misery.jpg",
+      "masterpiece": true
     }
   ]
 }

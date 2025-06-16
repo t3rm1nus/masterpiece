@@ -21,7 +21,9 @@ import {
   Person as PersonIcon,
   Launch as LaunchIcon,
   AccessTime as AccessTimeIcon,
-  ChildCare as ChildCareIcon
+  ChildCare as ChildCareIcon,
+  Code as DeveloperIcon,
+  Gamepad as PlatformIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 import useViewStore from '../store/viewStore';
@@ -174,9 +176,8 @@ const MaterialItemDetail = ({ item }) => {
             }}
           >
             {title}
-          </Typography>
-            {/* Chips de categoría y subcategoría - ocultos para juegos de mesa */}
-          {item.category !== 'boardgames' && (
+          </Typography>            {/* Chips de categoría y subcategoría - ocultos para juegos de mesa y videojuegos */}
+          {item.category !== 'boardgames' && item.category !== 'videogames' && (
             <Stack 
               direction="row" 
               spacing={1} 
@@ -276,6 +277,42 @@ const MaterialItemDetail = ({ item }) => {
                   <ChildCareIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
                   <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
                     <strong>{lang === 'es' ? 'Edad' : 'Age'}:</strong> {item.age}
+                  </Typography>
+                </Box>
+              )}            </Box>
+          )}
+          
+          {/* Información específica para videojuegos */}
+          {item.category === 'videogames' && (
+            <Box sx={{ marginBottom: '16px' }}>
+              {item.author && (
+                <Box 
+                  sx={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    marginBottom: '8px' 
+                  }}
+                >
+                  <DeveloperIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
+                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Desarrollador' : 'Developer'}:</strong> {item.author}
+                  </Typography>
+                </Box>
+              )}
+              
+              {item.platfomrs && (
+                <Box 
+                  sx={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    marginBottom: '8px' 
+                  }}
+                >
+                  <PlatformIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
+                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Plataformas' : 'Platforms'}:</strong> {item.platfomrs}
                   </Typography>
                 </Box>
               )}
