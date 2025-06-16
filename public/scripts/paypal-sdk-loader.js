@@ -50,8 +50,6 @@
       "client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R",
       "components=buttons",
       "currency=EUR",
-      "disable-funding=venmo",
-      "enable-funding=card",
       "intent=capture",
       "commit=true"
     ];
