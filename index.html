@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" 
       content="default-src 'self' https://*.paypal.com https://*.paypalobjects.com;
                script-src 'self' 'unsafe-inline' https://*.paypal.com https://*.paypalobjects.com;
@@ -11,27 +12,16 @@
                connect-src 'self' https://*.paypal.com https://*.paypalobjects.com;
                frame-src 'self' https://*.paypal.com https://*.paypalobjects.com;
                object-src 'none';
-               base-uri 'self';
-               geolocation 'none';
-               permissions-policy geolocation=();" />
-    <script>
-      // Register Service Worker to block geolocation
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/geo-service-worker.js')
-          .then(() => console.log('🛡️ Geolocation Service Worker registered'))
-          .catch(error => console.log('Geolocation Service Worker failed:', error));
-      }
-      
-      // Fallback for browsers without Service Worker support
-      try {
-        Object.defineProperty(navigator, 'permissions', {
-          value: {
-            query: () => Promise.resolve({ state: 'denied' })
-          },
-          configurable: false
-        });
-      } catch(e) {}
-    </script>
+               base-uri 'self'" />
+    
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" 
+          content="geolocation=(), payment=(self)" />
+    
+    <!-- Feature Policy (legacy but still supported) -->
+    <meta http-equiv="Feature-Policy" 
+          content="geolocation 'none'; payment 'self'" />
+    
     <script>
       // Symbol.observable Polyfill (debe ser el PRIMER script en <head>)
       (function() {
