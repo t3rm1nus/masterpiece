@@ -539,8 +539,7 @@
       // Interceptar y filtrar warnings de PayPal en desarrollo y producción
       const originalError = console.error;
       const originalWarn = console.warn;
-      const originalLog = console.log;
-        // Interceptar errores específicos de undefined + string que vienen de PayPal atomics
+      const originalLog = console.log;      // Interceptar errores específicos de undefined + string que vienen de PayPal atomics
       const originalConsoleMethod = console.log;
       const checkPayPalAtomicsError = function(args) {
         // Verificar si es el patrón: undefined 'atomics_error_getting_devlogger_extension'
@@ -564,6 +563,33 @@
         return false;
       };
       
+      // Función segura para convertir argumentos a string sin JSON.stringify
+      const safeStringify = function(args) {
+        try {
+          return args.map(arg => {
+            if (typeof arg === 'string') return arg;
+            if (typeof arg === 'number' || typeof arg === 'boolean') return String(arg);
+            if (arg === null || arg === undefined) return String(arg);
+            if (arg instanceof Error) return arg.message;
+            if (typeof arg === 'object') {
+              // Evitar JSON.stringify para objetos DOM y complejos
+              if (arg.nodeType || arg.__reactFiber$ || arg._reactInternalFiber) {
+                return '[DOM Element]';
+              }
+              // Para otros objetos, intentar JSON.stringify con fallback
+              try {
+                return JSON.stringify(arg);
+              } catch (e) {
+                return '[Complex Object]';
+              }
+            }
+            return String(arg);
+          }).join(' ');
+        } catch (e) {
+          return args.join(' ');
+        }
+      };
+      
       // Sobrescribir console.log para interceptar errores de atomics
       console.log = function(...args) {
         if (checkPayPalAtomicsError(args)) {
@@ -571,7 +597,7 @@
         }
         
         const message = args.join(' ');
-        const logString = JSON.stringify(args);
+        const logString = safeStringify(args);
         
         // Filtrar logs específicos de PayPal atomics
         if (message.includes('atomics_error_getting_devlogger_extension') ||
@@ -581,9 +607,9 @@
           return; // No mostrar estos logs
         }
         originalLog.apply(console, args);
-      };console.error = function(...args) {
+      };      console.error = function(...args) {
         const message = args.join(' ');
-        const errorString = JSON.stringify(args);
+        const errorString = safeStringify(args);
         
         // Filtrar errores específicos de PayPal y Redux que no afectan la funcionalidad
         if (message.includes('ncps_standalone_paylater_ineligible') || 
@@ -600,6 +626,7 @@
             message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
             message.includes('Blocked a frame with origin') ||
             message.includes('cross-origin frame') ||
+            message.includes('Converting circular structure to JSON') ||
             errorString.includes('atomics_error_getting_devlogger_extension') ||
             errorString.includes('__ATOMIC_EVENTS_DEV_LOGGER__')) {
           return; // No mostrar estos errores
@@ -607,7 +634,7 @@
         originalError.apply(console, args);
       };      console.warn = function(...args) {
         const message = args.join(' ');
-        const warnString = JSON.stringify(args);
+        const warnString = safeStringify(args);
         
         // Filtrar warnings relacionados con PayPal y Redux
         if (message.includes('ncps_standalone_paylater_ineligible') || 
@@ -635,13 +662,13 @@
              event.error.message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
              event.error.message.includes('Blocked a frame with origin') ||
              event.error.message.includes('cross-origin frame') ||
+             event.error.message.includes('Converting circular structure to JSON') ||
              (event.filename && event.filename.includes('paypal.com')))) {
           event.preventDefault();
           return true;
         }
       });
-      
-      // Interceptar específicamente errores de geolocalización y atomics
+        // Interceptar específicamente errores de geolocalización y atomics
       window.addEventListener('unhandledrejection', function(event) {
         if (event.reason && 
             (event.reason.message?.includes('geolocation') ||
@@ -649,20 +676,20 @@
              event.reason.message?.includes('DOMESTIC_TRANSACTION_REQUIRED') ||
              event.reason.message?.includes('atomics_error_getting_devlogger_extension') ||
              event.reason.message?.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
-             event.reason.message?.includes('Blocked a frame with origin'))) {
+             event.reason.message?.includes('Blocked a frame with origin') ||
+             event.reason.message?.includes('Converting circular structure to JSON'))) {
           console.log('Error de PayPal interceptado y suprimido:', event.reason);
           event.preventDefault();
           return true;
         }
       });
-      
-      // Interceptor global para capturar cualquier método de console usado por PayPal
+        // Interceptor global para capturar cualquier método de console usado por PayPal
       ['debug', 'info', 'trace', 'group', 'groupCollapsed'].forEach(method => {
         if (console[method]) {
           const original = console[method];
           console[method] = function(...args) {
             const message = args.join(' ');
-            const argString = JSON.stringify(args);
+            const argString = safeStringify(args);
             
             if (message.includes('atomics_error_getting_devlogger_extension') ||
                 message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
