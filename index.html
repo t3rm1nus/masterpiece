@@ -9,7 +9,7 @@
     <title>Vite + React</title>
       <!-- Polyfill mejorado para Symbol.observable antes de Redux -->
     <script>
-      (function() {
+      ;(function() {
         if (typeof Symbol === 'undefined') {
           window.Symbol = {};
         }
@@ -183,13 +183,14 @@
                 } catch (e) {
                   console.log('Excepción en watchPosition, usando mock:', e);
                   return mockGeolocation.watchPosition(success, error, options);
-                }
-              };
+                }              };
             }
           }
         };
-          // SIEMPRE usar mock para evitar violaciones de política en producción
-        if (shouldUseMock) {          Object.defineProperty(navigator, 'geolocation', {
+        
+        // SIEMPRE usar mock para evitar violaciones de política en producción
+        if (shouldUseMock) {
+          Object.defineProperty(navigator, 'geolocation', {
             value: mockGeolocation,
             writable: false,
             configurable: false
