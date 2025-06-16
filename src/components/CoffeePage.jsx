@@ -53,8 +53,28 @@ const CoffeePage = () => {
         <p className="coffee-cta">{t.coffee_cta}</p>
         <p className="coffee-legend">{t.coffee_legend}</p>
         
-        {/* Input de cantidad */}
-        <div className="amount-input-wrapper">
+        {/* PayPal Donation Button Form */}
+        <form action="https://www.paypal.com/donate" method="post" target="_top" style={{ marginTop: '20px', marginBottom: '20px' }}>
+          <input type="hidden" name="hosted_button_id" value="SP8LLWVGW7EWC" />
+          <input 
+            type="image" 
+            src="https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif" 
+            name="submit" 
+            title="PayPal - The safer, easier way to pay online!" 
+            alt="Donate with PayPal button" 
+            style={{ border: '0' }} 
+          />
+          <img 
+            alt="" 
+            src="https://www.paypal.com/en_ES/i/scr/pixel.gif" 
+            width="1" 
+            height="1" 
+            style={{ border: '0' }} 
+          />
+        </form>
+        
+        {/* Input de cantidad - ELIMINADO */}
+        {/* <div className="amount-input-wrapper">
           <label htmlFor="donation-amount" className="amount-label">
             {t.amount_label || 'Cantidad (EUR)'}
           </label>
@@ -68,12 +88,12 @@ const CoffeePage = () => {
             className="amount-input"
             placeholder="5"
           />
-        </div>
+        </div> */}
         
-        {/* Contenedor del botón de PayPal */}
-        <div className="paypal-button-container" id="paypal-button-wrapper">
+        {/* Contenedor del botón de PayPal - ELIMINADO */}
+        {/* <div className="paypal-button-container" id="paypal-button-wrapper">
           <div id="paypal-container-MRSQEQV646EPA"></div>
-        </div>
+        </div> */}
         
         {/* Footer divertido */}
         <p className="coffee-footer">{t.coffee_footer}</p>
