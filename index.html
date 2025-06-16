@@ -2,7 +2,14 @@
 <html lang="en">
   <head>    <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <meta http-equiv="Permissions-Policy" content="geolocation=*, camera=*, microphone=*, payment=*, accelerometer=*, gyroscope=*">
+    <meta name="viewport" content="width=devic          console.log('🚫 Geolocalización completamente deshabilitada - solo mock');
+          
+          // Verificar que el mock está activo
+          setTimeout(() => {
+            if (navigator.geolocation === mockGeolocation) {
+              console.log('✅ Mock de geolocalización confirmado como activo');
+            }
+          }, 100);-width, initial-scale=1.0" />    <meta http-equiv="Permissions-Policy" content="geolocation=*, camera=*, microphone=*, payment=*, accelerometer=*, gyroscope=*">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Vite + React</title>
     
@@ -67,10 +74,9 @@
         // En producción, SIEMPRE usar mock para evitar violaciones de política
         const shouldUseMock = true; // Siempre usar mock para máxima compatibilidad
         
-        // Crear un mock completo de geolocalización
-        const mockGeolocation = {
+        // Crear un mock completo de geolocalización        const mockGeolocation = {
           getCurrentPosition: function(success, error, options) {
-            console.log('Mock geolocation activado: Proporcionando ubicación de España');
+            console.log('🇪🇸 Mock geolocation activo: Proporcionando ubicación de Madrid, España');
             if (success) {
               setTimeout(() => {
                 success({
