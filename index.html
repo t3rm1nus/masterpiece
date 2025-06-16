@@ -7,84 +7,67 @@
     <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), payment=(), accelerometer=(), gyroscope=()">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Vite + React</title>
-      <!-- Polyfill mejorado para Symbol.observable antes de Redux -->
+
+    <!-- Symbol.observable polyfill for Redux -->
     <script>
-      ;(function() {
+      (function() {
         if (typeof Symbol === 'undefined') {
           window.Symbol = {};
         }
         
-        // Definir Symbol.observable de forma consistente
         const $$observable = typeof Symbol === 'function' && Symbol.observable || '@@observable';
         
         if (!Symbol.observable) {
           Symbol.observable = $$observable;
         }
         
-        // Asegurar que Symbol.observable sea consistente
         if (typeof Symbol.observable === 'string') {
           Symbol.observable = Symbol.for ? Symbol.for(Symbol.observable) : $$observable;
         }
         
         console.log('✅ Symbol.observable configurado:', Symbol.observable);
       })();
-    </script><!-- PayPal SDK Script - Configuración adaptada para móviles -->
-    <script>      // Variables globales para detección de entorno
+    </script>
+
+    <!-- Environment Detection and PayPal SDK -->
+    <script>
+      // Detect environment
       window.isLocalhost = window.location.hostname === 'localhost' || 
                           window.location.hostname === '127.0.0.1' || 
-                          window.location.hostname === '' ||
                           window.location.port === '5173' ||
                           window.location.port === '3000';
       
-      window.isProduction = !window.isLocalhost && 
-                           (window.location.hostname.includes('.vercel.app') ||
-                            window.location.hostname.includes('.netlify.app') ||
-                            window.location.protocol === 'https:');
+      window.isProduction = !window.isLocalhost;
       
-      console.log('🌍 Entorno detectado:', {
+      console.log('🌍 Environment:', {
         hostname: window.location.hostname,
-        protocol: window.location.protocol,
-        port: window.location.port,
         isLocalhost: window.isLocalhost,
         isProduction: window.isProduction
       });
       
-      // Detectar si es móvil para cargar SDK apropiado
-      const isMobileDevice = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);      // Configuración específica para localhost vs producción
-      let sdkUrl;
-      if (window.isLocalhost) {
-        // En localhost, deshabilitar tarjetas para evitar errores de desarrollo
-        sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&debug=true";      } else {
-        // En producción, configuración para transacciones internacionales
-        sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo";
-      }
+      // Load PayPal SDK
+      const sdkUrl = window.isLocalhost 
+        ? "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&debug=true"
+        : "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo";
       
       const script = document.createElement('script');
       script.src = sdkUrl;
       script.crossOrigin = 'anonymous';
       script.async = true;
-      document.head.appendChild(script);      console.log('💳 PayPal SDK cargado para:', {
-        environment: window.isLocalhost ? 'localhost' : 'production',
-        platform: window.isProduction ? 'vercel/netlify' : 'local',
-        device: isMobileDevice ? 'móvil' : 'desktop',
-        cards: window.isLocalhost ? 'deshabilitadas (desarrollo)' : 'habilitadas (producción)',
-        paypal: 'habilitado',
-        geolocation: 'mock con fallback inteligente',
-        sdkUrl: sdkUrl.substring(0, 100) + '...'
-      });
-    </script><!-- Script para configurar permisos antes de PayPal -->
-    <script>      // Mock completo de geolocalización para localhost y desarrollo      (function() {
-        console.log('🚫 Configurando protección completa de geolocalización...');
+      document.head.appendChild(script);
+      
+      console.log('💳 PayPal SDK loaded for:', window.isLocalhost ? 'localhost' : 'production');
+    </script>
+
+    <!-- Geolocation Mock -->
+    <script>
+      (function() {
+        console.log('🚫 Setting up geolocation mock...');
         
-        const originalGeolocation = navigator.geolocation;
-        // En localhost, siempre usar mock para evitar problemas
-        // En producción, SIEMPRE usar mock para evitar violaciones de política
-        const shouldUseMock = true; // Siempre usar mock para máxima compatibilidad
-        
-        // Crear un mock completo de geolocalización
+        // Create complete geolocation mock
         const mockGeolocation = {
           getCurrentPosition: function(success, error, options) {
-            console.log('🇪🇸 Mock geolocation activo: Proporcionando ubicación de Madrid, España');
+            console.log('🇪🇸 Mock geolocation: Madrid, Spain');
             if (success) {
               setTimeout(() => {
                 success({
@@ -104,154 +87,62 @@
           },
           watchPosition: function(success, error, options) {
             const id = Math.random();
-            if (success) {
-              setTimeout(() => {
-                success({
-                  coords: {
-                    latitude: 40.4168,
-                    longitude: -3.7038,
-                    altitude: null,
-                    accuracy: 100,
-                    altitudeAccuracy: null,
-                    heading: null,
-                    speed: null
-                  },
-                  timestamp: Date.now()
-                });
-              }, 100);
-            }
+            this.getCurrentPosition(success, error, options);
             return id;
           },
           clearWatch: function(id) {
-            console.log('Mock geolocation: clearWatch called with id', id);
+            console.log('Mock geolocation: clearWatch called');
           }
         };
         
-        // Función para interceptar errores de geolocalización y usar fallback
-        const interceptGeolocation = function() {
-          if (originalGeolocation && originalGeolocation.getCurrentPosition) {
-            const originalGetCurrentPosition = originalGeolocation.getCurrentPosition.bind(originalGeolocation);
-            
-            navigator.geolocation.getCurrentPosition = function(success, error, options) {
-              const timeout = options?.timeout || 10000;
-              let timeoutId;
-              
-              // Configurar timeout para usar mock si la geolocalización real falla
-              timeoutId = setTimeout(() => {
-                console.log('Geolocalización timeout, usando mock');
-                mockGeolocation.getCurrentPosition(success, error, options);
-              }, Math.min(timeout, 3000)); // Máximo 3 segundos de espera
-              
-              try {
-                originalGetCurrentPosition(
-                  (position) => {
-                    clearTimeout(timeoutId);
-                    success(position);
-                  },
-                  (err) => {
-                    clearTimeout(timeoutId);
-                    console.log('Error de geolocalización real, usando mock:', err);
-                    mockGeolocation.getCurrentPosition(success, error, options);
-                  },
-                  {
-                    ...options,
-                    timeout: Math.min(timeout, 3000),
-                    enableHighAccuracy: false,
-                    maximumAge: 600000 // 10 minutos
-                  }
-                );
-              } catch (e) {
-                clearTimeout(timeoutId);
-                console.log('Excepción en geolocalización, usando mock:', e);
-                mockGeolocation.getCurrentPosition(success, error, options);
-              }
-            };
-            
-            // Interceptar watchPosition también
-            if (originalGeolocation.watchPosition) {
-              const originalWatchPosition = originalGeolocation.watchPosition.bind(originalGeolocation);
-              navigator.geolocation.watchPosition = function(success, error, options) {
-                try {
-                  return originalWatchPosition(
-                    success,
-                    (err) => {
-                      console.log('Error en watchPosition, usando mock:', err);
-                      return mockGeolocation.watchPosition(success, error, options);
-                    },
-                    options
-                  );
-                } catch (e) {
-                  console.log('Excepción en watchPosition, usando mock:', e);                  return mockGeolocation.watchPosition(success, error, options);
-                }
-              };
-            }
-          }
-        };
-        
-        // SIEMPRE usar mock para evitar violaciones de política en producción
-        if (shouldUseMock) {
-          Object.defineProperty(navigator, 'geolocation', {
-            value: mockGeolocation,
-            writable: false,
-            configurable: false
-          });
-          console.log('🚫 Geolocalización completamente deshabilitada - solo mock');
-        }
-      })();
-      
-      // Verificar permisos de geolocalización solo si no estamos en localhost
-      if (!window.isLocalhost && navigator.permissions) {
-        navigator.permissions.query({name: 'geolocation'}).then(function(result) {
-          console.log('Estado de geolocalización:', result.state);
-        }).catch(function(err) {
-          console.log('No se puede verificar permisos de geolocalización:', err);
+        // Always use mock to avoid policy violations
+        Object.defineProperty(navigator, 'geolocation', {
+          value: mockGeolocation,
+          writable: false,
+          configurable: false
         });
-      } else if (window.isLocalhost) {
-        console.log('🌍 Localhost detectado: usando geolocalización mock por defecto');
-      }
+        
+        console.log('✅ Geolocation mock active');
+      })();
     </script>
-    
-    <!-- PayPal Button Initialization Script -->
+
+    <!-- PayPal Button Initialization -->
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        console.log('DOM cargado, inicializando PayPal...');
+        console.log('Initializing PayPal...');
         
-        // Función para verificar si estamos en móvil
-        function isMobile() {
-          return window.innerWidth <= 768;
+        let paypalInitialized = false;
+        let initTimeout = null;
+        
+        // Check if on coffee page
+        function isOnCoffeePage() {
+          return window.location.hash === '#/coffee' || 
+                 document.getElementById("paypal-container-MRSQEQV646EPA") !== null;
         }
         
-        // Función para inicializar PayPal Button
+        // Initialize PayPal button
         function initPayPalButton() {
           const container = document.getElementById("paypal-container-MRSQEQV646EPA");
-          const wrapper = document.getElementById("paypal-button-wrapper");
-          
-          console.log('Intentando inicializar PayPal...');
-          console.log('Móvil:', isMobile());
-          console.log('Container encontrado:', !!container);
-          console.log('Wrapper encontrado:', !!wrapper);
-          console.log('PayPal SDK disponible:', !!window.paypal);
           
           if (!window.paypal) {
-            console.log('PayPal SDK no disponible aún, reintentando en 500ms...');
+            console.log('PayPal SDK not ready, retrying...');
             setTimeout(initPayPalButton, 500);
             return;
           }
           
           if (!container) {
-            console.log('Contenedor PayPal no encontrado, reintentando en 500ms...');
+            console.log('PayPal container not found, retrying...');
             setTimeout(initPayPalButton, 500);
             return;
           }
           
-          console.log('✅ Inicializando botón PayPal...');
-          
-          if (wrapper) wrapper.classList.add('loading');
+          console.log('✅ Rendering PayPal button...');
           container.innerHTML = '';
-            try {            window.paypal.Buttons({
-              // Configuración para sandbox/testing
-              env: 'sandbox', // Cambiar a 'production' cuando tengas permisos
-                style: {
+          
+          try {
+            window.paypal.Buttons({
+              env: 'sandbox',
+              style: {
                 layout: 'vertical',
                 color: 'gold',
                 shape: 'rect',
@@ -260,62 +151,42 @@
                 tagline: false
               },
               
-              // Configurar métodos de pago: solo restringir en localhost
               fundingSource: window.isLocalhost ? window.paypal.FUNDING.PAYPAL : undefined,
               
               onClick: function(data, actions) {
-                console.log('🖱️ Botón PayPal clickeado');
-                console.log('🖱️ Tipo de funding:', data.fundingSource);
-                console.log('🖱️ Data del click:', data);
+                console.log('🖱️ PayPal button clicked');
                 
-                // Verificar cantidad antes de proceder
-                const amountInputDesktop = document.querySelector('input[name="amount"]#donation-amount');
-                const amountInputMobile = document.querySelector('input[name="amount"]#donation-amount-mobile');
-                const amountInput = amountInputDesktop || amountInputMobile;
+                const amountInput = document.querySelector('input[name="amount"]#donation-amount') || 
+                                   document.querySelector('input[name="amount"]#donation-amount-mobile');
                 
                 if (amountInput) {
                   const inputValue = parseFloat(amountInput.value);
-                  console.log('🔢 Valor actual del input al hacer click:', inputValue);
-                  
                   if (!inputValue || inputValue <= 0 || inputValue > 1000) {
-                    console.log('⚠️ Valor inválido, rechazando el pago');
+                    console.log('⚠️ Invalid amount, rejecting payment');
                     return actions.reject();
                   }
                 }
                 
-                console.log('✅ Click validado, procediendo...');
                 return actions.resolve();
               },
-                createOrder: function(data, actions) {
-                console.log('🔄 createOrder llamado');
+              
+              createOrder: function(data, actions) {
+                console.log('🔄 Creating PayPal order');
                 
-                // Obtener la cantidad del input o usar 5 EUR por defecto
                 let amount = '5.00';
-                
-                // Buscar el input en ambas versiones (desktop y móvil)
-                const amountInputDesktop = document.querySelector('input[name="amount"]#donation-amount');
-                const amountInputMobile = document.querySelector('input[name="amount"]#donation-amount-mobile');
-                const amountInput = amountInputDesktop || amountInputMobile;
-                
-                console.log('🔍 Input encontrado:', amountInput);
-                console.log('🔍 Valor del input:', amountInput ? amountInput.value : 'no hay input');
+                const amountInput = document.querySelector('input[name="amount"]#donation-amount') || 
+                                   document.querySelector('input[name="amount"]#donation-amount-mobile');
                 
                 if (amountInput && amountInput.value) {
                   const inputValue = parseFloat(amountInput.value);
-                  console.log('🔢 Valor parseado:', inputValue);
-                  
                   if (inputValue && inputValue > 0 && inputValue <= 1000) {
                     amount = inputValue.toFixed(2);
-                    console.log('✅ Cantidad válida:', amount);
-                  } else {
-                    console.log('⚠️ Cantidad inválida, usando 5.00 por defecto');
-                    amount = '5.00';
                   }
                 }
                 
-                console.log('💰 Creando orden PayPal con cantidad:', amount);
-                console.log('📱 Input usado:', amountInput ? amountInput.id : 'ninguno');
-                console.log('🌍 Entorno:', 'sandbox');                const orderData = {
+                console.log('💰 Order amount:', amount);
+                
+                return actions.order.create({
                   intent: 'CAPTURE',
                   purchase_units: [{
                     amount: {
@@ -325,506 +196,202 @@
                   }],
                   application_context: {
                     shipping_preference: 'NO_SHIPPING',
-                    user_action: 'PAY_NOW',
-                    payment_method: {
-                      payee_preferred: 'UNRESTRICTED'
-                    }
+                    user_action: 'PAY_NOW'
                   }
-                };
-                
-                console.log('📦 Datos de orden a enviar:', JSON.stringify(orderData, null, 2));
-                
-                return actions.order.create(orderData).then(function(orderID) {
-                  console.log('✅ Orden creada con ID:', orderID);
-                  return orderID;
-                }).catch(function(error) {
-                  console.error('❌ Error creando orden:', error);
-                  throw error;
                 });
               },
               
               onApprove: function(data, actions) {
-                console.log('Pago aprobado:', data);
+                console.log('Payment approved:', data);
                 return actions.order.capture().then(function(details) {
-                  console.log('Pago completado:', details);
+                  console.log('Payment completed:', details);
                   
-                  // Mostrar mensaje de éxito
                   const successMsg = document.createElement('div');
                   successMsg.innerHTML = `
-                    <div style="
-                      background: #4CAF50;
-                      color: white;
-                      padding: 15px;
-                      border-radius: 8px;
-                      text-align: center;
-                      margin: 10px 0;
-                      font-size: 14px;
-                    ">
-                      ¡Gracias por tu donación, ${details.payer.name.given_name}! 
-                      Tu apoyo significa mucho. ☕️
+                    <div style="background: #4CAF50; color: white; padding: 15px; border-radius: 8px; text-align: center; margin: 10px 0;">
+                      ¡Gracias por tu donación, ${details.payer.name.given_name}! Tu apoyo significa mucho. ☕️
                     </div>
                   `;
                   
                   container.parentNode.insertBefore(successMsg, container.nextSibling);
                   
-                  // Ocultar el contenedor del botón temporalmente
                   setTimeout(() => {
-                    if (wrapper) wrapper.style.display = 'none';
-                    setTimeout(() => {
-                      if (wrapper) wrapper.style.display = 'block';
-                      successMsg.remove();
-                      // Reinicializar el botón
-                      setTimeout(initPayPalButton, 1000);
-                    }, 5000);
-                  }, 2000);
+                    successMsg.remove();
+                  }, 5000);
                 });
-              },              onError: function(err) {
-                console.error('❌ Error en PayPal:', err);
-                console.error('❌ Tipo de error:', typeof err);
-                console.error('❌ Error completo:', JSON.stringify(err, null, 2));
+              },
+              
+              onError: function(err) {
+                console.error('❌ PayPal error:', err);
                 
-                // Manejar errores específicos de móviles
                 let errorMessage = 'Ha ocurrido un error. Por favor, inténtalo de nuevo.';
                 
                 if (err && err.message) {
-                  console.error('❌ Mensaje de error:', err.message);
-                  
                   if (err.message.includes('DOMESTIC_TRANSACTION_REQUIRED')) {
                     errorMessage = 'Error de configuración de pagos. Por favor, contacta al soporte.';
-                  } else if (err.message.includes('geolocation')) {
-                    errorMessage = 'Error de permisos. Por favor, permite la ubicación o intenta desde un navegador diferente.';
                   } else if (err.message.includes('INSTRUMENT_DECLINED')) {
                     errorMessage = 'Pago declinado. Por favor, verifica tu método de pago.';
-                  } else if (err.message.includes('VALIDATION_ERROR') || err.message.includes('INVALID_REQUEST')) {
-                    errorMessage = 'Error de validación. Verifica la cantidad introducida.';
                   }
                 }
                 
-                const errorMsg = document.createElement('div');
-                errorMsg.innerHTML = `
-                  <div style="
-                    background: #f44336;
-                    color: white;
-                    padding: 15px;
-                    border-radius: 8px;
-                    text-align: center;
-                    margin: 10px 0;
-                    font-size: 14px;
-                  ">
+                const errorDiv = document.createElement('div');
+                errorDiv.innerHTML = `
+                  <div style="background: #f44336; color: white; padding: 15px; border-radius: 8px; text-align: center; margin: 10px 0;">
                     ${errorMessage}
                   </div>
                 `;
                 
-                container.parentNode.insertBefore(errorMsg, container.nextSibling);
+                container.parentNode.insertBefore(errorDiv, container.nextSibling);
                 
                 setTimeout(() => {
-                  errorMsg.remove();
+                  errorDiv.remove();
                 }, 5000);
               },
               
               onCancel: function(data) {
-                console.log('Pago cancelado:', data);
+                console.log('Payment cancelled:', data);
               }
-                }).render('#paypal-container-MRSQEQV646EPA').then(function() {
-              console.log('✅ Botón PayPal renderizado correctamente');
-              console.log('Container después del render:', container);
-              console.log('Container tiene contenido:', container.innerHTML.length > 0);
-              
-              // Marcar como inicializado exitosamente
+            }).render('#paypal-container-MRSQEQV646EPA').then(function() {
+              console.log('✅ PayPal button rendered successfully');
               paypalInitialized = true;
-              
-              if (wrapper) {
-                wrapper.classList.remove('loading');
-                wrapper.classList.add('loaded');
-              }
-              
-              // Aplicar estilos móviles después de renderizar
-              setTimeout(() => {
-                applyMobileStyles();
-              }, 500);            }).catch(function(err) {
-              console.error('❌ Error al renderizar botón PayPal:', err);
-              if (wrapper) wrapper.classList.remove('loading');
-              
-              // Resetear completamente el estado en caso de error
+            }).catch(function(err) {
+              console.error('❌ Error rendering PayPal button:', err);
               paypalInitialized = false;
-              
-              // Si el error es de contenedor removido, intentar una vez más después de un delay mayor
-              if (err.message && err.message.includes('container element removed from DOM')) {
-                console.log('Error de contenedor removido, reintentando después de delay mayor...');
-                setTimeout(() => {
-                  if (isOnCoffeePage()) {
-                    debouncedPayPalInit();
-                  }
-                }, 2000);
-              } else {
-                console.log('Otro tipo de error, no se reintentará automáticamente');
-              }
             });
-              } catch (error) {
-            console.error('❌ Error en inicialización PayPal:', error);
-            if (wrapper) wrapper.classList.remove('loading');
-            
-            // Resetear la variable de inicialización en caso de error
+          } catch (error) {
+            console.error('❌ Error in PayPal initialization:', error);
             paypalInitialized = false;
-            
-            console.log('Error en try/catch, no se reintentará automáticamente');
           }
         }
         
-        // Función para aplicar estilos móviles
-        function applyMobileStyles() {
-          if (isMobile()) {
-            console.log('Aplicando estilos móviles a PayPal...');
-            
-            const container = document.getElementById("paypal-container-MRSQEQV646EPA");
-            if (!container) return;
-            
-            // Estilos para el contenedor principal
-            container.style.cssText = `
-              width: 100% !important;
-              max-width: 300px !important;
-              margin: 0 auto !important;
-              text-align: center !important;
-            `;
-            
-            // Estilos para todos los elementos PayPal
-            const paypalElements = container.querySelectorAll('*');
-            paypalElements.forEach(element => {
-              if (element.tagName === 'DIV' || element.tagName === 'IFRAME') {
-                element.style.cssText += `
-                  width: 100% !important;
-                  max-width: 300px !important;
-                  margin: 0 auto !important;
-                  border-radius: 8px !important;
-                `;
-              }
-            });
-            
-            console.log('✅ Estilos móviles aplicados a PayPal');
-          }
-        }
-          // Aplicar estilos en redimensionamiento
-        window.addEventListener('resize', () => {
-          setTimeout(applyMobileStyles, 100);
-        });        // Variable para controlar si PayPal ya está inicializado
-        let paypalInitialized = false;
-        let observerActive = false;
-        let initTimeout = null;
-        
-        // Función para verificar si estamos en la página de coffee
-        function isOnCoffeePage() {
-          return window.location.hash === '#/coffee' || 
-                 window.location.pathname.includes('/coffee') ||
-                 document.getElementById("paypal-container-MRSQEQV646EPA") !== null;
-        }
-        
-        // Función con debounce para evitar múltiples inicializaciones
+        // Debounced initialization
         function debouncedPayPalInit() {
-          // Cancelar cualquier inicialización pendiente
           if (initTimeout) {
             clearTimeout(initTimeout);
-            initTimeout = null;
           }
           
-          // Programar nueva inicialización con delay
           initTimeout = setTimeout(() => {
-            initPayPalWhenReady();
-            initTimeout = null;
-          }, 800); // Más tiempo para que React termine de renderizar
+            if (isOnCoffeePage() && !paypalInitialized) {
+              initPayPalButton();
+            }
+          }, 500);
         }
         
-        // Función para inicializar PayPal solo cuando sea necesario
-        function initPayPalWhenReady() {
-          if (!isOnCoffeePage()) {
-            console.log('No estamos en la página de coffee, esperando...');
-            return;
-          }
-          
+        // Observer for DOM changes
+        const observer = new MutationObserver(function(mutations) {
           const container = document.getElementById("paypal-container-MRSQEQV646EPA");
-          
-          if (!container || !document.body.contains(container)) {
-            console.log('Contenedor no disponible en página de coffee, esperando...');
-            return;
+          if (container && isOnCoffeePage() && !paypalInitialized) {
+            debouncedPayPalInit();
           }
-          
-          // Verificar si el contenedor está siendo manipulado por React
-          const containerParent = container.parentNode;
-          if (!containerParent || !document.body.contains(containerParent)) {
-            console.log('Contenedor padre no estable, esperando...');
-            setTimeout(debouncedPayPalInit, 500);
-            return;
-          }
-          
-          // Verificar si ya hay contenido PayPal en el contenedor
-          if (container.children.length > 0 && paypalInitialized) {
-            console.log('PayPal ya está inicializado y funcionando correctamente');
-            return;
-          }
-          
-          // Marcar como en proceso para evitar dobles inicializaciones
-          if (paypalInitialized) {
-            console.log('PayPal ya está en proceso de inicialización');
-            return;
-          }
-          
-          console.log('✅ Inicializando PayPal en página de coffee');
-          paypalInitialized = true; // Marcar antes de intentar renderizar
-          initPayPalButton();
-        }
+        });
         
-        // Observador para detectar cuando estemos en la página de coffee
-        function startPayPalObserver() {
-          if (observerActive) return;
-          
-          observerActive = true;
-          
-          const observer = new MutationObserver(function(mutations) {
-            let containerDetected = false;
-            
-            mutations.forEach(function(mutation) {
-              if (mutation.type === 'childList') {
-                // Verificar si se agregó el contenedor de PayPal
-                const container = document.getElementById("paypal-container-MRSQEQV646EPA");
-                if (container && !containerDetected && isOnCoffeePage()) {
-                  containerDetected = true;
-                  console.log('✅ Contenedor PayPal detectado en página de coffee');
-                }
-              }
-            });
-            
-            // Solo inicializar una vez por batch de mutaciones
-            if (containerDetected) {
-              debouncedPayPalInit();
-            }
-          });
-          
-          // Observar cambios en el DOM
-          observer.observe(document.body, {
-            childList: true,
-            subtree: true
-          });
-          
-          console.log('Observer de PayPal iniciado');
-        }
-          // Detectar cambios de ruta en React Router
-        function setupRouteListener() {
-          // Escuchar cambios en el hash para React Router
-          window.addEventListener('hashchange', function() {
-            console.log('Cambio de ruta detectado:', window.location.hash);
-            if (isOnCoffeePage()) {
-              debouncedPayPalInit();
-            } else {
-              // Limpiar estado cuando sales de la página de coffee
-              paypalInitialized = false;
-              if (initTimeout) {
-                clearTimeout(initTimeout);
-                initTimeout = null;
-              }
-            }
-          });
-          
-          // También escuchar el evento popstate
-          window.addEventListener('popstate', function() {
-            console.log('Popstate detectado');
-            if (isOnCoffeePage()) {
-              debouncedPayPalInit();
-            } else {
-              paypalInitialized = false;
-              if (initTimeout) {
-                clearTimeout(initTimeout);
-                initTimeout = null;
-              }
-            }
-          });
-        }
-          // Inicialización
-        startPayPalObserver();
-        setupRouteListener();
-          // Función global para que React pueda llamarla
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true
+        });
+        
+        // Route change listeners
+        window.addEventListener('hashchange', function() {
+          if (isOnCoffeePage()) {
+            debouncedPayPalInit();
+          } else {
+            paypalInitialized = false;
+          }
+        });
+        
+        window.addEventListener('popstate', function() {
+          if (isOnCoffeePage()) {
+            debouncedPayPalInit();
+          } else {
+            paypalInitialized = false;
+          }
+        });
+        
+        // Global function for React
         window.initializePayPal = function() {
-          console.log('PayPal inicialización solicitada desde React');
+          console.log('PayPal initialization requested from React');
           debouncedPayPalInit();
         };
         
-        // Verificar si ya estamos en la página de coffee al cargar
+        // Initial check
         setTimeout(function() {
           if (isOnCoffeePage()) {
-            initPayPalWhenReady();
+            debouncedPayPalInit();
           }
         }, 1000);
       });
     </script>
-      <!-- Script para suprimir warnings específicos de PayPal que no afectan la funcionalidad -->
+
+    <!-- Console Filtering for PayPal Warnings -->
     <script>
-      // Interceptar y filtrar warnings de PayPal en desarrollo y producción
-      const originalError = console.error;
-      const originalWarn = console.warn;
-      const originalLog = console.log;      // Interceptar errores específicos de undefined + string que vienen de PayPal atomics
-      const originalConsoleMethod = console.log;
-      const checkPayPalAtomicsError = function(args) {
-        // Verificar si es el patrón: undefined 'atomics_error_getting_devlogger_extension'
-        if (args.length === 2 && 
-            args[0] === undefined && 
-            typeof args[1] === 'string' && 
-            args[1].includes('atomics_error_getting_devlogger_extension')) {
-          return true;
-        }
+      (function() {
+        const originalError = console.error;
+        const originalWarn = console.warn;
+        const originalLog = console.log;
         
-        // Verificar si contiene SecurityError de PayPal
-        if (args.some(arg => 
-          typeof arg === 'object' && 
-          arg instanceof Error && 
-          arg.message && 
-          (arg.message.includes('Blocked a frame with origin') ||
-           arg.message.includes('__ATOMIC_EVENTS_DEV_LOGGER__')))) {
-          return true;
-        }
+        // Filter PayPal-specific warnings and errors
+        console.error = function(...args) {
+          const message = args.join(' ');
+          
+          if (message.includes('ncps_standalone_paylater_ineligible') || 
+              message.includes('paypal_js_sdk_v5_unhandled_exception') ||
+              message.includes('geolocation is not allowed') ||
+              message.includes('DOMESTIC_TRANSACTION_REQUIRED') ||
+              message.includes('atomics_error_getting_devlogger_extension') ||
+              message.includes('Blocked a frame with origin') ||
+              message.includes('Converting circular structure to JSON')) {
+            return;
+          }
+          
+          originalError.apply(console, args);
+        };
         
-        return false;
-      };
-      
-      // Función segura para convertir argumentos a string sin JSON.stringify
-      const safeStringify = function(args) {
-        try {
-          return args.map(arg => {
-            if (typeof arg === 'string') return arg;
-            if (typeof arg === 'number' || typeof arg === 'boolean') return String(arg);
-            if (arg === null || arg === undefined) return String(arg);
-            if (arg instanceof Error) return arg.message;
-            if (typeof arg === 'object') {
-              // Evitar JSON.stringify para objetos DOM y complejos
-              if (arg.nodeType || arg.__reactFiber$ || arg._reactInternalFiber) {
-                return '[DOM Element]';
-              }
-              // Para otros objetos, intentar JSON.stringify con fallback
-              try {
-                return JSON.stringify(arg);
-              } catch (e) {
-                return '[Complex Object]';
-              }
-            }
-            return String(arg);
-          }).join(' ');
-        } catch (e) {
-          return args.join(' ');
-        }
-      };
-      
-      // Sobrescribir console.log para interceptar errores de atomics
-      console.log = function(...args) {
-        if (checkPayPalAtomicsError(args)) {
-          return; // Suprimir estos errores específicos
-        }
+        console.warn = function(...args) {
+          const message = args.join(' ');
+          
+          if (message.includes('ncps_standalone_paylater_ineligible') || 
+              message.includes('Pay Later ineligible') ||
+              message.includes('Symbol.observable as defined by Redux') ||
+              message.includes('atomics_error_getting_devlogger_extension')) {
+            return;
+          }
+          
+          originalWarn.apply(console, args);
+        };
         
-        const message = args.join(' ');
-        const logString = safeStringify(args);
+        console.log = function(...args) {
+          const message = args.join(' ');
+          
+          if (message.includes('atomics_error_getting_devlogger_extension') ||
+              message.includes('__ATOMIC_EVENTS_DEV_LOGGER__')) {
+            return;
+          }
+          
+          originalLog.apply(console, args);
+        };
         
-        // Filtrar logs específicos de PayPal atomics
-        if (message.includes('atomics_error_getting_devlogger_extension') ||
-            message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
-            logString.includes('atomics_error_getting_devlogger_extension') ||
-            logString.includes('__ATOMIC_EVENTS_DEV_LOGGER__')) {
-          return; // No mostrar estos logs
-        }
-        originalLog.apply(console, args);
-      };      console.error = function(...args) {
-        const message = args.join(' ');
-        const errorString = safeStringify(args);
+        // Error event listeners
+        window.addEventListener('error', function(event) {
+          if (event.error && event.error.message && 
+              (event.error.message.includes('geolocation is not allowed') ||
+               event.error.message.includes('DOMESTIC_TRANSACTION_REQUIRED') ||
+               event.error.message.includes('atomics_error_getting_devlogger_extension') ||
+               (event.filename && event.filename.includes('paypal.com')))) {
+            event.preventDefault();
+            return true;
+          }
+        });
         
-        // Filtrar errores específicos de PayPal, Redux y Vite que no afectan la funcionalidad
-        if (message.includes('ncps_standalone_paylater_ineligible') || 
-            message.includes('paylater_ineligible') ||
-            message.includes('paypal_js_sdk_v5_unhandled_exception') ||
-            message.includes('Cannot read properties of null') ||
-            message.includes('classList') ||
-            message.includes('renderErrors') ||
-            message.includes('geolocation is not allowed') ||
-            message.includes('DOMESTIC_TRANSACTION_REQUIRED') ||
-            message.includes('scf_unhandled_error') ||
-            message.includes('Symbol.observable as defined by Redux') ||
-            message.includes('atomics_error_getting_devlogger_extension') ||
-            message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
-            message.includes('Blocked a frame with origin') ||
-            message.includes('cross-origin frame') ||
-            message.includes('Converting circular structure to JSON') ||
-            message.includes('WebSocket connection') ||
-            message.includes('failed to connect to websocket') ||
-            message.includes('vite') ||
-            errorString.includes('atomics_error_getting_devlogger_extension') ||
-            errorString.includes('__ATOMIC_EVENTS_DEV_LOGGER__')) {
-          return; // No mostrar estos errores
-        }
-        originalError.apply(console, args);
-      };console.warn = function(...args) {
-        const message = args.join(' ');
-        const warnString = safeStringify(args);
-        
-        // Filtrar warnings relacionados con PayPal y Redux
-        if (message.includes('ncps_standalone_paylater_ineligible') || 
-            message.includes('paylater_ineligible') ||
-            message.includes('Pay Later ineligible') ||
-            message.includes('paypal_js_sdk') ||
-            message.includes('Symbol.observable as defined by Redux') ||
-            message.includes('atomics_error_getting_devlogger_extension') ||
-            message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
-            warnString.includes('atomics_error_getting_devlogger_extension') ||
-            warnString.includes('__ATOMIC_EVENTS_DEV_LOGGER__')) {
-          return; // No mostrar estos warnings
-        }
-        originalWarn.apply(console, args);
-      };      // Interceptar errores no capturados de PayPal
-      window.addEventListener('error', function(event) {
-        if (event.error && event.error.message && 
-            (event.error.message.includes('Cannot read properties of null') ||
-             event.error.message.includes('classList') ||
-             event.error.message.includes('renderErrors') ||
-             event.error.message.includes('geolocation is not allowed') ||
-             event.error.message.includes('DOMESTIC_TRANSACTION_REQUIRED') ||
-             event.error.message.includes('scf_unhandled_error') ||
-             event.error.message.includes('atomics_error_getting_devlogger_extension') ||
-             event.error.message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
-             event.error.message.includes('Blocked a frame with origin') ||
-             event.error.message.includes('cross-origin frame') ||
-             event.error.message.includes('Converting circular structure to JSON') ||
-             (event.filename && event.filename.includes('paypal.com')))) {
-          event.preventDefault();
-          return true;
-        }
-      });
-        // Interceptar específicamente errores de geolocalización y atomics
-      window.addEventListener('unhandledrejection', function(event) {
-        if (event.reason && 
-            (event.reason.message?.includes('geolocation') ||
-             event.reason.toString().includes('geolocation') ||
-             event.reason.message?.includes('DOMESTIC_TRANSACTION_REQUIRED') ||
-             event.reason.message?.includes('atomics_error_getting_devlogger_extension') ||
-             event.reason.message?.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
-             event.reason.message?.includes('Blocked a frame with origin') ||
-             event.reason.message?.includes('Converting circular structure to JSON'))) {
-          console.log('Error de PayPal interceptado y suprimido:', event.reason);
-          event.preventDefault();
-          return true;
-        }
-      });
-        // Interceptor global para capturar cualquier método de console usado por PayPal
-      ['debug', 'info', 'trace', 'group', 'groupCollapsed'].forEach(method => {
-        if (console[method]) {
-          const original = console[method];
-          console[method] = function(...args) {
-            const message = args.join(' ');
-            const argString = safeStringify(args);
-            
-            if (message.includes('atomics_error_getting_devlogger_extension') ||
-                message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
-                argString.includes('atomics_error_getting_devlogger_extension') ||
-                argString.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
-                checkPayPalAtomicsError(args)) {
-              return; // Suprimir estos outputs
-            }
-            
-            original.apply(console, args);
-          };
-        }      });
+        window.addEventListener('unhandledrejection', function(event) {
+          if (event.reason && 
+              (event.reason.message?.includes('geolocation') ||
+               event.reason.message?.includes('DOMESTIC_TRANSACTION_REQUIRED') ||
+               event.reason.message?.includes('atomics_error_getting_devlogger_extension'))) {
+            event.preventDefault();
+            return true;
+          }
+        });
+      })();
     </script>
   </head>
   <body>
