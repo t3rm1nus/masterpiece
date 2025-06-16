@@ -34,7 +34,7 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
     return null;
   }
   
-  const title = recommendation.title?.[lang] || recommendation.title || 'Sin título';
+  const title = recommendation.title?.[lang] || recommendation.title || recommendation.name || 'Sin título';
   const description = recommendation.description?.[lang] || recommendation.description || '';
   
   const getCategoryIcon = (category) => {
@@ -148,19 +148,20 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
               }}
               image={recommendation.image}
               alt={title}
-            />
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'center' }}>
+            />            <Box sx={{ display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'center' }}>
               <Chip
                 icon={getCategoryIcon(recommendation.category)}
                 label={getCategoryTranslation(recommendation.category)}
                 size="small"
                 sx={{
-                  backgroundColor: getCategoryColor(recommendation.category),
-                  color: 'white',
+                  backgroundColor: recommendation.category === 'boardgames' ? 'transparent' : getCategoryColor(recommendation.category),
+                  color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'white',
+                  borderColor: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'transparent',
+                  border: recommendation.category === 'boardgames' ? '1px solid' : 'none',
                   fontSize: '0.7rem',
                   height: '24px',
                   '& .MuiChip-icon': {
-                    color: 'white'
+                    color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'white'
                   }
                 }}
               />
@@ -173,7 +174,8 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
                     fontSize: '0.65rem',
                     height: '20px',
                     borderColor: getCategoryColor(recommendation.category),
-                    color: getCategoryColor(recommendation.category)
+                    color: getCategoryColor(recommendation.category),
+                    marginTop: recommendation.category === 'boardgames' ? '4px' : '0px'
                   }}
                 />
               )}
@@ -256,18 +258,20 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
         <Typography variant="h6" component="h3" sx={{ marginBottom: '8px', fontSize: '1rem' }}>
           {title}
         </Typography>
-        
-        <Box sx={{ display: 'flex', gap: '4px', marginBottom: '8px', flexWrap: 'wrap' }}>
+          <Box sx={{ display: 'flex', gap: '4px', marginBottom: '8px', flexWrap: 'wrap', flexDirection: recommendation.category === 'boardgames' ? 'column' : 'row', alignItems: recommendation.category === 'boardgames' ? 'flex-start' : 'center' }}>
           <Chip
             icon={getCategoryIcon(recommendation.category)}
             label={getCategoryTranslation(recommendation.category)}
             size="small"
             sx={{
-              backgroundColor: getCategoryColor(recommendation.category),
-              color: 'white',
+              backgroundColor: recommendation.category === 'boardgames' ? 'transparent' : getCategoryColor(recommendation.category),
+              color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'white',
+              borderColor: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'transparent',
+              border: recommendation.category === 'boardgames' ? '1px solid' : 'none',
               fontSize: '0.7rem',
+              alignSelf: recommendation.category === 'boardgames' ? 'flex-start' : 'auto',
               '& .MuiChip-icon': {
-                color: 'white'
+                color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'white'
               }
             }}
           />
@@ -279,11 +283,13 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
               sx={{
                 fontSize: '0.65rem',
                 borderColor: getCategoryColor(recommendation.category),
-                color: getCategoryColor(recommendation.category)
+                color: getCategoryColor(recommendation.category),
+                alignSelf: recommendation.category === 'boardgames' ? 'flex-start' : 'auto',
+                marginTop: recommendation.category === 'boardgames' ? '4px' : '0px'
               }}
             />
           )}
-        </Box>        <Typography 
+        </Box><Typography 
           variant="body2" 
           color="text.secondary"
           sx={{ 

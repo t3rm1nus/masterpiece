@@ -19,7 +19,9 @@ import {
   CalendarToday as CalendarIcon,
   Category as CategoryIcon,
   Person as PersonIcon,
-  Launch as LaunchIcon
+  Launch as LaunchIcon,
+  AccessTime as AccessTimeIcon,
+  ChildCare as ChildCareIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 import useViewStore from '../store/viewStore';
@@ -35,7 +37,7 @@ const MaterialItemDetail = ({ item }) => {
     return null;
   }
   
-  const title = processTitle(item.title, lang);
+  const title = processTitle(item.title || item.name, lang);
   const description = processDescription(item.description, lang);
   
   // Determinar qué trailer mostrar según el idioma
@@ -173,38 +175,40 @@ const MaterialItemDetail = ({ item }) => {
           >
             {title}
           </Typography>
-          
-          {/* Chips de categoría y subcategoría */}
-          <Stack 
-            direction="row" 
-            spacing={1} 
-            justifyContent="center" 
-            sx={{ marginBottom: '16px' }}
-          >
-            <Chip
-              icon={<CategoryIcon />}
-              label={getCategoryTranslation(item.category)}
-              sx={{
-                backgroundColor: getCategoryColor(item.category),
-                color: 'white',
-                fontWeight: 'bold',
-                '& .MuiChip-icon': {
-                  color: 'white'
-                }
-              }}
-            />
-            {item.subcategory && (
+            {/* Chips de categoría y subcategoría - ocultos para juegos de mesa */}
+          {item.category !== 'boardgames' && (
+            <Stack 
+              direction="row" 
+              spacing={1} 
+              justifyContent="center" 
+              sx={{ marginBottom: '16px' }}
+            >
               <Chip
-                label={getSubcategoryTranslation(item.subcategory)}
-                variant="outlined"
+                icon={<CategoryIcon />}
+                label={getCategoryTranslation(item.category)}
                 sx={{
-                  borderColor: getCategoryColor(item.category),
-                  color: getCategoryColor(item.category),
-                  fontWeight: 'bold'
+                  backgroundColor: getCategoryColor(item.category),
+                  color: 'white',
+                  fontWeight: 'bold',
+                  '& .MuiChip-icon': {
+                    color: 'white'
+                  }
                 }}
               />
-            )}
-          </Stack>          {/* Año */}
+              {item.subcategory && (
+                <Chip
+                  label={getSubcategoryTranslation(item.subcategory)}
+                  variant="outlined"
+                  sx={{
+                    borderColor: getCategoryColor(item.category),
+                    color: getCategoryColor(item.category),
+                    fontWeight: 'bold'
+                  }}
+                />
+              )}
+            </Stack>
+          )}
+          {/* Año */}
           {item.year && (
             <Box 
               sx={{ 
@@ -218,6 +222,63 @@ const MaterialItemDetail = ({ item }) => {
               <Typography variant="h6" color="text.secondary">
                 <strong>{t.year || 'Año'}:</strong> {item.year}
               </Typography>
+            </Box>
+          )}
+          
+          {/* Datos técnicos para juegos de mesa */}
+          {item.category === 'boardgames' && (
+            <Box sx={{ marginBottom: '16px' }}>
+              {(item.minPlayers || item.maxPlayers) && (
+                <Box 
+                  sx={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    marginBottom: '8px' 
+                  }}
+                >
+                  <PersonIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Jugadores' : 'Players'}:</strong>{' '}
+                    {item.minPlayers && item.maxPlayers 
+                      ? (item.minPlayers === item.maxPlayers 
+                          ? item.minPlayers 
+                          : `${item.minPlayers}-${item.maxPlayers}`)
+                      : item.minPlayers || item.maxPlayers
+                    }
+                  </Typography>
+                </Box>
+              )}
+              
+              {item.playTime && (
+                <Box 
+                  sx={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    marginBottom: '8px' 
+                  }}
+                >
+                  <AccessTimeIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
+                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Duración' : 'Play Time'}:</strong> {item.playTime} {lang === 'es' ? 'min' : 'min'}
+                  </Typography>
+                </Box>
+              )}
+                {item.age && (
+                <Box 
+                  sx={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    marginBottom: '16px' 
+                  }}
+                >
+                  <ChildCareIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
+                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Edad' : 'Age'}:</strong> {item.age}
+                  </Typography>
+                </Box>
+              )}
             </Box>
           )}
           
@@ -237,15 +298,14 @@ const MaterialItemDetail = ({ item }) => {
               </Typography>
             </Box>
           )}
-          
-          {/* Descripción */}
+            {/* Descripción */}
           <Typography 
             variant="body1" 
             sx={{ 
               fontSize: '1.1rem',
               lineHeight: 1.6,
               textAlign: 'justify',
-              marginBottom: '24px',
+              marginBottom: item.category === 'boardgames' ? '32px' : '24px',
               color: 'text.primary'
             }}
           >

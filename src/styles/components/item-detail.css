@@ -161,18 +161,36 @@ html[data-theme='dark'] .item-detail-container.masterpiece-item {
   color: var(--text-color);
 }
 
+/* Estilos para categorías en el detalle */
 .item-detail-category {
+  text-align: center;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
-  color: var(--text-secondary);
 }
 
 .category-name {
   font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-bottom: 0.25rem;
 }
 
 .subcategory-name {
-  font-weight: normal;
+  font-weight: 500;
+  color: #666;
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Tema oscuro para subcategorías */
+html[data-theme='dark'] .subcategory-name {
+  color: #bbb;
+}
+
+/* Descripción de juegos de mesa con más espacio */
+.item-detail-description.boardgame-description {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .item-detail-director,
@@ -231,6 +249,20 @@ html[data-theme='dark'] .item-detail-container.masterpiece-item {
 .spotify-link:hover {
   background: color-mix(in srgb, var(--color-podcast) 80%, #000000);
   transform: translateY(-1px);
+}
+
+/* Estilos específicos para juegos de mesa */
+.boardgame-details {
+  margin: 1.5rem 0;
+}
+
+.item-detail-age {
+  margin-bottom: 1.5rem !important;
+}
+
+.item-detail-players,
+.item-detail-playtime {
+  margin-bottom: 1rem;
 }
 
 /* Responsive para tablets */

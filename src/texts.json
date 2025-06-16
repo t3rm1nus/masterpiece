@@ -1,7 +1,6 @@
 {  "es": {
     "home_title": "Nuevas Recomendaciones",
-    "categoriesTitle": "Categorías",
-    "categories": {
+    "categoriesTitle": "Categorías",    "categories": {
       "movies": "Películas",
       "videogames": "Videojuegos",
       "comics": "Cómics",
@@ -9,6 +8,36 @@
       "boardgames": "Juegos de mesa",
       "music": "Música",
       "podcast": "Podcast"
+    },    "subcategories": {
+      "estrategia": "Estrategia",
+      "familiar": "Familiar",
+      "abstracto": "Abstracto",
+      "cooperativo": "Cooperativo",
+      "dados": "Dados",
+      "cartas": "Cartas",
+      "civilización": "Civilización",
+      "aventura": "Aventura",
+      "party": "Fiesta",
+      "deducción": "Deducción",
+      "solitario": "Solitario",
+      "action": "Acción",
+      "adventure": "Aventura",
+      "animation": "Animación",
+      "comedy": "Comedia",
+      "drama": "Drama",
+      "fantasy": "Fantasía",
+      "horror": "Terror",
+      "sci-fi": "Ciencia Ficción",
+      "thriller": "Suspense",
+      "war": "Guerra",
+      "western": "Western",
+      "ciencia ficción": "Ciencia Ficción",
+      "crónica": "Crónica",
+      "distopía": "Distopía",
+      "fantasía": "Fantasía",
+      "histórico": "Histórico",
+      "noir": "Noir",
+      "superhéroes": "Superhéroes"
     },
     "see_all": "Ver todas",
     "change_language": "Cambiar idioma",
@@ -31,8 +60,7 @@
     "amount_label": "Cantidad (EUR)"
   },  "en": {
     "home_title": "New Recommendations",
-    "categoriesTitle": "Categories",
-    "categories": {
+    "categoriesTitle": "Categories",    "categories": {
       "movies": "Movies",
       "videogames": "Videogames",
       "comics": "Comics",
@@ -40,6 +68,18 @@
       "boardgames": "Board Games",
       "music": "Music",
       "podcast": "Podcast"
+    },    "subcategories": {
+      "estrategia": "Strategy",
+      "familiar": "Family",
+      "abstracto": "Abstract",
+      "cooperativo": "Cooperative",
+      "dados": "Dice",
+      "cartas": "Cards",
+      "civilización": "Civilization",
+      "aventura": "Adventure",
+      "party": "Party",
+      "deducción": "Deduction",
+      "solitario": "Solo"
     },
     "see_all": "See all",
     "change_language": "Change language",

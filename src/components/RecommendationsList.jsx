@@ -62,7 +62,7 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
     }
 
     return recommendations.map((rec, index) => {
-            const title = processTitle(rec.title, lang);
+            const title = processTitle(rec.title || rec.name, lang);
             const description = processDescription(rec.description, lang);
             const cardClasses = getRecommendationCardClasses(rec, isHome, isMobile);
             
@@ -117,9 +117,7 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
                     </div>                    <div className="rec-home-info">
                       <p className="rec-home-desc">{description}</p>
                     </div>
-                  </div>
-                ) : (
-                  // Layout desktop y categorías
+                  </div>                ) : (                  // Layout desktop y categorías
                   <>
                     <OptimizedImage 
                       src={rec.image} 
@@ -128,13 +126,18 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
                       height={170} 
                       style={desktopStyles.imageStyle} 
                     />
+                    <h3>{title}</h3>
                     <div style={desktopStyles.categoryContainer}>
-                      <span style={desktopStyles.categoryStyle}>
+                      <span style={{
+                        ...desktopStyles.categoryStyle,
+                        ...(rec.category === 'juegos_de_mesa' ? { color: '#e91e63' } : {})
+                      }}>
                         {getCategoryTranslation(rec.category)}
                       </span>
                       <span style={desktopStyles.subcategoryStyle}>
                         {getSubcategoryTranslation(rec.subcategory)}
-                      </span>                    </div>                    <h3>{title}</h3>
+                      </span>
+                    </div>
                     <p>{description}</p>
                   </>
                 )}

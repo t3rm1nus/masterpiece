@@ -1,49 +1,1157 @@
 {
   "recommendations": [
-    {
+   {
       "id": 1,
-      "name": "Aventureros al Tren",
+      "title": { "es": "Catan", "en": "Catan" },
       "category": "boardgames",
-      "description": "Un juego de mesa clásico donde los jugadores compiten para construir las rutas de tren más largas.",
-      "minPlayers": 2,
-      "maxPlayers": 5,
-      "playTime": 30
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Los jugadores asumen los roles de colonos en la isla de Catán, comerciando y construyendo para expandir sus asentamientos.",
+        "en": "Players assume the roles of settlers on the island of Catan, trading and building to expand their settlements."
+      },
+      "minPlayers": 3,
+      "maxPlayers": 4,
+      "playTime": 60,
+      "age": "+10",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/catan.jpg"
     },
     {
       "id": 2,
-      "name": "Catan",
+      "title": { "es": "Ticket to Ride", "en": "Ticket to Ride" },
       "category": "boardgames",
-      "description": "Los jugadores asumen el papel de colonos en la isla de Catan, comerciando y construyendo para expandir sus asentamientos.",
-      "minPlayers": 3,
-      "maxPlayers": 4,
-      "playTime": 60
+      "subcategory": "Familiar",
+      "description": {
+        "es": "Un juego de mesa con temática ferroviaria donde los jugadores recolectan cartas de varios tipos de vagones para reclamar rutas entre ciudades de América del Norte.",
+        "en": "A railway-themed board game where players collect cards of various types of train cars to claim railway routes between cities in North America."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 60,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/ticket.jpg"
     },
     {
       "id": 3,
-      "name": "Carcassonne",
+      "title": { "es": "Azul", "en": "Azul" },
       "category": "boardgames",
-      "description": "Un juego de colocación de losetas donde los jugadores construyen un paisaje medieval con ciudades, caminos y campos.",
+      "subcategory": "Abstracto",
+      "description": {
+        "es": "Los jugadores compiten como artesanos decorando las paredes del Palacio Real de Évora con hermosos azulejos.",
+        "en": "Players compete as artisans decorating the walls of the Royal Palace of Évora with beautiful tiles."
+      },
       "minPlayers": 2,
-      "maxPlayers": 5,
-      "playTime": 35
+      "maxPlayers": 4,
+      "playTime": 45,
+      "age": "+8",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/azul.jpg"
     },
     {
       "id": 4,
-      "name": "Pandemic",
+      "title": { "es": "Wingspan", "en": "Wingspan" },
       "category": "boardgames",
-      "description": "Los jugadores trabajan juntos como un equipo de especialistas para detener la propagación de enfermedades y salvar al mundo.",
-      "minPlayers": 2,
-      "maxPlayers": 4,
-      "playTime": 45
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Un juego de construcción de motor sobre aves en sus hábitats naturales. Atrae aves a tu reserva natural.",
+        "en": "An engine-building game about birds in their natural habitats. Attract birds to your wildlife preserve."
+      },
+      "minPlayers": 1,
+      "maxPlayers": 5,
+      "playTime": 70,
+      "age": "+10",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/wingspan.jpg"
     },
     {
       "id": 5,
-      "name": "7 Wonders",
+      "title": { "es": "7 Wonders", "en": "7 Wonders" },
       "category": "boardgames",
-      "description": "Un juego de cartas donde los jugadores desarrollan una civilización a lo largo de tres eras, construyendo maravillas y comerciando con otros jugadores.",
-      "minPlayers": 3,
+      "subcategory": "Civilización",
+      "description": {
+        "es": "Lidera una de las siete grandes ciudades del mundo antiguo. Explota recursos naturales, participa en el progreso científico y construye una maravilla arquitectónica.",
+        "en": "Lead one of the seven great cities of the ancient world. Exploit natural resources, participate in scientific progress, and build an architectural wonder."
+      },
+      "minPlayers": 2,
       "maxPlayers": 7,
-      "playTime": 30
+      "playTime": 30,
+      "age": "+10",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/7wonders.jpg"
+    },
+    {
+      "id": 6,
+      "title": { "es": "Splendor", "en": "Splendor" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Asume el papel de un acaudalado comerciante renacentista. Adquiere minas, transporte y artesanos para convertir gemas en hermosas joyas.",
+        "en": "Take on the role of a wealthy Renaissance merchant. Acquire mines, transportation, and artisans to turn raw gems into beautiful jewels."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 30,
+      "age": "+10",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/splendor.jpg"
+    },
+    {
+      "id": 7,
+      "title": { "es": "Pandemic", "en": "Pandemic" },
+      "category": "boardgames",
+      "subcategory": "Cooperativo",
+      "description": {
+        "es": "Juego cooperativo donde los jugadores trabajan juntos como un equipo de especialistas para tratar infecciones alrededor del mundo mientras reúnen recursos para encontrar curas.",
+        "en": "Cooperative game where players work together as a team of specialists to treat infections around the world while gathering resources to find cures."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 45,
+      "age": "+8",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/pandemic.png"
+    },
+    {
+      "id": 8,
+      "title": { "es": "King of Tokyo", "en": "King of Tokyo" },
+      "category": "boardgames",
+      "subcategory": "Dados",
+      "description": {
+        "es": "Un juego de dados donde los jugadores controlan monstruos mutantes, robots gigantes y alienígenas extraños compitiendo por el dominio de Tokio.",
+        "en": "A dice game where players control mutant monsters, gigantic robots, and strange aliens competing for dominance of Tokyo."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "playTime": 45,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/king.jpg"
+    },
+    {
+      "id": 9,
+      "title": { "es": "Gloomhaven", "en": "Gloomhaven" },
+      "category": "boardgames",
+      "subcategory": "Aventura",
+      "description": {
+        "es": "Un juego de combate táctico en un mundo persistente de motivos cambiantes. Forma un grupo de aventureros para enfrentar mazmorras llenas de monstruos.",
+        "en": "A tactical combat game in a persistent world of shifting motives. Form a party of adventurers to take on monster-filled dungeons."
+      },
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "playTime": 120,
+      "age": "+14",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/gloomhaven.jpg"
+    },
+    {
+      "id": 10,
+      "title": { "es": "Spirit Island", "en": "Spirit Island" },
+      "category": "boardgames",
+      "subcategory": "Cooperativo",
+      "description": {
+        "es": "Un juego cooperativo donde los jugadores son espíritus de la tierra luchando contra invasores colonizadores para salvar su hogar isleño.",
+        "en": "A cooperative game where players are spirits of the land fighting off colonizing invaders to save their island home."
+      },
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "playTime": 90,
+      "age": "+13",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/spirit.png"
+    },
+    {
+      "id": 11,
+      "title": { "es": "Terraforming Mars", "en": "Terraforming Mars" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Compite con corporaciones rivales para transformar Marte en un planeta habitable construyendo infraestructura y elevando la temperatura.",
+        "en": "Compete with rival corporations to transform Mars into a habitable planet by building infrastructure and raising temperature."
+      },
+      "minPlayers": 1,
+      "maxPlayers": 5,
+      "playTime": 120,
+      "age": "+12",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/terraforming.jpg"
+    },
+    {
+      "id": 12,
+      "title": { "es": "Brass: Birmingham", "en": "Brass: Birmingham" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Un juego de estrategia económica ambientado durante la Revolución Industrial de Inglaterra. Construye redes e industrias en las Midlands.",
+        "en": "An economic strategy game set during England's Industrial Revolution. Build networks and industries in the Midlands."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 120,
+      "age": "+14",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/brass.jpg"
+    },
+    {
+      "id": 13,
+      "title": { "es": "Puerto Rico", "en": "Puerto Rico" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Los jugadores asumen el papel de gobernadores coloniales en la isla de Puerto Rico, desarrollando la economía a través de la agricultura y el comercio.",
+        "en": "Players assume the role of colonial governors on the island of Puerto Rico, developing the economy through agriculture and trade."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 90,
+      "age": "+12",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/puertorico.jpg"
+    },
+    {
+      "id": 14,
+      "title": { "es": "Power Grid", "en": "Power Grid" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Un juego de estrategia económica donde los jugadores compiten para suministrar energía a las ciudades comprando plantas de energía y recursos.",
+        "en": "An economic strategy game where players compete to supply power to cities by purchasing power plants and resources."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "playTime": 120,
+      "age": "+12",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/power_grid.jpg"
+    },
+    {
+      "id": 15,
+      "title": { "es": "Scythe", "en": "Scythe" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Ambientado en una historia alternativa de los años 1920, los jugadores controlan personajes de cinco facciones luchando por el dominio en la Europa Oriental.",
+        "en": "Set in an alternate-history 1920s, players control characters from five factions fighting for dominance in Eastern Europa."
+      },
+      "minPlayers": 1,
+      "maxPlayers": 5,
+      "playTime": 115,
+      "age": "+14",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/Scythe.jpg"
+    },
+    {
+      "id": 16,
+      "title": { "es": "Agricola", "en": "Agricola" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Un juego de colocación de trabajadores donde los jugadores desarrollan sus granjas plantando campos, construyendo pastos y expandiendo sus hogares.",
+        "en": "A worker placement game where players develop their farms by planting fields, building pastures, and expanding their homes."
+      },
+      "minPlayers": 1,
+      "maxPlayers": 5,
+      "playTime": 90,
+      "age": "+12",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/agricola.jpg"
+    },
+    {
+      "id": 17,
+      "title": { "es": "Race for the Galaxy", "en": "Race for the Galaxy" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Un juego de cartas de exploración y desarrollo espacial. Los jugadores construyen civilizaciones galácticas usando cartas que representan mundos y desarrollos.",
+        "en": "A card game of space exploration and development. Players build galactic civilizations using cards representing worlds and developments."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 30,
+      "age": "+12",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/race_for_the_galaxy.jpg"
+    },
+    {
+      "id": 18,
+      "title": { "es": "Dominion", "en": "Dominion" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "El juego de construcción de mazos que inició el género. Construye tu mazo adquiriendo cartas que te dan monedas, acciones y puntos de victoria.",
+        "en": "The deck-building game that started the genre. Build your deck by acquiring cards that give you currency, actions, and victory points."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 30,
+      "age": "+13",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/dominion.jpg"
+    },
+    {
+      "id": 19,
+      "title": { "es": "Dice Forge", "en": "Dice Forge" },
+      "category": "boardgames",
+      "subcategory": "Dados",
+      "description": {
+        "es": "Construye y mejora tus dados para obtener recursos y ganar gloria.",
+        "en": "Forge and customize your dice to gain resources and earn glory."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 45,
+      "age": "+10",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/dice_forge.jpg"
+    },
+    {
+      "id": 20,
+      "title": { "es": "Finisterre Flure", "en": "Finisterre Flure" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Juego de exploración y control de áreas en la Costa del Finisterre.",
+        "en": "Exploration and area control game set on the coast of Finisterre."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 60,
+      "age": "+12",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/finisterre_flure.jpg"
+    },
+    {
+      "id": 21,
+      "title": { "es": "Carcassonne", "en": "Carcassonne" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Construye el paisaje medieval colocando losetas y puntuando con seguidores.",
+        "en": "Tile-placement game where you build a medieval landscape and score with meeples."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 35,
+      "age": "+7",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/carcassonne.png"
+    },
+    {
+      "id": 22,
+      "title": { "es": "Munchkin", "en": "Munchkin" },
+      "category": "boardgames",
+      "subcategory": "Aventura",
+      "description": {
+        "es": "Juego de cartas humorístico que parodia los dungeon crawlers; sube de nivel y roba tesoros.",
+        "en": "Humorous card game parodying dungeon crawlers; level up and loot treasures."
+      },
+      "minPlayers": 3,
+      "maxPlayers": 6,
+      "playTime": 60,
+      "age": "+10",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/munchkin.jpg"
+    },
+    {
+      "id": 23,
+      "title": { "es": "Dungeon Raiders", "en": "Dungeon Raiders" },
+      "category": "boardgames",
+      "subcategory": "Aventura",
+      "description": {
+        "es": "Coopera o compite en mazmorras para recuperar tesoros antes del colapso.",
+        "en": "Cooperative or competitive dungeon crawling to retrieve treasures before collapse."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 60,
+      "age": "+12",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/dungeon_raiders.jpg"
+    },
+    {
+      "id": 24,
+      "title": { "es": "Magic: The Gathering", "en": "Magic: The Gathering" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Juego de cartas coleccionables pionero; construye mazos y lucha contra otros jugadores.",
+        "en": "Pioneering collectible card game; build decks and duel other players."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2,
+      "playTime": 45,
+      "age": "+13",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/magic_the_gathering.png"
+    },
+    {
+      "id": 25,
+      "title": { "es": "Monstruo Final", "en": "Boss Monster" },
+      "category": "boardgames",
+      "subcategory": "Aventura",
+      "description": {
+        "es": "Juego de cartas de aventura enfrentándote a monstruos en mazmorras.",
+        "en": "Card adventure game facing off against monsters in dungeons."
+      },
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "playTime": 30,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/monstruo_final.jpg"
+    },
+    {
+      "id": 26,
+      "title": { "es": "Risk", "en": "Risk" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Juego de estrategia de conquista global donde los jugadores compiten por el control del mundo.",
+        "en": "Game of global conquest strategy where players compete for control of the world."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "playTime": 90,
+      "age": "+10",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/risk.jpg"
+    },
+    {
+      "id": 27,
+      "title": { "es": "Fantasma Blitz", "en": "Ghost Blitz" },
+      "category": "boardgames",
+      "subcategory": "Party",
+      "description": {
+        "es": "Juego de reflejos y deducción rápida recogiendo objetos según cartas.",
+        "en": "Quick reflex and deduction game grabbing objects based on cards."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 8,
+      "playTime": 10,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/ghost_blitz.jpg"
+    },
+    {
+      "id": 28,
+      "title": { "es": "Dobble", "en": "Dobble" },
+      "category": "boardgames",
+      "subcategory": "Party",
+      "description": {
+        "es": "Juego de cartas de observación rápida: encuentra el símbolo común entre dos cartas.",
+        "en": "Observation card game: spot the common symbol between two cards."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 8,
+      "playTime": 10,
+      "age": "+6",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/dobble.jpg"
+    },
+    {
+      "id": 29,
+      "title": { "es": "UNO", "en": "UNO" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Clásico juego de cartas donde se combinan colores y números para descartarse.",
+        "en": "Classic card game matching colors and numbers to discard cards."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 10,
+      "playTime": 30,
+      "age": "+7",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/uno.jpg"
+    },
+    {
+      "id": 30,
+      "title": { "es": "Takenoko", "en": "Takenoko" },
+      "category": "boardgames",
+      "subcategory": "Familiar",
+      "description": {
+        "es": "Juego donde cultivas bambú para alimentar a un oso panda en un jardín imperial.",
+        "en": "Grow bamboo to feed a panda in an imperial garden."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 45,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/takenoko.jpg"
+    },
+    {
+      "id": 31,
+      "title": { "es": "Villainous", "en": "Villainous" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Juego asimétrico donde cada jugador controla un villano Disney con objetivos únicos.",
+        "en": "Asymmetric game where each player controls a Disney villain with unique goals."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "playTime": 50,
+      "age": "+10",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/villainous.jpg"
+    },
+    {
+      "id": 32,
+      "title": { "es": "El Grande", "en": "El Grande" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Juego de control de áreas en la España medieval usando caballeros y mecanismos de subasta.",
+        "en": "Area control game in medieval Spain using knights and auction mechanics."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 90,
+      "age": "+12",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/el_grande.jpg"
+    },
+    {
+      "id": 33,
+      "title": { "es": "Exploding Kittens", "en": "Exploding Kittens" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Juego de cartas caótico donde evitas gatitos explosivos usando acciones especiales.",
+        "en": "Chaotic card game avoiding exploding kittens with special actions."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 15,
+      "age": "+7",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/exploding_kittens.jpeg"
+    },
+    {
+      "id": 34,
+      "title": { "es": "Hanamikoji", "en": "Hanamikoji" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Juego de cartas estratégico para dos jugadores con mecánicas de selección de acciones limitadas.",
+        "en": "Strategic two-player card game with limited action selection."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2,
+      "playTime": 20,
+      "age": "+10",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/hanamikoji.png"
+    },
+    {
+      "id": 35,
+      "title": { "es": "Bang!", "en": "Bang!" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Juego de roles ocultos en el lejano oeste donde disparas a otros jugadores según tu personaje.",
+        "en": "Hidden roles game in the Wild West where you shoot others based on your character."
+      },
+      "minPlayers": 4,
+      "maxPlayers": 7,
+      "playTime": 30,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/bang.jpg"
+    },
+    {
+      "id": 36,
+      "title": { "es": "Virus!", "en": "Virus!" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Juego de cartas rápido donde infectas órganos de otros jugadores para ganar.",
+        "en": "Fast-paced card game where you infect opponents' organs to win."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "playTime": 15,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/virus.png"
+    },
+    {
+      "id": 37,
+      "title": { "es": "Polilla tramposa", "en": "Cheating Moth" },
+      "category": "boardgames",
+      "subcategory": "Party",
+      "description": {
+        "es": "Juego de memoria y rapidez para atrapar una polilla invisible antes que otros.",
+        "en": "Memory and speed game to catch an invisible moth before others."
+      },
+      "minPlayers": 3,
+      "maxPlayers": 6,
+      "playTime": 15,
+      "age": "+6",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/polilla_tramposa.png"
+    },
+    {
+      "id": 38,
+      "title": { "es": "Keyforge", "en": "Keyforge" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Juego de cartas con mazos únicos donde compites por forjar llaves antes que tu oponente.",
+        "en": "Card game with unique decks competing to forge keys before your opponent."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2,
+      "playTime": 45,
+      "age": "+12",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/keyforge.jpg"
+    },
+    {
+      "id": 39,
+      "title": { "es": "Hero Realms", "en": "Hero Realms" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Juego de construcción de mazos con temática de fantasía y combates rápidos.",
+        "en": "Deck-building game with fantasy theme and fast combat."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 30,
+      "age": "+12",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/hero_realms.png"
+    },
+    {
+      "id": 40,
+      "title": { "es": "Castillos de Borgoña", "en": "The Castles of Burgundy" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Juego de colocación de losetas donde desarrollas tu principado en la Francia medieval.",
+        "en": "Tile-placement game developing your principality in medieval France."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 90,
+      "age": "+12",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/castillos_de_borgona.jpg"
+    },
+    {
+      "id": 41,
+      "title": { "es": "Gloom", "en": "Gloom" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Juego de cartas donde haces sufrir a tu familia gótica antes de matarlos, contando una historia macabra.",
+        "en": "Card game where you make your gothic family suffer before killing them, telling a macabre story."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 60,
+      "age": "+13",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/gloom.jpg"
+    },
+    {
+      "id": 42,
+      "title": { "es": "Cluedo", "en": "Clue" },
+      "category": "boardgames",
+      "subcategory": "Deducción",
+      "description": {
+        "es": "Clásico juego de misterio donde resuelves un asesinato descubriendo quién, cómo y dónde.",
+        "en": "Classic mystery game solving a murder by discovering who, how, and where."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "playTime": 45,
+      "age": "+8",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/cluedo.jpg"
+    },
+    {
+      "id": 43,
+      "title": { "es": "Stratego", "en": "Stratego" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Juego de táctica militar donde ocultas tus piezas y atacas al ejército enemigo para capturar su bandera.",
+        "en": "Military tactics game hiding your pieces and attacking the enemy army to capture their flag."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2,
+      "playTime": 45,
+      "age": "+8",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/stratego.jpg"
+    },
+    {
+      "id": 44,
+      "title": { "es": "Stop Thief", "en": "Stop Thief" },
+      "category": "boardgames",
+      "subcategory": "Deducción",
+      "description": {
+        "es": "Juego de deducción con ladrón invisible, usando un dispositivo electrónico que da pistas sonoras.",
+        "en": "Deduction game featuring an invisible thief and an electronic device providing sound clues."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 30,
+      "age": "+8",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/stop_thief.jpg"
+    },
+    {
+      "id": 45,
+      "title": { "es": "Small World", "en": "Small World" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Juego de conquista en un mundo pequeño con razas fantásticas que entran y salen de juego.",
+        "en": "Conquest game set in a small world with fantasy races that rise and fall."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 80,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/smallworld.jpg"
+    },
+    {
+      "id": 46,
+      "title": { "es": "Mice & Mystics", "en": "Mice & Mystics" },
+      "category": "boardgames",
+      "subcategory": "Aventura",
+      "description": {
+        "es": "Juego cooperativo narrativo donde los jugadores son ratones que luchan contra enemigos en un castillo.",
+        "en": "Cooperative narrative game where players are mice fighting enemies in a castle."
+      },
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "playTime": 90,
+      "age": "+7",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/mice_and_mystics.jpg"
+    },
+    {
+      "id": 47,
+      "title": { "es": "Magic Maze", "en": "Magic Maze" },
+      "category": "boardgames",
+      "subcategory": "Cooperativo",
+      "description": {
+        "es": "Juego cooperativo sin comunicación verbal donde los jugadores controlan héroes que roban un centro comercial.",
+        "en": "Cooperative real-time game without verbal communication where players control heroes stealing a mall."
+      },
+      "minPlayers": 1,
+      "maxPlayers": 8,
+      "playTime": 15,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/magic_maze.jpg"
+    },
+    {
+      "id": 48,
+      "title": { "es": "Viernes", "en": "Friday" },
+      "category": "boardgames",
+      "subcategory": "Solitario",
+      "description": {
+        "es": "Juego solitario donde ayudas a Viernes a sobrevivir en una isla llena de peligros y desafíos.",
+        "en": "Solo game where you help Friday survive on a dangerous island."
+      },
+      "minPlayers": 1,
+      "maxPlayers": 1,
+      "playTime": 30,
+      "age": "+12",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/viernes.jpg"
+    },
+    {
+      "id": 49,
+      "title": { "es": "Sushi Go!", "en": "Sushi Go!" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Juego rápido de cartas donde los jugadores seleccionan platos de sushi para formar la mejor combinación.",
+        "en": "Fast card drafting game where players pick sushi dishes to create the best combos."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 15,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/sushi_go.jpg"
+    },
+    {
+      "id": 50,
+      "title": { "es": "War Chest", "en": "War Chest" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Juego de estrategia abstracta con fichas de unidades y control de áreas.",
+        "en": "Abstract strategy game with unit tokens and area control."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2,
+      "playTime": 30,
+      "age": "+12",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/war_chest.jpg"
+    },
+    {
+      "id": 51,
+      "title": { "es": "Stone Age", "en": "Stone Age" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Los jugadores lideran tribus prehistóricas, colocando trabajadores para recolectar recursos y desarrollar la civilización.",
+        "en": "Players lead prehistoric tribes, placing workers to gather resources and develop civilization."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 75,
+      "age": "+10",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/stone_age.jpeg"
+    },
+    {
+      "id": 52,
+      "title": { "es": "Colt Express", "en": "Colt Express" },
+      "category": "boardgames",
+      "subcategory": "Familiar",
+      "description": {
+        "es": "Juego en 3D donde los jugadores interpretan bandidos que asaltan un tren, programando sus acciones para robar.",
+        "en": "3D game where players act as bandits robbing a train, programming actions to steal."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "playTime": 40,
+      "age": "+10",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/colt_express.jpg"
+    },
+    {
+      "id": 53,
+      "title": { "es": "Patchwork", "en": "Patchwork" },
+      "category": "boardgames",
+      "subcategory": "Abstracto",
+      "description": {
+        "es": "Juego para dos jugadores donde se compite por construir la colcha más completa con piezas de parches.",
+        "en": "Two-player game competing to build the most complete patchwork quilt with patch pieces."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2,
+      "playTime": 30,
+      "age": "+8",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/patchwork.jpg"
+    },
+    {
+      "id": 54,
+      "title": { "es": "Hive", "en": "Hive" },
+      "category": "boardgames",
+      "subcategory": "Abstracto",
+      "description": {
+        "es": "Juego abstracto para dos jugadores sin tablero donde se colocan y mueven insectos para rodear a la abeja reina del oponente.",
+        "en": "Abstract two-player game without a board where players place and move insects to surround the opponent's queen bee."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2,
+      "playTime": 20,
+      "age": "+9",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/hive.jpg"
+    },
+    {
+      "id": 55,
+      "title": { "es": "7 Wonders Duel", "en": "7 Wonders Duel" },
+      "category": "boardgames",
+      "subcategory": "Civilización",
+      "description": {
+        "es": "Versión para dos jugadores del famoso juego 7 Wonders, con desarrollo de civilización y cartas de progreso.",
+        "en": "Two-player version of the famous 7 Wonders game, featuring civilization development and progress cards."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2,
+      "playTime": 30,
+      "age": "+10",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/7_wonders_duel.jpg"
+    },
+    {
+      "id": 56,
+      "title": { "es": "Jaipur", "en": "Jaipur" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Juego rápido para dos jugadores donde compiten como comerciantes en el mercado de Jaipur.",
+        "en": "Fast two-player game where players compete as traders in the Jaipur market."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2,
+      "playTime": 30,
+      "age": "+12",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/jaipur.jpg"
+    },
+    {
+      "id": 57,
+      "title": { "es": "Tzolk'in", "en": "Tzolk'in: The Mayan Calendar" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Juego de colocación de trabajadores con engranajes giratorios que representan el calendario maya.",
+        "en": "Worker placement game featuring rotating gears that represent the Mayan calendar."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 90,
+      "age": "+13",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/tzolkin.jpeg"
+    },
+    {
+      "id": 58,
+      "title": { "es": "Tokaido", "en": "Tokaido" },
+      "category": "boardgames",
+      "subcategory": "Aventura",
+      "description": {
+        "es": "Juego donde los jugadores viajan por la ruta de Tokaido disfrutando experiencias culturales y recogiendo objetos.",
+        "en": "Players travel the Tokaido road enjoying cultural experiences and collecting items."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 45,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/tokaido.jpg"
+    },
+    {
+      "id": 59,
+      "title": { "es": "Tuareg", "en": "Tuareg" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Juego de estrategia y comercio ambientado en el desierto del Sahara, inspirado en los nómadas tuareg.",
+        "en": "Strategy and trading game set in the Sahara desert, inspired by the Tuareg nomads."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 45,
+      "age": "+10",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/tuareg.jpg"
+    },
+    {
+      "id": 60,
+      "title": { "es": "La Isla Prohibida", "en": "Forbidden Island" },
+      "category": "boardgames",
+      "subcategory": "Cooperativo",
+      "description": {
+        "es": "Juego cooperativo donde los jugadores trabajan juntos para recuperar tesoros en una isla que se hunde.",
+        "en": "Cooperative game where players work together to retrieve treasures on a sinking island."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 30,
+      "age": "+10",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/la_isla_prohibida.jpg"
+    },
+    {
+      "id": 61,
+      "title": { "es": "Santorini", "en": "Santorini" },
+      "category": "boardgames",
+      "subcategory": "Abstracto",
+      "description": {
+        "es": "Juego de estrategia abstracta donde los jugadores construyen una ciudad en la isla griega de Santorini, utilizando poderes de dioses y semidioses.",
+        "en": "Abstract strategy game where players build a city on the Greek island of Santorini, using powers of gods and demigods."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 20,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/santorini.jpg"
+    },
+    {
+      "id": 62,
+      "title": { "es": "Abalone", "en": "Abalone" },
+      "category": "boardgames",
+      "subcategory": "Abstracto",
+      "description": {
+        "es": "Juego para dos jugadores donde el objetivo es desplazar seis de las canicas del oponente fuera del tablero.",
+        "en": "Two-player game where the goal is to move six of the opponent's marbles off the board."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2,
+      "playTime": 20,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/abalone.jpg"
+    },
+    {
+      "id": 63,
+      "title": { "es": "Camel Up", "en": "Camel Up" },
+      "category": "boardgames",
+      "subcategory": "Familiar",
+      "description": {
+        "es": "Juego de apuestas en carreras de camellos donde los jugadores intentan predecir qué camello ganará.",
+        "en": "Betting game on camel races where players try to predict which camel will win."
+      },
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "playTime": 30,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/camel_up.png"
+    },
+    {
+      "id": 64,
+      "title": { "es": "Claim", "en": "Claim" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Juego de cartas para dos jugadores donde se compite por controlar facciones en un reino.",
+        "en": "Two-player card game where players compete to control factions in a kingdom."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2,
+      "playTime": 20,
+      "age": "+10",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/claim.jpg"
+    },
+    {
+      "id": 65,
+      "title": { "es": "Fungi (Morels)", "en": "Fungi (Morels)" },
+      "category": "boardgames",
+      "subcategory": "Cartas",
+      "description": {
+        "es": "Un juego de cartas para dos jugadores donde recolectas setas en el bosque para cocinarlas o venderlas.",
+        "en": "A two-player card game where you collect mushrooms in the forest to cook or sell them."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2,
+      "playTime": 30,
+      "age": "+8",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/fungi.jpg"
+    },
+    {
+      "id": 66,
+      "title": { "es": "Dungeon Petz", "en": "Dungeon Petz" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Juego donde los jugadores crían y venden criaturas monstruosas a los señores de las mazmorras.",
+        "en": "Game where players raise and sell monstrous creatures to dungeon lords."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 90,
+      "age": "+12",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/dungeon_petz.jpg"
+    },
+    {
+      "id": 67,
+      "title": { "es": "Everdell", "en": "Everdell" },
+      "category": "boardgames",
+      "subcategory": "Civilización",
+      "description": {
+        "es": "Juego de construcción de ciudad donde los jugadores gestionan recursos y construyen estructuras en un bosque encantado.",
+        "en": "City-building game where players manage resources and construct buildings in an enchanted forest."
+      },
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "playTime": 40,
+      "age": "+13",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/everdell.jpg"
+    },
+    {
+      "id": 68,
+      "title": { "es": "The Adventures of Robin Hood", "en": "The Adventures of Robin Hood" },
+      "category": "boardgames",
+      "subcategory": "Aventura",
+      "description": {
+        "es": "Juego cooperativo donde los jugadores asumen los roles de Robin Hood y sus compañeros en la lucha contra los opresores.",
+        "en": "Cooperative game where players take on the roles of Robin Hood and his companions in fighting oppressors."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 60,
+      "age": "+10",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/the_adventures_of_robin_hood.jpg"
+    },
+    {
+      "id": 69,
+      "title": { "es": "La Mansión de la Locura", "en": "Mansions of Madness" },
+      "category": "boardgames",
+      "subcategory": "Aventura",
+      "description": {
+        "es": "Juego de terror y misterio donde los jugadores investigan sucesos extraños en una mansión.",
+        "en": "Horror and mystery game where players investigate strange occurrences in a mansion."
+      },
+      "minPlayers": 1,
+      "maxPlayers": 5,
+      "playTime": 120,
+      "age": "+14",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/la_mansion_de_la_locura.jpg"
+    },
+    {
+      "id": 70,
+      "title": { "es": "HeroQuest", "en": "HeroQuest" },
+      "category": "boardgames",
+      "subcategory": "Aventura",
+      "description": {
+        "es": "Juego de aventura donde los jugadores exploran mazmorras, luchan contra monstruos y completan misiones.",
+        "en": "Adventure game where players explore dungeons, fight monsters, and complete quests."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 60,
+      "age": "+12",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/heroquest.jpg"
+    },
+    {
+      "id": 71,
+      "title": { "es": "Isle of Skye", "en": "Isle of Skye" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Juego de construcción de territorio donde los jugadores crean su propio reino en una isla escocesa.",
+        "en": "Tile-laying game where players build their own kingdom on a Scottish island."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 5,
+      "playTime": 45,
+      "age": "+8",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/isle_of_skye.jpg"
+    },
+    {
+      "id": 72,
+      "title": { "es": "Asante", "en": "Asante" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Juego de estrategia y comercio ambientado en el antiguo reino de Asante, donde los jugadores compiten por el control del comercio de oro.",
+        "en": "Strategy and trading game set in the ancient kingdom of Asante, where players compete for control of the gold trade."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 60,
+      "age": "+12",
+      "masterpiece": false,
+      "image": "/imagenes/juegos_de_mesa/asante.jpg"
     }
+    
   ]
 }

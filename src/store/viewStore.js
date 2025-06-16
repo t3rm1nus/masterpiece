@@ -45,20 +45,25 @@ const useViewStore = create(
           marginTop: 0, 
           lineHeight: '1.1'
         }
-      },
-
-      // Configuración de estilos para desktop layout
+      },      // Configuración de estilos para desktop layout
       desktopStyles: {
         cardStyle: { position: 'relative' },
-        imageStyle: { objectFit: 'cover' },
-        categoryContainer: { marginBottom: '0.2rem' },
+        imageStyle: { objectFit: 'cover' },        categoryContainer: { 
+          marginBottom: '1rem', 
+          textAlign: 'center' 
+        },
         categoryStyle: { 
           fontWeight: 'bold', 
-          display: 'block' 
+          display: 'inline',
+          textAlign: 'center'
         },
         subcategoryStyle: { 
           fontWeight: 500, 
-          color: '#888' 
+          color: '#888',
+          textAlign: 'center',
+          display: 'block',
+          marginLeft: '0',
+          marginTop: '0.25rem'
         }
       },
 

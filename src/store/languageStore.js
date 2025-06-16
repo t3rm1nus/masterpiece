@@ -41,8 +41,19 @@ const useLanguageStore = create(
           ? translations.categories[category] 
           : category;
       },
-        // Traducciones comunes de subcategorías
+      
+      // Traducciones comunes de subcategorías
       getSubcategoryTranslation: (subcategory) => {
+        const { translations } = get();
+        
+        // Primero intenta usar las subcategorías del archivo texts.json
+        // Convertir a minúsculas para hacer coincidencia case-insensitive
+        const lowercaseSubcategory = subcategory ? subcategory.toLowerCase() : '';
+        if (translations.subcategories && translations.subcategories[lowercaseSubcategory]) {
+          return translations.subcategories[lowercaseSubcategory];
+        }
+        
+        // Fallback a las traducciones hardcodeadas para subcategorías existentes
         const { lang } = get();
         const subcategoryTranslations = {
           'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
@@ -64,20 +75,13 @@ const useLanguageStore = create(
           'western': 'western',
           'superhéroes': lang === 'en' ? 'superheroes' : 'superhéroes',
           'superheroes': lang === 'es' ? 'superhéroes' : 'superheroes',
-          // Subcategorías adicionales del App.jsx
-          'fantasy': lang === 'es' ? 'fantasía' : 'fantasy',
-          'action': lang === 'es' ? 'acción' : 'action',
-          'comedy': lang === 'es' ? 'comedia' : 'comedy',
-          'adventure': lang === 'es' ? 'aventura' : 'adventure',
-          'animation': lang === 'es' ? 'animación' : 'animation',
-          'war': lang === 'es' ? 'guerra' : 'war',
-          'spanish cinema': lang === 'es' ? 'cine español' : 'spanish cinema',
-          'sci-fi': lang === 'es' ? 'ciencia ficción' : 'sci-fi',
-          'thriller': lang === 'es' ? 'suspense' : 'thriller',
-          'horror': lang === 'es' ? 'terror' : 'horror'
+          // Subcategorías adicionales de boardgames
+          'civilización': lang === 'en' ? 'civilization' : 'civilización',
+          'civilization': lang === 'es' ? 'civilización' : 'civilization',
+          'party': lang === 'es' ? 'fiesta' : 'party'
         };
         
-        return subcategoryTranslations[subcategory] || subcategory;
+        return subcategoryTranslations[lowercaseSubcategory] || subcategory;
       }
     }),
     { name: 'language-store' } // Nombre para DevTools
