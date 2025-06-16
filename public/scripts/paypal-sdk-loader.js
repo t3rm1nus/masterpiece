@@ -45,9 +45,9 @@
       "&currency=EUR" +
       "&debug=true";
   } else {
-    // Production: Sandbox configuration for testing
+    // Production: Use PayPal test client ID for more permissive testing
     const baseParams = [
-      "client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R",
+      "client-id=AfSlQEm1k9a7yiefPEOYF4lUFNBcW8QHWJrKuwK4GU7qfnNFVW5xGQpXCNYONT0yJDJGxLY0yxfS",
       "components=buttons",
       "currency=EUR",
       "locale=es_ES",
