@@ -247,6 +247,27 @@
     <script src="/scripts/paypal-sdk-loader.js"></script>
     <script src="/scripts/paypal-button-init.js"></script>
     <script src="/scripts/console-filter.js"></script>
+    <script>
+      // ULTRA-AGGRESSIVE: Reaplicar filtro de consola cada 2 segundos en móvil
+      (function() {
+        var patterns = [
+          'symbol.observable', 'redux', 'devtools', 'geolocation', 'paypal', 'permissions policy violation'
+        ];
+        function filterConsole(origFn) {
+          return function() {
+            var msg = Array.from(arguments).join(' ').toLowerCase();
+            if (patterns.some(p => msg.includes(p))) return;
+            return origFn.apply(console, arguments);
+          };
+        }
+        function enforceConsoleFilter() {
+          console.warn = filterConsole(console.warn);
+          console.error = filterConsole(console.error);
+        }
+        enforceConsoleFilter();
+        setInterval(enforceConsoleFilter, 2000);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
