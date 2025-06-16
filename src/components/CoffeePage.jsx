@@ -1,22 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useLanguage } from '../LanguageContext';
 import MaterialCoffeePage from './MaterialCoffeePage';
 
 const CoffeePage = () => {
   const { t } = useLanguage();
-  
-  // Inicializar PayPal cuando el componente se monte SOLO en desktop
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-      console.log('CoffeePage montado en desktop, inicializando PayPal...');
-      const timer = setTimeout(() => {
-        if (window.initializePayPal) {
-          window.initializePayPal();
-        }
-      }, 300);
-      return () => clearTimeout(timer);
-    }
-  }, []);
   
   return (
     <>
@@ -53,17 +40,34 @@ const CoffeePage = () => {
         <p className="coffee-cta">{t.coffee_cta}</p>
         <p className="coffee-legend">{t.coffee_legend}</p>
         
-        {/* PayPal Donation Button Form */}
-        <form action="https://www.paypal.com/donate" method="post" target="_top" style={{ marginTop: '20px', marginBottom: '20px' }}>
+        {/* PayPal Donation Button Form */}        <form action="https://www.paypal.com/donate" method="post" target="_top" style={{ marginTop: '20px', marginBottom: '20px' }}>
           <input type="hidden" name="hosted_button_id" value="SP8LLWVGW7EWC" />
-          <input 
-            type="image" 
-            src="https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif" 
+          {/* Reemplazamos el input type="image" con un button para personalizarlo */}
+          <button 
+            type="submit" 
             name="submit" 
-            title="PayPal - The safer, easier way to pay online!" 
-            alt="Donate with PayPal button" 
-            style={{ border: '0' }} 
-          />
+            className="custom-paypal-donate-button" // Clase para estilos personalizados
+            title="PayPal - The safer, easier way to pay online!"
+            style={{
+              backgroundColor: '#007bff',
+              color: 'white',
+              padding: '20px 40px',
+              border: '3px solid #0056b3',
+              borderRadius: '12px',
+              fontSize: '1.4em',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              display: 'inline-block',
+              textAlign: 'center',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+              textDecoration: 'none',
+              appearance: 'none',
+              WebkitAppearance: 'none',
+              MozAppearance: 'none'
+            }}
+          >
+            Donar con PayPal
+          </button>
           <img 
             alt="" 
             src="https://www.paypal.com/en_ES/i/scr/pixel.gif" 

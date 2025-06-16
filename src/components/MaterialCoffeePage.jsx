@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   Card,
   CardContent,
@@ -27,21 +27,6 @@ const MaterialCoffeePage = () => {
   const { t } = useLanguage();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
-  // Inicializar PayPal cuando el componente se monte (solo en móviles)
-  useEffect(() => {
-    if (isMobile) {
-      console.log('MaterialCoffeePage montado en móvil, inicializando PayPal...');
-      
-      const timer = setTimeout(() => {
-        if (window.initializePayPal) {
-          window.initializePayPal();
-        }
-      }, 500);
-      
-      return () => clearTimeout(timer);
-    }
-  }, [isMobile]);
 
   // Solo renderizar en móviles
   if (!isMobile) {
@@ -197,8 +182,7 @@ const MaterialCoffeePage = () => {
           >
             {t.coffee_cta}
           </Typography>
-          
-          <Typography 
+            <Typography 
             variant="body2" 
             sx={{ 
               marginBottom: '16px',
@@ -208,7 +192,8 @@ const MaterialCoffeePage = () => {
           >
             {t.coffee_legend}
           </Typography>
-            {/* Contenedor del botón PayPal con estilos Material UI mejorados para móviles */}
+
+          {/* Formulario de donación PayPal para móviles */}
           <Paper 
             elevation={2}
             sx={{ 
@@ -220,7 +205,8 @@ const MaterialCoffeePage = () => {
               width: '100%',
               maxWidth: '100%'
             }}
-          >            <Typography 
+          >
+            <Typography 
               variant="body2" 
               sx={{ 
                 marginBottom: '16px',
@@ -232,84 +218,48 @@ const MaterialCoffeePage = () => {
               Donación segura a través de PayPal
             </Typography>
             
-            {/* Input de cantidad */}
-            <Box sx={{ marginBottom: '16px', width: '100%' }}>
-              <Typography 
-                variant="body2" 
-                component="label" 
-                htmlFor="donation-amount-mobile"
-                sx={{ 
-                  display: 'block',
-                  marginBottom: '8px',
-                  color: theme.palette.text.primary,
-                  fontSize: '0.9rem',
-                  textAlign: 'center'
-                }}
-              >
-                {t.amount_label || 'Cantidad (EUR)'}
-              </Typography>
-              <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                <input 
-                  type="number" 
-                  id="donation-amount-mobile"
-                  name="amount"
-                  min="1" 
-                  max="100" 
-                  defaultValue="5"
-                  placeholder="5"
+            {/* Formulario de donación */}
+            <form action="https://www.paypal.com/donate" method="post" target="_top">
+              <input type="hidden" name="hosted_button_id" value="SP8LLWVGW7EWC" />
+              <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                <button 
+                  type="submit" 
+                  name="submit" 
+                  title="PayPal - The safer, easier way to pay online!"
                   style={{
-                    width: '100px',
-                    height: '40px',
-                    textAlign: 'center',
-                    fontSize: '16px',
-                    border: `1px solid ${theme.palette.divider}`,
+                    backgroundColor: theme.palette.primary.main,
+                    color: theme.palette.primary.contrastText,
+                    padding: '16px 32px',
+                    border: `2px solid ${theme.palette.primary.dark}`,
                     borderRadius: '8px',
-                    backgroundColor: theme.palette.background.default,
-                    color: theme.palette.text.primary
+                    fontSize: '1.1em',
+                    fontWeight: 'bold',
+                    cursor: 'pointer',
+                    display: 'inline-block',
+                    textAlign: 'center',
+                    boxShadow: theme.shadows[3],
+                    textDecoration: 'none',
+                    appearance: 'none',
+                    WebkitAppearance: 'none',
+                    MozAppearance: 'none',
+                    width: '100%',
+                    maxWidth: '280px',
+                    fontFamily: theme.typography.fontFamily,
+                    transition: 'all 0.3s ease'
                   }}
-                />
+                  onMouseOver={(e) => {
+                    e.target.style.backgroundColor = theme.palette.primary.dark;
+                    e.target.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor = theme.palette.primary.main;
+                    e.target.style.transform = 'translateY(0)';
+                  }}
+                >
+                  Donar con PayPal
+                </button>
               </Box>
-            </Box>
-            
-            {/* Contenedor del botón de PayPal optimizado para móviles */}
-            <Box 
-              id="paypal-button-wrapper"
-              sx={{
-                width: '100%',
-                minHeight: '100px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                '& #paypal-container-MRSQEQV646EPA': {
-                  borderRadius: '8px',
-                  overflow: 'hidden',
-                  width: '100% !important',
-                  maxWidth: '100% !important',
-                  '& > div': {
-                    width: '100% !important'
-                  },
-                  '& button': {
-                    width: '100% !important',
-                    minWidth: '200px !important',
-                    height: 'auto !important',
-                    minHeight: '48px !important',
-                    fontSize: '16px !important',
-                    lineHeight: '1.2 !important',
-                    whiteSpace: 'nowrap !important'
-                  },
-                  '& iframe': {
-                    width: '100% !important',
-                    minHeight: '48px !important'
-                  }
-                }
-              }}
-            >
-              <div 
-                id="paypal-container-MRSQEQV646EPA"
-                style={{ width: '100%', maxWidth: '300px' }}
-              ></div>
-            </Box>
+            </form>
           </Paper>
         </CardContent>
       </Card>

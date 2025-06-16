@@ -974,3 +974,56 @@ h1.after-subcategories {
 }
 
 /* ===== FIN CORRECCIONES PAYPAL MÓVILES ===== */
+
+/* Estilos para el botón de donar personalizado */
+.custom-paypal-donate-button {
+  background-color: var(--primary-color); /* Azulito del tema */
+  color: white; /* Texto blanco para contraste con fondo azul */
+  padding: 18px 35px; /* Más padding para hacerlo más grande */
+  border: 2px solid var(--primary-color); /* Borde del mismo color primario, o un poco más oscuro */
+  border-radius: 10px; /* Bordes más redondeados */
+  font-size: 1.3em; /* Fuente más grande */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Sombra un poco más pronunciada */
+}
+
+.custom-paypal-donate-button:hover {
+  background-color: #3a7bc8; /* Un azul un poco más oscuro para el hover, o puedes usar var(--hover-color) si prefieres */
+  color: white;
+  border-color: #2c5c97; /* Borde más oscuro en hover */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el botón de donar personalizado - CON MAYOR ESPECIFICIDAD Y !IMPORTANT */
+.coffee-page .custom-paypal-donate-button {
+  background-color: #007bff !important; /* Azul brillante explícito */
+  color: white !important;
+  padding: 20px 40px !important; /* Aún más grande */
+  border: 3px solid #0056b3 !important; /* Borde azul oscuro explícito */
+  border-radius: 12px !important;
+  font-size: 1.4em !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease !important;
+  display: inline-block !important;
+  text-align: center !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  text-decoration: none !important;
+  /* Asegurarse de que estas propiedades no sean anuladas por selectores de 'button' genéricos */
+  appearance: none !important; /* Intentar resetear la apariencia por defecto del navegador */
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+}
+
+.coffee-page .custom-paypal-donate-button:hover {
+  background-color: #0056b3 !important; /* Azul oscuro explícito para hover */
+  color: white !important;
+  border-color: #004085 !important; /* Borde aún más oscuro en hover */
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25) !important;
+}
