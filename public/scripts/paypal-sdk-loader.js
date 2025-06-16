@@ -1,8 +1,10 @@
 /**
  * Environment Detection and PayPal SDK Configuration
  * Loads PayPal SDK with optimal settings for development and production
+ * Version: 2025-06-16-v2 (Fixed merchant-id duplication)
  */
 (function() {
+  console.log('🔧 PayPal SDK Loader v2 - Initializing...');
   // Detect environment
   window.isLocalhost = window.location.hostname === 'localhost' || 
                       window.location.hostname === '127.0.0.1' || 
@@ -34,11 +36,16 @@
       sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&buyer-country=ES";
     }
   }
-  
-  const script = document.createElement('script');
+    const script = document.createElement('script');
   script.src = sdkUrl;
   script.crossOrigin = 'anonymous';
   script.async = true;
+  
+  // Log the actual URL being used for debugging
+  console.log('🌐 PayPal SDK URL being loaded:', sdkUrl);
+  console.log('📱 Is mobile device:', isMobileDevice);
+  console.log('🏠 Is localhost:', window.isLocalhost);
+  
   document.head.appendChild(script);
   
   console.log('💳 PayPal SDK loaded for:', {
