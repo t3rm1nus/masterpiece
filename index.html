@@ -16,11 +16,25 @@
         Symbol.observable = Symbol.observable || Symbol('observable') || '@@observable';
       }
     </script>    <!-- PayPal SDK Script - Configuración adaptada para móviles -->
-    <script>
-      // Variables globales para detección de entorno
+    <script>      // Variables globales para detección de entorno
       window.isLocalhost = window.location.hostname === 'localhost' || 
                           window.location.hostname === '127.0.0.1' || 
-                          window.location.hostname === '';
+                          window.location.hostname === '' ||
+                          window.location.port === '5173' ||
+                          window.location.port === '3000';
+      
+      window.isProduction = !window.isLocalhost && 
+                           (window.location.hostname.includes('.vercel.app') ||
+                            window.location.hostname.includes('.netlify.app') ||
+                            window.location.protocol === 'https:');
+      
+      console.log('🌍 Entorno detectado:', {
+        hostname: window.location.hostname,
+        protocol: window.location.protocol,
+        port: window.location.port,
+        isLocalhost: window.isLocalhost,
+        isProduction: window.isProduction
+      });
       
       // Detectar si es móvil para cargar SDK apropiado
       const isMobileDevice = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);      // Configuración específica para localhost vs producción
@@ -29,7 +43,7 @@
         // En localhost, deshabilitar tarjetas para evitar errores de desarrollo
         sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&intent=capture&vault=false&locale=es_ES&debug=true";
       } else {
-        // En producción, mantener tarjetas habilitadas en todos los dispositivos
+        // En producción (Vercel, Netlify, etc.), mantener tarjetas habilitadas
         sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo&currency=EUR&intent=capture&vault=false&locale=es_ES";
       }
       
@@ -37,12 +51,14 @@
       script.src = sdkUrl;
       script.crossOrigin = 'anonymous';
       script.async = true;
-      document.head.appendChild(script);      console.log('PayPal SDK cargado para:', {
+      document.head.appendChild(script);      console.log('💳 PayPal SDK cargado para:', {
         environment: window.isLocalhost ? 'localhost' : 'production',
+        platform: window.isProduction ? 'vercel/netlify' : 'local',
         device: isMobileDevice ? 'móvil' : 'desktop',
-        cards: window.isLocalhost ? 'deshabilitadas (localhost)' : 'habilitadas',
+        cards: window.isLocalhost ? 'deshabilitadas (desarrollo)' : 'habilitadas (producción)',
         paypal: 'habilitado',
-        geolocation: 'mock con fallback inteligente'
+        geolocation: 'mock con fallback inteligente',
+        sdkUrl: sdkUrl.substring(0, 100) + '...'
       });
     </script><!-- Script para configurar permisos antes de PayPal -->
     <script>      // Mock completo de geolocalización para localhost y desarrollo
@@ -673,7 +689,7 @@
         const message = args.join(' ');
         const errorString = safeStringify(args);
         
-        // Filtrar errores específicos de PayPal y Redux que no afectan la funcionalidad
+        // Filtrar errores específicos de PayPal, Redux y Vite que no afectan la funcionalidad
         if (message.includes('ncps_standalone_paylater_ineligible') || 
             message.includes('paylater_ineligible') ||
             message.includes('paypal_js_sdk_v5_unhandled_exception') ||
@@ -689,12 +705,15 @@
             message.includes('Blocked a frame with origin') ||
             message.includes('cross-origin frame') ||
             message.includes('Converting circular structure to JSON') ||
+            message.includes('WebSocket connection') ||
+            message.includes('failed to connect to websocket') ||
+            message.includes('vite') ||
             errorString.includes('atomics_error_getting_devlogger_extension') ||
             errorString.includes('__ATOMIC_EVENTS_DEV_LOGGER__')) {
           return; // No mostrar estos errores
         }
         originalError.apply(console, args);
-      };      console.warn = function(...args) {
+      };console.warn = function(...args) {
         const message = args.join(' ');
         const warnString = safeStringify(args);
         
