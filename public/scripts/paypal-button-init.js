@@ -1,11 +1,19 @@
 /**
- * PayPal Button Initialization - Minimal Safe Version
- * Corrige error de sintaxis y asegura funcionamiento básico en producción
+ * PayPal Button Initialization - Minimal Safe Version + Debug Logs
+ * Añade logs para depuración en producción móvil
  */
 document.addEventListener("DOMContentLoaded", function() {
   var container = document.getElementById("paypal-container-MRSQEQV646EPA");
-  if (!container || !window.paypal) return;
+  if (!container) {
+    console.warn('[PayPal] Contenedor no encontrado: #paypal-container-MRSQEQV646EPA');
+    return;
+  }
+  if (!window.paypal) {
+    console.warn('[PayPal] window.paypal no está disponible al inicializar.');
+    return;
+  }
   try {
+    console.log('[PayPal] Inicializando botones en', container, 'window.paypal:', !!window.paypal);
     window.paypal.Buttons({
       style: { layout: 'vertical', color: 'blue', shape: 'rect', label: 'pay', height: 45, tagline: false },
       createOrder: function(data, actions) {
