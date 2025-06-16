@@ -49,9 +49,8 @@ document.addEventListener("DOMContentLoaded", function() {
     container.innerHTML = '';
     
     try {
-      const isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        window.paypal.Buttons({
-        env: window.isLocalhost ? 'sandbox' : 'production',
+      const isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);      window.paypal.Buttons({
+        env: 'sandbox', // Este client-id parece ser de sandbox, mantener sandbox
         style: {
           layout: 'vertical',
           color: 'gold',
