@@ -45,15 +45,13 @@
       "&currency=EUR" +
       "&debug=true";
   } else {
-    // Production: Use PayPal test client ID for more permissive testing
+    // Production: Use official PayPal demo client ID for maximum compatibility
     const baseParams = [
-      "client-id=AfSlQEm1k9a7yiefPEOYF4lUFNBcW8QHWJrKuwK4GU7qfnNFVW5xGQpXCNYONT0yJDJGxLY0yxfS",
+      "client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R",
       "components=buttons",
       "currency=EUR",
-      "locale=es_ES",
       "disable-funding=venmo",
-      "enable-funding=card",
-      "debug=true"
+      "enable-funding=card"
     ];
     
     sdkUrl = "https://www.paypal.com/sdk/js?" + baseParams.join("&");
