@@ -42,8 +42,8 @@
         // En localhost, deshabilitar tarjetas para evitar errores de desarrollo
         sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&intent=capture&vault=false&locale=es_ES&debug=true";
       } else {
-        // En producción (Vercel, Netlify, etc.), mantener tarjetas habilitadas
-        sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo&currency=EUR&intent=capture&vault=false&locale=es_ES";
+        // En producción, configuración optimizada para móviles y transacciones internacionales
+        sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo&currency=EUR&intent=capture&vault=false&locale=es_ES&buyer-country=ES";
       }
       
       const script = document.createElement('script');
@@ -63,10 +63,9 @@
     <script>      // Mock completo de geolocalización para localhost y desarrollo
       (function() {
         const originalGeolocation = navigator.geolocation;
-        
-        // En localhost, siempre usar mock para evitar problemas
-        // En producción, usar mock si hay problemas con geolocalización
-        const shouldUseMock = window.isLocalhost || window.location.protocol !== 'https:';
+          // En localhost, siempre usar mock para evitar problemas
+        // En producción, SIEMPRE usar mock para evitar violaciones de política
+        const shouldUseMock = true; // Siempre usar mock para máxima compatibilidad
         
         // Crear un mock completo de geolocalización
         const mockGeolocation = {
@@ -175,19 +174,14 @@
             }
           }
         };
-        
-        // En localhost, reemplazar completamente la geolocalización
+          // SIEMPRE usar mock para evitar violaciones de política en producción
         if (shouldUseMock) {
           Object.defineProperty(navigator, 'geolocation', {
             value: mockGeolocation,
             writable: false,
             configurable: false
           });
-          console.log('🔧 Geolocalización mock activada para localhost');
-        } else {
-          // En producción, interceptar errores y usar fallback inteligente
-          interceptGeolocation();
-          console.log('🔧 Geolocalización con fallback inteligente activado');
+          console.log('� Geolocalización completamente deshabilitada - solo mock');
         }
       })();// Verificar permisos de geolocalización solo si no estamos en localhost
       if (!window.isLocalhost && navigator.permissions) {
@@ -284,8 +278,11 @@
                     user_action: 'PAY_NOW',
                     shipping_preference: 'NO_SHIPPING',
                     payment_method: {
-                      payee_preferred: 'UNRESTRICTED'
-                    }
+                      payee_preferred: 'UNRESTRICTED',
+                      payer_selected: 'UNRESTRICTED'
+                    },
+                    return_url: window.location.origin + window.location.pathname,
+                    cancel_url: window.location.origin + window.location.pathname
                   }
                 });
               },
