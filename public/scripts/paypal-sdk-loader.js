@@ -1,58 +1,124 @@
 /**
- * Environment Detection and PayPal SDK Configuration
- * Loads PayPal SDK with optimal settings for development and production
- * Version: 2025-06-16-v2 (Fixed merchant-id duplication)
+ * MOBILE-OPTIMIZED PayPal SDK Configuration
+ * Enhanced error handling and mobile compatibility
+ * Version: 2025-06-16-v3 (Mobile Production Hardened)
  */
 (function() {
-  console.log('🔧 PayPal SDK Loader v2 - Initializing...');
-  // Detect environment
-  window.isLocalhost = window.location.hostname === 'localhost' || 
-                      window.location.hostname === '127.0.0.1' || 
-                      window.location.port === '5173' ||
-                      window.location.port === '3000';
+  console.log('🔧 PayPal SDK Loader v3 - MOBILE HARDENED');
   
-  window.isProduction = !window.isLocalhost;
+  // Robust environment detection
+  const hostname = window.location.hostname;
+  const port = window.location.port;
+  const isLocalhost = hostname === 'localhost' || 
+                     hostname === '127.0.0.1' || 
+                     port === '5173' ||
+                     port === '3000';
   
-  console.log('🌍 Environment:', {
-    hostname: window.location.hostname,
-    isLocalhost: window.isLocalhost,
-    isProduction: window.isProduction
+  const isProduction = !isLocalhost;
+  
+  // Enhanced mobile detection
+  const isMobileDevice = window.innerWidth <= 768 || 
+                        window.screen.width <= 768 ||
+                        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  
+  // Detect iOS specifically (known for stricter payment policies)
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  
+  console.log('🌍 Environment Analysis:', {
+    hostname,
+    port,
+    isLocalhost,
+    isProduction,
+    isMobileDevice,
+    isIOS,
+    userAgent: navigator.userAgent.substring(0, 50) + '...'
   });
   
-  // Detect mobile device
-  const isMobileDevice = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);  // Load PayPal SDK with mobile-optimized configuration
+  // Mobile-optimized PayPal SDK configuration
   let sdkUrl;
-  if (window.isLocalhost) {
-    // En localhost, usar sandbox y deshabilitar tarjetas para evitar errores de desarrollo
-    sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&debug=true";
+  if (isLocalhost) {
+    // Localhost: Most conservative configuration to avoid development errors
+    sdkUrl = "https://www.paypal.com/sdk/js?" +
+      "client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R" +
+      "&components=buttons" +
+      "&disable-funding=venmo,card" +
+      "&currency=EUR" +
+      "&debug=true";
   } else {
-    // En producción, configuración europea específica - El entorno se determina por el client-id
+    // Production: Mobile-optimized European configuration
+    const baseParams = [
+      "client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R",
+      "components=buttons",
+      "currency=EUR",
+      "locale=es_ES",
+      "disable-funding=venmo", // Always disable venmo in Spain
+      "intent=capture",
+      "buyer-country=ES"
+    ];
+    
+    // Add mobile-specific optimizations
     if (isMobileDevice) {
-      // Configuración móvil optimizada para Europa/España
-      sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&intent=capture&buyer-country=ES";
+      baseParams.push("enable-funding=card"); // Enable cards on mobile production
+      if (isIOS) {
+        // iOS-specific optimizations
+        baseParams.push("vault=false"); // Disable vaulting on iOS to avoid policy issues
+      }
     } else {
-      // Configuración desktop para Europa/España
-      sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&buyer-country=ES";
+      baseParams.push("enable-funding=card");
     }
+    
+    sdkUrl = "https://www.paypal.com/sdk/js?" + baseParams.join("&");
   }
-    const script = document.createElement('script');
+  
+  console.log('🌐 PayPal SDK URL (Mobile Optimized):', sdkUrl);
+  
+  // Enhanced script loading with error handling
+  const script = document.createElement('script');
   script.src = sdkUrl;
   script.crossOrigin = 'anonymous';
   script.async = true;
   
-  // Log the actual URL being used for debugging
-  console.log('🌐 PayPal SDK URL being loaded:', sdkUrl);
-  console.log('📱 Is mobile device:', isMobileDevice);
-  console.log('🏠 Is localhost:', window.isLocalhost);
+  // Mobile-specific error handling
+  script.onerror = function(error) {
+    console.error('❌ PayPal SDK Load Error:', error);
+    console.log('🔄 Attempting fallback configuration...');
+    
+    // Fallback: Ultra-simple configuration
+    const fallbackScript = document.createElement('script');
+    fallbackScript.src = "https://www.paypal.com/sdk/js?" +
+      "client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R" +
+      "&components=buttons" +
+      "&currency=EUR";
+    fallbackScript.crossOrigin = 'anonymous';
+    fallbackScript.async = true;
+    document.head.appendChild(fallbackScript);
+  };
+  
+  script.onload = function() {
+    console.log('✅ PayPal SDK Loaded Successfully');
+    console.log('📱 Mobile Device:', isMobileDevice);
+    console.log('� iOS Device:', isIOS);
+    console.log('🌍 Environment:', isProduction ? 'Production' : 'Development');
+  };
+  
+  // Store configuration globally for debugging
+  window.PayPalConfig = {
+    environment: isProduction ? 'production' : 'development',
+    isMobile: isMobileDevice,
+    isIOS: isIOS,
+    sdkUrl: sdkUrl,
+    loadTime: Date.now()
+  };
   
   document.head.appendChild(script);
   
-  console.log('💳 PayPal SDK loaded for:', {
-    environment: window.isLocalhost ? 'localhost' : 'production',
-    device: isMobileDevice ? 'móvil' : 'desktop',
-    cards: window.isLocalhost ? 'deshabilitadas (desarrollo)' : 'habilitadas',
-    region: window.isLocalhost ? 'debug' : 'ES (España)',
+  console.log('💳 PayPal SDK Configuration Summary:', {
+    environment: isProduction ? 'PRODUCTION' : 'DEVELOPMENT',
+    device: isMobileDevice ? 'MOBILE' : 'DESKTOP',
+    platform: isIOS ? 'iOS' : 'Other',
+    cards: isLocalhost ? 'DISABLED (dev)' : 'ENABLED',
+    region: 'ES (España)',
     currency: 'EUR',
-    funding: 'PayPal + tarjetas (venmo deshabilitado)'
+    optimizations: isMobileDevice ? 'Mobile-specific' : 'Standard'
   });
 })();

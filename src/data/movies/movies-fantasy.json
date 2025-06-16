@@ -1,0 +1,300 @@
+{
+  "subcategory": "fantasy",
+  "count": 14,
+  "recommendations": [
+    {
+      "id": 40,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "El Señor de los Anillos: La Comunidad del Anillo",
+        "en": "The Lord of the Rings: The Fellowship of the Ring"
+      },
+      "description": {
+        "es": "La primera parte de la épica trilogía dirigida por Peter Jackson, donde Frodo y sus compañeros inician la misión de destruir el Anillo Único.",
+        "en": "The first part of the epic trilogy directed by Peter Jackson, where Frodo and his companions begin the quest to destroy the One Ring."
+      },
+      "director": "Peter Jackson",
+      "image": "/imagenes/peliculas/el_senor_1.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=2dlRvAjU_RI",
+        "en": "https://www.youtube.com/watch?v=V75dMMIW2B4"
+      },
+      "year": 2001,
+      "masterpiece": false
+    },
+    {
+      "id": 41,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "El Señor de los Anillos: Las Dos Torres",
+        "en": "The Lord of the Rings: The Two Towers"
+      },
+      "description": {
+        "es": "Segunda parte de la trilogía, donde la Comunidad se divide y la guerra por la Tierra Media se intensifica.",
+        "en": "Second part of the trilogy, where the Fellowship is divided and the war for Middle-earth intensifies."
+      },
+      "director": "Peter Jackson",
+      "image": "/imagenes/peliculas/el_senor_2.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=LbfMDwc4azU",
+        "en": "https://www.youtube.com/watch?v=nuTU5XcZTLA"
+      },
+      "year": 2002,
+      "masterpiece": false
+    },
+    {
+      "id": 42,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "El Señor de los Anillos: El Retorno del Rey",
+        "en": "The Lord of the Rings: The Return of the King"
+      },
+      "description": {
+        "es": "La conclusión de la trilogía, donde el destino de la Tierra Media se decide en la batalla final y Frodo llega a Mordor.",
+        "en": "The conclusion of the trilogy, where the fate of Middle-earth is decided in the final battle and Frodo reaches Mordor."
+      },
+      "director": "Peter Jackson",
+      "image": "/imagenes/peliculas/el_senor_3.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=E0nBBwXHfYI",
+        "en": "https://www.youtube.com/watch?v=r5X-hFf6Bwo"
+      },
+      "year": 2003,
+      "masterpiece": false
+    },
+    {
+      "id": 73,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "Harry Potter y la piedra filosofal",
+        "en": "Harry Potter and the Sorcerer's Stone"
+      },
+      "description": {
+        "es": "El inicio de la saga mágica de Harry Potter.",
+        "en": "The beginning of the magical Harry Potter saga."
+      },
+      "director": "Chris Columbus",
+      "image": "/imagenes/peliculas/harry1.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=WE4AJuIvG1Y",
+        "en": "https://www.youtube.com/watch?v=VyHV0BRtdxo"
+      },
+      "year": 2001,
+      "masterpiece": false
+    },
+    {
+      "id": 74,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "Harry Potter y la cámara secreta",
+        "en": "Harry Potter and the Chamber of Secrets"
+      },
+      "description": {
+        "es": "Harry regresa a Hogwarts para enfrentar nuevos peligros.",
+        "en": "Harry returns to Hogwarts to face new dangers."
+      },
+      "director": "Chris Columbus",
+      "image": "/imagenes/peliculas/harry2.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=C8CL5TbiFwY",
+        "en": "https://www.youtube.com/watch?v=1bq0qff4iF8"
+      },
+      "year": 2002,
+      "masterpiece": false
+    },
+    {
+      "id": 75,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "Harry Potter y el prisionero de Azkaban",
+        "en": "Harry Potter and the Prisoner of Azkaban"
+      },
+      "description": {
+        "es": "Harry descubre secretos de su pasado y enfrenta a Sirius Black.",
+        "en": "Harry discovers secrets of his past and faces Sirius Black."
+      },
+      "director": "Alfonso Cuarón",
+      "image": "/imagenes/peliculas/harry3.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=cCC_mdE5rJk",
+        "en": "https://www.youtube.com/watch?v=lAxgztbYDbs"
+      },
+      "year": 2004,
+      "masterpiece": false
+    },
+    {
+      "id": 76,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "Harry Potter y el cáliz de fuego",
+        "en": "Harry Potter and the Goblet of Fire"
+      },
+      "description": {
+        "es": "Harry compite en el Torneo de los Tres Magos.",
+        "en": "Harry competes in the Triwizard Tournament."
+      },
+      "director": "Mike Newell",
+      "image": "/imagenes/peliculas/harry4.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=AUMOURumGSo",
+        "en": "https://www.youtube.com/watch?v=PFWAOnvMd1Q"
+      },
+      "year": 2005,
+      "masterpiece": false
+    },
+    {
+      "id": 77,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "Harry Potter y la Orden del Fénix",
+        "en": "Harry Potter and the Order of the Phoenix"
+      },
+      "description": {
+        "es": "Harry lidera la resistencia contra el Ministerio de Magia.",
+        "en": "Harry leads the resistance against the Ministry of Magic."
+      },
+      "director": "David Yates",
+      "image": "/imagenes/peliculas/harry5.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=NaM7nKvX4Es",
+        "en": "https://www.youtube.com/watch?v=y6ZW7KXaXYk"
+      },
+      "year": 2007,
+      "masterpiece": false
+    },
+    {
+      "id": 78,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "Harry Potter y el misterio del príncipe",
+        "en": "Harry Potter and the Half-Blood Prince"
+      },
+      "description": {
+        "es": "Harry descubre el pasado de Voldemort.",
+        "en": "Harry discovers Voldemort's past."
+      },
+      "director": "David Yates",
+      "image": "/imagenes/peliculas/harry6.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=NaM7nKvX4Es",
+        "en": "https://www.youtube.com/watch?v=sg81Lts5kYY"
+      },
+      "year": 2009,
+      "masterpiece": false
+    },
+    {
+      "id": 79,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "Harry Potter y las Reliquias de la Muerte - Parte 1",
+        "en": "Harry Potter and the Deathly Hallows: Part 1"
+      },
+      "description": {
+        "es": "La batalla final contra Voldemort comienza.",
+        "en": "The final battle against Voldemort begins."
+      },
+      "director": "David Yates",
+      "image": "/imagenes/peliculas/harry7.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=PtjvAO_NV20&t=10s",
+        "en": "https://www.youtube.com/watch?v=MxqsmsA8y5k"
+      },
+      "year": 2010,
+      "masterpiece": false
+    },
+    {
+      "id": 80,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "Harry Potter y las Reliquias de la Muerte - Parte 2",
+        "en": "Harry Potter and the Deathly Hallows: Part 2"
+      },
+      "description": {
+        "es": "El desenlace épico de la saga de Harry Potter.",
+        "en": "The epic conclusion of the Harry Potter saga."
+      },
+      "director": "David Yates",
+      "image": "/imagenes/peliculas/harry8.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=HguSMW8XveQ",
+        "en": "https://www.youtube.com/watch?v=mObK5XD8udk"
+      },
+      "year": 2011,
+      "masterpiece": false
+    },
+    {
+      "id": 100,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "El Hobbit: La desolación de Smaug",
+        "en": "The Hobbit: The Desolation of Smaug"
+      },
+      "description": {
+        "es": "Segunda parte de la trilogía, donde Bilbo y los enanos continúan su viaje enfrentándose al dragón Smaug. Dirigida por Peter Jackson.",
+        "en": "Second part of the trilogy, where Bilbo and the dwarves continue their journey facing the dragon Smaug. Directed by Peter Jackson."
+      },
+      "director": "Peter Jackson",
+      "image": "/imagenes/peliculas/hobbit2.jpg",
+      "year": 2013,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=lSv53ZBFpc8",
+        "en": "https://www.youtube.com/watch?v=fnaojlfdUbs"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 101,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "El Hobbit: La batalla de los cinco ejércitos",
+        "en": "The Hobbit: The Battle of the Five Armies"
+      },
+      "description": {
+        "es": "Última parte de la trilogía, donde se libra una gran batalla por la Montaña Solitaria. Dirigida por Peter Jackson.",
+        "en": "Final part of the trilogy, where a great battle is fought for the Lonely Mountain. Directed by Peter Jackson."
+      },
+      "director": "Peter Jackson",
+      "image": "/imagenes/peliculas/hobbit3.jpg",
+      "year": 2014,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=clRX9RXOb64&t=17s",
+        "en": "https://www.youtube.com/watch?v=iVAgTiBrrDA&t=4s"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 153,
+      "category": "movies",
+      "subcategory": "fantasy",
+      "title": {
+        "es": "El Hobbit: Un viaje inesperado",
+        "en": "The Hobbit: An Unexpected Journey"
+      },
+      "description": {
+        "es": "Primera parte de la trilogía basada en la novela de J.R.R. Tolkien. Bilbo Bolsón se une a un grupo de enanos en una aventura para recuperar su hogar. Dirigida por Peter Jackson.",
+        "en": "First part of the trilogy based on J.R.R. Tolkien's novel. Bilbo Baggins joins a group of dwarves on an adventure to reclaim their home. Directed by Peter Jackson."
+      },
+      "director": "Peter Jackson",
+      "image": "/imagenes/peliculas/hobbit1.jpg",
+      "year": 2012,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=sI8OQRXhcZE&t=2s",
+        "en": "https://www.youtube.com/watch?v=9PSXjr1gbjc"
+      },
+      "masterpiece": false
+    }
+  ]
+}

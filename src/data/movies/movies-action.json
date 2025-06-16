@@ -1,0 +1,279 @@
+{
+  "subcategory": "action",
+  "count": 13,
+  "recommendations": [
+    {
+      "id": 28,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "300",
+        "en": "300"
+      },
+      "description": {
+        "es": "Película basada en la novela gráfica de Frank Miller y Lynn Varley, que narra la batalla de las Termópilas con un estilo visual impactante y épico.",
+        "en": "Film based on the graphic novel by Frank Miller and Lynn Varley, depicting the Battle of Thermopylae with an impactful and epic visual style."
+      },
+      "director": "Zack Snyder",
+      "image": "/imagenes/peliculas/300.jpg",
+      "year": 2006,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=mi4xUUJSuro",
+        "en": "https://www.youtube.com/watch?v=UrIbxk7idYA"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 31,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "Operación Dragón",
+        "en": "Enter the Dragon"
+      },
+      "description": {
+        "es": "Película de artes marciales protagonizada por Bruce Lee, considerada un clásico del género y una de las más influyentes de la historia.",
+        "en": "Martial arts film starring Bruce Lee, considered a classic of the genre and one of the most influential in history."
+      },
+      "director": "Robert Clouse",
+      "image": "/imagenes/peliculas/enter_the_dragon.jpg",
+      "year": 1973,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=xGPAuGUEIeg",
+        "en": "https://www.youtube.com/watch?v=xGPAuGUEIeg"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 102,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "Jungla de cristal",
+        "en": "Die Hard"
+      },
+      "description": {
+        "es": "Un policía de Nueva York debe enfrentarse a un grupo de terroristas que toma rehenes en un rascacielos de Los Ángeles en Nochebuena. Protagonizada por Bruce Willis y dirigida por John McTiernan.",
+        "en": "A New York cop must face a group of terrorists who take hostages in a Los Angeles skyscraper on Christmas Eve. Starring Bruce Willis and directed by John McTiernan."
+      },
+      "director": "John McTiernan",
+      "image": "/imagenes/peliculas/die_hard.jpg",
+      "year": 1988,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=GAdvN7KLc2o",
+        "en": "https://www.youtube.com/watch?v=jaJuwKCmJbY"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 119,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "Tigre y Dragón",
+        "en": "Crouching Tiger, Hidden Dragon"
+      },
+      "description": {
+        "es": "En la China de la dinastía Qing, una legendaria espada desaparece y dos guerreros expertos se ven envueltos en una historia de amor, honor y traición. Con espectaculares escenas de artes marciales y una profunda carga poética, 'Tigre y Dragón' es un clásico moderno del cine asiático.",
+        "en": "In Qing Dynasty China, a legendary sword goes missing and two expert warriors are drawn into a story of love, honor, and betrayal. Featuring spectacular martial arts scenes and a deep poetic undertone, 'Crouching Tiger, Hidden Dragon' is a modern classic of Asian cinema."
+      },
+      "director": "Ang Lee",
+      "image": "/imagenes/peliculas/crouching_tiger.jpg",
+      "year": 2000,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=oKItRi-uJIg&pp=ygUuY3JvdWNoaW5nIHRpZ2VyIGhpZGRlbiBkcmFnb24gdHJhaWxleSBlc3Bhw7FvbA%3D%3D",
+        "en": "https://www.youtube.com/watch?v=q-HrIQLdaNE&pp=ygUlY3JvdWNoaW5nIHRpZ2VyIGhpZGRlbiBkcmFnb24gdHJhaWxlcg%3D%3D"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 123,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "Predator",
+        "en": "Predator"
+      },
+      "description": {
+        "es": "Un comando de élite es enviado a la selva centroamericana para una misión de rescate, pero pronto se convierte en la presa de un cazador alienígena invisible. 'Predator' es un clásico del cine de acción y ciencia ficción, conocido por su atmósfera tensa y su icónico antagonista.",
+        "en": "An elite commando is sent to the Central American jungle on a rescue mission, but soon becomes the prey of an invisible alien hunter. 'Predator' is a classic action and science fiction film, known for its tense atmosphere and iconic antagonist."
+      },
+      "director": "John McTiernan",
+      "image": "/imagenes/peliculas/predator.jpg",
+      "year": 1987,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=NICzpXtD-A0",
+        "en": "https://www.youtube.com/watch?v=_1wDBNHYDv8"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 155,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "Mad Max: Furia en la carretera",
+        "en": "Mad Max: Fury Road"
+      },
+      "description": {
+        "es": "Una espectacular película de acción postapocalíptica dirigida por George Miller, donde Max y Furiosa luchan por sobrevivir en un mundo desértico y brutal.",
+        "en": "A spectacular post-apocalyptic action film directed by George Miller, where Max and Furiosa fight to survive in a brutal desert world."
+      },
+      "image": "/imagenes/peliculas/madmax.jpg",
+      "director": "George Miller",
+      "year": 2015,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=BOgm6QTjOmw&t=1s",
+        "en": "https://www.youtube.com/watch?v=hEJnMQG9ev8&t=1s"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 156,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "Furiosa: de la saga Mad Max",
+        "en": "Furiosa: A Mad Max Saga"
+      },
+      "description": {
+        "es": "La precuela de Mad Max: Furia en la carretera, centrada en el origen de Furiosa y su lucha por la libertad en un mundo salvaje.",
+        "en": "The prequel to Mad Max: Fury Road, focusing on Furiosa's origin and her fight for freedom in a savage world."
+      },
+      "image": "/imagenes/peliculas/madmax2.jpg",
+      "director": "George Miller",
+      "year": 2023,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=S3Vx7TZ0yZw&t=5s",
+        "en": "https://www.youtube.com/watch?v=XJMuhwVlca4&t=2s"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 172,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "Harakiri",
+        "en": "Harakiri"
+      },
+      "description": {
+        "es": "Una película clásica japonesa sobre honor y sacrificio.",
+        "en": "A classic Japanese film about honor and sacrifice."
+      },
+      "director": "Masaki Kobayashi",
+      "image": "/imagenes/peliculas/harakiri.jpg",
+      "year": 1962,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=gfABwM-Ppng",
+        "en": "https://www.youtube.com/watch?v=gfABwM-Ppng"
+      }
+    },
+    {
+      "id": 183,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "Karate Kid",
+        "en": "The Karate Kid"
+      },
+      "description": {
+        "es": "Un adolescente se muda a California y se convierte en el objetivo de un grupo de matones expertos en karate. Con la ayuda de un maestro de artes marciales, aprenderá no solo a defenderse, sino también valiosas lecciones de vida.",
+        "en": "A teenager moves to California and becomes the target of a group of karate-trained bullies. With the help of a martial arts master, he'll learn not only how to defend himself, but also valuable life lessons."
+      },
+      "director": "John G. Avildsen",
+      "image": "/imagenes/peliculas/karate_kid.jpg",
+      "year": 1984,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=r_8Rw16uscg",
+        "en": "https://www.youtube.com/watch?v=r_8Rw16uscg"
+      }
+    },
+    {
+      "id": 184,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "Kill Bill: Volumen 1",
+        "en": "Kill Bill: Volume 1"
+      },
+      "description": {
+        "es": "Una antigua asesina despierta de un coma de cuatro años y decide vengarse de la banda de asesinos que intentó matarla y le arrebató a su bebé por nacer. Primera parte de la épica saga de venganza de Quentin Tarantino.",
+        "en": "A former assassin awakens from a four-year coma and decides to seek revenge against the band of assassins who attempted to murder her and took her unborn child. First part of Quentin Tarantino's epic revenge saga."
+      },
+      "director": "Quentin Tarantino",
+      "image": "/imagenes/peliculas/kill_bill1.jpg",
+      "year": 2003,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=otmfu72n2MU",
+        "en": "https://www.youtube.com/watch?v=w75pIkF6EQo"
+      }
+    },
+    {
+      "id": 185,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "Kill Bill: Volumen 2",
+        "en": "Kill Bill: Volume 2"
+      },
+      "description": {
+        "es": "Continuación de la historia de venganza de La Novia, que ahora se enfrenta a su último objetivo: Bill, el líder de la organización que la traicionó. Una conclusión épica que mezcla acción, drama y western.",
+        "en": "Continuation of The Bride's revenge story, as she now faces her final target: Bill, the leader of the organization that betrayed her. An epic conclusion that mixes action, drama and western."
+      },
+      "director": "Quentin Tarantino",
+      "image": "/imagenes/peliculas/kill_bill2.jpg",
+      "year": 2004,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=s5RyiPijcWY",
+        "en": "https://www.youtube.com/watch?v=s5RyiPijcWY"
+      }
+    },
+    {
+      "id": 202,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "Los Siete Samuráis",
+        "en": "Seven Samurai"
+      },
+      "description": {
+        "es": "Una obra maestra del cine japonés que narra la historia de un pueblo que contrata a siete samuráis para protegerlos de los bandidos. Una épica historia sobre el honor, la lealtad y la lucha por la supervivencia.",
+        "en": "A masterpiece of Japanese cinema that tells the story of a village that hires seven samurai to protect them from bandits. An epic tale about honor, loyalty, and the struggle for survival."
+      },
+      "director": "Akira Kurosawa",
+      "image": "/imagenes/peliculas/los_siete_samurais.jpg",
+      "year": 1954,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=1XMJY0hYJEw",
+        "en": "https://www.youtube.com/watch?v=1XMJY0hYJEw"
+      }
+    },
+    {
+      "id": 212,
+      "category": "movies",
+      "subcategory": "action",
+      "title": {
+        "es": "Ong Bak",
+        "en": "Ong Bak: Muay Thai Warrior"
+      },
+      "description": {
+        "es": "Un joven campesino debe recuperar la cabeza robada de una estatua sagrada de su pueblo. Una película de artes marciales que muestra el auténtico Muay Thai tailandés con impresionantes acrobacias y combates sin efectos especiales.",
+        "en": "A young villager must recover the stolen head of a sacred statue from his village. A martial arts film that showcases authentic Thai Muay Thai with impressive acrobatics and fights without special effects."
+      },
+      "director": "Prachya Pinkaew",
+      "image": "/imagenes/peliculas/ong_bak.jpg",
+      "year": 2003,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=nAYUv9wjV48",
+        "en": "https://www.youtube.com/watch?v=nAYUv9wjV48"
+      }
+    }
+  ]
+}

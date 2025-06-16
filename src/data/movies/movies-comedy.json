@@ -1,0 +1,724 @@
+{
+  "subcategory": "comedy",
+  "count": 33,
+  "recommendations": [
+    {
+      "id": 36,
+      "category": "movies",
+      "subcategory": "comedy",
+      "tags": [
+        "spanish"
+      ],
+      "title": {
+        "es": "Amanece, que no es poco",
+        "en": "Amanece, que no es poco"
+      },
+      "description": {
+        "es": "Comedia surrealista de José Luis Cuerda, considerada una de las películas más originales y divertidas del cine español.",
+        "en": "Surrealist comedy by José Luis Cuerda, considered one of the most original and funniest films in Spanish cinema."
+      },
+      "director": "José Luis Cuerda",
+      "image": "/imagenes/peliculas/amanece.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=HVkOnINvIMA",
+        "en": "https://www.youtube.com/watch?v=HVkOnINvIMA"
+      },
+      "year": 1989,
+      "masterpiece": true
+    },
+    {
+      "id": 44,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Resacón en Las Vegas",
+        "en": "The Hangover"
+      },
+      "description": {
+        "es": "Un grupo de amigos despierta tras una despedida de soltero en Las Vegas sin recordar nada de la noche anterior y debe encontrar al novio desaparecido antes de la boda.",
+        "en": "A group of friends wakes up after a bachelor party in Las Vegas with no memory of the previous night and must find the missing groom before the wedding."
+      },
+      "image": "/imagenes/peliculas/hanghover1.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=4eYSpIz2FjU",
+        "en": "https://www.youtube.com/watch?v=tcdUhdOlz9M"
+      },
+      "director": "Todd Phillips",
+      "year": 2009,
+      "masterpiece": false
+    },
+    {
+      "id": 45,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Resacón 2: ¡Ahora en Tailandia!",
+        "en": "The Hangover Part II"
+      },
+      "description": {
+        "es": "La pandilla viaja a Tailandia para la boda de Stu, pero una vez más se despiertan sin recuerdos de la noche anterior y deben encontrar a un amigo perdido en Bangkok.",
+        "en": "The gang travels to Thailand for Stu's wedding, but once again they wake up with no memory of the previous night and must find a lost friend in Bangkok."
+      },
+      "image": "/imagenes/peliculas/hanghover2.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=1dQ9a5EFZeI",
+        "en": "https://www.youtube.com/watch?v=ohF5ZO_zOYU"
+      },
+      "director": "Todd Phillips",
+      "year": 2011,
+      "masterpiece": false
+    },
+    {
+      "id": 46,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Resacón 3",
+        "en": "The Hangover Part III"
+      },
+      "description": {
+        "es": "En la última entrega, los amigos se embarcan en una nueva aventura que los lleva de vuelta a Las Vegas, enfrentándose a viejos enemigos y situaciones inesperadas.",
+        "en": "In the final installment, the friends embark on a new adventure that takes them back to Las Vegas, facing old enemies and unexpected situations."
+      },
+      "image": "/imagenes/peliculas/hanghover3.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=1Vb7pQ2w1xk",
+        "en": "https://www.youtube.com/watch?v=96TelFMZwHc"
+      },
+      "director": "Todd Phillips",
+      "year": 2013,
+      "masterpiece": false
+    },
+    {
+      "id": 91,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Annie Hall",
+        "en": "Annie Hall"
+      },
+      "description": {
+        "es": "Una comedia romántica de Woody Allen que explora las complejidades de las relaciones modernas en Nueva York. Ganadora de 4 premios Oscar, incluyendo Mejor Película.",
+        "en": "A romantic comedy by Woody Allen exploring the complexities of modern relationships in New York. Winner of 4 Oscars, including Best Picture."
+      },
+      "director": "Woody Allen",
+      "image": "/imagenes/peliculas/annie_hall.jpg",
+      "year": 1977,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=TBzHphcc2Jw",
+        "en": "https://www.youtube.com/watch?v=TBzHphcc2Jw"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 92,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Mejor imposible",
+        "en": "As Good as It Gets"
+      },
+      "description": {
+        "es": "Comedia dramática dirigida por James L. Brooks, protagonizada por Jack Nicholson y Helen Hunt. Un escritor misántropo y una camarera forman una inesperada amistad.",
+        "en": "Dramatic comedy directed by James L. Brooks, starring Jack Nicholson and Helen Hunt. A misanthropic writer and a waitress form an unexpected friendship."
+      },
+      "director": "James L. Brooks",
+      "image": "/imagenes/peliculas/as_good.jpg",
+      "year": 1997,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=ssMbPxpSoiw",
+        "en": "https://www.youtube.com/watch?v=t2d89afgtqg"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 94,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Supersalidos",
+        "en": "Superbad"
+      },
+      "description": {
+        "es": "Una comedia adolescente irreverente sobre dos amigos que intentan disfrutar al máximo su última fiesta antes de graduarse. Escrita por Seth Rogen y Evan Goldberg, dirigida por Greg Mottola",
+        "en": "An irreverent teen comedy about two friends trying to make the most of their last party before graduation. Written by Seth Rogen and Evan Goldberg, directed by Greg Mottola."
+      },
+      "director": "Greg Mottola",
+      "image": "/imagenes/peliculas/superbad.jpg",
+      "year": 2007,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=b8ht6ObDlyQ",
+        "en": "https://www.youtube.com/watch?v=4eaZ_48ZYog"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 97,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "3 Idiots",
+        "en": "3 Idiots"
+      },
+      "description": {
+        "es": "Una comedia dramática india sobre la amistad, la presión académica y la búsqueda de la verdadera pasión en la vida universitaria. Dirigida por Rajkumar Hirani.",
+        "en": "An Indian comedy-drama about friendship, academic pressure, and the search for true passion in university life. Directed by Rajkumar Hirani."
+      },
+      "director": "Rajkumar Hirani",
+      "image": "/imagenes/peliculas/3idiots.jpg",
+      "year": 2009,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=K0eDlFX9GMc",
+        "en": "https://www.youtube.com/watch?v=K0eDlFX9GMc"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 98,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Crimen Ferpecto",
+        "en": "Crimen Ferpecto"
+      },
+      "description": {
+        "es": "Una comedia negra española dirigida por Álex de la Iglesia, sobre un ambicioso vendedor atrapado en una situación cada vez más absurda tras un crimen en unos grandes almacenes.",
+        "en": "A Spanish black comedy directed by Álex de la Iglesia, about an ambitious salesman trapped in an increasingly absurd situation after a crime in a department store."
+      },
+      "director": "Álex de la Iglesia",
+      "image": "/imagenes/peliculas/crimen_ferpecto.jpg",
+      "year": 2004,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=YEXvOydba1s",
+        "en": "https://www.youtube.com/watch?v=YEXvOydba1s"
+      },
+      "masterpiece": false,
+      "tags": [
+        "spanish"
+      ]
+    },
+    {
+      "id": 111,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Rebobine, por favor",
+        "en": "Be Kind Rewind"
+      },
+      "description": {
+        "es": "Dos amigos deben recrear las películas de un videoclub después de que todas las cintas se borren accidentalmente. Comedia dirigida por Michel Gondry.",
+        "en": "Two friends must remake the movies in a video store after all the tapes are accidentally erased. Comedy directed by Michel Gondry."
+      },
+      "director": "Michel Gondry",
+      "image": "/imagenes/peliculas/be_kind.jpg",
+      "year": 2008,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=XjwrknarHq0&t=9s",
+        "en": "https://www.youtube.com/watch?v=StfoiYS0JaE"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 112,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Bitelchús",
+        "en": "Beetlejuice"
+      },
+      "description": {
+        "es": "Una pareja de fantasmas contrata a un excéntrico espíritu para ahuyentar a los nuevos habitantes de su casa. Comedia fantástica dirigida por Tim Burton.",
+        "en": "A couple of ghosts hire an eccentric spirit to scare away the new inhabitants of their house. Fantasy comedy directed by Tim Burton."
+      },
+      "director": "Tim Burton",
+      "image": "/imagenes/peliculas/beetlejuice1.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Gpg6OzvwuiA",
+        "en": "https://www.youtube.com/watch?v=CoZqL9N6Rx4"
+      },
+      "year": 1988,
+      "masterpiece": false
+    },
+    {
+      "id": 113,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Bitelchús 2",
+        "en": "Beetlejuice 2"
+      },
+      "description": {
+        "es": "Secuela de la icónica comedia de Tim Burton, donde Beetlejuice regresa para causar más caos en el mundo de los vivos y los muertos.",
+        "en": "Sequel to Tim Burton's iconic comedy, where Beetlejuice returns to cause more chaos in the world of the living and the dead."
+      },
+      "director": "Tim Burton",
+      "image": "/imagenes/peliculas/beetlejuice2.jpg",
+      "year": 2024,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=9SzBZZhN0fQ&t=2s",
+        "en": "https://www.youtube.com/watch?v=As-vKW4ZboU&t=1s"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 114,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Bienvenido, Mister Marshall",
+        "en": "Welcome Mr. Marshall!"
+      },
+      "description": {
+        "es": "Una sátira sobre la España rural y la llegada del Plan Marshall, donde un pequeño pueblo se prepara para recibir a los americanos. Dirigida por Luis García Berlanga.",
+        "en": "A satire about rural Spain and the arrival of the Marshall Plan, where a small village prepares to welcome the Americans. Directed by Luis García Berlanga."
+      },
+      "director": "Luis García Berlanga",
+      "image": "/imagenes/peliculas/bienvenido_mister.jpg",
+      "year": 1953,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=pFcaobDW42g&t=34s",
+        "en": "https://www.youtube.com/watch?v=pFcaobDW42g&t=34s"
+      },
+      "masterpiece": false,
+      "tags": [
+        "spanish"
+      ]
+    },
+    {
+      "id": 116,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Los Cazafantasmas",
+        "en": "Ghostbusters"
+      },
+      "description": {
+        "es": "Un grupo de científicos en Nueva York crea un negocio para capturar fantasmas. Comedia icónica dirigida por Ivan Reitman.",
+        "en": "A group of scientists in New York start a business to catch ghosts. Iconic comedy directed by Ivan Reitman."
+      },
+      "director": "Ivan Reitman",
+      "image": "/imagenes/peliculas/Ghostbusters.jpg",
+      "year": 1984,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=nr3rshIFA_0",
+        "en": "https://www.youtube.com/watch?v=6hDkhw5Wkas&pp=ygUeY2F6YWZhbnRhc21hcyAxIHRyYWlsZXIgaW5nbGVz"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 129,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Dogma",
+        "en": "Dogma"
+      },
+      "description": {
+        "es": "Dos ángeles caídos intentan regresar al cielo desafiando las leyes divinas, lo que podría provocar el fin del universo. 'Dogma' es una comedia irreverente que mezcla religión, sátira y humor absurdo.",
+        "en": "Two fallen angels try to return to heaven by challenging divine laws, which could trigger the end of the universe. 'Dogma' is an irreverent comedy that mixes religion, satire, and absurd humor."
+      },
+      "director": "Kevin Smith",
+      "image": "/imagenes/peliculas/dogma.jpg",
+      "year": 1999,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=m5XqG2tS1XE",
+        "en": "https://www.youtube.com/watch?v=-8UW-O-rhv0"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 137,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "El día de la bestia",
+        "en": "The Day of the Beast"
+      },
+      "description": {
+        "es": "Un sacerdote cree haber descifrado el mensaje secreto del Apocalipsis y, junto a un fanático del death metal y un presentador de televisión, intenta evitar el nacimiento del Anticristo en Madrid. 'El día de la bestia' es una comedia negra y de terror, considerada una obra maestra del cine español.",
+        "en": "A priest believes he has deciphered the secret message of the Apocalypse and, together with a death metal fan and a TV host, tries to prevent the birth of the Antichrist in Madrid. 'The Day of the Beast' is a black comedy and horror film, considered a masterpiece of Spanish cinema."
+      },
+      "director": "Álex de la Iglesia",
+      "image": "/imagenes/peliculas/dia_bestia.jpg",
+      "year": 1995,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=_sOQnTw2K4E",
+        "en": "https://www.youtube.com/watch?v=pD7_zxXe06w"
+      },
+      "masterpiece": true,
+      "tags": [
+        "spanish"
+      ]
+    },
+    {
+      "id": 138,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "El gran dictador",
+        "en": "The Great Dictator"
+      },
+      "description": {
+        "es": "Un humilde barbero judío es confundido con un dictador tiránico en una sátira mordaz sobre el fascismo y la intolerancia. 'El gran dictador' es una de las obras más emblemáticas de Charles Chaplin, combinando humor y crítica social.",
+        "en": "A humble Jewish barber is mistaken for a tyrannical dictator in a scathing satire about fascism and intolerance. 'The Great Dictator' is one of Charles Chaplin's most emblematic works, combining humor and social critique."
+      },
+      "director": "Charles Chaplin",
+      "image": "/imagenes/peliculas/the_great_dictator.jpg",
+      "year": 1940,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=wNFWcR5dqlw&t=1s",
+        "en": "https://www.youtube.com/watch?v=i1C6qZVeFtA"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 139,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "El gran Lebowski",
+        "en": "The Big Lebowski"
+      },
+      "description": {
+        "es": "El Nota, un tipo tranquilo y amante del bowling, se ve envuelto por error en una absurda trama criminal. 'El gran Lebowski' es una comedia de culto de los hermanos Coen, célebre por sus personajes excéntricos y diálogos memorables.",
+        "en": "The Dude, a laid-back bowler, gets mistakenly involved in a bizarre criminal plot. 'The Big Lebowski' is a cult comedy by the Coen brothers, famous for its eccentric characters and memorable dialogue."
+      },
+      "director": "Joel Coen",
+      "image": "/imagenes/peliculas/big_lebowski.jpg",
+      "year": 1998,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=tE4--lpy3Pg",
+        "en": "https://www.youtube.com/watch?v=VgSqm8-wXWA"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 148,
+      "category": "movies",
+      "subcategory": "comedy",
+      "tags": [
+        "spanish"
+      ],
+      "title": {
+        "es": "El Milagro de P. Tinto",
+        "en": "The Miracle of P. Tinto"
+      },
+      "description": {
+        "es": "Una comedia surrealista que narra la peculiar vida de P. Tinto, un hombre que espera un milagro mientras enfrenta situaciones absurdas y personajes extravagantes.",
+        "en": "A surreal comedy that tells the peculiar life of P. Tinto, a man waiting for a miracle while facing absurd situations and extravagant characters."
+      },
+      "director": "Javier Fesser",
+      "image": "/imagenes/peliculas/el_milagro_de_p_tinto.jpg",
+      "year": 1998,
+      "masterpiece": true,
+      "cine_espanol": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Q0GMTc6TBf0",
+        "en": "https://www.youtube.com/watch?v=Q0GMTc6TBf0"
+      }
+    },
+    {
+      "id": 149,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Mejor imposible",
+        "en": "As Good as It Gets"
+      },
+      "description": {
+        "es": "Comedia dramática dirigida por James L. Brooks, protagonizada por Jack Nicholson y Helen Hunt. Un escritor misántropo y una camarera forman una inesperada amistad.",
+        "en": "Dramatic comedy directed by James L. Brooks, starring Jack Nicholson and Helen Hunt. A misanthropic writer and a waitress form an unexpected friendship."
+      },
+      "director": "James L. Brooks",
+      "image": "/imagenes/peliculas/as_good.jpg",
+      "year": 1997,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=ssMbPxpSoiw",
+        "en": "https://www.youtube.com/watch?v=t2d89afgtqg"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 160,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "El Jovencito Frankenstein",
+        "en": "Young Frankenstein"
+      },
+      "description": {
+        "es": "Una comedia clásica dirigida por Mel Brooks, que parodia las películas de terror de Frankenstein con un humor único.",
+        "en": "A classic comedy directed by Mel Brooks, parodying Frankenstein horror films with unique humor."
+      },
+      "director": "Mel Brooks",
+      "image": "/imagenes/peliculas/young_frankenstein.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Y8v2YNOdwnM",
+        "en": "https://www.youtube.com/watch?v=sO8g8VmFf0M"
+      },
+      "year": 1974,
+      "masterpiece": true
+    },
+    {
+      "id": 166,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Four Rooms",
+        "en": "Four Rooms"
+      },
+      "description": {
+        "es": "Una película de comedia que cuenta cuatro historias en un hotel.",
+        "en": "A comedy film that tells four stories in a hotel."
+      },
+      "director": "Quentin Tarantino",
+      "image": "/imagenes/peliculas/four_rooms.jpg",
+      "year": 1995,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=6IPseYWyYcw",
+        "en": "https://www.youtube.com/watch?v=0hu12MP7b1U"
+      }
+    },
+    {
+      "id": 187,
+      "category": "movies",
+      "subcategory": "comedy",
+      "tags": [
+        "spanish"
+      ],
+      "title": {
+        "es": "La Comunidad",
+        "en": "Common Wealth"
+      },
+      "description": {
+        "es": "Una comedia negra española que sigue a los vecinos de un edificio cuando descubren una fortuna escondida en el apartamento de un anciano fallecido. La codicia y la locura se apoderan de la comunidad mientras intentan repartirse el botín.",
+        "en": "A Spanish black comedy that follows the neighbors of a building when they discover a hidden fortune in a deceased old man's apartment. Greed and madness take over the community as they try to split the loot."
+      },
+      "director": "Álex de la Iglesia",
+      "image": "/imagenes/peliculas/la_comunidad.jpg",
+      "year": 2000,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=MTpFTg30oM4",
+        "en": "https://www.youtube.com/watch?v=MTpFTg30oM4"
+      }
+    },
+    {
+      "id": 188,
+      "category": "movies",
+      "subcategory": "comedy",
+      "tags": [
+        "spanish"
+      ],
+      "title": {
+        "es": "La Escopeta Nacional",
+        "en": "The National Shotgun"
+      },
+      "description": {
+        "es": "Una sátira política española que retrata las intrigas y corrupciones de la clase política durante una cacería. Dirigida por Luis García Berlanga, es una crítica mordaz a la sociedad española de la época.",
+        "en": "A Spanish political satire that portrays the intrigues and corruptions of the political class during a hunting trip. Directed by Luis García Berlanga, it's a biting critique of Spanish society of the time."
+      },
+      "director": "Luis García Berlanga",
+      "image": "/imagenes/peliculas/la_escopeta_nacional.jpg",
+      "year": 1978,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=fai35Ncpcfg",
+        "en": "https://www.youtube.com/watch?v=fai35Ncpcfg"
+      }
+    },
+    {
+      "id": 193,
+      "category": "movies",
+      "subcategory": "comedy",
+      "tags": [
+        "spanish"
+      ],
+      "title": {
+        "es": "La Vaquilla",
+        "en": "The Heifer"
+      },
+      "description": {
+        "es": "Una comedia ambientada en la Guerra Civil Española que narra los intentos de un grupo de soldados republicanos por robar una vaquilla para celebrar una fiesta. Una sátira sobre la guerra y la humanidad en tiempos de conflicto.",
+        "en": "A comedy set during the Spanish Civil War that tells the story of a group of Republican soldiers trying to steal a heifer to celebrate a party. A satire about war and humanity in times of conflict."
+      },
+      "director": "Luis García Berlanga",
+      "image": "/imagenes/peliculas/la_vaquilla.jpg",
+      "year": 1985,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Z4qcSg99DNs",
+        "en": "https://www.youtube.com/watch?v=Z4qcSg99DNs"
+      }
+    },
+    {
+      "id": 194,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "La Vida de Brian",
+        "en": "Life of Brian"
+      },
+      "description": {
+        "es": "Una comedia satírica de los Monty Python que sigue la vida de Brian, un hombre que nace el mismo día que Jesucristo y es confundido con el Mesías. Una sátira irreverente y brillante sobre la religión y la sociedad.",
+        "en": "A satirical comedy by Monty Python that follows the life of Brian, a man born on the same day as Jesus Christ who is mistaken for the Messiah. A brilliant and irreverent satire on religion and society."
+      },
+      "director": "Terry Jones",
+      "image": "/imagenes/peliculas/brian_life.jpg",
+      "year": 1979,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=0-E6bKzb1lw",
+        "en": "https://www.youtube.com/watch?v=GeKzBQnAq5I"
+      }
+    },
+    {
+      "id": 199,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Los Dioses Deben Estar Locos",
+        "en": "The Gods Must Be Crazy"
+      },
+      "description": {
+        "es": "Una comedia que narra las aventuras de un miembro de la tribu bosquimana cuando encuentra una botella de Coca-Cola que cae del cielo. Una sátira sobre la civilización moderna vista desde la perspectiva de una cultura tradicional.",
+        "en": "A comedy that tells the adventures of a Bushman tribe member when he finds a Coca-Cola bottle that falls from the sky. A satire about modern civilization seen from the perspective of a traditional culture."
+      },
+      "director": "Jamie Uys",
+      "image": "/imagenes/peliculas/dioses_locos.jpg",
+      "year": 1980,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=GPI1O_3BDDI",
+        "en": "https://www.youtube.com/watch?v=GPI1O_3BDDI"
+      }
+    },
+    {
+      "id": 208,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Veo, Veo... ¿Qué Ves?",
+        "en": "See No Evil, Hear No Evil"
+      },
+      "description": {
+        "es": "Una comedia que sigue las aventuras de un hombre sordo y otro ciego que se convierten en testigos involuntarios de un asesinato. Juntos deberán resolver el caso mientras se enfrentan a sus propias limitaciones.",
+        "en": "A comedy that follows the adventures of a deaf man and a blind man who become unwitting witnesses to a murder. Together they must solve the case while dealing with their own limitations."
+      },
+      "director": "Arthur Hiller",
+      "image": "/imagenes/peliculas/no_me_chilles.jpg",
+      "year": 1989,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=cdKXS7XX5_8",
+        "en": "https://www.youtube.com/watch?v=KzzvoOfXG9E"
+      }
+    },
+    {
+      "id": 223,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Amelie",
+        "en": "Amélie"
+      },
+      "description": {
+        "es": "Una joven camarera en París decide cambiar la vida de quienes la rodean mientras busca su propia felicidad. Una película mágica y encantadora que captura la esencia del París bohemio y la belleza de los pequeños momentos de la vida.",
+        "en": "A young waitress in Paris decides to change the lives of those around her while seeking her own happiness. A magical and charming film that captures the essence of bohemian Paris and the beauty of life's small moments."
+      },
+      "director": "Jean-Pierre Jeunet",
+      "image": "/imagenes/peliculas/amelie.jpg",
+      "year": 2001,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=JMPOXWSL_PY",
+        "en": "https://www.youtube.com/watch?v=Py7cDXQae2U"
+      }
+    },
+    {
+      "id": 234,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Teléfono Rojo, ¿Volamos hacia Moscú?",
+        "en": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"
+      },
+      "description": {
+        "es": "Una sátira sobre la Guerra Fría donde un general estadounidense enloquecido ordena un ataque nuclear contra la Unión Soviética. Una obra maestra de Stanley Kubrick que combina el humor negro con una crítica mordaz a la carrera armamentística.",
+        "en": "A satire on the Cold War where a deranged American general orders a nuclear attack on the Soviet Union. A Stanley Kubrick masterpiece that combines black humor with a biting critique of the arms race."
+      },
+      "director": "Stanley Kubrick",
+      "image": "/imagenes/peliculas/telefono_rojo.jpeg",
+      "year": 1964,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=a8NwIBA8rJA",
+        "en": "https://www.youtube.com/watch?v=a8NwIBA8rJA"
+      }
+    },
+    {
+      "id": 235,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Tenacious D: El Destino de la Roca",
+        "en": "Tenacious D in The Pick of Destiny"
+      },
+      "description": {
+        "es": "La historia ficticia de cómo Jack Black y Kyle Gass formaron la banda Tenacious D y su búsqueda de un plectro legendario que les dará el poder de convertirse en los mejores músicos del mundo. Una comedia musical irreverente y llena de cameos.",
+        "en": "The fictional story of how Jack Black and Kyle Gass formed the band Tenacious D and their quest for a legendary pick that will give them the power to become the greatest musicians in the world. An irreverent musical comedy full of cameos."
+      },
+      "director": "Liam Lynch",
+      "image": "/imagenes/peliculas/tenaciusd.jpg",
+      "year": 2006,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=qLKWKPEdWj0",
+        "en": "https://www.youtube.com/watch?v=qLKWKPEdWj0"
+      }
+    },
+    {
+      "id": 241,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Top Secret",
+        "en": "Top Secret!"
+      },
+      "description": {
+        "es": "Un cantante de rock americano se ve involucrado en una misión de espionaje en Alemania Oriental durante la Guerra Fría. Una comedia absurda de los creadores de 'Aterriza como puedas' que parodia las películas de espías y musicales.",
+        "en": "An American rock singer gets involved in a spy mission in East Germany during the Cold War. An absurd comedy from the creators of 'Airplane!' that parodies spy films and musicals."
+      },
+      "director": "Jim Abrahams, David Zucker, Jerry Zucker",
+      "image": "/imagenes/peliculas/top_secret.jpg",
+      "year": 1984,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=uXv6Gm8_npQ",
+        "en": "https://www.youtube.com/watch?v=Q5zen7sHQFI"
+      }
+    },
+    {
+      "id": 243,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Un Pez Llamado Wanda",
+        "en": "A Fish Called Wanda"
+      },
+      "description": {
+        "es": "Un grupo de estafadores intenta recuperar un botín de joyas robadas, pero sus planes se complican por la traición, el amor y un pez llamado Wanda. Una comedia negra con diálogos ingeniosos y situaciones hilarantes.",
+        "en": "A group of con artists tries to recover stolen jewels, but their plans are complicated by betrayal, love, and a fish called Wanda. A black comedy with witty dialogue and hilarious situations."
+      },
+      "director": "Charles Crichton",
+      "image": "/imagenes/peliculas/wanda.jpg",
+      "year": 1988,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=jBoW-d3lVbg",
+        "en": "https://www.youtube.com/watch?v=0WTwVpEEMps"
+      }
+    }
+  ]
+}

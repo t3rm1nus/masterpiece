@@ -1,0 +1,1559 @@
+{
+  "subcategory": "drama",
+  "count": 73,
+  "recommendations": [
+    {
+      "id": 32,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Ciudad de Dios",
+        "en": "City of God"
+      },
+      "description": {
+        "es": "Película brasileña dirigida por Fernando Meirelles y Kátia Lund, que retrata la vida en las favelas de Río de Janeiro y el ascenso del crimen organizado.",
+        "en": "Brazilian film directed by Fernando Meirelles and Kátia Lund, depicting life in the favelas of Rio de Janeiro and the rise of organized crime."
+      },
+      "director": "Fernando Meirelles, Kátia Lund",
+      "image": "/imagenes/peliculas/ciudad_de_dios.jpg",
+      "year": 2002,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=63kaF1n5sz0",
+        "en": "https://www.youtube.com/watch?v=JYKs35P2fZw"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 34,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Canino",
+        "en": "Dogtooth"
+      },
+      "description": {
+        "es": "Película griega dirigida por Yorgos Lanthimos, que explora la vida de una familia aislada del mundo exterior bajo reglas estrictas y absurdas.",
+        "en": "Greek film directed by Yorgos Lanthimos, exploring the life of a family isolated from the outside world under strict and absurd rules."
+      },
+      "director": "Yorgos Lanthimos",
+      "image": "/imagenes/peliculas/dogtooth.jpg",
+      "year": 2009,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=VQT8LCohdUk",
+        "en": "https://www.youtube.com/watch?v=VQT8LCohdUk"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 35,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El indomable Will Hunting",
+        "en": "Good Will Hunting"
+      },
+      "description": {
+        "es": "Película dirigida por Gus Van Sant, protagonizada por Matt Damon y Robin Williams. Un joven con un talento extraordinario para las matemáticas lucha por encontrar su lugar en el mundo con la ayuda de un terapeuta poco convencional.",
+        "en": "Film directed by Gus Van Sant, starring Matt Damon and Robin Williams. A young man with extraordinary mathematical talent struggles to find his place in the world with the help of an unconventional therapist."
+      },
+      "director": "Gus Van Sant",
+      "image": "/imagenes/peliculas/good_will_hunting.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=H4eUj8XLqD0",
+        "en": "https://www.youtube.com/watch?v=ReIJ1lbL-Q8"
+      },
+      "year": 1997,
+      "masterpiece": false
+    },
+    {
+      "id": 37,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Padrino",
+        "en": "The Godfather"
+      },
+      "description": {
+        "es": "Película dirigida por Francis Ford Coppola. Un clásico del cine sobre la familia mafiosa Corleone y el poder en la América de mediados del siglo XX.",
+        "en": "Film directed by Francis Ford Coppola. A cinema classic about the Corleone mafia family and power in mid-20th century America."
+      },
+      "director": "Francis Ford Coppola",
+      "image": "/imagenes/peliculas/el_padrino_1.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=XLEnSN99ths",
+        "en": "https://www.youtube.com/watch?v=sY1S34973zA"
+      },
+      "year": 1972,
+      "masterpiece": true
+    },
+    {
+      "id": 38,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Padrino II",
+        "en": "The Godfather Part II"
+      },
+      "description": {
+        "es": "Segunda parte de la saga dirigida por Francis Ford Coppola. Profundiza en los orígenes de la familia Corleone y el ascenso de Michael como jefe de la mafia.",
+        "en": "Second part of the saga directed by Francis Ford Coppola. Explores the origins of the Corleone family and Michael's rise as mafia boss."
+      },
+      "director": "Francis Ford Coppola",
+      "image": "/imagenes/peliculas/el_padrino_2.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=9O1Iy9od7-A",
+        "en": "https://www.youtube.com/watch?v=qJr92K_hKl0"
+      },
+      "year": 1974,
+      "masterpiece": true
+    },
+    {
+      "id": 39,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Padrino III",
+        "en": "The Godfather Part III"
+      },
+      "description": {
+        "es": "Tercera entrega de la saga de los Corleone, dirigida por Francis Ford Coppola. Michael intenta legitimar los negocios familiares mientras enfrenta nuevas amenazas.",
+        "en": "Third installment of the Corleone saga, directed by Francis Ford Coppola. Michael tries to legitimize the family business while facing new threats."
+      },
+      "director": "Francis Ford Coppola",
+      "image": "/imagenes/peliculas/el_padrino_3.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=QJrG2C1b1y0",
+        "en": "https://www.youtube.com/watch?v=QJrG2C1b1y0"
+      },
+      "year": 1990,
+      "masterpiece": true
+    },
+    {
+      "id": 52,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "La vendedora de rosas",
+        "en": "The Rose Seller"
+      },
+      "description": {
+        "es": "Película colombiana dirigida por Víctor Gaviria, inspirada en el cuento de Hans Christian Andersen, que retrata la dura vida de los niños en las calles de Medellín.",
+        "en": "Colombian film directed by Víctor Gaviria, inspired by Hans Christian Andersen's tale, portraying the harsh life of children on the streets of Medellín."
+      },
+      "image": "/imagenes/peliculas/la_vendedora_de_rosas.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=cYZMMRZR90w",
+        "en": "https://www.youtube.com/watch?v=cYZMMRZR90w"
+      },
+      "director": "Víctor Gaviria",
+      "year": 1998,
+      "masterpiece": false
+    },
+    {
+      "id": 65,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Una mente maravillosa",
+        "en": "A Beautiful Mind"
+      },
+      "description": {
+        "es": "La historia real del brillante matemático John Nash, que lucha contra la esquizofrenia mientras realiza importantes contribuciones a la economía y las matemáticas.",
+        "en": "The true story of brilliant mathematician John Nash, who battles schizophrenia while making major contributions to economics and mathematics."
+      },
+      "image": "/imagenes/peliculas/beautilful_mind.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=h_B16qD89aM"
+      },
+      "director": "Ron Howard",
+      "year": 2001,
+      "masterpiece": false
+    },
+    {
+      "id": 66,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "La naranja mecánica",
+        "en": "A Clockwork Orange"
+      },
+      "description": {
+        "es": "Película de Stanley Kubrick basada en la novela de Anthony Burgess. Un retrato impactante de la violencia, el control social y la libertad individual.",
+        "en": "Stanley Kubrick's film based on Anthony Burgess's novel. A shocking portrait of violence, social control, and individual freedom."
+      },
+      "image": "/imagenes/peliculas/naranja.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=MmUhbSZMjOY"
+      },
+      "director": "Stanley Kubrick",
+      "year": 1971,
+      "masterpiece": true
+    },
+    {
+      "id": 67,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Ahora o nunca",
+        "en": "The Bucket List"
+      },
+      "description": {
+        "es": "Dos hombres mayores, ambos enfermos terminales, escapan del hospital para cumplir una lista de deseos antes de morir. Protagonizada por Jack Nicholson y Morgan Freeman.",
+        "en": "Two terminally ill men escape from a hospital to fulfill a bucket list of things to do before they die. Starring Jack Nicholson and Morgan Freeman."
+      },
+      "image": "/imagenes/peliculas/ahora_nunca.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=63kaF1n5sz0",
+        "en": "https://www.youtube.com/watch?v=vc3mkG21ob4"
+      },
+      "director": "Rob Reiner",
+      "year": 2007,
+      "masterpiece": false
+    },
+    {
+      "id": 68,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "American History X",
+        "en": "American History X"
+      },
+      "description": {
+        "es": "Un joven neonazi intenta dejar atrás su pasado de odio y violencia tras salir de prisión, mientras trata de evitar que su hermano menor siga sus pasos. Protagonizada por Edward Norton.",
+        "en": "A former neo-Nazi tries to leave behind his past of hate and violence after being released from prison, while trying to prevent his younger brother from following in his footsteps. Starring Edward Norton."
+      },
+      "image": "/imagenes/peliculas/american_history.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=oi7bhRmJzec&t=13s",
+        "en": "https://www.youtube.com/watch?v=XfQYHqsiN5g"
+      },
+      "director": "Tony Kaye",
+      "year": 1998,
+      "masterpiece": false
+    },
+    {
+      "id": 69,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Apocalypse Now",
+        "en": "Apocalypse Now"
+      },
+      "description": {
+        "es": "Obra maestra de Francis Ford Coppola que adapta 'El corazón de las tinieblas' al contexto de la guerra de Vietnam. Un viaje al horror y la locura protagonizado por Martin Sheen y Marlon Brando.",
+        "en": "Francis Ford Coppola's masterpiece adapts 'Heart of Darkness' to the Vietnam War. A journey into horror and madness starring Martin Sheen and Marlon Brando."
+      },
+      "image": "/imagenes/peliculas/apocalipse.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=h5iZf5kv354",
+        "en": "https://www.youtube.com/watch?v=9l-ViOOFH-s"
+      },
+      "director": "Francis Ford Coppola",
+      "year": 1979,
+      "masterpiece": true
+    },
+    {
+      "id": 70,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Brazil",
+        "en": "Brazil"
+      },
+      "description": {
+        "es": "Una distopía surrealista dirigida por Terry Gilliam, donde un burócrata lucha contra un sistema opresivo y absurdo en un futuro totalitario. Considerada una obra de culto del cine de ciencia ficción.",
+        "en": "A surreal dystopia directed by Terry Gilliam, where a bureaucrat struggles against an oppressive and absurd system in a totalitarian future. Considered a cult classic of science fiction cinema."
+      },
+      "image": "/imagenes/peliculas/brazil.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=ei1Mov2GTMI",
+        "en": "https://www.youtube.com/watch?v=ZKPFC8DA9_8"
+      },
+      "director": "Terry Gilliam",
+      "year": 1985,
+      "masterpiece": false
+    },
+    {
+      "id": 93,
+      "category": "movies",
+      "subcategory": "drama",
+      "tags": [
+        "spanish"
+      ],
+      "title": {
+        "es": "Belle Époque",
+        "en": "Belle Époque"
+      },
+      "description": {
+        "es": "Película de Fernando Trueba ganadora del Oscar a la Mejor Película Extranjera. Una comedia romántica ambientada en la España de los años 30.",
+        "en": "Film by Fernando Trueba, winner of the Oscar for Best Foreign Language Film. A romantic comedy set in 1930s Spain."
+      },
+      "director": "Fernando Trueba",
+      "image": "/imagenes/peliculas/belle_epoque.jpg",
+      "year": 1992,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Fej2LCDtcss",
+        "en": "https://www.youtube.com/watch?v=Fej2LCDtcss"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 95,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Trainspotting",
+        "en": "Trainspotting"
+      },
+      "description": {
+        "es": "Un grupo de jóvenes en Edimburgo navega por la adicción a la heroína y la vida marginal en los años 90. Dirigida por Danny Boyle, basada en la novela de Irvine Welsh.",
+        "en": "A group of young people in Edinburgh navigate heroin addiction and marginal life in the 90s. Directed by Danny Boyle, based on the novel by Irvine Welsh."
+      },
+      "director": "Danny Boyle",
+      "image": "/imagenes/peliculas/trainspoting1.jpg",
+      "year": 1996,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=M8jl94mbCJU",
+        "en": "https://www.youtube.com/watch?v=8LuxOYIpu-I"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 96,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "T2 Trainspotting",
+        "en": "T2 Trainspotting"
+      },
+      "description": {
+        "es": "Veinte años después, Renton regresa a Escocia y se reencuentra con sus viejos amigos. Secuela dirigida por Danny Boyle, basada en la novela de Irvine Welsh.",
+        "en": "Twenty years later, Renton returns to Scotland and reunites with his old friends. Sequel directed by Danny Boyle, based on the novel by Irvine Welsh."
+      },
+      "director": "Danny Boyle",
+      "image": "/imagenes/peliculas/trainspoting2.jpg",
+      "year": 2017,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=PPLRVCAWq1Q",
+        "en": "https://www.youtube.com/watch?v=oQlaYKP996c"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 104,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Saló o los 120 días de Sodoma",
+        "en": "Salò, or the 120 Days of Sodom"
+      },
+      "description": {
+        "es": "Una controvertida y perturbadora película italiana dirigida por Pier Paolo Pasolini, basada en la novela de Sade. Un grupo de jóvenes es sometido a torturas y humillaciones por parte de autoridades fascistas.",
+        "en": "A controversial and disturbing Italian film directed by Pier Paolo Pasolini, based on Sade's novel. A group of youths is subjected to torture and humiliation by fascist authorities."
+      },
+      "director": "Pier Paolo Pasolini",
+      "image": "/imagenes/peliculas/salo.jpg",
+      "year": 1975,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=0iJYAycEDII",
+        "en": "https://www.youtube.com/watch?v=0iJYAycEDII"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 115,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Casino",
+        "en": "Casino"
+      },
+      "description": {
+        "es": "Un director de casino en Las Vegas se ve envuelto en una red de poder, ambición y traición. Dirigida por Martin Scorsese.",
+        "en": "A casino manager in Las Vegas becomes entangled in a web of power, ambition, and betrayal. Directed by Martin Scorsese."
+      },
+      "director": "Martin Scorsese",
+      "image": "/imagenes/peliculas/casino.jpg",
+      "year": 1995,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=aFP8CjozpkY",
+        "en": "https://www.youtube.com/watch?v=EJXDMwGWhoA"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 117,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Che, el argentino",
+        "en": "Che: Part One"
+      },
+      "description": {
+        "es": "La primera parte del biopic sobre Ernesto 'Che' Guevara, centrada en la Revolución Cubana. Dirigida por Steven Soderbergh.",
+        "en": "The first part of the biopic about Ernesto 'Che' Guevara, focused on the Cuban Revolution. Directed by Steven Soderbergh."
+      },
+      "director": "Steven Soderbergh",
+      "image": "/imagenes/peliculas/che.jpg",
+      "year": 2008,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=ImVM0X0YtH8&pp=ygUhY2hlIGVsIGFyZ2VudGlubyB0cmFpbGVyIGVzcGHDsW9s",
+        "en": "https://www.youtube.com/watch?v=fqTw2dtVQzw&pp=ygUfY2hlIGVsIGFyZ2VudGlubyB0cmFpbGVyIGluZ2xlcw%3D%3D"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 122,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Dark City",
+        "en": "Dark City"
+      },
+      "description": {
+        "es": "Un hombre despierta sin memoria en una ciudad oscura y laberíntica, perseguido por fuerzas misteriosas que manipulan la realidad. 'Dark City' es un thriller de ciencia ficción y cine negro, aclamado por su atmósfera única y su innovador enfoque visual.",
+        "en": "A man wakes up with no memory in a dark, labyrinthine city, pursued by mysterious forces that manipulate reality. 'Dark City' is a science fiction thriller and film noir, acclaimed for its unique atmosphere and innovative visual approach."
+      },
+      "director": "Alex Proyas",
+      "image": "/imagenes/peliculas/dark_city.jpeg",
+      "year": 1998,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=ZTldm4vo4mk&pp=ygUaZGFyayBjaXR5IHRyYWlsZXIgZXNwYcOxb2w%3D",
+        "en": "https://www.youtube.com/watch?v=gt9HkO-cGGo&pp=ygUSZGFyayBjaXR5IHRyYWlsZXIg"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 127,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "12 Angry Men",
+        "en": "12 Angry Men"
+      },
+      "description": {
+        "es": "Doce miembros de un jurado deben decidir el destino de un joven acusado de asesinato. A través de intensos debates, prejuicios y tensiones, '12 Angry Men' se convierte en un poderoso drama sobre la justicia y la naturaleza humana.",
+        "en": "Twelve jurors must decide the fate of a young man accused of murder. Through intense debates, prejudices, and tensions, '12 Angry Men' becomes a powerful drama about justice and human nature."
+      },
+      "director": "Sidney Lumet",
+      "image": "/imagenes/peliculas/12_angry_man.jpg",
+      "year": 1957,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=hiyJZP-MlxM",
+        "en": "https://www.youtube.com/watch?v=TEN-2uTi2c0"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 130,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Donnie Darko",
+        "en": "Donnie Darko"
+      },
+      "description": {
+        "es": "Un adolescente problemático comienza a experimentar visiones de un misterioso conejo gigante que le advierte sobre el fin del mundo. 'Donnie Darko' es un thriller psicológico de culto que mezcla ciencia ficción, drama y elementos sobrenaturales.",
+        "en": "A troubled teenager begins experiencing visions of a mysterious giant rabbit that warns him about the end of the world. 'Donnie Darko' is a cult psychological thriller that blends science fiction, drama, and supernatural elements."
+      },
+      "director": "Richard Kelly",
+      "image": "/imagenes/peliculas/donnie_darko.jpg",
+      "year": 2001,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=EP9L4CzN6to",
+        "en": "https://www.youtube.com/watch?v=bzLn8sYeM9o"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 132,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El abuelo",
+        "en": "El abuelo"
+      },
+      "description": {
+        "es": "Un anciano regresa a su tierra natal en busca de la verdad sobre la paternidad de sus nietas, enfrentándose a secretos familiares y al paso del tiempo. 'El abuelo' es un drama intenso y emotivo del cine español.",
+        "en": "An old man returns to his hometown seeking the truth about the paternity of his granddaughters, confronting family secrets and the passage of time. 'El abuelo' is an intense and emotional drama from Spanish cinema."
+      },
+      "director": "José Luis Garci",
+      "image": "/imagenes/peliculas/el_abuelo.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=MLZepMwQmcw",
+        "en": "https://www.youtube.com/watch?v=MLZepMwQmcw"
+      },
+      "year": 1998,
+      "masterpiece": false,
+      "tags": [
+        "spanish"
+      ]
+    },
+    {
+      "id": 133,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El bosque animado",
+        "en": "El bosque animado"
+      },
+      "description": {
+        "es": "En un bosque gallego, las vidas de sus peculiares habitantes se entrelazan en una historia llena de humor, ternura y realismo mágico. 'El bosque animado' es una de las grandes joyas del cine español.",
+        "en": "In a Galician forest, the lives of its peculiar inhabitants intertwine in a story full of humor, tenderness, and magical realism. 'El bosque animado' is one of the great gems of Spanish cinema."
+      },
+      "director": "José Luis Cuerda",
+      "image": "/imagenes/peliculas/el_bosque_animado.jpg",
+      "year": 1987,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Piu3tDDVH9o",
+        "en": "https://www.youtube.com/watch?v=Piu3tDDVH9o"
+      },
+      "masterpiece": false,
+      "tags": [
+        "spanish"
+      ]
+    },
+    {
+      "id": 135,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El club de los poetas muertos",
+        "en": "Dead Poets Society"
+      },
+      "description": {
+        "es": "En un estricto internado, un carismático profesor de literatura inspira a sus alumnos a pensar por sí mismos y a aprovechar el día. 'El club de los poetas muertos' es un emotivo drama sobre la juventud, la libertad y el poder de la poesía.",
+        "en": "At a strict boarding school, a charismatic literature teacher inspires his students to think for themselves and seize the day. 'Dead Poets Society' is an emotional drama about youth, freedom, and the power of poetry."
+      },
+      "director": "Peter Weir",
+      "image": "/imagenes/peliculas/dead_poets_society.jpg",
+      "year": 1989,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=y2m3OO5clPU",
+        "en": "https://www.youtube.com/watch?v=ye4KFyWu2do"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 136,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El golpe",
+        "en": "The Sting"
+      },
+      "description": {
+        "es": "Dos estafadores planean una compleja venganza contra un poderoso mafioso en el Chicago de los años 30. 'El golpe' es una comedia de intriga con giros sorprendentes y una banda sonora inolvidable.",
+        "en": "Two con artists plan a complex revenge against a powerful mobster in 1930s Chicago. 'The Sting' is a caper comedy with surprising twists and an unforgettable soundtrack."
+      },
+      "director": "George Roy Hill",
+      "image": "/imagenes/peliculas/el_golpe.jpg",
+      "year": 1973,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=UZ4CuWPnfeM",
+        "en": "https://www.youtube.com/watch?v=_nAIb_J9T5M"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 143,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Pobres criaturas",
+        "en": "Poor Things"
+      },
+      "description": {
+        "es": "Una joven es devuelta a la vida por un científico poco convencional y emprende un viaje de autodescubrimiento y libertad en una versión alternativa de la época victoriana.",
+        "en": "A young woman is brought back to life by an unorthodox scientist and embarks on a journey of self-discovery and freedom in an alternative Victorian era."
+      },
+      "image": "/imagenes/peliculas/poor_things.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=SsEojV8hZ9I",
+        "en": "https://www.youtube.com/watch?v=RlbR5N6veqw"
+      },
+      "director": "Yorgos Lanthimos",
+      "year": 2023,
+      "masterpiece": false
+    },
+    {
+      "id": 145,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "American Beauty",
+        "en": "American Beauty"
+      },
+      "description": {
+        "es": "Un hombre de mediana edad atraviesa una crisis existencial mientras se obsesiona con la amiga de su hija, en una sátira oscura sobre la vida suburbana estadounidense.",
+        "en": "A middle-aged man experiences an existential crisis while becoming infatuated with his daughter's friend, in a dark satire of American suburban life."
+      },
+      "image": "/imagenes/peliculas/american_beauty.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=2nxHDGMOjgQ",
+        "en": "https://www.youtube.com/watch?v=2nxHDGMOjgQ"
+      },
+      "director": "Sam Mendes",
+      "year": 1999,
+      "masterpiece": true,
+      "tags": []
+    },
+    {
+      "id": 147,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Braveheart",
+        "en": "Braveheart"
+      },
+      "description": {
+        "es": "Épica película histórica dirigida y protagonizada por Mel Gibson, que narra la vida de William Wallace y la lucha por la libertad de Escocia.",
+        "en": "Epic historical film directed by and starring Mel Gibson, telling the story of William Wallace and the fight for Scotland's freedom."
+      },
+      "image": "/imagenes/peliculas/braveheart.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=OwJGElRruv8",
+        "en": "https://www.youtube.com/watch?v=1NJO0jxBtMo"
+      },
+      "director": "Mel Gibson",
+      "year": 1995,
+      "masterpiece": false
+    },
+    {
+      "id": 159,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Verdugo",
+        "en": "El Verdugo"
+      },
+      "description": {
+        "es": "Una sátira sobre la pena de muerte y la burocracia en la España franquista, dirigida por Luis García Berlanga.",
+        "en": "A satire on capital punishment and bureaucracy in Francoist Spain, directed by Luis García Berlanga."
+      },
+      "director": "Luis García Berlanga",
+      "image": "/imagenes/peliculas/el_verdugo.jpg",
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=lUwO3YDulg0&t=20s",
+        "en": "https://www.youtube.com/watch?v=lUwO3YDulg0&t=20s"
+      },
+      "year": 1963,
+      "masterpiece": true,
+      "tags": [
+        "spanish"
+      ]
+    },
+    {
+      "id": 163,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Un Día de Furia",
+        "en": "Falling Down"
+      },
+      "description": {
+        "es": "Una película sobre un hombre que enfrenta su límite en un día caluroso en Los Ángeles.",
+        "en": "A film about a man reaching his breaking point on a hot day in Los Angeles."
+      },
+      "director": "Joel Schumacher",
+      "image": "/imagenes/peliculas/un_dia_de_furia.jpg",
+      "year": 1993,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=dEnj4CFQxiY",
+        "en": "https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/"
+      }
+    },
+    {
+      "id": 165,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Forrest Gump",
+        "en": "Forrest Gump"
+      },
+      "description": {
+        "es": "Una película inspiradora sobre la vida de un hombre extraordinario.",
+        "en": "An inspiring film about the life of an extraordinary man."
+      },
+      "director": "Robert Zemeckis",
+      "image": "/imagenes/peliculas/forrest_gump.jpg",
+      "year": 1994,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Cyh1LpxnaxI",
+        "en": "https://www.youtube.com/watch?v=bLvqoHBptjg"
+      }
+    },
+    {
+      "id": 169,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Gladiator",
+        "en": "Gladiator"
+      },
+      "description": {
+        "es": "Una épica película histórica dirigida por Ridley Scott.",
+        "en": "An epic historical film directed by Ridley Scott."
+      },
+      "director": "Ridley Scott",
+      "image": "/imagenes/peliculas/gladiator.jpg",
+      "year": 2000,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=W3xjHIdaGww",
+        "en": "https://www.youtube.com/watch?v=P5ieIbInFpg"
+      }
+    },
+    {
+      "id": 171,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Goodfellas",
+        "en": "Goodfellas"
+      },
+      "description": {
+        "es": "Una película de crimen dirigida por Martin Scorsese.",
+        "en": "A crime film directed by Martin Scorsese."
+      },
+      "director": "Martin Scorsese",
+      "image": "/imagenes/peliculas/goodfellas.jpg",
+      "year": 1990,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Shj-QWYDn_M",
+        "en": "https://www.youtube.com/watch?v=2ilzidi_J8Q"
+      }
+    },
+    {
+      "id": 175,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "La Lista de Schindler",
+        "en": "Schindler's List"
+      },
+      "description": {
+        "es": "Una película histórica sobre el Holocausto dirigida por Steven Spielberg.",
+        "en": "A historical film about the Holocaust directed by Steven Spielberg."
+      },
+      "director": "Steven Spielberg",
+      "image": "/imagenes/peliculas/schindlers_list.jpg",
+      "year": 1993,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=7q-ETFeMxwI",
+        "en": "https://www.youtube.com/watch?v=gG22XNhtnoY"
+      }
+    },
+    {
+      "id": 178,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "En el Nombre del Padre",
+        "en": "In the Name of the Father"
+      },
+      "description": {
+        "es": "Una película dramática basada en hechos reales sobre la injusticia.",
+        "en": "A dramatic film based on true events about injustice."
+      },
+      "director": "Jim Sheridan",
+      "image": "/imagenes/peliculas/in_the_name_of_the_father.jpg",
+      "year": 1993,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=YDAU5B5ZMxI",
+        "en": "https://www.youtube.com/watch?v=_FVkvkiL6Qk"
+      }
+    },
+    {
+      "id": 181,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Gran Viaje",
+        "en": "The Great Journey"
+      },
+      "description": {
+        "es": "Un padre musulmán anciano y su hijo francés emprenden un viaje por carretera desde Francia hasta La Meca. Durante el trayecto, ambos deberán enfrentar sus diferencias culturales y personales mientras descubren el verdadero significado de la fe y la familia.",
+        "en": "An elderly Muslim father and his French son embark on a road trip from France to Mecca. During the journey, they must confront their cultural and personal differences while discovering the true meaning of faith and family."
+      },
+      "director": "Ismaël Ferroukhi",
+      "image": "/imagenes/peliculas/el_gran_viaje.jpg",
+      "year": 2004,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=x64Xv_yu9BY",
+        "en": "https://www.youtube.com/watch?v=x64Xv_yu9BY"
+      }
+    },
+    {
+      "id": 189,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Odio",
+        "en": "La Haine"
+      },
+      "description": {
+        "es": "Un poderoso drama social que sigue a tres jóvenes de diferentes orígenes étnicos durante 24 horas en los suburbios de París, después de que un amigo suyo sea brutalmente golpeado por la policía. Una mirada cruda y realista a la violencia urbana y la tensión social.",
+        "en": "A powerful social drama that follows three young men from different ethnic backgrounds over 24 hours in the Paris suburbs, after their friend is brutally beaten by the police. A raw and realistic look at urban violence and social tension."
+      },
+      "director": "Mathieu Kassovitz",
+      "image": "/imagenes/peliculas/la_haine.jpg",
+      "year": 1995,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=-HJrtVbsKOE",
+        "en": "https://www.youtube.com/watch?v=OfE0o9B3dhI"
+      }
+    },
+    {
+      "id": 190,
+      "category": "movies",
+      "subcategory": "drama",
+      "tags": [
+        "spanish"
+      ],
+      "title": {
+        "es": "La Lengua de las Mariposas",
+        "en": "Butterfly's Tongue"
+      },
+      "description": {
+        "es": "Un emotivo drama ambientado en la España de 1936 que narra la relación entre un niño y su maestro, y cómo la guerra civil española afecta a su amistad. Una historia sobre la inocencia, la educación y las consecuencias de la guerra.",
+        "en": "An emotional drama set in 1936 Spain that tells the story of a boy and his teacher, and how the Spanish Civil War affects their friendship. A story about innocence, education, and the consequences of war."
+      },
+      "director": "José Luis Cuerda",
+      "image": "/imagenes/peliculas/la_lengua_de_las_mariposas.jpg",
+      "year": 1999,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=IEzOxMriGTE",
+        "en": "https://www.youtube.com/watch?v=IEzOxMriGTE"
+      }
+    },
+    {
+      "id": 192,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "La Secretaria",
+        "en": "Secretary"
+      },
+      "description": {
+        "es": "Una joven con problemas emocionales encuentra trabajo como secretaria de un abogado. Entre ellos se desarrolla una relación compleja que mezcla el poder, el control y el deseo, desafiando las convenciones sociales.",
+        "en": "A young woman with emotional problems gets a job as a lawyer's secretary. A complex relationship develops between them that mixes power, control, and desire, challenging social conventions."
+      },
+      "director": "Steven Shainberg",
+      "image": "/imagenes/peliculas/secretary.jpg",
+      "year": 2002,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=xn33mvWX9W8",
+        "en": "https://www.youtube.com/watch?v=xn33mvWX9W8"
+      }
+    },
+    {
+      "id": 196,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "La Vida es Bella",
+        "en": "Life is Beautiful"
+      },
+      "description": {
+        "es": "Un padre judío utiliza su imaginación para proteger a su hijo pequeño de los horrores de un campo de concentración nazi, convirtiendo su terrible realidad en un juego. Una conmovedora historia sobre el amor paternal y la esperanza en los momentos más oscuros.",
+        "en": "A Jewish father uses his imagination to protect his young son from the horrors of a Nazi concentration camp, turning their terrible reality into a game. A moving story about paternal love and hope in the darkest moments."
+      },
+      "director": "Roberto Benigni",
+      "image": "/imagenes/peliculas/la_vida_es_bella.jpg",
+      "year": 1997,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=e-Z062tRdbQ",
+        "en": "https://www.youtube.com/watch?v=8CTjcVr9Iao"
+      }
+    },
+    {
+      "id": 197,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Último Emperador",
+        "en": "The Last Emperor"
+      },
+      "description": {
+        "es": "La épica historia de Pu Yi, el último emperador de China, desde su infancia en la Ciudad Prohibida hasta su vida como ciudadano común en la China comunista. Una obra maestra cinematográfica que retrata la transformación de un país y un hombre.",
+        "en": "The epic story of Pu Yi, the last emperor of China, from his childhood in the Forbidden City to his life as an ordinary citizen in communist China. A cinematic masterpiece that portrays the transformation of a country and a man."
+      },
+      "director": "Bernardo Bertolucci",
+      "image": "/imagenes/peliculas/last_emperor.jpg",
+      "year": 1987,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=A4cH6g1wD5g",
+        "en": "https://www.youtube.com/watch?v=A4cH6g1wD5g"
+      }
+    },
+    {
+      "id": 198,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Gran Torino",
+        "en": "Gran Torino"
+      },
+      "description": {
+        "es": "Un veterano de la Guerra de Corea, racista y gruñón, se ve forzado a confrontar sus prejuicios cuando se hace amigo de su vecino hmong. Una poderosa historia sobre la redención, la amistad y el cambio generacional.",
+        "en": "A racist, grumpy Korean War veteran is forced to confront his prejudices when he befriends his Hmong neighbor. A powerful story about redemption, friendship, and generational change."
+      },
+      "director": "Clint Eastwood",
+      "image": "/imagenes/peliculas/gran_torino.jpg",
+      "year": 2008,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=U_bZWFLTp-c",
+        "en": "https://www.youtube.com/watch?v=RMhbr2XQblk"
+      }
+    },
+    {
+      "id": 201,
+      "category": "movies",
+      "subcategory": "drama",
+      "tags": [
+        "spanish"
+      ],
+      "title": {
+        "es": "Los Santos Inocentes",
+        "en": "The Holy Innocents"
+      },
+      "description": {
+        "es": "Un poderoso drama social que retrata la vida de una familia de campesinos en la España rural de los años 60, mostrando las duras condiciones de vida y la relación con los terratenientes. Una obra maestra del cine español.",
+        "en": "A powerful social drama that portrays the life of a peasant family in rural Spain of the 60s, showing the harsh living conditions and their relationship with landowners. A masterpiece of Spanish cinema."
+      },
+      "director": "Mario Camus",
+      "image": "/imagenes/peliculas/los_santos_inocentes.jpg",
+      "year": 1984,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=XFHnRFxGGGE",
+        "en": "https://www.youtube.com/watch?v=XFHnRFxGGGE"
+      }
+    },
+    {
+      "id": 203,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Memorias de África",
+        "en": "Out of Africa"
+      },
+      "description": {
+        "es": "La historia real de Karen Blixen, una escritora danesa que se traslada a Kenia para dirigir una plantación de café. Una épica historia de amor, aventura y descubrimiento personal en el África colonial.",
+        "en": "The true story of Karen Blixen, a Danish writer who moves to Kenya to run a coffee plantation. An epic tale of love, adventure, and self-discovery in colonial Africa."
+      },
+      "director": "Sydney Pollack",
+      "image": "/imagenes/peliculas/memorias_de_africa.jpg",
+      "year": 1985,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=imkMgjgRoEI",
+        "en": "https://www.youtube.com/watch?v=2EW2kNCmZZ0"
+      }
+    },
+    {
+      "id": 205,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Million Dollar Baby",
+        "en": "Million Dollar Baby"
+      },
+      "description": {
+        "es": "Un entrenador de boxeo retirado y amargado encuentra un nuevo propósito cuando una joven boxeadora le pide que la entrene. Una historia conmovedora sobre la determinación, la redención y los sacrificios necesarios para alcanzar los sueños.",
+        "en": "A retired and bitter boxing trainer finds new purpose when a young female boxer asks him to train her. A moving story about determination, redemption, and the sacrifices necessary to achieve dreams."
+      },
+      "director": "Clint Eastwood",
+      "image": "/imagenes/peliculas/million_dolar_baby.jpg",
+      "year": 2004,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=gGjdfvD91zQ",
+        "en": "https://www.youtube.com/watch?v=5_RsHRmIRBY"
+      }
+    },
+    {
+      "id": 206,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Mystic River",
+        "en": "Mystic River"
+      },
+      "description": {
+        "es": "Tres amigos de la infancia se reencuentran cuando la hija de uno de ellos es asesinada. Un drama psicológico que explora el impacto del pasado en el presente y las consecuencias de los traumas infantiles.",
+        "en": "Three childhood friends reunite when one of their daughters is murdered. A psychological drama that explores the impact of the past on the present and the consequences of childhood trauma."
+      },
+      "director": "Clint Eastwood",
+      "image": "/imagenes/peliculas/mystic_river.jpg",
+      "year": 2003,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=iCYoGicgruU",
+        "en": "https://www.youtube.com/watch?v=W7NktJhrRYQ"
+      }
+    },
+    {
+      "id": 209,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Novecento",
+        "en": "1900"
+      },
+      "description": {
+        "es": "Una épica historia que sigue la vida de dos hombres nacidos el mismo día en una finca italiana, uno hijo de terratenientes y otro de campesinos, y cómo sus vidas se entrelazan durante los cambios sociales y políticos de la primera mitad del siglo XX.",
+        "en": "An epic story that follows the lives of two men born on the same day on an Italian estate, one the son of landowners and the other of peasants, and how their lives intertwine during the social and political changes of the first half of the 20th century."
+      },
+      "director": "Bernardo Bertolucci",
+      "image": "/imagenes/peliculas/novecento.jpg",
+      "year": 1976,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=-glVNadIXtM",
+        "en": "https://www.youtube.com/watch?v=-glVNadIXtM"
+      }
+    },
+    {
+      "id": 211,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Alguien Voló Sobre el Nido del Cuco",
+        "en": "One Flew Over the Cuckoo's Nest"
+      },
+      "description": {
+        "es": "Un hombre es internado en un hospital psiquiátrico donde se enfrenta a la rígida autoridad de la enfermera Ratched. Una poderosa historia sobre la libertad, la rebelión y la lucha contra la opresión institucional.",
+        "en": "A man is committed to a psychiatric hospital where he faces the rigid authority of Nurse Ratched. A powerful story about freedom, rebellion, and the fight against institutional oppression."
+      },
+      "director": "Milos Forman",
+      "image": "/imagenes/peliculas/one_flew.jpg",
+      "year": 1975,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=-pNMIhnlEho",
+        "en": "https://www.youtube.com/watch?v=OXrcDonY-B8"
+      }
+    },
+    {
+      "id": 214,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Pianista",
+        "en": "The Pianist"
+      },
+      "description": {
+        "es": "Basada en la historia real de Władysław Szpilman, un pianista judío que sobrevive al Holocausto en Varsovia. Una conmovedora historia sobre la supervivencia, la música y la humanidad en tiempos de guerra.",
+        "en": "Based on the true story of Władysław Szpilman, a Jewish pianist who survives the Holocaust in Warsaw. A moving story about survival, music, and humanity in times of war."
+      },
+      "director": "Roman Polanski",
+      "image": "/imagenes/peliculas/the_pianist.jpg",
+      "year": 2002,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=qDexUwamV9I",
+        "en": "https://www.youtube.com/watch?v=BFwGqLa_oAo"
+      }
+    },
+    {
+      "id": 217,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Ran",
+        "en": "Ran"
+      },
+      "description": {
+        "es": "Una adaptación de 'El Rey Lear' de Shakespeare ambientada en el Japón feudal. Un anciano señor de la guerra divide su reino entre sus tres hijos, desencadenando una tragedia de ambición, traición y venganza.",
+        "en": "An adaptation of Shakespeare's 'King Lear' set in feudal Japan. An aging warlord divides his kingdom among his three sons, unleashing a tragedy of ambition, betrayal, and revenge."
+      },
+      "director": "Akira Kurosawa",
+      "image": "/imagenes/peliculas/ran.jpg",
+      "year": 1985,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Q_O7S9btYrs",
+        "en": "https://www.youtube.com/watch?v=YwP_kXyd-Rw"
+      }
+    },
+    {
+      "id": 218,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Rashomon",
+        "en": "Rashomon"
+      },
+      "description": {
+        "es": "Un crimen es contado desde cuatro perspectivas diferentes, cada una con su propia versión de la verdad. Una obra maestra que explora la naturaleza subjetiva de la realidad y la dificultad de conocer la verdad absoluta.",
+        "en": "A crime is told from four different perspectives, each with its own version of the truth. A masterpiece that explores the subjective nature of reality and the difficulty of knowing absolute truth."
+      },
+      "director": "Akira Kurosawa",
+      "image": "/imagenes/peliculas/rashomon.jpg",
+      "year": 1950,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=d-CQ5BI9nds",
+        "en": "https://www.youtube.com/watch?v=xCZ9TguVOIA"
+      }
+    },
+    {
+      "id": 219,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Relatos Salvajes",
+        "en": "Wild Tales"
+      },
+      "description": {
+        "es": "Una antología de seis historias cortas que exploran la violencia, la venganza y la corrupción en la sociedad argentina contemporánea. Una película que combina el humor negro con la crítica social.",
+        "en": "An anthology of six short stories that explore violence, revenge, and corruption in contemporary Argentine society. A film that combines black humor with social criticism."
+      },
+      "director": "Damián Szifron",
+      "image": "/imagenes/peliculas/relatos_salvajes.jpg",
+      "year": 2014,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=CzJM3jYKjAg",
+        "en": "https://www.youtube.com/watch?v=Utq0aDEp084"
+      }
+    },
+    {
+      "id": 221,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Samba",
+        "en": "Samba"
+      },
+      "description": {
+        "es": "Un inmigrante senegalés en Francia lucha por obtener sus papeles mientras trabaja como lavaplatos. Una historia sobre la inmigración, la solidaridad y la esperanza en medio de las dificultades.",
+        "en": "A Senegalese immigrant in France struggles to obtain his papers while working as a dishwasher. A story about immigration, solidarity, and hope in the midst of difficulties."
+      },
+      "director": "Olivier Nakache, Éric Toledano",
+      "image": "/imagenes/peliculas/samba.jpg",
+      "year": 2014,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=1xIomK9BpGs",
+        "en": "https://www.youtube.com/watch?v=VBknhcuPCfs"
+      }
+    },
+    {
+      "id": 222,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Intocables",
+        "en": "The Intouchables"
+      },
+      "description": {
+        "es": "Basada en una historia real, narra la inusual amistad entre un millonario tetrapléjico y su cuidador, un joven de los suburbios con antecedentes penales. Una conmovedora historia sobre la amistad, la superación y la dignidad humana.",
+        "en": "Based on a true story, it tells the unusual friendship between a quadriplegic millionaire and his caregiver, a young man from the suburbs with a criminal record. A moving story about friendship, overcoming adversity, and human dignity."
+      },
+      "director": "Olivier Nakache, Éric Toledano",
+      "image": "/imagenes/peliculas/intocables.jpg",
+      "year": 2011,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=drQRl0-nZw4",
+        "en": "https://www.youtube.com/watch?v=oK5hMNxqsFA"
+      }
+    },
+    {
+      "id": 224,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Rebelión",
+        "en": "Samurai Rebellion"
+      },
+      "description": {
+        "es": "Un samurái retirado y su hijo se enfrentan a su señor feudal cuando este exige que la nuera regrese a su palacio. Una poderosa historia sobre el honor, la lealtad y la rebelión contra la injusticia en el Japón feudal.",
+        "en": "A retired samurai and his son face their feudal lord when he demands the return of their daughter-in-law to his palace. A powerful story about honor, loyalty, and rebellion against injustice in feudal Japan."
+      },
+      "director": "Masaki Kobayashi",
+      "image": "/imagenes/peliculas/samurai_rebellion.jpg",
+      "year": 1967,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=GTkERWlcJB0",
+        "en": "https://www.youtube.com/watch?v=GTkERWlcJB0"
+      }
+    },
+    {
+      "id": 226,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Scarface",
+        "en": "Scarface"
+      },
+      "description": {
+        "es": "Un inmigrante cubano llega a Miami y se convierte en un poderoso narcotraficante. Una historia épica sobre la ambición, el poder y la caída, protagonizada por Al Pacino en uno de sus papeles más icónicos.",
+        "en": "A Cuban immigrant arrives in Miami and becomes a powerful drug lord. An epic story about ambition, power, and downfall, starring Al Pacino in one of his most iconic roles."
+      },
+      "director": "Brian De Palma",
+      "image": "/imagenes/peliculas/scarface.jpg",
+      "year": 1983,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Q7TbPvMBmzM",
+        "en": "https://www.youtube.com/watch?v=7pQQHnqBa2E"
+      }
+    },
+    {
+      "id": 227,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Taxi Driver",
+        "en": "Taxi Driver"
+      },
+      "description": {
+        "es": "Un veterano de Vietnam con insomnio trabaja como taxista nocturno en las calles de Nueva York, donde se ve envuelto en un mundo de violencia y corrupción. Una obra maestra de Martin Scorsese que explora la soledad y la alienación en la sociedad moderna.",
+        "en": "A Vietnam veteran with insomnia works as a night taxi driver in the streets of New York, where he becomes involved in a world of violence and corruption. A Martin Scorsese masterpiece that explores loneliness and alienation in modern society."
+      },
+      "director": "Martin Scorsese",
+      "image": "/imagenes/peliculas/taxi_driver.jpg",
+      "year": 1976,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=f-WNguoS_QA",
+        "en": "https://www.youtube.com/watch?v=T5IligQP7Fo"
+      }
+    },
+    {
+      "id": 228,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Esencia de Mujer",
+        "en": "Scent of a Woman"
+      },
+      "description": {
+        "es": "Un estudiante universitario acepta un trabajo cuidando a un teniente coronel ciego y amargado durante el fin de semana de Acción de Gracias. Una historia conmovedora sobre la amistad, la integridad y la redención, con una actuación memorable de Al Pacino.",
+        "en": "A college student takes a job looking after a bitter, blind retired lieutenant colonel over Thanksgiving weekend. A moving story about friendship, integrity, and redemption, featuring a memorable performance by Al Pacino."
+      },
+      "director": "Martin Brest",
+      "image": "/imagenes/peliculas/scent_of_a_woman.jpg",
+      "year": 1992,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=jJl4uZgc_BM",
+        "en": "https://www.youtube.com/watch?v=losLAzU9YCk"
+      }
+    },
+    {
+      "id": 229,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Cadena Perpetua",
+        "en": "The Shawshank Redemption"
+      },
+      "description": {
+        "es": "La historia de amistad entre dos hombres encarcelados durante varias décadas en la prisión de Shawshank. Una conmovedora historia sobre la esperanza, la amistad y la redención, considerada una de las mejores películas de todos los tiempos.",
+        "en": "The story of friendship between two men imprisoned for several decades in Shawshank prison. A moving story about hope, friendship, and redemption, considered one of the greatest films of all time."
+      },
+      "director": "Frank Darabont",
+      "image": "/imagenes/peliculas/cadena_perpetua.jpg",
+      "year": 1994,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=FyP4rXUmQ2U",
+        "en": "https://www.youtube.com/watch?v=PLl99DlL6b4"
+      }
+    },
+    {
+      "id": 237,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Thelma y Louise",
+        "en": "Thelma & Louise"
+      },
+      "description": {
+        "es": "Dos amigas emprenden un viaje por carretera que se convierte en una huida cuando una de ellas mata a un hombre en defensa propia. Un road movie que se ha convertido en un ícono del feminismo y la amistad femenina.",
+        "en": "Two friends embark on a road trip that turns into a flight when one of them kills a man in self-defense. A road movie that has become an icon of feminism and female friendship."
+      },
+      "director": "Ridley Scott",
+      "image": "/imagenes/peliculas/thelma_y_louise.jpg",
+      "year": 1991,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=nFNB7BSCRig",
+        "en": "https://www.youtube.com/watch?v=2iBFmKlO4BY"
+      }
+    },
+    {
+      "id": 238,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Hombre de la Tierra",
+        "en": "The Man from Earth"
+      },
+      "description": {
+        "es": "Un profesor universitario revela a sus colegas que ha vivido durante 14,000 años, desencadenando un intenso debate filosófico y científico. Una película de ciencia ficción minimalista que explora conceptos profundos a través del diálogo.",
+        "en": "A university professor reveals to his colleagues that he has lived for 14,000 years, triggering an intense philosophical and scientific debate. A minimalist science fiction film that explores deep concepts through dialogue."
+      },
+      "director": "Richard Schenkman",
+      "image": "/imagenes/peliculas/the_man_from_earth.jpg",
+      "year": 2007,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=MjW2hv_Uw2U",
+        "en": "https://www.youtube.com/watch?v=MjW2hv_Uw2U"
+      }
+    },
+    {
+      "id": 242,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Último Samurái",
+        "en": "The Twilight Samurai"
+      },
+      "description": {
+        "es": "Un samurái de bajo rango en el Japón del siglo XIX lucha por mantener a su familia mientras el país se moderniza. Una historia íntima y conmovedora sobre el honor, la familia y el cambio social en el Japón feudal.",
+        "en": "A low-ranking samurai in 19th century Japan struggles to support his family as the country modernizes. An intimate and moving story about honor, family, and social change in feudal Japan."
+      },
+      "director": "Yoji Yamada",
+      "image": "/imagenes/peliculas/the_twilight_samurai.jpg",
+      "year": 2002,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=ZZ2vWyhjXDw",
+        "en": "https://www.youtube.com/watch?v=VAepcd9zwgg"
+      }
+    },
+    {
+      "id": 244,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Uno de los Nuestros",
+        "en": "Goodfellas"
+      },
+      "description": {
+        "es": "La historia real de Henry Hill y su vida en la mafia neoyorquina, desde su juventud hasta su caída. Una obra maestra de Martin Scorsese que retrata con crudeza y realismo el mundo del crimen organizado.",
+        "en": "The true story of Henry Hill and his life in the New York mafia, from his youth to his downfall. A Martin Scorsese masterpiece that portrays the world of organized crime with rawness and realism."
+      },
+      "director": "Martin Scorsese",
+      "image": "/imagenes/peliculas/goodfellas.jpg",
+      "year": 1990,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Shj-QWYDn_M",
+        "en": "https://www.youtube.com/watch?v=2ilzidi_J8Q"
+      }
+    },
+    {
+      "id": 247,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Guerrero",
+        "en": "The Warrior"
+      },
+      "description": {
+        "es": "Una pandilla llamada los Warriors debe luchar para regresar a su territorio en Nueva York después de ser acusados de un asesinato que no cometieron. Una historia de supervivencia urbana y lealtad.",
+        "en": "A gang called the Warriors must fight their way back to their turf in New York after being framed for a murder they didn't commit. A story of urban survival and loyalty."
+      },
+      "director": "Walter Hill",
+      "year": 1979,
+      "image": "/imagenes/peliculas/the_warriors.jpg",
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=4Tv284k2OkU",
+        "en": "https://www.youtube.com/watch?v=--gdB-nnQkU"
+      }
+    },
+    {
+      "id": 249,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Yojimbo",
+        "en": "Yojimbo"
+      },
+      "description": {
+        "es": "Un ronin sin amo llega a un pueblo dividido por dos bandas criminales y decide enfrentarlas entre sí. Una obra maestra de Akira Kurosawa que influyó en el género western y estableció nuevos estándares para el cine de acción.",
+        "en": "A masterless samurai arrives in a town divided by two criminal gangs and decides to pit them against each other. An Akira Kurosawa masterpiece that influenced the western genre and set new standards for action cinema."
+      },
+      "director": "Akira Kurosawa",
+      "image": "/imagenes/peliculas/yojimbo.jpg",
+      "year": 1961,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=tAeUV8fw00A",
+        "en": "https://www.youtube.com/watch?v=y_1iT_GmHTE"
+      }
+    },
+    {
+      "id": 276,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Caballero Oscuro",
+        "en": "The Dark Knight"
+      },
+      "description": {
+        "es": "Batman se enfrenta a su mayor desafío cuando el Joker siembra el caos en Gotham City. Una obra maestra que trasciende el género de superhéroes para convertirse en un drama psicológico.",
+        "en": "Batman faces his greatest challenge when the Joker sows chaos in Gotham City. A masterpiece that transcends the superhero genre to become a psychological drama."
+      },
+      "director": "Christopher Nolan",
+      "image": "/imagenes/peliculas/dark_knight.jpg",
+      "year": 2008,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=dzQtWkpc2-c",
+        "en": "https://www.youtube.com/watch?v=EXeTwQWrcwY"
+      }
+    },
+    {
+      "id": 278,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Club de la Lucha",
+        "en": "Fight Club"
+      },
+      "description": {
+        "es": "Un oficinista insomne y un carismático vendedor de jabón forman un club clandestino donde los hombres pueden liberar su agresividad. Una crítica a la sociedad de consumo y la masculinidad tóxica.",
+        "en": "An insomniac office worker and a charismatic soap salesman form an underground club where men can release their aggression. A critique of consumer society and toxic masculinity."
+      },
+      "director": "David Fincher",
+      "image": "/imagenes/peliculas/fight_club.jpg",
+      "year": 1999,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=eUm7FNowyNo",
+        "en": "https://www.youtube.com/watch?v=SUXWAEX2jlg"
+      }
+    },
+    {
+      "id": 279,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "La Milla Verde",
+        "en": "The Green Mile"
+      },
+      "description": {
+        "es": "Un guardia de prisión en los años 30 descubre que uno de los reclusos condenados a muerte posee un don sobrenatural. Una historia sobre la redención, la injusticia y la humanidad.",
+        "en": "A prison guard in the 1930s discovers that one of the death row inmates possesses a supernatural gift. A story about redemption, injustice, and humanity."
+      },
+      "director": "Frank Darabont",
+      "image": "/imagenes/peliculas/green_mile.jpg",
+      "year": 1999,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=hBtSF4-cnzk",
+        "en": "https://www.youtube.com/watch?v=Ki4haFrqSrw"
+      }
+    },
+    {
+      "id": 280,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Parásitos",
+        "en": "Parasite"
+      },
+      "description": {
+        "es": "Una familia pobre se infiltra en la vida de una familia adinerada, desencadenando una serie de eventos inesperados. Una sátira social que explora la desigualdad y el clasismo.",
+        "en": "A poor family infiltrates the life of a wealthy family, triggering a series of unexpected events. A social satire that explores inequality and classism."
+      },
+      "director": "Bong Joon-ho",
+      "image": "/imagenes/peliculas/parasite.jpg",
+      "year": 2019,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=90dWVETAdtI",
+        "en": "https://www.youtube.com/watch?v=5xH0HfJHsaY"
+      }
+    },
+    {
+      "id": 282,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Ciudadano Kane",
+        "en": "Citizen Kane"
+      },
+      "description": {
+        "es": "La vida y el legado de Charles Foster Kane, un magnate de los medios, son investigados a través de diferentes perspectivas. Considerada una de las mejores películas de la historia del cine.",
+        "en": "The life and legacy of Charles Foster Kane, a media magnate, are investigated through different perspectives. Considered one of the greatest films in cinema history."
+      },
+      "director": "Orson Welles",
+      "image": "/imagenes/peliculas/citizen_kane.jpg",
+      "year": 1941,
+      "masterpiece": true,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=Ut7SlUa25l4",
+        "en": "https://www.youtube.com/watch?v=8dxh3lwdOFw"
+      }
+    },
+    {
+      "id": 285,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "El Show de Truman",
+        "en": "The Truman Show"
+      },
+      "description": {
+        "es": "Un hombre descubre que su vida entera ha sido un reality show televisado. Una sátira sobre los medios de comunicación y la privacidad en la era moderna.",
+        "en": "A man discovers that his entire life has been a televised reality show. A satire about media and privacy in the modern era."
+      },
+      "director": "Peter Weir",
+      "image": "/imagenes/peliculas/truman_show.jpg",
+      "year": 1998,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=U6jYmOnnImI",
+        "en": "https://www.youtube.com/watch?v=loTIzXAS7v4"
+      }
+    },
+    {
+      "id": 286,
+      "category": "movies",
+      "subcategory": "drama",
+      "tags": [
+        "spanish"
+      ],
+      "title": {
+        "es": "El Laberinto del Fauno",
+        "en": "Pan's Labyrinth"
+      },
+      "description": {
+        "es": "Una niña se refugia en un mundo de fantasía para escapar de la dura realidad de la posguerra española. Una mezcla magistral de realismo histórico y fantasía oscura.",
+        "en": "A girl takes refuge in a fantasy world to escape the harsh reality of post-war Spain. A masterful blend of historical realism and dark fantasy."
+      },
+      "director": "Guillermo del Toro",
+      "image": "/imagenes/peliculas/pans_labyrinth.jpg",
+      "year": 2006,
+      "masterpiece": false,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=FGzvvUBXj5M",
+        "en": "https://www.youtube.com/watch?v=EqYiSlkvRuw"
+      }
+    }
+  ]
+}
