@@ -1,6 +1,19 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self' https://*.paypal.com https://*.paypalobjects.com;
+               script-src 'self' 'unsafe-inline' https://*.paypal.com https://*.paypalobjects.com;
+               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+               font-src 'self' https://fonts.gstatic.com;
+               img-src 'self' data: https: blob:;
+               connect-src 'self' https://*.paypal.com https://*.paypalobjects.com;
+               frame-src 'self' https://*.paypal.com https://*.paypalobjects.com;
+               object-src 'none';
+               base-uri 'self';
+               geolocation 'none';
+               permissions-policy geolocation=();" />
     <script>
       // Register Service Worker to block geolocation
       if ('serviceWorker' in navigator) {
@@ -38,16 +51,9 @@
           watchPosition: function(s){ s && setTimeout(()=>s({coords:{latitude:40.4,longitude:-3.7}}),1); return 1; },
           clearWatch: function(){}
         };
-        try { 
-          Object.defineProperty(navigator, 'geolocation', { 
-            value: mockGeo, 
-            configurable: false,
-            enumerable: true
-          }); 
-        } catch(e){}
+        try { Object.defineProperty(navigator, 'geolocation', { value: mockGeo, writable: false, configurable: false }); } catch(e){}
       })();
     </script>
-    <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
