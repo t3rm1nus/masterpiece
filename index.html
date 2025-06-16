@@ -23,18 +23,15 @@
       
       // Detectar si es móvil para cargar SDK apropiado
       const isMobileDevice = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-      
-      // Configuración específica para localhost
+        // Configuración específica para localhost vs producción
       let sdkUrl;
       if (window.isLocalhost) {
-        // En localhost, usar configuración más permisiva
-        sdkUrl = isMobileDevice 
-          ? "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&intent=capture&vault=false&locale=es_ES&debug=true"
-          : "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&intent=capture&vault=false&locale=es_ES&debug=true";
+        // En localhost, deshabilitar tarjetas para evitar errores de desarrollo
+        sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&intent=capture&vault=false&locale=es_ES&debug=true";
       } else {
-        // En producción, configuración normal
+        // En producción, configuración normal según dispositivo
         sdkUrl = isMobileDevice 
-          ? "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&intent=capture&vault=false&locale=es_ES"
+          ? "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo&currency=EUR&intent=capture&vault=false&locale=es_ES"
           : "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo&currency=EUR&intent=capture&vault=false&locale=es_ES";
       }
       
@@ -43,11 +40,11 @@
       script.crossOrigin = 'anonymous';
       script.async = true;
       document.head.appendChild(script);
-      
-      console.log('PayPal SDK cargado para:', {
+        console.log('PayPal SDK cargado para:', {
         environment: window.isLocalhost ? 'localhost' : 'production',
         device: isMobileDevice ? 'móvil' : 'desktop',
-        cards: window.isLocalhost ? 'deshabilitadas (localhost)' : (isMobileDevice ? 'deshabilitadas (móvil)' : 'habilitadas')
+        cards: window.isLocalhost ? 'deshabilitadas (localhost)' : 'habilitadas',
+        paypal: 'habilitado'
       });
     </script><!-- Script para configurar permisos antes de PayPal -->
     <script>
@@ -193,10 +190,8 @@
                 label: 'donate',
                 height: 44,
                 tagline: false
-              },
-              
-              // Configurar métodos de pago según el dispositivo
-              fundingSource: isMobile() ? window.paypal.FUNDING.PAYPAL : undefined,
+              },              // Configurar métodos de pago: solo restringir en localhost
+              fundingSource: window.isLocalhost ? window.paypal.FUNDING.PAYPAL : undefined,
               
               createOrder: function(data, actions) {
                 // Obtener la cantidad del input o usar 5 EUR por defecto
@@ -539,13 +534,57 @@
         }, 1000);
       });
     </script>
-    
-    <!-- Script para suprimir warnings específicos de PayPal que no afectan la funcionalidad -->
+      <!-- Script para suprimir warnings específicos de PayPal que no afectan la funcionalidad -->
     <script>
-      // Interceptar y filtrar warnings de PayPal en desarrollo
+      // Interceptar y filtrar warnings de PayPal en desarrollo y producción
       const originalError = console.error;
-      const originalWarn = console.warn;      console.error = function(...args) {
+      const originalWarn = console.warn;
+      const originalLog = console.log;
+        // Interceptar errores específicos de undefined + string que vienen de PayPal atomics
+      const originalConsoleMethod = console.log;
+      const checkPayPalAtomicsError = function(args) {
+        // Verificar si es el patrón: undefined 'atomics_error_getting_devlogger_extension'
+        if (args.length === 2 && 
+            args[0] === undefined && 
+            typeof args[1] === 'string' && 
+            args[1].includes('atomics_error_getting_devlogger_extension')) {
+          return true;
+        }
+        
+        // Verificar si contiene SecurityError de PayPal
+        if (args.some(arg => 
+          typeof arg === 'object' && 
+          arg instanceof Error && 
+          arg.message && 
+          (arg.message.includes('Blocked a frame with origin') ||
+           arg.message.includes('__ATOMIC_EVENTS_DEV_LOGGER__')))) {
+          return true;
+        }
+        
+        return false;
+      };
+      
+      // Sobrescribir console.log para interceptar errores de atomics
+      console.log = function(...args) {
+        if (checkPayPalAtomicsError(args)) {
+          return; // Suprimir estos errores específicos
+        }
+        
         const message = args.join(' ');
+        const logString = JSON.stringify(args);
+        
+        // Filtrar logs específicos de PayPal atomics
+        if (message.includes('atomics_error_getting_devlogger_extension') ||
+            message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
+            logString.includes('atomics_error_getting_devlogger_extension') ||
+            logString.includes('__ATOMIC_EVENTS_DEV_LOGGER__')) {
+          return; // No mostrar estos logs
+        }
+        originalLog.apply(console, args);
+      };console.error = function(...args) {
+        const message = args.join(' ');
+        const errorString = JSON.stringify(args);
+        
         // Filtrar errores específicos de PayPal y Redux que no afectan la funcionalidad
         if (message.includes('ncps_standalone_paylater_ineligible') || 
             message.includes('paylater_ineligible') ||
@@ -556,19 +595,30 @@
             message.includes('geolocation is not allowed') ||
             message.includes('DOMESTIC_TRANSACTION_REQUIRED') ||
             message.includes('scf_unhandled_error') ||
-            message.includes('Symbol.observable as defined by Redux')) {
+            message.includes('Symbol.observable as defined by Redux') ||
+            message.includes('atomics_error_getting_devlogger_extension') ||
+            message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
+            message.includes('Blocked a frame with origin') ||
+            message.includes('cross-origin frame') ||
+            errorString.includes('atomics_error_getting_devlogger_extension') ||
+            errorString.includes('__ATOMIC_EVENTS_DEV_LOGGER__')) {
           return; // No mostrar estos errores
         }
         originalError.apply(console, args);
-      };
-        console.warn = function(...args) {
+      };      console.warn = function(...args) {
         const message = args.join(' ');
+        const warnString = JSON.stringify(args);
+        
         // Filtrar warnings relacionados con PayPal y Redux
         if (message.includes('ncps_standalone_paylater_ineligible') || 
             message.includes('paylater_ineligible') ||
             message.includes('Pay Later ineligible') ||
             message.includes('paypal_js_sdk') ||
-            message.includes('Symbol.observable as defined by Redux')) {
+            message.includes('Symbol.observable as defined by Redux') ||
+            message.includes('atomics_error_getting_devlogger_extension') ||
+            message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
+            warnString.includes('atomics_error_getting_devlogger_extension') ||
+            warnString.includes('__ATOMIC_EVENTS_DEV_LOGGER__')) {
           return; // No mostrar estos warnings
         }
         originalWarn.apply(console, args);
@@ -581,21 +631,49 @@
              event.error.message.includes('geolocation is not allowed') ||
              event.error.message.includes('DOMESTIC_TRANSACTION_REQUIRED') ||
              event.error.message.includes('scf_unhandled_error') ||
-             event.filename && event.filename.includes('paypal.com'))) {
+             event.error.message.includes('atomics_error_getting_devlogger_extension') ||
+             event.error.message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
+             event.error.message.includes('Blocked a frame with origin') ||
+             event.error.message.includes('cross-origin frame') ||
+             (event.filename && event.filename.includes('paypal.com')))) {
           event.preventDefault();
           return true;
         }
       });
       
-      // Interceptar específicamente errores de geolocalización
+      // Interceptar específicamente errores de geolocalización y atomics
       window.addEventListener('unhandledrejection', function(event) {
         if (event.reason && 
             (event.reason.message?.includes('geolocation') ||
              event.reason.toString().includes('geolocation') ||
-             event.reason.message?.includes('DOMESTIC_TRANSACTION_REQUIRED'))) {
+             event.reason.message?.includes('DOMESTIC_TRANSACTION_REQUIRED') ||
+             event.reason.message?.includes('atomics_error_getting_devlogger_extension') ||
+             event.reason.message?.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
+             event.reason.message?.includes('Blocked a frame with origin'))) {
           console.log('Error de PayPal interceptado y suprimido:', event.reason);
           event.preventDefault();
           return true;
+        }
+      });
+      
+      // Interceptor global para capturar cualquier método de console usado por PayPal
+      ['debug', 'info', 'trace', 'group', 'groupCollapsed'].forEach(method => {
+        if (console[method]) {
+          const original = console[method];
+          console[method] = function(...args) {
+            const message = args.join(' ');
+            const argString = JSON.stringify(args);
+            
+            if (message.includes('atomics_error_getting_devlogger_extension') ||
+                message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
+                argString.includes('atomics_error_getting_devlogger_extension') ||
+                argString.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
+                checkPayPalAtomicsError(args)) {
+              return; // Suprimir estos outputs
+            }
+            
+            original.apply(console, args);
+          };
         }
       });
     </script>
