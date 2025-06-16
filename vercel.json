@@ -12,10 +12,6 @@
           "value": "geolocation=*, camera=*, microphone=*, payment=*, accelerometer=*, gyroscope=*"
         },
         {
-          "key": "Feature-Policy",
-          "value": "geolocation *; camera *; microphone *; payment *; accelerometer *; gyroscope *"
-        },
-        {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
         }

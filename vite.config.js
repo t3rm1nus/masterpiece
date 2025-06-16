@@ -11,14 +11,12 @@ export default defineConfig({
     // Configuración para desarrollo con PayPal
     headers: {
       'Permissions-Policy': 'geolocation=*, camera=*, microphone=*, payment=*, accelerometer=*, gyroscope=*',
-      'Feature-Policy': 'geolocation *; camera *; microphone *; payment *; accelerometer *; gyroscope *',
       'Referrer-Policy': 'strict-origin-when-cross-origin'
     }
   },
   preview: {
     headers: {
       'Permissions-Policy': 'geolocation=*, camera=*, microphone=*, payment=*, accelerometer=*, gyroscope=*',
-      'Feature-Policy': 'geolocation *; camera *; microphone *; payment *; accelerometer *; gyroscope *',
       'Referrer-Policy': 'strict-origin-when-cross-origin'
     }
   }
