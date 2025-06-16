@@ -78,10 +78,16 @@ document.addEventListener("DOMContentLoaded", function() {
           }
           
           return actions.resolve();
-        },
-          createOrder: function(data, actions) {
+        },        createOrder: function(data, actions) {
           console.log('🔄 Creating PayPal order');
-          console.log('🌍 Environment:', window.isLocalhost ? 'sandbox' : 'production');
+          
+          // More specific environment logging
+          const environment = window.isLocalhost ? 'localhost/sandbox' : 'production/sandbox';
+          const clientIdType = 'AZDxjD...'.includes('AZDxjD') ? 'sandbox' : 'production';
+          
+          console.log('🌍 Environment:', environment);
+          console.log('💳 Client-ID Type:', clientIdType);
+          console.log('🔧 Button Environment: sandbox (forced for compatibility)');
           
           let amount = '5.00';
           const amountInput = document.querySelector('input[name="amount"]#donation-amount') || 

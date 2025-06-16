@@ -63,8 +63,7 @@
     
     originalError.apply(console, args);
   };
-  
-  console.warn = function(...args) {
+    console.warn = function(...args) {
     // Check for PayPal atomics errors first
     if (isPayPalAtomicsError(args)) {
       return;
@@ -75,8 +74,12 @@
     if (message.includes('ncps_standalone_paylater_ineligible') || 
         message.includes('Pay Later ineligible') ||
         message.includes('Symbol.observable as defined by Redux') ||
+        message.includes('Symbol.observable') ||
+        message.includes('Redux DevTools') ||
         message.includes('atomics_error_getting_devlogger_extension') ||
-        message.includes('__ATOMIC_EVENTS_DEV_LOGGER__')) {
+        message.includes('__ATOMIC_EVENTS_DEV_LOGGER__') ||
+        message.includes('Potential permissions policy violation: geolocation')) {
+      console.log('🤫 Filtered warning:', message.substring(0, 100) + '...');
       return;
     }
     
