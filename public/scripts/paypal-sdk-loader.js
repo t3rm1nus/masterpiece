@@ -19,8 +19,7 @@
   
   // Detect mobile device
   const isMobileDevice = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  
-  // Load PayPal SDK with mobile-optimized configuration
+    // Load PayPal SDK with mobile-optimized configuration
   let sdkUrl;
   if (window.isLocalhost) {
     // En localhost, deshabilitar tarjetas para evitar errores de desarrollo
@@ -28,11 +27,11 @@
   } else {
     // En producción, configuración europea específica para evitar DOMESTIC_TRANSACTION_REQUIRED
     if (isMobileDevice) {
-      // Configuración móvil optimizada para Europa/España
-      sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&intent=capture&buyer-country=ES&merchant-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R";
+      // Configuración móvil optimizada para Europa/España - SIN merchant-id duplicado
+      sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&intent=capture&buyer-country=ES";
     } else {
-      // Configuración desktop para Europa/España
-      sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&buyer-country=ES&merchant-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R";
+      // Configuración desktop para Europa/España - SIN merchant-id duplicado
+      sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&buyer-country=ES";
     }
   }
   
