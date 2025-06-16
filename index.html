@@ -1,8 +1,24 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta http-equiv="Permissions-Policy" content="geolocation=(self), payment=(self)" />
-    <meta http-equiv="Feature-Policy" content="geolocation 'self'; payment 'self'" />
+    <script>
+      // Register Service Worker to block geolocation
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/geo-service-worker.js')
+          .then(() => console.log('🛡️ Geolocation Service Worker registered'))
+          .catch(error => console.log('Geolocation Service Worker failed:', error));
+      }
+      
+      // Fallback for browsers without Service Worker support
+      try {
+        Object.defineProperty(navigator, 'permissions', {
+          value: {
+            query: () => Promise.resolve({ state: 'denied' })
+          },
+          configurable: false
+        });
+      } catch(e) {}
+    </script>
     <script>
       // Symbol.observable Polyfill (debe ser el PRIMER script en <head>)
       (function() {
@@ -22,13 +38,18 @@
           watchPosition: function(s){ s && setTimeout(()=>s({coords:{latitude:40.4,longitude:-3.7}}),1); return 1; },
           clearWatch: function(){}
         };
-        try { Object.defineProperty(navigator, 'geolocation', { value: mockGeo, writable: false, configurable: false }); } catch(e){}
+        try { 
+          Object.defineProperty(navigator, 'geolocation', { 
+            value: mockGeo, 
+            configurable: false,
+            enumerable: true
+          }); 
+        } catch(e){}
       })();
     </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Vite + React</title>
     <script src="/scripts/paypal-sdk-loader.js"></script>
     <script src="/scripts/paypal-button-init.js"></script>
