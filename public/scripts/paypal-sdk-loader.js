@@ -53,16 +53,15 @@
       "locale=es_ES",
       "disable-funding=venmo", // Always disable venmo in Spain
       "intent=capture",
-      "buyer-country=ES"
+      "buyer-country=ES",
+      "merchant-country=ES", // Especificar país del comerciante
+      "commit=true", // Confirmar transacción inmediatamente
+      "vault=false" // Deshabilitar almacenamiento de tarjetas
     ];
     
     // Add mobile-specific optimizations
     if (isMobileDevice) {
       baseParams.push("enable-funding=card"); // Enable cards on mobile production
-      if (isIOS) {
-        // iOS-specific optimizations
-        baseParams.push("vault=false"); // Disable vaulting on iOS to avoid policy issues
-      }
     } else {
       baseParams.push("enable-funding=card");
     }

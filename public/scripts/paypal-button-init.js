@@ -15,10 +15,35 @@ document.addEventListener("DOMContentLoaded", function() {
   try {
     console.log('[PayPal] Inicializando botones en', container, 'window.paypal:', !!window.paypal);
     window.paypal.Buttons({
-      style: { layout: 'vertical', color: 'blue', shape: 'rect', label: 'pay', height: 45, tagline: false },
+      style: { 
+        layout: 'vertical', 
+        color: 'blue', 
+        shape: 'rect', 
+        label: 'pay', 
+        height: 45, 
+        tagline: false 
+      },
       createOrder: function(data, actions) {
         return actions.order.create({
-          purchase_units: [{ amount: { value: '5.00', currency_code: 'EUR' }, description: 'Café Virtual - Masterpiece Collection' }]
+          intent: 'CAPTURE',
+          purchase_units: [{
+            amount: { 
+              value: '5.00', 
+              currency_code: 'EUR' 
+            },
+            description: 'Café Virtual - Masterpiece Collection',
+            payee: {
+              merchant_id: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'
+            }
+          }],
+          application_context: {
+            brand_name: 'Masterpiece Collection',
+            locale: 'es-ES',
+            user_action: 'PAY_NOW',
+            payment_method: {
+              payee_preferred: 'IMMEDIATE_PAYMENT_REQUIRED'
+            }
+          }
         });
       },
       onApprove: function(data, actions) {
@@ -52,10 +77,35 @@ window.initializePayPal = function() {
   try {
     console.log('[PayPal] (global) Inicializando botones en', container, 'window.paypal:', !!window.paypal);
     window.paypal.Buttons({
-      style: { layout: 'vertical', color: 'blue', shape: 'rect', label: 'pay', height: 45, tagline: false },
+      style: { 
+        layout: 'vertical', 
+        color: 'blue', 
+        shape: 'rect', 
+        label: 'pay', 
+        height: 45, 
+        tagline: false 
+      },
       createOrder: function(data, actions) {
         return actions.order.create({
-          purchase_units: [{ amount: { value: '5.00', currency_code: 'EUR' }, description: 'Café Virtual - Masterpiece Collection' }]
+          intent: 'CAPTURE',
+          purchase_units: [{
+            amount: { 
+              value: '5.00', 
+              currency_code: 'EUR' 
+            },
+            description: 'Café Virtual - Masterpiece Collection',
+            payee: {
+              merchant_id: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'
+            }
+          }],
+          application_context: {
+            brand_name: 'Masterpiece Collection',
+            locale: 'es-ES',
+            user_action: 'PAY_NOW',
+            payment_method: {
+              payee_preferred: 'IMMEDIATE_PAYMENT_REQUIRED'
+            }
+          }
         });
       },
       onApprove: function(data, actions) {
