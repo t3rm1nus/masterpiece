@@ -229,7 +229,21 @@
       })();
     </script>
     
-    <!-- Modular Enhanced Scripts (still load for additional protection) -->
+    <!-- Modular Enhanced Scripts (solo para escritorio/desarrollo, NO móvil) -->
+    <script>
+      // Solo cargar polyfills modulares si NO es móvil
+      (function() {
+        var isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (!isMobile) {
+          var s1 = document.createElement('script');
+          s1.src = '/scripts/symbol-observable-polyfill.js';
+          document.head.appendChild(s1);
+          var s2 = document.createElement('script');
+          s2.src = '/scripts/geolocation-override.js';
+          document.head.appendChild(s2);
+        }
+      })();
+    </script>
     <script src="/scripts/paypal-sdk-loader.js"></script>
     <script src="/scripts/paypal-button-init.js"></script>
     <script src="/scripts/console-filter.js"></script>
