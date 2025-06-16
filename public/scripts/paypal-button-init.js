@@ -50,9 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     try {
       const isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-      
-      window.paypal.Buttons({
-        env: 'sandbox',
+        window.paypal.Buttons({
+        env: window.isLocalhost ? 'sandbox' : 'production',
         style: {
           layout: 'vertical',
           color: 'gold',
@@ -81,9 +80,9 @@ document.addEventListener("DOMContentLoaded", function() {
           
           return actions.resolve();
         },
-        
-        createOrder: function(data, actions) {
+          createOrder: function(data, actions) {
           console.log('🔄 Creating PayPal order');
+          console.log('🌍 Environment:', window.isLocalhost ? 'sandbox' : 'production');
           
           let amount = '5.00';
           const amountInput = document.querySelector('input[name="amount"]#donation-amount') || 
@@ -98,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
           
           console.log('💰 Order amount:', amount);
           
-          // Enhanced order configuration for EUR and Spain - Force European region
+          // Enhanced order configuration for EUR and Spain - Simplified for sandbox compatibility
           const orderConfig = {
             intent: 'CAPTURE',
             purchase_units: [{
@@ -106,25 +105,25 @@ document.addEventListener("DOMContentLoaded", function() {
                 value: amount,
                 currency_code: 'EUR'
               },
-              description: 'Donación de café - Masterpiece Collection',
-              payee: {
-                merchant_id: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'
-              }
+              description: 'Donación de café - Masterpiece Collection'
+              // Removed payee.merchant_id for sandbox compatibility
             }],
             application_context: {
               shipping_preference: 'NO_SHIPPING',
               user_action: 'PAY_NOW',
               locale: 'es-ES',
               landing_page: 'BILLING',
-              brand_name: 'Masterpiece Collection',
-              return_url: window.location.href,
-              cancel_url: window.location.href
+              brand_name: 'Masterpiece Collection'
+              // Removed return_url and cancel_url for sandbox compatibility
             }
           };
           
-          console.log('📦 Order config:', orderConfig);
+          console.log('📦 Order config:', JSON.stringify(orderConfig, null, 2));
           
-          return actions.order.create(orderConfig);
+          return actions.order.create(orderConfig).catch(function(err) {
+            console.error('❌ Error creating order:', err);
+            throw err;
+          });
         },
         
         onApprove: function(data, actions) {
