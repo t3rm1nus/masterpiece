@@ -19,19 +19,15 @@ document.addEventListener("DOMContentLoaded", function() {
         layout: 'vertical', 
         color: 'blue', 
         shape: 'rect', 
-        label: 'pay', 
-        height: 45, 
-        tagline: false 
+        height: 45 
       },
       createOrder: function(data, actions) {
         return actions.order.create({
-          intent: 'CAPTURE',
           purchase_units: [{
             amount: { 
               value: '5.00', 
               currency_code: 'EUR' 
-            },
-            description: 'Café Virtual - Masterpiece Collection'
+            }
           }]
         });
       },
@@ -70,19 +66,15 @@ window.initializePayPal = function() {
         layout: 'vertical', 
         color: 'blue', 
         shape: 'rect', 
-        label: 'pay', 
-        height: 45, 
-        tagline: false 
+        height: 45 
       },
       createOrder: function(data, actions) {
         return actions.order.create({
-          intent: 'CAPTURE',
           purchase_units: [{
             amount: { 
               value: '5.00', 
               currency_code: 'EUR' 
-            },
-            description: 'Café Virtual - Masterpiece Collection'
+            }
           }]
         });
       },

@@ -45,15 +45,15 @@
       "&currency=EUR" +
       "&debug=true";
   } else {
-    // Production: Simplified European configuration
+    // Production: Sandbox configuration for testing
     const baseParams = [
       "client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R",
       "components=buttons",
       "currency=EUR",
       "locale=es_ES",
       "disable-funding=venmo",
-      "intent=capture",
-      "enable-funding=card"
+      "enable-funding=card",
+      "debug=true"
     ];
     
     sdkUrl = "https://www.paypal.com/sdk/js?" + baseParams.join("&");
