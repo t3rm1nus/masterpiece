@@ -3,29 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Permissions-Policy" content="geolocation=*, camera=(), microphone=(), payment=*, accelerometer=*, gyroscope=*">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <meta http-equiv="Permissions-Policy" content="geolocation=*, camera=(), microphone=(), payment=*, accelerometer=*, gyroscope=*">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Vite + React</title>
-
-    <!-- Symbol.observable polyfill for Redux -->
+    
+    <!-- Aggressive geolocation override -->
+    <script>
+      // Override geolocation BEFORE any other scripts
+      (function() {
+        console.log('🔒 Overriding geolocation API immediately...');
+        
+        const mockGeo = {
+          getCurrentPosition: function(success, error, options) {
+            console.log('🇪🇸 FORCED Mock: Madrid, Spain');
+            if (success) {
+              const position = {
+                coords: {
+                  latitude: 40.4168,
+                  longitude: -3.7038,
+                  altitude: 650,
+                  accuracy: 10,
+                  altitudeAccuracy: 5,
+                  heading: null,
+                  speed: null
+                },
+                timestamp: Date.now()
+              };
+              setTimeout(() => success(position), 10);
+            }
+          },
+          watchPosition: function(success, error, options) {
+            this.getCurrentPosition(success, error, options);
+            return Math.floor(Math.random() * 1000);
+          },
+          clearWatch: function() {}
+        };
+        
+        // Force override navigator.geolocation
+        try {
+          Object.defineProperty(navigator, 'geolocation', {
+            value: mockGeo,
+            writable: false,
+            configurable: false
+          });
+        } catch(e) {
+          navigator.geolocation = mockGeo;
+        }
+        
+        // Also override window.navigator.geolocation
+        try {
+          Object.defineProperty(window.navigator, 'geolocation', {
+            value: mockGeo,
+            writable: false,
+            configurable: false
+          });
+        } catch(e) {
+          window.navigator.geolocation = mockGeo;
+        }
+        
+        console.log('✅ Geolocation FORCED override active');
+      })();
+    </script>
+    <title>Vite + React</title>    <!-- Enhanced Symbol.observable polyfill for Redux compatibility -->
     <script>
       (function() {
+        console.log('🔧 Setting up Symbol.observable polyfill...');
+        
+        // Check if Symbol exists
         if (typeof Symbol === 'undefined') {
-          window.Symbol = {};
+          console.log('⚠️ Symbol not found, creating basic implementation');
+          window.Symbol = function(description) {
+            return '@@' + (description || 'symbol') + Math.random();
+          };
+          Symbol.for = function(key) {
+            return '@@' + key;
+          };
         }
         
-        const $$observable = typeof Symbol === 'function' && Symbol.observable || '@@observable';
+        // Define the observable symbol consistently
+        const observableSymbol = typeof Symbol === 'function' && Symbol.observable || '@@observable';
         
+        // Ensure Symbol.observable is set consistently
         if (!Symbol.observable) {
-          Symbol.observable = $$observable;
+          if (typeof Symbol.for === 'function') {
+            Symbol.observable = Symbol.for('observable');
+          } else {
+            Symbol.observable = observableSymbol;
+          }
         }
         
-        if (typeof Symbol.observable === 'string') {
-          Symbol.observable = Symbol.for ? Symbol.for(Symbol.observable) : $$observable;
+        // Ensure it's the same reference for Redux compatibility
+        if (typeof Symbol.observable === 'string' && typeof Symbol.for === 'function') {
+          Symbol.observable = Symbol.for('observable');
         }
         
-        console.log('✅ Symbol.observable configurado:', Symbol.observable);
+        console.log('✅ Symbol.observable configured consistently:', Symbol.observable);
+        
+        // Also set on window for compatibility
+        window.Symbol = window.Symbol || Symbol;
+        if (window.Symbol && !window.Symbol.observable) {
+          window.Symbol.observable = Symbol.observable;
+        }
       })();
     </script>
 
@@ -52,13 +129,13 @@
         // En localhost, deshabilitar tarjetas para evitar errores de desarrollo
         sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&debug=true";
       } else {
-        // En producción, configuración específica por región para EUR
+        // En producción, configuración europea específica para evitar DOMESTIC_TRANSACTION_REQUIRED
         if (isMobileDevice) {
-          // Configuración móvil con región europea específica para evitar DOMESTIC_TRANSACTION_REQUIRED
-          sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&intent=capture&buyer-country=ES";
+          // Configuración móvil optimizada para Europa/España
+          sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&intent=capture&buyer-country=ES&merchant-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R";
         } else {
-          // Configuración desktop con región europea
-          sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&buyer-country=ES";
+          // Configuración desktop para Europa/España
+          sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&buyer-country=ES&merchant-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R";
         }
       }
         const script = document.createElement('script');
@@ -69,60 +146,10 @@
         console.log('💳 PayPal SDK loaded for:', {
         environment: window.isLocalhost ? 'localhost' : 'production',
         device: isMobileDevice ? 'móvil' : 'desktop',
-        cards: window.isLocalhost ? 'deshabilitadas (desarrollo)' : 'habilitadas',
-        region: window.isLocalhost ? 'debug' : 'ES (España)',
+        cards: window.isLocalhost ? 'deshabilitadas (desarrollo)' : 'habilitadas',        region: window.isLocalhost ? 'debug' : 'ES (España)',
         currency: 'EUR',
         funding: 'PayPal + tarjetas (venmo deshabilitado)'
       });
-    </script>    <!-- Geolocation Mock for Spain -->
-    <script>
-      (function() {
-        console.log('🇪🇸 Setting up geolocation mock for Spain...');
-        
-        // Enhanced geolocation mock with better Spain data
-        const mockGeolocation = {
-          getCurrentPosition: function(success, error, options) {
-            console.log('🇪🇸 Mock geolocation: Madrid, Spain (Europa)');
-            if (success) {
-              setTimeout(() => {
-                success({
-                  coords: {
-                    latitude: 40.4168,      // Madrid
-                    longitude: -3.7038,     // Madrid
-                    altitude: 650,          // Madrid altitude
-                    accuracy: 50,           // High accuracy
-                    altitudeAccuracy: 10,
-                    heading: null,
-                    speed: null
-                  },
-                  timestamp: Date.now()
-                });
-              }, 50);
-            }
-          },
-          watchPosition: function(success, error, options) {
-            const id = Math.random();
-            this.getCurrentPosition(success, error, options);
-            return id;
-          },
-          clearWatch: function(id) {
-            console.log('🇪🇸 Mock geolocation: clearWatch called');
-          }
-        };
-        
-        // Override geolocation completely to prevent policy issues
-        if (window.navigator && window.navigator.geolocation) {
-          Object.defineProperty(navigator, 'geolocation', {
-            value: mockGeolocation,
-            writable: false,
-            configurable: false
-          });
-        } else {
-          navigator.geolocation = mockGeolocation;
-        }
-        
-        console.log('✅ Geolocation mock active (Madrid, España)');
-      })();
     </script>
 
     <!-- PayPal Button Initialization -->
@@ -219,8 +246,7 @@
                 }
                 
                 console.log('💰 Order amount:', amount);
-                
-                // Enhanced order configuration for EUR and Spain
+                  // Enhanced order configuration for EUR and Spain - Force European region
                 const orderConfig = {
                   intent: 'CAPTURE',
                   purchase_units: [{
@@ -228,13 +254,19 @@
                       value: amount,
                       currency_code: 'EUR'
                     },
-                    description: 'Donación de café - Masterpiece Collection'
+                    description: 'Donación de café - Masterpiece Collection',
+                    payee: {
+                      merchant_id: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'
+                    }
                   }],
                   application_context: {
                     shipping_preference: 'NO_SHIPPING',
                     user_action: 'PAY_NOW',
                     locale: 'es-ES',
-                    landing_page: 'BILLING'
+                    landing_page: 'BILLING',
+                    brand_name: 'Masterpiece Collection',
+                    return_url: window.location.href,
+                    cancel_url: window.location.href
                   }
                 };
                 
