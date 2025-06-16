@@ -5,18 +5,17 @@ import MaterialCoffeePage from './MaterialCoffeePage';
 const CoffeePage = () => {
   const { t } = useLanguage();
   
-  // Inicializar PayPal cuando el componente se monte
+  // Inicializar PayPal cuando el componente se monte SOLO en desktop
   useEffect(() => {
-    console.log('CoffeePage montado, inicializando PayPal...');
-    
-    // Dar tiempo a que el DOM se actualice
-    const timer = setTimeout(() => {
-      if (window.initializePayPal) {
-        window.initializePayPal();
-      }
-    }, 300);
-    
-    return () => clearTimeout(timer);
+    if (window.innerWidth > 768) {
+      console.log('CoffeePage montado en desktop, inicializando PayPal...');
+      const timer = setTimeout(() => {
+        if (window.initializePayPal) {
+          window.initializePayPal();
+        }
+      }, 300);
+      return () => clearTimeout(timer);
+    }
   }, []);
   
   return (
