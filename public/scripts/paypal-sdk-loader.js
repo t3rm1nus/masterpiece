@@ -99,6 +99,15 @@
     console.log('📱 Mobile Device:', isMobileDevice);
     console.log('� iOS Device:', isIOS);
     console.log('🌍 Environment:', isProduction ? 'Production' : 'Development');
+    // Trigger React initialization if available
+    if (typeof window.initializePayPal === 'function') {
+      console.log('[PayPal Loader] Triggering initializePayPal after SDK loaded');
+      try {
+        window.initializePayPal();
+      } catch (e) {
+        console.error('[PayPal Loader] Error in initializePayPal:', e);
+      }
+    }
   };
   
   // Store configuration globally for debugging
