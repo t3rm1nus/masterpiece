@@ -10,8 +10,16 @@ export default defineConfig({
     port: 5173,
     // Configuración para desarrollo con PayPal
     headers: {
-      'Permissions-Policy': 'geolocation=*, camera=*, microphone=*, payment=*',
-      'Feature-Policy': 'geolocation *; camera *; microphone *; payment *'
+      'Permissions-Policy': 'geolocation=*, camera=*, microphone=*, payment=*, accelerometer=*, gyroscope=*',
+      'Feature-Policy': 'geolocation *; camera *; microphone *; payment *; accelerometer *; gyroscope *',
+      'Referrer-Policy': 'strict-origin-when-cross-origin'
+    }
+  },
+  preview: {
+    headers: {
+      'Permissions-Policy': 'geolocation=*, camera=*, microphone=*, payment=*, accelerometer=*, gyroscope=*',
+      'Feature-Policy': 'geolocation *; camera *; microphone *; payment *; accelerometer *; gyroscope *',
+      'Referrer-Policy': 'strict-origin-when-cross-origin'
     }
   }
 })

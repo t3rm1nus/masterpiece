@@ -2,8 +2,9 @@
 <html lang="en">
   <head>    <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <meta http-equiv="Permissions-Policy" content="geolocation=*, camera=*, microphone=*, payment=*">
-    <meta http-equiv="Feature-Policy" content="geolocation *; camera *; microphone *; payment *">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <meta http-equiv="Permissions-Policy" content="geolocation=*, camera=*, microphone=*, payment=*, accelerometer=*, gyroscope=*">
+    <meta http-equiv="Feature-Policy" content="geolocation *; camera *; microphone *; payment *; accelerometer *; gyroscope *">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Vite + React</title>
     
     <!-- Polyfill para Symbol.observable antes de Redux -->
@@ -22,47 +23,40 @@
                           window.location.hostname === '';
       
       // Detectar si es móvil para cargar SDK apropiado
-      const isMobileDevice = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        // Configuración específica para localhost vs producción
+      const isMobileDevice = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);      // Configuración específica para localhost vs producción
       let sdkUrl;
       if (window.isLocalhost) {
         // En localhost, deshabilitar tarjetas para evitar errores de desarrollo
         sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&intent=capture&vault=false&locale=es_ES&debug=true";
       } else {
-        // En producción, configuración normal según dispositivo
-        sdkUrl = isMobileDevice 
-          ? "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo&currency=EUR&intent=capture&vault=false&locale=es_ES"
-          : "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo&currency=EUR&intent=capture&vault=false&locale=es_ES";
+        // En producción, mantener tarjetas habilitadas en todos los dispositivos
+        sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo&currency=EUR&intent=capture&vault=false&locale=es_ES";
       }
       
       const script = document.createElement('script');
       script.src = sdkUrl;
       script.crossOrigin = 'anonymous';
       script.async = true;
-      document.head.appendChild(script);
-        console.log('PayPal SDK cargado para:', {
+      document.head.appendChild(script);      console.log('PayPal SDK cargado para:', {
         environment: window.isLocalhost ? 'localhost' : 'production',
         device: isMobileDevice ? 'móvil' : 'desktop',
         cards: window.isLocalhost ? 'deshabilitadas (localhost)' : 'habilitadas',
-        paypal: 'habilitado'
+        paypal: 'habilitado',
+        geolocation: 'mock con fallback inteligente'
       });
     </script><!-- Script para configurar permisos antes de PayPal -->
-    <script>
-      // Mock completo de geolocalización para localhost y desarrollo
+    <script>      // Mock completo de geolocalización para localhost y desarrollo
       (function() {
-        const isLocalhost = window.location.hostname === 'localhost' || 
-                           window.location.hostname === '127.0.0.1' || 
-                           window.location.hostname === '';
-                           
         const originalGeolocation = navigator.geolocation;
         
         // En localhost, siempre usar mock para evitar problemas
-        const shouldUseMock = isLocalhost || window.location.protocol !== 'https:';
+        // En producción, usar mock si hay problemas con geolocalización
+        const shouldUseMock = window.isLocalhost || window.location.protocol !== 'https:';
         
         // Crear un mock completo de geolocalización
         const mockGeolocation = {
           getCurrentPosition: function(success, error, options) {
-            console.log('Mock geolocation (localhost): Proporcionando ubicación de España');
+            console.log('Mock geolocation activado: Proporcionando ubicación de España');
             if (success) {
               setTimeout(() => {
                 success({
@@ -105,6 +99,68 @@
           }
         };
         
+        // Función para interceptar errores de geolocalización y usar fallback
+        const interceptGeolocation = function() {
+          if (originalGeolocation && originalGeolocation.getCurrentPosition) {
+            const originalGetCurrentPosition = originalGeolocation.getCurrentPosition.bind(originalGeolocation);
+            
+            navigator.geolocation.getCurrentPosition = function(success, error, options) {
+              const timeout = options?.timeout || 10000;
+              let timeoutId;
+              
+              // Configurar timeout para usar mock si la geolocalización real falla
+              timeoutId = setTimeout(() => {
+                console.log('Geolocalización timeout, usando mock');
+                mockGeolocation.getCurrentPosition(success, error, options);
+              }, Math.min(timeout, 3000)); // Máximo 3 segundos de espera
+              
+              try {
+                originalGetCurrentPosition(
+                  (position) => {
+                    clearTimeout(timeoutId);
+                    success(position);
+                  },
+                  (err) => {
+                    clearTimeout(timeoutId);
+                    console.log('Error de geolocalización real, usando mock:', err);
+                    mockGeolocation.getCurrentPosition(success, error, options);
+                  },
+                  {
+                    ...options,
+                    timeout: Math.min(timeout, 3000),
+                    enableHighAccuracy: false,
+                    maximumAge: 600000 // 10 minutos
+                  }
+                );
+              } catch (e) {
+                clearTimeout(timeoutId);
+                console.log('Excepción en geolocalización, usando mock:', e);
+                mockGeolocation.getCurrentPosition(success, error, options);
+              }
+            };
+            
+            // Interceptar watchPosition también
+            if (originalGeolocation.watchPosition) {
+              const originalWatchPosition = originalGeolocation.watchPosition.bind(originalGeolocation);
+              navigator.geolocation.watchPosition = function(success, error, options) {
+                try {
+                  return originalWatchPosition(
+                    success,
+                    (err) => {
+                      console.log('Error en watchPosition, usando mock:', err);
+                      return mockGeolocation.watchPosition(success, error, options);
+                    },
+                    options
+                  );
+                } catch (e) {
+                  console.log('Excepción en watchPosition, usando mock:', e);
+                  return mockGeolocation.watchPosition(success, error, options);
+                }
+              };
+            }
+          }
+        };
+        
         // En localhost, reemplazar completamente la geolocalización
         if (shouldUseMock) {
           Object.defineProperty(navigator, 'geolocation', {
@@ -114,23 +170,11 @@
           });
           console.log('🔧 Geolocalización mock activada para localhost');
         } else {
-          // En producción, interceptar errores y usar fallback
-          const originalGetCurrentPosition = originalGeolocation?.getCurrentPosition;
-          if (originalGetCurrentPosition) {
-            navigator.geolocation.getCurrentPosition = function(success, error, options) {
-              try {
-                originalGetCurrentPosition.call(this, success, (err) => {
-                  console.log('Error de geolocalización interceptado, usando mock');
-                  mockGeolocation.getCurrentPosition(success, error, options);
-                }, options);
-              } catch (e) {
-                console.log('Excepción en geolocalización, usando mock');
-                mockGeolocation.getCurrentPosition(success, error, options);
-              }
-            };
-          }
+          // En producción, interceptar errores y usar fallback inteligente
+          interceptGeolocation();
+          console.log('🔧 Geolocalización con fallback inteligente activado');
         }
-      })();      // Verificar permisos de geolocalización solo si no estamos en localhost
+      })();// Verificar permisos de geolocalización solo si no estamos en localhost
       if (!window.isLocalhost && navigator.permissions) {
         navigator.permissions.query({name: 'geolocation'}).then(function(result) {
           console.log('Estado de geolocalización:', result.state);
@@ -217,13 +261,31 @@
                       value: amount,
                       currency_code: 'EUR'
                     },
-                    description: 'Donación para Masterpiece'
+                    description: 'Donación para Masterpiece',
+                    soft_descriptor: 'MASTERPIECE',
+                    payee: {
+                      merchant_id: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'
+                    }
                   }],
+                  payment_source: {
+                    paypal: {
+                      experience_context: {
+                        payment_method_preference: 'UNRESTRICTED',
+                        brand_name: 'Masterpiece',
+                        locale: 'es-ES',
+                        user_action: 'PAY_NOW',
+                        shipping_preference: 'NO_SHIPPING'
+                      }
+                    }
+                  },
                   application_context: {
                     brand_name: 'Masterpiece',
                     locale: 'es-ES',
                     user_action: 'PAY_NOW',
-                    shipping_preference: 'NO_SHIPPING'
+                    shipping_preference: 'NO_SHIPPING',
+                    payment_method: {
+                      payee_preferred: 'UNRESTRICTED'
+                    }
                   }
                 });
               },
