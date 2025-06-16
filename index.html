@@ -7,16 +7,28 @@
     <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), payment=(), accelerometer=(), gyroscope=()">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Vite + React</title>
-    
-    <!-- Polyfill para Symbol.observable antes de Redux -->
+      <!-- Polyfill mejorado para Symbol.observable antes de Redux -->
     <script>
-      if (typeof Symbol === 'undefined' || !Symbol.observable) {
+      (function() {
         if (typeof Symbol === 'undefined') {
           window.Symbol = {};
         }
-        Symbol.observable = Symbol.observable || Symbol('observable') || '@@observable';
-      }
-    </script>    <!-- PayPal SDK Script - Configuración adaptada para móviles -->
+        
+        // Definir Symbol.observable de forma consistente
+        const $$observable = typeof Symbol === 'function' && Symbol.observable || '@@observable';
+        
+        if (!Symbol.observable) {
+          Symbol.observable = $$observable;
+        }
+        
+        // Asegurar que Symbol.observable sea consistente
+        if (typeof Symbol.observable === 'string') {
+          Symbol.observable = Symbol.for ? Symbol.for(Symbol.observable) : $$observable;
+        }
+        
+        console.log('✅ Symbol.observable configurado:', Symbol.observable);
+      })();
+    </script><!-- PayPal SDK Script - Configuración adaptada para móviles -->
     <script>      // Variables globales para detección de entorno
       window.isLocalhost = window.location.hostname === 'localhost' || 
                           window.location.hostname === '127.0.0.1' || 
@@ -42,10 +54,9 @@
       let sdkUrl;
       if (window.isLocalhost) {
         // En localhost, deshabilitar tarjetas para evitar errores de desarrollo
-        sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&debug=true";
-      } else {
-        // En producción, configuración mínima para máxima compatibilidad
-        sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR";
+        sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&debug=true";      } else {
+        // En producción, configuración para transacciones internacionales
+        sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo";
       }
       
       const script = document.createElement('script');
@@ -62,10 +73,11 @@
         sdkUrl: sdkUrl.substring(0, 100) + '...'
       });
     </script><!-- Script para configurar permisos antes de PayPal -->
-    <script>      // Mock completo de geolocalización para localhost y desarrollo
-      (function() {
+    <script>      // Mock completo de geolocalización para localhost y desarrollo      (function() {
+        console.log('🚫 Configurando protección completa de geolocalización...');
+        
         const originalGeolocation = navigator.geolocation;
-          // En localhost, siempre usar mock para evitar problemas
+        // En localhost, siempre usar mock para evitar problemas
         // En producción, SIEMPRE usar mock para evitar violaciones de política
         const shouldUseMock = true; // Siempre usar mock para máxima compatibilidad
         
@@ -177,15 +189,16 @@
           }
         };
           // SIEMPRE usar mock para evitar violaciones de política en producción
-        if (shouldUseMock) {
-          Object.defineProperty(navigator, 'geolocation', {
+        if (shouldUseMock) {          Object.defineProperty(navigator, 'geolocation', {
             value: mockGeolocation,
             writable: false,
             configurable: false
           });
-          console.log('� Geolocalización completamente deshabilitada - solo mock');
+          console.log('🚫 Geolocalización completamente deshabilitada - solo mock');
         }
-      })();// Verificar permisos de geolocalización solo si no estamos en localhost
+      })();
+      
+      // Verificar permisos de geolocalización solo si no estamos en localhost
       if (!window.isLocalhost && navigator.permissions) {
         navigator.permissions.query({name: 'geolocation'}).then(function(result) {
           console.log('Estado de geolocalización:', result.state);
@@ -300,15 +313,21 @@
                 
                 console.log('💰 Creando orden PayPal con cantidad:', amount);
                 console.log('📱 Input usado:', amountInput ? amountInput.id : 'ninguno');
-                console.log('🌍 Entorno:', 'sandbox');
-                  const orderData = {
+                console.log('🌍 Entorno:', 'sandbox');                const orderData = {
                   intent: 'CAPTURE',
                   purchase_units: [{
                     amount: {
                       value: amount,
                       currency_code: 'EUR'
                     }
-                  }]
+                  }],
+                  application_context: {
+                    shipping_preference: 'NO_SHIPPING',
+                    user_action: 'PAY_NOW',
+                    payment_method: {
+                      payee_preferred: 'UNRESTRICTED'
+                    }
+                  }
                 };
                 
                 console.log('📦 Datos de orden a enviar:', JSON.stringify(orderData, null, 2));
@@ -806,9 +825,11 @@
         }
       });
     </script>
+    <script type="module" crossorigin src="/assets/index-B7ffUvvo.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DYqrLZSa.css">
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
   </body>
 </html>
