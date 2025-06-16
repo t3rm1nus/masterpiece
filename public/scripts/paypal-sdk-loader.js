@@ -39,7 +39,7 @@
   if (isLocalhost) {
     // Localhost: Most conservative configuration to avoid development errors
     sdkUrl = "https://www.paypal.com/sdk/js?" +
-      "client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R" +
+      "client-id=AdbZ_-bf8cu0_xztqShxsU_UbNsdJp8wntSM7I6YsEmDPEJHDO7ggWDotTjcA38lFCHKyfNTnEQzKdHm" + // Actualizado Client ID
       "&components=buttons" +
       "&disable-funding=venmo,card" +
       "&currency=EUR" +
@@ -47,9 +47,11 @@
   } else {
     // Production: Use official PayPal demo client ID for maximum compatibility
     const baseParams = [
-      "client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R",
+      "client-id=AdbZ_-bf8cu0_xztqShxsU_UbNsdJp8wntSM7I6YsEmDPEJHDO7ggWDotTjcA38lFCHKyfNTnEQzKdHm", // Actualizado Client ID
       "components=buttons",
       "currency=EUR",
+      // "disable-funding=venmo", // Removed for further simplification
+      // "enable-funding=card",   // Removed for further simplification
       "intent=capture",
       "commit=true"
     ];
