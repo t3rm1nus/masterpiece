@@ -45,26 +45,16 @@
       "&currency=EUR" +
       "&debug=true";
   } else {
-    // Production: Mobile-optimized European configuration
+    // Production: Simplified European configuration
     const baseParams = [
       "client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R",
       "components=buttons",
       "currency=EUR",
       "locale=es_ES",
-      "disable-funding=venmo", // Always disable venmo in Spain
+      "disable-funding=venmo",
       "intent=capture",
-      "buyer-country=ES",
-      "merchant-country=ES", // Especificar país del comerciante
-      "commit=true", // Confirmar transacción inmediatamente
-      "vault=false" // Deshabilitar almacenamiento de tarjetas
+      "enable-funding=card"
     ];
-    
-    // Add mobile-specific optimizations
-    if (isMobileDevice) {
-      baseParams.push("enable-funding=card"); // Enable cards on mobile production
-    } else {
-      baseParams.push("enable-funding=card");
-    }
     
     sdkUrl = "https://www.paypal.com/sdk/js?" + baseParams.join("&");
   }

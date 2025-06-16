@@ -31,19 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
               value: '5.00', 
               currency_code: 'EUR' 
             },
-            description: 'Café Virtual - Masterpiece Collection',
-            payee: {
-              merchant_id: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'
-            }
-          }],
-          application_context: {
-            brand_name: 'Masterpiece Collection',
-            locale: 'es-ES',
-            user_action: 'PAY_NOW',
-            payment_method: {
-              payee_preferred: 'IMMEDIATE_PAYMENT_REQUIRED'
-            }
-          }
+            description: 'Café Virtual - Masterpiece Collection'
+          }]
         });
       },
       onApprove: function(data, actions) {
@@ -93,19 +82,8 @@ window.initializePayPal = function() {
               value: '5.00', 
               currency_code: 'EUR' 
             },
-            description: 'Café Virtual - Masterpiece Collection',
-            payee: {
-              merchant_id: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'
-            }
-          }],
-          application_context: {
-            brand_name: 'Masterpiece Collection',
-            locale: 'es-ES',
-            user_action: 'PAY_NOW',
-            payment_method: {
-              payee_preferred: 'IMMEDIATE_PAYMENT_REQUIRED'
-            }
-          }
+            description: 'Café Virtual - Masterpiece Collection'
+          }]
         });
       },
       onApprove: function(data, actions) {
