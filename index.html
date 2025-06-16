@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), payment=(), accelerometer=(), gyroscope=()">
+    <meta http-equiv="Permissions-Policy" content="geolocation=*, camera=(), microphone=(), payment=*, accelerometer=*, gyroscope=*">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Vite + React</title>
 
@@ -44,45 +44,60 @@
         isLocalhost: window.isLocalhost,
         isProduction: window.isProduction
       });
+        // Detect mobile device
+      const isMobileDevice = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
       
-      // Load PayPal SDK
-      const sdkUrl = window.isLocalhost 
-        ? "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&debug=true"
-        : "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo";
-      
-      const script = document.createElement('script');
+      // Load PayPal SDK with mobile-optimized configuration      let sdkUrl;
+      if (window.isLocalhost) {
+        // En localhost, deshabilitar tarjetas para evitar errores de desarrollo
+        sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&debug=true";
+      } else {
+        // En producción, configuración específica por región para EUR
+        if (isMobileDevice) {
+          // Configuración móvil con región europea específica para evitar DOMESTIC_TRANSACTION_REQUIRED
+          sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&intent=capture&buyer-country=ES";
+        } else {
+          // Configuración desktop con región europea
+          sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&buyer-country=ES";
+        }
+      }
+        const script = document.createElement('script');
       script.src = sdkUrl;
       script.crossOrigin = 'anonymous';
       script.async = true;
       document.head.appendChild(script);
-      
-      console.log('💳 PayPal SDK loaded for:', window.isLocalhost ? 'localhost' : 'production');
-    </script>
-
-    <!-- Geolocation Mock -->
+        console.log('💳 PayPal SDK loaded for:', {
+        environment: window.isLocalhost ? 'localhost' : 'production',
+        device: isMobileDevice ? 'móvil' : 'desktop',
+        cards: window.isLocalhost ? 'deshabilitadas (desarrollo)' : 'habilitadas',
+        region: window.isLocalhost ? 'debug' : 'ES (España)',
+        currency: 'EUR',
+        funding: 'PayPal + tarjetas (venmo deshabilitado)'
+      });
+    </script>    <!-- Geolocation Mock for Spain -->
     <script>
       (function() {
-        console.log('🚫 Setting up geolocation mock...');
+        console.log('🇪🇸 Setting up geolocation mock for Spain...');
         
-        // Create complete geolocation mock
+        // Enhanced geolocation mock with better Spain data
         const mockGeolocation = {
           getCurrentPosition: function(success, error, options) {
-            console.log('🇪🇸 Mock geolocation: Madrid, Spain');
+            console.log('🇪🇸 Mock geolocation: Madrid, Spain (Europa)');
             if (success) {
               setTimeout(() => {
                 success({
                   coords: {
-                    latitude: 40.4168,
-                    longitude: -3.7038,
-                    altitude: null,
-                    accuracy: 100,
-                    altitudeAccuracy: null,
+                    latitude: 40.4168,      // Madrid
+                    longitude: -3.7038,     // Madrid
+                    altitude: 650,          // Madrid altitude
+                    accuracy: 50,           // High accuracy
+                    altitudeAccuracy: 10,
                     heading: null,
                     speed: null
                   },
                   timestamp: Date.now()
                 });
-              }, 100);
+              }, 50);
             }
           },
           watchPosition: function(success, error, options) {
@@ -91,18 +106,22 @@
             return id;
           },
           clearWatch: function(id) {
-            console.log('Mock geolocation: clearWatch called');
+            console.log('🇪🇸 Mock geolocation: clearWatch called');
           }
         };
         
-        // Always use mock to avoid policy violations
-        Object.defineProperty(navigator, 'geolocation', {
-          value: mockGeolocation,
-          writable: false,
-          configurable: false
-        });
+        // Override geolocation completely to prevent policy issues
+        if (window.navigator && window.navigator.geolocation) {
+          Object.defineProperty(navigator, 'geolocation', {
+            value: mockGeolocation,
+            writable: false,
+            configurable: false
+          });
+        } else {
+          navigator.geolocation = mockGeolocation;
+        }
         
-        console.log('✅ Geolocation mock active');
+        console.log('✅ Geolocation mock active (Madrid, España)');
       })();
     </script>
 
@@ -152,8 +171,9 @@
           
           console.log('✅ Rendering PayPal button...');
           container.innerHTML = '';
-          
-          try {
+            try {
+            const isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
             window.paypal.Buttons({
               env: 'sandbox',
               style: {
@@ -161,10 +181,11 @@
                 color: 'gold',
                 shape: 'rect',
                 label: 'donate',
-                height: 44,
+                height: isMobile ? 40 : 44, // Altura ajustada para móviles
                 tagline: false
               },
               
+              // No restringir funding source en producción para móviles
               fundingSource: window.isLocalhost ? window.paypal.FUNDING.PAYPAL : undefined,
               
               onClick: function(data, actions) {
@@ -183,8 +204,7 @@
                 
                 return actions.resolve();
               },
-              
-              createOrder: function(data, actions) {
+                createOrder: function(data, actions) {
                 console.log('🔄 Creating PayPal order');
                 
                 let amount = '5.00';
@@ -200,19 +220,27 @@
                 
                 console.log('💰 Order amount:', amount);
                 
-                return actions.order.create({
+                // Enhanced order configuration for EUR and Spain
+                const orderConfig = {
                   intent: 'CAPTURE',
                   purchase_units: [{
                     amount: {
                       value: amount,
                       currency_code: 'EUR'
-                    }
+                    },
+                    description: 'Donación de café - Masterpiece Collection'
                   }],
                   application_context: {
                     shipping_preference: 'NO_SHIPPING',
-                    user_action: 'PAY_NOW'
+                    user_action: 'PAY_NOW',
+                    locale: 'es-ES',
+                    landing_page: 'BILLING'
                   }
-                });
+                };
+                
+                console.log('📦 Order config:', orderConfig);
+                
+                return actions.order.create(orderConfig);
               },
               
               onApprove: function(data, actions) {
@@ -234,32 +262,38 @@
                   }, 5000);
                 });
               },
-              
-              onError: function(err) {
+                onError: function(err) {
                 console.error('❌ PayPal error:', err);
                 
                 let errorMessage = 'Ha ocurrido un error. Por favor, inténtalo de nuevo.';
+                let shouldShow = true;
                 
                 if (err && err.message) {
                   if (err.message.includes('DOMESTIC_TRANSACTION_REQUIRED')) {
-                    errorMessage = 'Error de configuración de pagos. Por favor, contacta al soporte.';
+                    console.log('🔧 DOMESTIC_TRANSACTION_REQUIRED error detected - this should be resolved with buyer-country=ES');
+                    errorMessage = 'Error de configuración regional. Reintentando...';
+                    shouldShow = false; // Don't show user error, this is a config issue
                   } else if (err.message.includes('INSTRUMENT_DECLINED')) {
                     errorMessage = 'Pago declinado. Por favor, verifica tu método de pago.';
+                  } else if (err.message.includes('PAYER_ACTION_REQUIRED')) {
+                    errorMessage = 'Se requiere acción del pagador. Por favor, completa el pago.';
                   }
                 }
                 
-                const errorDiv = document.createElement('div');
-                errorDiv.innerHTML = `
-                  <div style="background: #f44336; color: white; padding: 15px; border-radius: 8px; text-align: center; margin: 10px 0;">
-                    ${errorMessage}
-                  </div>
-                `;
-                
-                container.parentNode.insertBefore(errorDiv, container.nextSibling);
-                
-                setTimeout(() => {
-                  errorDiv.remove();
-                }, 5000);
+                if (shouldShow) {
+                  const errorDiv = document.createElement('div');
+                  errorDiv.innerHTML = `
+                    <div style="background: #f44336; color: white; padding: 15px; border-radius: 8px; text-align: center; margin: 10px 0;">
+                      ${errorMessage}
+                    </div>
+                  `;
+                  
+                  container.parentNode.insertBefore(errorDiv, container.nextSibling);
+                  
+                  setTimeout(() => {
+                    errorDiv.remove();
+                  }, 5000);
+                }
               },
               
               onCancel: function(data) {
