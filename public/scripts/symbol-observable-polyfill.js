@@ -1,43 +1,54 @@
 /**
- * Enhanced Symbol.observable polyfill for Redux compatibility
+ * Enhanced Symbol.observable polyfill for Redux compatibility - v2
  * Ensures consistent Symbol.observable across Redux and DevTools
  */
 (function() {
-  console.log('🔧 Setting up Symbol.observable polyfill...');
+  console.log('🔧 Setting up Symbol.observable polyfill v2...');
   
-  // Check if Symbol exists
-  if (typeof Symbol === 'undefined') {
-    console.log('⚠️ Symbol not found, creating basic implementation');
-    window.Symbol = function(description) {
-      return '@@' + (description || 'symbol') + Math.random();
-    };
-    Symbol.for = function(key) {
-      return '@@' + key;
-    };
-  }
-  
-  // Define the observable symbol consistently
-  const observableSymbol = typeof Symbol === 'function' && Symbol.observable || '@@observable';
-  
-  // Ensure Symbol.observable is set consistently
-  if (!Symbol.observable) {
+  // Early override to prevent Redux DevTools mismatch
+  if (typeof window !== 'undefined') {
+    // Store original if exists
+    const originalSymbol = window.Symbol;
+    
+    // Create consistent Symbol implementation
+    if (typeof Symbol === 'undefined') {
+      console.log('⚠️ Symbol not found, creating implementation');
+      window.Symbol = function(description) {
+        return '@@' + (description || 'symbol') + Math.random();
+      };
+      Symbol.for = function(key) {
+        return '@@' + key;
+      };
+    }
+    
+    // Force consistent observable symbol - BEFORE any other scripts
+    const OBSERVABLE_SYMBOL = '@@observable';
+    
+    // Override Symbol.observable consistently
     if (typeof Symbol.for === 'function') {
       Symbol.observable = Symbol.for('observable');
     } else {
-      Symbol.observable = observableSymbol;
+      Symbol.observable = OBSERVABLE_SYMBOL;
     }
-  }
-  
-  // Ensure it's the same reference for Redux compatibility
-  if (typeof Symbol.observable === 'string' && typeof Symbol.for === 'function') {
-    Symbol.observable = Symbol.for('observable');
-  }
-  
-  console.log('✅ Symbol.observable configured consistently:', Symbol.observable);
-  
-  // Also set on window for compatibility
-  window.Symbol = window.Symbol || Symbol;
-  if (window.Symbol && !window.Symbol.observable) {
-    window.Symbol.observable = Symbol.observable;
+    
+    // Also set on window for global access
+    window.Symbol = window.Symbol || Symbol;
+    if (window.Symbol) {
+      window.Symbol.observable = Symbol.observable;
+    }
+    
+    // Prevent any future changes
+    try {
+      Object.defineProperty(Symbol, 'observable', {
+        value: Symbol.observable,
+        writable: false,
+        configurable: false
+      });
+    } catch(e) {
+      // Fallback if defineProperty fails
+      Symbol.observable = Symbol.observable;
+    }
+    
+    console.log('✅ Symbol.observable v2 locked:', Symbol.observable);
   }
 })();

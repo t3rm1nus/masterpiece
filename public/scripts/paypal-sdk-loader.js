@@ -21,19 +21,19 @@
   
   // Detect mobile device
   const isMobileDevice = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    // Load PayPal SDK with mobile-optimized configuration
+  // Load PayPal SDK with mobile-optimized configuration
   let sdkUrl;
   if (window.isLocalhost) {
-    // En localhost, deshabilitar tarjetas para evitar errores de desarrollo
+    // En localhost, usar sandbox y deshabilitar tarjetas para evitar errores de desarrollo
     sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&debug=true";
   } else {
-    // En producción, configuración europea específica para evitar DOMESTIC_TRANSACTION_REQUIRED
+    // En producción, configuración europea específica - USAR LIVE SDK
     if (isMobileDevice) {
-      // Configuración móvil optimizada para Europa/España - SIN merchant-id duplicado
-      sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&intent=capture&buyer-country=ES";
+      // Configuración móvil optimizada para Europa/España - LIVE ENVIRONMENT
+      sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&intent=capture&buyer-country=ES&env=production";
     } else {
-      // Configuración desktop para Europa/España - SIN merchant-id duplicado
-      sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&buyer-country=ES";
+      // Configuración desktop para Europa/España - LIVE ENVIRONMENT
+      sdkUrl = "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&currency=EUR&locale=es_ES&disable-funding=venmo&buyer-country=ES&env=production";
     }
   }
     const script = document.createElement('script');
