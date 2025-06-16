@@ -51,7 +51,9 @@
       "components=buttons",
       "currency=EUR",
       "disable-funding=venmo",
-      "enable-funding=card"
+      "enable-funding=card",
+      "intent=capture",
+      "commit=true"
     ];
     
     sdkUrl = "https://www.paypal.com/sdk/js?" + baseParams.join("&");
