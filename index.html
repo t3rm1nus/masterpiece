@@ -248,7 +248,32 @@
               },              // Configurar métodos de pago: solo restringir en localhost
               fundingSource: window.isLocalhost ? window.paypal.FUNDING.PAYPAL : undefined,
               
-              createOrder: function(data, actions) {
+              onClick: function(data, actions) {
+                console.log('🖱️ Botón PayPal clickeado');
+                console.log('🖱️ Tipo de funding:', data.fundingSource);
+                console.log('🖱️ Data del click:', data);
+                
+                // Verificar cantidad antes de proceder
+                const amountInputDesktop = document.querySelector('input[name="amount"]#donation-amount');
+                const amountInputMobile = document.querySelector('input[name="amount"]#donation-amount-mobile');
+                const amountInput = amountInputDesktop || amountInputMobile;
+                
+                if (amountInput) {
+                  const inputValue = parseFloat(amountInput.value);
+                  console.log('🔢 Valor actual del input al hacer click:', inputValue);
+                  
+                  if (!inputValue || inputValue <= 0 || inputValue > 1000) {
+                    console.log('⚠️ Valor inválido, rechazando el pago');
+                    return actions.reject();
+                  }
+                }
+                
+                console.log('✅ Click validado, procediendo...');
+                return actions.resolve();
+              },
+                createOrder: function(data, actions) {
+                console.log('🔄 createOrder llamado');
+                
                 // Obtener la cantidad del input o usar 5 EUR por defecto
                 let amount = '5.00';
                 
@@ -257,15 +282,27 @@
                 const amountInputMobile = document.querySelector('input[name="amount"]#donation-amount-mobile');
                 const amountInput = amountInputDesktop || amountInputMobile;
                 
+                console.log('🔍 Input encontrado:', amountInput);
+                console.log('🔍 Valor del input:', amountInput ? amountInput.value : 'no hay input');
+                
                 if (amountInput && amountInput.value) {
                   const inputValue = parseFloat(amountInput.value);
-                  if (inputValue && inputValue > 0) {
+                  console.log('🔢 Valor parseado:', inputValue);
+                  
+                  if (inputValue && inputValue > 0 && inputValue <= 1000) {
                     amount = inputValue.toFixed(2);
+                    console.log('✅ Cantidad válida:', amount);
+                  } else {
+                    console.log('⚠️ Cantidad inválida, usando 5.00 por defecto');
+                    amount = '5.00';
                   }
                 }
-                  console.log('Creando orden PayPal con cantidad:', amount);
-                console.log('Input usado:', amountInput ? amountInput.id : 'ninguno');
-                console.log('Entorno:', 'sandbox');                return actions.order.create({
+                
+                console.log('💰 Creando orden PayPal con cantidad:', amount);
+                console.log('📱 Input usado:', amountInput ? amountInput.id : 'ninguno');
+                console.log('🌍 Entorno:', 'sandbox');
+                
+                const orderData = {
                   intent: 'CAPTURE',
                   purchase_units: [{
                     amount: {
@@ -286,6 +323,16 @@
                     return_url: window.location.origin + window.location.pathname,
                     cancel_url: window.location.origin + window.location.pathname
                   }
+                };
+                
+                console.log('📦 Datos de orden a enviar:', JSON.stringify(orderData, null, 2));
+                
+                return actions.order.create(orderData).then(function(orderID) {
+                  console.log('✅ Orden creada con ID:', orderID);
+                  return orderID;
+                }).catch(function(error) {
+                  console.error('❌ Error creando orden:', error);
+                  throw error;
                 });
               },
               
@@ -324,20 +371,25 @@
                     }, 5000);
                   }, 2000);
                 });
-              },
-                onError: function(err) {
-                console.error('Error en el pago:', err);
+              },              onError: function(err) {
+                console.error('❌ Error en PayPal:', err);
+                console.error('❌ Tipo de error:', typeof err);
+                console.error('❌ Error completo:', JSON.stringify(err, null, 2));
                 
                 // Manejar errores específicos de móviles
                 let errorMessage = 'Ha ocurrido un error. Por favor, inténtalo de nuevo.';
                 
                 if (err && err.message) {
+                  console.error('❌ Mensaje de error:', err.message);
+                  
                   if (err.message.includes('DOMESTIC_TRANSACTION_REQUIRED')) {
                     errorMessage = 'Error de configuración de pagos. Por favor, contacta al soporte.';
                   } else if (err.message.includes('geolocation')) {
                     errorMessage = 'Error de permisos. Por favor, permite la ubicación o intenta desde un navegador diferente.';
                   } else if (err.message.includes('INSTRUMENT_DECLINED')) {
                     errorMessage = 'Pago declinado. Por favor, verifica tu método de pago.';
+                  } else if (err.message.includes('VALIDATION_ERROR') || err.message.includes('INVALID_REQUEST')) {
+                    errorMessage = 'Error de validación. Verifica la cantidad introducida.';
                   }
                 }
                 
