@@ -1,9 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- CRITICAL INLINE DEFENSE: Symbol.observable & Geolocation (FIRST, SIMPLE) -->
     <script>
-      // Symbol.observable Polyfill (simple, robust)
+      // Symbol.observable Polyfill (debe ser el PRIMER script en <head>)
       (function() {
         var obs = Symbol.for('observable');
         try {
