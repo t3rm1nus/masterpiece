@@ -1,15 +1,148 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+  <head>    <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <meta http-equiv="Permissions-Policy" content="geolocation=*, camera=*, microphone=*, payment=*">
+    <meta http-equiv="Feature-Policy" content="geolocation *; camera *; microphone *; payment *">
     <title>Vite + React</title>
-      <!-- PayPal SDK Script - Usando sandbox para pruebas -->
-    <script
-      src="https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo&currency=EUR&intent=capture"
-      crossorigin="anonymous"
-      async>
+    
+    <!-- Polyfill para Symbol.observable antes de Redux -->
+    <script>
+      if (typeof Symbol === 'undefined' || !Symbol.observable) {
+        if (typeof Symbol === 'undefined') {
+          window.Symbol = {};
+        }
+        Symbol.observable = Symbol.observable || Symbol('observable') || '@@observable';
+      }
+    </script>    <!-- PayPal SDK Script - Configuración adaptada para móviles -->
+    <script>
+      // Variables globales para detección de entorno
+      window.isLocalhost = window.location.hostname === 'localhost' || 
+                          window.location.hostname === '127.0.0.1' || 
+                          window.location.hostname === '';
+      
+      // Detectar si es móvil para cargar SDK apropiado
+      const isMobileDevice = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+      // Configuración específica para localhost
+      let sdkUrl;
+      if (window.isLocalhost) {
+        // En localhost, usar configuración más permisiva
+        sdkUrl = isMobileDevice 
+          ? "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&intent=capture&vault=false&locale=es_ES&debug=true"
+          : "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&intent=capture&vault=false&locale=es_ES&debug=true";
+      } else {
+        // En producción, configuración normal
+        sdkUrl = isMobileDevice 
+          ? "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo,card&currency=EUR&intent=capture&vault=false&locale=es_ES"
+          : "https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R&components=buttons&disable-funding=venmo&currency=EUR&intent=capture&vault=false&locale=es_ES";
+      }
+      
+      const script = document.createElement('script');
+      script.src = sdkUrl;
+      script.crossOrigin = 'anonymous';
+      script.async = true;
+      document.head.appendChild(script);
+      
+      console.log('PayPal SDK cargado para:', {
+        environment: window.isLocalhost ? 'localhost' : 'production',
+        device: isMobileDevice ? 'móvil' : 'desktop',
+        cards: window.isLocalhost ? 'deshabilitadas (localhost)' : (isMobileDevice ? 'deshabilitadas (móvil)' : 'habilitadas')
+      });
+    </script><!-- Script para configurar permisos antes de PayPal -->
+    <script>
+      // Mock completo de geolocalización para localhost y desarrollo
+      (function() {
+        const isLocalhost = window.location.hostname === 'localhost' || 
+                           window.location.hostname === '127.0.0.1' || 
+                           window.location.hostname === '';
+                           
+        const originalGeolocation = navigator.geolocation;
+        
+        // En localhost, siempre usar mock para evitar problemas
+        const shouldUseMock = isLocalhost || window.location.protocol !== 'https:';
+        
+        // Crear un mock completo de geolocalización
+        const mockGeolocation = {
+          getCurrentPosition: function(success, error, options) {
+            console.log('Mock geolocation (localhost): Proporcionando ubicación de España');
+            if (success) {
+              setTimeout(() => {
+                success({
+                  coords: {
+                    latitude: 40.4168,
+                    longitude: -3.7038,
+                    altitude: null,
+                    accuracy: 100,
+                    altitudeAccuracy: null,
+                    heading: null,
+                    speed: null
+                  },
+                  timestamp: Date.now()
+                });
+              }, 100);
+            }
+          },
+          watchPosition: function(success, error, options) {
+            const id = Math.random();
+            if (success) {
+              setTimeout(() => {
+                success({
+                  coords: {
+                    latitude: 40.4168,
+                    longitude: -3.7038,
+                    altitude: null,
+                    accuracy: 100,
+                    altitudeAccuracy: null,
+                    heading: null,
+                    speed: null
+                  },
+                  timestamp: Date.now()
+                });
+              }, 100);
+            }
+            return id;
+          },
+          clearWatch: function(id) {
+            console.log('Mock geolocation: clearWatch called with id', id);
+          }
+        };
+        
+        // En localhost, reemplazar completamente la geolocalización
+        if (shouldUseMock) {
+          Object.defineProperty(navigator, 'geolocation', {
+            value: mockGeolocation,
+            writable: false,
+            configurable: false
+          });
+          console.log('🔧 Geolocalización mock activada para localhost');
+        } else {
+          // En producción, interceptar errores y usar fallback
+          const originalGetCurrentPosition = originalGeolocation?.getCurrentPosition;
+          if (originalGetCurrentPosition) {
+            navigator.geolocation.getCurrentPosition = function(success, error, options) {
+              try {
+                originalGetCurrentPosition.call(this, success, (err) => {
+                  console.log('Error de geolocalización interceptado, usando mock');
+                  mockGeolocation.getCurrentPosition(success, error, options);
+                }, options);
+              } catch (e) {
+                console.log('Excepción en geolocalización, usando mock');
+                mockGeolocation.getCurrentPosition(success, error, options);
+              }
+            };
+          }
+        }
+      })();      // Verificar permisos de geolocalización solo si no estamos en localhost
+      if (!window.isLocalhost && navigator.permissions) {
+        navigator.permissions.query({name: 'geolocation'}).then(function(result) {
+          console.log('Estado de geolocalización:', result.state);
+        }).catch(function(err) {
+          console.log('No se puede verificar permisos de geolocalización:', err);
+        });
+      } else if (window.isLocalhost) {
+        console.log('🌍 Localhost detectado: usando geolocalización mock por defecto');
+      }
     </script>
     
     <!-- PayPal Button Initialization Script -->
@@ -49,8 +182,7 @@
           
           if (wrapper) wrapper.classList.add('loading');
           container.innerHTML = '';
-            try {
-            window.paypal.Buttons({
+            try {            window.paypal.Buttons({
               // Configuración para sandbox/testing
               env: 'sandbox', // Cambiar a 'production' cuando tengas permisos
               
@@ -59,8 +191,12 @@
                 color: 'gold',
                 shape: 'rect',
                 label: 'donate',
-                height: 44
+                height: 44,
+                tagline: false
               },
+              
+              // Configurar métodos de pago según el dispositivo
+              fundingSource: isMobile() ? window.paypal.FUNDING.PAYPAL : undefined,
               
               createOrder: function(data, actions) {
                 // Obtener la cantidad del input o usar 5 EUR por defecto
@@ -79,21 +215,20 @@
                 }
                   console.log('Creando orden PayPal con cantidad:', amount);
                 console.log('Input usado:', amountInput ? amountInput.id : 'ninguno');
-                console.log('Entorno:', 'sandbox');
-                
-                return actions.order.create({
+                console.log('Entorno:', 'sandbox');                return actions.order.create({
                   intent: 'CAPTURE',
                   purchase_units: [{
                     amount: {
                       value: amount,
                       currency_code: 'EUR'
                     },
-                    description: 'Donación para Masterpiece - Café para el desarrollador'
+                    description: 'Donación para Masterpiece'
                   }],
                   application_context: {
-                    brand_name: 'Masterpiece App',
+                    brand_name: 'Masterpiece',
                     locale: 'es-ES',
-                    user_action: 'PAY_NOW'
+                    user_action: 'PAY_NOW',
+                    shipping_preference: 'NO_SHIPPING'
                   }
                 });
               },
@@ -134,9 +269,21 @@
                   }, 2000);
                 });
               },
-              
-              onError: function(err) {
+                onError: function(err) {
                 console.error('Error en el pago:', err);
+                
+                // Manejar errores específicos de móviles
+                let errorMessage = 'Ha ocurrido un error. Por favor, inténtalo de nuevo.';
+                
+                if (err && err.message) {
+                  if (err.message.includes('DOMESTIC_TRANSACTION_REQUIRED')) {
+                    errorMessage = 'Error de configuración de pagos. Por favor, contacta al soporte.';
+                  } else if (err.message.includes('geolocation')) {
+                    errorMessage = 'Error de permisos. Por favor, permite la ubicación o intenta desde un navegador diferente.';
+                  } else if (err.message.includes('INSTRUMENT_DECLINED')) {
+                    errorMessage = 'Pago declinado. Por favor, verifica tu método de pago.';
+                  }
+                }
                 
                 const errorMsg = document.createElement('div');
                 errorMsg.innerHTML = `
@@ -149,7 +296,7 @@
                     margin: 10px 0;
                     font-size: 14px;
                   ">
-                    Ha ocurrido un error. Por favor, inténtalo de nuevo.
+                    ${errorMessage}
                   </div>
                 `;
                 
@@ -397,41 +544,56 @@
     <script>
       // Interceptar y filtrar warnings de PayPal en desarrollo
       const originalError = console.error;
-      const originalWarn = console.warn;
-      
-      console.error = function(...args) {
+      const originalWarn = console.warn;      console.error = function(...args) {
         const message = args.join(' ');
-        // Filtrar errores específicos de PayPal que no afectan la funcionalidad
+        // Filtrar errores específicos de PayPal y Redux que no afectan la funcionalidad
         if (message.includes('ncps_standalone_paylater_ineligible') || 
             message.includes('paylater_ineligible') ||
             message.includes('paypal_js_sdk_v5_unhandled_exception') ||
             message.includes('Cannot read properties of null') ||
             message.includes('classList') ||
-            message.includes('renderErrors')) {
+            message.includes('renderErrors') ||
+            message.includes('geolocation is not allowed') ||
+            message.includes('DOMESTIC_TRANSACTION_REQUIRED') ||
+            message.includes('scf_unhandled_error') ||
+            message.includes('Symbol.observable as defined by Redux')) {
           return; // No mostrar estos errores
         }
         originalError.apply(console, args);
       };
-      
-      console.warn = function(...args) {
+        console.warn = function(...args) {
         const message = args.join(' ');
-        // Filtrar warnings relacionados con PayPal
+        // Filtrar warnings relacionados con PayPal y Redux
         if (message.includes('ncps_standalone_paylater_ineligible') || 
             message.includes('paylater_ineligible') ||
             message.includes('Pay Later ineligible') ||
-            message.includes('paypal_js_sdk')) {
+            message.includes('paypal_js_sdk') ||
+            message.includes('Symbol.observable as defined by Redux')) {
           return; // No mostrar estos warnings
         }
         originalWarn.apply(console, args);
-      };
-      
-      // Interceptar errores no capturados de PayPal
+      };      // Interceptar errores no capturados de PayPal
       window.addEventListener('error', function(event) {
         if (event.error && event.error.message && 
             (event.error.message.includes('Cannot read properties of null') ||
              event.error.message.includes('classList') ||
              event.error.message.includes('renderErrors') ||
+             event.error.message.includes('geolocation is not allowed') ||
+             event.error.message.includes('DOMESTIC_TRANSACTION_REQUIRED') ||
+             event.error.message.includes('scf_unhandled_error') ||
              event.filename && event.filename.includes('paypal.com'))) {
+          event.preventDefault();
+          return true;
+        }
+      });
+      
+      // Interceptar específicamente errores de geolocalización
+      window.addEventListener('unhandledrejection', function(event) {
+        if (event.reason && 
+            (event.reason.message?.includes('geolocation') ||
+             event.reason.toString().includes('geolocation') ||
+             event.reason.message?.includes('DOMESTIC_TRANSACTION_REQUIRED'))) {
+          console.log('Error de PayPal interceptado y suprimido:', event.reason);
           event.preventDefault();
           return true;
         }

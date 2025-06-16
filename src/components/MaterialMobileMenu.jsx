@@ -227,9 +227,8 @@ const MaterialMobileMenu = () => {
           >
             <ListItemIcon sx={{ color: isDarkTheme ? '#ffffff' : '#000000', minWidth: '40px' }}>
               {isDarkTheme ? <LightbulbIcon /> : <DarkModeIcon />}
-            </ListItemIcon>
-            <ListItemText 
-              primary={isDarkTheme ? 'Modo Claro' : 'Modo Oscuro'}
+            </ListItemIcon>            <ListItemText 
+              primary={isDarkTheme ? (t.light_mode || 'Modo Claro') : (t.dark_mode || 'Modo Oscuro')}
               sx={{ color: isDarkTheme ? '#ffffff' : '#000000' }}
             />
           </ListItemButton>
