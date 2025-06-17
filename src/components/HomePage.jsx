@@ -113,24 +113,22 @@ const HomePage = () => {
 
       <div className="special-buttons-container">
         {selectedCategory === 'movies' && (
-          <>
-            <button
-              className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
-              onClick={() => {
-                toggleSpanishCinema();
-                console.log('Toggling Spanish Cinema:', !isSpanishCinemaActive);
-              }}
-            >
-              {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
-            </button>
-            <button
-              className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
-              onClick={toggleMasterpiece}
-            >
-              {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
-            </button>
-          </>
+          <button
+            className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
+            onClick={() => {
+              toggleSpanishCinema();
+              console.log('Toggling Spanish Cinema:', !isSpanishCinemaActive);
+            }}
+          >
+            {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
+          </button>
         )}
+        <button
+          className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
+          onClick={toggleMasterpiece}
+        >
+          {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
+        </button>
 
         {selectedCategory === 'podcast' && (
           <>
