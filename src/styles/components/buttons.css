@@ -316,14 +316,14 @@
 }
 
 .subcategory-btn.masterpiece-btn:hover {
-  background: #ffecb3;
+  background: #fff3e0;
   border-color: #ffca28;
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
 
 .subcategory-btn.masterpiece-btn.active {
-  background: #ffd54f;
+  background: #ffe0b2;
   color: #5d4037;
   border-color: #ffca28;
   font-weight: var(--font-weight-bold);
