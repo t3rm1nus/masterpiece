@@ -22,13 +22,14 @@ const HomePage = () => {
     activeSubcategory,
     setActiveSubcategory,
     getSubcategoriesForCategory,
-    getCategories
+    getCategories,
+    filteredItems
   } = useDataStore();
   
   // Obtener configuración de estilos del store consolidado
   const { getSpecialButtonLabel } = useThemeStore();  
   // Obtener categorías traducidas
-  const categories = getCategories();
+  const categories = getCategories(lang);
   
   // Obtener subcategorías del store para la categoría seleccionada
   const categorySubcategories = getSubcategoriesForCategory();
@@ -38,13 +39,14 @@ const HomePage = () => {
   const [podcastLanguage, setPodcastLanguage] = useState('es');
   const [isRecommendedActive, setIsRecommendedActive] = useState(false);
 
-  const handleCategoryClick = (key, label) => {
-    setSelectedCategory(key);
+  const handleCategoryClick = (category) => {
+    const label = t.categories[category.key] || category.label;
+    setSelectedCategory(category.key);
     setSelectedCategoryLabel(label);
     setActiveSubcategory(null);
     setIsSpanishCinemaActive(false);
     setIsMasterpieceActive(false);
-    setIsRecommendedActive(key === 'recommended');
+    setIsRecommendedActive(category.key === 'recommended');
   };
 
   // Función para obtener el color de la categoría
@@ -90,7 +92,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="home-page">
+    <div className="home-container">
       <div className="header-controls">
         <ThemeToggle />
       </div>
@@ -99,11 +101,11 @@ const HomePage = () => {
         <div className="categories-list">
           {categories.map((category) => (
             <button
-              key={category}
-              className={`category-btn${selectedCategory === category ? ' active' : ''}`}
-              onClick={() => handleCategoryClick(category, t.categories[category] || category)}
+              key={category.key}
+              className={`category-btn${selectedCategory === category.key ? ' active' : ''}`}
+              onClick={() => handleCategoryClick(category)}
             >
-              {t.categories[category] || category}
+              {category.label}
             </button>
           ))}
         </div>
@@ -162,7 +164,7 @@ const HomePage = () => {
 
       <h1 className={selectedCategory ? 'after-subcategories' : ''}>{selectedCategoryLabel}</h1>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <RecommendationsList />
+        <RecommendationsList items={filteredItems} />
       </div>
     </div>
   );
