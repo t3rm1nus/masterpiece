@@ -27,7 +27,8 @@ const HomePage = () => {
     setPodcastLanguage,
     isSpanishCinemaActive,
     isMasterpieceActive,
-    podcastLanguage
+    podcastLanguage,
+    title
   } = useDataStore();
   
   // Obtener configuración de estilos del store consolidado
@@ -148,7 +149,7 @@ const HomePage = () => {
         )}
       </div>
 
-      <h1 className={selectedCategory ? 'after-subcategories' : ''}>{selectedCategoryLabel}</h1>
+      {title && <h1 className={selectedCategory ? 'after-subcategories' : ''}>{title}</h1>}
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
         <RecommendationsList items={filteredItems} />
       </div>
