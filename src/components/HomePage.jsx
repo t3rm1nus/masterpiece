@@ -84,7 +84,6 @@ const HomePage = () => {
       </div>
 
       <div className="categories-container">
-        <h2>{t.categoriesTitle}</h2>
         <div className="categories-list">
           {categories.map(({ key, label }) => (
             <button
@@ -100,12 +99,6 @@ const HomePage = () => {
 
       {selectedCategory && (
         <div className="subcategories-container">
-          <button
-            className={`subcategory-btn${!activeSubcategory ? ' active' : ''}`}
-            onClick={() => setActiveSubcategory(null)}
-          >
-            {t.see_all}
-          </button>
           {categorySubcategories.map(({ sub }) => (
             <button
               key={sub}
@@ -120,15 +113,23 @@ const HomePage = () => {
 
       <div className="special-buttons-container">
         {selectedCategory === 'movies' && (
-          <button
-            className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
-            onClick={() => {
-              toggleSpanishCinema();
-              console.log('Toggling Spanish Cinema:', !isSpanishCinemaActive);
-            }}
-          >
-            {getSpecialButtonLabel('spanishCinema')}
-          </button>
+          <>
+            <button
+              className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
+              onClick={() => {
+                toggleSpanishCinema();
+                console.log('Toggling Spanish Cinema:', !isSpanishCinemaActive);
+              }}
+            >
+              {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
+            </button>
+            <button
+              className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
+              onClick={toggleMasterpiece}
+            >
+              {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
+            </button>
+          </>
         )}
 
         {selectedCategory === 'podcast' && (
@@ -147,15 +148,6 @@ const HomePage = () => {
             </button>
           </>
         )}
-
-        <button
-          className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}              
-          onClick={() => {
-            toggleMasterpiece();
-          }}
-        >
-          {getSpecialButtonLabel('masterpiece')}
-        </button>
       </div>
 
       <h1 className={selectedCategory ? 'after-subcategories' : ''}>{title}</h1>
