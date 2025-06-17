@@ -278,22 +278,22 @@
   box-shadow: 0 2px 8px rgba(230, 81, 0, 0.3);
 }
 
-/* === BOTÓN PODCAST ESPAÑOL === */
-.subcategory-btn.spanish-podcast {
-  background: #4caf50;
+/* === BOTONES IDIOMA PODCAST === */
+.subcategory-btn.podcast-language {
+  background: #2196f3;
   color: white;
-  border-color: #4caf50;
+  border-color: #2196f3;
 }
 
-.subcategory-btn.spanish-podcast:hover {
-  background: #388e3c;
-  border-color: #388e3c;
+.subcategory-btn.podcast-language:hover {
+  background: #1976d2;
+  border-color: #1976d2;
 }
 
-.subcategory-btn.spanish-podcast.active {
-  background: #2e7d32;
-  border-color: #2e7d32;
-  box-shadow: 0 2px 8px rgba(46, 125, 50, 0.3);
+.subcategory-btn.podcast-language.active {
+  background: #1565c0;
+  border-color: #1565c0;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
 }
 
 /* === BOTÓN MASTERPIECE === */

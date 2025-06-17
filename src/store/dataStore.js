@@ -53,7 +53,7 @@ const useDataStore = create(
       activeSubcategory: null,
       isSpanishCinemaActive: false,
       isMasterpieceActive: false,
-      isSpanishPodcastActive: false,
+      podcastLanguage: null, // 'es', 'en' o null
       title: '',
       randomNotFoundImage: '',
       filteredItems: [],
@@ -128,7 +128,7 @@ const useDataStore = create(
           activeSubcategory, 
           isSpanishCinemaActive, 
           isMasterpieceActive,
-          isSpanishPodcastActive,
+          podcastLanguage,
           allData 
         } = state;
         // Si no hay categoría seleccionada, mostrar elementos aleatorios de todas las categorías
@@ -154,9 +154,9 @@ const useDataStore = create(
           console.log('Items after Spanish Cinema filter:', items.length);
         }
 
-        // Filtrar por Podcast en Español
-        if (isSpanishPodcastActive && selectedCategory === 'podcast') {
-          items = items.filter(item => item.idioma === 'es');
+        // Filtrar por idioma del podcast
+        if (podcastLanguage && selectedCategory === 'podcast') {
+          items = items.filter(item => item.idioma === podcastLanguage);
         }
 
         // Filtrar por obras maestras
@@ -235,15 +235,17 @@ const useDataStore = create(
         console.log('toggleSpanishCinema completed. New state:', !isSpanishCinemaActive);
       },
 
-      // Alternar podcasts en español
-      toggleSpanishPodcast: () => {
-        const { isSpanishPodcastActive, selectedCategory } = get();
+      // Alternar podcasts por idioma
+      setPodcastLanguage: (language) => {
+        const { podcastLanguage } = get();
+        // Si se hace clic en el mismo idioma, desactivar el filtro
+        const newLanguage = podcastLanguage === language ? null : language;
         set(
           { 
-            isSpanishPodcastActive: !isSpanishPodcastActive
+            podcastLanguage: newLanguage
           },
           false,
-          'toggleSpanishPodcast'
+          'setPodcastLanguage'
         );
         
         get().updateFilteredItems();

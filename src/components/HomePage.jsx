@@ -17,14 +17,14 @@ const HomePage = () => {
     activeSubcategory, 
     isSpanishCinemaActive, 
     isMasterpieceActive,
-    isSpanishPodcastActive,
+    podcastLanguage,
     title,
     filteredItems,
     setSelectedCategory,
     setActiveSubcategory,
     toggleSpanishCinema,
     toggleMasterpiece,
-    toggleSpanishPodcast,
+    setPodcastLanguage,
     getSubcategoriesForCategory,
     getCategories
   } = useDataStore();
@@ -122,16 +122,22 @@ const HomePage = () => {
                 </button>
               )}
 
-              {/* Mostrar botón de Podcast en Español solo en la categoría de podcasts */}
+              {/* Mostrar botones de idioma solo en la categoría de podcasts */}
               {selectedCategory === 'podcast' && (
-                <button
-                  className={`subcategory-btn spanish-podcast${isSpanishPodcastActive ? ' active' : ''}`}              
-                  onClick={() => {
-                    toggleSpanishPodcast();
-                  }}
-                >
-                  {getSpecialButtonLabel('spanishPodcast', lang)}
-                </button>
+                <>
+                  <button
+                    className={`subcategory-btn podcast-language${podcastLanguage === 'es' ? ' active' : ''}`}              
+                    onClick={() => setPodcastLanguage('es')}
+                  >
+                    {getSpecialButtonLabel('spanishPodcast', lang)}
+                  </button>
+                  <button
+                    className={`subcategory-btn podcast-language${podcastLanguage === 'en' ? ' active' : ''}`}              
+                    onClick={() => setPodcastLanguage('en')}
+                  >
+                    {getSpecialButtonLabel('englishPodcast', lang)}
+                  </button>
+                </>
               )}
 
               <button
