@@ -20,7 +20,7 @@
     },
     {
       "id": 2,
-      "category": "podcast",
+      "category": "podcast", 
       "subcategory": "comedy",
       "idioma": "es",
       "title": {
@@ -40,7 +40,7 @@
       "id": 3,
       "category": "podcast",
       "subcategory": "comedy",
-      "idioma": "es",
+      "idioma": "es", 
       "title": {
         "es": "Estirando el chicle",
         "en": "Estirando el chicle"
@@ -178,6 +178,528 @@
       "author": "Odio a la gente",
       "image": "/imagenes/podcasts/odio.jpg",
       "link": "https://open.spotify.com/show/1sYunv4SXt1HOmoDdvhOOp",
+      "masterpiece": false
+    },
+    {
+      "id": 11,
+      "category": "podcast",
+      "subcategory": "news",
+      "idioma": "es",
+      "title": {
+        "es": "Saldremos mejores",
+        "en": "Saldremos mejores"
+      },
+      "description": {
+        "es": "Un podcast que desafía la complacencia y te invita a profundizar más allá de las noticias de último momento. Con rigor y desparpajo, Inés Hernand y Nerea Pérez de las Heras analizan temas cruciales junto a voces expertas.",
+        "en": "A podcast that challenges complacency and invites you to delve beyond breaking news. With rigor and wit, Inés Hernand and Nerea Pérez de las Heras analyze crucial topics with expert voices."
+      },
+      "author": "Inés Hernand y Nerea Pérez de las Heras",
+      "image": "/imagenes/podcasts/saldremos_mejores.jpg",
+      "link": "https://open.spotify.com/show/7x5Q0B2ZWIot59Ah6NWoar",
+      "masterpiece": false
+    },
+    {
+      "id": 12,
+      "category": "podcast",
+      "subcategory": "news",
+      "idioma": "es",
+      "title": {
+        "es": "No es el fin del mundo",
+        "en": "No es el fin del mundo"
+      },
+      "description": {
+        "es": "Un podcast ganador del Premio Ondas que analiza la geopolítica y los acontecimientos mundiales de manera accesible y comprensible, explicando por qué no todo es tan catastrófico como parece.",
+        "en": "An Ondas Award-winning podcast that analyzes geopolitics and world events in an accessible and understandable way, explaining why not everything is as catastrophic as it seems."
+      },
+      "author": "Fernando Arancón y Alba Leiva",
+      "image": "/imagenes/podcasts/no_es_el_fin.jpg",
+      "link": "https://open.spotify.com/show/5dbvpKwtqz3X3hcX1BSEzf",
+      "masterpiece": false
+    },
+    {
+      "id": 13,
+      "category": "podcast",
+      "subcategory": "crime",
+      "idioma": "es",
+      "title": {
+        "es": "Territorio Negro",
+        "en": "Territorio Negro"
+      },
+      "description": {
+        "es": "Un podcast que profundiza en los casos criminales más impactantes de España, investigando a fondo cada suceso y sus implicaciones sociales.",
+        "en": "A podcast that delves into Spain's most impactful criminal cases, thoroughly investigating each event and its social implications."
+      },
+      "author": "Manu Marlasca y Luis Rendueles",
+      "image": "/imagenes/podcasts/territorio_negro.jpg",
+      "link": "https://open.spotify.com/show/6uXc6iDpBopOgUr8Osc4x7",
+      "masterpiece": false
+    },
+    {
+      "id": 14,
+      "category": "podcast",
+      "subcategory": "comedy",
+      "idioma": "es",
+      "title": {
+        "es": "La Ruina",
+        "en": "La Ruina"
+      },
+      "description": {
+        "es": "Un show de comedia donde los invitados comparten sus peores experiencias y momentos más vergonzosos, convirtiendo las desgracias en risas.",
+        "en": "A comedy show where guests share their worst experiences and most embarrassing moments, turning misfortunes into laughter."
+      },
+      "author": "Tomàs Fuentes e Ignasi Taltavull",
+      "image": "/imagenes/podcasts/la_ruina.jpg",
+      "link": "https://open.spotify.com/show/2hH5wXIG5SCCSxbcbKsyg8",
+      "masterpiece": false
+    },
+    {
+      "id": 15,
+      "category": "podcast",
+      "subcategory": "science",
+      "idioma": "es",
+      "title": {
+        "es": "La Rosa de los Vientos",
+        "en": "La Rosa de los Vientos"
+      },
+      "description": {
+        "es": "Un programa histórico de radio que explora misterios, ciencia, historia y fenómenos paranormales de forma rigurosa y entretenida.",
+        "en": "A historic radio program that explores mysteries, science, history and paranormal phenomena in a rigorous and entertaining way."
+      },
+      "author": "Bruno Cardeñosa",
+      "image": "/imagenes/podcasts/la_rosa.jpg",
+      "link": "https://open.spotify.com/show/2JZHytA0SZciOGkTRwWMyS",
+      "masterpiece": false
+    },
+    {
+      "id": 16,
+      "category": "podcast",
+      "subcategory": "science",
+      "idioma": "es",
+      "title": {
+        "es": "Entiende tu mente",
+        "en": "Entiende tu mente"
+      },
+      "description": {
+        "es": "Podcast de psicología que ayuda a entender aspectos fundamentales de nuestra mente y comportamiento de manera práctica y científica.",
+        "en": "Psychology podcast that helps understand fundamental aspects of our mind and behavior in a practical and scientific way."
+      },
+      "author": "Molo Cebrián",
+      "image": "/imagenes/podcasts/entiende_tu_mente.jpg",
+      "link": "https://open.spotify.com/show/0sGGLIDnnijRPLef7InllD",
+      "masterpiece": false
+    },
+    {
+      "id": 17,
+      "category": "podcast",
+      "subcategory": "culture",
+      "idioma": "es",
+      "title": {
+        "es": "Gabinete de curiosidades",
+        "en": "Gabinete de curiosidades"
+      },
+      "description": {
+        "es": "Un podcast que explora historias fascinantes y poco conocidas del mundo de la cultura, el arte y la historia.",
+        "en": "A podcast that explores fascinating and little-known stories from the world of culture, art and history."
+      },
+      "author": "Jorge Carrión",
+      "image": "/imagenes/podcasts/gabinete.jpg",
+      "link": "https://open.spotify.com/show/3yi00lEL8NqhEnJNmt2yaF",
+      "masterpiece": false
+    },
+    {
+      "id": 18,
+      "category": "podcast",
+      "subcategory": "culture",
+      "idioma": "es",
+      "title": {
+        "es": "Hotel Jorge Juan",
+        "en": "Hotel Jorge Juan"
+      },
+      "description": {
+        "es": "Un espacio de conversación donde se analizan tendencias culturales y sociales a través de entrevistas con personalidades destacadas.",
+        "en": "A conversation space where cultural and social trends are analyzed through interviews with prominent personalities."
+      },
+      "author": "Jorge Juan",
+      "image": "/imagenes/podcasts/hotel_jorge_juan.jpg",
+      "link": "https://open.spotify.com/show/42B1tQQzD6j9mCX6DNi4xQ",
+      "masterpiece": false
+    },
+    {
+      "id": 19,
+      "category": "podcast",
+      "subcategory": "music",
+      "idioma": "es",
+      "title": {
+        "es": "Ídolos",
+        "en": "Ídolos"
+      },
+      "description": {
+        "es": "Un podcast que explora las historias detrás de los grandes iconos de la música, revelando detalles desconocidos de sus vidas y carreras.",
+        "en": "A podcast that explores the stories behind the great icons of music, revealing unknown details of their lives and careers."
+      },
+      "author": "Arturo González-Campos",
+      "image": "/imagenes/podcasts/idolos.jpg",
+      "link": "https://open.spotify.com/show/6mthH0RnhXG8Fpa33uvRxT",
+      "masterpiece": false
+    },    
+    {
+      "id": 20,
+      "category": "podcast",
+      "subcategory": "history",
+      "idioma": "es",
+      "title": {
+        "es": "Crónica en negro",
+        "en": "Crónica en negro"
+      },
+      "description": {
+        "es": "Un recorrido por los casos criminales más impactantes de la historia de España, con un enfoque periodístico y riguroso.",
+        "en": "A journey through the most impactful criminal cases in Spanish history, with a journalistic and rigorous approach."
+      },
+      "author": "Manu Marlasca",
+      "image": "/imagenes/podcasts/cronica.jpg",
+      "link": "https://open.spotify.com/show/0Cx6uRV7UEh8U4tSGRHiYg",
+      "masterpiece": false
+    },
+    {
+      "id": 21,
+      "category": "podcast",
+      "subcategory": "education",
+      "idioma": "es",
+      "title": {
+        "es": "TED en Español",
+        "en": "TED en Español"
+      },
+      "description": {
+        "es": "Las mejores charlas TED traducidas al español, compartiendo ideas innovadoras en tecnología, entretenimiento y diseño.",
+        "en": "The best TED talks translated into Spanish, sharing innovative ideas in technology, entertainment and design."
+      },
+      "author": "TED",
+      "image": "/imagenes/podcasts/ted.jpg",
+      "link": "https://open.spotify.com/show/524qliZmwyXLOClyk8gV9T",
+      "masterpiece": false
+    },
+    {
+      "id": 22,
+      "category": "podcast",
+      "subcategory": "inspiration",
+      "idioma": "es",
+      "title": {
+        "es": "La Fucking Condición Humana",
+        "en": "La Fucking Condición Humana"
+      },
+      "description": {
+        "es": "Un podcast que explora la naturaleza humana a través de historias personales y reflexiones sobre la vida contemporánea.",
+        "en": "A podcast that explores human nature through personal stories and reflections on contemporary life."
+      },
+      "author": "Nerea Pérez de las Heras",
+      "image": "/imagenes/podcasts/la_fucking.jpg",
+      "link": "https://open.spotify.com/show/2xCbUret67qUXJWK2lp8jl",
+      "masterpiece": false
+    },
+    {
+      "id": 23,
+      "category": "podcast",
+      "subcategory": "technology",
+      "idioma": "es",
+      "title": {
+        "es": "La Órbita de Endor",
+        "en": "La Órbita de Endor"
+      },
+      "description": {
+        "es": "Un podcast sobre cultura pop, ciencia ficción y tecnología que analiza las últimas novedades del mundo geek.",
+        "en": "A podcast about pop culture, science fiction and technology that analyzes the latest news from the geek world."
+      },
+      "author": "Antonio Runa",
+      "image": "/imagenes/podcasts/la_orbita.jpg",
+      "link": "https://open.spotify.com/show/1S9ADiefiSIzsEYV5QZzSm",
+      "masterpiece": false
+    },
+    {
+      "id": 24,
+      "category": "podcast",
+      "subcategory": "technology",
+      "idioma": "es",
+      "title": {
+        "es": "Cuarto Milenial",
+        "en": "Cuarto Milenial"
+      },
+      "description": {
+        "es": "Un podcast que explora la intersección entre tecnología, cultura millennial y fenómenos paranormales con un enfoque fresco y actual.",
+        "en": "A podcast that explores the intersection between technology, millennial culture and paranormal phenomena with a fresh and current approach."
+      },
+      "author": "Ana Medina",
+      "image": "/imagenes/podcasts/cuarto_milenial.jpeg",
+      "link": "https://open.spotify.com/episode/4b33BHhH4A7cE3xQvuQ5gU",
+      "masterpiece": false
+    },
+    {
+      "id": 25,
+      "category": "podcast",
+      "subcategory": "news",
+      "idioma": "en",
+      "title": {
+        "es": "Throughline",
+        "en": "Throughline"
+      },
+      "description": {
+        "es": "Un podcast innovador que contextualiza las noticias actuales a través del lente de la historia, ofreciendo una investigación profunda y perspectivas únicas sobre cómo el pasado influye en nuestro presente.",
+        "en": "NPR's groundbreaking history podcast that contextualizes today's news through deep historical research, offering unique perspectives on how the past shapes our present."
+      },
+      "author": "NPR",
+      "image": "/imagenes/podcasts/throughline.jpg",
+      "link": "https://open.spotify.com/show/0vYTIMav7el5VXq5n5pxhI?si=2VSfhedvTPS3Ent2x2YeDg&nd=1&dlsi=a7989695a0ff4b01",
+      "masterpiece": false
+    },
+    {
+      "id": 26,
+      "category": "podcast",
+      "subcategory": "inspiration",
+      "idioma": "en",
+      "title": {
+        "es": "The Goal Digger Podcast",
+        "en": "The Goal Digger Podcast"
+      },
+      "description": {
+        "es": "Jenna Kutcher comparte consejos prácticos diarios para emprendedores y creativos, ayudándoles a alcanzar sus metas personales y profesionales.",
+        "en": "Jenna Kutcher shares daily practical advice for entrepreneurs and creatives, helping them achieve their personal and professional goals."
+      },
+      "author": "Jenna Kutcher",
+      "image": "/imagenes/podcasts/goal_digger.jpg",
+      "link": "https://open.spotify.com/show/0U11V31OMwksj3mg8gS0jX",
+      "masterpiece": false
+    },
+    {
+      "id": 27,
+      "category": "podcast",
+      "subcategory": "crime",
+      "idioma": "en",
+      "title": {
+        "es": "Crime Junkie",
+        "en": "Crime Junkie"
+      },
+      "description": {
+        "es": "Un podcast semanal de crímenes reales donde Ashley Flowers y Brit Prawat narran historias escalofriantes con un estilo cautivador y único, convirtiéndose en uno de los podcasts más populares del género.",
+        "en": "A weekly true crime podcast where host Ashley Flowers and her best friend Brit Prawat deliver captivating stories of real crimes with a unique storytelling style that has made it one of the most popular in the genre."
+      },
+      "author": "Ashley Flowers & Brit Prawat",
+      "image": "/imagenes/podcasts/crimejunkie.png",
+      "link": "https://open.spotify.com/show/3DgfoleqaW61T2amZQKINx",
+      "masterpiece": false
+    },
+    {
+      "id": 28,
+      "category": "podcast",
+      "subcategory": "news",
+      "idioma": "en",
+      "title": {
+        "es": "The Daily Podcast",
+        "en": "The Daily Podcast"
+      },
+      "description": {
+        "es": "El podcast insignia del New York Times que profundiza en las historias más importantes del día, incluyendo casos intrigantes y crímenes significativos, con un enfoque periodístico riguroso.",
+        "en": "The New York Times' flagship podcast that delves into the day's most important stories, including intriguing cases and significant crimes, with rigorous journalistic standards."
+      },
+      "author": "The New York Times",
+      "image": "/imagenes/podcasts/the_daily.jpg",
+      "link": "https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g",
+      "masterpiece": false
+    },
+    {
+      "id": 29,
+      "category": "podcast",
+      "subcategory": "comedy",
+      "idioma": "en",
+      "title": {
+        "es": "The Joe Rogan Experience",
+        "en": "The Joe Rogan Experience"
+      },
+      "description": {
+        "es": "El podcast más influyente de 2025, donde Joe Rogan mantiene conversaciones extensas con científicos, cómicos y figuras influyentes, explorando una amplia gama de temas con profundidad y humor.",
+        "en": "The most influential podcast of 2025, where Joe Rogan has long-form conversations with scientists, comedians, and influential figures, exploring a wide range of topics with depth and humor."
+      },
+      "author": "Joe Rogan",
+      "image": "/imagenes/podcasts/joe_rogan.jpg",
+      "link": "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk",
+      "masterpiece": false
+    },
+    {
+      "id": 30,
+      "category": "podcast",
+      "subcategory": "comedy",
+      "idioma": "en",
+      "title": {
+        "es": "This Past Weekend w/ Theo Von",
+        "en": "This Past Weekend w/ Theo Von"
+      },
+      "description": {
+        "es": "Un podcast que mezcla humor, nostalgia y reflexiones personales, donde Theo Von comparte historias únicas y conversaciones auténticas con diversos invitados.",
+        "en": "A podcast blending humor, nostalgia, and personal reflections, where Theo Von shares unique stories and authentic conversations with various guests."
+      },
+      "author": "Theo Von",
+      "image": "/imagenes/podcasts/this_past_weekend.jpg",
+      "link": "https://open.spotify.com/show/6PwE1CIZsgfrhX6Bw96PUN",
+      "masterpiece": false
+    },
+    {
+      "id": 31,
+      "category": "podcast",
+      "subcategory": "business",
+      "idioma": "en",
+      "title": {
+        "es": "The Diary of a CEO with Steven Bartlett",
+        "en": "The Diary of a CEO with Steven Bartlett"
+      },
+      "description": {
+        "es": "Un podcast que presenta relatos sinceros de emprendedores exitosos, ofreciendo lecciones profundas sobre negocios, liderazgo y desarrollo personal.",
+        "en": "A podcast featuring candid stories from successful entrepreneurs, offering deep lessons about business, leadership, and personal development."
+      },
+      "author": "Steven Bartlett",
+      "image": "/imagenes/podcasts/diary_ceo.jpg",
+      "link": "https://open.spotify.com/show/7iQXmUT7XGuZSzAMjoNWlX",
+      "masterpiece": false
+    },
+    {
+      "id": 32,
+      "category": "podcast",
+      "subcategory": "business",
+      "idioma": "en",
+      "title": {
+        "es": "How I Built This with Guy Raz",
+        "en": "How I Built This with Guy Raz"
+      },
+      "description": {
+        "es": "Guy Raz explora las historias inspiradoras detrás de algunas de las empresas más exitosas del mundo, revelando los desafíos y triunfos de sus fundadores.",
+        "en": "Guy Raz explores the inspiring stories behind some of the world's most successful companies, revealing the challenges and triumphs of their founders."
+      },
+      "author": "Guy Raz",
+      "image": "/imagenes/podcasts/how_i_build.jpg",
+      "link": "https://open.spotify.com/show/6E709HRH7XaiZrMfgtNCun",
+      "masterpiece": false
+    },
+    {
+      "id": 33,
+      "category": "podcast",
+      "subcategory": "science",
+      "idioma": "en",
+      "title": {
+        "es": "Ologies with Alie Ward",
+        "en": "Ologies with Alie Ward"
+      },
+      "description": {
+        "es": "Un fascinante viaje por diferentes campos científicos, donde cada episodio explora una nueva 'ología' de manera accesible y entretenida.",
+        "en": "A fascinating journey through different scientific fields, where each episode explores a new 'ology' in an accessible and entertaining way."
+      },
+      "author": "Alie Ward",
+      "image": "/imagenes/podcasts/ologies.jpg",
+      "link": "https://open.spotify.com/show/5nvRkVMH58SelKZYZFZx1S",
+      "masterpiece": false
+    },
+    {
+      "id": 34,
+      "category": "podcast",
+      "subcategory": "science",
+      "idioma": "en",
+      "title": {
+        "es": "Maintenance Phase",
+        "en": "Maintenance Phase"
+      },
+      "description": {
+        "es": "Un podcast que desmonta mitos sobre salud y cultura pop con rigor científico y humor, ofreciendo una perspectiva crítica sobre el bienestar y la sociedad.",
+        "en": "A podcast that debunks health and pop culture myths with scientific rigor and humor, offering a critical perspective on wellness and society."
+      },
+      "author": "Aubrey Gordon & Michael Hobbes",
+      "image": "/imagenes/podcasts/maintenance.jpg",
+      "link": "https://open.spotify.com/show/3rDR8CfpIEMpITG2UC3w5W",
+      "masterpiece": false
+    },
+    {
+      "id": 35,
+      "category": "podcast",
+      "subcategory": "culture",
+      "idioma": "en",
+      "title": {
+        "es": "If Books Could Kill",
+        "en": "If Books Could Kill"
+      },
+      "description": {
+        "es": "Un análisis inteligente y entretenido de bestsellers populares, explorando su impacto cultural y desentrañando sus mensajes ocultos.",
+        "en": "An intelligent and entertaining analysis of popular bestsellers, exploring their cultural impact and unraveling their hidden messages."
+      },
+      "author": "Michael Hobbes & Peter Shamshiri",
+      "image": "/imagenes/podcasts/if_books_could_kill.jpg",
+      "link": "https://open.spotify.com/show/2khJBoF73ujIATWUFtSxLD",
+      "masterpiece": false
+    },    
+    {
+      "id": 36,
+      "category": "podcast",
+      "subcategory": "music",
+      "idioma": "en",
+      "title": {
+        "es": "Switched on Pop",
+        "en": "Switched on Pop"
+      },
+      "description": {
+        "es": "Un análisis riguroso y divertido de la música pop contemporánea, explorando su composición, significado cultural e impacto social.",
+        "en": "A rigorous and fun analysis of contemporary pop music, exploring its composition, cultural meaning, and social impact."
+      },
+      "author": "Nate Sloan & Charlie Harding",
+      "image": "/imagenes/podcasts/switched_on_pop.png",
+      "link": "https://open.spotify.com/show/1sgWaKtQxwfjUpZnnK8r7J",
+      "masterpiece": false
+    },
+    {
+      "id": 37,
+      "category": "podcast",
+      "subcategory": "music",
+      "idioma": "en",
+      "title": {
+        "es": "Song Exploder",
+        "en": "Song Exploder"
+      },
+      "description": {
+        "es": "Un podcast único donde los artistas descomponen sus canciones y explican cada detalle del proceso creativo, desde la inspiración hasta la producción final.",
+        "en": "A unique podcast where artists break down their songs and explain every detail of the creative process, from inspiration to final production."
+      },
+      "author": "Hrishikesh Hirway",
+      "image": "/imagenes/podcasts/song_exploder.jpg",
+      "link": "https://open.spotify.com/show/10lMwCjvzLCLwth2AW6cLG",
+      "masterpiece": false
+    },
+    {
+      "id": 38,
+      "category": "podcast",
+      "subcategory": "history",
+      "idioma": "en",
+      "title": {
+        "es": "The Rest is History",
+        "en": "The Rest is History"
+      },
+      "description": {
+        "es": "Un viaje fascinante a través de la historia, desde guerras antiguas hasta cultura pop, con episodios destacados que incluyen invitados expertos.",
+        "en": "A fascinating journey through history, from ancient wars to pop culture, with featured episodes including expert guests."
+      },
+      "author": "Tom Holland & Dominic Sandbrook",
+      "image": "/imagenes/podcasts/the_rest.jpg",
+      "link": "https://open.spotify.com/show/7Cvsbcjhtur7nplC148TWy",
+      "masterpiece": false
+    },
+    {
+      "id": 39,
+      "category": "podcast",
+      "subcategory": "inspiration",
+      "idioma": "en",
+      "title": {
+        "es": "The Happiness Lab with Dr. Laurie Santos",
+        "en": "The Happiness Lab with Dr. Laurie Santos"
+      },
+      "description": {
+        "es": "La Dra. Laurie Santos explora la ciencia detrás de la felicidad y el bienestar emocional, ofreciendo insights prácticos basados en investigación científica.",
+        "en": "Dr. Laurie Santos explores the science behind happiness and emotional well-being, offering practical insights based on scientific research."
+      },
+      "author": "Dr. Laurie Santos",
+      "image": "/imagenes/podcasts/the_happiness.jpg",
+      "link": "https://open.spotify.com/show/3i5TCKhc6GY42pOWkpWveG",
       "masterpiece": false
     }
   ]
