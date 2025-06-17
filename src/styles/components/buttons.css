@@ -238,19 +238,26 @@
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius-md);
   padding: var(--space-sm) var(--space-md);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
   cursor: pointer;
   transition: all var(--transition-normal);
-  margin: var(--space-xs);
-  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  text-decoration: none;
+  min-height: 40px;
+  min-width: 120px;
   box-sizing: border-box;
+  margin: var(--space-xs);
 }
 
 .subcategory-btn:hover {
   background: var(--hover-color);
   border-color: var(--border-color-hover);
   transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 .subcategory-btn.active {
@@ -262,20 +269,22 @@
 
 /* === BOTÓN CINE ESPAÑOL === */
 .subcategory-btn.spanish-cinema {
-  background: #ff9800;
-  color: white;
-  border-color: #ff9800;
+  background: var(--color-masterpiece-light);
+  color: var(--text-color);
+  border-color: color-mix(in srgb, var(--color-masterpiece) 30%, transparent);
+  min-width: 140px;
 }
 
 .subcategory-btn.spanish-cinema:hover {
-  background: #f57c00;
-  border-color: #f57c00;
+  background: color-mix(in srgb, var(--color-masterpiece) 15%, var(--card-background));
+  border-color: color-mix(in srgb, var(--color-masterpiece) 50%, transparent);
 }
 
 .subcategory-btn.spanish-cinema.active {
-  background: #e65100;
-  border-color: #e65100;
-  box-shadow: 0 2px 8px rgba(230, 81, 0, 0.3);
+  background: color-mix(in srgb, var(--color-masterpiece) 25%, var(--card-background));
+  color: var(--text-color);
+  border: 2px solid var(--color-masterpiece);
+  font-weight: var(--font-weight-bold);
 }
 
 /* === BOTONES IDIOMA PODCAST === */
@@ -305,7 +314,7 @@
   color: #333333;
   border-color: var(--color-masterpiece);
   font-weight: var(--font-weight-bold);
-  position: relative;
+  min-width: 140px;
 }
 
 .subcategory-btn.masterpiece-btn:hover {
@@ -316,59 +325,52 @@
 }
 
 .subcategory-btn.masterpiece-btn.active {
-  background: #ffb300;
-  border-color: #ffb300;
-  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.5),
-              0 4px 12px rgba(255, 215, 0, 0.4);
+  background: var(--color-masterpiece-hover);
+  border-color: var(--color-masterpiece);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
 }
 
 .subcategory-btn.masterpiece-btn::before {
-  content: '⭐';
+  content: "🏆";
   margin-right: var(--space-xs);
 }
 
 /* === CONTENEDOR DE BOTONES ESPECIALES === */
 .special-buttons-container {
   display: flex;
-  gap: var(--space-sm);
-  margin: var(--space-md) auto;
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
 }
 
 /* === LISTA DE SUBCATEGORÍAS === */
 .subcategories-list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-xs);
-  margin: calc(var(--space-md) / 2) auto var(--space-sm) auto;
+  gap: var(--space-sm);
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
+  margin: var(--space-md) 0;
+  padding: 0 var(--space-md);
 }
 
-/* === RESPONSIVE PARA SUBCATEGORÍAS === */
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
   .subcategory-btn {
+    font-size: var(--font-size-sm);
     padding: var(--space-xs) var(--space-sm);
-    font-size: var(--font-size-xs);
-    margin: 2px;
-    min-height: 32px;
+    min-width: 100px;
   }
   
   .subcategories-list {
-    gap: 2px;
-    margin-bottom: var(--space-xs);
+    gap: var(--space-xs);
   }
   
   .special-buttons-container {
-    gap: var(--space-xs);
-    margin-top: var(--space-xs);
+    flex-direction: column;
+    gap: var(--space-sm);
   }
 }
