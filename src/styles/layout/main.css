@@ -65,10 +65,46 @@ h1 {
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--text-color);
+  position: relative;
+  padding: var(--space-lg) var(--space-2xl);
+  background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--color-masterpiece) 5%, transparent) 0%,
+    color-mix(in srgb, var(--color-masterpiece) 2%, transparent) 100%
+  );
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-sm);
+  max-width: 800px;
+  transition: all var(--transition-normal);
+}
+
+h1:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--color-masterpiece) 8%, transparent) 0%,
+    color-mix(in srgb, var(--color-masterpiece) 3%, transparent) 100%
+  );
 }
 
 h1.after-subcategories {
   margin-top: var(--space-md);
+}
+
+/* Tema oscuro para h1 */
+html[data-theme='dark'] h1 {
+  background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--color-masterpiece) 8%, #1a1a1a) 0%,
+    color-mix(in srgb, var(--color-masterpiece) 3%, #1a1a1a) 100%
+  );
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] h1:hover {
+  background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--color-masterpiece) 12%, #1a1a1a) 0%,
+    color-mix(in srgb, var(--color-masterpiece) 5%, #1a1a1a) 100%
+  );
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* === LISTAS DE CATEGORÍAS === */
