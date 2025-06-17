@@ -117,15 +117,16 @@ const MaterialSubcategoryChips = ({
             onClick={toggleMasterpiece}
             variant={isMasterpieceActive ? 'filled' : 'outlined'}
             sx={{
-              backgroundColor: isMasterpieceActive ? '#ffd700' : 'transparent',
-              borderColor: '#ffd700',
-              color: isMasterpieceActive ? '#333' : '#ffd700',
+              backgroundColor: isMasterpieceActive ? '#ffe0b2' : '#fff8e1',
+              borderColor: '#ffd54f',
+              color: isMasterpieceActive ? '#5d4037' : '#7a6a28',
               fontWeight: isMasterpieceActive ? 'bold' : 'normal',
               fontSize: '0.8rem',
-              transition: 'all 0.2s ease',
+              transition: 'all 0.3s ease',
               cursor: 'pointer',
               '&:hover': {
-                backgroundColor: isMasterpieceActive ? '#ffd700' : '#ffd70020',
+                backgroundColor: isMasterpieceActive ? '#ffe0b2' : '#fff3e0',
+                borderColor: '#ffca28',
                 transform: 'scale(1.05)',
                 boxShadow: theme.shadows[2]
               },
