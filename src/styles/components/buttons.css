@@ -237,8 +237,8 @@
   color: var(--text-color);
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius-md);
-  padding: var(--space-sm) var(--space-md);
-  font-size: var(--font-size-base);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   cursor: pointer;
   transition: all var(--transition-normal);
@@ -247,8 +247,8 @@
   justify-content: center;
   gap: var(--space-xs);
   text-decoration: none;
-  min-height: 40px;
-  min-width: 120px;
+  min-height: 32px;
+  min-width: 100px;
   box-sizing: border-box;
   margin: var(--space-xs);
 }
@@ -350,19 +350,21 @@
 .subcategories-list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
   justify-content: center;
   align-items: center;
   margin: var(--space-md) 0;
   padding: 0 var(--space-md);
+  width: 100%;
 }
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .subcategory-btn {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     padding: var(--space-xs) var(--space-sm);
-    min-width: 100px;
+    min-width: 90px;
+    min-height: 28px;
   }
   
   .subcategories-list {
