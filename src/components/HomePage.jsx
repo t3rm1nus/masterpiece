@@ -6,12 +6,11 @@ import { useTitleSync } from '../hooks/useTitleSync';
 import MaterialContentWrapper from './MaterialContentWrapper';
 import RecommendationsList from './RecommendationsList';
 import ThemeToggle from './ThemeToggle';
-import { categories } from '../data/categories';
 import '../styles/components/buttons.css';
 
 const HomePage = () => {
-  const { lang, t, getSubcategoryTranslation } = useLanguage();
-    // Hook para sincronizar títulos automáticamente
+  const { lang, t } = useLanguage();
+  // Hook para sincronizar títulos automáticamente
   useTitleSync();
   
   // Stores consolidados
@@ -29,7 +28,7 @@ const HomePage = () => {
   // Obtener configuración de estilos del store consolidado
   const { getSpecialButtonLabel } = useThemeStore();  
   // Obtener categorías traducidas
-  const categories = getCategories(lang);
+  const categories = getCategories();
   
   // Obtener subcategorías del store para la categoría seleccionada
   const categorySubcategories = getSubcategoriesForCategory();
@@ -98,13 +97,13 @@ const HomePage = () => {
 
       <div className="categories-container">
         <div className="categories-list">
-          {categories.map(({ key, label }) => (
+          {categories.map((category) => (
             <button
-              key={key}
-              className={`category-btn${selectedCategory === key ? ' active' : ''}`}
-              onClick={() => handleCategoryClick(key, label)}
+              key={category}
+              className={`category-btn${selectedCategory === category ? ' active' : ''}`}
+              onClick={() => handleCategoryClick(category, t.categories[category] || category)}
             >
-              {label}
+              {t.categories[category] || category}
             </button>
           ))}
         </div>
@@ -163,10 +162,7 @@ const HomePage = () => {
 
       <h1 className={selectedCategory ? 'after-subcategories' : ''}>{selectedCategoryLabel}</h1>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <RecommendationsList
-          recommendations={filteredItems}
-          isHome={!selectedCategory && !activeSubcategory}
-        />
+        <RecommendationsList />
       </div>
     </div>
   );
