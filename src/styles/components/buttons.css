@@ -310,21 +310,22 @@
 
 /* === BOTÓN MASTERPIECE === */
 .subcategory-btn.masterpiece-btn {
-  background: var(--color-secondary);
-  border-color: var(--color-secondary);
-  color: var(--text-inverse);
+  background: #fff8e1;
+  border-color: #ffd54f;
+  color: #7a6a28;
 }
 
 .subcategory-btn.masterpiece-btn:hover {
-  background: var(--color-secondary-dark);
-  border-color: var(--color-secondary-dark);
+  background: #ffecb3;
+  border-color: #ffca28;
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
 
 .subcategory-btn.masterpiece-btn.active {
-  background: var(--color-secondary-dark);
-  border-color: var(--color-secondary-dark);
+  background: #ffd54f;
+  color: #5d4037;
+  border-color: #ffca28;
   font-weight: var(--font-weight-bold);
 }
 

@@ -150,7 +150,7 @@ const HomePage = () => {
           </>
         )}
 
-        {!isRecommendedActive && (
+        {!isRecommendedActive && selectedCategory && (
           <button
             className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
             onClick={toggleMasterpiece}
