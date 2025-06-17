@@ -329,7 +329,7 @@
 }
 
 .subcategory-btn.masterpiece-btn::before {
-  content: "🏆";
+  content: "⭐";
   margin-right: var(--space-xs);
 }
 
