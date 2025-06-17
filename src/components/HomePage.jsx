@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import useDataStore from '../store/dataStore';
 import useThemeStore from '../store/themeStore';
@@ -6,6 +6,8 @@ import { useTitleSync } from '../hooks/useTitleSync';
 import MaterialContentWrapper from './MaterialContentWrapper';
 import RecommendationsList from './RecommendationsList';
 import ThemeToggle from './ThemeToggle';
+import { categories } from '../data/categories';
+import '../styles/components/buttons.css';
 
 const HomePage = () => {
   const { lang, t, getSubcategoryTranslation } = useLanguage();
@@ -15,17 +17,11 @@ const HomePage = () => {
   // Stores consolidados
   const { 
     selectedCategory, 
-    activeSubcategory, 
-    isSpanishCinemaActive, 
-    isMasterpieceActive,
-    podcastLanguage,
-    title,
-    filteredItems,
-    setSelectedCategory,
+    setSelectedCategory, 
+    selectedCategoryLabel, 
+    setSelectedCategoryLabel,
+    activeSubcategory,
     setActiveSubcategory,
-    toggleSpanishCinema,
-    toggleMasterpiece,
-    setPodcastLanguage,
     getSubcategoriesForCategory,
     getCategories
   } = useDataStore();
@@ -38,10 +34,18 @@ const HomePage = () => {
   // Obtener subcategorías del store para la categoría seleccionada
   const categorySubcategories = getSubcategoriesForCategory();
   
+  const [isSpanishCinemaActive, setIsSpanishCinemaActive] = useState(false);
+  const [isMasterpieceActive, setIsMasterpieceActive] = useState(false);
+  const [podcastLanguage, setPodcastLanguage] = useState('es');
+  const [isRecommendedActive, setIsRecommendedActive] = useState(false);
+
   const handleCategoryClick = (key, label) => {
-    // Usar la etiqueta traducida según el idioma actual
-    const translatedLabel = categories.find(cat => cat.key === key)?.label || label;
-    setSelectedCategory(key, translatedLabel);
+    setSelectedCategory(key);
+    setSelectedCategoryLabel(label);
+    setActiveSubcategory(null);
+    setIsSpanishCinemaActive(false);
+    setIsMasterpieceActive(false);
+    setIsRecommendedActive(key === 'recommended');
   };
 
   // Función para obtener el color de la categoría
@@ -73,8 +77,17 @@ const HomePage = () => {
   };
 
   const getSubcategoryLabel = (subcategory) => {
-    if (!subcategory) return '';
     return t.subcategories[subcategory] || subcategory;
+  };
+
+  const toggleMasterpiece = () => {
+    setIsMasterpieceActive(!isMasterpieceActive);
+    setIsSpanishCinemaActive(false);
+  };
+
+  const toggleSpanishCinema = () => {
+    setIsSpanishCinemaActive(!isSpanishCinemaActive);
+    setIsMasterpieceActive(false);
   };
 
   return (
@@ -115,10 +128,7 @@ const HomePage = () => {
         {selectedCategory === 'movies' && (
           <button
             className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
-            onClick={() => {
-              toggleSpanishCinema();
-              console.log('Toggling Spanish Cinema:', !isSpanishCinemaActive);
-            }}
+            onClick={toggleSpanishCinema}
           >
             {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
           </button>
@@ -151,7 +161,7 @@ const HomePage = () => {
         )}
       </div>
 
-      <h1 className={selectedCategory ? 'after-subcategories' : ''}>{title}</h1>
+      <h1 className={selectedCategory ? 'after-subcategories' : ''}>{selectedCategoryLabel}</h1>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
         <RecommendationsList
           recommendations={filteredItems}
