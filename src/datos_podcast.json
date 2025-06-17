@@ -3,7 +3,7 @@
     {
       "id": 1,
       "category": "podcast",
-      "subcategory": "audioblog",
+      "subcategory": "inspiration",
       "idioma": "es",
       "title": {
         "es": "Sacred Whispers",  
@@ -17,6 +17,168 @@
       "image": "/imagenes/podcasts/sacred.jpg",
       "link": "https://open.spotify.com/show/5XCcrAQ9LGeCRgmyNSkjJr",
       "masterpiece": true
+    },
+    {
+      "id": 2,
+      "category": "podcast",
+      "subcategory": "comedy",
+      "idioma": "es",
+      "title": {
+        "es": "Nadie sabe nada",
+        "en": "Nadie sabe nada"
+      },
+      "description": {
+        "es": "Un podcast de humor improvisado donde Andreu Buenafuente y Berto Romero hablan de cualquier tema sin guion ni preparación previa. Un espacio de comedia espontánea y conversación natural.",
+        "en": "An improvised comedy podcast where Andreu Buenafuente and Berto Romero talk about any topic without a script or prior preparation. A space for spontaneous comedy and natural conversation."
+      },
+      "author": "Andreu Buenafuente y Berto Romero",
+      "image": "/imagenes/podcasts/nadie_sabe_nada.png",
+      "link": "https://open.spotify.com/show/1jXeGsr1X2gpss332C8cAw?si=8132d85b01054d2a&nd=1&dlsi=990d7522d54f46e0",
+      "masterpiece": true
+    },
+    {
+      "id": 3,
+      "category": "podcast",
+      "subcategory": "comedy",
+      "idioma": "es",
+      "title": {
+        "es": "Estirando el chicle",
+        "en": "Estirando el chicle"
+      },
+      "description": {
+        "es": "Carolina Iglesias y Victoria Martín analizan con humor y perspectiva feminista temas de actualidad, cultura y sociedad.",
+        "en": "Carolina Iglesias and Victoria Martín analyze current affairs, culture and society with humor and a feminist perspective."
+      },
+      "author": "Carolina Iglesias y Victoria Martín",
+      "image": "/imagenes/podcasts/estirando.jpg",
+      "link": "https://open.spotify.com/show/6V1DDzXVZg6wFXFo0SanY2",
+      "masterpiece": true
+    },
+    {
+      "id": 4,
+      "category": "podcast",
+      "subcategory": "history",
+      "idioma": "es",
+      "title": {
+        "es": "Curiosidades de la Historia",
+        "en": "Curiosities of History"
+      },
+      "description": {
+        "es": "Un podcast de National Geographic que explora los momentos más fascinantes y desconocidos de la historia universal.",
+        "en": "A National Geographic podcast that explores the most fascinating and unknown moments in world history."
+      },
+      "author": "National Geographic",
+      "image": "/imagenes/podcasts/curiosidades.jpg",
+      "link": "https://open.spotify.com/show/5LpYg29KE8rckzwEj2JGmS",
+      "masterpiece": false
+    },
+    {
+      "id": 5,
+      "category": "podcast",
+      "subcategory": "comedy",
+      "idioma": "es",
+      "title": {
+        "es": "La vida moderna",
+        "en": "La vida moderna"
+      },
+      "description": {
+        "es": "David Broncano, Quequé e Ignatius Farray analizan con humor la actualidad y la sociedad moderna en este podcast de Movistar+.",
+        "en": "David Broncano, Quequé and Ignatius Farray analyze current affairs and modern society with humor in this Movistar+ podcast."
+      },
+      "author": "David Broncano, Quequé e Ignatius Farray",
+      "image": "/imagenes/podcasts/vida_moderna.png",
+      "link": "https://open.spotify.com/show/2VQlKTlbrsuAYHD4RvICbS",
+      "masterpiece": true
+    },
+    {
+      "id": 6,
+      "category": "podcast",
+      "subcategory": "education",
+      "idioma": "es",
+      "title": {
+        "es": "The Wild Project",
+        "en": "The Wild Project"
+      },
+      "description": {
+        "es": "Jordi Wild entrevista a personalidades de diferentes ámbitos en conversaciones profundas y reveladoras sobre sus vidas y experiencias.",
+        "en": "Jordi Wild interviews personalities from different fields in deep and revealing conversations about their lives and experiences."
+      },
+      "author": "Jordi Wild",
+      "image": "/imagenes/podcasts/wild.jpg",
+      "link": "https://open.spotify.com/show/5iKz9gAsyuQ1xLG6MFLtQg",
+      "masterpiece": false
+    },
+    {
+      "id": 7,
+      "category": "podcast",
+      "subcategory": "history",
+      "idioma": "es",
+      "title": {
+        "es": "Cualquier tiempo pasado fue anterior",
+        "en": "Cualquier tiempo pasado fue anterior"
+      },
+      "description": {
+        "es": "Nieves Concostrina narra con humor y precisión histórica los acontecimientos más curiosos y desconocidos de la historia.",
+        "en": "Nieves Concostrina narrates the most curious and unknown events in history with humor and historical accuracy."
+      },
+      "author": "Nieves Concostrina",
+      "image": "/imagenes/podcasts/tiempo_pasado.png",
+      "link": "https://open.spotify.com/show/5mZbYo1FEL4pS6Exp6RK6q",
+      "masterpiece": false
+    },
+    {
+      "id": 8,
+      "category": "podcast",
+      "subcategory": "inspiration",
+      "idioma": "es",
+      "title": {
+        "es": "El podcast de Cristina Mitre",
+        "en": "Cristina Mitre's Podcast"
+      },
+      "description": {
+        "es": "Cristina Mitre comparte consejos sobre belleza, bienestar y estilo de vida en este podcast que combina experiencia personal y profesional.",
+        "en": "Cristina Mitre shares advice on beauty, wellness and lifestyle in this podcast that combines personal and professional experience."
+      },
+      "author": "Cristina Mitre",
+      "image": "/imagenes/podcasts/cristina.jpg",
+      "link": "https://open.spotify.com/show/17zwEnaa9Em2z3hHE5LuZT",
+      "masterpiece": false
+    },
+    {
+      "id": 9,
+      "category": "podcast",
+      "subcategory": "crime",
+      "idioma": "es",
+      "title": {
+        "es": "Criminopatía",
+        "en": "Criminopatía"
+      },
+      "description": {
+        "es": "Clara Tiscar analiza casos criminales reales, explorando la psicología detrás de los crímenes y sus consecuencias en la sociedad.",
+        "en": "Clara Tiscar analyzes real criminal cases, exploring the psychology behind crimes and their consequences in society."
+      },
+      "author": "Clara Tiscar",
+      "image": "/imagenes/podcasts/Criminopatia.jpeg",
+      "link": "https://open.spotify.com/show/7yqiEjCXTX4Lqi0xD8RF87",
+      "masterpiece": false
+    },
+    {
+      "id": 10,
+      "category": "podcast",
+      "subcategory": "comedy",
+      "idioma": "es",
+      "title": {
+        "es": "Odio a la gente",
+        "en": "Odio a la gente"
+      },
+      "description": {
+        "es": "Un podcast de humor donde se analizan con ironía y sarcasmo las situaciones cotidianas y los comportamientos sociales que nos irritan.",
+        "en": "A comedy podcast that analyzes with irony and sarcasm everyday situations and social behaviors that irritate us."
+      },
+      "author": "Odio a la gente",
+      "image": "/imagenes/podcasts/odio.jpg",
+      "link": "https://open.spotify.com/show/1sYunv4SXt1HOmoDdvhOOp",
+      "masterpiece": false
     }
   ]
 }
