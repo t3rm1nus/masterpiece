@@ -24,7 +24,7 @@ class MoviesDataLoader {
     }
 
     try {
-      const response = await fetch('/src/data/movies/manifest.json');
+      const response = await fetch('/data/movies/manifest.json');
       if (!response.ok) {
         throw new Error(`Failed to load manifest: ${response.status}`);
       }
@@ -193,7 +193,7 @@ class MoviesDataLoader {
    * Private: Load module from file
    */
   async _loadModule(subcategory, moduleInfo) {
-    const modulePath = `/src/data/movies/${moduleInfo.file}`;
+    const modulePath = `/data/movies/${moduleInfo.file}`;
     
     console.log(`📥 Loading: ${subcategory} from ${modulePath} (${moduleInfo.count} movies)`);
     
