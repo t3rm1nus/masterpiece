@@ -269,21 +269,21 @@
 
 /* === BOTÓN CINE ESPAÑOL === */
 .subcategory-btn.spanish-cinema {
-  background: var(--color-masterpiece-light);
-  color: var(--text-color);
-  border-color: color-mix(in srgb, var(--color-masterpiece) 30%, transparent);
-  min-width: 140px;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--text-inverse);
 }
 
 .subcategory-btn.spanish-cinema:hover {
-  background: color-mix(in srgb, var(--color-masterpiece) 15%, var(--card-background));
-  border-color: color-mix(in srgb, var(--color-masterpiece) 50%, transparent);
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 .subcategory-btn.spanish-cinema.active {
-  background: color-mix(in srgb, var(--color-masterpiece) 25%, var(--card-background));
-  color: var(--text-color);
-  border: 2px solid var(--color-masterpiece);
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
   font-weight: var(--font-weight-bold);
 }
 
@@ -310,25 +310,22 @@
 
 /* === BOTÓN MASTERPIECE === */
 .subcategory-btn.masterpiece-btn {
-  background: var(--color-masterpiece);
-  color: #333333;
-  border-color: var(--color-masterpiece);
-  font-weight: var(--font-weight-bold);
-  min-width: 140px;
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--text-inverse);
 }
 
 .subcategory-btn.masterpiece-btn:hover {
-  background: var(--color-masterpiece-hover);
-  border-color: var(--color-masterpiece-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+  background: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 .subcategory-btn.masterpiece-btn.active {
-  background: var(--color-masterpiece-hover);
-  border-color: var(--color-masterpiece);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
+  background: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+  font-weight: var(--font-weight-bold);
 }
 
 .subcategory-btn.masterpiece-btn::before {
@@ -376,28 +373,47 @@
 .subcategory-btn.spanish-cinema,
 .subcategory-btn.masterpiece-btn {
   min-width: 140px;
-  background: var(--background-secondary);
-  border-color: var(--border-color);
-  color: var(--text-color);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-xs);
 }
 
-.subcategory-btn.spanish-cinema:hover,
-.subcategory-btn.masterpiece-btn:hover {
-  background: var(--hover-color);
-  border-color: var(--border-color-hover);
+.subcategory-btn.spanish-cinema {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--text-inverse);
+}
+
+.subcategory-btn.masterpiece-btn {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--text-inverse);
+}
+
+.subcategory-btn.spanish-cinema:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
 
-.subcategory-btn.spanish-cinema.active,
+.subcategory-btn.masterpiece-btn:hover {
+  background: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.subcategory-btn.spanish-cinema.active {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  font-weight: var(--font-weight-bold);
+}
+
 .subcategory-btn.masterpiece-btn.active {
-  background: var(--color-primary);
-  color: var(--text-inverse);
-  border-color: var(--color-primary);
+  background: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
   font-weight: var(--font-weight-bold);
 }
 
