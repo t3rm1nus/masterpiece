@@ -53,6 +53,7 @@ const useDataStore = create(
       activeSubcategory: null,
       isSpanishCinemaActive: false,
       isMasterpieceActive: false,
+      isSpanishPodcastActive: false,
       title: '',
       randomNotFoundImage: '',
       filteredItems: [],
@@ -127,11 +128,14 @@ const useDataStore = create(
           activeSubcategory, 
           isSpanishCinemaActive, 
           isMasterpieceActive,
+          isSpanishPodcastActive,
           allData 
-        } = state;        // Si no hay categoría seleccionada, mostrar elementos aleatorios de todas las categorías
+        } = state;
+        // Si no hay categoría seleccionada, mostrar elementos aleatorios de todas las categorías
         if (!selectedCategory) {
           return state.getRandomItemsFromAllCategories();
-        }        // Obtener elementos de la categoría seleccionada
+        }
+        // Obtener elementos de la categoría seleccionada
         let items = allData[selectedCategory] || [];
 
         // Filtrar por subcategoría
@@ -148,6 +152,11 @@ const useDataStore = create(
             item.subcategory === 'cine español'
           );
           console.log('Items after Spanish Cinema filter:', items.length);
+        }
+
+        // Filtrar por Podcast en Español
+        if (isSpanishPodcastActive && selectedCategory === 'podcast') {
+          items = items.filter(item => item.idioma === 'es');
         }
 
         // Filtrar por obras maestras
@@ -224,6 +233,20 @@ const useDataStore = create(
         
         get().updateFilteredItems();
         console.log('toggleSpanishCinema completed. New state:', !isSpanishCinemaActive);
+      },
+
+      // Alternar podcasts en español
+      toggleSpanishPodcast: () => {
+        const { isSpanishPodcastActive, selectedCategory } = get();
+        set(
+          { 
+            isSpanishPodcastActive: !isSpanishPodcastActive
+          },
+          false,
+          'toggleSpanishPodcast'
+        );
+        
+        get().updateFilteredItems();
       },
 
       // Alternar obras maestras
