@@ -1,16 +1,14 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-// Importar datos JSON (excepto movies que ahora es modular)
-import datosComics from "../datos_comics.json";
-import datosBooks from "../datos_books.json";
-import datosMusic from "../datos_music.json";
-import datosVideogames from "../datos_videogames.json";
-import datosBoardgames from "../datos_boardgames.json";
-import datosPodcast from "../datos_podcast.json";
-
-// Importar el nuevo loader modular para películas
-import { moviesLoader } from "../data/moviesLoader.js";
+// Importar datos JSON
+import datosMovies from "../data/datos_movies.json";
+import datosComics from "../data/datos_comics.json";
+import datosBooks from "../data/datos_books.json";
+import datosMusic from "../data/datos_music.json";
+import datosVideogames from "../data/datos_videogames.json";
+import datosBoardgames from "../data/datos_boardgames.json";
+import datosPodcast from "../data/datos_podcast.json";
 
 // Importar utilidades
 import { processItemsWithUniqueIds } from '../utils/appUtils';
@@ -30,10 +28,9 @@ const useDataStore = create(
         { key: 'videogames', es: 'Videojuegos', en: 'Videogames' },
         { key: 'boardgames', es: 'Juegos de Mesa', en: 'Board Games' },
         { key: 'podcast', es: 'Podcasts', en: 'Podcasts' }      ],      
-      
-      // Datos procesados con IDs únicos (movies se cargan dinámicamente)
+        // Datos procesados con IDs únicos
       allData: {
-        movies: [], // Se cargará dinámicamente con moviesLoader
+        movies: processItemsWithUniqueIds(datosMovies.recommendations || []),
         comics: processItemsWithUniqueIds(datosComics.recommendations || []),
         books: processItemsWithUniqueIds(datosBooks.recommendations || []),
         music: processItemsWithUniqueIds(datosMusic.recommendations || []),
@@ -41,10 +38,6 @@ const useDataStore = create(
         boardgames: processItemsWithUniqueIds(datosBoardgames.recommendations || []),
         podcast: processItemsWithUniqueIds(datosPodcast.recommendations || [])
       },
-
-      // Estado de carga para datos modulares
-      isLoadingMovies: false,
-      moviesLoadError: null,
 
       // ==========================================
       // ESTADO DE FILTROS
@@ -185,7 +178,7 @@ const useDataStore = create(
       // ACCIONES CONSOLIDADAS
       // ==========================================
         // Establecer categoría seleccionada
-      setSelectedCategory: async (category, label) => {
+      setSelectedCategory: (category, label) => {
         set(
           { 
             selectedCategory: category,
@@ -193,18 +186,8 @@ const useDataStore = create(
             activeSubcategory: null,
             isSpanishCinemaActive: false
           },
-          false,
-          'setSelectedCategory'
+          false,          'setSelectedCategory'
         );
-        
-        // Si es movies, cargar datos modulares automáticamente
-        if (category === 'movies') {
-          try {
-            await get().ensureMoviesLoaded();
-          } catch (error) {
-            console.error('Error loading movies for category:', error);
-          }
-        }
         
         // Actualizar elementos filtrados
         get().updateFilteredItems();
@@ -347,117 +330,7 @@ const useDataStore = create(
           },
           false,
           'initializeFilteredItems'
-        );
-      },
-
-      // ==========================================
-      // FUNCIONES DE CARGA MODULAR PARA PELÍCULAS
-      // ==========================================
-      
-      // Cargar todas las películas (backward compatibility)
-      loadAllMovies: async () => {
-        set({ isLoadingMovies: true, moviesLoadError: null }, false, 'loadAllMovies:start');
-        
-        try {
-          console.log('🎬 Loading all movies modularly...');
-          const moviesData = await moviesLoader.loadAll();
-          const processedMovies = processItemsWithUniqueIds(moviesData.recommendations || []);
-          
-          set(
-            (state) => ({
-              allData: {
-                ...state.allData,
-                movies: processedMovies
-              },
-              isLoadingMovies: false
-            }),
-            false,
-            'loadAllMovies:success'
-          );
-          
-          // Actualizar filtros si movies está seleccionado
-          const currentState = get();
-          if (currentState.selectedCategory === 'movies') {
-            currentState.updateFilteredItems();
-          }
-          
-          console.log(`✅ Loaded ${processedMovies.length} movies modularly`);
-          return processedMovies;
-          
-        } catch (error) {
-          console.error('❌ Error loading movies:', error);
-          set({ 
-            isLoadingMovies: false, 
-            moviesLoadError: error.message 
-          }, false, 'loadAllMovies:error');
-          throw error;
-        }
-      },
-      
-      // Cargar subcategorías específicas de películas
-      loadMovieSubcategories: async (subcategories) => {
-        set({ isLoadingMovies: true, moviesLoadError: null }, false, 'loadMovieSubcategories:start');
-        
-        try {
-          console.log(`🎬 Loading movie subcategories: ${subcategories.join(', ')}`);
-          const moviesData = await moviesLoader.loadSubcategories(subcategories);
-          const processedMovies = processItemsWithUniqueIds(moviesData.recommendations || []);
-          
-          set(
-            (state) => ({
-              allData: {
-                ...state.allData,
-                movies: processedMovies
-              },
-              isLoadingMovies: false
-            }),
-            false,
-            'loadMovieSubcategories:success'
-          );
-          
-          // Actualizar filtros si movies está seleccionado
-          const currentState = get();
-          if (currentState.selectedCategory === 'movies') {
-            currentState.updateFilteredItems();
-          }
-          
-          console.log(`✅ Loaded ${processedMovies.length} movies from ${subcategories.length} subcategories`);
-          return processedMovies;
-          
-        } catch (error) {
-          console.error('❌ Error loading movie subcategories:', error);
-          set({ 
-            isLoadingMovies: false, 
-            moviesLoadError: error.message 
-          }, false, 'loadMovieSubcategories:error');
-          throw error;
-        }
-      },
-      
-      // Cargar películas dinámicamente cuando se selecciona la categoría
-      ensureMoviesLoaded: async () => {
-        const { allData, isLoadingMovies } = get();
-        
-        // Si las películas ya están cargadas o se están cargando, no hacer nada
-        if (allData.movies.length > 0 || isLoadingMovies) {
-          return allData.movies;
-        }
-        
-        // Cargar todas las películas
-        return await get().loadAllMovies();
-      },
-      
-      // Buscar películas con criterios específicos
-      searchMovies: async (criteria) => {
-        try {
-          await get().ensureMoviesLoaded();
-          const moviesData = await moviesLoader.searchMovies(criteria);
-          return processItemsWithUniqueIds(moviesData.recommendations || []);
-        } catch (error) {
-          console.error('❌ Error searching movies:', error);
-          throw error;
-        }
-      },
+        );      },
 
       // ==========================================
       // FUNCIONES DE RESET CONSOLIDADAS

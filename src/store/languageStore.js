@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
-import texts from '../texts.json';
+import texts from '../data/texts.json';
 
 // Store para gestionar el idioma y las traducciones
 const useLanguageStore = create(

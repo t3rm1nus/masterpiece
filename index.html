@@ -1,34 +1,17 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+  <head>    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Masterpiece</title>
-    
-    <!-- Symbol.observable polyfill -->
-    <script>
-      (function() {
-        var obs = Symbol.for('observable');
-        try {
-          Symbol.observable = obs;
-          Object.defineProperty(Symbol, 'observable', { value: obs, writable: false, configurable: false });
-          if (window.Symbol) window.Symbol.observable = obs;
-        } catch(e){}
-      })();
-    </script>
-    
-    <!-- Geolocation mock -->
-    <script>
-      (function() {
-        var mockGeo = {
-          getCurrentPosition: function(s){ s && setTimeout(()=>s({coords:{latitude:40.4,longitude:-3.7}}),1); },
-          watchPosition: function(s){ s && setTimeout(()=>s({coords:{latitude:40.4,longitude:-3.7}}),1); return 1; },
-          clearWatch: function(){}
-        };
-        try { Object.defineProperty(navigator, 'geolocation', { value: mockGeo, writable: false, configurable: false }); } catch(e){}
-      })();    </script>
-    
-    <script src="/scripts/console-filter.js"></script>
+    <title>Masterpiece</title>    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/star-icon.svg">
+    <link rel="apple-touch-icon" href="/star-icon.svg">
+      <!-- Meta tags for PWA -->
+    <meta name="description" content="Masterpiece - Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts">
+    <meta name="theme-color" content="#1976d2">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Masterpiece">    
   </head>
   <body>
     <div id="root"></div>
