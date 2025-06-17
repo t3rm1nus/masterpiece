@@ -280,20 +280,23 @@
 
 /* === BOTONES IDIOMA PODCAST === */
 .subcategory-btn.podcast-language {
-  background: #2196f3;
-  color: white;
-  border-color: #2196f3;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-color: #90caf9;
+  font-weight: 500;
 }
 
 .subcategory-btn.podcast-language:hover {
-  background: #1976d2;
-  border-color: #1976d2;
+  background: #bbdefb;
+  border-color: #64b5f6;
+  color: #1565c0;
 }
 
 .subcategory-btn.podcast-language.active {
-  background: #1565c0;
-  border-color: #1565c0;
-  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
+  background: #90caf9;
+  border-color: #42a5f5;
+  color: #0d47a1;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
 }
 
 /* === BOTÓN MASTERPIECE === */
