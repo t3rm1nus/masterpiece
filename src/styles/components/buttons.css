@@ -372,11 +372,13 @@
 /* === BOTONES ESPECIALES === */
 .subcategory-btn.spanish-cinema,
 .subcategory-btn.masterpiece-btn {
-  min-width: 140px;
+  min-width: 160px;
+  min-height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-xs);
+  font-size: var(--font-size-base);
 }
 
 .subcategory-btn.spanish-cinema {
@@ -440,6 +442,8 @@
   
   .subcategory-btn.spanish-cinema,
   .subcategory-btn.masterpiece-btn {
-    min-width: 120px;
+    min-width: 140px;
+    min-height: 36px;
+    font-size: var(--font-size-sm);
   }
 }

@@ -123,12 +123,6 @@ const HomePage = () => {
             {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
           </button>
         )}
-        <button
-          className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
-          onClick={toggleMasterpiece}
-        >
-          {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
-        </button>
 
         {selectedCategory === 'podcast' && (
           <>
@@ -145,6 +139,15 @@ const HomePage = () => {
               {lang === 'es' ? 'Inglés' : 'English'}
             </button>
           </>
+        )}
+
+        {!isRecommendedActive && (
+          <button
+            className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
+            onClick={toggleMasterpiece}
+          >
+            {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
+          </button>
         )}
       </div>
 
