@@ -11,7 +11,7 @@
       },
       "image": "/imagenes/comics/elincal.jpg",
       "download": "https://archive.org/download/ElIncal/ElIncal.pdf",
-      "masterpiece": false,
+      "masterpiece": true,
       "author": "Alejandro Jodorowsky, Moebius"
     },
     {
