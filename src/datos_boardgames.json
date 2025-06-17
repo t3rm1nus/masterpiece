@@ -1151,7 +1151,22 @@
       "age": "+12",
       "masterpiece": false,
       "image": "/imagenes/juegos_de_mesa/asante.jpg"
+    },
+    {
+      "id": 73,
+      "title": { "es": "La Fuga de Colditz", "en": "Escape from Colditz" },
+      "category": "boardgames",
+      "subcategory": "Estrategia",
+      "description": {
+        "es": "Un juego de estrategia basado en el famoso castillo de Colditz durante la Segunda Guerra Mundial, donde los jugadores deben planificar y ejecutar audaces intentos de fuga.",
+        "en": "A strategy game based on the famous Colditz Castle during World War II, where players must plan and execute daring escape attempts."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 6,
+      "playTime": 120,
+      "age": "+12",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/colditz.jpg"
     }
-    
   ]
 }
