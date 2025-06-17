@@ -16,14 +16,18 @@ const HomePage = () => {
   // Stores consolidados
   const { 
     selectedCategory, 
-    setSelectedCategory, 
-    selectedCategoryLabel, 
-    setSelectedCategoryLabel,
+    setSelectedCategory,
     activeSubcategory,
     setActiveSubcategory,
     getSubcategoriesForCategory,
     getCategories,
-    filteredItems
+    filteredItems,
+    toggleSpanishCinema,
+    toggleMasterpiece,
+    setPodcastLanguage,
+    isSpanishCinemaActive,
+    isMasterpieceActive,
+    podcastLanguage
   } = useDataStore();
   
   // Obtener configuración de estilos del store consolidado
@@ -34,18 +38,10 @@ const HomePage = () => {
   // Obtener subcategorías del store para la categoría seleccionada
   const categorySubcategories = getSubcategoriesForCategory();
   
-  const [isSpanishCinemaActive, setIsSpanishCinemaActive] = useState(false);
-  const [isMasterpieceActive, setIsMasterpieceActive] = useState(false);
-  const [podcastLanguage, setPodcastLanguage] = useState('es');
   const [isRecommendedActive, setIsRecommendedActive] = useState(false);
 
   const handleCategoryClick = (category) => {
-    const label = t.categories[category.key] || category.label;
-    setSelectedCategory(category.key);
-    setSelectedCategoryLabel(label);
-    setActiveSubcategory(null);
-    setIsSpanishCinemaActive(false);
-    setIsMasterpieceActive(false);
+    setSelectedCategory(category.key, category.label);
     setIsRecommendedActive(category.key === 'recommended');
   };
 
@@ -81,16 +77,6 @@ const HomePage = () => {
     return t.subcategories[subcategory] || subcategory;
   };
 
-  const toggleMasterpiece = () => {
-    setIsMasterpieceActive(!isMasterpieceActive);
-    setIsSpanishCinemaActive(false);
-  };
-
-  const toggleSpanishCinema = () => {
-    setIsSpanishCinemaActive(!isSpanishCinemaActive);
-    setIsMasterpieceActive(false);
-  };
-
   return (
     <div className="home-container">
       <div className="header-controls">
@@ -119,7 +105,7 @@ const HomePage = () => {
               className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
               onClick={() => setActiveSubcategory(sub)}
             >
-              {getSubcategoryLabel(sub)}
+              {t.subcategories[sub] || sub}
             </button>
           ))}
         </div>
