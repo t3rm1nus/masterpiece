@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../LanguageContext';
 import useDataStore from '../store/dataStore';
 import useThemeStore from '../store/themeStore';
@@ -28,7 +28,9 @@ const HomePage = () => {
     isSpanishCinemaActive,
     isMasterpieceActive,
     podcastLanguage,
-    title
+    title,
+    initializeFilteredItems,
+    updateFilteredItems
   } = useDataStore();
   
   // Obtener configuración de estilos del store consolidado
@@ -40,6 +42,15 @@ const HomePage = () => {
   const categorySubcategories = getSubcategoriesForCategory();
   
   const [isRecommendedActive, setIsRecommendedActive] = useState(false);
+
+  // Inicializar datos al montar el componente
+  useEffect(() => {
+    if (!selectedCategory) {
+      initializeFilteredItems();
+    } else {
+      updateFilteredItems();
+    }
+  }, []);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category.key, category.label);
@@ -151,7 +162,10 @@ const HomePage = () => {
 
       {title && <h1 className={selectedCategory ? 'after-subcategories' : ''}>{title}</h1>}
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <RecommendationsList items={filteredItems} />
+        <RecommendationsList 
+          recommendations={filteredItems} 
+          isHome={!selectedCategory}
+        />
       </div>
     </div>
   );
