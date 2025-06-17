@@ -448,7 +448,7 @@
       "author": "NPR",
       "image": "/imagenes/podcasts/throughline.jpg",
       "link": "https://open.spotify.com/show/0vYTIMav7el5VXq5n5pxhI?si=2VSfhedvTPS3Ent2x2YeDg&nd=1&dlsi=a7989695a0ff4b01",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 26,
@@ -478,13 +478,13 @@
         "en": "Crime Junkie"
       },
       "description": {
-        "es": "Un podcast semanal de crímenes reales donde Ashley Flowers y Brit Prawat narran historias escalofriantes con un estilo cautivador y único, convirtiéndose en uno de los podcasts más populares del género.",
-        "en": "A weekly true crime podcast where host Ashley Flowers and her best friend Brit Prawat deliver captivating stories of real crimes with a unique storytelling style that has made it one of the most popular in the genre."
+        "es": "Un podcast de crímenes reales con un estilo narrativo cautivador que presenta historias escalofriantes de manera envolvente y detallada.",
+        "en": "A true crime podcast with a captivating narrative style that presents chilling stories in an immersive and detailed way."
       },
-      "author": "Ashley Flowers & Brit Prawat",
-      "image": "/imagenes/podcasts/crimejunkie.png",
+      "author": "Ashley Flowers",
+      "image": "/imagenes/podcasts/crime_junkie.jpg",
       "link": "https://open.spotify.com/show/3DgfoleqaW61T2amZQKINx",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 28,
@@ -492,17 +492,17 @@
       "subcategory": "news",
       "idioma": "en",
       "title": {
-        "es": "The Daily Podcast",
-        "en": "The Daily Podcast"
+        "es": "The Daily",
+        "en": "The Daily"
       },
       "description": {
-        "es": "El podcast insignia del New York Times que profundiza en las historias más importantes del día, incluyendo casos intrigantes y crímenes significativos, con un enfoque periodístico riguroso.",
-        "en": "The New York Times' flagship podcast that delves into the day's most important stories, including intriguing cases and significant crimes, with rigorous journalistic standards."
+        "es": "Un podcast diario que aborda casos importantes y eventos actuales, incluyendo investigaciones profundas y análisis detallados.",
+        "en": "A daily podcast that covers important cases and current events, including deep investigations and detailed analysis."
       },
       "author": "The New York Times",
       "image": "/imagenes/podcasts/the_daily.jpg",
       "link": "https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 29,
@@ -514,13 +514,13 @@
         "en": "The Joe Rogan Experience"
       },
       "description": {
-        "es": "El podcast más influyente de 2025, donde Joe Rogan mantiene conversaciones extensas con científicos, cómicos y figuras influyentes, explorando una amplia gama de temas con profundidad y humor.",
-        "en": "The most influential podcast of 2025, where Joe Rogan has long-form conversations with scientists, comedians, and influential figures, exploring a wide range of topics with depth and humor."
+        "es": "Entrevistas extensas y conversaciones profundas con científicos, cómicos y figuras influyentes, explorando una amplia gama de temas.",
+        "en": "Long-form interviews and deep conversations with scientists, comedians, and influential figures, exploring a wide range of topics."
       },
       "author": "Joe Rogan",
       "image": "/imagenes/podcasts/joe_rogan.jpg",
       "link": "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 30,
@@ -532,8 +532,8 @@
         "en": "This Past Weekend w/ Theo Von"
       },
       "description": {
-        "es": "Un podcast que mezcla humor, nostalgia y reflexiones personales, donde Theo Von comparte historias únicas y conversaciones auténticas con diversos invitados.",
-        "en": "A podcast blending humor, nostalgia, and personal reflections, where Theo Von shares unique stories and authentic conversations with various guests."
+        "es": "Una mezcla única de humor, nostalgia y reflexiones personales que ha ganado una gran popularidad.",
+        "en": "A unique blend of humor, nostalgia, and personal reflections that has gained massive popularity."
       },
       "author": "Theo Von",
       "image": "/imagenes/podcasts/this_past_weekend.jpg",
@@ -546,16 +546,16 @@
       "subcategory": "business",
       "idioma": "en",
       "title": {
-        "es": "The Diary of a CEO with Steven Bartlett",
-        "en": "The Diary of a CEO with Steven Bartlett"
+        "es": "The Diary of a CEO",
+        "en": "The Diary of a CEO"
       },
       "description": {
-        "es": "Un podcast que presenta relatos sinceros de emprendedores exitosos, ofreciendo lecciones profundas sobre negocios, liderazgo y desarrollo personal.",
-        "en": "A podcast featuring candid stories from successful entrepreneurs, offering deep lessons about business, leadership, and personal development."
+        "es": "Relatos sinceros y profundos de emprendedores exitosos, compartiendo lecciones valiosas sobre negocios y liderazgo.",
+        "en": "Honest and deep accounts from successful entrepreneurs, sharing valuable lessons about business and leadership."
       },
       "author": "Steven Bartlett",
       "image": "/imagenes/podcasts/diary_ceo.jpg",
-      "link": "https://open.spotify.com/show/7iQXmUT7XGuZSzAMjoNWlX",
+      "link": "https://open.spotify.com/show/5y0Ko4rh7Ux9lZYzRxuIdH",
       "masterpiece": false
     },
     {
@@ -564,17 +564,17 @@
       "subcategory": "business",
       "idioma": "en",
       "title": {
-        "es": "How I Built This with Guy Raz",
-        "en": "How I Built This with Guy Raz"
+        "es": "How I Built This",
+        "en": "How I Built This"
       },
       "description": {
-        "es": "Guy Raz explora las historias inspiradoras detrás de algunas de las empresas más exitosas del mundo, revelando los desafíos y triunfos de sus fundadores.",
-        "en": "Guy Raz explores the inspiring stories behind some of the world's most successful companies, revealing the challenges and triumphs of their founders."
+        "es": "Historias inspiradoras sobre la creación de empresas exitosas, narradas por sus fundadores.",
+        "en": "Inspiring stories about building successful companies, narrated by their founders."
       },
       "author": "Guy Raz",
       "image": "/imagenes/podcasts/how_i_build.jpg",
       "link": "https://open.spotify.com/show/6E709HRH7XaiZrMfgtNCun",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 33,
@@ -582,17 +582,17 @@
       "subcategory": "science",
       "idioma": "en",
       "title": {
-        "es": "Ologies with Alie Ward",
-        "en": "Ologies with Alie Ward"
+        "es": "Ologies",
+        "en": "Ologies"
       },
       "description": {
-        "es": "Un fascinante viaje por diferentes campos científicos, donde cada episodio explora una nueva 'ología' de manera accesible y entretenida.",
-        "en": "A fascinating journey through different scientific fields, where each episode explores a new 'ology' in an accessible and entertaining way."
+        "es": "Un fascinante viaje por diferentes campos científicos, explicados de manera accesible y entretenida.",
+        "en": "A fascinating journey through different scientific fields, explained in an accessible and entertaining way."
       },
       "author": "Alie Ward",
       "image": "/imagenes/podcasts/ologies.jpg",
       "link": "https://open.spotify.com/show/5nvRkVMH58SelKZYZFZx1S",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 34,
@@ -604,8 +604,8 @@
         "en": "Maintenance Phase"
       },
       "description": {
-        "es": "Un podcast que desmonta mitos sobre salud y cultura pop con rigor científico y humor, ofreciendo una perspectiva crítica sobre el bienestar y la sociedad.",
-        "en": "A podcast that debunks health and pop culture myths with scientific rigor and humor, offering a critical perspective on wellness and society."
+        "es": "Un análisis crítico y humorístico de mitos sobre salud y cultura pop, respaldado por investigación sólida.",
+        "en": "A critical and humorous analysis of health and pop culture myths, backed by solid research."
       },
       "author": "Aubrey Gordon & Michael Hobbes",
       "image": "/imagenes/podcasts/maintenance.jpg",
@@ -622,14 +622,14 @@
         "en": "If Books Could Kill"
       },
       "description": {
-        "es": "Un análisis inteligente y entretenido de bestsellers populares, explorando su impacto cultural y desentrañando sus mensajes ocultos.",
-        "en": "An intelligent and entertaining analysis of popular bestsellers, exploring their cultural impact and unraveling their hidden messages."
+        "es": "Un análisis inteligente y entretenido de bestsellers populares y su impacto cultural.",
+        "en": "A smart and entertaining analysis of popular bestsellers and their cultural impact."
       },
       "author": "Michael Hobbes & Peter Shamshiri",
       "image": "/imagenes/podcasts/if_books_could_kill.jpg",
       "link": "https://open.spotify.com/show/2khJBoF73ujIATWUFtSxLD",
       "masterpiece": false
-    },    
+    },
     {
       "id": 36,
       "category": "podcast",
@@ -640,8 +640,8 @@
         "en": "Switched on Pop"
       },
       "description": {
-        "es": "Un análisis riguroso y divertido de la música pop contemporánea, explorando su composición, significado cultural e impacto social.",
-        "en": "A rigorous and fun analysis of contemporary pop music, exploring its composition, cultural meaning, and social impact."
+        "es": "Un análisis profundo y entretenido de la música pop contemporánea y su significado cultural.",
+        "en": "A deep and entertaining analysis of contemporary pop music and its cultural significance."
       },
       "author": "Nate Sloan & Charlie Harding",
       "image": "/imagenes/podcasts/switched_on_pop.png",
@@ -658,13 +658,13 @@
         "en": "Song Exploder"
       },
       "description": {
-        "es": "Un podcast único donde los artistas descomponen sus canciones y explican cada detalle del proceso creativo, desde la inspiración hasta la producción final.",
-        "en": "A unique podcast where artists break down their songs and explain every detail of the creative process, from inspiration to final production."
+        "es": "Artistas descomponen sus canciones y explican cada detalle del proceso creativo.",
+        "en": "Artists break down their songs and explain every detail of the creative process."
       },
       "author": "Hrishikesh Hirway",
       "image": "/imagenes/podcasts/song_exploder.jpg",
       "link": "https://open.spotify.com/show/10lMwCjvzLCLwth2AW6cLG",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 38,
@@ -676,13 +676,13 @@
         "en": "The Rest is History"
       },
       "description": {
-        "es": "Un viaje fascinante a través de la historia, desde guerras antiguas hasta cultura pop, con episodios destacados que incluyen invitados expertos.",
-        "en": "A fascinating journey through history, from ancient wars to pop culture, with featured episodes including expert guests."
+        "es": "Un recorrido fascinante por la historia, desde guerras antiguas hasta cultura pop contemporánea.",
+        "en": "A fascinating journey through history, from ancient wars to contemporary pop culture."
       },
       "author": "Tom Holland & Dominic Sandbrook",
       "image": "/imagenes/podcasts/the_rest.jpg",
       "link": "https://open.spotify.com/show/7Cvsbcjhtur7nplC148TWy",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 39,
@@ -690,17 +690,17 @@
       "subcategory": "inspiration",
       "idioma": "en",
       "title": {
-        "es": "The Happiness Lab with Dr. Laurie Santos",
-        "en": "The Happiness Lab with Dr. Laurie Santos"
+        "es": "The Happiness Lab",
+        "en": "The Happiness Lab"
       },
       "description": {
-        "es": "La Dra. Laurie Santos explora la ciencia detrás de la felicidad y el bienestar emocional, ofreciendo insights prácticos basados en investigación científica.",
-        "en": "Dr. Laurie Santos explores the science behind happiness and emotional well-being, offering practical insights based on scientific research."
+        "es": "Una exploración científica de la felicidad y el bienestar emocional, con consejos prácticos.",
+        "en": "A scientific exploration of happiness and emotional well-being, with practical advice."
       },
       "author": "Dr. Laurie Santos",
       "image": "/imagenes/podcasts/the_happiness.jpg",
       "link": "https://open.spotify.com/show/3i5TCKhc6GY42pOWkpWveG",
-      "masterpiece": false
+      "masterpiece": true
     }
   ]
 }
