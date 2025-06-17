@@ -5,6 +5,7 @@ import useThemeStore from '../store/themeStore';
 import { useTitleSync } from '../hooks/useTitleSync';
 import MaterialContentWrapper from './MaterialContentWrapper';
 import RecommendationsList from './RecommendationsList';
+import ThemeToggle from './ThemeToggle';
 
 const HomePage = () => {
   const { lang, t, getSubcategoryTranslation } = useLanguage();
@@ -71,95 +72,100 @@ const HomePage = () => {
     }
   };
 
+  const getSubcategoryLabel = (subcategory) => {
+    if (!subcategory) return '';
+    return t.subcategories[subcategory] || subcategory;
+  };
+
   return (
-    <MaterialContentWrapper
-      categories={categories}
-      selectedCategory={selectedCategory}
-      onCategoryClick={handleCategoryClick}
-      subcategories={selectedCategory ? categorySubcategories : []}
-      activeSubcategory={activeSubcategory}
-      onSubcategoryClick={setActiveSubcategory}
-      categoryColor={selectedCategory ? getCategoryColor(selectedCategory) : '#0078d4'}
-      recommendations={filteredItems}
-      isHome={!selectedCategory && !activeSubcategory}
-    >
-      <>        <div className="categories-list">
+    <div className="home-page">
+      <div className="header-controls">
+        <ThemeToggle />
+      </div>
+
+      <div className="categories-container">
+        <h2>{t.categoriesTitle}</h2>
+        <div className="categories-list">
           {categories.map(({ key, label }) => (
             <button
               key={key}
-              className="category-btn"
+              className={`category-btn${selectedCategory === key ? ' active' : ''}`}
               onClick={() => handleCategoryClick(key, label)}
             >
               {label}
             </button>
           ))}
         </div>
-        
-        {selectedCategory && (
-          <>            <div className="subcategories-list">
-              {categorySubcategories.map(({ sub }) => (
-                <button
-                  key={sub}
-                  className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
-                  onClick={() => setActiveSubcategory(sub)}
-                >
-                  {getSubcategoryTranslation(sub)}
-                </button>
-              ))}
-            </div>
+      </div>
 
-            <div className="special-buttons-container">
-              {/* Mostrar botón de Cine Español solo en la categoría de películas */}
-              {selectedCategory === 'movies' && (
-                <button
-                  className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
-                  onClick={() => {
-                    toggleSpanishCinema();
-                    console.log('Toggling Spanish Cinema:', !isSpanishCinemaActive);
-                  }}
-                >
-                  {getSpecialButtonLabel('spanishCinema', lang)}
-                </button>
-              )}
-
-              {/* Mostrar botones de idioma solo en la categoría de podcasts */}
-              {selectedCategory === 'podcast' && (
-                <>
-                  <button
-                    className={`subcategory-btn podcast-language${podcastLanguage === 'es' ? ' active' : ''}`}              
-                    onClick={() => setPodcastLanguage('es')}
-                  >
-                    {getSpecialButtonLabel('spanishPodcast', lang)}
-                  </button>
-                  <button
-                    className={`subcategory-btn podcast-language${podcastLanguage === 'en' ? ' active' : ''}`}              
-                    onClick={() => setPodcastLanguage('en')}
-                  >
-                    {getSpecialButtonLabel('englishPodcast', lang)}
-                  </button>
-                </>
-              )}
-
-              <button
-                className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}              
-                onClick={() => {
-                  toggleMasterpiece();
-                }}
-              >
-                {getSpecialButtonLabel('masterpiece', lang)}
-              </button>
-            </div>
-          </>
-        )}        
-        <h1 className={selectedCategory ? 'after-subcategories' : ''}>{title}</h1>
-        <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-          <RecommendationsList
-            recommendations={filteredItems}
-            isHome={!selectedCategory && !activeSubcategory}
-          />
+      {selectedCategory && (
+        <div className="subcategories-container">
+          <button
+            className={`subcategory-btn${!activeSubcategory ? ' active' : ''}`}
+            onClick={() => setActiveSubcategory(null)}
+          >
+            {t.see_all}
+          </button>
+          {categorySubcategories.map(({ sub }) => (
+            <button
+              key={sub}
+              className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
+              onClick={() => setActiveSubcategory(sub)}
+            >
+              {getSubcategoryLabel(sub)}
+            </button>
+          ))}
         </div>
-      </>
-    </MaterialContentWrapper>
+      )}
+
+      <div className="special-buttons-container">
+        {selectedCategory === 'movies' && (
+          <button
+            className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
+            onClick={() => {
+              toggleSpanishCinema();
+              console.log('Toggling Spanish Cinema:', !isSpanishCinemaActive);
+            }}
+          >
+            {getSpecialButtonLabel('spanishCinema')}
+          </button>
+        )}
+
+        {selectedCategory === 'podcast' && (
+          <>
+            <button
+              className={`subcategory-btn podcast-language${podcastLanguage === 'es' ? ' active' : ''}`}              
+              onClick={() => setPodcastLanguage('es')}
+            >
+              {lang === 'es' ? 'Español' : 'Spanish'}
+            </button>
+            <button
+              className={`subcategory-btn podcast-language${podcastLanguage === 'en' ? ' active' : ''}`}              
+              onClick={() => setPodcastLanguage('en')}
+            >
+              {lang === 'es' ? 'Inglés' : 'English'}
+            </button>
+          </>
+        )}
+
+        <button
+          className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}              
+          onClick={() => {
+            toggleMasterpiece();
+          }}
+        >
+          {getSpecialButtonLabel('masterpiece')}
+        </button>
+      </div>
+
+      <h1 className={selectedCategory ? 'after-subcategories' : ''}>{title}</h1>
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <RecommendationsList
+          recommendations={filteredItems}
+          isHome={!selectedCategory && !activeSubcategory}
+        />
+      </div>
+    </div>
   );
 };
 
