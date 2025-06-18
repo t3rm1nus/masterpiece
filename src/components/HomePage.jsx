@@ -113,15 +113,17 @@ const HomePage = () => {
 
       {selectedCategory && (
         <div className="subcategories-container">
-          {categorySubcategories.map(({ sub }) => (
-            <button
-              key={sub}
-              className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
-              onClick={() => setActiveSubcategory(sub)}
-            >
-              {t.subcategories[sub] || sub}
-            </button>
-          ))}
+          {categorySubcategories
+            .sort((a, b) => a.order - b.order)
+            .map(({ sub }) => (
+              <button
+                key={sub}
+                className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
+                onClick={() => setActiveSubcategory(sub)}
+              >
+                {t.subcategories[sub] || sub}
+              </button>
+            ))}
         </div>
       )}
 

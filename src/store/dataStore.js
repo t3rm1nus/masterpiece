@@ -92,16 +92,38 @@ const useDataStore = create(
         const { selectedCategory, allData } = get();
         if (!selectedCategory || !allData[selectedCategory]) return [];
         
-        const items = allData[selectedCategory];
-        const subcategoriesSet = new Set();
+        // Obtener todas las subcategorías únicas
+        const subcategories = [...new Set(
+          allData[selectedCategory]
+            .map(item => item.subcategory)
+            .filter(Boolean)
+        )];
         
-        items.forEach(item => {
-          if (item.subcategory) {
-            subcategoriesSet.add(item.subcategory);
-          }
-        });
+        // Ordenar subcategorías según la categoría
+        if (selectedCategory === 'movies') {
+          return subcategories.map(sub => ({ sub, order: getMovieSubcategoryOrder(sub) }));
+        } else if (selectedCategory === 'documentales') {
+          return subcategories.map(sub => ({ sub, order: getDocumentarySubcategoryOrder(sub) }));
+        }
         
-        return Array.from(subcategoriesSet).map(sub => ({ sub }));
+        return subcategories.map(sub => ({ sub, order: 0 }));
+      },
+
+      // Función para ordenar subcategorías de documentales
+      getDocumentarySubcategoryOrder: (subcategory) => {
+        const order = {
+          'naturaleza': 1,
+          'historia': 2,
+          'ciencia': 3,
+          'tecnologia': 4,
+          'sociedad': 5,
+          'arte': 6,
+          'deportes': 7,
+          'viajes': 8,
+          'biografia': 9,
+          'otros': 10
+        };
+        return order[subcategory] || 999;
       },
 
       // Obtener todos los elementos de una categoría

@@ -49,7 +49,17 @@
       "history": "Historia",
       "inspiration": "Inspiración",
       "education": "Educación",
-      "technology": "Tecnología"
+      "technology": "Tecnología",
+      "naturaleza": "Naturaleza",
+      "historia": "Historia",
+      "ciencia": "Ciencia",
+      "tecnologia": "Tecnología",
+      "sociedad": "Sociedad",
+      "arte": "Arte",
+      "deportes": "Deportes",
+      "viajes": "Viajes",
+      "biografia": "Biografía",
+      "otros": "Otros"
     },    
     "change_language": "Cambiar idioma",
     "dark_mode": "Modo Oscuro",
@@ -84,7 +94,8 @@
       "books": "Books",
       "boardgames": "Board Games",
       "music": "Music",
-      "podcast": "Podcast"
+      "podcast": "Podcast",
+      "documentales": "Documentaries"
     },    "subcategories": {
       "estrategia": "Strategy",
       "familiar": "Family",
@@ -125,7 +136,17 @@
       "history": "History",
       "inspiration": "Inspiration",
       "education": "Education",
-      "technology": "Technology"
+      "technology": "Technology",
+      "naturaleza": "Nature",
+      "historia": "History",
+      "ciencia": "Science",
+      "tecnologia": "Technology",
+      "sociedad": "Society",
+      "arte": "Art",
+      "deportes": "Sports",
+      "viajes": "Travel",
+      "biografia": "Biography",
+      "otros": "Others"
     },    "see_all": "See all",
     "change_language": "Change language",
     "dark_mode": "Dark Mode",
