@@ -42,7 +42,8 @@ const HomePage = () => {
     setActiveLanguage,
     activeLanguage,
     availableLanguages,
-    allData
+    allData,
+    initializeData
   } = useDataStore();
   
   // Obtener configuración de estilos del store consolidado
@@ -58,12 +59,24 @@ const HomePage = () => {
   // Estado local para el elemento seleccionado
   const [selectedItem, setSelectedItem] = useState(null);
 
-  // Inicializar datos al montar el componente
+  // Efecto para inicializar los datos
+  useEffect(() => {
+    initializeData();
+  }, [initializeData]);
+
+  // Efecto para inicializar los datos filtrados
   useEffect(() => {
     if (allData && Object.keys(allData).length > 0) {
       initializeFilteredItems();
     }
   }, [allData, initializeFilteredItems]);
+
+  // Efecto para actualizar los items filtrados cuando cambian los filtros
+  useEffect(() => {
+    if (selectedCategory) {
+      updateFilteredItems();
+    }
+  }, [selectedCategory, activeSubcategory, activeLanguage, updateFilteredItems]);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);

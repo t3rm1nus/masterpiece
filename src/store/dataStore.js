@@ -112,31 +112,29 @@ const useDataStore = create(
           { key: 'documentales', es: 'Documentales', en: 'Documentaries' },
           { key: 'series', es: 'Series', en: 'TV Shows' }
         ],      
-          // Datos procesados con IDs únicos
+        // Estado inicial
         allData: {
           movies: processItemsWithUniqueIds(datosMovies.recommendations || []),
-          comics: processItemsWithUniqueIds(datosComics.recommendations || []),
-          books: processItemsWithUniqueIds(datosBooks.recommendations || []),
-          music: processItemsWithUniqueIds(datosMusic.recommendations || []),
-          videogames: processItemsWithUniqueIds(datosVideogames.recommendations || []),
+          documentales: processItemsWithUniqueIds(datosDocumentales.recommendations || []),
           boardgames: processItemsWithUniqueIds(datosBoardgames.recommendations || []),
-          podcast: processItemsWithUniqueIds(datosPodcast.recommendations || []),
-          documentales: processItemsWithUniqueIds(datosDocumentales.documentales || []),
-          series: processItemsWithUniqueIds(datosSeries.series || [])
+          podcast: processItemsWithUniqueIds(datosPodcast.recommendations || [])
         },
+        selectedCategory: null,
+        activeSubcategory: null,
+        activeLanguage: 'all',
+        filteredItems: [],
+        darkMode: false,
+        language: 'es',
 
         // ==========================================
         // ESTADO DE FILTROS
         // ==========================================
-        selectedCategory: null,
-        activeSubcategory: null,
         isSpanishCinemaActive: false,
         isMasterpieceActive: false,
         podcastLanguage: 'es',
         documentaryLanguage: 'es',
         title: '',
         randomNotFoundImage: '',
-        filteredItems: [],
 
         // ==========================================
         // GETTERS CONSOLIDADOS
@@ -202,7 +200,9 @@ const useDataStore = create(
         getAllItemsForCategory: (category) => {
           const { allData } = get();
           return allData[category] || [];
-        },      // ==========================================
+        },
+
+        // ==========================================
         // FUNCIONES AUXILIARES
         // ==========================================
         
@@ -486,6 +486,21 @@ const useDataStore = create(
         // ==========================================
         // FUNCIONES DE RESET CONSOLIDADAS
         // ==========================================
+
+        // Inicializar datos
+        initializeData: () => {
+          const { allData } = get();
+          if (!allData || Object.keys(allData).length === 0) {
+            set({ 
+              allData: {
+                movies: processItemsWithUniqueIds(datosMovies.recommendations || []),
+                documentales: processItemsWithUniqueIds(datosDocumentales.recommendations || []),
+                boardgames: processItemsWithUniqueIds(datosBoardgames.recommendations || []),
+                podcast: processItemsWithUniqueIds(datosPodcast.recommendations || [])
+              }
+            });
+          }
+        },
       }),
       {
         name: 'data-storage',
