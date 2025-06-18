@@ -32,7 +32,10 @@ const HomePage = () => {
     documentaryLanguage,
     title,
     initializeFilteredItems,
-    updateFilteredItems
+    updateFilteredItems,
+    setActiveLanguage,
+    activeLanguage,
+    availableLanguages
   } = useDataStore();
   
   // Obtener configuración de estilos del store consolidado
@@ -155,20 +158,23 @@ const HomePage = () => {
         )}
 
         {selectedCategory === 'documentales' && (
-          <>
+          <div className="language-filters">
             <button
-              className={`subcategory-btn documentary-language${documentaryLanguage === 'es' ? ' active' : ''}`}              
-              onClick={() => setDocumentaryLanguage('es')}
+              className={`language-btn${activeLanguage === 'all' ? ' active' : ''}`}
+              onClick={() => setActiveLanguage('all')}
             >
-              {lang === 'es' ? 'Español' : 'Spanish'}
+              {t.filters.languages.all}
             </button>
-            <button
-              className={`subcategory-btn documentary-language${documentaryLanguage === 'en' ? ' active' : ''}`}              
-              onClick={() => setDocumentaryLanguage('en')}
-            >
-              {lang === 'es' ? 'Inglés' : 'English'}
-            </button>
-          </>
+            {availableLanguages.map(lang => (
+              <button
+                key={lang}
+                className={`language-btn${activeLanguage === lang ? ' active' : ''}`}
+                onClick={() => setActiveLanguage(lang)}
+              >
+                {t.filters.languages[lang] || lang}
+              </button>
+            ))}
+          </div>
         )}
 
         {!isRecommendedActive && selectedCategory && (

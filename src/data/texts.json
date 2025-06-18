@@ -8,8 +8,7 @@
       "boardgames": "Juegos de mesa",
       "music": "Música",
       "podcast": "Podcast",
-      "documentales": "Documentales",
-      "series": "Series"
+      "documentales": "Documentales"
     },    "subcategories": {
       "estrategia": "Estrategia",
       "familiar": "Familiar",
@@ -59,7 +58,22 @@
       "deportes": "Deportes",
       "viajes": "Viajes",
       "biografia": "Biografía",
-      "otros": "Otros"
+      "otros": "Otros",
+      "nature": "Naturaleza",
+      "history": "Historia",
+      "science": "Ciencia",
+      "technology": "Tecnología",
+      "society": "Sociedad",
+      "art": "Arte",
+      "sports": "Deportes",
+      "travel": "Viajes",
+      "biography": "Biografía",
+      "politics": "Política",
+      "psychology": "Psicología",
+      "culture": "Cultura",
+      "food": "Gastronomía",
+      "spirituality": "Espiritualidad",
+      "others": "Otros"
     },    
     "change_language": "Cambiar idioma",
     "dark_mode": "Modo Oscuro",
@@ -84,7 +98,37 @@
     "coffee_benefit_4": "• Hacer que el botón de \"Donar\" no se sienta tan solo 😢",    "coffee_cta": "Así que ya sabes, si te nace…",
     "coffee_legend": "¡Haz clic y conviértete en leyenda!",    "coffee_footer": "¡Gracias por el café! ☕\n\n(O al menos por demostrar que aún hay buenas personas sueltas por el mundo. ❤️)",
     "thanks_message": "¡Gracias por tu apoyo!",
-    "amount_label": "Cantidad (EUR)"
+    "amount_label": "Cantidad (EUR)",
+    "filters": {
+      "all": "Todos",
+      "language": "Idioma",
+      "languages": {
+        "all": "Todos los idiomas",
+        "es": "Español",
+        "en": "Inglés",
+        "fr": "Francés",
+        "de": "Alemán",
+        "it": "Italiano",
+        "pt": "Portugués",
+        "ru": "Ruso",
+        "ja": "Japonés",
+        "ko": "Coreano",
+        "zh": "Chino",
+        "ar": "Árabe",
+        "hi": "Hindi",
+        "other": "Otros idiomas"
+      }
+    },
+    "documentary": {
+      "author": "Autor",
+      "duration": "Duración",
+      "language": "Idioma",
+      "episodes": "Episodios",
+      "watch": "Ver Documental",
+      "year": "Año",
+      "country": "País",
+      "director": "Director"
+    }
   },  "en": {
     "home_title": "New Recommendations",
     "categoriesTitle": "Categories",    "categories": {
@@ -146,7 +190,22 @@
       "deportes": "Sports",
       "viajes": "Travel",
       "biografia": "Biography",
-      "otros": "Others"
+      "otros": "Others",
+      "nature": "Nature",
+      "history": "History",
+      "science": "Science",
+      "technology": "Technology",
+      "society": "Society",
+      "art": "Art",
+      "sports": "Sports",
+      "travel": "Travel",
+      "biography": "Biography",
+      "politics": "Politics",
+      "psychology": "Psychology",
+      "culture": "Culture",
+      "food": "Food",
+      "spirituality": "Spirituality",
+      "others": "Others"
     },    "see_all": "See all",
     "change_language": "Change language",
     "dark_mode": "Dark Mode",
@@ -171,6 +230,36 @@
     "coffee_benefit_4": "• Make the \"Donate\" button feel less lonely 😢",    "coffee_cta": "So you know, if you feel like it…",
     "coffee_legend": "Click and become a legend!",    "coffee_footer": "Thanks for the coffee! ☕\n\n(Or at least for proving there are still good people out there in the world. ❤️)",
     "thanks_message": "Thank you for your support!",
-    "amount_label": "Amount (EUR)"
+    "amount_label": "Amount (EUR)",
+    "filters": {
+      "all": "All",
+      "language": "Language",
+      "languages": {
+        "all": "All Languages",
+        "es": "Spanish",
+        "en": "English",
+        "fr": "French",
+        "de": "German",
+        "it": "Italian",
+        "pt": "Portuguese",
+        "ru": "Russian",
+        "ja": "Japanese",
+        "ko": "Korean",
+        "zh": "Chinese",
+        "ar": "Arabic",
+        "hi": "Hindi",
+        "other": "Other Languages"
+      }
+    },
+    "documentary": {
+      "author": "Author",
+      "duration": "Duration",
+      "language": "Language",
+      "episodes": "Episodes",
+      "watch": "Watch Documentary",
+      "year": "Year",
+      "country": "Country",
+      "director": "Director"
+    }
   }
 }

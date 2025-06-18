@@ -1,0 +1,135 @@
+.language-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+.language-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  background: var(--background-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.language-btn:hover {
+  background: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+.language-btn.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .language-filters {
+    padding: 0 0.5rem;
+  }
+  
+  .language-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+.item-detail {
+  padding: 1rem;
+  background: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-header {
+  margin-bottom: 1rem;
+}
+
+.item-header h2 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.item-meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.item-category,
+.item-subcategory {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  background: var(--primary-color);
+  color: white;
+}
+
+.item-subcategory {
+  background: var(--secondary-color);
+}
+
+.item-info {
+  margin: 1rem 0;
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.info-label {
+  font-weight: bold;
+  min-width: 100px;
+  color: var(--text-color);
+}
+
+.info-value {
+  color: var(--text-color);
+}
+
+.item-description {
+  margin: 1rem 0;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.item-actions {
+  margin-top: 1rem;
+}
+
+.watch-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.watch-button:hover {
+  background: var(--primary-color-dark);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .item-detail {
+    padding: 0.75rem;
+  }
+
+  .item-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .info-label {
+    min-width: 80px;
+  }
+} 
