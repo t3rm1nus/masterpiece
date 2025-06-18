@@ -53,7 +53,8 @@ const useDataStore = create(
       activeSubcategory: null,
       isSpanishCinemaActive: false,
       isMasterpieceActive: false,
-      podcastLanguage: null, // 'es', 'en' o null
+      podcastLanguage: 'es',
+      documentaryLanguage: 'es',
       title: '',
       randomNotFoundImage: '',
       filteredItems: [],
@@ -129,6 +130,7 @@ const useDataStore = create(
           isSpanishCinemaActive, 
           isMasterpieceActive,
           podcastLanguage,
+          documentaryLanguage,
           allData 
         } = state;
         // Si no hay categoría seleccionada, mostrar elementos aleatorios de todas las categorías
@@ -156,7 +158,12 @@ const useDataStore = create(
 
         // Filtrar por idioma del podcast
         if (podcastLanguage && selectedCategory === 'podcast') {
-          items = items.filter(item => item.idioma === podcastLanguage);
+          items = items.filter(item => item.language === podcastLanguage || !item.language);
+        }
+
+        // Filtrar por idioma de documentales
+        if (documentaryLanguage && selectedCategory === 'documentales') {
+          items = items.filter(item => item.idioma === documentaryLanguage || !item.idioma);
         }
 
         // Filtrar por obras maestras
@@ -273,7 +280,8 @@ const useDataStore = create(
               books: lang === 'en' ? 'Books' : 'Libros',
               boardgames: lang === 'en' ? 'Board Games' : 'Juegos de Mesa',
               music: lang === 'en' ? 'Music' : 'Música',
-              podcast: lang === 'en' ? 'Podcasts' : 'Podcasts'
+              podcast: lang === 'en' ? 'Podcasts' : 'Podcasts',
+              documentales: lang === 'en' ? 'Documentaries' : 'Documentales'
             };
             const translatedTitle = categoryNames[selectedCategory] || selectedCategory;
             set({ title: translatedTitle }, false, 'updateTitleForLanguage');
@@ -314,15 +322,57 @@ const useDataStore = create(
         get().updateFilteredItems();
       },      // Actualizar elementos filtrados
       updateFilteredItems: () => {
-        const filteredItems = get().getFilteredItems();
+        const { 
+          selectedCategory, 
+          activeSubcategory, 
+          allData,
+          isSpanishCinemaActive,
+          isMasterpieceActive,
+          podcastLanguage,
+          documentaryLanguage
+        } = get();
         
-        // Si no hay resultados, generar una nueva imagen not found aleatoria
-        if (!filteredItems || filteredItems.length === 0) {
-          const randomNotFoundImage = get().generateRandomNotFoundImage();
-          set({ filteredItems, randomNotFoundImage }, false, 'updateFilteredItems');
-        } else {
-          set({ filteredItems }, false, 'updateFilteredItems');
+        if (!selectedCategory) {
+          get().initializeFilteredItems();
+          return;
         }
+        
+        let filtered = [...allData[selectedCategory]];
+        
+        // Aplicar filtros según la categoría
+        if (selectedCategory === 'movies' && isSpanishCinemaActive) {
+          filtered = filtered.filter(item => item.spanishCinema);
+        }
+        
+        if (isMasterpieceActive) {
+          filtered = filtered.filter(item => item.masterpiece);
+        }
+        
+        if (selectedCategory === 'podcast') {
+          filtered = filtered.filter(item => {
+            if (podcastLanguage === 'es') {
+              return item.language === 'es' || !item.language;
+            } else {
+              return item.language === 'en';
+            }
+          });
+        }
+
+        if (selectedCategory === 'documentales') {
+          filtered = filtered.filter(item => {
+            if (documentaryLanguage === 'es') {
+              return item.idioma === 'es' || !item.idioma;
+            } else {
+              return item.idioma === 'en';
+            }
+          });
+        }
+        
+        if (activeSubcategory) {
+          filtered = filtered.filter(item => item.subcategory === activeSubcategory);
+        }
+        
+        set({ filteredItems: filtered }, false, 'updateFilteredItems');
       },      // Inicializar elementos filtrados
       initializeFilteredItems: () => {
         const filteredItems = get().getRandomItemsFromAllCategories();

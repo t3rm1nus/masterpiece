@@ -449,3 +449,39 @@
     font-size: var(--font-size-sm);
   }
 }
+
+/* Estilos para botones de idioma de documentales */
+.documentary-language {
+  background-color: var(--color-documentales);
+  color: white;
+  border: 2px solid var(--color-documentales);
+  transition: all 0.3s ease;
+}
+
+.documentary-language:hover {
+  background-color: color-mix(in srgb, var(--color-documentales) 80%, #000000);
+  border-color: color-mix(in srgb, var(--color-documentales) 80%, #000000);
+}
+
+.documentary-language.active {
+  background-color: color-mix(in srgb, var(--color-documentales) 80%, #000000);
+  border-color: color-mix(in srgb, var(--color-documentales) 80%, #000000);
+  font-weight: bold;
+}
+
+/* Tema oscuro para botones de idioma de documentales */
+html[data-theme='dark'] .documentary-language {
+  background-color: var(--color-documentales);
+  color: white;
+  border-color: var(--color-documentales);
+}
+
+html[data-theme='dark'] .documentary-language:hover {
+  background-color: color-mix(in srgb, var(--color-documentales) 80%, #ffffff);
+  border-color: color-mix(in srgb, var(--color-documentales) 80%, #ffffff);
+}
+
+html[data-theme='dark'] .documentary-language.active {
+  background-color: color-mix(in srgb, var(--color-documentales) 80%, #ffffff);
+  border-color: color-mix(in srgb, var(--color-documentales) 80%, #ffffff);
+}

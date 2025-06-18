@@ -76,13 +76,15 @@ const ItemDetail = () => {
               className="item-detail-image"
             />
           </div>
-            <h2 className="item-detail-title">{title}</h2>
-            {/* Solo mostrar categoría para otras categorías, no para juegos de mesa ni videojuegos */}
+          <h2 className="item-detail-title">{title}</h2>
+          
+          {/* Solo mostrar categoría para otras categorías, no para juegos de mesa ni videojuegos */}
           {selectedItem.category !== 'boardgames' && selectedItem.category !== 'videogames' && (
             <div className="item-detail-category">
               <span className="category-name">
                 {getCategoryTranslation(selectedItem.category)}
-              </span>              {selectedItem.subcategory && (
+              </span>
+              {selectedItem.subcategory && (
                 <span className="subcategory-name">{getSubcategoryTranslation(selectedItem.subcategory)}</span>
               )}
             </div>

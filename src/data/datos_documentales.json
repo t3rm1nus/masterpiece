@@ -542,7 +542,7 @@
         "es": "Documental sobre la vida de Lucio Urtubia, un albañil anarquista que se convirtió en uno de los mayores falsificadores de cheques de viaje de la historia.",
         "en": "Documentary about the life of Lucio Urtubia, an anarchist bricklayer who became one of the greatest travelers check forgers in history."
       },
-      "image": "/imagenes/documentales/lucio.jpg",
+      "image": "/imagenes/documentales/lucio.jpeg",
       "categoria": "politics",
       "duracion": "90 min",
       "episodios": 1,
@@ -889,7 +889,7 @@
       "duracion": "32 min",
       "episodios": 1,
       "masterpiece": true,
-      "idioma": "fr",
+      "idioma": "en",
       "link": "https://watchdocumentaries.com/night-and-fog/",
       "autor": "Alain Resnais"
     },

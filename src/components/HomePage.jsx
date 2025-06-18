@@ -25,9 +25,11 @@ const HomePage = () => {
     toggleSpanishCinema,
     toggleMasterpiece,
     setPodcastLanguage,
+    setDocumentaryLanguage,
     isSpanishCinemaActive,
     isMasterpieceActive,
     podcastLanguage,
+    documentaryLanguage,
     title,
     initializeFilteredItems,
     updateFilteredItems
@@ -150,6 +152,23 @@ const HomePage = () => {
           </>
         )}
 
+        {selectedCategory === 'documentales' && (
+          <>
+            <button
+              className={`subcategory-btn documentary-language${documentaryLanguage === 'es' ? ' active' : ''}`}              
+              onClick={() => setDocumentaryLanguage('es')}
+            >
+              {lang === 'es' ? 'Español' : 'Spanish'}
+            </button>
+            <button
+              className={`subcategory-btn documentary-language${documentaryLanguage === 'en' ? ' active' : ''}`}              
+              onClick={() => setDocumentaryLanguage('en')}
+            >
+              {lang === 'es' ? 'Inglés' : 'English'}
+            </button>
+          </>
+        )}
+
         {!isRecommendedActive && selectedCategory && (
           <button
             className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
@@ -160,7 +179,14 @@ const HomePage = () => {
         )}
       </div>
 
-      {title && <h1 className={selectedCategory ? 'after-subcategories' : ''}>{title}</h1>}
+      {title && (
+        <h1 
+          className={selectedCategory ? 'after-subcategories' : ''}
+          style={{ textTransform: 'capitalize' }}
+        >
+          {title}
+        </h1>
+      )}
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
         <RecommendationsList 
           recommendations={filteredItems} 
