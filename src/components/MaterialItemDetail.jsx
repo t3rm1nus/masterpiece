@@ -23,7 +23,9 @@ import {
   AccessTime as AccessTimeIcon,
   ChildCare as ChildCareIcon,
   Code as DeveloperIcon,
-  Gamepad as PlatformIcon
+  Gamepad as PlatformIcon,
+  Translate as TranslateIcon,
+  PlaylistPlay as PlaylistPlayIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 import useViewStore from '../store/viewStore';
@@ -320,19 +322,113 @@ const MaterialItemDetail = ({ item }) => {
           )}
           
           {/* Información específica para podcast */}
-          {item.category === 'podcast' && item.author && (
-            <Box 
-              sx={{ 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center',
-                marginBottom: '16px' 
-              }}
-            >
-              <PersonIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
-              <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
-                <strong>{t.author || 'Autor'}:</strong> {item.author}
-              </Typography>
+          {item.category === 'podcast' && (
+            <Box sx={{ marginBottom: '16px' }}>
+              {item.author && (
+                <Box 
+                  sx={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    marginBottom: '8px' 
+                  }}
+                >
+                  <PersonIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
+                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Autor' : 'Author'}:</strong> {item.author}
+                  </Typography>
+                </Box>
+              )}
+            </Box>
+          )}
+
+          {/* Información específica para documentales */}
+          {item.category === 'documentales' && (
+            <Box sx={{ marginBottom: '16px' }}>
+              {item.autor && (
+                <Box 
+                  sx={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    marginBottom: '8px' 
+                  }}
+                >
+                  <PersonIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
+                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Autor' : 'Author'}:</strong> {item.autor}
+                  </Typography>
+                </Box>
+              )}
+
+              {item.duracion && (
+                <Box 
+                  sx={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    marginBottom: '8px' 
+                  }}
+                >
+                  <AccessTimeIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
+                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Duración' : 'Duration'}:</strong> {item.duracion}
+                  </Typography>
+                </Box>
+              )}
+
+              {item.idioma && (
+                <Box 
+                  sx={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    marginBottom: '8px' 
+                  }}
+                >
+                  <TranslateIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
+                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Idioma' : 'Language'}:</strong> {item.idioma}
+                  </Typography>
+                </Box>
+              )}
+
+              {item.episodios && (
+                <Box 
+                  sx={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    marginBottom: '8px' 
+                  }}
+                >
+                  <PlaylistPlayIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
+                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Episodios' : 'Episodes'}:</strong> {item.episodios}
+                  </Typography>
+                </Box>
+              )}
+
+              {item.link && (
+                <Box sx={{ marginTop: '16px', textAlign: 'center' }}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    startIcon={<PlayArrowIcon />}
+                    sx={{
+                      backgroundColor: getCategoryColor(item.category),
+                      '&:hover': {
+                        backgroundColor: colorMix(getCategoryColor(item.category), -20)
+                      }
+                    }}
+                  >
+                    {lang === 'es' ? 'Ver Documental' : 'Watch Documentary'}
+                  </Button>
+                </Box>
+              )}
             </Box>
           )}
             {/* Descripción */}

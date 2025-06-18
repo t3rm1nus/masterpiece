@@ -98,6 +98,48 @@ const ItemDetail = () => {
             </p>
           )}
           
+          {/* Datos específicos para documentales */}
+          {selectedItem.category === 'documentales' && (
+            <div className="documentary-details">
+              {selectedItem.autor && (
+                <p className="item-detail-author">
+                  <strong>{lang === 'es' ? 'Autor' : 'Author'}:</strong> {selectedItem.autor}
+                </p>
+              )}
+              
+              {selectedItem.duracion && (
+                <p className="item-detail-duration">
+                  <strong>{lang === 'es' ? 'Duración' : 'Duration'}:</strong> {selectedItem.duracion}
+                </p>
+              )}
+
+              {selectedItem.idioma && (
+                <p className="item-detail-language">
+                  <strong>{lang === 'es' ? 'Idioma' : 'Language'}:</strong> {selectedItem.idioma}
+                </p>
+              )}
+
+              {selectedItem.episodios && (
+                <p className="item-detail-episodes">
+                  <strong>{lang === 'es' ? 'Episodios' : 'Episodes'}:</strong> {selectedItem.episodios}
+                </p>
+              )}
+
+              {selectedItem.link && (
+                <div className="item-detail-trailer">
+                  <a 
+                    href={selectedItem.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="trailer-link"
+                  >
+                    {lang === 'es' ? 'Ver Documental' : 'Watch Documentary'}
+                  </a>
+                </div>
+              )}
+            </div>
+          )}
+          
           {/* Datos técnicos para juegos de mesa */}
           {selectedItem.category === 'boardgames' && (
             <div className="boardgame-details">              {(selectedItem.minPlayers || selectedItem.maxPlayers) && (

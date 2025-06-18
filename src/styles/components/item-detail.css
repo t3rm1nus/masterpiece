@@ -277,6 +277,45 @@ html[data-theme='dark'] .subcategory-name {
   color: var(--text-color);
 }
 
+/* Estilos específicos para documentales */
+.documentary-details {
+  margin: 1.5rem 0;
+}
+
+.item-detail-author,
+.item-detail-duration,
+.item-detail-language,
+.item-detail-episodes {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+/* Tema oscuro para detalles de documentales */
+html[data-theme='dark'] .item-detail-author,
+html[data-theme='dark'] .item-detail-duration,
+html[data-theme='dark'] .item-detail-language,
+html[data-theme='dark'] .item-detail-episodes {
+  color: var(--text-color);
+}
+
+/* Estilo para el botón de ver documental */
+.documentary-details .trailer-link {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--color-documentales);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.documentary-details .trailer-link:hover {
+  background: color-mix(in srgb, var(--color-documentales) 80%, #000000);
+  transform: translateY(-1px);
+}
+
 /* Responsive para tablets */
 @media (max-width: 768px) {
   .item-detail-container {

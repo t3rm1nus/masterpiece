@@ -120,14 +120,19 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
                         <span className="rec-home-cat" style={mobileHomeStyles.categoryStyle}>
                           {getCategoryTranslation(rec.category)}
                         </span>
-                        <span className="rec-home-subcat" style={mobileHomeStyles.subcategoryStyle}>
-                          {getSubcategoryTranslation(rec.subcategory)}
-                        </span>
+                        {rec.subcategory && (
+                          <span className="rec-home-subcat" style={mobileHomeStyles.subcategoryStyle}>
+                            {getSubcategoryTranslation(rec.subcategory)}
+                          </span>
+                        )}
                       </div>
-                    </div>                    <div className="rec-home-info">
+                    </div>
+                    <div className="rec-home-info">
                       <p className="rec-home-desc">{truncateDescription(description, rec.category)}</p>
                     </div>
-                  </div>                ) : (                  // Layout desktop y categorías
+                  </div>
+                ) : (
+                  // Layout desktop y categorías
                   <>
                     <OptimizedImage 
                       src={rec.image} 
@@ -140,13 +145,15 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
                     <div style={desktopStyles.categoryContainer}>
                       <span style={{
                         ...desktopStyles.categoryStyle,
-                        ...(rec.category === 'juegos_de_mesa' ? { color: '#e91e63' } : {})
+                        ...(rec.category === 'documentales' ? { color: '#ff9800' } : {})
                       }}>
                         {getCategoryTranslation(rec.category)}
                       </span>
-                      <span style={desktopStyles.subcategoryStyle}>
-                        {getSubcategoryTranslation(rec.subcategory)}
-                      </span>
+                      {rec.subcategory && (
+                        <span style={desktopStyles.subcategoryStyle}>
+                          {getSubcategoryTranslation(rec.subcategory)}
+                        </span>
+                      )}
                     </div>
                     <p>{truncateDescription(description, rec.category)}</p>
                   </>
