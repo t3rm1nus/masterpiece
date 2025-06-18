@@ -10,7 +10,7 @@
         "es": "Una serie documental que muestra la belleza natural de nuestro planeta y la vida salvaje que lo habita.",
         "en": "A documentary series that showcases the natural beauty of our planet and the wildlife that inhabits it."
       },
-      "imagen": "/imagenes/documentales/planeta_tierra.jpg",
+      "image": "/imagenes/documentales/planeta_tierra.jpg",
       "categoria": "nature",
       "duracion": "60 min",
       "episodios": 11,
@@ -29,7 +29,7 @@
         "es": "Documental sobre la lucha de las víctimas del franquismo en España por la justicia y la memoria histórica.",
         "en": "A documentary about the struggle of Franco's victims in Spain for justice and historical memory."
       },
-      "imagen": "/imagenes/documentales/silencio_de_otros.jpg",
+      "image": "/imagenes/documentales/silencio_de_otros.jpg",
       "categoria": "history",
       "duracion": "96 min",
       "episodios": 1,
@@ -48,7 +48,7 @@
         "es": "Documental que explora el papel de España como pionera en la globalización durante la Edad Moderna.",
         "en": "A documentary that explores Spain's role as a pioneer in globalization during the Modern Age."
       },
-      "imagen": "/imagenes/documentales/espania_la_primera.jpg",
+      "image": "/imagenes/documentales/espania_la_primera.jpg",
       "categoria": "history",
       "duracion": "90 min",
       "episodios": 1,
@@ -67,7 +67,7 @@
         "es": "Serie documental de Ken Burns sobre la Guerra Civil Americana, considerada una obra maestra del género.",
         "en": "Ken Burns' documentary series about the American Civil War, considered a masterpiece of the genre."
       },
-      "imagen": "/imagenes/documentales/civil_war.jpg",
+      "image": "/imagenes/documentales/civil_war.jpg",
       "categoria": "history",
       "duracion": "11 episodios",
       "episodios": 11,
@@ -86,7 +86,7 @@
         "es": "Documental que examina la historia del colonialismo y el genocidio a lo largo de la historia.",
         "en": "A documentary that examines the history of colonialism and genocide throughout history."
       },
-      "imagen": "/imagenes/documentales/exterminate.jpg",
+      "image": "/imagenes/documentales/exterminate.jpg",
       "categoria": "history",
       "duracion": "4 episodios",
       "episodios": 4,
@@ -105,7 +105,7 @@
         "es": "Serie documental que recorre la historia de España desde sus orígenes hasta la actualidad.",
         "en": "A documentary series that traces the history of Spain from its origins to the present day."
       },
-      "imagen": "/imagenes/documentales/memoria.png",
+      "image": "/imagenes/documentales/memoria.png",
       "categoria": "history",
       "duracion": "27 episodios",
       "episodios": 27,
@@ -124,7 +124,7 @@
         "es": "Documental de Ken Burns sobre la historia y el significado de la Estatua de la Libertad.",
         "en": "Ken Burns' documentary about the history and meaning of the Statue of Liberty."
       },
-      "imagen": "/imagenes/documentales/the_statue.jpg",
+      "image": "/imagenes/documentales/the_statue.jpg",
       "categoria": "history",
       "duracion": "60 min",
       "episodios": 1,
@@ -143,7 +143,7 @@
         "es": "Serie documental clásica de Carl Sagan que explora el universo y la ciencia.",
         "en": "Carl Sagan's classic documentary series that explores the universe and science."
       },
-      "imagen": "/imagenes/documentales/cosmos.jpg",
+      "image": "/imagenes/documentales/cosmos.jpg",
       "categoria": "science",
       "duracion": "13 episodios",
       "episodios": 13,
@@ -162,7 +162,7 @@
         "es": "Serie documental de Netflix que muestra la belleza natural de nuestro planeta y los desafíos que enfrenta.",
         "en": "Netflix documentary series that showcases the natural beauty of our planet and the challenges it faces."
       },
-      "imagen": "/imagenes/documentales/our_planet.jpg",
+      "image": "/imagenes/documentales/our_planet.jpg",
       "categoria": "nature",
       "duracion": "8 episodios",
       "episodios": 8,
@@ -181,7 +181,7 @@
         "es": "Documental sobre la historia cultural musical española y su evolución.",
         "en": "A documentary about Spanish musical cultural history and its evolution."
       },
-      "imagen": "/imagenes/documentales/megamix.jpg",
+      "image": "/imagenes/documentales/megamix.jpg",
       "categoria": "culture",
       "duracion": "90 min",
       "episodios": 1,
@@ -200,7 +200,7 @@
         "es": "Documental sobre el activismo LGTBI en España.",
         "en": "A documentary about LGTBI activism in Spain."
       },
-      "imagen": "/imagenes/documentales/un_hombre.jpg",
+      "image": "/imagenes/documentales/un_hombre.jpg",
       "categoria": "culture",
       "duracion": "60 min",
       "episodios": 1,
@@ -219,7 +219,7 @@
         "es": "Documental que sigue la vida de dos jóvenes jugadores de baloncesto en Chicago.",
         "en": "A documentary that follows the lives of two young basketball players in Chicago."
       },
-      "imagen": "/imagenes/documentales/hoop_dreams.jpg",
+      "image": "/imagenes/documentales/hoop_dreams.jpg",
       "categoria": "culture",
       "duracion": "170 min",
       "episodios": 1,
@@ -238,7 +238,7 @@
         "es": "Documental sobre casos de personas injustamente acusadas y condenadas.",
         "en": "A documentary about cases of people unjustly accused and convicted."
       },
-      "imagen": "/imagenes/documentales/falsos_culpables.jpg",
+      "image": "/imagenes/documentales/falsos_culpables.jpg",
       "categoria": "crime",
       "duracion": "90 min",
       "episodios": 1,
@@ -257,7 +257,7 @@
         "es": "Serie documental que analiza casos criminales reales desde una perspectiva psicológica.",
         "en": "A documentary series that analyzes real criminal cases from a psychological perspective."
       },
-      "imagen": "/imagenes/documentales/sac.jpg",
+      "image": "/imagenes/documentales/sac.jpg",
       "categoria": "crime",
       "duracion": "6 episodios",
       "episodios": 6,
@@ -276,7 +276,7 @@
         "es": "Serie documental que examina el caso de Steven Avery y su sobrino Brendan Dassey.",
         "en": "A documentary series that examines the case of Steven Avery and his nephew Brendan Dassey."
       },
-      "imagen": "/imagenes/documentales/making_murderer.jpg",
+      "image": "/imagenes/documentales/making_murderer.jpg",
       "categoria": "crime",
       "duracion": "10 episodios",
       "episodios": 10,
@@ -295,7 +295,7 @@
         "es": "Documental sobre la vida y el legado político de José Mujica, expresidente de Uruguay.",
         "en": "A documentary about the life and political legacy of José Mujica, former president of Uruguay."
       },
-      "imagen": "/imagenes/documentales/el_pepe.jpg",
+      "image": "/imagenes/documentales/el_pepe.jpg",
       "categoria": "politics",
       "duracion": "60 min",
       "episodios": 1,
@@ -314,7 +314,7 @@
         "es": "Documental que investiga la Iglesia de la Cienciología y sus prácticas.",
         "en": "A documentary that investigates the Church of Scientology and its practices."
       },
-      "imagen": "/imagenes/documentales/going_clear.jpg",
+      "image": "/imagenes/documentales/going_clear.jpg",
       "categoria": "politics",
       "duracion": "120 min",
       "episodios": 1,
@@ -333,7 +333,7 @@
         "es": "Documental que analiza la crisis financiera global de 2008.",
         "en": "A documentary that analyzes the global financial crisis of 2008."
       },
-      "imagen": "/imagenes/documentales/inside_job.jpg",
+      "image": "/imagenes/documentales/inside_job.jpg",
       "categoria": "politics",
       "duracion": "109 min",
       "episodios": 1,
@@ -352,7 +352,7 @@
         "es": "Documental sobre la vida y obra del diseñador de moda Paco Rabanne.",
         "en": "A documentary about the life and work of fashion designer Paco Rabanne."
       },
-      "imagen": "/imagenes/documentales/paco_rabanne.jpg",
+      "image": "/imagenes/documentales/paco_rabanne.jpg",
       "categoria": "art",
       "duracion": "60 min",
       "episodios": 1,
@@ -371,7 +371,7 @@
         "es": "Documental sobre la vida y carrera musical de Sole Giménez.",
         "en": "A documentary about the life and musical career of Sole Giménez."
       },
-      "imagen": "/imagenes/documentales/sole_gimenez.jpg",
+      "image": "/imagenes/documentales/sole_gimenez.jpg",
       "categoria": "art",
       "duracion": "60 min",
       "episodios": 1,
@@ -390,7 +390,7 @@
         "es": "Documental sobre el arte callejero y la figura de Banksy.",
         "en": "A documentary about street art and the figure of Banksy."
       },
-      "imagen": "/imagenes/documentales/exit.jpg",
+      "image": "/imagenes/documentales/exit.jpg",
       "categoria": "art",
       "duracion": "87 min",
       "episodios": 1,
@@ -409,7 +409,7 @@
         "es": "Documental que muestra un campamento evangélico para niños en Estados Unidos.",
         "en": "A documentary that shows an evangelical camp for children in the United States."
       },
-      "imagen": "/imagenes/documentales/jesus_camp.jpg",
+      "image": "/imagenes/documentales/jesus_camp.jpg",
       "categoria": "spirituality",
       "duracion": "84 min",
       "episodios": 1,
@@ -428,7 +428,7 @@
         "es": "Documental sobre el impacto psicológico de los desastres naturales en las comunidades afectadas.",
         "en": "A documentary about the psychological impact of natural disasters on affected communities."
       },
-      "imagen": "/imagenes/documentales/heridas.jpg",
+      "image": "/imagenes/documentales/heridas.jpg",
       "categoria": "psychology",
       "duracion": "39 min",
       "episodios": 1,
@@ -447,7 +447,7 @@
         "es": "Documental sobre la vida de Edith Bouvier Beale y su hija, primas de Jackie Kennedy.",
         "en": "A documentary about the life of Edith Bouvier Beale and her daughter, cousins of Jackie Kennedy."
       },
-      "imagen": "/imagenes/documentales/grey_gardens.jpg",
+      "image": "/imagenes/documentales/grey_gardens.jpg",
       "categoria": "psychology",
       "duracion": "94 min",
       "episodios": 1,
@@ -466,7 +466,7 @@
         "es": "Serie documental que explora cómo las teorías de Sigmund Freud influyeron en la publicidad y la política.",
         "en": "A documentary series that explores how Sigmund Freud's theories influenced advertising and politics."
       },
-      "imagen": "/imagenes/documentales/the_century.jpg",
+      "image": "/imagenes/documentales/the_century.jpg",
       "categoria": "psychology",
       "duracion": "4 episodios",
       "episodios": 4,
@@ -485,7 +485,7 @@
         "es": "Documental sobre la cultura y sociedad finlandesa.",
         "en": "A documentary about Finnish culture and society."
       },
-      "imagen": "/imagenes/documentales/finland.jpg",
+      "image": "/imagenes/documentales/finland.jpg",
       "categoria": "travel",
       "duracion": "60 min",
       "episodios": 1,
@@ -504,7 +504,7 @@
         "es": "Serie documental sobre la exploración del río Nilo en el siglo XIX.",
         "en": "A documentary series about the exploration of the Nile River in the 19th century."
       },
-      "imagen": "/imagenes/documentales/search_nile.jpg",
+      "image": "/imagenes/documentales/search_nile.jpg",
       "categoria": "travel",
       "duracion": "6 episodios",
       "episodios": 6,
@@ -523,7 +523,7 @@
         "es": "Serie documental sobre el viaje de Charles Darwin en el Beagle y el desarrollo de su teoría de la evolución.",
         "en": "A documentary series about Charles Darwin's voyage on the Beagle and the development of his theory of evolution."
       },
-      "imagen": "/imagenes/documentales/darwin.jpg",
+      "image": "/imagenes/documentales/darwin.jpg",
       "categoria": "travel",
       "duracion": "7 episodios",
       "episodios": 7,
@@ -542,7 +542,7 @@
         "es": "Documental sobre la vida de Lucio Urtubia, un albañil anarquista que se convirtió en uno de los mayores falsificadores de cheques de viaje de la historia.",
         "en": "Documentary about the life of Lucio Urtubia, an anarchist bricklayer who became one of the greatest travelers check forgers in history."
       },
-      "imagen": "/imagenes/documentales/lucio.jpg",
+      "image": "/imagenes/documentales/lucio.jpg",
       "categoria": "politics",
       "duracion": "90 min",
       "episodios": 1,
@@ -561,7 +561,7 @@
         "es": "Documental sobre WikiLeaks y su fundador Julian Assange, explorando el impacto de la organización en el periodismo y la transparencia.",
         "en": "Documentary about WikiLeaks and its founder Julian Assange, exploring the organization's impact on journalism and transparency."
       },
-      "imagen": "/imagenes/documentales/wikirebels.jpg",
+      "image": "/imagenes/documentales/wikirebels.jpg",
       "categoria": "politics",
       "duracion": "58 min",
       "episodios": 1,
@@ -580,7 +580,7 @@
         "es": "Documental sobre Edward Snowden y sus revelaciones sobre el programa de vigilancia masiva de la NSA.",
         "en": "Documentary about Edward Snowden and his revelations about the NSA's mass surveillance program."
       },
-      "imagen": "/imagenes/documentales/snowden.jpg",
+      "image": "/imagenes/documentales/snowden.jpg",
       "categoria": "politics",
       "duracion": "94 min",
       "episodios": 1,
@@ -599,7 +599,7 @@
         "es": "Documental de Michael Moore que explora las causas de la masacre de Columbine y la cultura de las armas en Estados Unidos.",
         "en": "Michael Moore's documentary exploring the causes of the Columbine massacre and gun culture in the United States."
       },
-      "imagen": "/imagenes/documentales/bowling.jpg",
+      "image": "/imagenes/documentales/bowling.jpg",
       "categoria": "politics",
       "duracion": "120 min",
       "episodios": 1,
@@ -618,7 +618,7 @@
         "es": "Documental de Michael Moore que examina el sistema de salud estadounidense y lo compara con otros sistemas de salud en el mundo.",
         "en": "Michael Moore's documentary examining the American healthcare system and comparing it to other healthcare systems around the world."
       },
-      "imagen": "/imagenes/documentales/Sicko.jpg",
+      "image": "/imagenes/documentales/Sicko.jpg",
       "categoria": "politics",
       "duracion": "123 min",
       "episodios": 1,
@@ -637,7 +637,7 @@
         "es": "Documental que sigue a siete niños palestinos e israelíes durante tres años, explorando sus vidas y perspectivas sobre el conflicto en Oriente Medio.",
         "en": "Documentary that follows seven Palestinian and Israeli children over three years, exploring their lives and perspectives on the Middle East conflict."
       },
-      "imagen": "/imagenes/documentales/promises.jpg",
+      "image": "/imagenes/documentales/promises.jpg",
       "categoria": "politics",
       "duracion": "106 min",
       "episodios": 1,
@@ -656,7 +656,7 @@
         "es": "Secuela de la aclamada serie documental que muestra la vida salvaje en diferentes hábitats de nuestro planeta.",
         "en": "Sequel to the acclaimed documentary series showcasing wildlife in different habitats of our planet."
       },
-      "imagen": "/imagenes/documentales/planet2.jpg",
+      "image": "/imagenes/documentales/planet2.jpg",
       "categoria": "nature",
       "duracion": "6 episodios",
       "episodios": 6,
@@ -675,7 +675,7 @@
         "es": "Documental sobre la última temporada de Michael Jordan con los Chicago Bulls y su sexto campeonato de la NBA.",
         "en": "Documentary about Michael Jordan's last season with the Chicago Bulls and their sixth NBA championship."
       },
-      "imagen": "/imagenes/documentales/last_dance.jpg",
+      "image": "/imagenes/documentales/last_dance.jpg",
       "categoria": "sports",
       "duracion": "10 episodios",
       "episodios": 10,
@@ -694,7 +694,7 @@
         "es": "Documental sobre el escalador Alex Honnold y su intento de escalar El Capitán sin cuerda de seguridad.",
         "en": "Documentary about climber Alex Honnold and his attempt to climb El Capitan without a safety rope."
       },
-      "imagen": "/imagenes/documentales/free_solo.jpg",
+      "image": "/imagenes/documentales/free_solo.jpg",
       "categoria": "sports",
       "duracion": "100 min",
       "episodios": 1,
@@ -713,7 +713,7 @@
         "es": "Documental sobre la búsqueda del misterioso músico Sixto Rodriguez, que fue famoso en Sudáfrica sin saberlo.",
         "en": "Documentary about the search for the mysterious musician Sixto Rodriguez, who was famous in South Africa without knowing it."
       },
-      "imagen": "/imagenes/documentales/searching.jpg",
+      "image": "/imagenes/documentales/searching.jpg",
       "categoria": "music",
       "duracion": "86 min",
       "episodios": 1,
@@ -732,7 +732,7 @@
         "es": "Documental que explora la historia de la desigualdad racial en Estados Unidos, centrándose en el sistema penitenciario.",
         "en": "Documentary exploring the history of racial inequality in the United States, focusing on the prison system."
       },
-      "imagen": "/imagenes/documentales/13th.jpg",
+      "image": "/imagenes/documentales/13th.jpg",
       "categoria": "politics",
       "duracion": "100 min",
       "episodios": 1,
@@ -751,7 +751,7 @@
         "es": "Documental sobre la vida y el legado de Fred Rogers, el presentador del programa infantil 'Mister Rogers' Neighborhood'.",
         "en": "Documentary about the life and legacy of Fred Rogers, the host of the children's show 'Mister Rogers' Neighborhood'."
       },
-      "imagen": "/imagenes/documentales/wont.jpg",
+      "image": "/imagenes/documentales/wont.jpg",
       "categoria": "biography",
       "duracion": "94 min",
       "episodios": 1,
@@ -770,7 +770,7 @@
         "es": "Documental sobre Jiro Ono, un maestro del sushi de 85 años y su restaurante en Tokio.",
         "en": "Documentary about Jiro Ono, an 85-year-old sushi master and his restaurant in Tokyo."
       },
-      "imagen": "/imagenes/documentales/jiro.jpg",
+      "image": "/imagenes/documentales/jiro.jpg",
       "categoria": "food",
       "duracion": "81 min",
       "episodios": 1,
@@ -789,7 +789,7 @@
         "es": "Documental que expone la caza anual de delfines en un parque nacional de Taiji, Japón.",
         "en": "Documentary exposing the annual dolphin hunt in a national park in Taiji, Japan."
       },
-      "imagen": "/imagenes/documentales/the_cove.jpg",
+      "image": "/imagenes/documentales/the_cove.jpg",
       "categoria": "nature",
       "duracion": "92 min",
       "episodios": 1,
@@ -808,7 +808,7 @@
         "es": "Documental que muestra la riqueza natural y la biodiversidad de la península ibérica.",
         "en": "Documentary showcasing the natural wealth and biodiversity of the Iberian Peninsula."
       },
-      "imagen": "/imagenes/documentales/iberia.jpg",
+      "image": "/imagenes/documentales/iberia.jpg",
       "categoria": "nature",
       "duracion": "4 episodios",
       "episodios": 4,
@@ -827,7 +827,7 @@
         "es": "Documental que sigue el curso del río Guadalquivir y su ecosistema.",
         "en": "Documentary following the course of the Guadalquivir River and its ecosystem."
       },
-      "imagen": "/imagenes/documentales/guadalquivir.jpg",
+      "image": "/imagenes/documentales/guadalquivir.jpg",
       "categoria": "nature",
       "duracion": "90 min",
       "episodios": 1,
@@ -846,7 +846,7 @@
         "es": "Documental que muestra el proceso creativo de Ferran Adrià y su equipo en el restaurante El Bulli.",
         "en": "Documentary showing the creative process of Ferran Adrià and his team at El Bulli restaurant."
       },
-      "imagen": "/imagenes/documentales/el_bulli.jpg",
+      "image": "/imagenes/documentales/el_bulli.jpg",
       "categoria": "food",
       "duracion": "108 min",
       "episodios": 1,
@@ -865,7 +865,7 @@
         "es": "Documental sobre el conflicto del Sáhara Occidental y el papel de España en él.",
         "en": "Documentary about the Western Sahara conflict and Spain's role in it."
       },
-      "imagen": "/imagenes/documentales/sons_clouds.jpg",
+      "image": "/imagenes/documentales/sons_clouds.jpg",
       "categoria": "politics",
       "duracion": "90 min",
       "episodios": 1,
@@ -884,7 +884,7 @@
         "es": "Documental histórico sobre los campos de concentración nazis.",
         "en": "Historical documentary about Nazi concentration camps."
       },
-      "imagen": "/imagenes/documentales/night.jpg",
+      "image": "/imagenes/documentales/night.jpg",
       "categoria": "history",
       "duracion": "32 min",
       "episodios": 1,
@@ -903,7 +903,7 @@
         "es": "Documental que explora el conflicto vasco a través de diferentes perspectivas.",
         "en": "Documentary exploring the Basque conflict through different perspectives."
       },
-      "imagen": "/imagenes/documentales/la_pelota.jpg",
+      "image": "/imagenes/documentales/la_pelota.jpg",
       "categoria": "politics",
       "duracion": "115 min",
       "episodios": 1,
@@ -922,7 +922,7 @@
         "es": "Documental que sigue al pintor Antonio López mientras intenta pintar un membrillo en su jardín.",
         "en": "Documentary following painter Antonio López as he attempts to paint a quince tree in his garden."
       },
-      "imagen": "/imagenes/documentales/el_sol.jpg",
+      "image": "/imagenes/documentales/el_sol.jpg",
       "categoria": "art",
       "duracion": "138 min",
       "episodios": 1,
@@ -941,7 +941,7 @@
         "es": "Serie documental sobre la naturaleza y la vida salvaje, presentada por Félix Rodríguez de la Fuente.",
         "en": "Documentary series about nature and wildlife, presented by Félix Rodríguez de la Fuente."
       },
-      "imagen": "/imagenes/documentales/hombre_tierra.jpg",
+      "image": "/imagenes/documentales/hombre_tierra.jpg",
       "categoria": "nature",
       "duracion": "124 episodios",
       "episodios": 124,
