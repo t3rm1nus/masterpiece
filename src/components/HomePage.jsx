@@ -7,9 +7,15 @@ import MaterialContentWrapper from './MaterialContentWrapper';
 import RecommendationsList from './RecommendationsList';
 import ThemeToggle from './ThemeToggle';
 import '../styles/components/buttons.css';
+import { useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import ItemDetail from './ItemDetail';
+import MaterialItemDetail from './MaterialItemDetail';
 
 const HomePage = () => {
   const { lang, t } = useLanguage();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   // Hook para sincronizar títulos automáticamente
   useTitleSync();
   
@@ -35,7 +41,8 @@ const HomePage = () => {
     updateFilteredItems,
     setActiveLanguage,
     activeLanguage,
-    availableLanguages
+    availableLanguages,
+    allData
   } = useDataStore();
   
   // Obtener configuración de estilos del store consolidado
@@ -48,18 +55,54 @@ const HomePage = () => {
   
   const [isRecommendedActive, setIsRecommendedActive] = useState(false);
 
+  // Estado local para el elemento seleccionado
+  const [selectedItem, setSelectedItem] = useState(null);
+
   // Inicializar datos al montar el componente
   useEffect(() => {
-    if (!selectedCategory) {
+    if (allData && Object.keys(allData).length > 0) {
       initializeFilteredItems();
-    } else {
-      updateFilteredItems();
     }
-  }, []);
+  }, [allData, initializeFilteredItems]);
 
   const handleCategoryClick = (category) => {
-    setSelectedCategory(category.key, category.label);
-    setIsRecommendedActive(category.key === 'recommended');
+    setSelectedCategory(category);
+    setActiveSubcategory(null);
+    setActiveLanguage('all');
+    setSelectedItem(null);
+  };
+
+  // Manejar clic en elemento
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+  };
+
+  // Manejar cierre del detalle
+  const handleCloseDetail = () => {
+    setSelectedItem(null);
+  };
+
+  // Renderizar el detalle del elemento
+  const renderItemDetail = () => {
+    if (!selectedItem) return null;
+
+    if (isMobile) {
+      return (
+        <MaterialItemDetail
+          item={selectedItem}
+          onClose={handleCloseDetail}
+          selectedCategory={selectedCategory}
+        />
+      );
+    }
+
+    return (
+      <ItemDetail
+        item={selectedItem}
+        onClose={handleCloseDetail}
+        selectedCategory={selectedCategory}
+      />
+    );
   };
 
   // Función para obtener el color de la categoría
@@ -94,6 +137,16 @@ const HomePage = () => {
     return t.subcategories[subcategory] || subcategory;
   };
 
+  // Verificar si hay datos disponibles
+  if (!allData || Object.keys(allData).length === 0) {
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner"></div>
+        <p>{t.ui.loading}</p>
+      </div>
+    );
+  }
+
   return (
     <div className="home-container">
       <div className="header-controls">
@@ -106,7 +159,7 @@ const HomePage = () => {
             <button
               key={category.key}
               className={`category-btn${selectedCategory === category.key ? ' active' : ''}`}
-              onClick={() => handleCategoryClick(category)}
+              onClick={() => handleCategoryClick(category.key)}
             >
               {category.label}
             </button>
@@ -116,17 +169,23 @@ const HomePage = () => {
 
       {selectedCategory && (
         <div className="subcategories-container">
-          {categorySubcategories
-            .sort((a, b) => a.order - b.order)
-            .map(({ sub }) => (
-              <button
-                key={sub}
-                className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
-                onClick={() => setActiveSubcategory(sub)}
-              >
-                {t.subcategories[sub] || sub}
-              </button>
-            ))}
+          {categorySubcategories && categorySubcategories.length > 0 ? (
+            categorySubcategories
+              .sort((a, b) => a.order - b.order)
+              .map(({ sub }) => (
+                <button
+                  key={sub}
+                  className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
+                  onClick={() => setActiveSubcategory(sub)}
+                >
+                  {t.subcategories[selectedCategory]?.[sub] || sub}
+                </button>
+              ))
+          ) : (
+            <div className="no-subcategories">
+              {t.ui.noSubcategories}
+            </div>
+          )}
         </div>
       )}
 
@@ -200,6 +259,44 @@ const HomePage = () => {
           recommendations={filteredItems} 
           isHome={!selectedCategory}
         />
+      </div>
+
+      <div className="items-grid">
+        {filteredItems && filteredItems.length > 0 ? (
+          filteredItems.map(item => (
+            <div
+              key={item.id}
+              className="item-card"
+              onClick={() => handleItemClick(item)}
+            >
+              <h3>{item.title}</h3>
+              {item.subcategory && (
+                <span className="item-subcategory">
+                  {t.subcategories[selectedCategory]?.[item.subcategory] || item.subcategory}
+                </span>
+              )}
+            </div>
+          ))
+        ) : (
+          <div className="no-items">
+            {t.ui.noResults}
+          </div>
+        )}
+      </div>
+
+      {renderItemDetail()}
+
+      <div className="coffee-section">
+        <h2>{t.coffee.title}</h2>
+        <p>{t.coffee.description}</p>
+        <a 
+          href="https://www.buymeacoffee.com/masterpiece" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="coffee-button"
+        >
+          {t.coffee.button}
+        </a>
       </div>
     </div>
   );

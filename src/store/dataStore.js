@@ -177,9 +177,9 @@ const useDataStore = create(
               .map(item => {
                 // Para documentales, usar la propiedad 'categoria' como subcategoría
                 if (selectedCategory === 'documentales') {
-                  return item.categoria;
+                  return item.categoria || 'others';
                 }
-                return item.subcategory;
+                return item.subcategory || 'others';
               })
               .filter(Boolean)
           )];
