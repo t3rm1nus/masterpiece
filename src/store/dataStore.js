@@ -15,6 +15,30 @@ import datosSeries from "../data/datos_series.json";
 // Importar utilidades
 import { processItemsWithUniqueIds } from '../utils/appUtils';
 
+// Función para ordenar subcategorías de documentales
+const getDocumentarySubcategoryOrder = (subcategory) => {
+  const order = {
+    'nature': 1,
+    'history': 2,
+    'science': 3,
+    'technology': 4,
+    'society': 5,
+    'art': 6,
+    'sports': 7,
+    'travel': 8,
+    'biography': 9,
+    'politics': 10,
+    'psychology': 11,
+    'crime': 12,
+    'culture': 13,
+    'food': 14,
+    'music': 15,
+    'spirituality': 16,
+    'others': 999
+  };
+  return order[subcategory] || 999;
+};
+
 // Store consolidado para datos y filtros
 const useDataStore = create(
   devtools(
@@ -113,30 +137,6 @@ const useDataStore = create(
         }
         
         return subcategories.map(sub => ({ sub, order: 0 }));
-      },
-
-      // Función para ordenar subcategorías de documentales
-      getDocumentarySubcategoryOrder: (subcategory) => {
-        const order = {
-          'nature': 1,
-          'history': 2,
-          'science': 3,
-          'technology': 4,
-          'society': 5,
-          'art': 6,
-          'sports': 7,
-          'travel': 8,
-          'biography': 9,
-          'politics': 10,
-          'psychology': 11,
-          'crime': 12,
-          'culture': 13,
-          'food': 14,
-          'music': 15,
-          'spirituality': 16,
-          'others': 999
-        };
-        return order[subcategory] || 999;
       },
 
       // Obtener todos los elementos de una categoría
