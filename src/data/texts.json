@@ -7,7 +7,9 @@
       "books": "Libros",
       "boardgames": "Juegos de mesa",
       "music": "Música",
-      "podcast": "Podcast"
+      "podcast": "Podcast",
+      "documentales": "Documentales",
+      "series": "Series"
     },    "subcategories": {
       "estrategia": "Estrategia",
       "familiar": "Familiar",

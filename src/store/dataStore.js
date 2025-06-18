@@ -9,6 +9,8 @@ import datosMusic from "../data/datos_music.json";
 import datosVideogames from "../data/datos_videogames.json";
 import datosBoardgames from "../data/datos_boardgames.json";
 import datosPodcast from "../data/datos_podcast.json";
+import datosDocumentales from "../data/datos_documentales.json";
+import datosSeries from "../data/datos_series.json";
 
 // Importar utilidades
 import { processItemsWithUniqueIds } from '../utils/appUtils';
@@ -27,7 +29,10 @@ const useDataStore = create(
         { key: 'music', es: 'Música', en: 'Music' },
         { key: 'videogames', es: 'Videojuegos', en: 'Videogames' },
         { key: 'boardgames', es: 'Juegos de Mesa', en: 'Board Games' },
-        { key: 'podcast', es: 'Podcasts', en: 'Podcasts' }      ],      
+        { key: 'podcast', es: 'Podcasts', en: 'Podcasts' },
+        { key: 'documentales', es: 'Documentales', en: 'Documentaries' },
+        { key: 'series', es: 'Series', en: 'TV Shows' }
+      ],      
         // Datos procesados con IDs únicos
       allData: {
         movies: processItemsWithUniqueIds(datosMovies.recommendations || []),
@@ -36,7 +41,9 @@ const useDataStore = create(
         music: processItemsWithUniqueIds(datosMusic.recommendations || []),
         videogames: processItemsWithUniqueIds(datosVideogames.recommendations || []),
         boardgames: processItemsWithUniqueIds(datosBoardgames.recommendations || []),
-        podcast: processItemsWithUniqueIds(datosPodcast.recommendations || [])
+        podcast: processItemsWithUniqueIds(datosPodcast.recommendations || []),
+        documentales: processItemsWithUniqueIds(datosDocumentales.documentales || []),
+        series: processItemsWithUniqueIds(datosSeries.series || [])
       },
 
       // ==========================================
