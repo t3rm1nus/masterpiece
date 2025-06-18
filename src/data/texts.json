@@ -89,12 +89,12 @@
     "home_title": "New Recommendations",
     "categoriesTitle": "Categories",    "categories": {
       "movies": "Movies",
-      "videogames": "Videogames",
+      "videogames": "Video Games",
       "comics": "Comics",
       "books": "Books",
       "boardgames": "Board Games",
       "music": "Music",
-      "podcast": "Podcast",
+      "podcast": "Podcasts",
       "documentales": "Documentaries"
     },    "subcategories": {
       "estrategia": "Strategy",

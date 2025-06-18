@@ -95,7 +95,13 @@ const useDataStore = create(
         // Obtener todas las subcategorías únicas
         const subcategories = [...new Set(
           allData[selectedCategory]
-            .map(item => item.subcategory)
+            .map(item => {
+              // Para documentales, usar la propiedad 'categoria' como subcategoría
+              if (selectedCategory === 'documentales') {
+                return item.categoria;
+              }
+              return item.subcategory;
+            })
             .filter(Boolean)
         )];
         
@@ -112,16 +118,23 @@ const useDataStore = create(
       // Función para ordenar subcategorías de documentales
       getDocumentarySubcategoryOrder: (subcategory) => {
         const order = {
-          'naturaleza': 1,
-          'historia': 2,
-          'ciencia': 3,
-          'tecnologia': 4,
-          'sociedad': 5,
-          'arte': 6,
-          'deportes': 7,
-          'viajes': 8,
-          'biografia': 9,
-          'otros': 10
+          'nature': 1,
+          'history': 2,
+          'science': 3,
+          'technology': 4,
+          'society': 5,
+          'art': 6,
+          'sports': 7,
+          'travel': 8,
+          'biography': 9,
+          'politics': 10,
+          'psychology': 11,
+          'crime': 12,
+          'culture': 13,
+          'food': 14,
+          'music': 15,
+          'spirituality': 16,
+          'others': 999
         };
         return order[subcategory] || 999;
       },
