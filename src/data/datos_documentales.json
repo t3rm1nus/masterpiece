@@ -1,0 +1,14 @@
+{
+  "documentales": [
+    {
+      "id": 1,
+      "titulo": "Planeta Tierra",
+      "descripcion": "Una serie documental que muestra la belleza natural de nuestro planeta y la vida salvaje que lo habita.",
+      "imagen": "/imagenes/documentales/planeta-tierra.jpg",
+      "categoria": "Naturaleza",
+      "duracion": "60 min",
+      "episodios": 11,
+      "masterpiece": true
+    }
+  ]
+} 
