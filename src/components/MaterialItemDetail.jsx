@@ -322,7 +322,7 @@ const MaterialItemDetail = ({ item }) => {
           )}
           
           {/* Información específica para podcast */}
-          {item.category === 'podcast' && (
+          {item.category === 'podcast' && item.link && (
             <Box sx={{ marginBottom: '16px' }}>
               {item.author && (
                 <Box 

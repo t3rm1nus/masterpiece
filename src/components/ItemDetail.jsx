@@ -111,7 +111,7 @@ const ItemDetail = () => {
                   </span>
                   {selectedItem.subcategory && (
                     <span className="item-subcategory">
-                      {t.subcategories[selectedItem.subcategory] || selectedItem.subcategory}
+                      {t.subcategories.documentales[selectedItem.subcategory] || selectedItem.subcategory}
                     </span>
                   )}
                 </div>

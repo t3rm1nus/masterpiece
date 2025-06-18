@@ -134,6 +134,10 @@ const useDataStore = create(
           return subcategories.map(sub => ({ sub, order: getMovieSubcategoryOrder(sub) }));
         } else if (selectedCategory === 'documentales') {
           return subcategories.map(sub => ({ sub, order: getDocumentarySubcategoryOrder(sub) }));
+        } else if (selectedCategory === 'boardgames') {
+          return subcategories.map(sub => ({ sub, order: getBoardgameSubcategoryOrder(sub) }));
+        } else if (selectedCategory === 'podcast') {
+          return subcategories.map(sub => ({ sub, order: getPodcastSubcategoryOrder(sub) }));
         }
         
         return subcategories.map(sub => ({ sub, order: 0 }));
