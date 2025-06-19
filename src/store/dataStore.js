@@ -111,13 +111,17 @@ const useDataStore = create(
           { key: 'podcast', es: 'Podcasts', en: 'Podcasts' },
           { key: 'documentales', es: 'Documentales', en: 'Documentaries' },
           { key: 'series', es: 'Series', en: 'TV Shows' }
-        ],      
-        // Estado inicial
+        ],        // Estado inicial
         allData: {
           movies: processItemsWithUniqueIds(datosMovies.recommendations || []),
-          documentales: processItemsWithUniqueIds(datosDocumentales.recommendations || []),
+          comics: processItemsWithUniqueIds(datosComics.recommendations || []),
+          books: processItemsWithUniqueIds(datosBooks.recommendations || []),
+          music: processItemsWithUniqueIds(datosMusic.recommendations || []),
+          videogames: processItemsWithUniqueIds(datosVideogames.recommendations || []),
           boardgames: processItemsWithUniqueIds(datosBoardgames.recommendations || []),
-          podcast: processItemsWithUniqueIds(datosPodcast.recommendations || [])
+          podcast: processItemsWithUniqueIds(datosPodcast.recommendations || []),
+          documentales: processItemsWithUniqueIds(datosDocumentales.recommendations || []),
+          series: processItemsWithUniqueIds(datosSeries.recommendations || [])
         },
         selectedCategory: null,
         activeSubcategory: null,
@@ -513,18 +517,21 @@ const useDataStore = create(
 
         // ==========================================
         // FUNCIONES DE RESET CONSOLIDADAS
-        // ==========================================
-
-        // Inicializar datos
+        // ==========================================        // Inicializar datos
         initializeData: () => {
           const { allData } = get();
           if (!allData || Object.keys(allData).length === 0) {
             set({ 
               allData: {
                 movies: processItemsWithUniqueIds(datosMovies.recommendations || []),
-                documentales: processItemsWithUniqueIds(datosDocumentales.recommendations || []),
+                comics: processItemsWithUniqueIds(datosComics.recommendations || []),
+                books: processItemsWithUniqueIds(datosBooks.recommendations || []),
+                music: processItemsWithUniqueIds(datosMusic.recommendations || []),
+                videogames: processItemsWithUniqueIds(datosVideogames.recommendations || []),
                 boardgames: processItemsWithUniqueIds(datosBoardgames.recommendations || []),
-                podcast: processItemsWithUniqueIds(datosPodcast.recommendations || [])
+                podcast: processItemsWithUniqueIds(datosPodcast.recommendations || []),
+                documentales: processItemsWithUniqueIds(datosDocumentales.recommendations || []),
+                series: processItemsWithUniqueIds(datosSeries.recommendations || [])
               }
             });
           }
