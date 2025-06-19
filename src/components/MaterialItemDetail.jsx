@@ -40,9 +40,17 @@ const MaterialItemDetail = ({ item }) => {
   if (!isMobile || !item) {
     return null;
   }
-  
-  const title = processTitle(item.title || item.name, lang);
+    const title = processTitle(item.title || item.name, lang);
   const description = processDescription(item.description, lang);
+  
+  // Función auxiliar para asegurar que siempre devuelva un string
+  const ensureString = (value) => {
+    if (typeof value === 'string') return value;
+    if (typeof value === 'object' && value !== null) {
+      return value[lang] || value.es || value.en || JSON.stringify(value);
+    }
+    return String(value || '');
+  };
   
   // Determinar qué trailer mostrar según el idioma
   const getTrailerUrl = () => {
@@ -223,9 +231,8 @@ const MaterialItemDetail = ({ item }) => {
                 marginBottom: '16px' 
               }}
             >
-              <CalendarIcon sx={{ marginRight: '8px', color: 'text.secondary' }} />
-              <Typography variant="h6" color="text.secondary">
-                <strong>{t.year || 'Año'}:</strong> {item.year}
+              <CalendarIcon sx={{ marginRight: '8px', color: 'text.secondary' }} />              <Typography variant="h6" color="text.secondary">
+                <strong>{t.year || 'Año'}:</strong> {ensureString(item.year)}
               </Typography>
             </Box>
           )}
@@ -246,9 +253,9 @@ const MaterialItemDetail = ({ item }) => {
                     <strong>{lang === 'es' ? 'Jugadores' : 'Players'}:</strong>{' '}
                     {item.minPlayers && item.maxPlayers 
                       ? (item.minPlayers === item.maxPlayers 
-                          ? item.minPlayers 
-                          : `${item.minPlayers}-${item.maxPlayers}`)
-                      : item.minPlayers || item.maxPlayers
+                          ? ensureString(item.minPlayers) 
+                          : `${ensureString(item.minPlayers)}-${ensureString(item.maxPlayers)}`)
+                      : ensureString(item.minPlayers || item.maxPlayers)
                     }
                   </Typography>
                 </Box>
@@ -263,9 +270,8 @@ const MaterialItemDetail = ({ item }) => {
                     marginBottom: '8px' 
                   }}
                 >
-                  <AccessTimeIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
-                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
-                    <strong>{lang === 'es' ? 'Duración' : 'Play Time'}:</strong> {item.playTime} {lang === 'es' ? 'min' : 'min'}
+                  <AccessTimeIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Duración' : 'Play Time'}:</strong> {ensureString(item.playTime)} {lang === 'es' ? 'min' : 'min'}
                   </Typography>
                 </Box>
               )}
@@ -278,9 +284,8 @@ const MaterialItemDetail = ({ item }) => {
                     marginBottom: '16px' 
                   }}
                 >
-                  <ChildCareIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
-                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
-                    <strong>{lang === 'es' ? 'Edad' : 'Age'}:</strong> {item.age}
+                  <ChildCareIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Edad' : 'Age'}:</strong> {ensureString(item.age)}
                   </Typography>
                 </Box>
               )}            </Box>
@@ -298,14 +303,13 @@ const MaterialItemDetail = ({ item }) => {
                     marginBottom: '8px' 
                   }}
                 >
-                  <DeveloperIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
-                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
-                    <strong>{lang === 'es' ? 'Desarrollador' : 'Developer'}:</strong> {item.author}
+                  <DeveloperIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Desarrollador' : 'Developer'}:</strong> {ensureString(item.author)}
                   </Typography>
                 </Box>
               )}
               
-              {item.platfomrs && (
+              {item.platforms && (
                 <Box 
                   sx={{ 
                     display: 'flex', 
@@ -316,7 +320,7 @@ const MaterialItemDetail = ({ item }) => {
                 >
                   <PlatformIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
                   <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
-                    <strong>{lang === 'es' ? 'Plataformas' : 'Platforms'}:</strong> {item.platfomrs}
+                    <strong>{lang === 'es' ? 'Plataformas' : 'Platforms'}:</strong> {ensureString(item.platforms)}
                   </Typography>
                 </Box>
               )}
@@ -335,9 +339,8 @@ const MaterialItemDetail = ({ item }) => {
                     marginBottom: '8px' 
                   }}
                 >
-                  <PersonIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
-                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
-                    <strong>{lang === 'es' ? 'Autor' : 'Author'}:</strong> {item.author}
+                  <PersonIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />                  <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
+                    <strong>{lang === 'es' ? 'Autor' : 'Author'}:</strong> {ensureString(item.author)}
                   </Typography>
                 </Box>
               )}
@@ -346,8 +349,7 @@ const MaterialItemDetail = ({ item }) => {
 
           {/* Información específica para documentales */}
           {item.category === 'documentales' && (
-            <Box sx={{ marginBottom: '16px' }}>
-              {item.autor && (
+            <Box sx={{ marginBottom: '16px' }}>              {item.author && (
                 <Box 
                   sx={{ 
                     display: 'flex', 
@@ -358,10 +360,10 @@ const MaterialItemDetail = ({ item }) => {
                 >
                   <PersonIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
                   <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
-                    <strong>{lang === 'es' ? 'Autor' : 'Author'}:</strong> {item.autor}
+                    <strong>{lang === 'es' ? 'Autor' : 'Author'}:</strong> {ensureString(item.author)}
                   </Typography>
                 </Box>
-              )}              {(item.duracion || item.duration) && (
+              )}              {item.duration && (
                 <Box 
                   sx={{ 
                     display: 'flex', 
@@ -372,12 +374,10 @@ const MaterialItemDetail = ({ item }) => {
                 >
                   <AccessTimeIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
                   <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
-                    <strong>{lang === 'es' ? 'Duración' : 'Duration'}:</strong> {item.duracion || item.duration}
+                    <strong>{lang === 'es' ? 'Duración' : 'Duration'}:</strong> {ensureString(item.duration)}
                   </Typography>
                 </Box>
-              )}
-
-              {item.idioma && (
+              )}              {item.language && (
                 <Box 
                   sx={{ 
                     display: 'flex', 
@@ -388,10 +388,10 @@ const MaterialItemDetail = ({ item }) => {
                 >
                   <TranslateIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
                   <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
-                    <strong>{lang === 'es' ? 'Idioma' : 'Language'}:</strong> {item.idioma}
+                    <strong>{lang === 'es' ? 'Idioma' : 'Language'}:</strong> {ensureString(item.language)}
                   </Typography>
                 </Box>
-              )}              {(item.episodios || item.episodes) && (
+              )}              {item.episodes && (
                 <Box 
                   sx={{ 
                     display: 'flex', 
@@ -402,7 +402,7 @@ const MaterialItemDetail = ({ item }) => {
                 >
                   <PlaylistPlayIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
                   <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
-                    <strong>{lang === 'es' ? 'Episodios' : 'Episodes'}:</strong> {item.episodios || item.episodes}
+                    <strong>{lang === 'es' ? 'Episodios' : 'Episodes'}:</strong> {ensureString(item.episodes)}
                   </Typography>
                 </Box>
               )}
@@ -415,11 +415,11 @@ const MaterialItemDetail = ({ item }) => {
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    startIcon={<PlayArrowIcon />}
-                    sx={{
+                    startIcon={<PlayArrowIcon />}                    sx={{
                       backgroundColor: getCategoryColor(item.category),
                       '&:hover': {
-                        backgroundColor: colorMix(getCategoryColor(item.category), -20)
+                        backgroundColor: getCategoryColor(item.category),
+                        opacity: 0.8
                       }
                     }}
                   >
