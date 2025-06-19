@@ -12,11 +12,11 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
     processTitle, 
     processDescription 
   } = useViewStore();
-  
-  const { getMasterpieceBadgeConfig } = useThemeStore();
+    const { getMasterpieceBadgeConfig } = useThemeStore();
   const badgeConfig = getMasterpieceBadgeConfig();
   
-  // Usar el item pasado como prop en lugar del store  const selectedItem = item;
+  // Usar el item pasado como prop en lugar del store
+  const selectedItem = item;
   
   if (!selectedItem) return null;
   
@@ -59,10 +59,12 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
     return null;
   };
     const trailerUrl = getTrailerUrl();
-  
-  return (
-    <>      {/* Componente Material UI solo para móviles */}
-      <MaterialItemDetail item={selectedItem} />      {/* Vista clásica solo para desktop */}
+    return (
+    <>
+      {/* Componente Material UI solo para móviles */}
+      <MaterialItemDetail item={selectedItem} />
+      
+      {/* Vista clásica solo para desktop */}
       <div className="item-detail-page desktop-only">
         <div className="item-detail-container">
           <div className={`item-detail-content ${selectedItem.masterpiece ? 'masterpiece-item' : 'normal-item'} ${selectedItem.category}`}>
@@ -118,23 +120,10 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
               <strong>{t.year || 'Año'}:</strong> {selectedItem.year}
             </p>
           )}
-          
-          {/* Datos específicos para documentales */}
+            {/* Datos específicos para documentales */}
           {selectedItem.category === 'documentales' && (
-            <div className="item-detail">              <div className="item-header">
-                <h2>{title}</h2>
-                <div className="item-meta">
-                  <span className="item-category">
-                    {t.categories[selectedItem.category]}
-                  </span>
-                  {selectedItem.subcategory && (
-                    <span className="item-subcategory">
-                      {t.subcategories.documentales[selectedItem.subcategory] || selectedItem.subcategory}
-                    </span>
-                  )}
-                </div>
-              </div>
-                <div className="item-info">
+            <div className="documentales-specific-details">
+              <div className="item-info">
                 {selectedItem.author && (
                   <div className="info-row">
                     <span className="info-label">{t.documentales?.author || 'Autor'}:</span>
