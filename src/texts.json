@@ -1,23 +1,46 @@
 {
+  "metadata": {
+    "version": "2.0.0",
+    "lastUpdated": "2025-06-19",
+    "supportedLanguages": ["es", "en"],
+    "defaultLanguage": "es"
+  },
   "es": {
     "ui": {
-      "loading": "Cargando...",
-      "noResults": "No se encontraron resultados",
-      "error": "Error al cargar los datos",
-      "retry": "Reintentar",
-      "back": "Volver",
-      "close": "Cerrar",
-      "search": "Buscar",
-      "filter": "Filtrar",
-      "sort": "Ordenar",
-      "view": "Ver",
-      "edit": "Editar",
-      "delete": "Eliminar",
-      "save": "Guardar",
-      "cancel": "Cancelar",
-      "confirm": "Confirmar",
-      "success": "Operación exitosa",
-      "error": "Error en la operación"
+      "navigation": {
+        "home": "Inicio",
+        "about": "Acerca de",
+        "contact": "Contacto",
+        "back": "Volver",
+        "close": "Cerrar"
+      },
+      "actions": {
+        "search": "Buscar",
+        "filter": "Filtrar",
+        "sort": "Ordenar",
+        "view": "Ver",
+        "edit": "Editar",
+        "delete": "Eliminar",
+        "save": "Guardar",
+        "cancel": "Cancelar",
+        "confirm": "Confirmar",
+        "retry": "Reintentar",
+        "share": "Compartir",
+        "download": "Descargar",
+        "favorite": "Favorito",
+        "watch": "Ver",
+        "read": "Leer",
+        "listen": "Escuchar",
+        "play": "Jugar"
+      },
+      "states": {
+        "loading": "Cargando...",
+        "noResults": "No se encontraron resultados",
+        "success": "Operación exitosa",
+        "error": "Error en la operación",
+        "empty": "Sin contenido disponible",
+        "offline": "Sin conexión"
+      }
     },
     "coffee": {
       "title": "¿Te gusta lo que ves?",
@@ -37,15 +60,28 @@
         "ja": "Japonés",
         "ko": "Coreano",
         "zh": "Chino"
+      },
+      "sortBy": {
+        "title": "Título",
+        "year": "Año",
+        "rating": "Calificación",
+        "duration": "Duración",
+        "alphabetical": "Alfabético",
+        "newest": "Más recientes",
+        "popular": "Más populares"
       }
     },
     "categories": {
       "movies": "Películas",
+      "series": "Series",
       "documentales": "Documentales",
+      "books": "Libros",
+      "comics": "Cómics",
+      "music": "Música",
+      "videogames": "Videojuegos",
       "boardgames": "Juegos de Mesa",
       "podcast": "Podcasts"
-    },
-    "subcategories": {
+    },    "subcategories": {
       "movies": {
         "action": "Acción",
         "adventure": "Aventura",
@@ -57,7 +93,23 @@
         "sci-fi": "Ciencia Ficción",
         "thriller": "Thriller",
         "war": "Guerra",
-        "western": "Western"
+        "western": "Western",
+        "romance": "Romance",
+        "mystery": "Misterio",
+        "biographical": "Biográfico"
+      },
+      "series": {
+        "drama": "Drama",
+        "comedy": "Comedia",
+        "action": "Acción",
+        "sci-fi": "Ciencia Ficción",
+        "fantasy": "Fantasía",
+        "thriller": "Thriller",
+        "crime": "Crimen",
+        "documentary": "Documental",
+        "animation": "Animación",
+        "reality": "Reality Show",
+        "miniseries": "Miniserie"
       },
       "documentales": {
         "nature": "Naturaleza",
@@ -76,20 +128,87 @@
         "food": "Gastronomía",
         "music": "Música",
         "spirituality": "Espiritualidad",
+        "health": "Salud",
+        "economics": "Economía",
+        "environment": "Medio Ambiente",
         "others": "Otros"
       },
+      "books": {
+        "fiction": "Ficción",
+        "non-fiction": "No ficción",
+        "mystery": "Misterio",
+        "romance": "Romance",
+        "sci-fi": "Ciencia Ficción",
+        "fantasy": "Fantasía",
+        "biography": "Biografía",
+        "history": "Historia",
+        "philosophy": "Filosofía",
+        "psychology": "Psicología",
+        "science": "Ciencia",
+        "self-help": "Autoayuda",
+        "business": "Negocios",
+        "poetry": "Poesía",
+        "essay": "Ensayo"
+      },
+      "comics": {
+        "superhero": "Superhéroes",
+        "graphic-novel": "Novela Gráfica",
+        "manga": "Manga",
+        "indie": "Independiente",
+        "humor": "Humor",
+        "horror": "Terror",
+        "sci-fi": "Ciencia Ficción",
+        "fantasy": "Fantasía",
+        "biography": "Biografía",
+        "historical": "Histórico",
+        "crime": "Crimen",
+        "adventure": "Aventura"
+      },
+      "music": {
+        "rock": "Rock",
+        "pop": "Pop",
+        "jazz": "Jazz",
+        "classical": "Clásica",
+        "electronic": "Electrónica",
+        "hip-hop": "Hip-Hop",
+        "folk": "Folk",
+        "country": "Country",
+        "blues": "Blues",
+        "reggae": "Reggae",
+        "metal": "Metal",
+        "indie": "Indie",
+        "world": "Música del Mundo"
+      },
+      "videogames": {
+        "action": "Acción",
+        "adventure": "Aventura",
+        "rpg": "RPG",
+        "strategy": "Estrategia",
+        "simulation": "Simulación",
+        "sports": "Deportes",
+        "racing": "Carreras",
+        "puzzle": "Puzzle",
+        "platform": "Plataformas",
+        "shooter": "Disparos",
+        "fighting": "Lucha",
+        "horror": "Terror",
+        "indie": "Independiente"
+      },
       "boardgames": {
-        "estrategia": "Estrategia",
-        "familiar": "Familiar",
-        "abstracto": "Abstracto",
-        "cooperativo": "Cooperativo",
-        "dados": "Dados",
-        "cartas": "Cartas",
-        "civilización": "Civilización",
-        "aventura": "Aventura",
+        "strategy": "Estrategia",
+        "family": "Familiar",
+        "abstract": "Abstracto",
+        "cooperative": "Cooperativo",
+        "dice": "Dados",
+        "cards": "Cartas",
+        "civilization": "Civilización",
+        "adventure": "Aventura",
         "party": "Party",
-        "deducción": "Deducción",
-        "solitario": "Solitario"
+        "deduction": "Deducción",
+        "solo": "Solitario",
+        "economic": "Económico",
+        "war": "Guerra",
+        "thematic": "Temático"
       },
       "podcast": {
         "news": "Noticias",
@@ -101,39 +220,135 @@
         "history": "Historia",
         "inspiration": "Inspiración",
         "education": "Educación",
-        "technology": "Tecnología"
+        "technology": "Tecnología",
+        "comedy": "Comedia",        "health": "Salud",
+        "sports": "Deportes",
+        "politics": "Política"
       }
     },
-    "documentary": {
-      "author": "Autor",
-      "duration": "Duración",
-      "language": "Idioma",
-      "episodes": "Episodios",
-      "year": "Año",
-      "country": "País",
-      "director": "Director",
-      "watch": "Ver documental"
+    "content": {
+      "metadata": {
+        "common": {
+          "title": "Título",
+          "year": "Año",
+          "language": "Idioma",
+          "rating": "Calificación",
+          "description": "Descripción",
+          "tags": "Etiquetas",
+          "duration": "Duración"
+        },
+        "movies": {
+          "director": "Director",
+          "cast": "Reparto",
+          "genre": "Género",
+          "runtime": "Duración",
+          "country": "País",
+          "watch": "Ver película"
+        },
+        "series": {
+          "creator": "Creador",
+          "seasons": "Temporadas",
+          "episodes": "Episodios",
+          "status": "Estado",
+          "network": "Cadena",
+          "watch": "Ver serie"
+        },
+        "documentales": {
+          "author": "Autor",
+          "duration": "Duración",
+          "language": "Idioma",
+          "episodes": "Episodios",
+          "year": "Año",
+          "country": "País",
+          "director": "Director",
+          "watch": "Ver documental"
+        },
+        "books": {
+          "author": "Autor",
+          "publisher": "Editorial",
+          "pages": "Páginas",
+          "isbn": "ISBN",
+          "edition": "Edición",
+          "read": "Leer libro"
+        },
+        "comics": {
+          "author": "Autor",
+          "artist": "Artista",
+          "publisher": "Editorial",
+          "issues": "Números",
+          "volumes": "Volúmenes",
+          "read": "Leer cómic"
+        },
+        "music": {
+          "artist": "Artista",
+          "album": "Álbum",
+          "genre": "Género",
+          "tracks": "Pistas",
+          "label": "Sello",
+          "listen": "Escuchar"
+        },
+        "videogames": {
+          "developer": "Desarrollador",
+          "publisher": "Distribuidor",
+          "platform": "Plataforma",
+          "genre": "Género",
+          "rating": "Clasificación",
+          "play": "Jugar"
+        },
+        "boardgames": {
+          "designer": "Diseñador",
+          "publisher": "Editorial",
+          "players": "Jugadores",
+          "playtime": "Tiempo de juego",
+          "age": "Edad mínima",
+          "complexity": "Complejidad",
+          "play": "Jugar"
+        },
+        "podcast": {
+          "host": "Presentador",
+          "episodes": "Episodios",
+          "frequency": "Frecuencia",
+          "platform": "Plataforma",
+          "listen": "Escuchar"
+        }
+      }
     }
-  },
-  "en": {
+  },  "en": {
     "ui": {
-      "loading": "Loading...",
-      "noResults": "No results found",
-      "error": "Error loading data",
-      "retry": "Retry",
-      "back": "Back",
-      "close": "Close",
-      "search": "Search",
-      "filter": "Filter",
-      "sort": "Sort",
-      "view": "View",
-      "edit": "Edit",
-      "delete": "Delete",
-      "save": "Save",
-      "cancel": "Cancel",
-      "confirm": "Confirm",
-      "success": "Operation successful",
-      "error": "Operation error"
+      "navigation": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact",
+        "back": "Back",
+        "close": "Close"
+      },
+      "actions": {
+        "search": "Search",
+        "filter": "Filter",
+        "sort": "Sort",
+        "view": "View",
+        "edit": "Edit",
+        "delete": "Delete",
+        "save": "Save",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "retry": "Retry",
+        "share": "Share",
+        "download": "Download",
+        "favorite": "Favorite",
+        "watch": "Watch",
+        "read": "Read",
+        "listen": "Listen",
+        "play": "Play"
+      },
+      "states": {
+        "loading": "Loading...",
+        "noResults": "No results found",
+        "success": "Operation successful",
+        "error": "Operation error",
+        "empty": "No content available",
+        "offline": "Offline"
+      }
     },
     "coffee": {
       "title": "Like what you see?",
@@ -153,11 +368,25 @@
         "ja": "Japanese",
         "ko": "Korean",
         "zh": "Chinese"
+      },
+      "sortBy": {
+        "title": "Title",
+        "year": "Year",
+        "rating": "Rating",
+        "duration": "Duration",
+        "alphabetical": "Alphabetical",
+        "newest": "Newest",
+        "popular": "Most Popular"
       }
     },
     "categories": {
       "movies": "Movies",
+      "series": "Series",
       "documentales": "Documentaries",
+      "books": "Books",
+      "comics": "Comics",
+      "music": "Music",
+      "videogames": "Video Games",
       "boardgames": "Board Games",
       "podcast": "Podcasts"
     },
@@ -173,7 +402,23 @@
         "sci-fi": "Sci-Fi",
         "thriller": "Thriller",
         "war": "War",
-        "western": "Western"
+        "western": "Western",
+        "romance": "Romance",
+        "mystery": "Mystery",
+        "biographical": "Biographical"
+      },
+      "series": {
+        "drama": "Drama",
+        "comedy": "Comedy",
+        "action": "Action",
+        "sci-fi": "Sci-Fi",
+        "fantasy": "Fantasy",
+        "thriller": "Thriller",
+        "crime": "Crime",
+        "documentary": "Documentary",
+        "animation": "Animation",
+        "reality": "Reality Show",
+        "miniseries": "Miniseries"
       },
       "documentales": {
         "nature": "Nature",
@@ -192,20 +437,87 @@
         "food": "Food",
         "music": "Music",
         "spirituality": "Spirituality",
+        "health": "Health",
+        "economics": "Economics",
+        "environment": "Environment",
         "others": "Others"
       },
+      "books": {
+        "fiction": "Fiction",
+        "non-fiction": "Non-fiction",
+        "mystery": "Mystery",
+        "romance": "Romance",
+        "sci-fi": "Sci-Fi",
+        "fantasy": "Fantasy",
+        "biography": "Biography",
+        "history": "History",
+        "philosophy": "Philosophy",
+        "psychology": "Psychology",
+        "science": "Science",
+        "self-help": "Self-help",
+        "business": "Business",
+        "poetry": "Poetry",
+        "essay": "Essay"
+      },
+      "comics": {
+        "superhero": "Superhero",
+        "graphic-novel": "Graphic Novel",
+        "manga": "Manga",
+        "indie": "Independent",
+        "humor": "Humor",
+        "horror": "Horror",
+        "sci-fi": "Sci-Fi",
+        "fantasy": "Fantasy",
+        "biography": "Biography",
+        "historical": "Historical",
+        "crime": "Crime",
+        "adventure": "Adventure"
+      },
+      "music": {
+        "rock": "Rock",
+        "pop": "Pop",
+        "jazz": "Jazz",
+        "classical": "Classical",
+        "electronic": "Electronic",
+        "hip-hop": "Hip-Hop",
+        "folk": "Folk",
+        "country": "Country",
+        "blues": "Blues",
+        "reggae": "Reggae",
+        "metal": "Metal",
+        "indie": "Indie",
+        "world": "World Music"
+      },
+      "videogames": {
+        "action": "Action",
+        "adventure": "Adventure",
+        "rpg": "RPG",
+        "strategy": "Strategy",
+        "simulation": "Simulation",
+        "sports": "Sports",
+        "racing": "Racing",
+        "puzzle": "Puzzle",
+        "platform": "Platform",
+        "shooter": "Shooter",
+        "fighting": "Fighting",
+        "horror": "Horror",
+        "indie": "Indie"
+      },
       "boardgames": {
-        "estrategia": "Strategy",
-        "familiar": "Family",
-        "abstracto": "Abstract",
-        "cooperativo": "Cooperative",
-        "dados": "Dice",
-        "cartas": "Cards",
-        "civilización": "Civilization",
-        "aventura": "Adventure",
+        "strategy": "Strategy",
+        "family": "Family",
+        "abstract": "Abstract",
+        "cooperative": "Cooperative",
+        "dice": "Dice",
+        "cards": "Cards",
+        "civilization": "Civilization",
+        "adventure": "Adventure",
         "party": "Party",
-        "deducción": "Deduction",
-        "solitario": "Solo"
+        "deduction": "Deduction",
+        "solo": "Solo",
+        "economic": "Economic",
+        "war": "War",
+        "thematic": "Thematic"
       },
       "podcast": {
         "news": "News",
@@ -217,18 +529,99 @@
         "history": "History",
         "inspiration": "Inspiration",
         "education": "Education",
-        "technology": "Technology"
+        "technology": "Technology",
+        "comedy": "Comedy",
+        "health": "Health",
+        "sports": "Sports",
+        "politics": "Politics"
       }
     },
-    "documentary": {
-      "author": "Author",
-      "duration": "Duration",
-      "language": "Language",
-      "episodes": "Episodes",
-      "year": "Year",
-      "country": "Country",
-      "director": "Director",
-      "watch": "Watch documentary"
+    "content": {
+      "metadata": {
+        "common": {
+          "title": "Title",
+          "year": "Year",
+          "language": "Language",
+          "rating": "Rating",
+          "description": "Description",
+          "tags": "Tags",
+          "duration": "Duration"
+        },
+        "movies": {
+          "director": "Director",
+          "cast": "Cast",
+          "genre": "Genre",
+          "runtime": "Runtime",
+          "country": "Country",
+          "watch": "Watch movie"
+        },
+        "series": {
+          "creator": "Creator",
+          "seasons": "Seasons",
+          "episodes": "Episodes",
+          "status": "Status",
+          "network": "Network",
+          "watch": "Watch series"
+        },
+        "documentales": {
+          "author": "Author",
+          "duration": "Duration",
+          "language": "Language",
+          "episodes": "Episodes",
+          "year": "Year",
+          "country": "Country",
+          "director": "Director",
+          "watch": "Watch documentary"
+        },
+        "books": {
+          "author": "Author",
+          "publisher": "Publisher",
+          "pages": "Pages",
+          "isbn": "ISBN",
+          "edition": "Edition",
+          "read": "Read book"
+        },
+        "comics": {
+          "author": "Author",
+          "artist": "Artist",
+          "publisher": "Publisher",
+          "issues": "Issues",
+          "volumes": "Volumes",
+          "read": "Read comic"
+        },
+        "music": {
+          "artist": "Artist",
+          "album": "Album",
+          "genre": "Genre",
+          "tracks": "Tracks",
+          "label": "Label",
+          "listen": "Listen"
+        },
+        "videogames": {
+          "developer": "Developer",
+          "publisher": "Publisher",
+          "platform": "Platform",
+          "genre": "Genre",
+          "rating": "Rating",
+          "play": "Play"
+        },
+        "boardgames": {
+          "designer": "Designer",
+          "publisher": "Publisher",
+          "players": "Players",
+          "playtime": "Playtime",
+          "age": "Min Age",
+          "complexity": "Complexity",
+          "play": "Play"
+        },
+        "podcast": {
+          "host": "Host",
+          "episodes": "Episodes",
+          "frequency": "Frequency",
+          "platform": "Platform",
+          "listen": "Listen"
+        }
+      }
     }
   }
-} 
+}
