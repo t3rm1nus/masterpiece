@@ -124,58 +124,54 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
             <div className="documentales-specific-details">
               <div className="item-info">                {selectedItem.author && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentales?.author || 'Autor'}:</span>
+                    <span className="info-label">{t.documentales?.author || 'Autor'}: </span>
                     <span className="info-value">{ensureString(selectedItem.author)}</span>
                   </div>
                 )}
                 {selectedItem.duration && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentales?.duration || 'Duración'}:</span>
+                    <span className="info-label">{t.documentales?.duration || 'Duración'}: </span>
                     <span className="info-value">{ensureString(selectedItem.duration)}</span>
                   </div>
                 )}
                 {selectedItem.language && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentales?.language || 'Idioma'}:</span>
+                    <span className="info-label">{t.documentales?.language || 'Idioma'}: </span>
                     <span className="info-value">{t.filters?.languages?.[selectedItem.language] || ensureString(selectedItem.language)}</span>
                   </div>
                 )}
                 {selectedItem.episodes && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentales?.episodes || 'Episodios'}:</span>
+                    <span className="info-label">{t.documentales?.episodes || 'Episodios'}: </span>
                     <span className="info-value">{ensureString(selectedItem.episodes)}</span>
                   </div>
                 )}
                 {selectedItem.year && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentales?.year || 'Año'}:</span>
+                    <span className="info-label">{t.documentales?.year || 'Año'}: </span>
                     <span className="info-value">{ensureString(selectedItem.year)}</span>
                   </div>
                 )}
                 {selectedItem.country && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentales?.country || 'País'}:</span>
+                    <span className="info-label">{t.documentales?.country || 'País'}: </span>
                     <span className="info-value">{ensureString(selectedItem.country)}</span>
                   </div>
                 )}
                 {selectedItem.director && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentales?.director || 'Director'}:</span>
+                    <span className="info-label">{t.documentales?.director || 'Director'}: </span>
                     <span className="info-value">{ensureString(selectedItem.director)}</span>
                   </div>
-                )}
-              </div>              {description && (
-                <div className="item-description">
-                  <p>{description}</p>
-                </div>
-              )}
+                )}</div>
 
               {selectedItem.link && (
-                <div className="item-actions">                  <a 
+                <div className="item-detail-trailer">
+                  <a 
                     href={selectedItem.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="watch-button"
+                    className="trailer-link"
                   >
                     {t.documentales?.watch || 'Ver documental'}
                   </a>
@@ -200,7 +196,7 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
               
               {selectedItem.playTime && (
                 <p className="item-detail-playtime">
-                  <strong>{lang === 'es' ? 'Duración' : 'Play Time'}:</strong> {ensureString(selectedItem.playTime)} {lang === 'es' ? 'min' : 'min'}
+                  <strong>{lang === 'es' ? 'Duración' : 'Play Time'}: </strong> {ensureString(selectedItem.playTime)} {lang === 'es' ? 'min' : 'min'}
                 </p>
               )}
               

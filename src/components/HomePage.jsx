@@ -88,11 +88,9 @@ const HomePage = () => {
   const handleCategoryClick = (category) => {
     console.log('[HomePage] Category clicked:', category);
     console.log('[HomePage] Current state before change:', { selectedCategory, activeSubcategory, activeLanguage });
-    
-    setSelectedCategory(category);
+      setSelectedCategory(category);
     setActiveSubcategory(null);
     setActiveLanguage('all');
-    setSelectedItem(null);
     
     console.log('[HomePage] State should change to:', { 
       selectedCategory: category, 
