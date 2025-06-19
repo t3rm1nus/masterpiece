@@ -46,10 +46,13 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
     <>      {/* Componente Material UI solo para móviles */}
       <MaterialItemDetail item={selectedItem} />      {/* Vista clásica solo para desktop */}
       <div className="item-detail-page desktop-only">
-        <div className="item-detail-overlay" onClick={onClose}></div>
-        <div className={`item-detail-container ${selectedItem.masterpiece ? 'masterpiece-item' : 'normal-item'} ${selectedItem.category}`}>
-          <button className="close-button" onClick={onClose} aria-label="Cerrar">×</button>
-          {selectedItem.masterpiece && (
+        <div className="item-detail-header">
+          <button className="back-button" onClick={onClose} aria-label="Volver">
+            ← Volver
+          </button>
+        </div>        <div className="item-detail-container">
+          <div className={`item-detail-content ${selectedItem.masterpiece ? 'masterpiece-item' : 'normal-item'} ${selectedItem.category}`}>
+            {selectedItem.masterpiece && (
             <span className="masterpiece-badge-container" title="Obra maestra">
               <svg 
                 width={badgeConfig.svg.width} 
@@ -257,12 +260,12 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
                 href={selectedItem.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="spotify-link"
-              >
+                className="spotify-link"              >
                 Escuchar en Spotify
               </a>
             </div>
           )}
+          </div>
         </div>
       </div>
     </>
