@@ -60,41 +60,60 @@ const HomePage = () => {
   const [isRecommendedActive, setIsRecommendedActive] = useState(false);
 
   // Estado local para el elemento seleccionado
-  const [selectedItem, setSelectedItem] = useState(null);
-
-  // Efecto para inicializar los datos
+  const [selectedItem, setSelectedItem] = useState(null);  // Efecto para inicializar los datos
   useEffect(() => {
+    console.log('[HomePage] Component mounted, initializing data...');
     initializeData();
   }, [initializeData]);
 
   // Efecto para inicializar los datos filtrados
   useEffect(() => {
+    console.log('[HomePage] AllData changed:', Object.keys(allData || {}).length, 'categories available');
     if (allData && Object.keys(allData).length > 0) {
+      console.log('[HomePage] AllData is ready, initializing filtered items...');
       initializeFilteredItems();
+    } else {
+      console.log('[HomePage] AllData not ready yet');
     }
   }, [allData, initializeFilteredItems]);
 
   // Efecto para actualizar los items filtrados cuando cambian los filtros
   useEffect(() => {
+    console.log('[HomePage] Filters changed - Category:', selectedCategory, 'Subcategory:', activeSubcategory, 'Language:', activeLanguage);
+    console.log('[HomePage] Current filteredItems count:', filteredItems?.length || 0);
+    
     if (selectedCategory) {
+      console.log('[HomePage] Updating filtered items for category:', selectedCategory);
       updateFilteredItems();
+    } else {
+      console.log('[HomePage] No category selected, showing home view');
     }
   }, [selectedCategory, activeSubcategory, activeLanguage, updateFilteredItems]);
-
   const handleCategoryClick = (category) => {
+    console.log('[HomePage] Category clicked:', category);
+    console.log('[HomePage] Current state before change:', { selectedCategory, activeSubcategory, activeLanguage });
+    
     setSelectedCategory(category);
     setActiveSubcategory(null);
     setActiveLanguage('all');
     setSelectedItem(null);
+    
+    console.log('[HomePage] State should change to:', { 
+      selectedCategory: category, 
+      activeSubcategory: null, 
+      activeLanguage: 'all' 
+    });
   };
 
   // Manejar clic en elemento
   const handleItemClick = (item) => {
+    console.log('[HomePage] Item clicked:', item?.title || item?.name, 'ID:', item?.id);
     setSelectedItem(item);
   };
 
   // Manejar cierre del detalle
   const handleCloseDetail = () => {
+    console.log('[HomePage] Closing item detail');
     setSelectedItem(null);
   };
 

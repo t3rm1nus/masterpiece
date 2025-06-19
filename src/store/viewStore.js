@@ -70,24 +70,35 @@ const useViewStore = create(
       // ==========================================
       // ACCIONES DE UI
       // ==========================================
+        setMobile: (isMobile) => {
+        const current = get().isMobile;
+        if (current !== isMobile) {
+          console.log('[ViewStore] Mobile state changed:', current, '->', isMobile);
+        }
+        set(
+          { isMobile },
+          false,
+          'setMobile'
+        );
+      },
       
-      setMobile: (isMobile) => set(
-        { isMobile },
-        false,
-        'setMobile'
-      ),
+      openMobileMenu: () => {
+        console.log('[ViewStore] Opening mobile menu');
+        set(
+          { mobileMenuOpen: true },
+          false,
+          'openMobileMenu'
+        );
+      },
       
-      openMobileMenu: () => set(
-        { mobileMenuOpen: true },
-        false,
-        'openMobileMenu'
-      ),
-      
-      closeMobileMenu: () => set(
-        { mobileMenuOpen: false },
-        false,
-        'closeMobileMenu'
-      ),
+      closeMobileMenu: () => {
+        console.log('[ViewStore] Closing mobile menu');
+        set(
+          { mobileMenuOpen: false },
+          false,
+          'closeMobileMenu'
+        );
+      },
       
       toggleMobileMenu: () => set(
         (state) => ({ mobileMenuOpen: !state.mobileMenuOpen }),
@@ -118,10 +129,12 @@ const useViewStore = create(
           set({ currentView: 'home' }, false, 'goBack');
         }
       },
-      
-      // Navegar a la vista de detalle de un item
+        // Navegar a la vista de detalle de un item
       navigateToDetail: (item) => {
+        console.log('[ViewStore] Navigating to detail view for item:', item?.title || item?.name, 'ID:', item?.id);
         const currentView = get().currentView;
+        console.log('[ViewStore] Previous view:', currentView);
+        
         set(
           { 
             selectedItem: item,
@@ -135,7 +148,10 @@ const useViewStore = create(
       
       // Volver de la vista de detalle
       goBackFromDetail: () => {
+        console.log('[ViewStore] Going back from detail view');
         const previousView = get().previousView;
+        console.log('[ViewStore] Returning to view:', previousView);
+        
         set(
           {
             selectedItem: null,

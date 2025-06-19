@@ -41,6 +41,7 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
   const { getMasterpieceBadgeConfig } = useThemeStore();
   const badgeConfig = getMasterpieceBadgeConfig();  // Handler para hacer clic en un item (memoizado)
   const handleItemClick = useCallback((item) => {
+    console.log('[RecommendationsList] Item clicked:', item?.title || item?.name, 'Category:', item?.category);
     navigateToDetail(item);
   }, [navigateToDetail]);
   // Función para recortar descripciones largas
@@ -53,11 +54,18 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
     }
     
     return description;
-  }, []);
-  // Memoizar el contenido de recomendaciones para evitar re-renders innecesarios
+  }, []);  // Memoizar el contenido de recomendaciones para evitar re-renders innecesarios
   const memoizedRecommendations = useMemo(() => {
+    console.log('[RecommendationsList] Rendering with recommendations:', {
+      count: recommendations?.length || 0,
+      isArray: Array.isArray(recommendations),
+      isHome: isHome,
+      firstItem: recommendations?.[0]?.title || recommendations?.[0]?.name || 'N/A'
+    });
+    
     // Verificación más robusta para evitar errores con .map()
     if (!recommendations || !Array.isArray(recommendations) || recommendations.length === 0) {
+      console.log('[RecommendationsList] No recommendations to show, displaying no results message');
       return (
         <div className="no-results-container">
           <img 
@@ -71,6 +79,8 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
         </div>
       );
     }
+
+    console.log('[RecommendationsList] Rendering', recommendations.length, 'recommendation cards');
 
     return recommendations.map((rec, index) => {
             const title = processTitle(rec.title || rec.name, lang);

@@ -83,15 +83,15 @@ const useLanguageStore = create(
       lang: translationUtils.getDefaultLanguage(),
       translations: texts[translationUtils.getDefaultLanguage()] || {},
       availableLanguages: translationUtils.getAvailableLanguages(),
-      
-      // Acciones
+        // Acciones
       setLanguage: (lang) => {
+        console.log('[LanguageStore] Setting language:', lang);
         const normalizedLang = translationUtils.normalizeKey(lang);
         const availableLanguages = get().availableLanguages;
         
         // Verificar que el idioma es válido
         if (!normalizedLang) {
-          console.warn('[Translation] Invalid language provided:', lang);
+          console.warn('[LanguageStore] Invalid language provided:', lang);
           return;
         }
         
@@ -101,6 +101,7 @@ const useLanguageStore = create(
         );
         
         if (targetLang && texts[targetLang]) {
+          console.log('[LanguageStore] Language changed successfully:', targetLang);
           set(
             { 
               lang: targetLang,
@@ -110,7 +111,7 @@ const useLanguageStore = create(
             'setLanguage'
           );
         } else {
-          console.warn('[Translation] Language not found:', lang, 'Available:', availableLanguages);
+          console.warn('[LanguageStore] Language not found:', lang, 'Available:', availableLanguages);
         }
       },
       

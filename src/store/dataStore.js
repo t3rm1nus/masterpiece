@@ -218,8 +218,7 @@ const useDataStore = create(
         // ==========================================
         // LÓGICA DE FILTRADO CONSOLIDADA
         // ==========================================
-        
-        // Filtrar elementos según criterios activos
+          // Filtrar elementos según criterios activos
         getFilteredItems: () => {
           const state = get();
           const { 
@@ -231,74 +230,110 @@ const useDataStore = create(
             documentaryLanguage,
             allData 
           } = state;
+          
+          console.log('[DataStore] Filtering items with criteria:', {
+            selectedCategory,
+            activeSubcategory,
+            isSpanishCinemaActive,
+            isMasterpieceActive,
+            podcastLanguage,
+            documentaryLanguage
+          });
+          
           // Si no hay categoría seleccionada, mostrar elementos aleatorios de todas las categorías
           if (!selectedCategory) {
+            console.log('[DataStore] No category selected, getting random items from all categories');
             return state.getRandomItemsFromAllCategories();
           }
+          
           // Obtener elementos de la categoría seleccionada
           let items = allData[selectedCategory] || [];
-
-          // Filtrar por subcategoría
+          console.log('[DataStore] Initial items for category', selectedCategory, ':', items.length);          // Filtrar por subcategoría
           if (activeSubcategory) {
+            console.log('[DataStore] Filtering by subcategory:', activeSubcategory);
+            const beforeFilter = items.length;
             items = items.filter(item => item.subcategory === activeSubcategory);
+            console.log('[DataStore] Items after subcategory filter:', items.length, '(was', beforeFilter, ')');
           }
 
           // Filtrar por Cine Español (se puede combinar con otros filtros)
           if (isSpanishCinemaActive && selectedCategory === 'movies') {
-            console.log('Filtering Spanish Cinema. Items before filter:', items.length);
+            console.log('[DataStore] Filtering Spanish Cinema. Items before filter:', items.length);
             items = items.filter(item => 
               (item.tags && item.tags.includes('spanish')) ||
               item.subcategory === 'spanish cinema' || 
               item.subcategory === 'cine español'
             );
-            console.log('Items after Spanish Cinema filter:', items.length);
-          }
-
-          // Filtrar por idioma del podcast
+            console.log('[DataStore] Items after Spanish Cinema filter:', items.length);
+          }          // Filtrar por idioma del podcast
           if (podcastLanguage && selectedCategory === 'podcast') {
+            console.log('[DataStore] Filtering podcasts by language:', podcastLanguage);
+            const beforeFilter = items.length;
             items = items.filter(item => item.language === podcastLanguage || !item.language);
+            console.log('[DataStore] Items after podcast language filter:', items.length, '(was', beforeFilter, ')');
           }
 
           // Filtrar por idioma de documentales
           if (documentaryLanguage && selectedCategory === 'documentales') {
+            console.log('[DataStore] Filtering documentaries by language:', documentaryLanguage);
+            const beforeFilter = items.length;
             items = items.filter(item => item.idioma === documentaryLanguage || !item.idioma);
+            console.log('[DataStore] Items after documentary language filter:', items.length, '(was', beforeFilter, ')');
           }
 
           // Filtrar por obras maestras
           if (isMasterpieceActive) {
+            console.log('[DataStore] Filtering by masterpieces');
+            const beforeFilter = items.length;
             items = items.filter(item => item.masterpiece === true);
+            console.log('[DataStore] Items after masterpiece filter:', items.length, '(was', beforeFilter, ')');
           }
 
+          console.log('[DataStore] Final filtered items count:', items.length);
           return items;
         },        // Obtener elementos aleatorios de todas las categorías para la home
         getRandomItemsFromAllCategories: () => {
           const { allData } = get();
           const allItems = [];
           
+          console.log('[DataStore] Getting random items from all categories');
+          console.log('[DataStore] AllData available:', Object.keys(allData || {}));
+          
           // Validar que allData existe y que cada categoría es un array válido
           if (allData && typeof allData === 'object') {
-            Object.values(allData).forEach(categoryItems => {
+            Object.entries(allData).forEach(([category, categoryItems]) => {
               if (Array.isArray(categoryItems)) {
+                console.log('[DataStore] Adding', categoryItems.length, 'items from', category);
                 allItems.push(...categoryItems);
+              } else {
+                console.warn('[DataStore] Invalid data for category', category, ':', categoryItems);
               }
             });
           }
           
+          console.log('[DataStore] Total items collected:', allItems.length);
+          
           // Verificar que tenemos elementos para devolver
           if (allItems.length === 0) {
+            console.warn('[DataStore] No items found in any category');
             return [];
           }
           
           // Mezclar y tomar los primeros 20 elementos
           const shuffled = allItems.sort(() => 0.5 - Math.random());
-          return shuffled.slice(0, 20);
+          const result = shuffled.slice(0, 20);
+          console.log('[DataStore] Returning', result.length, 'random items');
+          return result;
         },
 
         // ==========================================
         // ACCIONES CONSOLIDADAS
-        // ==========================================
-          // Establecer categoría seleccionada
+        // ==========================================          // Establecer categoría seleccionada
         setSelectedCategory: (category, label) => {
+          console.log('[DataStore] Setting selected category:', category, 'with label:', label);
+          const currentCategory = get().selectedCategory;
+          console.log('[DataStore] Previous category:', currentCategory);
+          
           set(
             { 
               selectedCategory: category,
@@ -309,10 +344,15 @@ const useDataStore = create(
             false,          'setSelectedCategory'
           );
           
+          console.log('[DataStore] Category set, updating filtered items...');
           // Actualizar elementos filtrados
           get().updateFilteredItems();
-        },// Establecer subcategoría activa
+        },        // Establecer subcategoría activa
         setActiveSubcategory: (subcategory) => {
+          console.log('[DataStore] Setting active subcategory:', subcategory);
+          const currentSubcategory = get().activeSubcategory;
+          console.log('[DataStore] Previous subcategory:', currentSubcategory);
+          
           set(
             { 
               activeSubcategory: subcategory
@@ -321,11 +361,13 @@ const useDataStore = create(
             'setActiveSubcategory'
           );
           
+          console.log('[DataStore] Subcategory set, updating filtered items...');
           get().updateFilteredItems();
-        },// Alternar Cine Español
+        },        // Alternar Cine Español
         toggleSpanishCinema: () => {
           const { isSpanishCinemaActive, selectedCategory } = get();
-          console.log('toggleSpanishCinema called. Current state:', isSpanishCinemaActive, 'Selected category:', selectedCategory);
+          console.log('[DataStore] Toggling Spanish Cinema. Current state:', isSpanishCinemaActive, 'Selected category:', selectedCategory);
+          
           set(
             { 
               isSpanishCinemaActive: !isSpanishCinemaActive
@@ -499,11 +541,16 @@ const useDataStore = create(
           // Asegurar que siempre tenemos un array válido
           const finalFiltered = Array.isArray(filtered) ? filtered : [];
           set({ filteredItems: finalFiltered }, false, 'updateFilteredItems');
-        },// Inicializar elementos filtrados
+        },        // Inicializar elementos filtrados
         initializeFilteredItems: () => {
+          console.log('[DataStore] Initializing filtered items...');
           const filteredItems = get().getRandomItemsFromAllCategories();
           const randomNotFoundImage = get().generateRandomNotFoundImage();
           const defaultTitle = get().getDefaultTitle('es');
+          
+          console.log('[DataStore] Filtered items initialized:', filteredItems.length, 'items');
+          console.log('[DataStore] Random not found image:', randomNotFoundImage);
+          console.log('[DataStore] Default title:', defaultTitle);
           
           set(
             { 
@@ -513,27 +560,51 @@ const useDataStore = create(
             },
             false,
             'initializeFilteredItems'
-          );        },
+          );
+        },
 
         // ==========================================
         // FUNCIONES DE RESET CONSOLIDADAS
         // ==========================================        // Inicializar datos
         initializeData: () => {
+          console.log('[DataStore] Initializing data...');
           const { allData } = get();
+          
           if (!allData || Object.keys(allData).length === 0) {
-            set({ 
-              allData: {
-                movies: processItemsWithUniqueIds(datosMovies.recommendations || []),
-                comics: processItemsWithUniqueIds(datosComics.recommendations || []),
-                books: processItemsWithUniqueIds(datosBooks.recommendations || []),
-                music: processItemsWithUniqueIds(datosMusic.recommendations || []),
-                videogames: processItemsWithUniqueIds(datosVideogames.recommendations || []),
-                boardgames: processItemsWithUniqueIds(datosBoardgames.recommendations || []),
-                podcast: processItemsWithUniqueIds(datosPodcast.recommendations || []),
-                documentales: processItemsWithUniqueIds(datosDocumentales.recommendations || []),
-                series: processItemsWithUniqueIds(datosSeries.recommendations || [])
-              }
-            });
+            console.log('[DataStore] AllData is empty, loading from JSON files...');
+            const newAllData = {
+              movies: processItemsWithUniqueIds(datosMovies.recommendations || []),
+              comics: processItemsWithUniqueIds(datosComics.recommendations || []),
+              books: processItemsWithUniqueIds(datosBooks.recommendations || []),
+              music: processItemsWithUniqueIds(datosMusic.recommendations || []),
+              videogames: processItemsWithUniqueIds(datosVideogames.recommendations || []),
+              boardgames: processItemsWithUniqueIds(datosBoardgames.recommendations || []),
+              podcast: processItemsWithUniqueIds(datosPodcast.recommendations || []),
+              documentales: processItemsWithUniqueIds(datosDocumentales.recommendations || []),
+              series: processItemsWithUniqueIds(datosSeries.recommendations || [])
+            };
+            
+            const totalItems = Object.values(newAllData).reduce((sum, items) => sum + items.length, 0);
+            console.log('[DataStore] Data loaded successfully. Total items:', totalItems);
+            console.log('[DataStore] Items per category:', Object.entries(newAllData).map(([key, items]) => `${key}: ${items.length}`).join(', '));
+            
+            set({ allData: newAllData });
+            
+            // Inicializar elementos filtrados después de cargar los datos
+            setTimeout(() => {
+              console.log('[DataStore] Initializing filtered items after data load...');
+              get().initializeFilteredItems();
+            }, 0);
+          } else {
+            console.log('[DataStore] AllData already exists, checking filtered items...');
+            // Si los datos ya existen, asegurémonos de que filteredItems esté inicializado
+            const { filteredItems } = get();
+            if (!filteredItems || filteredItems.length === 0) {
+              console.log('[DataStore] FilteredItems is empty, re-initializing...');
+              get().initializeFilteredItems();
+            } else {
+              console.log('[DataStore] FilteredItems already initialized with', filteredItems.length, 'items');
+            }
           }
         },
       }),
@@ -552,6 +623,10 @@ const useDataStore = create(
 );
 
 // Inicializar el store al importarlo
-useDataStore.getState().initializeFilteredItems();
+const store = useDataStore.getState();
+store.initializeData();
+setTimeout(() => {
+  store.initializeFilteredItems();
+}, 0);
 
 export default useDataStore;
