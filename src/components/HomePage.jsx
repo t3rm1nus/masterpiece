@@ -192,112 +192,130 @@ const HomePage = () => {
       </div>
     );
   }
-
   return (
     <div className="home-container">
       <div className="header-controls">
         <ThemeToggle />
-      </div>      <div className="categories-container">
-        <div className="categories-list">
-          {Array.isArray(categories) && categories.map((category) => (
-            <button
-              key={category.key}
-              className={`category-btn${selectedCategory === category.key ? ' active' : ''}`}
-              onClick={() => handleCategoryClick(category.key)}
-            >
-              {category.label}
-            </button>
-          ))}
-        </div>
-      </div>      {selectedCategory && (
-        <div className="subcategories-container">
-          {Array.isArray(categorySubcategories) && categorySubcategories.length > 0 ? (
-            categorySubcategories
-              .sort((a, b) => a.order - b.order)
-              .map(({ sub }) => (
+      </div>
+
+      {/* Hide all navigation controls when showing item detail */}
+      {!selectedItem && (
+        <>
+          <div className="categories-container">
+            <div className="categories-list">
+              {Array.isArray(categories) && categories.map((category) => (
                 <button
-                  key={sub}
-                  className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
-                  onClick={() => setActiveSubcategory(sub)}
+                  key={category.key}
+                  className={`category-btn${selectedCategory === category.key ? ' active' : ''}`}
+                  onClick={() => handleCategoryClick(category.key)}
                 >
-                  {t.subcategories[selectedCategory]?.[sub] || sub}
+                  {category.label}
                 </button>
-              ))
-          ) : (
-            <div className="no-subcategories">
-              {t.ui.noSubcategories}
+              ))}
+            </div>
+          </div>
+
+          {selectedCategory && (
+            <div className="subcategories-container">
+              {Array.isArray(categorySubcategories) && categorySubcategories.length > 0 ? (
+                categorySubcategories
+                  .sort((a, b) => a.order - b.order)
+                  .map(({ sub }) => (
+                    <button
+                      key={sub}
+                      className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
+                      onClick={() => setActiveSubcategory(sub)}
+                    >
+                      {t.subcategories[selectedCategory]?.[sub] || sub}
+                    </button>
+                  ))
+              ) : (
+                <div className="no-subcategories">
+                  {t.ui.noSubcategories}
+                </div>
+              )}
             </div>
           )}
-        </div>
+
+          <div className="special-buttons-container">
+            {selectedCategory === 'movies' && (
+              <button
+                className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
+                onClick={handleSpanishCinemaToggle}
+              >
+                {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
+              </button>
+            )}
+
+            {selectedCategory === 'podcast' && (
+              <>
+                <button
+                  className={`subcategory-btn podcast-language${activePodcastLanguages.includes('es') ? ' active' : ''}`}              
+                  onClick={() => togglePodcastLanguage('es')}
+                >
+                  {lang === 'es' ? 'Español' : 'Spanish'}
+                </button>
+                <button
+                  className={`subcategory-btn podcast-language${activePodcastLanguages.includes('en') ? ' active' : ''}`}              
+                  onClick={() => togglePodcastLanguage('en')}
+                >
+                  {lang === 'es' ? 'Inglés' : 'English'}
+                </button>
+              </>
+            )}
+
+            {selectedCategory === 'documentales' && (
+              <>
+                <button
+                  className={`subcategory-btn podcast-language${activeDocumentaryLanguages.includes('es') ? ' active' : ''}`}              
+                  onClick={() => toggleDocumentaryLanguage('es')}
+                >
+                  {lang === 'es' ? 'Español' : 'Spanish'}
+                </button>
+                <button
+                  className={`subcategory-btn podcast-language${activeDocumentaryLanguages.includes('en') ? ' active' : ''}`}              
+                  onClick={() => toggleDocumentaryLanguage('en')}
+                >
+                  {lang === 'es' ? 'Inglés' : 'English'}
+                </button>
+              </>
+            )}
+
+            {!isRecommendedActive && selectedCategory && (
+              <button
+                className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
+                onClick={toggleMasterpiece}
+              >
+                {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
+              </button>
+            )}
+          </div>
+
+          {/* Debug info */}
+          {process.env.NODE_ENV === 'development' && (
+            <div style={{ fontSize: '12px', color: '#666', margin: '10px 0' }}>
+              [Debug] Title: "{title}" | Selected: {selectedCategory || 'none'} | Items: {filteredItems?.length || 0}
+            </div>
+          )}
+
+          {title && (
+            <h1 
+              className={selectedCategory ? 'after-subcategories' : ''}
+              style={{ textTransform: 'capitalize', textAlign: 'center', margin: '20px 0' }}
+            >
+              {title}
+            </h1>
+          )}
+        </>
       )}
 
-      <div className="special-buttons-container">        {selectedCategory === 'movies' && (
-          <button
-            className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
-            onClick={handleSpanishCinemaToggle}
-          >
-            {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
-          </button>
-        )}{selectedCategory === 'podcast' && (
-          <>
-            <button
-              className={`subcategory-btn podcast-language${activePodcastLanguages.includes('es') ? ' active' : ''}`}              
-              onClick={() => togglePodcastLanguage('es')}
-            >
-              {lang === 'es' ? 'Español' : 'Spanish'}
-            </button>
-            <button
-              className={`subcategory-btn podcast-language${activePodcastLanguages.includes('en') ? ' active' : ''}`}              
-              onClick={() => togglePodcastLanguage('en')}
-            >
-              {lang === 'es' ? 'Inglés' : 'English'}
-            </button>
-          </>
-        )}        {selectedCategory === 'documentales' && (
-          <>
-            <button
-              className={`subcategory-btn podcast-language${activeDocumentaryLanguages.includes('es') ? ' active' : ''}`}              
-              onClick={() => toggleDocumentaryLanguage('es')}
-            >
-              {lang === 'es' ? 'Español' : 'Spanish'}
-            </button>
-            <button
-              className={`subcategory-btn podcast-language${activeDocumentaryLanguages.includes('en') ? ' active' : ''}`}              
-              onClick={() => toggleDocumentaryLanguage('en')}
-            >
-              {lang === 'es' ? 'Inglés' : 'English'}
-            </button>
-          </>
-        )}
-
-        {!isRecommendedActive && selectedCategory && (
-          <button
-            className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
-            onClick={toggleMasterpiece}
-          >
-            {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
-          </button>
-        )}
-      </div>      {/* Debug info */}
-      {process.env.NODE_ENV === 'development' && (
-        <div style={{ fontSize: '12px', color: '#666', margin: '10px 0' }}>
-          [Debug] Title: "{title}" | Selected: {selectedCategory || 'none'} | Items: {filteredItems?.length || 0}
-        </div>
-      )}
-        {title && !selectedItem && (
-        <h1 
-          className={selectedCategory ? 'after-subcategories' : ''}
-          style={{ textTransform: 'capitalize', textAlign: 'center', margin: '20px 0' }}
-        >
-          {title}
-        </h1>
-      )}
       {/* Render either the recommendations list OR the item detail, not both */}
       {selectedItem ? (
         renderItemDetail()
       ) : (
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-          <RecommendationsList            recommendations={filteredItems} 
+          <RecommendationsList            
+            recommendations={filteredItems} 
             isHome={!selectedCategory}
             onItemClick={handleItemClick}
           />
