@@ -607,11 +607,11 @@ const useDataStore = create(
             }
           }
         },
-      }),
-      {
+      }),      {
         name: 'data-storage',
         partialize: (state) => ({
-          selectedCategory: state.selectedCategory,
+          // No persistir selectedCategory para que siempre inicie en home
+          // selectedCategory: state.selectedCategory,
           activeSubcategory: state.activeSubcategory,
           activeLanguage: state.activeLanguage,
           darkMode: state.darkMode,
@@ -624,6 +624,10 @@ const useDataStore = create(
 
 // Inicializar el store al importarlo
 const store = useDataStore.getState();
+
+// Forzar que siempre inicie en home
+store.set({ selectedCategory: null, activeSubcategory: null });
+
 store.initializeData();
 setTimeout(() => {
   store.initializeFilteredItems();

@@ -25,6 +25,14 @@ export function LanguageProvider({ children }) {
     hasTranslation,
     getTranslationMetadata
   } = useLanguageStore();
+
+  console.log('[LanguageProvider] Current state:', {
+    lang,
+    hasTranslations: !!t && Object.keys(t).length > 0,
+    translationsKeys: t ? Object.keys(t) : [],
+    availableLanguages,
+    coffeeTranslations: t?.coffee || 'missing'
+  });
   // Wrapper function para setLanguage con validación adicional
   const changeLanguage = (lng) => {
     console.log('[LanguageContext] Language change requested:', lng);

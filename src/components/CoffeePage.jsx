@@ -3,7 +3,12 @@ import { useLanguage } from '../LanguageContext';
 import MaterialCoffeePage from './MaterialCoffeePage';
 
 const CoffeePage = () => {
-  const { t } = useLanguage();
+  const { t, getTranslation } = useLanguage();
+  
+  console.log('[CoffeePage] Rendering with translations:', t);
+  console.log('[CoffeePage] Coffee title:', getTranslation('coffee.title'));
+  console.log('[CoffeePage] Coffee description:', getTranslation('coffee.description'));
+  console.log('[CoffeePage] Coffee button:', getTranslation('coffee.button'));
   
   return (
     <>
@@ -16,14 +21,14 @@ const CoffeePage = () => {
         <div className="coffee-icon">☕</div>
         
         {/* Título principal */}
-        <h1 className="coffee-title">{t.coffee_page_title}</h1>
+        <h1 className="coffee-title">{getTranslation('coffee.title', '¿Te gusta lo que ves?')}</h1>
         
         {/* Subtítulo */}
         <p className="coffee-subtitle">{t.coffee_page_subtitle}</p>
         
         {/* Descripción principal */}
         <p className="coffee-description">
-          {t.coffee_description}
+          {getTranslation('coffee.description', 'Si disfrutas de este contenido y quieres apoyar su desarrollo, puedes invitarme a un café. Tu apoyo ayuda a mantener y mejorar este proyecto.')}
         </p>
         
         {/* Lista de beneficios */}

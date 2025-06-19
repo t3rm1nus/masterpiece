@@ -274,9 +274,7 @@ const HomePage = () => {
             {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
           </button>
         )}
-      </div>
-
-      {title && (
+      </div>      {title && (
         <h1 
           className={selectedCategory ? 'after-subcategories' : ''}
           style={{ textTransform: 'capitalize' }}
@@ -284,6 +282,14 @@ const HomePage = () => {
           {title}
         </h1>
       )}
+      
+      {/* Debug info */}
+      {process.env.NODE_ENV === 'development' && (
+        <div style={{ fontSize: '12px', color: '#666', margin: '10px 0' }}>
+          [Debug] Title: "{title}" | Selected: {selectedCategory || 'none'} | Items: {filteredItems?.length || 0}
+        </div>
+      )}
+      
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
         <RecommendationsList 
           recommendations={filteredItems} 

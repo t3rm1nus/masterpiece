@@ -45,23 +45,26 @@ const AppContent = () => {
     default:
       console.warn('[AppContent] Unknown view:', currentView);
       content = <div>Página no encontrada</div>;
-  }
-
-  // Usando useEffect para detectar cambios de tamaño y actualizar el estado en el store de UI
+  }  // Usando useEffect para detectar cambios de tamaño y actualizar el estado en el store de UI
   useEffect(() => {
     console.log('[AppContent] Setting up resize listener...');
     const checkMobile = () => {
       const newIsMobile = isMobileDevice(window.innerWidth);
-      console.log('[AppContent] Screen size changed. Is mobile:', newIsMobile, 'Width:', window.innerWidth);
-      setMobile(newIsMobile);
+      
+      // Solo actualizar si cambió el estado mobile
+      if (newIsMobile !== isMobileUI) {
+        console.log('[AppContent] Screen size changed. Is mobile:', newIsMobile, 'Width:', window.innerWidth);
+        setMobile(newIsMobile);
+      }
     };
+    
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => {
       console.log('[AppContent] Cleaning up resize listener');
       window.removeEventListener('resize', checkMobile);
     };
-  }, [setMobile]);
+  }, [setMobile, isMobileUI]);
 
   return (
     <div className="container" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>      
