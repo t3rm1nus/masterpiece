@@ -73,11 +73,13 @@
 
 .main-menu button:not(.donation-btn):hover {
   background: var(--color-primary-dark);
+  color: black;
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0, 123, 212, 0.3);
 }
 
 .main-menu button:not(.donation-btn):active {
+  color: black;
   transform: translateY(0);
   box-shadow: none;
 }
