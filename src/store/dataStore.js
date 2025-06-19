@@ -110,8 +110,11 @@ const useDataStore = create(
           { key: 'boardgames', es: 'Juegos de Mesa', en: 'Board Games' },
           { key: 'podcast', es: 'Podcasts', en: 'Podcasts' },
           { key: 'documentales', es: 'Documentales', en: 'Documentaries' },
-          { key: 'series', es: 'Series', en: 'TV Shows' }
-        ],        // Estado inicial
+          { key: 'series', es: 'Series', en: 'TV Shows' }        ],
+
+        // ==========================================
+        // ESTADO INICIAL DE DATOS
+        // ==========================================
         allData: {
           movies: processItemsWithUniqueIds(datosMovies.recommendations || []),
           comics: processItemsWithUniqueIds(datosComics.recommendations || []),
@@ -120,7 +123,7 @@ const useDataStore = create(
           videogames: processItemsWithUniqueIds(datosVideogames.recommendations || []),
           boardgames: processItemsWithUniqueIds(datosBoardgames.recommendations || []),
           podcast: processItemsWithUniqueIds(datosPodcast.recommendations || []),
-          documentales: processItemsWithUniqueIds(datosDocumentales.recommendations || []),
+          documentales: processItemsWithUniqueIds(datosDocumentales.documentales || []),
           series: processItemsWithUniqueIds(datosSeries.recommendations || [])
         },
         selectedCategory: null,
@@ -128,15 +131,17 @@ const useDataStore = create(
         activeLanguage: 'all',
         filteredItems: [],
         darkMode: false,
-        language: 'es',
-
-        // ==========================================
+        language: 'es',        // ==========================================
         // ESTADO DE FILTROS
         // ==========================================
         isSpanishCinemaActive: false,
         isMasterpieceActive: false,
-        podcastLanguage: 'es',
-        documentaryLanguage: 'es',
+          // Sistema de filtrado de podcasts - ahora usa array de idiomas activos
+        activePodcastLanguages: [], // Array que puede contener 'es', 'en', o ambos
+        
+        // Sistema de filtrado de documentales - igual que podcasts
+        activeDocumentaryLanguages: [], // Array que puede contener 'es', 'en', o ambos
+        
         title: '',
         randomNotFoundImage: '',
 
@@ -220,24 +225,20 @@ const useDataStore = create(
         // ==========================================
           // Filtrar elementos según criterios activos
         getFilteredItems: () => {
-          const state = get();
-          const { 
+          const state = get();          const { 
             selectedCategory, 
             activeSubcategory, 
             isSpanishCinemaActive, 
-            isMasterpieceActive,
-            podcastLanguage,
-            documentaryLanguage,
+            isMasterpieceActive,            activePodcastLanguages,
+            activeDocumentaryLanguages,
             allData 
-          } = state;
-          
-          console.log('[DataStore] Filtering items with criteria:', {
+          } = state;          console.log('[DataStore] Filtering items with criteria:', {
             selectedCategory,
             activeSubcategory,
             isSpanishCinemaActive,
             isMasterpieceActive,
-            podcastLanguage,
-            documentaryLanguage
+            activePodcastLanguages,
+            activeDocumentaryLanguages
           });
           
           // Si no hay categoría seleccionada, mostrar elementos aleatorios de todas las categorías
@@ -266,18 +267,22 @@ const useDataStore = create(
             );
             console.log('[DataStore] Items after Spanish Cinema filter:', items.length);
           }          // Filtrar por idioma del podcast
-          if (podcastLanguage && selectedCategory === 'podcast') {
-            console.log('[DataStore] Filtering podcasts by language:', podcastLanguage);
+          if (activePodcastLanguages.length > 0 && selectedCategory === 'podcast') {
+            console.log('[DataStore] Filtering podcasts by languages:', activePodcastLanguages);
             const beforeFilter = items.length;
-            items = items.filter(item => item.language === podcastLanguage || !item.language);
+            items = items.filter(item => 
+              activePodcastLanguages.includes(item.language) || 
+              (!item.language && activePodcastLanguages.length === 2) // Mostrar items sin idioma si ambos idiomas están activos
+            );
             console.log('[DataStore] Items after podcast language filter:', items.length, '(was', beforeFilter, ')');
-          }
-
-          // Filtrar por idioma de documentales
-          if (documentaryLanguage && selectedCategory === 'documentales') {
-            console.log('[DataStore] Filtering documentaries by language:', documentaryLanguage);
+          }          // Filtrar por idioma de documentales
+          if (activeDocumentaryLanguages.length > 0 && selectedCategory === 'documentales') {
+            console.log('[DataStore] Filtering documentaries by languages:', activeDocumentaryLanguages);
             const beforeFilter = items.length;
-            items = items.filter(item => item.idioma === documentaryLanguage || !item.idioma);
+            items = items.filter(item => 
+              activeDocumentaryLanguages.includes(item.idioma) || 
+              (!item.idioma && activeDocumentaryLanguages.length === 2) // Mostrar items sin idioma si ambos idiomas están activos
+            );
             console.log('[DataStore] Items after documentary language filter:', items.length, '(was', beforeFilter, ')');
           }
 
@@ -328,18 +333,21 @@ const useDataStore = create(
 
         // ==========================================
         // ACCIONES CONSOLIDADAS
-        // ==========================================          // Establecer categoría seleccionada
+        // ==========================================        // Establecer categoría seleccionada
         setSelectedCategory: (category, label) => {
           console.log('[DataStore] Setting selected category:', category, 'with label:', label);
           const currentCategory = get().selectedCategory;
           console.log('[DataStore] Previous category:', currentCategory);
-          
-          set(
+            set(
             { 
               selectedCategory: category,
               title: label || category,
               activeSubcategory: null,
-              isSpanishCinemaActive: false
+              isSpanishCinemaActive: false,
+              // Resetear filtros de podcast si no es la categoría podcast
+              activePodcastLanguages: category === 'podcast' ? get().activePodcastLanguages : [],
+              // Resetear filtros de documentales si no es la categoría documentales
+              activeDocumentaryLanguages: category === 'documentales' ? get().activeDocumentaryLanguages : []
             },
             false,          'setSelectedCategory'
           );
@@ -347,7 +355,7 @@ const useDataStore = create(
           console.log('[DataStore] Category set, updating filtered items...');
           // Actualizar elementos filtrados
           get().updateFilteredItems();
-        },        // Establecer subcategoría activa
+        },// Establecer subcategoría activa
         setActiveSubcategory: (subcategory) => {
           console.log('[DataStore] Setting active subcategory:', subcategory);
           const currentSubcategory = get().activeSubcategory;
@@ -378,23 +386,58 @@ const useDataStore = create(
           
           get().updateFilteredItems();
           console.log('toggleSpanishCinema completed. New state:', !isSpanishCinemaActive);
-        },        // Alternar podcasts por idioma
-        setPodcastLanguage: (language) => {
-          const { podcastLanguage } = get();
-          // Si se hace clic en el mismo idioma, desactivar el filtro
-          const newLanguage = podcastLanguage === language ? null : language;
+        },        // Alternar idioma específico de podcasts (on/off independiente)
+        togglePodcastLanguage: (language) => {
+          const { activePodcastLanguages } = get();
+          console.log('[DataStore] Toggling podcast language:', language, 'Current active:', activePodcastLanguages);
+          
+          let newLanguages;
+          if (activePodcastLanguages.includes(language)) {
+            // Si el idioma está activo, lo removemos
+            newLanguages = activePodcastLanguages.filter(lang => lang !== language);
+          } else {
+            // Si el idioma no está activo, lo añadimos
+            newLanguages = [...activePodcastLanguages, language];
+          }
+          
           set(
             { 
-              podcastLanguage: newLanguage
+              activePodcastLanguages: newLanguages
             },
             false,
-            'setPodcastLanguage'
-          );
+            'togglePodcastLanguage'          );
           
+          console.log('[DataStore] New active podcast languages:', newLanguages);
           get().updateFilteredItems();
         },
 
-        // Establecer idioma activo para documentales
+        // Alternar idioma específico de documentales (on/off independiente)
+        toggleDocumentaryLanguage: (language) => {
+          const { activeDocumentaryLanguages } = get();
+          console.log('[DataStore] Toggling documentary language:', language, 'Current active:', activeDocumentaryLanguages);
+          
+          let newLanguages;
+          if (activeDocumentaryLanguages.includes(language)) {
+            // Si el idioma está activo, lo removemos
+            newLanguages = activeDocumentaryLanguages.filter(lang => lang !== language);
+          } else {
+            // Si el idioma no está activo, lo añadimos
+            newLanguages = [...activeDocumentaryLanguages, language];
+          }
+          
+          set(
+            { 
+              activeDocumentaryLanguages: newLanguages
+            },
+            false,
+            'toggleDocumentaryLanguage'
+          );
+          
+          console.log('[DataStore] New active documentary languages:', newLanguages);
+          get().updateFilteredItems();
+        },
+
+        // Establecer idioma activo para documentales (funcionalidad legacy - será removida)
         setActiveLanguage: (language) => {
           set(
             { 
@@ -461,9 +504,7 @@ const useDataStore = create(
           );
           
           get().updateFilteredItems();
-        },
-
-        // Resetear todos los filtros
+        },        // Resetear todos los filtros
         resetAllFilters: (lang = 'es') => {
           const defaultTitle = get().getDefaultTitle(lang);
           set(
@@ -472,6 +513,7 @@ const useDataStore = create(
               activeSubcategory: null,
               isSpanishCinemaActive: false,
               isMasterpieceActive: false,
+              activePodcastLanguages: [],
               title: defaultTitle
             },
             false,
@@ -483,14 +525,12 @@ const useDataStore = create(
         // Actualizar elementos filtrados
         updateFilteredItems: () => {
           const { 
-            selectedCategory, 
-            activeSubcategory, 
-            activeLanguage,
+            selectedCategory,            activeSubcategory,            activeLanguage,
             allData,
             isSpanishCinemaActive,
             isMasterpieceActive,
-            podcastLanguage,
-            documentaryLanguage
+            activePodcastLanguages,
+            activeDocumentaryLanguages
           } = get();
           
           if (!selectedCategory) {
@@ -516,16 +556,14 @@ const useDataStore = create(
           if (isMasterpieceActive) {
             filtered = filtered.filter(item => item.masterpiece);
           }
-          
-          if (selectedCategory === 'podcast') {
-            filtered = filtered.filter(item => {
-              if (podcastLanguage === 'es') {
-                return item.language === 'es' || !item.language;
-              } else {
-                return item.language === 'en';
-              }
-            });
-          }          if (selectedCategory === 'documentales') {
+            if (selectedCategory === 'podcast') {
+            if (activePodcastLanguages.length > 0) {
+              filtered = filtered.filter(item => {
+                return activePodcastLanguages.includes(item.language) || 
+                       (!item.language && activePodcastLanguages.length === 2);
+              });
+            }
+          }if (selectedCategory === 'documentales') {
             if (activeLanguage !== 'all') {
               filtered = filtered.filter(item => {
                 return item.language === activeLanguage || 

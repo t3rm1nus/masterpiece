@@ -20,8 +20,7 @@ const HomePage = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   // Hook para sincronizar títulos automáticamente
   useTitleSync();
-  
-  // Stores consolidados
+    // Stores consolidados
   const { 
     selectedCategory, 
     setSelectedCategory,
@@ -29,15 +28,14 @@ const HomePage = () => {
     setActiveSubcategory,
     getSubcategoriesForCategory,
     getCategories,
-    filteredItems,
-    toggleSpanishCinema,
+    filteredItems,    toggleSpanishCinema,
     toggleMasterpiece,
-    setPodcastLanguage,
-    setDocumentaryLanguage,
+    togglePodcastLanguage,
+    toggleDocumentaryLanguage,
     isSpanishCinemaActive,
     isMasterpieceActive,
-    podcastLanguage,
-    documentaryLanguage,
+    activePodcastLanguages,
+    activeDocumentaryLanguages,
     title,
     initializeFilteredItems,
     updateFilteredItems,
@@ -229,42 +227,36 @@ const HomePage = () => {
           >
             {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
           </button>
-        )}
-
-        {selectedCategory === 'podcast' && (
+        )}        {selectedCategory === 'podcast' && (
           <>
             <button
-              className={`subcategory-btn podcast-language${podcastLanguage === 'es' ? ' active' : ''}`}              
-              onClick={() => setPodcastLanguage('es')}
+              className={`subcategory-btn podcast-language${activePodcastLanguages.includes('es') ? ' active' : ''}`}              
+              onClick={() => togglePodcastLanguage('es')}
             >
               {lang === 'es' ? 'Español' : 'Spanish'}
             </button>
             <button
-              className={`subcategory-btn podcast-language${podcastLanguage === 'en' ? ' active' : ''}`}              
-              onClick={() => setPodcastLanguage('en')}
+              className={`subcategory-btn podcast-language${activePodcastLanguages.includes('en') ? ' active' : ''}`}              
+              onClick={() => togglePodcastLanguage('en')}
             >
               {lang === 'es' ? 'Inglés' : 'English'}
             </button>
           </>
-        )}
-
-        {selectedCategory === 'documentales' && (
-          <div className="language-filters">
+        )}        {selectedCategory === 'documentales' && (
+          <>
             <button
-              className={`language-btn${activeLanguage === 'all' ? ' active' : ''}`}
-              onClick={() => setActiveLanguage('all')}
+              className={`subcategory-btn podcast-language${activeDocumentaryLanguages.includes('es') ? ' active' : ''}`}              
+              onClick={() => toggleDocumentaryLanguage('es')}
             >
-              {t.filters.languages.all}
-            </button>            {Array.isArray(availableLanguages) && availableLanguages.map(language => (
-              <button
-                key={language}
-                className={`language-btn${activeLanguage === language ? ' active' : ''}`}
-                onClick={() => setActiveLanguage(language)}
-              >
-                {t.filters.languages[language] || language}
-              </button>
-            ))}
-          </div>
+              {lang === 'es' ? 'Español' : 'Spanish'}
+            </button>
+            <button
+              className={`subcategory-btn podcast-language${activeDocumentaryLanguages.includes('en') ? ' active' : ''}`}              
+              onClick={() => toggleDocumentaryLanguage('en')}
+            >
+              {lang === 'es' ? 'Inglés' : 'English'}
+            </button>
+          </>
         )}
 
         {!isRecommendedActive && selectedCategory && (
