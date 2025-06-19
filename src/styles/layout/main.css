@@ -89,6 +89,13 @@
   margin-left: var(--space-md);
 }
 
+/* Mover botón "Nuevas recomendaciones" un poco a la derecha en desktop */
+@media (min-width: 769px) {
+  .main-menu > div:first-child > div:first-child > button:first-child {
+    margin-left: var(--space-lg);
+  }
+}
+
 /* === TÍTULOS PRINCIPALES === */
 h1 {
   text-align: center;
