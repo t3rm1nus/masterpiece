@@ -144,3 +144,30 @@ export const getLocalizedTitle = (item, lang = 'es') => {
 export const getLocalizedDescription = (item, lang = 'es') => {
   return getLocalizedContent(item?.description, lang);
 };
+
+/**
+ * Valida si un valor es un array válido y no vacío
+ * @param {any} value - El valor a validar
+ * @returns {boolean} - true si es un array válido y no vacío
+ */
+export const isValidArray = (value) => {
+  return Array.isArray(value) && value.length > 0;
+};
+
+/**
+ * Valida si un valor es un array válido (puede estar vacío)
+ * @param {any} value - El valor a validar
+ * @returns {boolean} - true si es un array válido
+ */
+export const isArray = (value) => {
+  return Array.isArray(value);
+};
+
+/**
+ * Obtiene un array seguro, devolviendo un array vacío si el valor no es válido
+ * @param {any} value - El valor a validar
+ * @returns {Array} - El array original si es válido, o un array vacío
+ */
+export const safeArray = (value) => {
+  return Array.isArray(value) ? value : [];
+};

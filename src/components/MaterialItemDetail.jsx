@@ -200,7 +200,7 @@ const MaterialItemDetail = ({ item }) => {
               />
               {item.subcategory && (
                 <Chip
-                  label={getSubcategoryTranslation(item.subcategory)}
+                  label={getSubcategoryTranslation(item.subcategory, item.category)}
                   variant="outlined"
                   sx={{
                     borderColor: getCategoryColor(item.category),

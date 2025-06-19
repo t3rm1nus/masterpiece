@@ -167,11 +167,9 @@ const HomePage = () => {
     <div className="home-container">
       <div className="header-controls">
         <ThemeToggle />
-      </div>
-
-      <div className="categories-container">
+      </div>      <div className="categories-container">
         <div className="categories-list">
-          {categories.map((category) => (
+          {Array.isArray(categories) && categories.map((category) => (
             <button
               key={category.key}
               className={`category-btn${selectedCategory === category.key ? ' active' : ''}`}
@@ -181,11 +179,9 @@ const HomePage = () => {
             </button>
           ))}
         </div>
-      </div>
-
-      {selectedCategory && (
+      </div>      {selectedCategory && (
         <div className="subcategories-container">
-          {categorySubcategories && categorySubcategories.length > 0 ? (
+          {Array.isArray(categorySubcategories) && categorySubcategories.length > 0 ? (
             categorySubcategories
               .sort((a, b) => a.order - b.order)
               .map(({ sub }) => (
@@ -239,7 +235,7 @@ const HomePage = () => {
               onClick={() => setActiveLanguage('all')}
             >
               {t.filters.languages.all}
-            </button>            {availableLanguages.map(language => (
+            </button>            {Array.isArray(availableLanguages) && availableLanguages.map(language => (
               <button
                 key={language}
                 className={`language-btn${activeLanguage === language ? ' active' : ''}`}
@@ -275,7 +271,7 @@ const HomePage = () => {
           isHome={!selectedCategory}
         />
       </div>      <div className="items-grid">
-        {filteredItems && Array.isArray(filteredItems) && filteredItems.length > 0 ? (
+        {Array.isArray(filteredItems) && filteredItems.length > 0 ? (
           filteredItems.map(item => (
             <div
               key={item.id}
@@ -292,7 +288,7 @@ const HomePage = () => {
           ))
         ) : (
           <div className="no-items">
-            {t.ui.no_results}
+            {t.ui?.noResults || t.ui?.no_results || 'No se encontraron resultados'}
           </div>
         )}
       </div>

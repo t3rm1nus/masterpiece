@@ -21,9 +21,13 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
   const { lang } = useLanguage();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
-  
-  // Solo renderizar en móviles
+    // Solo renderizar en móviles
   if (!isMobile) {
+    return null;
+  }
+  
+  // Validar que categories sea un array
+  if (!Array.isArray(categories)) {
     return null;
   }
   

@@ -85,7 +85,7 @@ const ItemDetail = () => {
                 {getCategoryTranslation(selectedItem.category)}
               </span>
               {selectedItem.subcategory && (
-                <span className="subcategory-name">{getSubcategoryTranslation(selectedItem.subcategory)}</span>
+                <span className="subcategory-name">{getSubcategoryTranslation(selectedItem.subcategory, selectedItem.category)}</span>
               )}
             </div>
           )}

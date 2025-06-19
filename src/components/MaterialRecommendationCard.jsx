@@ -176,7 +176,7 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
               />
               {recommendation.subcategory && (
                 <Chip
-                  label={getSubcategoryTranslation(recommendation.subcategory)}
+                  label={getSubcategoryTranslation(recommendation.subcategory, recommendation.category)}
                   size="small"
                   variant="outlined"
                   sx={{
@@ -286,7 +286,7 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
           />
           {recommendation.subcategory && (
             <Chip
-              label={getSubcategoryTranslation(recommendation.subcategory)}
+              label={getSubcategoryTranslation(recommendation.subcategory, recommendation.category)}
               size="small"
               variant="outlined"
               sx={{

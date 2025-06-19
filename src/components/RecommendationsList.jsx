@@ -123,7 +123,7 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
                         </span>
                         {rec.subcategory && (
                           <span className="rec-home-subcat" style={mobileHomeStyles.subcategoryStyle}>
-                            {getSubcategoryTranslation(rec.subcategory)}
+                            {getSubcategoryTranslation(rec.subcategory, rec.category)}
                           </span>
                         )}
                       </div>
@@ -152,7 +152,7 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
                       </span>
                       {rec.subcategory && (
                         <span style={desktopStyles.subcategoryStyle}>
-                          {getSubcategoryTranslation(rec.subcategory)}
+                          {getSubcategoryTranslation(rec.subcategory, rec.category)}
                         </span>
                       )}
                     </div>

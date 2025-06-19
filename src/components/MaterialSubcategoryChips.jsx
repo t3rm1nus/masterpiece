@@ -32,9 +32,8 @@ const MaterialSubcategoryChips = ({
     return null;
   }
   return (
-    <>
-      {/* Chips de subcategorías normales */}
-      {subcategories && subcategories.length > 0 && (
+    <>      {/* Chips de subcategorías normales */}
+      {Array.isArray(subcategories) && subcategories.length > 0 && (
         <Box
           sx={{
             display: 'flex',
@@ -48,7 +47,7 @@ const MaterialSubcategoryChips = ({
           {subcategories.map(({ sub }) => (
             <Chip
               key={sub}
-              label={getSubcategoryTranslation(sub)}
+              label={getSubcategoryTranslation(sub, selectedCategory)}
               onClick={() => onSubcategoryClick(sub)}
               variant={activeSubcategory === sub ? 'filled' : 'outlined'}
               sx={{
