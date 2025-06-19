@@ -654,10 +654,18 @@ const useDataStore = create(
             if (activeSubcategory) {
             filtered = filtered.filter(item => item.subcategory === activeSubcategory);
           }
-          
-          // Asegurar que siempre tenemos un array válido
+            // Asegurar que siempre tenemos un array válido
           const finalFiltered = Array.isArray(filtered) ? filtered : [];
-          set({ filteredItems: finalFiltered }, false, 'updateFilteredItems');
+          
+          // Si no hay resultados, generar una nueva imagen notfound
+          let newState = { filteredItems: finalFiltered };
+          if (finalFiltered.length === 0) {
+            const newRandomNotFoundImage = get().generateRandomNotFoundImage();
+            console.log('[DataStore] No results found, generating new notfound image:', newRandomNotFoundImage);
+            newState.randomNotFoundImage = newRandomNotFoundImage;
+          }
+          
+          set(newState, false, 'updateFilteredItems');
         },        // Inicializar elementos filtrados
         initializeFilteredItems: () => {
           console.log('[DataStore] Initializing filtered items...');

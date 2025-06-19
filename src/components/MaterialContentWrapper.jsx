@@ -3,7 +3,7 @@ import { useMediaQuery, useTheme, Box, Typography } from '@mui/material';
 import MaterialRecommendationCard from './MaterialRecommendationCard';
 import MaterialCategoryButtons from './MaterialCategoryButtons';
 import MaterialSubcategoryChips from './MaterialSubcategoryChips';
-import { getRandomNotFoundImage } from '../utils/appUtils';
+import useDataStore from '../store/dataStore';
 import { useLanguage } from '../LanguageContext';
 
 const MaterialContentWrapper = ({ 
@@ -21,6 +21,7 @@ const MaterialContentWrapper = ({
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const { t } = useLanguage();
+  const { randomNotFoundImage } = useDataStore();
   
   // Si no es móvil, renderizar el contenido original
   if (!isMobile) {
@@ -85,7 +86,7 @@ const MaterialContentWrapper = ({
         }}>
           {/* Imagen "not found" aleatoria */}          <Box
             component="img"
-            src={getRandomNotFoundImage()}
+            src={randomNotFoundImage}
             alt={t.no_results || 'No se encontraron resultados'}
             sx={{
               maxWidth: '200px',

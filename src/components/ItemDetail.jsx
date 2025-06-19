@@ -46,11 +46,10 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
     <>      {/* Componente Material UI solo para móviles */}
       <MaterialItemDetail item={selectedItem} />      {/* Vista clásica solo para desktop */}
       <div className="item-detail-page desktop-only">
-        <div className="item-detail-header">
+        <div className="item-detail-container">
           <button className="back-button" onClick={onClose} aria-label="Volver">
             ← Volver
           </button>
-        </div>        <div className="item-detail-container">
           <div className={`item-detail-content ${selectedItem.masterpiece ? 'masterpiece-item' : 'normal-item'} ${selectedItem.category}`}>
             {selectedItem.masterpiece && (
             <span className="masterpiece-badge-container" title="Obra maestra">
