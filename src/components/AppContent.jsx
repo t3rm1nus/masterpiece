@@ -10,13 +10,14 @@ const AppContent = () => {
   const { lang } = useLanguage();
   
   console.log('[AppContent] Component rendering with language:', lang);
-  
     // Usando el store consolidado de vista para toda la gestión de UI
   const { 
     isMobile: isMobileUI, 
     mobileMenuOpen, 
     setMobile, 
-    currentView
+    currentView,
+    selectedItem,
+    goBackFromDetail
   } = useViewStore();
 
   console.log('[AppContent] Current view state:', { currentView, isMobileUI, mobileMenuOpen });
@@ -25,14 +26,22 @@ const AppContent = () => {
     case 'home':
       console.log('[AppContent] Rendering HomePage');
       content = <HomePage />;
-      break;
-    case 'detail':
-      console.log('[AppContent] Rendering ItemDetail (lazy)');
-      content = (
-        <Suspense fallback={<LoadingFallback message="Cargando detalle..." />}>
-          <LazyItemDetail />
-        </Suspense>
-      );
+      break;    case 'detail':
+      console.log('[AppContent] Rendering ItemDetail (lazy) with selectedItem:', selectedItem);
+      if (!selectedItem) {
+        console.warn('[AppContent] No selectedItem found, redirecting to home');
+        content = <HomePage />;
+      } else {
+        content = (
+          <Suspense fallback={<LoadingFallback message="Cargando detalle..." />}>
+            <LazyItemDetail 
+              item={selectedItem}
+              onClose={goBackFromDetail}
+              selectedCategory={selectedItem.category}
+            />
+          </Suspense>
+        );
+      }
       break;
     case 'coffee':
       console.log('[AppContent] Rendering CoffeePage (lazy)');
