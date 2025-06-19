@@ -25,25 +25,13 @@ export function LanguageProvider({ children }) {
     hasTranslation,
     getTranslationMetadata
   } = useLanguageStore();
-
-  console.log('[LanguageProvider] Current state:', {
-    lang,
-    hasTranslations: !!t && Object.keys(t).length > 0,
-    translationsKeys: t ? Object.keys(t) : [],
-    availableLanguages,
-    coffeeTranslations: t?.coffee || 'missing'
-  });
   // Wrapper function para setLanguage con validación adicional
   const changeLanguage = (lng) => {
-    console.log('[LanguageContext] Language change requested:', lng);
-    console.log('[LanguageContext] Current language:', lang);
-    
     if (!lng || typeof lng !== 'string') {
       console.warn('[LanguageContext] Invalid language provided to changeLanguage:', lng);
       return;
     }
     
-    console.log('[LanguageContext] Calling setLanguage with:', lng);
     setLanguage(lng);
   };
 

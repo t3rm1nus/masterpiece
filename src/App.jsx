@@ -6,8 +6,6 @@ import AppContent from './components/AppContent';
 import ErrorDisplay from './components/ErrorDisplay';
 
 function App() {
-  console.log('[App] Application starting...');
-  
   return (
     <LanguageProvider>
       <MaterialThemeProvider>

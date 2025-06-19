@@ -1,15 +1,10 @@
-import React, { useMemo, useCallback, lazy } from 'react';
+import React, { useMemo, useCallback } from 'react';
 import { useLanguage } from '../LanguageContext';
 import useViewStore from '../store/viewStore';
 import useDataStore from '../store/dataStore';
 import useThemeStore from '../store/themeStore';
 import { generateRecommendationKey } from '../utils/appUtils';
 import MaterialContentWrapper from './MaterialContentWrapper';
-
-// Separar chunks por funcionalidad
-const CoffeePage = lazy(() => 
-  import('./CoffeePage' /* webpackChunkName: "coffee" */)
-);
 
 // Implementar imagen optimizada
 const OptimizedImage = ({ src, alt, ...props }) => (
@@ -41,7 +36,6 @@ const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {  con
   const { getMasterpieceBadgeConfig } = useThemeStore();
   const badgeConfig = getMasterpieceBadgeConfig();  // Handler para hacer clic en un item (memoizado)
   const handleItemClick = useCallback((item) => {
-    console.log('[RecommendationsList] Item clicked:', item?.title || item?.name, 'Category:', item?.category);
     if (onItemClick) {
       onItemClick(item);
     } else {
@@ -60,16 +54,8 @@ const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {  con
     return description;
   }, []);  // Memoizar el contenido de recomendaciones para evitar re-renders innecesarios
   const memoizedRecommendations = useMemo(() => {
-    console.log('[RecommendationsList] Rendering with recommendations:', {
-      count: recommendations?.length || 0,
-      isArray: Array.isArray(recommendations),
-      isHome: isHome,
-      firstItem: recommendations?.[0]?.title || recommendations?.[0]?.name || 'N/A'
-    });
-    
     // Verificación más robusta para evitar errores con .map()
     if (!recommendations || !Array.isArray(recommendations) || recommendations.length === 0) {
-      console.log('[RecommendationsList] No recommendations to show, displaying no results message');
       return (
         <div className="no-results-container">
           <img 
@@ -80,9 +66,8 @@ const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {  con
           <p className="no-results-text">
             {t.no_results || 'No se encontraron resultados'}
           </p>
-        </div>
-      );
-    }    console.log('[RecommendationsList] Rendering', recommendations.length, 'recommendation cards');
+        </div>      );
+    }
 
     return recommendations.map((rec, index) => {
       try {        // Normalizar datos para compatibilidad entre diferentes estructuras
@@ -97,12 +82,9 @@ const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {  con
                    (rec.category && ['politics', 'history', 'science', 'nature', 'culture', 'crime', 'art'].includes(rec.category)) ? 'documentales' : 
                    rec.category
         };
-        
-        const title = processTitle(normalizedRec.title || normalizedRec.name, lang);
+          const title = processTitle(normalizedRec.title || normalizedRec.name, lang);
         const description = processDescription(normalizedRec.description, lang);
         const cardClasses = getRecommendationCardClasses(normalizedRec, isHome, isMobile);
-        
-        console.log('[RecommendationsList] Processing item', index + 1, ':', title, 'Category:', normalizedRec.category, 'Subcategory:', normalizedRec.subcategory);
         
         return (
           <div 

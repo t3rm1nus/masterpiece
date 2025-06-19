@@ -1,4 +1,4 @@
-/* Estilos para la página de detalle de item - Desktop */
+/* Estilos para la página de detalle de item - Consolidado */
 .item-detail-page.desktop-only {
   position: relative;
   min-height: 100vh;
@@ -10,8 +10,21 @@
   overflow-y: auto;
 }
 
+/* Estilos base para páginas de detalle (mobile y desktop) */
+.item-detail-page {
+  min-height: 100vh;
+  padding-top: calc(70px + var(--space-xl)); /* Espacio para menú fijo + margen extra */
+  padding-bottom: var(--space-xl);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
 /* Tema oscuro */
-html[data-theme='dark'] .item-detail-page.desktop-only {  background-color: #121212;
+html[data-theme='dark'] .item-detail-page.desktop-only {  
+  background-color: #121212;
 }
 
 .item-detail-container {
@@ -21,10 +34,18 @@ html[data-theme='dark'] .item-detail-page.desktop-only {  background-color: #121
   margin: 80px auto 0 auto; /* Agregado margen superior de 80px */
   padding: 40px 20px;
   text-align: center;
-  /* Eliminadas decoraciones de card: background-color, border-radius, box-shadow */
   color: var(--text-color);
   z-index: 1;
   animation: slideIn 0.4s ease-out;
+}
+
+/* Estilos para mobile/tablet */
+@media (max-width: 768px) {
+  .item-detail-container {
+    width: 95%;
+    padding: var(--space-lg);
+    margin: var(--space-md) auto 0 auto;
+  }
 }
 
 @keyframes slideIn {
@@ -98,7 +119,7 @@ html[data-theme='dark'] .item-detail-page.desktop-only {  background-color: #121
 .item-detail-image-container {
   position: relative;
   display: inline-block;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-lg);
 }
 
 .item-detail-image {
@@ -106,9 +127,9 @@ html[data-theme='dark'] .item-detail-page.desktop-only {  background-color: #121
   max-height: 450px;
   width: auto;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal);
 }
 
 .item-detail-image:hover {
@@ -116,10 +137,11 @@ html[data-theme='dark'] .item-detail-page.desktop-only {  background-color: #121
 }
 
 .item-detail-title {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
   color: var(--text-color);
+  margin: var(--space-lg) 0 var(--space-md) 0;
+  line-height: var(--line-height-tight);
 }
 
 /* Estilos para categorías en el detalle */
@@ -150,45 +172,51 @@ html[data-theme='dark'] .subcategory-name {
 
 /* Descripción de juegos de mesa con más espacio */
 .item-detail-description.boardgame-description {
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-2xl);
 }
 
 .item-detail-director,
 .item-detail-year,
 .item-detail-author {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
+  font-size: var(--font-size-lg);
   color: var(--text-color);
 }
 
 .item-detail-description {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-lg);
   max-width: 600px;
-  margin: 0 auto 2rem auto;
-  color: var(--text-color);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
 .item-detail-trailer {
-  margin-top: 2rem;
+  margin-top: var(--space-lg);
+}
+
+.item-detail-trailer iframe {
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
 }
 
 .item-detail-spotify {
-  margin-top: 1.5rem;
+  margin-top: var(--space-xl);
 }
 
 .trailer-link {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
+  padding: var(--space-sm) var(--space-xl);
   background: var(--primary-color);
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.2s, transform 0.2s;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-bold);
+  transition: background var(--transition-normal), transform var(--transition-normal);
 }
 
 .trailer-link:hover {
@@ -198,13 +226,13 @@ html[data-theme='dark'] .subcategory-name {
 
 .spotify-link {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
+  padding: var(--space-sm) var(--space-xl);
   background: var(--color-podcast);
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.2s, transform 0.2s;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-bold);
+  transition: background var(--transition-normal), transform var(--transition-normal);
 }
 
 .spotify-link:hover {
@@ -214,41 +242,41 @@ html[data-theme='dark'] .subcategory-name {
 
 /* Estilos específicos para juegos de mesa */
 .boardgame-details {
-  margin: 1.5rem 0;
+  margin: var(--space-xl) 0;
 }
 
 .item-detail-age {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: var(--space-xl) !important;
 }
 
 .item-detail-players,
 .item-detail-playtime {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-md);
 }
 
 /* Estilos específicos para videojuegos */
 .videogame-details {
-  margin: 1.5rem 0;
+  margin: var(--space-xl) 0;
 }
 
 .item-detail-developer,
 .item-detail-platforms {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
+  font-size: var(--font-size-lg);
   color: var(--text-color);
 }
 
 /* Estilos específicos para documentales */
 .documentary-details {
-  margin: 1.5rem 0;
+  margin: var(--space-xl) 0;
 }
 
 .item-detail-author,
 .item-detail-duration,
 .item-detail-language,
 .item-detail-episodes {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
+  font-size: var(--font-size-lg);
   color: var(--text-color);
 }
 
@@ -263,38 +291,18 @@ html[data-theme='dark'] .item-detail-episodes {
 /* Estilo para el botón de ver documental */
 .documentary-details .trailer-link {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
+  padding: var(--space-sm) var(--space-xl);
   background: var(--color-documentales);
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.2s, transform 0.2s;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-bold);
+  transition: background var(--transition-normal), transform var(--transition-normal);
 }
 
 .documentary-details .trailer-link:hover {
   background: color-mix(in srgb, var(--color-documentales) 80%, #000000);
   transform: translateY(-1px);
-}
-
-/* Responsive para tablets */
-@media (max-width: 768px) {
-  .item-detail-container {
-    padding: 1rem;
-  }
-  
-  .item-detail-image {
-    max-width: 250px;
-    max-height: 375px;
-  }
-  
-  .item-detail-title {
-    font-size: 1.5rem;
-  }
-  
-  .item-detail-description {
-    font-size: 1.1rem;
-  }
 }
 
 /* Header con botón de volver */
@@ -367,4 +375,42 @@ html[data-theme='dark'] .item-detail-header {
 html[data-theme='dark'] .item-detail-content {
   background: #1e1e1e;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* === BOTÓN DE VOLVER === */
+.item-detail-back-btn {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  z-index: var(--z-dropdown);
+}
+
+/* === METADATOS === */
+.item-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+/* === RESPONSIVE CONSOLIDADO === */
+@media (max-width: 768px) {
+  .item-detail-page {
+    padding-top: var(--space-lg);
+  }
+  
+  .item-detail-image {
+    max-width: 250px;
+  }
+  
+  .item-detail-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .item-detail-description {
+    font-size: var(--font-size-base);
+  }
 }

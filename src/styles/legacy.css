@@ -11,17 +11,13 @@
   
   h1 {
     margin-top: var(--space-lg) !important;
-  }
-  
+  }  
   /* Ocultar menú clásico en móviles */
   .main-menu {
     display: none !important;
   }
   
-  /* Ocultar detalle clásico en móviles */
-  .item-detail-container {
-    display: none !important;
-  }
+  /* Ocultar detalle clásico en móviles - moved to item-detail.css */
 }
 
 /* === ESTILOS DE MATERIAL UI OVERRIDES === */

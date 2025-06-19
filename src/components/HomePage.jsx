@@ -1,25 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../LanguageContext';
 import useDataStore from '../store/dataStore';
-import useThemeStore from '../store/themeStore';
 import useViewStore from '../store/viewStore';
 import { useTitleSync } from '../hooks/useTitleSync';
-import MaterialContentWrapper from './MaterialContentWrapper';
 import RecommendationsList from './RecommendationsList';
 import ThemeToggle from './ThemeToggle';
 import '../styles/components/buttons.css';
 import '../styles/components/home-page.css';
-import { useMediaQuery } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import UnifiedItemDetail from './UnifiedItemDetail';
 
 const HomePage = () => {
-  const { lang, t, getTranslation } = useLanguage();
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const { lang, t } = useLanguage();
   // Hook para sincronizar títulos automáticamente
   useTitleSync();
-    // Stores consolidados
+  // Stores consolidados
   const { 
     selectedCategory, 
     setSelectedCategory,
@@ -27,7 +21,8 @@ const HomePage = () => {
     setActiveSubcategory,
     getSubcategoriesForCategory,
     getCategories,
-    filteredItems,    toggleSpanishCinema,
+    filteredItems,
+    toggleSpanishCinema,
     toggleMasterpiece,
     togglePodcastLanguage,
     toggleDocumentaryLanguage,
@@ -40,89 +35,56 @@ const HomePage = () => {
     updateFilteredItems,
     setActiveLanguage,
     activeLanguage,
-    availableLanguages,
     allData,
-    initializeData  } = useDataStore();
+    initializeData
+  } = useDataStore();
   
-  // Obtener configuración de estilos del store consolidado
-  const { getSpecialButtonLabel } = useThemeStore();
   // Obtener funciones de procesamiento del store de vista
-  const { processTitle, navigate, goBackFromDetail, selectedItem, navigateToDetail } = useViewStore();
+  const { goBackFromDetail, selectedItem, navigateToDetail } = useViewStore();
   // Obtener categorías traducidas
   const categories = getCategories(lang);
   
   // Obtener subcategorías del store para la categoría seleccionada
   const categorySubcategories = getSubcategoriesForCategory();
     const [isRecommendedActive, setIsRecommendedActive] = useState(false);
-
   // Efecto para inicializar los datos
   useEffect(() => {
-    console.log('[HomePage] Component mounted, initializing data...');
     initializeData();
-  }, [initializeData]);
-  // Efecto para inicializar los datos filtrados
+  }, [initializeData]);  // Efecto para inicializar los datos filtrados
   useEffect(() => {
-    console.log('[HomePage] AllData changed:', Object.keys(allData || {}).length, 'categories available');
     // Solo inicializar si no hay filteredItems y allData está listo
     if (allData && Object.keys(allData).length > 0 && (!filteredItems || filteredItems.length === 0)) {
-      console.log('[HomePage] AllData is ready and filteredItems is empty, initializing...');
       initializeFilteredItems();
-    } else {
-      console.log('[HomePage] AllData ready but filteredItems already has', filteredItems?.length || 0, 'items');
     }
   }, [allData]); // Removemos initializeFilteredItems de las dependencias para evitar bucles
-
   // Efecto para actualizar los items filtrados cuando cambian los filtros
   useEffect(() => {
-    console.log('[HomePage] Filters changed - Category:', selectedCategory, 'Subcategory:', activeSubcategory, 'Language:', activeLanguage);
-    console.log('[HomePage] Current filteredItems count:', filteredItems?.length || 0);
-    
     if (selectedCategory) {
-      console.log('[HomePage] Updating filtered items for category:', selectedCategory);
       updateFilteredItems();
-    } else {
-      console.log('[HomePage] No category selected, showing home view');
     }
-  }, [selectedCategory, activeSubcategory, activeLanguage, updateFilteredItems]);
-  const handleCategoryClick = (category) => {
-    console.log('[HomePage] Category clicked:', category);
-    console.log('[HomePage] Current state before change:', { selectedCategory, activeSubcategory, activeLanguage });
-      setSelectedCategory(category);
+  }, [selectedCategory, activeSubcategory, activeLanguage, updateFilteredItems]);  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
     setActiveSubcategory(null);
     setActiveLanguage('all');
-    
-    console.log('[HomePage] State should change to:', { 
-      selectedCategory: category, 
-      activeSubcategory: null, 
-      activeLanguage: 'all' 
-    });  };
-
-  // Manejar toggle de cine español con logging
+  };
+  // Manejar toggle de cine español
   const handleSpanishCinemaToggle = () => {
-    console.log('[HomePage] Spanish Cinema button clicked, current state:', isSpanishCinemaActive);
     toggleSpanishCinema();
   };  // Manejar clic en elemento
   const handleItemClick = (item) => {
-    console.log('[HomePage] Item clicked:', item?.title || item?.name, 'ID:', item?.id);
     // Usar el viewStore para navegar al detalle
     navigateToDetail(item);
     // Hacer scroll al inicio de la página
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-  // Manejar cierre del detalle
+  };  // Manejar cierre del detalle
   const handleCloseDetail = () => {
-    console.log('[HomePage] Closing item detail');
     // Volver a la vista anterior usando el viewStore
     goBackFromDetail();
   };  // Renderizar el detalle del elemento
   const renderItemDetail = () => {
-    console.log('[HomePage] renderItemDetail called, selectedItem:', selectedItem);
     if (!selectedItem) {
-      console.log('[HomePage] No selectedItem, not rendering detail');
       return null;
     }
-
-    console.log('[HomePage] Rendering item detail for:', selectedItem.title);
 
     return (
       <UnifiedItemDetail
@@ -159,12 +121,7 @@ const HomePage = () => {
       case 'documentaries':
         return '#9e9e9e';
       default:
-        return '#0078d4';
-    }
-  };
-
-  const getSubcategoryLabel = (subcategory) => {
-    return t.subcategories[subcategory] || subcategory;
+        return '#0078d4';    }
   };
 
   // Verificar si hay datos disponibles
@@ -197,9 +154,7 @@ const HomePage = () => {
                 </button>
               ))}
             </div>
-          </div>
-
-          {selectedCategory && (
+          </div>          {selectedCategory && selectedCategory !== 'documentales' && (
             <div className="subcategories-container">
               {Array.isArray(categorySubcategories) && categorySubcategories.length > 0 ? (
                 categorySubcategories
@@ -232,36 +187,49 @@ const HomePage = () => {
             )}
 
             {selectedCategory === 'podcast' && (
-              <>
-                <button
-                  className={`subcategory-btn podcast-language${activePodcastLanguages.includes('es') ? ' active' : ''}`}              
+              <>                <button
+                  className={`subcategory-btn podcast-language${activePodcastLanguages?.includes('es') ? ' active' : ''}`}              
                   onClick={() => togglePodcastLanguage('es')}
                 >
                   {lang === 'es' ? 'Español' : 'Spanish'}
                 </button>
                 <button
-                  className={`subcategory-btn podcast-language${activePodcastLanguages.includes('en') ? ' active' : ''}`}              
+                  className={`subcategory-btn podcast-language${activePodcastLanguages?.includes('en') ? ' active' : ''}`}              
                   onClick={() => togglePodcastLanguage('en')}
                 >
                   {lang === 'es' ? 'Inglés' : 'English'}
                 </button>
               </>
-            )}
-
-            {selectedCategory === 'documentales' && (
+            )}            {selectedCategory === 'documentales' && (
               <>
+                {/* Botones de idioma para documentales */}
                 <button
-                  className={`subcategory-btn podcast-language${activeDocumentaryLanguages.includes('es') ? ' active' : ''}`}              
+                  className={`subcategory-btn podcast-language${activeDocumentaryLanguages?.includes('es') ? ' active' : ''}`}              
                   onClick={() => toggleDocumentaryLanguage('es')}
                 >
                   {lang === 'es' ? 'Español' : 'Spanish'}
                 </button>
                 <button
-                  className={`subcategory-btn podcast-language${activeDocumentaryLanguages.includes('en') ? ' active' : ''}`}              
+                  className={`subcategory-btn podcast-language${activeDocumentaryLanguages?.includes('en') ? ' active' : ''}`}              
                   onClick={() => toggleDocumentaryLanguage('en')}
                 >
                   {lang === 'es' ? 'Inglés' : 'English'}
                 </button>
+                
+                {/* Subcategorías de documentales */}
+                {Array.isArray(categorySubcategories) && categorySubcategories.length > 0 && (
+                  categorySubcategories
+                    .sort((a, b) => a.order - b.order)
+                    .map(({ sub }) => (
+                      <button
+                        key={sub}
+                        className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
+                        onClick={() => setActiveSubcategory(sub)}
+                      >
+                        {t.subcategories[selectedCategory]?.[sub] || sub}
+                      </button>
+                    ))
+                )}
               </>
             )}
 
@@ -274,13 +242,6 @@ const HomePage = () => {
               </button>
             )}
           </div>
-
-          {/* Debug info */}
-          {process.env.NODE_ENV === 'development' && (
-            <div style={{ fontSize: '12px', color: '#666', margin: '10px 0' }}>
-              [Debug] Title: "{title}" | Selected: {selectedCategory || 'none'} | Items: {filteredItems?.length || 0}
-            </div>
-          )}
 
           {title && (
             <h1 

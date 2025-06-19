@@ -2,15 +2,14 @@
    DESIGN TOKENS Y VARIABLES CSS
    =================================== */
 
-:root {
-  /* === SPACING SYSTEM === */
+:root {  /* === SPACING SYSTEM === */
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;
   --space-lg: 24px;
   --space-xl: 32px;
   --space-2xl: 48px;
-  --space-3xl: 64px;
+  /* --space-3xl: 64px; (unused) */
 
   /* === TYPOGRAPHY === */
   --font-size-xs: 12px;
@@ -42,11 +41,10 @@
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
   --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
   --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.25);
-
   /* === TRANSITIONS === */
   --transition-fast: 0.15s ease;
   --transition-normal: 0.3s ease;
-  --transition-slow: 0.5s ease;
+  /* --transition-slow: 0.5s ease; (unused) */
 
   /* === Z-INDEX === */
   --z-dropdown: 100;
@@ -54,11 +52,12 @@
   --z-fixed: 300;
   --z-modal: 400;
   --z-tooltip: 500;
-
-  /* === BREAKPOINTS (para JS) === */
+  /* === BREAKPOINTS (for JS) === */
+  /* Commented out unused breakpoint variables
   --breakpoint-mobile: 768px;
   --breakpoint-tablet: 1024px;
   --breakpoint-desktop: 1200px;
+  */
 }
 
 /* === RESPONSIVE TYPOGRAPHY === */
