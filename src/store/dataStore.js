@@ -291,15 +291,14 @@ const useDataStore = create(
             })));
             
             items = items.filter(item => {
-              const hasSpanishTag = item.tags && item.tags.includes('spanish');
-              const hasSpanishSubcategory = item.subcategory === 'spanish cinema' || item.subcategory === 'cine español';
-              const isSpanish = hasSpanishTag || hasSpanishSubcategory;
+              // Solo filtrar por tags "spanish" - esto es lo más confiable
+              const hasSpanishTag = item.tags && Array.isArray(item.tags) && item.tags.includes('spanish');
               
-              if (isSpanish) {
-                console.log('[DataStore] Spanish movie found:', item.title, 'tags:', item.tags, 'subcategory:', item.subcategory);
+              if (hasSpanishTag) {
+                console.log('[DataStore] Spanish movie found:', item.title, 'tags:', item.tags);
               }
               
-              return isSpanish;
+              return hasSpanishTag;
             });
             console.log('[DataStore] Items after Spanish Cinema filter:', items.length);
           }// Filtrar por idioma del podcast
@@ -331,39 +330,54 @@ const useDataStore = create(
           }
 
           console.log('[DataStore] Final filtered items count:', items.length);
-          return items;
-        },        // Obtener elementos aleatorios de todas las categorías para la home
+          return items;        },
+
+        // Obtener elementos aleatorios de todas las categorías para la home
         getRandomItemsFromAllCategories: () => {
           const { allData } = get();
-          const allItems = [];
           
           console.log('[DataStore] Getting random items from all categories');
           console.log('[DataStore] AllData available:', Object.keys(allData || {}));
           
-          // Validar que allData existe y que cada categoría es un array válido
-          if (allData && typeof allData === 'object') {
-            Object.entries(allData).forEach(([category, categoryItems]) => {
-              if (Array.isArray(categoryItems)) {
-                console.log('[DataStore] Adding', categoryItems.length, 'items from', category);
-                allItems.push(...categoryItems);
-              } else {
-                console.warn('[DataStore] Invalid data for category', category, ':', categoryItems);
-              }
-            });
+          // Validar que allData existe
+          if (!allData || typeof allData !== 'object') {
+            console.warn('[DataStore] No valid allData available');
+            return [];
           }
+
+          const categories = Object.keys(allData);
+          const itemsPerCategory = Math.ceil(20 / categories.length); // Distribuir 20 elementos entre todas las categorías
+          const allItems = [];
+          
+          console.log('[DataStore] Items per category:', itemsPerCategory, 'Total categories:', categories.length);
+          
+          // Tomar elementos equitativamente de cada categoría
+          categories.forEach(category => {
+            const categoryItems = allData[category];
+            if (Array.isArray(categoryItems) && categoryItems.length > 0) {
+              // Mezclar los elementos de esta categoría y tomar los primeros
+              const shuffledCategory = [...categoryItems].sort(() => 0.5 - Math.random());
+              const selectedFromCategory = shuffledCategory.slice(0, itemsPerCategory);
+              
+              console.log('[DataStore] Adding', selectedFromCategory.length, 'items from', category, '(available:', categoryItems.length, ')');
+              allItems.push(...selectedFromCategory);
+            } else {
+              console.warn('[DataStore] Invalid or empty data for category', category, ':', categoryItems);
+            }
+          });
           
           console.log('[DataStore] Total items collected:', allItems.length);
           
-          // Verificar que tenemos elementos para devolver
-          if (allItems.length === 0) {
-            console.warn('[DataStore] No items found in any category');
-            return [];
-          }
+          // Mezclar el resultado final para que no estén agrupados por categoría
+          const shuffledFinal = allItems.sort(() => 0.5 - Math.random());
+          const result = shuffledFinal.slice(0, 20); // Asegurar que no excedamos 20 elementos
           
-          // Mezclar y tomar los primeros 20 elementos
-          const shuffled = allItems.sort(() => 0.5 - Math.random());
-          const result = shuffled.slice(0, 20);
-          console.log('[DataStore] Returning', result.length, 'random items');
+          console.log('[DataStore] Returning', result.length, 'balanced random items');
+          console.log('[DataStore] Distribution by category:', result.reduce((acc, item) => {
+            acc[item.category] = (acc[item.category] || 0) + 1;
+            return acc;
+          }, {}));
+          
           return result;
         },
 
@@ -611,10 +625,11 @@ const useDataStore = create(
           }
           
           let filtered = [...categoryData];
-          
-          // Aplicar filtros según la categoría
+            // Aplicar filtros según la categoría
           if (selectedCategory === 'movies' && isSpanishCinemaActive) {
-            filtered = filtered.filter(item => item.spanishCinema);
+            console.log('[DataStore] updateFilteredItems: Applying Spanish cinema filter');
+            filtered = filtered.filter(item => item.tags && Array.isArray(item.tags) && item.tags.includes('spanish'));
+            console.log('[DataStore] updateFilteredItems: After Spanish filter, items count:', filtered.length);
           }
           
           if (isMasterpieceActive) {
