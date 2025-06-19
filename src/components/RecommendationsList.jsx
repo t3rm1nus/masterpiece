@@ -86,20 +86,30 @@ const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {  con
 
     return recommendations.map((rec, index) => {
       try {
-        const title = processTitle(rec.title || rec.name, lang);
-        const description = processDescription(rec.description, lang);
-        const cardClasses = getRecommendationCardClasses(rec, isHome, isMobile);
+        // Normalizar datos de documentales para compatibilidad
+        const normalizedRec = {
+          ...rec,
+          // Para documentales, usar 'descripcion' si no hay 'description'
+          description: rec.description || rec.descripcion,
+          // Para documentales, usar 'categoria' como subcategory si no hay 'subcategory'
+          subcategory: rec.subcategory || rec.categoria,
+          // Asegurar que la categoría esté correcta
+          category: rec.category || 'documentales'
+        };
         
-        console.log('[RecommendationsList] Processing item', index + 1, ':', title);
+        const title = processTitle(normalizedRec.title || normalizedRec.name, lang);
+        const description = processDescription(normalizedRec.description, lang);
+        const cardClasses = getRecommendationCardClasses(normalizedRec, isHome, isMobile);
+        
+        console.log('[RecommendationsList] Processing item', index + 1, ':', title, 'Category:', normalizedRec.category, 'Subcategory:', normalizedRec.subcategory);
         
         return (
           <div 
-            key={generateRecommendationKey(rec, index)}
+            key={generateRecommendationKey(normalizedRec, index)}
             className={cardClasses}
             style={isHome && isMobile ? mobileHomeStyles.cardStyle : desktopStyles.cardStyle}
-            onClick={() => handleItemClick(rec)}
-          >
-            {rec.masterpiece && (
+            onClick={() => handleItemClick(normalizedRec)}          >
+            {normalizedRec.masterpiece && (
               <span className="masterpiece-badge" title="Obra maestra">
                     <svg 
                       width={badgeConfig.svg.width} 
@@ -127,7 +137,7 @@ const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {  con
                   <div className="rec-home-content">
                     <div className="rec-home-media">
                       <OptimizedImage 
-                        src={rec.image} 
+                        src={normalizedRec.image} 
                         alt={title} 
                         width={80} 
                         height={110} 
@@ -135,24 +145,24 @@ const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {  con
                       />
                       <div className="rec-home-cats" style={mobileHomeStyles.categoryContainer}>
                         <span className="rec-home-cat" style={mobileHomeStyles.categoryStyle}>
-                          {getCategoryTranslation(rec.category)}
+                          {getCategoryTranslation(normalizedRec.category)}
                         </span>
-                        {rec.subcategory && (
+                        {normalizedRec.subcategory && (
                           <span className="rec-home-subcat" style={mobileHomeStyles.subcategoryStyle}>
-                            {getSubcategoryTranslation(rec.subcategory, rec.category)}
+                            {getSubcategoryTranslation(normalizedRec.subcategory, normalizedRec.category)}
                           </span>
                         )}
                       </div>
                     </div>
                     <div className="rec-home-info">
-                      <p className="rec-home-desc">{truncateDescription(description, rec.category)}</p>
+                      <p className="rec-home-desc">{truncateDescription(description, normalizedRec.category)}</p>
                     </div>
                   </div>
                 ) : (
                   // Layout desktop y categorías
                   <>
                     <OptimizedImage 
-                      src={rec.image} 
+                      src={normalizedRec.image} 
                       alt={title} 
                       width={120} 
                       height={170} 
@@ -162,25 +172,25 @@ const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {  con
                     <div style={desktopStyles.categoryContainer}>
                       <span style={{
                         ...desktopStyles.categoryStyle,
-                        ...(rec.category === 'documentales' ? { color: '#ff9800' } : {})
+                        ...(normalizedRec.category === 'documentales' ? { color: '#ff9800' } : {})
                       }}>
-                        {getCategoryTranslation(rec.category)}
+                        {getCategoryTranslation(normalizedRec.category)}
                       </span>
-                      {rec.subcategory && (
+                      {normalizedRec.subcategory && (
                         <span style={desktopStyles.subcategoryStyle}>
-                          {getSubcategoryTranslation(rec.subcategory, rec.category)}
+                          {getSubcategoryTranslation(normalizedRec.subcategory, normalizedRec.category)}
                         </span>
                       )}                    </div>
-                    <p>{truncateDescription(description, rec.category)}</p>
+                    <p>{truncateDescription(description, normalizedRec.category)}</p>
                   </>
                 )}
               </div>
             );
       } catch (error) {
-        console.error('[RecommendationsList] Error rendering item', index + 1, ':', error, rec);
+        console.error('[RecommendationsList] Error rendering item', index + 1, ':', error, normalizedRec || rec);
         return (
           <div key={`error-${index}`} style={{ padding: '10px', color: 'red', border: '1px solid red' }}>
-            Error rendering item: {rec?.title || rec?.name || 'Unknown'}
+            Error rendering item: {normalizedRec?.title || normalizedRec?.name || rec?.title || rec?.name || 'Unknown'}
           </div>
         );
       }

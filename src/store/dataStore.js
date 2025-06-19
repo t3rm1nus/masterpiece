@@ -110,9 +110,7 @@ const useDataStore = create(
           { key: 'boardgames', es: 'Juegos de Mesa', en: 'Board Games' },
           { key: 'podcast', es: 'Podcasts', en: 'Podcasts' },
           { key: 'documentales', es: 'Documentales', en: 'Documentaries' },
-          { key: 'series', es: 'Series', en: 'TV Shows' }        ],
-
-        // ==========================================
+          { key: 'series', es: 'Series', en: 'TV Shows' }        ],        // ==========================================
         // ESTADO INICIAL DE DATOS
         // ==========================================
         allData: {
@@ -123,7 +121,7 @@ const useDataStore = create(
           videogames: processItemsWithUniqueIds(datosVideogames.recommendations || []),
           boardgames: processItemsWithUniqueIds(datosBoardgames.recommendations || []),
           podcast: processItemsWithUniqueIds(datosPodcast.recommendations || []),
-          documentales: processItemsWithUniqueIds(datosDocumentales.documentales || []),
+          documentales: processItemsWithUniqueIds(datosDocumentales.recommendations || []),
           series: processItemsWithUniqueIds(datosSeries.recommendations || [])
         },
         selectedCategory: null,
@@ -271,11 +269,11 @@ const useDataStore = create(
             console.log('[DataStore] Filtering podcasts by languages:', activePodcastLanguages);
             const beforeFilter = items.length;
             items = items.filter(item => 
-              activePodcastLanguages.includes(item.language) || 
-              (!item.language && activePodcastLanguages.length === 2) // Mostrar items sin idioma si ambos idiomas están activos
+              activePodcastLanguages.includes(item.idioma) || 
+              (!item.idioma && activePodcastLanguages.length === 2) // Mostrar items sin idioma si ambos idiomas están activos
             );
             console.log('[DataStore] Items after podcast language filter:', items.length, '(was', beforeFilter, ')');
-          }          // Filtrar por idioma de documentales
+          }// Filtrar por idioma de documentales
           if (activeDocumentaryLanguages.length > 0 && selectedCategory === 'documentales') {
             console.log('[DataStore] Filtering documentaries by languages:', activeDocumentaryLanguages);
             const beforeFilter = items.length;
@@ -555,20 +553,20 @@ const useDataStore = create(
           
           if (isMasterpieceActive) {
             filtered = filtered.filter(item => item.masterpiece);
-          }
-            if (selectedCategory === 'podcast') {
+          }          if (selectedCategory === 'podcast') {
             if (activePodcastLanguages.length > 0) {
               filtered = filtered.filter(item => {
-                return activePodcastLanguages.includes(item.language) || 
-                       (!item.language && activePodcastLanguages.length === 2);
+                return activePodcastLanguages.includes(item.idioma) || 
+                       (!item.idioma && activePodcastLanguages.length === 2);
               });
             }
-          }if (selectedCategory === 'documentales') {
-            if (activeLanguage !== 'all') {
+          }
+
+          if (selectedCategory === 'documentales') {
+            if (activeDocumentaryLanguages.length > 0) {
               filtered = filtered.filter(item => {
-                return item.language === activeLanguage || 
-                       item.idioma === activeLanguage ||
-                       (!item.language && !item.idioma && activeLanguage === 'es');
+                return activeDocumentaryLanguages.includes(item.idioma) || 
+                       (!item.idioma && activeDocumentaryLanguages.length === 2);
               });
             }
           }
