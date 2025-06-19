@@ -439,20 +439,18 @@ const useDataStore = create(
           console.log('[DataStore] Spanish Cinema state changed to:', newState);
           get().updateFilteredItems();
           console.log('[DataStore] toggleSpanishCinema completed. Final state:', get().isSpanishCinemaActive);
-        },
-
-        // Alternar idioma específico de podcasts (on/off independiente)
+        },        // Alternar idioma específico de podcasts (mutuamente excluyente)
         togglePodcastLanguage: (language) => {
           const { activePodcastLanguages } = get();
           console.log('[DataStore] Toggling podcast language:', language, 'Current active:', activePodcastLanguages);
           
           let newLanguages;
           if (activePodcastLanguages.includes(language)) {
-            // Si el idioma está activo, lo removemos
-            newLanguages = activePodcastLanguages.filter(lang => lang !== language);
+            // Si el idioma está activo, lo removemos (desactivar)
+            newLanguages = [];
           } else {
-            // Si el idioma no está activo, lo añadimos
-            newLanguages = [...activePodcastLanguages, language];
+            // Si el idioma no está activo, lo ponemos como único activo
+            newLanguages = [language];
           }
           
           set(
@@ -466,18 +464,17 @@ const useDataStore = create(
           get().updateFilteredItems();
         },
 
-        // Alternar idioma específico de documentales (on/off independiente)
+        // Alternar idioma específico de documentales (mutuamente excluyente)
         toggleDocumentaryLanguage: (language) => {
           const { activeDocumentaryLanguages } = get();
           console.log('[DataStore] Toggling documentary language:', language, 'Current active:', activeDocumentaryLanguages);
           
           let newLanguages;
           if (activeDocumentaryLanguages.includes(language)) {
-            // Si el idioma está activo, lo removemos
-            newLanguages = activeDocumentaryLanguages.filter(lang => lang !== language);
+            // Si el idioma está activo, lo removemos (desactivar)            newLanguages = [];
           } else {
-            // Si el idioma no está activo, lo añadimos
-            newLanguages = [...activeDocumentaryLanguages, language];
+            // Si el idioma no está activo, lo ponemos como único activo
+            newLanguages = [language];
           }
           
           set(

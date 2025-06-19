@@ -56,6 +56,37 @@
   backdrop-filter: blur(10px);
 }
 
+/* Estilos para los botones del menú principal */
+.main-menu button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  min-height: 36px;
+  white-space: nowrap;
+}
+
+.main-menu button:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 123, 212, 0.3);
+}
+
+.main-menu button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Estilos específicos para el primer div (botones de la izquierda) */
+.main-menu > div:first-child > div:first-child {
+  margin-left: var(--space-md);
+}
+
 /* === TÍTULOS PRINCIPALES === */
 h1 {
   text-align: center;

@@ -108,11 +108,12 @@ const HomePage = () => {
     console.log('[HomePage] Spanish Cinema button clicked, current state:', isSpanishCinemaActive);
     toggleSpanishCinema();
   };
-
   // Manejar clic en elemento
   const handleItemClick = (item) => {
     console.log('[HomePage] Item clicked:', item?.title || item?.name, 'ID:', item?.id);
     setSelectedItem(item);
+    // Hacer scroll al inicio de la página
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Manejar cierre del detalle
