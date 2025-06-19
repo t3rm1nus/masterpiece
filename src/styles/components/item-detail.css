@@ -21,18 +21,10 @@ html[data-theme='dark'] .item-detail-page.desktop-only {  background-color: #121
   margin: 80px auto 0 auto; /* Agregado margen superior de 80px */
   padding: 40px 20px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Eliminadas decoraciones de card: background-color, border-radius, box-shadow */
   color: var(--text-color);
   z-index: 1;
   animation: slideIn 0.4s ease-out;
-}
-
-/* Tema oscuro para el contenedor */
-html[data-theme='dark'] .item-detail-container {
-  background-color: rgba(26, 26, 26, 0.9);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes slideIn {
