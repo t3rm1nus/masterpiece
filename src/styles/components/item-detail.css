@@ -65,6 +65,36 @@ html[data-theme='dark'] .item-detail-page.desktop-only {  background-color: #121
   }
 }
 
+/* Badge más grande solo en desktop y solo en página de detalle */
+@media (min-width: 769px) {
+  .item-detail-page.desktop-only .masterpiece-badge-container {
+    transform: scale(1.5);
+    top: -20px;
+    right: -15px;
+  }
+  
+  .item-detail-page.desktop-only .masterpiece-badge-container svg {
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+  }
+  
+  /* Ajustar animación pulse para el badge más grande */
+  @keyframes pulseDesktop {
+    0% {
+      transform: scale(1.5);
+    }
+    50% {
+      transform: scale(1.575); /* 1.5 * 1.05 */
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+  
+  .item-detail-page.desktop-only .masterpiece-badge-container {
+    animation: pulseDesktop 2s infinite;
+  }
+}
+
 .item-detail-image-container {
   position: relative;
   display: inline-block;
