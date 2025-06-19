@@ -51,8 +51,8 @@ const MaterialContentWrapper = ({
           categoryColor={categoryColor}
           selectedCategory={selectedCategory}
         />
-      )}{/* Lista de recomendaciones Material UI */}
-      {recommendations && recommendations.length > 0 && (
+      )}      {/* Lista de recomendaciones Material UI */}
+      {recommendations && Array.isArray(recommendations) && recommendations.length > 0 && (
         <Box
           sx={{
             display: 'flex',
@@ -72,9 +72,8 @@ const MaterialContentWrapper = ({
               isHome={isHome}
             />
           ))}
-        </Box>      )}
-        {/* Si no hay recomendaciones en móviles, mostrar mensaje e imagen apropiada en lugar del contenido desktop */}
-      {(!recommendations || recommendations.length === 0) && (
+        </Box>      )}        {/* Si no hay recomendaciones en móviles, mostrar mensaje e imagen apropiada en lugar del contenido desktop */}
+      {(!recommendations || !Array.isArray(recommendations) || recommendations.length === 0) && (
         <Box sx={{ 
           textAlign: 'center', 
           padding: '2rem',

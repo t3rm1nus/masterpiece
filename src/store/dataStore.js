@@ -266,16 +266,24 @@ const useDataStore = create(
           }
 
           return items;
-        },
-
-        // Obtener elementos aleatorios de todas las categorías para la home
+        },        // Obtener elementos aleatorios de todas las categorías para la home
         getRandomItemsFromAllCategories: () => {
           const { allData } = get();
           const allItems = [];
           
-          Object.values(allData).forEach(categoryItems => {
-            allItems.push(...categoryItems);
-          });
+          // Validar que allData existe y que cada categoría es un array válido
+          if (allData && typeof allData === 'object') {
+            Object.values(allData).forEach(categoryItems => {
+              if (Array.isArray(categoryItems)) {
+                allItems.push(...categoryItems);
+              }
+            });
+          }
+          
+          // Verificar que tenemos elementos para devolver
+          if (allItems.length === 0) {
+            return [];
+          }
           
           // Mezclar y tomar los primeros 20 elementos
           const shuffled = allItems.sort(() => 0.5 - Math.random());
@@ -480,13 +488,14 @@ const useDataStore = create(
               });
             }
           }
-          
-          if (activeSubcategory) {
+            if (activeSubcategory) {
             filtered = filtered.filter(item => item.subcategory === activeSubcategory);
           }
           
-          set({ filteredItems: filtered }, false, 'updateFilteredItems');
-        },      // Inicializar elementos filtrados
+          // Asegurar que siempre tenemos un array válido
+          const finalFiltered = Array.isArray(filtered) ? filtered : [];
+          set({ filteredItems: finalFiltered }, false, 'updateFilteredItems');
+        },// Inicializar elementos filtrados
         initializeFilteredItems: () => {
           const filteredItems = get().getRandomItemsFromAllCategories();
           const randomNotFoundImage = get().generateRandomNotFoundImage();

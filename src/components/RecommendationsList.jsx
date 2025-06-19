@@ -54,9 +54,10 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
     
     return description;
   }, []);
-
   // Memoizar el contenido de recomendaciones para evitar re-renders innecesarios
-  const memoizedRecommendations = useMemo(() => {    if (!recommendations || recommendations.length === 0) {
+  const memoizedRecommendations = useMemo(() => {
+    // Verificación más robusta para evitar errores con .map()
+    if (!recommendations || !Array.isArray(recommendations) || recommendations.length === 0) {
       return (
         <div className="no-results-container">
           <img 

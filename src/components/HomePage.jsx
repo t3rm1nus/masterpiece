@@ -274,10 +274,8 @@ const HomePage = () => {
           recommendations={filteredItems} 
           isHome={!selectedCategory}
         />
-      </div>
-
-      <div className="items-grid">
-        {filteredItems && filteredItems.length > 0 ? (
+      </div>      <div className="items-grid">
+        {filteredItems && Array.isArray(filteredItems) && filteredItems.length > 0 ? (
           filteredItems.map(item => (
             <div
               key={item.id}
