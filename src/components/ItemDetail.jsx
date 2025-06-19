@@ -118,47 +118,46 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
                   )}
                 </div>
               </div>
-              
-              <div className="item-info">
+                <div className="item-info">
                 {selectedItem.author && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentary.author}:</span>
+                    <span className="info-label">{t.documentales?.author || 'Autor'}:</span>
                     <span className="info-value">{selectedItem.author}</span>
                   </div>
                 )}
                 {selectedItem.duration && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentary.duration}:</span>
+                    <span className="info-label">{t.documentales?.duration || 'Duración'}:</span>
                     <span className="info-value">{selectedItem.duration}</span>
                   </div>
                 )}
                 {selectedItem.language && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentary.language}:</span>
-                    <span className="info-value">{t.filters.languages[selectedItem.language] || selectedItem.language}</span>
+                    <span className="info-label">{t.documentales?.language || 'Idioma'}:</span>
+                    <span className="info-value">{t.filters?.languages?.[selectedItem.language] || selectedItem.language}</span>
                   </div>
                 )}
                 {selectedItem.episodes && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentary.episodes}:</span>
+                    <span className="info-label">{t.documentales?.episodes || 'Episodios'}:</span>
                     <span className="info-value">{selectedItem.episodes}</span>
                   </div>
                 )}
                 {selectedItem.year && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentary.year}:</span>
+                    <span className="info-label">{t.documentales?.year || 'Año'}:</span>
                     <span className="info-value">{selectedItem.year}</span>
                   </div>
                 )}
                 {selectedItem.country && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentary.country}:</span>
+                    <span className="info-label">{t.documentales?.country || 'País'}:</span>
                     <span className="info-value">{selectedItem.country}</span>
                   </div>
                 )}
                 {selectedItem.director && (
                   <div className="info-row">
-                    <span className="info-label">{t.documentary.director}:</span>
+                    <span className="info-label">{t.documentales?.director || 'Director'}:</span>
                     <span className="info-value">{selectedItem.director}</span>
                   </div>
                 )}
@@ -171,14 +170,13 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
               )}
 
               {selectedItem.link && (
-                <div className="item-actions">
-                  <a 
+                <div className="item-actions">                  <a 
                     href={selectedItem.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="watch-button"
                   >
-                    {t.documentary.watch}
+                    {t.documentales?.watch || 'Ver documental'}
                   </a>
                 </div>
               )}
