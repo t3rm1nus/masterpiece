@@ -25,7 +25,7 @@ import useViewStore from '../store/viewStore';
 
 const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
   const { lang, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
-  const { navigateToDetail } = useViewStore();
+  const { navigateToDetail, processTitle, processDescription } = useViewStore();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   
@@ -33,8 +33,9 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
   if (!isMobile) {
     return null;
   }
-    const title = recommendation.title?.[lang] || recommendation.title || recommendation.name || 'Sin título';
-  const description = recommendation.description?.[lang] || recommendation.description || '';
+  
+  const title = processTitle(recommendation.title || recommendation.name, lang);
+  const description = processDescription(recommendation.description, lang);
     // Función para recortar descripciones largas
   const truncateDescription = (desc, category, maxLength = 150) => {
     if (!desc) return '';

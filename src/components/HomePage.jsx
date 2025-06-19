@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../LanguageContext';
 import useDataStore from '../store/dataStore';
 import useThemeStore from '../store/themeStore';
+import useViewStore from '../store/viewStore';
 import { useTitleSync } from '../hooks/useTitleSync';
 import MaterialContentWrapper from './MaterialContentWrapper';
 import RecommendationsList from './RecommendationsList';
@@ -43,11 +44,13 @@ const HomePage = () => {
     activeLanguage,
     availableLanguages,
     allData,
-    initializeData
-  } = useDataStore();
+    initializeData  } = useDataStore();
   
   // Obtener configuración de estilos del store consolidado
-  const { getSpecialButtonLabel } = useThemeStore();  
+  const { getSpecialButtonLabel } = useThemeStore();
+  
+  // Obtener funciones de procesamiento del store de vista
+  const { processTitle } = useViewStore();
   // Obtener categorías traducidas
   const categories = getCategories(lang);
   
@@ -236,14 +239,13 @@ const HomePage = () => {
               onClick={() => setActiveLanguage('all')}
             >
               {t.filters.languages.all}
-            </button>
-            {availableLanguages.map(lang => (
+            </button>            {availableLanguages.map(language => (
               <button
-                key={lang}
-                className={`language-btn${activeLanguage === lang ? ' active' : ''}`}
-                onClick={() => setActiveLanguage(lang)}
+                key={language}
+                className={`language-btn${activeLanguage === language ? ' active' : ''}`}
+                onClick={() => setActiveLanguage(language)}
               >
-                {t.filters.languages[lang] || lang}
+                {t.filters.languages[language] || language}
               </button>
             ))}
           </div>
@@ -282,7 +284,7 @@ const HomePage = () => {
               className="item-card"
               onClick={() => handleItemClick(item)}
             >
-              <h3>{item.title}</h3>
+              <h3>{processTitle(item.title, lang)}</h3>
               {item.subcategory && (
                 <span className="item-subcategory">
                   {t.subcategories[selectedCategory]?.[item.subcategory] || item.subcategory}
@@ -292,7 +294,7 @@ const HomePage = () => {
           ))
         ) : (
           <div className="no-items">
-            {t.ui.noResults}
+            {t.ui.no_results}
           </div>
         )}
       </div>

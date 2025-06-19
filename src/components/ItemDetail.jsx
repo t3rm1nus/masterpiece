@@ -104,7 +104,7 @@ const ItemDetail = () => {
           {selectedItem.category === 'documentales' && (
             <div className="item-detail">
               <div className="item-header">
-                <h2>{selectedItem.title}</h2>
+                <h2>{title}</h2>
                 <div className="item-meta">
                   <span className="item-category">
                     {t.categories[selectedItem.category]}

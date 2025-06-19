@@ -106,3 +106,41 @@ export const processItemsWithUniqueIds = (items) => {
 export const findItemByGlobalId = (items, globalId) => {
   return items.find(item => generateUniqueId(item) === globalId) || null;
 };
+
+/**
+ * Extrae contenido localizado de un campo que puede ser string o objeto {es, en}
+ * @param {string|Object} content - El contenido que puede ser string o objeto
+ * @param {string} lang - Idioma actual ('es' o 'en')
+ * @returns {string} - El contenido en el idioma solicitado
+ */
+export const getLocalizedContent = (content, lang = 'es') => {
+  if (typeof content === 'string') {
+    return content;
+  }
+  
+  if (typeof content === 'object' && content !== null) {
+    return content[lang] || content.es || content.en || '';
+  }
+  
+  return '';
+};
+
+/**
+ * Extrae el título localizado de un item
+ * @param {Object} item - El item
+ * @param {string} lang - Idioma actual ('es' o 'en')
+ * @returns {string} - El título en el idioma solicitado
+ */
+export const getLocalizedTitle = (item, lang = 'es') => {
+  return getLocalizedContent(item?.title, lang);
+};
+
+/**
+ * Extrae la descripción localizada de un item
+ * @param {Object} item - El item
+ * @param {string} lang - Idioma actual ('es' o 'en')
+ * @returns {string} - La descripción en el idioma solicitado
+ */
+export const getLocalizedDescription = (item, lang = 'es') => {
+  return getLocalizedContent(item?.description, lang);
+};

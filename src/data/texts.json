@@ -100,8 +100,7 @@
       "year": "Año",
       "country": "País",
       "director": "Director"
-    },
-    "ui": {
+    },    "ui": {
       "change_language": "Cambiar idioma",
       "dark_mode": "Modo Oscuro",
       "light_mode": "Modo Claro",
@@ -110,7 +109,9 @@
       "back": "Volver",
       "watch_trailer": "Ver Trailer",
       "director": "Director",
-      "year": "Año"
+      "year": "Año",
+      "loading": "Cargando...",
+      "noSubcategories": "Sin subcategorías disponibles"
     },
     "coffee": {
       "title": "¿Nos invitas a un café? ¿O diez?",
@@ -231,8 +232,7 @@
       "year": "Year",
       "country": "Country",
       "director": "Director"
-    },
-    "ui": {
+    },    "ui": {
       "change_language": "Change language",
       "dark_mode": "Dark Mode",
       "light_mode": "Light Mode",
@@ -241,7 +241,9 @@
       "back": "Back",
       "watch_trailer": "Watch Trailer",
       "director": "Director",
-      "year": "Year"
+      "year": "Year",
+      "loading": "Loading...",
+      "noSubcategories": "No subcategories available"
     },
     "coffee": {
       "title": "Buy us a coffee? Or ten?",

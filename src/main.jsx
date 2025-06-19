@@ -3,14 +3,8 @@ import { createRoot } from 'react-dom/client'
 import './styles/index.css'
 import App from './App.jsx'
 
-// Capacitor imports
-import { Capacitor } from '@capacitor/core';
-import { SplashScreen } from '@capacitor/splash-screen';
-
-// Hide splash screen when app is ready
-if (Capacitor.isNativePlatform()) {
-  SplashScreen.hide();
-}
+// Note: Splash screen handling is done natively in Android via SplashActivity
+// No need for Capacitor splash screen plugin on web or hybrid builds
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

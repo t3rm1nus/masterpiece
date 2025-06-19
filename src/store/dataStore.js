@@ -324,9 +324,7 @@ const useDataStore = create(
           
           get().updateFilteredItems();
           console.log('toggleSpanishCinema completed. New state:', !isSpanishCinemaActive);
-        },
-
-        // Alternar podcasts por idioma
+        },        // Alternar podcasts por idioma
         setPodcastLanguage: (language) => {
           const { podcastLanguage } = get();
           // Si se hace clic en el mismo idioma, desactivar el filtro
@@ -337,6 +335,19 @@ const useDataStore = create(
             },
             false,
             'setPodcastLanguage'
+          );
+          
+          get().updateFilteredItems();
+        },
+
+        // Establecer idioma activo para documentales
+        setActiveLanguage: (language) => {
+          set(
+            { 
+              activeLanguage: language
+            },
+            false,
+            'setActiveLanguage'
           );
           
           get().updateFilteredItems();
@@ -412,13 +423,15 @@ const useDataStore = create(
             false,
             'resetAllFilters'
           );
-          
-          get().updateFilteredItems();
-        },      // Actualizar elementos filtrados
+            get().updateFilteredItems();
+        },
+
+        // Actualizar elementos filtrados
         updateFilteredItems: () => {
           const { 
             selectedCategory, 
             activeSubcategory, 
+            activeLanguage,
             allData,
             isSpanishCinemaActive,
             isMasterpieceActive,
@@ -430,8 +443,16 @@ const useDataStore = create(
             get().initializeFilteredItems();
             return;
           }
+
+          // Verificar que existe la categoría y que es un array
+          const categoryData = allData[selectedCategory];
+          if (!categoryData || !Array.isArray(categoryData)) {
+            console.error(`Category data for "${selectedCategory}" is not an array:`, categoryData);
+            set({ filteredItems: [] }, false, 'updateFilteredItems');
+            return;
+          }
           
-          let filtered = [...allData[selectedCategory]];
+          let filtered = [...categoryData];
           
           // Aplicar filtros según la categoría
           if (selectedCategory === 'movies' && isSpanishCinemaActive) {
@@ -450,16 +471,14 @@ const useDataStore = create(
                 return item.language === 'en';
               }
             });
-          }
-
-          if (selectedCategory === 'documentales') {
-            filtered = filtered.filter(item => {
-              if (documentaryLanguage === 'es') {
-                return item.idioma === 'es' || !item.idioma;
-              } else {
-                return item.idioma === 'en';
-              }
-            });
+          }          if (selectedCategory === 'documentales') {
+            if (activeLanguage !== 'all') {
+              filtered = filtered.filter(item => {
+                return item.language === activeLanguage || 
+                       item.idioma === activeLanguage ||
+                       (!item.language && !item.idioma && activeLanguage === 'es');
+              });
+            }
           }
           
           if (activeSubcategory) {
