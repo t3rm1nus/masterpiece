@@ -4,19 +4,20 @@ import useViewStore from '../store/viewStore';
 import useThemeStore from '../store/themeStore';
 import MaterialItemDetail from './MaterialItemDetail';
 
-const ItemDetail = () => {
+const ItemDetail = ({ item, onClose, selectedCategory }) => {
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
   
   // Stores consolidados
   const { 
-    selectedItem, 
-    goBackFromDetail,
     processTitle, 
     processDescription 
   } = useViewStore();
   
   const { getMasterpieceBadgeConfig } = useThemeStore();
   const badgeConfig = getMasterpieceBadgeConfig();
+  
+  // Usar el item pasado como prop en lugar del store
+  const selectedItem = item;
   
   if (!selectedItem) return null;
   
@@ -43,9 +44,11 @@ const ItemDetail = () => {
   
   return (
     <>      {/* Componente Material UI solo para móviles */}
-      <MaterialItemDetail item={selectedItem} />{/* Vista clásica solo para desktop */}
+      <MaterialItemDetail item={selectedItem} />      {/* Vista clásica solo para desktop */}
       <div className="item-detail-page desktop-only">
+        <div className="item-detail-overlay" onClick={onClose}></div>
         <div className={`item-detail-container ${selectedItem.masterpiece ? 'masterpiece-item' : 'normal-item'} ${selectedItem.category}`}>
+          <button className="close-button" onClick={onClose} aria-label="Cerrar">×</button>
           {selectedItem.masterpiece && (
             <span className="masterpiece-badge-container" title="Obra maestra">
               <svg 

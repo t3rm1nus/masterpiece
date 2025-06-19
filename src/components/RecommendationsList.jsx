@@ -85,16 +85,17 @@ const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {  con
     }    console.log('[RecommendationsList] Rendering', recommendations.length, 'recommendation cards');
 
     return recommendations.map((rec, index) => {
-      try {
-        // Normalizar datos de documentales para compatibilidad
+      try {        // Normalizar datos para compatibilidad entre diferentes estructuras
         const normalizedRec = {
           ...rec,
           // Para documentales, usar 'descripcion' si no hay 'description'
           description: rec.description || rec.descripcion,
-          // Para documentales, usar 'categoria' como subcategory si no hay 'subcategory'
-          subcategory: rec.subcategory || rec.categoria,
-          // Asegurar que la categoría esté correcta
-          category: rec.category || 'documentales'
+          // Para documentales, manejar subcategorías: usar subcategory si existe, sino usar category como subcategory
+          subcategory: rec.subcategory || (rec.category !== 'documentales' ? rec.category : null),
+          // La categoría principal debe determinarse por el contexto - si viene de documentales, es documentales
+          category: rec.category === 'documentales' ? 'documentales' : 
+                   (rec.category && ['politics', 'history', 'science', 'nature', 'culture', 'crime', 'art'].includes(rec.category)) ? 'documentales' : 
+                   rec.category
         };
         
         const title = processTitle(normalizedRec.title || normalizedRec.name, lang);
