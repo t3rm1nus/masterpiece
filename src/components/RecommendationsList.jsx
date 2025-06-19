@@ -170,10 +170,9 @@ const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {  con
                       style={desktopStyles.imageStyle} 
                     />
                     <h3>{title}</h3>
-                    <div style={desktopStyles.categoryContainer}>
-                      <span style={{
+                    <div style={desktopStyles.categoryContainer}>                      <span style={{
                         ...desktopStyles.categoryStyle,
-                        ...(normalizedRec.category === 'documentales' ? { color: '#ff9800' } : {})
+                        ...(normalizedRec.category === 'documentales' ? { color: '#9e9e9e' } : {})
                       }}>
                         {getCategoryTranslation(normalizedRec.category)}
                       </span>

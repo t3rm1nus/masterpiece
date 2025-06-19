@@ -84,9 +84,11 @@ const MaterialItemDetail = ({ item }) => {
         return '#8bc34a';
       case 'boardgames':
       case 'juegos de mesa':
-        return '#e91e63';
-      case 'comics':
+        return '#e91e63';      case 'comics':
         return '#ff9800';
+      case 'documentales':
+      case 'documentaries':
+        return '#9e9e9e';
       default:
         return theme.palette.primary.main;
     }
