@@ -288,37 +288,16 @@ const HomePage = () => {
         >
           {title}
         </h1>
-      )}
-      
+      )}      
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
         <RecommendationsList 
           recommendations={filteredItems} 
           isHome={!selectedCategory}
+          onItemClick={handleItemClick}
         />
-      </div>      <div className="items-grid">
-        {Array.isArray(filteredItems) && filteredItems.length > 0 ? (
-          filteredItems.map(item => (
-            <div
-              key={item.id}
-              className="item-card"
-              onClick={() => handleItemClick(item)}
-            >
-              <h3>{processTitle(item.title, lang)}</h3>
-              {item.subcategory && (
-                <span className="item-subcategory">
-                  {t.subcategories[selectedCategory]?.[item.subcategory] || item.subcategory}
-                </span>
-              )}
-            </div>
-          ))
-        ) : (
-          <div className="no-items">
-            {t.ui?.noResults || t.ui?.no_results || 'No se encontraron resultados'}
-          </div>
-        )}
       </div>
 
-      {renderItemDetail()}      <div className="coffee-section">
+      {renderItemDetail()}<div className="coffee-section">
         <h2>{getTranslation('coffee.title', '¿Te gusta lo que ves?')}</h2>
         <p>{getTranslation('coffee.description', 'Si disfrutas de este contenido y quieres apoyar su desarrollo, puedes invitarme a un café. Tu apoyo ayuda a mantener y mejorar este proyecto.')}</p>
         <a 

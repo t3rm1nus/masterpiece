@@ -22,7 +22,7 @@ const OptimizedImage = ({ src, alt, ...props }) => (
   />
 );
 
-const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
+const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {  const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
     // Stores consolidados
   const { 
     isMobile, 
@@ -42,8 +42,12 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
   const badgeConfig = getMasterpieceBadgeConfig();  // Handler para hacer clic en un item (memoizado)
   const handleItemClick = useCallback((item) => {
     console.log('[RecommendationsList] Item clicked:', item?.title || item?.name, 'Category:', item?.category);
-    navigateToDetail(item);
-  }, [navigateToDetail]);
+    if (onItemClick) {
+      onItemClick(item);
+    } else {
+      navigateToDetail(item);
+    }
+  }, [navigateToDetail, onItemClick]);
   // Función para recortar descripciones largas
   const truncateDescription = useCallback((description, category, maxLength = 150) => {
     if (!description) return '';
