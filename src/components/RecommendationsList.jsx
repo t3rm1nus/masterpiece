@@ -78,23 +78,25 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
           </p>
         </div>
       );
-    }
-
-    console.log('[RecommendationsList] Rendering', recommendations.length, 'recommendation cards');
+    }    console.log('[RecommendationsList] Rendering', recommendations.length, 'recommendation cards');
 
     return recommendations.map((rec, index) => {
-            const title = processTitle(rec.title || rec.name, lang);
-            const description = processDescription(rec.description, lang);
-            const cardClasses = getRecommendationCardClasses(rec, isHome, isMobile);
-            
-            return (
-              <div 
-                key={generateRecommendationKey(rec, index)}
-                className={cardClasses}
-                style={isHome && isMobile ? mobileHomeStyles.cardStyle : desktopStyles.cardStyle}
-                onClick={() => handleItemClick(rec)}
-              >                {rec.masterpiece && (
-                  <span className="masterpiece-badge" title="Obra maestra">
+      try {
+        const title = processTitle(rec.title || rec.name, lang);
+        const description = processDescription(rec.description, lang);
+        const cardClasses = getRecommendationCardClasses(rec, isHome, isMobile);
+        
+        console.log('[RecommendationsList] Processing item', index + 1, ':', title);
+        
+        return (
+          <div 
+            key={generateRecommendationKey(rec, index)}
+            className={cardClasses}
+            style={isHome && isMobile ? mobileHomeStyles.cardStyle : desktopStyles.cardStyle}
+            onClick={() => handleItemClick(rec)}
+          >
+            {rec.masterpiece && (
+              <span className="masterpiece-badge" title="Obra maestra">
                     <svg 
                       width={badgeConfig.svg.width} 
                       height={badgeConfig.svg.height} 
@@ -164,14 +166,21 @@ const RecommendationsList = ({ recommendations, isHome }) => {  const { lang, t,
                         <span style={desktopStyles.subcategoryStyle}>
                           {getSubcategoryTranslation(rec.subcategory, rec.category)}
                         </span>
-                      )}
-                    </div>
+                      )}                    </div>
                     <p>{truncateDescription(description, rec.category)}</p>
                   </>
                 )}
               </div>
             );
-          });
+      } catch (error) {
+        console.error('[RecommendationsList] Error rendering item', index + 1, ':', error, rec);
+        return (
+          <div key={`error-${index}`} style={{ padding: '10px', color: 'red', border: '1px solid red' }}>
+            Error rendering item: {rec?.title || rec?.name || 'Unknown'}
+          </div>
+        );
+      }
+    });
   }, [recommendations, randomNotFoundImage, t.no_results, isMobile, handleItemClick, processTitle, processDescription, getRecommendationCardClasses, badgeConfig, isHome, mobileHomeStyles, desktopStyles, lang, truncateDescription]);
   return (
     <MaterialContentWrapper

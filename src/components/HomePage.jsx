@@ -14,7 +14,7 @@ import ItemDetail from './ItemDetail';
 import MaterialItemDetail from './MaterialItemDetail';
 
 const HomePage = () => {
-  const { lang, t } = useLanguage();
+  const { lang, t, getTranslation } = useLanguage();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   // Hook para sincronizar títulos automáticamente
@@ -65,17 +65,17 @@ const HomePage = () => {
     console.log('[HomePage] Component mounted, initializing data...');
     initializeData();
   }, [initializeData]);
-
   // Efecto para inicializar los datos filtrados
   useEffect(() => {
     console.log('[HomePage] AllData changed:', Object.keys(allData || {}).length, 'categories available');
-    if (allData && Object.keys(allData).length > 0) {
-      console.log('[HomePage] AllData is ready, initializing filtered items...');
+    // Solo inicializar si no hay filteredItems y allData está listo
+    if (allData && Object.keys(allData).length > 0 && (!filteredItems || filteredItems.length === 0)) {
+      console.log('[HomePage] AllData is ready and filteredItems is empty, initializing...');
       initializeFilteredItems();
     } else {
-      console.log('[HomePage] AllData not ready yet');
+      console.log('[HomePage] AllData ready but filteredItems already has', filteredItems?.length || 0, 'items');
     }
-  }, [allData, initializeFilteredItems]);
+  }, [allData]); // Removemos initializeFilteredItems de las dependencias para evitar bucles
 
   // Efecto para actualizar los items filtrados cuando cambian los filtros
   useEffect(() => {
@@ -274,20 +274,20 @@ const HomePage = () => {
             {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
           </button>
         )}
-      </div>      {title && (
-        <h1 
-          className={selectedCategory ? 'after-subcategories' : ''}
-          style={{ textTransform: 'capitalize' }}
-        >
-          {title}
-        </h1>
-      )}
-      
-      {/* Debug info */}
+      </div>      {/* Debug info */}
       {process.env.NODE_ENV === 'development' && (
         <div style={{ fontSize: '12px', color: '#666', margin: '10px 0' }}>
           [Debug] Title: "{title}" | Selected: {selectedCategory || 'none'} | Items: {filteredItems?.length || 0}
         </div>
+      )}
+      
+      {title && (
+        <h1 
+          className={selectedCategory ? 'after-subcategories' : ''}
+          style={{ textTransform: 'capitalize', textAlign: 'center', margin: '20px 0' }}
+        >
+          {title}
+        </h1>
       )}
       
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
@@ -318,18 +318,16 @@ const HomePage = () => {
         )}
       </div>
 
-      {renderItemDetail()}
-
-      <div className="coffee-section">
-        <h2>{t.coffee.title}</h2>
-        <p>{t.coffee.description}</p>
+      {renderItemDetail()}      <div className="coffee-section">
+        <h2>{getTranslation('coffee.title', '¿Te gusta lo que ves?')}</h2>
+        <p>{getTranslation('coffee.description', 'Si disfrutas de este contenido y quieres apoyar su desarrollo, puedes invitarme a un café. Tu apoyo ayuda a mantener y mejorar este proyecto.')}</p>
         <a 
           href="https://www.buymeacoffee.com/masterpiece" 
           target="_blank" 
           rel="noopener noreferrer"
           className="coffee-button"
         >
-          {t.coffee.button}
+          {getTranslation('coffee.button', 'Invítame a un café')}
         </a>
       </div>
     </div>
