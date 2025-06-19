@@ -359,9 +359,7 @@ const MaterialItemDetail = ({ item }) => {
                     <strong>{lang === 'es' ? 'Autor' : 'Author'}:</strong> {item.autor}
                   </Typography>
                 </Box>
-              )}
-
-              {item.duracion && (
+              )}              {(item.duracion || item.duration) && (
                 <Box 
                   sx={{ 
                     display: 'flex', 
@@ -372,7 +370,7 @@ const MaterialItemDetail = ({ item }) => {
                 >
                   <AccessTimeIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
                   <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
-                    <strong>{lang === 'es' ? 'Duración' : 'Duration'}:</strong> {item.duracion}
+                    <strong>{lang === 'es' ? 'Duración' : 'Duration'}:</strong> {item.duracion || item.duration}
                   </Typography>
                 </Box>
               )}
@@ -391,9 +389,7 @@ const MaterialItemDetail = ({ item }) => {
                     <strong>{lang === 'es' ? 'Idioma' : 'Language'}:</strong> {item.idioma}
                   </Typography>
                 </Box>
-              )}
-
-              {item.episodios && (
+              )}              {(item.episodios || item.episodes) && (
                 <Box 
                   sx={{ 
                     display: 'flex', 
@@ -404,7 +400,7 @@ const MaterialItemDetail = ({ item }) => {
                 >
                   <PlaylistPlayIcon sx={{ marginRight: '8px', color: getCategoryColor(item.category) }} />
                   <Typography variant="h6" sx={{ color: getCategoryColor(item.category) }}>
-                    <strong>{lang === 'es' ? 'Episodios' : 'Episodes'}:</strong> {item.episodios}
+                    <strong>{lang === 'es' ? 'Episodios' : 'Episodes'}:</strong> {item.episodios || item.episodes}
                   </Typography>
                 </Box>
               )}
