@@ -77,9 +77,11 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
         return '#8bc34a';
       case 'boardgames':
       case 'juegos de mesa':
-        return '#e91e63';
-      case 'comics':
+        return '#e91e63';      case 'comics':
         return '#ff9800';
+      case 'documentales':
+      case 'documentaries':
+        return '#f44336';
       default:
         return theme.palette.primary.main;
     }

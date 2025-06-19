@@ -36,7 +36,28 @@ const getMovieSubcategoryOrder = (subcategory) => {
 
 // Función para ordenar subcategorías de documentales
 const getDocumentarySubcategoryOrder = (subcategory) => {
+  // Normalizar subcategoría a minúsculas para comparación
+  const normalized = (subcategory || '').toLowerCase();
+  
   const order = {
+    // Valores en español
+    'naturaleza': 1,
+    'historia': 2,
+    'ciencia': 3,
+    'tecnología': 4,
+    'sociedad': 5,
+    'arte': 6,
+    'deportes': 7,
+    'viajes': 8,
+    'biografía': 9,
+    'política': 10,
+    'psicología': 11,
+    'crimen': 12,
+    'cultura': 13,
+    'comida': 14,
+    'música': 15,
+    'espiritualidad': 16,
+    // Valores en inglés
     'nature': 1,
     'history': 2,
     'science': 3,
@@ -55,7 +76,7 @@ const getDocumentarySubcategoryOrder = (subcategory) => {
     'spirituality': 16,
     'others': 999
   };
-  return order[subcategory] || 999;
+  return order[normalized] || 999;
 };
 
 // Función para ordenar subcategorías de juegos de mesa
@@ -169,9 +190,7 @@ const useDataStore = create(
         // Obtener título por defecto
         getDefaultTitle: (lang = 'es') => {
           return lang === 'en' ? 'New Recommendations' : 'Nuevas Recomendaciones';
-        },
-
-        // Obtener subcategorías para la categoría seleccionada
+        },        // Obtener subcategorías para la categoría seleccionada
         getSubcategoriesForCategory: () => {
           const { selectedCategory, allData } = get();
           if (!selectedCategory || !allData[selectedCategory]) return [];
@@ -180,9 +199,9 @@ const useDataStore = create(
           const subcategories = [...new Set(
             allData[selectedCategory]
               .map(item => {
-                // Para documentales, usar la propiedad 'categoria' como subcategoría
+                // Para documentales, primero intentar subcategory, luego category
                 if (selectedCategory === 'documentales') {
-                  return item.categoria || 'others';
+                  return item.subcategory || item.category || 'others';
                 }
                 return item.subcategory || 'others';
               })
@@ -253,18 +272,28 @@ const useDataStore = create(
             const beforeFilter = items.length;
             items = items.filter(item => item.subcategory === activeSubcategory);
             console.log('[DataStore] Items after subcategory filter:', items.length, '(was', beforeFilter, ')');
-          }
-
-          // Filtrar por Cine Español (se puede combinar con otros filtros)
+          }          // Filtrar por Cine Español (se puede combinar con otros filtros)
           if (isSpanishCinemaActive && selectedCategory === 'movies') {
             console.log('[DataStore] Filtering Spanish Cinema. Items before filter:', items.length);
-            items = items.filter(item => 
-              (item.tags && item.tags.includes('spanish')) ||
-              item.subcategory === 'spanish cinema' || 
-              item.subcategory === 'cine español'
-            );
+            console.log('[DataStore] Sample items before Spanish filter:', items.slice(0, 3).map(item => ({
+              title: item.title,
+              tags: item.tags,
+              subcategory: item.subcategory
+            })));
+            
+            items = items.filter(item => {
+              const hasSpanishTag = item.tags && item.tags.includes('spanish');
+              const hasSpanishSubcategory = item.subcategory === 'spanish cinema' || item.subcategory === 'cine español';
+              const isSpanish = hasSpanishTag || hasSpanishSubcategory;
+              
+              if (isSpanish) {
+                console.log('[DataStore] Spanish movie found:', item.title, 'tags:', item.tags, 'subcategory:', item.subcategory);
+              }
+              
+              return isSpanish;
+            });
             console.log('[DataStore] Items after Spanish Cinema filter:', items.length);
-          }          // Filtrar por idioma del podcast
+          }// Filtrar por idioma del podcast
           if (activePodcastLanguages.length > 0 && selectedCategory === 'podcast') {
             console.log('[DataStore] Filtering podcasts by languages:', activePodcastLanguages);
             const beforeFilter = items.length;
@@ -486,7 +515,30 @@ const useDataStore = create(
               const translatedTitle = categoryNames[selectedCategory] || selectedCategory;
               set({ title: translatedTitle }, false, 'updateTitleForLanguage');
             }
-          }
+          }        },
+
+        // Función para reseteo completo de la aplicación (al refresh)
+        resetToHome: () => {
+          console.log('[DataStore] Resetting application to home state...');
+          set(
+            { 
+              selectedCategory: null,
+              activeSubcategory: null,
+              activeLanguage: 'all',
+              activePodcastLanguages: [],
+              activeDocumentaryLanguages: [],
+              isSpanishCinemaActive: false,
+              isMasterpieceActive: false,
+              filteredItems: []
+            },
+            false,
+            'resetToHome'
+          );
+          
+          // Reinicializar los items filtrados para mostrar recomendaciones aleatorias
+          setTimeout(() => {
+            get().initializeFilteredItems();
+          }, 100);
         },
 
         // Resetear categoría
@@ -646,28 +698,19 @@ const useDataStore = create(
       }),      {
         name: 'data-storage',
         partialize: (state) => ({
-          // No persistir selectedCategory para que siempre inicie en home
-          // selectedCategory: state.selectedCategory,
-          activeSubcategory: state.activeSubcategory,
-          activeLanguage: state.activeLanguage,
+          // Solo persistir configuraciones de usuario, no el estado de navegación
           darkMode: state.darkMode,
           language: state.language
+          // Excluimos selectedCategory, activeSubcategory, activeLanguage para reseteo completo
         })
       }
     )
   )
 );
 
-// Inicializar el store al importarlo
-useDataStore.setState({ 
-  selectedCategory: null, 
-  activeSubcategory: null 
-});
-
+// Inicializar el store al importarlo - reseteo completo para siempre empezar en home
 const store = useDataStore.getState();
+store.resetToHome(); // Usar la función específica de reseteo
 store.initializeData();
-setTimeout(() => {
-  store.initializeFilteredItems();
-}, 0);
 
 export default useDataStore;

@@ -115,10 +115,15 @@ const HomePage = () => {
     console.log('[HomePage] Closing item detail');
     setSelectedItem(null);
   };
-
   // Renderizar el detalle del elemento
   const renderItemDetail = () => {
-    if (!selectedItem) return null;
+    console.log('[HomePage] renderItemDetail called, selectedItem:', selectedItem);
+    if (!selectedItem) {
+      console.log('[HomePage] No selectedItem, not rendering detail');
+      return null;
+    }
+
+    console.log('[HomePage] Rendering item detail for:', selectedItem.title, 'isMobile:', isMobile);
 
     if (isMobile) {
       return (
@@ -159,9 +164,11 @@ const HomePage = () => {
         return '#8bc34a';
       case 'boardgames':
       case 'juegos de mesa':
-        return '#e91e63';
-      case 'comics':
+        return '#e91e63';      case 'comics':
         return '#ff9800';
+      case 'documentales':
+      case 'documentaries':
+        return '#f44336';
       default:
         return '#0078d4';
     }
@@ -282,14 +289,17 @@ const HomePage = () => {
           {title}
         </h1>
       )}      
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <RecommendationsList          recommendations={filteredItems} 
-          isHome={!selectedCategory}
-          onItemClick={handleItemClick}
-        />
-      </div>
-
-      {renderItemDetail()}
+      {/* Render either the recommendations list OR the item detail, not both */}
+      {selectedItem ? (
+        renderItemDetail()
+      ) : (
+        <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+          <RecommendationsList            recommendations={filteredItems} 
+            isHome={!selectedCategory}
+            onItemClick={handleItemClick}
+          />
+        </div>
+      )}
     </div>
   );
 };

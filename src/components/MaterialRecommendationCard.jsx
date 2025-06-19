@@ -93,9 +93,11 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
         return theme.palette.mode === 'dark' ? '#689f38' : '#8bc34a';
       case 'boardgames':
       case 'juegos de mesa':
-        return theme.palette.mode === 'dark' ? '#c2185b' : '#e91e63';
-      case 'comics':
+        return theme.palette.mode === 'dark' ? '#c2185b' : '#e91e63';      case 'comics':
         return theme.palette.mode === 'dark' ? '#f57c00' : '#ff9800';
+      case 'documentales':
+      case 'documentaries':
+        return theme.palette.mode === 'dark' ? '#d32f2f' : '#f44336';
       default:
         return theme.palette.primary.main;
     }
