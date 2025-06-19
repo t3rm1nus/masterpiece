@@ -26,7 +26,7 @@ import { useLanguage } from '../LanguageContext';
 const MaterialCoffeePage = () => {
   const { t } = useLanguage();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg')); // Cambiado de 'md' a 'lg'
 
   // Solo renderizar en móviles
   if (!isMobile) {

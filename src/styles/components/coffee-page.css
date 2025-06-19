@@ -98,14 +98,14 @@
 
 /* === RESPONSIVE === */
 /* Ocultar versión desktop en móviles */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .coffee-page.desktop-only {
     display: none !important;
   }
 }
 
 /* Ocultar versión Material UI en desktop */
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   .MaterialCoffeePage {
     display: none !important;
   }

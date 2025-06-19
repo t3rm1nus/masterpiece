@@ -50,6 +50,17 @@
       "button": "Invítame a un café",
       "donate": "Invítame a un café"
     },
+    "coffee_page_title": "¿Te gusta lo que ves?",
+    "coffee_page_subtitle": "Tu apoyo hace la diferencia",
+    "coffee_description": "Si disfrutas de este contenido curado con amor y quieres apoyar su desarrollo continuo, puedes invitarme a un café. Tu contribución ayuda a mantener y mejorar este proyecto, además de motivarme a seguir compartiendo las mejores recomendaciones culturales.",
+    "coffee_benefits_title": "Tu apoyo ayuda a:",
+    "coffee_benefit_1": "Mantener el sitio actualizado con nuevas recomendaciones",
+    "coffee_benefit_2": "Mejorar la experiencia de usuario continuamente",
+    "coffee_benefit_3": "Desarrollar nuevas funcionalidades increíbles",
+    "coffee_benefit_4": "Dedicar más tiempo a curar contenido de calidad",
+    "coffee_cta": "¿Te animas a apoyar este proyecto?",
+    "coffee_legend": "Cada contribución, por pequeña que sea, marca una gran diferencia",
+    "coffee_footer": "¡Gracias por ser parte de esta comunidad de amantes de la cultura! 🎭📚🎬",
     "filters": {
       "languages": {
         "all": "Todos los idiomas",
