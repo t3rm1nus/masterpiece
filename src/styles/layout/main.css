@@ -227,16 +227,13 @@ html[data-theme='dark'] h1:hover {
 }
 
 .item-detail-container {
-  background: var(--card-background);
-  border-radius: var(--border-radius-xl);
-  box-shadow: var(--shadow-lg);
+  /* Estilos de decoración eliminados para transparencia */
   padding: var(--space-xl);
   margin: 0 auto;
   max-width: 700px;
   width: 90%;
   position: relative;
   text-align: center;
-  border: var(--border-width) solid var(--border-color);
 }
 
 .item-detail-back-btn {
