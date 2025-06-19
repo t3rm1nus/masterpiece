@@ -81,7 +81,7 @@ function DesktopMenu() {
             className="donation-btn"
             onClick={navigateToCoffee}
           >
-            ☕ {getTranslation('coffee.donate', 'Donar')}
+            ☕ {getTranslation('coffee.donate', 'Invítame a un café')}
           </button>
         )}
         

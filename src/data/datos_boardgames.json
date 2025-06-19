@@ -1162,11 +1162,26 @@
         "en": "A strategy game based on the famous Colditz Castle during World War II, where players must plan and execute daring escape attempts."
       },
       "minPlayers": 2,
-      "maxPlayers": 6,
-      "playTime": 120,
+      "maxPlayers": 6,      "playTime": 120,
       "age": "+12",
       "masterpiece": true,
       "image": "/imagenes/juegos_de_mesa/colditz.jpg"
+    },
+    {
+      "id": 74,
+      "title": { "es": "La Isla", "en": "The Island" },
+      "category": "boardgames",
+      "subcategory": "Aventura",
+      "description": {
+        "es": "Un emocionante juego de supervivencia donde los jugadores deben escapar de una isla que se hunde, mientras lidian con tiburones, ballenas y otros peligros marinos.",
+        "en": "An exciting survival game where players must escape from a sinking island while dealing with sharks, whales, and other marine dangers."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 4,
+      "playTime": 60,
+      "age": "+10",
+      "masterpiece": true,
+      "image": "/imagenes/juegos_de_mesa/the_island.jpg"
     }
   ]
 }

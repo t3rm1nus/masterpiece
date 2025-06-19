@@ -291,25 +291,13 @@ const HomePage = () => {
         </h1>
       )}      
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <RecommendationsList 
-          recommendations={filteredItems} 
+        <RecommendationsList          recommendations={filteredItems} 
           isHome={!selectedCategory}
           onItemClick={handleItemClick}
         />
       </div>
 
-      {renderItemDetail()}<div className="coffee-section">
-        <h2>{getTranslation('coffee.title', '¿Te gusta lo que ves?')}</h2>
-        <p>{getTranslation('coffee.description', 'Si disfrutas de este contenido y quieres apoyar su desarrollo, puedes invitarme a un café. Tu apoyo ayuda a mantener y mejorar este proyecto.')}</p>
-        <a 
-          href="https://www.buymeacoffee.com/masterpiece" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="coffee-button"
-        >
-          {getTranslation('coffee.button', 'Invítame a un café')}
-        </a>
-      </div>
+      {renderItemDetail()}
     </div>
   );
 };
