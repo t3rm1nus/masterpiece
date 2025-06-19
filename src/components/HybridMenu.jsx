@@ -25,7 +25,7 @@ function LanguageSelector() {
 
 // Menú clásico para desktop
 function DesktopMenu() {
-  const { t, lang } = useLanguage();
+  const { t, lang, getTranslation } = useLanguage();
   const { resetAllFilters } = useDataStore();
   const { currentView, goBackFromDetail, goBackFromCoffee, navigate, navigateToCoffee } = useViewStore();
   
@@ -45,13 +45,12 @@ function DesktopMenu() {
         width: '100%',
         maxWidth: '1200px',
         margin: '0 auto'
-      }}>      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-        {/* Botón de inicio a la izquierda que resetea todos los filtros */}
+      }}>      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>        {/* Botón de inicio a la izquierda que resetea todos los filtros */}
         <button 
           onClick={handleNewRecommendations} 
           style={{ fontWeight: 'bold' }}
         >
-          {t.home_title}
+          {getTranslation('ui.titles.home_title', 'Nuevas Recomendaciones')}
         </button>
         
         {/* Mostrar botón volver solo en vista de detalle */}
@@ -76,14 +75,13 @@ function DesktopMenu() {
       </div>
       
       {/* Controles de la derecha: café, tema e idioma */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-        {/* Botón de donación - solo mostrar si no estamos en la página de café */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>        {/* Botón de donación - solo mostrar si no estamos en la página de café */}
         {!isCoffeeView && (
           <button 
             className="donation-btn"
             onClick={navigateToCoffee}
           >
-            ☕ {t.buy_me_coffee}
+            ☕ {getTranslation('coffee.donate', 'Donar')}
           </button>
         )}
         

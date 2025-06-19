@@ -18,6 +18,7 @@
 @import './components/cards.css';
 @import './components/item-detail.css';
 @import './components/coffee-page.css';
+@import './components/home-page.css';
 
 /* === LEGACY & SPECIFIC STYLES === */
 @import './legacy.css';

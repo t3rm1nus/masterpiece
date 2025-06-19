@@ -8,6 +8,7 @@ import MaterialContentWrapper from './MaterialContentWrapper';
 import RecommendationsList from './RecommendationsList';
 import ThemeToggle from './ThemeToggle';
 import '../styles/components/buttons.css';
+import '../styles/components/home-page.css';
 import { useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import ItemDetail from './ItemDetail';
