@@ -11,14 +11,7 @@
 }
 
 /* Tema oscuro */
-html[data-theme='dark'] .item-detail-page.desktop-only {
-  background-color: #121212;
-}
-
-/* Tema oscuro */
-html[data-theme='dark'] .item-detail-container {
-  background-color: #1a1a1a !important;
-  border-color: #333;
+html[data-theme='dark'] .item-detail-page.desktop-only {  background-color: #121212;
 }
 
 .item-detail-container {
@@ -28,19 +21,10 @@ html[data-theme='dark'] .item-detail-container {
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
-  background-color: transparent;
+  background-color: transparent !important;
   color: var(--text-color);
   z-index: 1;
   animation: slideIn 0.4s ease-out;
-}
-
-/* Botón de volver dentro del contenedor */
-.item-detail-container .back-button {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
 }
 
 @keyframes slideIn {
@@ -50,101 +34,10 @@ html[data-theme='dark'] .item-detail-container {
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+    transform: translateY(0) scale(1);  }
 }
 
-/* Fondo para elementos normales */
-.item-detail-container.normal-item {
-  background-color: #ffffff !important;
-}
-
-/* Fondo para elementos normales con color de categoría */
-.item-detail-container.normal-item.movies {
-  background: color-mix(in srgb, var(--color-movies) 8%, #ffffff) !important;
-}
-
-.item-detail-container.normal-item.videogames {
-  background: color-mix(in srgb, var(--color-videogames) 8%, #ffffff) !important;
-}
-
-.item-detail-container.normal-item.comics {
-  background: color-mix(in srgb, var(--color-comics) 8%, #ffffff) !important;
-}
-
-.item-detail-container.normal-item.books {
-  background: color-mix(in srgb, var(--color-books) 8%, #ffffff) !important;
-}
-
-.item-detail-container.normal-item.music {
-  background: color-mix(in srgb, var(--color-music) 8%, #ffffff) !important;
-}
-
-.item-detail-container.normal-item.boardgames {
-  background: color-mix(in srgb, var(--color-boardgames) 8%, #ffffff) !important;
-}
-
-.item-detail-container.normal-item.podcast {
-  background: color-mix(in srgb, var(--color-podcast) 8%, #ffffff) !important;
-}
-
-.item-detail-container.normal-item.documentales {
-  background: color-mix(in srgb, #9e9e9e 8%, #ffffff) !important;
-}
-
-/* Fondo para elementos masterpiece */
-.item-detail-container.masterpiece-item {
-  background: linear-gradient(135deg, #fff9e6 0%, #fffaf0 100%) !important;
-  border-color: #ffd700;
-  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2);
-}
-
-/* Container en tema oscuro - elementos normales */
-html[data-theme='dark'] .item-detail-container.normal-item {
-  background-color: #2d2d2d !important;
-  border-color: #404040;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-}
-
-/* Container en tema oscuro - elementos normales con color de categoría */
-html[data-theme='dark'] .item-detail-container.normal-item.movies {
-  background: color-mix(in srgb, var(--color-movies) 8%, #2d2d2d) !important;
-}
-
-html[data-theme='dark'] .item-detail-container.normal-item.videogames {
-  background: color-mix(in srgb, var(--color-videogames) 8%, #2d2d2d) !important;
-}
-
-html[data-theme='dark'] .item-detail-container.normal-item.comics {
-  background: color-mix(in srgb, var(--color-comics) 8%, #2d2d2d) !important;
-}
-
-html[data-theme='dark'] .item-detail-container.normal-item.books {
-  background: color-mix(in srgb, var(--color-books) 8%, #2d2d2d) !important;
-}
-
-html[data-theme='dark'] .item-detail-container.normal-item.music {
-  background: color-mix(in srgb, var(--color-music) 8%, #2d2d2d) !important;
-}
-
-html[data-theme='dark'] .item-detail-container.normal-item.boardgames {
-  background: color-mix(in srgb, var(--color-boardgames) 8%, #2d2d2d) !important;
-}
-
-html[data-theme='dark'] .item-detail-container.normal-item.podcast {
-  background: color-mix(in srgb, var(--color-podcast) 8%, #2d2d2d) !important;
-}
-
-html[data-theme='dark'] .item-detail-container.normal-item.documentales {
-  background: color-mix(in srgb, #9e9e9e 8%, #2d2d2d) !important;
-}
-
-/* Container en tema oscuro - elementos masterpiece */
-html[data-theme='dark'] .item-detail-container.masterpiece-item {
-  background: linear-gradient(135deg, #3a3520 0%, #2d2d2d 100%) !important;
-  border-color: #ffd700;
-  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.1);
-}
+/* Contenido del item de detalle */
 
 /* Badge de masterpiece en esquina superior derecha del container */
 .masterpiece-badge-container {

@@ -47,19 +47,16 @@ const HomePage = () => {
   
   // Obtener configuración de estilos del store consolidado
   const { getSpecialButtonLabel } = useThemeStore();
-  
   // Obtener funciones de procesamiento del store de vista
-  const { processTitle } = useViewStore();
+  const { processTitle, navigate, goBackFromDetail, selectedItem, navigateToDetail } = useViewStore();
   // Obtener categorías traducidas
   const categories = getCategories(lang);
   
   // Obtener subcategorías del store para la categoría seleccionada
   const categorySubcategories = getSubcategoriesForCategory();
-  
-  const [isRecommendedActive, setIsRecommendedActive] = useState(false);
+    const [isRecommendedActive, setIsRecommendedActive] = useState(false);
 
-  // Estado local para el elemento seleccionado
-  const [selectedItem, setSelectedItem] = useState(null);  // Efecto para inicializar los datos
+  // Efecto para inicializar los datos
   useEffect(() => {
     console.log('[HomePage] Component mounted, initializing data...');
     initializeData();
@@ -107,19 +104,19 @@ const HomePage = () => {
   const handleSpanishCinemaToggle = () => {
     console.log('[HomePage] Spanish Cinema button clicked, current state:', isSpanishCinemaActive);
     toggleSpanishCinema();
-  };
-  // Manejar clic en elemento
+  };  // Manejar clic en elemento
   const handleItemClick = (item) => {
     console.log('[HomePage] Item clicked:', item?.title || item?.name, 'ID:', item?.id);
-    setSelectedItem(item);
+    // Usar el viewStore para navegar al detalle
+    navigateToDetail(item);
     // Hacer scroll al inicio de la página
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
   // Manejar cierre del detalle
   const handleCloseDetail = () => {
     console.log('[HomePage] Closing item detail');
-    setSelectedItem(null);
+    // Volver a la vista anterior usando el viewStore
+    goBackFromDetail();
   };
   // Renderizar el detalle del elemento
   const renderItemDetail = () => {

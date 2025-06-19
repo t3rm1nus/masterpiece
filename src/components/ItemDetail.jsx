@@ -47,9 +47,6 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
       <MaterialItemDetail item={selectedItem} />      {/* Vista clásica solo para desktop */}
       <div className="item-detail-page desktop-only">
         <div className="item-detail-container">
-          <button className="back-button" onClick={onClose} aria-label="Volver">
-            ← Volver
-          </button>
           <div className={`item-detail-content ${selectedItem.masterpiece ? 'masterpiece-item' : 'normal-item'} ${selectedItem.category}`}>
             {selectedItem.masterpiece && (
             <span className="masterpiece-badge-container" title="Obra maestra">
