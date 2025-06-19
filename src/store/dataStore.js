@@ -263,10 +263,19 @@ const useDataStore = create(
             console.log('[DataStore] No category selected, getting random items from all categories');
             return state.getRandomItemsFromAllCategories();
           }
-          
-          // Obtener elementos de la categoría seleccionada
+            // Obtener elementos de la categoría seleccionada
           let items = allData[selectedCategory] || [];
-          console.log('[DataStore] Initial items for category', selectedCategory, ':', items.length);          // Filtrar por subcategoría
+          console.log('[DataStore] Initial items for category', selectedCategory, ':', items.length);
+          
+          // Debug: Verificar estructura de datos de películas
+          if (selectedCategory === 'movies' && items.length > 0) {
+            console.log('[DataStore] Sample movie items structure:', items.slice(0, 2).map(item => ({
+              id: item.id,
+              title: item.title,
+              tags: item.tags,
+              subcategory: item.subcategory
+            })));
+          }// Filtrar por subcategoría
           if (activeSubcategory) {
             console.log('[DataStore] Filtering by subcategory:', activeSubcategory);
             const beforeFilter = items.length;
@@ -397,23 +406,28 @@ const useDataStore = create(
           );
           
           console.log('[DataStore] Subcategory set, updating filtered items...');
-          get().updateFilteredItems();
-        },        // Alternar Cine Español
+          get().updateFilteredItems();        },        // Alternar Cine Español
         toggleSpanishCinema: () => {
+          console.log('[DataStore] toggleSpanishCinema function called!');
           const { isSpanishCinemaActive, selectedCategory } = get();
           console.log('[DataStore] Toggling Spanish Cinema. Current state:', isSpanishCinemaActive, 'Selected category:', selectedCategory);
           
+          const newState = !isSpanishCinemaActive;
+          
           set(
             { 
-              isSpanishCinemaActive: !isSpanishCinemaActive
+              isSpanishCinemaActive: newState
             },
             false,
             'toggleSpanishCinema'
           );
           
+          console.log('[DataStore] Spanish Cinema state changed to:', newState);
           get().updateFilteredItems();
-          console.log('toggleSpanishCinema completed. New state:', !isSpanishCinemaActive);
-        },        // Alternar idioma específico de podcasts (on/off independiente)
+          console.log('[DataStore] toggleSpanishCinema completed. Final state:', get().isSpanishCinemaActive);
+        },
+
+        // Alternar idioma específico de podcasts (on/off independiente)
         togglePodcastLanguage: (language) => {
           const { activePodcastLanguages } = get();
           console.log('[DataStore] Toggling podcast language:', language, 'Current active:', activePodcastLanguages);

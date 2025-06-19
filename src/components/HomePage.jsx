@@ -101,7 +101,12 @@ const HomePage = () => {
       selectedCategory: category, 
       activeSubcategory: null, 
       activeLanguage: 'all' 
-    });
+    });  };
+
+  // Manejar toggle de cine español con logging
+  const handleSpanishCinemaToggle = () => {
+    console.log('[HomePage] Spanish Cinema button clicked, current state:', isSpanishCinemaActive);
+    toggleSpanishCinema();
   };
 
   // Manejar clic en elemento
@@ -226,15 +231,14 @@ const HomePage = () => {
         </div>
       )}
 
-      <div className="special-buttons-container">
-        {selectedCategory === 'movies' && (
+      <div className="special-buttons-container">        {selectedCategory === 'movies' && (
           <button
             className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
-            onClick={toggleSpanishCinema}
+            onClick={handleSpanishCinemaToggle}
           >
             {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
           </button>
-        )}        {selectedCategory === 'podcast' && (
+        )}{selectedCategory === 'podcast' && (
           <>
             <button
               className={`subcategory-btn podcast-language${activePodcastLanguages.includes('es') ? ' active' : ''}`}              
