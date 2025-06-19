@@ -162,21 +162,7 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
                   <div className="info-row">
                     <span className="info-label">{t.documentales?.director || 'Director'}: </span>
                     <span className="info-value">{ensureString(selectedItem.director)}</span>
-                  </div>
-                )}</div>
-
-              {selectedItem.link && (
-                <div className="item-detail-trailer">
-                  <a 
-                    href={selectedItem.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="trailer-link"
-                  >
-                    {t.documentales?.watch || 'Ver documental'}
-                  </a>
-                </div>
-              )}
+                  </div>                )}</div>
             </div>
           )}
           
@@ -227,11 +213,25 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
             <p className="item-detail-author">
               <strong>{t.author || 'Autor'}:</strong> {ensureString(selectedItem.author)}
             </p>
-          )}
-            <p className={`item-detail-description ${selectedItem.category === 'boardgames' ? 'boardgame-description' : ''}`}>
+          )}            <p className={`item-detail-description ${selectedItem.category === 'boardgames' ? 'boardgame-description' : ''}`}>
             {description}
           </p>
-            {trailerUrl && (
+            
+          {/* Botón para documentales */}
+          {selectedItem.category === 'documentales' && selectedItem.link && (
+            <div className="item-detail-trailer">
+              <a 
+                href={selectedItem.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="trailer-link"
+              >
+                {t.documentales?.watch || 'Ver documental'}
+              </a>
+            </div>
+          )}
+          
+          {trailerUrl && (
             <div className="item-detail-trailer">
               <a 
                 href={trailerUrl} 

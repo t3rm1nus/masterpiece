@@ -18,7 +18,7 @@ html[data-theme='dark'] .item-detail-page.desktop-only {  background-color: #121
   position: relative;
   max-width: 1000px;
   width: 100%;
-  margin: 0 auto;
+  margin: 80px auto 0 auto; /* Agregado margen superior de 80px */
   padding: 40px 20px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.9);
