@@ -16,13 +16,31 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
   const { getMasterpieceBadgeConfig } = useThemeStore();
   const badgeConfig = getMasterpieceBadgeConfig();
   
-  // Usar el item pasado como prop en lugar del store
-  const selectedItem = item;
+  // Usar el item pasado como prop en lugar del store  const selectedItem = item;
   
   if (!selectedItem) return null;
   
-  const title = processTitle(selectedItem.title || selectedItem.name, lang);
-  const description = processDescription(selectedItem.description, lang);
+  console.log('[ItemDetail] selectedItem.title:', selectedItem.title);
+  console.log('[ItemDetail] selectedItem.name:', selectedItem.name);
+  console.log('[ItemDetail] lang:', lang);
+  
+  // Función auxiliar para asegurar que siempre devuelva un string
+  const ensureString = (value) => {
+    if (typeof value === 'string') return value;
+    if (typeof value === 'object' && value !== null) {
+      return value[lang] || value.es || value.en || JSON.stringify(value);
+    }
+    return String(value || '');
+  };
+  
+  const rawTitle = processTitle(selectedItem.title || selectedItem.name, lang);
+  const rawDescription = processDescription(selectedItem.description, lang);
+  
+  const title = ensureString(rawTitle);
+  const description = ensureString(rawDescription);
+  
+  console.log('[ItemDetail] processed title:', title);
+  console.log('[ItemDetail] processed description:', description);
   
   // Determinar qué trailer mostrar según el idioma
   const getTrailerUrl = () => {
@@ -71,8 +89,7 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
             </span>
           )}
           
-          <div className="item-detail-image-container">
-            <img 
+          <div className="item-detail-image-container">            <img 
               src={selectedItem.image} 
               alt={title}
               className="item-detail-image"
@@ -104,8 +121,7 @@ const ItemDetail = ({ item, onClose, selectedCategory }) => {
           
           {/* Datos específicos para documentales */}
           {selectedItem.category === 'documentales' && (
-            <div className="item-detail">
-              <div className="item-header">
+            <div className="item-detail">              <div className="item-header">
                 <h2>{title}</h2>
                 <div className="item-meta">
                   <span className="item-category">
