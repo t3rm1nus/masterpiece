@@ -11,8 +11,7 @@ import '../styles/components/buttons.css';
 import '../styles/components/home-page.css';
 import { useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import ItemDetail from './ItemDetail';
-import MaterialItemDetail from './MaterialItemDetail';
+import UnifiedItemDetail from './UnifiedItemDetail';
 
 const HomePage = () => {
   const { lang, t, getTranslation } = useLanguage();
@@ -115,8 +114,7 @@ const HomePage = () => {
     console.log('[HomePage] Closing item detail');
     // Volver a la vista anterior usando el viewStore
     goBackFromDetail();
-  };
-  // Renderizar el detalle del elemento
+  };  // Renderizar el detalle del elemento
   const renderItemDetail = () => {
     console.log('[HomePage] renderItemDetail called, selectedItem:', selectedItem);
     if (!selectedItem) {
@@ -124,20 +122,10 @@ const HomePage = () => {
       return null;
     }
 
-    console.log('[HomePage] Rendering item detail for:', selectedItem.title, 'isMobile:', isMobile);
-
-    if (isMobile) {
-      return (
-        <MaterialItemDetail
-          item={selectedItem}
-          onClose={handleCloseDetail}
-          selectedCategory={selectedCategory}
-        />
-      );
-    }
+    console.log('[HomePage] Rendering item detail for:', selectedItem.title);
 
     return (
-      <ItemDetail
+      <UnifiedItemDetail
         item={selectedItem}
         onClose={handleCloseDetail}
         selectedCategory={selectedCategory}
