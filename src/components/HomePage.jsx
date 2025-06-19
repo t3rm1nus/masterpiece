@@ -284,15 +284,14 @@ const HomePage = () => {
           [Debug] Title: "{title}" | Selected: {selectedCategory || 'none'} | Items: {filteredItems?.length || 0}
         </div>
       )}
-      
-      {title && (
+        {title && !selectedItem && (
         <h1 
           className={selectedCategory ? 'after-subcategories' : ''}
           style={{ textTransform: 'capitalize', textAlign: 'center', margin: '20px 0' }}
         >
           {title}
         </h1>
-      )}      
+      )}
       {/* Render either the recommendations list OR the item detail, not both */}
       {selectedItem ? (
         renderItemDetail()
