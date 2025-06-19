@@ -1,7 +1,6 @@
 import { lazy } from 'react';
 
 // Lazy loading de componentes pesados
-export const LazyItemDetail = lazy(() => import('./ItemDetail'));
 export const LazyCoffeePage = lazy(() => import('./CoffeePage'));
 export const LazyRecommendationsList = lazy(() => import('./RecommendationsList'));
 

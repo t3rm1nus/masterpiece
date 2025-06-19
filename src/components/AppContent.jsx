@@ -4,7 +4,8 @@ import useViewStore from '../store/viewStore';
 import { isMobileDevice } from '../utils/appUtils';
 import HybridMenu from './HybridMenu';
 import HomePage from './HomePage';
-import { LazyItemDetail, LazyCoffeePage, LoadingFallback } from './LazyComponents';
+import UnifiedItemDetail from './UnifiedItemDetail';
+import { LazyCoffeePage, LoadingFallback } from './LazyComponents';
 
 const AppContent = () => {  
   const { lang } = useLanguage();
@@ -27,19 +28,17 @@ const AppContent = () => {
       console.log('[AppContent] Rendering HomePage');
       content = <HomePage />;
       break;    case 'detail':
-      console.log('[AppContent] Rendering ItemDetail (lazy) with selectedItem:', selectedItem);
+      console.log('[AppContent] Rendering UnifiedItemDetail with selectedItem:', selectedItem);
       if (!selectedItem) {
         console.warn('[AppContent] No selectedItem found, redirecting to home');
         content = <HomePage />;
       } else {
         content = (
-          <Suspense fallback={<LoadingFallback message="Cargando detalle..." />}>
-            <LazyItemDetail 
-              item={selectedItem}
-              onClose={goBackFromDetail}
-              selectedCategory={selectedItem.category}
-            />
-          </Suspense>
+          <UnifiedItemDetail 
+            item={selectedItem}
+            onClose={goBackFromDetail}
+            selectedCategory={selectedItem.category}
+          />
         );
       }
       break;
