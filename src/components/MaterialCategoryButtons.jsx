@@ -81,7 +81,7 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
         return '#ff9800';
       case 'documentales':
       case 'documentaries':
-        return '#f44336';
+        return '#9e9e9e';
       default:
         return theme.palette.primary.main;
     }

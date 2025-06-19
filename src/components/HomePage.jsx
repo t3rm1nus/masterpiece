@@ -173,7 +173,7 @@ const HomePage = () => {
         return '#ff9800';
       case 'documentales':
       case 'documentaries':
-        return '#f44336';
+        return '#9e9e9e';
       default:
         return '#0078d4';
     }

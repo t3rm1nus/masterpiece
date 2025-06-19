@@ -1,29 +1,40 @@
 /* Estilos para la página de detalle de item - Desktop */
 .item-detail-page.desktop-only {
-  position: relative;
-  padding: 120px 20px 40px 20px; /* Más margin-top */
-  background-color: #ffffff !important;
-  min-height: 100vh;
-  color: var(--text-color);
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 /* Tema oscuro */
-html[data-theme='dark'] .item-detail-page.desktop-only {
+html[data-theme='dark'] .item-detail-container {
   background-color: #1a1a1a !important;
+  border-color: #333;
 }
 
 .item-detail-container {
   position: relative;
   max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  max-height: 90vh;
+  margin: 0;
   padding: 2rem;
   text-align: center;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   border: 1px solid #dee2e6;
-  z-index: 1000;
+  z-index: 1001;
   animation: slideIn 0.4s ease-out;
+  overflow-y: auto;
+  background-color: #ffffff;
+  color: var(--text-color);
 }
 
 @keyframes slideIn {
@@ -71,6 +82,10 @@ html[data-theme='dark'] .item-detail-page.desktop-only {
   background: color-mix(in srgb, var(--color-podcast) 8%, #ffffff) !important;
 }
 
+.item-detail-container.normal-item.documentales {
+  background: color-mix(in srgb, #9e9e9e 8%, #ffffff) !important;
+}
+
 /* Fondo para elementos masterpiece */
 .item-detail-container.masterpiece-item {
   background: linear-gradient(135deg, #fff9e6 0%, #fffaf0 100%) !important;
@@ -112,6 +127,10 @@ html[data-theme='dark'] .item-detail-container.normal-item.boardgames {
 
 html[data-theme='dark'] .item-detail-container.normal-item.podcast {
   background: color-mix(in srgb, var(--color-podcast) 8%, #2d2d2d) !important;
+}
+
+html[data-theme='dark'] .item-detail-container.normal-item.documentales {
+  background: color-mix(in srgb, #9e9e9e 8%, #2d2d2d) !important;
 }
 
 /* Container en tema oscuro - elementos masterpiece */
@@ -351,7 +370,7 @@ html[data-theme='dark'] .item-detail-episodes {
 
 /* Overlay mejorado para cerrar el modal */
 .item-detail-overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -359,7 +378,6 @@ html[data-theme='dark'] .item-detail-episodes {
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
   backdrop-filter: blur(8px);
   z-index: 999;
-  animation: fadeIn 0.3s ease-out;
 }
 
 @keyframes fadeIn {

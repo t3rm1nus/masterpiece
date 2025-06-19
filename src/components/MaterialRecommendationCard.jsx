@@ -97,7 +97,7 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
         return theme.palette.mode === 'dark' ? '#f57c00' : '#ff9800';
       case 'documentales':
       case 'documentaries':
-        return theme.palette.mode === 'dark' ? '#d32f2f' : '#f44336';
+        return theme.palette.mode === 'dark' ? '#757575' : '#9e9e9e';
       default:
         return theme.palette.primary.main;
     }
