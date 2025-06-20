@@ -133,6 +133,23 @@ const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {
           padding: '20px',
           width: '100%'
         }}>
+          <p className="no-results-text" style={{
+            fontSize: '1.2em',
+            color: '#666',
+            fontWeight: 500,
+            marginTop: '0',
+            marginBottom: '0.2em'
+          }}>
+            {t?.no_results || 'No se encontraron resultados'}
+          </p>
+          <p className="no-results-subtext" style={{
+            fontSize: '0.9em',
+            color: '#999',
+            marginTop: '8px',
+            marginBottom: '16px'
+          }}>
+            Prueba con otros filtros o categorías
+          </p>
           <img 
             src={notFoundImageUrl} 
             alt="No se encontraron resultados" 
@@ -150,20 +167,6 @@ const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {
               marginRight: 'auto'
             }}
           />
-          <p className="no-results-text" style={{
-            fontSize: '1.2em',
-            color: '#666',
-            marginTop: '16px'
-          }}>
-            {t?.no_results || 'No se encontraron resultados'}
-          </p>
-          <p className="no-results-subtext" style={{
-            fontSize: '0.9em',
-            color: '#999',
-            marginTop: '8px'
-          }}>
-            Prueba con otros filtros o categorías
-          </p>
         </div>
       );
     }
