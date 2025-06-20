@@ -83,6 +83,18 @@
   font-size: 0.9rem;
 }
 
+.donation-title {
+  box-shadow: none !important;
+  transition: none !important;
+}
+
+.donation-title:hover {
+  box-shadow: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  text-decoration: none !important;
+}
+
 /* === ANIMACIONES === */
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

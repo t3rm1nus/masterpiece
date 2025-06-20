@@ -306,17 +306,7 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
           )}
           
           {/* Información general */}
-          {selectedItem.director && (
-            <p className="item-detail-director">
-              <strong>{t.director || 'Director'}: </strong> {ensureString(selectedItem.director)}
-            </p>
-          )}
-          
-          {selectedItem.year && (
-            <p className="item-detail-year">
-              <strong>{t.year || 'Año'}: </strong> {ensureString(selectedItem.year)}
-            </p>
-          )}
+          {/* Eliminado director y año para películas, ya se muestran en info-row */}
           
           {/* Información específica por categoría */}
           {renderDesktopSpecificContent()}
@@ -461,118 +451,57 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
   
   // Función para renderizar contenido específico de categorías en desktop
   function renderDesktopSpecificContent() {
+    // Unificación de maquetación para todos los detalles (excepto título, categoría, subcategoría y descripción)
+    const infoRows = [];
     // Documentales
     if (selectedItem.category === 'documentales') {
-      return (
-        <div className="documentales-specific-details">
-          <div className="item-info">
-            {selectedItem.author && (
-              <div className="info-row">
-                <span className="info-label">{t.documentales?.author || 'Autor'}: </span>
-                <span className="info-value">{ensureString(selectedItem.author)}</span>
-              </div>
-            )}
-            {selectedItem.duration && (
-              <div className="info-row">
-                <span className="info-label">{t.documentales?.duration || 'Duración'}: </span>
-                <span className="info-value">{ensureString(selectedItem.duration)}</span>
-              </div>
-            )}
-            {selectedItem.language && (
-              <div className="info-row">
-                <span className="info-label">{t.documentales?.language || 'Idioma'}: </span>
-                <span className="info-value">{t.filters?.languages?.[selectedItem.language] || ensureString(selectedItem.language)}</span>
-              </div>
-            )}
-            {selectedItem.episodes && (
-              <div className="info-row">
-                <span className="info-label">{t.documentales?.episodes || 'Episodios'}: </span>
-                <span className="info-value">{ensureString(selectedItem.episodes)}</span>
-              </div>
-            )}
-            {selectedItem.year && (
-              <div className="info-row">
-                <span className="info-label">{t.documentales?.year || 'Año'}: </span>
-                <span className="info-value">{ensureString(selectedItem.year)}</span>
-              </div>
-            )}
-            {selectedItem.country && (
-              <div className="info-row">
-                <span className="info-label">{t.documentales?.country || 'País'}: </span>
-                <span className="info-value">{ensureString(selectedItem.country)}</span>
-              </div>
-            )}
-            {selectedItem.director && (
-              <div className="info-row">
-                <span className="info-label">{t.documentales?.director || 'Director'}: </span>
-                <span className="info-value">{ensureString(selectedItem.director)}</span>
-              </div>
-            )}
-          </div>
-        </div>
-      );
+      if (selectedItem.author) infoRows.push({ label: t.documentales?.author || 'Autor', value: ensureString(selectedItem.author) });
+      if (selectedItem.duration) infoRows.push({ label: t.documentales?.duration || 'Duración', value: ensureString(selectedItem.duration) });
+      if (selectedItem.language) infoRows.push({ label: t.documentales?.language || 'Idioma', value: t.filters?.languages?.[selectedItem.language] || ensureString(selectedItem.language) });
+      if (selectedItem.episodes) infoRows.push({ label: t.documentales?.episodes || 'Episodios', value: ensureString(selectedItem.episodes) });
+      if (selectedItem.year) infoRows.push({ label: t.documentales?.year || 'Año', value: ensureString(selectedItem.year) });
+      if (selectedItem.country) infoRows.push({ label: t.documentales?.country || 'País', value: ensureString(selectedItem.country) });
+      if (selectedItem.director) infoRows.push({ label: t.documentales?.director || 'Director', value: ensureString(selectedItem.director) });
     }
-    
     // Juegos de mesa
     if (selectedItem.category === 'boardgames') {
-      return (
-        <div className="boardgame-details">
-          {(selectedItem.minPlayers || selectedItem.maxPlayers) && (
-            <p className="item-detail-players">
-              <strong>{lang === 'es' ? 'Jugadores' : 'Players'}: </strong>
-              {selectedItem.minPlayers && selectedItem.maxPlayers 
-                ? (selectedItem.minPlayers === selectedItem.maxPlayers 
-                    ? ensureString(selectedItem.minPlayers) 
-                    : `${ensureString(selectedItem.minPlayers)}-${ensureString(selectedItem.maxPlayers)}`)
-                : ensureString(selectedItem.minPlayers || selectedItem.maxPlayers)
-              }
-            </p>
-          )}
-          
-          {selectedItem.playTime && (
-            <p className="item-detail-playtime">
-              <strong>{lang === 'es' ? 'Duración' : 'Play Time'}: </strong> {ensureString(selectedItem.playTime)} {lang === 'es' ? 'min' : 'min'}
-            </p>
-          )}
-          
-          {selectedItem.age && (
-            <p className="item-detail-age">
-              <strong>{lang === 'es' ? 'Edad' : 'Age'}: </strong> {ensureString(selectedItem.age)}
-            </p>
-          )}
-        </div>
-      );
+      if (selectedItem.minPlayers || selectedItem.maxPlayers) {
+        let players = selectedItem.minPlayers && selectedItem.maxPlayers
+          ? (selectedItem.minPlayers === selectedItem.maxPlayers
+              ? ensureString(selectedItem.minPlayers)
+              : `${ensureString(selectedItem.minPlayers)}-${ensureString(selectedItem.maxPlayers)}`)
+          : ensureString(selectedItem.minPlayers || selectedItem.maxPlayers);
+        infoRows.push({ label: lang === 'es' ? 'Jugadores' : 'Players', value: players });
+      }
+      if (selectedItem.playTime) infoRows.push({ label: lang === 'es' ? 'Duración' : 'Play Time', value: `${ensureString(selectedItem.playTime)} min` });
+      if (selectedItem.age) infoRows.push({ label: lang === 'es' ? 'Edad' : 'Age', value: ensureString(selectedItem.age) });
     }
-    
     // Videojuegos
     if (selectedItem.category === 'videogames') {
-      return (
-        <div className="videogame-details">
-          {selectedItem.author && (
-            <p className="item-detail-developer">
-              <strong>{lang === 'es' ? 'Desarrollador' : 'Developer'}: </strong> {ensureString(selectedItem.author)}
-            </p>
-          )}
-          
-          {selectedItem.platforms && (
-            <p className="item-detail-platforms">
-              <strong>{lang === 'es' ? 'Plataformas' : 'Platforms'}: </strong> {ensureString(selectedItem.platforms)}
-            </p>
-          )}
-        </div>
-      );
+      if (selectedItem.author) infoRows.push({ label: lang === 'es' ? 'Desarrollador' : 'Developer', value: ensureString(selectedItem.author) });
+      if (selectedItem.platforms) infoRows.push({ label: lang === 'es' ? 'Plataformas' : 'Platforms', value: ensureString(selectedItem.platforms) });
     }
-    
     // Podcasts
     if (selectedItem.category === 'podcast' && selectedItem.author) {
-      return (
-        <p className="item-detail-author">
-          <strong>{t.author || 'Autor'}: </strong> {ensureString(selectedItem.author)}
-        </p>
-      );
+      infoRows.push({ label: t.author || 'Autor', value: ensureString(selectedItem.author) });
     }
-    
-    return null;
+    // Películas y otras categorías
+    if (selectedItem.category === 'movies' || selectedItem.category === 'peliculas') {
+      if (selectedItem.director) infoRows.push({ label: t.director || 'Director', value: ensureString(selectedItem.director) });
+      if (selectedItem.year) infoRows.push({ label: t.year || 'Año', value: ensureString(selectedItem.year) });
+    }
+    // Renderizado unificado
+    if (infoRows.length === 0) return null;
+    return (
+      <div className="item-info">
+        {infoRows.map((row, idx) => (
+          <div className="info-row" key={idx}>
+            <span className="info-label">{row.label}: </span>
+            <span className="info-value">{row.value}</span>
+          </div>
+        ))}
+      </div>
+    );
   }
   
   // Función para renderizar botones de acción en mobile

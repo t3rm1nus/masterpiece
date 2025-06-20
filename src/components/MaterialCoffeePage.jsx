@@ -88,6 +88,7 @@ const MaterialCoffeePage = () => {  const { t } = useLanguage();
             {/* Título principal */}          <Typography 
             variant="h4" 
             component="h1" 
+            className="donation-title"
             sx={{ 
               fontWeight: 'bold',
               marginBottom: '16px',
