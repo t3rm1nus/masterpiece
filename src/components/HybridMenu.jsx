@@ -1,8 +1,7 @@
 import React from 'react';
 import { useMediaQuery, useTheme } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
-import useDataStore from '../store/dataStore';
-import useViewStore from '../store/viewStore';
+import { useAppData, useAppView } from '../store/useAppStore';
 import ThemeToggle from './ThemeToggle';
 import MaterialMobileMenu from './MaterialMobileMenu';
 
@@ -26,12 +25,11 @@ function LanguageSelector() {
 // Menú clásico para desktop
 function DesktopMenu() {
   const { t, lang, getTranslation } = useLanguage();
-  const { resetAllFilters } = useDataStore();
-  const { currentView, goBackFromDetail, goBackFromCoffee, navigate, navigateToCoffee } = useViewStore();
-  
+  const { resetAllFilters, generateNewRecommendations } = useAppData();
+  const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee } = useAppView();  
   const handleNewRecommendations = () => {
-    resetAllFilters(lang);
-    navigate('home');
+    console.log('Botón "Nuevas recomendaciones" clickeado');
+    generateNewRecommendations();
   };
   
   const isDetailView = currentView === 'detail';
@@ -76,12 +74,13 @@ function DesktopMenu() {
       
       {/* Controles de la derecha: café, tema e idioma */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>        {/* Botón de donación - solo mostrar si no estamos en la página de café */}
-        {!isCoffeeView && (
-          <button 
+        {!isCoffeeView && (          <button 
             className="donation-btn"
-            onClick={navigateToCoffee}
+            onClick={goToCoffee}
           >
-            ☕ {getTranslation('coffee.donate', 'Invítame a un café')}
+            {/* Usar emoji café bonito y literal correcto */}
+            <span style={{fontSize: '1.2em', marginRight: 8}}>☕</span>
+            Invitame a un café
           </button>
         )}
         

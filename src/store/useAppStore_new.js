@@ -16,7 +16,8 @@ const useAppStore = create((set, get) => ({
   theme: 'light',
   searchTerm: '',
   isSearchActive: false,
-  error: null,  language: 'es',
+  error: null,
+  language: 'es',
   translations: {},
 
   // Función goHome
@@ -24,55 +25,49 @@ const useAppStore = create((set, get) => ({
     set({ 
       currentView: 'home',
       selectedItem: null,
-      selectedCategory: null, // CRÍTICO: null para mostrar todas las recomendaciones
-      selectedSubcategory: null
+      selectedCategory: 'all',
+      selectedSubcategory: 'all'
     });
   },
+
   resetAllFilters: () => {
     set({ 
-      selectedCategory: null, // CRÍTICO: null para mostrar todas las recomendaciones
-      selectedSubcategory: null,
+      selectedCategory: 'all',
+      selectedSubcategory: 'all',
       searchTerm: '',
       isSearchActive: false,
       currentView: 'home',
       selectedItem: null
     });
-  },  // Nueva función para generar nuevas recomendaciones
+  },
+
+  // Nueva función para generar nuevas recomendaciones
   generateNewRecommendations: () => {
     console.log('Generando nuevas recomendaciones...');
-    const { allData } = get();
+    const mockRecommendations = [
+      { id: Date.now() + 1, title: 'Blade Runner 2049', category: 'movies', description: 'Ciencia ficción épica', image: '/favicon.png' },
+      { id: Date.now() + 2, title: 'El Hobbit', category: 'books', description: 'Fantasía de Tolkien', image: '/favicon.png' },
+      { id: Date.now() + 3, title: 'Breath of the Wild', category: 'videogames', description: 'Mundo abierto', image: '/favicon.png' },
+      { id: Date.now() + 4, title: 'Thriller', category: 'music', description: 'Álbum de Michael Jackson', image: '/favicon.png' }
+    ];
 
-    if (allData && Object.keys(allData).length > 0) {
-      // Generar nueva lista curada de 14 recomendaciones desde los datos existentes
-      const categories = ['movies', 'books', 'videogames', 'music', 'comics', 'boardgames', 'podcast', 'series', 'documentales'];
-      const newRecommendations = [];
+    const newAllData = {
+      movies: mockRecommendations.filter(r => r.category === 'movies'),
+      books: mockRecommendations.filter(r => r.category === 'books'),
+      videogames: mockRecommendations.filter(r => r.category === 'videogames'),
+      music: mockRecommendations.filter(r => r.category === 'music'),
+      all: mockRecommendations
+    };
 
-      categories.forEach((category, index) => {
-        const categoryData = allData[category] || [];
-        if (categoryData.length > 0) {
-          // Tomar 1-2 items por categoría para llegar a 14 total
-          const itemsToTake = index < 5 ? 2 : 1; // Primeras 5 categorías: 2 items, resto: 1 item
-          const selectedItems = categoryData
-            .sort(() => 0.5 - Math.random()) // Shuffle
-            .slice(0, Math.min(itemsToTake, categoryData.length));
-
-          newRecommendations.push(...selectedItems);
-        }
-      });
-
-      const finalRecommendations = newRecommendations.slice(0, 14);
-
-      set({ 
-        recommendations: finalRecommendations,
-        filteredItems: finalRecommendations,
-        selectedCategory: null,
-        selectedSubcategory: null,
-        currentView: 'home',
-        selectedItem: null
-      });
-
-      console.log('✅ Nuevas recomendaciones generadas:', finalRecommendations.length);
-    }
+    set({ 
+      recommendations: mockRecommendations,
+      filteredItems: mockRecommendations,
+      allData: newAllData,
+      selectedCategory: 'all',
+      selectedSubcategory: 'all',
+      currentView: 'home',
+      selectedItem: null
+    });
   },
 
   // Función para inicializar elementos filtrados
@@ -118,48 +113,152 @@ const useAppStore = create((set, get) => ({
   },
   baseRecommendationCardClasses: 'recommendation-card transition-all duration-300 hover:shadow-lg cursor-pointer border border-gray-200 rounded-lg overflow-hidden',
   isTablet: false,
-  // NOTA: Función initializeData deshabilitada - ahora se usan datos reales desde JSON
-  // Esta función contenía datos mock que causaban que solo se mostraran películas
-  initializeDataDisabled: () => {
-    console.log('⚠️ initializeData deshabilitada - usando datos reales desde JSON');
-  },  // Función para actualizar datos desde fuente externa
-  updateWithRealData: (realData) => {
-    let recommendations14 = realData.recommendations?.slice(0, 14) || [];
-    // Si hay menos de 14, completar con items aleatorios de allData evitando duplicados
-    if (recommendations14.length < 14 && realData.allData) {
-      // Unir todos los items de allData en un solo array
-      const allItems = Object.values(realData.allData).flat();
-      // Filtrar los que ya están en recommendations14 (por id único)
-      const existingIds = new Set(recommendations14.map(item => item.id));
-      const candidates = allItems.filter(item => !existingIds.has(item.id));
-      // Mezclar candidatos y tomar los necesarios
-      for (let i = candidates.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [candidates[i], candidates[j]] = [candidates[j], candidates[i]];
+
+  // Función de inicialización con datos realistas
+  initializeData: () => {
+    console.log('Inicializando datos...');
+    
+    const categories = [
+      { id: 'movies', name: 'Películas', subcategories: [] },
+      { id: 'series', name: 'Series', subcategories: [] },
+      { id: 'books', name: 'Libros', subcategories: [] },
+      { id: 'music', name: 'Música', subcategories: [] },
+      { id: 'videogames', name: 'Videojuegos', subcategories: [] },
+      { id: 'podcast', name: 'Podcasts', subcategories: [] },
+      { id: 'comics', name: 'Cómics', subcategories: [] },
+      { id: 'boardgames', name: 'Juegos de Mesa', subcategories: [] },
+      { id: 'documentales', name: 'Documentales', subcategories: [] }
+    ];
+    
+    // Datos con estructura similar a los JSONs reales
+    const allRecommendations = [
+      {
+        id: 1,
+        category: "movies",
+        subcategory: "action",
+        title: { es: "300", en: "300" },
+        description: { es: "Película épica sobre la batalla de las Termópilas", en: "Epic film about the Battle of Thermopylae" },
+        director: "Zack Snyder",
+        image: "/imagenes/peliculas/300.jpg",
+        year: 2006,
+        masterpiece: true
+      },
+      {
+        id: 2,
+        category: "movies", 
+        subcategory: "drama",
+        title: { es: "El Padrino", en: "The Godfather" },
+        description: { es: "Una saga familiar sobre el poder y la corrupción", en: "A family saga about power and corruption" },
+        director: "Francis Ford Coppola",
+        image: "/imagenes/peliculas/el-padrino.jpg",
+        year: 1972,
+        masterpiece: true
+      },
+      {
+        id: 3,
+        category: "books",
+        subcategory: "Terror",
+        title: "Misery",
+        author: "Stephen King",
+        year: 1987,
+        description: { es: "Un novelista atrapado por su fan más obsesiva", en: "A novelist trapped by his most obsessive fan" },
+        image: "/imagenes/libros/misery.jpg",
+        masterpiece: true
+      },
+      {
+        id: 4,
+        category: "books",
+        subcategory: "Realismo Mágico",
+        title: "Cien años de soledad",
+        author: "Gabriel García Márquez",
+        year: 1967,
+        description: { es: "La saga de la familia Buendía en Macondo", en: "The saga of the Buendía family in Macondo" },
+        image: "/imagenes/libros/cien-anos-soledad.jpg",
+        masterpiece: true
+      },
+      {
+        id: 5,
+        category: "videogames",
+        subcategory: "mundo abierto",
+        title: "The Legend of Zelda: Breath of the Wild",
+        author: "Nintendo",
+        year: 2017,
+        description: { es: "Una aventura épica en el reino de Hyrule", en: "An epic adventure in the kingdom of Hyrule" },
+        image: "/imagenes/videojuegos/The_Legend_of_Zelda_Breath_of_the_Wild.jpg",
+        platforms: "Nintendo Switch, Wii U",
+        masterpiece: true
+      },
+      {
+        id: 6,
+        category: "music",
+        subcategory: "Rock",
+        title: "Abbey Road",
+        author: "The Beatles",
+        year: 1969,
+        description: { es: "Uno de los mejores álbumes de todos los tiempos", en: "One of the greatest albums of all time" },
+        image: "/imagenes/musica/abbey-road.jpg",
+        masterpiece: true
+      },
+      {
+        id: 7,
+        category: "series",
+        subcategory: "Drama",
+        title: "Breaking Bad",
+        author: "Vince Gilligan",
+        year: 2008,
+        description: { es: "La transformación de Walter White", en: "The transformation of Walter White" },
+        image: "/imagenes/series/breaking-bad.jpg",
+        masterpiece: true
+      },
+      {
+        id: 8,
+        category: "podcast",
+        subcategory: "Investigación",
+        title: "Serial",
+        author: "Sarah Koenig",
+        year: 2014,
+        description: { es: "Podcast de investigación criminal", en: "True crime investigation podcast" },
+        image: "/imagenes/podcasts/serial.jpg"
       }
-      const needed = 14 - recommendations14.length;
-      recommendations14 = recommendations14.concat(candidates.slice(0, needed));
-    }
-    set({
-      categories: realData.categories,
-      recommendations: recommendations14,
-      filteredItems: recommendations14,
-      allData: realData.allData,
-      selectedCategory: null,
-      isDataInitialized: true
+    ];
+
+    const allData = {
+      movies: allRecommendations.filter(r => r.category === 'movies'),
+      series: allRecommendations.filter(r => r.category === 'series'),
+      books: allRecommendations.filter(r => r.category === 'books'),
+      music: allRecommendations.filter(r => r.category === 'music'),
+      videogames: allRecommendations.filter(r => r.category === 'videogames'),
+      podcast: allRecommendations.filter(r => r.category === 'podcast'),
+      comics: allRecommendations.filter(r => r.category === 'comics'),
+      boardgames: allRecommendations.filter(r => r.category === 'boardgames'),
+      documentales: allRecommendations.filter(r => r.category === 'documentales'),
+      all: allRecommendations
+    };
+
+    set({ 
+      categories,
+      recommendations: allRecommendations,
+      filteredItems: allRecommendations,
+      allData,
+      selectedCategory: 'all',
+      isDataInitialized: true 
     });
-    console.log('✅ Store actualizado con recomendaciones diarias:', recommendations14.length);
+
+    console.log('✅ Datos inicializados:', {
+      total: allRecommendations.length,
+      categories: categories.length
+    });
   },
+
+  // Resto de funciones
   getRecommendations: () => get().recommendations,
   getCategories: () => {
     const categories = get().categories;
-    const translations = get().translations;
-    const language = get().language;
-    
     return categories.map(cat => ({
       key: cat.id,
-      label: translations?.[language]?.categories?.[cat.id] || cat.name
-    }));  },
+      label: cat.name
+    }));
+  },
   getSubcategoriesForCategory: (categoryId) => {
     const categories = get().categories;
     const category = categories.find(cat => cat.id === categoryId);
@@ -171,8 +270,8 @@ const useAppStore = create((set, get) => ({
   resetToHome: () => set({ 
     currentView: 'home', 
     selectedItem: null, 
-    selectedCategory: null, // CRÍTICO: null para mostrar todas las recomendaciones
-    selectedSubcategory: null
+    selectedCategory: 'all', 
+    selectedSubcategory: 'all'
   }),
   updateFilteredItems: (items) => set({ filteredItems: items }),
   setTitle: (title) => set({ title }),
@@ -191,38 +290,14 @@ const useAppStore = create((set, get) => ({
   setSearchActive: (active) => set({ isSearchActive: active }),
   clearSearch: () => set({ searchTerm: '', isSearchActive: false }),
   setError: (error) => set({ error }),
-  clearError: () => set({ error: null }),  setLanguage: (language) => set({ language }),
+  clearError: () => set({ error: null }),
+  setLanguage: (language) => set({ language }),
   toggleLanguage: () => set(state => ({ 
     language: state.language === 'es' ? 'en' : 'es'
   })),
-  setTranslations: (translations) => {
-    set({ translations });
-    // Actualizar título cuando se cargan las traducciones
-    const state = get();
-    state.updateTitleForLanguage();
-  },
 
   // Funciones simples
-  updateTitleForLanguage: () => {
-    const state = get();
-    const { selectedCategory, translations, language } = state;
-    
-    let newTitle;
-    if (!selectedCategory) {
-      // Título por defecto cuando no hay categoría seleccionada
-      newTitle = translations?.[language]?.ui?.titles?.home_title || 'Recomendaciones diarias';
-    } else {
-      // Título de la categoría seleccionada
-      newTitle = translations?.[language]?.categories?.[selectedCategory] || selectedCategory;
-    }
-    
-    set({ title: newTitle });
-    console.log('🔄 Título actualizado:', newTitle, 'para idioma:', language);
-  },
-  getDefaultTitle: (lang) => {
-    const translations = get().translations;
-    return translations?.[lang]?.ui?.titles?.home_title || 'Recomendaciones diarias';
-  },
+  updateTitleForLanguage: () => {},
   randomNotFoundImage: () => '/imagenes/notfound/not-found-1.jpg',
   processTitle: (title) => {
     if (typeof title === 'object' && title !== null) {
@@ -238,27 +313,7 @@ const useAppStore = create((set, get) => ({
     }
     return description || 'Sin descripción';
   },
-  getMasterpieceBadgeConfig: () => ({
-    color: 'gold',
-    icon: '★',
-    svg: {
-      width: 20,
-      height: 20,
-      viewBox: "0 0 20 20",
-      fill: "none",
-      xmlns: "http://www.w3.org/2000/svg"
-    },
-    circle: {
-      cx: 10,
-      cy: 10,
-      r: 10,
-      fill: "#FFD700"
-    },
-    star: {
-      d: "M10 15l-5.5 3 1.5-6L0 7l6-.5L10 1l4 5.5L20 7l-6 5 1.5 6z",
-      fill: "#FFA500"
-    }
-  }),
+  getMasterpieceBadgeConfig: () => ({ color: 'gold', icon: '★' }),
   getTranslation: (key) => key,
 }));
 
@@ -310,7 +365,6 @@ export const useAppData = () => {
   const title = useAppStore(state => state.title);
   const isDataInitialized = useAppStore(state => state.isDataInitialized);
   const initializeData = useAppStore(state => state.initializeData);
-  const updateWithRealData = useAppStore(state => state.updateWithRealData);
   const getRecommendations = useAppStore(state => state.getRecommendations);
   const getCategories = useAppStore(state => state.getCategories);
   const getSubcategoriesForCategory = useAppStore(state => state.getSubcategoriesForCategory);
@@ -321,9 +375,9 @@ export const useAppData = () => {
   const resetAllFilters = useAppStore(state => state.resetAllFilters);
   const generateNewRecommendations = useAppStore(state => state.generateNewRecommendations);
   const initializeFilteredItems = useAppStore(state => state.initializeFilteredItems);
-  const updateFilteredItems = useAppStore(state => state.updateFilteredItems);  const setTitle = useAppStore(state => state.setTitle);
+  const updateFilteredItems = useAppStore(state => state.updateFilteredItems);
+  const setTitle = useAppStore(state => state.setTitle);
   const updateTitleForLanguage = useAppStore(state => state.updateTitleForLanguage);
-  const getDefaultTitle = useAppStore(state => state.getDefaultTitle);
   const randomNotFoundImage = useAppStore(state => state.randomNotFoundImage);
   
   // Estados adicionales para compatibilidad
@@ -343,10 +397,10 @@ export const useAppData = () => {
   
   return {
     recommendations, categories, filteredItems, selectedCategory, selectedSubcategory,
-    title, isDataInitialized, initializeData, updateWithRealData, getRecommendations, getCategories,
+    title, isDataInitialized, initializeData, getRecommendations, getCategories,
     getSubcategoriesForCategory, setCategory, setSelectedCategory, setSubcategory, resetToHome, resetAllFilters,
     generateNewRecommendations, initializeFilteredItems,
-    updateFilteredItems, setTitle, updateTitleForLanguage, getDefaultTitle, randomNotFoundImage,
+    updateFilteredItems, setTitle, updateTitleForLanguage, randomNotFoundImage,
     // Estados adicionales
     activeSubcategory, setActiveSubcategory, isSpanishCinemaActive, toggleSpanishCinema,
     isMasterpieceActive, toggleMasterpiece, activePodcastLanguages, togglePodcastLanguage,
@@ -354,6 +408,12 @@ export const useAppData = () => {
     allData
   };
 };
+
+// Inicialización automática
+const store = useAppStore.getState();
+if (!store.isDataInitialized) {
+  store.initializeData();
+}
 
 export const useAppTheme = () => {
   const isDarkMode = useAppStore(state => state.isDarkMode);
@@ -387,11 +447,10 @@ export const useAppLanguage = () => {
   const language = useAppStore(state => state.language);
   const translations = useAppStore(state => state.translations);
   const setLanguage = useAppStore(state => state.setLanguage);
-  const setTranslations = useAppStore(state => state.setTranslations);
   const toggleLanguage = useAppStore(state => state.toggleLanguage);
   const getTranslation = useAppStore(state => state.getTranslation);
   
-  return { language, translations, setLanguage, setTranslations, toggleLanguage, getTranslation };
+  return { language, translations, setLanguage, toggleLanguage, getTranslation };
 };
 
 export default useAppStore;

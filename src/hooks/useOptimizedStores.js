@@ -1,7 +1,5 @@
 import { useMemo, useCallback } from 'react';
-import { useViewStore } from '../store/viewStore';
-import { useDataStore } from '../store/dataStore';
-import { useThemeStore } from '../store/themeStore';
+import { useAppView, useAppData, useAppTheme, useAppUI } from '../store/useAppStore';
 
 /**
  * Hook personalizado para optimizar el rendimiento de componentes
@@ -9,26 +7,18 @@ import { useThemeStore } from '../store/themeStore';
  */
 export const useOptimizedStores = () => {
   // Selectores específicos para evitar re-renders innecesarios
-  const isMobile = useViewStore(state => state.isMobile);
-  const currentView = useViewStore(state => state.currentView);
-  const navigateToDetail = useViewStore(state => state.navigateToDetail);
-  const processTitle = useViewStore(state => state.processTitle);
-  const processDescription = useViewStore(state => state.processDescription);
-  
-  const filteredItems = useDataStore(state => state.filteredItems);
-  const homeRecommendations = useDataStore(state => state.homeRecommendations);
-  const selectedCategory = useDataStore(state => state.selectedCategory);
-  
-  const isDarkTheme = useThemeStore(state => state.isDarkTheme);
-  const getMasterpieceBadgeConfig = useThemeStore(state => state.getMasterpieceBadgeConfig);
+  const { processTitle, processDescription, goToDetail, currentView } = useAppView();
+  const { filteredItems, homeRecommendations, selectedCategory } = useAppData();
+  const { isDarkTheme, getMasterpieceBadgeConfig } = useAppTheme();
+  const { isMobile } = useAppUI();
 
   // Memoizar configuraciones que no cambian frecuentemente
   const badgeConfig = useMemo(() => getMasterpieceBadgeConfig(), [getMasterpieceBadgeConfig]);
   
   // Callbacks optimizados
   const handleItemClick = useCallback((item) => {
-    navigateToDetail(item);
-  }, [navigateToDetail]);
+    goToDetail(item);
+  }, [goToDetail]);
 
   const processItemTitle = useCallback((item) => {
     return processTitle(item);
@@ -73,8 +63,8 @@ export const useOptimizedStores = () => {
  * Hook para optimizar el manejo de estilos condicionales
  */
 export const useOptimizedStyles = () => {
-  const isDarkTheme = useThemeStore(state => state.isDarkTheme);
-  const isMobile = useViewStore(state => state.isMobile);
+  const { isDarkTheme } = useAppTheme();
+  const { isMobile } = useAppUI();
 
   const containerStyles = useMemo(() => ({
     backgroundColor: isDarkTheme ? '#1e1e1e' : '#ffffff',

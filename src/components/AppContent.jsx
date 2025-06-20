@@ -1,5 +1,5 @@
 import React, { useEffect, Suspense } from 'react';
-import useViewStore from '../store/viewStore';
+import { useAppView, useAppUI } from '../store/useAppStore';
 import { isMobileDevice } from '../utils/appUtils';
 import HybridMenu from './HybridMenu';
 import HomePage from './HomePage';
@@ -9,12 +9,12 @@ import { LazyCoffeePage, LoadingFallback } from './LazyComponents';
 const AppContent = () => {
   // Usando el store consolidado de vista para toda la gestión de UI
   const { 
-    isMobile: isMobileUI, 
-    setMobile, 
     currentView,
     selectedItem,
-    goBackFromDetail
-  } = useViewStore();
+    goBackFromDetail,
+    isMobile: isMobileView,
+    setViewport
+  } = useAppView();
 
   let content;  switch (currentView) {
     case 'home':
@@ -43,14 +43,13 @@ const AppContent = () => {
     default:
       console.warn('[AppContent] Unknown view:', currentView);
       content = <div>Página no encontrada</div>;
-  }  // Usando useEffect para detectar cambios de tamaño y actualizar el estado en el store de UI
-  useEffect(() => {    const checkMobile = () => {
-      const newIsMobile = isMobileDevice(window.innerWidth);
+  }  // Usando useEffect para detectar cambios de tamaño y actualizar el estado en el store de vista
+  useEffect(() => {
+    const checkMobile = () => {
+      const currentWidth = window.innerWidth;
       
-      // Solo actualizar si cambió el estado mobile
-      if (newIsMobile !== isMobileUI) {
-        setMobile(newIsMobile);
-      }
+      // Actualizar viewport usando setViewport que maneja isMobile, isTablet, isDesktop
+      setViewport(currentWidth);
     };
     
     checkMobile();
@@ -58,7 +57,7 @@ const AppContent = () => {
     return () => {
       window.removeEventListener('resize', checkMobile);
     };
-  }, [setMobile, isMobileUI]);
+  }, [setViewport]);
 
   return (
     <div className="container" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>      

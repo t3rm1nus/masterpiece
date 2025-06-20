@@ -9,8 +9,8 @@ import {
   ListItemIcon,
   ListItemText,
   Paper,
-  Chip,
   Container,
+  Button,
   useTheme,
   useMediaQuery
 } from '@mui/material';
@@ -19,20 +19,18 @@ import {
   Favorite as HeartIcon,
   Star as StarIcon,
   Code as CodeIcon,
-  Update as UpdateIcon
+  Update as UpdateIcon,
+  Wifi as WifiIcon,
+  Psychology as BrainIcon,
+  SentimentVeryDissatisfied as SadIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 
-const MaterialCoffeePage = () => {
-  const { t } = useLanguage();
+const MaterialCoffeePage = () => {  const { t } = useLanguage();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('lg')); // Cambiado de 'md' a 'lg'
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
-  // Solo renderizar en móviles
-  if (!isMobile) {
-    return null;
-  }
-
+  // Ahora se renderiza en todas las pantallas (móvil Y desktop)
   const benefits = [
     {
       text: t.coffee_benefit_1,
@@ -40,37 +38,40 @@ const MaterialCoffeePage = () => {
     },
     {
       text: t.coffee_benefit_2,
-      icon: <StarIcon sx={{ color: '#f39c12' }} />
+      icon: <WifiIcon sx={{ color: '#f39c12' }} />
     },
     {
       text: t.coffee_benefit_3,
-      icon: <CodeIcon sx={{ color: '#3498db' }} />
+      icon: <Box sx={{ display: 'flex', gap: 0.5 }}>
+        <CoffeeIcon sx={{ color: '#8b4513', fontSize: '1.2rem' }} />
+        <BrainIcon sx={{ color: '#3498db', fontSize: '1.2rem' }} />
+      </Box>
     },
     {
       text: t.coffee_benefit_4,
-      icon: <UpdateIcon sx={{ color: '#2ecc71' }} />
+      icon: <SadIcon sx={{ color: '#9b59b6' }} />
     }
   ];
 
   return (    <Container 
-      maxWidth="sm" 
+      maxWidth="md" 
       sx={{ 
-        padding: '16px',
-        paddingTop: '64px', // Espacio para el AppBar fijo (48px) + padding extra (16px)
-        paddingBottom: '32px'
+        padding: { xs: '16px', sm: '24px' }, // Responsivo: menos padding en móvil
+        paddingTop: { xs: '80px', sm: '100px', md: '120px' }, // Más espacio arriba para evitar que se superponga con el menú
+        paddingBottom: '40px',
+        backgroundColor: '#fafafa', // Fondo gris muy claro como en las imágenes
+        minHeight: '100vh',
+        position: 'relative',
+        zIndex: 1 // Asegurar que esté por debajo del menú
       }}
-    >
-      {/* Tarjeta principal */}
+    >{/* Card principal con icono de café y color de fondo de café */}
       <Card 
         elevation={3}
         sx={{ 
           marginBottom: '16px',
-          background: theme.palette.mode === 'dark' 
-            ? 'linear-gradient(135deg, #2d1810 0%, #1a0e0a 100%)'
-            : 'linear-gradient(135deg, #f7f3e9 0%, #e8ddd4 100%)',
-          border: theme.palette.mode === 'dark' 
-            ? '1px solid #5d4e37' 
-            : '1px solid #d4af37'
+          backgroundColor: '#F5F5DC', // Color beige/crema como en la imagen
+          border: '2px solid #D4A574', // Borde dorado/marrón
+          borderRadius: '12px',
         }}
       >
         <CardContent sx={{ textAlign: 'center', padding: '24px' }}>
@@ -84,28 +85,43 @@ const MaterialCoffeePage = () => {
           >
             ☕
           </Box>
-          
-          {/* Título principal */}
-          <Typography 
+            {/* Título principal */}          <Typography 
             variant="h4" 
             component="h1" 
             sx={{ 
               fontWeight: 'bold',
-              marginBottom: '8px',
-              color: theme.palette.mode === 'dark' ? '#f4e4bc' : '#8b4513',
-              fontSize: { xs: '1.8rem', sm: '2.2rem' }
+              marginBottom: '16px',
+              color: '#8B4513', // Color marrón café para el texto
+              fontSize: { xs: '1.5rem', sm: '1.8rem' },
+              textDecoration: 'none', // Quitar cualquier decoración de texto
+              textShadow: 'none', // Quitar sombra de texto
+              border: 'none', // Quitar bordes
+              outline: 'none', // Quitar outline
+              background: 'none', // Quitar fondo
+              backgroundColor: 'transparent', // Fondo transparente
+              '&:hover': {
+                background: 'none',
+                backgroundColor: 'transparent',
+                textDecoration: 'none',
+                color: '#8B4513' // Mantener el mismo color en hover
+              },
+              '&:focus': {
+                background: 'none',
+                backgroundColor: 'transparent',
+                outline: 'none'
+              }
             }}
           >
             {t.coffee_page_title}
           </Typography>
-          
-          {/* Subtítulo */}
+            {/* Subtítulo con emoji de mano */}
           <Typography 
             variant="h6" 
             sx={{ 
               marginBottom: '16px',
-              color: theme.palette.mode === 'dark' ? '#d2b48c' : '#a0522d',
-              fontStyle: 'italic'
+              color: '#8B4513', // Color marrón café para el texto
+              fontStyle: 'normal',
+              fontSize: { xs: '1.1rem', sm: '1.3rem' }
             }}
           >
             {t.coffee_page_subtitle}
@@ -116,17 +132,22 @@ const MaterialCoffeePage = () => {
             variant="body1" 
             sx={{ 
               lineHeight: 1.6,
-              color: theme.palette.text.primary,
+              color: '#333333', // Texto oscuro para el fondo claro
               fontSize: '1rem'
             }}
           >
             {t.coffee_description}
           </Typography>
         </CardContent>
-      </Card>
-
-      {/* Tarjeta de beneficios */}
-      <Card elevation={2} sx={{ marginBottom: '16px' }}>
+      </Card>      {/* Card con fondo blanco y borde gris */}
+      <Card 
+        elevation={2}        sx={{ 
+          marginBottom: '20px',
+          backgroundColor: '#ffffff',
+          border: '1px solid #d0d0d0',
+          borderRadius: '8px'
+        }}
+      >
         <CardContent>
           <Typography 
             variant="h6" 
@@ -134,7 +155,8 @@ const MaterialCoffeePage = () => {
               marginBottom: '16px',
               textAlign: 'center',
               fontWeight: 'bold',
-              color: theme.palette.primary.main
+              color: '#1976d2',
+              fontSize: '1.1rem'
             }}
           >
             {t.coffee_benefits_title}
@@ -142,7 +164,7 @@ const MaterialCoffeePage = () => {
           
           <List dense>
             {benefits.map((benefit, index) => (
-              <ListItem key={index} sx={{ padding: '4px 0' }}>
+              <ListItem key={index} sx={{ padding: '8px 0' }}>
                 <ListItemIcon sx={{ minWidth: '40px' }}>
                   {benefit.icon}
                 </ListItemIcon>
@@ -150,67 +172,65 @@ const MaterialCoffeePage = () => {
                   primary={benefit.text}
                   primaryTypographyProps={{
                     fontSize: '0.95rem',
-                    lineHeight: 1.4
+                    lineHeight: 1.4,
+                    color: '#333333'
                   }}
                 />
               </ListItem>
             ))}
           </List>
         </CardContent>
-      </Card>
-
-      {/* Tarjeta de call to action */}
+      </Card>      {/* Card con borde verde y fondo verde suave */}
       <Card 
-        elevation={3}
-        sx={{ 
-          marginBottom: '16px',
-          background: theme.palette.mode === 'dark'
-            ? 'linear-gradient(135deg, #1a472a 0%, #0d2818 100%)'
-            : 'linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%)',
-          border: '2px solid',
-          borderColor: theme.palette.mode === 'dark' ? '#4caf50' : '#2e7d32'
+        elevation={3}        sx={{ 
+          marginBottom: '20px',
+          backgroundColor: '#e8f5e8',
+          border: '2px solid #4caf50',
+          borderRadius: '8px'
         }}
       >
         <CardContent sx={{ textAlign: 'center' }}>
+          {/* Título en verde */}
           <Typography 
             variant="h6" 
             sx={{ 
               marginBottom: '8px',
               fontWeight: 'bold',
-              color: theme.palette.mode === 'dark' ? '#81c784' : '#2e7d32'
+              color: '#2e7d32'
             }}
           >
             {t.coffee_cta}
           </Typography>
-            <Typography 
+          
+          {/* Párrafo en gris y cursiva */}
+          <Typography 
             variant="body2" 
             sx={{ 
               marginBottom: '16px',
-              color: theme.palette.text.secondary,
+              color: '#666666',
               fontStyle: 'italic'
             }}
           >
             {t.coffee_legend}
           </Typography>
 
-          {/* Formulario de donación PayPal para móviles */}
+          {/* Card interna fondo blanco borde gris */}
           <Paper 
-            elevation={2}
-            sx={{ 
+            elevation={2}            sx={{ 
               padding: '20px',
-              backgroundColor: theme.palette.background.paper,
-              borderRadius: '12px',
-              border: '1px solid',
-              borderColor: theme.palette.divider,
+              backgroundColor: '#ffffff',
+              borderRadius: '8px',
+              border: '1px solid #d0d0d0',
               width: '100%',
               maxWidth: '100%'
             }}
           >
+            {/* Párrafo gris */}
             <Typography 
               variant="body2" 
               sx={{ 
                 marginBottom: '16px',
-                color: theme.palette.text.secondary,
+                color: '#666666',
                 fontSize: '0.9rem',
                 textAlign: 'center'
               }}
@@ -218,7 +238,7 @@ const MaterialCoffeePage = () => {
               Donación segura a través de PayPal
             </Typography>
             
-            {/* Formulario de donación */}
+            {/* Botón de donar de PayPal tal y como está */}
             <form action="https://www.paypal.com/donate" method="post" target="_top">
               <input type="hidden" name="hosted_button_id" value="SP8LLWVGW7EWC" />
               <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
@@ -227,66 +247,58 @@ const MaterialCoffeePage = () => {
                   name="submit" 
                   title="PayPal - The safer, easier way to pay online!"
                   style={{
-                    backgroundColor: theme.palette.primary.main,
-                    color: theme.palette.primary.contrastText,
+                    backgroundColor: '#007bff',
+                    color: '#ffffff',
                     padding: '16px 32px',
-                    border: `2px solid ${theme.palette.primary.dark}`,
+                    border: '2px solid #0056b3',
                     borderRadius: '8px',
                     fontSize: '1.1em',
                     fontWeight: 'bold',
                     cursor: 'pointer',
                     display: 'inline-block',
                     textAlign: 'center',
-                    boxShadow: theme.shadows[3],
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
                     textDecoration: 'none',
                     appearance: 'none',
                     WebkitAppearance: 'none',
                     MozAppearance: 'none',
                     width: '100%',
                     maxWidth: '280px',
-                    fontFamily: theme.typography.fontFamily,
+                    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
                     transition: 'all 0.3s ease'
                   }}
                   onMouseOver={(e) => {
-                    e.target.style.backgroundColor = theme.palette.primary.dark;
+                    e.target.style.backgroundColor = '#0056b3';
                     e.target.style.transform = 'translateY(-2px)';
                   }}
-                  onMouseOut={(e) => {
-                    e.target.style.backgroundColor = theme.palette.primary.main;
-                    e.target.style.transform = 'translateY(0)';
-                  }}
-                >
-                  Donar con PayPal
-                </button>
+                  onMouseOut={(e) => {                  e.target.style.backgroundColor = '#007bff';
+                  e.target.style.transform = 'translateY(0)';
+                }}              >
+                Invítame a un café
+              </button>
               </Box>
             </form>
           </Paper>
         </CardContent>
-      </Card>
-
-      {/* Footer */}
-      <Card elevation={1}>
-        <CardContent sx={{ textAlign: 'center', padding: '16px' }}>
+      </Card>      {/* Card blanca con borde gris - Footer */}
+      <Card 
+        elevation={1}        sx={{
+          backgroundColor: '#ffffff',
+          border: '1px solid #d0d0d0',
+          borderRadius: '8px'
+        }}
+      >
+        <CardContent sx={{ textAlign: 'center', padding: '16px' }}>          {/* Párrafo gris y cursiva */}
           <Typography 
             variant="body2" 
             sx={{ 
-              color: theme.palette.text.secondary,
+              color: '#666666',
               fontStyle: 'italic',
-              lineHeight: 1.4
-            }}
-          >
+              lineHeight: 1.4,
+              marginBottom: '16px'
+            }}          >
             {t.coffee_footer}
           </Typography>
-          
-          <Box sx={{ marginTop: '12px' }}>
-            <Chip 
-              icon={<CoffeeIcon />}
-              label="¡Gracias por tu apoyo!"
-              color="primary"
-              variant="outlined"
-              size="small"
-            />
-          </Box>
         </CardContent>
       </Card>
     </Container>

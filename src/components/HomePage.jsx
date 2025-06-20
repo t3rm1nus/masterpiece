@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../LanguageContext';
-import useDataStore from '../store/dataStore';
-import useViewStore from '../store/viewStore';
+import { useAppData, useAppView } from '../store/useAppStore';
 import { useTitleSync } from '../hooks/useTitleSync';
+import { loadRealData } from '../utils/dataLoader';
 import RecommendationsList from './RecommendationsList';
 import ThemeToggle from './ThemeToggle';
 import '../styles/components/buttons.css';
 import '../styles/components/home-page.css';
 import UnifiedItemDetail from './UnifiedItemDetail';
+import { normalizeSubcategoryInternal } from '../utils/categoryUtils';
 
 const HomePage = () => {
   const { lang, t } = useLanguage();
   // Hook para sincronizar títulos automáticamente
   useTitleSync();
+
   // Stores consolidados
   const { 
+    recommendations,
     selectedCategory, 
     setSelectedCategory,
     activeSubcategory,
@@ -34,46 +37,193 @@ const HomePage = () => {
     initializeFilteredItems,
     updateFilteredItems,
     setActiveLanguage,
-    activeLanguage,
+    activeLanguage,    
     allData,
-    initializeData
-  } = useDataStore();
+    isDataInitialized,
+    updateWithRealData,
+    updateTitleForLanguage
+  } = useAppData();
   
-  // Obtener funciones de procesamiento del store de vista
-  const { goBackFromDetail, selectedItem, navigateToDetail } = useViewStore();
-  // Obtener categorías traducidas
-  const categories = getCategories(lang);
+  // Efecto para actualizar título cuando cambia el idioma
+  useEffect(() => {
+    if (lang) {
+      updateTitleForLanguage();
+    }
+  }, [lang, selectedCategory, updateTitleForLanguage]);
+    // Obtener funciones de procesamiento del store de vista
+  const { goBackFromDetail, selectedItem, goToDetail } = useAppView();
+  // Obtener categorías traducidas (se actualizará cuando cambie el idioma)
+  const categoriesFromStore = getCategories();
   
+  // Traducir categorías usando el contexto de idioma
+  const categories = categoriesFromStore.map(cat => ({
+    ...cat,
+    label: t?.categories?.[cat.key] || cat.label,
+    isMasterpiece: cat.key === 'masterpiece' || cat.masterpiece === true
+  }));
   // Obtener subcategorías del store para la categoría seleccionada
-  const categorySubcategories = getSubcategoriesForCategory();
-    const [isRecommendedActive, setIsRecommendedActive] = useState(false);
-  // Efecto para inicializar los datos
-  useEffect(() => {
-    initializeData();
-  }, [initializeData]);  // Efecto para inicializar los datos filtrados
-  useEffect(() => {
-    // Solo inicializar si no hay filteredItems y allData está listo
-    if (allData && Object.keys(allData).length > 0 && (!filteredItems || filteredItems.length === 0)) {
-      initializeFilteredItems();
+  const categorySubcategories = React.useMemo(() => {
+    let subs = getSubcategoriesForCategory(selectedCategory);
+    // Si es boardgames, solo devolver la key tal cual (ya está en inglés)
+    if (selectedCategory === 'boardgames' && Array.isArray(subs)) {
+      return subs.map(({ sub, ...rest }) => ({
+        sub: sub.toLowerCase().trim(),
+        label: t?.subcategories?.boardgames?.[sub.toLowerCase().trim()] || sub,
+        ...rest
+      }));
     }
-  }, [allData]); // Removemos initializeFilteredItems de las dependencias para evitar bucles
-  // Efecto para actualizar los items filtrados cuando cambian los filtros
+    // Para otras categorías, devolver tal cual
+    return subs;
+  }, [selectedCategory, getSubcategoriesForCategory, t, lang]);
+  const [isRecommendedActive, setIsRecommendedActive] = useState(false);  // Efecto para cargar datos reales - solo una vez
   useEffect(() => {
-    if (selectedCategory) {
-      updateFilteredItems();
+    let mounted = true;
+    
+    if (!isDataInitialized && mounted) {        console.log('🔄 Iniciando carga de datos reales...');
+      loadRealData().then(realData => {
+        if (mounted) {
+          console.log('✅ Datos cargados, actualizando store con recomendaciones diarias...');
+          updateWithRealData(realData);
+          // Usar las recomendaciones finales del store (garantiza 14)
+          updateFilteredItems(realData.recommendations?.length === 14 ? realData.recommendations : realData.recommendations?.concat(Object.values(realData.allData).flat().filter(item => !realData.recommendations.some(r => r.id === item.id)).slice(0, 14 - (realData.recommendations?.length || 0))) || []);
+        }
+      }).catch(error => {
+        console.error('❌ Error en HomePage:', error);
+      });
     }
-  }, [selectedCategory, activeSubcategory, activeLanguage, updateFilteredItems]);  const handleCategoryClick = (category) => {
+    
+    return () => {
+      mounted = false;
+    };
+  }, [isDataInitialized, updateWithRealData]);  // Efecto para actualizar los items filtrados cuando cambian los filtros
+  useEffect(() => {
+    if (allData && Object.keys(allData).length > 0) {
+      let filteredData = [];
+      
+      // Si no hay categoría seleccionada (null), mostrar recomendaciones diarias curadas
+      if (!selectedCategory || selectedCategory === 'all') {
+        filteredData = recommendations;
+        console.log('📋 Mostrando recomendaciones diarias curadas:', filteredData.length);
+      } else {
+        // Filtrar elementos basado en la categoría seleccionada (mostrar TODAS de esa categoría)
+        filteredData = allData[selectedCategory] || [];
+        console.log(`🎯 Filtrando por categoría "${selectedCategory}":`, filteredData.length);
+      }      // Aplicar filtros adicionales solo cuando hay una categoría específica seleccionada
+      if (selectedCategory && selectedCategory !== 'all') {
+        console.log('🔍 Aplicando filtros adicionales...', {
+          isSpanishCinemaActive,
+          isMasterpieceActive,
+          activePodcastLanguages,
+          activeDocumentaryLanguages,
+          activeSubcategory
+        });// Filtro de Cine Español (solo para películas)
+        if (selectedCategory === 'movies' && isSpanishCinemaActive) {
+          filteredData = filteredData.filter(item => {
+            // Verificar múltiples propiedades que puedan indicar cine español
+            const isSpanish = 
+              item.spanish_cinema === true || 
+              item.spanishCinema === true ||
+              (item.tags && item.tags.includes('spanish')) ||
+              (item.director && (
+                item.director.includes('Luis García Berlanga') ||
+                item.director.includes('Pedro Almodóvar') ||
+                item.director.includes('Alejandro Amenábar') ||
+                item.director.includes('Fernando Trueba') ||
+                item.director.includes('Icíar Bollaín') ||
+                item.director.includes('Carlos Saura') ||
+                item.director.includes('Víctor Erice')
+              )) ||
+              (item.country && item.country === 'España') ||
+              (item.pais && item.pais === 'España') ||
+              (item.description && (
+                item.description.es?.includes('español') ||
+                item.description.es?.includes('España')
+              ));
+            
+            return isSpanish;
+          });
+          console.log('🇪🇸 Filtro Cine Español aplicado:', filteredData.length);
+        }
+
+        // Filtro de Masterpiece (para cualquier categoría)
+        if (isMasterpieceActive) {
+          filteredData = filteredData.filter(item => 
+            item.masterpiece === true || 
+            item.obra_maestra === true
+          );
+          console.log('⭐ Filtro Masterpiece aplicado:', filteredData.length);
+        }
+
+        // Filtro de idioma para podcasts
+        if (selectedCategory === 'podcast' && activePodcastLanguages.length > 0) {
+          filteredData = filteredData.filter(item => 
+            activePodcastLanguages.includes(item.language) ||
+            activePodcastLanguages.includes(item.idioma)
+          );
+          console.log('🎧 Filtro idioma podcast aplicado:', filteredData.length);
+        }
+
+        // Filtro de idioma para documentales
+        if (selectedCategory === 'documentales' && activeDocumentaryLanguages.length > 0) {
+          filteredData = filteredData.filter(item => 
+            activeDocumentaryLanguages.includes(item.language) ||
+            activeDocumentaryLanguages.includes(item.idioma)
+          );
+          console.log('🎬 Filtro idioma documental aplicado:', filteredData.length);
+        }
+
+        // Filtro de subcategoría
+        if (activeSubcategory && activeSubcategory !== 'all') {
+          filteredData = filteredData.filter(item => 
+            (item.subcategory && item.subcategory.toLowerCase().trim() === activeSubcategory)
+            || (item.categoria && item.categoria.toLowerCase().trim() === activeSubcategory)
+            || (item.genre && item.genre.toLowerCase().trim() === activeSubcategory)
+            || (item.genero && item.generero.toLowerCase().trim() === activeSubcategory)
+          );
+          console.log(`📂 Filtro subcategoría (key directa) "${activeSubcategory}" aplicado:`, filteredData.length);
+        }
+      }
+
+      // Ordenar alfabéticamente por título (soporta objetos multiidioma)
+      filteredData = filteredData.slice().sort((a, b) => {
+        const titleA = typeof a.title === 'object' ? (a.title.es || a.title.en || Object.values(a.title)[0] || '') : (a.title || '');
+        const titleB = typeof b.title === 'object' ? (b.title.es || b.title.en || Object.values(b.title)[0] || '') : (b.title || '');
+        return titleA.localeCompare(titleB, 'es', { sensitivity: 'base' });
+      });
+
+      updateFilteredItems(filteredData);
+    } else {
+      console.log('⚠️ allData no está disponible aún:', allData);
+    }
+  }, [
+    selectedCategory, 
+    activeSubcategory, 
+    activeLanguage, 
+    allData, 
+    recommendations, 
+    isSpanishCinemaActive,
+    isMasterpieceActive,
+    activePodcastLanguages,
+    activeDocumentaryLanguages,
+    updateFilteredItems
+  ]);  const handleCategoryClick = (category) => {
     setSelectedCategory(category);
     setActiveSubcategory(null);
     setActiveLanguage('all');
-  };
-  // Manejar toggle de cine español
+  };// Manejar toggle de cine español
   const handleSpanishCinemaToggle = () => {
+    console.log('🇪🇸 Toggle Cine Español:', !isSpanishCinemaActive);
     toggleSpanishCinema();
-  };  // Manejar clic en elemento
+  };
+
+  // Manejar toggle de masterpiece
+  const handleMasterpieceToggle = () => {
+    console.log('⭐ Toggle Masterpiece:', !isMasterpieceActive);
+    toggleMasterpiece();
+  };// Manejar clic en elemento
   const handleItemClick = (item) => {
     // Usar el viewStore para navegar al detalle
-    navigateToDetail(item);
+    goToDetail(item);
     // Hacer scroll al inicio de la página
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };  // Manejar cierre del detalle
@@ -123,13 +273,12 @@ const HomePage = () => {
       default:
         return '#0078d4';    }
   };
-
   // Verificar si hay datos disponibles
   if (!allData || Object.keys(allData).length === 0) {
     return (
       <div className="loading-container">
         <div className="loading-spinner"></div>
-        <p>{t.ui.loading}</p>
+        <p>Cargando...</p>
       </div>
     );
   }
@@ -155,8 +304,7 @@ const HomePage = () => {
               ))}
             </div>
           </div>          {selectedCategory && selectedCategory !== 'documentales' && (
-            <div className="subcategories-container">
-              {Array.isArray(categorySubcategories) && categorySubcategories.length > 0 ? (
+            <div className="subcategories-container">              {Array.isArray(categorySubcategories) && categorySubcategories.length > 0 && (
                 categorySubcategories
                   .sort((a, b) => a.order - b.order)
                   .map(({ sub }) => (
@@ -165,17 +313,44 @@ const HomePage = () => {
                       className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
                       onClick={() => setActiveSubcategory(sub)}
                     >
-                      {t.subcategories[selectedCategory]?.[sub] || sub}
-                    </button>
+                      {t?.subcategories?.[selectedCategory]?.[sub.toLowerCase()] || sub}                    </button>
                   ))
-              ) : (
-                <div className="no-subcategories">
-                  {t.ui.noSubcategories}
-                </div>
               )}
             </div>
           )}
 
+          {/* SUBCATEGORÍAS DINÁMICAS PARA DOCUMENTALES */}
+          {selectedCategory === 'documentales' && (
+            (() => {
+              // Obtener subcategorías únicas y normalizadas de los items de documentales
+              const subcatsSet = new Set();
+              (allData['documentales'] || []).forEach(item => {
+                if (item.subcategory) subcatsSet.add(item.subcategory.toLowerCase().trim());
+              });
+              const subcats = Array.from(subcatsSet).sort((a, b) => a.localeCompare(b, lang === 'es' ? 'es' : 'en', { sensitivity: 'base' }));
+              // Log de depuración para ver subcategorías detectadas y traducciones
+              console.log('[DOCU] Subcategorías únicas detectadas:', subcats);
+              const missingTranslations = subcats.filter(sub => !t?.subcategories?.documentales?.[sub]);
+              if (missingTranslations.length > 0) {
+                console.warn('[DOCU] Subcategorías sin traducción en texts.json:', missingTranslations);
+              }
+              return (
+                <div className="subcategories-container">
+                  {subcats.map(sub => (
+                    <button
+                      key={sub}
+                      className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
+                      onClick={() => setActiveSubcategory(sub)}
+                    >
+                      {t?.subcategories?.documentales?.[sub] || sub}
+                    </button>
+                  ))}
+                </div>
+              );
+            })()
+          )}
+
+          {/* BOTONES ESPECIALES (idioma, masterpiece, etc) */}
           <div className="special-buttons-container">
             {selectedCategory === 'movies' && (
               <button
@@ -184,10 +359,9 @@ const HomePage = () => {
               >
                 {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
               </button>
-            )}
-
-            {selectedCategory === 'podcast' && (
-              <>                <button
+            )}            {selectedCategory === 'podcast' && (
+              <div key="podcast-languages">
+                <button
                   className={`subcategory-btn podcast-language${activePodcastLanguages?.includes('es') ? ' active' : ''}`}              
                   onClick={() => togglePodcastLanguage('es')}
                 >
@@ -199,9 +373,9 @@ const HomePage = () => {
                 >
                   {lang === 'es' ? 'Inglés' : 'English'}
                 </button>
-              </>
+              </div>
             )}            {selectedCategory === 'documentales' && (
-              <>
+              <div key="documentales-controls">
                 {/* Botones de idioma para documentales */}
                 <button
                   className={`subcategory-btn podcast-language${activeDocumentaryLanguages?.includes('es') ? ' active' : ''}`}              
@@ -215,42 +389,27 @@ const HomePage = () => {
                 >
                   {lang === 'es' ? 'Inglés' : 'English'}
                 </button>
-                
-                {/* Subcategorías de documentales */}
-                {Array.isArray(categorySubcategories) && categorySubcategories.length > 0 && (
-                  categorySubcategories
-                    .sort((a, b) => a.order - b.order)
-                    .map(({ sub }) => (
-                      <button
-                        key={sub}
-                        className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
-                        onClick={() => setActiveSubcategory(sub)}
-                      >
-                        {t.subcategories[selectedCategory]?.[sub] || sub}
-                      </button>
-                    ))
-                )}
-              </>
+              </div>
             )}
 
             {!isRecommendedActive && selectedCategory && (
               <button
                 className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
-                onClick={toggleMasterpiece}
+                onClick={handleMasterpieceToggle}
               >
                 {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
               </button>
             )}
-          </div>
-
-          {title && (
-            <h1 
-              className={selectedCategory ? 'after-subcategories' : ''}
-              style={{ textTransform: 'capitalize', textAlign: 'center', margin: '20px 0' }}
-            >
-              {title}
-            </h1>
-          )}
+          </div>          {/* Mostrar título traducido */}
+          <h1 
+            className={selectedCategory ? 'after-subcategories' : ''}
+            style={{ textTransform: 'capitalize', textAlign: 'center', margin: '20px 0' }}
+          >
+            {selectedCategory 
+              ? (t?.categories?.[selectedCategory] || selectedCategory)
+              : (t?.ui?.titles?.home_title || 'Recomendaciones diarias')
+            }
+          </h1>
         </>
       )}
 

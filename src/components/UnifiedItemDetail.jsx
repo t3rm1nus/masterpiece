@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../LanguageContext';
-import useViewStore from '../store/viewStore';
-import useThemeStore from '../store/themeStore';
+import { useAppView, useAppTheme } from '../store/useAppStore';
+import '../styles/components/item-detail.css';
 
 // Material UI imports (solo para mobile)
 import {
@@ -34,8 +34,8 @@ import {
 
 const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
-  const { processTitle, processDescription, goBackFromDetail } = useViewStore();
-  const { getMasterpieceBadgeConfig } = useThemeStore();
+  const { processTitle, processDescription, goBackFromDetail } = useAppView();
+  const { getMasterpieceBadgeConfig } = useAppTheme();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   
@@ -162,26 +162,9 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
           
           {/* Badge de masterpiece en la imagen */}
           {selectedItem.masterpiece && (
-            <Box
-              sx={{
-                position: 'absolute',
-                top: '16px',
-                right: '16px',
-                backgroundColor: '#ffd700',
-                color: 'white',
-                borderRadius: '50%',
-                width: 40,
-                height: 40,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: '3px solid white',
-                boxShadow: theme.shadows[4],
-                zIndex: 10
-              }}
-            >
-              <StarIcon sx={{ fontSize: '20px' }} />
-            </Box>
+            <span className="masterpiece-detail-badge" title="Obra maestra">
+              <img src="/imagenes/masterpiece-star.svg" alt="Masterpiece" style={{ width: 56, height: 56, display: 'block' }} />
+            </span>
           )}
           
           <CardContent sx={{ padding: '24px' }}>
@@ -282,25 +265,8 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
       <div className="item-detail-container">
         <div className={`item-detail-content ${selectedItem.masterpiece ? 'masterpiece-item' : 'normal-item'} ${selectedItem.category}`}>
           {selectedItem.masterpiece && (
-            <span className="masterpiece-badge-container" title="Obra maestra">
-              <svg 
-                width={badgeConfig.svg.width} 
-                height={badgeConfig.svg.height} 
-                viewBox={badgeConfig.svg.viewBox} 
-                fill={badgeConfig.svg.fill} 
-                xmlns={badgeConfig.svg.xmlns}
-              >
-                <circle 
-                  cx={badgeConfig.circle.cx} 
-                  cy={badgeConfig.circle.cy} 
-                  r={badgeConfig.circle.r} 
-                  fill={badgeConfig.circle.fill}
-                />
-                <path 
-                  d={badgeConfig.star.d} 
-                  fill={badgeConfig.star.fill}
-                />
-              </svg>
+            <span className="masterpiece-detail-badge" title="Obra maestra">
+              <img src="/imagenes/masterpiece-star.svg" alt="Masterpiece" style={{ width: 56, height: 56, display: 'block' }} />
             </span>
           )}
           

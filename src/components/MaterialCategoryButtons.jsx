@@ -58,7 +58,10 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
     }
   };
   
-  const getCategoryColor = (categoryKey) => {
+  const getCategoryColor = (categoryKey, isMasterpiece) => {
+    if (isMasterpiece) {
+      return 'linear-gradient(135deg, #fffbe6 0%, #ffe082 40%, #fff8e1 100%)';
+    }
     switch (categoryKey) {
       case 'movies':
       case 'peliculas':
@@ -77,7 +80,8 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
         return '#8bc34a';
       case 'boardgames':
       case 'juegos de mesa':
-        return '#e91e63';      case 'comics':
+        return '#e91e63';
+      case 'comics':
         return '#ff9800';
       case 'documentales':
       case 'documentaries':
@@ -99,32 +103,33 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
         boxSizing: 'border-box'
       }}
     >
-      {categories.map(({ key, label }) => (
+      {categories.map(({ key, label, isMasterpiece }) => (
         <Button
           key={key}
           variant={selectedCategory === key ? 'contained' : 'outlined'}
           startIcon={getCategoryIcon(key)}
-          onClick={() => onCategoryClick(key, label)}          sx={{
+          onClick={() => onCategoryClick(key, label)}
+          sx={{
             minWidth: 'auto',
-            maxWidth: 'calc(50% - 3px)', // Máximo 50% del ancho menos la mitad del gap
+            maxWidth: 'calc(50% - 3px)',
             borderRadius: '20px',
             textTransform: 'none',
-            fontSize: '0.8rem', // Ligeramente más pequeño para móviles
+            fontSize: '0.8rem',
             fontWeight: selectedCategory === key ? 'bold' : 'normal',
-            backgroundColor: selectedCategory === key ? getCategoryColor(key) : 'transparent',
+            background: selectedCategory === key && isMasterpiece ? getCategoryColor(key, true) : (selectedCategory === key ? getCategoryColor(key) : 'transparent'),
             borderColor: getCategoryColor(key),
             color: selectedCategory === key ? 'white' : getCategoryColor(key),
-            padding: '6px 12px', // Padding horizontal reducido
+            padding: '6px 12px',
             transition: 'all 0.3s ease',
-            flexShrink: 1, // Permitir que el botón se encoja si es necesario
+            flexShrink: 1,
             '&:hover': {
-              backgroundColor: selectedCategory === key ? getCategoryColor(key) : `${getCategoryColor(key)}20`,
+              background: selectedCategory === key && isMasterpiece ? getCategoryColor(key, true) : (selectedCategory === key ? getCategoryColor(key) : `${getCategoryColor(key)}20`),
               borderColor: getCategoryColor(key),
               transform: 'translateY(-2px)',
               boxShadow: theme.shadows[4]
             },
             '& .MuiButton-startIcon': {
-              marginRight: '4px', // Reducido para ahorrar espacio
+              marginRight: '4px',
               fontSize: '16px'
             }
           }}

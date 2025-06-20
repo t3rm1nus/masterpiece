@@ -5588,6 +5588,27 @@
         "en": "https://www.youtube.com/watch?v=M2bEzJFVdQ4"
       },
       "masterpiece": true
-    }
+    },
+    {
+  "id": 264,
+  "category": "movies",
+  "subcategory": "comedy",
+  "title": {
+    "es": "Los caballeros de la mesa cuadrada",
+    "en": "Monty Python and the Holy Grail"
+  },
+  "description": {
+    "es": "Parodia surrealista de la leyenda artúrica, donde el Rey Arturo y sus caballeros emprenden una absurda búsqueda del Santo Grial. Llena de humor absurdo, gags visuales y diálogos memorables, es una de las comedias más influyentes de la historia del cine británico.",
+    "en": "A surreal parody of the Arthurian legend, where King Arthur and his knights embark on an absurd quest for the Holy Grail. Full of absurd humor, visual gags, and memorable dialogue, it's one of the most influential comedies in British film history."
+  },
+  "director": "Terry Gilliam, Terry Jones",
+  "image": "/imagenes/peliculas/holy_grail.jpg",
+  "year": 1975,
+  "trailer": {
+    "es": "https://www.youtube.com/watch?v=WGidnQmVTVQ",
+    "en": "https://www.youtube.com/watch?v=67yCrKqAPQk"
+  },
+  "masterpiece": true
+}
   ]
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import useErrorStore from '../store/errorStore';
+import { useAppError } from '../store/useAppStore';
 
 /**
  * Componente para mostrar errores de la aplicación
@@ -8,7 +8,7 @@ import useErrorStore from '../store/errorStore';
  * tiene un error activo. Puede ser incluido en cualquier parte de la aplicación.
  */
 export default function ErrorDisplay() {
-  const { hasError, errorMessage, clearError } = useErrorStore();
+  const { hasError, errorMessage, clearError } = useAppError();
   
   if (!hasError) return null;
   

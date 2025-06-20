@@ -1,5 +1,6 @@
-import React, { createContext, useContext } from "react";
-import useLanguageStore from "./store/languageStore";
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { useAppLanguage } from "./store/useAppStore";
+import textsData from "./data/texts.json";
 
 /**
  * Robust Language Context
@@ -13,19 +14,29 @@ import useLanguageStore from "./store/languageStore";
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-  // Usamos el store de idioma robusto
+  // Usamos el store de idioma unificado
   const { 
-    lang, 
-    translations: t, 
-    availableLanguages,
-    setLanguage, 
-    getTranslation, 
-    getCategoryTranslation,
-    getSubcategoryTranslation,
-    hasTranslation,
-    getTranslationMetadata
-  } = useLanguageStore();
-  // Wrapper function para setLanguage con validación adicional
+    language, 
+    setLanguage,
+    setTranslations: updateStoreTranslations
+  } = useAppLanguage();
+
+  // Estado para las traducciones cargadas
+  const [translations, setTranslations] = useState({});  // Cargar traducciones al inicio
+  useEffect(() => {
+    if (textsData && textsData[language]) {
+      console.log('Cargando traducciones para:', language, textsData[language]);
+      setTranslations(textsData[language]);
+      // Actualizar el store con las traducciones completas
+      updateStoreTranslations(textsData);
+    } else {
+      console.warn('No se encontraron traducciones para:', language);
+    }
+  }, [language, updateStoreTranslations]);
+  // Crear objeto t con las traducciones
+  const t = translations;
+  const lang = language; // Alias para compatibilidad
+  const availableLanguages = ['es', 'en'];// Wrapper function para setLanguage con validación adicional
   const changeLanguage = (lng) => {
     if (!lng || typeof lng !== 'string') {
       console.warn('[LanguageContext] Invalid language provided to changeLanguage:', lng);
@@ -34,20 +45,58 @@ export function LanguageProvider({ children }) {
     
     setLanguage(lng);
   };
+  // Funciones de traducción con datos reales
+  const getTranslation = (key, fallback = key) => {
+    try {
+      const keys = key.split('.');
+      let value = translations;
+      for (const k of keys) {
+        value = value?.[k];
+        if (value === undefined) break;
+      }
+      return value || fallback;
+    } catch (error) {
+      console.warn('[LanguageContext] Error getting translation for key:', key, error);
+      return fallback;
+    }
+  };
+
+  const getCategoryTranslation = (category, fallback = category) => {
+    return getTranslation(`categories.${category}`, fallback);
+  };
+
+  const getSubcategoryTranslation = (subcategory, category = null, fallback = subcategory) => {
+    if (category) {
+      return getTranslation(`subcategories.${category}.${subcategory}`, fallback);
+    }
+    return getTranslation(`subcategories.${subcategory}`, fallback);
+  };
 
   // Método de conveniencia para traducir con fallback automático a la clave
   const translate = (key, fallback = null) => {
-    return getTranslation(key, fallback);
+    return getTranslation(key, fallback || key);
   };
 
   // Método de conveniencia para traducir categorías
   const translateCategory = (category, fallback = null) => {
-    return getCategoryTranslation(category, fallback);
+    return getCategoryTranslation(category, fallback || category);
   };
 
   // Método de conveniencia para traducir subcategorías con contexto de categoría
   const translateSubcategory = (subcategory, category = null, fallback = null) => {
-    return getSubcategoryTranslation(subcategory, category, fallback);
+    return getSubcategoryTranslation(subcategory, category, fallback || subcategory);
+  };
+  // Crear funciones de utilidad locales para reemplazar las eliminadas del store
+  const hasTranslation = (key) => {
+    return key && key !== ''; // Simplificado
+  };
+
+  const getTranslationMetadata = () => {
+    return {
+      currentLanguage: lang,
+      availableLanguages: availableLanguages,
+      totalLanguages: availableLanguages.length
+    };
   };
 
   // Método para verificar si el idioma actual está disponible

@@ -3,7 +3,8 @@
     {
       "category": "videogames",
       "subcategory": "mundo abierto",
-      "title": "The Legend of Zelda: Breath of the Wild",
+      "title": { "es": "La Leyenda de Zelda: Breath of the Wild", "en": "BreakiThe Legend of Zelda: Breath of the Wild" },
+      "id": 1,     
       "author": "Nintendo",
       "year": 2017 ,
       "description": {

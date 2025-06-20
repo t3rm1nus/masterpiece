@@ -6,8 +6,7 @@ import {
   useMediaQuery
 } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
-import useDataStore from '../store/dataStore';
-import useThemeStore from '../store/themeStore';
+import { useAppData, useAppTheme } from '../store/useAppStore';
 
 const MaterialSubcategoryChips = ({ 
   subcategories, 
@@ -15,15 +14,14 @@ const MaterialSubcategoryChips = ({
   onSubcategoryClick,
   categoryColor = '#0078d4',
   selectedCategory
-}) => {
-  const { getSubcategoryTranslation } = useLanguage();
+}) => {  const { getSubcategoryTranslation } = useLanguage();
   const { 
     isSpanishCinemaActive, 
     isMasterpieceActive, 
     toggleSpanishCinema, 
     toggleMasterpiece 
-  } = useDataStore();
-  const { getSpecialButtonLabel } = useThemeStore();
+  } = useAppData();
+  const { getSpecialButtonLabel } = useAppTheme();
   const { lang } = useLanguage();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
@@ -44,10 +42,10 @@ const MaterialSubcategoryChips = ({
             marginBottom: '8px'
           }}
         >
-          {subcategories.map(({ sub }) => (
+          {subcategories.map(({ sub, label }) => (
             <Chip
               key={sub}
-              label={getSubcategoryTranslation(sub, selectedCategory)}
+              label={label || getSubcategoryTranslation(sub, selectedCategory)}
               onClick={() => onSubcategoryClick(sub)}
               variant={activeSubcategory === sub ? 'filled' : 'outlined'}
               sx={{

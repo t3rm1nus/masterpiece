@@ -1,9 +1,9 @@
 /**
- * Language Slice - Gestión de idioma
+ * Language Slice - Gestión de idioma  
  * Consolidación del languageStore anterior
  */
 
-export const createLanguageSlice = (set, get) => ({
+export const languageSlice = (set, get) => ({
   // ==========================================
   // ESTADO DE IDIOMA
   // ==========================================
@@ -17,12 +17,11 @@ export const createLanguageSlice = (set, get) => ({
   // ==========================================
   // ACCIONES DE IDIOMA
   // ==========================================
-  
-  /**
-   * Cambiar idioma de la aplicación
+    /**
+   * Cambiar idioma de la aplicación - VERSIÓN SEGURA SIN get()
    */
   setLanguage: (newLang) => {
-    const { supportedLanguages } = get();
+    const supportedLanguages = ['es', 'en']; // Valores fijos para evitar get()
     
     if (!supportedLanguages.includes(newLang)) {
       console.warn('[LanguageSlice] Unsupported language:', newLang);
@@ -39,12 +38,12 @@ export const createLanguageSlice = (set, get) => ({
   },
 
   /**
-   * Toggle entre español e inglés
+   * Toggle entre español e inglés - VERSIÓN SEGURA SIN get()
    */
   toggleLanguage: () => {
-    const { lang } = get();
-    const newLang = lang === 'es' ? 'en' : 'es';
-    get().setLanguage(newLang);
+    set((state) => ({
+      lang: state.lang === 'es' ? 'en' : 'es'
+    }));
   },
 
   // ==========================================
@@ -67,50 +66,14 @@ export const createLanguageSlice = (set, get) => ({
     // Todos los idiomas soportados actualmente son LTR
     return 'ltr';
   },
-
   /**
-   * Obtener configuración de formato de fecha por idioma
+   * ELIMINADAS: getDateFormat con get() - CAUSABA INFINITE LOOPS
+   * Los formatos se pueden calcular en los componentes usando el valor lang del selector
    */
-  getDateFormat: () => {
-    const { lang } = get();
-    
-    const formats = {
-      es: {
-        short: 'DD/MM/YYYY',
-        long: 'DD de MMMM de YYYY',
-        locale: 'es-ES'
-      },
-      en: {
-        short: 'MM/DD/YYYY',
-        long: 'MMMM DD, YYYY',
-        locale: 'en-US'
-      }
-    };
-
-    return formats[lang] || formats.es;
-  },
-
   /**
-   * Obtener configuración de números por idioma
+   * ELIMINADAS: getNumberFormat con get() - CAUSABA INFINITE LOOPS
+   * Los formatos se pueden calcular en los componentes usando el valor lang del selector
    */
-  getNumberFormat: () => {
-    const { lang } = get();
-    
-    const formats = {
-      es: {
-        decimal: ',',
-        thousands: '.',
-        locale: 'es-ES'
-      },
-      en: {
-        decimal: '.',
-        thousands: ',',
-        locale: 'en-US'
-      }
-    };
-
-    return formats[lang] || formats.es;
-  },
 
   // ==========================================
   // RESETEAR ESTADO

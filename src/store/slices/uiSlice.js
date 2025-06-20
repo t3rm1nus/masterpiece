@@ -22,13 +22,11 @@ export const uiSlice = (set, get) => ({
 
   // Search actions
   setSearchTerm: (term) => set({ searchTerm: term }),
-
-  performSearch: async (term) => {
+  performSearch: async (term, recommendations = []) => {
     try {
       set({ isSearching: true, error: null });
       
-      const state = get();
-      const recommendations = state.recommendations || [];
+      // ARREGLADO: recibir recommendations como parámetro en lugar de usar get()
       
       if (!term.trim()) {
         set({ searchResults: [], isSearching: false });
@@ -68,33 +66,6 @@ export const uiSlice = (set, get) => ({
     selectedSubcategories: [],
     selectedTags: [],
   }),
-
-  // Get filtered recommendations
-  getFilteredRecommendations: () => {
-    const state = get();
-    const { recommendations, selectedCategories, selectedSubcategories, selectedTags } = state;
-
-    if (!recommendations || recommendations.length === 0) {
-      return [];
-    }
-
-    return recommendations.filter(rec => {
-      if (selectedCategories.length > 0) {
-        const recCategory = typeof rec.category === 'object' ? rec.category.key : rec.category;
-        if (!selectedCategories.includes(recCategory)) return false;
-      }
-
-      if (selectedSubcategories.length > 0) {
-        const recSubcategory = typeof rec.subcategory === 'object' ? rec.subcategory.key : rec.subcategory;
-        if (!selectedSubcategories.includes(recSubcategory)) return false;
-      }
-
-      if (selectedTags.length > 0) {
-        const recTags = Array.isArray(rec.tags) ? rec.tags.map(tag => typeof tag === 'object' ? tag.key : tag) : [];
-        if (!selectedTags.some(tag => recTags.includes(tag))) return false;
-      }
-
-      return true;
-    });
-  },
+  // ELIMINADA: getFilteredRecommendations con get() - CAUSABA INFINITE LOOPS
+  // Los filtros se pueden aplicar en los componentes usando los valores del selector
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import useThemeStore from '../store/themeStore';
+import { useAppTheme } from '../store/useAppStore';
 
 /**
  * Componente para cambiar entre temas claro y oscuro
@@ -8,7 +8,7 @@ import useThemeStore from '../store/themeStore';
  * entre los temas claro y oscuro de la aplicación.
  */
 export default function ThemeToggle() {
-  const { theme, toggleTheme } = useThemeStore();
+  const { theme, toggleTheme } = useAppTheme();
   
   return (
     <button 

@@ -15,7 +15,6 @@ export const viewSlice = (set, get) => ({
   },
 
   setCurrentView: (view) => set({ currentView: view }),
-
   // Navigation actions
   navigateToDetail: (id) => {
     set({ currentView: 'detail', selectedRecommendationId: id });
@@ -25,14 +24,45 @@ export const viewSlice = (set, get) => ({
     set({ currentView: 'home', selectedRecommendationId: null });
   },
 
-  // Responsive styles
-  getResponsiveStyles: () => {
-    const state = get();
-    if (state.isMobile) return state.mobileStyles;
-    if (state.isTablet) return state.tabletStyles;
-    return state.desktopStyles;
+  // Unified navigation actions
+  goToDetail: (item) => {
+    set({ 
+      currentView: 'detail', 
+      selectedItem: item,
+      previousView: 'home'
+    });
   },
 
+  goHome: () => {
+    set({ 
+      currentView: 'home', 
+      selectedItem: null,
+      previousView: null
+    });
+  },
+
+  goBackFromDetail: () => {
+    set({ 
+      currentView: 'home', 
+      selectedItem: null
+    });
+  },
+
+  goToCoffee: () => {
+    set({ 
+      currentView: 'coffee',
+      previousView: 'home'
+    });
+  },
+
+  goBackFromCoffee: () => {
+    set({ 
+      currentView: 'home'
+    });
+  },
+  // Responsive styles - CALCULADOS DINÁMICAMENTE EN COMPONENTES
+  // NO usar get() aquí para evitar infinite loops
+  
   // Style configurations
   mobileStyles: {
     container: 'px-4 py-2',
@@ -64,18 +94,7 @@ export const viewSlice = (set, get) => ({
     header: 'text-xl font-bold mb-4',
     button: 'px-4 py-2 rounded-md text-sm',
   },
-
-  // Get recommendation card classes
-  getRecommendationCardClasses: () => {
-    const state = get();
-    const baseClasses = 'recommendation-card transition-all duration-300 hover:shadow-lg cursor-pointer border border-gray-200 rounded-lg overflow-hidden';
-    
-    if (state.isMobile) {
-      return `${baseClasses} mb-4 mx-2`;
-    } else if (state.isTablet) {
-      return `${baseClasses} mb-6`;
-    } else {
-      return `${baseClasses} mb-8 hover:scale-105`;
-    }
-  },
+  // Base recommendation card classes - CALCULADO DINÁMICAMENTE EN COMPONENTES  
+  // NO usar get() aquí para evitar infinite loops
+  baseRecommendationCardClasses: 'recommendation-card transition-all duration-300 hover:shadow-lg cursor-pointer border border-gray-200 rounded-lg overflow-hidden',
 });

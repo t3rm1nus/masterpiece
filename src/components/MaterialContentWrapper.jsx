@@ -3,7 +3,7 @@ import { useMediaQuery, useTheme, Box, Typography } from '@mui/material';
 import MaterialRecommendationCard from './MaterialRecommendationCard';
 import MaterialCategoryButtons from './MaterialCategoryButtons';
 import MaterialSubcategoryChips from './MaterialSubcategoryChips';
-import useDataStore from '../store/dataStore';
+import { useAppData } from '../store/useAppStore';
 import { useLanguage } from '../LanguageContext';
 
 const MaterialContentWrapper = ({ 
@@ -21,7 +21,7 @@ const MaterialContentWrapper = ({
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const { t } = useLanguage();
-  const { randomNotFoundImage } = useDataStore();
+  const { randomNotFoundImage } = useAppData();
   
   // Si no es móvil, renderizar el contenido original
   if (!isMobile) {

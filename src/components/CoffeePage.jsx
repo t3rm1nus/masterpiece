@@ -9,13 +9,13 @@ const CoffeePage = () => {
   console.log('[CoffeePage] Coffee title:', getTranslation('coffee.title'));
   console.log('[CoffeePage] Coffee description:', getTranslation('coffee.description'));
   console.log('[CoffeePage] Coffee button:', getTranslation('coffee.button'));
-  
-  return (
+    return (
     <>
-      {/* Componente Material UI solo para móviles */}
+      {/* Componente Material UI para móviles Y desktop */}
       <MaterialCoffeePage />
       
-      {/* Página clásica solo para desktop */}
+      {/* Página clásica DESHABILITADA - ahora usamos MaterialCoffeePage para todo */}
+      {false && (
       <div className="coffee-page desktop-only">
         {/* Icono de café animado */}
         <div className="coffee-icon">☕</div>
@@ -80,10 +80,10 @@ const CoffeePage = () => {
             height="1" 
             style={{ border: '0' }} 
           />        </form>
-        
-        {/* Footer divertido */}
+          {/* Footer divertido */}
         <p className="coffee-footer">{t.coffee_footer}</p>
       </div>
+      )}
     </>
   );
 };

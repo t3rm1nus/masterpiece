@@ -4,7 +4,7 @@
       "id": 1,
       "category": "books",
       "subcategory": "Terror",
-      "title": "Misery",
+      "title": { "es": "Misery", "en": "Misery" },
       "author": "Sthephen King",
       "year": 1987,
       "description": {

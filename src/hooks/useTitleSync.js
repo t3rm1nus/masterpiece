@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useLanguage } from '../LanguageContext';
-import useDataStore from '../store/dataStore';
+import { useAppData } from '../store/useAppStore';
 
 // Hook personalizado para sincronizar el título con el idioma
 export const useTitleSync = () => {
   const { lang } = useLanguage();
-  const { updateTitleForLanguage, selectedCategory, title, getDefaultTitle, setTitle } = useDataStore();
+  const { updateTitleForLanguage, selectedCategory, title, getDefaultTitle, setTitle } = useAppData();
 
   useEffect(() => {
     // Actualizar título cuando cambia el idioma o la categoría seleccionada

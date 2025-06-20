@@ -2,9 +2,10 @@
   "series": [
     {
       "id": 1,
+      "title": { "es": "Breaking Bad", "en": "Breaking Bad" },
       "titulo": "Breaking Bad",
       "descripcion": "Un profesor de química con cáncer terminal se convierte en fabricante y distribuidor de metanfetamina para asegurar el futuro financiero de su familia.",
-      "imagen": "/imagenes/series/breaking-bad.jpg",
+      "image": "/imagenes/series/breaking.jpg",
       "categoria": "Drama",
       "temporadas": 5,
       "episodios": 62,

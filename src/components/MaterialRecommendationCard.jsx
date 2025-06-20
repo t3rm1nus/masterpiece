@@ -21,11 +21,11 @@ import {
   AutoStories as ComicIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
-import useViewStore from '../store/viewStore';
+import { useAppView } from '../store/useAppStore';
 
 const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
   const { lang, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
-  const { navigateToDetail, processTitle, processDescription } = useViewStore();
+  const { goToDetail, processTitle, processDescription } = useAppView();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   
@@ -103,7 +103,7 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
     }
   };
     const handleClick = () => {
-    navigateToDetail(recommendation);
+    goToDetail(recommendation);
   };  return isHome ? (
     // Layout para la home (móvil)
     <Card

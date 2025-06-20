@@ -1,27 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import useThemeStore from '../store/themeStore';
+import { useAppTheme } from '../store/useAppStore';
 
 const MaterialThemeProvider = ({ children }) => {
-  const { isDarkTheme } = useThemeStore();
+  const { isDarkMode, theme: currentTheme } = useAppTheme();
   
-  const theme = createTheme({
-    palette: {
-      mode: isDarkTheme ? 'dark' : 'light',
+  // Aplicar el tema al HTML para CSS customizado
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    console.log('Theme applied to HTML:', currentTheme);
+  }, [currentTheme]);
+  
+  const theme = createTheme({    palette: {
+      mode: isDarkMode ? 'dark' : 'light',
       primary: {
         main: '#0078d4',
       },
       secondary: {
         main: '#ffc439',
-      },
-      background: {
-        default: isDarkTheme ? '#1e1e1e' : '#ffffff',
-        paper: isDarkTheme ? '#2d2d2d' : '#ffffff',
+      },      background: {
+        default: isDarkMode ? '#1e1e1e' : '#ffffff',
+        paper: isDarkMode ? '#2d2d2d' : '#ffffff',
       },
       text: {
-        primary: isDarkTheme ? '#ffffff' : '#000000',
-        secondary: isDarkTheme ? '#cccccc' : '#666666',
+        primary: isDarkMode ? '#ffffff' : '#000000',
+        secondary: isDarkMode ? '#cccccc' : '#666666',
       },
     },
     breakpoints: {
@@ -53,9 +57,8 @@ const MaterialThemeProvider = ({ children }) => {
         styleOverrides: {
           root: {
             borderRadius: '8px',
-            margin: '2px 8px',
-            '&:hover': {
-              backgroundColor: isDarkTheme ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.04)',
+            margin: '2px 8px',            '&:hover': {
+              backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.04)',
             },
           },
         },

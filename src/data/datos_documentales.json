@@ -1,24 +1,26 @@
 {
-  "recommendations": [    {
+  "recommendations": [
+    {
       "id": 1,
       "title": {
-        "es": "Planeta Tierra",
-        "en": "Planet Earth"
+        "es": "Cuando Éramos Reyes",
+        "en": "When We Were Kings"
       },
       "description": {
-        "es": "Una serie documental que muestra la belleza natural de nuestro planeta y la vida salvaje que lo habita.",
-        "en": "A documentary series that showcases the natural beauty of our planet and the wildlife that inhabits it."
+        "es": "Documental sobre el legendario combate de boxeo entre Muhammad Ali y George Foreman en Zaire en 1974, conocido como 'The Rumble in the Jungle'.",
+        "en": "Documentary about the legendary boxing match between Muhammad Ali and George Foreman in Zaire in 1974, known as 'The Rumble in the Jungle'."
       },
-      "image": "/imagenes/documentales/planeta_tierra.jpg",
+      "image": "/imagenes/documentales/kings.jpg",
       "category": "documentales",
-      "subcategory": "Naturaleza",
-      "duration": "60 min",
-      "episodes": 11,
+      "subcategory": "sports",
+      "duration": "88 min",
+      "episodes": 1,
       "masterpiece": true,
       "idioma": "en",
-      "link": "https://www.documaniatv.com/documentales/planeta-tierra/",
-      "autor": "Alastair Fothergill"
-    },    {
+      "link": "https://ok.ru/video/2293236632075",
+      "autor": "Leon Gast"
+    },
+    {
       "id": 2,
       "title": {
         "es": "El silencio de otros",
@@ -30,14 +32,15 @@
       },
       "image": "/imagenes/documentales/silencio_de_otros.jpg",
       "category": "documentales",
-      "subcategory": "Historia",
+      "subcategory": "history",
       "duration": "96 min",
       "episodes": 1,
       "masterpiece": false,
       "idioma": "es",
       "link": "https://archive.org/details/el-silencio-de-otros",
       "autor": "Almudena Carracedo y Robert Bahar"
-    },    {
+    },
+    {
       "id": 3,
       "title": {
         "es": "España, la primera globalización",
@@ -49,9 +52,10 @@
       },
       "image": "/imagenes/documentales/espania_la_primera.jpg",
       "category": "documentales",
-      "subcategory": "Historia",
+      "subcategory": "history",
       "duration": "90 min",
-      "episodes": 1,      "masterpiece": false,
+      "episodes": 1,
+      "masterpiece": false,
       "idioma": "es",
       "link": "https://www.rtve.es/play/videos/documentales/documentales-espana-primera-globalizacion/4726895/",
       "autor": "José Luis López-Linares"
@@ -73,7 +77,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=JB50zde4rwU",
-      "autor": "Ken Burns"
+      "autor": "Ken Burns",
+      "subcategory": "history"
     },
     {
       "id": 5,
@@ -92,7 +97,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.hbo.com/exterminate-all-the-brutes",
-      "autor": "Raoul Peck"
+      "autor": "Raoul Peck",
+      "subcategory": "history"
     },
     {
       "id": 6,
@@ -111,7 +117,8 @@
       "masterpiece": false,
       "idioma": "es",
       "link": "https://www.rtve.es/play/videos/memoria-de-espana/",
-      "autor": "Fernando García de Cortázar"
+      "autor": "Fernando García de Cortázar",
+      "subcategory": "history"
     },
     {
       "id": 7,
@@ -130,7 +137,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.imdb.com/es-es/title/tt0092011/?reasonForLanguagePrompt=browser_header_mismatch",
-      "autor": "Ken Burns"
+      "autor": "Ken Burns",
+      "subcategory": "history"
     },
     {
       "id": 8,
@@ -149,7 +157,8 @@
       "masterpiece": true,
       "idioma": "en",
       "link": "https://www.documaniatv.com/documentales/cosmos/",
-      "autor": "Carl Sagan"
+      "autor": "Carl Sagan",
+      "subcategory": "science"
     },
     {
       "id": 9,
@@ -162,13 +171,14 @@
         "en": "Netflix documentary series that showcases the natural beauty of our planet and the challenges it faces."
       },
       "image": "/imagenes/documentales/our_planet.jpg",
-      "category": "nature",
+      "category": "wildlife",
       "duration": "8 episodios",
       "episodes": 8,
       "masterpiece": true,
       "idioma": "en",
       "link": "https://www.documaniatv.com/documentales/nuestro-planeta/",
-      "autor": "Alastair Fothergill"
+      "autor": "Alastair Fothergill",
+      "subcategory": "wildlife"
     },
     {
       "id": 10,
@@ -181,13 +191,14 @@
         "en": "A documentary about Spanish musical cultural history and its evolution."
       },
       "image": "/imagenes/documentales/megamix.jpg",
-      "category": "culture",
+      "category": "music",
       "duration": "90 min",
       "episodes": 1,
       "masterpiece": false,
       "idioma": "es",
       "link": "https://www.rtve.es/play/videos/megamix-brutal/",
-      "autor": "Jordi Évole"
+      "autor": "Jordi Évole",
+      "subcategory": "society"
     },
     {
       "id": 11,
@@ -206,7 +217,8 @@
       "masterpiece": false,
       "idioma": "es",
       "link": "https://www.rtve.es/play/videos/un-hombre-tranquilo/",
-      "autor": "Jordi Évole"
+      "autor": "Jordi Évole",
+      "subcategory": "society"
     },
     {
       "id": 12,
@@ -225,7 +237,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://watchdocumentaries.com/hoop-dreams/",
-      "autor": "Steve James"
+      "autor": "Steve James",
+      "subcategory": "society"
     },
     {
       "id": 13,
@@ -244,7 +257,8 @@
       "masterpiece": false,
       "idioma": "es",
       "link": "https://www.rtve.es/play/videos/en-portada/portada-falsos-culpables/16569526/",
-      "autor": "Jordi Évole"
+      "autor": "Jordi Évole",
+      "subcategory": "justice"
     },
     {
       "id": 14,
@@ -263,7 +277,8 @@
       "masterpiece": false,
       "idioma": "es",
       "link": "https://www.rtve.es/play/videos/sac-en-la-mente-criminal/",
-      "autor": "Jordi Évole"
+      "autor": "Jordi Évole",
+      "subcategory": "justice"
     },
     {
       "id": 15,
@@ -282,7 +297,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.netflix.com/es/title/80000770?s=i&vlang=es&clip=80091585",
-      "autor": "Laura Ricciardi y Moira Demos"
+      "autor": "Laura Ricciardi y Moira Demos",
+      "subcategory": "justice"
     },
     {
       "id": 16,
@@ -301,7 +317,8 @@
       "masterpiece": true,
       "idioma": "es",
       "link": "https://www.rtve.es/play/videos/en-portada/portada-mujica-simplemente-pepe/2788116/",
-      "autor": "Emir Kusturica"
+      "autor": "Emir Kusturica",
+      "subcategory": "politics"
     },
     {
       "id": 17,
@@ -320,7 +337,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=VtAOTrRZr5s",
-      "autor": "Alex Gibney"
+      "autor": "Alex Gibney",
+      "subcategory": "politics"
     },
     {
       "id": 18,
@@ -339,7 +357,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=MWTHjImKsbc",
-      "autor": "Charles Ferguson"
+      "autor": "Charles Ferguson",
+      "subcategory": "politics"
     },
     {
       "id": 19,
@@ -358,7 +377,8 @@
       "masterpiece": false,
       "idioma": "es",
       "link": "https://www.filmaffinity.com/en/film178636.html",
-      "autor": "Jordi Évole"
+      "autor": "Jordi Évole",
+      "subcategory": "art"
     },
     {
       "id": 20,
@@ -377,7 +397,8 @@
       "masterpiece": false,
       "idioma": "es",
       "link": "https://www.rtve.es/play/videos/imprescindibles/sole-gimenez-alma-blues/16116477/",
-      "autor": "Jordi Évole"
+      "autor": "Jordi Évole",
+      "subcategory": "art"
     },
     {
       "id": 21,
@@ -396,7 +417,8 @@
       "masterpiece": true,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=hOhw0VjMNG0",
-      "autor": "Banksy"
+      "autor": "Banksy",
+      "subcategory": "art"
     },
     {
       "id": 22,
@@ -415,7 +437,8 @@
       "masterpiece": true,
       "idioma": "en",
       "link": "https://www.documaniatv.com/social/jesus-camp-video_bb2fa32f2.html",
-      "autor": "Heidi Ewing y Rachel Grady"
+      "autor": "Heidi Ewing y Rachel Grady",
+      "subcategory": "faith"
     },
     {
       "id": 23,
@@ -434,7 +457,8 @@
       "masterpiece": true,
       "idioma": "es",
       "link": "https://www.youtube.com/watch?v=LRkvqjl4Pgs",
-      "autor": "Jordi Évole"
+      "autor": "Jordi Évole",
+      "subcategory": "mind"
     },
     {
       "id": 24,
@@ -453,7 +477,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=y9sCdPdoKLk",
-      "autor": "Albert y David Maysles"
+      "autor": "Albert y David Maysles",
+      "subcategory": "mind"
     },
     {
       "id": 25,
@@ -472,7 +497,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=eJ3RzGoQC4s",
-      "autor": "Adam Curtis"
+      "autor": "Adam Curtis",
+      "subcategory": "mind"
     },
     {
       "id": 26,
@@ -491,7 +517,8 @@
       "masterpiece": false,
       "idioma": "es",
       "link": "https://www.rtve.es/play/videos/en-portada/finlandia-defensa-adn/6992921/",
-      "autor": "Jordi Évole"
+      "autor": "Jordi Évole",
+      "subcategory": "exploration"
     },
     {
       "id": 27,
@@ -510,7 +537,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.imdb.com/es-es/title/tt0068130/?reasonForLanguagePrompt=browser_header_mismatch",
-      "autor": "David Attenborough"
+      "autor": "David Attenborough",
+      "subcategory": "exploration"
     },
     {
       "id": 28,
@@ -529,7 +557,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=m2OOYcrELuU",
-      "autor": "David Attenborough"
+      "autor": "David Attenborough",
+      "subcategory": "exploration"
     },
     {
       "id": 29,
@@ -548,7 +577,8 @@
       "masterpiece": true,
       "idioma": "es",
       "link": "https://www.youtube.com/watch?v=HhiP_5zOMJI&list=PLIyX_5XWFx2T1QIn-DOkAaZ8vJSJ93Y38",
-      "autor": "Aitor Arregi y José Mari Goenaga"
+      "autor": "Aitor Arregi y José Mari Goenaga",
+      "subcategory": "politics"
     },
     {
       "id": 30,
@@ -567,7 +597,8 @@
       "masterpiece": true,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=OWH4TOplGBg&t=1s",
-      "autor": "Johan Söderberg"
+      "autor": "Johan Söderberg",
+      "subcategory": "politics"
     },
     {
       "id": 31,
@@ -586,7 +617,8 @@
       "masterpiece": true,
       "idioma": "en",
       "link": "https://www.documaniatv.com/politica/citizenfour-video_be5bc1127.html",
-      "autor": "Laura Poitras"
+      "autor": "Laura Poitras",
+      "subcategory": "politics"
     },
     {
       "id": 32,
@@ -605,7 +637,8 @@
       "masterpiece": true,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=VmKZBGzbYdc",
-      "autor": "Michael Moore"
+      "autor": "Michael Moore",
+      "subcategory": "politics"
     },
     {
       "id": 33,
@@ -624,7 +657,8 @@
       "masterpiece": true,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=YbEQ7acb0IE",
-      "autor": "Michael Moore"
+      "autor": "Michael Moore",
+      "subcategory": "politics"
     },
     {
       "id": 34,
@@ -643,7 +677,8 @@
       "masterpiece": true,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=4UIRa67Qgu8",
-      "autor": "Justine Shapiro, B.Z. Goldberg y Carlos Bolado"
+      "autor": "Justine Shapiro, B.Z. Goldberg y Carlos Bolado",
+      "subcategory": "politics"
     },
     {
       "id": 35,
@@ -656,13 +691,14 @@
         "en": "Sequel to the acclaimed documentary series showcasing wildlife in different habitats of our planet."
       },
       "image": "/imagenes/documentales/planet2.jpg",
-      "category": "nature",
+      "category": "wildlife",
       "duration": "6 episodios",
       "episodes": 6,
       "masterpiece": false,
       "idioma": "en",
       "link": "https://watchdocumentaries.com/planet-earth-ii/",
-      "autor": "David Attenborough"
+      "autor": "David Attenborough",
+      "subcategory": "wildlife"
     },
     {
       "id": 36,
@@ -681,7 +717,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=oVyNkoMQwyI",
-      "autor": "Jason Hehir"
+      "autor": "Jason Hehir",
+      "subcategory": "sports"
     },
     {
       "id": 37,
@@ -700,7 +737,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.area-documental.com/video/Free+Solo/",
-      "autor": "Elizabeth Chai Vasarhelyi y Jimmy Chin"
+      "autor": "Elizabeth Chai Vasarhelyi y Jimmy Chin",
+      "subcategory": "sports"
     },
     {
       "id": 38,
@@ -719,7 +757,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.documaniatv.com/biografias/searching-for-sugar-man-video_033fec27b.html",
-      "autor": "Malik Bendjelloul"
+      "autor": "Malik Bendjelloul",
+      "subcategory": "music"
     },
     {
       "id": 39,
@@ -738,7 +777,8 @@
       "masterpiece": true,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=krfcq5pF8u8",
-      "autor": "Ava DuVernay"
+      "autor": "Ava DuVernay",
+      "subcategory": "politics"
     },
     {
       "id": 40,
@@ -757,7 +797,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.imdb.com/es-es/title/tt7681902/?reasonForLanguagePrompt=browser_header_mismatch",
-      "autor": "Morgan Neville"
+      "autor": "Morgan Neville",
+      "subcategory": "people"
     },
     {
       "id": 41,
@@ -776,7 +817,8 @@
       "masterpiece": false,
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=kF8hQNfM3bg",
-      "autor": "David Gelb"
+      "autor": "David Gelb",
+      "subcategory": "gastronomy"
     },
     {
       "id": 42,
@@ -789,13 +831,14 @@
         "en": "Documentary exposing the annual dolphin hunt in a national park in Taiji, Japan."
       },
       "image": "/imagenes/documentales/the_cove.jpg",
-      "category": "nature",
+      "category": "wildlife",
       "duration": "92 min",
       "episodes": 1,
       "masterpiece": true,
       "idioma": "en",
       "link": "https://www.documaniatv.com/naturaleza/the-cove-video_3a84abbef.html",
-      "autor": "Louie Psihoyos"
+      "autor": "Louie Psihoyos",
+      "subcategory": "wildlife"
     },
     {
       "id": 43,
@@ -808,13 +851,14 @@
         "en": "Documentary showcasing the natural wealth and biodiversity of the Iberian Peninsula."
       },
       "image": "/imagenes/documentales/iberia.jpg",
-      "category": "nature",
+      "category": "wildlife",
       "duration": "4 episodios",
       "episodes": 4,
       "masterpiece": false,
       "idioma": "es",
       "link": "https://www.imdb.com/es-es/title/tt26862521/?reasonForLanguagePrompt=browser_header_mismatch",
-      "autor": "Joaquín Gutiérrez Acha"
+      "autor": "Joaquín Gutiérrez Acha",
+      "subcategory": "wildlife"
     },
     {
       "id": 44,
@@ -827,13 +871,14 @@
         "en": "Documentary following the course of the Guadalquivir River and its ecosystem."
       },
       "image": "/imagenes/documentales/guadalquivir.jpg",
-      "category": "nature",
+      "category": "wildlife",
       "duration": "90 min",
       "episodes": 1,
       "masterpiece": false,
       "idioma": "es",
       "link": "https://www.filmin.es/pelicula/guadalquivir?awinaffid=400165&awinmid=82863",
-      "autor": "Joaquín Gutiérrez Acha"
+      "autor": "Joaquín Gutiérrez Acha",
+      "subcategory": "wildlife"
     },
     {
       "id": 45,
@@ -852,7 +897,8 @@
       "masterpiece": false,
       "idioma": "es",
       "link": "https://www.youtube.com/watch?v=BN0eshtAxYA",
-      "autor": "Gereon Wetzel"
+      "autor": "Gereon Wetzel",
+      "subcategory": "gastronomy"
     },
     {
       "id": 46,
@@ -871,7 +917,8 @@
       "masterpiece": false,
       "idioma": "es",
       "link": "https://www.imdb.com/es-es/title/tt1661263/?reasonForLanguagePrompt=browser_header_mismatch",
-      "autor": "Álvaro Longoria"
+      "autor": "Álvaro Longoria",
+      "subcategory": "politics"
     },
     {
       "id": 47,
@@ -890,7 +937,8 @@
       "masterpiece": true,
       "idioma": "en",
       "link": "https://watchdocumentaries.com/night-and-fog/",
-      "autor": "Alain Resnais"
+      "autor": "Alain Resnais",
+      "subcategory": "history"
     },
     {
       "id": 48,
@@ -909,7 +957,8 @@
       "masterpiece": true,
       "idioma": "es",
       "link": "https://www.documaniatv.com/politica/la-pelota-vasca-la-piel-contra-la-piedra-video_a65f60a4e.html",
-      "autor": "Julio Medem"
+      "autor": "Julio Medem",
+      "subcategory": "politics"
     },
     {
       "id": 49,
@@ -928,7 +977,8 @@
       "masterpiece": false,
       "idioma": "es",
       "link": "https://ok.ru/video/4075512203903",
-      "autor": "Víctor Erice"
+      "autor": "Víctor Erice",
+      "subcategory": "art"
     },
     {
       "id": 51,
@@ -941,13 +991,34 @@
         "en": "Documentary series about nature and wildlife, presented by Félix Rodríguez de la Fuente."
       },
       "image": "/imagenes/documentales/hombre_tierra.jpg",
-      "category": "nature",
+      "category": "wildlife",
       "duration": "124 episodios",
       "episodes": 124,
-      "masterpiece": false,
+      "masterpiece": true,
       "idioma": "es",
       "link": "https://www.rtve.es/play/videos/el-hombre-y-la-tierra/",
-      "autor": "Félix Rodríguez de la Fuente"
+      "autor": "Félix Rodríguez de la Fuente",
+      "subcategory": "wildlife"
+    },
+    {
+      "id": 51,
+      "title": {
+        "es": "Planeta Tierra",
+        "en": "Planet Earth"
+      },
+      "description": {
+        "es": "Una serie documental que muestra la belleza natural de nuestro planeta y la vida salvaje que lo habita.",
+        "en": "A documentary series that showcases the natural beauty of our planet and the wildlife that inhabits it."
+      },
+      "image": "/imagenes/documentales/planeta_tierra.jpg",
+      "category": "documentales",
+      "subcategory": "wildlife",
+      "duration": "60 min",
+      "episodes": 11,
+      "masterpiece": true,
+      "idioma": "en",
+      "link": "https://www.documaniatv.com/documentales/planeta-tierra/",
+      "autor": "Alastair Fothergill"
     }
   ]
-} 
+}

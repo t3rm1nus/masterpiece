@@ -26,28 +26,25 @@ import {
   DarkMode as DarkModeIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
-import useDataStore from '../store/dataStore';
-import useViewStore from '../store/viewStore';
-import useThemeStore from '../store/themeStore';
+import { useAppData, useAppView, useAppTheme } from '../store/useAppStore';
 import ThemeToggle from './ThemeToggle';
 
 const MaterialMobileMenu = () => {
   const { t, lang, changeLanguage } = useLanguage();
-  const { resetAllFilters } = useDataStore();
-  const { currentView, goBackFromDetail, goBackFromCoffee, navigate, navigateToCoffee } = useViewStore();
-  const { isDarkTheme, toggleTheme } = useThemeStore();
+  const { resetAllFilters } = useAppData();
+  const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee } = useAppView();
+  const { isDarkTheme, toggleTheme } = useAppTheme();
     const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg')); // Cambiado de 'md' a 'lg' para incluir tablets
-  
-  const handleNewRecommendations = () => {
+    const handleNewRecommendations = () => {
     resetAllFilters(lang);
-    navigate('home');
+    goHome();
     setDrawerOpen(false);
   };
   
   const handleCoffeeNavigation = () => {
-    navigateToCoffee();
+    goToCoffee();
     setDrawerOpen(false);
   };
   

@@ -3,7 +3,7 @@
  * Consolidación del errorStore anterior
  */
 
-export const createErrorSlice = (set, get) => ({
+export const errorSlice = (set, get) => ({
   // ==========================================
   // ESTADO DE ERRORES
   // ==========================================
@@ -40,14 +40,10 @@ export const createErrorSlice = (set, get) => ({
       errorSource: null
     });
   },
-  
-  /**
-   * Verificar si hay error activo
+    /**
+   * ELIMINADO: getErrorStatus con get() - CAUSABA INFINITE LOOPS
+   * Los valores se exponen directamente en el selector
    */
-  getErrorStatus: () => {
-    const { hasError, errorMessage, errorSource } = get();
-    return { hasError, errorMessage, errorSource };
-  },
   
   // ==========================================
   // RESETEAR ESTADO

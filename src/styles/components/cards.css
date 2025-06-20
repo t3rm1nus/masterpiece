@@ -1,3 +1,50 @@
+:root {
+  --cat-movies-bg: #e3f0ff;
+  --cat-movies-strong: #0078d4;
+  --cat-videogames-bg: #e6f7e6;
+  --cat-videogames-strong: #1a7f37;
+  --cat-comics-bg: #fff3e6;
+  --cat-comics-strong: #e67e22;
+  --cat-books-bg: #f3e6ff;
+  --cat-books-strong: #8e44ad;
+  --cat-boardgames-bg: #f9fbe7;
+  --cat-boardgames-strong: #b2bc1e;
+  --cat-music-bg: #fce4ec;
+  --cat-music-strong: #c2185b;
+  --cat-podcast-bg: #e0f7fa;
+  --cat-podcast-strong: #00838f;
+  --cat-documentales-bg: #fdeaea;
+  --cat-documentales-strong: #b71c1c;
+  /* Añade más categorías si es necesario */
+}
+
+.recommendation-card.movies {
+  background: var(--cat-movies-bg) !important;
+}
+.recommendation-card.videogames {
+  background: var(--cat-videogames-bg) !important;
+}
+.recommendation-card.comics {
+  background: var(--cat-comics-bg) !important;
+}
+.recommendation-card.books {
+  background: var(--cat-books-bg) !important;
+}
+.recommendation-card.boardgames {
+  background: var(--cat-boardgames-bg) !important;
+}
+.recommendation-card.music {
+  background: var(--cat-music-bg) !important;
+}
+.recommendation-card.podcast {
+  background: var(--cat-podcast-bg) !important;
+}
+.recommendation-card.documentales {
+  background: var(--cat-documentales-bg) !important;
+}
+
+
+
 /* ===================================
    TARJETAS DE RECOMENDACIÓN
    =================================== */
@@ -47,55 +94,30 @@
 }
 
 .recommendation-card span {
-  margin-top: var(--space-sm);
+ 
   font-size: var(--font-size-xs);
-  color: var(--text-muted);
 }
 
-/* === VARIANTES POR CATEGORÍA === */
-.recommendation-card.movies {
-  background: color-mix(in srgb, var(--color-movies) 8%, var(--card-background));
-}
-
-.recommendation-card.videogames {
-  background: color-mix(in srgb, var(--color-videogames) 8%, var(--card-background));
-}
-
-.recommendation-card.comics {
-  background: color-mix(in srgb, var(--color-comics) 8%, var(--card-background));
-}
-
-.recommendation-card.books {
-  background: color-mix(in srgb, var(--color-books) 8%, var(--card-background));
-}
-
-.recommendation-card.boardgames {
-  background: color-mix(in srgb, var(--color-boardgames) 8%, var(--card-background));
-}
-
-.recommendation-card.music {
-  background: color-mix(in srgb, var(--color-music) 8%, var(--card-background));
-}
-
-.recommendation-card.podcast {
-  background: color-mix(in srgb, var(--color-podcast) 8%, var(--card-background));
-}
 
 /* === VARIANTE MASTERPIECE === */
 .recommendation-card.masterpiece {
   border: 3px solid var(--color-masterpiece) !important;
-  background: linear-gradient(135deg, 
-    var(--color-masterpiece-light) 60%, 
-    color-mix(in srgb, var(--color-masterpiece) 20%, transparent) 100%) !important;
+  background: linear-gradient(135deg, #fffdf6 0%, #fff3c1 40%, #fffbe6 100%) !important;
   position: relative;
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-masterpiece) 40%, transparent), 
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-masterpiece) 20%, transparent), 
               var(--shadow-lg);
+  z-index: 2;
+}
+
+/* Si tiene también clase de categoría, forzar el fondo masterpiece */
+.recommendation-card.masterpiece[class*=" "] {
+  background: linear-gradient(135deg, #fffdf6 0%, #fff3c1 40%, #fffbe6 100%) !important;
 }
 
 /* === BADGE DE MASTERPIECE === */
 .recommendation-card .masterpiece-badge {
   position: absolute;
-  top: -23px;
+  top: -17px;
   right: -15px;
   width: 28px;
   height: 28px;
@@ -116,11 +138,303 @@
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .recommendation-card {
-    width: 45vw;
-    min-width: 160px;
+    width: 45vw;    min-width: 160px;
     max-width: 240px;
     padding: var(--space-sm);
     position: relative;
     overflow: visible;
   }
+}
+
+/* ===================================
+   NO RESULTS SECTION
+   =================================== */
+
+.no-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  padding: var(--space-xl);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.no-results-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--space-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal);
+}
+
+.no-results-image:hover {
+  transform: scale(1.02);
+}
+
+.no-results-text {
+  font-size: 1.2em;
+  color: var(--text-secondary);
+  margin-top: var(--space-md);
+  font-weight: 500;
+}
+
+.no-results-subtext {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  margin-top: var(--space-sm);
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive para no-results */
+@media (max-width: 768px) {
+  .no-results-container {
+    min-height: 300px;
+    padding: var(--space-lg);
+  }
+  
+  .no-results-image {
+    max-width: 250px;
+  }
+  
+  .no-results-text {
+    font-size: 1.1em;
+  }
+}
+
+/* === LAYOUT MÓVIL PARA HOME === */
+.rec-home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.rec-home-media {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  box-sizing: border-box;
+}
+
+.rec-home-img {
+  border-radius: var(--border-radius-md);
+  object-fit: cover;
+  width: 70%;   
+}
+
+.rec-home-cats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.rec-home-cat {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.rec-home-subcat {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.rec-home-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.rec-home-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  margin: 0;
+  line-height: var(--line-height-tight);
+}
+
+.rec-home-desc {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  line-height: var(--line-height-normal);
+  margin: 10px 0 0 0;
+}
+
+/* === LAYOUT DESKTOP PARA CATEGORÍAS === */
+.category-container {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+  justify-content: center;
+  margin: var(--space-xs) 0;
+}
+
+.category-label {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+}
+
+.subcategory-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+/* === CONTENEDOR DE RECOMENDACIONES === */
+.recommendations-wrapper {
+  width: 100%;
+  padding: var(--space-md);
+}
+
+.recommendations-list {
+  display: grid;
+  gap: var(--space-md);
+  justify-content: center;
+  align-items: start;
+  /* Centrar los items aunque haya pocos */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid responsivo */
+@media (min-width: 1200px) {
+  .recommendations-list {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--space-md);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1800px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .recommendations-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .recommendations-list {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  
+  .recommendations-wrapper {
+    padding: var(--space-sm);
+  }
+}
+
+/* Forzar layout vertical en desktop para recommendation-card */
+@media (min-width: 900px) {
+  .recommendation-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    min-width: 220px;
+    max-width: 260px;
+    box-sizing: border-box;
+  }
+  .recommendation-card img {
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  .category-label,
+  .subcategory-label,
+  .recommendation-card p {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .category-label {
+    font-weight: bold !important;
+    color: #0078d4 !important;
+  }
+  .subcategory-label {
+    font-size: 0.95em !important;
+    color: #666 !important;
+  }
+}
+
+.category-label {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Colores intensos por categoría */
+.recommendation-card.movies .category-label {
+  color: var(--cat-movies-strong) !important;
+}
+.recommendation-card.videogames .category-label {
+  color: var(--cat-videogames-strong) !important;
+}
+.recommendation-card.comics .category-label {
+  color: var(--cat-comics-strong) !important;
+}
+.recommendation-card.books .category-label {
+  color: var(--cat-books-strong) !important;
+}
+.recommendation-card.boardgames .category-label {
+  color: var(--cat-boardgames-strong) !important;
+}
+.recommendation-card.music .category-label {
+  color: var(--cat-music-strong) !important;
+}
+.recommendation-card.podcast .category-label {
+  color: var(--cat-podcast-strong) !important;
+}
+.recommendation-card.documentales .category-label {
+  color: var(--cat-documentales-strong) !important;
+}
+
+.recommendation-card.movies .rec-home-cat {
+  color: var(--cat-movies-strong) !important;
+}
+.recommendation-card.videogames .rec-home-cat {
+  color: var(--cat-videogames-strong) !important;
+}
+.recommendation-card.comics .rec-home-cat {
+  color: var(--cat-comics-strong) !important;
+}
+.recommendation-card.books .rec-home-cat {
+  color: var(--cat-books-strong) !important;
+}
+.recommendation-card.boardgames .rec-home-cat {
+  color: var(--cat-boardgames-strong) !important;
+}
+.recommendation-card.music .rec-home-cat {
+  color: var(--cat-music-strong) !important;
+}
+.recommendation-card.podcast .rec-home-cat {
+  color: var(--cat-podcast-strong) !important;
+}
+.recommendation-card.documentales .rec-home-cat {
+  color: var(--cat-documentales-strong) !important;
 }
