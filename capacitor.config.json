@@ -2,17 +2,20 @@
   "appId": "com.masterpiece.app",
   "appName": "Masterpiece",
   "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
   "plugins": {
     "SplashScreen": {
-      "launchShowDuration": 2000,
+      "launchShowDuration": 3000, 
       "launchAutoHide": true,
-      "launchFadeOutDuration": 500,
-      "backgroundColor": "#D4B896",
-      "androidSplashResourceName": "splash",
-      "androidScaleType": "CENTER_CROP",
+      "backgroundColor": "#ffffff",
+      "androidSplashResourceName": "splash_image",
+      "androidScaleType": "FIT_XY", 
       "showSpinner": false,
       "splashFullScreen": true,
-      "splashImmersive": true
+      "splashImmersive": false
     }
   }
 }
+
