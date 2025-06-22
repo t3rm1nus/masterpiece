@@ -669,5 +669,15 @@
         }
       }
     }
+  },
+  "how_to_download": {
+    "es": {
+      "title": "¿Cómo descargar?",
+      "description": "Guía para descargar torrents de forma segura y sencilla."
+    },
+    "en": {
+      "title": "How to download?",
+      "description": "Guide to download torrents safely and easily."
+    }
   }
 }

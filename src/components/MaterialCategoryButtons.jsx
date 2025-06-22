@@ -13,7 +13,8 @@ import {
   Mic as PodcastIcon,
   Extension as BoardGameIcon,
   AutoStories as ComicIcon,
-  Category as CategoryIcon
+  Category as CategoryIcon,
+  Star as StarIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 
@@ -135,6 +136,9 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
           }}
         >
           {label}
+          {isMasterpiece && (
+            <StarIcon sx={{ color: '#FFD600', ml: 1, fontSize: '1.1em', verticalAlign: 'middle' }} />
+          )}
         </Button>
       ))}
     </Box>

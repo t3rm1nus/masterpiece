@@ -438,3 +438,7 @@
 .recommendation-card.documentales .rec-home-cat {
   color: var(--cat-documentales-strong) !important;
 }
+
+.css-31dimf {
+    padding-top: 0 !important;
+}

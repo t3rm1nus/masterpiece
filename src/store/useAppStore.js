@@ -181,6 +181,10 @@ const useAppStore = create((set, get) => ({
   goToDetail: (item) => set({ currentView: 'detail', selectedItem: item }),
   goToHome: () => set({ currentView: 'home', selectedItem: null }),
   goToCoffee: () => set({ currentView: 'coffee' }),
+  goToHowToDownload: () => {
+    console.log('goToHowToDownload ejecutado');
+    set({ currentView: 'howToDownload' });
+  },
   setViewport: (isMobile) => set({ isMobile }),
   toggleTheme: () => set(state => ({ 
     isDarkMode: !state.isDarkMode,
@@ -273,6 +277,7 @@ export const useAppView = () => {
   const goToHome = useAppStore(state => state.goToHome);
   const goHome = useAppStore(state => state.goHome);
   const goToCoffee = useAppStore(state => state.goToCoffee);
+  const goToHowToDownload = useAppStore(state => state.goToHowToDownload);
   const setViewport = useAppStore(state => state.setViewport);
   const processTitle = useAppStore(state => state.processTitle);
   const processDescription = useAppStore(state => state.processDescription);
@@ -295,7 +300,7 @@ export const useAppView = () => {
   
   return {
     currentView, selectedItem, isMobile, setView, setSelectedItem,
-    goToDetail, goToHome, goHome, goToCoffee, setViewport, processTitle, processDescription,
+    goToDetail, goToHome, goHome, goToCoffee, goToHowToDownload, setViewport, processTitle, processDescription,
     goBackFromDetail, goBackFromCoffee, mobileHomeStyles, desktopStyles, 
     baseRecommendationCardClasses, isTablet
   };

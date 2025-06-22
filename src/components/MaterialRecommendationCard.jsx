@@ -102,6 +102,35 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
         return theme.palette.primary.main;
     }
   };
+    const getCategoryGradient = (category) => {
+    switch (category) {
+      case 'movies':
+      case 'peliculas':
+        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
+      case 'videogames':
+      case 'videojuegos':
+        return 'linear-gradient(135deg, #f8f3fa 0%, #e1bee7 100%)';
+      case 'books':
+      case 'libros':
+        return 'linear-gradient(135deg, #f4faf4 0%, #c8e6c9 100%)';
+      case 'music':
+      case 'musica':
+        return 'linear-gradient(135deg, #f2fbfc 0%, #b2ebf2 100%)';
+      case 'podcast':
+      case 'podcasts':
+        return 'linear-gradient(135deg, #f7fbf2 0%, #dcedc8 100%)';
+      case 'boardgames':
+      case 'juegos de mesa':
+        return 'linear-gradient(135deg, #fdf4f8 0%, #f8bbd0 100%)';
+      case 'comics':
+        return 'linear-gradient(135deg, #fff8f0 0%, #ffe0b2 100%)';
+      case 'documentales':
+      case 'documentaries':
+        return 'linear-gradient(135deg, #fafafa 0%, #e0e0e0 100%)';
+      default:
+        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
+    }
+  };
     const handleClick = () => {
     goToDetail(recommendation);
   };  return isHome ? (
@@ -113,18 +142,14 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
         margin: '0 auto 16px auto',
         cursor: 'pointer',
         transition: 'all 0.3s ease',
-        boxShadow: recommendation.masterpiece ? theme.shadows[4] : theme.shadows[2], // Sombra base
-        overflow: 'visible', // Permitir que el badge sobresalga
-        '&:hover': {
-          transform: 'translateY(-4px)',
-          boxShadow: theme.shadows[8],        
-        },
+        boxShadow: recommendation.masterpiece ? theme.shadows[4] : theme.shadows[2],
+        overflow: 'visible',
         border: recommendation.masterpiece ? '2px solid #ffd700' : 'none',
-        background: recommendation.masterpiece 
-          ? (theme.palette.mode === 'dark' 
+        background: recommendation.masterpiece
+          ? (theme.palette.mode === 'dark'
             ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
             : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
-          : (theme.palette.mode === 'dark' ? '#2d2d2d' : '#ffffff') // Color sólido para no-masterpieces
+          : getCategoryGradient(recommendation.category),
       }}
       onClick={handleClick}
     >
@@ -239,20 +264,17 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
       sx={{
         width: '100%',
         maxWidth: 300,
-        margin: '0 auto', // Centrar la tarjeta
+        margin: '0 auto',
         cursor: 'pointer',
         transition: 'all 0.3s ease',
-        boxShadow: recommendation.masterpiece ? theme.shadows[4] : theme.shadows[2], // Sombra base
-        overflow: 'visible', // Permitir que el badge sobresalga
-        '&:hover': {
-          transform: 'translateY(-4px)',
-          boxShadow: theme.shadows[8],        },
+        boxShadow: recommendation.masterpiece ? theme.shadows[4] : theme.shadows[2],
+        overflow: 'visible',
         border: recommendation.masterpiece ? '2px solid #ffd700' : 'none',
-        background: recommendation.masterpiece 
+        background: recommendation.masterpiece
           ? (theme.palette.mode === 'dark' 
             ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
             : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
-          : (theme.palette.mode === 'dark' ? '#2d2d2d' : '#ffffff') // Color sólido para no-masterpieces
+          : getCategoryGradient(recommendation.category),
       }}
       onClick={handleClick}
     >

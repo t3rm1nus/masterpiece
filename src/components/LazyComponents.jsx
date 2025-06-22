@@ -3,6 +3,7 @@ import { lazy } from 'react';
 // Lazy loading de componentes pesados
 export const LazyCoffeePage = lazy(() => import('./CoffeePage'));
 export const LazyRecommendationsList = lazy(() => import('./RecommendationsList'));
+export const LazyHowToDownload = lazy(() => import('../pages/HowToDownload'));
 
 // Componente de loading fallback
 export const LoadingFallback = ({ message = "Cargando..." }) => (

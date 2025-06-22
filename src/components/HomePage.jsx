@@ -9,6 +9,27 @@ import '../styles/components/buttons.css';
 import '../styles/components/home-page.css';
 import UnifiedItemDetail from './UnifiedItemDetail';
 import { normalizeSubcategoryInternal } from '../utils/categoryUtils';
+import MaterialCategorySelect from './MaterialCategorySelect';
+import { useTheme } from '@mui/material/styles';
+
+// Hook para detectar si es móvil SOLO por ancho de pantalla (robusto y compatible móvil)
+function useIsMobile() {
+  const getIsMobile = () => typeof window !== 'undefined' ? window.innerWidth < 900 : false;
+  const [isMobile, setIsMobile] = React.useState(getIsMobile);
+
+  React.useEffect(() => {
+    const handleResize = () => setIsMobile(getIsMobile());
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
+    // Forzar comprobación tras el primer render (por si el valor inicial es incorrecto)
+    setTimeout(handleResize, 100);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleResize);
+    };
+  }, []);
+  return isMobile;
+}
 
 const HomePage = () => {
   const { lang, t } = useLanguage();
@@ -273,6 +294,7 @@ const HomePage = () => {
       default:
         return '#0078d4';    }
   };
+  const isMobile = useIsMobile();
   // Verificar si hay datos disponibles
   if (!allData || Object.keys(allData).length === 0) {
     return (
@@ -283,7 +305,13 @@ const HomePage = () => {
     );
   }
   return (
-    <div className="home-container">
+    <div className="home-container" style={{
+      maxWidth: 520,
+      margin: '0 auto',
+      padding: '0 16px',
+      marginTop: 64, // 64px para dejar espacio al menú fijo
+      boxSizing: 'border-box',
+    }}>
       <div className="header-controls">
         <ThemeToggle />
       </div>
@@ -291,125 +319,200 @@ const HomePage = () => {
       {/* Hide all navigation controls when showing item detail */}
       {!selectedItem && (
         <>
-          <div className="categories-container">
-            <div className="categories-list">
-              {Array.isArray(categories) && categories.map((category) => (
-                <button
-                  key={category.key}
-                  className={`category-btn${selectedCategory === category.key ? ' active' : ''}`}
-                  onClick={() => handleCategoryClick(category.key)}
-                >
-                  {category.label}
-                </button>
-              ))}
-            </div>
-          </div>          {selectedCategory && selectedCategory !== 'documentales' && (
-            <div className="subcategories-container">              {Array.isArray(categorySubcategories) && categorySubcategories.length > 0 && (
-                categorySubcategories
-                  .sort((a, b) => a.order - b.order)
-                  .map(({ sub }) => (
-                    <button
-                      key={sub}
-                      className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
-                      onClick={() => setActiveSubcategory(sub)}
-                    >
-                      {t?.subcategories?.[selectedCategory]?.[sub.toLowerCase()] || sub}                    </button>
-                  ))
-              )}
-            </div>
-          )}
-
-          {/* SUBCATEGORÍAS DINÁMICAS PARA DOCUMENTALES */}
-          {selectedCategory === 'documentales' && (
-            (() => {
-              // Obtener subcategorías únicas y normalizadas de los items de documentales
-              const subcatsSet = new Set();
-              (allData['documentales'] || []).forEach(item => {
-                if (item.subcategory) subcatsSet.add(item.subcategory.toLowerCase().trim());
-              });
-              const subcats = Array.from(subcatsSet).sort((a, b) => a.localeCompare(b, lang === 'es' ? 'es' : 'en', { sensitivity: 'base' }));
-              // Log de depuración para ver subcategorías detectadas y traducciones
-              console.log('[DOCU] Subcategorías únicas detectadas:', subcats);
-              const missingTranslations = subcats.filter(sub => !t?.subcategories?.documentales?.[sub]);
-              if (missingTranslations.length > 0) {
-                console.warn('[DOCU] Subcategorías sin traducción en texts.json:', missingTranslations);
-              }
-              return (
-                <div className="subcategories-container">
-                  {subcats.map(sub => (
-                    <button
-                      key={sub}
-                      className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
-                      onClick={() => setActiveSubcategory(sub)}
-                    >
-                      {t?.subcategories?.documentales?.[sub] || sub}
-                    </button>
-                  ))}
-                </div>
-              );
-            })()
-          )}
-
-          {/* BOTONES ESPECIALES (idioma, masterpiece, etc) */}
-          <div className="special-buttons-container">
-            {selectedCategory === 'movies' && (
-              <button
-                className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}              
-                onClick={handleSpanishCinemaToggle}
-              >
-                {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
-              </button>
-            )}            {selectedCategory === 'podcast' && (
-              <div key="podcast-languages">
-                <button
-                  className={`subcategory-btn podcast-language${activePodcastLanguages?.includes('es') ? ' active' : ''}`}              
-                  onClick={() => togglePodcastLanguage('es')}
-                >
-                  {lang === 'es' ? 'Español' : 'Spanish'}
-                </button>
-                <button
-                  className={`subcategory-btn podcast-language${activePodcastLanguages?.includes('en') ? ' active' : ''}`}              
-                  onClick={() => togglePodcastLanguage('en')}
-                >
-                  {lang === 'es' ? 'Inglés' : 'English'}
-                </button>
-              </div>
-            )}            {selectedCategory === 'documentales' && (
-              <div key="documentales-controls">
-                {/* Botones de idioma para documentales */}
-                <button
-                  className={`subcategory-btn podcast-language${activeDocumentaryLanguages?.includes('es') ? ' active' : ''}`}              
-                  onClick={() => toggleDocumentaryLanguage('es')}
-                >
-                  {lang === 'es' ? 'Español' : 'Spanish'}
-                </button>
-                <button
-                  className={`subcategory-btn podcast-language${activeDocumentaryLanguages?.includes('en') ? ' active' : ''}`}              
-                  onClick={() => toggleDocumentaryLanguage('en')}
-                >
-                  {lang === 'es' ? 'Inglés' : 'English'}
-                </button>
-              </div>
-            )}
-
-            {!isRecommendedActive && selectedCategory && (
-              <button
-                className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
-                onClick={handleMasterpieceToggle}
-              >
-                {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
-              </button>
-            )}
-          </div>          {/* Mostrar título traducido */}
+          {/* Mostrar título traducido */}
           <h1 
             className={selectedCategory ? 'after-subcategories' : ''}
-            style={{ textTransform: 'capitalize', textAlign: 'center', margin: '20px 0' }}
+            style={{ textTransform: 'capitalize', textAlign: 'center', margin: '20px 0 32px 0', fontWeight: 700, fontSize: '2.2rem' }}
           >
             {selectedCategory 
               ? (t?.categories?.[selectedCategory] || selectedCategory)
               : (t?.ui?.titles?.home_title || 'Recomendaciones diarias')
             }
           </h1>
+
+          {/* SOLO DESKTOP: Botones de categorías y subcategorías */}
+          {!isMobile && (
+            <>
+              <div className="categories-container">
+                <div className="categories-list">
+                  {Array.isArray(categories) && categories.map((category) => (
+                    <button
+                      key={category.key}
+                      className={`category-btn${selectedCategory === category.key ? ' active' : ''}`}
+                      onClick={() => handleCategoryClick(category.key)}
+                    >
+                      {category.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              {selectedCategory && selectedCategory !== 'documentales' && (
+                <div className="subcategories-container">
+                  {Array.isArray(categorySubcategories) && categorySubcategories.length > 0 && (
+                    categorySubcategories
+                      .sort((a, b) => a.order - b.order)
+                      .map(({ sub }) => (
+                        <button
+                          key={sub}
+                          className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
+                          onClick={() => setActiveSubcategory(sub)}
+                        >
+                          {t?.subcategories?.[selectedCategory]?.[sub.toLowerCase()] || sub}
+                        </button>
+                      ))
+                  )}
+                </div>
+              )}
+              {selectedCategory === 'documentales' && (
+                (() => {
+                  const subcatsSet = new Set();
+                  (allData['documentales'] || []).forEach(item => {
+                    if (item.subcategory) subcatsSet.add(item.subcategory.toLowerCase().trim());
+                  });
+                  const subcats = Array.from(subcatsSet).sort((a, b) => a.localeCompare(b, lang === 'es' ? 'es' : 'en', { sensitivity: 'base' }));
+                  return (
+                    <div className="subcategories-container">
+                      {subcats.map(sub => (
+                        <button
+                          key={sub}
+                          className={`subcategory-btn${activeSubcategory === sub ? ' active' : ''}`}
+                          onClick={() => setActiveSubcategory(sub)}
+                        >
+                          {t?.subcategories?.documentales?.[sub] || sub}
+                        </button>
+                      ))}
+                    </div>
+                  );
+                })()
+              )}
+              <div className="special-buttons-container">
+                {selectedCategory === 'movies' && (
+                  <button
+                    className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}
+                    onClick={handleSpanishCinemaToggle}
+                  >
+                    {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
+                  </button>
+                )}
+                {selectedCategory === 'podcast' && (
+                  <div key="podcast-languages">
+                    <button
+                      className={`subcategory-btn podcast-language${activePodcastLanguages?.includes('es') ? ' active' : ''}`}
+                      onClick={() => togglePodcastLanguage('es')}
+                    >
+                      {lang === 'es' ? 'Español' : 'Spanish'}
+                    </button>
+                    <button
+                      className={`subcategory-btn podcast-language${activePodcastLanguages?.includes('en') ? ' active' : ''}`}
+                      onClick={() => togglePodcastLanguage('en')}
+                    >
+                      {lang === 'es' ? 'Inglés' : 'English'}
+                    </button>
+                  </div>
+                )}
+                {selectedCategory === 'documentales' && (
+                  <div key="documentales-controls">
+                    <button
+                      className={`subcategory-btn podcast-language${activeDocumentaryLanguages?.includes('es') ? ' active' : ''}`}
+                      onClick={() => toggleDocumentaryLanguage('es')}
+                    >
+                      {lang === 'es' ? 'Español' : 'Spanish'}
+                    </button>
+                    <button
+                      className={`subcategory-btn podcast-language${activeDocumentaryLanguages?.includes('en') ? ' active' : ''}`}
+                      onClick={() => toggleDocumentaryLanguage('en')}
+                    >
+                      {lang === 'es' ? 'Inglés' : 'English'}
+                    </button>
+                  </div>
+                )}
+                {!isRecommendedActive && selectedCategory && (
+                  <button
+                    className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
+                    onClick={handleMasterpieceToggle}
+                  >
+                    {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
+                  </button>
+                )}
+              </div>
+            </>
+          )}
+
+          {/* SOLO EN MÓVIL: Select, subcategorías y botones especiales debajo del h1 */}
+          {isMobile && (
+            <div style={{ width: '100%', maxWidth: 500, margin: '0 auto 12px auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <span style={{ width: '100%', maxWidth: 400, display: 'flex', justifyContent: 'center', marginBottom: 12 }}>
+                <MaterialCategorySelect
+                  categories={categories}
+                  selectedCategory={selectedCategory}
+                  onCategoryChange={(cat, subcat) => {
+                    if (subcat) {
+                      setSelectedCategory(cat);
+                      setActiveSubcategory(subcat);
+                    } else {
+                      setSelectedCategory(cat);
+                      setActiveSubcategory(null);
+                    }
+                  }}
+                  subcategories={categorySubcategories}
+                  activeSubcategory={activeSubcategory}
+                />
+              </span>
+              {/* Botones especiales solo si hay categoría seleccionada */}
+              {selectedCategory && (
+                <div className="special-buttons-container" style={isMobile ? { display: 'flex', flexDirection: 'row', gap: 8, justifyContent: 'center', alignItems: 'center', width: '100%', margin: '8px 0' } : {}}>
+                  {selectedCategory === 'movies' && (
+                    <button
+                      className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}
+                      onClick={handleSpanishCinemaToggle}
+                    >
+                      {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
+                    </button>
+                  )}
+                  {selectedCategory === 'podcast' && (
+                    <div key="podcast-languages">
+                      <button
+                        className={`subcategory-btn podcast-language${activePodcastLanguages?.includes('es') ? ' active' : ''}`}
+                        onClick={() => togglePodcastLanguage('es')}
+                      >
+                        {lang === 'es' ? 'Español' : 'Spanish'}
+                      </button>
+                      <button
+                        className={`subcategory-btn podcast-language${activePodcastLanguages?.includes('en') ? ' active' : ''}`}
+                        onClick={() => togglePodcastLanguage('en')}
+                      >
+                        {lang === 'es' ? 'Inglés' : 'English'}
+                      </button>
+                    </div>
+                  )}
+                  {selectedCategory === 'documentales' && (
+                    <div key="documentales-controls">
+                      <button
+                        className={`subcategory-btn podcast-language${activeDocumentaryLanguages?.includes('es') ? ' active' : ''}`}
+                        onClick={() => toggleDocumentaryLanguage('es')}
+                      >
+                        {lang === 'es' ? 'Español' : 'Spanish'}
+                      </button>
+                      <button
+                        className={`subcategory-btn podcast-language${activeDocumentaryLanguages?.includes('en') ? ' active' : ''}`}
+                        onClick={() => toggleDocumentaryLanguage('en')}
+                      >
+                        {lang === 'es' ? 'Inglés' : 'English'}
+                      </button>
+                    </div>
+                  )}
+                  {!isRecommendedActive && (
+                    <button
+                      className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
+                      onClick={handleMasterpieceToggle}
+                    >
+                      {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
+                    </button>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
         </>
       )}
 
@@ -417,11 +520,24 @@ const HomePage = () => {
       {selectedItem ? (
         renderItemDetail()
       ) : (
-        <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            // Quitar paddingTop en móvil cuando no hay categoría seleccionada
+            ...(isMobile && (!selectedCategory || selectedCategory === 'all')
+              ? { paddingTop: 0 }
+              : {})
+          }}
+        >
           <RecommendationsList            
             recommendations={filteredItems} 
             isHome={!selectedCategory}
             onItemClick={handleItemClick}
+            categories={categories}
+            selectedCategory={selectedCategory}
+            onCategoryClick={handleCategoryClick}
           />
         </div>
       )}

@@ -36,7 +36,7 @@ const OptimizedImage = ({ src, alt, ...props }) => (
   />
 );
 
-const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {
+const RecommendationsList = ({ recommendations, isHome, onItemClick, categories, selectedCategory, onCategoryClick }) => {
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
   // Stores consolidados - SOLO VALORES PRIMITIVOS Y ACCIONES SEGURAS
   const { 
@@ -359,20 +359,26 @@ const RecommendationsList = ({ recommendations, isHome, onItemClick }) => {
 
   return (
     <MaterialContentWrapper
+      categories={categories}
+      selectedCategory={selectedCategory}
+      onCategoryClick={onCategoryClick}
       recommendations={recommendations}
       isHome={isHome}
     >
       <div
         className="recommendations-wrapper"
         style={
-          !isMobile
-            ? {
+          isMobile
+            ? // En móvil: si no hay categoría seleccionada, quitar padding-top
+              (!selectedCategory || selectedCategory === 'all')
+                ? { paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0 }
+                : undefined
+            : {
                 width: '96vw',
                 maxWidth: '1800px',
                 margin: '0 auto',
                 padding: '0 2vw',
               }
-            : undefined
         }
       >
         <div

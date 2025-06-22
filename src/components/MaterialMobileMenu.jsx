@@ -23,7 +23,8 @@ import {
   Coffee as CoffeeIcon,
   Close as CloseIcon,
   Lightbulb as LightbulbIcon,
-  DarkMode as DarkModeIcon
+  DarkMode as DarkModeIcon,
+  Download as DownloadIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppView, useAppTheme } from '../store/useAppStore';
@@ -32,9 +33,9 @@ import ThemeToggle from './ThemeToggle';
 const MaterialMobileMenu = () => {
   const { t, lang, changeLanguage } = useLanguage();
   const { resetAllFilters } = useAppData();
-  const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee } = useAppView();
+  const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();
   const { isDarkTheme, toggleTheme } = useAppTheme();
-    const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg')); // Cambiado de 'md' a 'lg' para incluir tablets
     const handleNewRecommendations = () => {
@@ -54,6 +55,11 @@ const MaterialMobileMenu = () => {
     } else if (currentView === 'coffee') {
       goBackFromCoffee();
     }
+    setDrawerOpen(false);
+  };
+  
+  const handleHowToDownload = () => {
+    goToHowToDownload();
     setDrawerOpen(false);
   };
   
@@ -85,6 +91,26 @@ const MaterialMobileMenu = () => {
       action: handleCoffeeNavigation,
       show: !isCoffeeView,
       special: true
+    },
+    {
+      text: t.how_to_download || '¿Cómo descargar?',
+      icon: (
+        <span style={{display:'flex',alignItems:'center'}}>
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none" style={{verticalAlign:'middle'}} xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="16" fill="#111" />
+            <path d="M8 12C8 10 12 8 16 8C20 8 24 10 24 12C24 14 20 16 16 16C12 16 8 14 8 12Z" fill="#fff" stroke="#fff" strokeWidth="1.5"/>
+            <rect x="13.5" y="11" width="2" height="2" rx="1" fill="#111"/>
+            <rect x="17" y="11" width="2" height="2" rx="1" fill="#111"/>
+            <path d="M12 18C13.5 20 18.5 20 20 18" stroke="#fff" strokeWidth="1.5" strokeLinecap="round"/>
+            <path d="M6 24C10 22 22 22 26 24" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
+            <rect x="21" y="6" width="2" height="8" rx="1" fill="#fff"/>
+            <rect x="9" y="6" width="2" height="8" rx="1" fill="#fff"/>
+          </svg>
+        </span>
+      ),
+      action: handleHowToDownload,
+      show: true,
+      special: false
     }
   ];
   

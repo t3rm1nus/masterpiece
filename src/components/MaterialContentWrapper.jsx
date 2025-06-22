@@ -1,8 +1,7 @@
 import React from 'react';
 import { useMediaQuery, useTheme, Box, Typography } from '@mui/material';
 import MaterialRecommendationCard from './MaterialRecommendationCard';
-import MaterialCategoryButtons from './MaterialCategoryButtons';
-import MaterialSubcategoryChips from './MaterialSubcategoryChips';
+import MaterialCategorySelect from './MaterialCategorySelect';
 import { useAppData } from '../store/useAppStore';
 import { useLanguage } from '../LanguageContext';
 
@@ -36,23 +35,15 @@ const MaterialContentWrapper = ({
       paddingTop: '64px', // Espacio para el AppBar fijo (48px) + padding extra (16px)
       boxSizing: 'border-box' // Incluir padding en el cálculo del ancho
     }}>
-      {/* Botones de categorías Material UI */}
-      {categories && (
-        <MaterialCategoryButtons
+      {/* Select de categorías Material UI */}
+      {/* {categories && (
+        <MaterialCategorySelect
           categories={categories}
           selectedCategory={selectedCategory}
-          onCategoryClick={onCategoryClick}
+          onCategoryChange={onCategoryClick}
         />
-      )}      {/* Chips de subcategorías Material UI */}
-      {((subcategories && subcategories.length > 0) || selectedCategory) && (
-        <MaterialSubcategoryChips
-          subcategories={subcategories || []}
-          activeSubcategory={activeSubcategory}
-          onSubcategoryClick={onSubcategoryClick}
-          categoryColor={categoryColor}
-          selectedCategory={selectedCategory}
-        />
-      )}      {/* Lista de recomendaciones Material UI */}
+      )} */}      {/* Chips de subcategorías Material UI eliminados en móvil */}
+      {/* Lista de recomendaciones Material UI */}
       {recommendations && Array.isArray(recommendations) && recommendations.length > 0 && (
         <Box
           sx={{

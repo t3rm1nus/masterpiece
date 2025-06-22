@@ -4,7 +4,7 @@ import { isMobileDevice } from '../utils/appUtils';
 import HybridMenu from './HybridMenu';
 import HomePage from './HomePage';
 import UnifiedItemDetail from './UnifiedItemDetail';
-import { LazyCoffeePage, LoadingFallback } from './LazyComponents';
+import { LazyCoffeePage, LazyHowToDownload, LoadingFallback } from './LazyComponents';
 
 const AppContent = () => {
   // Usando el store consolidado de vista para toda la gestión de UI
@@ -37,6 +37,13 @@ const AppContent = () => {
       content = (
         <Suspense fallback={<LoadingFallback message="Cargando página de donación..." />}>
           <LazyCoffeePage />
+        </Suspense>
+      );
+      break;
+    case 'howToDownload':
+      content = (
+        <Suspense fallback={<LoadingFallback message="Cargando instrucciones de descarga..." />}>
+          <LazyHowToDownload />
         </Suspense>
       );
       break;

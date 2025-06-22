@@ -7,6 +7,7 @@ import {
 } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppTheme } from '../store/useAppStore';
+import { getCategoryColor } from './HomePage';
 
 const MaterialSubcategoryChips = ({ 
   subcategories, 
@@ -21,7 +22,6 @@ const MaterialSubcategoryChips = ({
     toggleSpanishCinema, 
     toggleMasterpiece 
   } = useAppData();
-  const { getSpecialButtonLabel } = useAppTheme();
   const { lang } = useLanguage();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
@@ -29,6 +29,17 @@ const MaterialSubcategoryChips = ({
   if (!isMobile) {
     return null;
   }
+
+  // Fallback temporal para evitar crash si no existe getSpecialButtonLabel
+  const getSpecialButtonLabel = (type, lang) => {
+    if (type === 'spanishCinema') return lang === 'es' ? 'Cine Español' : 'Spanish Cinema';
+    if (type === 'masterpiece') return lang === 'es' ? 'Obras Maestras' : 'Masterpieces';
+    return '';
+  };
+
+  // Obtener color de categoría para móvil
+  const categoryColorFinal = getCategoryColor(selectedCategory);
+
   return (
     <>      {/* Chips de subcategorías normales */}
       {Array.isArray(subcategories) && subcategories.length > 0 && (
@@ -49,15 +60,15 @@ const MaterialSubcategoryChips = ({
               onClick={() => onSubcategoryClick(sub)}
               variant={activeSubcategory === sub ? 'filled' : 'outlined'}
               sx={{
-                backgroundColor: activeSubcategory === sub ? categoryColor : 'transparent',
-                borderColor: categoryColor,
-                color: activeSubcategory === sub ? 'white' : categoryColor,
+                backgroundColor: activeSubcategory === sub ? categoryColorFinal : 'transparent',
+                borderColor: categoryColorFinal,
+                color: activeSubcategory === sub ? 'white' : categoryColorFinal,
                 fontWeight: activeSubcategory === sub ? 'bold' : 'normal',
                 fontSize: '0.8rem',
                 transition: 'all 0.2s ease',
                 cursor: 'pointer',
                 '&:hover': {
-                  backgroundColor: activeSubcategory === sub ? categoryColor : `${categoryColor}20`,
+                  backgroundColor: activeSubcategory === sub ? categoryColorFinal : `${categoryColorFinal}20`,
                   transform: 'scale(1.05)',
                   boxShadow: theme.shadows[2]
                 },
@@ -89,15 +100,15 @@ const MaterialSubcategoryChips = ({
               onClick={toggleSpanishCinema}
               variant={isSpanishCinemaActive ? 'filled' : 'outlined'}
               sx={{
-                backgroundColor: isSpanishCinemaActive ? '#d32f2f' : 'transparent',
-                borderColor: '#d32f2f',
-                color: isSpanishCinemaActive ? 'white' : '#d32f2f',
+                backgroundColor: isSpanishCinemaActive ? categoryColorFinal : 'transparent',
+                borderColor: categoryColorFinal,
+                color: isSpanishCinemaActive ? 'white' : categoryColorFinal,
                 fontWeight: isSpanishCinemaActive ? 'bold' : 'normal',
                 fontSize: '0.8rem',
                 transition: 'all 0.2s ease',
                 cursor: 'pointer',
                 '&:hover': {
-                  backgroundColor: isSpanishCinemaActive ? '#d32f2f' : '#d32f2f20',
+                  backgroundColor: isSpanishCinemaActive ? categoryColorFinal : `${categoryColorFinal}20`,
                   transform: 'scale(1.05)',
                   boxShadow: theme.shadows[2]
                 },
@@ -114,16 +125,16 @@ const MaterialSubcategoryChips = ({
             onClick={toggleMasterpiece}
             variant={isMasterpieceActive ? 'filled' : 'outlined'}
             sx={{
-              backgroundColor: isMasterpieceActive ? '#ffe0b2' : '#fff8e1',
-              borderColor: '#ffd54f',
-              color: isMasterpieceActive ? '#5d4037' : '#7a6a28',
+              backgroundColor: isMasterpieceActive ? categoryColorFinal : 'transparent',
+              borderColor: categoryColorFinal,
+              color: isMasterpieceActive ? 'white' : categoryColorFinal,
               fontWeight: isMasterpieceActive ? 'bold' : 'normal',
               fontSize: '0.8rem',
               transition: 'all 0.3s ease',
               cursor: 'pointer',
               '&:hover': {
-                backgroundColor: isMasterpieceActive ? '#ffe0b2' : '#fff3e0',
-                borderColor: '#ffca28',
+                backgroundColor: isMasterpieceActive ? categoryColorFinal : `${categoryColorFinal}20`,
+                borderColor: categoryColorFinal,
                 transform: 'scale(1.05)',
                 boxShadow: theme.shadows[2]
               },
