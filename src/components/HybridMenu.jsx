@@ -50,6 +50,9 @@ function DesktopMenu() {
     setSplashOpen(true);
     setTimeout(() => {
       if (audioRef.current) {
+        const audios = ["/imagenes/samurai.mp3", "/imagenes/samurai.wav"];
+        const random = Math.floor(Math.random() * audios.length);
+        audioRef.current.src = audios[random];
         audioRef.current.currentTime = 0;
         audioRef.current.play();
       }
@@ -144,25 +147,62 @@ function DesktopMenu() {
         {/* Icono a la derecha del botón ¿Cómo descargar? */}
         <img
           src="/imagenes/icono.png"
-          alt="icono"
-          style={{ height: 36, width: 36, marginLeft: 12, cursor: 'pointer', borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.10)' }}
-          onClick={() => {
-            if (window.innerWidth < 900) {
-              // Si es móvil, abrir el popup móvil (MaterialMobileMenu)
-              const evt = new CustomEvent('openMobileSplash');
-              window.dispatchEvent(evt);
-            } else {
-              handleSplashOpen();
-            }
+          alt="info"
+          title={lang === 'en' ? 'Show info' : 'Mostrar información'}
+          onClick={handleSplashOpen}
+          style={{
+            width: '36px',
+            height: '36px',
+            marginLeft: '8px',
+            cursor: 'pointer',
+            verticalAlign: 'middle',
+            display: 'inline-block',
+            borderRadius: '6px' // Borde muy suave, sin borde visible
           }}
         />
+        
         {/* Splash Dialog Desktop */}
-        <Dialog open={splashOpen} onClose={handleSplashClose} maxWidth="md" PaperProps={{ style: { borderRadius: 18, background: '#222', boxShadow: '0 8px 32px rgba(0,0,0,0.18)' } }}>
-          <DialogContent sx={{ p: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', background: '#222' }}>
+        <Dialog open={splashOpen} onClose={handleSplashClose} maxWidth="xl" fullWidth
+          PaperProps={{
+            style: {
+              borderRadius: 18,
+              background: '#222',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
+              overflow: 'hidden',
+              padding: 0,
+              margin: 0,
+              maxWidth: '100vw',
+              maxHeight: '100vh',
+            }
+          }}
+        >
+          <DialogContent sx={{
+            p: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            background: '#222',
+            width: '100vw',
+            height: '100vh',
+            maxWidth: '100vw',
+            maxHeight: '100vh',
+            overflow: 'hidden',
+          }}>
             <img 
               src="/imagenes/splash_image.png" 
               alt="Splash" 
-              style={{ width: '100vw', maxWidth: '90vw', maxHeight: '90vh', borderRadius: 16, margin: 0, cursor: 'pointer', objectFit: 'contain', background: '#111' }} 
+              style={{
+                width: '100%',
+                height: '100%',
+                maxWidth: '100vw',
+                maxHeight: '100vh',
+                borderRadius: 0,
+                margin: 0,
+                cursor: 'pointer',
+                objectFit: 'contain',
+                background: '#111',
+                display: 'block',
+              }} 
               onClick={handleSplashClose}
             />
             <audio ref={audioRef} src="/imagenes/samurai.mp3" preload="auto" loop />

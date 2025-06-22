@@ -578,26 +578,24 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
       );
     }
 
-    // Botón Descargar Película (solo para películas)
-    if (selectedItem.category === 'movies') {
+    // Botón Descargar Película (solo para películas y series)
+    if (selectedItem.category === 'movies' || selectedItem.category === 'series') {
       buttons.push(
-        <Box key="download" sx={{ textAlign: 'center', marginBottom: '16px' }}>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={() => {
-              if (typeof goToHowToDownload === 'function') goToHowToDownload();
-            }}
-            sx={{
-              backgroundColor: '#1976d2',
-              '&:hover': {
-                backgroundColor: '#1565c0'
+        <div key="download" className="item-detail-trailer">
+          <a
+            href="#descargar"
+            className="trailer-link"
+            onClick={e => {
+              e.preventDefault();
+              if (typeof window !== 'undefined' && window.location) {
+                window.location.hash = '#/how-to-download';
               }
+              if (typeof goToHowToDownload === 'function') goToHowToDownload();
             }}
           >
             {t?.ui?.actions?.download || (lang === 'en' ? 'Download' : 'Descargar')}
-          </Button>
-        </Box>
+          </a>
+        </div>
       );
     }
 
@@ -640,8 +638,8 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
       );
     }
 
-    // Botón Descargar Película (solo para películas)
-    if (selectedItem.category === 'movies') {
+    // Botón Descargar Película (solo para películas y series)
+    if (selectedItem.category === 'movies' || selectedItem.category === 'series') {
       buttons.push(
         <div key="download" className="item-detail-trailer">
           <a

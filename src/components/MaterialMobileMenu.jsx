@@ -92,6 +92,27 @@ const MaterialMobileMenu = () => {
     return null;
   }
 
+  // --- Splash popup handlers ---
+  const handleSplashOpen = () => {
+    setSplashOpen(true);
+    setTimeout(() => {
+      if (audioRef.current) {
+        const audios = ["/imagenes/samurai.mp3", "/imagenes/samurai.wav"];
+        const random = Math.floor(Math.random() * audios.length);
+        audioRef.current.src = audios[random];
+        audioRef.current.currentTime = 0;
+        audioRef.current.play();
+      }
+    }, 100);
+  };
+  const handleSplashClose = () => {
+    setSplashOpen(false);
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  };
+  
   // Declarar menuItems dentro del render SIEMPRE, para que use los textos actualizados
   const menuItems = [
     {
@@ -132,30 +153,25 @@ const MaterialMobileMenu = () => {
       action: handleHowToDownload,
       show: true,
       special: false
+    },
+    {
+      text: lang === 'en' ? 'About Us' : '¿Quiénes somos?',
+      icon: (
+        <span style={{display:'flex',alignItems:'center'}}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="12,2 15,9 22,9.5 17,14.5 18.5,22 12,18 5.5,22 7,14.5 2,9.5 9,9" />
+          </svg>
+        </span>
+      ),
+      action: handleSplashOpen,
+      show: true,
+      special: false
     }
   ];
   
   const handleLanguageChange = (lng) => {
     changeLanguage(lng);
     setDrawerOpen(false);
-  };
-
-  // --- Splash popup handlers ---
-  const handleSplashOpen = () => {
-    setSplashOpen(true);
-    setTimeout(() => {
-      if (audioRef.current) {
-        audioRef.current.currentTime = 0;
-        audioRef.current.play();
-      }
-    }, 100);
-  };
-  const handleSplashClose = () => {
-    setSplashOpen(false);
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    }
   };
 
   return (
