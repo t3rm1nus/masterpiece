@@ -1,6 +1,7 @@
 import React from 'react';
 import { Select, MenuItem, InputLabel, FormControl, useTheme, useMediaQuery, ListSubheader } from '@mui/material';
 import { Movie as MovieIcon, SportsEsports as GameIcon, MenuBook as BookIcon, LibraryMusic as MusicIcon, Mic as PodcastIcon, Extension as BoardGameIcon, AutoStories as ComicIcon, Category as CategoryIcon, Star as StarIcon } from '@mui/icons-material';
+import { useLanguage } from '../LanguageContext';
 
 const getCategoryIcon = (categoryKey) => {
   switch (categoryKey) {
@@ -31,6 +32,7 @@ const getCategoryIcon = (categoryKey) => {
 
 // Recibe también subcategorías y categoría seleccionada
 const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange, subcategories, activeSubcategory }) => {
+  const { t, lang } = useLanguage();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   React.useEffect(() => {
@@ -47,12 +49,12 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
   return (
     <div style={{ width: '100%' }}>
       <FormControl fullWidth variant="outlined" sx={{ my: 2, display: 'block', width: '100%' }}>
-        <InputLabel id="category-select-label">Categoría</InputLabel>
+        <InputLabel id="category-select-label">{t?.ui?.navigation?.category || (lang === 'en' ? 'Category' : 'Categoría')}</InputLabel>
         <Select
           labelId="category-select-label"
           id="category-select"
           value={selectedCategory || ''}
-          label="Categoría"
+          label={t?.ui?.navigation?.category || (lang === 'en' ? 'Category' : 'Categoría')}
           onChange={e => onCategoryChange(e.target.value, null)}
           sx={{
             background: theme.palette.background.paper,
@@ -73,7 +75,7 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
           }}
         >
           <MenuItem key="all" value="all">
-            Todas las categorías
+            {t?.ui?.navigation?.all_categories || (lang === 'en' ? 'All categories' : 'Todas las categorías')}
           </MenuItem>
           {categories.map(({ key, label, isMasterpiece }) => (
             <MenuItem key={key} value={key} sx={{ display: 'flex', alignItems: 'center' }}>
@@ -88,12 +90,12 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
       </FormControl>
       {showSubcatSelect && (
         <FormControl fullWidth variant="outlined" sx={{ my: 1, display: 'block', width: '100%' }}>
-          <InputLabel id="subcategory-select-label">Subcategoría</InputLabel>
+          <InputLabel id="subcategory-select-label">{t?.ui?.navigation?.subcategory || (lang === 'en' ? 'Subcategory' : 'Subcategoría')}</InputLabel>
           <Select
             labelId="subcategory-select-label"
             id="subcategory-select"
             value={activeSubcategory || 'all'}
-            label="Subcategoría"
+            label={t?.ui?.navigation?.subcategory || (lang === 'en' ? 'Subcategory' : 'Subcategoría')}
             onChange={e => onCategoryChange(selectedCategory, e.target.value)}
             sx={{
               background: theme.palette.background.paper,
@@ -114,7 +116,7 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
               },
             }}
           >
-            <MenuItem key="all" value="all">Todas las subcategorías</MenuItem>
+            <MenuItem key="all" value="all">{t?.ui?.navigation?.all_subcategories || (lang === 'en' ? 'All subcategories' : 'Todas las subcategorías')}</MenuItem>
             {subcategories.map(sub => (
               <MenuItem key={sub.sub || sub} value={sub.sub || sub}>
                 {sub.label || sub.sub || sub}

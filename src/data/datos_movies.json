@@ -5590,25 +5590,67 @@
       "masterpiece": true
     },
     {
-  "id": 264,
-  "category": "movies",
-  "subcategory": "comedy",
-  "title": {
-    "es": "Los caballeros de la mesa cuadrada",
-    "en": "Monty Python and the Holy Grail"
-  },
-  "description": {
-    "es": "Parodia surrealista de la leyenda artúrica, donde el Rey Arturo y sus caballeros emprenden una absurda búsqueda del Santo Grial. Llena de humor absurdo, gags visuales y diálogos memorables, es una de las comedias más influyentes de la historia del cine británico.",
-    "en": "A surreal parody of the Arthurian legend, where King Arthur and his knights embark on an absurd quest for the Holy Grail. Full of absurd humor, visual gags, and memorable dialogue, it's one of the most influential comedies in British film history."
-  },
-  "director": "Terry Gilliam, Terry Jones",
-  "image": "/imagenes/peliculas/holy_grail.jpg",
-  "year": 1975,
-  "trailer": {
-    "es": "https://www.youtube.com/watch?v=WGidnQmVTVQ",
-    "en": "https://www.youtube.com/watch?v=67yCrKqAPQk"
-  },
-  "masterpiece": true
-}
+      "id": 264,
+      "category": "movies",
+      "subcategory": "comedy",
+      "title": {
+        "es": "Los caballeros de la mesa cuadrada",
+        "en": "Monty Python and the Holy Grail"
+      },
+      "description": {
+        "es": "Parodia surrealista de la leyenda artúrica, donde el Rey Arturo y sus caballeros emprenden una absurda búsqueda del Santo Grial. Llena de humor absurdo, gags visuales y diálogos memorables, es una de las comedias más influyentes de la historia del cine británico.",
+        "en": "A surreal parody of the Arthurian legend, where King Arthur and his knights embark on an absurd quest for the Holy Grail. Full of absurd humor, visual gags, and memorable dialogue, it's one of the most influential comedies in British film history."
+      },
+      "director": "Terry Gilliam, Terry Jones",
+      "image": "/imagenes/peliculas/holy_grail.jpg",
+      "year": 1975,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=WGidnQmVTVQ",
+        "en": "https://www.youtube.com/watch?v=67yCrKqAPQk"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 265,
+      "category": "movies",
+      "subcategory": "horror",
+      "title": {
+        "es": "Longlegs",
+        "en": "Longlegs"
+      },
+      "description": {
+        "es": "Un agente del FBI investiga una serie de asesinatos relacionados con un misterioso asesino apodado 'Long Legs'. A medida que avanza la investigación, descubre conexiones inquietantes con su propio pasado.",
+        "en": "An FBI agent investigates a series of murders linked to a mysterious killer known as 'Long Legs'. As the investigation progresses, she uncovers disturbing connections to her own past."
+      },
+      "director": "Osgood Perkins",
+      "image": "/imagenes/peliculas/longlegs.jpeg",
+      "year": 2024,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=I0Uq-HcmKII",
+        "en": "https://www.youtube.com/watch?v=ou9t6wXJkjE"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 266,
+      "category": "movies",
+      "subcategory": "horror",
+      "title": {
+        "es": "Ghostland",
+        "en": "Ghostland"
+      },
+      "description": {
+        "es": "Tras la muerte de su tía, una madre y sus dos hijas heredan una casa donde pronto se ven amenazadas por intrusos. Años después, los traumas y horrores vividos resurgen de forma inesperada.",
+        "en": "After the death of their aunt, a mother and her two daughters inherit a house where they are soon threatened by intruders. Years later, the traumas and horrors they experienced resurface unexpectedly."
+      },
+      "director": "Pascal Laugier",
+      "image": "/imagenes/peliculas/ghostland.jpg",
+      "year": 2018,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=ni_DF8waeDE",
+        "en": "https://www.youtube.com/watch?v=66JuZ1cb03E"
+      },
+      "masterpiece": false
+    }
   ]
 }

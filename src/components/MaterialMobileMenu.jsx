@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   AppBar, 
   Toolbar, 
@@ -14,7 +14,9 @@ import {
   useMediaQuery,
   useTheme,
   Divider,
-  Button
+  Button,
+  Dialog,
+  DialogContent
 } from '@mui/material';
 import {
   Menu as MenuIcon,
@@ -36,8 +38,23 @@ const MaterialMobileMenu = () => {
   const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();
   const { isDarkTheme, toggleTheme } = useAppTheme();
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [splashOpen, setSplashOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg')); // Cambiado de 'md' a 'lg' para incluir tablets
+  const audioRef = useRef(null);
+
+  // Cerrar Drawer al cambiar idioma para forzar recarga de textos
+  useEffect(() => {
+    if (drawerOpen) setDrawerOpen(false);
+  }, [lang]);
+
+  useEffect(() => {
+    // Escuchar evento global para abrir el splash desde desktop
+    const openSplashListener = () => setSplashOpen(true);
+    window.addEventListener('openMobileSplash', openSplashListener);
+    return () => window.removeEventListener('openMobileSplash', openSplashListener);
+  }, []);
+  
     const handleNewRecommendations = () => {
     resetAllFilters(lang);
     goHome();
@@ -54,6 +71,8 @@ const MaterialMobileMenu = () => {
       goBackFromDetail();
     } else if (currentView === 'coffee') {
       goBackFromCoffee();
+    } else if (currentView === 'howToDownload') {
+      goHome();
     }
     setDrawerOpen(false);
   };
@@ -65,13 +84,15 @@ const MaterialMobileMenu = () => {
   
   const isDetailView = currentView === 'detail';
   const isCoffeeView = currentView === 'coffee';
-  const showBackButton = isDetailView || isCoffeeView;
+  const isHowToDownloadView = currentView === 'howToDownload'; // corregido: antes era 'how-to-download'
+  const showBackButton = isDetailView || isCoffeeView || isHowToDownloadView;
   
   // Solo renderizar si estamos en móvil
   if (!isMobile) {
     return null;
   }
-  
+
+  // Declarar menuItems dentro del render SIEMPRE, para que use los textos actualizados
   const menuItems = [
     {
       text: t.home_title || 'Inicio',
@@ -114,6 +135,29 @@ const MaterialMobileMenu = () => {
     }
   ];
   
+  const handleLanguageChange = (lng) => {
+    changeLanguage(lng);
+    setDrawerOpen(false);
+  };
+
+  // --- Splash popup handlers ---
+  const handleSplashOpen = () => {
+    setSplashOpen(true);
+    setTimeout(() => {
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0;
+        audioRef.current.play();
+      }
+    }, 100);
+  };
+  const handleSplashClose = () => {
+    setSplashOpen(false);
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  };
+
   return (
     <>      <AppBar 
         position="fixed" 
@@ -147,8 +191,11 @@ const MaterialMobileMenu = () => {
             sx={{ 
               fontWeight: 'bold',
               fontSize: '1.1rem',
-              color: isDarkTheme ? '#ffffff' : '#000000'
+              color: isDarkTheme ? '#ffffff' : '#000000',
+              cursor: 'pointer',
+              userSelect: 'none'
             }}
+            onClick={handleSplashOpen}
           >
             Masterpiece
           </Typography>
@@ -167,7 +214,20 @@ const MaterialMobileMenu = () => {
           </IconButton>
         </Toolbar>
       </AppBar>
+      {/* Splash Dialog */}
+      <Dialog open={splashOpen} onClose={handleSplashClose} maxWidth="xs" PaperProps={{ style: { borderRadius: 18, background: isDarkTheme ? '#222' : '#fff', boxShadow: '0 8px 32px rgba(0,0,0,0.18)' } }}>
+        <DialogContent sx={{ p: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', background: isDarkTheme ? '#222' : '#fff' }}>
+          <img 
+            src="/imagenes/splash_image.png" 
+            alt="Splash" 
+            style={{ width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer' }} 
+            onClick={handleSplashClose}
+          />
+          <audio ref={audioRef} src="/imagenes/samurai.mp3" preload="auto" loop />
+        </DialogContent>
+      </Dialog>
         <Drawer
+        key={lang} // Solo key={lang} para forzar desmontaje/montaje al cambiar idioma
         anchor="left"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
@@ -181,7 +241,7 @@ const MaterialMobileMenu = () => {
       >
         <Box sx={{ padding: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-            Menú
+            {t.menu || (lang === 'en' ? 'Menu' : 'Menú')}
           </Typography>
           <IconButton 
             onClick={() => setDrawerOpen(false)}
@@ -203,12 +263,37 @@ const MaterialMobileMenu = () => {
                   onClick={item.action}
                   sx={{
                     padding: '12px 16px',
-                    backgroundColor: item.special ? '#ffc439' : 'transparent',
-                    color: item.special ? '#333333' : (isDarkTheme ? '#ffffff' : '#000000'),
-                    margin: item.special ? '8px 16px' : '0',
-                    borderRadius: item.special ? '20px' : '0',
+                    background: index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                      ? 'linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%)'
+                      : item.special
+                        ? '#ffc439'
+                        : 'transparent',
+                    color: index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                      ? '#1e3c72'
+                      : item.special
+                        ? '#333333'
+                        : (isDarkTheme ? '#ffffff' : '#000000'),
+                    margin: item.special || index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                      ? '8px 16px'
+                      : '0',
+                    borderRadius: item.special || index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                      ? '20px'
+                      : '0',
+                    border: index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                      ? '2px solid #b2c2e0'
+                      : undefined,
+                    fontWeight: item.special || index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                      ? 'bold'
+                      : 'normal',
+                    boxShadow: index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                      ? '0 2px 8px rgba(180,200,230,0.18)'
+                      : undefined,
                     '&:hover': {
-                      backgroundColor: item.special ? '#ffb700' : (isDarkTheme ? '#404040' : '#f5f5f5')
+                      backgroundColor: item.special
+                        ? '#ffb700'
+                        : index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                          ? '#d2e2f6'
+                          : (isDarkTheme ? '#404040' : '#f5f5f5')
                     }
                   }}
                 >
@@ -260,13 +345,13 @@ const MaterialMobileMenu = () => {
         {/* Selector de idioma */}
         <Box sx={{ padding: '0 16px', marginBottom: '16px' }}>
           <Typography variant="subtitle2" sx={{ marginBottom: '8px', color: isDarkTheme ? '#cccccc' : '#666666' }}>
-            Idioma
+            {t.language || (lang === 'en' ? 'Language' : 'Idioma')}
           </Typography>
           <Box sx={{ display: 'flex', gap: '8px' }}>
             <Button
               variant={lang === 'es' ? 'contained' : 'outlined'}
               size="small"
-              onClick={() => changeLanguage('es')}
+              onClick={() => handleLanguageChange('es')}
               sx={{
                 minWidth: '60px',
                 backgroundColor: lang === 'es' ? '#0078d4' : 'transparent',
@@ -279,7 +364,7 @@ const MaterialMobileMenu = () => {
             <Button
               variant={lang === 'en' ? 'contained' : 'outlined'}
               size="small"
-              onClick={() => changeLanguage('en')}
+              onClick={() => handleLanguageChange('en')}
               sx={{
                 minWidth: '60px',
                 backgroundColor: lang === 'en' ? '#0078d4' : 'transparent',

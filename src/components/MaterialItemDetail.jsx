@@ -1,0 +1,312 @@
+import React from 'react';
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Chip,
+  Box,
+  Button,
+  useTheme,
+  useMediaQuery,
+  Stack,
+  Fab
+} from '@mui/material';
+import {
+  ArrowBack as ArrowBackIcon,
+  PlayArrow as PlayArrowIcon,
+  Star as StarIcon,
+  CalendarToday as CalendarIcon,
+  Category as CategoryIcon,
+  Person as PersonIcon,
+  Launch as LaunchIcon,
+  AccessTime as AccessTimeIcon,
+  ChildCare as ChildCareIcon,
+  Code as DeveloperIcon,
+  Gamepad as PlatformIcon,
+  Translate as TranslateIcon,
+  PlaylistPlay as PlaylistPlayIcon
+} from '@mui/icons-material';
+import { useLanguage } from '../LanguageContext';
+import useViewStore from '../store/viewStore';
+
+const MaterialItemDetail = ({ item }) => {
+  const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
+  const { goBackFromDetail, processTitle, processDescription } = useViewStore();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  
+  // Solo renderizar en móviles
+  if (!isMobile || !item) {
+    return null;
+  }
+  const title = processTitle(item.title || item.name, lang);
+  const description = processDescription(item.description, lang);
+
+  // Función auxiliar para asegurar que siempre devuelva un string
+  const ensureString = (value) => {
+    if (typeof value === 'string') return value;
+    if (typeof value === 'object' && value !== null) {
+      return value[lang] || value.es || value.en || JSON.stringify(value);
+    }
+    return String(value || '');
+  };
+
+  // Determinar qué trailer mostrar según el idioma
+  const getTrailerUrl = () => {
+    if (!item.trailer) return null;
+    if (lang === 'es' && item.trailer.es) {
+      return item.trailer.es;
+    } else if (lang === 'en' && item.trailer.en) {
+      return item.trailer.en;
+    } else if (typeof item.trailer === 'string') {
+      return item.trailer;
+    } else if (item.trailer.es) {
+      return item.trailer.es;
+    } else if (item.trailer.en) {
+      return item.trailer.en;
+    }
+    return null;
+  };
+
+  const trailerUrl = getTrailerUrl();
+
+  const getCategoryColor = (category) => {
+    switch (category) {
+      case 'movies':
+      case 'peliculas':
+        return '#2196f3';
+      case 'videogames':
+      case 'videojuegos':
+        return '#9c27b0';
+      case 'books':
+      case 'libros':
+        return '#4caf50';
+      case 'music':
+      case 'musica':
+        return '#00bcd4';
+      case 'podcast':
+      case 'podcasts':
+        return '#8bc34a';
+      case 'boardgames':
+      case 'juegos de mesa':
+        return '#e91e63';
+      case 'comics':
+        return '#ff9800';
+      case 'documentales':
+      case 'documentaries':
+        return '#9e9e9e';
+      default:
+        return theme.palette.primary.main;
+    }
+  };
+
+  return (
+    <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px' }}>
+      {/* Botón de volver flotante */}
+      <Fab
+        color="primary"
+        aria-label="volver"
+        onClick={goBackFromDetail}
+        sx={{
+          position: 'fixed',
+          top: '80px',
+          left: '16px',
+          zIndex: 1000,
+          backgroundColor: theme.palette.primary.main,
+          '&:hover': {
+            backgroundColor: theme.palette.primary.dark,
+          }
+        }}
+      >
+        <ArrowBackIcon />
+      </Fab>
+      {/* Tarjeta principal */}
+      <Card
+        sx={{
+          maxWidth: 600,
+          margin: '0 auto',
+          marginTop: '60px',
+          borderRadius: '16px',
+          overflow: 'hidden',
+          boxShadow: theme.shadows[8],
+          border: item.masterpiece ? '3px solid #ffd700' : 'none',
+          background: item.masterpiece 
+            ? 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)'
+            : theme.palette.background.paper
+        }}
+      >
+        {/* Imagen principal */}
+        <Box sx={{ position: 'relative' }}>
+          <CardMedia
+            component="img"
+            sx={{
+              height: 300,
+              objectFit: 'cover',
+              width: '100%'
+            }}
+            image={item.image}
+            alt={title}
+          />
+          {/* Badge de masterpiece solo móviles, overlay absoluto sobre la imagen */}
+          {item.masterpiece && (
+            <Box
+              className="masterpiece-detail-badge force-mobile-badge"
+              title="Obra maestra"
+              sx={{
+                position: 'absolute',
+                top: { xs: '60px !important', md: '-12px' },
+                right: { xs: '-9px !important', md: '-12px' },
+                zIndex: 100,
+                width: { xs: '57px !important', md: '40px' },
+                height: { xs: '38px !important', md: '40px' },
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: 'white',
+                borderRadius: { xs: '19px', md: '50%' },
+                boxShadow: 4,
+                p: 0,
+                m: 0
+              }}
+            >
+              <img
+                alt="Masterpiece"
+                src="/imagenes/masterpiece-star.png"
+                style={{ width: 32, height: 32, display: 'block' }}
+              />
+            </Box>
+          )}
+        </Box>
+        <CardContent sx={{ padding: { xs: '12px 8px', md: '24px' } }}>
+          {/* Título */}
+          <Typography 
+            variant="h4" 
+            component="h1" 
+            id="item-detail-mobile-title"
+            gutterBottom
+            className="detail-title-mobile"
+            sx={{ 
+              fontWeight: 'bold',
+              fontSize: { xs: '1.2rem', sm: '2rem' },
+              textAlign: 'center',
+              marginBottom: { xs: 0, sm: '16px' },
+              borderRadius: { xs: 0, sm: '8px' },
+              boxShadow: { xs: 'none', sm: 2 },
+              p: { xs: 0, sm: 1 },
+              mt: { xs: 0, sm: 0 },
+              mb: { xs: 0, sm: '16px' },
+              m: { xs: 0, sm: undefined }
+            }}
+          >
+            {title}
+          </Typography>
+          {/* Detalles adicionales (chips, descripción, botones, etc.) */}
+          <Stack spacing={1} sx={{ mb: 2 }}>
+            {/* Chips de categoría y subcategoría */}
+            <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '8px' }}>
+              <Chip 
+                label={getCategoryTranslation(item.category, lang)} 
+                sx={{ 
+                  backgroundColor: getCategoryColor(item.category),
+                  color: 'white',
+                  fontWeight: 'bold',
+                  borderRadius: '16px',
+                  py: '6px',
+                  px: '12px',
+                  fontSize: { xs: '0.8rem', sm: '1rem' },
+                  boxShadow: 2
+                }}
+                icon={
+                  <CategoryIcon sx={{ mr: 0.5, fontSize: { xs: '1rem', sm: '1.2rem' } }} />
+                }
+              />
+              {item.subcategory && (
+                <Chip 
+                  label={getSubcategoryTranslation(item.subcategory, lang)} 
+                  sx={{ 
+                    backgroundColor: theme.palette.secondary.main,
+                    color: 'white',
+                    fontWeight: 'bold',
+                    borderRadius: '16px',
+                    py: '6px',
+                    px: '12px',
+                    fontSize: { xs: '0.8rem', sm: '1rem' },
+                    boxShadow: 2
+                  }}
+                  icon={
+                    <TranslateIcon sx={{ mr: 0.5, fontSize: { xs: '1rem', sm: '1.2rem' } }} />
+                  }
+                />
+              )}
+            </Box>
+            {/* Descripción */}
+            <Typography 
+              variant="body1" 
+              component="div"
+              sx={{ 
+                textAlign: 'justify',
+                fontSize: { xs: '0.9rem', sm: '1rem' },
+                lineHeight: 1.6,
+                mb: 2
+              }}
+            >
+              {description}
+            </Typography>
+            {/* Botones de acción */}
+            <Stack spacing={1}>
+              {/* Botón Ver Trailer */}
+              {trailerUrl && (
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  fullWidth
+                  sx={{ 
+                    fontWeight: 700, 
+                    fontSize: { xs: '1rem', md: '1.1rem' },
+                    py: '12px',
+                    borderRadius: '8px',
+                    boxShadow: 2,
+                    '&:hover': {
+                      backgroundColor: theme.palette.secondary.dark,
+                    }
+                  }}
+                  onClick={() => window.open(trailerUrl, '_blank')}
+                  startIcon={<PlayArrowIcon />}
+                >
+                  {t?.ui?.actions?.watchTrailer ? t.ui.actions.watchTrailer : (lang === 'en' ? 'Watch Trailer' : 'Ver Trailer')}
+                </Button>
+              )}
+              {/* Botón Descargar Película (solo para películas) */}
+              {item.category === 'movies' && (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  fullWidth
+                  sx={{ mt: 2, fontWeight: 700, fontSize: { xs: '1rem', md: '1.1rem' } }}
+                  onClick={() => window.open('/how-to-download', '_blank')}
+                  startIcon={<LaunchIcon />}
+                >
+                  {t?.ui?.actions?.download ? `${t.ui.actions.download} ${t.ui.categories?.movies?.toLowerCase?.() || ''}`.trim() : (lang === 'en' ? 'Download movie' : 'Descargar película')}
+                </Button>
+              )}
+            </Stack>
+          </Stack>
+        </CardContent>
+      </Card>
+    </Box>
+  );
+};
+
+export default MaterialItemDetail;
+
+/*
+Agrega este CSS global si hay estilos globales que afectan los h1:
+@media (max-width: 900px) {
+  .detail-title-mobile {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+}
+*/

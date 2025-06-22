@@ -6,7 +6,8 @@
     "defaultLanguage": "es"
   },
   "es": {
-    "ui": {      "navigation": {
+    "ui": {
+      "navigation": {
         "home": "Inicio",
         "about": "Acerca de",
         "contact": "Contacto",
@@ -17,6 +18,8 @@
         "home_title": "Nuevas Recomendaciones",
         "app_title": "Masterpiece"
       },
+      "menu": "Menú",
+      "language": "Idioma",
       "actions": {
         "search": "Buscar",
         "filter": "Filtrar",
@@ -35,7 +38,8 @@
         "read": "Leer",
         "listen": "Escuchar",
         "play": "Jugar"
-      },      "states": {
+      },
+      "states": {
         "loading": "Cargando...",
         "noResults": "No se encontraron resultados",
         "success": "Operación exitosa",
@@ -44,7 +48,8 @@
         "offline": "Sin conexión",
         "noSubcategories": "No hay subcategorías disponibles"
       }
-    },    "coffee": {
+    },
+    "coffee": {
       "title": "¿Nos invitas a un café? ¿O diez?",
       "description": "¡Ey! 👋 Sabemos que podrías estar gastando tu dinero en cosas muy importantes... como croquetas para el gato, skins de videojuegos o esa tercera subscripción que ni usas. Pero si te gusta lo que hacemos y quieres apoyarnos, una donación (por mínima que sea) es como un abrazo digital con billete dentro 💵",
       "button": "Donar con PayPal",
@@ -95,7 +100,8 @@
       "videogames": "Videojuegos",
       "boardgames": "Juegos de Mesa",
       "podcast": "Podcasts"
-    },    "subcategories": {
+    },
+    "subcategories": {
       "movies": {
         "action": "Acción",
         "adventure": "Aventura",
@@ -244,7 +250,8 @@
         "inspiration": "Inspiración",
         "education": "Educación",
         "technology": "Tecnología",
-        "comedy": "Comedia",        "health": "Salud",
+        "comedy": "Comedia",
+        "health": "Salud",
         "sports": "Deportes",
         "politics": "Política"
       }
@@ -336,8 +343,10 @@
         }
       }
     }
-  },  "en": {
-    "ui": {      "navigation": {
+  },
+  "en": {
+    "ui": {
+      "navigation": {
         "home": "Home",
         "about": "About",
         "contact": "Contact",
@@ -348,6 +357,8 @@
         "home_title": "New Recommendations",
         "app_title": "Masterpiece"
       },
+      "menu": "Menu",
+      "language": "Language",
       "actions": {
         "search": "Search",
         "filter": "Filter",
@@ -366,7 +377,8 @@
         "read": "Read",
         "listen": "Listen",
         "play": "Play"
-      },      "states": {
+      },
+      "states": {
         "loading": "Loading...",
         "noResults": "No results found",
         "success": "Operation successful",
@@ -375,7 +387,8 @@
         "offline": "Offline",
         "noSubcategories": "No subcategories available"
       }
-    },    "coffee": {
+    },
+    "coffee": {
       "title": "Buy us a coffee? Or ten?",
       "description": "Hey! 👋 We know you could be spending your money on very important things... like cat treats, video game skins, or that third subscription you don't even use. But if you like what we do and want to support us, a donation (however small) is like a digital hug with cash inside 💵",
       "button": "Donate with PayPal",

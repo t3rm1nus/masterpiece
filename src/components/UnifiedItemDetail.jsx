@@ -34,7 +34,7 @@ import {
 
 const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
-  const { processTitle, processDescription, goBackFromDetail } = useAppView();
+  const { processTitle, processDescription, goBackFromDetail, goToHowToDownload } = useAppView();
   const { getMasterpieceBadgeConfig } = useAppTheme();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
@@ -555,7 +555,7 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
         </Box>
       );
     }
-    
+
     // Botón de Spotify para podcasts
     if (selectedItem.category === 'podcast' && selectedItem.link) {
       buttons.push(
@@ -577,7 +577,30 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
         </Box>
       );
     }
-    
+
+    // Botón Descargar Película (solo para películas)
+    if (selectedItem.category === 'movies') {
+      buttons.push(
+        <Box key="download" sx={{ textAlign: 'center', marginBottom: '16px' }}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              if (typeof goToHowToDownload === 'function') goToHowToDownload();
+            }}
+            sx={{
+              backgroundColor: '#1976d2',
+              '&:hover': {
+                backgroundColor: '#1565c0'
+              }
+            }}
+          >
+            {t?.ui?.actions?.download || (lang === 'en' ? 'Download' : 'Descargar')}
+          </Button>
+        </Box>
+      );
+    }
+
     return buttons;
   }
   
@@ -611,23 +634,28 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
             rel="noopener noreferrer"
             className="trailer-link"
           >
-            {t.watch_trailer || 'Ver Trailer'}
+            {t.watch_trailer || t?.ui?.actions?.watchTrailer || (lang === 'en' ? 'Watch Trailer' : 'Ver Trailer')}
           </a>
         </div>
       );
     }
-    
-    // Botón de Spotify para podcasts
-    if (selectedItem.category === 'podcast' && selectedItem.link) {
+
+    // Botón Descargar Película (solo para películas)
+    if (selectedItem.category === 'movies') {
       buttons.push(
-        <div key="spotify" className="item-detail-spotify">
-          <a 
-            href={selectedItem.link} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="spotify-link"
+        <div key="download" className="item-detail-trailer">
+          <a
+            href="#descargar"
+            className="trailer-link"
+            onClick={e => {
+              e.preventDefault();
+              if (typeof window !== 'undefined' && window.location) {
+                window.location.hash = '#/how-to-download';
+              }
+              if (typeof goToHowToDownload === 'function') goToHowToDownload();
+            }}
           >
-            Escuchar en Spotify
+            {t?.ui?.actions?.download || (lang === 'en' ? 'Download' : 'Descargar')}
           </a>
         </div>
       );

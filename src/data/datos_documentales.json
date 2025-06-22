@@ -1019,6 +1019,86 @@
       "idioma": "en",
       "link": "https://www.documaniatv.com/documentales/planeta-tierra/",
       "autor": "Alastair Fothergill"
+    },
+    {
+      "id": 52,
+      "title": {
+        "es": "Fahrenheit 9/11",
+        "en": "Fahrenheit 9/11"
+      },
+      "description": {
+        "es": "Documental de Michael Moore que examina la presidencia de George W. Bush, la guerra contra el terrorismo y sus consecuencias tras los atentados del 11 de septiembre.",
+        "en": "Michael Moore's documentary examining the presidency of George W. Bush, the War on Terror, and its aftermath following the September 11 attacks."
+      },
+      "image": "/imagenes/documentales/fahrenheit.jpg",
+      "category": "documentales",
+      "subcategory": "politics",
+      "duration": "122 min",
+      "episodes": 1,
+      "masterpiece": true,
+      "idioma": "en",
+      "link": "https://www.youtube.com/watch?v=KC0L0I0V86w",
+      "autor": "Michael Moore"
+    },
+    {
+      "id": 53,
+      "title": {
+        "es": "Style Wars",
+        "en": "Style Wars"
+      },
+      "description": {
+        "es": "Documental clásico sobre la cultura del graffiti, el breakdance y el hip hop en el Nueva York de los años 80.",
+        "en": "Classic documentary about graffiti, breakdancing, and hip hop culture in 1980s New York."
+      },
+      "image": "/imagenes/documentales/style_wars.jpg",
+      "category": "documentales",
+      "subcategory": "culture",
+      "duration": "69 min",
+      "episodes": 1,
+      "masterpiece": true,
+      "idioma": "en",
+      "link": "https://www.youtube.com/watch?v=NFBRfhoABlQ",
+      "autor": "Tony Silver"
+    },
+    {
+      "id": 54,
+      "title": {
+        "es": "Calle Real 70",
+        "en": "Calle Real 70"
+      },
+      "description": {
+        "es": "Documental sobre la historia y la vida cotidiana en la mítica dirección Calle Real 70, explorando sus personajes y su impacto en la cultura local.",
+        "en": "Documentary about the history and daily life at the legendary address Calle Real 70, exploring its characters and its impact on local culture."
+      },
+      "image": "/imagenes/documentales/real70.jpg",
+      "category": "documentales",
+      "subcategory": "culture",
+      "duration": "80 min",
+      "episodes": 1,
+      "masterpiece": true,
+      "idioma": "es",
+      "link": "https://www.youtube.com/watch?v=_p_uQYsVUeg",
+      "autor": "Jose Miragall"
+    },
+    {
+      "id": 55,
+      "title": {
+        "es": "Graffiti Wars, Robbo Vs Banksy",
+        "en": "Graffiti Wars, Robbo Vs Banksy"
+      },
+      "description": {
+        "es": "Documental sobre la legendaria rivalidad entre los artistas urbanos Robbo y Banksy, explorando el impacto del graffiti en la cultura contemporánea.",
+        "en": "Documentary about the legendary rivalry between street artists Robbo and Banksy, exploring the impact of graffiti on contemporary culture."
+      },
+      "image": "/imagenes/documentales/grafity_wars.png",
+      "category": "documentales",
+      "subcategory": "culture",
+      "duration": "47 min",
+      "episodes": 1,
+      "masterpiece": true,
+      "idioma": "en",
+      "link": "https://www.youtube.com/watch?v=5E7xYRt_VqQ&t=460s",
+      "autor": "Jane Preston"
     }
   ]
 }

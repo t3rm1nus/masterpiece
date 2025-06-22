@@ -5,6 +5,8 @@ import { useAppData, useAppView } from '../store/useAppStore';
 import ThemeToggle from './ThemeToggle';
 import MaterialMobileMenu from './MaterialMobileMenu';
 import DownloadIcon from '@mui/icons-material/Download';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
 
 // Componente para el selector de idioma clásico
 function LanguageSelector() {
@@ -28,6 +30,11 @@ function DesktopMenu() {
   const { t, lang, getTranslation } = useLanguage();
   const { resetAllFilters, generateNewRecommendations } = useAppData();
   const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();  
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const [splashOpen, setSplashOpen] = React.useState(false);
+  const audioRef = React.useRef(null);
+  if (isMobile) return null;
   
   const handleNewRecommendations = () => {
     console.log('Botón "Nuevas recomendaciones" clickeado');
@@ -36,6 +43,26 @@ function DesktopMenu() {
   
   const isDetailView = currentView === 'detail';
   const isCoffeeView = currentView === 'coffee';
+  const isHowToDownloadView = currentView === 'howToDownload';
+  
+  // --- Splash popup handlers ---
+  const handleSplashOpen = () => {
+    setSplashOpen(true);
+    setTimeout(() => {
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0;
+        audioRef.current.play();
+      }
+    }, 100);
+  };
+  const handleSplashClose = () => {
+    setSplashOpen(false);
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  };
+  
     return (
     <nav className="main-menu">
       <div style={{ 
@@ -53,36 +80,31 @@ function DesktopMenu() {
           {getTranslation('ui.titles.home_title', 'Nuevas Recomendaciones')}
         </button>
         
-        {/* Mostrar botón volver solo en vista de detalle */}
-        {isDetailView && (
+        {/* Mostrar botón volver solo en vista de detalle, café o howToDownload */}
+        {(isDetailView || isCoffeeView || isHowToDownloadView) && (
           <button 
             className="back-btn" 
-            onClick={goBackFromDetail}
+            onClick={() => {
+              if (isDetailView) return goBackFromDetail();
+              if (isCoffeeView) return goBackFromCoffee();
+              if (isHowToDownloadView) return goHome();
+            }}
           >
-            ← {t.back || 'Volver'}
-          </button>
-        )}
-        
-        {/* Mostrar botón volver en vista de café */}
-        {isCoffeeView && (
-          <button 
-            className="back-btn" 
-            onClick={goBackFromCoffee}
-          >
-            ← {t.back || 'Volver'}
+            ← {t?.ui?.navigation?.back || t.back || (lang === 'en' ? 'Back' : 'Volver')}
           </button>
         )}
       </div>
       
       {/* Controles de la derecha: café, tema e idioma */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>        {/* Botón de donación - solo mostrar si no estamos en la página de café */}
-        {!isCoffeeView && (          <button 
+        {!isCoffeeView && (
+          <button 
             className="donation-btn"
             onClick={goToCoffee}
           >
             {/* Usar emoji café bonito y literal correcto */}
             <span style={{fontSize: '1.2em', marginRight: 8}}>☕</span>
-            Invitame a un café
+            {lang === 'en' ? 'Buy me a coffee' : 'Invítame a un café'}
           </button>
         )}
         {/* Botón ¿Cómo descargar? */}
@@ -105,20 +127,47 @@ function DesktopMenu() {
           }}
         >
           {/* Bandera pirata SVG */}
-          <span style={{fontSize: '1.5em', marginRight: 6, display: 'flex', alignItems: 'center'}}>
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style={{verticalAlign:'middle'}}>
-              <circle cx="16" cy="16" r="16" fill="#e0eafc" />
-              <path d="M8 12C8 10 12 8 16 8C20 8 24 10 24 12C24 14 20 16 16 16C12 16 8 14 8 12Z" fill="#fff" stroke="#b2c2e0" strokeWidth="1.5"/>
-              <rect x="13.5" y="11" width="2" height="2" rx="1" fill="#e0eafc"/>
-              <rect x="17" y="11" width="2" height="2" rx="1" fill="#e0eafc"/>
-              <path d="M12 18C13.5 20 18.5 20 20 18" stroke="#b2c2e0" strokeWidth="1.5" strokeLinecap="round"/>
+          <span style={{fontSize: '1.2em', marginRight: 6, display: 'flex', alignItems: 'center'}}>
+            <svg width="22" height="22" viewBox="0 0 32 32" fill="none" style={{verticalAlign:'middle'}} xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="16" fill="#111" />
+              <path d="M8 12C8 10 12 8 16 8C20 8 24 10 24 12C24 14 20 16 16 16C12 16 8 14 8 12Z" fill="#fff" stroke="#fff" strokeWidth="1.5"/>
+              <rect x="13.5" y="11" width="2" height="2" rx="1" fill="#111"/>
+              <rect x="17" y="11" width="2" height="2" rx="1" fill="#111"/>
+              <path d="M12 18C13.5 20 18.5 20 20 18" stroke="#fff" strokeWidth="1.5" strokeLinecap="round"/>
               <path d="M6 24C10 22 22 22 26 24" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
-              <rect x="21" y="6" width="2" height="8" rx="1" fill="#b2c2e0"/>
-              <rect x="9" y="6" width="2" height="8" rx="1" fill="#b2c2e0"/>
+              <rect x="21" y="6" width="2" height="8" rx="1" fill="#fff"/>
+              <rect x="9" y="6" width="2" height="8" rx="1" fill="#fff"/>
             </svg>
           </span>
-          {getTranslation('how_to_download', '¿Cómo descargar?')}
+          {getTranslation('how_to_download.title', lang === 'en' ? 'How to download?' : '¿Cómo descargar?')}
         </button>
+        {/* Icono a la derecha del botón ¿Cómo descargar? */}
+        <img
+          src="/imagenes/icono.png"
+          alt="icono"
+          style={{ height: 36, width: 36, marginLeft: 12, cursor: 'pointer', borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.10)' }}
+          onClick={() => {
+            if (window.innerWidth < 900) {
+              // Si es móvil, abrir el popup móvil (MaterialMobileMenu)
+              const evt = new CustomEvent('openMobileSplash');
+              window.dispatchEvent(evt);
+            } else {
+              handleSplashOpen();
+            }
+          }}
+        />
+        {/* Splash Dialog Desktop */}
+        <Dialog open={splashOpen} onClose={handleSplashClose} maxWidth="md" PaperProps={{ style: { borderRadius: 18, background: '#222', boxShadow: '0 8px 32px rgba(0,0,0,0.18)' } }}>
+          <DialogContent sx={{ p: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', background: '#222' }}>
+            <img 
+              src="/imagenes/splash_image.png" 
+              alt="Splash" 
+              style={{ width: '100vw', maxWidth: '90vw', maxHeight: '90vh', borderRadius: 16, margin: 0, cursor: 'pointer', objectFit: 'contain', background: '#111' }} 
+              onClick={handleSplashClose}
+            />
+            <audio ref={audioRef} src="/imagenes/samurai.mp3" preload="auto" loop />
+          </DialogContent>
+        </Dialog>
         <ThemeToggle />
         <LanguageSelector />
       </div>
@@ -129,11 +178,12 @@ function DesktopMenu() {
 
 // Componente híbrido que decide qué menú mostrar
 const HybridMenu = () => {
+  const { lang } = useLanguage(); // <--- Añadido para obtener el idioma actual
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg')); // Cambiado de 'md' a 'lg' para incluir tablets
   
   if (isMobile) {
-    return <MaterialMobileMenu />;
+    return <MaterialMobileMenu key={lang} />;
   } else {
     return <DesktopMenu />;
   }

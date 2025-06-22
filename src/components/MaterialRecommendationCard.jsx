@@ -278,15 +278,46 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
       }}
       onClick={handleClick}
     >
-      <CardMedia
-        component="img"
-        sx={{
-          height: 200,
-          objectFit: 'cover'
-        }}
-        image={recommendation.image}
-        alt={title}
-      />
+      <Box sx={{ position: 'relative' }}>
+        <CardMedia
+          component="img"
+          sx={{
+            height: 200,
+            objectFit: 'cover',
+            width: '100%'
+          }}
+          image={recommendation.image}
+          alt={title}
+        />
+        {/* Badge de masterpiece - SOLO móviles: top: 0, right: 0 */}
+        {recommendation.masterpiece && (
+          <Badge
+            badgeContent={<StarIcon sx={{ fontSize: '18px', color: '#ffd700' }} />} // Estrella dorada
+            sx={{
+              position: 'absolute',
+              top: { xs: 0, md: 8 },
+              right: { xs: 0, md: 8 },
+              zIndex: 10,
+              pointerEvents: 'none',
+              '& .MuiBadge-badge': {
+                backgroundColor: 'white',
+                color: '#ffd700',
+                width: 28,
+                height: 28,
+                borderRadius: '50%',
+                border: '2px solid #ffd700',
+                boxShadow: theme.shadows[4],
+                display: 'flex !important',
+                alignItems: 'center',
+                justifyContent: 'center',
+                visibility: 'visible !important',
+                opacity: '1 !important',
+                padding: 0
+              }
+            }}
+          />
+        )}
+      </Box>
       <CardContent sx={{ position: 'relative', overflow: 'visible' }}>
         <Typography variant="h6" component="h3" sx={{ marginBottom: '8px', fontSize: '1rem' }}>
           {title}
@@ -333,30 +364,6 @@ const MaterialRecommendationCard = ({ recommendation, isHome = false }) => {
           }}        >
           {truncateDescription(description, recommendation.category)}        </Typography>
       </CardContent>
-      
-      {/* Badge de masterpiece - posicionado sobre la imagen */}
-      {recommendation.masterpiece && (
-        <Badge
-          badgeContent={<StarIcon sx={{ fontSize: '16px', color: 'white' }} />}          sx={{
-            position: 'absolute',
-            top: 8, // Ajustado para estar sobre la imagen
-            right: 8,
-            zIndex: 10, // Asegurar que esté siempre visible
-            '& .MuiBadge-badge': {
-              backgroundColor: '#ffd700',
-              color: 'white',
-              width: 28,
-              height: 28,
-              borderRadius: '50%',
-              border: '2px solid white',
-              boxShadow: theme.shadows[4], // Sombra más prominente
-              display: 'flex !important', // Asegurar que siempre se muestre
-              visibility: 'visible !important', // Forzar visibilidad
-              opacity: '1 !important' // Asegurar opacidad completa
-            }
-          }}
-        />
-      )}
     </Card>
   );
 };
