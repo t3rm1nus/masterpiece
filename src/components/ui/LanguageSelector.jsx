@@ -54,7 +54,7 @@ const LanguageSelector = ({ variant = 'desktop', sx = {} }) => {
         value={lang}
         onChange={e => changeLanguage(e.target.value)}
         size="small"
-        sx={{ borderRadius: 2, fontWeight: 'bold', fontSize: '1em', height: 36, ...sx }}
+        sx={{ borderRadius: 2, fontSize: '1em', height: 36, ...sx }}
       >
         <MenuItem value="es">Español</MenuItem>
         <MenuItem value="en">English</MenuItem>

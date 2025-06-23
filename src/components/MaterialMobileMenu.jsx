@@ -30,7 +30,7 @@ import {
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppView, useAppTheme } from '../store/useAppStore';
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle from './ui/ThemeToggle';
 import FabBackButton from './ui/FabBackButton';
 import { useNavigationActions } from '../hooks/useNavigationActions';
 import { useMenuItems } from '../hooks/useMenuItems.jsx';
@@ -236,42 +236,41 @@ const MaterialMobileMenu = () => {
         <List sx={{ padding: 0 }}>
           {menuItems.map((item, index) => {
             if (!item.show) return null;
-            
             return (
               <ListItem key={index} disablePadding>
                 <ListItemButton
                   onClick={() => { item.action && item.action(); setDrawerOpen(false); }}
                   sx={{
                     padding: '12px 16px',
-                    background: index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                    background: index === menuItems.findIndex(i => i.label === (t.how_to_download || '¿Cómo descargar?'))
                       ? 'linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%)'
                       : item.special
                         ? '#ffc439'
                         : 'transparent',
-                    color: index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                    color: index === menuItems.findIndex(i => i.label === (t.how_to_download || '¿Cómo descargar?'))
                       ? '#1e3c72'
                       : item.special
                         ? '#333333'
                         : (isDarkMode ? '#ffffff' : '#000000'),
-                    margin: item.special || index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                    margin: item.special || index === menuItems.findIndex(i => i.label === (t.how_to_download || '¿Cómo descargar?'))
                       ? '8px 16px'
                       : '0',
-                    borderRadius: item.special || index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                    borderRadius: item.special || index === menuItems.findIndex(i => i.label === (t.how_to_download || '¿Cómo descargar?'))
                       ? '20px'
                       : '0',
-                    border: index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                    border: index === menuItems.findIndex(i => i.label === (t.how_to_download || '¿Cómo descargar?'))
                       ? '2px solid #b2c2e0'
                       : undefined,
-                    fontWeight: item.special || index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                    fontWeight: item.special || index === menuItems.findIndex(i => i.label === (t.how_to_download || '¿Cómo descargar?'))
                       ? 'bold'
                       : 'normal',
-                    boxShadow: index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                    boxShadow: index === menuItems.findIndex(i => i.label === (t.how_to_download || '¿Cómo descargar?'))
                       ? '0 2px 8px rgba(180,200,230,0.18)'
                       : undefined,
                     '&:hover': {
                       backgroundColor: item.special
                         ? '#ffb700'
-                        : index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
+                        : index === menuItems.findIndex(i => i.label === (t.how_to_download || '¿Cómo descargar?'))
                           ? '#d2e2f6'
                           : (isDarkMode ? '#404040' : '#f5f5f5')
                     }
@@ -303,26 +302,7 @@ const MaterialMobileMenu = () => {
         
         {/* Selector de tema */}
         <Box sx={{ padding: '0 16px', marginBottom: '16px' }}>
-          <ListItemButton
-            onClick={() => {
-              toggleTheme();
-            }}
-            sx={{
-              borderRadius: '8px',
-              padding: '12px',
-              '&:hover': {
-                backgroundColor: isDarkMode ? '#404040' : '#f5f5f5'
-              }
-            }}
-          >
-            <ListItemIcon sx={{ color: isDarkMode ? '#ffffff' : '#000000', minWidth: '40px' }}>
-              {isDarkMode ? <LightbulbIcon /> : <DarkModeIcon />}
-            </ListItemIcon>
-            <ListItemText
-              primary={!isDarkMode ? getTranslation('ui.dark_mode') : getTranslation('ui.light_mode')}
-              sx={{ color: isDarkMode ? '#ffffff' : '#000000' }}
-            />
-          </ListItemButton>
+          <ThemeToggle showLabel />
         </Box>
         
         {/* Selector de idioma */}

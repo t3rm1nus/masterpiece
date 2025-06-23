@@ -2,12 +2,12 @@ import React from 'react';
 import { useMediaQuery, useTheme } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppView } from '../store/useAppStore';
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle from './ui/ThemeToggle';
 import MaterialMobileMenu from './MaterialMobileMenu';
 import DownloadIcon from '@mui/icons-material/Download';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
-import { useMenuItems } from '../hooks/useMenuItems';
+import { useMenuItems } from '../hooks/useMenuItems.jsx';
 import LanguageSelector from './ui/LanguageSelector';
 
 // Menú clásico para desktop
@@ -61,8 +61,7 @@ function DesktopMenu() {
           {menuItems.filter(item => item.show && !item.special && item.label !== getTranslation('ui.navigation.about')).map((item, idx) => (
             <button key={idx} onClick={item.action} style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8 }}>
               {item.icon}
-              {/* Si es el botón de inicio, mostrar literal personalizado */}
-              {item.label === getTranslation('ui.navigation.home') ? getTranslation('ui.titles.home_title', 'Nuevas Recomendaciones') : item.label}
+              {item.label}
             </button>
           ))}
         </div>
