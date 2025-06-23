@@ -2,10 +2,10 @@ import React from 'react';
 import UiButton from '../ui/UiButton';
 
 /**
- * SubcategoryBar: Barra de selección de subcategorías.
- * Permite customizar estilos, callbacks y visibilidad de elementos.
+ * SubcategoryBar: Barra de selección de subcategorías altamente parametrizable y reutilizable.
+ * Permite customizar estilos, callbacks, render y visibilidad de elementos.
  *
- * Props:
+ * Props avanzados:
  * - selectedCategory: string (categoría activa)
  * - categorySubcategories: array (subcategorías de la categoría)
  * - activeSubcategory: string (subcategoría activa)
@@ -13,6 +13,11 @@ import UiButton from '../ui/UiButton';
  * - allData: object (datos completos para subcats dinámicos)
  * - t: object (traducciones)
  * - lang: string (idioma actual)
+ * - renderChip: función opcional para custom render de cada chip `(subcat, selected, idx) => ReactNode`
+ * - sx: objeto de estilos adicionales para el contenedor
+ * - chipSx: objeto de estilos adicionales para cada chip
+ * - visible: boolean (si se muestra el componente, default: true)
+ * - ...props: cualquier otro prop para el contenedor
  *
  * Ejemplo de uso:
  * <SubcategoryBar
@@ -20,22 +25,27 @@ import UiButton from '../ui/UiButton';
  *   categorySubcategories={[{ sub: 'Acción', order: 1 }]}
  *   activeSubcategory="Acción"
  *   setActiveSubcategory={sub => {}}
- *   allData={{}}
- *   t={{}}
- *   lang="es"
+ *   sx={{ background: '#fafafa' }}
+ *   chipSx={{ fontSize: 16 }}
+ *   renderChip={(subcat, selected, idx) => (
+ *     <span key={subcat} style={{ color: selected ? 'red' : 'gray' }}>{subcat}</span>
+ *   )}
  * />
  */
 
-const SubcategoryBar = ({ selectedCategory, categorySubcategories, activeSubcategory, setActiveSubcategory, allData, t, lang }) => {
-  if (!selectedCategory) return null;
+const SubcategoryBar = ({ selectedCategory, categorySubcategories, activeSubcategory, setActiveSubcategory, allData, t, lang, renderChip, sx, chipSx, visible = true, ...props }) => {
+  if (!visible || !selectedCategory) return null;
   if (selectedCategory !== 'documentales') {
     return (
-      <div className="subcategories-container">
+      <div className="subcategories-container" style={sx} {...props}>
         {Array.isArray(categorySubcategories) && categorySubcategories.length > 0 && (
           categorySubcategories
             .sort((a, b) => a.order - b.order)
-            .map(({ sub }) => {
+            .map(({ sub }, idx) => {
               const isActive = activeSubcategory === sub;
+              if (renderChip) {
+                return renderChip(sub, isActive, idx);
+              }
               return (
                 <UiButton
                   key={sub}
@@ -61,7 +71,8 @@ const SubcategoryBar = ({ selectedCategory, categorySubcategories, activeSubcate
                       borderColor: 'var(--border-color-hover)',
                       transform: 'translateY(-1px)',
                       boxShadow: 'var(--shadow-sm)'
-                    }
+                    },
+                    ...chipSx
                   }}
                 >
                   {t?.subcategories?.[selectedCategory]?.[sub.toLowerCase()] || sub}
@@ -79,9 +90,12 @@ const SubcategoryBar = ({ selectedCategory, categorySubcategories, activeSubcate
   });
   const subcats = Array.from(subcatsSet).sort((a, b) => a.localeCompare(b, lang === 'es' ? 'es' : 'en', { sensitivity: 'base' }));
   return (
-    <div className="subcategories-container">
-      {subcats.map(sub => {
+    <div className="subcategories-container" style={sx} {...props}>
+      {subcats.map((sub, idx) => {
         const isActive = activeSubcategory === sub;
+        if (renderChip) {
+          return renderChip(sub, isActive, idx);
+        }
         return (
           <UiButton
             key={sub}
@@ -107,7 +121,8 @@ const SubcategoryBar = ({ selectedCategory, categorySubcategories, activeSubcate
                 borderColor: 'var(--border-color-hover)',
                 transform: 'translateY(-1px)',
                 boxShadow: 'var(--shadow-sm)'
-              }
+              },
+              ...chipSx
             }}
           >
             {t?.subcategories?.documentales?.[sub] || sub}

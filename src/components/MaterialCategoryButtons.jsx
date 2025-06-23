@@ -20,25 +20,32 @@ import { useLanguage } from '../LanguageContext';
 
 /**
  * MaterialCategoryButtons
- * Botones de categoría altamente parametrizables para navegación y filtrado.
+ * Lista de botones de categorías altamente parametrizable y reutilizable.
  *
  * Props avanzados:
- * - categories: array de objetos { key, label, isMasterpiece? } (categorías a mostrar)
+ * - categories: array de objetos { key, label, isMasterpiece?, icon? } (categorías a mostrar)
  * - selectedCategory: string (categoría seleccionada)
- * - onCategoryClick: función (callback al seleccionar categoría)
+ * - onCategoryClick: función (callback al seleccionar categoría, recibe key y label)
  * - renderButton: función opcional para custom render de cada botón `(cat, selected, idx) => ReactNode`
  * - sx: estilos adicionales para el contenedor
  * - buttonSx: estilos adicionales para cada botón
  * - visible: boolean (si se muestra el componente, default: true)
- * - showIcons: boolean (mostrar iconos si existen)
+ * - showIcons: boolean (mostrar iconos si existen, default: true)
  * - ...props: cualquier otro prop para el contenedor
  *
  * Ejemplo de uso:
  * <MaterialCategoryButtons
- *   categories={[{ key: 'movies', label: 'Películas' }]}
+ *   categories={[
+ *     { key: 'movies', label: 'Películas', icon: <MovieIcon /> },
+ *     { key: 'books', label: 'Libros' }
+ *   ]}
  *   selectedCategory="movies"
  *   onCategoryClick={key => setSelectedCategory(key)}
  *   sx={{ background: '#fafafa' }}
+ *   buttonSx={{ fontSize: '1.1em' }}
+ *   renderButton={(cat, selected, idx) => (
+ *     <Button key={cat.key} color={selected ? 'primary' : 'inherit'}>{cat.label}</Button>
+ *   )}
  * />
  */
 

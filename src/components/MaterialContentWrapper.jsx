@@ -6,31 +6,38 @@ import { useAppData } from '../store/useAppStore';
 import { useLanguage } from '../LanguageContext';
 
 /**
- * MaterialContentWrapper: Wrapper adaptable para recomendaciones y contenido principal.
- * Permite customizar layout, pasar acciones extra y mostrar/ocultar secciones.
+ * MaterialContentWrapper
+ * Wrapper adaptable y parametrizable para recomendaciones, categorías y layout principal.
+ * Orquesta la UI de listas, categorías, subcategorías y permite custom render, callbacks y layout flexible.
  *
- * Props:
+ * Props avanzados:
  * - children: contenido a renderizar (usado en desktop)
- * - categories: array de categorías
+ * - categories: array de categorías (para barra o select de categorías)
  * - selectedCategory: string (categoría activa)
  * - onCategoryClick: función para seleccionar categoría
- * - subcategories: array de subcategorías
+ * - subcategories: array de subcategorías (para chips/barra de subcategorías)
  * - activeSubcategory: string (subcategoría activa)
  * - onSubcategoryClick: función para seleccionar subcategoría
  * - recommendations: array de recomendaciones a mostrar
- * - isHome: boolean (modo home)
- * - categoryColor: string (color de la categoría)
- * - renderExtraActions: función opcional para renderizar acciones extra
- * - showSections: objeto opcional para mostrar/ocultar secciones (por ejemplo: { recommendations: true, emptyState: true })
+ * - isHome: boolean (modo home, layout especial)
+ * - categoryColor: string (color principal de la categoría)
+ * - renderExtraActions: función opcional para renderizar acciones extra (ej: botones, filtros)
+ * - showSections: objeto opcional para mostrar/ocultar secciones (ej: { recommendations: true, emptyState: true })
+ * - sx: estilos adicionales para el wrapper
+ * - ...props: cualquier otro prop para el contenedor principal
  *
  * Ejemplo de uso:
  * <MaterialContentWrapper
  *   categories={categories}
  *   selectedCategory={selectedCategory}
  *   onCategoryClick={onCategoryClick}
+ *   subcategories={subcategories}
+ *   activeSubcategory={activeSubcategory}
+ *   onSubcategoryClick={setActiveSubcategory}
  *   recommendations={recommendations}
  *   renderExtraActions={() => <CustomActions />}
  *   showSections={{ recommendations: true }}
+ *   sx={{ background: '#fafafa' }}
  * >
  *   {children}
  * </MaterialContentWrapper>

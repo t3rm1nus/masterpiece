@@ -73,30 +73,47 @@ Botones especiales contextuales para categorías. Permite customizar estilos, ca
 
 ### CategoryBar
 
-Barra de selección de categorías. Permite customizar estilos, iconos, callbacks y visibilidad.
+Barra de selección de categorías altamente parametrizable y reutilizable. Permite customizar estilos, iconos, callbacks, render y visibilidad.
 
-**Props:**
-
+**Props avanzados:**
 - `categories`: array (lista de categorías { key, label })
 - `selectedCategory`: string (categoría activa)
 - `onCategoryClick`: function (callback al seleccionar categoría)
+- `renderButton`: función opcional para custom render de cada botón `(cat, selected, idx) => ReactNode`
+- `sx`: objeto de estilos adicionales para el contenedor
+- `buttonSx`: objeto de estilos adicionales para cada botón
+- `visible`: boolean (si se muestra el componente, default: true)
+- ...props: cualquier otro prop para el contenedor
 
 **Ejemplo de uso:**
 
 ```jsx
+import CategoryBar from './src/components/home/CategoryBar';
+
 <CategoryBar
   categories={[{ key: 'movies', label: 'Películas' }]}
   selectedCategory="movies"
   onCategoryClick={key => {}}
+  sx={{ background: '#fafafa' }}
+  buttonSx={{ fontSize: 18 }}
+/>
+
+// Custom render
+<CategoryBar
+  categories={cats}
+  selectedCategory={active}
+  onCategoryClick={setActive}
+  renderButton={(cat, selected) => (
+    <button key={cat.key} style={{ color: selected ? 'blue' : 'black' }}>{cat.label}</button>
+  )}
 />
 ```
 
 ### SubcategoryBar
 
-Barra de selección de subcategorías. Permite customizar estilos, callbacks y visibilidad de elementos.
+Barra de selección de subcategorías altamente parametrizable y reutilizable. Permite customizar estilos, callbacks, render y visibilidad de elementos.
 
-**Props:**
-
+**Props avanzados:**
 - `selectedCategory`: string (categoría activa)
 - `categorySubcategories`: array (subcategorías de la categoría)
 - `activeSubcategory`: string (subcategoría activa)
@@ -104,18 +121,35 @@ Barra de selección de subcategorías. Permite customizar estilos, callbacks y v
 - `allData`: object (datos completos para subcats dinámicos)
 - `t`: object (traducciones)
 - `lang`: string (idioma actual)
+- `renderChip`: función opcional para custom render de cada chip `(subcat, selected, idx) => ReactNode`
+- `sx`: objeto de estilos adicionales para el contenedor
+- `chipSx`: objeto de estilos adicionales para cada chip
+- `visible`: boolean (si se muestra el componente, default: true)
+- ...props: cualquier otro prop para el contenedor
 
 **Ejemplo de uso:**
 
 ```jsx
+import SubcategoryBar from './src/components/home/SubcategoryBar';
+
 <SubcategoryBar
   selectedCategory="movies"
   categorySubcategories={[{ sub: 'Acción', order: 1 }]}
   activeSubcategory="Acción"
   setActiveSubcategory={sub => {}}
-  allData={{}}
-  t={{}}
-  lang="es"
+  sx={{ background: '#fafafa' }}
+  chipSx={{ fontSize: 16 }}
+/>
+
+// Custom render
+<SubcategoryBar
+  selectedCategory={cat}
+  categorySubcategories={subcats}
+  activeSubcategory={active}
+  setActiveSubcategory={setActive}
+  renderChip={(subcat, selected) => (
+    <span key={subcat} style={{ color: selected ? 'red' : 'gray' }}>{subcat}</span>
+  )}
 />
 ```
 
@@ -644,5 +678,61 @@ import RecommendationsList from './src/components/RecommendationsList';
   emptyComponent={<div>No hay recomendaciones</div>}
   pagination={{ page, pageSize, onPageChange }}
   sx={{ background: '#fafafa' }}
+/>
+```
+
+### MaterialCategorySelect
+
+Selector de categoría y subcategoría altamente parametrizable, ideal para flujos móviles o compactos. Permite customizar el render, callbacks, integración con subcategorías y estilos.
+
+**Props:**
+- `categories`: array de objetos `{ key, label, isMasterpiece?, icon? }` (categorías a mostrar)
+- `selectedCategory`: string (categoría seleccionada)
+- `onCategoryChange`: función (callback al seleccionar categoría o subcategoría, recibe `(categoryKey, subcategoryKey)`)
+- `subcategories`: array de subcategorías (opcional, para mostrar select de subcategoría)
+- `activeSubcategory`: string (subcategoría seleccionada, opcional)
+- `sx`: objeto de estilos adicionales para el select principal
+- `subcategorySx`: objeto de estilos adicionales para el select de subcategoría
+- `visible`: boolean (si se muestra el componente, default: true)
+- `showIcons`: boolean (mostrar iconos si existen, default: true)
+- ...props: cualquier otro prop para el contenedor
+
+**Ejemplo de uso:**
+
+```jsx
+import MaterialCategorySelect from './src/components/MaterialCategorySelect';
+import MovieIcon from '@mui/icons-material/Movie';
+
+<MaterialCategorySelect
+  categories={[
+    { key: 'peliculas', label: 'Películas', icon: <MovieIcon /> },
+    { key: 'series', label: 'Series' },
+  ]}
+  selectedCategory={selectedCat}
+  onCategoryChange={(cat, subcat) => {
+    setSelectedCat(cat);
+    setActiveSubcat(subcat);
+  }}
+  subcategories={[
+    { sub: 'Acción', label: 'Acción' },
+    { sub: 'Drama', label: 'Drama' },
+  ]}
+  activeSubcategory={activeSubcat}
+/>
+
+// Solo categorías (sin subcategorías)
+<MaterialCategorySelect
+  categories={cats}
+  selectedCategory={active}
+  onCategoryChange={setActive}
+/>
+
+// Customización avanzada: estilos y control de visibilidad
+<MaterialCategorySelect
+  categories={cats}
+  selectedCategory={active}
+  onCategoryChange={setActive}
+  sx={{ background: '#f5f5f5' }}
+  visible={isMobile}
 />
 ```

@@ -11,10 +11,10 @@ import { getCategoryColor } from '../utils/categoryUtils';
 
 /**
  * MaterialSubcategoryChips
- * Chips de subcategoría altamente parametrizables para navegación y filtrado.
+ * Lista de chips de subcategorías altamente parametrizable y reutilizable.
  *
  * Props avanzados:
- * - subcategories: array de objetos { sub, label } (subcategorías a mostrar)
+ * - subcategories: array de objetos { sub, label, icon? } (subcategorías a mostrar)
  * - activeSubcategory: string (subcategoría seleccionada)
  * - onSubcategoryClick: función (callback al seleccionar subcategoría)
  * - categoryColor: string (color principal de la categoría, default: '#0078d4')
@@ -23,7 +23,7 @@ import { getCategoryColor } from '../utils/categoryUtils';
  * - sx: estilos adicionales para el contenedor
  * - chipSx: estilos adicionales para cada chip
  * - visible: boolean (si se muestra el componente, default: true)
- * - showIcons: boolean (mostrar iconos si existen)
+ * - showIcons: boolean (mostrar iconos si existen, default: false)
  * - ...props: cualquier otro prop para el contenedor
  *
  * Ejemplo de uso:
@@ -34,6 +34,10 @@ import { getCategoryColor } from '../utils/categoryUtils';
  *   categoryColor="#e91e63"
  *   selectedCategory="movies"
  *   sx={{ background: '#fafafa' }}
+ *   chipSx={{ fontSize: '1.1em' }}
+ *   renderChip={(subcat, selected, idx) => (
+ *     <Chip key={subcat.sub} color={selected ? 'primary' : 'default'} label={subcat.label} />
+ *   )}
  * />
  */
 
