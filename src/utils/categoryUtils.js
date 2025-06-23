@@ -64,4 +64,37 @@ export const getUniqueSubcategories = (items, lang) => {
     items.map(item => normalizeSubcategoryInternal(item.subcategory))
   );
   return Array.from(subcategories).filter(Boolean);
-}; 
+};
+
+// Helpers para categorías y colores
+
+export function getCategoryColor(category, theme) {
+  switch (category) {
+    case 'movies':
+    case 'peliculas':
+      return '#2196f3';
+    case 'videogames':
+    case 'videojuegos':
+      return '#9c27b0';
+    case 'books':
+    case 'libros':
+      return '#4caf50';
+    case 'music':
+    case 'musica':
+      return '#00bcd4';
+    case 'podcast':
+    case 'podcasts':
+      return '#8bc34a';
+    case 'boardgames':
+    case 'juegos de mesa':
+      return '#e91e63';
+    case 'comics':
+      return '#ff9800';
+    case 'documentales':
+    case 'documentaries':
+      return '#9e9e9e';
+    default:
+      return theme?.palette?.primary?.main || '#1976d2';
+  }
+}
+// ...otros helpers de categorías a futuro...
