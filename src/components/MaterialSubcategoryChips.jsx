@@ -57,7 +57,7 @@ const MaterialSubcategoryChips = ({
             <Chip
               key={sub}
               label={label || getSubcategoryTranslation(sub, selectedCategory)}
-              onClick={() => onSubcategoryClick(sub)}
+              onClick={onSubcategoryClick ? () => onSubcategoryClick(sub) : undefined}
               variant={activeSubcategory === sub ? 'filled' : 'outlined'}
               sx={{
                 backgroundColor: activeSubcategory === sub ? categoryColorFinal : 'transparent',
