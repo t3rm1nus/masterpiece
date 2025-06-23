@@ -2,10 +2,7 @@ import React from 'react';
 import './Layout.css';
 
 // DEPRECATED: Usa UiLayout en vez de este componente para unificación de layouts.
-export default function Layout({ children, className = '', ...props }) {
-  return (
-    <div className={`mp-layout ${className}`} {...props}>
-      {children}
-    </div>
-  );
+// Este archivo ya no debe usarse y puede eliminarse próximamente.
+export default function Layout() {
+  return null;
 }

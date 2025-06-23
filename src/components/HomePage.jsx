@@ -18,6 +18,7 @@ import SplashDialog from './SplashDialog';
 import CategoryBar from './home/CategoryBar';
 import SubcategoryBar from './home/SubcategoryBar';
 import SpecialButtons from './home/SpecialButtons';
+import UiLayout from './ui/UiLayout';
 
 // Hook para detectar si es móvil SOLO por ancho de pantalla (robusto y compatible móvil)
 function useIsMobile() {
@@ -320,13 +321,7 @@ const HomePage = () => {
     );
   }
   return (
-    <div className="home-container" style={{
-      // maxWidth: 520, // Eliminado para desktop
-      margin: '0 auto',
-      padding: '0 16px',
-      marginTop: 64, // 64px para dejar espacio al menú fijo
-      boxSizing: 'border-box',
-    }}>
+    <UiLayout maxWidth="md" sx={{marginTop: 8}}>
       {/* Eliminar controles de cabecera solo en desktop */}
       {/* {isMobile && (
         <div className="header-controls">
@@ -458,7 +453,7 @@ const HomePage = () => {
           />
         </div>
       )}
-    </div>
+    </UiLayout>
   );
 };
 
