@@ -335,7 +335,13 @@ const HomePage = () => {
           {/* Mostrar título traducido */}
           <h1 
             className={(isMobile ? 'home-mobile-title ' : '') + (selectedCategory ? 'after-subcategories' : '')}
-            style={{ textTransform: 'capitalize', textAlign: 'center', margin: '20px 0 32px 0', fontWeight: 700, fontSize: '2.2rem' }}
+            style={{
+              textTransform: 'capitalize',
+              textAlign: 'center',
+              margin: '20px 0 32px 0',
+              fontWeight: 700,
+              fontSize: '2.2rem'
+            }}
           >
             {selectedCategory 
               ? (t?.categories?.[selectedCategory] || selectedCategory)
