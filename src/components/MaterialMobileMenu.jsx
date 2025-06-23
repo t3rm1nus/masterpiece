@@ -31,12 +31,16 @@ import {
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppView, useAppTheme } from '../store/useAppStore';
 import ThemeToggle from './ThemeToggle';
+import FabBackButton from './ui/FabBackButton';
+import { useNavigationActions } from '../hooks/useNavigationActions';
+import { useMenuItems } from '../hooks/useMenuItems.jsx';
 
 const MaterialMobileMenu = () => {
   const { t, lang, changeLanguage, getTranslation } = useLanguage();
   const { resetAllFilters } = useAppData();
   const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();
   const { isDarkMode, toggleTheme } = useAppTheme();
+  const navigation = useNavigationActions();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [splashOpen, setSplashOpen] = useState(false);
   const theme = useTheme();
@@ -113,62 +117,9 @@ const MaterialMobileMenu = () => {
     }
   };
   
-  // Declarar menuItems dentro del render SIEMPRE, para que use los textos actualizados
-  const menuItems = [
-    {
-      text: getTranslation('ui.navigation.home'),
-      icon: <HomeIcon />,
-      action: handleNewRecommendations,
-      show: true
-    },
-    {
-      text: getTranslation('ui.navigation.back'),
-      icon: <ArrowBackIcon />,
-      action: handleGoBack,
-      show: showBackButton
-    },
-    {
-      text: getTranslation('ui.navigation.buy_me_coffee'),
-      icon: <CoffeeIcon />,
-      action: handleCoffeeNavigation,
-      show: !isCoffeeView,
-      special: true
-    },
-    {
-      text: getTranslation('ui.navigation.how_to_download'),
-      icon: (
-        <span style={{display:'flex',alignItems:'center'}}>
-          <svg width="24" height="24" viewBox="0 0 32 32" fill="none" style={{verticalAlign:'middle'}} xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="16" fill="#111" />
-            <path d="M8 12C8 10 12 8 16 8C20 8 24 10 24 12C24 14 20 16 16 16C12 16 8 14 8 12Z" fill="#fff" stroke="#fff" strokeWidth="1.5"/>
-            <rect x="13.5" y="11" width="2" height="2" rx="1" fill="#111"/>
-            <rect x="17" y="11" width="2" height="2" rx="1" fill="#111"/>
-            <path d="M12 18C13.5 20 18.5 20 20 18" stroke="#fff" strokeWidth="1.5" strokeLinecap="round"/>
-            <path d="M6 24C10 22 22 22 26 24" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
-            <rect x="21" y="6" width="2" height="8" rx="1" fill="#fff"/>
-            <rect x="9" y="6" width="2" height="8" rx="1" fill="#fff"/>
-          </svg>
-        </span>
-      ),
-      action: handleHowToDownload,
-      show: true,
-      special: false
-    },
-    {
-      text: getTranslation('ui.navigation.about'),
-      icon: (
-        <span style={{display:'flex',alignItems:'center'}}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="12,2 15,9 22,9.5 17,14.5 18.5,22 12,18 5.5,22 7,14.5 2,9.5 9,9" />
-          </svg>
-        </span>
-      ),
-      action: handleSplashOpen,
-      show: true,
-      special: false
-    }
-  ];
-  
+  // Usar hook centralizado para los items del menú, pasando el handler de splash
+  const menuItems = useMenuItems(handleSplashOpen);
+
   const handleLanguageChange = (lng) => {
     changeLanguage(lng);
     setDrawerOpen(false);
@@ -288,7 +239,7 @@ const MaterialMobileMenu = () => {
             return (
               <ListItem key={index} disablePadding>
                 <ListItemButton
-                  onClick={item.action}
+                  onClick={() => { item.action && item.action(); setDrawerOpen(false); }}
                   sx={{
                     padding: '12px 16px',
                     background: index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
@@ -334,7 +285,7 @@ const MaterialMobileMenu = () => {
                     {item.icon}
                   </ListItemIcon>
                   <ListItemText 
-                    primary={item.text}
+                    primary={item.label}
                     sx={{
                       '& .MuiListItemText-primary': {
                         fontWeight: item.special ? 'bold' : 'normal'
@@ -408,33 +359,9 @@ const MaterialMobileMenu = () => {
           </Box>
         </Box>
       </Drawer>
+      {/* FAB de volver flotante */}
       {showFabBackButton && (
-        <button
-          className="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary"
-          type="button"
-          aria-label="volver"
-          onClick={handleGoBack}
-          style={{
-            position: 'fixed',
-            top: fabTop,
-            left: 16,
-            zIndex: 2001,
-            boxShadow: '0 4px 16px rgba(0,0,0,0.18)',
-            background: '#1976d2',
-            color: '#fff',
-            width: 56,
-            height: 56,
-            borderRadius: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            border: 'none',
-            outline: 'none',
-            cursor: 'pointer',
-          }}
-        >
-          <ArrowBackIcon style={{ fontSize: 32 }} />
-        </button>
+        <FabBackButton onClick={navigation.goBackFromDetail} sx={{ top: fabTop }} />
       )}
     </>
   );
