@@ -81,6 +81,91 @@ const useAppStore = create((set, get) => ({
     set({ filteredItems: state.recommendations });
   },
 
+  // --- Centralización de filtrado de items ---
+  getFilteredItems: ({
+    selectedCategory,
+    activeSubcategory,
+    activeLanguage,
+    allData,
+    recommendations,
+    isSpanishCinemaActive,
+    isMasterpieceActive,
+    activePodcastLanguages,
+    activeDocumentaryLanguages,
+    isDataInitialized
+  }) => {
+    if (!isDataInitialized) return [];
+    if (allData && Object.keys(allData).length > 0) {
+      let filteredData = [];
+      if (!selectedCategory || selectedCategory === 'all') {
+        if (recommendations && recommendations.length > 0) {
+          filteredData = recommendations;
+        } else {
+          // Fallback: tomar 14 items de allData si recommendations está vacío
+          filteredData = Object.values(allData).flat().slice(0, 14);
+        }
+      } else {
+        filteredData = allData[selectedCategory] || [];
+      }
+      if (selectedCategory && selectedCategory !== 'all') {
+        if (selectedCategory === 'movies' && isSpanishCinemaActive) {
+          filteredData = filteredData.filter(item => {
+            const isSpanish =
+              item.spanish_cinema === true ||
+              item.spanishCinema === true ||
+              (item.tags && item.tags.includes('spanish')) ||
+              (item.director && [
+                'Luis García Berlanga',
+                'Pedro Almodóvar',
+                'Alejandro Amenábar',
+                'Fernando Trueba',
+                'Icíar Bollaín',
+                'Carlos Saura',
+                'Víctor Erice',
+              ].some(dir => item.director.includes(dir))) ||
+              (item.country && item.country === 'España') ||
+              (item.pais && item.pais === 'España') ||
+              (item.description && (
+                item.description.es?.includes('español') ||
+                item.description.es?.includes('España')
+              ));
+            return isSpanish;
+          });
+        }
+        if (isMasterpieceActive) {
+          filteredData = filteredData.filter(item =>
+            item.masterpiece === true || item.obra_maestra === true
+          );
+        }
+        // Filtrado por idioma para podcasts y documentales
+        if (selectedCategory === 'podcast' && activePodcastLanguages && activePodcastLanguages.length > 0) {
+          filteredData = filteredData.filter(item =>
+            activePodcastLanguages.includes(item.idioma)
+          );
+        }
+        if (selectedCategory === 'documentales' && activeDocumentaryLanguages && activeDocumentaryLanguages.length > 0) {
+          filteredData = filteredData.filter(item =>
+            activeDocumentaryLanguages.includes(item.idioma)
+          );
+        }
+        // Filtrado por subcategoría
+        if (activeSubcategory && activeSubcategory !== 'all') {
+          filteredData = filteredData.filter(item =>
+            (item.subcategory || item.subCategory) === activeSubcategory
+          );
+        }
+        // Filtrado por idioma general
+        if (activeLanguage && activeLanguage !== 'all') {
+          filteredData = filteredData.filter(item =>
+            item.idioma === activeLanguage
+          );
+        }
+      }
+      return filteredData;
+    }
+    return [];
+  },
+
   // Estados adicionales para compatibilidad
   activeSubcategory: null,
   setActiveSubcategory: (subcategory) => set({ activeSubcategory: subcategory }),
