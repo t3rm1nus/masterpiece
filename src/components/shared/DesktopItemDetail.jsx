@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@mui/material';
+import UiButton from '../ui/UiButton';
 import { getCategoryColor } from '../../utils/categoryUtils';
 import { ensureString } from '../../utils/stringUtils';
 import { useTrailerUrl } from '../../hooks/useTrailerUrl';

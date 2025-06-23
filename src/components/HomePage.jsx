@@ -398,10 +398,20 @@ const HomePage = () => {
                       setActiveSubcategory(null);
                     }
                   }}
-                  subcategories={categorySubcategories}
+                  subcategories={(() => {
+                    if (selectedCategory === 'documentales') {
+                      const subcatsSet = new Set();
+                      (allData['documentales'] || []).forEach(item => {
+                        if (item.subcategory) subcatsSet.add(item.subcategory.toLowerCase().trim());
+                      });
+                      return Array.from(subcatsSet).map(sub => ({ sub, label: t?.subcategories?.documentales?.[sub] || sub }));
+                    }
+                    return Array.isArray(categorySubcategories) ? categorySubcategories : [];
+                  })()}
                   activeSubcategory={activeSubcategory}
                 />
               </span>
+              {/* Solo muestra SpecialButtons si hay categoría seleccionada */}
               {selectedCategory && (
                 <SpecialButtons
                   selectedCategory={selectedCategory}

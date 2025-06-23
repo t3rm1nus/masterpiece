@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import {
-  Card,
+  Card as MuiCard,
   CardContent,
   CardMedia,
   Typography,
@@ -22,6 +22,7 @@ import {
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 import { useAppView } from '../store/useAppStore';
+import UiCard from './ui/Card';
 
 const MaterialRecommendationCard = ({ recommendation }) => {
   const { lang, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
@@ -128,11 +129,11 @@ const MaterialRecommendationCard = ({ recommendation }) => {
     goToDetail(recommendation);
   };
 
-  // Layout único: CATEGORÍAS (imagen grande arriba, chips y título debajo, badge sobre imagen)
+  // Unificación: Usa UiCard como base visual, pero mantiene la lógica y estilos de MUI
   return (
-    <Card
-      sx={{
-        width: '100%',
+    <UiCard
+      className="mp-card mp-card--material"
+      style={{
         maxWidth: 300,
         margin: '0 auto',
         cursor: 'pointer',
@@ -209,7 +210,8 @@ const MaterialRecommendationCard = ({ recommendation }) => {
               }
             }}
           />
-          {recommendation.subcategory && (
+          {/* Mostrar subcategoría solo si no es documental */}
+          {recommendation.subcategory && recommendation.category !== 'documentales' && recommendation.category !== 'documentaries' && (
             <Chip
               label={getSubcategoryTranslation(recommendation.subcategory, recommendation.category)}
               size="small"
@@ -237,7 +239,7 @@ const MaterialRecommendationCard = ({ recommendation }) => {
           {truncateDescription(description, recommendation.category)}
         </Typography>
       </CardContent>
-    </Card>
+    </UiCard>
   );
 };
 

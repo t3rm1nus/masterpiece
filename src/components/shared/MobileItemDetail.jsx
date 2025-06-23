@@ -1,9 +1,10 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button } from '@mui/material';
+import { CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button } from '@mui/material';
 import { ArrowBack as ArrowBackIcon, Category as CategoryIcon } from '@mui/icons-material';
 import { getCategoryColor } from '../../utils/categoryUtils';
 import { ensureString } from '../../utils/stringUtils';
 import { useTrailerUrl } from '../../hooks/useTrailerUrl';
+import UiCard from '../ui/UiCard';
 
 const MobileItemDetail = ({ selectedItem, title, description, lang, t, theme, getCategoryTranslation, getSubcategoryTranslation, goBackFromDetail, goToHowToDownload, imgLoaded, setImgLoaded, renderMobileSpecificContent, renderMobileActionButtons }) => {
   if (!selectedItem) return null;
@@ -28,7 +29,7 @@ const MobileItemDetail = ({ selectedItem, title, description, lang, t, theme, ge
         <ArrowBackIcon />
       </Fab>
       {/* Tarjeta principal */}
-      <Card
+      <UiCard
         sx={{
           maxWidth: 600,
           margin: '0 auto',
@@ -38,8 +39,10 @@ const MobileItemDetail = ({ selectedItem, title, description, lang, t, theme, ge
           boxShadow: theme.shadows[8],
           border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
           background: selectedItem.masterpiece 
-            ? 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)'
-            : theme.palette.background.paper
+            ? (theme.palette.mode === 'dark' 
+              ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
+              : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
+            : getCategoryColor(selectedItem.category),
         }}
       >
         {/* Imagen principal */}
@@ -142,7 +145,7 @@ const MobileItemDetail = ({ selectedItem, title, description, lang, t, theme, ge
           {/* Botones de acción */}
           {renderMobileActionButtons()}
         </CardContent>
-      </Card>
+      </UiCard>
     </Box>
   );
 };

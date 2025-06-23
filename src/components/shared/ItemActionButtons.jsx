@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Button } from '@mui/material';
+import { Box } from '@mui/material';
 import { PlayArrow as PlayArrowIcon } from '@mui/icons-material';
 import { getCategoryColor } from '../../utils/categoryUtils';
+import UiButton from '../ui/UiButton';
 
 // Botones de acción para mobile y desktop
 export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHowToDownload }) {
@@ -9,7 +10,7 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
   if (selectedItem.category === 'documentales' && selectedItem.link) {
     buttons.push(
       <Box key="documental" sx={{ textAlign: 'center', marginBottom: '16px' }}>
-        <Button
+        <UiButton
           variant="contained"
           href={selectedItem.link}
           target="_blank"
@@ -24,14 +25,14 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
           }}
         >
           {lang === 'es' ? 'Ver Documental' : 'Watch Documentary'}
-        </Button>
+        </UiButton>
       </Box>
     );
   }
   if (trailerUrl) {
     buttons.push(
       <Box key="trailer" sx={{ textAlign: 'center', marginBottom: '16px' }}>
-        <Button
+        <UiButton
           variant="contained"
           startIcon={<PlayArrowIcon />}
           href={trailerUrl}
@@ -45,15 +46,15 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
             }
           }}
         >
-          {t.watch_trailer || 'Ver Trailer'}
-        </Button>
+          {lang === 'es' ? 'Ver Tráiler' : 'Watch Trailer'}
+        </UiButton>
       </Box>
     );
   }
   if (selectedItem.category === 'podcast' && selectedItem.link) {
     buttons.push(
       <Box key="spotify" sx={{ textAlign: 'center', marginBottom: '16px' }}>
-        <Button
+        <UiButton
           variant="contained"
           href={selectedItem.link}
           target="_blank"
@@ -66,14 +67,14 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
           }}
         >
           Escuchar en Spotify
-        </Button>
+        </UiButton>
       </Box>
     );
   }
   if (selectedItem.category === 'movies' || selectedItem.category === 'series') {
     buttons.push(
       <Box key="download" sx={{ textAlign: 'center', marginBottom: '16px' }}>
-        <Button
+        <UiButton
           variant="contained"
           color="primary"
           startIcon={<PlayArrowIcon />}
@@ -91,7 +92,7 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
           }}
         >
           {t?.ui?.actions?.download || (lang === 'en' ? 'Download' : 'Descargar')}
-        </Button>
+        </UiButton>
       </Box>
     );
   }
@@ -131,7 +132,7 @@ export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHo
   if (selectedItem.category === 'movies' || selectedItem.category === 'series') {
     buttons.push(
       <div key="download" className="item-detail-trailer">
-        <Button
+        <UiButton
           variant="contained"
           color="primary"
           sx={{ mt: 2, fontWeight: 700, fontSize: { xs: '1rem', md: '1.1rem' }, minWidth: 180 }}
@@ -141,7 +142,7 @@ export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHo
           startIcon={<PlayArrowIcon />}
         >
           {t?.ui?.actions?.download || (lang === 'en' ? 'Download' : 'Descargar')}
-        </Button>
+        </UiButton>
       </div>
     );
   }

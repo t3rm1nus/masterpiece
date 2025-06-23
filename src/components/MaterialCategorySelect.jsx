@@ -43,8 +43,8 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
   if (!isMobile) return null;
   if (!Array.isArray(categories)) return null;
 
-  // El select de subcategorías solo se muestra si hay subcategorías y categoría seleccionada (excepto documentales)
-  const showSubcatSelect = Array.isArray(subcategories) && subcategories.length > 0 && selectedCategory && selectedCategory !== 'documentales';
+  // El select de subcategorías solo se muestra si hay subcategorías y categoría seleccionada
+  const showSubcatSelect = Array.isArray(subcategories) && subcategories.length > 0 && selectedCategory;
 
   return (
     <div style={{ width: '100%' }}>
