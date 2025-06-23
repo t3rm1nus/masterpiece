@@ -34,6 +34,7 @@ import ThemeToggle from './ThemeToggle';
 import FabBackButton from './ui/FabBackButton';
 import { useNavigationActions } from '../hooks/useNavigationActions';
 import { useMenuItems } from '../hooks/useMenuItems.jsx';
+import LanguageSelector from './ui/LanguageSelector';
 
 const MaterialMobileMenu = () => {
   const { t, lang, changeLanguage, getTranslation } = useLanguage();
@@ -329,34 +330,7 @@ const MaterialMobileMenu = () => {
           <Typography variant="subtitle2" sx={{ marginBottom: '8px', color: isDarkMode ? '#cccccc' : '#666666' }}>
             {getTranslation('ui.language')}
           </Typography>
-          <Box sx={{ display: 'flex', gap: '8px' }}>
-            <Button
-              variant={lang === 'es' ? 'contained' : 'outlined'}
-              size="small"
-              onClick={() => handleLanguageChange('es')}
-              sx={{
-                minWidth: '60px',
-                backgroundColor: lang === 'es' ? '#0078d4' : 'transparent',
-                color: lang === 'es' ? '#ffffff' : (isDarkMode ? '#ffffff' : '#0078d4'),
-                borderColor: '#0078d4'
-              }}
-            >
-              ES
-            </Button>
-            <Button
-              variant={lang === 'en' ? 'contained' : 'outlined'}
-              size="small"
-              onClick={() => handleLanguageChange('en')}
-              sx={{
-                minWidth: '60px',
-                backgroundColor: lang === 'en' ? '#0078d4' : 'transparent',
-                color: lang === 'en' ? '#ffffff' : (isDarkMode ? '#ffffff' : '#0078d4'),
-                borderColor: '#0078d4'
-              }}
-            >
-              EN
-            </Button>
-          </Box>
+          <LanguageSelector variant="mobile" />
         </Box>
       </Drawer>
       {/* FAB de volver flotante */}

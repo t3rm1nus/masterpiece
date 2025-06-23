@@ -8,23 +8,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import { useMenuItems } from '../hooks/useMenuItems';
-
-// Componente para el selector de idioma clásico
-function LanguageSelector() {
-  const { lang, changeLanguage } = useLanguage();
-  return (
-    <select
-      id="language-selector"
-      name="language-selector"
-      value={lang}
-      onChange={e => changeLanguage(e.target.value)}
-      style={{ marginLeft: 8 }}
-    >
-      <option value="es">Español</option>
-      <option value="en">English</option>
-    </select>
-  );
-}
+import LanguageSelector from './ui/LanguageSelector';
 
 // Menú clásico para desktop
 function DesktopMenu() {
@@ -154,7 +138,7 @@ function DesktopMenu() {
             </DialogContent>
           </Dialog>
           <ThemeToggle />
-          <LanguageSelector />
+          <LanguageSelector variant="desktop" sx={{ marginLeft: 1 }} />
         </div>
       </div>
     </nav>
