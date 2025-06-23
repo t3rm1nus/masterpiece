@@ -39,7 +39,18 @@ function useIsMobile() {
   return isMobile;
 }
 
-const HomePage = () => {
+const HomePage = ({
+  categoryBarProps = {},
+  subcategoryBarProps = {},
+  materialCategorySelectProps = {},
+  specialButtonsProps = {},
+  renderCategoryButton,
+  renderSubcategoryChip,
+  categoryBarSx,
+  subcategoryBarSx,
+  materialCategorySelectSx,
+  ...rest
+} = {}) => {
   const { lang, t } = useLanguage();
   // Hook para sincronizar títulos automáticamente
   useTitleSync();
@@ -91,8 +102,6 @@ const HomePage = () => {
   const { goBackFromDetail, selectedItem, goToDetail } = useAppView();
   // Obtener categorías traducidas (se actualizará cuando cambie el idioma)
   const categoriesFromStore = getCategories();
-  
-  // Traducir categorías usando el contexto de idioma
   const categories = categoriesFromStore.map(cat => ({
     ...cat,
     label: t?.categories?.[cat.key] || cat.label,
@@ -101,7 +110,6 @@ const HomePage = () => {
   // Obtener subcategorías del store para la categoría seleccionada
   const categorySubcategories = React.useMemo(() => {
     let subs = getSubcategoriesForCategory(selectedCategory);
-    // Si es boardgames, solo devolver la key tal cual (ya está en inglés)
     if (selectedCategory === 'boardgames' && Array.isArray(subs)) {
       return subs.map(({ sub, ...rest }) => ({
         sub: sub.toLowerCase().trim(),
@@ -109,8 +117,11 @@ const HomePage = () => {
         ...rest
       }));
     }
-    // Para otras categorías, devolver tal cual
-    return subs;
+    // Normalizar formato para todos los componentes parametrizables
+    if (Array.isArray(subs)) {
+      return subs.map(s => typeof s === 'string' ? { sub: s, label: t?.subcategories?.[selectedCategory]?.[s] || s } : s);
+    }
+    return [];
   }, [selectedCategory, getSubcategoriesForCategory, t, lang]);
   const [isRecommendedActive, setIsRecommendedActive] = useState(false);  // Efecto para cargar datos reales - solo una vez
   useEffect(() => {
@@ -362,12 +373,18 @@ const HomePage = () => {
                 categories={categories}
                 selectedCategory={selectedCategory}
                 onCategoryClick={handleCategoryClick}
+                renderButton={renderCategoryButton}
+                sx={categoryBarSx}
+                {...categoryBarProps}
               />
               <SubcategoryBar
                 selectedCategory={selectedCategory}
                 categorySubcategories={categorySubcategories}
                 activeSubcategory={activeSubcategory}
                 setActiveSubcategory={setActiveSubcategory}
+                renderChip={renderSubcategoryChip}
+                sx={subcategoryBarSx}
+                {...subcategoryBarProps}
                 allData={allData}
                 t={t}
                 lang={lang}
@@ -384,6 +401,7 @@ const HomePage = () => {
                 toggleDocumentaryLanguage={toggleDocumentaryLanguage}
                 lang={lang}
                 isRecommendedActive={isRecommendedActive}
+                {...specialButtonsProps}
               />
             </>
           )}
@@ -414,9 +432,12 @@ const HomePage = () => {
                     return Array.isArray(categorySubcategories) ? categorySubcategories : [];
                   })()}
                   activeSubcategory={activeSubcategory}
+                  renderButton={renderCategoryButton}
+                  renderChip={renderSubcategoryChip}
+                  sx={materialCategorySelectSx}
+                  {...materialCategorySelectProps}
                 />
               </span>
-              {/* Solo muestra SpecialButtons si hay categoría seleccionada */}
               {selectedCategory && (
                 <SpecialButtons
                   selectedCategory={selectedCategory}
@@ -431,6 +452,7 @@ const HomePage = () => {
                   lang={lang}
                   isRecommendedActive={isRecommendedActive}
                   isMobile
+                  {...specialButtonsProps}
                 />
               )}
             </div>
@@ -460,6 +482,10 @@ const HomePage = () => {
             categories={categories}
             selectedCategory={selectedCategory}
             onCategoryClick={handleCategoryClick}
+            showCategoryBar={false}
+            showSubcategoryBar={false}
+            showCategorySelect={isMobile ? false : undefined}
+            showSubcategoryChips={isMobile ? false : undefined}
           />
         </div>
       )}

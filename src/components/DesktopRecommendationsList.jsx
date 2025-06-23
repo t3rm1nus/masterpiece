@@ -2,83 +2,14 @@ import React, { useMemo, useCallback } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { useAppView, useAppData, useAppTheme } from '../store/useAppStore';
 import { generateRecommendationKey } from '../utils/appUtils';
-import MaterialContentWrapper from './MaterialContentWrapper';
+import CategoryBar from './home/CategoryBar';
+import SubcategoryBar from './home/SubcategoryBar';
 import '../styles/components/cards.css';
-
-// Componente de imagen optimizada
-const OptimizedImage = ({ src, alt, className, style }) => (
-  <img 
-    src={src}
-    alt={alt}
-    className={className}
-    style={style}
-    loading="lazy"
-    decoding="async"
-  />
-);
-
-// Componente del badge de obra maestra
-const MasterpieceBadge = ({ config }) => (
-  <span className="masterpiece-badge" title="Obra maestra">
-    <svg
-      width={config.svg.width}
-      height={config.svg.height}
-      viewBox={config.svg.viewBox}
-      fill={config.svg.fill}
-      xmlns={config.svg.xmlns}
-    >
-      <circle
-        cx={config.circle.cx}
-        cy={config.circle.cy}
-        r={config.circle.r}
-        fill={config.circle.fill}
-      />
-      <path
-        d={config.star.d}
-        fill={config.star.fill}
-      />
-    </svg>
-  </span>
-);
-
-// Componente para mostrar categorías
-const CategoryLabels = ({ category, subcategory, getCategoryTranslation, getSubcategoryTranslation }) => (
-  <>
-    <div className="category-label">
-      {getCategoryTranslation(category)}
-    </div>
-    {subcategory && (
-      <div className="subcategory-label" style={{ fontSize: '0.95em', color: '#666', textAlign: 'center' }}>
-        {getSubcategoryTranslation(subcategory, category)}
-      </div>
-    )}
-  </>
-);
-
-// Componente para vista "sin resultados"
-const NoResults = ({ t, randomNotFoundImage }) => {
-  const notFoundImageUrl = randomNotFoundImage?.() || '/favicon.png';
-  
-  return (
-    <div className="no-results-container">
-      <p className="no-results-text">
-        {t?.no_results || 'No se encontraron resultados'}
-      </p>
-      <p className="no-results-subtext">
-        Prueba con otros filtros o categorías
-      </p>
-      <img 
-        src={notFoundImageUrl} 
-        alt="No se encontraron resultados" 
-        className="no-results-image"
-      />
-    </div>
-  );
-};
+import { NoResults } from './SharedComponents';
 
 /**
  * DesktopRecommendationsList
- * Lista de recomendaciones para desktop, altamente parametrizable.
+ * Lista de recomendaciones para desktop, altamente parametrizable y reutilizable.
  *
  * Props avanzados:
  * - items: array de recomendaciones a mostrar (alias de recommendations)
@@ -87,12 +18,35 @@ const NoResults = ({ t, randomNotFoundImage }) => {
  * - loading: boolean (estado de carga)
  * - emptyComponent: ReactNode o función para custom empty state
  * - pagination: objeto de paginación `{ page, pageSize, onPageChange }`
- * - sx, className, style: estilos avanzados
+ * - categories: array de categorías (para barra de categorías)
+ * - selectedCategory: string (categoría activa)
+ * - onCategoryClick: función para seleccionar categoría
+ * - subcategories: array de subcategorías (para barra de subcategorías)
+ * - activeSubcategory: string (subcategoría activa)
+ * - onSubcategoryClick: función para seleccionar subcategoría
+ * - renderCategoryButton: función para custom render de botón de categoría
+ * - renderSubcategoryChip: función para custom render de chip de subcategoría
+ * - categoryBarSx: estilos adicionales para CategoryBar
+ * - subcategoryBarSx: estilos adicionales para SubcategoryBar
+ * - showCategoryBar: boolean (mostrar barra de categorías, default: true)
+ * - showSubcategoryBar: boolean (mostrar barra de subcategorías, default: true)
  * - ...props legacy (recommendations, etc.)
  *
  * Ejemplo de uso:
  * <DesktopRecommendationsList
  *   items={recs}
+ *   categories={categories}
+ *   selectedCategory={selectedCategory}
+ *   onCategoryClick={setCategory}
+ *   subcategories={subcategories}
+ *   activeSubcategory={activeSubcategory}
+ *   onSubcategoryClick={setActiveSubcategory}
+ *   renderCategoryButton={...}
+ *   renderSubcategoryChip={...}
+ *   categoryBarSx={{ background: '#fafafa' }}
+ *   subcategoryBarSx={{ background: '#eee' }}
+ *   showCategoryBar={false} // <---
+ *   showSubcategoryBar={false} // <---
  *   renderItem={(item, idx) => <MyCard item={item} key={item.id} />}
  *   onItemClick={item => setSelected(item)}
  *   loading={isLoading}
@@ -117,8 +71,24 @@ const DesktopRecommendationsList = ({
   categories,
   selectedCategory,
   onCategoryClick,
+  subcategories,
+  activeSubcategory,
+  onSubcategoryClick,
+  renderCategoryButton,
+  renderSubcategoryChip,
+  categoryBarSx = {},
+  subcategoryBarSx = {},
+  showCategoryBar = true,
+  showSubcategoryBar = true,
+  showCategorySelect, // props avanzados que no deben ir al DOM
+  showSubcategoryChips, // props avanzados que no deben ir al DOM
   ...rest
 }) => {
+  // Filtrar props que no deben ir al DOM
+  const domSafeRest = { ...rest };
+  delete domSafeRest.showCategorySelect;
+  delete domSafeRest.showSubcategoryChips;
+
   const data = items || recommendations;
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
   const { goToDetail } = useAppView();
@@ -171,19 +141,23 @@ const DesktopRecommendationsList = ({
   // Renderizador para vista home de desktop (sin título)
   const renderDesktopHomeCard = useCallback((rec, title, description) => (
     <>
-      <OptimizedImage
+      <img
         src={rec.image}
         alt={title}
         className="rec-home-img"
         style={{ width: '70%' }}
+        loading="lazy"
+        decoding="async"
       />
       <div style={{ height: '8px' }} />
-      <CategoryLabels
-        category={rec.category}
-        subcategory={rec.subcategory}
-        getCategoryTranslation={getCategoryTranslation}
-        getSubcategoryTranslation={getSubcategoryTranslation}
-      />
+      <div className="category-label">
+        {getCategoryTranslation(rec.category)}
+      </div>
+      {rec.subcategory && (
+        <div className="subcategory-label" style={{ fontSize: '0.95em', color: '#666', textAlign: 'center' }}>
+          {getSubcategoryTranslation(rec.subcategory, rec.category)}
+        </div>
+      )}
       <div style={{ height: '8px' }} />
       <p style={{ textAlign: 'center' }}>
         {truncateDescription(description)}
@@ -194,23 +168,27 @@ const DesktopRecommendationsList = ({
   // Renderizador para vista de listado de desktop (con título)
   const renderDesktopListCard = useCallback((rec, title, description) => (
     <>
-      <OptimizedImage
+      <img
         src={rec.image}
         alt={title}
         className="rec-home-img"
         style={{ width: '70%' }}
+        loading="lazy"
+        decoding="async"
       />
       <div style={{ height: '8px' }} />
       <h3 className="rec-home-title" style={{ textAlign: 'center', margin: 0 }}>
         {title}
       </h3>
       <div style={{ height: '8px' }} />
-      <CategoryLabels
-        category={rec.category}
-        subcategory={rec.subcategory}
-        getCategoryTranslation={getCategoryTranslation}
-        getSubcategoryTranslation={getSubcategoryTranslation}
-      />
+      <div className="category-label">
+        {getCategoryTranslation(rec.category)}
+      </div>
+      {rec.subcategory && (
+        <div className="subcategory-label" style={{ fontSize: '0.95em', color: '#666', textAlign: 'center' }}>
+          {getSubcategoryTranslation(rec.subcategory, rec.category)}
+        </div>
+      )}
       <div style={{ height: '8px' }} />
       <p style={{ textAlign: 'center' }}>
         {truncateDescription(description)}
@@ -246,7 +224,26 @@ const DesktopRecommendationsList = ({
             alignItems: 'center',
           }}
         >
-          {normalizedRec.masterpiece && <MasterpieceBadge config={badgeConfig} />}
+          {normalizedRec.masterpiece && <span className="masterpiece-badge" title="Obra maestra">
+            <svg
+              width={badgeConfig.svg.width}
+              height={badgeConfig.svg.height}
+              viewBox={badgeConfig.svg.viewBox}
+              fill={badgeConfig.svg.fill}
+              xmlns={badgeConfig.svg.xmlns}
+            >
+              <circle
+                cx={badgeConfig.circle.cx}
+                cy={badgeConfig.circle.cy}
+                r={badgeConfig.circle.r}
+                fill={badgeConfig.circle.fill}
+              />
+              <path
+                d={badgeConfig.star.d}
+                fill={badgeConfig.star.fill}
+              />
+            </svg>
+          </span>}
           {cardContent}
         </div>
       );
@@ -293,7 +290,7 @@ const DesktopRecommendationsList = ({
   const getListStyles = () => ({
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'flex-start',
+    justifyContent: data && data.length < 4 ? 'center' : 'flex-start',
     alignItems: 'flex-start',
     gap: '32px 24px',
     width: '100%',
@@ -302,7 +299,28 @@ const DesktopRecommendationsList = ({
   });
 
   return (
-    <div className={`desktop-recommendations-list ${className}`} style={{ ...getWrapperStyles(), ...sx, ...style }} {...rest}>
+    <div className={`desktop-recommendations-list ${className}`} style={{ ...getWrapperStyles(), ...sx, ...style }} {...domSafeRest}>
+      {/* Barra de categorías parametrizable */}
+      {showCategoryBar && categories && (
+        <CategoryBar
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onCategoryClick={onCategoryClick}
+          renderButton={renderCategoryButton}
+          sx={categoryBarSx}
+        />
+      )}
+      {/* Barra de subcategorías parametrizable */}
+      {showSubcategoryBar && subcategories && (
+        <SubcategoryBar
+          selectedCategory={selectedCategory}
+          categorySubcategories={subcategories}
+          activeSubcategory={activeSubcategory}
+          setActiveSubcategory={onSubcategoryClick}
+          renderChip={renderSubcategoryChip}
+          sx={subcategoryBarSx}
+        />
+      )}
       <div className="recommendations-list desktop-list" style={getListStyles()}>
         {memoizedRecommendations}
       </div>

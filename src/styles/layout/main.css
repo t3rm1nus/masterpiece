@@ -84,6 +84,14 @@
   box-shadow: none;
 }
 
+/* Sobrescribir el fondo azul heredado solo para el botón ThemeToggle */
+.main-menu .theme-toggle-btn {
+  background: transparent !important;
+  color: var(--mui-color-secondary, #6d4aff) !important;
+  border: 1px solid rgba(0,0,0,0.23) !important;
+  box-shadow: none !important;
+}
+
 /* Estilos específicos para el primer div (botones de la izquierda) */
 .main-menu > div:first-child > div:first-child {
   margin-left: var(--space-md);

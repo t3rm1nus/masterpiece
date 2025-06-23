@@ -4,7 +4,10 @@
       "id": 1,
       "title": { "es": "Breaking Bad", "en": "Breaking Bad" },
       "titulo": "Breaking Bad",
-      "descripcion": "Un profesor de química con cáncer terminal se convierte en fabricante y distribuidor de metanfetamina para asegurar el futuro financiero de su familia.",
+       "description": {
+        "es": "Un profesor de instituto diagnosticado con cáncer de pulmón empieza a manufacturar y vender metamfetamina para asegurar el futuro de su familia.",
+        "en": "A high school teacher diagnosed with lung cancer begins manufacturing and selling methamphetamine to secure his family's future."
+      },
       "image": "/imagenes/series/breaking.jpg",
       "categoria": "Drama",
       "temporadas": 5,

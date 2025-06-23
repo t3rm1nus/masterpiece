@@ -5,13 +5,30 @@ import { ensureString } from '../../utils/stringUtils';
 
 /**
  * DesktopItemDetail
- * Detalle de ítem para desktop, altamente parametrizable.
+ * Detalle de ítem para desktop, altamente parametrizable y unificado con MobileItemDetail.
  *
  * Props avanzados:
- * - renderHeader, renderImage, renderCategory, renderSubcategory, renderDescription, renderActions, renderFooter: funciones para custom render de cada sección
- * - showSections: objeto para mostrar/ocultar secciones (por ejemplo: { image: true, category: true, description: true, actions: true, footer: true })
+ * - renderHeader, renderImage, renderCategory, renderSubcategory, renderYear, renderDescription, renderActions, renderFooter: funciones para custom render de cada sección
+ * - showSections: objeto para mostrar/ocultar secciones (por ejemplo: { image: true, category: true, year: true, description: true, actions: true, footer: true })
  * - sx, className, style: estilos avanzados
+ * - onBack: callback para botón de volver (opcional)
  * - ...props legacy
+ *
+ * Ejemplo de uso:
+ * <DesktopItemDetail
+ *   selectedItem={item}
+ *   renderHeader={...}
+ *   renderImage={...}
+ *   renderCategory={...}
+ *   renderSubcategory={...}
+ *   renderYear={...}
+ *   renderDescription={...}
+ *   renderActions={...}
+ *   renderFooter={...}
+ *   showSections={{ image: true, category: true, year: true, description: true, actions: true, footer: true }}
+ *   sx={{ background: '#fafafa' }}
+ *   onBack={() => ...}
+ * />
  */
 const DesktopItemDetail = ({
   selectedItem,
@@ -28,6 +45,7 @@ const DesktopItemDetail = ({
   renderImage,
   renderCategory,
   renderSubcategory,
+  renderYear,
   renderDescription,
   renderActions,
   renderFooter,
@@ -35,6 +53,7 @@ const DesktopItemDetail = ({
   sx = {},
   className = '',
   style = {},
+  onBack,
   ...props
 }) => {
   if (!selectedItem) return null;
@@ -42,6 +61,12 @@ const DesktopItemDetail = ({
     <div className={`item-detail-page desktop-only ${className}`} style={style} {...props}>
       <div className="item-detail-container" style={sx}>
         <div className={`item-detail-content ${selectedItem.masterpiece ? 'masterpiece-item' : 'normal-item'} ${selectedItem.category}`}> 
+          {/* Botón de volver (opcional) */}
+          {showSections.backButton !== false && onBack && (
+            <UiButton onClick={onBack} variant="outlined" color="primary" sx={{ mb: 2 }}>
+              Volver
+            </UiButton>
+          )}
           {renderHeader && renderHeader(selectedItem)}
           {selectedItem.masterpiece && (
             <span className="masterpiece-detail-badge" title="Obra maestra">
@@ -77,6 +102,14 @@ const DesktopItemDetail = ({
                     ? renderSubcategory(selectedItem)
                     : <span className="subcategory-name">{getSubcategoryTranslation(selectedItem.subcategory, selectedItem.category)}</span>
                   )}
+                </div>
+          )}
+          {/* Año */}
+          {showSections.year !== false && selectedItem.year && (
+            renderYear
+              ? renderYear(selectedItem)
+              : <div className="item-detail-year">
+                  <span><strong>{t?.year || 'Año'}:</strong> {ensureString(selectedItem.year, lang)}</span>
                 </div>
           )}
           {/* Información específica por categoría */}

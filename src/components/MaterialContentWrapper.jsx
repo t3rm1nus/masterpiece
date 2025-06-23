@@ -53,43 +53,77 @@ const MaterialContentWrapper = ({
   onSubcategoryClick,
   recommendations,
   isHome = false,
-  categoryColor
+  categoryColor,
+  renderCategoryButton,
+  renderSubcategoryChip,
+  categorySelectSx,
+  subcategoryChipsSx,
+  categorySelectProps = {},
+  subcategoryChipsProps = {},
+  visible = true,
+  showCategorySelect = true,
+  showSubcategoryChips = true,
+  showCategoryBar, // ignorar si llega
+  showSubcategoryBar, // ignorar si llega
+  ...props
 }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const { t } = useLanguage();
   const { randomNotFoundImage } = useAppData();
-  
+  if (!visible) return null;
   // Si no es móvil, renderizar el contenido original
   if (!isMobile) {
     return children;
   }
-  // En móviles, usar componentes Material UI
+  // En móviles, usar componentes Material UI parametrizables
   return (
     <Box sx={{ 
       width: '100%',
-      maxWidth: '100vw', // Asegurar que ocupe todo el ancho de la ventana
-      padding: '0 4px', // Padding horizontal mínimo para evitar que toque los bordes
-      paddingTop: '64px', // Espacio para el AppBar fijo (48px) + padding extra (16px)
-      boxSizing: 'border-box' // Incluir padding en el cálculo del ancho
-    }}>
-      {/* Select de categorías Material UI */}
-      {/* {categories && (
+      maxWidth: '100vw',
+      padding: '0 4px',
+      paddingTop: '64px',
+      boxSizing: 'border-box',
+      ...props.sx
+    }} {...(() => {
+      // Eliminar props que no deben ir al DOM
+      const { showCategoryBar, showSubcategoryBar, showCategorySelect, showSubcategoryChips, ...restProps } = props;
+      return restProps;
+    })()}>
+      {/* Select de categorías parametrizable */}
+      {showCategorySelect && categories && (
         <MaterialCategorySelect
           categories={categories}
           selectedCategory={selectedCategory}
           onCategoryChange={onCategoryClick}
+          subcategories={subcategories}
+          activeSubcategory={activeSubcategory}
+          renderButton={renderCategoryButton}
+          renderChip={renderSubcategoryChip}
+          sx={categorySelectSx}
+          {...categorySelectProps}
         />
-      )} */}      {/* Chips de subcategorías Material UI eliminados en móvil */}
+      )}
+      {/* Chips de subcategorías parametrizables (opcional, si se quiere mostrar además del select) */}
+      {showSubcategoryChips && subcategories && (
+        <MaterialSubcategoryChips
+          subcategories={subcategories}
+          value={activeSubcategory}
+          onChange={onSubcategoryClick}
+          renderChip={renderSubcategoryChip}
+          sx={subcategoryChipsSx}
+          {...subcategoryChipsProps}
+        />
+      )}
       {/* Lista de recomendaciones Material UI */}
       {recommendations && Array.isArray(recommendations) && recommendations.length > 0 && (
         <Box
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center', // Centrar las tarjetas horizontalmente
+            alignItems: 'center',
             gap: isHome ? '8px' : '16px',
-            padding: '4px', // Padding reducido para mejor uso del espacio
+            padding: '4px',
             width: '100%',
             maxWidth: '100%',
             boxSizing: 'border-box'
@@ -102,7 +136,9 @@ const MaterialContentWrapper = ({
               isHome={isHome}
             />
           ))}
-        </Box>      )}        {/* Si no hay recomendaciones en móviles, mostrar mensaje e imagen apropiada en lugar del contenido desktop */}
+        </Box>
+      )}
+      {/* Empty state */}
       {(!recommendations || !Array.isArray(recommendations) || recommendations.length === 0) && (
         <Box sx={{ 
           textAlign: 'center', 
@@ -119,7 +155,6 @@ const MaterialContentWrapper = ({
           <Typography variant="body2" sx={{ margin: 0, padding: 0 }}>
             {t.try_different_filters || 'Intenta cambiar los filtros seleccionados'}
           </Typography>
-          {/* Imagen "not found" aleatoria */}
           <Box
             component="img"
             src={randomNotFoundImage()}

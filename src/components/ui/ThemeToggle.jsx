@@ -45,7 +45,7 @@ const ThemeToggle = ({
 
   const defaultLightIcon = (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="#888" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
   const defaultDarkIcon = (
@@ -57,13 +57,14 @@ const ThemeToggle = ({
 
   const button = (
     <UiButton
+      className="theme-toggle-btn"
       onClick={handleClick}
       variant={variant}
       color={color}
       size={size}
       aria-label={ariaLabel || (theme === 'light' ? getTranslation('ui.dark_mode', 'Modo oscuro') : getTranslation('ui.light_mode', 'Modo claro'))}
       sx={{
-        background: '#fff',
+        background: 'transparent', // Quitar fondo azul
         border: '1px solid rgba(0,0,0,0.23)',
         color: 'var(--mui-color-secondary, #6d4aff)',
         borderRadius: '4px',

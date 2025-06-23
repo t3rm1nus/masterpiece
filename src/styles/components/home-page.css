@@ -206,3 +206,122 @@
     max-width: 280px;
   }
 }
+
+@media (max-width: 900px) {
+  .home-container h1.home-mobile-title {
+    margin-bottom: 0!important;
+    margin-top: 0 !important;
+    border-radius: 0!important;
+    box-shadow: 0 2px 12px 0 rgba(255, 200, 80, 0.13), 0 1.5px 0 #ffe29e !important;
+    background: linear-gradient(135deg, #fffbe6 60%, #ffe29e 100%) !important;
+    padding: 14px 8px 10px 8px !important;
+    font-size: 1.25rem !important;
+    color: black !important;
+    border-top: 1.5px solid grey !important;
+    border-bottom: 1.5px solid grey !important;
+    text-shadow: 0 2px 8px #e9ecf3, 0 1px 0 #fff, 1px 1px 2px rgba(0, 0, 0, 0.08) !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.5px !important;
+    width: 90% !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    transition: all 0.2s !important;
+    z-index: 2 !important;
+    position: relative !important;
+  }
+  /* Eliminar margen superior del select de categorías de MUI justo debajo del h1 */
+  .home-container .MuiFormControl-root,
+  .home-container [class*="MuiFormControl-root"],
+  .home-container .material-category-select,
+  .home-container [class*="material-category-select"] {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  /* Quitar espacio entre h1 y select de categorías en móviles */
+  .home-container h1.home-mobile-title + .category-select,
+  .home-container h1.home-mobile-title + .MuiFormControl-root,
+  .home-container h1.home-mobile-title + .MuiSelect-root,
+  .home-container h1.home-mobile-title + select {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  .category-select,
+  .MuiFormControl-root,
+  .MuiSelect-root,
+  select {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  /* Alinear ancho del select con el h1 en móviles */
+  .home-container .category-select,
+  .home-container .MuiFormControl-root,
+  .home-container .MuiSelect-root,
+  .home-container select {
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+  /* Forzar ancho y centrado del select con clase generada de MUI */
+  .home-container .css-5hmd55-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+  /* Centrar el label del select de categorías en móviles */
+  .home-container .MuiInputLabel-root,
+  .home-container label.MuiInputLabel-root {
+    width: 90% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    display: block !important;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Refuerzo para móviles pequeños */
+  .home-container .category-select,
+  .home-container .MuiFormControl-root,
+  .home-container .MuiSelect-root,
+  .home-container select {
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+  /* Refuerzo para móviles pequeños */
+  .home-container .css-5hmd55-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+  /* Refuerzo para móviles pequeños */
+  .home-container .MuiInputLabel-root,
+  .home-container label.MuiInputLabel-root {
+    width: 90% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    display: block !important;
+    pointer-events: auto;
+  }
+}

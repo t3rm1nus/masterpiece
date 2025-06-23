@@ -48,8 +48,21 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
 
   return (
     <div style={{ width: '100%' }}>
-      <FormControl fullWidth variant="outlined" sx={{ my: 2, display: 'block', width: '100%' }}>
-        <InputLabel id="category-select-label">{t?.ui?.navigation?.category || (lang === 'en' ? 'Category' : 'Categoría')}</InputLabel>
+      <FormControl
+        fullWidth
+        variant="outlined"
+        sx={{
+          my: 2,
+          display: 'block',
+          width: '100%',
+          boxSizing: 'border-box',
+        }}
+      >
+        <InputLabel
+          id="category-select-label"
+        >
+          {t?.ui?.navigation?.category || (lang === 'en' ? 'Category' : 'Categoría')}
+        </InputLabel>
         <Select
           labelId="category-select-label"
           id="category-select"
@@ -64,6 +77,7 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
             boxShadow: theme.shadows[1],
             width: '100%',
             display: 'block',
+            boxSizing: 'border-box',
           }}
           MenuProps={{
             PaperProps: {
@@ -89,8 +103,21 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
         </Select>
       </FormControl>
       {showSubcatSelect && (
-        <FormControl fullWidth variant="outlined" sx={{ my: 1, display: 'block', width: '100%' }}>
-          <InputLabel id="subcategory-select-label">{t?.ui?.navigation?.subcategory || (lang === 'en' ? 'Subcategory' : 'Subcategoría')}</InputLabel>
+        <FormControl
+          fullWidth
+          variant="outlined"
+          sx={{
+            my: 1,
+            display: 'block',
+            width: '100%',
+            boxSizing: 'border-box',
+          }}
+        >
+          <InputLabel
+            id="subcategory-select-label"
+          >
+            {t?.ui?.navigation?.subcategory || (lang === 'en' ? 'Subcategory' : 'Subcategoría')}
+          </InputLabel>
           <Select
             labelId="subcategory-select-label"
             id="subcategory-select"
@@ -105,6 +132,7 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
               boxShadow: theme.shadows[1],
               width: '100%',
               display: 'block',
+              boxSizing: 'border-box',
               mt: 1,
             }}
             MenuProps={{
