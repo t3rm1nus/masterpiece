@@ -99,7 +99,7 @@
 /* === TÍTULOS PRINCIPALES === */
 h1 {
   text-align: center;
-  margin: 120px auto var(--space-lg) auto;
+  margin: 0 auto var(--space-lg) auto;
   display: block;
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);

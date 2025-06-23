@@ -321,7 +321,7 @@ const HomePage = () => {
     );
   }
   return (
-    <UiLayout maxWidth="md" sx={{marginTop: 8}}>
+    <UiLayout sx={{ marginTop: 8, width: '100vw', maxWidth: '100vw', px: 0 }}>
       {/* Eliminar controles de cabecera solo en desktop */}
       {/* {isMobile && (
         <div className="header-controls">
@@ -334,14 +334,18 @@ const HomePage = () => {
         <>
           {/* Mostrar título traducido */}
           <h1 
-            className={(isMobile ? 'home-mobile-title ' : '') + (selectedCategory ? 'after-subcategories' : '')}
-            style={{
+            className={
+              'home-title' +
+              (isMobile ? ' home-mobile-title' : '') +
+              (selectedCategory ? ' after-subcategories' : '')
+            }
+            style={isMobile ? {
               textTransform: 'capitalize',
               textAlign: 'center',
               margin: '20px 0 32px 0',
               fontWeight: 700,
               fontSize: '2.2rem'
-            }}
+            } : {}}
           >
             {selectedCategory 
               ? (t?.categories?.[selectedCategory] || selectedCategory)

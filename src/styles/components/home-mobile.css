@@ -1,0 +1,31 @@
+.home-mobile-select-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 12px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-mobile-select-bar {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.home-recommendations-list-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .home-mobile-select-container {
+    max-width: 100vw;
+  }
+  .home-mobile-select-bar {
+    max-width: 100vw;
+  }
+}
