@@ -180,8 +180,14 @@ const MaterialMobileMenu = () => {
     forceUpdate(f => !f);
   }, [isDarkMode]);
 
+  // Mostrar FAB de volver solo en móvil y solo en las páginas de donaciones y cómo descargar
+  const showFabBackButton = isMobile && (currentView === 'coffee' || currentView === 'howToDownload');
+  // Determinar el top dinámico para el botón
+  const fabTop = (currentView === 'coffee' || currentView === 'howToDownload') ? 63 : 16;
+
   return (
-    <>      <AppBar 
+    <>
+      <AppBar 
         position="fixed" 
         elevation={1}
         sx={{ 
@@ -402,6 +408,34 @@ const MaterialMobileMenu = () => {
           </Box>
         </Box>
       </Drawer>
+      {showFabBackButton && (
+        <button
+          className="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary"
+          type="button"
+          aria-label="volver"
+          onClick={handleGoBack}
+          style={{
+            position: 'fixed',
+            top: fabTop,
+            left: 16,
+            zIndex: 2001,
+            boxShadow: '0 4px 16px rgba(0,0,0,0.18)',
+            background: '#1976d2',
+            color: '#fff',
+            width: 56,
+            height: 56,
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: 'none',
+            outline: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          <ArrowBackIcon style={{ fontSize: 32 }} />
+        </button>
+      )}
     </>
   );
 };
