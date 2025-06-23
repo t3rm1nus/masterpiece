@@ -1,0 +1,28 @@
+.mp-btn {
+  padding: 0.5em 1.2em;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.mp-btn--primary {
+  background: #0078d4;
+  color: #fff;
+}
+.mp-btn--secondary {
+  background: #eee;
+  color: #222;
+}
+.mp-btn--danger {
+  background: #d32f2f;
+  color: #fff;
+}
+.mp-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

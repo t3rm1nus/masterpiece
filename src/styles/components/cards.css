@@ -157,36 +157,36 @@
   justify-content: center;
   min-height: 400px;
   text-align: center;
-  padding: var(--space-xl);
-  animation: fadeIn 0.5s ease-in-out;
+  padding: 20px;
+  width: 100%;
 }
 
 .no-results-image {
-  max-width: 300px;
+  max-width: 100%;
   width: 100%;
   height: auto;
-  margin-bottom: var(--space-lg);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-md);
-  transition: transform var(--transition-normal);
-}
-
-.no-results-image:hover {
-  transform: scale(1.02);
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .no-results-text {
   font-size: 1.2em;
-  color: var(--text-secondary);
-  margin-top: var(--space-md);
+  color: #666;
   font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0.2em;
 }
 
 .no-results-subtext {
   font-size: 0.9em;
-  color: var(--text-muted);
-  margin-top: var(--space-sm);
-  opacity: 0.8;
+  color: #999;
+  margin-top: 8px;
+  margin-bottom: 16px;
 }
 
 @keyframes fadeIn {
@@ -441,4 +441,54 @@
 
 .css-31dimf {
     padding-top: 0 !important;
+}
+
+/* Estilos para el componente NoResults */
+.no-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.no-results-image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-results-text {
+  font-size: 1.2em;
+  color: #666;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0.2em;
+}
+
+.no-results-subtext {
+  font-size: 0.9em;
+  color: #999;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+/* Estilos para cards de error */
+.error-card {
+  padding: 10px;
+  color: red;
+  border: 1px solid red;
+  border-radius: 8px;
+  margin: 8px;
+  background-color: #fff5f5;
 }
