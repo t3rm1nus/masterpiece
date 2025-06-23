@@ -41,6 +41,8 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
   
   const badgeConfig = getMasterpieceBadgeConfig();
   const selectedItem = item;
+
+  const [imgLoaded, setImgLoaded] = React.useState(false);
   
   if (!selectedItem) return null;
   
@@ -158,6 +160,10 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
             }}
             image={selectedItem.image}
             alt={title}
+            onLoad={() => {
+              setImgLoaded(true);
+              console.log('[UnifiedItemDetail] Imagen cargada, imgLoaded=true');
+            }}
           />
           
           {/* Badge de masterpiece en la imagen */}
@@ -581,21 +587,27 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
     // Botón Descargar Película (solo para películas y series)
     if (selectedItem.category === 'movies' || selectedItem.category === 'series') {
       buttons.push(
-        <div key="download" className="item-detail-trailer">
-          <a
-            href="#descargar"
-            className="trailer-link"
-            onClick={e => {
-              e.preventDefault();
-              if (typeof window !== 'undefined' && window.location) {
-                window.location.hash = '#/how-to-download';
-              }
+        <Box key="download" sx={{ textAlign: 'center', marginBottom: '16px' }}>
+          <Button
+            variant="contained"
+            color="primary"
+            startIcon={<PlayArrowIcon />}
+            onClick={() => {
               if (typeof goToHowToDownload === 'function') goToHowToDownload();
+            }}
+            sx={{
+              backgroundColor: getCategoryColor(selectedItem.category),
+              fontWeight: 700,
+              fontSize: { xs: '1rem', md: '1.1rem' },
+              '&:hover': {
+                backgroundColor: getCategoryColor(selectedItem.category),
+                opacity: 0.8
+              }
             }}
           >
             {t?.ui?.actions?.download || (lang === 'en' ? 'Download' : 'Descargar')}
-          </a>
-        </div>
+          </Button>
+        </Box>
       );
     }
 
@@ -638,29 +650,73 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
       );
     }
 
-    // Botón Descargar Película (solo para películas y series)
+    // Botón Descargar Película (solo para películas y series) en desktop
     if (selectedItem.category === 'movies' || selectedItem.category === 'series') {
       buttons.push(
         <div key="download" className="item-detail-trailer">
-          <a
-            href="#descargar"
-            className="trailer-link"
-            onClick={e => {
-              e.preventDefault();
-              if (typeof window !== 'undefined' && window.location) {
-                window.location.hash = '#/how-to-download';
-              }
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{ mt: 2, fontWeight: 700, fontSize: { xs: '1rem', md: '1.1rem' }, minWidth: 180 }}
+            onClick={() => {
               if (typeof goToHowToDownload === 'function') goToHowToDownload();
             }}
+            startIcon={<PlayArrowIcon />}
           >
             {t?.ui?.actions?.download || (lang === 'en' ? 'Download' : 'Descargar')}
-          </a>
+          </Button>
         </div>
       );
     }
     
     return buttons;
   }
+  
+  React.useEffect(() => {
+    if (isMobile && selectedItem && imgLoaded) {
+      setTimeout(() => {
+        // Busca el primer .MuiBox-root que contenga un .MuiCard-root
+        let scrollContainer = null;
+        const boxRoots = document.querySelectorAll('.MuiBox-root');
+        for (const box of boxRoots) {
+          if (box.querySelector('.MuiCard-root')) {
+            scrollContainer = box;
+            break;
+          }
+        }
+        if (scrollContainer) {
+          const style = window.getComputedStyle(scrollContainer);
+          const hasScroll = style.overflowY === 'auto' || style.overflowY === 'scroll' || scrollContainer.scrollHeight > scrollContainer.clientHeight;
+          console.log('[UnifiedItemDetail] Scroll container encontrado:', scrollContainer.className, 'overflowY:', style.overflowY, 'scrollHeight:', scrollContainer.scrollHeight, 'clientHeight:', scrollContainer.clientHeight);
+          if (hasScroll) {
+            scrollContainer.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            scrollContainer.scrollTop = 0;
+            console.log('[UnifiedItemDetail] Scroll aplicado en scrollContainer');
+          } else if (scrollContainer.parentNode) {
+            const parent = scrollContainer.parentNode;
+            const parentStyle = window.getComputedStyle(parent);
+            const parentHasScroll = parent.scrollHeight > parent.clientHeight;
+            console.log('[UnifiedItemDetail] Intentando scroll en parentNode:', parent.className, 'scrollHeight:', parent.scrollHeight, 'clientHeight:', parent.clientHeight);
+            if (parentHasScroll) {
+              parent.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+              parent.scrollTop = 0;
+              console.log('[UnifiedItemDetail] Scroll aplicado en parentNode');
+            } else {
+              console.log('[UnifiedItemDetail] Ni scrollContainer ni parent tienen scroll. Fallback a window.');
+              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            }
+          } else {
+            console.log('[UnifiedItemDetail] scrollContainer no tiene parentNode. Fallback a window.');
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+          }
+        } else {
+          // Fallback a window
+          console.log('[UnifiedItemDetail] Scroll to top en window (no se encontró .MuiBox-root contenedor de .MuiCard-root)');
+          window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        }
+      }, 0);
+    }
+  }, [isMobile, selectedItem && (selectedItem.id || selectedItem.title || selectedItem.name), imgLoaded]);
 };
 
 export default UnifiedItemDetail;

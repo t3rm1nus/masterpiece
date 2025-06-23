@@ -142,7 +142,7 @@ function DesktopMenu() {
               <rect x="9" y="6" width="2" height="8" rx="1" fill="#fff"/>
             </svg>
           </span>
-          {getTranslation('how_to_download.title', lang === 'en' ? 'How to download?' : '¿Cómo descargar?')}
+          {lang === 'en' ? 'How to Download?' : '¿Cómo descargar?'}
         </button>
         {/* Icono a la derecha del botón ¿Cómo descargar? */}
         <img

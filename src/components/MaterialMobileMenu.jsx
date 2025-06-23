@@ -33,10 +33,10 @@ import { useAppData, useAppView, useAppTheme } from '../store/useAppStore';
 import ThemeToggle from './ThemeToggle';
 
 const MaterialMobileMenu = () => {
-  const { t, lang, changeLanguage } = useLanguage();
+  const { t, lang, changeLanguage, getTranslation } = useLanguage();
   const { resetAllFilters } = useAppData();
   const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();
-  const { isDarkTheme, toggleTheme } = useAppTheme();
+  const { isDarkMode, toggleTheme } = useAppTheme();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [splashOpen, setSplashOpen] = useState(false);
   const theme = useTheme();
@@ -116,26 +116,26 @@ const MaterialMobileMenu = () => {
   // Declarar menuItems dentro del render SIEMPRE, para que use los textos actualizados
   const menuItems = [
     {
-      text: t.home_title || 'Inicio',
+      text: getTranslation('ui.navigation.home'),
       icon: <HomeIcon />,
       action: handleNewRecommendations,
       show: true
     },
     {
-      text: t.back || 'Volver',
+      text: getTranslation('ui.navigation.back'),
       icon: <ArrowBackIcon />,
       action: handleGoBack,
       show: showBackButton
     },
     {
-      text: t.buy_me_coffee || 'Cómprame un café',
+      text: getTranslation('ui.navigation.buy_me_coffee'),
       icon: <CoffeeIcon />,
       action: handleCoffeeNavigation,
       show: !isCoffeeView,
       special: true
     },
     {
-      text: t.how_to_download || '¿Cómo descargar?',
+      text: getTranslation('ui.navigation.how_to_download'),
       icon: (
         <span style={{display:'flex',alignItems:'center'}}>
           <svg width="24" height="24" viewBox="0 0 32 32" fill="none" style={{verticalAlign:'middle'}} xmlns="http://www.w3.org/2000/svg">
@@ -155,7 +155,7 @@ const MaterialMobileMenu = () => {
       special: false
     },
     {
-      text: lang === 'en' ? 'About Us' : '¿Quiénes somos?',
+      text: getTranslation('ui.navigation.about'),
       icon: (
         <span style={{display:'flex',alignItems:'center'}}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
@@ -174,14 +174,20 @@ const MaterialMobileMenu = () => {
     setDrawerOpen(false);
   };
 
+  // Forzar rerender al cambiar tema para actualizar el literal del botón
+  const [, forceUpdate] = useState(false);
+  useEffect(() => {
+    forceUpdate(f => !f);
+  }, [isDarkMode]);
+
   return (
     <>      <AppBar 
         position="fixed" 
         elevation={1}
         sx={{ 
-          backgroundColor: isDarkTheme ? '#1e1e1e' : '#ffffff',
-          color: isDarkTheme ? '#ffffff' : '#000000',
-          borderBottom: isDarkTheme ? '1px solid #333' : '1px solid #e0e0e0',
+          backgroundColor: isDarkMode ? '#1e1e1e' : '#ffffff',
+          color: isDarkMode ? '#ffffff' : '#000000',
+          borderBottom: isDarkMode ? '1px solid #333' : '1px solid #e0e0e0',
           height: '48px',
           minHeight: '48px',
           top: '0 !important',
@@ -207,7 +213,7 @@ const MaterialMobileMenu = () => {
             sx={{ 
               fontWeight: 'bold',
               fontSize: '1.1rem',
-              color: isDarkTheme ? '#ffffff' : '#000000',
+              color: isDarkMode ? '#ffffff' : '#000000',
               cursor: 'pointer',
               userSelect: 'none'
             }}
@@ -222,7 +228,7 @@ const MaterialMobileMenu = () => {
             aria-label="abrir menú"
             onClick={() => setDrawerOpen(true)}
             sx={{ 
-              color: isDarkTheme ? '#ffffff' : '#0078d4',
+              color: isDarkMode ? '#ffffff' : '#0078d4',
               fontSize: '1.5rem'
             }}
           >
@@ -231,8 +237,8 @@ const MaterialMobileMenu = () => {
         </Toolbar>
       </AppBar>
       {/* Splash Dialog */}
-      <Dialog open={splashOpen} onClose={handleSplashClose} maxWidth="xs" PaperProps={{ style: { borderRadius: 18, background: isDarkTheme ? '#222' : '#fff', boxShadow: '0 8px 32px rgba(0,0,0,0.18)' } }}>
-        <DialogContent sx={{ p: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', background: isDarkTheme ? '#222' : '#fff' }}>
+      <Dialog open={splashOpen} onClose={handleSplashClose} maxWidth="xs" PaperProps={{ style: { borderRadius: 18, background: isDarkMode ? '#222' : '#fff', boxShadow: '0 8px 32px rgba(0,0,0,0.18)' } }}>
+        <DialogContent sx={{ p: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', background: isDarkMode ? '#222' : '#fff' }}>
           <img 
             src="/imagenes/splash_image.png" 
             alt="Splash" 
@@ -250,18 +256,18 @@ const MaterialMobileMenu = () => {
         sx={{
           '& .MuiDrawer-paper': {
             width: 'min(80vw, 320px)',
-            backgroundColor: isDarkTheme ? '#2d2d2d' : '#ffffff',
-            color: isDarkTheme ? '#ffffff' : '#000000'
+            backgroundColor: isDarkMode ? '#2d2d2d' : '#ffffff',
+            color: isDarkMode ? '#ffffff' : '#000000'
           }
         }}
       >
         <Box sx={{ padding: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-            {t.menu || (lang === 'en' ? 'Menu' : 'Menú')}
+            {getTranslation('ui.menu')}
           </Typography>
           <IconButton 
             onClick={() => setDrawerOpen(false)}
-            sx={{ color: isDarkTheme ? '#ffffff' : '#000000' }}
+            sx={{ color: isDarkMode ? '#ffffff' : '#000000' }}
           >
             <CloseIcon />
           </IconButton>
@@ -288,7 +294,7 @@ const MaterialMobileMenu = () => {
                       ? '#1e3c72'
                       : item.special
                         ? '#333333'
-                        : (isDarkTheme ? '#ffffff' : '#000000'),
+                        : (isDarkMode ? '#ffffff' : '#000000'),
                     margin: item.special || index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
                       ? '8px 16px'
                       : '0',
@@ -309,13 +315,13 @@ const MaterialMobileMenu = () => {
                         ? '#ffb700'
                         : index === menuItems.findIndex(i => i.text === (t.how_to_download || '¿Cómo descargar?'))
                           ? '#d2e2f6'
-                          : (isDarkTheme ? '#404040' : '#f5f5f5')
+                          : (isDarkMode ? '#404040' : '#f5f5f5')
                     }
                   }}
                 >
                   <ListItemIcon 
                     sx={{ 
-                      color: item.special ? '#333333' : (isDarkTheme ? '#ffffff' : '#000000'),
+                      color: item.special ? '#333333' : (isDarkMode ? '#ffffff' : '#000000'),
                       minWidth: '40px'
                     }}
                   >
@@ -340,28 +346,31 @@ const MaterialMobileMenu = () => {
         {/* Selector de tema */}
         <Box sx={{ padding: '0 16px', marginBottom: '16px' }}>
           <ListItemButton
-            onClick={toggleTheme}
+            onClick={() => {
+              toggleTheme();
+            }}
             sx={{
               borderRadius: '8px',
               padding: '12px',
               '&:hover': {
-                backgroundColor: isDarkTheme ? '#404040' : '#f5f5f5'
+                backgroundColor: isDarkMode ? '#404040' : '#f5f5f5'
               }
             }}
           >
-            <ListItemIcon sx={{ color: isDarkTheme ? '#ffffff' : '#000000', minWidth: '40px' }}>
-              {isDarkTheme ? <LightbulbIcon /> : <DarkModeIcon />}
-            </ListItemIcon>            <ListItemText 
-              primary={isDarkTheme ? (t.light_mode || 'Modo Claro') : (t.dark_mode || 'Modo Oscuro')}
-              sx={{ color: isDarkTheme ? '#ffffff' : '#000000' }}
+            <ListItemIcon sx={{ color: isDarkMode ? '#ffffff' : '#000000', minWidth: '40px' }}>
+              {isDarkMode ? <LightbulbIcon /> : <DarkModeIcon />}
+            </ListItemIcon>
+            <ListItemText
+              primary={!isDarkMode ? getTranslation('ui.dark_mode') : getTranslation('ui.light_mode')}
+              sx={{ color: isDarkMode ? '#ffffff' : '#000000' }}
             />
           </ListItemButton>
         </Box>
         
         {/* Selector de idioma */}
         <Box sx={{ padding: '0 16px', marginBottom: '16px' }}>
-          <Typography variant="subtitle2" sx={{ marginBottom: '8px', color: isDarkTheme ? '#cccccc' : '#666666' }}>
-            {t.language || (lang === 'en' ? 'Language' : 'Idioma')}
+          <Typography variant="subtitle2" sx={{ marginBottom: '8px', color: isDarkMode ? '#cccccc' : '#666666' }}>
+            {getTranslation('ui.language')}
           </Typography>
           <Box sx={{ display: 'flex', gap: '8px' }}>
             <Button
@@ -371,7 +380,7 @@ const MaterialMobileMenu = () => {
               sx={{
                 minWidth: '60px',
                 backgroundColor: lang === 'es' ? '#0078d4' : 'transparent',
-                color: lang === 'es' ? '#ffffff' : (isDarkTheme ? '#ffffff' : '#0078d4'),
+                color: lang === 'es' ? '#ffffff' : (isDarkMode ? '#ffffff' : '#0078d4'),
                 borderColor: '#0078d4'
               }}
             >
@@ -384,7 +393,7 @@ const MaterialMobileMenu = () => {
               sx={{
                 minWidth: '60px',
                 backgroundColor: lang === 'en' ? '#0078d4' : 'transparent',
-                color: lang === 'en' ? '#ffffff' : (isDarkTheme ? '#ffffff' : '#0078d4'),
+                color: lang === 'en' ? '#ffffff' : (isDarkMode ? '#ffffff' : '#0078d4'),
                 borderColor: '#0078d4'
               }}
             >

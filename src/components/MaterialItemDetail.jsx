@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Card,
   CardContent,
@@ -29,6 +29,7 @@ import {
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 import useViewStore from '../store/viewStore';
+import './styles/components/item-detail-action-btn.css';
 
 const MaterialItemDetail = ({ item }) => {
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
@@ -101,6 +102,28 @@ const MaterialItemDetail = ({ item }) => {
     }
   };
 
+  // Estado para saber si la imagen principal ha cargado
+  const [imgLoaded, setImgLoaded] = React.useState(false);
+
+  // Scroll arriba en móviles solo cuando la imagen esté cargada
+  useEffect(() => {
+    let timeoutId;
+    const isReallyMobile = isMobile || /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
+    if (isReallyMobile && item && imgLoaded) {
+      timeoutId = setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }, 30); // pequeño retardo tras carga de imagen
+    }
+    return () => clearTimeout(timeoutId);
+  }, [isMobile, item && (item.id || item.title || item.name), imgLoaded]);
+
+  // Función para manejar la acción de descarga
+  const handleDownloadClick = () => {
+    // Aquí va la lógica de descarga personalizada
+    // Por ejemplo, mostrar un modal, iniciar descarga, etc.
+    alert('Descarga iniciada (aquí va tu lógica)');
+  };
+
   return (
     <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px' }}>
       {/* Botón de volver flotante */}
@@ -147,6 +170,7 @@ const MaterialItemDetail = ({ item }) => {
             }}
             image={item.image}
             alt={title}
+            onLoad={() => setImgLoaded(true)}
           />
           {/* Badge de masterpiece solo móviles, overlay absoluto sobre la imagen */}
           {item.masterpiece && (
@@ -254,41 +278,69 @@ const MaterialItemDetail = ({ item }) => {
               {description}
             </Typography>
             {/* Botones de acción */}
-            <Stack spacing={1}>
+            <Stack spacing={2} sx={{ alignItems: 'center', width: '100%' }}>
               {/* Botón Ver Trailer */}
               {trailerUrl && (
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  fullWidth
-                  sx={{ 
-                    fontWeight: 700, 
-                    fontSize: { xs: '1rem', md: '1.1rem' },
-                    py: '12px',
-                    borderRadius: '8px',
-                    boxShadow: 2,
-                    '&:hover': {
-                      backgroundColor: theme.palette.secondary.dark,
-                    }
-                  }}
-                  onClick={() => window.open(trailerUrl, '_blank')}
-                  startIcon={<PlayArrowIcon />}
-                >
-                  {t?.ui?.actions?.watchTrailer ? t.ui.actions.watchTrailer : (lang === 'en' ? 'Watch Trailer' : 'Ver Trailer')}
-                </Button>
+                <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', p: 0, m: 0 }}>
+                  <Button
+                    component="a"
+                    href={trailerUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="contained"
+                    color="primary" // Unificamos color para descartar diferencias de theme
+                    sx={{
+                      fontWeight: 700,
+                      fontSize: { xs: '1rem', md: '1.1rem' },
+                      py: '12px',
+                      borderRadius: '8px',
+                      boxShadow: 2,
+                      minWidth: 180,
+                      maxWidth: 320,
+                      width: '100%',
+                      mx: 'auto',
+                      display: 'block',
+                      textAlign: 'center',
+                      p: 0,
+                      m: 0
+                    }}
+                    startIcon={<PlayArrowIcon />}
+                    className="item-detail-action-btn"
+                  >
+                    {t?.ui?.actions?.watchTrailer ? t.ui.actions.watchTrailer : (lang === 'en' ? 'Watch Trailer' : 'Ver Trailer')}
+                  </Button>
+                </Box>
               )}
               {/* Botón Descargar Película (solo para películas) */}
               {item.category === 'movies' && (
-                <Button
-                  variant="contained"
-                  color="primary"
-                  fullWidth
-                  sx={{ mt: 2, fontWeight: 700, fontSize: { xs: '1rem', md: '1.1rem' } }}
-                  onClick={() => window.open('/how-to-download', '_blank')}
-                  startIcon={<LaunchIcon />}
-                >
-                  {t?.ui?.actions?.download ? `${t.ui.actions.download} ${t.ui.categories?.movies?.toLowerCase?.() || ''}`.trim() : (lang === 'en' ? 'Download movie' : 'Descargar película')}
-                </Button>
+                <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', p: 0, m: 0 }}>
+                  <Button
+                    component="a"
+                    href="#descargar"
+                    variant="contained"
+                    color="primary"
+                    sx={{
+                      fontWeight: 700,
+                      fontSize: { xs: '1rem', md: '1.1rem' },
+                      py: '12px',
+                      borderRadius: '8px',
+                      boxShadow: 2,
+                      minWidth: 180,
+                      maxWidth: 320,
+                      width: '100%',
+                      mx: 'auto',
+                      display: 'block',
+                      textAlign: 'center',
+                      p: 0,
+                      m: 0
+                    }}
+                    onClick={e => { e.preventDefault(); handleDownloadClick(); }}
+                    startIcon={<LaunchIcon />}
+                    className="item-detail-action-btn"
+                  >
+                    {t?.ui?.actions?.download ? `${t.ui.actions.download} ${t.ui.categories?.movies?.toLowerCase?.() || ''}`.trim() : (lang === 'en' ? 'Download movie' : 'Descargar película')}
+                  </Button>
+                </Box>
               )}
             </Stack>
           </Stack>

@@ -9,10 +9,12 @@
     "ui": {
       "navigation": {
         "home": "Inicio",
-        "about": "Acerca de",
+        "about": "¿Quiénes somos?",
         "contact": "Contacto",
         "back": "Volver",
-        "close": "Cerrar"
+        "close": "Cerrar",
+        "how_to_download": "¿Cómo descargar?",
+        "buy_me_coffee": "Cómprame un café"
       },
       "titles": {
         "home_title": "Nuevas Recomendaciones",
@@ -20,6 +22,8 @@
       },
       "menu": "Menú",
       "language": "Idioma",
+      "dark_mode": "Modo Oscuro",
+      "light_mode": "Modo Claro",
       "actions": {
         "search": "Buscar",
         "filter": "Filtrar",
@@ -348,10 +352,12 @@
     "ui": {
       "navigation": {
         "home": "Home",
-        "about": "About",
+        "about": "About Us",
         "contact": "Contact",
         "back": "Back",
-        "close": "Close"
+        "close": "Close",
+        "how_to_download": "How to download?",
+        "buy_me_coffee": "Buy me a coffee"
       },
       "titles": {
         "home_title": "New Recommendations",
@@ -359,6 +365,8 @@
       },
       "menu": "Menu",
       "language": "Language",
+      "dark_mode": "Dark Mode",
+      "light_mode": "Light Mode",
       "actions": {
         "search": "Search",
         "filter": "Filter",
