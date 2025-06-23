@@ -3,31 +3,70 @@ import { CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button } fro
 import { ArrowBack as ArrowBackIcon, Category as CategoryIcon } from '@mui/icons-material';
 import { getCategoryColor } from '../../utils/categoryUtils';
 import { ensureString } from '../../utils/stringUtils';
-import { useTrailerUrl } from '../../hooks/useTrailerUrl';
 import UiCard from '../ui/UiCard';
 
-const MobileItemDetail = ({ selectedItem, title, description, lang, t, theme, getCategoryTranslation, getSubcategoryTranslation, goBackFromDetail, goToHowToDownload, imgLoaded, setImgLoaded, renderMobileSpecificContent, renderMobileActionButtons }) => {
+/**
+ * MobileItemDetail
+ * Detalle de ítem para móvil, altamente parametrizable.
+ *
+ * Props avanzados:
+ * - renderHeader, renderImage, renderCategory, renderSubcategory, renderYear, renderDescription, renderActions, renderFooter: funciones para custom render de cada sección
+ * - showSections: objeto para mostrar/ocultar secciones (por ejemplo: { image: true, category: true, year: true, description: true, actions: true, footer: true })
+ * - sx, className, style: estilos avanzados
+ * - ...props legacy
+ */
+const MobileItemDetail = ({
+  selectedItem,
+  title,
+  description,
+  lang,
+  t,
+  theme,
+  getCategoryTranslation,
+  getSubcategoryTranslation,
+  goBackFromDetail,
+  goToHowToDownload,
+  imgLoaded,
+  setImgLoaded,
+  renderMobileSpecificContent,
+  renderMobileActionButtons,
+  renderHeader,
+  renderImage,
+  renderCategory,
+  renderSubcategory,
+  renderYear,
+  renderDescription,
+  renderActions,
+  renderFooter,
+  showSections = {},
+  sx = {},
+  className = '',
+  style = {},
+  ...props
+}) => {
   if (!selectedItem) return null;
   return (
-    <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px' }}>
+    <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px', ...sx }} className={className} style={style} {...props}>
       {/* Botón de volver flotante */}
-      <Fab
-        color="primary"
-        aria-label="volver"
-        onClick={goBackFromDetail}
-        sx={{
-          position: 'fixed',
-          top: '80px',
-          left: '16px',
-          zIndex: 1000,
-          backgroundColor: theme.palette.primary.main,
-          '&:hover': {
-            backgroundColor: theme.palette.primary.dark,
-          }
-        }}
-      >
-        <ArrowBackIcon />
-      </Fab>
+      {showSections.backButton !== false && (
+        <Fab
+          color="primary"
+          aria-label="volver"
+          onClick={goBackFromDetail}
+          sx={{
+            position: 'fixed',
+            top: '80px',
+            left: '16px',
+            zIndex: 1000,
+            backgroundColor: theme?.palette?.primary?.main,
+            '&:hover': {
+              backgroundColor: theme?.palette?.primary?.dark,
+            }
+          }}
+        >
+          <ArrowBackIcon />
+        </Fab>
+      )}
       {/* Tarjeta principal */}
       <UiCard
         sx={{
@@ -36,27 +75,28 @@ const MobileItemDetail = ({ selectedItem, title, description, lang, t, theme, ge
           marginTop: '60px',
           borderRadius: '16px',
           overflow: 'hidden',
-          boxShadow: theme.shadows[8],
+          boxShadow: theme?.shadows?.[8],
           border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
           background: selectedItem.masterpiece 
-            ? (theme.palette.mode === 'dark' 
+            ? (theme?.palette?.mode === 'dark' 
               ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
               : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
-            : getCategoryColor(selectedItem.category),
+            : getCategoryColor(selectedItem.category, theme),
         }}
       >
+        {/* Header custom */}
+        {renderHeader && renderHeader(selectedItem)}
         {/* Imagen principal */}
-        <CardMedia
-          component="img"
-          sx={{
-            height: 300,
-            objectFit: 'cover',
-            position: 'relative'
-          }}
-          image={selectedItem.image}
-          alt={title}
-          onLoad={() => setImgLoaded(true)}
-        />
+        {showSections.image !== false && (renderImage
+          ? renderImage(selectedItem)
+          : <CardMedia
+              component="img"
+              sx={{ height: 300, objectFit: 'cover', position: 'relative' }}
+              image={selectedItem.image}
+              alt={title}
+              onLoad={() => setImgLoaded && setImgLoaded(true)}
+            />
+        )}
         {/* Badge de masterpiece en la imagen */}
         {selectedItem.masterpiece && (
           <span className="masterpiece-detail-badge" title="Obra maestra">
@@ -65,85 +105,80 @@ const MobileItemDetail = ({ selectedItem, title, description, lang, t, theme, ge
         )}
         <CardContent sx={{ padding: '24px' }}>
           {/* Título */}
-          <Typography 
-            variant="h4" 
-            component="h1" 
-            gutterBottom
-            sx={{ 
-              fontWeight: 'bold',
-              fontSize: { xs: '1.5rem', sm: '2rem' },
-              textAlign: 'center',
-              marginBottom: '16px'
-            }}
-          >
-            {title}
-          </Typography>
-          {/* Chips de categoría y subcategoría */}
-          {selectedItem.category !== 'boardgames' && selectedItem.category !== 'videogames' && (
-            <Stack 
-              direction="row" 
-              spacing={1} 
-              justifyContent="center" 
-              sx={{ marginBottom: '16px' }}
-            >
-              <Chip
-                icon={<CategoryIcon />}
-                label={getCategoryTranslation(selectedItem.category)}
-                sx={{
-                  backgroundColor: getCategoryColor(selectedItem.category, theme),
-                  color: 'white',
-                  fontWeight: 'bold',
-                  '& .MuiChip-icon': {
-                    color: 'white'
-                  }
-                }}
-              />
-              {selectedItem.subcategory && (
-                <Chip
-                  label={getSubcategoryTranslation(selectedItem.subcategory, selectedItem.category)}
-                  variant="outlined"
-                  sx={{
-                    borderColor: getCategoryColor(selectedItem.category, theme),
-                    color: getCategoryColor(selectedItem.category, theme),
-                    fontWeight: 'bold'
-                  }}
-                />
-              )}
-            </Stack>
-          )}
-          {/* Año */}
-          {selectedItem.year && (
-            <Box 
+          {showSections.title !== false && (
+            <Typography 
+              variant="h4" 
+              component="h1" 
+              gutterBottom
               sx={{ 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center',
-                marginBottom: '16px' 
+                fontWeight: 'bold',
+                fontSize: { xs: '1.5rem', sm: '2rem' },
+                textAlign: 'center',
+                marginBottom: '16px'
               }}
             >
-              {/* ...año... */}
-              <Typography variant="h6" color="text.secondary">
-                <strong>{t.year || 'Año'}:</strong> {ensureString(selectedItem.year, lang)}
-              </Typography>
-            </Box>
+              {title}
+            </Typography>
+          )}
+          {/* Chips de categoría y subcategoría */}
+          {showSections.category !== false && selectedItem.category !== 'boardgames' && selectedItem.category !== 'videogames' && (
+            renderCategory
+              ? renderCategory(selectedItem)
+              : <Stack direction="row" spacing={1} justifyContent="center" sx={{ marginBottom: '16px' }}>
+                  <Chip
+                    icon={<CategoryIcon />}
+                    label={getCategoryTranslation(selectedItem.category)}
+                    sx={{
+                      backgroundColor: getCategoryColor(selectedItem.category, theme),
+                      color: 'white',
+                      fontWeight: 'bold',
+                      '& .MuiChip-icon': { color: 'white' }
+                    }}
+                  />
+                  {selectedItem.subcategory && (renderSubcategory
+                    ? renderSubcategory(selectedItem)
+                    : <Chip
+                        label={getSubcategoryTranslation(selectedItem.subcategory, selectedItem.category)}
+                        variant="outlined"
+                        sx={{
+                          borderColor: getCategoryColor(selectedItem.category, theme),
+                          color: getCategoryColor(selectedItem.category, theme),
+                          fontWeight: 'bold'
+                        }}
+                      />
+                  )}
+                </Stack>
+          )}
+          {/* Año */}
+          {showSections.year !== false && selectedItem.year && (
+            renderYear
+              ? renderYear(selectedItem)
+              : <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
+                  <Typography variant="h6" color="text.secondary">
+                    <strong>{t?.year || 'Año'}:</strong> {ensureString(selectedItem.year, lang)}
+                  </Typography>
+                </Box>
           )}
           {/* Información específica por categoría */}
-          {renderMobileSpecificContent()}
+          {renderMobileSpecificContent && renderMobileSpecificContent(selectedItem)}
           {/* Descripción */}
-          <Typography 
-            variant="body1" 
-            sx={{ 
-              fontSize: '1.1rem',
-              lineHeight: 1.6,
-              textAlign: 'justify',
-              marginBottom: '24px',
-              color: 'text.primary'
-            }}
-          >
-            {description}
-          </Typography>
+          {showSections.description !== false && (
+            renderDescription
+              ? renderDescription(selectedItem)
+              : <Typography 
+                  variant="body1" 
+                  sx={{ fontSize: '1.1rem', lineHeight: 1.6, textAlign: 'justify', marginBottom: '24px', color: 'text.primary' }}
+                >
+                  {description}
+                </Typography>
+          )}
           {/* Botones de acción */}
-          {renderMobileActionButtons()}
+          {showSections.actions !== false && (renderActions
+            ? renderActions(selectedItem)
+            : renderMobileActionButtons && renderMobileActionButtons(selectedItem)
+          )}
+          {/* Footer custom */}
+          {showSections.footer !== false && renderFooter && renderFooter(selectedItem)}
         </CardContent>
       </UiCard>
     </Box>

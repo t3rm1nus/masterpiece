@@ -18,12 +18,37 @@ import {
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 
-const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick }) => {
+/**
+ * MaterialCategoryButtons
+ * Botones de categoría altamente parametrizables para navegación y filtrado.
+ *
+ * Props avanzados:
+ * - categories: array de objetos { key, label, isMasterpiece? } (categorías a mostrar)
+ * - selectedCategory: string (categoría seleccionada)
+ * - onCategoryClick: función (callback al seleccionar categoría)
+ * - renderButton: función opcional para custom render de cada botón `(cat, selected, idx) => ReactNode`
+ * - sx: estilos adicionales para el contenedor
+ * - buttonSx: estilos adicionales para cada botón
+ * - visible: boolean (si se muestra el componente, default: true)
+ * - showIcons: boolean (mostrar iconos si existen)
+ * - ...props: cualquier otro prop para el contenedor
+ *
+ * Ejemplo de uso:
+ * <MaterialCategoryButtons
+ *   categories={[{ key: 'movies', label: 'Películas' }]}
+ *   selectedCategory="movies"
+ *   onCategoryClick={key => setSelectedCategory(key)}
+ *   sx={{ background: '#fafafa' }}
+ * />
+ */
+
+const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick, renderButton, sx, buttonSx, visible = true, showIcons = true, ...props }) => {
   const { lang } = useLanguage();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
-    // Solo renderizar en móviles
-  if (!isMobile) {
+  
+  // Solo renderizar en móviles
+  if (!isMobile || !visible) {
     return null;
   }
   
@@ -101,46 +126,54 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
         padding: '12px 4px', // Padding horizontal reducido
         maxWidth: '100%',
         width: '100%',
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
+        ...sx
       }}
+      {...props}
     >
-      {categories.map(({ key, label, isMasterpiece }) => (
-        <Button
-          key={key}
-          variant={selectedCategory === key ? 'contained' : 'outlined'}
-          startIcon={getCategoryIcon(key)}
-          onClick={() => onCategoryClick(key, label)}
-          sx={{
-            minWidth: 'auto',
-            maxWidth: 'calc(50% - 3px)',
-            borderRadius: '20px',
-            textTransform: 'none',
-            fontSize: '0.8rem',
-            fontWeight: selectedCategory === key ? 'bold' : 'normal',
-            background: selectedCategory === key && isMasterpiece ? getCategoryColor(key, true) : (selectedCategory === key ? getCategoryColor(key) : 'transparent'),
-            borderColor: getCategoryColor(key),
-            color: selectedCategory === key ? 'white' : getCategoryColor(key),
-            padding: '6px 12px',
-            transition: 'all 0.3s ease',
-            flexShrink: 1,
-            '&:hover': {
-              background: selectedCategory === key && isMasterpiece ? getCategoryColor(key, true) : (selectedCategory === key ? getCategoryColor(key) : `${getCategoryColor(key)}20`),
+      {categories.map(({ key, label, isMasterpiece }, idx) => {
+        if (renderButton) {
+          return renderButton({ key, label, isMasterpiece }, selectedCategory === key, idx);
+        }
+        return (
+          <Button
+            key={key}
+            variant={selectedCategory === key ? 'contained' : 'outlined'}
+            startIcon={showIcons ? getCategoryIcon(key) : null}
+            onClick={() => onCategoryClick(key, label)}
+            sx={{
+              minWidth: 'auto',
+              maxWidth: 'calc(50% - 3px)',
+              borderRadius: '20px',
+              textTransform: 'none',
+              fontSize: '0.8rem',
+              fontWeight: selectedCategory === key ? 'bold' : 'normal',
+              background: selectedCategory === key && isMasterpiece ? getCategoryColor(key, true) : (selectedCategory === key ? getCategoryColor(key) : 'transparent'),
               borderColor: getCategoryColor(key),
-              transform: 'translateY(-2px)',
-              boxShadow: theme.shadows[4]
-            },
-            '& .MuiButton-startIcon': {
-              marginRight: '4px',
-              fontSize: '16px'
-            }
-          }}
-        >
-          {label}
-          {isMasterpiece && (
-            <StarIcon sx={{ color: '#FFD600', ml: 1, fontSize: '1.1em', verticalAlign: 'middle' }} />
-          )}
-        </Button>
-      ))}
+              color: selectedCategory === key ? 'white' : getCategoryColor(key),
+              padding: '6px 12px',
+              transition: 'all 0.3s ease',
+              flexShrink: 1,
+              ...buttonSx,
+              '&:hover': {
+                background: selectedCategory === key && isMasterpiece ? getCategoryColor(key, true) : (selectedCategory === key ? getCategoryColor(key) : `${getCategoryColor(key)}20`),
+                borderColor: getCategoryColor(key),
+                transform: 'translateY(-2px)',
+                boxShadow: theme.shadows[4]
+              },
+              '& .MuiButton-startIcon': {
+                marginRight: '4px',
+                fontSize: '16px'
+              }
+            }}
+          >
+            {label}
+            {isMasterpiece && (
+              <StarIcon sx={{ color: '#FFD600', ml: 1, fontSize: '1.1em', verticalAlign: 'middle' }} />
+            )}
+          </Button>
+        );
+      })}
     </Box>
   );
 };

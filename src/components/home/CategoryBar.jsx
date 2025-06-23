@@ -1,6 +1,23 @@
 import React from 'react';
 import UiButton from '../ui/UiButton';
 
+/**
+ * CategoryBar: Barra de selección de categorías.
+ * Permite customizar estilos, iconos, callbacks y visibilidad.
+ *
+ * Props:
+ * - categories: array (lista de categorías { key, label })
+ * - selectedCategory: string (categoría activa)
+ * - onCategoryClick: function (callback al seleccionar categoría)
+ *
+ * Ejemplo de uso:
+ * <CategoryBar
+ *   categories={[{ key: 'movies', label: 'Películas' }]}
+ *   selectedCategory="movies"
+ *   onCategoryClick={key => {}}
+ * />
+ */
+
 const CategoryBar = ({ categories, selectedCategory, onCategoryClick }) => (
   <div className="categories-container">
     <div className="categories-list">

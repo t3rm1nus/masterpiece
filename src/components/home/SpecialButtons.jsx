@@ -1,6 +1,36 @@
 import React from 'react';
 import UiButton from '../ui/UiButton';
 
+/**
+ * SpecialButtons: Botones especiales contextuales para categorías.
+ * Permite customizar estilos, callbacks, visibilidad y textos.
+ *
+ * Props:
+ * - selectedCategory: string (categoría activa)
+ * - isSpanishCinemaActive: boolean (estado del botón Cine Español)
+ * - handleSpanishCinemaToggle: function (callback para alternar Cine Español)
+ * - isMasterpieceActive: boolean (estado del botón Obras Maestras)
+ * - handleMasterpieceToggle: function (callback para alternar Obras Maestras)
+ * - activePodcastLanguages: array (idiomas activos en podcast)
+ * - togglePodcastLanguage: function (callback para alternar idioma podcast)
+ * - activeDocumentaryLanguages: array (idiomas activos en documentales)
+ * - toggleDocumentaryLanguage: function (callback para alternar idioma documental)
+ * - lang: string (idioma actual)
+ * - isRecommendedActive: boolean (oculta botón Obras Maestras si true)
+ * - isMobile: boolean (aplica estilos móviles)
+ *
+ * Ejemplo de uso:
+ * <SpecialButtons
+ *   selectedCategory="movies"
+ *   isSpanishCinemaActive={true}
+ *   handleSpanishCinemaToggle={() => {}}
+ *   isMasterpieceActive={false}
+ *   handleMasterpieceToggle={() => {}}
+ *   lang="es"
+ *   isMobile={false}
+ * />
+ */
+
 const SpecialButtons = ({
   selectedCategory,
   isSpanishCinemaActive,

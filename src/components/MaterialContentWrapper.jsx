@@ -5,6 +5,37 @@ import MaterialCategorySelect from './MaterialCategorySelect';
 import { useAppData } from '../store/useAppStore';
 import { useLanguage } from '../LanguageContext';
 
+/**
+ * MaterialContentWrapper: Wrapper adaptable para recomendaciones y contenido principal.
+ * Permite customizar layout, pasar acciones extra y mostrar/ocultar secciones.
+ *
+ * Props:
+ * - children: contenido a renderizar (usado en desktop)
+ * - categories: array de categorías
+ * - selectedCategory: string (categoría activa)
+ * - onCategoryClick: función para seleccionar categoría
+ * - subcategories: array de subcategorías
+ * - activeSubcategory: string (subcategoría activa)
+ * - onSubcategoryClick: función para seleccionar subcategoría
+ * - recommendations: array de recomendaciones a mostrar
+ * - isHome: boolean (modo home)
+ * - categoryColor: string (color de la categoría)
+ * - renderExtraActions: función opcional para renderizar acciones extra
+ * - showSections: objeto opcional para mostrar/ocultar secciones (por ejemplo: { recommendations: true, emptyState: true })
+ *
+ * Ejemplo de uso:
+ * <MaterialContentWrapper
+ *   categories={categories}
+ *   selectedCategory={selectedCategory}
+ *   onCategoryClick={onCategoryClick}
+ *   recommendations={recommendations}
+ *   renderExtraActions={() => <CustomActions />}
+ *   showSections={{ recommendations: true }}
+ * >
+ *   {children}
+ * </MaterialContentWrapper>
+ */
+
 const MaterialContentWrapper = ({ 
   children, 
   categories,

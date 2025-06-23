@@ -36,7 +36,32 @@ import { useNavigationActions } from '../hooks/useNavigationActions';
 import { useMenuItems } from '../hooks/useMenuItems.jsx';
 import LanguageSelector from './ui/LanguageSelector';
 
-const MaterialMobileMenu = () => {
+/**
+ * MaterialMobileMenu: Menú lateral y AppBar para navegación móvil.
+ * Permite customizar renderizado de items, estilos y callbacks.
+ *
+ * Props:
+ * - renderMenuItem: función opcional para customizar el render de cada ítem del menú (item, index) => ReactNode
+ * - menuItems: array opcional de items personalizados para el menú
+ * - onMenuOpen/onMenuClose: callbacks opcionales al abrir/cerrar el menú
+ * - sx: estilos adicionales para el Drawer/AppBar
+ *
+ * Ejemplo de uso:
+ * <MaterialMobileMenu
+ *   renderMenuItem={(item, idx) => <CustomMenuItem item={item} key={idx} />}
+ *   menuItems={[{ label: 'Inicio', icon: <HomeIcon />, action: () => {} }]}
+ *   onMenuOpen={() => {}}
+ *   onMenuClose={() => {}}
+ *   sx={{ background: '#222' }}
+ * />
+ */
+const MaterialMobileMenu = ({
+  renderMenuItem,
+  menuItems: menuItemsProp,
+  onMenuOpen,
+  onMenuClose,
+  sx = {}
+} = {}) => {
   const { t, lang, changeLanguage, getTranslation } = useLanguage();
   const { resetAllFilters } = useAppData();
   const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();
@@ -118,8 +143,8 @@ const MaterialMobileMenu = () => {
     }
   };
   
-  // Usar hook centralizado para los items del menú, pasando el handler de splash
-  const menuItems = useMenuItems(handleSplashOpen);
+  // Usar items custom si se pasan, si no usar hook por defecto
+  const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems(handleSplashOpen);
 
   const handleLanguageChange = (lng) => {
     changeLanguage(lng);
@@ -154,7 +179,8 @@ const MaterialMobileMenu = () => {
           margin: 0,
           padding: 0,
           zIndex: theme.zIndex.appBar || 1100,
-          position: 'fixed !important'
+          position: 'fixed !important',
+          ...sx.appBar
         }}
       >
         <Toolbar 
@@ -215,7 +241,8 @@ const MaterialMobileMenu = () => {
           '& .MuiDrawer-paper': {
             width: 'min(80vw, 320px)',
             backgroundColor: isDarkMode ? '#2d2d2d' : '#ffffff',
-            color: isDarkMode ? '#ffffff' : '#000000'
+            color: isDarkMode ? '#ffffff' : '#000000',
+            ...sx.drawer
           }
         }}
       >
@@ -236,6 +263,7 @@ const MaterialMobileMenu = () => {
         <List sx={{ padding: 0 }}>
           {menuItems.map((item, index) => {
             if (!item.show) return null;
+            if (renderMenuItem) return renderMenuItem(item, index);
             return (
               <ListItem key={index} disablePadding>
                 <ListItemButton

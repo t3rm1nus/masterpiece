@@ -2,59 +2,98 @@ import React from 'react';
 import UiButton from '../ui/UiButton';
 import { getCategoryColor } from '../../utils/categoryUtils';
 import { ensureString } from '../../utils/stringUtils';
-import { useTrailerUrl } from '../../hooks/useTrailerUrl';
 
-const DesktopItemDetail = ({ selectedItem, title, description, lang, t, getCategoryTranslation, getSubcategoryTranslation, goToHowToDownload, renderDesktopSpecificContent, renderDesktopActionButtons }) => {
+/**
+ * DesktopItemDetail
+ * Detalle de ítem para desktop, altamente parametrizable.
+ *
+ * Props avanzados:
+ * - renderHeader, renderImage, renderCategory, renderSubcategory, renderDescription, renderActions, renderFooter: funciones para custom render de cada sección
+ * - showSections: objeto para mostrar/ocultar secciones (por ejemplo: { image: true, category: true, description: true, actions: true, footer: true })
+ * - sx, className, style: estilos avanzados
+ * - ...props legacy
+ */
+const DesktopItemDetail = ({
+  selectedItem,
+  title,
+  description,
+  lang,
+  t,
+  getCategoryTranslation,
+  getSubcategoryTranslation,
+  goToHowToDownload,
+  renderDesktopSpecificContent,
+  renderDesktopActionButtons,
+  renderHeader,
+  renderImage,
+  renderCategory,
+  renderSubcategory,
+  renderDescription,
+  renderActions,
+  renderFooter,
+  showSections = {},
+  sx = {},
+  className = '',
+  style = {},
+  ...props
+}) => {
   if (!selectedItem) return null;
   return (
-    <div className="item-detail-page desktop-only">
-      <div className="item-detail-container">
-        <div className={`item-detail-content ${selectedItem.masterpiece ? 'masterpiece-item' : 'normal-item'} ${selectedItem.category}`}>
+    <div className={`item-detail-page desktop-only ${className}`} style={style} {...props}>
+      <div className="item-detail-container" style={sx}>
+        <div className={`item-detail-content ${selectedItem.masterpiece ? 'masterpiece-item' : 'normal-item'} ${selectedItem.category}`}> 
+          {renderHeader && renderHeader(selectedItem)}
           {selectedItem.masterpiece && (
             <span className="masterpiece-detail-badge" title="Obra maestra">
               <img src="/imagenes/masterpiece-star.png" alt="Masterpiece" style={{ width: 56, height: 56, display: 'block' }} />
             </span>
           )}
-          <div className="item-detail-image-container">
-            <img 
-              src={selectedItem.image} 
-              alt={title}
-              className="item-detail-image"
-            />
-          </div>
-          <h2 className="item-detail-title" style={{
-            color: '#111',
-            fontWeight: 900,
-            fontSize: '2.4rem',
-            margin: '0.7em 0 0.3em 0',
-            lineHeight: 1.1,
-            display: 'block',
-            letterSpacing: '-1.5px',
-            background: 'none',
-            border: 'none',
-            boxShadow: 'none',
-            textShadow: 'none',
-            borderRadius: 0,
-            padding: 0
-          }}>{title}</h2>
+          {/* Imagen */}
+          {showSections.image !== false && (renderImage
+            ? renderImage(selectedItem)
+            : <div className="item-detail-image-container">
+                <img 
+                  src={selectedItem.image} 
+                  alt={title}
+                  className="item-detail-image"
+                />
+              </div>
+          )}
+          {/* Título */}
+          {showSections.title !== false && (
+            <h2 className="item-detail-title" style={{
+              color: '#111', fontWeight: 900, fontSize: '2.4rem', margin: '0.7em 0 0.3em 0', lineHeight: 1.1, display: 'block', letterSpacing: '-1.5px', background: 'none', border: 'none', boxShadow: 'none', textShadow: 'none', borderRadius: 0, padding: 0
+            }}>{title}</h2>
+          )}
           {/* Categoría y subcategoría */}
-          {selectedItem.category !== 'boardgames' && selectedItem.category !== 'videogames' && (
-            <div className="item-detail-category">
-              <span className="category-name">
-                {getCategoryTranslation(selectedItem.category)}
-              </span>
-              {selectedItem.subcategory && (
-                <span className="subcategory-name">{getSubcategoryTranslation(selectedItem.subcategory, selectedItem.category)}</span>
-              )}
-            </div>
+          {showSections.category !== false && selectedItem.category !== 'boardgames' && selectedItem.category !== 'videogames' && (
+            renderCategory
+              ? renderCategory(selectedItem)
+              : <div className="item-detail-category">
+                  <span className="category-name">
+                    {getCategoryTranslation(selectedItem.category)}
+                  </span>
+                  {selectedItem.subcategory && (renderSubcategory
+                    ? renderSubcategory(selectedItem)
+                    : <span className="subcategory-name">{getSubcategoryTranslation(selectedItem.subcategory, selectedItem.category)}</span>
+                  )}
+                </div>
           )}
           {/* Información específica por categoría */}
-          {renderDesktopSpecificContent()}
-          <p className={`item-detail-description ${selectedItem.category === 'boardgames' ? 'boardgame-description' : ''}`}>
-            {description}
-          </p>
+          {renderDesktopSpecificContent && renderDesktopSpecificContent(selectedItem)}
+          {/* Descripción */}
+          {showSections.description !== false && (
+            renderDescription
+              ? renderDescription(selectedItem)
+              : <p className={`item-detail-description ${selectedItem.category === 'boardgames' ? 'boardgame-description' : ''}`}>{description}</p>
+          )}
           {/* Botones de acción */}
-          {renderDesktopActionButtons()}
+          {showSections.actions !== false && (renderActions
+            ? renderActions(selectedItem)
+            : renderDesktopActionButtons && renderDesktopActionButtons(selectedItem)
+          )}
+          {/* Footer custom */}
+          {showSections.footer !== false && renderFooter && renderFooter(selectedItem)}
         </div>
       </div>
     </div>

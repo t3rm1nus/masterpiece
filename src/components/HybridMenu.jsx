@@ -10,8 +10,28 @@ import DialogContent from '@mui/material/DialogContent';
 import { useMenuItems } from '../hooks/useMenuItems.jsx';
 import LanguageSelector from './ui/LanguageSelector';
 
+/**
+ * HybridMenu: Menú adaptable que muestra menú móvil o desktop según el dispositivo.
+ * Permite customizar renderizado de items, estilos y callbacks.
+ *
+ * Props:
+ * - renderMenuItem: función opcional para customizar el render de cada ítem del menú (item, index) => ReactNode
+ * - menuItems: array opcional de items personalizados para el menú
+ * - onMenuOpen/onMenuClose: callbacks opcionales al abrir/cerrar el menú
+ * - sx: estilos adicionales para el menú
+ *
+ * Ejemplo de uso:
+ * <HybridMenu
+ *   renderMenuItem={(item, idx) => <CustomMenuItem item={item} key={idx} />}
+ *   menuItems={[{ label: 'Inicio', icon: <HomeIcon />, action: () => {} }]}
+ *   onMenuOpen={() => {}}
+ *   onMenuClose={() => {}}
+ *   sx={{ background: '#222' }}
+ * />
+ */
+
 // Menú clásico para desktop
-function DesktopMenu() {
+function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {} }) {
   const { t, lang, getTranslation } = useLanguage();
   const { resetAllFilters, generateNewRecommendations } = useAppData();
   const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();  
@@ -42,12 +62,11 @@ function DesktopMenu() {
     }
   };
 
-  // Usar hook centralizado para los items del menú
-  // Para desktop, excluimos el ítem 'about' y renderizamos el icono manualmente
-  const menuItems = useMenuItems();
+  // Usar items custom si se pasan, si no usar hook por defecto
+  const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems();
 
   return (
-    <nav className="main-menu">
+    <nav className="main-menu" style={sx.menu}>
       <div style={{ 
         display: 'flex', 
         alignItems: 'center', 
@@ -59,19 +78,23 @@ function DesktopMenu() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           {/* Renderizar los items principales del menú */}
           {menuItems.filter(item => item.show && !item.special && item.label !== getTranslation('ui.navigation.about')).map((item, idx) => (
-            <button key={idx} onClick={item.action} style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8 }}>
-              {item.icon}
-              {item.label}
-            </button>
+            renderMenuItem
+              ? renderMenuItem(item, idx)
+              : <button key={idx} onClick={item.action} style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8 }}>
+                  {item.icon}
+                  {item.label}
+                </button>
           ))}
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           {/* Renderizar los items especiales (donación, etc) */}
           {menuItems.filter(item => item.show && item.special).map((item, idx) => (
-            <button key={idx} className="donation-btn" onClick={item.action} style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8 }}>
-              {item.icon}
-              {item.label}
-            </button>
+            renderMenuItem
+              ? renderMenuItem(item, idx)
+              : <button key={idx} className="donation-btn" onClick={item.action} style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8 }}>
+                  {item.icon}
+                  {item.label}
+                </button>
           ))}
           {/* Icono quienes somos (about) como imagen suelta a la derecha */}
           <img
@@ -145,15 +168,21 @@ function DesktopMenu() {
 }
 
 // Componente híbrido que decide qué menú mostrar
-const HybridMenu = () => {
-  const { lang } = useLanguage(); // <--- Añadido para obtener el idioma actual
+const HybridMenu = ({
+  renderMenuItem,
+  menuItems,
+  onMenuOpen,
+  onMenuClose,
+  sx = {}
+} = {}) => {
+  const { lang } = useLanguage();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('lg')); // Cambiado de 'md' a 'lg' para incluir tablets
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   
   if (isMobile) {
-    return <MaterialMobileMenu key={lang} />;
+    return <MaterialMobileMenu key={lang} renderMenuItem={renderMenuItem} menuItems={menuItems} onMenuOpen={onMenuOpen} onMenuClose={onMenuClose} sx={sx} />;
   } else {
-    return <DesktopMenu />;
+    return <DesktopMenu renderMenuItem={renderMenuItem} menuItems={menuItems} sx={sx} />;
   }
 };
 

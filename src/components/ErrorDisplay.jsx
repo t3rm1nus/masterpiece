@@ -1,24 +1,55 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useAppError } from '../store/useAppStore';
 
 /**
- * Componente para mostrar errores de la aplicación
- * 
- * Este componente muestra un mensaje de error cuando el store de errores
- * tiene un error activo. Puede ser incluido en cualquier parte de la aplicación.
+ * ErrorDisplay
+ * Muestra un mensaje de error flotante.
+ *
+ * Props:
+ * - message: string (mensaje a mostrar, si no se usa el del store)
+ * - type: 'error' | 'warning' | 'info' | 'success' (color del fondo)
+ * - position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' (posición)
+ * - onClose: función para cerrar el error (por defecto usa clearError del store)
+ * - open: boolean (si se fuerza a mostrar)
+ * - className: string (clase CSS extra)
+ * - style: object (estilos extra)
  */
-export default function ErrorDisplay() {
-  const { hasError, errorMessage, clearError } = useAppError();
-  
-  if (!hasError) return null;
-  
+const ErrorDisplay = ({
+  message,
+  type = 'error',
+  position = 'bottom-right',
+  onClose,
+  open,
+  className = '',
+  style = {}
+}) => {
+  const store = useAppError();
+  const hasError = typeof open === 'boolean' ? open : store.hasError;
+  const errorMessage = message || store.errorMessage;
+  const handleClose = onClose || store.clearError;
+
+  if (!hasError || !errorMessage) return null;
+
+  const bgColors = {
+    error: '#f44336',
+    warning: '#ff9800',
+    info: '#2196f3',
+    success: '#4caf50'
+  };
+  const positions = {
+    'top-left': { top: 20, left: 20, right: 'auto', bottom: 'auto' },
+    'top-right': { top: 20, right: 20, left: 'auto', bottom: 'auto' },
+    'bottom-left': { bottom: 20, left: 20, right: 'auto', top: 'auto' },
+    'bottom-right': { bottom: 20, right: 20, left: 'auto', top: 'auto' }
+  };
+
   return (
-    <div 
+    <div
+      className={className}
       style={{
         position: 'fixed',
-        bottom: '20px',
-        right: '20px',
-        backgroundColor: '#f44336',
+        backgroundColor: bgColors[type] || bgColors.error,
         color: 'white',
         padding: '12px 20px',
         borderRadius: '4px',
@@ -28,12 +59,15 @@ export default function ErrorDisplay() {
         alignItems: 'center',
         justifyContent: 'space-between',
         maxWidth: '90%',
-        width: '400px'
+        width: '400px',
+        fontSize: '1rem',
+        ...positions[position],
+        ...style
       }}
     >
       <span>{errorMessage}</span>
       <button
-        onClick={clearError}
+        onClick={handleClose}
         style={{
           background: 'none',
           border: 'none',
@@ -42,9 +76,22 @@ export default function ErrorDisplay() {
           cursor: 'pointer',
           marginLeft: '10px'
         }}
+        aria-label="Cerrar error"
       >
         &times;
       </button>
     </div>
   );
-}
+};
+
+ErrorDisplay.propTypes = {
+  message: PropTypes.string,
+  type: PropTypes.oneOf(['error', 'warning', 'info', 'success']),
+  position: PropTypes.oneOf(['top-left', 'top-right', 'bottom-left', 'bottom-right']),
+  onClose: PropTypes.func,
+  open: PropTypes.bool,
+  className: PropTypes.string,
+  style: PropTypes.object
+};
+
+export default ErrorDisplay;

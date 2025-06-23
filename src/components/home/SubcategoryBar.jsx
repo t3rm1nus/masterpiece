@@ -1,6 +1,31 @@
 import React from 'react';
 import UiButton from '../ui/UiButton';
 
+/**
+ * SubcategoryBar: Barra de selección de subcategorías.
+ * Permite customizar estilos, callbacks y visibilidad de elementos.
+ *
+ * Props:
+ * - selectedCategory: string (categoría activa)
+ * - categorySubcategories: array (subcategorías de la categoría)
+ * - activeSubcategory: string (subcategoría activa)
+ * - setActiveSubcategory: function (callback al seleccionar subcategoría)
+ * - allData: object (datos completos para subcats dinámicos)
+ * - t: object (traducciones)
+ * - lang: string (idioma actual)
+ *
+ * Ejemplo de uso:
+ * <SubcategoryBar
+ *   selectedCategory="movies"
+ *   categorySubcategories={[{ sub: 'Acción', order: 1 }]}
+ *   activeSubcategory="Acción"
+ *   setActiveSubcategory={sub => {}}
+ *   allData={{}}
+ *   t={{}}
+ *   lang="es"
+ * />
+ */
+
 const SubcategoryBar = ({ selectedCategory, categorySubcategories, activeSubcategory, setActiveSubcategory, allData, t, lang }) => {
   if (!selectedCategory) return null;
   if (selectedCategory !== 'documentales') {

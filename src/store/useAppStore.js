@@ -35,7 +35,17 @@ const useAppStore = create(
       baseRecommendationCardClasses: 'recommendation-card transition-all duration-300 hover:shadow-lg cursor-pointer border border-gray-200 rounded-lg overflow-hidden',
 
       // --- Funciones UI/Compatibilidad ---
-      setViewport: (isMobile) => set({ isMobile }),
+      setViewport: (width) => {
+        // width puede ser un número (px) o booleano (legacy)
+        if (typeof width === 'number') {
+          set({
+            isMobile: width < 900,
+            isTablet: width >= 900 && width < 1200,
+          });
+        } else {
+          set({ isMobile: !!width });
+        }
+      },
       setSearchTerm: (term) => set({ searchTerm: term }),
       setSearchActive: (active) => set({ isSearchActive: active }),
       clearSearch: () => set({ searchTerm: '', isSearchActive: false }),

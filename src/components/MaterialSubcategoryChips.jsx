@@ -9,13 +9,48 @@ import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppTheme } from '../store/useAppStore';
 import { getCategoryColor } from '../utils/categoryUtils';
 
+/**
+ * MaterialSubcategoryChips
+ * Chips de subcategoría altamente parametrizables para navegación y filtrado.
+ *
+ * Props avanzados:
+ * - subcategories: array de objetos { sub, label } (subcategorías a mostrar)
+ * - activeSubcategory: string (subcategoría seleccionada)
+ * - onSubcategoryClick: función (callback al seleccionar subcategoría)
+ * - categoryColor: string (color principal de la categoría, default: '#0078d4')
+ * - selectedCategory: string (categoría activa, para traducción y color)
+ * - renderChip: función opcional para custom render de cada chip `(subcat, selected, idx) => ReactNode`
+ * - sx: estilos adicionales para el contenedor
+ * - chipSx: estilos adicionales para cada chip
+ * - visible: boolean (si se muestra el componente, default: true)
+ * - showIcons: boolean (mostrar iconos si existen)
+ * - ...props: cualquier otro prop para el contenedor
+ *
+ * Ejemplo de uso:
+ * <MaterialSubcategoryChips
+ *   subcategories={[{ sub: 'comedia', label: 'Comedia' }]}
+ *   activeSubcategory="comedia"
+ *   onSubcategoryClick={sub => setActiveSubcategory(sub)}
+ *   categoryColor="#e91e63"
+ *   selectedCategory="movies"
+ *   sx={{ background: '#fafafa' }}
+ * />
+ */
+
 const MaterialSubcategoryChips = ({ 
   subcategories, 
   activeSubcategory, 
   onSubcategoryClick,
   categoryColor = '#0078d4',
-  selectedCategory
-}) => {  const { getSubcategoryTranslation } = useLanguage();
+  selectedCategory,
+  renderChip,
+  sx,
+  chipSx,
+  visible = true,
+  showIcons = false,
+  ...props
+}) => {  
+  const { getSubcategoryTranslation } = useLanguage();
   const { 
     isSpanishCinemaActive, 
     isMasterpieceActive, 
@@ -25,6 +60,12 @@ const MaterialSubcategoryChips = ({
   const { lang } = useLanguage();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+
+  // No renderizar si la prop visible es false
+  if (!visible) {
+    return null;
+  }
+
   // Solo renderizar en móviles
   if (!isMobile) {
     return null;
@@ -50,34 +91,46 @@ const MaterialSubcategoryChips = ({
             gap: '8px',
             justifyContent: 'center',
             padding: '8px 16px',
-            marginBottom: '8px'
+            marginBottom: '8px',
+            ...sx
           }}
+          {...props}
         >
-          {subcategories.map(({ sub, label }) => (
-            <Chip
-              key={sub}
-              label={label || getSubcategoryTranslation(sub, selectedCategory)}
-              onClick={onSubcategoryClick ? () => onSubcategoryClick(sub) : undefined}
-              variant={activeSubcategory === sub ? 'filled' : 'outlined'}
-              sx={{
-                backgroundColor: activeSubcategory === sub ? categoryColorFinal : 'transparent',
-                borderColor: categoryColorFinal,
-                color: activeSubcategory === sub ? 'white' : categoryColorFinal,
-                fontWeight: activeSubcategory === sub ? 'bold' : 'normal',
-                fontSize: '0.8rem',
-                transition: 'all 0.2s ease',
-                cursor: 'pointer',
-                '&:hover': {
-                  backgroundColor: activeSubcategory === sub ? categoryColorFinal : `${categoryColorFinal}20`,
-                  transform: 'scale(1.05)',
-                  boxShadow: theme.shadows[2]
-                },
-                '&:active': {
-                  transform: 'scale(0.98)'
-                }
-              }}
-            />
-          ))}
+          {subcategories.map(({ sub, label }, idx) => {
+            const isActive = activeSubcategory === sub;
+            const chipColor = isActive ? categoryColorFinal : 'transparent';
+            const chipTextColor = isActive ? 'white' : categoryColorFinal;
+            const chipBorderColor = categoryColorFinal;
+
+            return renderChip ? (
+              renderChip({ sub, label, isActive, idx })
+            ) : (
+              <Chip
+                key={sub}
+                label={label || getSubcategoryTranslation(sub, selectedCategory)}
+                onClick={onSubcategoryClick ? () => onSubcategoryClick(sub) : undefined}
+                variant={isActive ? 'filled' : 'outlined'}
+                sx={{
+                  backgroundColor: chipColor,
+                  borderColor: chipBorderColor,
+                  color: chipTextColor,
+                  fontWeight: isActive ? 'bold' : 'normal',
+                  fontSize: '0.8rem',
+                  transition: 'all 0.2s ease',
+                  cursor: 'pointer',
+                  '&:hover': {
+                    backgroundColor: isActive ? chipBorderColor : `${chipBorderColor}20`,
+                    transform: 'scale(1.05)',
+                    boxShadow: theme.shadows[2]
+                  },
+                  '&:active': {
+                    transform: 'scale(0.98)'
+                  },
+                  ...chipSx
+                }}
+              />
+            );
+          })}
         </Box>
       )}
       

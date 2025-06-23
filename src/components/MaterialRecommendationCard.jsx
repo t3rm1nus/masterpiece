@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import {
-  Card as MuiCard,
   CardContent,
   CardMedia,
   Typography,
@@ -24,7 +24,28 @@ import { useLanguage } from '../LanguageContext';
 import { useAppView } from '../store/useAppStore';
 import UiCard from './ui/UiCard';
 
-const MaterialRecommendationCard = ({ recommendation }) => {
+/**
+ * MaterialRecommendationCard
+ * Card visual para mostrar una recomendación.
+ *
+ * Props:
+ * - recommendation: objeto de recomendación (requerido)
+ * - onClick: función al hacer click (por defecto navega al detalle)
+ * - showCategory: boolean (muestra el chip de categoría)
+ * - showSubcategory: boolean (muestra el chip de subcategoría)
+ * - sx: estilos extra para la card
+ * - className: clase CSS extra
+ * - actions: nodo React para acciones extra (abajo)
+ */
+const MaterialRecommendationCard = memo(({
+  recommendation,
+  onClick,
+  showCategory = true,
+  showSubcategory = true,
+  sx = {},
+  className = '',
+  actions
+}) => {
   const { lang, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
   const { goToDetail, processTitle, processDescription } = useAppView();
   const theme = useTheme();
@@ -125,14 +146,14 @@ const MaterialRecommendationCard = ({ recommendation }) => {
         return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
     }
   };
-  const handleClick = () => {
-    goToDetail(recommendation);
+  const handleCardClick = () => {
+    if (onClick) onClick(recommendation);
+    else goToDetail(recommendation);
   };
 
-  // Unificación: Usa UiCard como base visual, pero mantiene la lógica y estilos de MUI
   return (
     <UiCard
-      className="mp-card mp-card--material"
+      className={`mp-card mp-card--material ${className}`}
       style={{
         maxWidth: 300,
         margin: '0 auto',
@@ -146,8 +167,9 @@ const MaterialRecommendationCard = ({ recommendation }) => {
             ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
             : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
           : getCategoryGradient(recommendation.category),
+        ...sx
       }}
-      onClick={handleClick}
+      onClick={handleCardClick}
     >
       <Box sx={{ position: 'relative' }}>
         <CardMedia
@@ -194,24 +216,26 @@ const MaterialRecommendationCard = ({ recommendation }) => {
           {title}
         </Typography>
         <Box sx={{ display: 'flex', gap: '4px', marginBottom: '8px', flexWrap: 'wrap', flexDirection: recommendation.category === 'boardgames' ? 'column' : 'row', alignItems: recommendation.category === 'boardgames' ? 'flex-start' : 'center' }}>
-          <Chip
-            icon={getCategoryIcon(recommendation.category)}
-            label={getCategoryTranslation(recommendation.category)}
-            size="small"
-            sx={{
-              backgroundColor: recommendation.category === 'boardgames' ? 'transparent' : getCategoryColor(recommendation.category),
-              color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'white',
-              borderColor: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'transparent',
-              border: recommendation.category === 'boardgames' ? '1px solid' : 'none',
-              fontSize: '0.7rem',
-              alignSelf: recommendation.category === 'boardgames' ? 'flex-start' : 'auto',
-              '& .MuiChip-icon': {
-                color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'white'
-              }
-            }}
-          />
+          {showCategory && (
+            <Chip
+              icon={getCategoryIcon(recommendation.category)}
+              label={getCategoryTranslation(recommendation.category)}
+              size="small"
+              sx={{
+                backgroundColor: recommendation.category === 'boardgames' ? 'transparent' : getCategoryColor(recommendation.category),
+                color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'white',
+                borderColor: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'transparent',
+                border: recommendation.category === 'boardgames' ? '1px solid' : 'none',
+                fontSize: '0.7rem',
+                alignSelf: recommendation.category === 'boardgames' ? 'flex-start' : 'auto',
+                '& .MuiChip-icon': {
+                  color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'white'
+                }
+              }}
+            />
+          )}
           {/* Mostrar subcategoría solo si no es documental */}
-          {recommendation.subcategory && recommendation.category !== 'documentales' && recommendation.category !== 'documentaries' && (
+          {showSubcategory && recommendation.subcategory && recommendation.category !== 'documentales' && recommendation.category !== 'documentaries' && (
             <Chip
               label={getSubcategoryTranslation(recommendation.subcategory, recommendation.category)}
               size="small"
@@ -238,9 +262,20 @@ const MaterialRecommendationCard = ({ recommendation }) => {
         >
           {truncateDescription(description, recommendation.category)}
         </Typography>
+        {actions && <Box mt={1}>{actions}</Box>}
       </CardContent>
     </UiCard>
   );
+});
+
+MaterialRecommendationCard.propTypes = {
+  recommendation: PropTypes.object.isRequired,
+  onClick: PropTypes.func,
+  showCategory: PropTypes.bool,
+  showSubcategory: PropTypes.bool,
+  sx: PropTypes.object,
+  className: PropTypes.string,
+  actions: PropTypes.node
 };
 
-export default memo(MaterialRecommendationCard);
+export default MaterialRecommendationCard;

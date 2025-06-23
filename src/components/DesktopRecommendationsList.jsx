@@ -76,19 +76,54 @@ const NoResults = ({ t, randomNotFoundImage }) => {
   );
 };
 
-const DesktopRecommendationsList = ({ 
-  recommendations, 
-  isHome, 
-  onItemClick, 
-  categories, 
-  selectedCategory, 
-  onCategoryClick 
+/**
+ * DesktopRecommendationsList
+ * Lista de recomendaciones para desktop, altamente parametrizable.
+ *
+ * Props avanzados:
+ * - items: array de recomendaciones a mostrar (alias de recommendations)
+ * - renderItem: función para custom render de cada ítem `(item, idx) => ReactNode`
+ * - onItemClick: callback al hacer click en un ítem
+ * - loading: boolean (estado de carga)
+ * - emptyComponent: ReactNode o función para custom empty state
+ * - pagination: objeto de paginación `{ page, pageSize, onPageChange }`
+ * - sx, className, style: estilos avanzados
+ * - ...props legacy (recommendations, etc.)
+ *
+ * Ejemplo de uso:
+ * <DesktopRecommendationsList
+ *   items={recs}
+ *   renderItem={(item, idx) => <MyCard item={item} key={item.id} />}
+ *   onItemClick={item => setSelected(item)}
+ *   loading={isLoading}
+ *   emptyComponent={<div>No hay recomendaciones</div>}
+ *   pagination={{ page, pageSize, onPageChange }}
+ *   sx={{ background: '#fafafa' }}
+ * />
+ */
+const DesktopRecommendationsList = ({
+  items,
+  renderItem,
+  onItemClick,
+  loading,
+  emptyComponent,
+  pagination,
+  sx = {},
+  className = '',
+  style = {},
+  // legacy/compatibilidad
+  recommendations,
+  isHome,
+  categories,
+  selectedCategory,
+  onCategoryClick,
+  ...rest
 }) => {
+  const data = items || recommendations;
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
   const { goToDetail } = useAppView();
   const { randomNotFoundImage } = useAppData();
   const { getMasterpieceBadgeConfig } = useAppTheme();
-  
   const badgeConfig = getMasterpieceBadgeConfig();
 
   // Funciones utilitarias
@@ -183,23 +218,33 @@ const DesktopRecommendationsList = ({
     </>
   ), [getCategoryTranslation, getSubcategoryTranslation, truncateDescription]);
 
+  // Render de cada ítem (custom o default)
   const renderRecommendationCard = useCallback((rec, index) => {
+    if (renderItem) return renderItem(rec, index);
     try {
       const normalizedRec = normalizeRecommendation(rec);
       const title = processMultiLanguageField(normalizedRec.title || normalizedRec.name);
       const description = processMultiLanguageField(normalizedRec.description);
       const cardClasses = getCardClasses(normalizedRec);
-
-      // Elegir el renderizador según si es home o no
       const cardContent = isHome 
         ? renderDesktopHomeCard(normalizedRec, title, description)
         : renderDesktopListCard(normalizedRec, title, description);
-
       return (
         <div
           key={generateRecommendationKey(normalizedRec, index)}
           className={cardClasses}
           onClick={() => handleItemClick(normalizedRec)}
+          style={{
+            maxWidth: 260,
+            minWidth: 200,
+            flex: '1 1 220px',
+            boxSizing: 'border-box',
+            margin: 0,
+            cursor: 'pointer',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
         >
           {normalizedRec.masterpiece && <MasterpieceBadge config={badgeConfig} />}
           {cardContent}
@@ -214,6 +259,7 @@ const DesktopRecommendationsList = ({
       );
     }
   }, [
+    renderItem,
     normalizeRecommendation, 
     processMultiLanguageField, 
     getCardClasses, 
@@ -226,16 +272,19 @@ const DesktopRecommendationsList = ({
 
   // Memoización del contenido principal
   const memoizedRecommendations = useMemo(() => {
-    if (!recommendations?.length) {
+    if (loading) return <div className="recommendations-loading">Cargando...</div>;
+    if (!data?.length) {
+      if (emptyComponent) {
+        return typeof emptyComponent === 'function' ? emptyComponent() : emptyComponent;
+      }
       return <NoResults t={t} randomNotFoundImage={randomNotFoundImage} />;
     }
-    
-    return recommendations.map(renderRecommendationCard);
-  }, [recommendations, t, randomNotFoundImage, renderRecommendationCard]);
+    return data.map(renderRecommendationCard);
+  }, [data, t, randomNotFoundImage, renderRecommendationCard, loading, emptyComponent]);
 
   // Estilos del contenedor desktop
   const getWrapperStyles = () => ({
-    width: '96vw',
+    width: '100%',
     maxWidth: '1800px',
     margin: '0 auto',
     padding: '0 2vw',
@@ -244,7 +293,7 @@ const DesktopRecommendationsList = ({
   const getListStyles = () => ({
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'flex-start',
     gap: '32px 24px',
     width: '100%',
@@ -253,19 +302,32 @@ const DesktopRecommendationsList = ({
   });
 
   return (
-    <MaterialContentWrapper
-      categories={categories}
-      selectedCategory={selectedCategory}
-      onCategoryClick={onCategoryClick}
-      recommendations={recommendations}
-      isHome={isHome}
-    >
-      <div className="recommendations-wrapper desktop-wrapper" style={getWrapperStyles()}>
-        <div className="recommendations-list desktop-list" style={getListStyles()}>
-          {memoizedRecommendations}
-        </div>
+    <div className={`desktop-recommendations-list ${className}`} style={{ ...getWrapperStyles(), ...sx, ...style }} {...rest}>
+      <div className="recommendations-list desktop-list" style={getListStyles()}>
+        {memoizedRecommendations}
       </div>
-    </MaterialContentWrapper>
+      {pagination && (
+        <div className="pagination-container">
+          <button 
+            className="pagination-button" 
+            onClick={() => pagination.onPageChange(pagination.page - 1)}
+            disabled={pagination.page <= 1}
+          >
+            Anterior
+          </button>
+          <span className="pagination-info">
+            Página {pagination.page} de {Math.ceil((data?.length || 0) / (pagination.pageSize || 1))}
+          </span>
+          <button 
+            className="pagination-button" 
+            onClick={() => pagination.onPageChange(pagination.page + 1)}
+            disabled={pagination.page >= Math.ceil((data?.length || 0) / (pagination.pageSize || 1))}
+          >
+            Siguiente
+          </button>
+        </div>
+      )}
+    </div>
   );
 };
 

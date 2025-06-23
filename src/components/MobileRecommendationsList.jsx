@@ -61,19 +61,54 @@ const NoResults = ({ t, randomNotFoundImage }) => {
   );
 };
 
-const MobileRecommendationsList = ({ 
-  recommendations, 
-  isHome, 
-  onItemClick, 
-  categories, 
-  selectedCategory, 
-  onCategoryClick 
+/**
+ * MobileRecommendationsList
+ * Lista de recomendaciones para móvil, altamente parametrizable.
+ *
+ * Props avanzados:
+ * - items: array de recomendaciones a mostrar (alias de recommendations)
+ * - renderItem: función para custom render de cada ítem `(item, idx) => ReactNode`
+ * - onItemClick: callback al hacer click en un ítem
+ * - loading: boolean (estado de carga)
+ * - emptyComponent: ReactNode o función para custom empty state
+ * - pagination: objeto de paginación `{ page, pageSize, onPageChange }`
+ * - sx, className, style: estilos avanzados
+ * - ...props legacy (recommendations, etc.)
+ *
+ * Ejemplo de uso:
+ * <MobileRecommendationsList
+ *   items={recs}
+ *   renderItem={(item, idx) => <MyCard item={item} key={item.id} />}
+ *   onItemClick={item => setSelected(item)}
+ *   loading={isLoading}
+ *   emptyComponent={<div>No hay recomendaciones</div>}
+ *   pagination={{ page, pageSize, onPageChange }}
+ *   sx={{ background: '#fafafa' }}
+ * />
+ */
+const MobileRecommendationsList = ({
+  items,
+  renderItem,
+  onItemClick,
+  loading,
+  emptyComponent,
+  pagination,
+  sx = {},
+  className = '',
+  style = {},
+  // legacy/compatibilidad
+  recommendations,
+  isHome,
+  categories,
+  selectedCategory,
+  onCategoryClick,
+  ...rest
 }) => {
+  const data = items || recommendations;
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
   const { goToDetail } = useAppView();
   const { randomNotFoundImage } = useAppData();
   const { getMasterpieceBadgeConfig } = useAppTheme();
-  
   const badgeConfig = getMasterpieceBadgeConfig();
 
   // Funciones utilitarias
@@ -143,7 +178,9 @@ const MobileRecommendationsList = ({
     </div>
   ), [getCategoryTranslation, getSubcategoryTranslation, truncateDescription]);
 
+  // Render de cada ítem (custom o default)
   const renderRecommendationCard = useCallback((rec, index) => {
+    if (renderItem) return renderItem(rec, index);
     try {
       const normalizedRec = normalizeRecommendation(rec);
       const title = processMultiLanguageField(normalizedRec.title || normalizedRec.name);
@@ -169,6 +206,7 @@ const MobileRecommendationsList = ({
       );
     }
   }, [
+    renderItem,
     normalizeRecommendation, 
     processMultiLanguageField, 
     getCardClasses, 
@@ -179,34 +217,41 @@ const MobileRecommendationsList = ({
 
   // Memoización del contenido principal
   const memoizedRecommendations = useMemo(() => {
-    if (!recommendations?.length) {
+    if (loading) return <div className="recommendations-loading">Cargando...</div>;
+    if (!data?.length) {
+      if (emptyComponent) {
+        return typeof emptyComponent === 'function' ? emptyComponent() : emptyComponent;
+      }
       return <NoResults t={t} randomNotFoundImage={randomNotFoundImage} />;
     }
-    
-    return recommendations.map(renderRecommendationCard);
-  }, [recommendations, t, randomNotFoundImage, renderRecommendationCard]);
-
-  // Estilos del contenedor móvil
-  const getWrapperStyles = () => {
-    return (!selectedCategory || selectedCategory === 'all')
-      ? { paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0 }
-      : undefined;
-  };
+    return data.map(renderRecommendationCard);
+  }, [data, t, randomNotFoundImage, renderRecommendationCard, loading, emptyComponent]);
 
   return (
-    <MaterialContentWrapper
-      categories={categories}
-      selectedCategory={selectedCategory}
-      onCategoryClick={onCategoryClick}
-      recommendations={recommendations}
-      isHome={isHome}
-    >
-      <div className="recommendations-wrapper mobile-wrapper" style={getWrapperStyles()}>
-        <div className="recommendations-list mobile-list">
-          {memoizedRecommendations}
+    <div className={`mobile-recommendations-list ${className}`} style={style} {...rest}>
+      {memoizedRecommendations}
+      {pagination && (
+        <div className="pagination-container">
+          <button 
+            className="pagination-button" 
+            onClick={() => pagination.onPageChange(pagination.page - 1)}
+            disabled={pagination.page <= 1}
+          >
+            Anterior
+          </button>
+          <span className="pagination-info">
+            Página {pagination.page} de {Math.ceil((data?.length || 0) / (pagination.pageSize || 1))}
+          </span>
+          <button 
+            className="pagination-button" 
+            onClick={() => pagination.onPageChange(pagination.page + 1)}
+            disabled={pagination.page >= Math.ceil((data?.length || 0) / (pagination.pageSize || 1))}
+          >
+            Siguiente
+          </button>
         </div>
-      </div>
-    </MaterialContentWrapper>
+      )}
+    </div>
   );
 };
 

@@ -32,6 +32,29 @@ import {
   PlaylistPlay as PlaylistPlayIcon
 } from '@mui/icons-material';
 
+/**
+ * UnifiedItemDetail: Detalle unificado de ítem para todas las categorías.
+ * Permite pasar acciones extra, customizar layout y mostrar/ocultar secciones.
+ *
+ * Props:
+ * - item: objeto de datos del ítem a mostrar
+ * - onClose: función para cerrar el detalle
+ * - selectedCategory: string (categoría activa)
+ * - renderMobileActionButtons: función opcional para renderizar acciones extra en mobile
+ * - renderDesktopActionButtons: función opcional para renderizar acciones extra en desktop
+ * - renderMobileSpecificContent: función opcional para renderizar contenido extra en mobile
+ * - renderDesktopSpecificContent: función opcional para renderizar contenido extra en desktop
+ * - showSections: objeto opcional para mostrar/ocultar secciones (por ejemplo: { trailer: true, description: false })
+ *
+ * Ejemplo de uso:
+ * <UnifiedItemDetail
+ *   item={item}
+ *   onClose={() => setOpen(false)}
+ *   selectedCategory="movies"
+ *   renderMobileActionButtons={() => <CustomActions />}
+ *   showSections={{ trailer: true, description: false }}
+ * />
+ */
 const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
   const { processTitle, processDescription, goBackFromDetail, goToHowToDownload } = useAppView();
