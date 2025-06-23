@@ -55,7 +55,7 @@ const HomePage = () => {
   const { 
     recommendations,
     selectedCategory, 
-    setSelectedCategory,
+    setCategory,
     activeSubcategory,
     setActiveSubcategory,
     getSubcategoriesForCategory,
@@ -243,7 +243,7 @@ const HomePage = () => {
     activeDocumentaryLanguages,
     updateFilteredItems
   ]);  const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
+    setCategory(category);
     setActiveSubcategory(null);
     setActiveLanguage('all');
   };// Manejar toggle de cine español
@@ -391,10 +391,10 @@ const HomePage = () => {
                   selectedCategory={selectedCategory}
                   onCategoryChange={(cat, subcat) => {
                     if (subcat) {
-                      setSelectedCategory(cat);
+                      setCategory(cat);
                       setActiveSubcategory(subcat);
                     } else {
-                      setSelectedCategory(cat);
+                      setCategory(cat);
                       setActiveSubcategory(null);
                     }
                   }}

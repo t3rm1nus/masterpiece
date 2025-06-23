@@ -369,7 +369,6 @@ export const useAppData = () => {
   const getCategories = useAppStore(state => state.getCategories);
   const getSubcategoriesForCategory = useAppStore(state => state.getSubcategoriesForCategory);
   const setCategory = useAppStore(state => state.setCategory);
-  const setSelectedCategory = useAppStore(state => state.setCategory);
   const setSubcategory = useAppStore(state => state.setSubcategory);
   const resetToHome = useAppStore(state => state.resetToHome);
   const resetAllFilters = useAppStore(state => state.resetAllFilters);
@@ -398,7 +397,7 @@ export const useAppData = () => {
   return {
     recommendations, categories, filteredItems, selectedCategory, selectedSubcategory,
     title, isDataInitialized, initializeData, getRecommendations, getCategories,
-    getSubcategoriesForCategory, setCategory, setSelectedCategory, setSubcategory, resetToHome, resetAllFilters,
+    getSubcategoriesForCategory, setCategory, setSubcategory, resetToHome, resetAllFilters,
     generateNewRecommendations, initializeFilteredItems,
     updateFilteredItems, setTitle, updateTitleForLanguage, randomNotFoundImage,
     // Estados adicionales

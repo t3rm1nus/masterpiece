@@ -1,7 +1,7 @@
 // Handlers and helpers for HomePage
 
-export const handleCategoryClick = (setSelectedCategory, setActiveSubcategory, setActiveLanguage) => category => {
-  setSelectedCategory(category);
+export const handleCategoryClick = (setCategory, setActiveSubcategory, setActiveLanguage) => category => {
+  setCategory(category);
   setActiveSubcategory(null);
   setActiveLanguage('all');
 };

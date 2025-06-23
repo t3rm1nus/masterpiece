@@ -348,7 +348,23 @@ const useAppStore = create((set, get) => ({
       fill: "#FFA500"
     }
   }),
-  getTranslation: (key) => key,
+  // Traducción centralizada: usa getTranslation del contexto de idioma
+  getTranslation: (key, fallback) => {
+    const translations = get().translations;
+    const language = get().language;
+    // Permite acceder a claves anidadas tipo 'ui.navigation.home'
+    if (!translations || !language) return fallback || key;
+    const keys = key.split('.');
+    let value = translations[language];
+    for (const k of keys) {
+      if (value && typeof value === 'object' && k in value) {
+        value = value[k];
+      } else {
+        return fallback || key;
+      }
+    }
+    return value || fallback || key;
+  },
 }));
 
 // ✅ HOOKS PARA ACCEDER AL STORE
@@ -366,28 +382,27 @@ export const useAppView = () => {
   const setViewport = useAppStore(state => state.setViewport);
   const processTitle = useAppStore(state => state.processTitle);
   const processDescription = useAppStore(state => state.processDescription);
-  
-  // Estilos para compatibilidad
   const mobileHomeStyles = useAppStore(state => state.mobileHomeStyles);
   const desktopStyles = useAppStore(state => state.desktopStyles);
   const baseRecommendationCardClasses = useAppStore(state => state.baseRecommendationCardClasses);
   const isTablet = useAppStore(state => state.isTablet);
-  
+
   // Funciones adicionales para compatibilidad
   const goBackFromDetail = () => {
     useAppStore.getState().setView('home');
     useAppStore.getState().setSelectedItem(null);
   };
-  
+
   const goBackFromCoffee = () => {
     useAppStore.getState().setView('home');
   };
-  
+
+  // Limpieza: eliminados wrappers de retrocompatibilidad innecesarios
   return {
     currentView, selectedItem, isMobile, setView, setSelectedItem,
     goToDetail, goToHome, goHome, goToCoffee, goToHowToDownload, setViewport, processTitle, processDescription,
-    goBackFromDetail, goBackFromCoffee, mobileHomeStyles, desktopStyles, 
-    baseRecommendationCardClasses, isTablet
+    mobileHomeStyles, desktopStyles, baseRecommendationCardClasses, isTablet,
+    goBackFromDetail, goBackFromCoffee
   };
 };
 
@@ -399,24 +414,22 @@ export const useAppData = () => {
   const selectedSubcategory = useAppStore(state => state.selectedSubcategory);
   const title = useAppStore(state => state.title);
   const isDataInitialized = useAppStore(state => state.isDataInitialized);
-  const initializeData = useAppStore(state => state.initializeData);
   const updateWithRealData = useAppStore(state => state.updateWithRealData);
   const getRecommendations = useAppStore(state => state.getRecommendations);
   const getCategories = useAppStore(state => state.getCategories);
   const getSubcategoriesForCategory = useAppStore(state => state.getSubcategoriesForCategory);
   const setCategory = useAppStore(state => state.setCategory);
-  const setSelectedCategory = useAppStore(state => state.setCategory);
   const setSubcategory = useAppStore(state => state.setSubcategory);
   const resetToHome = useAppStore(state => state.resetToHome);
   const resetAllFilters = useAppStore(state => state.resetAllFilters);
   const generateNewRecommendations = useAppStore(state => state.generateNewRecommendations);
   const initializeFilteredItems = useAppStore(state => state.initializeFilteredItems);
-  const updateFilteredItems = useAppStore(state => state.updateFilteredItems);  const setTitle = useAppStore(state => state.setTitle);
+  const updateFilteredItems = useAppStore(state => state.updateFilteredItems);
+  const setTitle = useAppStore(state => state.setTitle);
   const updateTitleForLanguage = useAppStore(state => state.updateTitleForLanguage);
   const getDefaultTitle = useAppStore(state => state.getDefaultTitle);
   const randomNotFoundImage = useAppStore(state => state.randomNotFoundImage);
-  
-  // Estados adicionales para compatibilidad
+  // Estados adicionales para compatibilidad (solo los centralizados)
   const activeSubcategory = useAppStore(state => state.activeSubcategory);
   const setActiveSubcategory = useAppStore(state => state.setActiveSubcategory);
   const isSpanishCinemaActive = useAppStore(state => state.isSpanishCinemaActive);
@@ -430,13 +443,12 @@ export const useAppData = () => {
   const activeLanguage = useAppStore(state => state.activeLanguage);
   const setActiveLanguage = useAppStore(state => state.setActiveLanguage);
   const allData = useAppStore(state => state.allData);
-  
+
   return {
     recommendations, categories, filteredItems, selectedCategory, selectedSubcategory,
-    title, isDataInitialized, initializeData, updateWithRealData, getRecommendations, getCategories,
-    getSubcategoriesForCategory, setCategory, setSelectedCategory, setSubcategory, resetToHome, resetAllFilters,
-    generateNewRecommendations, initializeFilteredItems,
-    updateFilteredItems, setTitle, updateTitleForLanguage, getDefaultTitle, randomNotFoundImage,
+    title, isDataInitialized, updateWithRealData, getRecommendations, getCategories,
+    getSubcategoriesForCategory, setCategory, setSubcategory, resetToHome, resetAllFilters,
+    generateNewRecommendations, initializeFilteredItems, updateFilteredItems, setTitle, updateTitleForLanguage, getDefaultTitle, randomNotFoundImage,
     // Estados adicionales
     activeSubcategory, setActiveSubcategory, isSpanishCinemaActive, toggleSpanishCinema,
     isMasterpieceActive, toggleMasterpiece, activePodcastLanguages, togglePodcastLanguage,
@@ -451,7 +463,6 @@ export const useAppTheme = () => {
   const toggleTheme = useAppStore(state => state.toggleTheme);
   const setTheme = useAppStore(state => state.setTheme);
   const getMasterpieceBadgeConfig = useAppStore(state => state.getMasterpieceBadgeConfig);
-  
   return { isDarkMode, theme, toggleTheme, setTheme, getMasterpieceBadgeConfig };
 };
 
@@ -461,7 +472,6 @@ export const useAppUI = () => {
   const setSearchTerm = useAppStore(state => state.setSearchTerm);
   const setSearchActive = useAppStore(state => state.setSearchActive);
   const clearSearch = useAppStore(state => state.clearSearch);
-  
   return { searchTerm, isSearchActive, setSearchTerm, setSearchActive, clearSearch };
 };
 
@@ -469,7 +479,6 @@ export const useAppError = () => {
   const error = useAppStore(state => state.error);
   const setError = useAppStore(state => state.setError);
   const clearError = useAppStore(state => state.clearError);
-  
   return { error, setError, clearError };
 };
 
@@ -480,7 +489,6 @@ export const useAppLanguage = () => {
   const setTranslations = useAppStore(state => state.setTranslations);
   const toggleLanguage = useAppStore(state => state.toggleLanguage);
   const getTranslation = useAppStore(state => state.getTranslation);
-  
   return { language, translations, setLanguage, setTranslations, toggleLanguage, getTranslation };
 };
 
