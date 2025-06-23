@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAppTheme } from '../../store/useAppStore';
 import { useLanguage } from '../../LanguageContext';
+import UiButton from './UiButton';
 
 /**
  * Componente para cambiar entre temas claro y oscuro
@@ -12,26 +13,36 @@ const ThemeToggle = ({ sx = {}, showLabel = false }) => {
   const { getTranslation } = useLanguage();
 
   return (
-    <button
+    <UiButton
       onClick={toggleTheme}
-      style={{
-        background: 'none',
-        border: '1px solid var(--border-color)',
+      variant="outlined"
+      color="secondary"
+      size="medium"
+      aria-label={theme === 'light' ? getTranslation('ui.dark_mode', 'Modo oscuro') : getTranslation('ui.light_mode', 'Modo claro')}
+      sx={{
+        background: '#fff', // Fondo blanco en desktop
+        border: '1px solid rgba(0,0,0,0.23)',
+        color: 'var(--mui-color-secondary, #6d4aff)',
         borderRadius: '4px',
-        padding: '0.5rem',
-        cursor: 'pointer',
+        padding: '6px 16px',
+        minWidth: 40,
+        minHeight: 36,
+        fontSize: '1rem',
+        fontWeight: 500,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: 'var(--text-color)',
-        backgroundColor: 'var(--card-background)',
+        gap: 1,
         margin: '0 0.5rem',
-        fontWeight: 'normal', // Siempre normal en móvil
-        fontSize: '1em',
-        gap: 8,
+        transition: 'background 0.2s, border-color 0.2s',
+        boxShadow: 'none',
+        cursor: 'pointer',
+        '&:hover': {
+          background: 'rgba(109,74,255,0.04)',
+          borderColor: 'rgba(109,74,255,0.5)',
+        },
         ...sx
       }}
-      aria-label={theme === 'light' ? getTranslation('ui.dark_mode', 'Modo oscuro') : getTranslation('ui.light_mode', 'Modo claro')}
     >
       {theme === 'light' ? (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +61,7 @@ const ThemeToggle = ({ sx = {}, showLabel = false }) => {
             : getTranslation('ui.light_mode', 'Modo claro')}
         </span>
       )}
-    </button>
+    </UiButton>
   );
 };
 

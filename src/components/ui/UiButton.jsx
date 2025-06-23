@@ -16,7 +16,7 @@ const UiButton = ({ children, variant = 'contained', color = 'primary', size = '
         textTransform: 'none',
         fontWeight: 600,
         boxShadow: 'none',
-        ...sx
+        ...sx // sx debe ir al final para sobrescribir cualquier valor por defecto
       }}
       {...props}
     >

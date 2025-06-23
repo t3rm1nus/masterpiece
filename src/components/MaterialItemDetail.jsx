@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import {
-  Card,
   CardContent,
   CardMedia,
   Typography,
@@ -12,6 +11,7 @@ import {
   Stack,
   Fab
 } from '@mui/material';
+import UiCard from './ui/UiCard';
 import {
   ArrowBack as ArrowBackIcon,
   PlayArrow as PlayArrowIcon,
@@ -102,6 +102,37 @@ const MaterialItemDetail = ({ item }) => {
     }
   };
 
+  // Gradiente de fondo igual que en los listados
+  const getCategoryGradient = (category) => {
+    switch (category) {
+      case 'movies':
+      case 'peliculas':
+        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
+      case 'videogames':
+      case 'videojuegos':
+        return 'linear-gradient(135deg, #f8f3fa 0%, #e1bee7 100%)';
+      case 'books':
+      case 'libros':
+        return 'linear-gradient(135deg, #f4faf4 0%, #c8e6c9 100%)';
+      case 'music':
+      case 'musica':
+        return 'linear-gradient(135deg, #f2fbfc 0%, #b2ebf2 100%)';
+      case 'podcast':
+      case 'podcasts':
+        return 'linear-gradient(135deg, #f7fbf2 0%, #dcedc8 100%)';
+      case 'boardgames':
+      case 'juegos de mesa':
+        return 'linear-gradient(135deg, #fdf4f8 0%, #f8bbd0 100%)';
+      case 'comics':
+        return 'linear-gradient(135deg, #fff8f0 0%, #ffe0b2 100%)';
+      case 'documentales':
+      case 'documentaries':
+        return 'linear-gradient(135deg, #fafafa 0%, #e0e0e0 100%)';
+      default:
+        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
+    }
+  };
+
   // Estado para saber si la imagen principal ha cargado
   const [imgLoaded, setImgLoaded] = React.useState(false);
 
@@ -125,7 +156,7 @@ const MaterialItemDetail = ({ item }) => {
   };
 
   return (
-    <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px' }}>
+    <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px' }} className="item-detail-mobile">
       {/* Botón de volver flotante */}
       <Fab
         color="primary"
@@ -145,7 +176,8 @@ const MaterialItemDetail = ({ item }) => {
         <ArrowBackIcon />
       </Fab>
       {/* Tarjeta principal */}
-      <Card
+      <UiCard
+        className={`item-detail-mobile-card recommendation-card ${item.category || 'movies'}`}
         sx={{
           maxWidth: 600,
           margin: '0 auto',
@@ -154,10 +186,8 @@ const MaterialItemDetail = ({ item }) => {
           overflow: 'hidden',
           boxShadow: theme.shadows[8],
           border: item.masterpiece ? '3px solid #ffd700' : 'none',
-          background: item.masterpiece 
-            ? 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)'
-            : theme.palette.background.paper
         }}
+        style={{ background: '#fff', backgroundImage: 'none' }}
       >
         {/* Imagen principal */}
         <Box sx={{ position: 'relative' }}>
@@ -345,7 +375,7 @@ const MaterialItemDetail = ({ item }) => {
             </Stack>
           </Stack>
         </CardContent>
-      </Card>
+      </UiCard>
     </Box>
   );
 };

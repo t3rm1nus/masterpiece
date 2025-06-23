@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Card,
   CardContent,
   Typography,
   Box,
@@ -14,6 +13,7 @@ import {
   useTheme,
   useMediaQuery
 } from '@mui/material';
+import UiCard from './ui/UiCard';
 import {
   Coffee as CoffeeIcon,
   Favorite as HeartIcon,
@@ -65,7 +65,7 @@ const MaterialCoffeePage = () => {  const { t } = useLanguage();
         zIndex: 1 // Asegurar que esté por debajo del menú
       }}
     >{/* Card principal con icono de café y color de fondo de café */}
-      <Card 
+      <UiCard 
         elevation={3}
         sx={{ 
           marginBottom: '16px',
@@ -140,8 +140,8 @@ const MaterialCoffeePage = () => {  const { t } = useLanguage();
             {t.coffee_description}
           </Typography>
         </CardContent>
-      </Card>      {/* Card con fondo blanco y borde gris */}
-      <Card 
+      </UiCard>      {/* Card con fondo blanco y borde gris */}
+      <UiCard 
         elevation={2}        sx={{ 
           marginBottom: '20px',
           backgroundColor: '#ffffff',
@@ -181,8 +181,8 @@ const MaterialCoffeePage = () => {  const { t } = useLanguage();
             ))}
           </List>
         </CardContent>
-      </Card>      {/* Card con borde verde y fondo verde suave */}
-      <Card 
+      </UiCard>      {/* Card con borde verde y fondo verde suave */}
+      <UiCard 
         elevation={3}        sx={{ 
           marginBottom: '20px',
           backgroundColor: '#e8f5e8',
@@ -281,8 +281,8 @@ const MaterialCoffeePage = () => {  const { t } = useLanguage();
             </form>
           </Paper>
         </CardContent>
-      </Card>      {/* Card blanca con borde gris - Footer */}
-      <Card 
+      </UiCard>      {/* Card blanca con borde gris - Footer */}
+      <UiCard 
         elevation={1}        sx={{
           backgroundColor: '#ffffff',
           border: '1px solid #d0d0d0',
@@ -301,7 +301,7 @@ const MaterialCoffeePage = () => {  const { t } = useLanguage();
             {t.coffee_footer}
           </Typography>
         </CardContent>
-      </Card>
+      </UiCard>
     </Container>
   );
 };

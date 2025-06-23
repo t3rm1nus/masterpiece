@@ -1,0 +1,70 @@
+/* ESTILOS MEJORADOS PARA DETALLE EN MÓVIL */
+@media (max-width: 900px) {
+  .mp-ui-card.item-detail-mobile-card {
+    border-radius: 16px !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10) !important;
+    border: none !important;
+    margin-top: 60px !important;
+    margin-bottom: 24px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #fff !important;
+    background-image: none !important;
+  }
+  .item-detail-mobile .MuiTypography-h4 {
+    font-size: 1.4rem !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    margin-bottom: 8px !important;
+    color: #222 !important;
+    background: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  .item-detail-mobile .MuiCardMedia-root {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    object-fit: cover !important;
+    height: 220px !important;
+    width: 100% !important;
+  }
+  .item-detail-mobile .masterpiece-detail-badge {
+    top: 40px !important;
+    right: 0 !important;
+    width: 48px !important;
+    height: 32px !important;
+    background: #fff !important;
+    border-radius: 16px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10) !important;
+    z-index: 10 !important;
+  }
+  .item-detail-mobile .MuiChip-root {
+    font-size: 0.9rem !important;
+    border-radius: 16px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+    margin: 0 4px 8px 0 !important;
+  }
+  .item-detail-mobile .MuiTypography-body1 {
+    font-size: 1rem !important;
+    color: #444 !important;
+    text-align: justify !important;
+    margin-bottom: 16px !important;
+  }
+  .item-detail-mobile .item-detail-action-btn {
+    min-width: 180px !important;
+    max-width: 320px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    border-radius: 8px !important;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.08) !important;
+  }
+}

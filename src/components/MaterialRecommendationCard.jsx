@@ -22,7 +22,7 @@ import {
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 import { useAppView } from '../store/useAppStore';
-import UiCard from './ui/Card';
+import UiCard from './ui/UiCard';
 
 const MaterialRecommendationCard = ({ recommendation }) => {
   const { lang, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
