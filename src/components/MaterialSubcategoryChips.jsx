@@ -7,7 +7,7 @@ import {
 } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppTheme } from '../store/useAppStore';
-import { getCategoryColor } from './HomePage';
+import { getCategoryColor } from '../utils/categoryUtils';
 
 const MaterialSubcategoryChips = ({ 
   subcategories, 

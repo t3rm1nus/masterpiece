@@ -312,7 +312,22 @@ const useAppStore = create((set, get) => ({
     const translations = get().translations;
     return translations?.[lang]?.ui?.titles?.home_title || 'Recomendaciones diarias';
   },
-  randomNotFoundImage: () => '/imagenes/notfound/not-found-1.jpg',
+  randomNotFoundImage: () => {
+    const images = [
+      'notfound.webp',
+      'notfound2.webp',
+      'notfound3.webp',
+      'notfound4.webp',
+      'notfound5.webp',
+      'notfound6.webp',
+      'notfound7.webp',
+      'notfound8.webp',
+      'notfound9.webp',
+      'notfound10.webp',
+    ];
+    const idx = Math.floor(Math.random() * images.length);
+    return `/imagenes/notfound/${images[idx]}`;
+  },
   processTitle: (title) => {
     if (typeof title === 'object' && title !== null) {
       const lang = get().language;

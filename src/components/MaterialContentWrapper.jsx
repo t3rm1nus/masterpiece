@@ -75,26 +75,27 @@ const MaterialContentWrapper = ({
           alignItems: 'center',
           gap: '1rem'
         }}>
-          {/* Imagen "not found" aleatoria */}          <Box
+          <Typography variant="h6" sx={{ margin: 0, padding: 0 }}>
+            {t.no_results || 'No se encontraron resultados'}
+          </Typography>
+          <Typography variant="body2" sx={{ margin: 0, padding: 0 }}>
+            {t.try_different_filters || 'Intenta cambiar los filtros seleccionados'}
+          </Typography>
+          {/* Imagen "not found" aleatoria */}
+          <Box
             component="img"
-            src={randomNotFoundImage}
+            src={randomNotFoundImage()}
             alt={t.no_results || 'No se encontraron resultados'}
             sx={{
-              maxWidth: '200px',
-              width: '100%',
+              maxWidth: '90vw',
+              width: '90%',
               height: 'auto',
               borderRadius: '12px',
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-              marginBottom: '1rem'
+              marginTop: '1rem',
+              marginBottom: 0
             }}
           />
-          
-          <Typography variant="h6" sx={{ marginBottom: '0.5rem' }}>
-            {t.no_results || 'No se encontraron resultados'}
-          </Typography>
-          <Typography variant="body2">
-            {t.try_different_filters || 'Intenta cambiar los filtros seleccionados'}
-          </Typography>
         </Box>
       )}
     </Box>

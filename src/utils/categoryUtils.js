@@ -67,7 +67,7 @@ export const getUniqueSubcategories = (items, lang) => {
 };
 
 // Helpers para categorías y colores
-
+// getCategoryColor centralizado aquí, eliminar duplicados en otros archivos
 export function getCategoryColor(category, theme) {
   switch (category) {
     case 'movies':
@@ -94,7 +94,7 @@ export function getCategoryColor(category, theme) {
     case 'documentaries':
       return '#9e9e9e';
     default:
-      return theme?.palette?.primary?.main || '#1976d2';
+      return '#0078d4';
   }
 }
 // ...otros helpers de categorías a futuro...

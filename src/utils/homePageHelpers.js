@@ -22,33 +22,3 @@ export const handleItemClick = (goToDetail) => item => {
 export const handleCloseDetail = goBackFromDetail => () => {
   goBackFromDetail();
 };
-
-export function getCategoryColor(categoryKey) {
-  switch (categoryKey) {
-    case 'movies':
-    case 'peliculas':
-      return '#2196f3';
-    case 'videogames':
-    case 'videojuegos':
-      return '#9c27b0';
-    case 'books':
-    case 'libros':
-      return '#4caf50';
-    case 'music':
-    case 'musica':
-      return '#00bcd4';
-    case 'podcast':
-    case 'podcasts':
-      return '#8bc34a';
-    case 'boardgames':
-    case 'juegos de mesa':
-      return '#e91e63';
-    case 'comics':
-      return '#ff9800';
-    case 'documentales':
-    case 'documentaries':
-      return '#9e9e9e';
-    default:
-      return '#0078d4';
-  }
-}
