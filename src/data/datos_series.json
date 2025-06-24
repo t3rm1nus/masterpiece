@@ -2,8 +2,7 @@
   "series": [
     {
       "id": 1,
-      "title": { "es": "Breaking Bad", "en": "Breaking Bad" },
-      "titulo": "Breaking Bad",
+      "title": { "es": "Breaking Bad", "en": "Breaking Bad" },      
        "description": {
         "es": "Un profesor de instituto diagnosticado con cáncer de pulmón empieza a manufacturar y vender metamfetamina para asegurar el futuro de su familia.",
         "en": "A high school teacher diagnosed with lung cancer begins manufacturing and selling methamphetamine to secure his family's future."
@@ -12,7 +11,31 @@
       "categoria": "Drama",
       "temporadas": 5,
       "episodios": 62,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=V8WQhxHEmMc",
+        "en": "https://www.youtube.com/watch?v=VaOt6tXyf2Y"
+      },
       "masterpiece": true
+    },
+    {
+      "id": 2,
+      "title": { "es": "Los Serrano", "en": "Los Serrano" },
+      "description": {
+        "es": "Sigue a la familia de los Serrano, que vive en el vecindario ficticio de Santa Justa en la Ribera de Manzanares, Madrid.",
+        "en": "Follow the Serrano family, who live in the fictional neighborhood of Santa Justa in the Ribera de Manzanares, Madrid."
+      },
+      "image": "/imagenes/series/serrano.jpg",
+      "categoria": "Comedia",
+      "temporadas": 8,
+      "episodios": 147,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=V8WQhxHEmMc",
+        "en": "https://www.youtube.com/watch?v=VaOt6tXyf2Y"
+      },
+      "masterpiece": false,
+      "tags": [
+        "spanish"
+      ]
     }
   ]
 } 

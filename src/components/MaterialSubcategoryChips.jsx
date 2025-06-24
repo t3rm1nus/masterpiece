@@ -56,9 +56,11 @@ const MaterialSubcategoryChips = ({
 }) => {  
   const { getSubcategoryTranslation } = useLanguage();
   const { 
-    isSpanishCinemaActive, 
-    isMasterpieceActive, 
-    toggleSpanishCinema, 
+    isSpanishCinemaActive,
+    isSpanishSeriesActive,
+    isMasterpieceActive,
+    toggleSpanishCinema,
+    toggleSpanishSeries,
     toggleMasterpiece 
   } = useAppData();
   const { lang } = useLanguage();
@@ -67,11 +69,6 @@ const MaterialSubcategoryChips = ({
 
   // No renderizar si la prop visible es false
   if (!visible) {
-    return null;
-  }
-
-  // Solo renderizar en móviles
-  if (!isMobile) {
     return null;
   }
 
@@ -139,69 +136,54 @@ const MaterialSubcategoryChips = ({
         </Box>
       )}
       
-      {/* Botones especiales - solo mostrar si hay una categoría seleccionada */}
-      {selectedCategory && (
-        <Box
-          sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '8px',
-            justifyContent: 'center',
-            padding: '8px 16px',
-            marginBottom: '16px'
-          }}
-        >
+      {/* Botones especiales - SOLO en móvil y SOLO si hay categoría */}
+      {isMobile && selectedCategory && (
+        <div className="special-buttons-container" style={{
+          display: 'flex',
+          flexDirection: 'row',
+          gap: '8px',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '100%',
+          margin: '8px 0px'
+        }}>
           {/* Botón de Cine Español solo para categoría de películas */}
           {selectedCategory === 'movies' && (
-            <Chip
-              label={getSpecialButtonLabel('spanishCinema', lang)}
+            <button
+              className={`MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorSecondary subcategory-btn spanish-cinema` + (isSpanishCinemaActive ? ' Mui-selected' : '')}
+              type="button"
+              tabIndex={0}
               onClick={toggleSpanishCinema}
-              variant={isSpanishCinemaActive ? 'filled' : 'outlined'}
-              sx={{
-                backgroundColor: isSpanishCinemaActive ? categoryColorFinal : 'transparent',
-                borderColor: categoryColorFinal,
-                color: isSpanishCinemaActive ? 'white' : categoryColorFinal,
-                fontWeight: isSpanishCinemaActive ? 'bold' : 'normal',
-                fontSize: '0.8rem',
-                transition: 'all 0.2s ease',
-                cursor: 'pointer',
-                '&:hover': {
-                  backgroundColor: isSpanishCinemaActive ? categoryColorFinal : `${categoryColorFinal}20`,
-                  transform: 'scale(1.05)',
-                  boxShadow: theme.shadows[2]
-                },
-                '&:active': {
-                  transform: 'scale(0.98)'
-                }
-              }}
-            />
+              style={{ fontWeight: isSpanishCinemaActive ? 'bold' : 'normal' }}
+            >
+              {getSpecialButtonLabel('spanishCinema', lang)}
+              <span className="MuiTouchRipple-root css-r3djoj-MuiTouchRipple-root"></span>
+            </button>
           )}
-          
+          {/* Botón de Series Españolas solo para categoría de series */}
+          {selectedCategory === 'series' && (
+            <button
+              className={`MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorSecondary subcategory-btn spanish-series` + (isSpanishSeriesActive ? ' Mui-selected' : '')}
+              type="button"
+              tabIndex={0}
+              onClick={toggleSpanishSeries}
+              style={{ fontWeight: isSpanishSeriesActive ? 'bold' : 'normal' }}
+            >
+              {lang === 'es' ? 'Series Españolas' : 'Spanish Series'}
+              <span className="MuiTouchRipple-root css-r3djoj-MuiTouchRipple-root"></span>
+            </button>
+          )}
           {/* Botón de Masterpiece - siempre visible cuando hay categoría */}
-          <Chip
-            label={getSpecialButtonLabel('masterpiece', lang)}
+          <button
+            className={`MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorSecondary subcategory-btn masterpiece-btn css-2uqr7o-MuiButtonBase-root-MuiButton-root` + (isMasterpieceActive ? ' Mui-selected' : '')}
+            type="button"
+            tabIndex={0}
             onClick={toggleMasterpiece}
-            variant={isMasterpieceActive ? 'filled' : 'outlined'}
-            sx={{
-              backgroundColor: isMasterpieceActive ? categoryColorFinal : 'transparent',
-              borderColor: categoryColorFinal,
-              color: isMasterpieceActive ? 'white' : categoryColorFinal,
-              fontWeight: isMasterpieceActive ? 'bold' : 'normal',
-              fontSize: '0.8rem',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              '&:hover': {
-                backgroundColor: isMasterpieceActive ? categoryColorFinal : `${categoryColorFinal}20`,
-                borderColor: categoryColorFinal,
-                transform: 'scale(1.05)',
-                boxShadow: theme.shadows[2]
-              },
-              '&:active': {
-                transform: 'scale(0.98)'
-              }
-            }}
-          />
-        </Box>
+            style={{ fontWeight: isMasterpieceActive ? 'bold' : 'normal' }}
+          >
+            {getSpecialButtonLabel('masterpiece', lang)}
+          </button>
+        </div>
       )}
     </>
   );

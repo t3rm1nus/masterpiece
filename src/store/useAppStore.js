@@ -132,6 +132,12 @@ const useAppStore = create(
         return `/imagenes/notfound/${images[idx]}`;
       },
 
+      // --- Estados especiales de filtros ---
+      isSpanishCinemaActive: false,
+      toggleSpanishCinema: () => set(state => ({ isSpanishCinemaActive: !state.isSpanishCinemaActive })),
+      isSpanishSeriesActive: false,
+      toggleSpanishSeries: () => set(state => ({ isSpanishSeriesActive: !state.isSpanishSeriesActive })),
+
       // --- Slices externos ---
       ...createThemeSlice(set, get),
       ...createLanguageSlice(set, get),
@@ -230,6 +236,8 @@ export const useAppData = () => {
   const setActiveSubcategory = useAppStore(state => state.setActiveSubcategory);
   const isSpanishCinemaActive = useAppStore(state => state.isSpanishCinemaActive);
   const toggleSpanishCinema = useAppStore(state => state.toggleSpanishCinema);
+  const isSpanishSeriesActive = useAppStore(state => state.isSpanishSeriesActive);
+  const toggleSpanishSeries = useAppStore(state => state.toggleSpanishSeries);
   const isMasterpieceActive = useAppStore(state => state.isMasterpieceActive);
   const toggleMasterpiece = useAppStore(state => state.toggleMasterpiece);
   const activePodcastLanguages = useAppStore(state => state.activePodcastLanguages);
@@ -247,6 +255,7 @@ export const useAppData = () => {
     generateNewRecommendations, initializeFilteredItems, updateFilteredItems, setTitle, updateTitleForLanguage, getDefaultTitle, randomNotFoundImage,
     // Estados adicionales
     activeSubcategory, setActiveSubcategory, isSpanishCinemaActive, toggleSpanishCinema,
+    isSpanishSeriesActive, toggleSpanishSeries,
     isMasterpieceActive, toggleMasterpiece, activePodcastLanguages, togglePodcastLanguage,
     activeDocumentaryLanguages, toggleDocumentaryLanguage, activeLanguage, setActiveLanguage,
     allData

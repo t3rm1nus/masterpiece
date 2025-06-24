@@ -123,7 +123,9 @@ const HomePage = ({
     allData,
     isDataInitialized,
     updateWithRealData,
-    updateTitleForLanguage
+    updateTitleForLanguage,
+    isSpanishSeriesActive,
+    toggleSpanishSeries
   } = useAppData();
   
   // Efecto para actualizar título cuando cambia el idioma
@@ -254,6 +256,14 @@ const HomePage = ({
             activeDocumentaryLanguages.includes(item.idioma)
           );
           console.log('🎬 Filtro idioma documental aplicado:', filteredData.length);
+        }
+
+        // Filtro de Series Españolas (solo para series)
+        if (selectedCategory === 'series' && isSpanishSeriesActive) {
+          filteredData = filteredData.filter(item =>
+            (item.tags && item.tags.includes('spanish'))
+          );
+          console.log('🇪🇸 Filtro Series Españolas aplicado:', filteredData.length);
         }
 
         // Filtro de subcategoría
