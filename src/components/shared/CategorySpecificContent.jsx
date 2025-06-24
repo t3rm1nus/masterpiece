@@ -172,6 +172,29 @@ export function MobileCategorySpecificContent({ selectedItem, lang, t, getTransl
       </Box>
     );
   }
+  // Series
+  if (selectedItem.category === 'series' && (selectedItem.temporadas || selectedItem.episodios)) {
+    return (
+      <Box sx={{ marginBottom: '16px', width: '100%' }}>
+        {selectedItem.temporadas && (
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '8px' }}>
+            <PlaylistPlayIcon sx={{ marginRight: '8px', color: '#111' }} />
+            <Typography variant="h6" sx={{ color: '#111', fontWeight: 500, textAlign: 'left', fontSize: '1rem' }}>
+              <strong>{lang === 'es' ? 'Temporadas' : 'Seasons'}:</strong> {ensureString(selectedItem.temporadas)}
+            </Typography>
+          </Box>
+        )}
+        {selectedItem.episodios && (
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '8px' }}>
+            <PlaylistPlayIcon sx={{ marginRight: '8px', color: '#111' }} />
+            <Typography variant="h6" sx={{ color: '#111', fontWeight: 500, textAlign: 'left', fontSize: '1rem' }}>
+              <strong>{lang === 'es' ? 'Episodios' : 'Episodes'}:</strong> {ensureString(selectedItem.episodios)}
+            </Typography>
+          </Box>
+        )}
+      </Box>
+    );
+  }
   
   return null;
 }
@@ -211,6 +234,10 @@ export function DesktopCategorySpecificContent({ selectedItem, lang, t, getTrans
     if (selectedItem.year) infoRows.push({ label: (getTranslation && typeof getTranslation === 'function')
       ? getTranslation('content.metadata.common.year', 'Año')
       : (t?.content?.metadata?.common?.year || 'Año'), value: ensureString(selectedItem.year) });
+  }
+  if (selectedItem.category === 'series') {
+    if (selectedItem.temporadas) infoRows.push({ label: lang === 'es' ? 'Temporadas' : 'Seasons', value: ensureString(selectedItem.temporadas) });
+    if (selectedItem.episodios) infoRows.push({ label: lang === 'es' ? 'Episodios' : 'Episodes', value: ensureString(selectedItem.episodios) });
   }
   if (infoRows.length === 0) return null;
   return (
