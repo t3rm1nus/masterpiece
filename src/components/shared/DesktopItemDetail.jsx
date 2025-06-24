@@ -54,6 +54,7 @@ const DesktopItemDetail = ({
   className = '',
   style = {},
   onBack,
+  getTranslation, // <-- Añadido correctamente como prop
   ...props
 }) => {
   if (!selectedItem) return null;
@@ -69,8 +70,8 @@ const DesktopItemDetail = ({
           )}
           {renderHeader && renderHeader(selectedItem)}
           {selectedItem.masterpiece && (
-            <span className="masterpiece-detail-badge" title={getTranslation('ui.badges.masterpiece', 'Obra maestra')}>
-              <img src="/imagenes/masterpiece-star.png" alt={getTranslation('ui.alt.masterpiece', 'Obra maestra')} style={{ width: 56, height: 56, display: 'block' }} />
+            <span className="masterpiece-detail-badge" title={(getTranslation ? getTranslation('ui.badges.masterpiece', 'Obra maestra') : 'Obra maestra')}>
+              <img src="/imagenes/masterpiece-star.png" alt={(getTranslation ? getTranslation('ui.alt.masterpiece', 'Obra maestra') : 'Obra maestra')} style={{ width: 56, height: 56, display: 'block' }} />
             </span>
           )}
           {/* Imagen */}
