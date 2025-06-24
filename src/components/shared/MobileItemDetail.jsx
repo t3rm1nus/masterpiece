@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button, useTheme } from '@mui/material';
+import { CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button } from '@mui/material';
 import { ArrowBack as ArrowBackIcon, Category as CategoryIcon } from '@mui/icons-material';
 import { getCategoryColor } from '../../utils/categoryUtils';
 import { ensureString } from '../../utils/stringUtils';
@@ -38,7 +38,7 @@ const MobileItemDetail = ({
   description,
   lang,
   t,
-  theme: themeProp, // <- renombrado aquí
+  theme,
   getCategoryTranslation,
   getSubcategoryTranslation,
   goBackFromDetail,
@@ -67,41 +67,6 @@ const MobileItemDetail = ({
   delete domSafeProps.showCategorySelect;
   delete domSafeProps.showSubcategoryChips;
   if (!selectedItem) return null;
-
-  // Usa el prop si existe, si no, usa useTheme
-  const theme = themeProp || useTheme();
-
-  // Utilidad para obtener el gradiente igual que en las cards
-  const getCategoryGradient = (category) => {
-    switch (category) {
-      case 'movies':
-      case 'peliculas':
-        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
-      case 'videogames':
-      case 'videojuegos':
-        return 'linear-gradient(135deg, #f8f3fa 0%, #e1bee7 100%)';
-      case 'books':
-      case 'libros':
-        return 'linear-gradient(135deg, #f4faf4 0%, #c8e6c9 100%)';
-      case 'music':
-      case 'musica':
-        return 'linear-gradient(135deg, #f2fbfc 0%, #b2ebf2 100%)';
-      case 'podcast':
-      case 'podcasts':
-        return 'linear-gradient(135deg, #f7fbf2 0%, #dcedc8 100%)';
-      case 'boardgames':
-      case 'juegos de mesa':
-        return 'linear-gradient(135deg, #fdf4f8 0%, #f8bbd0 100%)';
-      case 'comics':
-        return 'linear-gradient(135deg, #fff8f0 0%, #ffe0b2 100%)';
-      case 'documentales':
-      case 'documentaries':
-        return 'linear-gradient(135deg, #fafafa 0%, #e0e0e0 100%)';
-      default:
-        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
-    }
-  };
-
   return (
     <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px', ...sx }} className={className} style={style} {...domSafeProps}>
       {/* Botón de volver flotante */}
@@ -134,11 +99,11 @@ const MobileItemDetail = ({
           overflow: 'hidden',
           boxShadow: theme?.shadows?.[8],
           border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
-          background: selectedItem.masterpiece
-            ? (theme?.palette?.mode === 'dark'
+          background: selectedItem.masterpiece 
+            ? (theme?.palette?.mode === 'dark' 
               ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
               : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
-            : getCategoryGradient(selectedItem.category),
+            : getCategoryColor(selectedItem.category, theme),
         }}
       >
         {/* Header custom */}
