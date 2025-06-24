@@ -225,7 +225,7 @@ const MaterialMobileMenu = ({
         <DialogContent sx={{ p: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', background: isDarkMode ? '#222' : '#fff' }}>
           <img 
             src="/imagenes/splash_image.png" 
-            alt="Splash" 
+            alt={getTranslation('ui.alt.splash', 'Splash')}
             style={{ width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer' }} 
             onClick={handleSplashClose}
           />

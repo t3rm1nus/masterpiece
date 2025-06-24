@@ -90,7 +90,7 @@ const DesktopRecommendationsList = ({
   delete domSafeRest.showSubcategoryChips;
 
   const data = items || recommendations;
-  const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
+  const { lang, t, getCategoryTranslation, getSubcategoryTranslation, getTranslation } = useLanguage();
   const { goToDetail } = useAppView();
   const { randomNotFoundImage } = useAppData();
   const { getMasterpieceBadgeConfig } = useAppTheme();
@@ -224,7 +224,7 @@ const DesktopRecommendationsList = ({
             alignItems: 'center',
           }}
         >
-          {normalizedRec.masterpiece && <span className="masterpiece-badge" title="Obra maestra">
+          {normalizedRec.masterpiece && <span className="masterpiece-badge" title={getTranslation('ui.badges.masterpiece', 'Obra maestra')}>
             <svg
               width={badgeConfig.svg.width}
               height={badgeConfig.svg.height}
@@ -269,7 +269,7 @@ const DesktopRecommendationsList = ({
 
   // Memoización del contenido principal
   const memoizedRecommendations = useMemo(() => {
-    if (loading) return <div className="recommendations-loading">Cargando...</div>;
+    if (loading) return <div className="recommendations-loading">{getTranslation('ui.states.loading', 'Cargando...')}</div>;
     if (!data?.length) {
       if (emptyComponent) {
         return typeof emptyComponent === 'function' ? emptyComponent() : emptyComponent;
@@ -331,17 +331,17 @@ const DesktopRecommendationsList = ({
             onClick={() => pagination.onPageChange(pagination.page - 1)}
             disabled={pagination.page <= 1}
           >
-            Anterior
+            {getTranslation('ui.pagination.previous', 'Anterior')}
           </button>
           <span className="pagination-info">
-            Página {pagination.page} de {Math.ceil((data?.length || 0) / (pagination.pageSize || 1))}
+            {getTranslation('ui.pagination.page_of', 'Página')} {pagination.page} {getTranslation('ui.pagination.of', 'de')} {Math.ceil((data?.length || 0) / (pagination.pageSize || 1))}
           </span>
           <button 
             className="pagination-button" 
             onClick={() => pagination.onPageChange(pagination.page + 1)}
             disabled={pagination.page >= Math.ceil((data?.length || 0) / (pagination.pageSize || 1))}
           >
-            Siguiente
+            {getTranslation('ui.pagination.next', 'Siguiente')}
           </button>
         </div>
       )}

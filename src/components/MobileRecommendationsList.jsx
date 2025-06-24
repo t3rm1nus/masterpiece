@@ -107,7 +107,7 @@ const MobileRecommendationsList = ({
     >
       {/* Render custom recommendations if provided, else fallback to default */}
       {loading ? (
-        <div className="recommendations-loading">Cargando...</div>
+        <div className="recommendations-loading">{getTranslation('ui.states.loading', 'Cargando...')}</div>
       ) : !data?.length ? (
         typeof emptyComponent === 'function' ? emptyComponent() : emptyComponent
       ) : renderItem ? (
@@ -123,17 +123,20 @@ const MobileRecommendationsList = ({
             onClick={() => pagination.onPageChange(pagination.page - 1)}
             disabled={pagination.page <= 1}
           >
-            Anterior
+            {getTranslation('ui.actions.previous', 'Anterior')}
           </button>
           <span className="pagination-info">
-            Página {pagination.page} de {Math.ceil((data?.length || 0) / (pagination.pageSize || 1))}
+            {getTranslation('ui.pagination.page_of', 'Página {page} de {total}', {
+              page: pagination.page,
+              total: Math.ceil((data?.length || 0) / (pagination.pageSize || 1))
+            })}
           </span>
           <button 
             className="pagination-button" 
             onClick={() => pagination.onPageChange(pagination.page + 1)}
             disabled={pagination.page >= Math.ceil((data?.length || 0) / (pagination.pageSize || 1))}
           >
-            Siguiente
+            {getTranslation('ui.actions.next', 'Siguiente')}
           </button>
         </div>
       )}

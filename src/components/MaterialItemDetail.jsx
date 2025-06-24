@@ -32,7 +32,7 @@ import useViewStore from '../store/viewStore';
 import './styles/components/item-detail-action-btn.css';
 
 const MaterialItemDetail = ({ item }) => {
-  const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
+  const { lang, t, getCategoryTranslation, getSubcategoryTranslation, getTranslation } = useLanguage();
   const { goBackFromDetail, processTitle, processDescription } = useViewStore();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
@@ -206,7 +206,7 @@ const MaterialItemDetail = ({ item }) => {
           {item.masterpiece && (
             <Box
               className="masterpiece-detail-badge force-mobile-badge"
-              title="Obra maestra"
+              title={getTranslation('ui.badges.masterpiece', 'Obra maestra')}
               sx={{
                 position: 'absolute',
                 top: { xs: '60px !important', md: '-12px' },
@@ -225,7 +225,7 @@ const MaterialItemDetail = ({ item }) => {
               }}
             >
               <img
-                alt="Masterpiece"
+                alt={getTranslation('ui.alt.masterpiece', 'Obra maestra')}
                 src="/imagenes/masterpiece-star.png"
                 style={{ width: 32, height: 32, display: 'block' }}
               />

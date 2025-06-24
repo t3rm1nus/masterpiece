@@ -246,7 +246,7 @@ const MaterialCoffeePage = () => {  const { t } = useLanguage();
                 <button 
                   type="submit" 
                   name="submit" 
-                  title="PayPal - The safer, easier way to pay online!"
+                  title={getTranslation('ui.paypal.title', 'PayPal - The safer, easier way to pay online!')}
                   style={{
                     backgroundColor: '#007bff',
                     color: '#ffffff',
@@ -275,7 +275,7 @@ const MaterialCoffeePage = () => {  const { t } = useLanguage();
                   onMouseOut={(e) => {                  e.target.style.backgroundColor = '#007bff';
                   e.target.style.transform = 'translateY(0)';
                 }}              >
-                Invítame a un café
+                {getTranslation('ui.paypal.button', 'Invítame a un café')}
               </button>
               </Box>
             </form>

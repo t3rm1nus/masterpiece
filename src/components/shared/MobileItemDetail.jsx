@@ -121,8 +121,8 @@ const MobileItemDetail = ({
         )}
         {/* Badge de masterpiece en la imagen */}
         {selectedItem.masterpiece && (
-          <span className="masterpiece-detail-badge" title="Obra maestra">
-            <img src="/imagenes/masterpiece-star.png" alt="Masterpiece" style={{ width: 56, height: 56, display: 'block' }} />
+          <span className="masterpiece-detail-badge" title={getTranslation('ui.badges.masterpiece', 'Obra maestra')}>
+            <img src="/imagenes/masterpiece-star.png" alt={getTranslation('ui.alt.masterpiece', 'Obra maestra')} style={{ width: 56, height: 56, display: 'block' }} />
           </span>
         )}
         <CardContent sx={{ padding: '24px' }}>

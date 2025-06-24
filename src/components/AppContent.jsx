@@ -5,6 +5,7 @@ import HybridMenu from './HybridMenu';
 import HomePage from './HomePage';
 import UnifiedItemDetail from './UnifiedItemDetail';
 import { LazyCoffeePage, LazyHowToDownload, LoadingFallback } from './LazyComponents';
+import { useLanguage } from '../LanguageContext';
 
 const AppContent = () => {
   // Usando el store consolidado de vista para toda la gestión de UI
@@ -15,6 +16,8 @@ const AppContent = () => {
     isMobile: isMobileView,
     setViewport
   } = useAppView();
+
+  const { getTranslation } = useLanguage();
 
   let content;  switch (currentView) {
     case 'home':
@@ -35,21 +38,21 @@ const AppContent = () => {
       break;
     case 'coffee':
       content = (
-        <Suspense fallback={<LoadingFallback message="Cargando página de donación..." />}>
+        <Suspense fallback={<LoadingFallback message={getTranslation('ui.states.loading_coffee', 'Cargando página de donación...')} />}>
           <LazyCoffeePage />
         </Suspense>
       );
       break;
     case 'howToDownload':
       content = (
-        <Suspense fallback={<LoadingFallback message="Cargando instrucciones de descarga..." />}>
+        <Suspense fallback={<LoadingFallback message={getTranslation('ui.states.loading_how_to_download', 'Cargando instrucciones de descarga...')} />}>
           <LazyHowToDownload />
         </Suspense>
       );
       break;
     default:
       console.warn('[AppContent] Unknown view:', currentView);
-      content = <div>Página no encontrada</div>;
+      content = <div>{getTranslation('ui.errors.page_not_found', 'Página no encontrada')}</div>;
   }  // Usando useEffect para detectar cambios de tamaño y actualizar el estado en el store de vista
   useEffect(() => {
     const checkMobile = () => {

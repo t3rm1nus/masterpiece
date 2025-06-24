@@ -99,8 +99,8 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {} }) {
           {/* Icono quienes somos (about) como imagen suelta a la derecha */}
           <img
             src="/imagenes/icono.png"
-            alt="info"
-            title={lang === 'en' ? 'Show info' : 'Mostrar información'}
+            alt={getTranslation('ui.alt.info', 'info')}
+            title={getTranslation('ui.titles.show_info', lang === 'en' ? 'Show info' : 'Mostrar información')}
             onClick={handleSplashOpen}
             style={{
               width: '36px',
@@ -141,7 +141,7 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {} }) {
             }}>
               <img 
                 src="/imagenes/splash_image.png" 
-                alt="Splash" 
+                alt={getTranslation('ui.alt.splash', 'Splash')}
                 style={{
                   width: '100%',
                   height: '100%',

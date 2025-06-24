@@ -26,7 +26,9 @@ export default function ThemeToggle() {
         backgroundColor: 'var(--card-background)',
         margin: '0 0.5rem'
       }}
-      aria-label={theme === 'light' ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro'}
+      aria-label={theme === 'light' 
+        ? getTranslation('ui.theme.toggle_dark', 'Cambiar a modo oscuro') 
+        : getTranslation('ui.theme.toggle_light', 'Cambiar a modo claro')}
     >
       {theme === 'light' ? (
         // Icono de luna para modo oscuro

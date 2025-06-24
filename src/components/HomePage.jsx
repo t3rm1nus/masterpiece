@@ -327,7 +327,7 @@ const HomePage = ({
     return (
       <div className="loading-container">
         <div className="loading-spinner"></div>
-        <p>Cargando...</p>
+        <p>{getTranslation('ui.states.loading', 'Cargando...')}</p>
       </div>
     );
   }

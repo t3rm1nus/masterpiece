@@ -16,9 +16,16 @@
         "how_to_download": "¿Cómo descargar?",
         "buy_me_coffee": "Cómprame un café"
       },
+      "alt": {
+        "splash": "Splash",
+        "masterpiece": "Obra maestra",
+        "info": "Información"
+      },
       "titles": {
         "home_title": "Nuevas Recomendaciones",
-        "app_title": "Masterpiece"
+        "app_title": "Masterpiece",
+        "title": "Título",
+        "show_info": "Mostrar información"
       },
       "menu": "Menú",
       "language": "Idioma",
@@ -41,16 +48,49 @@
         "watch": "Ver",
         "read": "Leer",
         "listen": "Escuchar",
-        "play": "Jugar"
+        "play": "Jugar",
+        "accept": "Aceptar",
+        "action": "Acción",
+        "previous": "Anterior",
+        "next": "Siguiente"
+      },
+      "pagination": {
+        "previous": "Anterior",
+        "next": "Siguiente",
+        "of": "de",
+        "page_of": "Página",
+        "page_of_full": "Página {page} de {total}"
+      },
+      "theme": {
+        "toggle_dark": "Cambiar a modo oscuro",
+        "toggle_light": "Cambiar a modo claro"
+      },
+      "paypal": {
+        "title": "PayPal - La forma más segura y fácil de pagar en línea!",
+        "button": "Invítame a un café"
       },
       "states": {
         "loading": "Cargando...",
+        "loading_coffee": "Cargando página de donación...",
+        "loading_how_to_download": "Cargando instrucciones de descarga...",
         "noResults": "No se encontraron resultados",
+        "no_recommendations": "No hay recomendaciones",
+        "try_different_filters": "Intenta cambiar los filtros seleccionados",
+        "try_other_filters": "Prueba con otros filtros o categorías",
         "success": "Operación exitosa",
+        "success_short": "Éxito",
         "error": "Error en la operación",
         "empty": "Sin contenido disponible",
         "offline": "Sin conexión",
-        "noSubcategories": "No hay subcategorías disponibles"
+        "noSubcategories": "No hay subcategorías disponibles",
+        "content": "Contenido",
+        "footer": "Pie"
+      },
+      "errors": {
+        "page_not_found": "Página no encontrada"
+      },
+      "badges": {
+        "masterpiece": "Obra maestra"
       }
     },
     "coffee": {
@@ -359,9 +399,16 @@
         "how_to_download": "How to download?",
         "buy_me_coffee": "Buy me a coffee"
       },
+      "alt": {
+        "splash": "Splash",
+        "masterpiece": "Masterpiece",
+        "info": "Info"
+      },
       "titles": {
         "home_title": "New Recommendations",
-        "app_title": "Masterpiece"
+        "app_title": "Masterpiece",
+        "title": "Title",
+        "show_info": "Show info"
       },
       "menu": "Menu",
       "language": "Language",
@@ -384,16 +431,49 @@
         "watch": "Watch",
         "read": "Read",
         "listen": "Listen",
-        "play": "Play"
+        "play": "Play",
+        "accept": "Accept",
+        "action": "Action",
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next",
+        "of": "of",
+        "page_of": "Page",
+        "page_of_full": "Page {page} of {total}"
+      },
+      "theme": {
+        "toggle_dark": "Switch to dark mode",
+        "toggle_light": "Switch to light mode"
+      },
+      "paypal": {
+        "title": "PayPal - The safest and easiest way to pay online!",
+        "button": "Buy me a coffee"
       },
       "states": {
         "loading": "Loading...",
+        "loading_coffee": "Loading donation page...",
+        "loading_how_to_download": "Loading download instructions...",
         "noResults": "No results found",
+        "no_recommendations": "No recommendations",
+        "try_different_filters": "Try changing the selected filters",
+        "try_other_filters": "Try other filters or categories",
         "success": "Operation successful",
+        "success_short": "Success",
         "error": "Operation error",
         "empty": "No content available",
         "offline": "Offline",
-        "noSubcategories": "No subcategories available"
+        "noSubcategories": "No subcategories available",
+        "content": "Content",
+        "footer": "Footer"
+      },
+      "errors": {
+        "page_not_found": "Page not found"
+      },
+      "badges": {
+        "masterpiece": "Masterpiece"
       }
     },
     "coffee": {

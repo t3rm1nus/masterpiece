@@ -158,7 +158,7 @@ const MaterialContentWrapper = ({
           <Box
             component="img"
             src={randomNotFoundImage()}
-            alt={t.no_results || 'No se encontraron resultados'}
+            alt={getTranslation('ui.states.noResults', 'No se encontraron resultados')}
             sx={{
               maxWidth: '90vw',
               width: '90%',

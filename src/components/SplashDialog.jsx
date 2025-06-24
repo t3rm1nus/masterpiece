@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
+import { useLanguage } from '../LanguageContext';
 
 /**
  * SplashDialog: Modal/diálogo de splash personalizable.
@@ -42,6 +43,7 @@ const SplashDialog = ({
   DialogContentProps = {}
 }) => {
   const audioRef = useRef(null);
+  const { getTranslation } = useLanguage();
 
   useEffect(() => {
     if (open && audioRef.current) {
@@ -134,7 +136,7 @@ const SplashDialog = ({
         ) : (
           <img
             src="/imagenes/splash_image.png"
-            alt="Splash"
+            alt={getTranslation('ui.alt.splash', 'Splash')}
             style={{
               width: '90vw',
               maxWidth: '90vw',

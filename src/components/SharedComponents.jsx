@@ -15,7 +15,7 @@ export const OptimizedImage = ({ src, alt, className, style, loading = 'lazy', d
 );
 
 // Componente del badge de obra maestra
-export const MasterpieceBadge = ({ config, tooltip = 'Obra maestra', size = 56, ...props }) => (
+export const MasterpieceBadge = ({ config, tooltip = getTranslation('ui.badges.masterpiece', 'Obra maestra'), size = 56, ...props }) => (
   <span className="masterpiece-badge" title={tooltip} {...props}>
     <svg
       width={size}
@@ -57,11 +57,11 @@ export const NoResults = ({ t, randomNotFoundImage, image, text, subtext, childr
   const notFoundImageUrl = image || (randomNotFoundImage?.() || '/favicon.png');
   return (
     <div className="no-results-container" style={sx} {...props}>
-      <p className="no-results-text">{text || t?.no_results || 'No se encontraron resultados'}</p>
-      <p className="no-results-subtext">{subtext || 'Prueba con otros filtros o categorías'}</p>
+      <p className="no-results-text">{text || getTranslation('ui.states.noResults', 'No se encontraron resultados')}</p>
+      <p className="no-results-subtext">{subtext || getTranslation('ui.states.try_other_filters', 'Prueba con otros filtros o categorías')}</p>
       <img 
         src={notFoundImageUrl} 
-        alt="No se encontraron resultados" 
+        alt={getTranslation('ui.states.noResults', 'No se encontraron resultados')} 
         className="no-results-image"
       />
       {children}
