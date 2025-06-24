@@ -61,12 +61,12 @@ const HomePage = ({
   const audioRef = useRef(null);
   // Audios disponibles para el splash
   const splashAudios = [
-    "/imagenes/sonidos/samurai.mp3",
-    "/imagenes/sonidos/samurai.wav",
-    "/imagenes/sonidos/samurai1.mp3",
-    "/imagenes/sonidos/samurai2.mp3",
-    "/imagenes/sonidos/samurai3.mp3",
-    "/imagenes/sonidos/samurai4.mp3"
+    "/sonidos/samurai.mp3",
+    "/sonidos/samurai.wav",
+    "/sonidos/samurai1.mp3",
+    "/sonidos/samurai2.mp3",
+    "/sonidos/samurai3.mp3",
+    "/sonidos/samurai4.mp3"
   ];
   // Estado para controlar los audios pendientes (no repetir hasta que suenen todos)
   const [pendingAudios, setPendingAudios] = useState([...splashAudios]);

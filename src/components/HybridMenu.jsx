@@ -47,7 +47,7 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {}, onSpla
   //   setSplashOpen(true);
   //   setTimeout(() => {
   //     if (audioRef.current) {
-  //       const audios = ["/imagenes/sonidos/samurai.mp3", "/imagenes/sonidos/samurai.wav"];
+  //       const audios = ["/sonidos/samurai.mp3", "/sonidos/samurai.wav"];
   //       const random = Math.floor(Math.random() * audios.length);
   //       audioRef.current.src = audios[random];
   //       audioRef.current.currentTime = 0;
