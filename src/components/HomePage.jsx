@@ -510,6 +510,14 @@ const HomePage = ({
                       });
                       return Array.from(subcatsSet).map(sub => ({ sub, label: t?.subcategories?.documentales?.[sub] || sub }));
                     }
+                    // NUEVO: subcategorías para series desde el campo subcategoria del JSON
+                    if (selectedCategory === 'series') {
+                      const subcatsSet = new Set();
+                      (allData['series'] || []).forEach(item => {
+                        if (item.subcategoria) subcatsSet.add(item.subcategoria.toLowerCase().trim());
+                      });
+                      return Array.from(subcatsSet).map(sub => ({ sub, label: t?.subcategories?.series?.[sub] || sub }));
+                    }
                     return Array.isArray(categorySubcategories) ? categorySubcategories : [];
                   })()}
                   activeSubcategory={activeSubcategory}

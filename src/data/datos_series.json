@@ -2,30 +2,35 @@
   "series": [
     {
       "id": 1,
-      "title": { "es": "Breaking Bad", "en": "The serranos" },      
-       "description": {
+      "title": { "es": "Breaking Bad", "en": "Breaking Bad" },
+      "year": "2008",
+      "director": "Vince Gilligan",
+      "description": {
         "es": "Un profesor de instituto diagnosticado con cáncer de pulmón empieza a manufacturar y vender metamfetamina para asegurar el futuro de su familia.",
         "en": "A high school teacher diagnosed with lung cancer begins manufacturing and selling methamphetamine to secure his family's future."
       },
       "image": "/imagenes/series/breaking.jpg",
-      "categoria": "Drama",
+      "subcategoria": "drama",
       "temporadas": 5,
       "episodios": 62,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=nY3BV7vDf7E",
         "en": "https://www.youtube.com/watch?v=Jdp_75r3xLQ"
       },
-      "masterpiece": true
+      "masterpiece": true,
+      "categoria": "series"
     },
     {
       "id": 2,
-      "title": { "es": "Los Serrano", "en": "Los Serrano" },
+      "title": { "es": "Los Serrano", "en": "The serranos" },
+      "year": "2003",
+      "director": "Álex Pina",
       "description": {
         "es": "Sigue a la familia de los Serrano, que vive en el vecindario ficticio de Santa Justa en la Ribera de Manzanares, Madrid.",
         "en": "Follow the Serrano family, who live in the fictional neighborhood of Santa Justa in the Ribera de Manzanares, Madrid."
       },
       "image": "/imagenes/series/serrano.jpg",
-      "categoria": "Comedia",
+      "subcategoria": "comedy",
       "temporadas": 8,
       "episodios": 147,
       "trailer": {
@@ -35,7 +40,610 @@
       "masterpiece": false,
       "tags": [
         "spanish"
-      ]
+      ],
+      "categoria": "series"
+    },
+    {
+      "id": 3,
+      "title": { "es": "Gran Hotel", "en": "Gran Hotel" },
+      "year": "2011",
+      "director": "Carlos Sedes",
+      "description": {
+        "es": "Está ambientada en un lujoso hotel de principios del siglo XX, donde un joven llega en busca de su hermana desaparecida y se une al personal como camarero.",
+        "en": "Set in an early 20th-century luxury hotel, where a young man posing as a waiter investigates the disappearance of his sister while working undercover."
+      },
+      "image": "/imagenes/series/gran_hotel.jpg",
+      "subcategoria": "drama",
+      "temporadas": 3,
+      "episodios": 39,
+      "trailer": { "es": "https://www.youtube.com/watch?v=h_6KL7RY3pg", 
+      "en": "https://www.youtube.com/watch?v=h_6KL7RY3pg" },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 4,
+      "title": { "es": "El tiempo entre costuras", "en": "The Time in Between" },
+      "year": "2013",
+      "director": "Iñaki Mercero",
+      "description": {
+        "es": "Sira, una joven modista, se ve implicada en espionaje durante la Guerra Civil y la II Guerra Mundial.",
+        "en": "Sira, a young seamstress, becomes involved in espionage during the Spanish Civil War and WWII."
+      },
+      "image": "/imagenes/series/el_tiempo_entre_costuras.jpg",
+      "subcategoria": "drama",
+      "temporadas": 1,
+      "episodios": 11,
+      "trailer": { "es": "https://www.youtube.com/watch?v=_CfVkmaCPbE", "en": "https://www.youtube.com/watch?v=_CfVkmaCPbE" },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 5,
+      "title": { "es": "El Ministerio del Tiempo", "en": "The Ministry of Time" },
+      "year": "2015",
+      "director": "Marc Vigil",
+      "description": {
+        "es": "Una patrulla del Gobierno viaja al pasado para evitar alteraciones en la Historia de España.",
+        "en": "A government unit travels through time to prevent changes to Spain’s history."
+      },
+      "image": "/imagenes/series/el_ministerio_del_tiempo.jpg",
+      "subcategoria": "sci-fy",
+      "temporadas": 4,
+      "episodios": 42,
+      "trailer": { "es": "https://www.youtube.com/watch?v=l4IH43JLVTg", 
+      "en": "https://www.youtube.com/watch?v=l4IH43JLVTg" },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 6,
+      "title": { "es": "Isabel", "en": "Isabel" },
+      "year": "2012",
+      "director": "Jordi Frades",
+      "description": {
+        "es": "Serie histórica que narra la vida de Isabel la Católica, desde su juventud hasta la unificación de España.",
+        "en": "Historical series portraying the life of Queen Isabella of Castile, from youth to Spain's unification."
+      },
+      "image": "/imagenes/series/isabel.jpg",
+      "subcategoria": "drama",
+      "temporadas": 3,
+      "episodios": 39,
+      "trailer": { "es": "https://www.youtube.com/watch?v=W4cEc9uasrg", 
+      "en": "https://www.youtube.com/watch?v=W4cEc9uasrg" },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 7,
+      "title": { "es": "El Internado", "en": "The Boarding School" },
+      "year": "2007",
+      "director": "Jesús Rodrigo",
+      "description": {
+        "es": "Un internado elitista en medio del bosque oculta secretos mortales mientras los estudiantes descubren oscuros misterios.",
+        "en": "A prestigious boarding school hides deadly secrets as students uncover dark mysteries."
+      },
+      "image": "/imagenes/series/el_internado.jpg",
+      "subcategoria": "mistery",
+      "temporadas": 7,
+      "episodios": 71,
+      "trailer": { "es": "https://www.youtube.com/watch?v=sdytEqadkQY", 
+      "en": "https://www.youtube.com/watch?v=sdytEqadkQY" },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 8,
+      "title": { "es": "Velvet", "en": "Velvet" },
+      "year": "2014",
+      "director": "Carlos Sedes",
+      "description": {
+        "es": "En los años 50, una historia de amor imposible entre una costurera y un heredero dentro de unos grandes almacenes de moda.",
+        "en": "In the 1950s, a love story between a seamstress and a fashion empire heir unfolds inside an elegant department store."
+      },
+      "image": "/imagenes/series/velvet.jpg",
+      "subcategoria": "drama",
+      "temporadas": 4,
+      "episodios": 55,
+      "trailer": { "es": "https://www.youtube.com/watch?v=rOwczqmx484", 
+      "en": "https://www.youtube.com/watch?v=rOwczqmx484" },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 9,
+      "title": { "es": "Aquí no hay quien viva", "en": "No One Could Live Here" },
+      "year": "2003",
+      "director": "Laura Caballero",
+      "description": {
+        "es": "Una comunidad de vecinos muy peculiar que enfrenta el caos diario en un edificio del centro de Madrid.",
+        "en": "A quirky community of neighbors deals with daily chaos in a downtown Madrid apartment building."
+      },
+      "image": "/imagenes/series/aqui_no_hay_quien_viva.jpg",
+      "subcategoria": "comedy",
+      "temporadas": 5,
+      "episodios": 90,
+      "trailer": { "es": "https://www.youtube.com/watch?v=rU93XqVOItw", "en": "https://www.youtube.com/watch?v=rU93XqVOItw" },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 10,
+      "title": { "es": "Verano Azul", "en": "Blue Summer" },
+      "year": "1981",
+      "director": "Antonio Mercero",
+      "description": {
+        "es": "Siete jóvenes viven un verano inolvidable en un pueblo costero español, marcados por la amistad, el crecimiento y la tragedia.",
+        "en": "Seven young friends experience a life-changing summer in a Spanish coastal town, marked by friendship, growth, and loss."
+      },
+      "image": "/imagenes/series/verano_azul.jpg",
+      "subcategoria": "drama",
+      "temporadas": 1,
+      "episodios": 19,
+      "trailer": { "es": "https://www.youtube.com/watch?v=pUSljlw8lXE", "en": "https://www.youtube.com/watch?v=pUSljlw8lXE" },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 11,
+      "title": { "es": "Antidisturbios", "en": "Riot Police" },
+      "year": "2020",
+      "director": "Rodrigo Sorogoyen",
+      "description": {
+        "es": "Un grupo de policías antidisturbios se ve envuelto en un caso de brutalidad mientras una agente de asuntos internos los investiga.",
+        "en": "A group of riot police is entangled in a brutality case while being investigated by an internal affairs agent."
+      },
+      "image": "/imagenes/series/antidisturbios.jpg",
+      "subcategoria": "thriller",
+      "temporadas": 1,
+      "episodios": 6,
+      "trailer": { "es": "https://www.youtube.com/watch?v=e5vxS65tgOA", 
+      "en": "https://www.youtube.com/watch?v=e5vxS65tgOA" },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 12,
+      "title": { "es": "Yo, adicto", "en": "I, Addict" },
+      "year": "2021",
+      "director": "Jordi Évole",
+      "description": {
+        "es": "Testimonios reales que retratan el descenso a los infiernos de las adicciones y el proceso de recuperación.",
+        "en": "Real testimonies portraying the descent into addiction and the journey of recovery."
+      },
+      "image": "/imagenes/series/yo_adicto.jpg",
+      "subcategoria": "drama",
+      "temporadas": 1,
+      "episodios": 6,
+      "trailer": { "es": "https://www.youtube.com/watch?v=vh60TQdhoes", "en": "https://www.youtube.com/watch?v=vh60TQdhoes" },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 13,
+      "title": { "es": "Fariña", "en": "Cocaine Coast" },
+      "year": "2018",
+      "director": "Carlos Sedes",
+      "description": {
+        "es": "Basada en hechos reales, narra el auge del narcotráfico gallego en los años 80 y la implicación de figuras políticas y judiciales.",
+        "en": "Based on real events, it tells the story of Galician drug trafficking in the 1980s and the involvement of political figures."
+      },
+      "image": "/imagenes/series/farina.jpg",
+      "subcategoria": "drama",
+      "temporadas": 1,
+      "episodios": 10,
+      "trailer": { "es": "https://www.youtube.com/watch?v=MBPCVh6tHhs", "en": "https://www.youtube.com/watch?v=1scc9Eq1ZAw" },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 14,
+      "title": { "es": "El fin de la comedia", "en": "The End of Comedy" },
+      "year": "2014",
+      "director": "Ignatius Farray",
+      "description": {
+        "es": "Ignatius Farray interpreta una versión ficticia de sí mismo, entre lo trágico y lo absurdo, en esta comedia semiautobiográfica.",
+        "en": "Ignatius Farray plays a fictionalized version of himself in this semi-autobiographical dramedy full of absurdity."
+      },
+      "image": "/imagenes/series/fin_comedia.jpg",
+      "subcategoria": "comedy",
+      "temporadas": 2,
+      "episodios": 12,
+      "trailer": { "es": "https://www.youtube.com/watch?v=zBl3m6D-6-Y", "en": "https://www.youtube.com/watch?v=zBl3m6D-6-Y" },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 15,
+      "title": { "es": "Los gozos y las sombras", "en": "The Joys and the Shadows" },
+      "year": "1982",
+      "director": "Rafael Moreno Alba",
+      "description": {
+        "es": "Adaptación de la trilogía de Gonzalo Torrente Ballester, ambientada en la Galicia de preguerra, con tensiones sociales y políticas.",
+        "en": "Adaptation of the trilogy by Gonzalo Torrente Ballester, set in pre-war Galicia, portraying political and social tensions."
+      },
+      "image": "/imagenes/series/gozos.jpg",
+      "subcategoria": "drama",
+      "temporadas": 1,
+      "episodios": 13,
+      "trailer": { "es": "https://www.youtube.com/watch?v=tjpNpnpK8Og", "en": "https://www.youtube.com/watch?v=tjpNpnpK8Og" },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 16,
+      "title": { "es": "Malviviendo", "en": "Hard Living" },
+      "year": "2008",
+      "director": "David Sainz",
+      "description": {
+        "es": "Una comedia negra creada por jóvenes andaluces sobre la vida marginal en un barrio ficticio de Sevilla.",
+        "en": "A dark comedy created by Andalusian youth about marginal life in a fictional neighborhood of Seville."
+      },
+      "image": "/imagenes/series/malviviendo.jpg",
+      "subcategoria": "comedy",
+      "temporadas": 4,
+      "episodios": 30,
+      "trailer": { "es": "https://www.youtube.com/watch?v=JxpSHQJ3NpI", "en": "https://www.youtube.com/watch?v=JxpSHQJ3NpI" },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 17,
+      "title": { "es": "Historias para no dormir", "en": "Stories to Keep You Awake" },
+      "year": "2021",
+      "director": "Varios (Paco Plaza, Rodrigo Sorogoyen, Paula Ortiz, entre otros)",
+      "description": {
+        "es": "Serie de antología con episodios auto-conclusivos en los que cada temporada se cuentan historias independientes que rinden tributo al formato clásico de Narciso Ibáñez Serrador, dirigidas y protagonizadas por conocidos nombres del cine español.",
+        "en": "Anthology series with self-contained episodes where each season tells independent stories that pay tribute to the classic format of Narciso Ibáñez Serrador, directed and starred by well-known names from Spanish cinema."
+      },
+      "image": "/imagenes/series/historias_moderna.jpg",
+      "subcategoria": "terror",
+      "temporadas": 2,
+      "episodios": 8,
+      "trailer": { "es": "https://www.youtube.com/watch?v=2ngpEeoirxY", "en": "https://www.youtube.com/watch?v=2ngpEeoirxY" },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 18,
+      "title": { "es": "Historias para no dormir", "en": "Stories to Keep You Awake" },
+      "year": "1966",
+      "director": "Narciso Ibáñez Serrador",
+      "description": {
+        "es": "Serie de culto de terror, con relatos independientes, creada por Narciso Ibáñez Serrador.",
+        "en": "Cult horror anthology series created by Narciso Ibáñez Serrador, featuring standalone stories."
+      },
+      "image": "/imagenes/series/historias.jpg",
+      "subcategoria": "terror",
+      "temporadas": 1,
+      "episodios": 8,
+      "trailer": { "es": "https://www.youtube.com/watch?v=cElhBMNELck", "en": "https://www.youtube.com/watch?v=cElhBMNELck" },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 19,
+      "title": { "es": "Paquita Salas", "en": "Paquita Salas" },
+      "year": "2016",
+      "director": "Javier Calvo, Javier Ambrossi",
+      "description": {
+        "es": "Paquita fue una de las mejores representantes de actores de los 90, pero ahora lucha por adaptarse a los nuevos tiempos.",
+        "en": "Paquita was one of the best talent agents in the '90s, but now she struggles to stay relevant in the modern industry."
+      },
+      "image": "/imagenes/series/paquita.jpg",
+      "subcategoria": "comedy",
+      "temporadas": 3,
+      "episodios": 16,
+      "trailer": { "es": "https://www.youtube.com/watch?v=6o0LwrRWY4I", "en": "https://www.youtube.com/watch?v=6o0LwrRWY4I" },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },{
+      "id": 20,
+      "title": { "es": "Arde Madrid", "en": "Burn Madrid" },
+      "year": "2018",
+      "director": "Paco León, Anna R. Costa",
+      "description": {
+        "es": "Ambientada en el Madrid franquista, sigue la vida secreta de Ava Gardner a través del punto de vista de su asistenta.",
+        "en": "Set in Francoist Madrid, follows Ava Gardner's secret life through the eyes of her maid."
+      },
+      "image": "/imagenes/series/arde.jpg",
+      "subcategoria": "comedy",
+      "temporadas": 1,
+      "episodios": 8,
+      "trailer": { "es": "https://www.youtube.com/watch?v=AJmV7QHGGiM", "en": "https://www.youtube.com/watch?v=AJmV7QHGGiM" },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 21,
+      "title": { "es": "La Hora Chanante", "en": "La Hora Chanante" },
+      "year": "2002",
+      "director": "Joaquín Reyes",
+      "description": {
+        "es": "Programa de humor absurdo y parodias presentado por Joaquín Reyes, emitido en La 2 de TVE entre 2002 y 2006.",
+        "en": "Absurd comedy and parody show hosted by Joaquín Reyes, aired on La 2 of TVE between 2002 and 2006."
+      },
+      "image": "/imagenes/series/la_hora.jpg",
+      "subcategoria": "comedy",
+      "temporadas": 2,
+      "episodios": 24,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=auuvjY8PFZk&list=RDauuvjY8PFZk&start_radio=1",
+        "en": "https://www.youtube.com/watch?v=auuvjY8PFZk&list=RDauuvjY8PFZk&start_radio=1"
+      },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 22,
+      "title": { "es": "7 Vidas", "en": "7 Lives" },
+      "year": "1999",
+      "director": "Ricardo Sánchez Cuerda",
+      "description": {
+        "es": "Comedia española que narra la vida de un grupo de amigos en un bar de Madrid, con numerosos gags y personajes emblemáticos.",
+        "en": "Spanish comedy about a group of friends living their lives around a bar in Madrid, featuring iconic characters and gags."
+      },
+      "image": "/imagenes/series/7vidas.jpg",
+      "subcategoria": "comedy",
+      "temporadas": 12,
+      "episodios": 204,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=s98r7fOXoEU",
+        "en": "https://www.youtube.com/watch?v=s98r7fOXoEU"
+      },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 23,
+      "title": { "es": "Muchachada Nui", "en": "Muchachada Nui" },
+      "year": "2007",
+      "director": "Joaquín Reyes",
+      "description": {
+        "es": "Programa de humor absurdo y surrealista creado por Joaquín Reyes y sus compañeros, continuación de La Hora Chanante.",
+        "en": "Absurd and surreal comedy show created by Joaquín Reyes and colleagues, a follow-up to La Hora Chanante."
+      },
+      "image": "/imagenes/series/muchachada.jpg",
+      "subcategoria": "comedy",
+      "temporadas": 4,
+      "episodios": 32,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=p_EhCrTD648",
+        "en": "https://www.youtube.com/watch?v=p_EhCrTD648"
+      },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 24,
+      "title": { "es": "Fortunata y Jacinta", "en": "Fortunata and Jacinta" },
+      "year": "1980",
+      "director": "Mario Camus",
+      "description": {
+        "es": "Miniserie basada en la novela de Benito Pérez Galdós que relata la historia de dos mujeres muy diferentes en la España del siglo XIX.",
+        "en": "Miniseries based on Benito Pérez Galdós' novel telling the story of two very different women in 19th century Spain."
+      },
+      "image": "/imagenes/series/fortunata.jpg",
+      "subcategoria": "drama",
+      "temporadas": 1,
+      "episodios": 4,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=tl1bQz3oNSA&list=RDtl1bQz3oNSA&start_radio=1",
+        "en": "https://www.youtube.com/watch?v=tl1bQz3oNSA&list=RDtl1bQz3oNSA&start_radio=1"
+      },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 25,
+      "title": { "es": "Da Suisa", "en": "Da Suisa" },
+      "year": "2009",
+      "director": "David Sainz",
+      "description": {
+        "es": "Serie de humor y situaciones cotidianas en el contexto español, muy popular en televisión local.",
+        "en": "Comedy series about everyday situations in the Spanish context, popular on local TV."
+      },
+      "image": "/imagenes/series/da_suisa.jpg",
+      "subcategoria": "comedy",
+      "temporadas": 3,
+      "episodios": 30,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=YTGksASq5B0",
+        "en": "https://www.youtube.com/watch?v=YTGksASq5B0"
+      },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 26,
+      "title": { "es": "Vis a Vis", "en": "Locked Up" },
+      "year": "2015",
+      "director": "Jesús Colmenar",
+      "description": {
+        "es": "Drama carcelario que narra la vida de una joven internada en prisión y las luchas de poder dentro del centro penitenciario.",
+        "en": "Prison drama following the life of a young woman incarcerated and the power struggles inside the penitentiary."
+      },
+      "image": "/imagenes/series/vis.jpg",
+      "subcategoria": "drama",
+      "temporadas": 4,
+      "episodios": 40,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=hDMyQfuQSkA",
+        "en": "https://www.youtube.com/watch?v=hDMyQfuQSkA"
+      },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 27,
+      "title": { "es": "El Pícaro", "en": "The Rogue" },
+      "year": "1974",
+      "director": "Fernando Fernán Gómez",
+      "description": {
+        "es": "Serie histórica española que sigue las aventuras de un pícaro astuto y carismático en el siglo XVII.",
+        "en": "Spanish historical series following the adventures of a clever and charismatic rogue in the 17th century."
+      },
+      "image": "/imagenes/series/picaro.jpg",
+      "subcategoria": "drama",
+      "temporadas": 1,
+      "episodios": 6,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=kUA3d8Na2SU",
+        "en": "https://www.youtube.com/watch?v=kUA3d8Na2SU"
+      },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 28,
+      "title": { "es": "La Casa de Papel", "en": "Money Heist" },
+      "year": "2017",
+      "director": "Álex Pina",
+      "description": {
+        "es": "Grupo de ladrones intenta realizar el mayor atraco de la historia en la Real Casa de la Moneda de España.",
+        "en": "A group of thieves tries to pull off the biggest heist in history at the Royal Mint of Spain."
+      },
+      "image": "/imagenes/series/la_casa_de_papel.jpg",
+      "subcategoria": "thriller",
+      "temporadas": 5,
+      "episodios": 41,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=_InqQJRqGW4",
+        "en": "https://www.youtube.com/watch?v=_InqQJRqGW4"
+      },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 29,
+      "title": { "es": "Cañas y Barro", "en": "Reeds and Mud" },
+      "year": "1978",
+      "director": "Rafael Romero Marchent",
+      "description": {
+        "es": "Miniserie basada en la novela de Vicente Blasco Ibáñez que relata la vida en un pueblo pesquero valenciano.",
+        "en": "Miniseries based on Vicente Blasco Ibáñez’s novel depicting life in a Valencian fishing village."
+      },
+      "image": "/imagenes/series/canas.jpg",
+      "subcategoria": "drama",
+      "temporadas": 1,
+      "episodios": 8,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=UyaN43bLmyY&list=RDUyaN43bLmyY&start_radio=1",
+        "en": "https://www.youtube.com/watch?v=UyaN43bLmyY&list=RDUyaN43bLmyY&start_radio=1"
+      },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 30,
+      "title": { "es": "La Barraca", "en": "The Shack" },
+      "year": "1979",
+      "director": "León Klimovsky",
+      "description": {
+        "es": "Miniserie basada en la novela de Vicente Blasco Ibáñez que muestra la lucha por la supervivencia de una familia campesina.",
+        "en": "Miniseries based on Vicente Blasco Ibáñez’s novel showing the survival struggle of a peasant family."
+      },
+      "image": "/imagenes/series/la_barraca.jpg",
+      "subcategoria": "drama",
+      "temporadas": 1,
+      "episodios": 6,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=hRg9V40wfGw",
+        "en": "https://www.youtube.com/watch?v=hRg9V40wfGw"
+      },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 31,
+      "title": { "es": "El Otro Lado", "en": "The Other Side" },
+      "year": "2018",
+      "director": "Berto Romero",
+      "description": {
+        "es": "Serie dramática que explora temas sobrenaturales y misterios en un pequeño pueblo español.",
+        "en": "Drama series exploring supernatural themes and mysteries in a small Spanish town."
+      },
+      "image": "/imagenes/series/el_otro_lado.jpg",
+      "subcategoria": "drama",
+      "temporadas": 1,
+      "episodios": 10,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=lwSeCM364MA",
+        "en": "https://www.youtube.com/watch?v=ZBZvPX67GWc"
+      },
+      "masterpiece": true,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 32,
+      "title": { "es": "Farmacia de Guardia", "en": "Farmacia de Guardia" },
+      "year": "1991",
+      "director": "Antonio Mercero",
+      "description": {
+        "es": "Comedia española que gira en torno a las situaciones de una farmacia de barrio y su propietaria.",
+        "en": "Spanish comedy centered around the situations in a neighborhood pharmacy and its owner."
+      },
+      "image": "/imagenes/series/farmacia.jpg",
+      "subcategoria": "comedy",
+      "temporadas": 5,
+      "episodios": 170,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=8D_YFFcbTMM",
+        "en": "https://www.youtube.com/watch?v=8D_YFFcbTMM"
+      },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
+    },
+    {
+      "id": 33,
+      "title": { "es": "Lleno por Favor", "en": "Lleno por Favor" },
+      "year": "1993",
+      "director": "Vicente Escrivá",
+      "description": {
+        "es": "Serie cómica que aborda situaciones cotidianas y absurdas con humor muy popular en España.",
+        "en": "Comedy series portraying everyday and absurd situations with humor popular in Spain."
+      },
+      "image": "/imagenes/series/lleno_por_favor.jpg",
+      "subcategoria": "comedy",
+      "temporadas": 3,
+      "episodios": 30,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=2xKqlabcA5o",
+        "en": "https://www.youtube.com/watch?v=2xKqlabcA5o"
+      },
+      "masterpiece": false,
+      "tags": ["spanish"],
+      "categoria": "series"
     }
   ]
-} 
+}

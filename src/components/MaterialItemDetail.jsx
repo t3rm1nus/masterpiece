@@ -318,26 +318,29 @@ const MaterialItemDetail = ({ item }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     variant="contained"
-                    color="primary" // Unificamos color para descartar diferencias de theme
+                    color="primary"
                     sx={{
                       fontWeight: 700,
                       fontSize: { xs: '1rem', md: '1.1rem' },
-                      py: '12px',
+                      py: '10px',
                       borderRadius: '8px',
                       boxShadow: 2,
                       minWidth: 180,
                       maxWidth: 320,
                       width: '100%',
                       mx: 'auto',
-                      display: 'block',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
                       textAlign: 'center',
                       p: 0,
                       m: 0
                     }}
-                    startIcon={<PlayArrowIcon />}
+                    startIcon={<PlayArrowIcon sx={{ ml: '-2px', mr: '2px', fontSize: '1.3em' }} />}
                     className="item-detail-action-btn"
                   >
-                    {t?.ui?.actions?.watchTrailer ? t.ui.actions.watchTrailer : (lang === 'en' ? 'Watch Trailer' : 'Ver Trailer')}
+                    <span style={{ display: 'inline-block', verticalAlign: 'middle', lineHeight: 1 }}>{t?.ui?.actions?.watchTrailer ? t.ui.actions.watchTrailer : (lang === 'en' ? 'Watch Trailer' : 'Ver Trailer')}</span>
                   </Button>
                 </Box>
               )}
@@ -352,23 +355,26 @@ const MaterialItemDetail = ({ item }) => {
                     sx={{
                       fontWeight: 700,
                       fontSize: { xs: '1rem', md: '1.1rem' },
-                      py: '12px',
+                      py: '10px',
                       borderRadius: '8px',
                       boxShadow: 2,
                       minWidth: 180,
                       maxWidth: 320,
                       width: '100%',
                       mx: 'auto',
-                      display: 'block',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
                       textAlign: 'center',
                       p: 0,
                       m: 0
                     }}
                     onClick={e => { e.preventDefault(); handleDownloadClick(); }}
-                    startIcon={<LaunchIcon />}
+                    startIcon={<LaunchIcon sx={{ ml: '-2px', mr: '2px', fontSize: '1.3em' }} />}
                     className="item-detail-action-btn"
                   >
-                    {t?.ui?.actions?.download ? `${t.ui.actions.download} ${t.ui.categories?.movies?.toLowerCase?.() || ''}`.trim() : (lang === 'en' ? 'Download movie' : 'Descargar película')}
+                    <span style={{ display: 'inline-block', verticalAlign: 'middle', lineHeight: 1 }}>{t?.ui?.actions?.download ? `${t.ui.actions.download} ${t.ui.categories?.movies?.toLowerCase?.() || ''}`.trim() : (lang === 'en' ? 'Download movie' : 'Descargar película')}</span>
                   </Button>
                 </Box>
               )}

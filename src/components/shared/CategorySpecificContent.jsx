@@ -192,6 +192,25 @@ export function MobileCategorySpecificContent({ selectedItem, lang, t, getTransl
             </Typography>
           </Box>
         )}
+        {selectedItem.year && (
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '8px' }}>
+            <AccessTimeIcon sx={{ marginRight: '8px', color: '#111' }} />
+            <Typography variant="h6" sx={{ color: '#111', fontWeight: 500, textAlign: 'left', fontSize: '1rem' }}>
+              <strong>{(getTranslation && typeof getTranslation === 'function')
+                ? getTranslation('content.metadata.common.year', 'Año')
+                : (t?.content?.metadata?.common?.year || 'Año')
+              }:</strong> {ensureString(selectedItem.year, lang)}
+            </Typography>
+          </Box>
+        )}
+        {selectedItem.director && (
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '8px' }}>
+            <PersonIcon sx={{ marginRight: '8px', color: '#111' }} />
+            <Typography variant="h6" sx={{ color: '#111', fontWeight: 500, textAlign: 'left', fontSize: '1rem' }}>
+              <strong>{t?.content?.metadata?.common?.director || 'Director'}:</strong> {ensureString(selectedItem.director)}
+            </Typography>
+          </Box>
+        )}
       </Box>
     );
   }
@@ -238,6 +257,11 @@ export function DesktopCategorySpecificContent({ selectedItem, lang, t, getTrans
   if (selectedItem.category === 'series') {
     if (selectedItem.temporadas) infoRows.push({ label: lang === 'es' ? 'Temporadas' : 'Seasons', value: ensureString(selectedItem.temporadas) });
     if (selectedItem.episodios) infoRows.push({ label: lang === 'es' ? 'Episodios' : 'Episodes', value: ensureString(selectedItem.episodios) });
+    // Añadir year y director justo después de episodios
+    if (selectedItem.year) infoRows.push({ label: (getTranslation && typeof getTranslation === 'function')
+      ? getTranslation('content.metadata.common.year', 'Año')
+      : (t?.content?.metadata?.common?.year || 'Año'), value: ensureString(selectedItem.year) });
+    if (selectedItem.director) infoRows.push({ label: t?.content?.metadata?.common?.director || 'Director', value: ensureString(selectedItem.director) });
   }
   if (infoRows.length === 0) return null;
   return (
