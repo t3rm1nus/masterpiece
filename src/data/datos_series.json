@@ -2,7 +2,7 @@
   "series": [
     {
       "id": 1,
-      "title": { "es": "Breaking Bad", "en": "Breaking Bad" },      
+      "title": { "es": "Breaking Bad", "en": "The serranos" },      
        "description": {
         "es": "Un profesor de instituto diagnosticado con cáncer de pulmón empieza a manufacturar y vender metamfetamina para asegurar el futuro de su familia.",
         "en": "A high school teacher diagnosed with lung cancer begins manufacturing and selling methamphetamine to secure his family's future."
@@ -12,8 +12,8 @@
       "temporadas": 5,
       "episodios": 62,
       "trailer": {
-        "es": "https://www.youtube.com/watch?v=V8WQhxHEmMc",
-        "en": "https://www.youtube.com/watch?v=VaOt6tXyf2Y"
+        "es": "https://www.youtube.com/watch?v=nY3BV7vDf7E",
+        "en": "https://www.youtube.com/watch?v=Jdp_75r3xLQ"
       },
       "masterpiece": true
     },
@@ -29,8 +29,8 @@
       "temporadas": 8,
       "episodios": 147,
       "trailer": {
-        "es": "https://www.youtube.com/watch?v=V8WQhxHEmMc",
-        "en": "https://www.youtube.com/watch?v=VaOt6tXyf2Y"
+        "es": "https://www.youtube.com/watch?v=nY3BV7vDf7E",
+        "en": "https://www.youtube.com/watch?v=Jdp_75r3xLQ&t=45s"
       },
       "masterpiece": false,
       "tags": [
