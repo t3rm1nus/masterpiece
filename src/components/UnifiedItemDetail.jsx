@@ -120,7 +120,7 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
       getSubcategoryTranslation={getSubcategoryTranslation}
       goToHowToDownload={goToHowToDownload}
       renderDesktopSpecificContent={() => (
-        <DesktopCategorySpecificContent selectedItem={selectedItem} lang={lang} t={t} />
+        <DesktopCategorySpecificContent selectedItem={selectedItem} lang={lang} t={t} getTranslation={typeof t === 'function' ? t : undefined} />
       )}
       renderDesktopActionButtons={() => (
         <DesktopActionButtons

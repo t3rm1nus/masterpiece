@@ -62,12 +62,12 @@
 
 /* === COLORES POR CATEGORÍA === */
 :root {
-  --color-movies: #2196f3;
-  --color-videogames: #9c27b0;
-  --color-comics: #ff9800;
-  --color-books: #4caf50;
-  --color-boardgames: #e91e63;
-  --color-music: #00bcd4;
+  --color-movies: #90caf9;
+  --color-videogames: #ce93d8;
+  --color-comics: #ffcc80;
+  --color-books: #a5d6a7;
+  --color-boardgames: #f8bbd0;
+  --color-music: #b3e5fc;
   --color-podcast: #8bc34a;
-  --color-documentales: #fdeaea;
+  --color-documentales: #ffab91;
 }

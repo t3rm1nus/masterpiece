@@ -19,6 +19,9 @@ import CategoryBar from './home/CategoryBar';
 import SubcategoryBar from './home/SubcategoryBar';
 import SpecialButtons from './home/SpecialButtons';
 import UiLayout from './ui/UiLayout';
+import { getCategoryGradient } from '../utils/categoryUtils';
+import HybridMenu from './HybridMenu';
+import MaterialMobileMenu from './MaterialMobileMenu';
 
 // Hook para detectar si es móvil SOLO por ancho de pantalla (robusto y compatible móvil)
 function useIsMobile() {
@@ -51,12 +54,43 @@ const HomePage = ({
   materialCategorySelectSx,
   ...rest
 } = {}) => {
-  const { lang, t } = useLanguage();
+  const { lang, t, getTranslation } = useLanguage();
   // Hook para sincronizar títulos automáticamente
   useTitleSync();
   const [splashOpen, setSplashOpen] = useState(false);
   const audioRef = useRef(null);
-   const handleSplashClose = () => {
+  // Audios disponibles para el splash
+  const splashAudios = [
+    "/imagenes/sonidos/samurai.mp3",
+    "/imagenes/sonidos/samurai.wav",
+    "/imagenes/sonidos/samurai1.mp3",
+    "/imagenes/sonidos/samurai2.mp3",
+    "/imagenes/sonidos/samurai3.mp3",
+    "/imagenes/sonidos/samurai4.mp3"
+  ];
+  // Estado para controlar los audios pendientes (no repetir hasta que suenen todos)
+  const [pendingAudios, setPendingAudios] = useState([...splashAudios]);
+  const [splashAudio, setSplashAudio] = useState(splashAudios[0]);
+  const handleSplashOpen = () => {
+    let audiosToUse = pendingAudios.length > 0 ? pendingAudios : [...splashAudios];
+    // Elegir audio aleatorio de los pendientes
+    const randomIdx = Math.floor(Math.random() * audiosToUse.length);
+    const randomAudio = audiosToUse[randomIdx];
+    setSplashAudio(randomAudio);
+    setSplashOpen(true);
+    // Eliminar el audio elegido de los pendientes
+    const newPending = audiosToUse.filter((a, i) => i !== randomIdx);
+    setPendingAudios(newPending);
+  };
+
+  // Log del audio elegido SIEMPRE que se abra el splash (móvil o desktop)
+  useEffect(() => {
+    if (splashOpen && splashAudio) {
+      console.log('[Splash] Sonido elegido:', splashAudio);
+    }
+  }, [splashOpen, splashAudio]);
+
+  const handleSplashClose = () => {
     setSplashOpen(false);
     if (audioRef.current) {
       audioRef.current.pause();
@@ -105,7 +139,9 @@ const HomePage = ({
   const categories = categoriesFromStore.map(cat => ({
     ...cat,
     label: t?.categories?.[cat.key] || cat.label,
-    isMasterpiece: cat.key === 'masterpiece' || cat.masterpiece === true
+    isMasterpiece: cat.key === 'masterpiece' || cat.masterpiece === true,
+    color: categoryColor(cat.key),
+    gradient: getCategoryGradient(cat.key)
   }));
   // Obtener subcategorías del store para la categoría seleccionada
   const categorySubcategories = React.useMemo(() => {
@@ -222,13 +258,16 @@ const HomePage = ({
 
         // Filtro de subcategoría
         if (activeSubcategory && activeSubcategory !== 'all') {
-          filteredData = filteredData.filter(item => 
-            (item.subcategory && item.subcategory.toLowerCase().trim() === activeSubcategory)
-            || (item.categoria && item.categoria.toLowerCase().trim() === activeSubcategory)
-            || (item.genre && item.genre.toLowerCase().trim() === activeSubcategory)
-            || (item.genero && item.generero.toLowerCase().trim() === activeSubcategory)
-          );
-          console.log(`📂 Filtro subcategoría (key directa) "${activeSubcategory}" aplicado:`, filteredData.length);
+          const normalizedActiveSubcat = normalizeSubcategoryInternal(activeSubcategory);
+          filteredData = filteredData.filter(item => {
+            return (
+              (item.subcategory && normalizeSubcategoryInternal(item.subcategory) === normalizedActiveSubcat)
+              || (item.categoria && normalizeSubcategoryInternal(item.categoria) === normalizedActiveSubcat)
+              || (item.genre && normalizeSubcategoryInternal(item.genre) === normalizedActiveSubcat)
+              || (item.genero && normalizeSubcategoryInternal(item.genero) === normalizedActiveSubcat)
+            );
+          });
+          console.log(`📂 Filtro subcategoría (normalizado) "${activeSubcategory}" aplicado:`, filteredData.length);
         }
       }
 
@@ -272,8 +311,12 @@ const HomePage = ({
   const handleItemClick = (item) => {
     // Usar el viewStore para navegar al detalle
     goToDetail(item);
-    // Hacer scroll al inicio de la página
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Hacer scroll al inicio de la página solo en móviles, subiendo 100px más
+    if (window.innerWidth < 900) {
+      setTimeout(() => {
+        window.scrollTo({ top: Math.max(0, window.scrollY - window.scrollY + 0 - 100), behavior: 'smooth' });
+      }, 0);
+    }
   };  // Manejar cierre del detalle
   const handleCloseDetail = () => {
     // Volver a la vista anterior usando el viewStore
@@ -291,66 +334,8 @@ const HomePage = ({
         selectedCategory={selectedCategory}
       />
     );
-  };
-
-  // Función para obtener el color de la categoría
-  const getCategoryColor = (categoryKey) => {
-    switch (categoryKey) {
-      case 'movies':
-      case 'peliculas':
-        return '#2196f3';
-      case 'videogames':
-      case 'videojuegos':
-        return '#9c27b0';
-      case 'books':
-      case 'libros':
-        return '#4caf50';
-      case 'music':
-      case 'musica':
-        return '#00bcd4';
-      case 'podcast':
-      case 'podcasts':
-        return '#8bc34a';
-      case 'boardgames':
-      case 'juegos de mesa':
-        return '#e91e63';      case 'comics':
-        return '#ff9800';
-      case 'documentales':
-      case 'documentaries':
-        return '#9e9e9e';
-      default:
-        return '#0078d4';    }
-  };
-  // Copiado de MaterialRecommendationCard y MobileItemDetail para unificar degradados
-  function getCategoryGradient(category) {
-    switch (category) {
-      case 'movies':
-      case 'peliculas':
-        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
-      case 'videogames':
-      case 'videojuegos':
-        return 'linear-gradient(135deg, #f8f3fa 0%, #e1bee7 100%)';
-      case 'books':
-      case 'libros':
-        return 'linear-gradient(135deg, #f4faf4 0%, #c8e6c9 100%)';
-      case 'music':
-      case 'musica':
-        return 'linear-gradient(135deg, #f2fbfc 0%, #b2ebf2 100%)';
-      case 'podcast':
-      case 'podcasts':
-        return 'linear-gradient(135deg, #f7fbf2 0%, #dcedc8 100%)';
-      case 'boardgames':
-      case 'juegos de mesa':
-        return 'linear-gradient(135deg, #fdf4f8 0%, #f8bbd0 100%)';
-      case 'comics':
-        return 'linear-gradient(135deg, #fff8f0 0%, #ffe0b2 100%)';
-      case 'documentales':
-      case 'documentaries':
-        return 'linear-gradient(135deg, #fafafa 0%, #e0e0e0 100%)';
-      default:
-        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
-    }
   }
+
   const isMobile = useIsMobile();
   // Verificar si hay datos disponibles
   if (!allData || Object.keys(allData).length === 0) {
@@ -361,6 +346,25 @@ const HomePage = ({
       </div>
     );
   }
+
+  // Subir scroll arriba al volver atrás en móviles
+  useEffect(() => {
+    const handlePopState = () => {
+      if (window.innerWidth < 900) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Subir scroll arriba al recargar en móviles
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth < 900) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <UiLayout sx={{ marginTop: 8, width: '100vw', maxWidth: '100vw', px: 0 }}>
       {/* Eliminar controles de cabecera solo en desktop */}
@@ -381,30 +385,49 @@ const HomePage = ({
               (selectedCategory ? ' after-subcategories' : '')
             }
             style={{
-              ...(isMobile ? {
-                textTransform: 'capitalize',
-                textAlign: 'center',
-                margin: '20px 0 32px 0',
-                fontWeight: 700,
-                fontSize: '2.2rem',
-                background: selectedCategory ? getCategoryGradient(selectedCategory) : undefined,
-                boxShadow: selectedCategory ? '0 2px 12px 0 rgba(255, 200, 80, 0.13), 0 1.5px 0 #ffe29e' : undefined,
-                color: 'black',
-                borderRadius: 0,
-                position: 'relative',
-                zIndex: 2,
-                border: 'none',
-                transition: 'background 0.3s',
-              } : {})
+              textTransform: 'capitalize',
+              textAlign: 'center',
+              margin: '20px 0 32px 0',
+              fontWeight: 700,
+              fontSize: '2.2rem',
+              background: selectedCategory && selectedCategory !== 'all' ? getCategoryGradient(selectedCategory) : 'linear-gradient(90deg, #fffbe6 0%, #ffe082 100%)',
+              color: 'black',
+              borderRadius: 0,
+              position: 'relative',
+              zIndex: 2,
+              border: 'none',
+              transition: 'background 0.3s',
+              width: isMobile ? '100vw' : '99vw',
+              left: '50%',
+              right: '50%',
+              transform: 'translateX(-50%)',
+              maxWidth: isMobile ? '100vw' : '1600px',
+              minWidth: isMobile ? '100vw' : '0',
+              minHeight: isMobile ? 0 : '70px',
+              padding: isMobile ? undefined : '32px 0 28px 0',
+              display: 'block',
+              boxShadow: 'none',
+              borderTop: isMobile ? undefined : '2px solid #bbb',
+              borderBottom: isMobile ? undefined : '2px solid #bbb',
             }}
           >
-            {selectedCategory 
-              ? (t?.categories?.[selectedCategory] || selectedCategory)
-              : (t?.ui?.titles?.home_title || 'Recomendaciones diarias')
+            {(!selectedCategory || selectedCategory === 'all')
+              ? (t?.ui?.titles?.home_title || 'Lista de recomendados')
+              : (t?.categories?.[selectedCategory] || selectedCategory)
             }
           </h1>
           {isMobile && (
-            <SplashDialog open={splashOpen} onClose={handleSplashClose} audio="/imagenes/samurai.mp3" dark />
+            <SplashDialog open={splashOpen} onClose={handleSplashClose} audio={splashAudio} dark />
+          )}
+          {/* SOLO DESKTOP: Menú superior y controles */}
+          {!isMobile && (
+            <HybridMenu
+              onSplashOpen={handleSplashOpen}
+              splashAudio={splashAudio}
+              splashOpen={splashOpen}
+              onSplashClose={handleSplashClose}
+              audioRef={audioRef}
+            />
           )}
           {/* SOLO DESKTOP: Categorías, subcategorías y botones especiales */}
           {!isMobile && (
@@ -529,8 +552,50 @@ const HomePage = ({
           />
         </div>
       )}
+
+      {/* SOLO EN MÓVIL: Menú superior centralizado para splash/audio */}
+      {isMobile && (
+        <MaterialMobileMenu
+          onSplashOpen={handleSplashOpen}
+          splashAudio={splashAudio}
+          splashOpen={splashOpen}
+          onSplashClose={handleSplashClose}
+          audioRef={audioRef}
+        />
+      )}
     </UiLayout>
   );
 };
+
+// Fuera del componente HomePage
+function categoryColor(categoryKey) {
+  switch (categoryKey) {
+    case 'movies':
+    case 'peliculas':
+      return '#2196f3';
+    case 'videogames':
+    case 'videojuegos':
+      return '#9c27b0';
+    case 'books':
+    case 'libros':
+      return '#4caf50';
+    case 'music':
+    case 'musica':
+      return '#00bcd4';
+    case 'podcast':
+    case 'podcasts':
+      return '#8bc34a';
+    case 'boardgames':
+    case 'juegos de mesa':
+      return '#e91e63';
+    case 'comics':
+      return '#ff9800';
+    case 'documentales':
+    case 'documentaries':
+      return '#9e9e9e';
+    default:
+      return '#0078d4';
+  }
+}
 
 export default HomePage;

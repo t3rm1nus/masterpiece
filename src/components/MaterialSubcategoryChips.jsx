@@ -91,9 +91,10 @@ const MaterialSubcategoryChips = ({
         <Box
           sx={{
             display: 'flex',
-            flexWrap: 'wrap',
+            flexWrap: 'nowrap', // Evita salto de línea
+            overflowX: 'auto', // Scroll horizontal
             gap: '8px',
-            justifyContent: 'center',
+            justifyContent: 'flex-start',
             padding: '8px 16px',
             marginBottom: '8px',
             ...sx

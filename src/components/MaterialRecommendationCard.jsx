@@ -112,7 +112,7 @@ const MaterialRecommendationCard = memo(({
         return theme.palette.mode === 'dark' ? '#f57c00' : '#ff9800';
       case 'documentales':
       case 'documentaries':
-        return theme.palette.mode === 'dark' ? '#757575' : '#9e9e9e';
+        return theme.palette.mode === 'dark' ? '#e57373' : '#e57373';
       default:
         return theme.palette.primary.main;
     }
@@ -141,7 +141,7 @@ const MaterialRecommendationCard = memo(({
         return 'linear-gradient(135deg, #fff8f0 0%, #ffe0b2 100%)';
       case 'documentales':
       case 'documentaries':
-        return 'linear-gradient(135deg, #fafafa 0%, #e0e0e0 100%)';
+        return 'linear-gradient(135deg, #fdeaea 0%, #e57373 100%)';
       default:
         return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
     }
@@ -157,7 +157,7 @@ const MaterialRecommendationCard = memo(({
       style={{
         maxWidth: 340, // ampliado a 340px
         minWidth: 220, // asegura que no sean demasiado pequeños
-        margin: '0 auto',
+        margin: '0 auto 20px auto', // antes '0 auto', ahora añade marginBottom 20px
         cursor: 'pointer',
         transition: 'all 0.3s ease',
         boxShadow: recommendation.masterpiece ? theme.shadows[4] : theme.shadows[2],
@@ -168,10 +168,39 @@ const MaterialRecommendationCard = memo(({
             ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
             : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
           : getCategoryGradient(recommendation.category),
+        position: 'relative', // necesario para posicionar la estrella
         ...sx
       }}
       onClick={handleCardClick}
     >
+      {/* Badge de masterpiece - ahora sobre la esquina del card */}
+      {recommendation.masterpiece && (
+        <Badge
+          badgeContent={<StarIcon sx={{ fontSize: '18px', color: '#ffd700' }} />} // Estrella dorada
+          sx={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            zIndex: 10,
+            pointerEvents: 'none',
+            '& .MuiBadge-badge': {
+              backgroundColor: 'white',
+              color: '#ffd700',
+              width: 28,
+              height: 28,
+              borderRadius: '50%',
+              border: '2px solid #ffd700',
+              boxShadow: theme.shadows[4],
+              display: 'flex !important',
+              alignItems: 'center',
+              justifyContent: 'center',
+              visibility: 'visible !important',
+              opacity: '1 !important',
+              padding: 0
+            }
+          }}
+        />
+      )}
       <Box sx={{ position: 'relative' }}>
         <CardMedia
           component="img"
@@ -183,40 +212,12 @@ const MaterialRecommendationCard = memo(({
           image={recommendation.image}
           alt={title}
         />
-        {/* Badge de masterpiece - SOLO móviles: top: 0, right: 0 */}
-        {recommendation.masterpiece && (
-          <Badge
-            badgeContent={<StarIcon sx={{ fontSize: '18px', color: '#ffd700' }} />} // Estrella dorada
-            sx={{
-              position: 'absolute',
-              top: { xs: 0, md: 8 },
-              right: { xs: 0, md: 8 },
-              zIndex: 10,
-              pointerEvents: 'none',
-              '& .MuiBadge-badge': {
-                backgroundColor: 'white',
-                color: '#ffd700',
-                width: 28,
-                height: 28,
-                borderRadius: '50%',
-                border: '2px solid #ffd700',
-                boxShadow: theme.shadows[4],
-                display: 'flex !important',
-                alignItems: 'center',
-                justifyContent: 'center',
-                visibility: 'visible !important',
-                opacity: '1 !important',
-                padding: 0
-              }
-            }}
-          />
-        )}
       </Box>
       <CardContent sx={{ position: 'relative', overflow: 'visible' }}>
-        <Typography variant="h6" component="h3" sx={{ marginBottom: '8px', fontSize: '1rem' }}>
+        <Typography variant="h6" component="h3" sx={{ marginBottom: '8px', fontSize: '1.13rem', textAlign: 'center', fontWeight: 600 }}>
           {title}
         </Typography>
-        <Box sx={{ display: 'flex', gap: '4px', marginBottom: '8px', flexWrap: 'wrap', flexDirection: recommendation.category === 'boardgames' ? 'column' : 'row', alignItems: recommendation.category === 'boardgames' ? 'flex-start' : 'center' }}>
+        <Box sx={{ display: 'flex', gap: '4px', marginBottom: '8px', flexWrap: 'wrap', flexDirection: 'row', alignItems: 'center' }}>
           {showCategory && (
             <Chip
               icon={getCategoryIcon(recommendation.category)}
@@ -245,8 +246,8 @@ const MaterialRecommendationCard = memo(({
                 fontSize: '0.65rem',
                 borderColor: getCategoryColor(recommendation.category),
                 color: getCategoryColor(recommendation.category),
-                alignSelf: recommendation.category === 'boardgames' ? 'flex-start' : 'auto',
-                marginTop: recommendation.category === 'boardgames' ? '4px' : '0px'
+                alignSelf: 'auto', // Unificado para todas las categorías
+                marginTop: '0px'    // Unificado para todas las categorías
               }}
             />
           )}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from '../LanguageContext';
 
 // Componente de imagen optimizada
 export const OptimizedImage = ({ src, alt, className, style, loading = 'lazy', decoding = 'async', fallback, ...props }) => (
@@ -15,28 +16,31 @@ export const OptimizedImage = ({ src, alt, className, style, loading = 'lazy', d
 );
 
 // Componente del badge de obra maestra
-export const MasterpieceBadge = ({ config, tooltip = getTranslation('ui.badges.masterpiece', 'Obra maestra'), size = 56, ...props }) => (
-  <span className="masterpiece-badge" title={tooltip} {...props}>
-    <svg
-      width={size}
-      height={size}
-      viewBox={config.svg.viewBox}
-      fill={config.svg.fill}
-      xmlns={config.svg.xmlns}
-    >
-      <circle
-        cx={config.circle.cx}
-        cy={config.circle.cy}
-        r={config.circle.r}
-        fill={config.circle.fill}
-      />
-      <path
-        d={config.star.d}
-        fill={config.star.fill}
-      />
-    </svg>
-  </span>
-);
+export const MasterpieceBadge = ({ config, tooltip, size = 56, ...props }) => {
+  const { getTranslation } = useLanguage();
+  return (
+    <span className="masterpiece-badge" title={tooltip || getTranslation('ui.badges.masterpiece', 'Obra maestra')} {...props}>
+      <svg
+        width={size}
+        height={size}
+        viewBox={config.svg.viewBox}
+        fill={config.svg.fill}
+        xmlns={config.svg.xmlns}
+      >
+        <circle
+          cx={config.circle.cx}
+          cy={config.circle.cy}
+          r={config.circle.r}
+          fill={config.circle.fill}
+        />
+        <path
+          d={config.star.d}
+          fill={config.star.fill}
+        />
+      </svg>
+    </span>
+  );
+};
 
 // Componente para mostrar categorías
 export const CategoryLabels = ({ category, subcategory, getCategoryTranslation, getSubcategoryTranslation, renderCategory, renderSubcategory, sx = {}, ...props }) => (
@@ -54,6 +58,7 @@ export const CategoryLabels = ({ category, subcategory, getCategoryTranslation, 
 
 // Componente para vista "sin resultados"
 export const NoResults = ({ t, randomNotFoundImage, image, text, subtext, children, sx = {}, ...props }) => {
+  const { getTranslation } = useLanguage();
   const notFoundImageUrl = image || (randomNotFoundImage?.() || '/favicon.png');
   return (
     <div className="no-results-container" style={sx} {...props}>

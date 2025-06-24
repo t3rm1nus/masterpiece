@@ -26,7 +26,8 @@ import {
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 
-const MaterialCoffeePage = () => {  const { t } = useLanguage();
+const MaterialCoffeePage = () => {
+  const { t, getTranslation } = useLanguage();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 

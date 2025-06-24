@@ -1,11 +1,12 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import { PlayArrow as PlayArrowIcon } from '@mui/icons-material';
 import { getCategoryColor } from '../../utils/categoryUtils';
 import UiButton from '../ui/UiButton';
 
 // Botones de acción para mobile y desktop
 export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHowToDownload }) {
+  const theme = useTheme();
   const buttons = [];
   if (selectedItem.category === 'documentales' && selectedItem.link) {
     buttons.push(
@@ -34,18 +35,31 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
       <Box key="trailer" sx={{ textAlign: 'center', marginBottom: '16px' }}>
         <UiButton
           variant="contained"
-          startIcon={<PlayArrowIcon />}
+          color="primary"
+          startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
           href={trailerUrl}
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            backgroundColor: getCategoryColor(selectedItem.category),
             fontWeight: 700,
-            fontSize: { xs: '1rem', md: '1.1rem' },
-            minWidth: 180,
+            fontSize: { xs: '0.95rem', md: '1.05rem' },
+            minWidth: 140,
+            maxWidth: 220,
+            width: '100%',
+            py: '8px',
+            borderRadius: '8px',
+            boxShadow: 2,
+            mx: 'auto',
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+            backgroundColor: theme?.palette?.primary?.main,
+            color: theme?.palette?.primary?.contrastText,
             '&:hover': {
-              backgroundColor: getCategoryColor(selectedItem.category),
-              opacity: 0.8
+              backgroundColor: theme?.palette?.primary?.dark,
+              color: theme?.palette?.primary?.contrastText,
+              opacity: 0.9
             }
           }}
         >
@@ -80,18 +94,30 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
         <UiButton
           variant="contained"
           color="primary"
-          startIcon={<PlayArrowIcon />}
+          startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
           onClick={() => {
             if (typeof goToHowToDownload === 'function') goToHowToDownload();
           }}
           sx={{
-            backgroundColor: getCategoryColor(selectedItem.category),
             fontWeight: 700,
-            fontSize: { xs: '1rem', md: '1.1rem' },
-            minWidth: 180,
+            fontSize: { xs: '0.95rem', md: '1.05rem' },
+            minWidth: 140,
+            maxWidth: 220,
+            width: '100%',
+            py: '8px',
+            borderRadius: '8px',
+            boxShadow: 2,
+            mx: 'auto',
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+            backgroundColor: theme?.palette?.primary?.main,
+            color: theme?.palette?.primary?.contrastText,
             '&:hover': {
-              backgroundColor: getCategoryColor(selectedItem.category),
-              opacity: 0.8
+              backgroundColor: theme?.palette?.primary?.dark,
+              color: theme?.palette?.primary?.contrastText,
+              opacity: 0.9
             }
           }}
         >
@@ -122,14 +148,17 @@ export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHo
   if (trailerUrl) {
     buttons.push(
       <div key="trailer" className="item-detail-trailer">
-        <a 
-          href={trailerUrl} 
-          target="_blank" 
+        <UiButton
+          variant="contained"
+          color="primary"
+          sx={{ mt: 2, fontWeight: 700, fontSize: { xs: '1rem', md: '1.1rem' }, minWidth: 180 }}
+          component="a"
+          href={trailerUrl}
+          target="_blank"
           rel="noopener noreferrer"
-          className="trailer-link"
         >
-          {t.watch_trailer || t?.ui?.actions?.watchTrailer || (lang === 'en' ? 'Watch Trailer' : 'Ver Trailer')}
-        </a>
+          {t.watch_trailer || t?.ui?.actions?.watchTrailer || (lang === 'en' ? 'Watch Trailer' : 'Ver Tráiler')}
+        </UiButton>
       </div>
     );
   }

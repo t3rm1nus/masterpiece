@@ -31,36 +31,37 @@ import LanguageSelector from './ui/LanguageSelector';
  */
 
 // Menú clásico para desktop
-function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {} }) {
+function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {}, onSplashOpen, splashAudio, splashOpen, onSplashClose, audioRef }) {
   const { t, lang, getTranslation } = useLanguage();
   const { resetAllFilters, generateNewRecommendations } = useAppData();
   const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();  
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
-  const [splashOpen, setSplashOpen] = React.useState(false);
-  const audioRef = React.useRef(null);
+  // const [splashOpen, setSplashOpen] = React.useState(false);
+  // const audioRef = React.useRef(null);
   if (isMobile) return null;
 
   // --- Splash popup handlers ---
-  const handleSplashOpen = () => {
-    setSplashOpen(true);
-    setTimeout(() => {
-      if (audioRef.current) {
-        const audios = ["/imagenes/samurai.mp3", "/imagenes/samurai.wav"];
-        const random = Math.floor(Math.random() * audios.length);
-        audioRef.current.src = audios[random];
-        audioRef.current.currentTime = 0;
-        audioRef.current.play();
-      }
-    }, 100);
-  };
-  const handleSplashClose = () => {
-    setSplashOpen(false);
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    }
-  };
+  // El handler y audio vienen de props (HomePage)
+  // const handleSplashOpen = () => {
+  //   setSplashOpen(true);
+  //   setTimeout(() => {
+  //     if (audioRef.current) {
+  //       const audios = ["/imagenes/sonidos/samurai.mp3", "/imagenes/sonidos/samurai.wav"];
+  //       const random = Math.floor(Math.random() * audios.length);
+  //       audioRef.current.src = audios[random];
+  //       audioRef.current.currentTime = 0;
+  //       audioRef.current.play();
+  //     }
+  //   }, 100);
+  // };
+  // const handleSplashClose = () => {
+  //   setSplashOpen(false);
+  //   if (audioRef.current) {
+  //     audioRef.current.pause();
+  //     audioRef.current.currentTime = 0;
+  //   }
+  // };
 
   // Usar items custom si se pasan, si no usar hook por defecto
   const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems();
@@ -101,7 +102,7 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {} }) {
             src="/imagenes/icono.png"
             alt={getTranslation('ui.alt.info', 'info')}
             title={getTranslation('ui.titles.show_info', lang === 'en' ? 'Show info' : 'Mostrar información')}
-            onClick={handleSplashOpen}
+            onClick={onSplashOpen}
             style={{
               width: '36px',
               height: '36px',
@@ -113,7 +114,7 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {} }) {
             }}
           />
           {/* Splash Dialog Desktop */}
-          <Dialog open={splashOpen} onClose={handleSplashClose} maxWidth="xl" fullWidth
+          <Dialog open={splashOpen} onClose={onSplashClose} maxWidth="xl" fullWidth
             PaperProps={{
               style: {
                 borderRadius: 18,
@@ -154,9 +155,9 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {} }) {
                   background: '#111',
                   display: 'block',
                 }} 
-                onClick={handleSplashClose}
+                onClick={onSplashClose}
               />
-              <audio ref={audioRef} src="/imagenes/samurai.mp3" preload="auto" loop />
+              <audio ref={audioRef} src={splashAudio} preload="auto" autoPlay loop />
             </DialogContent>
           </Dialog>
           <ThemeToggle />
@@ -173,7 +174,12 @@ const HybridMenu = ({
   menuItems,
   onMenuOpen,
   onMenuClose,
-  sx = {}
+  sx = {},
+  onSplashOpen,
+  splashAudio,
+  splashOpen,
+  onSplashClose,
+  audioRef
 } = {}) => {
   const { lang } = useLanguage();
   const theme = useTheme();
@@ -182,7 +188,7 @@ const HybridMenu = ({
   if (isMobile) {
     return <MaterialMobileMenu key={lang} renderMenuItem={renderMenuItem} menuItems={menuItems} onMenuOpen={onMenuOpen} onMenuClose={onMenuClose} sx={sx} />;
   } else {
-    return <DesktopMenu renderMenuItem={renderMenuItem} menuItems={menuItems} sx={sx} />;
+    return <DesktopMenu renderMenuItem={renderMenuItem} menuItems={menuItems} sx={sx} onSplashOpen={onSplashOpen} splashAudio={splashAudio} splashOpen={splashOpen} onSplashClose={onSplashClose} audioRef={audioRef} />;
   }
 };
 

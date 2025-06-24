@@ -1,5 +1,6 @@
 import React from 'react';
 import UiButton from '../ui/UiButton';
+import { getCategoryGradient } from '../../utils/categoryUtils';
 
 /**
  * SpecialButtons: Botones especiales contextuales para categorías.
@@ -44,81 +45,128 @@ const SpecialButtons = ({
   lang,
   isRecommendedActive,
   isMobile
-}) => (
-  <div className="special-buttons-container" style={isMobile ? { display: 'flex', flexDirection: 'row', gap: 8, justifyContent: 'center', alignItems: 'center', width: '100%', margin: '8px 0' } : {}}>
-    {selectedCategory === 'movies' && (
-      <UiButton
-        className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}
-        variant={isSpanishCinemaActive ? 'contained' : 'outlined'}
-        color="secondary"
-        size="small"
-        onClick={handleSpanishCinemaToggle}
-        sx={{ margin: '0 4px', minWidth: 90 }}
-      >
-        {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
-      </UiButton>
-    )}
-    {selectedCategory === 'podcast' && (
-      <div key="podcast-languages">
+}) => {
+  // Fallback visual: ELIMINADO. Los botones deben reflejar el estado real del array (ningún idioma activo = ambos blancos)
+  let podcastLangs = activePodcastLanguages;
+  let docuLangs = activeDocumentaryLanguages;
+
+  return (
+    <div className="special-buttons-container" style={isMobile ? { display: 'flex', flexDirection: 'row', gap: 8, justifyContent: 'center', alignItems: 'center', width: '100%', margin: '8px 0' } : {}}>
+      {selectedCategory === 'podcast' && (
+        <>
+          {console.log('activePodcastLanguages', podcastLangs)}
+        </>
+      )}
+      {selectedCategory === 'documentales' && (
+        <>
+          {console.log('activeDocumentaryLanguages', docuLangs)}
+        </>
+      )}
+      {selectedCategory === 'movies' && (
         <UiButton
-          className={`subcategory-btn podcast-language${activePodcastLanguages?.includes('es') ? ' active' : ''}`}
-          variant={activePodcastLanguages?.includes('es') ? 'contained' : 'outlined'}
+          className={`subcategory-btn spanish-cinema${isSpanishCinemaActive ? ' active' : ''}`}
+          variant={isSpanishCinemaActive ? 'contained' : 'outlined'}
           color="secondary"
           size="small"
-          onClick={() => togglePodcastLanguage('es')}
-          sx={{ margin: '0 4px', minWidth: 80 }}
+          onClick={handleSpanishCinemaToggle}
+          sx={{
+            margin: '0 4px',
+            minWidth: 90,
+            background: isSpanishCinemaActive ? getCategoryGradient(selectedCategory) : '#fff',
+            color: '#757575',
+            borderColor: '#bdbdbd',
+            fontWeight: isSpanishCinemaActive ? 700 : 500
+          }}
         >
-          {lang === 'es' ? 'Español' : 'Spanish'}
+          {lang === 'es' ? 'Cine Español' : 'Spanish Cinema'}
         </UiButton>
+      )}
+      {selectedCategory === 'podcast' && (
+        <div key="podcast-languages">
+          <UiButton
+            className={`subcategory-btn podcast-language${podcastLangs?.includes('es') ? ' active' : ''}`}
+            variant="outlined"
+            size="small"
+            onClick={() => togglePodcastLanguage('es')}
+            sx={{
+              margin: '0 4px',
+              minWidth: 80,
+              background: podcastLangs?.includes('es') ? getCategoryGradient(selectedCategory) : '#fff !important',
+              color: '#757575',
+              borderColor: '#bdbdbd',
+              fontWeight: podcastLangs?.includes('es') ? 700 : 500
+            }}
+          >
+            {lang === 'es' ? 'Español' : 'Spanish'}
+          </UiButton>
+          <UiButton
+            className={`subcategory-btn podcast-language${podcastLangs?.includes('en') ? ' active' : ''}`}
+            variant="outlined"
+            size="small"
+            onClick={() => togglePodcastLanguage('en')}
+            sx={{
+              margin: '0 4px',
+              minWidth: 80,
+              background: podcastLangs?.includes('en') ? getCategoryGradient(selectedCategory) : '#fff !important',
+              color: '#757575',
+              borderColor: '#bdbdbd',
+              fontWeight: podcastLangs?.includes('en') ? 700 : 500
+            }}
+          >
+            {lang === 'es' ? 'Inglés' : 'English'}
+          </UiButton>
+        </div>
+      )}
+      {selectedCategory === 'documentales' && (
+        <div key="documentales-controls">
+          <UiButton
+            className={`subcategory-btn podcast-language${docuLangs?.includes('es') ? ' active' : ''}`}
+            variant="outlined"
+            size="small"
+            onClick={() => toggleDocumentaryLanguage('es')}
+            sx={{
+              margin: '0 4px',
+              minWidth: 80,
+              background: docuLangs?.includes('es') ? getCategoryGradient(selectedCategory) : '#fff !important',
+              color: '#757575',
+              borderColor: '#bdbdbd',
+              fontWeight: docuLangs?.includes('es') ? 700 : 500
+            }}
+          >
+            {lang === 'es' ? 'Español' : 'Spanish'}
+          </UiButton>
+          <UiButton
+            className={`subcategory-btn podcast-language${docuLangs?.includes('en') ? ' active' : ''}`}
+            variant="outlined"
+            size="small"
+            onClick={() => toggleDocumentaryLanguage('en')}
+            sx={{
+              margin: '0 4px',
+              minWidth: 80,
+              background: docuLangs?.includes('en') ? getCategoryGradient(selectedCategory) : '#fff !important',
+              color: '#757575',
+              borderColor: '#bdbdbd',
+              fontWeight: docuLangs?.includes('en') ? 700 : 500
+            }}
+          >
+            {lang === 'es' ? 'Inglés' : 'English'}
+          </UiButton>
+        </div>
+      )}
+      {!isRecommendedActive && selectedCategory && (
         <UiButton
-          className={`subcategory-btn podcast-language${activePodcastLanguages?.includes('en') ? ' active' : ''}`}
-          variant={activePodcastLanguages?.includes('en') ? 'contained' : 'outlined'}
+          className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
+          variant={isMasterpieceActive ? 'contained' : 'outlined'}
           color="secondary"
           size="small"
-          onClick={() => togglePodcastLanguage('en')}
-          sx={{ margin: '0 4px', minWidth: 80 }}
+          onClick={handleMasterpieceToggle}
+          sx={{ margin: '0 4px', minWidth: 110 }}
         >
-          {lang === 'es' ? 'Inglés' : 'English'}
+          {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
         </UiButton>
-      </div>
-    )}
-    {selectedCategory === 'documentales' && (
-      <div key="documentales-controls">
-        <UiButton
-          className={`subcategory-btn podcast-language${activeDocumentaryLanguages?.includes('es') ? ' active' : ''}`}
-          variant={activeDocumentaryLanguages?.includes('es') ? 'contained' : 'outlined'}
-          color="secondary"
-          size="small"
-          onClick={() => toggleDocumentaryLanguage('es')}
-          sx={{ margin: '0 4px', minWidth: 80 }}
-        >
-          {lang === 'es' ? 'Español' : 'Spanish'}
-        </UiButton>
-        <UiButton
-          className={`subcategory-btn podcast-language${activeDocumentaryLanguages?.includes('en') ? ' active' : ''}`}
-          variant={activeDocumentaryLanguages?.includes('en') ? 'contained' : 'outlined'}
-          color="secondary"
-          size="small"
-          onClick={() => toggleDocumentaryLanguage('en')}
-          sx={{ margin: '0 4px', minWidth: 80 }}
-        >
-          {lang === 'es' ? 'Inglés' : 'English'}
-        </UiButton>
-      </div>
-    )}
-    {!isRecommendedActive && selectedCategory && (
-      <UiButton
-        className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
-        variant={isMasterpieceActive ? 'contained' : 'outlined'}
-        color="secondary"
-        size="small"
-        onClick={handleMasterpieceToggle}
-        sx={{ margin: '0 4px', minWidth: 110 }}
-      >
-        {lang === 'es' ? 'Obras Maestras' : 'Masterpieces'}
-      </UiButton>
-    )}
-  </div>
-);
+      )}
+    </div>
+  );
+};
 
 export default SpecialButtons;

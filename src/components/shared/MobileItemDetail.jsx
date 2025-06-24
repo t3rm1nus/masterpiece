@@ -94,7 +94,7 @@ const MobileItemDetail = ({
         return 'linear-gradient(135deg, #fff8f0 0%, #ffe0b2 100%)';
       case 'documentales':
       case 'documentaries':
-        return 'linear-gradient(135deg, #fafafa 0%, #e0e0e0 100%)';
+        return 'linear-gradient(135deg, #fdeaea 0%, #e57373 100%)';
       default:
         return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
     }
@@ -204,16 +204,6 @@ const MobileItemDetail = ({
                   )}
                 </Stack>
           )}
-          {/* Año */}
-          {showSections.year !== false && selectedItem.year && (
-            renderYear
-              ? renderYear(selectedItem)
-              : <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
-                  <Typography variant="h6" color="text.secondary">
-                    <strong>{t?.year || 'Año'}:</strong> {ensureString(selectedItem.year, lang)}
-                  </Typography>
-                </Box>
-          )}
           {/* Información específica por categoría */}
           {renderMobileSpecificContent && renderMobileSpecificContent(selectedItem)}
           {/* Descripción */}
@@ -222,7 +212,7 @@ const MobileItemDetail = ({
               ? renderDescription(selectedItem)
               : <Typography 
                   variant="body1" 
-                  sx={{ fontSize: '1.1rem', lineHeight: 1.6, textAlign: 'justify', marginBottom: '24px', color: 'text.primary' }}
+                  sx={{ fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '24px', color: 'text.primary' }}
                 >
                   {description}
                 </Typography>

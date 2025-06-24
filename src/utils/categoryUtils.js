@@ -68,33 +68,77 @@ export const getUniqueSubcategories = (items, lang) => {
 
 // Helpers para categorías y colores
 // getCategoryColor centralizado aquí, eliminar duplicados en otros archivos
-export function getCategoryColor(category, theme) {
+export function getCategoryColor(category, theme, intenseForSelect) {
   switch (category) {
     case 'movies':
     case 'peliculas':
-      return '#2196f3';
+      return '#90caf9'; // azul pastel claro
     case 'videogames':
     case 'videojuegos':
-      return '#9c27b0';
+      return '#ce93d8'; // lila pastel
     case 'books':
     case 'libros':
-      return '#4caf50';
+      return '#a5d6a7'; // verde menta pastel
     case 'music':
     case 'musica':
-      return '#00bcd4';
+      return '#80cbc4'; // verde agua pastel
     case 'podcast':
     case 'podcasts':
-      return '#8bc34a';
+      return '#8bc34a'; // verde unificado
     case 'boardgames':
     case 'juegos de mesa':
-      return '#e91e63';
+      return '#f8bbd0'; // rosa pastel
     case 'comics':
-      return '#ff9800';
+      return '#ffcc80'; // naranja pastel suave
     case 'documentales':
     case 'documentaries':
-      return '#9e9e9e';
+      return '#ffab91'; // rojo pastel claro
+    case 'series':
+      return '#b39ddb'; // lavanda pastel
     default:
       return '#0078d4';
   }
 }
+
+// Función utilitaria para obtener el degradado de la categoría
+export function getCategoryGradient(category) {
+  switch (category) {
+    case 'movies':
+    case 'peliculas':
+      return 'linear-gradient(135deg, #e3f2fd 0%, #90caf9 100%)';
+    case 'videogames':
+    case 'videojuegos':
+      return 'linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%)';
+    case 'books':
+    case 'libros':
+      return 'linear-gradient(135deg, #e8f5e9 0%, #a5d6a7 100%)';
+    case 'music':
+    case 'musica':
+      return 'linear-gradient(135deg, #e0f2f1 0%, #80cbc4 100%)';
+    case 'podcast':
+    case 'podcasts':
+      return 'linear-gradient(135deg, #dcedc8 0%, #8bc34a 100%)';
+    case 'boardgames':
+    case 'juegos de mesa':
+      return 'linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%)';
+    case 'comics':
+      return 'linear-gradient(135deg, #fff3e0 0%, #ffcc80 100%)';
+    case 'documentales':
+    case 'documentaries':
+      return 'linear-gradient(135deg, #ffebee 0%, #ffab91 100%)'; // degradado rojo claro
+    case 'series':
+      return 'linear-gradient(135deg, #ede7f6 0%, #b39ddb 100%)';
+    default:
+      return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
+  }
+}
+
+// Export alternativo para compatibilidad con imports antiguos
+export { getCategoryColor as categoryColor };
+
+// Exportar versión especial para selects
+export function getCategoryColorForSelect(category, theme) {
+  return getCategoryColor(category, theme, true);
+}
+
 // ...otros helpers de categorías a futuro...

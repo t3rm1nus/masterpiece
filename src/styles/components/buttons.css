@@ -106,7 +106,7 @@
 .category-btn {
   background: var(--color-masterpiece-light);
   color: var(--text-color);
-  border: var(--border-width) solid color-mix(in srgb, var(--color-masterpiece) 30%, transparent);
+  border: 1.5px solid #bdbdbd;
   border-radius: var(--border-radius-md);
   padding: var(--space-md) var(--space-lg);
   font-size: var(--font-size-lg);
@@ -118,15 +118,30 @@
 
 .category-btn:hover {
   background: color-mix(in srgb, var(--color-masterpiece) 15%, var(--card-background));
-  border-color: color-mix(in srgb, var(--color-masterpiece) 50%, transparent);
+  border-color: #bdbdbd;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
 .category-btn.active {
-  background: color-mix(in srgb, var(--color-masterpiece) 25%, var(--card-background));
   color: var(--text-color);
-  border: 2px solid var(--color-masterpiece);
+  border: 2px solid #bdbdbd;
+  font-weight: var(--font-weight-bold);
+}
+
+/* === BOTONES DE SUBCATEGORÍA Y ESPECIALES (excepto masterpiece) === */
+.subcategory-btn:not(.masterpiece-btn),
+.subcategory-btn.spanish-cinema,
+.subcategory-btn.podcast-language,
+.subcategory-btn.documentary-language {
+  border: 1.5px solid #bdbdbd !important;
+}
+
+.subcategory-btn.active:not(.masterpiece-btn),
+.subcategory-btn.spanish-cinema.active,
+.subcategory-btn.podcast-language.active,
+.subcategory-btn.documentary-language.active {
+  border: 1.5px solid #bdbdbd !important;
   font-weight: var(--font-weight-bold);
 }
 
@@ -215,9 +230,15 @@
 /* === ESTADOS DE FOCUS === */
 .btn:focus-visible,
 .category-btn:focus-visible,
-.menu-btn:focus-visible {
+.menu-btn:focus-visible,
+.subcategory-btn:focus-visible,
+.subcategory-btn.spanish-cinema:focus-visible,
+.subcategory-btn.podcast-language:focus-visible,
+.subcategory-btn.documentary-language:focus-visible,
+.subcategory-btn.masterpiece-btn:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+  border-color: #bdbdbd !important;
 }
 
 /* === UTILIDADES === */
@@ -261,94 +282,50 @@
 }
 
 .subcategory-btn.active {
-  background: var(--color-primary);
-  color: var(--text-inverse);
-  border-color: var(--color-primary);
   font-weight: var(--font-weight-bold);
+  border: 1.5px solid grey !important;
+  /* El fondo y el borde se definen desde React para permitir degradado */
 }
 
-/* === BOTÓN CINE ESPAÑOL === */
+/* === BOTÓN CINE ESPAÑOL E IDIOMAS === */
+.subcategory-btn.spanish-cinema,
+.subcategory-btn.podcast-language,
+.subcategory-btn.documentary-language {
+  /* Unificamos tamaño y fuente con subcategoría */
+  min-width: 100px;
+  min-height: 32px;
+  font-size: var(--font-size-sm);
+  /* Desktop: borde y texto gris */
+  border-color: #bdbdbd;
+  color: #757575;
+}
+
 .subcategory-btn.spanish-cinema {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
-  color: var(--text-inverse);
+  
+  border-color: #bdbdbd;
+  color: #757575;
 }
 
 .subcategory-btn.spanish-cinema:hover {
-  background: var(--color-primary-dark);
-  border-color: var(--color-primary-dark);
+  background: var(--hover-color) !important;
+  border-color: var(--border-color-hover) !important;
+  color: #757575;
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
 
 .subcategory-btn.spanish-cinema.active {
-  background: var(--color-primary-dark);
-  border-color: var(--color-primary-dark);
+  border: 1.5px solid #bdbdbd !important;
+  color: #757575;
   font-weight: var(--font-weight-bold);
 }
 
-/* === BOTONES IDIOMA PODCAST === */
-.subcategory-btn.podcast-language {
-  background: #e3f2fd;
-  color: #1976d2;
-  border-color: #90caf9;
-  font-weight: 500;
-}
-
-.subcategory-btn.podcast-language:hover {
-  background: #bbdefb;
-  border-color: #64b5f6;
-  color: #1565c0;
-}
-
-.subcategory-btn.podcast-language.active {
-  background: #90caf9;
-  border-color: #42a5f5;
-  color: #0d47a1;
-  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
-}
-
-/* === MASTERPIECE BUTTON STYLES MOVED TO SPECIAL BUTTONS SECTION === */
-
-/* === LISTA DE SUBCATEGORÍAS === */
-.subcategories-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  justify-content: center;
-  align-items: center;
-  margin: var(--space-md) 0;
-  padding: 0 var(--space-md);
-  width: 100%;
-}
-
-/* === CONTENEDOR DE SUBCATEGORÍAS === */
-.subcategories-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: var(--space-md) 0;
-  padding: 0 var(--space-md);
-}
-
-/* === CONTENEDOR DE BOTONES ESPECIALES === */
-.special-buttons-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-md);
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: var(--space-md) 0;
-  padding: 0 var(--space-md);
-}
-
-/* === BOTONES ESPECIALES === */
-.subcategory-btn.spanish-cinema,
+/* === MASTERPIECE BUTTON: NO TOCAR === */
 .subcategory-btn.masterpiece-btn {
+  background: #fff8e1 !important;
+  border-color: #ffd54f !important;
+  color: #7a6a28 !important;
+  transition: all 0.3s ease !important;
   min-width: 160px;
   min-height: 40px;
   display: inline-flex;
@@ -358,39 +335,11 @@
   font-size: var(--font-size-base);
 }
 
-.subcategory-btn.spanish-cinema {
-  background: var(--background-secondary);
-  border-color: var(--border-color);
-  color: var(--text-color);
-}
-
-/* Consolidado: estilos masterpiece */
-.subcategory-btn.masterpiece-btn {
-  background: #fff8e1 !important;
-  border-color: #ffd54f !important;
-  color: #7a6a28 !important;
-  transition: all 0.3s ease !important;
-}
-
-.subcategory-btn.spanish-cinema:hover {
-  background: var(--hover-color);
-  border-color: var(--border-color-hover);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-sm);
-}
-
 .subcategory-btn.masterpiece-btn:hover {
   background: #fff3e0 !important;
   border-color: #ffca28 !important;
   transform: translateY(-1px) !important;
   box-shadow: var(--shadow-sm) !important;
-}
-
-.subcategory-btn.spanish-cinema.active {
-  background: var(--color-primary);
-  color: var(--text-inverse);
-  border-color: var(--color-primary);
-  font-weight: var(--font-weight-bold);
 }
 
 .subcategory-btn.masterpiece-btn.active {
@@ -425,6 +374,12 @@
   }
   
   .subcategory-btn.spanish-cinema,
+  .subcategory-btn.podcast-language,
+  .subcategory-btn.documentary-language {
+    min-width: 90px;
+    min-height: 28px;
+    font-size: var(--font-size-xs);
+  }
   .subcategory-btn.masterpiece-btn {
     min-width: 140px;
     min-height: 36px;
@@ -466,4 +421,13 @@ html[data-theme='dark'] .documentary-language:hover {
 html[data-theme='dark'] .documentary-language.active {
   background-color: color-mix(in srgb, var(--color-documentales) 80%, #ffffff);
   border-color: color-mix(in srgb, var(--color-documentales) 80%, #ffffff);
+}
+
+.subcategory-btn.spanish-cinema,
+.subcategory-btn.spanish-cinema:focus,
+.subcategory-btn.spanish-cinema:active,
+.subcategory-btn.spanish-cinema:focus-visible,
+.subcategory-btn.spanish-cinema.active,
+.subcategory-btn.spanish-cinema:hover {
+  border: 1.5px solid #bdbdbd !important;
 }

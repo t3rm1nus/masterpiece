@@ -1,5 +1,6 @@
 import React from 'react';
 import UiButton from '../ui/UiButton';
+import { categoryColor, getCategoryGradient } from '../../utils/categoryUtils';
 
 /**
  * SubcategoryBar: Barra de selección de subcategorías altamente parametrizable y reutilizable.
@@ -55,27 +56,21 @@ const SubcategoryBar = ({ selectedCategory, categorySubcategories, activeSubcate
                   size="medium"
                   onClick={() => setActiveSubcategory(sub)}
                   sx={{
-                    background: isActive ? 'var(--color-primary)' : 'var(--background-secondary)',
-                    color: isActive ? 'var(--text-inverse)' : 'var(--text-color)',
-                    border: isActive ? '2px solid var(--color-primary)' : '1.5px solid var(--border-color)',
+                    background: isActive ? getCategoryGradient(selectedCategory) : 'var(--background-secondary)',
+                    color: isActive ? '#222' : 'var(--text-color)',
+                    border: isActive ? `2px solid ${categoryColor(selectedCategory) || 'var(--color-primary)'}` : '1.5px solid var(--border-color)',
                     borderRadius: 'var(--border-radius-md)',
-                    padding: 'var(--space-xs) var(--space-sm)',
-                    fontSize: 'var(--font-size-sm)',
-                    fontWeight: isActive ? 'var(--font-weight-bold)' : 'var(--font-weight-medium)',
-                    minWidth: 100,
-                    margin: '0 4px',
-                    boxShadow: 'none',
-                    transition: 'all var(--transition-normal)',
-                    '&:hover': {
-                      background: 'var(--hover-color)',
-                      borderColor: 'var(--border-color-hover)',
-                      transform: 'translateY(-1px)',
-                      boxShadow: 'var(--shadow-sm)'
-                    },
-                    ...chipSx
+                    padding: '6px 18px',
+                    fontSize: '1rem',
+                    fontWeight: isActive ? 700 : 500,
+                    margin: '0 4px 8px 0',
+                    minWidth: 80,
+                    transition: 'all 0.2s',
+                    boxShadow: isActive ? '0 2px 8px 0 rgba(0,0,0,0.08)' : 'none',
+                    // El degradado ya está en el estado normal
                   }}
                 >
-                  {t?.subcategories?.[selectedCategory]?.[sub.toLowerCase()] || sub}
+                  {t?.subcategories?.[selectedCategory]?.[sub] || sub}
                 </UiButton>
               );
             })

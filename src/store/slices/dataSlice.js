@@ -164,15 +164,12 @@ export const dataSlice = (set, get) => ({
       activeSubcategory: null,
       activeLanguage: 'all',
       isSpanishCinemaActive: false,
-      isMasterpieceActive: false,
-      activePodcastLanguages: [],
-      activeDocumentaryLanguages: []
+      isMasterpieceActive: false
+      // No inicializar activePodcastLanguages ni activeDocumentaryLanguages aquí
     });
-    
-    // Inicializar datos si es necesario
-    get().initializeData();
-    get().initializeFilteredItems();
-    get().updateFilteredItems();
+    setTimeout(() => {
+      get().updateFilteredItems();
+    }, 0);
   },
 
   setActiveSubcategory: (subcategory) => {
@@ -209,29 +206,31 @@ export const dataSlice = (set, get) => ({
   togglePodcastLanguage: (language) => {
     const { activePodcastLanguages } = get();
     let newLanguages;
-    
+    // Si el idioma ya está activo, desactívalo (deja ambos desactivados)
     if (activePodcastLanguages.includes(language)) {
-      newLanguages = activePodcastLanguages.filter(lang => lang !== language);
+      newLanguages = [];
     } else {
-      newLanguages = [...activePodcastLanguages, language];
+      // Al activar uno, desactiva el otro (solo uno activo)
+      newLanguages = [language];
     }
-    
     set({ activePodcastLanguages: newLanguages });
-    get().updateFilteredItems();
+    setTimeout(() => {
+      get().updateFilteredItems();
+    }, 0);
   },
 
   toggleDocumentaryLanguage: (language) => {
     const { activeDocumentaryLanguages } = get();
     let newLanguages;
-    
     if (activeDocumentaryLanguages.includes(language)) {
-      newLanguages = activeDocumentaryLanguages.filter(lang => lang !== language);
+      newLanguages = [];
     } else {
-      newLanguages = [...activeDocumentaryLanguages, language];
+      newLanguages = [language];
     }
-    
     set({ activeDocumentaryLanguages: newLanguages });
-    get().updateFilteredItems();
+    setTimeout(() => {
+      get().updateFilteredItems();
+    }, 0);
   },
 
   // ==========================================

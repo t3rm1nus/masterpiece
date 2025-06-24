@@ -84,17 +84,9 @@ const useAppStore = create((set, get) => ({
   isMasterpieceActive: false,
   toggleMasterpiece: () => set(state => ({ isMasterpieceActive: !state.isMasterpieceActive })),
   activePodcastLanguages: [],
-  togglePodcastLanguage: (lang) => set(state => ({
-    activePodcastLanguages: state.activePodcastLanguages.includes(lang) 
-      ? state.activePodcastLanguages.filter(l => l !== lang)
-      : [...state.activePodcastLanguages, lang]
-  })),
+  togglePodcastLanguage: (lang) => set({ activePodcastLanguages: [lang] }),
   activeDocumentaryLanguages: [],
-  toggleDocumentaryLanguage: (lang) => set(state => ({
-    activeDocumentaryLanguages: state.activeDocumentaryLanguages.includes(lang) 
-      ? state.activeDocumentaryLanguages.filter(l => l !== lang)
-      : [...state.activeDocumentaryLanguages, lang]
-  })),
+  toggleDocumentaryLanguage: (lang) => set({ activeDocumentaryLanguages: [lang] }),
   activeLanguage: 'all',
   setActiveLanguage: (lang) => set({ activeLanguage: lang }),
   allData: {},
@@ -410,6 +402,21 @@ export const useAppData = () => {
 
 // Inicialización automática
 const store = useAppStore.getState();
+
+// Limpiar selecciones especiales SOLO en reload completo (Ctrl+F5)
+if (window && window.sessionStorage) {
+  if (!sessionStorage.getItem('mp_specials_initialized')) {
+    // Limpiar estados especiales
+    useAppStore.setState({
+      isMasterpieceActive: false,
+      isSpanishCinemaActive: false,
+      activePodcastLanguages: [],
+      activeDocumentaryLanguages: []
+    });
+    sessionStorage.setItem('mp_specials_initialized', '1');
+  }
+}
+
 if (!store.isDataInitialized) {
   store.initializeData();
 }
@@ -453,3 +460,26 @@ export const useAppLanguage = () => {
 };
 
 export default useAppStore;
+
+// Filtrado por idioma para podcast
+if (selectedCategory === 'podcast') {
+  if (activePodcastLanguages.length === 0) {
+    filteredData = [];
+  } else {
+    filteredData = filteredData.filter(item =>
+      activePodcastLanguages.includes(item.language) ||
+      activePodcastLanguages.includes(item.idioma)
+    );
+  }
+}
+// Filtrado por idioma para documentales
+if (selectedCategory === 'documentales') {
+  if (activeDocumentaryLanguages.length === 0) {
+    filteredData = [];
+  } else {
+    filteredData = filteredData.filter(item =>
+      activeDocumentaryLanguages.includes(item.language) ||
+      activeDocumentaryLanguages.includes(item.idioma)
+    );
+  }
+}

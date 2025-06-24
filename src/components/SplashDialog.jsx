@@ -25,7 +25,7 @@ import { useLanguage } from '../LanguageContext';
  *   title="Bienvenido"
  *   content={<img src="/imagenes/splash_image.png" alt="Splash" />}
  *   actions={<Button onClick={onClose}>Cerrar</Button>}
- *   audio="/imagenes/samurai.mp3"
+ *   audio="/imagenes/sonidos/samurai.mp3"
  *   dark={true}
  *   sx={{ background: '#111' }}
  * />
@@ -36,7 +36,7 @@ const SplashDialog = ({
   title,
   content,
   actions,
-  audio = '/imagenes/samurai.mp3',
+  audio = '/imagenes/sonidos/samurai.mp3',
   dark = true,
   sx = {},
   PaperProps = {},

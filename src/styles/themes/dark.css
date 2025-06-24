@@ -62,11 +62,12 @@ html[data-theme='dark'] {
 
 /* === COLORES POR CATEGORÍA (MODO OSCURO) === */
 html[data-theme='dark'] {
-  --color-movies: #1976d2;
-  --color-videogames: #7b1fa2;
-  --color-comics: #f57c00;
-  --color-books: #388e3c;
-  --color-boardgames: #c2185b;
-  --color-music: #0097a7;
-  --color-podcast: #689f38;
+  --color-movies: #90caf9;
+  --color-videogames: #ce93d8;
+  --color-comics: #ffcc80;
+  --color-books: #a5d6a7;
+  --color-boardgames: #f8bbd0;
+  --color-music: #b3e5fc;
+  --color-podcast: #8bc34a;
+  --color-documentales: #ffab91;
 }

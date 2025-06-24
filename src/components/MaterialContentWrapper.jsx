@@ -69,7 +69,7 @@ const MaterialContentWrapper = ({
 }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
-  const { t } = useLanguage();
+  const { t, getTranslation } = useLanguage();
   const { randomNotFoundImage } = useAppData();
   if (!visible) return null;
   // Si no es móvil, renderizar el contenido original
@@ -122,7 +122,7 @@ const MaterialContentWrapper = ({
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: isHome ? '8px' : '16px',
+            gap: isHome ? '12px' : '24px', // antes 8/16, ahora 12/24
             padding: '4px',
             width: '100%',
             maxWidth: '100%',
@@ -142,12 +142,12 @@ const MaterialContentWrapper = ({
       {(!recommendations || !Array.isArray(recommendations) || recommendations.length === 0) && (
         <Box sx={{ 
           textAlign: 'center', 
-          padding: '2rem',
+          padding: isMobile ? 0 : '2rem',
           color: 'text.secondary',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '1rem'
+          gap: isMobile ? 0 : '1rem'
         }}>
           <Typography variant="h6" sx={{ margin: 0, padding: 0 }}>
             {t.no_results || 'No se encontraron resultados'}

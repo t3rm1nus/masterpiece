@@ -105,14 +105,6 @@ const DesktopItemDetail = ({
                   )}
                 </div>
           )}
-          {/* Año */}
-          {showSections.year !== false && selectedItem.year && (
-            renderYear
-              ? renderYear(selectedItem)
-              : <div className="item-detail-year">
-                  <span><strong>{t?.year || 'Año'}:</strong> {ensureString(selectedItem.year, lang)}</span>
-                </div>
-          )}
           {/* Información específica por categoría */}
           {renderDesktopSpecificContent && renderDesktopSpecificContent(selectedItem)}
           {/* Descripción */}
