@@ -40,6 +40,9 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
           rel="noopener noreferrer"
           sx={{
             backgroundColor: getCategoryColor(selectedItem.category),
+            fontWeight: 700,
+            fontSize: { xs: '1rem', md: '1.1rem' },
+            minWidth: 180,
             '&:hover': {
               backgroundColor: getCategoryColor(selectedItem.category),
               opacity: 0.8
@@ -85,6 +88,7 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
             backgroundColor: getCategoryColor(selectedItem.category),
             fontWeight: 700,
             fontSize: { xs: '1rem', md: '1.1rem' },
+            minWidth: 180,
             '&:hover': {
               backgroundColor: getCategoryColor(selectedItem.category),
               opacity: 0.8

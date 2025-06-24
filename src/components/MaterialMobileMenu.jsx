@@ -189,7 +189,17 @@ const MaterialMobileMenu = ({
             justifyContent: 'space-between', 
             padding: '0 12px',
             minHeight: '48px !important', // Altura más compacta
-            height: '48px'
+            height: '48px',
+            ...(typeof window !== 'undefined' && window.innerWidth < 900
+              ? {
+                  background: 'linear-gradient(135deg, #fffbe6 60%, #ffe29e 100%)',
+                  boxShadow: '0 2px 12px 0 rgba(255, 200, 80, 0.13), 0 1.5px 0 #ffe29e',
+                  borderRadius: 0,
+                  position: 'relative',
+                  zIndex: 2
+                  // Bordes eliminados
+                }
+              : {})
           }}>
           <Typography 
             variant="h6" 

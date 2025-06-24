@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select, MenuItem, InputLabel, FormControl, useTheme, useMediaQuery, ListSubheader } from '@mui/material';
+import { Select, MenuItem, InputLabel, FormControl, useTheme, useMediaQuery, ListSubheader, Box } from '@mui/material';
 import { Movie as MovieIcon, SportsEsports as GameIcon, MenuBook as BookIcon, LibraryMusic as MusicIcon, Mic as PodcastIcon, Extension as BoardGameIcon, AutoStories as ComicIcon, Category as CategoryIcon, Star as StarIcon } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 
@@ -47,15 +47,22 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
   const showSubcatSelect = Array.isArray(subcategories) && subcategories.length > 0 && selectedCategory;
 
   return (
-    <div style={{ width: '100%' }}>
+    <div
+      style={{ width: isMobile ? '80vw' : '100vw', maxWidth: isMobile ? '80vw' : '100vw', margin: isMobile ? '0 auto 24px auto' : '0', boxSizing: 'border-box', position: 'relative', left: 'unset', transform: 'unset', zIndex: 1300 }}
+    >
       <FormControl
         fullWidth
         variant="outlined"
         sx={{
           my: 2,
           display: 'block',
-          width: '100%',
+          width: isMobile ? '80vw' : '100vw',
+          maxWidth: isMobile ? '80vw' : '100vw',
+          minWidth: 0,
           boxSizing: 'border-box',
+          p: 0,
+          mx: isMobile ? 'auto' : 0,
+          mb: isMobile && showSubcatSelect ? 4 : isMobile ? 3 : 0, // aumenta separación si hay subcategorías
         }}
       >
         <InputLabel
@@ -75,15 +82,25 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
             fontWeight: 'bold',
             fontSize: '1rem',
             boxShadow: theme.shadows[1],
-            width: '100%',
+            width: isMobile ? '80vw' : '100vw',
+            maxWidth: isMobile ? '80vw' : '100vw',
+            minWidth: 0,
             display: 'block',
             boxSizing: 'border-box',
+            p: 0,
+            mx: isMobile ? 'auto' : 0,
           }}
           MenuProps={{
+            anchorOrigin: { vertical: 'bottom', horizontal: 'center' },
+            transformOrigin: { vertical: 'top', horizontal: 'center' },
             PaperProps: {
               sx: {
                 borderRadius: 2,
                 boxShadow: theme.shadows[4],
+                width: isMobile ? '80vw' : '100vw',
+                maxWidth: isMobile ? '80vw' : '100vw',
+                minWidth: 0,
+                mx: isMobile ? 'auto' : 0,
               },
             },
           }}
@@ -103,55 +120,72 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
         </Select>
       </FormControl>
       {showSubcatSelect && (
-        <FormControl
-          fullWidth
-          variant="outlined"
-          sx={{
-            my: 1,
-            display: 'block',
-            width: '100%',
-            boxSizing: 'border-box',
-          }}
-        >
-          <InputLabel
-            id="subcategory-select-label"
-          >
-            {t?.ui?.navigation?.subcategory || (lang === 'en' ? 'Subcategory' : 'Subcategoría')}
-          </InputLabel>
-          <Select
-            labelId="subcategory-select-label"
-            id="subcategory-select"
-            value={activeSubcategory || 'all'}
-            label={t?.ui?.navigation?.subcategory || (lang === 'en' ? 'Subcategory' : 'Subcategoría')}
-            onChange={e => onCategoryChange(selectedCategory, e.target.value)}
+        <>
+          <Box sx={{ height: 24 }} />
+          <FormControl
+            fullWidth
+            variant="outlined"
             sx={{
-              background: theme.palette.background.paper,
-              borderRadius: 2,
-              fontWeight: 'bold',
-              fontSize: '1rem',
-              boxShadow: theme.shadows[1],
-              width: '100%',
               display: 'block',
+              width: isMobile ? '80vw' : '100vw',
+              maxWidth: isMobile ? '80vw' : '100vw',
+              minWidth: 0,
               boxSizing: 'border-box',
-              mt: 1,
-            }}
-            MenuProps={{
-              PaperProps: {
-                sx: {
-                  borderRadius: 2,
-                  boxShadow: theme.shadows[4],
-                },
-              },
+              p: 0,
+              mx: isMobile ? 'auto' : 0,
+              mb: isMobile ? 3 : 0,
             }}
           >
-            <MenuItem key="all" value="all">{t?.ui?.navigation?.all_subcategories || (lang === 'en' ? 'All subcategories' : 'Todas las subcategorías')}</MenuItem>
-            {subcategories.map(sub => (
-              <MenuItem key={sub.sub || sub} value={sub.sub || sub}>
-                {sub.label || sub.sub || sub}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+            <InputLabel
+              id="subcategory-select-label"
+            >
+              {t?.ui?.navigation?.subcategory || (lang === 'en' ? 'Subcategory' : 'Subcategoría')}
+            </InputLabel>
+            <Select
+              labelId="subcategory-select-label"
+              id="subcategory-select"
+              value={activeSubcategory || 'all'}
+              label={t?.ui?.navigation?.subcategory || (lang === 'en' ? 'Subcategory' : 'Subcategoría')}
+              onChange={e => onCategoryChange(selectedCategory, e.target.value)}
+              sx={{
+                background: theme.palette.background.paper,
+                borderRadius: 2,
+                fontWeight: 'bold',
+                fontSize: '1rem',
+                boxShadow: theme.shadows[1],
+                width: isMobile ? '80vw' : '100vw',
+                maxWidth: isMobile ? '80vw' : '100vw',
+                minWidth: 0,
+                display: 'block',
+                boxSizing: 'border-box',
+                mt: 1,
+                p: 0,
+                mx: isMobile ? 'auto' : 0,
+              }}
+              MenuProps={{
+                anchorOrigin: { vertical: 'bottom', horizontal: 'center' },
+                transformOrigin: { vertical: 'top', horizontal: 'center' },
+                PaperProps: {
+                  sx: {
+                    borderRadius: 2,
+                    boxShadow: theme.shadows[4],
+                    width: isMobile ? '80vw' : '100vw',
+                    maxWidth: isMobile ? '80vw' : '100vw',
+                    minWidth: 0,
+                    mx: isMobile ? 'auto' : 0,
+                  },
+                },
+              }}
+            >
+              <MenuItem key="all" value="all">{t?.ui?.navigation?.all_subcategories || (lang === 'en' ? 'All subcategories' : 'Todas las subcategorías')}</MenuItem>
+              {subcategories.map(sub => (
+                <MenuItem key={sub.sub || sub} value={sub.sub || sub}>
+                  {sub.label || sub.sub || sub}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </>
       )}
     </div>
   );
