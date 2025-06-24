@@ -260,10 +260,15 @@ const HomePage = ({
 
         // Filtro de Series Españolas (solo para series)
         if (selectedCategory === 'series' && isSpanishSeriesActive) {
+          console.log('[Filtro Series Españolas] Estado activo:', isSpanishSeriesActive);
+          console.log('[Filtro Series Españolas] Antes de filtrar:', filteredData.map(i => ({id: i.id, tags: i.tags})));
           filteredData = filteredData.filter(item =>
             (item.tags && item.tags.includes('spanish'))
           );
-          console.log('🇪🇸 Filtro Series Españolas aplicado:', filteredData.length);
+          console.log('[Filtro Series Españolas] Después de filtrar:', filteredData.map(i => ({id: i.id, tags: i.tags})));
+        } else if (selectedCategory === 'series') {
+          console.log('[Filtro Series Españolas] Estado activo:', isSpanishSeriesActive, '(NO FILTRO APLICADO)');
+          console.log('[Filtro Series Españolas] Series visibles:', filteredData.map(i => ({id: i.id, tags: i.tags})));
         }
 
         // Filtro de subcategoría
@@ -299,6 +304,7 @@ const HomePage = ({
     allData, 
     recommendations, 
     isSpanishCinemaActive,
+    isSpanishSeriesActive, // <-- añadido para que el filtro reaccione al cambio
     isMasterpieceActive,
     activePodcastLanguages,
     activeDocumentaryLanguages,
@@ -474,6 +480,8 @@ const HomePage = ({
                 toggleDocumentaryLanguage={toggleDocumentaryLanguage}
                 lang={lang}
                 isRecommendedActive={isRecommendedActive}
+                isSpanishSeriesActive={isSpanishSeriesActive}
+                handleSpanishSeriesToggle={toggleSpanishSeries}
                 {...specialButtonsProps}
               />
             </>

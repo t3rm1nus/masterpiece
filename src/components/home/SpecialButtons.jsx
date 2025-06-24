@@ -44,7 +44,9 @@ const SpecialButtons = ({
   toggleDocumentaryLanguage,
   lang,
   isRecommendedActive,
-  isMobile
+  isMobile,
+  isSpanishSeriesActive,
+  handleSpanishSeriesToggle
 }) => {
   // Fallback visual: ELIMINADO. Los botones deben reflejar el estado real del array (ningún idioma activo = ambos blancos)
   let podcastLangs = activePodcastLanguages;
@@ -153,6 +155,30 @@ const SpecialButtons = ({
           </UiButton>
         </div>
       )}
+      {/* Botón TEST solo en desktop y solo para series */}
+      {selectedCategory === 'series' && !isMobile && (
+        <UiButton
+          className={`subcategory-btn test-btn${isSpanishSeriesActive ? ' active' : ''}`}
+          variant={isSpanishSeriesActive ? 'contained' : 'outlined'}
+          color="secondary"
+          size="small"
+          onClick={() => {
+            console.log('[SpecialButtons] Click en botón Series Españolas');
+            handleSpanishSeriesToggle();
+          }}
+          sx={{
+            margin: '0 4px',
+            minWidth: 90,
+            background: isSpanishSeriesActive ? getCategoryGradient(selectedCategory) : '#fff',
+            color: '#757575',
+            borderColor: '#bdbdbd',
+            fontWeight: isSpanishSeriesActive ? 700 : 500
+          }}
+        >
+          {lang === 'es' ? 'Series Españolas' : 'Spanish Series'}
+        </UiButton>
+      )}
+      {/* Botón Obras Maestras */}
       {!isRecommendedActive && selectedCategory && (
         <UiButton
           className={`subcategory-btn masterpiece-btn${isMasterpieceActive ? ' active' : ''}`}
