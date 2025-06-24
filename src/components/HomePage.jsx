@@ -22,6 +22,7 @@ import UiLayout from './ui/UiLayout';
 import { getCategoryGradient } from '../utils/categoryUtils';
 import HybridMenu from './HybridMenu';
 import MaterialMobileMenu from './MaterialMobileMenu';
+import { getSubcategoryLabel } from '../utils/subcategoryLabel';
 
 // Hook para detectar si es móvil SOLO por ancho de pantalla (robusto y compatible móvil)
 function useIsMobile() {
@@ -149,15 +150,25 @@ const HomePage = ({
   const categorySubcategories = React.useMemo(() => {
     let subs = getSubcategoriesForCategory(selectedCategory);
     if (selectedCategory === 'boardgames' && Array.isArray(subs)) {
-      return subs.map(({ sub, ...rest }) => ({
-        sub: sub.toLowerCase().trim(),
-        label: t?.subcategories?.boardgames?.[sub.toLowerCase().trim()] || sub,
-        ...rest
-      }));
+      return subs.map(({ sub, ...rest }) => {
+        const normalized = normalizeSubcategoryInternal(sub);
+        return {
+          sub: normalized,
+          label: getSubcategoryLabel(normalized, 'boardgames', t, lang),
+          ...rest
+        };
+      });
     }
     // Normalizar formato para todos los componentes parametrizables
     if (Array.isArray(subs)) {
-      return subs.map(s => typeof s === 'string' ? { sub: s, label: t?.subcategories?.[selectedCategory]?.[s] || s } : s);
+      return subs.map(s => {
+        const normalized = typeof s === 'string' ? normalizeSubcategoryInternal(s) : s.sub;
+        return {
+          sub: normalized,
+          label: getSubcategoryLabel(normalized, selectedCategory, t, lang),
+          ...(typeof s === 'object' ? s : {})
+        };
+      });
     }
     return [];
   }, [selectedCategory, getSubcategoriesForCategory, t, lang]);
@@ -271,18 +282,20 @@ const HomePage = ({
           console.log('[Filtro Series Españolas] Series visibles:', filteredData.map(i => ({id: i.id, tags: i.tags})));
         }
 
-        // Filtro de subcategoría
+        // Filtro de subcategoría (AJUSTE PARA MÓVIL TAMBIÉN)
         if (activeSubcategory && activeSubcategory !== 'all') {
           const normalizedActiveSubcat = normalizeSubcategoryInternal(activeSubcategory);
           filteredData = filteredData.filter(item => {
+            // Prioridad: subcategoria (sin tilde), luego subcategory, categoria, genre, genero
             return (
-              (item.subcategory && normalizeSubcategoryInternal(item.subcategory) === normalizedActiveSubcat)
+              (item.subcategoria && normalizeSubcategoryInternal(item.subcategoria) === normalizedActiveSubcat)
+              || (item.subcategory && normalizeSubcategoryInternal(item.subcategory) === normalizedActiveSubcat)
               || (item.categoria && normalizeSubcategoryInternal(item.categoria) === normalizedActiveSubcat)
               || (item.genre && normalizeSubcategoryInternal(item.genre) === normalizedActiveSubcat)
               || (item.genero && normalizeSubcategoryInternal(item.genero) === normalizedActiveSubcat)
             );
           });
-          console.log(`📂 Filtro subcategoría (normalizado) "${activeSubcategory}" aplicado:`, filteredData.length);
+          console.log(`📂 Filtro subcategoría (normalizado) "${activeSubcategory}" aplicado (desktop/móvil):`, filteredData.length);
         }
       }
 
@@ -468,6 +481,7 @@ const HomePage = ({
                 t={t}
                 lang={lang}
               />
+              {console.log('[HomePage] categorySubcategories:', categorySubcategories)}
               <SpecialButtons
                 selectedCategory={selectedCategory}
                 isSpanishCinemaActive={isSpanishCinemaActive}
@@ -512,11 +526,31 @@ const HomePage = ({
                     }
                     // NUEVO: subcategorías para series desde el campo subcategoria del JSON
                     if (selectedCategory === 'series') {
-                      const subcatsSet = new Set();
+                      // Obtener subcategorías únicas y normalizadas del campo subcategoria
+                      const subcatsMap = new Map();
                       (allData['series'] || []).forEach(item => {
-                        if (item.subcategoria) subcatsSet.add(item.subcategoria.toLowerCase().trim());
+                        if (item.subcategoria) {
+                          const normalized = normalizeSubcategoryInternal(item.subcategoria);
+                          if (!subcatsMap.has(normalized)) {
+                            subcatsMap.set(normalized, {
+                              sub: normalized,
+                              label: getSubcategoryLabel(normalized, 'series', t, lang)
+                            });
+                          }
+                        }
                       });
-                      return Array.from(subcatsSet).map(sub => ({ sub, label: t?.subcategories?.series?.[sub] || sub }));
+                      return Array.from(subcatsMap.values());
+                    }
+                    // ...para otras categorías, usar traducción si existe
+                    if (Array.isArray(categorySubcategories)) {
+                      return categorySubcategories.map(s => {
+                        const normalized = typeof s === 'string' ? normalizeSubcategoryInternal(s) : s.sub;
+                        return {
+                          sub: normalized,
+                          label: getSubcategoryLabel(normalized, selectedCategory, t, lang),
+                          ...(typeof s === 'object' ? s : {})
+                        };
+                      });
                     }
                     return Array.isArray(categorySubcategories) ? categorySubcategories : [];
                   })()}

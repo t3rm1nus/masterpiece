@@ -29,6 +29,7 @@ import {
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 import useViewStore from '../store/viewStore';
+import { getSubcategoryLabel } from '../utils/subcategoryLabel';
 import './styles/components/item-detail-action-btn.css';
 
 const MaterialItemDetail = ({ item }) => {
@@ -277,7 +278,7 @@ const MaterialItemDetail = ({ item }) => {
               />
               {item.subcategory && (
                 <Chip 
-                  label={getSubcategoryTranslation(item.subcategory, lang)} 
+                  label={getSubcategoryLabel(item.subcategory, item.category || 'series', t, lang)} 
                   sx={{ 
                     backgroundColor: theme.palette.secondary.main,
                     color: 'white',

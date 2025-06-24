@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import seriesData from '../data/datos_series.json';
 
 const useAppStore = create((set, get) => ({
   // Estados básicos
@@ -109,10 +110,31 @@ const useAppStore = create((set, get) => ({
   // Función de inicialización con datos realistas
   initializeData: () => {
     console.log('Inicializando datos...');
-    
+    // Leer subcategorías únicas de series desde el JSON real
+    let seriesSubcats = [];
+    if (seriesData && Array.isArray(seriesData.series)) {
+      const subcatSet = new Set();
+      seriesData.series.forEach((serie, idx) => {
+        console.log('[useAppStore] Serie', idx, '->', serie.title, '| subcategoria:', serie.subcategoria, '| categoria:', serie.categoria);
+        if (serie.subcategoria && typeof serie.subcategoria === 'string') {
+          // Permitir múltiples subcategorías separadas por coma
+          serie.subcategoria.split(',').forEach(sub => {
+            const cleanSub = sub.trim().toLowerCase();
+            if (cleanSub) {
+              subcatSet.add(cleanSub);
+              console.log('[useAppStore] Añadiendo subcategoría:', cleanSub, 'de serie:', serie.title);
+            }
+          });
+        }
+      });
+      seriesSubcats = Array.from(subcatSet).map(sub => ({ sub, label: sub }));
+      console.log('[useAppStore] Subcategorías series generadas (final):', seriesSubcats);
+    } else {
+      console.log('[useAppStore] No se encontró seriesData o no es array:', seriesData);
+    }
     const categories = [
       { id: 'movies', name: 'Películas', subcategories: [] },
-      { id: 'series', name: 'Series', subcategories: [] },
+      { id: 'series', name: 'Series', subcategories: seriesSubcats },
       { id: 'books', name: 'Libros', subcategories: [] },
       { id: 'music', name: 'Música', subcategories: [] },
       { id: 'videogames', name: 'Videojuegos', subcategories: [] },
@@ -235,11 +257,9 @@ const useAppStore = create((set, get) => ({
       selectedCategory: 'all',
       isDataInitialized: true 
     });
-
-    console.log('✅ Datos inicializados:', {
-      total: allRecommendations.length,
-      categories: categories.length
-    });
+    console.log('[useAppStore] Categorías tras set:', categories);
+    const catSeries = categories.find(cat => cat.id === 'series');
+    console.log('[useAppStore] Categoría series tras set:', catSeries);
   },
 
   // Resto de funciones
@@ -254,6 +274,10 @@ const useAppStore = create((set, get) => ({
   getSubcategoriesForCategory: (categoryId) => {
     const categories = get().categories;
     const category = categories.find(cat => cat.id === categoryId);
+    console.log('[useAppStore] getSubcategoriesForCategory:', categoryId, '| category:', category, '| subcategories:', category?.subcategories);
+    if (categoryId === 'series') {
+      console.log('[useAppStore] getSubcategoriesForCategory (series) - subcategories:', category?.subcategories);
+    }
     return category?.subcategories || [];
   },
 

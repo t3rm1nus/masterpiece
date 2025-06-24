@@ -8,6 +8,7 @@ import {
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppTheme } from '../store/useAppStore';
 import { getCategoryColor } from '../utils/categoryUtils';
+import { getSubcategoryLabel } from '../utils/subcategoryLabel';
 
 /**
  * MaterialSubcategoryChips
@@ -82,6 +83,10 @@ const MaterialSubcategoryChips = ({
   // Obtener color de categoría para móvil
   const categoryColorFinal = getCategoryColor(selectedCategory);
 
+  // LOG para depuración de subcategorías
+  console.log('[MaterialSubcategoryChips] subcategories prop:', subcategories);
+  console.log('[MaterialSubcategoryChips] selectedCategory:', selectedCategory);
+
   return (
     <>      {/* Chips de subcategorías normales */}
       {Array.isArray(subcategories) && subcategories.length > 0 && (
@@ -99,17 +104,20 @@ const MaterialSubcategoryChips = ({
           {...props}
         >
           {subcategories.map(({ sub, label }, idx) => {
+            // LOG para cada chip
+            console.log('[MaterialSubcategoryChips] Render chip:', { sub, label, idx });
             const isActive = activeSubcategory === sub;
             const chipColor = isActive ? categoryColorFinal : 'transparent';
             const chipTextColor = isActive ? 'white' : categoryColorFinal;
             const chipBorderColor = categoryColorFinal;
-
+            // Usar siempre el literal traducido
+            const chipLabel = getSubcategoryLabel(sub, selectedCategory, useLanguage().t, useLanguage().lang);
             return renderChip ? (
-              renderChip({ sub, label, isActive, idx })
+              renderChip({ sub, label: chipLabel, isActive, idx })
             ) : (
               <Chip
                 key={sub}
-                label={label || getSubcategoryTranslation(sub, selectedCategory)}
+                label={chipLabel}
                 onClick={onSubcategoryClick ? () => onSubcategoryClick(sub) : undefined}
                 variant={isActive ? 'filled' : 'outlined'}
                 sx={{

@@ -3,6 +3,7 @@ import { Select, MenuItem, InputLabel, FormControl, useTheme, useMediaQuery, Lis
 import { Movie as MovieIcon, SportsEsports as GameIcon, MenuBook as BookIcon, LibraryMusic as MusicIcon, Mic as PodcastIcon, Extension as BoardGameIcon, AutoStories as ComicIcon, Category as CategoryIcon, Star as StarIcon } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 import { getCategoryColor, getCategoryColorForSelect } from '../utils/categoryUtils';
+import { getSubcategoryLabel } from '../utils/subcategoryLabel';
 
 const getCategoryIcon = (categoryKey) => {
   switch (categoryKey) {
@@ -284,7 +285,7 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
               <MenuItem key="all" value="all">{t?.ui?.navigation?.all_subcategories || (lang === 'en' ? 'All subcategories' : 'Todas las subcategorías')}</MenuItem>
               {subcategories.map(sub => (
                 <MenuItem key={sub.sub || sub} value={sub.sub || sub}>
-                  {sub.label || sub.sub || sub}
+                  {getSubcategoryLabel(sub.sub || sub, selectedCategory, t, lang)}
                 </MenuItem>
               ))}
             </Select>

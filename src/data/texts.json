@@ -165,15 +165,10 @@
       "series": {
         "drama": "Drama",
         "comedy": "Comedia",
-        "action": "Acción",
-        "sci-fi": "Ciencia Ficción",
-        "fantasy": "Fantasía",
+        "terror": "Terror",
+        "sci-fy": "Ciencia Ficción",
         "thriller": "Thriller",
-        "crime": "Crimen",
-        "documentary": "Documental",
-        "animation": "Animación",
-        "reality": "Reality Show",
-        "miniseries": "Miniserie"
+        "mistery": "Misterio"
       },
       "documentales": {
         "nature": "Naturaleza",
@@ -548,15 +543,10 @@
       "series": {
         "drama": "Drama",
         "comedy": "Comedy",
-        "action": "Action",
-        "sci-fi": "Sci-Fi",
-        "fantasy": "Fantasy",
+        "terror": "Horror",
+        "sci-fy": "Sci-Fi",
         "thriller": "Thriller",
-        "crime": "Crime",
-        "documentary": "Documentary",
-        "animation": "Animation",
-        "reality": "Reality Show",
-        "miniseries": "Miniseries"
+        "mistery": "Mystery"
       },
       "documentales": {
         "nature": "Nature",

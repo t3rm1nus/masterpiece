@@ -18,6 +18,38 @@ export const createDataSlice = (set, get) => ({
   isDataInitialized: false,
   allData: {},
   updateWithRealData: (realData) => {
+    console.log('[dataStore] updateWithRealData: categorías recibidas:', realData.categories);
+    const catSeries = realData.categories?.find(cat => cat.id === 'series');
+    console.log('[dataStore] updateWithRealData: subcategorías de series recibidas:', catSeries?.subcategories);
+
+    // --- CORRECCIÓN: Generar subcategorías únicas de series a partir de los datos reales ---
+    let seriesSubcats = [];
+    if (realData.allData && Array.isArray(realData.allData.series)) {
+      const subcatSet = new Set();
+      realData.allData.series.forEach((serie, idx) => {
+        if (serie.subcategoria && typeof serie.subcategoria === 'string') {
+          serie.subcategoria.split(',').forEach(sub => {
+            const cleanSub = sub.trim().toLowerCase();
+            if (cleanSub) {
+              subcatSet.add(cleanSub);
+            }
+          });
+        }
+      });
+      seriesSubcats = Array.from(subcatSet).map(sub => ({ sub, label: sub }));
+      console.log('[dataStore] Subcategorías series generadas (realData):', seriesSubcats);
+    }
+    // --- FIN CORRECCIÓN ---
+
+    // --- CORRECCIÓN: Reemplazar subcategorías de series en las categorías ---
+    let categoriesFixed = realData.categories ? realData.categories.map(cat => {
+      if (cat.id === 'series') {
+        return { ...cat, subcategories: seriesSubcats };
+      }
+      return cat;
+    }) : [];
+    // --- FIN CORRECCIÓN ---
+
     let recommendations14 = realData.recommendations?.slice(0, 14) || [];
     if (recommendations14.length < 14 && realData.allData) {
       const allItems = Object.values(realData.allData).flat();
@@ -31,13 +63,15 @@ export const createDataSlice = (set, get) => ({
       recommendations14 = recommendations14.concat(candidates.slice(0, needed));
     }
     set({
-      categories: realData.categories,
+      categories: categoriesFixed,
       recommendations: recommendations14,
       filteredItems: recommendations14,
       allData: realData.allData,
       selectedCategory: null,
       isDataInitialized: true
     });
+    const catSeriesAfter = categoriesFixed?.find(cat => cat.id === 'series');
+    console.log('[dataStore] updateWithRealData: subcategorías de series tras set:', catSeriesAfter?.subcategories);
     console.log('✅ Store actualizado con recomendaciones diarias:', recommendations14.length);
   },
   getRecommendations: () => get().recommendations,
