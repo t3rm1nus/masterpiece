@@ -60,6 +60,7 @@ const MobileItemDetail = ({
   className = '',
   style = {},
   onBack,
+  getTranslation, // <-- Añadido correctamente como prop
   ...props
 }) => {
   // Filtrar props internos que no deben ir al DOM
@@ -153,8 +154,8 @@ const MobileItemDetail = ({
         )}
         {/* Badge de masterpiece en la imagen */}
         {selectedItem.masterpiece && (
-          <span className="masterpiece-detail-badge" title={getTranslation('ui.badges.masterpiece', 'Obra maestra')}>
-            <img src="/imagenes/masterpiece-star.png" alt={getTranslation('ui.alt.masterpiece', 'Obra maestra')} style={{ width: 56, height: 56, display: 'block' }} />
+          <span className="masterpiece-detail-badge" title={(getTranslation ? getTranslation('ui.badges.masterpiece', 'Obra maestra') : 'Obra maestra')}>
+            <img src="/imagenes/masterpiece-star.png" alt={(getTranslation ? getTranslation('ui.alt.masterpiece', 'Obra maestra') : 'Obra maestra')} style={{ width: 56, height: 56, display: 'block' }} />
           </span>
         )}
         <CardContent sx={{ padding: '24px' }}>

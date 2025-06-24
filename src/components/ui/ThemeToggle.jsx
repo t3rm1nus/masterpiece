@@ -50,8 +50,8 @@ const ThemeToggle = ({
   );
   const defaultDarkIcon = (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="12" cy="12" r="5" stroke="#888" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="#888" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 
@@ -64,8 +64,8 @@ const ThemeToggle = ({
       size={size}
       aria-label={ariaLabel || (theme === 'light' ? getTranslation('ui.dark_mode', 'Modo oscuro') : getTranslation('ui.light_mode', 'Modo claro'))}
       sx={{
-        background: 'transparent', // Quitar fondo azul
-        border: '1px solid rgba(0,0,0,0.23)',
+        background: 'transparent',
+        border: '1.5px solid #888', // siempre gris
         color: 'var(--mui-color-secondary, #6d4aff)',
         borderRadius: '4px',
         padding: '6px 16px',
@@ -83,7 +83,7 @@ const ThemeToggle = ({
         cursor: 'pointer',
         '&:hover': {
           background: 'rgba(109,74,255,0.04)',
-          borderColor: 'rgba(109,74,255,0.5)',
+          borderColor: '#888',
         },
         ...sx
       }}
@@ -92,7 +92,7 @@ const ThemeToggle = ({
         ? (iconLight || defaultLightIcon)
         : (iconDark || defaultDarkIcon)}
       {showLabel && (
-        <span style={{ marginLeft: 8 }}>
+        <span style={{ marginLeft: 8, color: '#888' }}>
           {theme === 'light'
             ? getTranslation('ui.dark_mode', 'Modo oscuro')
             : getTranslation('ui.light_mode', 'Modo claro')}

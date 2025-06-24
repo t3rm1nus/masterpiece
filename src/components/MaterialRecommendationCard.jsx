@@ -155,7 +155,8 @@ const MaterialRecommendationCard = memo(({
     <UiCard
       className={`mp-card mp-card--material ${className}`}
       style={{
-        maxWidth: 300,
+        maxWidth: 340, // ampliado a 340px
+        minWidth: 220, // asegura que no sean demasiado pequeños
         margin: '0 auto',
         cursor: 'pointer',
         transition: 'all 0.3s ease',

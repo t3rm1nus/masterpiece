@@ -2,6 +2,7 @@ import React from 'react';
 import { Select, MenuItem, InputLabel, FormControl, useTheme, useMediaQuery, ListSubheader, Box } from '@mui/material';
 import { Movie as MovieIcon, SportsEsports as GameIcon, MenuBook as BookIcon, LibraryMusic as MusicIcon, Mic as PodcastIcon, Extension as BoardGameIcon, AutoStories as ComicIcon, Category as CategoryIcon, Star as StarIcon } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
+import { getCategoryColor } from '../utils/categoryUtils';
 
 const getCategoryIcon = (categoryKey) => {
   switch (categoryKey) {
@@ -48,7 +49,7 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
 
   return (
     <div
-      style={{ width: isMobile ? '80vw' : '100vw', maxWidth: isMobile ? '80vw' : '100vw', margin: isMobile ? '0 auto 24px auto' : '0', boxSizing: 'border-box', position: 'relative', left: 'unset', transform: 'unset', zIndex: 1300 }}
+      style={{ width: isMobile ? '80vw' : '100vw', maxWidth: isMobile ? '80vw' : '100vw', margin: isMobile ? '0 auto 24px auto' : '0', boxSizing: 'border-box', position: 'relative', left: 'unset', transform: 'unset', zIndex: 900 }}
     >
       <FormControl
         fullWidth
@@ -56,17 +57,34 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
         sx={{
           my: 2,
           display: 'block',
-          width: isMobile ? '80vw' : '100vw',
-          maxWidth: isMobile ? '80vw' : '100vw',
+          width: isMobile ? '80vw' : '100vw', // restaurado a 80vw
+          maxWidth: isMobile ? '80vw' : '100vw', // restaurado a 80vw
           minWidth: 0,
           boxSizing: 'border-box',
           p: 0,
           mx: isMobile ? 'auto' : 0,
           mb: isMobile && showSubcatSelect ? 4 : isMobile ? 3 : 0, // aumenta separación si hay subcategorías
+          '& .MuiOutlinedInput-notchedOutline': {
+            borderColor: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined,
+            borderWidth: 2
+          },
+          '& .MuiInputLabel-root': {
+            color: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined,
+            fontWeight: 'bold'
+          },
+          '& .Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined,
+            borderWidth: 2
+          },
+          '& .Mui-focused .MuiInputLabel-root': {
+            color: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined,
+            fontWeight: 'bold'
+          }
         }}
       >
         <InputLabel
           id="category-select-label"
+          sx={{ color: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined, fontWeight: 'bold' }}
         >
           {t?.ui?.navigation?.category || (lang === 'en' ? 'Category' : 'Categoría')}
         </InputLabel>
@@ -89,6 +107,17 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
             boxSizing: 'border-box',
             p: 0,
             mx: isMobile ? 'auto' : 0,
+            '& .MuiOutlinedInput-notchedOutline': {
+              borderColor: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined,
+              borderWidth: 2
+            },
+            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+              borderColor: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined,
+              borderWidth: 2
+            },
+            '& .MuiSelect-icon': {
+              color: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined
+            }
           }}
           MenuProps={{
             anchorOrigin: { vertical: 'bottom', horizontal: 'center' },
@@ -127,17 +156,34 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
             variant="outlined"
             sx={{
               display: 'block',
-              width: isMobile ? '80vw' : '100vw',
-              maxWidth: isMobile ? '80vw' : '100vw',
+              width: isMobile ? '80vw' : '100vw', // restaurado a 80vw
+              maxWidth: isMobile ? '80vw' : '100vw', // restaurado a 80vw
               minWidth: 0,
               boxSizing: 'border-box',
               p: 0,
               mx: isMobile ? 'auto' : 0,
               mb: isMobile ? 3 : 0,
+              '& .MuiOutlinedInput-notchedOutline': {
+                borderColor: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined,
+                borderWidth: 2
+              },
+              '& .MuiInputLabel-root': {
+                color: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined,
+                fontWeight: 'bold'
+              },
+              '& .Mui-focused .MuiOutlinedInput-notchedOutline': {
+                borderColor: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined,
+                borderWidth: 2
+              },
+              '& .Mui-focused .MuiInputLabel-root': {
+                color: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined,
+                fontWeight: 'bold'
+              }
             }}
           >
             <InputLabel
               id="subcategory-select-label"
+              sx={{ color: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined, fontWeight: 'bold' }}
             >
               {t?.ui?.navigation?.subcategory || (lang === 'en' ? 'Subcategory' : 'Subcategoría')}
             </InputLabel>
@@ -161,6 +207,17 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
                 mt: 1,
                 p: 0,
                 mx: isMobile ? 'auto' : 0,
+                '& .MuiOutlinedInput-notchedOutline': {
+                  borderColor: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined,
+                  borderWidth: 2
+                },
+                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                  borderColor: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined,
+                  borderWidth: 2
+                },
+                '& .MuiSelect-icon': {
+                  color: selectedCategory ? getCategoryColor(selectedCategory, theme) : undefined
+                }
               }}
               MenuProps={{
                 anchorOrigin: { vertical: 'bottom', horizontal: 'center' },

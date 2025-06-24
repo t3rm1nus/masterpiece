@@ -321,6 +321,36 @@ const HomePage = ({
       default:
         return '#0078d4';    }
   };
+  // Copiado de MaterialRecommendationCard y MobileItemDetail para unificar degradados
+  function getCategoryGradient(category) {
+    switch (category) {
+      case 'movies':
+      case 'peliculas':
+        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
+      case 'videogames':
+      case 'videojuegos':
+        return 'linear-gradient(135deg, #f8f3fa 0%, #e1bee7 100%)';
+      case 'books':
+      case 'libros':
+        return 'linear-gradient(135deg, #f4faf4 0%, #c8e6c9 100%)';
+      case 'music':
+      case 'musica':
+        return 'linear-gradient(135deg, #f2fbfc 0%, #b2ebf2 100%)';
+      case 'podcast':
+      case 'podcasts':
+        return 'linear-gradient(135deg, #f7fbf2 0%, #dcedc8 100%)';
+      case 'boardgames':
+      case 'juegos de mesa':
+        return 'linear-gradient(135deg, #fdf4f8 0%, #f8bbd0 100%)';
+      case 'comics':
+        return 'linear-gradient(135deg, #fff8f0 0%, #ffe0b2 100%)';
+      case 'documentales':
+      case 'documentaries':
+        return 'linear-gradient(135deg, #fafafa 0%, #e0e0e0 100%)';
+      default:
+        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
+    }
+  }
   const isMobile = useIsMobile();
   // Verificar si hay datos disponibles
   if (!allData || Object.keys(allData).length === 0) {
@@ -350,13 +380,23 @@ const HomePage = ({
               (isMobile ? ' home-mobile-title' : '') +
               (selectedCategory ? ' after-subcategories' : '')
             }
-            style={isMobile ? {
-              textTransform: 'capitalize',
-              textAlign: 'center',
-              margin: '20px 0 32px 0',
-              fontWeight: 700,
-              fontSize: '2.2rem'
-            } : {}}
+            style={{
+              ...(isMobile ? {
+                textTransform: 'capitalize',
+                textAlign: 'center',
+                margin: '20px 0 32px 0',
+                fontWeight: 700,
+                fontSize: '2.2rem',
+                background: selectedCategory ? getCategoryGradient(selectedCategory) : undefined,
+                boxShadow: selectedCategory ? '0 2px 12px 0 rgba(255, 200, 80, 0.13), 0 1.5px 0 #ffe29e' : undefined,
+                color: 'black',
+                borderRadius: 0,
+                position: 'relative',
+                zIndex: 2,
+                border: 'none',
+                transition: 'background 0.3s',
+              } : {})
+            }}
           >
             {selectedCategory 
               ? (t?.categories?.[selectedCategory] || selectedCategory)
