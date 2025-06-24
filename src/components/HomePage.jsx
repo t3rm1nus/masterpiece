@@ -533,6 +533,8 @@ const HomePage = ({
                   lang={lang}
                   isRecommendedActive={isRecommendedActive}
                   isMobile
+                  isSpanishSeriesActive={isSpanishSeriesActive}
+                  handleSpanishSeriesToggle={toggleSpanishSeries}
                   {...specialButtonsProps}
                 />
               )}

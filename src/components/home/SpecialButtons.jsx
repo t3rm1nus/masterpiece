@@ -178,6 +178,29 @@ const SpecialButtons = ({
           {lang === 'es' ? 'Series Españolas' : 'Spanish Series'}
         </UiButton>
       )}
+      {/* Botón Series Españolas solo en mobile y solo para series */}
+      {selectedCategory === 'series' && isMobile && (
+        <UiButton
+          className={`subcategory-btn test-btn${isSpanishSeriesActive ? ' active' : ''}`}
+          variant={isSpanishSeriesActive ? 'contained' : 'outlined'}
+          color="secondary"
+          size="small"
+          onClick={() => {
+            console.log('[SpecialButtons] Click en botón Series Españolas (mobile)');
+            handleSpanishSeriesToggle();
+          }}
+          sx={{
+            margin: '0 4px',
+            minWidth: 90,
+            background: isSpanishSeriesActive ? getCategoryGradient(selectedCategory) : '#fff',
+            color: '#757575',
+            borderColor: '#bdbdbd',
+            fontWeight: isSpanishSeriesActive ? 700 : 500
+          }}
+        >
+          {lang === 'es' ? 'Series Españolas' : 'Spanish Series'}
+        </UiButton>
+      )}
       {/* Botón Obras Maestras */}
       {!isRecommendedActive && selectedCategory && (
         <UiButton
