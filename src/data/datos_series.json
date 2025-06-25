@@ -128,7 +128,7 @@
         "en": "A prestigious boarding school hides deadly secrets as students uncover dark mysteries."
       },
       "image": "/imagenes/series/el_internado.jpg",
-      "subcategoria": "mistery",
+      "subcategoria": "thriller",
       "temporadas": 7,
       "episodios": 71,
       "trailer": { "es": "https://www.youtube.com/watch?v=sdytEqadkQY", 
@@ -2704,7 +2704,7 @@
       "en": "A modern-day crime fighter battles evil with the help of an intelligent car named KITT."
     },
     "image": "/imagenes/series/coche_fantastico.jpg",
-    "subcategoria": "adventure",
+    "subcategoria": "sci-fy",
     "temporadas": 4,
     "episodios": 90,
     "trailer": {
@@ -2750,7 +2750,7 @@
       "en": "Teen sitcom following a group of students through school life, romance, friendships, and everyday problems."
     },
     "image": "/imagenes/series/salvados_por_la_campana.jpg",
-    "subcategoria": "teen",
+    "subcategoria": "comedy",
     "temporadas": 4,
     "episodios": 86,
     "trailer": {
