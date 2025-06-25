@@ -152,7 +152,7 @@
       "episodios": 55,
       "trailer": { "es": "https://www.youtube.com/watch?v=rOwczqmx484", 
       "en": "https://www.youtube.com/watch?v=rOwczqmx484" },
-      "masterpiece": true,
+      "masterpiece": false,
       "tags": ["spanish"],
       "categoria": "series"
     },
@@ -170,7 +170,7 @@
       "temporadas": 5,
       "episodios": 90,
       "trailer": { "es": "https://www.youtube.com/watch?v=rU93XqVOItw", "en": "https://www.youtube.com/watch?v=rU93XqVOItw" },
-      "masterpiece": true,
+      "masterpiece": false,
       "tags": ["spanish"],
       "categoria": "series"
     },
@@ -243,7 +243,7 @@
       "temporadas": 1,
       "episodios": 10,
       "trailer": { "es": "https://www.youtube.com/watch?v=MBPCVh6tHhs", "en": "https://www.youtube.com/watch?v=1scc9Eq1ZAw" },
-      "masterpiece": true,
+      "masterpiece": false,
       "tags": ["spanish"],
       "categoria": "series"
     },
@@ -261,7 +261,7 @@
       "temporadas": 2,
       "episodios": 12,
       "trailer": { "es": "https://www.youtube.com/watch?v=zBl3m6D-6-Y", "en": "https://www.youtube.com/watch?v=zBl3m6D-6-Y" },
-      "masterpiece": true,
+      "masterpiece": false,
       "tags": ["spanish"],
       "categoria": "series"
     },
@@ -279,7 +279,7 @@
       "temporadas": 1,
       "episodios": 13,
       "trailer": { "es": "https://www.youtube.com/watch?v=tjpNpnpK8Og", "en": "https://www.youtube.com/watch?v=tjpNpnpK8Og" },
-      "masterpiece": true,
+      "masterpiece": false,
       "tags": ["spanish"],
       "categoria": "series"
     },
@@ -389,7 +389,7 @@
         "es": "https://www.youtube.com/watch?v=auuvjY8PFZk&list=RDauuvjY8PFZk&start_radio=1",
         "en": "https://www.youtube.com/watch?v=auuvjY8PFZk&list=RDauuvjY8PFZk&start_radio=1"
       },
-      "masterpiece": true,
+      "masterpiece": false,
       "tags": ["spanish"],
       "categoria": "series"
     },
@@ -431,7 +431,7 @@
         "es": "https://www.youtube.com/watch?v=p_EhCrTD648",
         "en": "https://www.youtube.com/watch?v=p_EhCrTD648"
       },
-      "masterpiece": true,
+      "masterpiece": false,
       "tags": ["spanish"],
       "categoria": "series"
     },
@@ -452,7 +452,7 @@
         "es": "https://www.youtube.com/watch?v=tl1bQz3oNSA&list=RDtl1bQz3oNSA&start_radio=1",
         "en": "https://www.youtube.com/watch?v=tl1bQz3oNSA&list=RDtl1bQz3oNSA&start_radio=1"
       },
-      "masterpiece": true,
+      "masterpiece": false,
       "tags": ["spanish"],
       "categoria": "series"
     },
@@ -473,7 +473,7 @@
         "es": "https://www.youtube.com/watch?v=YTGksASq5B0",
         "en": "https://www.youtube.com/watch?v=YTGksASq5B0"
       },
-      "masterpiece": true,
+      "masterpiece": false,
       "tags": ["spanish"],
       "categoria": "series"
     },
@@ -599,7 +599,7 @@
         "es": "https://www.youtube.com/watch?v=lwSeCM364MA",
         "en": "https://www.youtube.com/watch?v=ZBZvPX67GWc"
       },
-      "masterpiece": true,
+      "masterpiece": false,
       "tags": ["spanish"],
       "categoria": "series"
     },
@@ -818,7 +818,7 @@
       "en": "Anime about humanity fighting against gigantic titans that devour humans."
     },
     "image": "/imagenes/series/ataque.jpg",
-    "subcategoria": "anime",
+    "subcategoria": "animation",
     "temporadas": 4,
     "episodios": 87,
     "trailer": {
@@ -887,7 +887,7 @@
       "en": "Anime about a student who finds a supernatural notebook that can kill anyone."
     },
     "image": "/imagenes/series/death_note.jpg",
-    "subcategoria": "anime",
+    "subcategoria": "animation",
     "temporadas": 1,
     "episodios": 37,
     "trailer": {
@@ -1048,7 +1048,7 @@
       "en": "Science fiction anthology exploring the dark side of technology and modern society."
     },
     "image": "/imagenes/series/black_mirror.jpg",
-    "subcategoria": "scifi",
+    "subcategoria": "sci-fi",
     "temporadas": 6,
     "episodios": 27,
     "trailer": {
@@ -1094,7 +1094,7 @@
       "en": "Star Wars series about a Mandalorian bounty hunter and his ward in the outer reaches of the galaxy."
     },
     "image": "/imagenes/series/the_mandalorian.jpg",
-    "subcategoria": "scifi",
+    "subcategoria": "sci-fi",
     "temporadas": 3,
     "episodios": 24,
     "trailer": {
@@ -1163,7 +1163,7 @@
       "en": "Mystery about plane crash survivors stranded on a mysterious island full of secrets."
     },
     "image": "/imagenes/series/lost.jpg",
-    "subcategoria": "mystery",
+    "subcategoria": "thriller",
     "temporadas": 6,
     "episodios": 121,
     "trailer": {
@@ -1232,7 +1232,7 @@
       "en": "Adventure anime about Monkey D. Luffy and his pirate crew searching for the One Piece treasure."
     },
     "image": "/imagenes/series/one_piece.jpg",
-    "subcategoria": "anime",
+    "subcategoria": "animation",
     "temporadas": 21,
     "episodios": 1000,
     "trailer": {
@@ -1255,7 +1255,7 @@
       "en": "Surreal mystery about the investigation of Laura Palmer's murder in a small town."
     },
     "image": "/imagenes/series/twin_peaks.jpg",
-    "subcategoria": "mystery",
+    "subcategoria": "thriller",
     "temporadas": 3,
     "episodios": 48,
     "trailer": {
@@ -1278,7 +1278,7 @@
       "en": "Action anime about Goku and the Z warriors defending Earth from powerful enemies."
     },
     "image": "/imagenes/series/dragon_ball_z.jpg",
-    "subcategoria": "anime",
+    "subcategoria": "animation",
     "temporadas": 9,
     "episodios": 291,
     "trailer": {
@@ -1370,7 +1370,7 @@
       "en": "Anime about Saitama, a superhero who can defeat any enemy with a single punch, but seeks a worthy opponent."
     },
     "image": "/imagenes/series/one_punch_man.jpg",
-    "subcategoria": "anime",
+    "subcategoria": "animation",
     "temporadas": 3,
     "episodios": 36,
     "trailer": {
@@ -1393,7 +1393,7 @@
       "en": "Anime about a student with psychic powers trying to live a normal life while controlling his supernatural abilities."
     },
     "image": "/imagenes/series/mob_psycho_100.jpg",
-    "subcategoria": "anime",
+    "subcategoria": "animation",
     "temporadas": 3,
     "episodios": 37,
     "trailer": {
@@ -1485,7 +1485,7 @@
       "en": "Science fiction series set in a futuristic theme park populated by conscious androids."
     },
     "image": "/imagenes/series/westworld.jpg",
-    "subcategoria": "scifi",
+    "subcategoria": "sci-fi",
     "temporadas": 4,
     "episodios": 36,
     "trailer": {
@@ -1584,7 +1584,7 @@
       "es": "https://www.youtube.com/watch?v=ixFyyG4CWY0",
       "en": "https://www.youtube.com/watch?v=ixFyyG4CWY0"
     },
-    "masterpiece": false,
+    "masterpiece": true,
     "categoria": "series"
   },
   {
@@ -1600,7 +1600,7 @@
       "en": "Science fiction series about an FBI team investigating paranormal events and fringe science."
     },
     "image": "/imagenes/series/fringe.jpg",
-    "subcategoria": "scifi",
+    "subcategoria": "sci-fi",
     "temporadas": 5,
     "episodios": 100,
     "trailer": {
@@ -1669,7 +1669,7 @@
       "en": "Sitcom comedy set in a Boston bar where everybody knows your name and feels like home."
     },
     "image": "/imagenes/series/cheers.jpg",
-    "subcategoria": "sitcom",
+    "subcategoria": "comedy",
     "temporadas": 11,
     "episodios": 275,
     "trailer": {
@@ -1705,24 +1705,24 @@
   {
     "id": 80,
     "title": {
-      "es": "Los Simpson",
-      "en": "The Simpsons"
+      "es": "El equipo A",
+      "en": "The A-Team"
     },
-    "year": "1989",
-    "director": "Matt Groening",
+    "year": "1983",
+    "director": "Stephen J. Cannell",
     "description": {
-      "es": "Serie de animación sobre la familia Simpson y su vida en el pueblo ficticio de Springfield.",
-      "en": "Animated series about the Simpson family and their life in the fictional town of Springfield."
+      "es": "Un grupo de ex soldados ayudan a los necesitados mientras son perseguidos por el gobierno.",
+      "en": "A group of former soldiers help those in need while being pursued by the government."
     },
-    "image": "/imagenes/series/simpsons.jpg",
-    "subcategoria": "animation",
-    "temporadas": 35,
-    "episodios": 750,
+    "image": "/imagenes/series/el_equipo_a.jpg",
+    "subcategoria": "action",
+    "temporadas": 5,
+    "episodios": 98,
     "trailer": {
-      "es": "https://www.youtube.com/watch?v=GJxnQzm-Ecg",
-      "en": "https://www.youtube.com/watch?v=GJxnQzm-Ecg"
+      "es": "https://www.youtube.com/watch?v=Cn6kEsloMdE",
+      "en": "https://www.youtube.com/watch?v=Cn6kEsloMdE"
     },
-    "masterpiece": true,
+    "masterpiece": false,
     "categoria": "series"
   },
   {
@@ -1791,7 +1791,7 @@
       "es": "https://www.youtube.com/watch?v=CLVZmXzeZx8",
       "en": "https://www.youtube.com/watch?v=k5VngkAbkAE"
     },
-    "masterpiece": false,
+    "masterpiece": true,
     "categoria": "series"
   },
   {
@@ -1807,7 +1807,7 @@
       "en": "Modern adaptation of Sherlock Holmes set in 21st century London starring Benedict Cumberbatch."
     },
     "image": "/imagenes/series/sherlock.jpg",
-    "subcategoria": "mystery",
+    "subcategoria": "thriller",
     "temporadas": 4,
     "episodios": 13,
     "trailer": {
@@ -1830,7 +1830,7 @@
       "en": "Sitcom about a group of nerdy scientists and their aspiring actress neighbor in Pasadena, California."
     },
     "image": "/imagenes/series/big_bang_theory.jpg",
-    "subcategoria": "sitcom",
+    "subcategoria": "comedy",
     "temporadas": 12,
     "episodios": 279,
     "trailer": {
@@ -1853,7 +1853,7 @@
       "en": "Prequel to The Big Bang Theory showing the childhood of genius Sheldon Cooper in Texas."
     },
     "image": "/imagenes/series/young_sheldon.jpg",
-    "subcategoria": "sitcom",
+    "subcategoria": "comedy",
     "temporadas": 7,
     "episodios": 141,
     "trailer": {
@@ -1922,7 +1922,7 @@
       "en": "Anime about a young ninja seeking recognition and dreaming of becoming the leader of his village."
     },
     "image": "/imagenes/series/naruto.jpg",
-    "subcategoria": "anime",
+    "subcategoria": "animation",
     "temporadas": 9,
     "episodios": 720,
     "trailer": {
@@ -1945,7 +1945,7 @@
       "en": "Sitcom about Ted Mosby telling his children the story of how he met their mother."
     },
     "image": "/imagenes/series/how_i_met_your_mother.jpg",
-    "subcategoria": "sitcom",
+    "subcategoria": "comedy",
     "temporadas": 9,
     "episodios": 208,
     "trailer": {
@@ -1991,7 +1991,7 @@
       "en": "Mockumentary about three related families navigating modern life with humor and heart."
     },
     "image": "/imagenes/series/modern_family.jpg",
-    "subcategoria": "sitcom",
+    "subcategoria": "comedy",
     "temporadas": 11,
     "episodios": 250,
     "trailer": {
@@ -2037,7 +2037,7 @@
       "en": "Science fiction series about eight strangers mentally and emotionally connected around the world."
     },
     "image": "/imagenes/series/sense8.jpg",
-    "subcategoria": "scifi",
+    "subcategoria": "sci-fi",
     "temporadas": 2,
     "episodios": 24,
     "trailer": {
@@ -2267,7 +2267,7 @@
       "en": "Anime about a world where most people have superpowers and a powerless young man dreams of becoming a hero."
     },
     "image": "/imagenes/series/my_hero_academia.jpg",
-    "subcategoria": "anime",
+    "subcategoria": "animation",
     "temporadas": 7,
     "episodios": 158,
     "trailer": {
@@ -2520,7 +2520,7 @@
       "en": "Science fiction anime about space bounty hunters in 2071, blending genres and unique musical styles."
     },
     "image": "/imagenes/series/cowboy_bebop.jpg",
-    "subcategoria": "anime",
+    "subcategoria": "animation",
     "temporadas": 1,
     "episodios": 26,
     "trailer": {
@@ -2566,7 +2566,7 @@
       "en": "Science fiction and mystery series following two FBI agents investigating paranormal phenomena."
     },
     "image": "/imagenes/series/expediente_x.jpg",
-    "subcategoria": "mystery",
+    "subcategoria": "thriller",
     "temporadas": 11,
     "episodios": 218,
     "trailer": {
@@ -2727,7 +2727,7 @@
       "en": "A clumsy yet effective spy battles an evil organization with help from his partner Agent 99."
     },
     "image": "/imagenes/series/superagente_86.jpg",
-    "subcategoria": "spy",
+    "subcategoria": "comedy",
     "temporadas": 5,
     "episodios": 138,
     "trailer": {
@@ -2740,25 +2740,26 @@
   {
     "id": 125,
     "title": {
-      "es": "El equipo A",
-      "en": "The A-Team"
+      "es": "Salvados por la campana",
+      "en": "Saved by the Bell"
     },
-    "year": "1983",
-    "director": "Stephen J. Cannell",
+    "year": "1989",
+    "director": "Dennis Erdman",
     "description": {
-      "es": "Un grupo de ex soldados ayudan a los necesitados mientras son perseguidos por el gobierno.",
-      "en": "A group of former soldiers help those in need while being pursued by the government."
+      "es": "Serie juvenil que sigue a un grupo de estudiantes en su vida escolar, sus romances, amistades y problemas cotidianos.",
+      "en": "Teen sitcom following a group of students through school life, romance, friendships, and everyday problems."
     },
-    "image": "/imagenes/series/el_equipo_a.jpg",
-    "subcategoria": "action",
-    "temporadas": 5,
-    "episodios": 98,
+    "image": "/imagenes/series/salvados_por_la_campana.jpg",
+    "subcategoria": "teen",
+    "temporadas": 4,
+    "episodios": 86,
     "trailer": {
-      "es": "https://www.youtube.com/watch?v=Cn6kEsloMdE",
-      "en": "https://www.youtube.com/watch?v=Cn6kEsloMdE"
+      "es": "https://www.youtube.com/watch?v=GKETZzExfPc",
+      "en": "https://www.youtube.com/watch?v=GKETZzExfPc"
     },
     "masterpiece": false,
     "categoria": "series"
   }
+  
   ]
 }
