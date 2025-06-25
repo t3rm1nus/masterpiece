@@ -14,7 +14,7 @@
         "back": "Volver",
         "close": "Cerrar",
         "how_to_download": "¿Cómo descargar?",
-        "buy_me_coffee": "Cómprame un café"
+        "buy_me_coffee": "Invítame a un café"
       },
       "alt": {
         "splash": "Splash",
@@ -163,12 +163,17 @@
         "biographical": "Biográfico"
       },
       "series": {
-        "drama": "Drama",
+        "medical": "Médica",
+        "animation": "Animación",
+        "horror": "Terror",
+        "fantasy": "Fantasía",
+        "crime": "Crimen",
+        "historical": "Histórica",
+        "romance": "Romance",
         "comedy": "Comedia",
-        "terror": "Terror",
-        "sci-fy": "Ciencia Ficción",
+        "sci-fi": "Ciencia Ficción",
         "thriller": "Thriller",
-        "mistery": "Misterio"
+        "drama": "Drama"
       },
       "documentales": {
         "nature": "Naturaleza",
@@ -541,12 +546,17 @@
         "biographical": "Biographical"
       },
       "series": {
-        "drama": "Drama",
+        "medical": "Medical",
+        "animation": "Animation",
+        "horror": "Horror",
+        "fantasy": "Fantasy",
+        "crime": "Crime",
+        "historical": "Historical",
+        "romance": "Romance",
         "comedy": "Comedy",
-        "terror": "Horror",
-        "sci-fy": "Sci-Fi",
+        "sci-fi": "Sci-Fi",
         "thriller": "Thriller",
-        "mistery": "Mystery"
+        "drama": "Drama"
       },
       "documentales": {
         "nature": "Nature",
