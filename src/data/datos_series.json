@@ -1140,7 +1140,7 @@
       "en": "Superhero satire about a group fighting corrupt superheroes and powerful corporations."
     },
     "image": "/imagenes/series/the_boys.jpg",
-    "subcategoria": "action",
+    "subcategoria": "sci-fy",
     "temporadas": 4,
     "episodios": 32,
     "trailer": {
@@ -1715,7 +1715,7 @@
       "en": "A group of former soldiers help those in need while being pursued by the government."
     },
     "image": "/imagenes/series/el_equipo_a.jpg",
-    "subcategoria": "action",
+    "subcategoria": "comedy",
     "temporadas": 5,
     "episodios": 98,
     "trailer": {
@@ -1968,7 +1968,7 @@
       "en": "Political thriller about an ambitious congressman manipulating his way to power in Washington."
     },
     "image": "/imagenes/series/house_of_cards.jpg",
-    "subcategoria": "political",
+    "subcategoria": "thriller",
     "temporadas": 6,
     "episodios": 73,
     "trailer": {
@@ -2612,7 +2612,7 @@
       "en": "Follows the adventures of Goku from childhood as he trains in martial arts and searches for the Dragon Balls."
     },
     "image": "/imagenes/series/dragon_ball.jpg",
-    "subcategoria": "action",
+    "subcategoria": "animation",
     "temporadas": 9,
     "episodios": 153,
     "trailer": {
