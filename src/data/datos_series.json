@@ -311,7 +311,7 @@
         "en": "Anthology series with self-contained episodes where each season tells independent stories that pay tribute to the classic format of Narciso Ibáñez Serrador, directed and starred by well-known names from Spanish cinema."
       },
       "image": "/imagenes/series/historias_moderna.jpg",
-      "subcategoria": "terror",
+      "subcategoria": "horror",
       "temporadas": 2,
       "episodios": 8,
       "trailer": { "es": "https://www.youtube.com/watch?v=2ngpEeoirxY", "en": "https://www.youtube.com/watch?v=2ngpEeoirxY" },
@@ -329,7 +329,7 @@
         "en": "Cult horror anthology series created by Narciso Ibáñez Serrador, featuring standalone stories."
       },
       "image": "/imagenes/series/historias.jpg",
-      "subcategoria": "terror",
+      "subcategoria": "horror",
       "temporadas": 1,
       "episodios": 8,
       "trailer": { "es": "https://www.youtube.com/watch?v=cElhBMNELck", "en": "https://www.youtube.com/watch?v=cElhBMNELck" },
@@ -1554,7 +1554,7 @@
       "en": "Black comedy anthology series set in exclusive resorts exploring tension between social classes."
     },
     "image": "/imagenes/series/white_lotus.jpg",
-    "subcategoria": "comedy",
+    "subcategoria": "drama",
     "temporadas": 2,
     "episodios": 12,
     "trailer": {
