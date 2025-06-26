@@ -18,9 +18,7 @@ export const createDataSlice = (set, get) => ({
   isDataInitialized: false,
   allData: {},
   updateWithRealData: (realData) => {
-    console.log('[dataStore] updateWithRealData: categorías recibidas:', realData.categories);
     const catSeries = realData.categories?.find(cat => cat.id === 'series');
-    console.log('[dataStore] updateWithRealData: subcategorías de series recibidas:', catSeries?.subcategories);
 
     // --- CORRECCIÓN: Generar subcategorías únicas de series a partir de los datos reales ---
     let seriesSubcats = [];
@@ -37,7 +35,6 @@ export const createDataSlice = (set, get) => ({
         }
       });
       seriesSubcats = Array.from(subcatSet).map(sub => ({ sub, label: sub }));
-      console.log('[dataStore] Subcategorías series generadas (realData):', seriesSubcats);
     }
     // --- FIN CORRECCIÓN ---
 
@@ -71,8 +68,6 @@ export const createDataSlice = (set, get) => ({
       isDataInitialized: true
     });
     const catSeriesAfter = categoriesFixed?.find(cat => cat.id === 'series');
-    console.log('[dataStore] updateWithRealData: subcategorías de series tras set:', catSeriesAfter?.subcategories);
-    console.log('✅ Store actualizado con recomendaciones diarias:', recommendations14.length);
   },
   getRecommendations: () => get().recommendations,
   getCategories: () => {
@@ -94,7 +89,6 @@ export const createDataSlice = (set, get) => ({
   activeSubcategory: null,
   setActiveSubcategory: (subcategory) => set({ selectedSubcategory: subcategory, activeSubcategory: subcategory }),
   generateNewRecommendations: () => {
-    console.log('Generando nuevas recomendaciones...');
     const { allData } = get();
     if (allData && Object.keys(allData).length > 0) {
       const categories = ['movies', 'books', 'videogames', 'music', 'comics', 'boardgames', 'podcast', 'series', 'documentales'];
@@ -118,7 +112,6 @@ export const createDataSlice = (set, get) => ({
         currentView: 'home',
         selectedItem: null
       });
-      console.log('✅ Nuevas recomendaciones generadas:', finalRecommendations.length);
     }
   },
   updateTitleForLanguage: (lang) => {

@@ -153,7 +153,8 @@ const MaterialItemDetail = ({ item }) => {
         sx={{
           maxWidth: 600,
           margin: '0 auto',
-          marginTop: '60px',
+          marginTop: 14,
+          marginLeft: 5,
           borderRadius: '16px',
           overflow: 'hidden',
           boxShadow: theme.shadows[8],

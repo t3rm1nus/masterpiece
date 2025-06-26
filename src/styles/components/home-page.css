@@ -308,7 +308,10 @@
   }
   .MuiContainer-root {
     position: relative !important;
-    left: -5px !important;
+    margin-left: 5px !important;
+    margin-top: 47px !important;
+    left: unset !important;
+    top: unset !important;
   }
   .mp-ui-layout {
     position: relative !important;

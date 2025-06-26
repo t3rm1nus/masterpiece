@@ -1,7 +1,5 @@
 // Utilidad para cargar datos reales desde JSON
 export const loadRealData = async () => {
-  console.log('🔄 Cargando datos reales desde JSON...');
-  
   try {
     // Importar todos los archivos JSON
     const [
@@ -26,10 +24,7 @@ export const loadRealData = async () => {
       import('/src/data/datos_documentales.json')
     ]);
 
-    console.log('📄 Datos JSON cargados:', { 
-      movies: moviesData?.default?.recommendations?.length || 0,
-      books: booksData?.default?.recommendations?.length || 0 
-    });    // Función helper para procesar categoría
+    // Función helper para procesar categoría
     const processCategory = (data, categoryName) => {
       // Manejo flexible de diferentes estructuras JSON
       let itemsArray = null;
@@ -168,15 +163,7 @@ export const loadRealData = async () => {
         name: 'Documentales', 
         subcategories: extractSubcategories(processedData.documentales) 
       }
-    ];    console.log('✅ Datos reales procesados:', {
-      total: allRecommendations.length,
-      dailyRecommendations: dailyRecommendations.length,
-      categories: realCategories.length,
-      subcategoriesFound: realCategories.map(cat => `${cat.id}: ${cat.subcategories.length}`).join(', '),
-      breakdown: Object.entries(processedData).map(([key, items]) => `${key}: ${items.length}`).join(', ')
-    });
-
-    return {
+    ];    return {
       categories: realCategories,
       recommendations: dailyRecommendations, // CRÍTICO: Solo 12 recomendaciones diarias
       filteredItems: dailyRecommendations,   // CRÍTICO: Mostrar solo las recomendaciones curadas

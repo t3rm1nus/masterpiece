@@ -12,6 +12,7 @@
   padding: 0;
   margin: 0;
   overflow-y: auto;
+  margin-top: -42px;
 }
 
 html[data-theme='dark'] .item-detail-page.desktop-only {  

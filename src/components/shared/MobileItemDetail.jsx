@@ -127,7 +127,7 @@ const MobileItemDetail = ({
         sx={{
           maxWidth: 600,
           margin: '0 auto',
-          marginTop: '60px',
+          marginTop: 0,
           borderRadius: '16px',
           overflow: 'hidden',
           boxShadow: theme?.shadows?.[8],

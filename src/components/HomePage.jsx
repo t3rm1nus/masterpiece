@@ -25,6 +25,7 @@ import MaterialMobileMenu from './MaterialMobileMenu';
 import { getSubcategoryLabel } from '../utils/subcategoryLabel';
 import '../styles/components/animations.css';
 import MaterialContentWrapper from './MaterialContentWrapper';
+import useAppStore from '../store/useAppStore'; // <-- Importa el hook Zustand directo
 
 // Hook para detectar si es móvil SOLO por ancho de pantalla (robusto y compatible móvil)
 function useIsMobile() {
@@ -87,13 +88,6 @@ const HomePage = ({
     // (No play here, let SplashDialog handle it)
   };
 
-  // Log del audio elegido SIEMPRE que se abra el splash (móvil o desktop)
-  useEffect(() => {
-    if (splashOpen && splashAudio) {
-      console.log('[Splash] Sonido elegido:', splashAudio);
-    }
-  }, [splashOpen, splashAudio]);
-
   const handleSplashClose = () => {
     setSplashOpen(false);
     if (audioRef.current) {
@@ -139,7 +133,12 @@ const HomePage = ({
     }
   }, [lang, selectedCategory, updateTitleForLanguage]);
     // Obtener funciones de procesamiento del store de vista
-  const { goBackFromDetail, selectedItem, goToDetail } = useAppView();
+  // const { goBackFromDetail, selectedItem, goToDetail } = useAppView();
+  // Usar Zustand directo para selectedItem y navegación
+  const selectedItem = useAppStore(state => state.selectedItem);
+  const goToDetail = useAppStore(state => state.goToDetail);
+  const goBackFromDetail = useAppStore(state => state.goBackFromDetail);
+
   // Obtener categorías traducidas (se actualizará cuando cambie el idioma)
   const categoriesFromStore = getCategories();
   const categories = categoriesFromStore.map(cat => ({
@@ -179,10 +178,9 @@ const HomePage = ({
   useEffect(() => {
     let mounted = true;
     
-    if (!isDataInitialized && mounted) {        console.log('🔄 Iniciando carga de datos reales...');
+    if (!isDataInitialized && mounted) {
       loadRealData().then(realData => {
         if (mounted) {
-          console.log('✅ Datos cargados, actualizando store con recomendaciones diarias...');
           updateWithRealData(realData);
           // Usar las recomendaciones finales del store (garantiza 14)
           updateFilteredItems(realData.recommendations?.length === 14 ? realData.recommendations : realData.recommendations?.concat(Object.values(realData.allData).flat().filter(item => !realData.recommendations.some(r => r.id === item.id)).slice(0, 14 - (realData.recommendations?.length || 0))) || []);
@@ -203,20 +201,12 @@ const HomePage = ({
       // Si no hay categoría seleccionada (null), mostrar recomendaciones diarias curadas
       if (!selectedCategory || selectedCategory === 'all') {
         filteredData = recommendations;
-        console.log('📋 Mostrando recomendaciones diarias curadas:', filteredData.length);
       } else {
         // Filtrar elementos basado en la categoría seleccionada (mostrar TODAS de esa categoría)
         filteredData = allData[selectedCategory] || [];
-        console.log(`🎯 Filtrando por categoría "${selectedCategory}":`, filteredData.length);
       }      // Aplicar filtros adicionales solo cuando hay una categoría específica seleccionada
       if (selectedCategory && selectedCategory !== 'all') {
-        console.log('🔍 Aplicando filtros adicionales...', {
-          isSpanishCinemaActive,
-          isMasterpieceActive,
-          activePodcastLanguages,
-          activeDocumentaryLanguages,
-          activeSubcategory
-        });// Filtro de Cine Español (solo para películas)
+        // Filtro de Cine Español (solo para películas)
         if (selectedCategory === 'movies' && isSpanishCinemaActive) {
           filteredData = filteredData.filter(item => {
             // Verificar múltiples propiedades que puedan indicar cine español
@@ -242,7 +232,6 @@ const HomePage = ({
             
             return isSpanish;
           });
-          console.log('🇪🇸 Filtro Cine Español aplicado:', filteredData.length);
         }
 
         // Filtro de Masterpiece (para cualquier categoría)
@@ -251,7 +240,6 @@ const HomePage = ({
             item.masterpiece === true || 
             item.obra_maestra === true
           );
-          console.log('⭐ Filtro Masterpiece aplicado:', filteredData.length);
         }
 
         // Filtro de idioma para podcasts
@@ -260,7 +248,6 @@ const HomePage = ({
             activePodcastLanguages.includes(item.language) ||
             activePodcastLanguages.includes(item.idioma)
           );
-          console.log('🎧 Filtro idioma podcast aplicado:', filteredData.length);
         }
 
         // Filtro de idioma para documentales
@@ -269,17 +256,13 @@ const HomePage = ({
             activeDocumentaryLanguages.includes(item.language) ||
             activeDocumentaryLanguages.includes(item.idioma)
           );
-          console.log('🎬 Filtro idioma documental aplicado:', filteredData.length);
         }
 
         // Filtro de Series Españolas (solo para series)
         if (selectedCategory === 'series' && isSpanishSeriesActive) {
-          console.log('[Filtro Series Españolas] Estado activo:', isSpanishSeriesActive);
-          console.log('[Filtro Series Españolas] Antes de filtrar:', filteredData.map(i => ({id: i.id, tags: i.tags})));
           filteredData = filteredData.filter(item =>
             (item.tags && item.tags.includes('spanish'))
           );
-          console.log('[Filtro Series Españolas] Después de filtrar:', filteredData.map(i => ({id: i.id, tags: i.tags})));
         } else if (selectedCategory === 'series') {
           console.log('[Filtro Series Españolas] Estado activo:', isSpanishSeriesActive, '(NO FILTRO APLICADO)');
           console.log('[Filtro Series Españolas] Series visibles:', filteredData.map(i => ({id: i.id, tags: i.tags})));
@@ -298,7 +281,6 @@ const HomePage = ({
               || (item.genero && normalizeSubcategoryInternal(item.genero) === normalizedActiveSubcat)
             );
           });
-          console.log(`📂 Filtro subcategoría (normalizado) "${activeSubcategory}" aplicado (desktop/móvil):`, filteredData.length);
         }
       }
 
@@ -310,9 +292,7 @@ const HomePage = ({
       });
 
       updateFilteredItems(filteredData);
-    } else {
-      console.log('⚠️ allData no está disponible aún:', allData);
-    }
+    } 
   }, [
     selectedCategory, 
     activeSubcategory, 
@@ -331,42 +311,67 @@ const HomePage = ({
     setActiveLanguage('all');
   };// Manejar toggle de cine español
   const handleSpanishCinemaToggle = () => {
-    console.log('🇪🇸 Toggle Cine Español:', !isSpanishCinemaActive);
     toggleSpanishCinema();
   };
 
   // Manejar toggle de masterpiece
   const handleMasterpieceToggle = () => {
-    console.log('⭐ Toggle Masterpiece:', !isMasterpieceActive);
     toggleMasterpiece();
   };// Manejar clic en elemento
   const handleItemClick = (item) => {
     // Usar el viewStore para navegar al detalle
     goToDetail(item);
-    // Hacer scroll al inicio de la página solo en móviles, subiendo 100px más
-    if (window.innerWidth < 900) {
-      setTimeout(() => {
-        window.scrollTo({ top: Math.max(0, window.scrollY - window.scrollY + 0 - 100), behavior: 'smooth' });
-      }, 0);
-    }
+    // Eliminado scroll y log aquí para evitar duplicidad y conflictos
   };  // Manejar cierre del detalle
   const handleCloseDetail = () => {
     // Volver a la vista anterior usando el viewStore
     goBackFromDetail();
   };  // Renderizar el detalle del elemento
-  const renderItemDetail = () => {
-    if (!selectedItem) {
-      return null;
-    }
+  // const renderItemDetail = () => {
+  //   if (!selectedItem) {
+  //     return null;
+  //   }
+  //   return (
+  //     <UnifiedItemDetail
+  //       item={selectedItem}
+  //       onClose={handleCloseDetail}
+  //       selectedCategory={selectedCategory}
+  //     />
+  //   );
+  // }
 
-    return (
-      <UnifiedItemDetail
-        item={selectedItem}
-        onClose={handleCloseDetail}
-        selectedCategory={selectedCategory}
-      />
-    );
-  }
+  // Scroll al top al mostrar detalle en móvil (debug exhaustivo: logs y varios intentos)
+  useEffect(() => {
+    if (selectedItem && typeof window !== 'undefined' && window.innerWidth < 900) {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        const main = document.querySelector('main');
+        if (main) main.scrollTop = 0;
+        const root = document.getElementById('root');
+        if (root) root.scrollTop = 0;
+      }, 100);
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        const main = document.querySelector('main');
+        if (main) main.scrollTop = 0;
+        const root = document.getElementById('root');
+        if (root) root.scrollTop = 0;
+      }, 300);
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        const main = document.querySelector('main');
+        if (main) main.scrollTop = 0;
+        const root = document.getElementById('root');
+        if (root) root.scrollTop = 0;
+      }, 600);
+    }
+  }, [selectedItem]);
 
   const isMobile = useIsMobile();
   const isCategoryListMobile = isMobile && selectedCategory && selectedCategory !== 'all';
@@ -459,18 +464,6 @@ const HomePage = ({
       setActiveSubcategory(subcategory);
     }
   };
-
-  // Log siempre antes de renderizar la lista para depuración profunda
-  console.log('[HomePage] InfiniteScroll CHECK:', {
-    isMobile,
-    selectedCategory,
-    isCategoryListMobile,
-    paginatedItems: paginatedItems.length,
-    filteredItems: filteredItems.length,
-    hasMoreMobile,
-    mobilePage,
-    pageSize
-  });
 
   return (
     <UiLayout sx={{ marginTop: 8, width: '100vw', maxWidth: '100vw', px: 0 }}>
@@ -574,7 +567,6 @@ const HomePage = ({
                 t={t}
                 lang={lang}
               />
-              {console.log('[HomePage] categorySubcategories:', categorySubcategories)}
               <SpecialButtons
                 selectedCategory={selectedCategory}
                 isSpanishCinemaActive={isSpanishCinemaActive}
@@ -596,9 +588,10 @@ const HomePage = ({
         </>
       )}
       {/* Render either the recommendations list OR the item detail, not both */}
-      {selectedItem ? (
+      {/* {selectedItem ? (
         renderItemDetail()
-      ) : (
+      ) : ( */}
+      {!selectedItem && (
         <div
           style={{
             width: isMobile ? '96vw' : '100%',

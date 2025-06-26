@@ -85,7 +85,6 @@ const MobileRecommendationsList = ({
   return (
     <>
       {/* Infinite scroll props explícitos para debug */}
-      {console.log('[MobileRecommendationsList] hasMore:', rest.hasMore, 'loadingMore:', rest.loadingMore, 'onLoadMore:', typeof rest.onLoadMore)}
       <MaterialContentWrapper
         recommendations={data}
         isHome={isHome}

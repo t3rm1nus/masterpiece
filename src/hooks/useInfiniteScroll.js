@@ -16,24 +16,17 @@ export default function useInfiniteScroll(onLoadMore, hasMore, loading) {
     const observer = new window.IntersectionObserver(
       entries => {
         if (entries[0].isIntersecting) {
-          console.log('[InfiniteScroll] Sentinel intersecting, trigger onLoadMore');
           onLoadMore();
-        } else {
-          console.log('[InfiniteScroll] Sentinel NOT intersecting');
         }
       },
       { rootMargin: '120px' }
     );
     if (sentinelRef.current) {
       observer.observe(sentinelRef.current);
-      console.log('[InfiniteScroll] Observing sentinel', sentinelRef.current);
-    } else {
-      console.log('[InfiniteScroll] Sentinel ref is null');
     }
     return () => {
       if (sentinelRef.current) {
         observer.unobserve(sentinelRef.current);
-        console.log('[InfiniteScroll] Unobserving sentinel', sentinelRef.current);
       }
       observer.disconnect();
     };

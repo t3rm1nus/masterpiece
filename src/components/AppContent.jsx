@@ -16,64 +16,52 @@ const AppContent = () => {
     isMobile: isMobileView,
     setViewport
   } = useAppView();
-
   const { getTranslation } = useLanguage();
 
-  let content;  switch (currentView) {
-    case 'home':
-      content = <HomePage />;
-      break;    case 'detail':
-      if (!selectedItem) {
-        console.warn('[AppContent] No selectedItem found, redirecting to home');
-        content = <HomePage />;
-      } else {
-        content = (
-          <UnifiedItemDetail 
-            item={selectedItem}
-            onClose={goBackFromDetail}
-            selectedCategory={selectedItem.category}
-          />
-        );
-      }
-      break;
-    case 'coffee':
-      content = (
+  // Scroll al top al volver a la vista 'home' desde 'detail' en desktop
+  useEffect(() => {
+    // Si venimos de un detalle y estamos en desktop, sube el scroll al top
+    if (currentView === 'home' && !isMobileView) {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        const main = document.querySelector('main');
+        if (main) main.scrollTop = 0;
+        const root = document.getElementById('root');
+        if (root) root.scrollTop = 0;
+      }, 200); // Espera breve para asegurar que HomePage se haya renderizado
+    }
+  }, [currentView, isMobileView]);
+
+  // Renderiza SIEMPRE HomePage y muestra el detalle como overlay/modal si corresponde
+  return (
+    <>
+      <HybridMenu />
+      <HomePage />
+      {/* Overlay/modal de detalle solo si hay selectedItem y currentView es 'detail' */}
+      {currentView === 'detail' && selectedItem && (
+        <UnifiedItemDetail 
+          item={selectedItem}
+          onClose={goBackFromDetail}
+          selectedCategory={selectedItem.category}
+        />
+      )}
+      {/* Otras vistas (coffee, howToDownload, etc) */}
+      {currentView === 'coffee' && (
         <Suspense fallback={<LoadingFallback message={getTranslation('ui.states.loading_coffee', 'Cargando página de donación...')} />}>
           <LazyCoffeePage />
         </Suspense>
-      );
-      break;
-    case 'howToDownload':
-      content = (
+      )}
+      {currentView === 'howToDownload' && (
         <Suspense fallback={<LoadingFallback message={getTranslation('ui.states.loading_how_to_download', 'Cargando instrucciones de descarga...')} />}>
           <LazyHowToDownload />
         </Suspense>
-      );
-      break;
-    default:
-      console.warn('[AppContent] Unknown view:', currentView);
-      content = <div>{getTranslation('ui.errors.page_not_found', 'Página no encontrada')}</div>;
-  }  // Usando useEffect para detectar cambios de tamaño y actualizar el estado en el store de vista
-  useEffect(() => {
-    const checkMobile = () => {
-      const currentWidth = window.innerWidth;
-      
-      // Actualizar viewport usando setViewport que maneja isMobile, isTablet, isDesktop
-      setViewport(currentWidth);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
-  }, [setViewport]);
-
-  return (
-    <div className="container" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>      
-      <HybridMenu />
-      {content}
-    </div>
+      )}
+      {['home', 'detail', 'coffee', 'howToDownload'].indexOf(currentView) === -1 && (
+        <div>{getTranslation('ui.errors.page_not_found', 'Página no encontrada')}</div>
+      )}
+    </>
   );
 };
 
