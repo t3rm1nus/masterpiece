@@ -3,49 +3,49 @@
 
 export const categoryPalette = {
   movies: {
-    color: '#2196f3',
-    strong: '#0078d4',
-    gradient: 'linear-gradient(135deg, #e3f2fd 0%, #90caf9 100%)'
+    color: '#B3D1FF', // Azul pastel (antes era rojo)
+    strong: '#64B5F6',
+    gradient: 'linear-gradient(135deg, #E5F0FF 0%, #B3D1FF 100%)'
   },
   videogames: {
-    color: '#9c27b0',
-    strong: '#7b1fa2',
-    gradient: 'linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%)'
+    color: '#FFB3B3', // Rojo pastel (antes era azul)
+    strong: '#E57373',
+    gradient: 'linear-gradient(135deg, #FFE5E5 0%, #FFB3B3 100%)'
   },
   books: {
-    color: '#4caf50',
-    strong: '#388e3c',
-    gradient: 'linear-gradient(135deg, #e8f5e9 0%, #a5d6a7 100%)'
+    color: '#FFF9B3', // Amarillo pastel
+    strong: '#FFF176',
+    gradient: 'linear-gradient(135deg, #FFFFE5 0%, #FFF9B3 100%)'
   },
   music: {
-    color: '#00bcd4',
-    strong: '#0097a7',
-    gradient: 'linear-gradient(135deg, #e0f2f1 0%, #80cbc4 100%)'
+    color: '#B3FFB3', // Verde pastel
+    strong: '#81C784',
+    gradient: 'linear-gradient(135deg, #E5FFE5 0%, #B3FFB3 100%)'
   },
   podcast: {
-    color: '#8bc34a',
-    strong: '#689f38',
-    gradient: 'linear-gradient(135deg, #dcedc8 0%, #8bc34a 100%)'
+    color: '#FFD9B3', // Naranja pastel
+    strong: '#FFB74D',
+    gradient: 'linear-gradient(135deg, #FFF3E5 0%, #FFD9B3 100%)'
   },
   boardgames: {
-    color: '#e91e63',
-    strong: '#c2185b',
-    gradient: 'linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%)'
+    color: '#E0B3FF', // Violeta pastel
+    strong: '#BA68C8',
+    gradient: 'linear-gradient(135deg, #F5E5FF 0%, #E0B3FF 100%)'
   },
   comics: {
-    color: '#ff9800',
-    strong: '#e67e22',
-    gradient: 'linear-gradient(135deg, #fff3e0 0%, #ffcc80 100%)'
+    color: '#D2B48C', // Marrón pastel
+    strong: '#A1887F',
+    gradient: 'linear-gradient(135deg, #F5EDE5 0%, #D2B48C 100%)'
   },
   documentales: {
-    color: '#e57373',
-    strong: '#b71c1c',
-    gradient: 'linear-gradient(135deg, #ffebee 0%, #ffab91 100%)'
+    color: '#B3FFFF', // Cian pastel
+    strong: '#4DD0E1',
+    gradient: 'linear-gradient(135deg, #E5FFFF 0%, #B3FFFF 100%)'
   },
   series: {
-    color: '#b39ddb',
-    strong: '#512da8',
-    gradient: 'linear-gradient(135deg, #ede7f6 0%, #b39ddb 100%)'
+    color: '#FFB3E6', // Magenta pastel
+    strong: '#F06292',
+    gradient: 'linear-gradient(135deg, #FFE5F5 0%, #FFB3E6 100%)'
   }
 };
 
