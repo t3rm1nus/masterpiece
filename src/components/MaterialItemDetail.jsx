@@ -211,7 +211,7 @@ const MaterialItemDetail = ({ item }) => {
             component="h1" 
             id="item-detail-mobile-title"
             gutterBottom
-            className="detail-title-mobile"
+            className="detail-title-mobile animated-gradient-title"
             sx={{ 
               fontWeight: 'bold',
               fontSize: { xs: '1.2rem', sm: '2rem' },
@@ -222,7 +222,11 @@ const MaterialItemDetail = ({ item }) => {
               p: { xs: 0, sm: 1 },
               mt: { xs: 0, sm: 0 },
               mb: { xs: 0, sm: '16px' },
-              m: { xs: 0, sm: undefined }
+              m: { xs: 0, sm: undefined },
+              background: getCategoryAnimatedGradient(item.category),
+              backgroundSize: '200% 200%',
+              animation: 'animatedGradientBG 6s ease-in-out infinite',
+              color: '#222',
             }}
           >
             {title}

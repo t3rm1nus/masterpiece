@@ -2,6 +2,7 @@ import React, { useMemo, useCallback } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { useAppView, useAppData, useAppTheme } from '../store/useAppStore';
 import { generateRecommendationKey } from '../utils/appUtils';
+import { getCategoryGradient } from '../utils/categoryPalette';
 import CategoryBar from './home/CategoryBar';
 import SubcategoryBar from './home/SubcategoryBar';
 import '../styles/components/cards.css';
@@ -207,6 +208,9 @@ const DesktopRecommendationsList = ({
           key={generateRecommendationKey(normalizedRec, index)}
           recommendation={normalizedRec}
           onClick={() => handleItemClick(normalizedRec)}
+          sx={{
+            '--card-gradient': getCategoryGradient(normalizedRec.category)
+          }}
         />
       );
     } catch (error) {

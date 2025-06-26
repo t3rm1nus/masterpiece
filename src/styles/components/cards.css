@@ -415,3 +415,54 @@
   margin: 8px;
   background-color: #fff5f5;
 }
+
+/* Animaciones y microinteracciones avanzadas */
+.mp-card--material {
+  transition: box-shadow 0.3s cubic-bezier(.4,2,.6,1), transform 0.25s cubic-bezier(.4,2,.6,1), background 0.4s;
+  will-change: box-shadow, transform, background;
+  animation: fadeInCard 0.7s cubic-bezier(.4,2,.6,1);
+}
+
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(30px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+
+.mp-card--material:hover {
+  box-shadow: 0 8px 32px 0 rgba(60,60,60,0.18), 0 1.5px 6px 0 rgba(0,0,0,0.10);
+  transform: translateY(-6px) scale(1.025);
+  z-index: 2;
+  background: linear-gradient(120deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.2) 100%), var(--card-gradient, inherit);
+}
+
+.mp-card--material:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px 0 rgba(60,60,60,0.10);
+}
+
+.masterpiece-badge {
+  animation: badgePop 0.5s cubic-bezier(.4,2,.6,1);
+}
+@keyframes badgePop {
+  0% { transform: scale(0.2) rotate(-30deg); opacity: 0; }
+  80% { transform: scale(1.15) rotate(8deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0); }
+}
+
+.category-label, .MuiChip-root {
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.MuiChip-root:hover, .category-label:hover {
+  box-shadow: 0 2px 8px 0 rgba(60,60,60,0.10);
+  transform: scale(1.08);
+  filter: brightness(1.08);
+}
+
+.recommendations-list.desktop-list {
+  animation: fadeInList 0.7s cubic-bezier(.4,2,.6,1);
+}
+@keyframes fadeInList {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}

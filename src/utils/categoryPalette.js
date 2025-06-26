@@ -66,3 +66,27 @@ export function getCategoryStrongColor(category) {
 export function getCategoryColorForSelect(category) {
   return getCategoryStrongColor(category);
 }
+
+// Devuelve un gradiente animado con todos los colores pastel de las categorías
+export function getAllCategoriesAnimatedGradient() {
+  const stops = [
+    categoryPalette.movies.color,
+    categoryPalette.videogames.color,
+    categoryPalette.books.color,
+    categoryPalette.music.color,
+    categoryPalette.podcast.color,
+    categoryPalette.boardgames.color,
+    categoryPalette.comics.color,
+    categoryPalette.documentales.color,
+    categoryPalette.series.color
+  ];
+  return `linear-gradient(270deg, ${stops.join(', ')}, ${stops[0]})`;
+}
+
+// Devuelve un gradiente animado solo con los tonos de una categoría
+export function getCategoryAnimatedGradient(category) {
+  const key = String(category).toLowerCase();
+  const base = categoryPalette[key]?.color || '#fffbe6';
+  const strong = categoryPalette[key]?.strong || '#ffe082';
+  return `linear-gradient(270deg, ${base}, ${strong}, ${base})`;
+}

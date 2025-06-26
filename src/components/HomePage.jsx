@@ -19,7 +19,7 @@ import CategoryBar from './home/CategoryBar';
 import SubcategoryBar from './home/SubcategoryBar';
 import SpecialButtons from './home/SpecialButtons';
 import UiLayout from './ui/UiLayout';
-import { getCategoryGradient } from '../utils/categoryUtils';
+import { getCategoryGradient, getAllCategoriesAnimatedGradient, getCategoryAnimatedGradient } from '../utils/categoryPalette';
 import HybridMenu from './HybridMenu';
 import MaterialMobileMenu from './MaterialMobileMenu';
 import { getSubcategoryLabel } from '../utils/subcategoryLabel';
@@ -395,6 +395,13 @@ const HomePage = ({
     }
   }, []);
 
+  // Setea las variables CSS para los gradientes animados
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty('--all-categories-animated-gradient', getAllCategoriesAnimatedGradient());
+    root.style.setProperty('--category-animated-gradient', getCategoryAnimatedGradient(selectedCategory));
+  }, [selectedCategory]);
+
   return (
     <UiLayout sx={{ marginTop: 8, width: '100vw', maxWidth: '100vw', px: 0 }}>
       {/* Eliminar controles de cabecera solo en desktop */}
@@ -410,7 +417,7 @@ const HomePage = ({
           {/* Mostrar título traducido */}
           <h1 
             className={
-              'home-title' +
+              'home-title animated-gradient-title' +
               (isMobile ? ' home-mobile-title' : '') +
               (selectedCategory ? ' after-subcategories' : '')
             }
@@ -420,13 +427,15 @@ const HomePage = ({
               margin: '20px 0 32px 0',
               fontWeight: 700,
               fontSize: '2.2rem',
-              background: selectedCategory && selectedCategory !== 'all' ? getCategoryGradient(selectedCategory) : 'linear-gradient(90deg, #fffbe6 0%, #ffe082 100%)',
+              backgroundImage: (!selectedCategory || selectedCategory === 'all')
+                ? 'var(--all-categories-animated-gradient)'
+                : 'var(--category-animated-gradient)',
               color: 'black',
               borderRadius: 0,
               position: 'relative',
               zIndex: 2,
               border: 'none',
-              transition: 'background 0.3s',
+              transition: 'background-image 0.3s',
               width: isMobile ? '100vw' : '99vw',
               left: '50%',
               right: '50%',
@@ -439,6 +448,8 @@ const HomePage = ({
               boxShadow: 'none',
               borderTop: isMobile ? undefined : '2px solid #bbb',
               borderBottom: isMobile ? undefined : '2px solid #bbb',
+              backgroundSize: '200% 200%',
+              animation: 'animatedGradientBG 6s ease-in-out infinite',
             }}
           >
             {(!selectedCategory || selectedCategory === 'all')

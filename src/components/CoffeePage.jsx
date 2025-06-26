@@ -21,7 +21,16 @@ const CoffeePage = () => {
         <div className="coffee-icon">☕</div>
         
         {/* Título principal */}
-        <h1 className="coffee-title">{getTranslation('coffee.title', '¿Te gusta lo que ves?')}</h1>
+        <h1 className="coffee-title animated-gradient-title"
+            style={{
+              background: getAllCategoriesAnimatedGradient(),
+              backgroundSize: '200% 200%',
+              animation: 'animatedGradientBG 6s ease-in-out infinite',
+              color: '#222',
+            }}
+        >
+          {getTranslation('coffee.title', '¿Te gusta lo que ves?')}
+        </h1>
         
         {/* Subtítulo */}
         <p className="coffee-subtitle">{t.coffee_page_subtitle}</p>

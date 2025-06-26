@@ -145,6 +145,22 @@
   100% { transform: rotate(360deg); }
 }
 
+/* === ANIMATED GRADIENT TITLE === */
+.animated-gradient-title {
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
+  color: #222 !important;
+  -webkit-text-fill-color: #222 !important;
+  background-size: 200% 200%;
+  animation: animatedGradientBG 6s ease-in-out infinite;
+}
+
+@keyframes animatedGradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .home-container {
