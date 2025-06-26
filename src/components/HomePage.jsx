@@ -83,6 +83,7 @@ const HomePage = ({
     // Eliminar el audio elegido de los pendientes
     const newPending = audiosToUse.filter((a, i) => i !== randomIdx);
     setPendingAudios(newPending);
+    // (No play here, let SplashDialog handle it)
   };
 
   // Log del audio elegido SIEMPRE que se abra el splash (móvil o desktop)
@@ -458,9 +459,6 @@ const HomePage = ({
               : (t?.categories?.[selectedCategory] || selectedCategory)
             }
           </h1>
-          {isMobile && (
-            <SplashDialog open={splashOpen} onClose={handleSplashClose} audio={splashAudio} dark />
-          )}
           {/* SOLO DESKTOP: Menú superior y controles */}
           {!isMobile && (
             <HybridMenu
@@ -513,100 +511,8 @@ const HomePage = ({
               />
             </>
           )}
-          {/* SOLO EN MÓVIL: Select y botones especiales debajo del h1 */}
-          {isMobile && (
-            <div
-              style={{
-                width: '100%',
-                maxWidth: 500,
-                margin: '0 auto 12px auto',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center'
-              }}
-            >
-              <span style={{ width: '100%', maxWidth: 400, display: 'flex', justifyContent: 'center', marginBottom: 12 }}>
-                <MaterialCategorySelect
-                  categories={categories}
-                  selectedCategory={selectedCategory}
-                  onCategoryChange={(cat, subcat) => {
-                    if (subcat) {
-                      setCategory(cat);
-                      setActiveSubcategory(subcat);
-                    } else {
-                      setCategory(cat);
-                      setActiveSubcategory(null);
-                    }
-                  }}
-                  subcategories={(() => {
-                    if (selectedCategory === 'documentales') {
-                      const subcatsSet = new Set();
-                      (allData['documentales'] || []).forEach(item => {
-                        if (item.subcategory) subcatsSet.add(item.subcategory.toLowerCase().trim());
-                      });
-                      return Array.from(subcatsSet).map(sub => ({ sub, label: t?.subcategories?.documentales?.[sub] || sub }));
-                    }
-                    // NUEVO: subcategorías para series desde el campo subcategoria del JSON
-                    if (selectedCategory === 'series') {
-                      // Obtener subcategorías únicas y normalizadas del campo subcategoria
-                      const subcatsMap = new Map();
-                      (allData['series'] || []).forEach(item => {
-                        if (item.subcategoria) {
-                          const normalized = normalizeSubcategoryInternal(item.subcategoria);
-                          if (!subcatsMap.has(normalized)) {
-                            subcatsMap.set(normalized, {
-                              sub: normalized,
-                              label: getSubcategoryLabel(normalized, 'series', t, lang)
-                            });
-                          }
-                        }
-                      });
-                      return Array.from(subcatsMap.values());
-                    }
-                    // ...para otras categorías, usar traducción si existe
-                    if (Array.isArray(categorySubcategories)) {
-                      return categorySubcategories.map(s => {
-                        const normalized = typeof s === 'string' ? normalizeSubcategoryInternal(s) : s.sub;
-                        return {
-                          sub: normalized,
-                          label: getSubcategoryLabel(normalized, selectedCategory, t, lang),
-                          ...(typeof s === 'object' ? s : {})
-                        };
-                      });
-                    }
-                    return Array.isArray(categorySubcategories) ? categorySubcategories : [];
-                  })()}
-                  activeSubcategory={activeSubcategory}
-                  renderButton={renderCategoryButton}
-                  renderChip={renderSubcategoryChip}
-                  sx={materialCategorySelectSx}
-                  {...materialCategorySelectProps}
-                />
-              </span>
-              {selectedCategory && (
-                <SpecialButtons
-                  selectedCategory={selectedCategory}
-                  isSpanishCinemaActive={isSpanishCinemaActive}
-                  handleSpanishCinemaToggle={handleSpanishCinemaToggle}
-                  isMasterpieceActive={isMasterpieceActive}
-                  handleMasterpieceToggle={handleMasterpieceToggle}
-                  activePodcastLanguages={activePodcastLanguages}
-                  togglePodcastLanguage={togglePodcastLanguage}
-                  activeDocumentaryLanguages={activeDocumentaryLanguages}
-                  toggleDocumentaryLanguage={toggleDocumentaryLanguage}
-                  lang={lang}
-                  isRecommendedActive={isRecommendedActive}
-                  isMobile
-                  isSpanishSeriesActive={isSpanishSeriesActive}
-                  handleSpanishSeriesToggle={toggleSpanishSeries}
-                  {...specialButtonsProps}
-                />
-              )}
-            </div>
-          )}
         </>
       )}
-
       {/* Render either the recommendations list OR the item detail, not both */}
       {selectedItem ? (
         renderItemDetail()
@@ -636,7 +542,6 @@ const HomePage = ({
           />
         </div>
       )}
-
       {/* SOLO EN MÓVIL: Menú superior centralizado para splash/audio */}
       {isMobile && (
         <MaterialMobileMenu
@@ -653,33 +558,18 @@ const HomePage = ({
 
 // Fuera del componente HomePage
 function categoryColor(categoryKey) {
-  switch (categoryKey) {
-    case 'movies':
-    case 'peliculas':
-      return '#2196f3';
-    case 'videogames':
-    case 'videojuegos':
-      return '#9c27b0';
-    case 'books':
-    case 'libros':
-      return '#4caf50';
-    case 'music':
-    case 'musica':
-      return '#00bcd4';
-    case 'podcast':
-    case 'podcasts':
-      return '#8bc34a';
-    case 'boardgames':
-    case 'juegos de mesa':
-      return '#e91e63';
-    case 'comics':
-      return '#ff9800';
-    case 'documentales':
-    case 'documentaries':
-      return '#9e9e9e';
-    default:
-      return '#0078d4';
-  }
+  // Definir colores específicos para categorías concretas
+  const specificColors = {
+    'movies': '#FF5733', // Ejemplo: color rojo para películas
+    'series': '#33C3FF', // Ejemplo: color azul para series
+    'documentales': '#75FF33', // Ejemplo: color verde para documentales
+    'podcast': '#FF33A1', // Ejemplo: color rosa para podcasts
+    'masterpiece': '#FFC300', // Color dorado para masterpiece
+    'default': '#FFFFFF' // Color por defecto (blanco)
+  };
+
+  // Devolver el color específico si existe, o el color por defecto
+  return specificColors[categoryKey] || specificColors['default'];
 }
 
 export default HomePage;

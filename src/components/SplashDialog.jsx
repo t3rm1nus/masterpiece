@@ -1,7 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
+import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
 import { useLanguage } from '../LanguageContext';
+import '../styles/components/splash-visual.css';
+import '../styles/components/splash-visual-mobile.css';
 
 /**
  * SplashDialog: Modal/diálogo de splash personalizable.
@@ -40,20 +44,49 @@ const SplashDialog = ({
   dark = true,
   sx = {},
   PaperProps = {},
-  DialogContentProps = {}
+  DialogContentProps = {},
+  audioRef: externalAudioRef // <-- allow parent to pass audioRef
 }) => {
-  const audioRef = useRef(null);
+  const internalAudioRef = useRef(null);
+  const audioRef = externalAudioRef || internalAudioRef;
   const { getTranslation } = useLanguage();
+
+  // Detecta si es móvil (SSR safe)
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 600);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     if (open && audioRef.current) {
       audioRef.current.currentTime = 0;
-      audioRef.current.play();
+      setTimeout(() => {
+        audioRef.current && audioRef.current.play && audioRef.current.play();
+      }, 50);
     } else if (!open && audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
   }, [open]);
+
+  // Función recursiva para clonar el primer <img> y añadir id y clase
+  function addIdToImg(element) {
+    if (!React.isValidElement(element)) return element;
+    if (element.type === 'img') {
+      return React.cloneElement(element, {
+        id: 'splash-image',
+        className: (element.props.className || '') + ' splash-image',
+      });
+    }
+    if (element.props && element.props.children) {
+      const children = React.Children.map(element.props.children, addIdToImg);
+      return React.cloneElement(element, {}, children);
+    }
+    return element;
+  }
 
   return (
     <Dialog
@@ -102,6 +135,9 @@ const SplashDialog = ({
         ...sx.dialog
       }}
     >
+      {/* --- Advanced animated background and effects --- */}
+      {/* Fondo animado eliminado por requerimiento */}
+      {/* --- End advanced effects --- */}
       <DialogContent
         sx={{
           p: 0,
@@ -114,6 +150,11 @@ const SplashDialog = ({
           maxWidth: 'none',
           minWidth: 0,
           minHeight: 0,
+          width: '100vw',
+          height: '100vh',
+          boxSizing: 'border-box',
+          border: '2px solid #000', // Revert to 2px border
+          borderRadius: 0, // Revert to no border radius
           ...sx.content
         }}
         style={{
@@ -122,40 +163,67 @@ const SplashDialog = ({
           maxWidth: 'none',
           minWidth: 0,
           minHeight: 0,
+          width: '100vw',
+          height: '100vh',
           padding: 0,
           margin: 0,
+          boxSizing: 'border-box',
+          border: '2px solid #000', // Revert to 2px border
+          borderRadius: 0, // Revert to no border radius
           ...sx.contentStyle
         }}
         {...DialogContentProps}
       >
-        {title && (
-          <div style={{ fontWeight: 'bold', fontSize: 22, marginBottom: 16, color: dark ? '#fff' : '#222', textAlign: 'center' }}>{title}</div>
-        )}
-        {content ? (
-          content
-        ) : (
-          <img
-            src="/imagenes/splash_image.png"
-            alt={getTranslation('ui.alt.splash', 'Splash')}
-            style={{
-              width: '90vw',
-              maxWidth: '90vw',
-              maxHeight: '90vh',
-              borderRadius: 16,
-              margin: 0,
-              cursor: 'pointer',
-              objectFit: 'contain',
-              background: 'transparent',
-              display: 'block',
-              boxShadow: 'none',
+        <Paper elevation={0} sx={{
+          borderRadius: 0,
+          background: 'transparent',
+          boxShadow: 'none',
+          p: 0,
+          maxWidth: 'none',
+          width: '100vw',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          position: 'relative',
+          zIndex: 3,
+        }}>
+          {/* No title for desktop splash */}
+          <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 0 }}
+            onClick={() => {
+              if (typeof onClose === 'function') {
+                onClose();
+              }
             }}
-            onClick={onClose}
-          />
-        )}
-        <audio ref={audioRef} src={audio} preload="auto" loop />
-        {actions && (
-          <div style={{ marginTop: 24, width: '100%', display: 'flex', justifyContent: 'center' }}>{actions}</div>
-        )}
+            style={{ cursor: 'pointer' }}
+          >
+            {content
+              ? addIdToImg(content)
+              : (
+              <img
+                id="splash-image"
+                className="splash-image"
+                src="/imagenes/splash_image.png"
+                alt={getTranslation('ui.alt.splash', 'Splash')}
+                style={{
+                  height: '100vh',
+                  width: 'auto',
+                  maxHeight: '100vh',
+                  maxWidth: '100vw',
+                  borderRadius: '32px',
+                  margin: 0,
+                  cursor: 'pointer',
+                  objectFit: 'contain',
+                  background: 'transparent',
+                  display: 'block',
+                  boxShadow: 'none',
+                  border: '4px solid #000',
+                }}
+              />
+            )}
+          </Box>
+          {/* No actions or close button for desktop splash */}
+        </Paper>
+        <audio ref={audioRef} src={audio} preload="auto" autoPlay loop />
       </DialogContent>
     </Dialog>
   );

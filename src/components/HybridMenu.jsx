@@ -9,6 +9,7 @@ import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import { useMenuItems } from '../hooks/useMenuItems.jsx';
 import LanguageSelector from './ui/LanguageSelector';
+import SplashDialog from './SplashDialog';
 
 /**
  * HybridMenu: Menú adaptable que muestra menú móvil o desktop según el dispositivo.
@@ -114,52 +115,17 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {}, onSpla
             }}
           />
           {/* Splash Dialog Desktop */}
-          <Dialog open={splashOpen} onClose={onSplashClose} maxWidth="xl" fullWidth
-            PaperProps={{
-              style: {
-                borderRadius: 18,
-                background: '#222',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
-                overflow: 'hidden',
-                padding: 0,
-                margin: 0,
-                maxWidth: '100vw',
-                maxHeight: '100vh',
-              }
+          <SplashDialog
+            open={splashOpen}
+            onClose={onSplashClose}
+            audio={splashAudio}
+            dark={true}
+            sx={{
+              paper: { borderRadius: 18, background: 'rgba(34,34,34,0.92)', boxShadow: '0 8px 32px rgba(0,0,0,0.18)', overflow: 'hidden', padding: 0, margin: 0, maxWidth: '100vw', maxHeight: '100vh' },
+              content: { p: 0, m: 0, width: '100vw', height: '100vh', maxWidth: '100vw', maxHeight: '100vh', overflow: 'hidden', background: 'transparent' }
             }}
-          >
-            <DialogContent sx={{
-              p: 0,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              background: '#222',
-              width: '100vw',
-              height: '100vh',
-              maxWidth: '100vw',
-              maxHeight: '100vh',
-              overflow: 'hidden',
-            }}>
-              <img 
-                src="/imagenes/splash_image.png" 
-                alt={getTranslation('ui.alt.splash', 'Splash')}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  maxWidth: '100vw',
-                  maxHeight: '100vh',
-                  borderRadius: 0,
-                  margin: 0,
-                  cursor: 'pointer',
-                  objectFit: 'contain',
-                  background: '#111',
-                  display: 'block',
-                }} 
-                onClick={onSplashClose}
-              />
-              <audio ref={audioRef} src={splashAudio} preload="auto" autoPlay loop />
-            </DialogContent>
-          </Dialog>
+            audioRef={audioRef}
+          />
           <ThemeToggle />
           <LanguageSelector variant="desktop" sx={{ marginLeft: 1 }} />
         </div>

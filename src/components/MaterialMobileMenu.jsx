@@ -178,6 +178,8 @@ const MaterialMobileMenu = ({
         <DialogContent sx={{ p: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', background: isDarkMode ? '#222' : '#fff' }}>
           {/* Solo una imagen, sin fondo duplicado */}
           <img 
+            id="splash-image"
+            className="splash-image"
             src="/imagenes/splash_image.png" 
             alt={getTranslation('ui.alt.splash', 'Splash')}
             style={{ width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer', background: 'none' }} 
