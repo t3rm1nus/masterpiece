@@ -35,6 +35,7 @@ import FabBackButton from './ui/FabBackButton';
 import { useNavigationActions } from '../hooks/useNavigationActions';
 import { useMenuItems } from '../hooks/useMenuItems.jsx';
 import LanguageSelector from './ui/LanguageSelector';
+import SplashDialog from './SplashDialog';
 
 /**
  * MaterialMobileMenu: Menú lateral y AppBar para navegación móvil.
@@ -174,20 +175,31 @@ const MaterialMobileMenu = ({
         </Toolbar>
       </AppBar>
       {/* Splash Dialog */}
-      <Dialog open={splashOpen} onClose={onSplashClose} maxWidth="xs" PaperProps={{ style: { borderRadius: 18, background: isDarkMode ? '#222' : '#fff', boxShadow: '0 8px 32px rgba(0,0,0,0.18)' } }}>
-        <DialogContent sx={{ p: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', background: isDarkMode ? '#222' : '#fff' }}>
-          {/* Solo una imagen, sin fondo duplicado */}
-          <img 
-            id="splash-image"
-            className="splash-image"
-            src="/imagenes/splash_image.png" 
+      <SplashDialog
+        open={splashOpen}
+        onClose={onSplashClose}
+        audio={splashAudio}
+        content={
+          <img
+            src="/imagenes/splash_image.png"
             alt={getTranslation('ui.alt.splash', 'Splash')}
-            style={{ width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer', background: 'none' }} 
-            onClick={onSplashClose}
+            style={{ width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer', background: 'none' }}
           />
-          <audio ref={audioRef} src={splashAudio} preload="auto" autoPlay loop />
-        </DialogContent>
-      </Dialog>
+        }
+        sx={{
+          content: {
+            background: isDarkMode ? '#222' : '#fff',
+            border: 'none',
+            borderRadius: 18,
+            boxShadow: '0 8px 32px rgba(0,0,0,0.18)'
+          },
+          paper: {
+            borderRadius: 18,
+            background: isDarkMode ? '#222' : '#fff',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.18)'
+          }
+        }}
+      />
         <Drawer
         key={lang} // Solo key={lang} para forzar desmontaje/montaje al cambiar idioma
         anchor="left"

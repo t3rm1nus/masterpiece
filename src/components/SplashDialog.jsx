@@ -50,6 +50,7 @@ const SplashDialog = ({
   const internalAudioRef = useRef(null);
   const audioRef = externalAudioRef || internalAudioRef;
   const { getTranslation } = useLanguage();
+  const [animationClass, setAnimationClass] = React.useState('');
 
   // Detecta si es móvil (SSR safe)
   const [isMobile, setIsMobile] = React.useState(false);
@@ -72,6 +73,21 @@ const SplashDialog = ({
     }
   }, [open]);
 
+  // Controla la animación al abrir/cerrar
+  useEffect(() => {
+    if (open) {
+      setAnimationClass('splash-animate-in');
+    } else if (animationClass === 'splash-animate-in') {
+      setAnimationClass('splash-animate-out');
+      // Espera la animación de salida antes de desmontar
+      const timeout = setTimeout(() => setAnimationClass(''), 700);
+      return () => clearTimeout(timeout);
+    } else {
+      setAnimationClass('');
+    }
+    // eslint-disable-next-line
+  }, [open]);
+
   // Función recursiva para clonar el primer <img> y añadir id y clase
   function addIdToImg(element) {
     if (!React.isValidElement(element)) return element;
@@ -90,7 +106,7 @@ const SplashDialog = ({
 
   return (
     <Dialog
-      open={open}
+      open={open || animationClass === 'splash-animate-out'}
       onClose={onClose}
       maxWidth={false}
       fullWidth
@@ -153,7 +169,6 @@ const SplashDialog = ({
           width: '100vw',
           height: '100vh',
           boxSizing: 'border-box',
-          border: '2px solid #000', // Revert to 2px border
           borderRadius: 0, // Revert to no border radius
           ...sx.content
         }}
@@ -168,11 +183,16 @@ const SplashDialog = ({
           padding: 0,
           margin: 0,
           boxSizing: 'border-box',
-          border: '2px solid #000', // Revert to 2px border
           borderRadius: 0, // Revert to no border radius
           ...sx.contentStyle
         }}
         {...DialogContentProps}
+        onClick={isMobile ? (e => {
+          // Evita que el click en la imagen o el box lo vuelva a disparar
+          if (e.target === e.currentTarget && typeof onClose === 'function') {
+            onClose();
+          }
+        }) : undefined}
       >
         <Paper elevation={0} sx={{
           borderRadius: 0,
@@ -186,7 +206,9 @@ const SplashDialog = ({
           alignItems: 'center',
           position: 'relative',
           zIndex: 3,
-        }}>
+        }}
+        className={animationClass}
+        >
           {/* No title for desktop splash */}
           <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 0 }}
             onClick={() => {
