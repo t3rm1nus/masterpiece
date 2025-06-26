@@ -51,6 +51,7 @@ const SplashDialog = ({
   const audioRef = externalAudioRef || internalAudioRef;
   const { getTranslation } = useLanguage();
   const [animationClass, setAnimationClass] = React.useState('');
+  const [visible, setVisible] = React.useState(false);
 
   // Detecta si es móvil (SSR safe)
   const [isMobile, setIsMobile] = React.useState(false);
@@ -76,14 +77,19 @@ const SplashDialog = ({
   // Controla la animación al abrir/cerrar
   useEffect(() => {
     if (open) {
+      setVisible(true);
       setAnimationClass('splash-animate-in');
     } else if (animationClass === 'splash-animate-in') {
       setAnimationClass('splash-animate-out');
       // Espera la animación de salida antes de desmontar
-      const timeout = setTimeout(() => setAnimationClass(''), 700);
+      const timeout = setTimeout(() => {
+        setAnimationClass('');
+        setVisible(false);
+      }, 700);
       return () => clearTimeout(timeout);
     } else {
       setAnimationClass('');
+      setVisible(false);
     }
     // eslint-disable-next-line
   }, [open]);
@@ -106,7 +112,7 @@ const SplashDialog = ({
 
   return (
     <Dialog
-      open={open || animationClass === 'splash-animate-out'}
+      open={visible}
       onClose={onClose}
       maxWidth={false}
       fullWidth
@@ -154,99 +160,101 @@ const SplashDialog = ({
       {/* --- Advanced animated background and effects --- */}
       {/* Fondo animado eliminado por requerimiento */}
       {/* --- End advanced effects --- */}
-      <DialogContent
-        sx={{
-          p: 0,
-          m: 0,
-          background: 'transparent !important',
-          overflow: 'visible',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          maxWidth: 'none',
-          minWidth: 0,
-          minHeight: 0,
-          width: '100vw',
-          height: '100vh',
-          boxSizing: 'border-box',
-          borderRadius: 0, // Revert to no border radius
-          ...sx.content
-        }}
-        style={{
-          background: 'transparent',
-          overflow: 'visible',
-          maxWidth: 'none',
-          minWidth: 0,
-          minHeight: 0,
-          width: '100vw',
-          height: '100vh',
-          padding: 0,
-          margin: 0,
-          boxSizing: 'border-box',
-          borderRadius: 0, // Revert to no border radius
-          ...sx.contentStyle
-        }}
-        {...DialogContentProps}
-        onClick={isMobile ? (e => {
-          // Evita que el click en la imagen o el box lo vuelva a disparar
-          if (e.target === e.currentTarget && typeof onClose === 'function') {
-            onClose();
-          }
-        }) : undefined}
-      >
-        <Paper elevation={0} sx={{
-          borderRadius: 0,
-          background: 'transparent',
-          boxShadow: 'none',
-          p: 0,
-          maxWidth: 'none',
-          width: '100vw',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          position: 'relative',
-          zIndex: 3,
-        }}
-        className={animationClass}
+      {visible && (
+        <DialogContent
+          sx={{
+            p: 0,
+            m: 0,
+            background: 'transparent !important',
+            overflow: 'visible',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            maxWidth: 'none',
+            minWidth: 0,
+            minHeight: 0,
+            width: '100vw',
+            height: '100vh',
+            boxSizing: 'border-box',
+            borderRadius: 0, // Revert to no border radius
+            ...sx.content
+          }}
+          style={{
+            background: 'transparent',
+            overflow: 'visible',
+            maxWidth: 'none',
+            minWidth: 0,
+            minHeight: 0,
+            width: '100vw',
+            height: '100vh',
+            padding: 0,
+            margin: 0,
+            boxSizing: 'border-box',
+            borderRadius: 0, // Revert to no border radius
+            ...sx.contentStyle
+          }}
+          {...DialogContentProps}
+          onClick={isMobile ? (e => {
+            // Evita que el click en la imagen o el box lo vuelva a disparar
+            if (e.target === e.currentTarget && typeof onClose === 'function') {
+              onClose();
+            }
+          }) : undefined}
         >
-          {/* No title for desktop splash */}
-          <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 0 }}
-            onClick={() => {
-              if (typeof onClose === 'function') {
-                onClose();
-              }
-            }}
-            style={{ cursor: 'pointer' }}
+          <Paper elevation={0} sx={{
+            borderRadius: 0,
+            background: 'transparent',
+            boxShadow: 'none',
+            p: 0,
+            maxWidth: 'none',
+            width: '100vw',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            position: 'relative',
+            zIndex: 3,
+          }}
+          className={animationClass}
           >
-            {content
-              ? addIdToImg(content)
-              : (
-              <img
-                id="splash-image"
-                className="splash-image"
-                src="/imagenes/splash_image.png"
-                alt={getTranslation('ui.alt.splash', 'Splash')}
-                style={{
-                  height: '100vh',
-                  width: 'auto',
-                  maxHeight: '100vh',
-                  maxWidth: '100vw',
-                  borderRadius: '32px',
-                  margin: 0,
-                  cursor: 'pointer',
-                  objectFit: 'contain',
-                  background: 'transparent',
-                  display: 'block',
-                  boxShadow: 'none',
-                  border: '4px solid #000',
-                }}
-              />
-            )}
-          </Box>
-          {/* No actions or close button for desktop splash */}
-        </Paper>
-        <audio ref={audioRef} src={audio} preload="auto" autoPlay loop />
-      </DialogContent>
+            {/* No title for desktop splash */}
+            <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 0 }}
+              onClick={() => {
+                if (typeof onClose === 'function') {
+                  onClose();
+                }
+              }}
+              style={{ cursor: 'pointer' }}
+            >
+              {content
+                ? addIdToImg(content)
+                : (
+                <img
+                  id="splash-image"
+                  className="splash-image"
+                  src="/imagenes/splash_image.png"
+                  alt={getTranslation('ui.alt.splash', 'Splash')}
+                  style={{
+                    height: '100vh',
+                    width: 'auto',
+                    maxHeight: '100vh',
+                    maxWidth: '100vw',
+                    borderRadius: '32px',
+                    margin: 0,
+                    cursor: 'pointer',
+                    objectFit: 'contain',
+                    background: 'transparent',
+                    display: 'block',
+                    boxShadow: 'none',
+                    border: '4px solid #000',
+                  }}
+                />
+              )}
+            </Box>
+            {/* No actions or close button for desktop splash */}
+          </Paper>
+          <audio ref={audioRef} src={audio} preload="auto" autoPlay loop />
+        </DialogContent>
+      )}
     </Dialog>
   );
 };
