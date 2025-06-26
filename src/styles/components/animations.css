@@ -1,0 +1,53 @@
+/*
+Animaciones y transiciones suaves para cards, header y menú móvil
+*/
+
+/* Fade y slide para cards de recomendados/categorías */
+.recommendation-card, .category-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1),
+              transform 0.4s cubic-bezier(.4,0,.2,1),
+              box-shadow 0.3s;
+}
+
+.recommendation-card.entering, .category-card.entering {
+  opacity: 0;
+  transform: translateY(30px) scale(0.96);
+}
+
+.recommendation-card.exiting, .category-card.exiting {
+  opacity: 0;
+  transform: translateY(-30px) scale(0.96);
+}
+
+/* Hover/focus: escala y sombra suave */
+.recommendation-card:hover, .recommendation-card:focus,
+.category-card:hover, .category-card:focus {
+  box-shadow: 0 6px 24px 0 rgba(0,0,0,0.13);
+  transform: translateY(-2px) scale(1.025);
+  z-index: 2;
+}
+
+/* Transición de gradiente en el header */
+.home-title {
+  transition: background 0.6s cubic-bezier(.4,0,.2,1), color 0.3s;
+}
+
+/* Menú móvil: slide y fade */
+.material-mobile-menu__drawer {
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1), opacity 0.4s;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.material-mobile-menu__drawer.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+.material-mobile-menu__overlay {
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+.material-mobile-menu__overlay.open {
+  opacity: 1;
+}

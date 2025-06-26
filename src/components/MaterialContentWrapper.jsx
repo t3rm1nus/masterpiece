@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useMediaQuery, useTheme, Box, Typography } from '@mui/material';
 import MaterialRecommendationCard from './MaterialRecommendationCard';
 import MaterialCategorySelect from './MaterialCategorySelect';
@@ -77,6 +77,21 @@ const MaterialContentWrapper = ({
     return children;
   }
   // En móviles, usar componentes Material UI parametrizables
+  // Animación de entrada/salida para las cards en móvil
+  const [visibleIndexes, setVisibleIndexes] = useState([]);
+
+  useEffect(() => {
+    if (recommendations && Array.isArray(recommendations)) {
+      // Animación de entrada secuencial
+      setVisibleIndexes([]);
+      recommendations.forEach((_, idx) => {
+        setTimeout(() => {
+          setVisibleIndexes(prev => [...prev, idx]);
+        }, 60 * idx);
+      });
+    }
+  }, [recommendations]);
+
   return (
     <Box sx={{ 
       width: '100%',
@@ -122,7 +137,7 @@ const MaterialContentWrapper = ({
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: isHome ? '12px' : '24px', // antes 8/16, ahora 12/24
+            gap: isHome ? '12px' : '24px',
             padding: '4px',
             width: '100%',
             maxWidth: '100%',
@@ -130,11 +145,16 @@ const MaterialContentWrapper = ({
           }}
         >
           {recommendations.map((recommendation, index) => (
-            <MaterialRecommendationCard
+            <div
               key={recommendation.globalId || `${recommendation.title}-${index}`}
-              recommendation={recommendation}
-              isHome={isHome}
-            />
+              className={`recommendation-card${visibleIndexes.includes(index) ? '' : ' entering'}`}
+              style={{ width: '100%' }}
+            >
+              <MaterialRecommendationCard
+                recommendation={recommendation}
+                isHome={isHome}
+              />
+            </div>
           ))}
         </Box>
       )}

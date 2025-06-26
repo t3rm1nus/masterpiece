@@ -23,6 +23,7 @@ import { getCategoryGradient } from '../utils/categoryUtils';
 import HybridMenu from './HybridMenu';
 import MaterialMobileMenu from './MaterialMobileMenu';
 import { getSubcategoryLabel } from '../utils/subcategoryLabel';
+import '../styles/components/animations.css';
 
 // Hook para detectar si es móvil SOLO por ancho de pantalla (robusto y compatible móvil)
 function useIsMobile() {
