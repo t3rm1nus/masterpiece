@@ -601,7 +601,7 @@ const HomePage = ({
       ) : (
         <div
           style={{
-            width: isMobile ? '100%' : '100%',
+            width: isMobile ? '92%' : '100%',
             display: 'flex',
             justifyContent: 'center',
             // Quitar paddingTop en móvil cuando no hay categoría seleccionada
