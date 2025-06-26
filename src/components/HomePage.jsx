@@ -411,6 +411,11 @@ const HomePage = ({
     );
   }
 
+  // Desactiva la restauración automática de scroll del navegador
+  if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
+
   // Subir scroll arriba al volver atrás en móviles
   useEffect(() => {
     const handlePopState = () => {
@@ -426,6 +431,13 @@ const HomePage = ({
   useEffect(() => {
     if (typeof window !== 'undefined' && window.innerWidth < 900) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, []);
+
+  // Scroll al top en el primer render de la home
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'auto' });
     }
   }, []);
 

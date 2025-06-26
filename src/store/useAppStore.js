@@ -6,6 +6,24 @@ import { createNavigationSlice } from './navigationStore';
 import { createDataSlice } from './dataStore';
 import { migrateAppStoreState } from '../utils/migrationHelpers';
 
+// --- LIMPIEZA DE PERSISTENCIA ANTES DE CREAR EL STORE ---
+if (typeof window !== 'undefined') {
+  try {
+    const persisted = window.localStorage.getItem('masterpiece-data');
+    if (persisted) {
+      const parsed = JSON.parse(persisted);
+      if (parsed.state) {
+        parsed.state.selectedCategory = null;
+        // Elimina scroll guardado si existe
+        if (parsed.state.scrollPosition) delete parsed.state.scrollPosition;
+        window.localStorage.setItem('masterpiece-data', JSON.stringify(parsed));
+      }
+    }
+  } catch (e) {
+    // Ignorar errores de parseo
+  }
+}
+
 const useAppStore = create(
   persist(
     (set, get) => ({
