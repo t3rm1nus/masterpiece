@@ -549,6 +549,8 @@ const HomePage = ({
             margin: isMobile ? '0 auto' : undefined,
             display: 'flex',
             justifyContent: 'center',
+            // Más espacio arriba solo en móvil
+            ...(isMobile ? { marginTop: 28 } : {}),
             ...(isMobile && (!selectedCategory || selectedCategory === 'all')
               ? { paddingTop: 0 }
               : {})
