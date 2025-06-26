@@ -228,7 +228,7 @@ const MaterialMobileMenu = ({
               bgColor = 'rgba(0,120,212,0.10)'; // azul suave
             } else if (item.label && (item.label.toLowerCase().includes('café') || item.label.toLowerCase().includes('coffee'))) {
               customIcon = (
-                <svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CoffeeIcon" style={iconStyle}><path d="M18.5 3H6c-1.1 0-2 .9-2 2v5.71c0 3.83 2.95 7.18 6.78 7.29 3.96.12 7.22-3.06 7.22-7v-1h.5c1.93 0 3.5-1.57 3.5-3.5S20.43 3 18.5 3M16 5v3H6V5zm2.5 3H18V5h.5c.83 0 1.5.67 1.5 1.5S19.33 8 18.5 8M4 19h16v2H4z"></path></svg>
+                <svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CoffeeIcon" style={{ ...iconStyle, width: 22, height: 22, minWidth: 22, minHeight: 22 }}><path d="M18.5 3H6c-1.1 0-2 .9-2 2v5.71c0 3.83 2.95 7.18 6.78 7.29 3.96.12 7.22-3.06 7.22-7v-1h.5c1.93 0 3.5-1.57 3.5-3.5S20.43 3 18.5 3M16 5v3H6V5zm2.5 3H18V5h.5c.83 0 1.5.67 1.5 1.5S19.33 8 18.5 8M4 19h16v2H4z"></path></svg>
               );
               bgColor = '#ffc439'; // amarillo café igual que desktop
             } else if (item.label && (
@@ -254,7 +254,7 @@ const MaterialMobileMenu = ({
                 <ListItem key={index} disablePadding>
                   <ListItemButton onClick={() => { item.action && item.action(); setDrawerOpen(false); }}
                     sx={{ borderRadius: 2, my: 0.5, backgroundColor: bgColor, transition: 'background 0.2s', '&:hover': { backgroundColor: bgColor } }}>
-                    <ListItemIcon sx={{ color: '#000 !important' }}>
+                    <ListItemIcon sx={{ color: '#000 !important', minWidth: 28, minHeight: 28, width: customIcon ? 28 : undefined, height: customIcon ? 28 : undefined, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       {customIcon ? customIcon : item.icon}
                     </ListItemIcon>
                     <ListItemText primary={item.label} />
