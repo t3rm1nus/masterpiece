@@ -230,7 +230,7 @@ const DesktopRecommendationsList = ({
   // Memoización del contenido principal
   const memoizedRecommendations = useMemo(() => {
     if (loading) return <div className="recommendations-loading">{getTranslation('ui.states.loading', 'Cargando...')}</div>;
-    if (!data?.length) {
+    if (!data || !data.length) {
       if (emptyComponent) {
         return typeof emptyComponent === 'function' ? emptyComponent() : emptyComponent;
       }

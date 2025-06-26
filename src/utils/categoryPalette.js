@@ -90,3 +90,20 @@ export function getCategoryAnimatedGradient(category) {
   const strong = categoryPalette[key]?.strong || '#ffe082';
   return `linear-gradient(270deg, ${base}, ${strong}, ${base})`;
 }
+
+// Devuelve un gradiente animado SOLO con los tonos dorados de masterpiece, grises y blancos
+export function getMasterpieceAnimatedGradient() {
+  // Dorados, grises y blancos
+  const stops = [
+    '#fffbe6', // dorado claro
+    '#ffe082', // dorado medio
+    '#ffd700', // dorado fuerte
+    '#fff',    // blanco
+    '#e0e0e0', // gris claro
+    '#bdbdbd', // gris medio
+    '#ffd700', // dorado fuerte
+    '#fffbe6', // dorado claro
+    '#fff',    // blanco
+  ];
+  return `linear-gradient(270deg, ${stops.join(', ')}, ${stops[0]})`;
+}

@@ -159,41 +159,48 @@ const MaterialRecommendationCard = memo(({
         <Typography variant="h6" component="h3" sx={{ marginBottom: '8px', fontSize: '1.13rem', textAlign: 'center', fontWeight: 600 }}>
           {title}
         </Typography>
-        <Box sx={{ display: 'flex', gap: '4px', marginBottom: '8px', flexWrap: 'wrap', flexDirection: 'row', alignItems: 'center' }}>
+        <Box sx={{ marginBottom: '8px', width: '100%', display: 'flex', justifyContent: 'flex-start' }}>
           {showCategory && (
             <Chip
               icon={getCategoryIcon(recommendation.category)}
               label={getCategoryTranslation(recommendation.category)}
               size="small"
               sx={{
-                backgroundColor: recommendation.category === 'boardgames' ? 'transparent' : getCategoryColor(recommendation.category),
-                color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'white',
-                borderColor: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'transparent',
-                border: recommendation.category === 'boardgames' ? '1px solid' : 'none',
+                backgroundColor: recommendation.category === 'boardgames' ? 'transparent' : getCategoryColor(recommendation.category, 'strong'),
+                color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category, 'strong') : 'white',
+                borderColor: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category, 'strong') : 'transparent',
+                border: recommendation.category === 'boardgames' ? '1.5px solid' : 'none',
                 fontSize: '0.7rem',
-                alignSelf: recommendation.category === 'boardgames' ? 'flex-start' : 'auto',
+                fontWeight: 600,
+                letterSpacing: 0.2,
+                alignSelf: 'flex-start',
+                boxShadow: recommendation.category === 'boardgames' ? undefined : '0 0 0 2px rgba(0,0,0,0.04)',
                 '& .MuiChip-icon': {
-                  color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category) : 'white'
+                  color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category, 'strong') : 'white'
                 }
               }}
             />
           )}
-          {/* Mostrar subcategoría solo si no es documental */}
-          {showSubcategory && recommendation.subcategory && recommendation.category !== 'documentales' && recommendation.category !== 'documentaries' && (
+        </Box>
+        {showSubcategory && recommendation.subcategory && (
+          <Box sx={{ marginBottom: '8px', width: '100%', display: 'flex', justifyContent: 'flex-start' }}>
             <Chip
               label={getSubcategoryTranslation(recommendation.subcategory, recommendation.category)}
               size="small"
               variant="outlined"
               sx={{
-                fontSize: '0.65rem',
-                borderColor: getCategoryColor(recommendation.category),
-                color: getCategoryColor(recommendation.category),
-                alignSelf: 'auto', // Unificado para todas las categorías
-                marginTop: '0px'    // Unificado para todas las categorías
+                fontSize: '0.68rem',
+                borderColor: getCategoryColor(recommendation.category, 'strong'),
+                color: '#666',
+                alignSelf: 'flex-start',
+                marginTop: '0px',
+                borderWidth: 2,
+                borderStyle: 'solid',
+                fontWeight: 500
               }}
             />
-          )}
-        </Box>
+          </Box>
+        )}
         <Typography 
           variant="body2" 
           color="text.secondary"

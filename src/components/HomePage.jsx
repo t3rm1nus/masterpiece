@@ -19,7 +19,7 @@ import CategoryBar from './home/CategoryBar';
 import SubcategoryBar from './home/SubcategoryBar';
 import SpecialButtons from './home/SpecialButtons';
 import UiLayout from './ui/UiLayout';
-import { getCategoryGradient, getAllCategoriesAnimatedGradient, getCategoryAnimatedGradient } from '../utils/categoryPalette';
+import { getCategoryGradient, getAllCategoriesAnimatedGradient, getCategoryAnimatedGradient, getMasterpieceAnimatedGradient } from '../utils/categoryPalette';
 import HybridMenu from './HybridMenu';
 import MaterialMobileMenu from './MaterialMobileMenu';
 import { getSubcategoryLabel } from '../utils/subcategoryLabel';
@@ -398,7 +398,8 @@ const HomePage = ({
   // Setea las variables CSS para los gradientes animados
   useEffect(() => {
     const root = document.documentElement;
-    root.style.setProperty('--all-categories-animated-gradient', getAllCategoriesAnimatedGradient());
+    // Usar solo en la home el gradiente dorado+grises+blancos
+    root.style.setProperty('--all-categories-animated-gradient', getMasterpieceAnimatedGradient());
     root.style.setProperty('--category-animated-gradient', getCategoryAnimatedGradient(selectedCategory));
   }, [selectedCategory]);
 
