@@ -253,11 +253,25 @@ const MaterialMobileMenu = ({
               : (
                 <ListItem key={index} disablePadding>
                   <ListItemButton onClick={() => { item.action && item.action(); setDrawerOpen(false); }}
-                    sx={{ borderRadius: 2, my: 0.5, backgroundColor: bgColor, transition: 'background 0.2s', '&:hover': { backgroundColor: bgColor } }}>
-                    <ListItemIcon sx={{ color: '#000 !important', minWidth: 28, minHeight: 28, width: customIcon ? 28 : undefined, height: customIcon ? 28 : undefined, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    sx={{
+                      borderRadius: 2,
+                      my: 0.5,
+                      backgroundColor: bgColor,
+                      transition: 'background 0.2s',
+                      '&:hover': { backgroundColor: bgColor },
+                      minHeight: 40,
+                      height: 40,
+                      px: 1,
+                      '@media (max-width:900px)': {
+                        minHeight: 40,
+                        height: 40,
+                        px: 1
+                      }
+                    }}>
+                    <ListItemIcon sx={{ color: '#000 !important', minWidth: 24, minHeight: 24, width: customIcon ? 24 : undefined, height: customIcon ? 24 : undefined, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       {customIcon ? customIcon : item.icon}
                     </ListItemIcon>
-                    <ListItemText primary={item.label} />
+                    <ListItemText primary={item.label} primaryTypographyProps={{ fontSize: '0.97rem' }} />
                   </ListItemButton>
                 </ListItem>
               );
