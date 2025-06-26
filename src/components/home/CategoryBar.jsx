@@ -1,5 +1,6 @@
 import React from 'react';
 import UiButton from '../ui/UiButton';
+import { getCategoryColor, getCategoryGradient } from '../../utils/categoryPalette';
 
 /**
  * CategoryBar: Barra de selección de categorías altamente parametrizable y reutilizable.
@@ -47,9 +48,9 @@ const CategoryBar = ({ categories, selectedCategory, onCategoryClick, renderButt
               size="large"
               onClick={() => onCategoryClick(category.key)}
               sx={{
-                background: isActive ? (category.gradient || category.color || '#2196f3') : 'var(--color-masterpiece-light)',
+                background: isActive ? getCategoryGradient(category.key) : 'var(--color-masterpiece-light)',
                 color: isActive ? '#222' : 'var(--text-color)',
-                border: isActive ? `2px solid ${category.color || '#2196f3'}` : '1.5px solid color-mix(in srgb, var(--color-masterpiece) 30%, transparent)',
+                border: isActive ? `2px solid ${getCategoryColor(category.key)}` : '1.5px solid color-mix(in srgb, var(--color-masterpiece) 30%, transparent)',
                 borderRadius: 'var(--border-radius-md)',
                 padding: 'var(--space-md) var(--space-lg)',
                 fontSize: 'var(--font-size-lg)',
@@ -59,8 +60,8 @@ const CategoryBar = ({ categories, selectedCategory, onCategoryClick, renderButt
                 minWidth: 120,
                 transition: 'all var(--transition-normal)',
                 '&:hover': {
-                  background: isActive ? (category.gradient || category.color || '#2196f3') : 'color-mix(in srgb, var(--color-masterpiece) 15%, var(--card-background))',
-                  borderColor: isActive ? (category.color || '#2196f3') : 'color-mix(in srgb, var(--color-masterpiece) 50%, transparent)',
+                  background: isActive ? getCategoryGradient(category.key) : 'color-mix(in srgb, var(--color-masterpiece) 15%, var(--card-background))',
+                  borderColor: isActive ? getCategoryColor(category.key) : 'color-mix(in srgb, var(--color-masterpiece) 50%, transparent)',
                   transform: 'translateY(-2px)',
                   boxShadow: 'var(--shadow-md)'
                 },

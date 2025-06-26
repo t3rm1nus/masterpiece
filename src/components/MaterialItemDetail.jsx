@@ -30,6 +30,7 @@ import {
 import { useLanguage } from '../LanguageContext';
 import useViewStore from '../store/viewStore';
 import { getSubcategoryLabel } from '../utils/subcategoryLabel';
+import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 import './styles/components/item-detail-action-btn.css';
 
 const MaterialItemDetail = ({ item }) => {
@@ -72,36 +73,6 @@ const MaterialItemDetail = ({ item }) => {
   };
 
   const trailerUrl = getTrailerUrl();
-
-  const getCategoryColor = (category) => {
-    switch (category) {
-      case 'movies':
-      case 'peliculas':
-        return '#2196f3';
-      case 'videogames':
-      case 'videojuegos':
-        return '#9c27b0';
-      case 'books':
-      case 'libros':
-        return '#4caf50';
-      case 'music':
-      case 'musica':
-        return '#00bcd4';
-      case 'podcast':
-      case 'podcasts':
-        return '#8bc34a';
-      case 'boardgames':
-      case 'juegos de mesa':
-        return '#e91e63';
-      case 'comics':
-        return '#ff9800';
-      case 'documentales':
-      case 'documentaries':
-        return '#e57373';
-      default:
-        return theme.palette.primary.main;
-    }
-  };
 
   // Gradiente de fondo igual que en los listados
   const getCategoryGradient = (category) => {

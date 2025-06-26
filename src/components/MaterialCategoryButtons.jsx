@@ -17,6 +17,7 @@ import {
   Star as StarIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
+import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 
 /**
  * MaterialCategoryButtons
@@ -91,38 +92,6 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
     }
   };
   
-  const getCategoryColor = (categoryKey, isMasterpiece) => {
-    if (isMasterpiece) {
-      return 'linear-gradient(135deg, #fffbe6 0%, #ffe082 40%, #fff8e1 100%)';
-    }
-    switch (categoryKey) {
-      case 'movies':
-      case 'peliculas':
-        return '#2196f3';
-      case 'videogames':
-      case 'videojuegos':
-        return '#9c27b0';
-      case 'books':
-      case 'libros':
-        return '#4caf50';
-      case 'music':
-      case 'musica':
-        return '#00bcd4';
-      case 'podcast':
-      case 'podcasts':
-        return '#8bc34a';
-      case 'boardgames':
-      case 'juegos de mesa':
-        return '#e91e63';
-      case 'comics':
-        return '#ff9800';
-      case 'documentales':
-      case 'documentaries':
-        return '#9e9e9e';
-      default:
-        return theme.palette.primary.main;
-    }
-  };
     return (
     <Box
       sx={{
@@ -155,7 +124,7 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
               textTransform: 'none',
               fontSize: '0.8rem',
               fontWeight: selectedCategory === key ? 'bold' : 'normal',
-              background: selectedCategory === key && isMasterpiece ? getCategoryColor(key, true) : (selectedCategory === key ? getCategoryColor(key) : 'transparent'),
+              background: selectedCategory === key && isMasterpiece ? getCategoryGradient(key) : (selectedCategory === key ? getCategoryColor(key) : 'transparent'),
               borderColor: getCategoryColor(key),
               color: selectedCategory === key ? 'white' : getCategoryColor(key),
               padding: '6px 12px',
@@ -163,7 +132,7 @@ const MaterialCategoryButtons = ({ categories, selectedCategory, onCategoryClick
               flexShrink: 1,
               ...buttonSx,
               '&:hover': {
-                background: selectedCategory === key && isMasterpiece ? getCategoryColor(key, true) : (selectedCategory === key ? getCategoryColor(key) : `${getCategoryColor(key)}20`),
+                background: selectedCategory === key && isMasterpiece ? getCategoryGradient(key) : (selectedCategory === key ? getCategoryColor(key) : `${getCategoryColor(key)}20`),
                 borderColor: getCategoryColor(key),
                 transform: 'translateY(-2px)',
                 boxShadow: theme.shadows[4]

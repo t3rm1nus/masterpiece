@@ -7,7 +7,7 @@ import {
 } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppTheme } from '../store/useAppStore';
-import { getCategoryColor } from '../utils/categoryUtils';
+import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 import { getSubcategoryLabel } from '../utils/subcategoryLabel';
 
 /**

@@ -2,7 +2,7 @@ import React from 'react';
 import { Select, MenuItem, InputLabel, FormControl, useTheme, useMediaQuery, ListSubheader, Box } from '@mui/material';
 import { Movie as MovieIcon, SportsEsports as GameIcon, MenuBook as BookIcon, LibraryMusic as MusicIcon, Mic as PodcastIcon, Extension as BoardGameIcon, AutoStories as ComicIcon, Category as CategoryIcon, Star as StarIcon } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
-import { getCategoryColor, getCategoryColorForSelect } from '../utils/categoryUtils';
+import { getCategoryColor, getCategoryGradient, getCategoryColorForSelect } from '../utils/categoryPalette';
 import { getSubcategoryLabel } from '../utils/subcategoryLabel';
 
 const getCategoryIcon = (categoryKey) => {
@@ -66,27 +66,27 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
           mx: isMobile ? 'auto' : 0,
           mb: isMobile && showSubcatSelect ? 2.5 : isMobile ? 1.5 : 0, // antes 4/3, ahora 2.5/1.5
           '& .MuiOutlinedInput-notchedOutline': {
-            borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+            borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
             borderWidth: 2
           },
           '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+            borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
             borderWidth: 2
           },
           '& .MuiOutlinedInput-root': {
             boxShadow: 'none !important',
           },
           '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+            borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
             borderWidth: 2,
             boxShadow: 'none !important',
           },
           '& .MuiInputLabel-root': {
-            color: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+            color: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
             fontWeight: 'bold',
           },
           '& .MuiInputLabel-root.Mui-focused': {
-            color: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+            color: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
             fontWeight: 'bold',
           }
         }}
@@ -117,31 +117,31 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
             p: 0,
             mx: isMobile ? 'auto' : 0,
             '& .MuiOutlinedInput-notchedOutline': {
-              borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+              borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
               borderWidth: 2
             },
             '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-              borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+              borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
               borderWidth: 2
             },
             '& .MuiOutlinedInput-root': {
               boxShadow: 'none !important',
             },
             '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-              borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+              borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
               borderWidth: 2,
               boxShadow: 'none !important',
             },
             '& .MuiInputLabel-root': {
-              color: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+              color: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
               fontWeight: 'bold'
             },
             '&.Mui-focused .MuiInputLabel-root': {
-              color: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+              color: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
               fontWeight: 'bold'
             },
             '& .MuiSelect-icon': {
-              color: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined
+              color: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined
             }
           }}
           MenuProps={{
@@ -188,27 +188,27 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
               mb: isMobile ? 3 : 0,
               my: 0,
               '& .MuiOutlinedInput-notchedOutline': {
-                borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+                borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
                 borderWidth: 2
               },
               '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+                borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
                 borderWidth: 2
               },
               '& .MuiOutlinedInput-root': {
                 boxShadow: 'none !important',
               },
               '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+                borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
                 borderWidth: 2,
                 boxShadow: 'none !important',
               },
               '& .MuiInputLabel-root': {
-                color: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+                color: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
                 fontWeight: 'bold',
               },
               '& .MuiInputLabel-root.Mui-focused': {
-                color: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+                color: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
                 fontWeight: 'bold',
               },
             }}
@@ -240,31 +240,31 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
                 p: 0,
                 mx: isMobile ? 'auto' : 0,
                 '& .MuiOutlinedInput-notchedOutline': {
-                  borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+                  borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
                   borderWidth: 2
                 },
                 '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                  borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+                  borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
                   borderWidth: 2
                 },
                 '& .MuiOutlinedInput-root': {
                   boxShadow: 'none !important',
                 },
                 '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                  borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+                  borderColor: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
                   borderWidth: 2,
                   boxShadow: 'none !important',
                 },
                 '& .MuiInputLabel-root': {
-                  color: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+                  color: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
                   fontWeight: 'bold',
                 },
                 '& .MuiInputLabel-root.Mui-focused': {
-                  color: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined,
+                  color: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined,
                   fontWeight: 'bold',
                 },
                 '& .MuiSelect-icon': {
-                  color: selectedCategory ? getCategoryColorForSelect(selectedCategory, theme) : undefined
+                  color: selectedCategory ? getCategoryColorForSelect(selectedCategory) : undefined
                 }
               }}
               MenuProps={{

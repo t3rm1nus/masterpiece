@@ -1,0 +1,26 @@
+.animated-gradient-title {
+  background: linear-gradient(270deg, #ff9800, #2196f3, #8bc34a, #e91e63, #ff9800);
+  background-size: 1200% 1200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: gradientMove 8s ease-in-out infinite;
+}
+
+.animated-gradient-bg {
+  animation: gradientMove 8s ease-in-out infinite;
+  background-size: 400% 400%!important;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

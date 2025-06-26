@@ -1,6 +1,6 @@
 import React from 'react';
 import UiButton from '../ui/UiButton';
-import { categoryColor, getCategoryGradient } from '../../utils/categoryUtils';
+import { getCategoryColor, getCategoryGradient } from '../../utils/categoryPalette';
 
 /**
  * SubcategoryBar: Barra de selección de subcategorías altamente parametrizable y reutilizable.
@@ -58,7 +58,7 @@ const SubcategoryBar = ({ selectedCategory, categorySubcategories, activeSubcate
                   sx={{
                     background: isActive ? getCategoryGradient(selectedCategory) : 'var(--background-secondary)',
                     color: isActive ? '#222' : 'var(--text-color)',
-                    border: isActive ? `2px solid ${categoryColor(selectedCategory) || 'var(--color-primary)'}` : '1.5px solid var(--border-color)',
+                    border: isActive ? `2px solid ${getCategoryColor(selectedCategory) || 'var(--color-primary)'}` : '1.5px solid var(--border-color)',
                     borderRadius: 'var(--border-radius-md)',
                     padding: '6px 18px',
                     fontSize: '1rem',

@@ -23,6 +23,7 @@ import {
 import { useLanguage } from '../LanguageContext';
 import { useAppView } from '../store/useAppStore';
 import UiCard from './ui/UiCard';
+import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 
 /**
  * MaterialRecommendationCard
@@ -86,64 +87,6 @@ const MaterialRecommendationCard = memo(({
         return <ComicIcon fontSize="small" />;
       default:
         return <StarIcon fontSize="small" />;
-    }
-  };
-  const getCategoryColor = (category) => {
-    switch (category) {
-      case 'movies':
-      case 'peliculas':
-        return theme.palette.mode === 'dark' ? '#1976d2' : '#2196f3';
-      case 'videogames':
-      case 'videojuegos':
-        return theme.palette.mode === 'dark' ? '#7b1fa2' : '#9c27b0';
-      case 'books':
-      case 'libros':
-        return theme.palette.mode === 'dark' ? '#388e3c' : '#4caf50';
-      case 'music':
-      case 'musica':
-        return theme.palette.mode === 'dark' ? '#0097a7' : '#00bcd4';
-      case 'podcast':
-      case 'podcasts':
-        return theme.palette.mode === 'dark' ? '#689f38' : '#8bc34a';
-      case 'boardgames':
-      case 'juegos de mesa':
-        return theme.palette.mode === 'dark' ? '#c2185b' : '#e91e63';
-      case 'comics':
-        return theme.palette.mode === 'dark' ? '#f57c00' : '#ff9800';
-      case 'documentales':
-      case 'documentaries':
-        return theme.palette.mode === 'dark' ? '#e57373' : '#e57373';
-      default:
-        return theme.palette.primary.main;
-    }
-  };
-  const getCategoryGradient = (category) => {
-    switch (category) {
-      case 'movies':
-      case 'peliculas':
-        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
-      case 'videogames':
-      case 'videojuegos':
-        return 'linear-gradient(135deg, #f8f3fa 0%, #e1bee7 100%)';
-      case 'books':
-      case 'libros':
-        return 'linear-gradient(135deg, #f4faf4 0%, #c8e6c9 100%)';
-      case 'music':
-      case 'musica':
-        return 'linear-gradient(135deg, #f2fbfc 0%, #b2ebf2 100%)';
-      case 'podcast':
-      case 'podcasts':
-        return 'linear-gradient(135deg, #f7fbf2 0%, #dcedc8 100%)';
-      case 'boardgames':
-      case 'juegos de mesa':
-        return 'linear-gradient(135deg, #fdf4f8 0%, #f8bbd0 100%)';
-      case 'comics':
-        return 'linear-gradient(135deg, #fff8f0 0%, #ffe0b2 100%)';
-      case 'documentales':
-      case 'documentaries':
-        return 'linear-gradient(135deg, #fdeaea 0%, #e57373 100%)';
-      default:
-        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
     }
   };
   const handleCardClick = () => {

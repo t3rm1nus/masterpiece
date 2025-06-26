@@ -429,12 +429,3 @@ html[data-theme='dark'] .documentary-language.active {
   background-color: color-mix(in srgb, var(--color-documentales) 80%, #ffffff);
   border-color: color-mix(in srgb, var(--color-documentales) 80%, #ffffff);
 }
-
-.subcategory-btn.spanish-cinema,
-.subcategory-btn.spanish-cinema:focus,
-.subcategory-btn.spanish-cinema:active,
-.subcategory-btn.spanish-cinema:focus-visible,
-.subcategory-btn.spanish-cinema.active,
-.subcategory-btn.spanish-cinema:hover {
-  border: 1.5px solid #bdbdbd !important;
-}

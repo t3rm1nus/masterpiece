@@ -1,49 +1,27 @@
 :root {
-  --cat-movies-bg: #e3f0ff;
-  --cat-movies-strong: #0078d4;
-  --cat-videogames-bg: #e6f7e6;
-  --cat-videogames-strong: #1a7f37;
-  --cat-comics-bg: #fff3e6;
-  --cat-comics-strong: #e67e22;
-  --cat-books-bg: #f3e6ff;
-  --cat-books-strong: #8e44ad;
-  --cat-boardgames-bg: #f9fbe7;
-  --cat-boardgames-strong: #b2bc1e;
-  --cat-music-bg: #fce4ec;
-  --cat-music-strong: #c2185b;
-  --cat-podcast-bg: #dcedc8;
-  --cat-podcast-strong: #689f38;
-  --cat-documentales-bg: #fdeaea;
-  --cat-documentales-strong: #b71c1c;
-  /* Añade más categorías si es necesario */
+  --color-masterpiece: #f39c12;
+  --card-background: #ffffff;
+  --border-radius-lg: 12px;
+  --border-radius-md: 8px;
+  --border-radius-full: 50%;
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --transition-normal: 0.3s ease;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --text-secondary: #666666;
+  --text-inverse: #ffffff;
+  --z-dropdown: 1000;
 }
-
-.recommendation-card.movies {
-  background: var(--cat-movies-bg) !important;
-}
-.recommendation-card.videogames {
-  background: var(--cat-videogames-bg) !important;
-}
-.recommendation-card.comics {
-  background: var(--cat-comics-bg) !important;
-}
-.recommendation-card.books {
-  background: var(--cat-books-bg) !important;
-}
-.recommendation-card.boardgames {
-  background: var(--cat-boardgames-bg) !important;
-}
-.recommendation-card.music {
-  background: var(--cat-music-bg) !important;
-}
-.recommendation-card.podcast {
-  background: var(--cat-podcast-bg) !important;
-}
-.recommendation-card.documentales {
-  background: var(--cat-documentales-bg) !important;
-}
-
-
 
 /* ===================================
    TARJETAS DE RECOMENDACIÓN
@@ -386,61 +364,6 @@
 .category-label {
   font-weight: bold;
   text-align: center;
-}
-
-/* Colores intensos por categoría */
-.recommendation-card.movies .category-label {
-  color: var(--cat-movies-strong) !important;
-}
-.recommendation-card.videogames .category-label {
-  color: var(--cat-videogames-strong) !important;
-}
-.recommendation-card.comics .category-label {
-  color: var(--cat-comics-strong) !important;
-}
-.recommendation-card.books .category-label {
-  color: var(--cat-books-strong) !important;
-}
-.recommendation-card.boardgames .category-label {
-  color: var(--cat-boardgames-strong) !important;
-}
-.recommendation-card.music .category-label {
-  color: var(--cat-music-strong) !important;
-}
-.recommendation-card.podcast .category-label {
-  color: var(--cat-podcast-strong) !important;
-}
-.recommendation-card.documentales .category-label {
-  color: var(--cat-documentales-strong) !important;
-}
-
-.recommendation-card.movies .rec-home-cat {
-  color: var(--cat-movies-strong) !important;
-}
-.recommendation-card.videogames .rec-home-cat {
-  color: var(--cat-videogames-strong) !important;
-}
-.recommendation-card.comics .rec-home-cat {
-  color: var(--cat-comics-strong) !important;
-}
-.recommendation-card.books .rec-home-cat {
-  color: var(--cat-books-strong) !important;
-}
-.recommendation-card.boardgames .rec-home-cat {
-  color: var(--cat-boardgames-strong) !important;
-}
-.recommendation-card.music .rec-home-cat {
-  color: var(--cat-music-strong) !important;
-}
-.recommendation-card.podcast .rec-home-cat {
-  color: var(--cat-podcast-strong) !important;
-}
-.recommendation-card.documentales .rec-home-cat {
-  color: var(--cat-documentales-strong) !important;
-}
-
-.css-31dimf {
-    padding-top: 0 !important;
 }
 
 /* Estilos para el componente NoResults */
