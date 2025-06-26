@@ -22,7 +22,7 @@ import UiLayout from './ui/UiLayout';
 import { getCategoryGradient, getAllCategoriesAnimatedGradient, getCategoryAnimatedGradient, getMasterpieceAnimatedGradient } from '../utils/categoryPalette';
 import HybridMenu from './HybridMenu';
 import MaterialMobileMenu from './MaterialMobileMenu';
-import { getSubcategoryLabel } from '../utils/subcategoryLabel';
+import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 import '../styles/components/animations.css';
 import MaterialContentWrapper from './MaterialContentWrapper';
 import useAppStore from '../store/useAppStore'; // <-- Importa el hook Zustand directo

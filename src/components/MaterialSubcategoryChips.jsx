@@ -8,7 +8,7 @@ import {
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppTheme } from '../store/useAppStore';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
-import { getSubcategoryLabel } from '../utils/subcategoryLabel';
+import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 
 /**
  * MaterialSubcategoryChips

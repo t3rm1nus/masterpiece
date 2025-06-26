@@ -7,6 +7,13 @@ import UnifiedItemDetail from './UnifiedItemDetail';
 import { LazyCoffeePage, LazyHowToDownload, LoadingFallback } from './LazyComponents';
 import { useLanguage } from '../LanguageContext';
 
+/**
+ * AppContent
+ *
+ * Componente principal que orquesta la navegación y renderizado de las vistas principales de la app.
+ * Siempre renderiza HomePage y muestra overlays/modales según el estado global (detalle, donaciones, instrucciones, etc).
+ * Gestiona el scroll y la experiencia de usuario al cambiar de vista.
+ */
 const AppContent = () => {
   // Usando el store consolidado de vista para toda la gestión de UI
   const { 
@@ -38,7 +45,7 @@ const AppContent = () => {
   return (
     <>
       <HybridMenu />
-      <HomePage />
+      {(currentView === 'home' || currentView === 'detail') && <HomePage />}
       {/* Overlay/modal de detalle solo si hay selectedItem y currentView es 'detail' */}
       {currentView === 'detail' && selectedItem && (
         <UnifiedItemDetail 
@@ -58,6 +65,7 @@ const AppContent = () => {
           <LazyHowToDownload />
         </Suspense>
       )}
+      {/* Renderiza mensaje de error si la vista no existe */}
       {['home', 'detail', 'coffee', 'howToDownload'].indexOf(currentView) === -1 && (
         <div>{getTranslation('ui.errors.page_not_found', 'Página no encontrada')}</div>
       )}

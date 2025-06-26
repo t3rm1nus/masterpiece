@@ -1,27 +1,24 @@
 /**
- * Translation Utilities
- * 
- * Additional utilities for advanced translation handling
- * beyond the core translation engine.
+ * translationUtils.js
+ *
+ * Utilidades avanzadas para la gestión de traducciones en la app Masterpiece.
+ * Incluye validación de claves, pluralización, interpolación, merge profundo y extracción de claves.
  */
 
 /**
- * Create a translation key validator
- * Useful for development to ensure all translation keys exist
+ * Crea un validador de claves de traducción.
+ * Permite detectar claves faltantes durante el desarrollo.
  */
 export const createTranslationValidator = (translations) => {
   const missingKeys = new Set();
-  
   return {
     /**
-     * Validate that a translation key exists
+     * Valida que una clave de traducción exista en el objeto de traducciones.
      */
     validate: (key) => {
       if (!key || typeof key !== 'string') return false;
-      
       const keys = key.split('.');
       let current = translations;
-      
       for (const keyPart of keys) {
         if (!current || typeof current !== 'object' || !(keyPart in current)) {
           missingKeys.add(key);
@@ -29,67 +26,60 @@ export const createTranslationValidator = (translations) => {
         }
         current = current[keyPart];
       }
-      
       return true;
     },
-    
     /**
-     * Get all missing keys that were validated
+     * Devuelve todas las claves faltantes detectadas.
      */
     getMissingKeys: () => Array.from(missingKeys),
-    
     /**
-     * Clear missing keys cache
+     * Limpia el cache de claves faltantes.
      */
     clearMissingKeys: () => missingKeys.clear()
   };
 };
 
 /**
- * Pluralization utility for translations
- * Handles basic English/Spanish pluralization rules
+ * Pluralización básica para inglés y español.
+ * Devuelve la forma singular o plural según el conteo y el idioma.
  */
 export const pluralize = (count, singular, plural = null, language = 'es') => {
   if (typeof count !== 'number') return singular;
-  
   if (language === 'en') {
     return count === 1 ? singular : (plural || `${singular}s`);
   } else {
-    // Spanish rules - basic implementation
+    // Español: implementación básica
     return count === 1 ? singular : (plural || `${singular}s`);
   }
 };
 
 /**
- * Format translation with interpolation
- * Example: formatTranslation("Hello {name}!", { name: "World" }) => "Hello World!"
+ * Interpola variables en una cadena de traducción.
+ * Ejemplo: formatTranslation('Hola {name}!', { name: 'Mundo' }) => 'Hola Mundo!'
  */
 export const formatTranslation = (template, variables = {}) => {
   if (!template || typeof template !== 'string') return template;
   if (!variables || typeof variables !== 'object') return template;
-  
   return template.replace(/\{(\w+)\}/g, (match, key) => {
     return variables[key] !== undefined ? variables[key] : match;
   });
 };
 
 /**
- * Deep merge translation objects
- * Useful for combining partial translations or fallbacks
+ * Realiza un merge profundo entre dos objetos de traducción.
+ * Útil para combinar traducciones parciales o aplicar fallbacks.
  */
 export const mergeTranslations = (target, source) => {
   if (!target || typeof target !== 'object') return source;
   if (!source || typeof source !== 'object') return target;
-  
   const result = { ...target };
-  
   for (const key in source) {
     if (source.hasOwnProperty(key)) {
       if (
-        result[key] && 
-        typeof result[key] === 'object' && 
+        result[key] &&
+        typeof result[key] === 'object' &&
         !Array.isArray(result[key]) &&
-        typeof source[key] === 'object' && 
+        typeof source[key] === 'object' &&
         !Array.isArray(source[key])
       ) {
         result[key] = mergeTranslations(result[key], source[key]);
@@ -98,25 +88,21 @@ export const mergeTranslations = (target, source) => {
       }
     }
   }
-  
   return result;
 };
 
 /**
- * Extract all translation keys from a translation object
- * Useful for generating key lists or finding unused keys
+ * Extrae todas las claves de traducción de un objeto de traducciones.
+ * Útil para generar listas de claves o detectar claves no usadas.
  */
 export const extractTranslationKeys = (translations, prefix = '') => {
   const keys = [];
-  
   if (!translations || typeof translations !== 'object') {
     return keys;
   }
-  
   for (const key in translations) {
     if (translations.hasOwnProperty(key)) {
       const fullKey = prefix ? `${prefix}.${key}` : key;
-      
       if (typeof translations[key] === 'object' && !Array.isArray(translations[key])) {
         keys.push(...extractTranslationKeys(translations[key], fullKey));
       } else {
@@ -124,13 +110,12 @@ export const extractTranslationKeys = (translations, prefix = '') => {
       }
     }
   }
-  
   return keys;
 };
 
 /**
- * Create a translation namespace wrapper
- * Useful for components that need translations from a specific namespace
+ * Crea un wrapper de namespace para traducciones.
+ * Útil para componentes que necesitan traducciones de un namespace específico.
  */
 export const createTranslationNamespace = (getTranslation, namespace) => {
   return (key, fallback = null) => {
@@ -140,55 +125,48 @@ export const createTranslationNamespace = (getTranslation, namespace) => {
 };
 
 /**
- * Batch translation getter
- * Get multiple translations at once with a single call
+ * Obtiene múltiples traducciones en una sola llamada.
+ * Útil para optimizar el rendimiento en componentes.
  */
 export const batchGetTranslations = (getTranslation, keys = []) => {
   if (!Array.isArray(keys)) return {};
-  
   const result = {};
   for (const key of keys) {
     if (typeof key === 'string') {
       result[key] = getTranslation(key);
     }
   }
-  
   return result;
 };
 
 /**
- * Translation cache utility
- * Simple memoization for translation lookups
+ * Utilidad de caché para traducciones.
+ * Permite almacenar en caché resultados de traducciones para mejorar el rendimiento.
  */
 export const createTranslationCache = () => {
   const cache = new Map();
-  
   return {
     /**
-     * Get cached translation or compute and cache it
+     * Obtiene una traducción del caché o la calcula y almacena en caché.
      */
     get: (key, computeFn) => {
       if (cache.has(key)) {
         return cache.get(key);
       }
-      
       const result = computeFn();
       cache.set(key, result);
       return result;
     },
-    
     /**
-     * Clear cache
+     * Limpia el caché.
      */
     clear: () => cache.clear(),
-    
     /**
-     * Get cache size
+     * Devuelve el tamaño del caché.
      */
     size: () => cache.size,
-    
     /**
-     * Check if key is cached
+     * Verifica si una clave está en el caché.
      */
     has: (key) => cache.has(key)
   };
