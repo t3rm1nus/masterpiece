@@ -42,6 +42,14 @@ const RecommendationsList = ({
 }) => {
   const { isMobile } = useAppView();
 
+  // Eliminar props de infinite scroll que no son para desktop ni para la lista de categorías
+  const {
+    onLoadMore,
+    hasMore,
+    loadingMore,
+    ...desktopSafeProps
+  } = props;
+
   const commonProps = {
     items,
     renderItem,
@@ -52,7 +60,7 @@ const RecommendationsList = ({
     sx,
     className,
     style,
-    ...props
+    ...desktopSafeProps
   };
 
   return isMobile 

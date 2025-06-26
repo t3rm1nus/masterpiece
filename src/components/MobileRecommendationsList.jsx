@@ -81,66 +81,74 @@ const MobileRecommendationsList = ({
   ...rest
 }) => {
   const data = items || recommendations;
+
   return (
-    <MaterialContentWrapper
-      recommendations={data}
-      isHome={isHome}
-      categories={categories}
-      selectedCategory={selectedCategory}
-      onCategoryClick={onCategoryClick}
-      subcategories={subcategories}
-      activeSubcategory={activeSubcategory}
-      onSubcategoryClick={onSubcategoryClick}
-      renderCategoryButton={renderCategoryButton}
-      renderSubcategoryChip={renderSubcategoryChip}
-      categorySelectSx={categorySelectSx}
-      subcategoryChipsSx={subcategoryChipsSx}
-      categorySelectProps={categorySelectProps}
-      subcategoryChipsProps={subcategoryChipsProps}
-      visible={visible}
-      sx={sx}
-      className={className}
-      style={style}
-      showCategorySelect={showCategorySelect}
-      showSubcategoryChips={showSubcategoryChips}
-      {...rest}
-    >
-      {/* Render custom recommendations if provided, else fallback to default */}
-      {loading ? (
-        <div className="recommendations-loading">{getTranslation('ui.states.loading', 'Cargando...')}</div>
-      ) : !data?.length ? (
-        typeof emptyComponent === 'function' ? emptyComponent() : emptyComponent
-      ) : renderItem ? (
-        <>
-          {data.map((item, idx) => renderItem(item, idx))}
-        </>
-      ) : null}
-      {/* Paginación si aplica */}
-      {pagination && (
-        <div className="pagination-container">
-          <button 
-            className="pagination-button" 
-            onClick={() => pagination.onPageChange(pagination.page - 1)}
-            disabled={pagination.page <= 1}
-          >
-            {getTranslation('ui.actions.previous', 'Anterior')}
-          </button>
-          <span className="pagination-info">
-            {getTranslation('ui.pagination.page_of', 'Página {page} de {total}', {
-              page: pagination.page,
-              total: Math.ceil((data?.length || 0) / (pagination.pageSize || 1))
-            })}
-          </span>
-          <button 
-            className="pagination-button" 
-            onClick={() => pagination.onPageChange(pagination.page + 1)}
-            disabled={pagination.page >= Math.ceil((data?.length || 0) / (pagination.pageSize || 1))}
-          >
-            {getTranslation('ui.actions.next', 'Siguiente')}
-          </button>
-        </div>
-      )}
-    </MaterialContentWrapper>
+    <>
+      {/* Infinite scroll props explícitos para debug */}
+      {console.log('[MobileRecommendationsList] hasMore:', rest.hasMore, 'loadingMore:', rest.loadingMore, 'onLoadMore:', typeof rest.onLoadMore)}
+      <MaterialContentWrapper
+        recommendations={data}
+        isHome={isHome}
+        categories={categories}
+        selectedCategory={selectedCategory}
+        onCategoryClick={onCategoryClick}
+        subcategories={subcategories}
+        activeSubcategory={activeSubcategory}
+        onSubcategoryClick={onSubcategoryClick}
+        renderCategoryButton={renderCategoryButton}
+        renderSubcategoryChip={renderSubcategoryChip}
+        categorySelectSx={categorySelectSx}
+        subcategoryChipsSx={subcategoryChipsSx}
+        categorySelectProps={categorySelectProps}
+        subcategoryChipsProps={subcategoryChipsProps}
+        visible={visible}
+        sx={sx}
+        className={className}
+        style={style}
+        showCategorySelect={showCategorySelect}
+        showSubcategoryChips={showSubcategoryChips}
+        onLoadMore={rest.onLoadMore}
+        hasMore={rest.hasMore}
+        loadingMore={rest.loadingMore}
+        {...rest}
+      >
+        {/* Render custom recommendations if provided, else fallback to default */}
+        {loading && !data?.length ? (
+          <div className="recommendations-loading">{getTranslation('ui.states.loading', 'Cargando...')}</div>
+        ) : !data?.length ? (
+          typeof emptyComponent === 'function' ? emptyComponent() : emptyComponent
+        ) : renderItem ? (
+          <>
+            {data.map((item, idx) => renderItem(item, idx))}
+          </>
+        ) : null}
+        {/* Paginación si aplica */}
+        {pagination && (
+          <div className="pagination-container">
+            <button 
+              className="pagination-button" 
+              onClick={() => pagination.onPageChange(pagination.page - 1)}
+              disabled={pagination.page <= 1}
+            >
+              {getTranslation('ui.actions.previous', 'Anterior')}
+            </button>
+            <span className="pagination-info">
+              {getTranslation('ui.pagination.page_of', 'Página {page} de {total}', {
+                page: pagination.page,
+                total: Math.ceil((data?.length || 0) / (pagination.pageSize || 1))
+              })}
+            </span>
+            <button 
+              className="pagination-button" 
+              onClick={() => pagination.onPageChange(pagination.page + 1)}
+              disabled={pagination.page >= Math.ceil((data?.length || 0) / (pagination.pageSize || 1))}
+            >
+              {getTranslation('ui.actions.next', 'Siguiente')}
+            </button>
+          </div>
+        )}
+      </MaterialContentWrapper>
+    </>
   );
 };
 

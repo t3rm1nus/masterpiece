@@ -24,6 +24,7 @@ import HybridMenu from './HybridMenu';
 import MaterialMobileMenu from './MaterialMobileMenu';
 import { getSubcategoryLabel } from '../utils/subcategoryLabel';
 import '../styles/components/animations.css';
+import MaterialContentWrapper from './MaterialContentWrapper';
 
 // Hook para detectar si es móvil SOLO por ancho de pantalla (robusto y compatible móvil)
 function useIsMobile() {
@@ -368,6 +369,38 @@ const HomePage = ({
   }
 
   const isMobile = useIsMobile();
+  const isCategoryListMobile = isMobile && selectedCategory && selectedCategory !== 'all';
+
+  // Estado de paginación SOLO para móvil
+  const [mobilePage, setMobilePage] = useState(1);
+  const [loadingMoreMobile, setLoadingMoreMobile] = useState(false);
+  const pageSize = 10; // Ajusta a 10 para cumplir el requerimiento
+
+  // Resetear página al cambiar de categoría, subcategoría o filtros relevantes
+  useEffect(() => {
+    if (isMobile) setMobilePage(1);
+  }, [selectedCategory, activeSubcategory, isSpanishCinemaActive, isMasterpieceActive, activePodcastLanguages, activeDocumentaryLanguages, isMobile]);
+
+  // Calcular los ítems a mostrar SOLO en móvil (paginados)
+  const paginatedItems = React.useMemo(() => {
+    if (!isMobile) return filteredItems;
+    return filteredItems.slice(0, mobilePage * pageSize);
+  }, [filteredItems, mobilePage, isMobile]);
+
+  // Calcular si hay más para infinite scroll SOLO en móvil
+  const hasMoreMobile = isMobile && (paginatedItems.length < filteredItems.length);
+
+  // Callback para cargar más SOLO en móvil
+  const handleLoadMoreMobile = React.useCallback(() => {
+    if (hasMoreMobile && !loadingMoreMobile) {
+      setLoadingMoreMobile(true);
+      setTimeout(() => {
+        setMobilePage(p => p + 1);
+        setLoadingMoreMobile(false);
+      }, 600); // Simula carga para mostrar el loader
+    }
+  }, [hasMoreMobile, loadingMoreMobile]);
+
   // Verificar si hay datos disponibles
   if (!allData || Object.keys(allData).length === 0) {
     return (
@@ -414,6 +447,18 @@ const HomePage = ({
       setActiveSubcategory(subcategory);
     }
   };
+
+  // Log siempre antes de renderizar la lista para depuración profunda
+  console.log('[HomePage] InfiniteScroll CHECK:', {
+    isMobile,
+    selectedCategory,
+    isCategoryListMobile,
+    paginatedItems: paginatedItems.length,
+    filteredItems: filteredItems.length,
+    hasMoreMobile,
+    mobilePage,
+    pageSize
+  });
 
   return (
     <UiLayout sx={{ marginTop: 8, width: '100vw', maxWidth: '100vw', px: 0 }}>
@@ -555,18 +600,42 @@ const HomePage = ({
               : {})
           }}
         >
-          <RecommendationsList            
-            recommendations={filteredItems} 
-            isHome={!selectedCategory}
-            onItemClick={handleItemClick}
-            categories={categories}
-            selectedCategory={selectedCategory}
-            onCategoryClick={handleCategoryClick}
-            showCategoryBar={false}
-            showSubcategoryBar={false}
-            showCategorySelect={isMobile ? false : undefined}
-            showSubcategoryChips={isMobile ? false : undefined}
-          />
+          {/* Renderizado condicional: SOLO en móvil y SOLO para listado de categorías, usa MaterialContentWrapper con infinite scroll */}
+          {isCategoryListMobile ? (
+            <MaterialContentWrapper
+              recommendations={paginatedItems}
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onCategoryClick={handleCategoryClick}
+              subcategories={categorySubcategories}
+              activeSubcategory={activeSubcategory}
+              onSubcategoryClick={setActiveSubcategory}
+              renderCategoryButton={renderCategoryButton}
+              renderSubcategoryChip={renderSubcategoryChip}
+              categorySelectSx={materialCategorySelectSx}
+              subcategoryChipsSx={subcategoryBarSx}
+              categorySelectProps={materialCategorySelectProps}
+              subcategoryChipsProps={subcategoryBarProps}
+              isHome={false}
+              onLoadMore={handleLoadMoreMobile}
+              hasMore={hasMoreMobile}
+              loadingMore={loadingMoreMobile}
+              categoryColor={categoryColor(selectedCategory)}
+            />
+          ) : (
+            <RecommendationsList            
+              recommendations={isMobile ? paginatedItems : filteredItems}
+              isHome={!selectedCategory}
+              onItemClick={handleItemClick}
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onCategoryClick={handleCategoryClick}
+              showCategoryBar={false}
+              showSubcategoryBar={false}
+              showCategorySelect={isMobile ? false : undefined}
+              showSubcategoryChips={isMobile ? false : undefined}
+            />
+          )}
         </div>
       )}
       {/* SOLO EN MÓVIL: Menú superior centralizado para splash/audio */}

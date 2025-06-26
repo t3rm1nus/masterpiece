@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useMediaQuery, useTheme, Box, Typography } from '@mui/material';
 import MaterialRecommendationCard from './MaterialRecommendationCard';
 import MaterialCategorySelect from './MaterialCategorySelect';
+import MaterialSubcategoryChips from './MaterialSubcategoryChips';
 import { useAppData } from '../store/useAppStore';
 import { useLanguage } from '../LanguageContext';
+import useInfiniteScroll from '../hooks/useInfiniteScroll';
+import CircularProgress from '@mui/material/CircularProgress';
 
 /**
  * MaterialContentWrapper
@@ -65,6 +68,9 @@ const MaterialContentWrapper = ({
   showSubcategoryChips = true,
   showCategoryBar, // ignorar si llega
   showSubcategoryBar, // ignorar si llega
+  onLoadMore, // NUEVO: callback para infinite scroll
+  hasMore,    // NUEVO: si hay más para infinite scroll
+  loadingMore, // NUEVO: si está cargando más
   ...props
 }) => {
   const theme = useTheme();
@@ -92,12 +98,19 @@ const MaterialContentWrapper = ({
     }
   }, [recommendations]);
 
+  // Infinite scroll solo en móvil y solo en listados de categorías
+  const { sentinelRef } = useInfiniteScroll(
+    onLoadMore || (() => {}),
+    !!hasMore,
+    !!loadingMore
+  );
+
   return (
     <Box sx={{ 
       width: '100%',
       maxWidth: '100vw',
       padding: '0 4px',
-      paddingTop: '64px',
+      // paddingTop: '64px', // Quitado para evitar padding extra
       boxSizing: 'border-box',
       ...props.sx
     }} {...(() => {
@@ -105,8 +118,8 @@ const MaterialContentWrapper = ({
       const { showCategoryBar, showSubcategoryBar, showCategorySelect, showSubcategoryChips, ...restProps } = props;
       return restProps;
     })()}>
-      {/* Select de categorías parametrizable */}
-      {showCategorySelect && categories && (
+      {/* Select de categorías parametrizable SOLO en desktop o si showCategorySelect está forzado */}
+      {(!isMobile && showCategorySelect && categories) && (
         <MaterialCategorySelect
           categories={categories}
           selectedCategory={selectedCategory}
@@ -119,8 +132,8 @@ const MaterialContentWrapper = ({
           {...categorySelectProps}
         />
       )}
-      {/* Chips de subcategorías parametrizables (opcional, si se quiere mostrar además del select) */}
-      {showSubcategoryChips && subcategories && (
+      {/* Chips de subcategorías SOLO en desktop o si showSubcategoryChips está forzado explícitamente */}
+      {(!isMobile && showSubcategoryChips && subcategories) && (
         <MaterialSubcategoryChips
           subcategories={subcategories}
           value={activeSubcategory}
@@ -152,6 +165,40 @@ const MaterialContentWrapper = ({
               className={visibleIndexes.includes(index) ? '' : 'entering'}
             />
           ))}
+          {/* Sentinel para infinite scroll */}
+          {(() => {
+            if (hasMore) {
+              // Normaliza el color: si no hay, usa naranja por defecto
+              let loaderColor = categoryColor;
+              if (!loaderColor || typeof loaderColor !== 'string' || loaderColor.trim() === '') loaderColor = '#ff9800';
+              // Si el color viene en formato rgb(a) o similar, no le añadas transparencia con '22'
+              let bgColor = loaderColor;
+              if (/^#([0-9a-f]{3}){1,2}$/i.test(loaderColor)) {
+                bgColor = loaderColor + '22'; // añade transparencia solo si es hex
+              }
+              return (
+                <div
+                  ref={sentinelRef}
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    padding: 16,
+                    background: bgColor,
+                    border: `1px dashed ${loaderColor}`,
+                    borderRadius: 8,
+                    margin: 8
+                  }}
+                >
+                  <span style={{ color: loaderColor, fontWeight: 'bold', marginRight: 12, fontSize: 18 }}>
+                    {getTranslation('ui.states.loading', 'Cargando / Loading')}
+                  </span>
+                  {loadingMore && <CircularProgress size={32} sx={{ color: loaderColor }} />}
+                </div>
+              );
+            }
+            return null;
+          })()}
         </Box>
       )}
       {/* Empty state */}
@@ -187,6 +234,8 @@ const MaterialContentWrapper = ({
           />
         </Box>
       )}
+      {/* Render children (solo para desktop o casos especiales) */}
+      {!isMobile && children}
     </Box>
   );
 };
