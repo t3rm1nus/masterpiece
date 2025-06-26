@@ -72,7 +72,7 @@
         "en": "Sira, a young seamstress, becomes involved in espionage during the Spanish Civil War and WWII."
       },
       "image": "/imagenes/series/el_tiempo_entre_costuras.jpg",
-      "subcategoria": "drama",
+      "subcategoria": "historical",
       "temporadas": 1,
       "episodios": 11,
       "trailer": { "es": "https://www.youtube.com/watch?v=_CfVkmaCPbE", "en": "https://www.youtube.com/watch?v=_CfVkmaCPbE" },
@@ -109,7 +109,7 @@
         "en": "Historical series portraying the life of Queen Isabella of Castile, from youth to Spain's unification."
       },
       "image": "/imagenes/series/isabel.jpg",
-      "subcategoria": "drama",
+      "subcategoria": "historical",
       "temporadas": 3,
       "episodios": 39,
       "trailer": { "es": "https://www.youtube.com/watch?v=W4cEc9uasrg", 
@@ -275,7 +275,7 @@
         "en": "Adaptation of the trilogy by Gonzalo Torrente Ballester, set in pre-war Galicia, portraying political and social tensions."
       },
       "image": "/imagenes/series/gozos.jpg",
-      "subcategoria": "drama",
+      "subcategoria": "historical",
       "temporadas": 1,
       "episodios": 13,
       "trailer": { "es": "https://www.youtube.com/watch?v=tjpNpnpK8Og", "en": "https://www.youtube.com/watch?v=tjpNpnpK8Og" },
@@ -508,7 +508,7 @@
         "en": "Spanish historical series following the adventures of a clever and charismatic rogue in the 17th century."
       },
       "image": "/imagenes/series/picaro.jpg",
-      "subcategoria": "drama",
+      "subcategoria": "historical",
       "temporadas": 1,
       "episodios": 6,
       "trailer": {
@@ -2658,7 +2658,7 @@
       "en": "A model and an offbeat detective solve cases while their romantic relationship evolves."
     },
     "image": "/imagenes/series/luz_de_luna.jpg",
-    "subcategoria": "romance",
+    "subcategoria": "comedy",
     "temporadas": 5,
     "episodios": 66,
     "trailer": {
@@ -2759,7 +2759,29 @@
     },
     "masterpiece": false,
     "categoria": "series"
-  }
-  
+  },
+  {
+    "id": 126,
+    "title": {
+      "es": "Samurai Champloo",
+      "en": "Samurai Champloo"
+    },
+    "year": "2004",
+    "director": "Shinichirō Watanabe",
+    "description": {
+      "es": "Serie de anime que mezcla el Japón feudal con elementos de hip hop, siguiendo el viaje de tres personajes en busca del 'samurái que huele a girasoles'.",
+      "en": "Anime series blending feudal Japan with hip hop elements, following three characters on a journey to find the 'samurai who smells of sunflowers'."
+    },
+    "image": "/imagenes/series/samurai_champloo.jpg",
+    "subcategoria": "anime",
+    "temporadas": 1,
+    "episodios": 26,
+    "trailer": {
+      "es": "https://www.youtube.com/watch?v=xWKzbhAUeZE",
+      "en": "https://www.youtube.com/watch?v=Un7P24YU8OE"
+    },
+    "masterpiece": true,
+    "categoria": "series"
+  }  
   ]
 }

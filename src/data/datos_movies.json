@@ -5651,6 +5651,91 @@
         "en": "https://www.youtube.com/watch?v=66JuZ1cb03E"
       },
       "masterpiece": false
+    },
+    {
+      "id": 267,
+      "category": "movies",
+      "subcategory": "animation",
+      "title": {
+        "es": "El castillo en el cielo",
+        "en": "Castle in the Sky"
+      },
+      "description": {
+        "es": "Dos jóvenes huyen de piratas y agentes del gobierno mientras buscan una legendaria ciudad flotante llamada Laputa.",
+        "en": "Two young people flee from pirates and government agents while searching for a legendary floating city called Laputa."
+      },
+      "director": "Hayao Miyazaki",
+      "image": "/imagenes/peliculas/el_castillo_en_el_cielo.jpg",
+      "year": 1986,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=FgWd39ziFe8",
+        "en": "https://www.youtube.com/watch?v=FgWd39ziFe8"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 268,
+      "category": "movies",
+      "subcategory": "animation",
+      "title": {
+        "es": "El castillo ambulante",
+        "en": "Howl's Moving Castle"
+      },
+      "description": {
+        "es": "Sophie, una joven convertida en anciana por una bruja, encuentra refugio en el castillo mágico de un misterioso mago llamado Howl.",
+        "en": "Sophie, a young woman cursed to become old by a witch, finds refuge in the magical castle of a mysterious wizard named Howl."
+      },
+      "director": "Hayao Miyazaki",
+      "image": "/imagenes/peliculas/el_castillo_ambulante.jpg",
+      "year": 2004,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=TioZt2aBZVE",
+        "en": "https://www.youtube.com/watch?v=TioZt2aBZVE"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 269,
+      "category": "movies",
+      "subcategory": "animation",
+      "title": {
+        "es": "Ponyo en el acantilado",
+        "en": "Ponyo"
+      },
+      "description": {
+        "es": "Una mágica criatura marina llamada Ponyo desea convertirse en humana tras conocer a un niño pequeño llamado Sōsuke.",
+        "en": "A magical sea creature named Ponyo longs to become human after meeting a young boy named Sōsuke."
+      },
+      "director": "Hayao Miyazaki",
+      "image": "/imagenes/peliculas/ponyo.jpg",
+      "year": 2008,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=89LbtkHG0c4",
+        "en": "https://www.youtube.com/watch?v=h6XP82TyFWw"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 270,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Érase una vez en Hollywood",
+        "en": "Once Upon a Time in Hollywood"
+      },
+      "description": {
+        "es": "Un actor de televisión y su doble de acción intentan encontrar su lugar en un Hollywood cambiante a finales de los años 60.",
+        "en": "A fading television actor and his stunt double strive to stay relevant in a changing Hollywood at the end of the 1960s."
+      },
+      "director": "Quentin Tarantino",
+      "image": "/imagenes/peliculas/once_upon_a_time_in_hollywood.jpg",
+      "year": 2019,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=J0rFGJV3cYw",
+        "en": "https://www.youtube.com/watch?v=ELeMaP8EPAA"
+      },
+      "masterpiece": false
     }
+    
   ]
 }
