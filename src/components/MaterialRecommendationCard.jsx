@@ -96,9 +96,9 @@ const MaterialRecommendationCard = memo(({
     <UiCard
       className={`mp-card mp-card--material ${className}`}
       style={{
-        maxWidth: isMobile ? '99vw' : 245,
+        maxWidth: isMobile ? '88vw' : 245,
         minWidth: isMobile ? '0' : 200,
-        width: isMobile ? '95vw' : undefined,
+        width: isMobile ? '82vw' : undefined,
         margin: '0 auto 12px auto',
         cursor: 'pointer',
         transition: 'all 0.3s ease',
