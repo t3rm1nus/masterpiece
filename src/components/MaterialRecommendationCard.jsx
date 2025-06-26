@@ -98,9 +98,9 @@ const MaterialRecommendationCard = memo(({
     <UiCard
       className={`mp-card mp-card--material ${className}`}
       style={{
-        maxWidth: 340, // ampliado a 340px
-        minWidth: 220, // asegura que no sean demasiado pequeños
-        margin: '0 auto 20px auto', // antes '0 auto', ahora añade marginBottom 20px
+        maxWidth: 245, // aún más ancho para asegurar 6 por línea
+        minWidth: 200, // aún más ancho
+        margin: '0 auto 12px auto',
         cursor: 'pointer',
         transition: 'all 0.3s ease',
         boxShadow: recommendation.masterpiece ? theme.shadows[4] : theme.shadows[2],
@@ -111,7 +111,7 @@ const MaterialRecommendationCard = memo(({
             ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
             : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
           : getCategoryGradient(recommendation.category),
-        position: 'relative', // necesario para posicionar la estrella
+        position: 'relative',
         ...sx
       }}
       onClick={handleCardClick}

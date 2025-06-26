@@ -246,9 +246,9 @@ const DesktopRecommendationsList = ({
   const getListStyles = () => ({
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: data && data.length < 4 ? 'center' : 'flex-start',
+    justifyContent: data && data.length < 6 ? 'center' : 'flex-start',
     alignItems: 'flex-start',
-    gap: '32px 24px',
+    gap: '20px 12px', // reducido el espacio entre items
     width: '100%',
     marginLeft: 'auto',
     marginRight: 'auto',
