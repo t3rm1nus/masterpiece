@@ -50,9 +50,7 @@ const MaterialRecommendationCard = memo(({
   const { lang, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
   const { goToDetail, processTitle, processDescription } = useAppView();
   const theme = useTheme();
-  // const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
-
-  // if (!isMobile) return null;
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const title = processTitle(recommendation.title || recommendation.name, lang);
   const description = processDescription(recommendation.description, lang);
@@ -98,8 +96,9 @@ const MaterialRecommendationCard = memo(({
     <UiCard
       className={`mp-card mp-card--material ${className}`}
       style={{
-        maxWidth: 245,
-        minWidth: 200,
+        maxWidth: isMobile ? '99vw' : 245,
+        minWidth: isMobile ? '0' : 200,
+        width: isMobile ? '95vw' : undefined,
         margin: '0 auto 12px auto',
         cursor: 'pointer',
         transition: 'all 0.3s ease',
