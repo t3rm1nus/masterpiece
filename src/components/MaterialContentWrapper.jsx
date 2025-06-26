@@ -145,16 +145,12 @@ const MaterialContentWrapper = ({
           }}
         >
           {recommendations.map((recommendation, index) => (
-            <div
+            <MaterialRecommendationCard
               key={recommendation.globalId || `${recommendation.title}-${index}`}
-              className={`recommendation-card${visibleIndexes.includes(index) ? '' : ' entering'}`}
-              style={{ width: '100%' }}
-            >
-              <MaterialRecommendationCard
-                recommendation={recommendation}
-                isHome={isHome}
-              />
-            </div>
+              recommendation={recommendation}
+              isHome={isHome}
+              className={visibleIndexes.includes(index) ? '' : 'entering'}
+            />
           ))}
         </Box>
       )}
