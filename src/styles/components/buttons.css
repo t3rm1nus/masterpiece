@@ -385,6 +385,13 @@
     min-height: 36px;
     font-size: var(--font-size-sm);
   }
+  
+  .category-btn {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--font-size-sm);
+    min-width: 90px;
+    min-height: 32px;
+  }
 }
 
 /* Estilos para botones de idioma de documentales */

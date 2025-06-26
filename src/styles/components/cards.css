@@ -138,11 +138,16 @@
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .recommendation-card {
-    width: 45vw;    min-width: 160px;
-    max-width: 240px;
-    padding: var(--space-sm);
-    position: relative;
-    overflow: visible;
+    width: 40vw;
+    min-width: 140px;
+    max-width: 200px;
+    padding: var(--space-xs);
+  }
+  .recommendation-card h3 {
+    font-size: 1rem;
+  }
+  .recommendation-card p {
+    font-size: 0.92rem;
   }
 }
 
