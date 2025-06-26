@@ -6,6 +6,7 @@ import CategoryBar from './home/CategoryBar';
 import SubcategoryBar from './home/SubcategoryBar';
 import '../styles/components/cards.css';
 import { NoResults } from './SharedComponents';
+import MaterialRecommendationCard from './MaterialRecommendationCard';
 
 /**
  * DesktopRecommendationsList
@@ -201,51 +202,12 @@ const DesktopRecommendationsList = ({
     if (renderItem) return renderItem(rec, index);
     try {
       const normalizedRec = normalizeRecommendation(rec);
-      const title = processMultiLanguageField(normalizedRec.title || normalizedRec.name);
-      const description = processMultiLanguageField(normalizedRec.description);
-      const cardClasses = getCardClasses(normalizedRec);
-      const cardContent = isHome 
-        ? renderDesktopHomeCard(normalizedRec, title, description)
-        : renderDesktopListCard(normalizedRec, title, description);
       return (
-        <div
+        <MaterialRecommendationCard
           key={generateRecommendationKey(normalizedRec, index)}
-          className={cardClasses}
+          recommendation={normalizedRec}
           onClick={() => handleItemClick(normalizedRec)}
-          style={{
-            maxWidth: 260,
-            minWidth: 200,
-            flex: '1 1 220px',
-            boxSizing: 'border-box',
-            margin: 0,
-            cursor: 'pointer',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          {normalizedRec.masterpiece && <span className="masterpiece-badge" title={getTranslation('ui.badges.masterpiece', 'Obra maestra')}>
-            <svg
-              width={badgeConfig.svg.width}
-              height={badgeConfig.svg.height}
-              viewBox={badgeConfig.svg.viewBox}
-              fill={badgeConfig.svg.fill}
-              xmlns={badgeConfig.svg.xmlns}
-            >
-              <circle
-                cx={badgeConfig.circle.cx}
-                cy={badgeConfig.circle.cy}
-                r={badgeConfig.circle.r}
-                fill={badgeConfig.circle.fill}
-              />
-              <path
-                d={badgeConfig.star.d}
-                fill={badgeConfig.star.fill}
-              />
-            </svg>
-          </span>}
-          {cardContent}
-        </div>
+        />
       );
     } catch (error) {
       console.error('[DesktopRecommendationsList] Error rendering item', index + 1, ':', error);
@@ -258,13 +220,7 @@ const DesktopRecommendationsList = ({
   }, [
     renderItem,
     normalizeRecommendation, 
-    processMultiLanguageField, 
-    getCardClasses, 
-    handleItemClick, 
-    badgeConfig,
-    isHome,
-    renderDesktopHomeCard,
-    renderDesktopListCard
+    handleItemClick
   ]);
 
   // Memoización del contenido principal

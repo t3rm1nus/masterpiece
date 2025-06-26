@@ -50,9 +50,9 @@ const MaterialRecommendationCard = memo(({
   const { lang, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
   const { goToDetail, processTitle, processDescription } = useAppView();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  // const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
-  if (!isMobile) return null;
+  // if (!isMobile) return null;
 
   const title = processTitle(recommendation.title || recommendation.name, lang);
   const description = processDescription(recommendation.description, lang);
