@@ -502,7 +502,16 @@ const HomePage = ({
           )}
           {/* SOLO EN MÓVIL: Select y botones especiales debajo del h1 */}
           {isMobile && (
-            <div style={{ width: '100%', maxWidth: 500, margin: '0 auto 12px auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div
+              style={{
+                width: '100%',
+                maxWidth: 500,
+                margin: '0 auto 12px auto',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}
+            >
               <span style={{ width: '100%', maxWidth: 400, display: 'flex', justifyContent: 'center', marginBottom: 12 }}>
                 <MaterialCategorySelect
                   categories={categories}
@@ -591,7 +600,7 @@ const HomePage = ({
       ) : (
         <div
           style={{
-            width: '100%',
+            width: isMobile ? '96%' : '100%',
             display: 'flex',
             justifyContent: 'center',
             // Quitar paddingTop en móvil cuando no hay categoría seleccionada
