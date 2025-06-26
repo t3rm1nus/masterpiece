@@ -472,7 +472,7 @@ const HomePage = ({
           </h1>
           {/* SOLO MÓVIL: Selector de categorías justo debajo del h1 */}
           {isMobile && (
-            <div style={{ width: '100vw', maxWidth: '100vw', margin: '0 auto', marginBottom: 12, marginTop: -8, zIndex: 2, position: 'relative' }}>
+            <div style={{ width: '96vw', maxWidth: '96vw', margin: '0 auto', marginBottom: 12, marginTop: -8, zIndex: 2, position: 'relative', marginLeft: '10px' }}>
               <MaterialCategorySelect
                 categories={categories}
                 selectedCategory={selectedCategory}
@@ -544,13 +544,12 @@ const HomePage = ({
       ) : (
         <div
           style={{
-            width: isMobile ? '100vw' : '100%',
-            maxWidth: isMobile ? '100vw' : undefined,
+            width: isMobile ? '96vw' : '100%',
+            maxWidth: isMobile ? '96vw' : undefined,
             margin: isMobile ? '0 auto' : undefined,
             display: 'flex',
             justifyContent: 'center',
-            // Más espacio arriba solo en móvil
-            ...(isMobile ? { marginTop: 28 } : {}),
+            ...(isMobile ? { marginTop: 28, marginLeft: '10px' } : {}),
             ...(isMobile && (!selectedCategory || selectedCategory === 'all')
               ? { paddingTop: 0 }
               : {})
