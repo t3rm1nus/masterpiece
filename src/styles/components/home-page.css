@@ -306,6 +306,14 @@
     display: block !important;
     pointer-events: auto;
   }
+  .MuiContainer-root {
+    position: relative !important;
+    left: -5px !important;
+  }
+  .mp-ui-layout {
+    position: relative !important;
+    left: -7px !important;
+  }
 }
 
 @media (max-width: 600px) {
