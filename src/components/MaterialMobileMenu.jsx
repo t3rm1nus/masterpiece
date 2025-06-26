@@ -36,6 +36,7 @@ import { useNavigationActions } from '../hooks/useNavigationActions';
 import { useMenuItems } from '../hooks/useMenuItems.jsx';
 import LanguageSelector from './ui/LanguageSelector';
 import SplashDialog from './SplashDialog';
+import MaterialCategorySelect from './MaterialCategorySelect';
 
 /**
  * MaterialMobileMenu: Menú lateral y AppBar para navegación móvil.
@@ -115,7 +116,7 @@ const MaterialMobileMenu = ({
           backgroundColor: isDarkMode ? '#1e1e1e' : '#ffffff',
           color: isDarkMode ? '#ffffff' : '#000000',
           borderBottom: isDarkMode ? '1px solid #333' : '1px solid #e0e0e0',
-          height: '48px',
+          height: 'auto', // Cambiado para permitir crecer
           minHeight: '48px',
           top: '0 !important',
           left: '0 !important',
@@ -130,48 +131,43 @@ const MaterialMobileMenu = ({
         <Toolbar 
           variant="dense"
           sx={{ 
-            justifyContent: 'space-between', 
-            padding: '0 12px',
-            minHeight: '48px !important', // Altura más compacta
-            height: '48px',
-            ...(typeof window !== 'undefined' && window.innerWidth < 900
-              ? {
-                  background: 'linear-gradient(135deg, #fffbe6 60%, #ffe29e 100%)',
-                  boxShadow: '0 2px 12px 0 rgba(255, 200, 80, 0.13), 0 1.5px 0 #ffe29e',
-                  borderRadius: 0,
-                  position: 'relative',
-                  zIndex: 2
-                  // Bordes eliminados
-                }
-              : {})
+            flexDirection: 'row', // Solo la cabecera
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: 0,
+            minHeight: '48px !important',
+            height: 'auto',
           }}>
-          <Typography 
-            variant="h6" 
-            component="div" 
-            sx={{ 
-              fontWeight: 'bold',
-              fontSize: '1.1rem',
-              color: isDarkMode ? '#ffffff' : '#000000',
-              cursor: 'pointer',
-              userSelect: 'none'
-            }}
-            onClick={onSplashOpen}
-          >
-            Masterpiece
-          </Typography>
-          
-          <IconButton
-            edge="end"
-            color="inherit"
-            aria-label="abrir menú"
-            onClick={() => setDrawerOpen(true)}
-            sx={{ 
-              color: isDarkMode ? '#ffffff' : '#0078d4',
-              fontSize: '1.5rem'
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', minHeight: 48, px: 1 }}>
+            <Typography 
+              variant="h6" 
+              component="div" 
+              sx={{ 
+                fontWeight: 'bold',
+                fontSize: '1.1rem',
+                color: isDarkMode ? '#ffffff' : '#000000',
+                cursor: 'pointer',
+                userSelect: 'none',
+                m: 0, p: 0
+              }}
+              onClick={onSplashOpen}
+            >
+              Masterpiece
+            </Typography>
+            <IconButton
+              edge="end"
+              color="inherit"
+              aria-label="abrir menú"
+              onClick={() => setDrawerOpen(true)}
+              sx={{ 
+                color: isDarkMode ? '#ffffff' : '#0078d4',
+                fontSize: '1.5rem',
+                m: 0, p: 0
+              }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Box>
         </Toolbar>
       </AppBar>
       {/* Splash Dialog */}
@@ -200,7 +196,7 @@ const MaterialMobileMenu = ({
           }
         }}
       />
-        <Drawer
+      <Drawer
         key={lang} // Solo key={lang} para forzar desmontaje/montaje al cambiar idioma
         anchor="left"
         open={drawerOpen}
@@ -225,9 +221,7 @@ const MaterialMobileMenu = ({
             <CloseIcon />
           </IconButton>
         </Box>
-        
         <Divider />
-        
         <List sx={{ padding: 0 }}>
           {menuItems.map((item, index) => {
             if (!item.show) return null;

@@ -404,6 +404,17 @@ const HomePage = ({
     root.style.setProperty('--category-animated-gradient', getCategoryAnimatedGradient(selectedCategory));
   }, [selectedCategory]);
 
+  // Callback unificado para cambios de categoría o subcategoría en móvil
+  const handleCategoryOrSubcategoryChange = (category, subcategory) => {
+    if (category !== selectedCategory) {
+      setCategory(category);
+      setActiveSubcategory(null);
+      setActiveLanguage('all');
+    } else if (subcategory !== undefined) {
+      setActiveSubcategory(subcategory);
+    }
+  };
+
   return (
     <UiLayout sx={{ marginTop: 8, width: '100vw', maxWidth: '100vw', px: 0 }}>
       {/* Eliminar controles de cabecera solo en desktop */}
@@ -459,6 +470,20 @@ const HomePage = ({
               : (t?.categories?.[selectedCategory] || selectedCategory)
             }
           </h1>
+          {/* SOLO MÓVIL: Selector de categorías justo debajo del h1 */}
+          {isMobile && (
+            <div style={{ width: '100vw', maxWidth: '100vw', margin: '0 auto', marginBottom: 12, marginTop: -8, zIndex: 2, position: 'relative' }}>
+              <MaterialCategorySelect
+                categories={categories}
+                selectedCategory={selectedCategory}
+                onCategoryChange={handleCategoryOrSubcategoryChange}
+                subcategories={categorySubcategories}
+                activeSubcategory={activeSubcategory}
+                sx={materialCategorySelectSx}
+                {...materialCategorySelectProps}
+              />
+            </div>
+          )}
           {/* SOLO DESKTOP: Menú superior y controles */}
           {!isMobile && (
             <HybridMenu
@@ -519,10 +544,11 @@ const HomePage = ({
       ) : (
         <div
           style={{
-            width: isMobile ? '92%' : '100%',
+            width: isMobile ? '100vw' : '100%',
+            maxWidth: isMobile ? '100vw' : undefined,
+            margin: isMobile ? '0 auto' : undefined,
             display: 'flex',
             justifyContent: 'center',
-            // Quitar paddingTop en móvil cuando no hay categoría seleccionada
             ...(isMobile && (!selectedCategory || selectedCategory === 'all')
               ? { paddingTop: 0 }
               : {})
