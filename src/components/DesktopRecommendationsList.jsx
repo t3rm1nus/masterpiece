@@ -87,6 +87,8 @@ const DesktopRecommendationsList = ({
   showSubcategoryChips, // props avanzados que no deben ir al DOM
   ...rest
 }) => {
+  // LOGS ELIMINADOS: activeLanguage, activePodcastLanguages, activeDocumentaryLanguages, filteredItems
+
   // Filtrar props que no deben ir al DOM
   const domSafeRest = { ...rest };
   delete domSafeRest.showCategorySelect;

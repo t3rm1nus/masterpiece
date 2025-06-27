@@ -107,12 +107,8 @@ const HomePage = ({
     filteredItems,
     toggleSpanishCinema,
     toggleMasterpiece,
-    togglePodcastLanguage,
-    toggleDocumentaryLanguage,
     isSpanishCinemaActive,
     isMasterpieceActive,
-    activePodcastLanguages,
-    activeDocumentaryLanguages,
     title,
     initializeFilteredItems,
     updateFilteredItems,
@@ -127,8 +123,6 @@ const HomePage = ({
     setSpanishCinemaActive,
     setSpanishSeriesActive,
     setMasterpieceActive,
-    setActivePodcastLanguages,
-    setActiveDocumentaryLanguages,
   } = useAppData();
   
   // Efecto para actualizar título cuando cambia el idioma
@@ -144,7 +138,8 @@ const HomePage = ({
   const goToDetail = useAppStore(state => state.goToDetail);
   const goBackFromDetail = useAppStore(state => state.goBackFromDetail);
   const currentView = useAppStore(state => state.currentView);
-
+  const activePodcastDocumentaryLanguage = useAppStore(state => state.activePodcastDocumentaryLanguage);
+  const resetActivePodcastDocumentaryLanguage = useAppStore(state => state.resetActivePodcastDocumentaryLanguage);
   // LOGS DE DEPURACIÓN
   useEffect(() => {
     console.log('[HomePage] currentView:', currentView, 'selectedItem:', selectedItem);
@@ -193,8 +188,6 @@ const HomePage = ({
       setMasterpieceActive(false);
       setSpanishCinemaActive(false);
       setSpanishSeriesActive(false);
-      setActivePodcastLanguages([]);
-      setActiveDocumentaryLanguages([]);
       loadRealData().then(realData => {
         if (mounted) {
           updateWithRealData(realData);
@@ -211,16 +204,12 @@ const HomePage = ({
   useEffect(() => {
     if (allData && Object.keys(allData).length > 0) {
       let filteredData = [];
-      
-      // Si no hay categoría seleccionada (null), mostrar recomendaciones diarias curadas
       if (!selectedCategory || selectedCategory === 'all') {
         filteredData = recommendations;
       } else {
-        // Filtrar elementos basado en la categoría seleccionada (mostrar TODAS de esa categoría)
         filteredData = allData[selectedCategory] || [];
-      }      // Aplicar filtros adicionales solo cuando hay una categoría específica seleccionada
+      }
       if (selectedCategory && selectedCategory !== 'all') {
-        // Filtro de Cine Español (solo para películas)
         if (selectedCategory === 'movies' && isSpanishCinemaActive) {
           filteredData = filteredData.filter(item => {
             // Verificar múltiples propiedades que puedan indicar cine español
@@ -247,41 +236,22 @@ const HomePage = ({
             return isSpanish;
           });
         }
-
-        // Filtro de Masterpiece (para cualquier categoría)
         if (isMasterpieceActive) {
           filteredData = filteredData.filter(item => 
             item.masterpiece === true || 
             item.obra_maestra === true
           );
         }
-
-        // Filtro de idioma para podcasts
-        if (selectedCategory === 'podcast' && activePodcastLanguages.length > 0) {
-          filteredData = filteredData.filter(item => 
-            activePodcastLanguages.includes(item.language) ||
-            activePodcastLanguages.includes(item.idioma)
-          );
-        }
-
-        // Filtro de idioma para documentales
-        if (selectedCategory === 'documentales' && activeDocumentaryLanguages.length > 0) {
-          filteredData = filteredData.filter(item => 
-            activeDocumentaryLanguages.includes(item.language) ||
-            activeDocumentaryLanguages.includes(item.idioma)
-          );
-        }
-
         // Filtro de Series Españolas (solo para series)
         if (selectedCategory === 'series' && isSpanishSeriesActive) {
           filteredData = filteredData.filter(item =>
             (item.tags && item.tags.includes('spanish'))
           );
-        } else if (selectedCategory === 'series') {
-          // console.log('[Filtro Series Españolas] Estado activo:', isSpanishSeriesActive, '(NO FILTRO APLICADO)');
-          // console.log('[Filtro Series Españolas] Series visibles:', filteredData.map(i => ({id: i.id, tags: i.tags})));
         }
-
+        // Filtro de idioma para Podcasts/Documentales
+        if ((selectedCategory === 'podcast' || selectedCategory === 'documentales') && activePodcastDocumentaryLanguage) {
+          filteredData = filteredData.filter(item => item.idioma === activePodcastDocumentaryLanguage);
+        }
         // Filtro de subcategoría (AJUSTE PARA MÓVIL TAMBIÉN)
         if (activeSubcategory && activeSubcategory !== 'all') {
           const normalizedActiveSubcat = normalizeSubcategoryInternal(activeSubcategory);
@@ -297,14 +267,12 @@ const HomePage = ({
           });
         }
       }
-
       // Ordenar alfabéticamente por título (soporta objetos multiidioma)
       filteredData = filteredData.slice().sort((a, b) => {
         const titleA = typeof a.title === 'object' ? (a.title.es || a.title.en || Object.values(a.title)[0] || '') : (a.title || '');
         const titleB = typeof b.title === 'object' ? (b.title.es || b.title.en || Object.values(b.title)[0] || '') : (b.title || '');
         return titleA.localeCompare(titleB, 'es', { sensitivity: 'base' });
       });
-
       updateFilteredItems(filteredData);
     } 
   }, [
@@ -316,19 +284,17 @@ const HomePage = ({
     isSpanishCinemaActive,
     isSpanishSeriesActive, // <-- añadido para que el filtro reaccione al cambio
     isMasterpieceActive,
-    activePodcastLanguages,
-    activeDocumentaryLanguages,
+    activePodcastDocumentaryLanguage,
     updateFilteredItems
-  ]);  const handleCategoryClick = (category) => {
+  ]);
+  const handleCategoryClick = (category) => {
     setCategory(category);
     setActiveSubcategory(null);
     setActiveLanguage('all');
-    // Resetear filtros especiales al cambiar de categoría principal
     setMasterpieceActive(false);
     setSpanishCinemaActive(false);
     setSpanishSeriesActive(false);
-    setActivePodcastLanguages([]);
-    setActiveDocumentaryLanguages([]);
+    resetActivePodcastDocumentaryLanguage(); // Reset filtro idioma al cambiar categoría
   };// Manejar toggle de cine español
   const handleSpanishCinemaToggle = () => {
     toggleSpanishCinema();
@@ -402,7 +368,7 @@ const HomePage = ({
   // Resetear página al cambiar de categoría, subcategoría o filtros relevantes
   useEffect(() => {
     if (isMobile) setMobilePage(1);
-  }, [selectedCategory, activeSubcategory, isSpanishCinemaActive, isMasterpieceActive, activePodcastLanguages, activeDocumentaryLanguages, isMobile]);
+  }, [selectedCategory, activeSubcategory, isSpanishCinemaActive, isMasterpieceActive, isMobile]);
 
   // Calcular los ítems a mostrar SOLO en móvil (paginados)
   const paginatedItems = React.useMemo(() => {
@@ -558,10 +524,6 @@ const HomePage = ({
                   handleSpanishCinemaToggle={handleSpanishCinemaToggle}
                   isMasterpieceActive={isMasterpieceActive}
                   handleMasterpieceToggle={handleMasterpieceToggle}
-                  activePodcastLanguages={activePodcastLanguages}
-                  togglePodcastLanguage={togglePodcastLanguage}
-                  activeDocumentaryLanguages={activeDocumentaryLanguages}
-                  toggleDocumentaryLanguage={toggleDocumentaryLanguage}
                   lang={lang}
                   isRecommendedActive={isRecommendedActive}
                   isSpanishSeriesActive={isSpanishSeriesActive}
@@ -611,10 +573,6 @@ const HomePage = ({
                 handleSpanishCinemaToggle={handleSpanishCinemaToggle}
                 isMasterpieceActive={isMasterpieceActive}
                 handleMasterpieceToggle={handleMasterpieceToggle}
-                activePodcastLanguages={activePodcastLanguages}
-                togglePodcastLanguage={togglePodcastLanguage}
-                activeDocumentaryLanguages={activeDocumentaryLanguages}
-                toggleDocumentaryLanguage={toggleDocumentaryLanguage}
                 lang={lang}
                 isRecommendedActive={isRecommendedActive}
                 isSpanishSeriesActive={isSpanishSeriesActive}

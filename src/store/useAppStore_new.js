@@ -90,6 +90,15 @@ const useAppStore = create((set, get) => ({
   isMasterpieceActive: false,
   toggleMasterpiece: () => set(state => ({ isMasterpieceActive: !state.isMasterpieceActive })),
   activePodcastLanguages: [],
+  setActivePodcastLanguages: (langs) => {
+    let arr = Array.isArray(langs) ? langs.slice(0, 1) : [];
+    set({ activePodcastLanguages: arr });
+  },
+  activeDocumentaryLanguages: [],
+  setActiveDocumentaryLanguages: (langs) => {
+    let arr = Array.isArray(langs) ? langs.slice(0, 1) : [];
+    set({ activeDocumentaryLanguages: arr });
+  },
   togglePodcastLanguage: (lang) => set(state => {
     let newLangs;
     // Si el idioma ya está activo, desactívalo (deja vacío)
@@ -100,7 +109,6 @@ const useAppStore = create((set, get) => ({
     }
     return { activePodcastLanguages: newLangs };
   }),
-  activeDocumentaryLanguages: [],
   toggleDocumentaryLanguage: (lang) => set(state => {
     let newLangs;
     if (state.activeDocumentaryLanguages.includes(lang)) {
