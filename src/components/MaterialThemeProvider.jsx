@@ -9,7 +9,6 @@ const MaterialThemeProvider = ({ children }) => {
   // Aplicar el tema al HTML para CSS customizado
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', currentTheme);
-    console.log('Theme applied to HTML:', currentTheme);
   }, [currentTheme]);
   
   const theme = createTheme({    palette: {

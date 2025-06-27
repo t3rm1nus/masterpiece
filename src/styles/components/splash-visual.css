@@ -18,7 +18,7 @@
   background-size: 400% 400%;
   filter: blur(60px) brightness(1.2) saturate(1.3);
   opacity: 0.85;
-  animation: splashGradientMove 12s ease-in-out infinite alternate;
+  /* animation: splashGradientMove 12s ease-in-out infinite alternate; */
 }
 
 @keyframes splashGradientMove {
@@ -39,7 +39,7 @@
   position: absolute;
   border-radius: 50%;
   opacity: 0.5;
-  animation: splashParticleMove 8s linear infinite;
+  /* animation: splashParticleMove 8s linear infinite; */
   pointer-events: none;
 }
 
@@ -62,7 +62,7 @@
   filter: blur(40px);
   opacity: 0.7;
   z-index: 1;
-  animation: splashGlowPulse 4s ease-in-out infinite alternate;
+  /* animation: splashGlowPulse 4s ease-in-out infinite alternate; */
 }
 
 @keyframes splashGlowPulse {
@@ -71,10 +71,10 @@
 }
 
 .splash-animate-in {
-  animation: splashIn 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  /* animation: splashIn 1.1s cubic-bezier(0.23, 1, 0.32, 1) both; */
 }
 .splash-animate-out {
-  animation: splashOut 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
+  /* animation: splashOut 0.7s cubic-bezier(0.23, 1, 0.32, 1) both; */
 }
 
 @keyframes splashIn {

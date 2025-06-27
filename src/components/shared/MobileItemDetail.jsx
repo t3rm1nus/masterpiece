@@ -1,9 +1,10 @@
 import React from 'react';
 import { CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button } from '@mui/material';
-import { ArrowBack as ArrowBackIcon, Category as CategoryIcon } from '@mui/icons-material';
-import { getCategoryColor } from '../../utils/categoryUtils';
+import { ArrowBack as ArrowBackIcon, Category as CategoryIcon, Extension as ExtensionIcon, Movie as MovieIcon, Book as BookIcon, MusicNote as MusicNoteIcon, SportsEsports as SportsEsportsIcon, Mic as MicIcon, Tv as TvIcon, AutoStories as ComicIcon } from '@mui/icons-material';
+import { getCategoryColor, getCategoryGradient } from '../../utils/categoryPalette';
 import { ensureString } from '../../utils/stringUtils';
 import UiCard from '../ui/UiCard';
+import { MobileActionButtons } from './ItemActionButtons';
 
 /**
  * MobileItemDetail
@@ -69,39 +70,36 @@ const MobileItemDetail = ({
   delete domSafeProps.showSubcategoryChips;
   if (!selectedItem) return null;
 
-  // Añadir función para obtener el degradado de fondo por categoría
-  const getCategoryGradient = (category, theme) => {
+  // Helper para iconos por categoría
+  const getCategoryIcon = (category) => {
     switch (category) {
-      case 'movies':
-      case 'peliculas':
-        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
-      case 'videogames':
-      case 'videojuegos':
-        return 'linear-gradient(135deg, #f8f3fa 0%, #e1bee7 100%)';
-      case 'books':
-      case 'libros':
-        return 'linear-gradient(135deg, #f4faf4 0%, #c8e6c9 100%)';
-      case 'music':
-      case 'musica':
-        return 'linear-gradient(135deg, #f2fbfc 0%, #b2ebf2 100%)';
-      case 'podcast':
-      case 'podcasts':
-        return 'linear-gradient(135deg, #f7fbf2 0%, #dcedc8 100%)';
       case 'boardgames':
-      case 'juegos de mesa':
-        return 'linear-gradient(135deg, #fdf4f8 0%, #f8bbd0 100%)';
+        return <ExtensionIcon />;
+      case 'movies':
+        return <MovieIcon />;
+      case 'books':
+        return <BookIcon />;
+      case 'music':
+        return <MusicNoteIcon />;
+      case 'videogames':
+        return <SportsEsportsIcon />;
+      case 'podcasts':
+        return <MicIcon />;
+      case 'series':
+        return <TvIcon />;
       case 'comics':
-        return 'linear-gradient(135deg, #fff8f0 0%, #ffe0b2 100%)';
-      case 'documentales':
-      case 'documentaries':
-        return 'linear-gradient(135deg, #fdeaea 0%, #e57373 100%)';
+        return <ComicIcon />;
       default:
-        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
+        return <CategoryIcon />;
     }
   };
 
   return (
-    <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px', ...sx }} className={className} style={style} {...domSafeProps}>
+    <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px', ...sx }} className={className} style={{
+      background: '#fff',
+      '--category-color': getCategoryColor(selectedItem.category),
+      ...style
+    }} {...domSafeProps}>
       {/* Botón de volver flotante */}
       {showSections.backButton !== false && (onBack || goBackFromDetail) && (
         <Fab
@@ -132,11 +130,7 @@ const MobileItemDetail = ({
           overflow: 'hidden',
           boxShadow: theme?.shadows?.[8],
           border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
-          background: selectedItem.masterpiece
-            ? (theme?.palette?.mode === 'dark' 
-              ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
-              : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
-            : getCategoryGradient(selectedItem.category, theme),
+          background: getCategoryGradient(selectedItem.category),
         }}
       >
         {/* Header custom */}
@@ -176,18 +170,29 @@ const MobileItemDetail = ({
             </Typography>
           )}
           {/* Chips de categoría y subcategoría */}
-          {showSections.category !== false && selectedItem.category !== 'boardgames' && selectedItem.category !== 'videogames' && (
+          {showSections.category !== false && (
             renderCategory
               ? renderCategory(selectedItem)
-              : <Stack direction="row" spacing={1} justifyContent="center" sx={{ marginBottom: '16px' }}>
+              : <Stack direction="row" spacing={1} justifyContent="center" sx={{ marginBottom: '16px' }} style={{
+                  '--category-color': getCategoryColor(selectedItem.category, 'strong')
+                }}>
                   <Chip
-                    icon={<CategoryIcon />}
+                    icon={getCategoryIcon(selectedItem.category)}
                     label={getCategoryTranslation(selectedItem.category)}
+                    className="category-chip"
                     sx={{
-                      backgroundColor: getCategoryColor(selectedItem.category, theme),
-                      color: 'white',
-                      fontWeight: 'bold',
-                      '& .MuiChip-icon': { color: 'white' }
+                      backgroundColor: selectedItem.category === 'boardgames' ? 'transparent' : getCategoryColor(selectedItem.category, 'strong'),
+                      color: selectedItem.category === 'boardgames' ? getCategoryColor(selectedItem.category, 'strong') : 'white',
+                      borderColor: selectedItem.category === 'boardgames' ? getCategoryColor(selectedItem.category, 'strong') : 'transparent',
+                      border: selectedItem.category === 'boardgames' ? '1.5px solid' : 'none',
+                      fontSize: '0.7rem',
+                      fontWeight: 600,
+                      letterSpacing: 0.2,
+                      alignSelf: 'flex-start',
+                      boxShadow: selectedItem.category === 'boardgames' ? undefined : '0 0 0 2px rgba(0,0,0,0.04)',
+                      '& .MuiChip-icon': {
+                        color: selectedItem.category === 'boardgames' ? '#fff' : 'white',
+                      }
                     }}
                   />
                   {selectedItem.subcategory && (renderSubcategory
@@ -195,10 +200,16 @@ const MobileItemDetail = ({
                     : <Chip
                         label={getSubcategoryTranslation(selectedItem.subcategory, selectedItem.category)}
                         variant="outlined"
+                        className="subcategory-chip"
                         sx={{
-                          borderColor: getCategoryColor(selectedItem.category, theme),
-                          color: getCategoryColor(selectedItem.category, theme),
-                          fontWeight: 'bold'
+                          fontSize: '0.68rem',
+                          borderColor: getCategoryColor(selectedItem.category, 'strong'),
+                          color: '#666',
+                          alignSelf: 'flex-start',
+                          marginTop: '0px',
+                          borderWidth: 2,
+                          borderStyle: 'solid',
+                          fontWeight: 500
                         }}
                       />
                   )}
@@ -220,7 +231,9 @@ const MobileItemDetail = ({
           {/* Botones de acción */}
           {showSections.actions !== false && (renderActions
             ? renderActions(selectedItem)
-            : renderMobileActionButtons && renderMobileActionButtons(selectedItem)
+            : renderMobileActionButtons
+              ? renderMobileActionButtons(selectedItem)
+              : <MobileActionButtons selectedItem={selectedItem} lang={lang} t={t} />
           )}
           {/* Footer custom */}
           {showSections.footer !== false && renderFooter && renderFooter(selectedItem)}

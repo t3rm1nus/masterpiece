@@ -13,9 +13,9 @@ export const categoryPalette = {
     gradient: 'linear-gradient(135deg, #FFE5E5 0%, #FFB3B3 100%)'
   },
   books: {
-    color: '#FFF9B3', // Amarillo pastel
-    strong: '#FFF176',
-    gradient: 'linear-gradient(135deg, #FFFFE5 0%, #FFF9B3 100%)'
+    color: '#FFF176', // Amarillo oscuro y legible
+    strong: '#FFD600', // Amarillo aún más oscuro para contraste
+    gradient: 'linear-gradient(135deg, #FFFDE7 0%, #FFF176 100%)'
   },
   music: {
     color: '#B3FFB3', // Verde pastel

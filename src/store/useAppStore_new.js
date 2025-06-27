@@ -44,7 +44,6 @@ const useAppStore = create((set, get) => ({
 
   // Nueva función para generar nuevas recomendaciones
   generateNewRecommendations: () => {
-    console.log('Generando nuevas recomendaciones...');
     const mockRecommendations = [
       { id: Date.now() + 1, title: 'Blade Runner 2049', category: 'movies', description: 'Ciencia ficción épica', image: '/favicon.png' },
       { id: Date.now() + 2, title: 'El Hobbit', category: 'books', description: 'Fantasía de Tolkien', image: '/favicon.png' },
@@ -85,9 +84,40 @@ const useAppStore = create((set, get) => ({
   isMasterpieceActive: false,
   toggleMasterpiece: () => set(state => ({ isMasterpieceActive: !state.isMasterpieceActive })),
   activePodcastLanguages: [],
-  togglePodcastLanguage: (lang) => set({ activePodcastLanguages: [lang] }),
+  togglePodcastLanguage: (lang) => set(state => {
+    let newLangs;
+    // Si el idioma ya está activo, desactívalo (deja vacío)
+    if (state.activePodcastLanguages.length === 1 && state.activePodcastLanguages[0] === lang) {
+      newLangs = [];
+    } else {
+      newLangs = [lang];
+    }
+    return { activePodcastLanguages: newLangs };
+  }),
   activeDocumentaryLanguages: [],
-  toggleDocumentaryLanguage: (lang) => set({ activeDocumentaryLanguages: [lang] }),
+  toggleDocumentaryLanguage: (lang) => set(state => {
+    let newLangs;
+    if (state.activeDocumentaryLanguages.includes(lang)) {
+      newLangs = [];
+    } else {
+      newLangs = [lang];
+    }
+    // Filtrar inmediatamente tras cambiar idioma
+    const selectedCategory = get().selectedCategory;
+    let filteredData = get().allData[selectedCategory] || [];
+    if (selectedCategory === 'documentales') {
+      if (newLangs.length === 0) {
+        filteredData = [];
+      } else {
+        filteredData = filteredData.filter(item =>
+          newLangs.includes(item.language) ||
+          newLangs.includes(item.idioma)
+        );
+      }
+    }
+    set({ filteredItems: filteredData });
+    return { activeDocumentaryLanguages: newLangs };
+  }),
   activeLanguage: 'all',
   setActiveLanguage: (lang) => set({ activeLanguage: lang }),
   allData: {},
@@ -109,29 +139,23 @@ const useAppStore = create((set, get) => ({
 
   // Función de inicialización con datos realistas
   initializeData: () => {
-    console.log('Inicializando datos...');
     // Leer subcategorías únicas de series desde el JSON real
     let seriesSubcats = [];
     if (seriesData && Array.isArray(seriesData.series)) {
       const subcatSet = new Set();
       seriesData.series.forEach((serie, idx) => {
-        console.log('[useAppStore] Serie', idx, '->', serie.title, '| subcategoria:', serie.subcategoria, '| categoria:', serie.categoria);
         if (serie.subcategoria && typeof serie.subcategoria === 'string') {
           // Permitir múltiples subcategorías separadas por coma
           serie.subcategoria.split(',').forEach(sub => {
             const cleanSub = sub.trim().toLowerCase();
             if (cleanSub) {
               subcatSet.add(cleanSub);
-              console.log('[useAppStore] Añadiendo subcategoría:', cleanSub, 'de serie:', serie.title);
             }
           });
         }
       });
       seriesSubcats = Array.from(subcatSet).map(sub => ({ sub, label: sub }));
-      console.log('[useAppStore] Subcategorías series generadas (final):', seriesSubcats);
-    } else {
-      console.log('[useAppStore] No se encontró seriesData o no es array:', seriesData);
-    }
+    } 
     const categories = [
       { id: 'movies', name: 'Películas', subcategories: [] },
       { id: 'series', name: 'Series', subcategories: seriesSubcats },
@@ -257,9 +281,7 @@ const useAppStore = create((set, get) => ({
       selectedCategory: 'all',
       isDataInitialized: true 
     });
-    console.log('[useAppStore] Categorías tras set:', categories);
     const catSeries = categories.find(cat => cat.id === 'series');
-    console.log('[useAppStore] Categoría series tras set:', catSeries);
   },
 
   // Resto de funciones
@@ -274,9 +296,7 @@ const useAppStore = create((set, get) => ({
   getSubcategoriesForCategory: (categoryId) => {
     const categories = get().categories;
     const category = categories.find(cat => cat.id === categoryId);
-    console.log('[useAppStore] getSubcategoriesForCategory:', categoryId, '| category:', category, '| subcategories:', category?.subcategories);
     if (categoryId === 'series') {
-      console.log('[useAppStore] getSubcategoriesForCategory (series) - subcategories:', category?.subcategories);
     }
     return category?.subcategories || [];
   },
@@ -484,26 +504,3 @@ export const useAppLanguage = () => {
 };
 
 export default useAppStore;
-
-// Filtrado por idioma para podcast
-if (selectedCategory === 'podcast') {
-  if (activePodcastLanguages.length === 0) {
-    filteredData = [];
-  } else {
-    filteredData = filteredData.filter(item =>
-      activePodcastLanguages.includes(item.language) ||
-      activePodcastLanguages.includes(item.idioma)
-    );
-  }
-}
-// Filtrado por idioma para documentales
-if (selectedCategory === 'documentales') {
-  if (activeDocumentaryLanguages.length === 0) {
-    filteredData = [];
-  } else {
-    filteredData = filteredData.filter(item =>
-      activeDocumentaryLanguages.includes(item.language) ||
-      activeDocumentaryLanguages.includes(item.idioma)
-    );
-  }
-}

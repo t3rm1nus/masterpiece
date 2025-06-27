@@ -25,7 +25,6 @@ export function LanguageProvider({ children }) {
   const [translations, setTranslations] = useState({});  // Cargar traducciones al inicio
   useEffect(() => {
     if (textsData && textsData[language]) {
-      console.log('Cargando traducciones para:', language, textsData[language]);
       setTranslations(textsData[language]);
       // Actualizar el store con las traducciones completas
       updateStoreTranslations(textsData);

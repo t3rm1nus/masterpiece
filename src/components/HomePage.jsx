@@ -25,7 +25,7 @@ import MaterialMobileMenu from './MaterialMobileMenu';
 import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 import '../styles/components/animations.css';
 import MaterialContentWrapper from './MaterialContentWrapper';
-import useAppStore from '../store/useAppStore'; // <-- Importa el hook Zustand directo
+import useAppStore from '../store/useAppStore_new'; // <-- Usar solo el store NUEVO
 
 // Hook para detectar si es móvil SOLO por ancho de pantalla (robusto y compatible móvil)
 function useIsMobile() {
@@ -272,8 +272,8 @@ const HomePage = ({
             (item.tags && item.tags.includes('spanish'))
           );
         } else if (selectedCategory === 'series') {
-          console.log('[Filtro Series Españolas] Estado activo:', isSpanishSeriesActive, '(NO FILTRO APLICADO)');
-          console.log('[Filtro Series Españolas] Series visibles:', filteredData.map(i => ({id: i.id, tags: i.tags})));
+          // console.log('[Filtro Series Españolas] Estado activo:', isSpanishSeriesActive, '(NO FILTRO APLICADO)');
+          // console.log('[Filtro Series Españolas] Series visibles:', filteredData.map(i => ({id: i.id, tags: i.tags})));
         }
 
         // Filtro de subcategoría (AJUSTE PARA MÓVIL TAMBIÉN)

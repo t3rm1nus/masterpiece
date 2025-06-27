@@ -13,15 +13,31 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
       <Box key="documental" sx={{ textAlign: 'center', marginBottom: '16px' }}>
         <UiButton
           variant="contained"
+          color="primary"
           href={selectedItem.link}
           target="_blank"
           rel="noopener noreferrer"
           startIcon={<PlayArrowIcon />}
           sx={{
-            backgroundColor: getCategoryColor(selectedItem.category),
+            fontWeight: 700,
+            fontSize: { xs: '0.95rem', md: '1.05rem' },
+            minWidth: 140,
+            maxWidth: 220,
+            width: '100%',
+            py: '8px',
+            borderRadius: '8px',
+            boxShadow: 2,
+            mx: 'auto',
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+            backgroundColor: theme?.palette?.primary?.main,
+            color: theme?.palette?.primary?.contrastText,
             '&:hover': {
-              backgroundColor: getCategoryColor(selectedItem.category),
-              opacity: 0.8
+              backgroundColor: theme?.palette?.primary?.dark,
+              color: theme?.palette?.primary?.contrastText,
+              opacity: 0.9
             }
           }}
         >
@@ -158,6 +174,30 @@ export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHo
           rel="noopener noreferrer"
         >
           {t.watch_trailer || t?.ui?.actions?.watchTrailer || (lang === 'en' ? 'Watch Trailer' : 'Ver Tráiler')}
+        </UiButton>
+      </div>
+    );
+  }
+  if (selectedItem.category === 'podcast' && selectedItem.link) {
+    buttons.push(
+      <div key="spotify" className="item-detail-trailer">
+        <UiButton
+          variant="contained"
+          href={selectedItem.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            backgroundColor: '#1DB954',
+            '&:hover': {
+              backgroundColor: '#1ed760'
+            },
+            mt: 2,
+            fontWeight: 700,
+            fontSize: { xs: '1rem', md: '1.1rem' },
+            minWidth: 180
+          }}
+        >
+          Escuchar en Spotify
         </UiButton>
       </div>
     );

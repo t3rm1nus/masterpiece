@@ -1,7 +1,6 @@
 import React from 'react';
 import UiButton from '../ui/UiButton';
-import { getCategoryColor } from '../../utils/categoryUtils';
-import { ensureString } from '../../utils/stringUtils';
+import { getCategoryColor, getCategoryGradient } from '../../utils/categoryPalette';
 
 /**
  * DesktopItemDetail
@@ -59,9 +58,16 @@ const DesktopItemDetail = ({
 }) => {
   if (!selectedItem) return null;
   return (
-    <div className={`item-detail-page desktop-only ${className}`} style={style} {...props}>
+    <div className={`item-detail-page desktop-only ${className}`} style={{
+      ...style,
+      background: getCategoryGradient(selectedItem.category)
+    }} {...props}>
       <div className="item-detail-container" style={sx}>
-        <div className={`item-detail-content ${selectedItem.masterpiece ? 'masterpiece-item' : 'normal-item'} ${selectedItem.category}`}> 
+        <div className={`item-detail-content ${selectedItem.masterpiece ? 'masterpiece-item' : 'normal-item'} ${selectedItem.category}`}
+          style={{
+            background: '#fff',
+            '--category-color': getCategoryColor(selectedItem.category),
+          }}>
           {/* Botón de volver (opcional) */}
           {showSections.backButton !== false && onBack && (
             <UiButton onClick={onBack} variant="outlined" color="primary" sx={{ mb: 2 }}>
@@ -92,10 +98,12 @@ const DesktopItemDetail = ({
             }}>{title}</h2>
           )}
           {/* Categoría y subcategoría */}
-          {showSections.category !== false && selectedItem.category !== 'boardgames' && selectedItem.category !== 'videogames' && (
+          {showSections.category !== false && (
             renderCategory
               ? renderCategory(selectedItem)
-              : <div className="item-detail-category">
+              : <div className="item-detail-category" style={{
+                  '--category-color': getCategoryColor(selectedItem.category)
+                }}>
                   <span className="category-name">
                     {getCategoryTranslation(selectedItem.category)}
                   </span>
