@@ -32,6 +32,10 @@
   margin-top: 30px !important;
 }
 
+.home-container h1.home-mobile-title {
+    margin-top: 10px !important;
+}
+
 /* === COFFEE SECTION === */
 .coffee-section {
   max-width: 800px;
@@ -178,7 +182,8 @@
   }
   
   .coffee-section {
-    margin: 2rem auto 1rem auto;
+    margin-top: 0 !important;
+    margin-bottom: 1rem;
     padding: 1.5rem;
   }
   
@@ -206,6 +211,10 @@
   
   .special-buttons-container {
     gap: 0.3rem;
+  }
+  
+  .css-1leq974 {
+    padding: 0 5px 0 0 !important;
   }
 }
 
@@ -321,6 +330,7 @@
   .mp-ui-layout {
     position: relative !important;
     left: -12px !important;
+    border-top: 20px solid #fff !important;
   }
 }
 

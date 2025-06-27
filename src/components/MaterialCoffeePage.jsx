@@ -58,7 +58,7 @@ const MaterialCoffeePage = () => {
       maxWidth="md" 
       sx={{ 
         padding: { xs: '16px', sm: '24px' }, // Responsivo: menos padding en móvil
-        paddingTop: { xs: '80px', sm: '100px', md: '120px' }, // Más espacio arriba para evitar que se superponga con el menú
+        paddingTop: { xs: '10px', sm: '100px', md: '120px' }, // <-- paddingTop 10px en móvil
         paddingBottom: '40px',
         backgroundColor: '#fafafa', // Fondo gris muy claro como en las imágenes
         minHeight: '100vh',
