@@ -120,6 +120,11 @@
   margin-bottom: 1.5rem;
 }
 
+/* Espacio superior para los botones especiales en móviles */
+  .special-buttons-container {
+    margin-top: 20px !important;
+  }
+
 /* === LOADING CONTAINER === */
 .loading-container {
   display: flex;
