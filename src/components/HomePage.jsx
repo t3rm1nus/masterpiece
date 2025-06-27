@@ -56,13 +56,17 @@ const HomePage = ({
   categoryBarSx,
   subcategoryBarSx,
   materialCategorySelectSx,
+  splashAudio,
+  splashOpen,
+  onSplashOpen,
+  onSplashClose,
+  audioRef,
   ...rest
 } = {}) => {
   const { lang, t, getTranslation } = useLanguage();
   // Hook para sincronizar títulos automáticamente
   useTitleSync();
-  const [splashOpen, setSplashOpen] = useState(false);
-  const audioRef = useRef(null);
+  const [splashOpenLocal, setSplashOpen] = useState(false);
   // Audios disponibles para el splash
   const splashAudios = [
     "/sonidos/samurai.mp3",
@@ -74,7 +78,7 @@ const HomePage = ({
   ];
   // Estado para controlar los audios pendientes (no repetir hasta que suenen todos)
   const [pendingAudios, setPendingAudios] = useState([...splashAudios]);
-  const [splashAudio, setSplashAudio] = useState(splashAudios[0]);
+  const [splashAudioLocal, setSplashAudio] = useState(splashAudios[0]);
   const handleSplashOpen = () => {
     let audiosToUse = pendingAudios.length > 0 ? pendingAudios : [...splashAudios];
     // Elegir audio aleatorio de los pendientes
@@ -537,10 +541,10 @@ const HomePage = ({
           {/* SOLO DESKTOP: Menú superior y controles */}
           {!isMobile && (
             <HybridMenu
-              onSplashOpen={handleSplashOpen}
+              onSplashOpen={onSplashOpen}
               splashAudio={splashAudio}
               splashOpen={splashOpen}
-              onSplashClose={handleSplashClose}
+              onSplashClose={onSplashClose}
               audioRef={audioRef}
             />
           )}
@@ -640,15 +644,7 @@ const HomePage = ({
         </div>
       )}
       {/* SOLO EN MÓVIL: Menú superior centralizado para splash/audio */}
-      {isMobile && (
-        <MaterialMobileMenu
-          onSplashOpen={handleSplashOpen}
-          splashAudio={splashAudio}
-          splashOpen={splashOpen}
-          onSplashClose={handleSplashClose}
-          audioRef={audioRef}
-        />
-      )}
+      {/* MaterialMobileMenu eliminado de aquí; ahora se renderiza globalmente en AppContent.jsx */}
     </UiLayout>
   );
 };

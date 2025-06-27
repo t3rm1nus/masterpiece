@@ -152,7 +152,20 @@ const HybridMenu = ({
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   
   if (isMobile) {
-    return <MaterialMobileMenu key={lang} renderMenuItem={renderMenuItem} menuItems={menuItems} onMenuOpen={onMenuOpen} onMenuClose={onMenuClose} sx={sx} />;
+    // Pasar los props de splash también en móvil
+    return <MaterialMobileMenu 
+      key={lang} 
+      renderMenuItem={renderMenuItem} 
+      menuItems={menuItems} 
+      onMenuOpen={onMenuOpen} 
+      onMenuClose={onMenuClose} 
+      sx={sx}
+      onSplashOpen={onSplashOpen}
+      splashAudio={splashAudio}
+      splashOpen={splashOpen}
+      onSplashClose={onSplashClose}
+      audioRef={audioRef}
+    />;
   } else {
     return <DesktopMenu renderMenuItem={renderMenuItem} menuItems={menuItems} sx={sx} onSplashOpen={onSplashOpen} splashAudio={splashAudio} splashOpen={splashOpen} onSplashClose={onSplashClose} audioRef={audioRef} />;
   }

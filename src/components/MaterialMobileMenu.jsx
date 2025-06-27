@@ -1,3 +1,4 @@
+console.log('[MaterialMobileMenu.jsx] Loaded from src/components/MaterialMobileMenu.jsx');
 import React, { useState, useEffect } from 'react';
 import { 
   AppBar, 
@@ -103,12 +104,16 @@ const MaterialMobileMenu = ({
   const fabTop = (currentView === 'coffee' || currentView === 'howToDownload') ? 63 : 16;
 
   // Solo renderizar si estamos en móvil
+  // (El AppBar debe mostrarse siempre en móvil, independientemente de la vista)
   if (!isMobile) {
     return null;
   }
 
+  console.log('[MaterialMobileMenu] render', { splashOpen, splashAudio, onSplashOpen, onSplashClose });
+
   return (
     <>
+      {/* AppBar siempre visible en móvil para acceso al splash */}
       <AppBar 
         position="fixed" 
         elevation={1}
@@ -116,7 +121,7 @@ const MaterialMobileMenu = ({
           backgroundColor: isDarkMode ? '#1e1e1e' : '#ffffff',
           color: isDarkMode ? '#ffffff' : '#000000',
           borderBottom: isDarkMode ? '1px solid #333' : '1px solid #e0e0e0',
-          height: 'auto', // Cambiado para permitir crecer
+          height: 'auto',
           minHeight: '48px',
           top: '0 !important',
           left: '0 !important',
@@ -131,7 +136,7 @@ const MaterialMobileMenu = ({
         <Toolbar 
           variant="dense"
           sx={{ 
-            flexDirection: 'row', // Solo la cabecera
+            flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-between',
             padding: 0,
@@ -150,7 +155,10 @@ const MaterialMobileMenu = ({
                 userSelect: 'none',
                 m: 0, p: 0
               }}
-              onClick={onSplashOpen}
+              onClick={() => {
+                console.log('[MaterialMobileMenu] Título Masterpiece click', { onSplashOpen });
+                onSplashOpen && onSplashOpen();
+              }}
             >
               Masterpiece
             </Typography>
