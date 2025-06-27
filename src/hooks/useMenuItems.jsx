@@ -2,7 +2,7 @@
 import { useLanguage } from '../LanguageContext';
 import { useAppView, useAppData } from '../store/useAppStore';
 import { useCallback } from 'react';
-import { Home as HomeIcon, ArrowBack as ArrowBackIcon, Coffee as CoffeeIcon } from '@mui/icons-material';
+import { Home as HomeIcon, Coffee as CoffeeIcon } from '@mui/icons-material';
 import React from 'react';
 
 export function useMenuItems(handleSplashOpen) {
@@ -53,12 +53,6 @@ export function useMenuItems(handleSplashOpen) {
         handleNewRecommendations();
       },
       show: true
-    },
-    {
-      label: getTranslation('ui.navigation.back'),
-      icon: <ArrowBackIcon />,
-      action: handleGoBack,
-      show: showBackButton
     },
     {
       label: getTranslation('ui.navigation.buy_me_coffee'),

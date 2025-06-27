@@ -119,7 +119,9 @@ const DesktopItemDetail = ({
           {showSections.description !== false && (
             renderDescription
               ? renderDescription(selectedItem)
-              : <p className={`item-detail-description ${selectedItem.category === 'boardgames' ? 'boardgame-description' : ''}`}>{description}</p>
+              : <p className={`item-detail-description ${selectedItem.category === 'boardgames' ? 'boardgame-description' : ''}`}
+                  style={{ marginTop: 20, marginBottom: 20 }}
+                >{description}</p>
           )}
           {/* Botones de acción */}
           {showSections.actions !== false && (renderActions
