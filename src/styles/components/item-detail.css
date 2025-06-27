@@ -573,8 +573,8 @@ html[data-theme='dark'] .info-value {
 @media (max-width: 900px) {
   .masterpiece-detail-badge {
   
-    top: 53px;
-    right: -10px;
+    top: -14px;
+    right: -5px;
   }
 }
 
