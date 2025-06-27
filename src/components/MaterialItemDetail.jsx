@@ -31,11 +31,12 @@ import { useLanguage } from '../LanguageContext';
 import useViewStore from '../store/viewStore';
 import { getSubcategoryLabel } from '../utils/subcategoryLabel';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
+import { processTitle, processDescription } from '../store/utils';
 import './styles/components/item-detail-action-btn.css';
 
 const MaterialItemDetail = ({ item }) => {
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation, getTranslation } = useLanguage();
-  const { goBackFromDetail, processTitle, processDescription } = useViewStore();
+  const { goBackFromDetail } = useViewStore();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   

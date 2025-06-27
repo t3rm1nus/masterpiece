@@ -7,6 +7,7 @@ import { useAppData } from '../store/useAppStore';
 import { useLanguage } from '../LanguageContext';
 import useInfiniteScroll from '../hooks/useInfiniteScroll';
 import CircularProgress from '@mui/material/CircularProgress';
+import { randomNotFoundImage } from '../store/utils';
 
 /**
  * MaterialContentWrapper
@@ -76,7 +77,6 @@ const MaterialContentWrapper = ({
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const { t, getTranslation } = useLanguage();
-  const { randomNotFoundImage } = useAppData();
   if (!visible) return null;
   // Si no es móvil, renderizar el contenido original
   if (!isMobile) {

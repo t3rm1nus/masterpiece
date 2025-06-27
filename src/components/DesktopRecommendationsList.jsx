@@ -8,6 +8,7 @@ import SubcategoryBar from './home/SubcategoryBar';
 import '../styles/components/cards.css';
 import { NoResults } from './SharedComponents';
 import MaterialRecommendationCard from './MaterialRecommendationCard';
+import { randomNotFoundImage } from '../store/utils';
 
 /**
  * DesktopRecommendationsList
@@ -94,7 +95,6 @@ const DesktopRecommendationsList = ({
   const data = items || recommendations;
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation, getTranslation } = useLanguage();
   const { goToDetail } = useAppView();
-  const { randomNotFoundImage } = useAppData();
   const { getMasterpieceBadgeConfig } = useAppTheme();
   const badgeConfig = getMasterpieceBadgeConfig();
 

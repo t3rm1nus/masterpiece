@@ -1,5 +1,6 @@
 import { useMemo, useCallback } from 'react';
 import { useAppView, useAppData, useAppTheme, useAppUI } from '../store/useAppStore';
+import { useMultiLanguageData } from './useMultiLanguageData';
 
 /**
  * Hook personalizado para optimizar el rendimiento de componentes
@@ -7,10 +8,11 @@ import { useAppView, useAppData, useAppTheme, useAppUI } from '../store/useAppSt
  */
 export const useOptimizedStores = () => {
   // Selectores específicos para evitar re-renders innecesarios
-  const { processTitle, processDescription, goToDetail, currentView } = useAppView();
+  const { goToDetail, currentView } = useAppView();
   const { filteredItems, homeRecommendations, selectedCategory } = useAppData();
   const { isDarkTheme, getMasterpieceBadgeConfig } = useAppTheme();
   const { isMobile } = useAppUI();
+  const { processTitle, processDescription } = useMultiLanguageData();
 
   // Memoizar configuraciones que no cambian frecuentemente
   const badgeConfig = useMemo(() => getMasterpieceBadgeConfig(), [getMasterpieceBadgeConfig]);
@@ -21,11 +23,11 @@ export const useOptimizedStores = () => {
   }, [goToDetail]);
 
   const processItemTitle = useCallback((item) => {
-    return processTitle(item);
+    return processTitle(item.title, item.name);
   }, [processTitle]);
 
   const processItemDescription = useCallback((item) => {
-    return processDescription(item);
+    return processDescription(item.description);
   }, [processDescription]);
 
   // Selectores computados memoizados

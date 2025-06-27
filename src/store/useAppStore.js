@@ -1,3 +1,17 @@
+// =============================================
+// STORE PRINCIPAL DE OFICIAL
+// Este archivo es el único store global de la app.
+// Usa slices, soporta persistencia y migración.
+// No usar ni mantener otros stores globales.
+//
+// CONVENCIONES DE NOMBRES Y ESTRUCTURA:
+// - Todos los estados y funciones globales deben estar en slices (ver ./themeStore, ./languageStore, ./navigationStore, ./dataStore).
+// - No duplicar estados/funciones en el objeto principal: si un campo existe en un slice, no debe declararse aquí.
+// - Utilidades globales deben importarse desde './utils'.
+// - Los nombres de campos deben ser consistentes en todo el store y la app (ej: 'language', 'selectedCategory', 'activeSubcategory').
+// - Si se agregan nuevos estados globales, documentar aquí y en el slice correspondiente.
+// =============================================
+
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { createThemeSlice } from './themeStore';
@@ -28,6 +42,7 @@ const useAppStore = create(
   persist(
     (set, get) => ({
       // Estados básicos que NO son de navegación ni datos
+      // Si agregas un nuevo estado global, agrégalo en el slice correspondiente y documenta aquí.
       isMobile: false,
       isTablet: false,
       isDarkMode: false,
@@ -118,38 +133,6 @@ const useAppStore = create(
         }
       }),
 
-      // --- Procesadores de título/descripción ---
-      processTitle: (title) => {
-        if (typeof title === 'object' && title !== null) {
-          const lang = get().language;
-          return title[lang] || title.es || title.en || 'Sin título';
-        }
-        return title || 'Sin título';
-      },
-      processDescription: (description) => {
-        if (typeof description === 'object' && description !== null) {
-          const lang = get().language;
-          return description[lang] || description.es || description.en || 'Sin descripción';
-        }
-        return description || 'Sin descripción';
-      },
-      randomNotFoundImage: () => {
-        const images = [
-          'notfound.webp',
-          'notfound2.webp',
-          'notfound3.webp',
-          'notfound4.webp',
-          'notfound5.webp',
-          'notfound6.webp',
-          'notfound7.webp',
-          'notfound8.webp',
-          'notfound9.webp',
-          'notfound10.webp',
-        ];
-        const idx = Math.floor(Math.random() * images.length);
-        return `/imagenes/notfound/${images[idx]}`;
-      },
-
       // --- Estados especiales de filtros ---
       isSpanishCinemaActive: false,
       toggleSpanishCinema: () => set(state => ({ isSpanishCinemaActive: !state.isSpanishCinemaActive })),
@@ -178,6 +161,7 @@ const useAppStore = create(
       setActiveDocumentaryLanguages: (langs) => set({ activeDocumentaryLanguages: Array.isArray(langs) ? langs : [] }),
 
       // --- Slices externos ---
+      // Todos los estados y funciones principales deben estar en slices.
       ...createThemeSlice(set, get),
       ...createLanguageSlice(set, get),
       ...createNavigationSlice(set, get),
@@ -189,6 +173,7 @@ const useAppStore = create(
       migrate: migrateAppStoreState,
       partialize: (state) => ({
         // Solo persistir los campos relevantes
+        // Si agregas un nuevo campo persistente, documenta aquí y en el slice correspondiente.
         recommendations: state.recommendations,
         categories: state.categories,
         filteredItems: state.filteredItems,
@@ -209,6 +194,7 @@ const useAppStore = create(
 );
 
 // ✅ HOOKS PARA ACCEDER AL STORE
+// Si agregas nuevos campos/funciones, asegúrate de exponerlos aquí y mantener la consistencia de nombres.
 export const useAppView = () => {
   const currentView = useAppStore(state => state.currentView);
   const selectedItem = useAppStore(state => state.selectedItem);
@@ -221,8 +207,6 @@ export const useAppView = () => {
   const goToCoffee = useAppStore(state => state.goToCoffee);
   const goToHowToDownload = useAppStore(state => state.goToHowToDownload);
   const setViewport = useAppStore(state => state.setViewport);
-  const processTitle = useAppStore(state => state.processTitle);
-  const processDescription = useAppStore(state => state.processDescription);
   const mobileHomeStyles = useAppStore(state => state.mobileHomeStyles);
   const desktopStyles = useAppStore(state => state.desktopStyles);
   const baseRecommendationCardClasses = useAppStore(state => state.baseRecommendationCardClasses);
@@ -241,7 +225,7 @@ export const useAppView = () => {
   // Limpieza: eliminados wrappers de retrocompatibilidad innecesarios
   return {
     currentView, selectedItem, isMobile, setView, setSelectedItem,
-    goToDetail, goToHome, goHome, goToCoffee, goToHowToDownload, setViewport, processTitle, processDescription,
+    goToDetail, goToHome, goHome, goToCoffee, goToHowToDownload, setViewport,
     mobileHomeStyles, desktopStyles, baseRecommendationCardClasses, isTablet,
     goBackFromDetail, goBackFromCoffee
   };
@@ -269,7 +253,6 @@ export const useAppData = () => {
   const setTitle = useAppStore(state => state.setTitle);
   const updateTitleForLanguage = useAppStore(state => state.updateTitleForLanguage);
   const getDefaultTitle = useAppStore(state => state.getDefaultTitle);
-  const randomNotFoundImage = useAppStore(state => state.randomNotFoundImage);
   // Estados adicionales para compatibilidad (solo los centralizados)
   const activeSubcategory = useAppStore(state => state.activeSubcategory);
   const setActiveSubcategory = useAppStore(state => state.setActiveSubcategory);
@@ -296,7 +279,7 @@ export const useAppData = () => {
     recommendations, categories, filteredItems, selectedCategory, selectedSubcategory,
     title, isDataInitialized, updateWithRealData, getRecommendations, getCategories,
     getSubcategoriesForCategory, setCategory, setSubcategory, resetToHome, resetAllFilters,
-    generateNewRecommendations, initializeFilteredItems, updateFilteredItems, setTitle, updateTitleForLanguage, getDefaultTitle, randomNotFoundImage,
+    generateNewRecommendations, initializeFilteredItems, updateFilteredItems, setTitle, updateTitleForLanguage, getDefaultTitle,
     // Estados adicionales
     activeSubcategory, setActiveSubcategory, isSpanishCinemaActive, toggleSpanishCinema,
     isSpanishSeriesActive, toggleSpanishSeries,

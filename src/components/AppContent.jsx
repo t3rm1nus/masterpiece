@@ -37,15 +37,27 @@ const AppContent = () => {
         if (main) main.scrollTop = 0;
         const root = document.getElementById('root');
         if (root) root.scrollTop = 0;
+        console.log('[AppContent] Scroll al top tras volver a home (desktop)');
       }, 200); // Espera breve para asegurar que HomePage se haya renderizado
     }
   }, [currentView, isMobileView]);
+
+  // Scroll al top al entrar en un detalle (móvil y desktop)
+  useEffect(() => {
+    if (currentView === 'detail') {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+        document.documentElement.scrollTop = 0;
+      }, 200); // Espera breve para asegurar que el detalle se haya renderizado
+    }
+  }, [currentView]);
 
   // Renderiza SIEMPRE HomePage y muestra el detalle como overlay/modal si corresponde
   return (
     <>
       <HybridMenu />
-      {(currentView === 'home' || currentView === 'detail') && <HomePage />}
+      {/* Renderiza HomePage solo si estamos en la vista home */}
+      {currentView === 'home' && <HomePage />}
       {/* Overlay/modal de detalle solo si hay selectedItem y currentView es 'detail' */}
       {currentView === 'detail' && selectedItem && (
         <UnifiedItemDetail 

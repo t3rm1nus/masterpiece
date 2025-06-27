@@ -1,6 +1,7 @@
 import React from 'react';
 import { CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button } from '@mui/material';
 import { ArrowBack as ArrowBackIcon, Category as CategoryIcon, Extension as ExtensionIcon, Movie as MovieIcon, Book as BookIcon, MusicNote as MusicNoteIcon, SportsEsports as SportsEsportsIcon, Mic as MicIcon, Tv as TvIcon, AutoStories as ComicIcon } from '@mui/icons-material';
+import { OndemandVideoIcon, LiveTvIcon } from './CategoryCustomIcons';
 import { getCategoryColor, getCategoryGradient } from '../../utils/categoryPalette';
 import { ensureString } from '../../utils/stringUtils';
 import UiCard from '../ui/UiCard';
@@ -86,7 +87,9 @@ const MobileItemDetail = ({
       case 'podcasts':
         return <MicIcon />;
       case 'series':
-        return <TvIcon />;
+        return <LiveTvIcon />; // Icono TV para series
+      case 'documentales':
+        return <OndemandVideoIcon />; // Icono video para documentales
       case 'comics':
         return <ComicIcon />;
       default:
@@ -95,11 +98,14 @@ const MobileItemDetail = ({
   };
 
   return (
-    <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px', ...sx }} className={className} style={{
-      background: '#fff',
-      '--category-color': getCategoryColor(selectedItem.category),
-      ...style
-    }} {...domSafeProps}>
+    <Box
+      className={`item-detail-page mobile-only ${className || ''}`}
+      sx={{ position: 'relative', minHeight: '100vh', padding: '16px', ...sx }}
+      style={{
+        ...style
+      }}
+      {...domSafeProps}
+    >
       {/* Botón de volver flotante */}
       {showSections.backButton !== false && (onBack || goBackFromDetail) && (
         <Fab
@@ -124,13 +130,14 @@ const MobileItemDetail = ({
       <UiCard
         sx={{
           maxWidth: 600,
+          width: '100%',
           margin: '0 auto',
           marginTop: 0,
           borderRadius: '16px',
           overflow: 'hidden',
           boxShadow: theme?.shadows?.[8],
           border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
-          background: getCategoryGradient(selectedItem.category),
+          background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
         }}
       >
         {/* Header custom */}

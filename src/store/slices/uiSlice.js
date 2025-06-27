@@ -1,3 +1,21 @@
+/**
+ * UI SLICE OFICIAL
+ * Centraliza la gestión de la interfaz de usuario (búsqueda, vistas, estados de carga, etc).
+ * - Todos los estados y funciones de UI deben declararse aquí, no en el store principal.
+ * - Usar nombres claros y consistentes para los campos de UI.
+ * - Si se agregan nuevos campos globales de UI, documentar aquí y en el store principal.
+ */
+
+// =============================================
+// SLICE DE UI PRINCIPAL
+// Este slice contiene la lógica y estados relacionados con la interfaz de usuario (búsqueda, vistas, etc).
+//
+// CONVENCIONES:
+// - Todos los estados y funciones de UI deben declararse aquí, no en el store principal.
+// - Usar nombres claros y consistentes para los campos de UI.
+// - Si se agregan nuevos campos globales de UI, documentar aquí y en el store principal.
+// =============================================
+
 export const uiSlice = (set, get) => ({
   // Loading state
   isLoading: false,

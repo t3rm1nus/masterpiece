@@ -256,6 +256,13 @@ html[data-theme='dark'] .item-detail-page.desktop-only {
   position: relative;
 }
 
+/* Ajuste para móviles para evitar que el detalle quede oculto debajo del menú superior fijo */
+@media (max-width: 768px) {
+  .item-detail-page {
+    padding-top: 64px !important; /* Altura del AppBar móvil (MaterialMobileMenu) */
+  }
+}
+
 /* Tema oscuro */
 html[data-theme='dark'] .item-detail-page.desktop-only {  
   background-color: #121212;

@@ -1,7 +1,25 @@
 /**
+ * LANGUAGE SLICE OFICIAL
+ * Centraliza la gestión de idioma global y traducciones.
+ * - Todos los estados y funciones de idioma deben declararse aquí, no en el store principal.
+ * - Usar siempre 'language' como nombre de campo global.
+ * - Si se agregan nuevos campos globales de idioma, documentar aquí y en el store principal.
+ */
+
+/**
  * Language Slice - Gestión de idioma  
  * Consolidación del languageStore anterior
  */
+
+// =============================================
+// SLICE DE IDIOMA PRINCIPAL
+// Este slice contiene la lógica y estados relacionados con el idioma y las traducciones.
+//
+// CONVENCIONES:
+// - Todos los estados y funciones de idioma deben declararse aquí, no en el store principal.
+// - Usar siempre 'language' como nombre de campo para el idioma global.
+// - Si se agregan nuevos campos globales de idioma, documentar aquí y en el store principal.
+// =============================================
 
 export const languageSlice = (set, get) => ({
   // ==========================================
@@ -9,7 +27,7 @@ export const languageSlice = (set, get) => ({
   // ==========================================
   
   // Idioma actual
-  lang: 'es', // 'es' | 'en'
+  language: 'es', // 'es' | 'en'
   
   // Idiomas disponibles
   supportedLanguages: ['es', 'en'],
@@ -29,7 +47,7 @@ export const languageSlice = (set, get) => ({
     }
     
     console.log('[LanguageSlice] Changing language to:', newLang);
-    set({ lang: newLang });
+    set({ language: newLang });
     
     // Actualizar título de la página si es necesario
     if (typeof document !== 'undefined') {
@@ -42,7 +60,7 @@ export const languageSlice = (set, get) => ({
    */
   toggleLanguage: () => {
     set((state) => ({
-      lang: state.lang === 'es' ? 'en' : 'es'
+      language: state.language === 'es' ? 'en' : 'es'
     }));
   },
 
@@ -84,6 +102,6 @@ export const languageSlice = (set, get) => ({
    */
   resetLanguage: () => {
     console.log('[LanguageSlice] Resetting language to Spanish');
-    set({ lang: 'es' });
+    set({ language: 'es' });
   }
 });

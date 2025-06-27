@@ -1,3 +1,5 @@
+import { processTitle, processDescription, randomNotFoundImage } from './utils';
+
 // Migration helper for persisted state
 function migrateDataSliceState(state, version) {
   // Example: migrate from v0 to v1 (add new fields, rename, etc.)

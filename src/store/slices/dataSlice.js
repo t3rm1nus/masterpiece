@@ -1,7 +1,35 @@
 /**
+ * DATA SLICE OFICIAL
+ * Centraliza toda la lógica de datos, filtrado, inicialización, subcategorías y utilidades relacionadas con recomendaciones, categorías y filtros.
+ * - Todas las funciones y estados de datos deben declararse aquí, no en el store principal.
+ * - Utilidades como processTitle, processDescription y randomNotFoundImage deben importarse desde '../utils' y usarse aquí.
+ * - Si se requiere lógica de demo, debe estar claramente documentada y no usarse en producción.
+ * - Si se agregan nuevos campos globales de datos, documentar aquí y en el store principal.
+ */
+
+/**
  * Data Slice - Gestión de datos, filtros y categorías
  * Consolidación del dataStore anterior
  */
+
+// =============================================
+// ATENCIÓN: LÓGICA DE DEMO
+// La función generateNewRecommendations y cualquier dato mock generado aquí
+// solo debe usarse en desarrollo, pruebas o entornos de demo.
+// Nunca debe invocarse ni importarse en producción real.
+// Si necesitas datos de ejemplo, asegúrate de condicionar su uso a process.env.NODE_ENV !== 'production'.
+// =============================================
+
+// =============================================
+// SLICE DE DATOS PRINCIPAL
+// Este slice contiene toda la lógica y estados relacionados con los datos de la app (recomendaciones, categorías, filtros, etc).
+//
+// CONVENCIONES:
+// - Todos los estados y funciones de datos deben declararse aquí, no en el store principal.
+// - Los nombres de campos deben ser consistentes con el resto de la app y otros slices.
+// - Si se agregan nuevos campos globales de datos, documentar aquí y en el store principal.
+// - Utilidades globales deben importarse desde '../utils'.
+// =============================================
 
 // Importar datos JSON
 import datosMovies from "../../data/datos_movies.json";
@@ -14,6 +42,7 @@ import datosPodcast from "../../data/datos_podcast.json";
 import datosDocumentales from "../../data/datos_documentales.json";
 import datosSeries from "../../data/datos_series.json";
 import { processItemsWithUniqueIds } from '../../utils/appUtils';
+import { processTitle, processDescription, randomNotFoundImage } from '../utils';
 
 export const dataSlice = (set, get) => ({
   // ==========================================
@@ -43,6 +72,9 @@ export const dataSlice = (set, get) => ({
   title: '',
   randomNotFoundImage: null,
 
+  // Estado para subcategorías únicas por categoría
+  categorySubcategories: {},
+
   // ==========================================
   // ACCIONES DE INICIALIZACIÓN
   // ==========================================
@@ -63,14 +95,28 @@ export const dataSlice = (set, get) => ({
         series: datosSeries,
       };
         const processedData = {};
+      const categorySubcategories = {};
       Object.keys(dataMap).forEach((category) => {
         const data = dataMap[category];
         // Handle both direct arrays and objects with recommendations property
         const items = Array.isArray(data) ? data : data.recommendations || [];
         processedData[category] = processItemsWithUniqueIds(items, category);
+        // Subcategorías únicas para la categoría
+        const subcatSet = new Set();
+        items.forEach(item => {
+          if (item.subcategory || item.subcategoria) {
+            // Permitir múltiples subcategorías separadas por coma
+            const raw = item.subcategory || item.subcategoria;
+            (typeof raw === 'string' ? raw.split(',') : [raw]).forEach(sub => {
+              const clean = (sub || '').trim().toLowerCase();
+              if (clean) subcatSet.add(clean);
+            });
+          }
+        });
+        categorySubcategories[category] = Array.from(subcatSet).sort();
       });
       
-      set({ allData: processedData });
+      set({ allData: processedData, categorySubcategories });
     }
   },
 
@@ -203,14 +249,14 @@ export const dataSlice = (set, get) => ({
     get().updateFilteredItems();
   },
 
+  // Permite máximo dos idiomas activos al entrar en la categoría, pero solo uno tras seleccionar
   togglePodcastLanguage: (language) => {
     const { activePodcastLanguages } = get();
     let newLanguages;
-    // Si el idioma ya está activo, desactívalo (deja ambos desactivados)
     if (activePodcastLanguages.includes(language)) {
       newLanguages = [];
     } else {
-      // Al activar uno, desactiva el otro (solo uno activo)
+      // Si hay dos activos, solo deja el nuevo
       newLanguages = [language];
     }
     set({ activePodcastLanguages: newLanguages });
@@ -225,6 +271,7 @@ export const dataSlice = (set, get) => ({
     if (activeDocumentaryLanguages.includes(language)) {
       newLanguages = [];
     } else {
+      // Si hay dos activos, solo deja el nuevo
       newLanguages = [language];
     }
     set({ activeDocumentaryLanguages: newLanguages });
@@ -233,11 +280,21 @@ export const dataSlice = (set, get) => ({
     }, 0);
   },
 
+  // Al entrar en la categoría, permite dos activos (por ejemplo, 'es' y 'en')
+  setActivePodcastLanguages: (langs) => {
+    let arr = Array.isArray(langs) ? langs.slice(0, 2) : [];
+    set({ activePodcastLanguages: arr });
+  },
+  setActiveDocumentaryLanguages: (langs) => {
+    let arr = Array.isArray(langs) ? langs.slice(0, 2) : [];
+    set({ activeDocumentaryLanguages: arr });
+  },
+
   // ==========================================
   // GETTERS Y UTILIDADES
   // ==========================================
   
-  getCategories: (lang = 'es') => {
+  getCategories: (lang = 'es', asArray = false) => {
     const categoryTranslations = {
       es: {
         peliculas: 'Películas',
@@ -262,24 +319,16 @@ export const dataSlice = (set, get) => ({
         documentales: 'Documentaries'
       }
     };
-    
-    return categoryTranslations[lang] || categoryTranslations.es;
+    const map = categoryTranslations[lang] || categoryTranslations.es;
+    if (asArray) {
+      return Object.entries(map).map(([key, label]) => ({ key, label }));
+    }
+    return map;
   },
 
-  getSubcategoriesForCategory: () => {
-    const { allData, selectedCategory } = get();
-    
-    if (!selectedCategory || !allData[selectedCategory]) {
-      return [];
-    }
-    
-    const subcategories = [...new Set(
-      allData[selectedCategory]
-        .map(item => item.subcategory)
-        .filter(sub => sub && sub !== '')
-    )];
-    
-    return subcategories.sort();
+  getSubcategoriesForCategory: (category) => {
+    const { categorySubcategories } = get();
+    return categorySubcategories[category] || [];
   },
 
   // ==========================================
@@ -341,5 +390,41 @@ export const dataSlice = (set, get) => ({
     const randomImage = images[Math.floor(Math.random() * images.length)];
     set({ randomNotFoundImage: randomImage });
     return randomImage;
-  }
+  },
+
+  // Utilidades centralizadas para títulos y not found
+  processTitle: (title, lang = 'es') => processTitle(title, lang),
+  processDescription: (description, lang = 'es') => processDescription(description, lang),
+  randomNotFoundImage: () => randomNotFoundImage(),
+
+  // =============================================
+  // FUNCIÓN DE DEMO: generateNewRecommendations
+  // Esta función solo debe usarse en entornos de desarrollo/demo.
+  // Genera recomendaciones mock y estructura allData para pruebas rápidas.
+  // =============================================
+  
+  generateNewRecommendations: () => {
+    const mockRecommendations = [
+      { id: Date.now() + 1, title: 'Blade Runner 2049', category: 'peliculas', description: 'Ciencia ficción épica', image: '/favicon.png' },
+      { id: Date.now() + 2, title: 'El Hobbit', category: 'libros', description: 'Fantasía de Tolkien', image: '/favicon.png' },
+      { id: Date.now() + 3, title: 'Breath of the Wild', category: 'videojuegos', description: 'Mundo abierto', image: '/favicon.png' },
+      { id: Date.now() + 4, title: 'Thriller', category: 'musica', description: 'Álbum de Michael Jackson', image: '/favicon.png' }
+    ];
+    const newAllData = {
+      peliculas: mockRecommendations.filter(r => r.category === 'peliculas'),
+      libros: mockRecommendations.filter(r => r.category === 'libros'),
+      videojuegos: mockRecommendations.filter(r => r.category === 'videojuegos'),
+      musica: mockRecommendations.filter(r => r.category === 'musica'),
+      all: mockRecommendations
+    };
+    set({
+      recommendations: mockRecommendations,
+      filteredItems: mockRecommendations,
+      allData: newAllData,
+      selectedCategory: 'all',
+      activeSubcategory: null,
+      currentView: 'home',
+      selectedItem: null
+    });
+  },
 });

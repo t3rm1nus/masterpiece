@@ -1,3 +1,9 @@
+// =============================================
+// ARCHIVO OBSOLETO
+// Este store ha sido deshabilitado. Usa src/store/useAppStore.js
+// No mantener ni modificar este archivo. Toda la lógica debe migrarse al store principal.
+// =============================================
+
 import { create } from 'zustand';
 import seriesData from '../data/datos_series.json';
 

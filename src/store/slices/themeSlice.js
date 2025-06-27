@@ -1,3 +1,21 @@
+/**
+ * THEME SLICE OFICIAL
+ * Centraliza la gestión del tema visual (dark/light mode, colores, etc).
+ * - Todos los estados y funciones de tema deben declararse aquí, no en el store principal.
+ * - Usar siempre 'theme' y 'isDarkMode' como nombres de campos globales.
+ * - Si se agregan nuevos campos globales de tema, documentar aquí y en el store principal.
+ */
+
+// =============================================
+// SLICE DE TEMA PRINCIPAL
+// Este slice contiene la lógica y estados relacionados con el tema visual (dark/light mode, etc).
+//
+// CONVENCIONES:
+// - Todos los estados y funciones de tema deben declararse aquí, no en el store principal.
+// - Usar siempre 'theme' y 'isDarkMode' como nombres de campos globales.
+// - Si se agregan nuevos campos globales de tema, documentar aquí y en el store principal.
+// =============================================
+
 // Static theme configurations - defined outside to prevent infinite loops
 const THEME_COLORS = {
   default: {

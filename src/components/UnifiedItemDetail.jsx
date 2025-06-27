@@ -9,6 +9,7 @@ import MobileItemDetail from './shared/MobileItemDetail';
 import DesktopItemDetail from './shared/DesktopItemDetail';
 import { MobileActionButtons, DesktopActionButtons } from './shared/ItemActionButtons';
 import { MobileCategorySpecificContent, DesktopCategorySpecificContent } from './shared/CategorySpecificContent';
+import { processTitle, processDescription } from '../store/utils';
 
 // Material UI imports (solo para mobile)
 import {
@@ -57,7 +58,7 @@ import {
  */
 const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
-  const { processTitle, processDescription, goBackFromDetail, goToHowToDownload } = useAppView();
+  const { goBackFromDetail, goToHowToDownload } = useAppView();
   const { getMasterpieceBadgeConfig } = useAppTheme();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
@@ -67,7 +68,10 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
 
   const [imgLoaded, setImgLoaded] = React.useState(false);
   
-  if (!selectedItem) return null;
+  if (!selectedItem) {
+    console.log('[UnifiedItemDetail] No selectedItem, no se renderiza detalle');
+    return null;
+  }
   
   const rawTitle = processTitle(selectedItem.title || selectedItem.name, lang);
   const rawDescription = processDescription(selectedItem.description, lang);
@@ -79,6 +83,7 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
   
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
+    console.log('[UnifiedItemDetail] Renderizando MobileItemDetail', selectedItem);
     return (
       <MobileItemDetail
         selectedItem={selectedItem}
@@ -109,6 +114,7 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
     );
   }
   // Renderizado para desktop usando subcomponente
+  console.log('[UnifiedItemDetail] Renderizando DesktopItemDetail', selectedItem);
   return (
     <DesktopItemDetail
       selectedItem={selectedItem}

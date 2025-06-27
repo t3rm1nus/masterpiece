@@ -25,7 +25,7 @@ import MaterialMobileMenu from './MaterialMobileMenu';
 import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 import '../styles/components/animations.css';
 import MaterialContentWrapper from './MaterialContentWrapper';
-import useAppStore from '../store/useAppStore_new'; // <-- Usar solo el store NUEVO
+import useAppStore from '../store/useAppStore'; // <-- Usar solo el store NUEVO
 
 // Hook para detectar si es móvil SOLO por ancho de pantalla (robusto y compatible móvil)
 function useIsMobile() {
@@ -143,6 +143,12 @@ const HomePage = ({
   const selectedItem = useAppStore(state => state.selectedItem);
   const goToDetail = useAppStore(state => state.goToDetail);
   const goBackFromDetail = useAppStore(state => state.goBackFromDetail);
+  const currentView = useAppStore(state => state.currentView);
+
+  // LOGS DE DEPURACIÓN
+  useEffect(() => {
+    console.log('[HomePage] currentView:', currentView, 'selectedItem:', selectedItem);
+  }, [currentView, selectedItem]);
 
   // Obtener categorías traducidas (se actualizará cuando cambie el idioma)
   const categoriesFromStore = getCategories();
@@ -333,12 +339,10 @@ const HomePage = ({
     toggleMasterpiece();
   };// Manejar clic en elemento
   const handleItemClick = (item) => {
-    // Usar el viewStore para navegar al detalle
+    console.log('[HomePage] handleItemClick', item);
     goToDetail(item);
-    // Eliminado scroll y log aquí para evitar duplicidad y conflictos
   };  // Manejar cierre del detalle
   const handleCloseDetail = () => {
-    // Volver a la vista anterior usando el viewStore
     goBackFromDetail();
   };  // Renderizar el detalle del elemento
   // const renderItemDetail = () => {
@@ -706,5 +710,14 @@ function categoryColor(categoryKey) {
   // Devolver el color específico si existe, o el color por defecto
   return specificColors[categoryKey] || specificColors['default'];
 }
+
+// =============================================================
+// NOTA SOBRE FILTROS DE IDIOMA (podcast/documentales):
+// - Los filtros de idioma (activePodcastLanguages, activeDocumentaryLanguages) solo se aplican a las categorías 'podcast' y 'documentales'.
+// - Al entrar en la categoría, pueden estar activos hasta dos idiomas simultáneamente.
+// - Tras seleccionar un idioma, solo puede quedar uno activo.
+// - El resto de categorías no usan ni muestran estos filtros.
+// - Esta lógica está centralizada en el store y reflejada en el UI.
+// =============================================================
 
 export default HomePage;

@@ -30,6 +30,13 @@ import { getCategoryGradient } from '../../utils/categoryUtils';
  *   lang="es"
  *   isMobile={false}
  * />
+ *
+ * NOTA SOBRE FILTROS DE IDIOMA (podcast/documentales):
+ * - Los filtros de idioma (activePodcastLanguages, activeDocumentaryLanguages) solo se aplican a las categorías 'podcast' y 'documentales'.
+ * - Al entrar en la categoría, pueden estar activos hasta dos idiomas simultáneamente.
+ * - Tras seleccionar un idioma, solo puede quedar uno activo.
+ * - El resto de categorías no usan ni muestran estos filtros.
+ * - Esta lógica está centralizada en el store y reflejada en el UI.
  */
 
 const SpecialButtons = ({

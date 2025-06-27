@@ -20,8 +20,10 @@ import {
   Extension as BoardGameIcon,
   AutoStories as ComicIcon
 } from '@mui/icons-material';
+import { OndemandVideoIcon, LiveTvIcon } from './shared/CategoryCustomIcons';
 import { useLanguage } from '../LanguageContext';
 import { useAppView } from '../store/useAppStore';
+import { processTitle, processDescription } from '../store/utils';
 import UiCard from './ui/UiCard';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 
@@ -48,9 +50,9 @@ const MaterialRecommendationCard = memo(({
   actions
 }) => {
   const { lang, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
-  const { goToDetail, processTitle, processDescription } = useAppView();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const { goToDetail } = useAppView();
 
   const title = processTitle(recommendation.title || recommendation.name, lang);
   const description = processDescription(recommendation.description, lang);
@@ -83,6 +85,10 @@ const MaterialRecommendationCard = memo(({
         return <BoardGameIcon fontSize="small" />;
       case 'comics':
         return <ComicIcon fontSize="small" />;
+      case 'series':
+        return <LiveTvIcon fontSize="small" />;
+      case 'documentales':
+        return <OndemandVideoIcon fontSize="small" />;
       default:
         return <StarIcon fontSize="small" />;
     }
