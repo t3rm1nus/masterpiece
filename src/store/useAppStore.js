@@ -153,8 +153,29 @@ const useAppStore = create(
       // --- Estados especiales de filtros ---
       isSpanishCinemaActive: false,
       toggleSpanishCinema: () => set(state => ({ isSpanishCinemaActive: !state.isSpanishCinemaActive })),
+      setSpanishCinemaActive: (active) => set({ isSpanishCinemaActive: !!active }),
       isSpanishSeriesActive: false,
       toggleSpanishSeries: () => set(state => ({ isSpanishSeriesActive: !state.isSpanishSeriesActive })),
+      setSpanishSeriesActive: (active) => set({ isSpanishSeriesActive: !!active }),
+      isMasterpieceActive: false,
+      toggleMasterpiece: () => set(state => ({ isMasterpieceActive: !state.isMasterpieceActive })),
+      setMasterpieceActive: (active) => set({ isMasterpieceActive: !!active }),
+      activePodcastLanguages: [],
+      togglePodcastLanguage: (lang) => set(state => {
+        const arr = state.activePodcastLanguages.includes(lang)
+          ? state.activePodcastLanguages.filter(l => l !== lang)
+          : [...state.activePodcastLanguages, lang];
+        return { activePodcastLanguages: arr };
+      }),
+      setActivePodcastLanguages: (langs) => set({ activePodcastLanguages: Array.isArray(langs) ? langs : [] }),
+      activeDocumentaryLanguages: [],
+      toggleDocumentaryLanguage: (lang) => set(state => {
+        const arr = state.activeDocumentaryLanguages.includes(lang)
+          ? state.activeDocumentaryLanguages.filter(l => l !== lang)
+          : [...state.activeDocumentaryLanguages, lang];
+        return { activeDocumentaryLanguages: arr };
+      }),
+      setActiveDocumentaryLanguages: (langs) => set({ activeDocumentaryLanguages: Array.isArray(langs) ? langs : [] }),
 
       // --- Slices externos ---
       ...createThemeSlice(set, get),
@@ -265,6 +286,11 @@ export const useAppData = () => {
   const activeLanguage = useAppStore(state => state.activeLanguage);
   const setActiveLanguage = useAppStore(state => state.setActiveLanguage);
   const allData = useAppStore(state => state.allData);
+  const setSpanishCinemaActive = useAppStore(state => state.setSpanishCinemaActive);
+  const setSpanishSeriesActive = useAppStore(state => state.setSpanishSeriesActive);
+  const setMasterpieceActive = useAppStore(state => state.setMasterpieceActive);
+  const setActivePodcastLanguages = useAppStore(state => state.setActivePodcastLanguages);
+  const setActiveDocumentaryLanguages = useAppStore(state => state.setActiveDocumentaryLanguages);
 
   return {
     recommendations, categories, filteredItems, selectedCategory, selectedSubcategory,
@@ -276,7 +302,12 @@ export const useAppData = () => {
     isSpanishSeriesActive, toggleSpanishSeries,
     isMasterpieceActive, toggleMasterpiece, activePodcastLanguages, togglePodcastLanguage,
     activeDocumentaryLanguages, toggleDocumentaryLanguage, activeLanguage, setActiveLanguage,
-    allData
+    allData,
+    setSpanishCinemaActive,
+    setSpanishSeriesActive,
+    setMasterpieceActive,
+    setActivePodcastLanguages,
+    setActiveDocumentaryLanguages
   };
 };
 

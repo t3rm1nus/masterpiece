@@ -123,7 +123,12 @@ const HomePage = ({
     updateWithRealData,
     updateTitleForLanguage,
     isSpanishSeriesActive,
-    toggleSpanishSeries
+    toggleSpanishSeries,
+    setSpanishCinemaActive,
+    setSpanishSeriesActive,
+    setMasterpieceActive,
+    setActivePodcastLanguages,
+    setActiveDocumentaryLanguages,
   } = useAppData();
   
   // Efecto para actualizar título cuando cambia el idioma
@@ -177,19 +182,22 @@ const HomePage = ({
   const [isRecommendedActive, setIsRecommendedActive] = useState(false);  // Efecto para cargar datos reales - solo una vez
   useEffect(() => {
     let mounted = true;
-    
     if (!isDataInitialized && mounted) {
+      // Resetear filtros especiales al cargar datos reales
+      setMasterpieceActive(false);
+      setSpanishCinemaActive(false);
+      setSpanishSeriesActive(false);
+      setActivePodcastLanguages([]);
+      setActiveDocumentaryLanguages([]);
       loadRealData().then(realData => {
         if (mounted) {
           updateWithRealData(realData);
-          // Usar las recomendaciones finales del store (garantiza 14)
           updateFilteredItems(realData.recommendations?.length === 14 ? realData.recommendations : realData.recommendations?.concat(Object.values(realData.allData).flat().filter(item => !realData.recommendations.some(r => r.id === item.id)).slice(0, 14 - (realData.recommendations?.length || 0))) || []);
         }
       }).catch(error => {
         console.error('❌ Error en HomePage:', error);
       });
     }
-    
     return () => {
       mounted = false;
     };
@@ -309,6 +317,12 @@ const HomePage = ({
     setCategory(category);
     setActiveSubcategory(null);
     setActiveLanguage('all');
+    // Resetear filtros especiales al cambiar de categoría principal
+    setMasterpieceActive(false);
+    setSpanishCinemaActive(false);
+    setSpanishSeriesActive(false);
+    setActivePodcastLanguages([]);
+    setActiveDocumentaryLanguages([]);
   };// Manejar toggle de cine español
   const handleSpanishCinemaToggle = () => {
     toggleSpanishCinema();
@@ -532,6 +546,26 @@ const HomePage = ({
                 sx={materialCategorySelectSx}
                 {...materialCategorySelectProps}
               />
+              {/* Botones especiales SOLO en móvil y SOLO si hay categoría seleccionada */}
+              {selectedCategory && selectedCategory !== 'all' && (
+                <SpecialButtons
+                  selectedCategory={selectedCategory}
+                  isSpanishCinemaActive={isSpanishCinemaActive}
+                  handleSpanishCinemaToggle={handleSpanishCinemaToggle}
+                  isMasterpieceActive={isMasterpieceActive}
+                  handleMasterpieceToggle={handleMasterpieceToggle}
+                  activePodcastLanguages={activePodcastLanguages}
+                  togglePodcastLanguage={togglePodcastLanguage}
+                  activeDocumentaryLanguages={activeDocumentaryLanguages}
+                  toggleDocumentaryLanguage={toggleDocumentaryLanguage}
+                  lang={lang}
+                  isRecommendedActive={isRecommendedActive}
+                  isSpanishSeriesActive={isSpanishSeriesActive}
+                  handleSpanishSeriesToggle={toggleSpanishSeries}
+                  {...specialButtonsProps}
+                  isMobile={true}
+                />
+              )}
             </div>
           )}
           {/* SOLO DESKTOP: Menú superior y controles */}
