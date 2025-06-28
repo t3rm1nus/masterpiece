@@ -26,7 +26,7 @@ const variantStyles = {
     '&:hover': {
       background: '#e3f2fd',
       borderColor: '#005ea6',
-      color: '#005ea6'
+      color: '#000' // Cambiado a negro en hover
     },
     '&:active': {
       background: '#bbdefb',

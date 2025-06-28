@@ -117,6 +117,7 @@ const MobileItemDetail = ({
     if (isClosing) {
       console.log('[MobileItemDetail] Animación de cierre INICIADA (isClosing=true)', { selectedItem });
     }
+    // Eliminada la inyección de estilos globales para h1 móvil
   }, [isClosing, selectedItem]);
 
   // Botón de volver flotante, fijo respecto a la ventana y fuera del Box animado
@@ -211,7 +212,7 @@ const MobileItemDetail = ({
                 component="h1" 
                 gutterBottom
                 sx={{ 
-                  fontWeight: 'bold',
+                  fontWeight: { xs: 400, sm: 'bold' }, // 400 en móviles, bold en desktop
                   fontSize: { xs: '1.5rem', sm: '2rem' },
                   textAlign: 'center',
                   marginBottom: '16px'

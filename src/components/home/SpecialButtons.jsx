@@ -41,7 +41,7 @@ const SpecialButtons = ({
             sx={{
               margin: '0 4px',
               minWidth: 90,
-              background: activePodcastDocumentaryLanguage === 'es' ? getCategoryGradient(selectedCategory) : '#fff',
+              background: '#fff !important', // Forzar fondo blanco incluso activo
               color: '#757575',
               borderColor: '#bdbdbd',
               fontWeight: activePodcastDocumentaryLanguage === 'es' ? 700 : 500
@@ -58,7 +58,7 @@ const SpecialButtons = ({
             sx={{
               margin: '0 4px',
               minWidth: 90,
-              background: activePodcastDocumentaryLanguage === 'en' ? getCategoryGradient(selectedCategory) : '#fff',
+              background: '#fff !important', // Forzar fondo blanco incluso activo
               color: '#757575',
               borderColor: '#bdbdbd',
               fontWeight: activePodcastDocumentaryLanguage === 'en' ? 700 : 500
@@ -77,8 +77,11 @@ const SpecialButtons = ({
           onClick={handleSpanishCinemaToggle}
           sx={{
             margin: '0 4px',
-            minWidth: 90,
-            background: isSpanishCinemaActive ? getCategoryGradient(selectedCategory) : '#fff',
+            minWidth: '90px !important',
+            minHeight: '32px !important',
+            fontSize: '0.95rem !important',
+            padding: '4px 14px !important',
+            background: '#fff !important',
             color: '#757575',
             borderColor: '#bdbdbd',
             fontWeight: isSpanishCinemaActive ? 700 : 500
@@ -118,7 +121,7 @@ const SpecialButtons = ({
           sx={{
             margin: '0 4px',
             minWidth: 90,
-            background: isSpanishSeriesActive ? getCategoryGradient(selectedCategory) : '#fff',
+            background: '#fff !important', // Forzar fondo blanco incluso activo
             color: '#757575',
             borderColor: '#bdbdbd',
             fontWeight: isSpanishSeriesActive ? 700 : 500
@@ -138,8 +141,8 @@ const SpecialButtons = ({
           sx={{
             margin: '0 4px',
             minWidth: 90,
-            background: isSpanishSeriesActive ? getCategoryGradient(selectedCategory) : '#fff',
-            color: '#757575',
+            background: '#fff !important',
+            color: '#757575', // Gris siempre en móvil
             borderColor: '#bdbdbd',
             fontWeight: isSpanishSeriesActive ? 700 : 500
           }}
