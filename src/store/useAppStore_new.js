@@ -158,9 +158,9 @@ const useAppStore = create((set, get) => ({
     if (seriesData && Array.isArray(seriesData.series)) {
       const subcatSet = new Set();
       seriesData.series.forEach((serie, idx) => {
-        if (serie.subcategoria && typeof serie.subcategoria === 'string') {
+        if (serie.subcategory && typeof serie.subcategory === 'string') {
           // Permitir múltiples subcategorías separadas por coma
-          serie.subcategoria.split(',').forEach(sub => {
+          serie.subcategory.split(',').forEach(sub => {
             const cleanSub = sub.trim().toLowerCase();
             if (cleanSub) {
               subcatSet.add(cleanSub);

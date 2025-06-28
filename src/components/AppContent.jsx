@@ -1,11 +1,11 @@
 import React, { useEffect, Suspense, useRef, useState } from 'react';
 import { useAppView } from '../store/useAppStore';
 import { useLanguage } from '../LanguageContext';
-import HybridMenu from './HybridMenu';
 import HomePage from './HomePage';
 import UnifiedItemDetail from './UnifiedItemDetail';
 import { LazyCoffeePage, LazyHowToDownload, LoadingFallback } from './LazyComponents';
 import MaterialMobileMenu from './MaterialMobileMenu';
+import HybridMenu from './HybridMenu';
 import { Box, Fade, Slide } from '@mui/material';
 
 /**
@@ -32,6 +32,7 @@ const AppContent = () => {
   const [splashOpen, setSplashOpen] = useState(false);
   const [pendingAudios, setPendingAudios] = useState([...splashAudios]);
   const [splashAudio, setSplashAudio] = useState(splashAudios[0]);
+  const [isClosingDetail, setIsClosingDetail] = useState(false);
 
   const handleSplashOpen = () => {
     let audiosToUse = pendingAudios.length > 0 ? pendingAudios : [...splashAudios];
@@ -76,15 +77,43 @@ const AppContent = () => {
     }
   }, [currentView]);
 
+  React.useEffect(() => {
+    if (isClosingDetail) {
+      const timeout = setTimeout(() => {
+        goBackFromDetail();
+        setIsClosingDetail(false);
+      }, 600); // Debe coincidir con la duración de la animación
+      return () => clearTimeout(timeout);
+    }
+  }, [isClosingDetail, goBackFromDetail]);
+
+  // Callback estable para el botón Volver del menú superior
+  const handleBackFromDetail = React.useCallback(() => {
+    if (currentView === 'detail' && selectedItem) {
+      console.log('[AppContent] handleBackFromDetail ejecutado');
+      setIsClosingDetail(true);
+    }
+  }, [currentView, selectedItem]);
+
+  console.log('[AppContent] RENDER GLOBAL - ESTE ES EL LAYOUT QUE SE EJECUTA');
+
   return (
     <Box sx={{ minHeight: '100vh', width: '100vw', position: 'relative', background: '#fafbfc' }}>
-      {/* Menús globales */}
+      {/* Menú superior desktop siempre visible, con onBack dinámico */}
       <HybridMenu
         onSplashOpen={handleSplashOpen}
         splashAudio={splashAudio}
         splashOpen={splashOpen}
         onSplashClose={handleSplashClose}
         audioRef={audioRef}
+        onBack={() => {
+          if (currentView === 'detail' && selectedItem) {
+            console.log('[AppContent] onBack ejecutado');
+            setIsClosingDetail(true);
+          } else {
+            console.log('[AppContent] onBack ignorado: no hay detalle activo');
+          }
+        }}
       />
       {isMobileView && (
         <MaterialMobileMenu
@@ -108,7 +137,7 @@ const AppContent = () => {
         </Box>
       </Fade>
       {/* Overlay/modal de detalle animado y accesible */}
-      <Slide direction="up" in={currentView === 'detail' && !!selectedItem} mountOnEnter unmountOnExit timeout={400}>
+      <Slide direction="up" in={currentView === 'detail' && !!selectedItem && !isClosingDetail} mountOnEnter unmountOnExit timeout={400}>
         <Box sx={{
           position: 'fixed',
           inset: 0,
@@ -126,8 +155,9 @@ const AppContent = () => {
             {selectedItem ? (
               <UnifiedItemDetail
                 item={selectedItem}
-                onClose={goBackFromDetail}
+                onClose={() => setIsClosingDetail(true)}
                 selectedCategory={selectedItem.category}
+                onRequestClose={() => setIsClosingDetail(true)}
               />
             ) : (
               <Box sx={{ minHeight: 200 }} />

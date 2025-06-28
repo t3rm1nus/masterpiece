@@ -10,7 +10,7 @@
         "en": "A high school teacher diagnosed with lung cancer begins manufacturing and selling methamphetamine to secure his family's future."
       },
       "image": "/imagenes/series/breaking.jpg",
-      "subcategoria": "drama",
+      "subcategory": "drama",
       "temporadas": 5,
       "episodios": 62,
       "trailer": {
@@ -30,7 +30,7 @@
         "en": "Follow the Serrano family, who live in the fictional neighborhood of Santa Justa in the Ribera de Manzanares, Madrid."
       },
       "image": "/imagenes/series/serrano.jpg",
-      "subcategoria": "comedy",
+      "subcategory": "comedy",
       "temporadas": 8,
       "episodios": 147,
       "trailer": {
@@ -53,7 +53,7 @@
         "en": "Set in an early 20th-century luxury hotel, where a young man posing as a waiter investigates the disappearance of his sister while working undercover."
       },
       "image": "/imagenes/series/gran_hotel.jpg",
-      "subcategoria": "drama",
+      "subcategory": "drama",
       "temporadas": 3,
       "episodios": 39,
       "trailer": { "es": "https://www.youtube.com/watch?v=h_6KL7RY3pg", 
@@ -72,7 +72,7 @@
         "en": "Sira, a young seamstress, becomes involved in espionage during the Spanish Civil War and WWII."
       },
       "image": "/imagenes/series/el_tiempo_entre_costuras.jpg",
-      "subcategoria": "historical",
+      "subcategory": "historical",
       "temporadas": 1,
       "episodios": 11,
       "trailer": { "es": "https://www.youtube.com/watch?v=_CfVkmaCPbE", "en": "https://www.youtube.com/watch?v=_CfVkmaCPbE" },
@@ -90,7 +90,7 @@
         "en": "A government unit travels through time to prevent changes to Spain’s history."
       },
       "image": "/imagenes/series/el_ministerio_del_tiempo.jpg",
-      "subcategoria": "sci-fi",
+      "subcategory": "sci-fi",
       "temporadas": 4,
       "episodios": 42,
       "trailer": { "es": "https://www.youtube.com/watch?v=l4IH43JLVTg", 
@@ -109,7 +109,7 @@
         "en": "Historical series portraying the life of Queen Isabella of Castile, from youth to Spain's unification."
       },
       "image": "/imagenes/series/isabel.jpg",
-      "subcategoria": "historical",
+      "subcategory": "historical",
       "temporadas": 3,
       "episodios": 39,
       "trailer": { "es": "https://www.youtube.com/watch?v=W4cEc9uasrg", 
@@ -128,7 +128,7 @@
         "en": "A prestigious boarding school hides deadly secrets as students uncover dark mysteries."
       },
       "image": "/imagenes/series/el_internado.jpg",
-      "subcategoria": "thriller",
+      "subcategory": "thriller",
       "temporadas": 7,
       "episodios": 71,
       "trailer": { "es": "https://www.youtube.com/watch?v=sdytEqadkQY", 
@@ -147,7 +147,7 @@
         "en": "In the 1950s, a love story between a seamstress and a fashion empire heir unfolds inside an elegant department store."
       },
       "image": "/imagenes/series/velvet.jpg",
-      "subcategoria": "drama",
+      "subcategory": "drama",
       "temporadas": 4,
       "episodios": 55,
       "trailer": { "es": "https://www.youtube.com/watch?v=rOwczqmx484", 
@@ -166,7 +166,7 @@
         "en": "A quirky community of neighbors deals with daily chaos in a downtown Madrid apartment building."
       },
       "image": "/imagenes/series/aqui_no_hay_quien_viva.jpg",
-      "subcategoria": "comedy",
+      "subcategory": "comedy",
       "temporadas": 5,
       "episodios": 90,
       "trailer": { "es": "https://www.youtube.com/watch?v=rU93XqVOItw", "en": "https://www.youtube.com/watch?v=rU93XqVOItw" },
@@ -184,7 +184,7 @@
         "en": "Seven young friends experience a life-changing summer in a Spanish coastal town, marked by friendship, growth, and loss."
       },
       "image": "/imagenes/series/verano_azul.jpg",
-      "subcategoria": "drama",
+      "subcategory": "drama",
       "temporadas": 1,
       "episodios": 19,
       "trailer": { "es": "https://www.youtube.com/watch?v=pUSljlw8lXE", "en": "https://www.youtube.com/watch?v=pUSljlw8lXE" },
@@ -202,7 +202,7 @@
         "en": "A group of riot police is entangled in a brutality case while being investigated by an internal affairs agent."
       },
       "image": "/imagenes/series/antidisturbios.jpg",
-      "subcategoria": "thriller",
+      "subcategory": "thriller",
       "temporadas": 1,
       "episodios": 6,
       "trailer": { "es": "https://www.youtube.com/watch?v=e5vxS65tgOA", 
@@ -221,7 +221,7 @@
         "en": "Real testimonies portraying the descent into addiction and the journey of recovery."
       },
       "image": "/imagenes/series/yo_adicto.jpg",
-      "subcategoria": "drama",
+      "subcategory": "drama",
       "temporadas": 1,
       "episodios": 6,
       "trailer": { "es": "https://www.youtube.com/watch?v=vh60TQdhoes", "en": "https://www.youtube.com/watch?v=vh60TQdhoes" },
@@ -239,7 +239,7 @@
         "en": "Based on real events, it tells the story of Galician drug trafficking in the 1980s and the involvement of political figures."
       },
       "image": "/imagenes/series/farina.jpg",
-      "subcategoria": "drama",
+      "subcategory": "drama",
       "temporadas": 1,
       "episodios": 10,
       "trailer": { "es": "https://www.youtube.com/watch?v=MBPCVh6tHhs", "en": "https://www.youtube.com/watch?v=1scc9Eq1ZAw" },
@@ -257,7 +257,7 @@
         "en": "Ignatius Farray plays a fictionalized version of himself in this semi-autobiographical dramedy full of absurdity."
       },
       "image": "/imagenes/series/fin_comedia.jpg",
-      "subcategoria": "comedy",
+      "subcategory": "comedy",
       "temporadas": 2,
       "episodios": 12,
       "trailer": { "es": "https://www.youtube.com/watch?v=zBl3m6D-6-Y", "en": "https://www.youtube.com/watch?v=zBl3m6D-6-Y" },
@@ -275,7 +275,7 @@
         "en": "Adaptation of the trilogy by Gonzalo Torrente Ballester, set in pre-war Galicia, portraying political and social tensions."
       },
       "image": "/imagenes/series/gozos.jpg",
-      "subcategoria": "historical",
+      "subcategory": "historical",
       "temporadas": 1,
       "episodios": 13,
       "trailer": { "es": "https://www.youtube.com/watch?v=tjpNpnpK8Og", "en": "https://www.youtube.com/watch?v=tjpNpnpK8Og" },
@@ -293,7 +293,7 @@
         "en": "A dark comedy created by Andalusian youth about marginal life in a fictional neighborhood of Seville."
       },
       "image": "/imagenes/series/malviviendo.jpg",
-      "subcategoria": "comedy",
+      "subcategory": "comedy",
       "temporadas": 4,
       "episodios": 30,
       "trailer": { "es": "https://www.youtube.com/watch?v=JxpSHQJ3NpI", "en": "https://www.youtube.com/watch?v=JxpSHQJ3NpI" },
@@ -311,7 +311,7 @@
         "en": "Anthology series with self-contained episodes where each season tells independent stories that pay tribute to the classic format of Narciso Ibáñez Serrador, directed and starred by well-known names from Spanish cinema."
       },
       "image": "/imagenes/series/historias_moderna.jpg",
-      "subcategoria": "horror",
+      "subcategory": "horror",
       "temporadas": 2,
       "episodios": 8,
       "trailer": { "es": "https://www.youtube.com/watch?v=2ngpEeoirxY", "en": "https://www.youtube.com/watch?v=2ngpEeoirxY" },
@@ -329,7 +329,7 @@
         "en": "Cult horror anthology series created by Narciso Ibáñez Serrador, featuring standalone stories."
       },
       "image": "/imagenes/series/historias.jpg",
-      "subcategoria": "horror",
+      "subcategory": "horror",
       "temporadas": 1,
       "episodios": 8,
       "trailer": { "es": "https://www.youtube.com/watch?v=cElhBMNELck", "en": "https://www.youtube.com/watch?v=cElhBMNELck" },
@@ -347,7 +347,7 @@
         "en": "Paquita was one of the best talent agents in the '90s, but now she struggles to stay relevant in the modern industry."
       },
       "image": "/imagenes/series/paquita.jpg",
-      "subcategoria": "comedy",
+      "subcategory": "comedy",
       "temporadas": 3,
       "episodios": 16,
       "trailer": { "es": "https://www.youtube.com/watch?v=6o0LwrRWY4I", "en": "https://www.youtube.com/watch?v=6o0LwrRWY4I" },
@@ -364,7 +364,7 @@
         "en": "Set in Francoist Madrid, follows Ava Gardner's secret life through the eyes of her maid."
       },
       "image": "/imagenes/series/arde.jpg",
-      "subcategoria": "comedy",
+      "subcategory": "comedy",
       "temporadas": 1,
       "episodios": 8,
       "trailer": { "es": "https://www.youtube.com/watch?v=AJmV7QHGGiM", "en": "https://www.youtube.com/watch?v=AJmV7QHGGiM" },
@@ -382,7 +382,7 @@
         "en": "Absurd comedy and parody show hosted by Joaquín Reyes, aired on La 2 of TVE between 2002 and 2006."
       },
       "image": "/imagenes/series/la_hora.jpg",
-      "subcategoria": "comedy",
+      "subcategory": "comedy",
       "temporadas": 2,
       "episodios": 24,
       "trailer": {
@@ -403,7 +403,7 @@
         "en": "Spanish comedy about a group of friends living their lives around a bar in Madrid, featuring iconic characters and gags."
       },
       "image": "/imagenes/series/7vidas.jpg",
-      "subcategoria": "comedy",
+      "subcategory": "comedy",
       "temporadas": 12,
       "episodios": 204,
       "trailer": {
@@ -424,7 +424,7 @@
         "en": "Absurd and surreal comedy show created by Joaquín Reyes and colleagues, a follow-up to La Hora Chanante."
       },
       "image": "/imagenes/series/muchachada.jpg",
-      "subcategoria": "comedy",
+      "subcategory": "comedy",
       "temporadas": 4,
       "episodios": 32,
       "trailer": {
@@ -445,7 +445,7 @@
         "en": "Miniseries based on Benito Pérez Galdós' novel telling the story of two very different women in 19th century Spain."
       },
       "image": "/imagenes/series/fortunata.jpg",
-      "subcategoria": "drama",
+      "subcategory": "drama",
       "temporadas": 1,
       "episodios": 4,
       "trailer": {
@@ -466,7 +466,7 @@
         "en": "Comedy series about everyday situations in the Spanish context, popular on local TV."
       },
       "image": "/imagenes/series/da_suisa.jpg",
-      "subcategoria": "comedy",
+      "subcategory": "comedy",
       "temporadas": 3,
       "episodios": 30,
       "trailer": {
@@ -487,7 +487,7 @@
         "en": "Prison drama following the life of a young woman incarcerated and the power struggles inside the penitentiary."
       },
       "image": "/imagenes/series/vis.jpg",
-      "subcategoria": "drama",
+      "subcategory": "drama",
       "temporadas": 4,
       "episodios": 40,
       "trailer": {
@@ -508,7 +508,7 @@
         "en": "Spanish historical series following the adventures of a clever and charismatic rogue in the 17th century."
       },
       "image": "/imagenes/series/picaro.jpg",
-      "subcategoria": "historical",
+      "subcategory": "historical",
       "temporadas": 1,
       "episodios": 6,
       "trailer": {
@@ -529,7 +529,7 @@
         "en": "A group of thieves tries to pull off the biggest heist in history at the Royal Mint of Spain."
       },
       "image": "/imagenes/series/la_casa_de_papel.jpg",
-      "subcategoria": "thriller",
+      "subcategory": "thriller",
       "temporadas": 5,
       "episodios": 41,
       "trailer": {
@@ -550,7 +550,7 @@
         "en": "Miniseries based on Vicente Blasco Ibáñez’s novel depicting life in a Valencian fishing village."
       },
       "image": "/imagenes/series/canas.jpg",
-      "subcategoria": "drama",
+      "subcategory": "drama",
       "temporadas": 1,
       "episodios": 8,
       "trailer": {
@@ -571,7 +571,7 @@
         "en": "Miniseries based on Vicente Blasco Ibáñez’s novel showing the survival struggle of a peasant family."
       },
       "image": "/imagenes/series/la_barraca.jpg",
-      "subcategoria": "drama",
+      "subcategory": "drama",
       "temporadas": 1,
       "episodios": 6,
       "trailer": {
@@ -592,7 +592,7 @@
         "en": "Drama series exploring supernatural themes and mysteries in a small Spanish town."
       },
       "image": "/imagenes/series/el_otro_lado.jpg",
-      "subcategoria": "drama",
+      "subcategory": "drama",
       "temporadas": 1,
       "episodios": 10,
       "trailer": {
@@ -613,7 +613,7 @@
         "en": "Spanish comedy centered around the situations in a neighborhood pharmacy and its owner."
       },
       "image": "/imagenes/series/farmacia.jpg",
-      "subcategoria": "comedy",
+      "subcategory": "comedy",
       "temporadas": 5,
       "episodios": 170,
       "trailer": {
@@ -634,7 +634,7 @@
         "en": "Comedy series portraying everyday and absurd situations with humor popular in Spain."
       },
       "image": "/imagenes/series/lleno.jpg",
-      "subcategoria": "comedy",
+      "subcategory": "comedy",
       "temporadas": 3,
       "episodios": 30,
       "trailer": {
@@ -657,7 +657,7 @@
       "en": "Miniseries dramatizing the 1986 Chernobyl nuclear disaster and its devastating aftermath."
     },
     "image": "/imagenes/series/chernobyl.jpg",
-    "subcategoria": "drama",
+    "subcategory": "drama",
     "temporadas": 1,
     "episodios": 5,
     "trailer": {
@@ -680,7 +680,7 @@
       "en": "Crime drama examining Baltimore from multiple perspectives: police, drug dealers, politicians, and media."
     },
     "image": "/imagenes/series/wire.jpg",
-    "subcategoria": "crime",
+    "subcategory": "crime",
     "temporadas": 5,
     "episodios": 60,
     "trailer": {
@@ -703,7 +703,7 @@
       "en": "Drama about Tony Soprano, a mob boss struggling to balance his family life and criminal career."
     },
     "image": "/imagenes/series/sopranos.jpg",
-    "subcategoria": "drama",
+    "subcategory": "drama",
     "temporadas": 6,
     "episodios": 86,
     "trailer": {
@@ -726,7 +726,7 @@
       "en": "British comedy about the misadventures of the IT department employees at a large corporation."
     },
     "image": "/imagenes/series/it_crowd.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 4,
     "episodios": 25,
     "trailer": {
@@ -749,7 +749,7 @@
       "en": "Epic fantasy series based on George R.R. Martin's novels about the struggle for the Iron Throne."
     },
     "image": "/imagenes/series/game_of_thrones.jpg",
-    "subcategoria": "fantasy",
+    "subcategory": "fantasy",
     "temporadas": 8,
     "episodios": 73,
     "trailer": {
@@ -772,7 +772,7 @@
       "en": "Game of Thrones prequel chronicling the Targaryen civil war known as the Dance of the Dragons."
     },
     "image": "/imagenes/series/house_of_dragons.jpg",
-    "subcategoria": "fantasy",
+    "subcategory": "fantasy",
     "temporadas": 2,
     "episodios": 18,
     "trailer": {
@@ -795,7 +795,7 @@
       "en": "Animated comedy about the interdimensional adventures of an alcoholic scientist and his grandson."
     },
     "image": "/imagenes/series/rick_and_morty.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 7,
     "episodios": 71,
     "trailer": {
@@ -818,7 +818,7 @@
       "en": "Anime about humanity fighting against gigantic titans that devour humans."
     },
     "image": "/imagenes/series/ataque.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 4,
     "episodios": 87,
     "trailer": {
@@ -841,7 +841,7 @@
       "en": "Breaking Bad prequel following lawyer Jimmy McGill's transformation into Saul Goodman."
     },
     "image": "/imagenes/series/better_call.jpg",
-    "subcategoria": "drama",
+    "subcategory": "drama",
     "temporadas": 6,
     "episodios": 63,
     "trailer": {
@@ -864,7 +864,7 @@
       "en": "Mockumentary comedy about employees at a paper sales office in Scranton."
     },
     "image": "/imagenes/series/the_office.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 9,
     "episodios": 201,
     "trailer": {
@@ -887,7 +887,7 @@
       "en": "Anime about a student who finds a supernatural notebook that can kill anyone."
     },
     "image": "/imagenes/series/death_note.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 1,
     "episodios": 37,
     "trailer": {
@@ -910,7 +910,7 @@
       "en": "Comedy about Jerry Seinfeld's daily life and his eccentric friends in New York."
     },
     "image": "/imagenes/series/seinfeld.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 9,
     "episodios": 180,
     "trailer": {
@@ -933,7 +933,7 @@
       "en": "Crime anthology series exploring complex cases with different detectives each season."
     },
     "image": "/imagenes/series/true_detective.jpg",
-    "subcategoria": "crime",
+    "subcategory": "crime",
     "temporadas": 4,
     "episodios": 30,
     "trailer": {
@@ -956,7 +956,7 @@
       "en": "Anthology series inspired by the Coen Brothers film, featuring crimes in the American Midwest."
     },
     "image": "/imagenes/series/fargo.jpg",
-    "subcategoria": "crime",
+    "subcategory": "crime",
     "temporadas": 5,
     "episodios": 51,
     "trailer": {
@@ -979,7 +979,7 @@
       "en": "Comedy about six friends living in New York navigating adult life together."
     },
     "image": "/imagenes/series/friends.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 10,
     "episodios": 236,
     "trailer": {
@@ -1002,7 +1002,7 @@
       "en": "Crime drama about the rise and fall of Colombian drug cartels, especially Pablo Escobar."
     },
     "image": "/imagenes/series/narcos.jpg",
-    "subcategoria": "crime",
+    "subcategory": "crime",
     "temporadas": 3,
     "episodios": 30,
     "trailer": {
@@ -1025,7 +1025,7 @@
       "en": "Satirical animated comedy about four boys in a small Colorado town."
     },
     "image": "/imagenes/series/south_park.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 26,
     "episodios": 325,
     "trailer": {
@@ -1048,7 +1048,7 @@
       "en": "Science fiction anthology exploring the dark side of technology and modern society."
     },
     "image": "/imagenes/series/black_mirror.jpg",
-    "subcategoria": "sci-fi",
+    "subcategory": "sci-fi",
     "temporadas": 6,
     "episodios": 27,
     "trailer": {
@@ -1071,7 +1071,7 @@
       "en": "Dystopian drama following a British family through political and social changes in the near future."
     },
     "image": "/imagenes/series/years_and_years.jpg",
-    "subcategoria": "drama",
+    "subcategory": "drama",
     "temporadas": 1,
     "episodios": 6,
     "trailer": {
@@ -1094,7 +1094,7 @@
       "en": "Star Wars series about a Mandalorian bounty hunter and his ward in the outer reaches of the galaxy."
     },
     "image": "/imagenes/series/the_mandalorian.jpg",
-    "subcategoria": "sci-fi",
+    "subcategory": "sci-fi",
     "temporadas": 3,
     "episodios": 24,
     "trailer": {
@@ -1117,7 +1117,7 @@
       "en": "Supernatural thriller set in the 80s about kids facing supernatural forces in their town."
     },
     "image": "/imagenes/series/stranger_things.jpg",
-    "subcategoria": "horror",
+    "subcategory": "horror",
     "temporadas": 4,
     "episodios": 42,
     "trailer": {
@@ -1140,7 +1140,7 @@
       "en": "Superhero satire about a group fighting corrupt superheroes and powerful corporations."
     },
     "image": "/imagenes/series/the_boys.jpg",
-    "subcategoria": "sci-fi",
+    "subcategory": "sci-fi",
     "temporadas": 4,
     "episodios": 32,
     "trailer": {
@@ -1163,7 +1163,7 @@
       "en": "Mystery about plane crash survivors stranded on a mysterious island full of secrets."
     },
     "image": "/imagenes/series/lost.jpg",
-    "subcategoria": "thriller",
+    "subcategory": "thriller",
     "temporadas": 6,
     "episodios": 121,
     "trailer": {
@@ -1186,7 +1186,7 @@
       "en": "Surreal British sketch comedy that revolutionized humor with its absurd and innovative style."
     },
     "image": "/imagenes/series/monty_python.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 4,
     "episodios": 45,
     "trailer": {
@@ -1209,7 +1209,7 @@
       "en": "Animated comedy about a dysfunctional American family that satirizes American society and culture."
     },
     "image": "/imagenes/series/the_simpsons.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 35,
     "episodios": 750,
     "trailer": {
@@ -1232,7 +1232,7 @@
       "en": "Adventure anime about Monkey D. Luffy and his pirate crew searching for the One Piece treasure."
     },
     "image": "/imagenes/series/one_piece.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 21,
     "episodios": 1000,
     "trailer": {
@@ -1255,7 +1255,7 @@
       "en": "Surreal mystery about the investigation of Laura Palmer's murder in a small town."
     },
     "image": "/imagenes/series/twin_peaks.jpg",
-    "subcategoria": "thriller",
+    "subcategory": "thriller",
     "temporadas": 3,
     "episodios": 48,
     "trailer": {
@@ -1278,7 +1278,7 @@
       "en": "Action anime about Goku and the Z warriors defending Earth from powerful enemies."
     },
     "image": "/imagenes/series/dragon_ball_z.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 9,
     "episodios": 291,
     "trailer": {
@@ -1301,7 +1301,7 @@
       "en": "Post-apocalyptic drama about a smuggler and teenager navigating a world devastated by zombies."
     },
     "image": "/imagenes/series/the_last_of_us.jpg",
-    "subcategoria": "drama",
+    "subcategory": "drama",
     "temporadas": 1,
     "episodios": 9,
     "trailer": {
@@ -1324,7 +1324,7 @@
       "en": "Comedy-drama about a young woman navigating life in London with dark humor and breaking the fourth wall."
     },
     "image": "/imagenes/series/fleabag.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 2,
     "episodios": 12,
     "trailer": {
@@ -1347,7 +1347,7 @@
       "en": "Medical drama following Dr. Gregory House, a brilliant but sarcastic doctor who solves complex medical cases."
     },
     "image": "/imagenes/series/house.jpg",
-    "subcategoria": "medical",
+    "subcategory": "medical",
     "temporadas": 8,
     "episodios": 177,
     "trailer": {
@@ -1370,7 +1370,7 @@
       "en": "Anime about Saitama, a superhero who can defeat any enemy with a single punch, but seeks a worthy opponent."
     },
     "image": "/imagenes/series/one_punch_man.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 3,
     "episodios": 36,
     "trailer": {
@@ -1393,7 +1393,7 @@
       "en": "Anime about a student with psychic powers trying to live a normal life while controlling his supernatural abilities."
     },
     "image": "/imagenes/series/mob_psycho_100.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 3,
     "episodios": 37,
     "trailer": {
@@ -1416,7 +1416,7 @@
       "en": "Horror series exploring the traumas of a family who lived in a haunted house during their childhood."
     },
     "image": "/imagenes/series/haunting_hill_house.jpg",
-    "subcategoria": "horror",
+    "subcategory": "horror",
     "temporadas": 1,
     "episodios": 10,
     "trailer": {
@@ -1439,7 +1439,7 @@
       "en": "Crime series about FBI agents developing serial killer profiles in the 1970s and 1980s."
     },
     "image": "/imagenes/series/mindhunter.jpg",
-    "subcategoria": "crime",
+    "subcategory": "crime",
     "temporadas": 2,
     "episodios": 19,
     "trailer": {
@@ -1462,7 +1462,7 @@
       "en": "Adaptation of Neil Gaiman's comic about Dream, one of the Eternals who rules the world of dreams."
     },
     "image": "/imagenes/series/sandman.jpg",
-    "subcategoria": "fantasy",
+    "subcategory": "fantasy",
     "temporadas": 1,
     "episodios": 10,
     "trailer": {
@@ -1485,7 +1485,7 @@
       "en": "Science fiction series set in a futuristic theme park populated by conscious androids."
     },
     "image": "/imagenes/series/westworld.jpg",
-    "subcategoria": "sci-fi",
+    "subcategory": "sci-fi",
     "temporadas": 4,
     "episodios": 36,
     "trailer": {
@@ -1508,7 +1508,7 @@
       "en": "Narcos spin-off exploring the origins of modern Mexican drug trafficking in the 1980s."
     },
     "image": "/imagenes/series/narcos_mexico.jpg",
-    "subcategoria": "crime",
+    "subcategory": "crime",
     "temporadas": 3,
     "episodios": 30,
     "trailer": {
@@ -1531,7 +1531,7 @@
       "en": "Miniseries about Beth Harmon, a chess prodigy battling addictions while mastering the game."
     },
     "image": "/imagenes/series/queens_gambit.jpg",
-    "subcategoria": "drama",
+    "subcategory": "drama",
     "temporadas": 1,
     "episodios": 7,
     "trailer": {
@@ -1554,7 +1554,7 @@
       "en": "Black comedy anthology series set in exclusive resorts exploring tension between social classes."
     },
     "image": "/imagenes/series/white_lotus.jpg",
-    "subcategoria": "drama",
+    "subcategory": "drama",
     "temporadas": 2,
     "episodios": 12,
     "trailer": {
@@ -1577,7 +1577,7 @@
       "en": "Anthology horror series exploring racial terror across different periods of American history."
     },
     "image": "/imagenes/series/them.jpg",
-    "subcategoria": "horror",
+    "subcategory": "horror",
     "temporadas": 1,
     "episodios": 10,
     "trailer": {
@@ -1600,7 +1600,7 @@
       "en": "Science fiction series about an FBI team investigating paranormal events and fringe science."
     },
     "image": "/imagenes/series/fringe.jpg",
-    "subcategoria": "sci-fi",
+    "subcategory": "sci-fi",
     "temporadas": 5,
     "episodios": 100,
     "trailer": {
@@ -1623,7 +1623,7 @@
       "en": "Thriller about an engineer who gets himself imprisoned to help his brother escape from death row."
     },
     "image": "/imagenes/series/prison_break.jpg",
-    "subcategoria": "thriller",
+    "subcategory": "thriller",
     "temporadas": 5,
     "episodios": 90,
     "trailer": {
@@ -1646,7 +1646,7 @@
       "en": "Anthology suspense series presented by the master of suspense Alfred Hitchcock."
     },
     "image": "/imagenes/series/alfred_hitchcock_presents.jpg",
-    "subcategoria": "thriller",
+    "subcategory": "thriller",
     "temporadas": 7,
     "episodios": 268,
     "trailer": {
@@ -1669,7 +1669,7 @@
       "en": "Sitcom comedy set in a Boston bar where everybody knows your name and feels like home."
     },
     "image": "/imagenes/series/cheers.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 11,
     "episodios": 275,
     "trailer": {
@@ -1692,7 +1692,7 @@
       "en": "Dramatic comedy about a military hospital during the Korean War, mixing humor and drama."
     },
     "image": "/imagenes/series/mash.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 11,
     "episodios": 256,
     "trailer": {
@@ -1715,7 +1715,7 @@
       "en": "A group of former soldiers help those in need while being pursued by the government."
     },
     "image": "/imagenes/series/el_equipo_a.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 5,
     "episodios": 98,
     "trailer": {
@@ -1738,7 +1738,7 @@
       "en": "Medical drama about a young surgeon with autism and savant syndrome joining a prestigious hospital."
     },
     "image": "/imagenes/series/good_doctor.jpg",
-    "subcategoria": "medical",
+    "subcategory": "medical",
     "temporadas": 7,
     "episodios": 126,
     "trailer": {
@@ -1761,7 +1761,7 @@
       "en": "Dramatic comedy about a dysfunctional working-class family led by an alcoholic father."
     },
     "image": "/imagenes/series/shameless.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 11,
     "episodios": 134,
     "trailer": {
@@ -1784,7 +1784,7 @@
       "en": "Historical drama following the adventures of legendary Viking warrior Ragnar Lothbrok and his family."
     },
     "image": "/imagenes/series/vikings.jpg",
-    "subcategoria": "historical",
+    "subcategory": "historical",
     "temporadas": 6,
     "episodios": 89,
     "trailer": {
@@ -1807,7 +1807,7 @@
       "en": "Modern adaptation of Sherlock Holmes set in 21st century London starring Benedict Cumberbatch."
     },
     "image": "/imagenes/series/sherlock.jpg",
-    "subcategoria": "thriller",
+    "subcategory": "thriller",
     "temporadas": 4,
     "episodios": 13,
     "trailer": {
@@ -1830,7 +1830,7 @@
       "en": "Sitcom about a group of nerdy scientists and their aspiring actress neighbor in Pasadena, California."
     },
     "image": "/imagenes/series/big_bang_theory.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 12,
     "episodios": 279,
     "trailer": {
@@ -1853,7 +1853,7 @@
       "en": "Prequel to The Big Bang Theory showing the childhood of genius Sheldon Cooper in Texas."
     },
     "image": "/imagenes/series/young_sheldon.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 7,
     "episodios": 141,
     "trailer": {
@@ -1876,7 +1876,7 @@
       "en": "Psychological thriller about a forensic analyst leading a double life as a vigilante serial killer."
     },
     "image": "/imagenes/series/dexter.jpg",
-    "subcategoria": "thriller",
+    "subcategory": "thriller",
     "temporadas": 8,
     "episodios": 96,
     "trailer": {
@@ -1899,7 +1899,7 @@
       "en": "Post-apocalyptic series about survivors of a zombie plague fighting to survive."
     },
     "image": "/imagenes/series/walking_dead.jpg",
-    "subcategoria": "horror",
+    "subcategory": "horror",
     "temporadas": 11,
     "episodios": 177,
     "trailer": {
@@ -1922,7 +1922,7 @@
       "en": "Anime about a young ninja seeking recognition and dreaming of becoming the leader of his village."
     },
     "image": "/imagenes/series/naruto.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 9,
     "episodios": 720,
     "trailer": {
@@ -1945,7 +1945,7 @@
       "en": "Sitcom about Ted Mosby telling his children the story of how he met their mother."
     },
     "image": "/imagenes/series/how_i_met_your_mother.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 9,
     "episodios": 208,
     "trailer": {
@@ -1968,7 +1968,7 @@
       "en": "Political thriller about an ambitious congressman manipulating his way to power in Washington."
     },
     "image": "/imagenes/series/house_of_cards.jpg",
-    "subcategoria": "thriller",
+    "subcategory": "thriller",
     "temporadas": 6,
     "episodios": 73,
     "trailer": {
@@ -1991,7 +1991,7 @@
       "en": "Mockumentary about three related families navigating modern life with humor and heart."
     },
     "image": "/imagenes/series/modern_family.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 11,
     "episodios": 250,
     "trailer": {
@@ -2014,7 +2014,7 @@
       "en": "Anthology horror series exploring different horror stories each season."
     },
     "image": "/imagenes/series/american_horror_story.jpg",
-    "subcategoria": "horror",
+    "subcategory": "horror",
     "temporadas": 12,
     "episodios": 132,
     "trailer": {
@@ -2037,7 +2037,7 @@
       "en": "Science fiction series about eight strangers mentally and emotionally connected around the world."
     },
     "image": "/imagenes/series/sense8.jpg",
-    "subcategoria": "sci-fi",
+    "subcategory": "sci-fi",
     "temporadas": 2,
     "episodios": 24,
     "trailer": {
@@ -2060,7 +2060,7 @@
       "en": "Fantasy comedy about an angel and demon working together to prevent the Apocalypse."
     },
     "image": "/imagenes/series/good_omens.jpg",
-    "subcategoria": "fantasy",
+    "subcategory": "fantasy",
     "temporadas": 2,
     "episodios": 12,
     "trailer": {
@@ -2083,7 +2083,7 @@
       "en": "Fantasy series based on Neil Gaiman's novel about old gods vs new gods in America."
     },
     "image": "/imagenes/series/american_gods.jpg",
-    "subcategoria": "fantasy",
+    "subcategory": "fantasy",
     "temporadas": 3,
     "episodios": 26,
     "trailer": {
@@ -2106,7 +2106,7 @@
       "en": "Dystopian drama based on Margaret Atwood's novel about a totalitarian society where fertile women are enslaved for reproduction."
     },
     "image": "/imagenes/series/handmaids_tale.jpg",
-    "subcategoria": "drama",
+    "subcategory": "drama",
     "temporadas": 5,
     "episodios": 56,
     "trailer": {
@@ -2129,7 +2129,7 @@
       "en": "Comedy about a young man from Philadelphia who moves in with his wealthy relatives in Bel-Air, starring Will Smith."
     },
     "image": "/imagenes/series/fresh_prince.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 6,
     "episodios": 148,
     "trailer": {
@@ -2152,7 +2152,7 @@
       "en": "Comedy series focused on the Winslow family and their quirky neighbor Steve Urkel, whose inventions and clumsiness lead to all sorts of funny and chaotic situations."
     },
     "image": "/imagenes/series/full_house.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 9,
     "episodios": 215,
     "trailer": {
@@ -2175,7 +2175,7 @@
       "en": "Animated comedy about a pizza delivery boy who accidentally freezes himself and wakes up in the year 3000."
     },
     "image": "/imagenes/series/futurama.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 11,
     "episodios": 150,
     "trailer": {
@@ -2198,7 +2198,7 @@
       "en": "Animated dramedy about an anthropomorphic horse who's a former TV star dealing with depression and addiction."
     },
     "image": "/imagenes/series/bojack_horseman.jpg",
-    "subcategoria": "drama",
+    "subcategory": "drama",
     "temporadas": 6,
     "episodios": 77,
     "trailer": {
@@ -2221,7 +2221,7 @@
       "en": "Animated series about twins who spend summer with their great-uncle and discover supernatural mysteries in an Oregon town."
     },
     "image": "/imagenes/series/gravity_falls.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 2,
     "episodios": 40,
     "trailer": {
@@ -2244,7 +2244,7 @@
       "en": "Psychological thriller about a cybersecurity engineer with social anxiety disorder who is recruited by a group of hacktivists."
     },
     "image": "/imagenes/series/mr_robot.jpg",
-    "subcategoria": "thriller",
+    "subcategory": "thriller",
     "temporadas": 4,
     "episodios": 45,
     "trailer": {
@@ -2267,7 +2267,7 @@
       "en": "Anime about a world where most people have superpowers and a powerless young man dreams of becoming a hero."
     },
     "image": "/imagenes/series/my_hero_academia.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 7,
     "episodios": 158,
     "trailer": {
@@ -2290,7 +2290,7 @@
       "en": "Drama about a dysfunctional family running a funeral home in Los Angeles, exploring themes of death and life."
     },
     "image": "/imagenes/series/six_feet_under.jpg",
-    "subcategoria": "drama",
+    "subcategory": "drama",
     "temporadas": 5,
     "episodios": 63,
     "trailer": {
@@ -2313,7 +2313,7 @@
       "en": "Teen comedy about a teenager who creates a web show with her friends from her apartment."
     },
     "image": "/imagenes/series/icarly.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 6,
     "episodios": 109,
     "trailer": {
@@ -2336,7 +2336,7 @@
       "en": "Horror series about people trapped in a mysterious town they can't escape from, stalked by nightmarish creatures."
     },
     "image": "/imagenes/series/from.jpg",
-    "subcategoria": "horror",
+    "subcategory": "horror",
     "temporadas": 3,
     "episodios": 30,
     "trailer": {
@@ -2359,7 +2359,7 @@
       "en": "Legal drama about a wife who returns to work as a lawyer after her husband's political scandal."
     },
     "image": "/imagenes/series/good_wife.jpg",
-    "subcategoria": "drama",
+    "subcategory": "drama",
     "temporadas": 7,
     "episodios": 156,
     "trailer": {
@@ -2382,7 +2382,7 @@
       "en": "South Korean thriller about desperate people participating in deadly children's games for a cash prize."
     },
     "image": "/imagenes/series/squid_game.jpg",
-    "subcategoria": "thriller",
+    "subcategory": "thriller",
     "temporadas": 2,
     "episodios": 17,
     "trailer": {
@@ -2405,7 +2405,7 @@
       "en": "Surreal animated series about the adventures of a boy named Finn and his magical dog Jake in a post-apocalyptic world."
     },
     "image": "/imagenes/series/adventure_time.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 10,
     "episodios": 283,
     "trailer": {
@@ -2428,7 +2428,7 @@
       "en": "Animated series about the adventures of a 12-year-old blue cat and his adoptive family in the fictional city of Elmore."
     },
     "image": "/imagenes/series/gumball.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 6,
     "episodios": 240,
     "trailer": {
@@ -2451,7 +2451,7 @@
       "en": "Medical drama following the personal and professional lives of surgical interns at a Seattle hospital."
     },
     "image": "/imagenes/series/greys_anatomy.jpg",
-    "subcategoria": "drama",
+    "subcategory": "drama",
     "temporadas": 21,
     "episodios": 435,
     "trailer": {
@@ -2474,7 +2474,7 @@
       "en": "Dramedy about four Manhattan women navigating relationships, sex, and friendship in New York City."
     },
     "image": "/imagenes/series/sex_and_the_city.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 6,
     "episodios": 94,
     "trailer": {
@@ -2497,7 +2497,7 @@
       "en": "Animated comedy about a dysfunctional Rhode Island family with irreverent humor and pop culture references."
     },
     "image": "/imagenes/series/family_guy.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 22,
     "episodios": 423,
     "trailer": {
@@ -2520,7 +2520,7 @@
       "en": "Science fiction anime about space bounty hunters in 2071, blending genres and unique musical styles."
     },
     "image": "/imagenes/series/cowboy_bebop.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 1,
     "episodios": 26,
     "trailer": {
@@ -2543,7 +2543,7 @@
       "en": "Semi-autobiographical comedy about a divorced comedian raising his two daughters in New York."
     },
     "image": "/imagenes/series/louie.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 5,
     "episodios": 61,
     "trailer": {
@@ -2566,7 +2566,7 @@
       "en": "Science fiction and mystery series following two FBI agents investigating paranormal phenomena."
     },
     "image": "/imagenes/series/expediente_x.jpg",
-    "subcategoria": "thriller",
+    "subcategory": "thriller",
     "temporadas": 11,
     "episodios": 218,
     "trailer": {
@@ -2589,7 +2589,7 @@
       "en": "A red panda office worker deals with her daily frustrations by singing death metal at karaoke."
     },
     "image": "/imagenes/series/aggretsuko.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 5,
     "episodios": 50,
     "trailer": {
@@ -2612,7 +2612,7 @@
       "en": "Follows the adventures of Goku from childhood as he trains in martial arts and searches for the Dragon Balls."
     },
     "image": "/imagenes/series/dragon_ball.jpg",
-    "subcategoria": "animation",
+    "subcategory": "animation",
     "temporadas": 9,
     "episodios": 153,
     "trailer": {
@@ -2635,7 +2635,7 @@
       "en": "A missing child reveals dark secrets and connections among four families in a small German town."
     },
     "image": "/imagenes/series/dark.jpg",
-    "subcategoria": "thriller",
+    "subcategory": "thriller",
     "temporadas": 3,
     "episodios": 26,
     "trailer": {
@@ -2658,7 +2658,7 @@
       "en": "A model and an offbeat detective solve cases while their romantic relationship evolves."
     },
     "image": "/imagenes/series/luz_de_luna.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 5,
     "episodios": 66,
     "trailer": {
@@ -2681,7 +2681,7 @@
       "en": "An apparently peaceful alien race arrives on Earth but hides dark intentions."
     },
     "image": "/imagenes/series/v.jpg",
-    "subcategoria": "sci-fi",
+    "subcategory": "sci-fi",
     "temporadas": 1,
     "episodios": 19,
     "trailer": {
@@ -2704,7 +2704,7 @@
       "en": "A modern-day crime fighter battles evil with the help of an intelligent car named KITT."
     },
     "image": "/imagenes/series/coche_fantastico.jpg",
-    "subcategoria": "sci-fi",
+    "subcategory": "sci-fi",
     "temporadas": 4,
     "episodios": 90,
     "trailer": {
@@ -2727,7 +2727,7 @@
       "en": "A clumsy yet effective spy battles an evil organization with help from his partner Agent 99."
     },
     "image": "/imagenes/series/superagente_86.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 5,
     "episodios": 138,
     "trailer": {
@@ -2750,7 +2750,7 @@
       "en": "Teen sitcom following a group of students through school life, romance, friendships, and everyday problems."
     },
     "image": "/imagenes/series/salvados_por_la_campana.jpg",
-    "subcategoria": "comedy",
+    "subcategory": "comedy",
     "temporadas": 4,
     "episodios": 86,
     "trailer": {
@@ -2773,7 +2773,7 @@
       "en": "Anime series blending feudal Japan with hip hop elements, following three characters on a journey to find the 'samurai who smells of sunflowers'."
     },
     "image": "/imagenes/series/samurai_champloo.jpg",
-    "subcategoria": "anime",
+    "subcategory": "anime",
     "temporadas": 1,
     "episodios": 26,
     "trailer": {

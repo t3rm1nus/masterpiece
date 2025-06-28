@@ -32,7 +32,18 @@ import SplashDialog from './SplashDialog';
  */
 
 // Menú clásico para desktop
-function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {}, onSplashOpen, splashAudio, splashOpen, onSplashClose, audioRef }) {
+function DesktopMenu(props) {
+  const {
+    renderMenuItem,
+    menuItems: menuItemsProp,
+    sx = {},
+    onSplashOpen,
+    splashAudio,
+    splashOpen,
+    onSplashClose,
+    audioRef,
+    onBack // <-- aseguramos que se desestructura correctamente
+  } = props;
   const { t, lang, getTranslation } = useLanguage();
   const { resetAllFilters, generateNewRecommendations } = useAppData();
   const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();  
@@ -71,6 +82,11 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {}, onSpla
   // Usar items custom si se pasan, si no usar hook por defecto
   const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems();
 
+  // Log de depuración en cada render
+  React.useEffect(() => {
+    console.log('[HybridMenu] Render, valor de onBack:', typeof onBack, onBack);
+  }, [onBack, currentView]);
+
   return (
     <nav className="main-menu" style={{
       position: 'fixed',
@@ -107,7 +123,18 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {}, onSpla
           {showBackButton && (
             <button
               key="back-desktop-detail"
-              onClick={isDetailView ? goBackFromDetail : isCoffeeView ? goBackFromCoffee : goHome}
+              onClick={e => {
+                console.log('[HybridMenu] Botón Volver clicado', { isDetailView, onBack });
+                if (typeof onBack === 'function') {
+                  onBack();
+                } else if (isDetailView) {
+                  console.log('[HybridMenu] isDetailView pero onBack es undefined');
+                } else if (isCoffeeView) {
+                  goBackFromCoffee();
+                } else {
+                  goHome();
+                }
+              }}
               style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8, marginLeft: 8 }}
             >
               <span style={{display:'flex',alignItems:'center'}}>&larr;</span>
@@ -175,12 +202,14 @@ const HybridMenu = ({
   splashAudio,
   splashOpen,
   onSplashClose,
-  audioRef
+  audioRef,
+  onBack // <-- AGREGADO para evitar ReferenceError
 } = {}) => {
   const { lang } = useLanguage();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
-  
+  // [HybridMenu] RENDER GLOBAL - ESTE ES EL MENU QUE SE EJECUTA (onBack eliminado del log para evitar error de referencia)
+
   if (isMobile) {
     // Pasar los props de splash también en móvil
     return <MaterialMobileMenu 
@@ -197,7 +226,7 @@ const HybridMenu = ({
       audioRef={audioRef}
     />;
   } else {
-    return <DesktopMenu renderMenuItem={renderMenuItem} menuItems={menuItems} sx={sx} onSplashOpen={onSplashOpen} splashAudio={splashAudio} splashOpen={splashOpen} onSplashClose={onSplashClose} audioRef={audioRef} />;
+    return <DesktopMenu renderMenuItem={renderMenuItem} menuItems={menuItems} sx={sx} onSplashOpen={onSplashOpen} splashAudio={splashAudio} splashOpen={splashOpen} onSplashClose={onSplashClose} audioRef={audioRef} onBack={onBack} />;
   }
 };
 

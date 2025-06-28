@@ -35,8 +35,8 @@ export const createDataSlice = (set, get) => ({
     if (realData.allData && Array.isArray(realData.allData.series)) {
       const subcatSet = new Set();
       realData.allData.series.forEach((serie, idx) => {
-        if (serie.subcategoria && typeof serie.subcategoria === 'string') {
-          serie.subcategoria.split(',').forEach(sub => {
+        if (serie.subcategory && typeof serie.subcategory === 'string') {
+          serie.subcategory.split(',').forEach(sub => {
             const cleanSub = sub.trim().toLowerCase();
             if (cleanSub) {
               subcatSet.add(cleanSub);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppView } from '../store/useAppStore';
 import { useTitleSync } from '../hooks/useTitleSync';
@@ -302,8 +302,7 @@ const HomePage = ({
           filteredData = filteredData.filter(item => {
             // Prioridad: subcategoria (sin tilde), luego subcategory, categoria, genre, genero
             return (
-              (item.subcategoria && normalizeSubcategoryInternal(item.subcategoria) === normalizedActiveSubcat)
-              || (item.subcategory && normalizeSubcategoryInternal(item.subcategory) === normalizedActiveSubcat)
+              (item.subcategory && normalizeSubcategoryInternal(item.subcategory) === normalizedActiveSubcat)
               || (item.categoria && normalizeSubcategoryInternal(item.categoria) === normalizedActiveSubcat)
               || (item.genre && normalizeSubcategoryInternal(item.genre) === normalizedActiveSubcat)
               || (item.genero && normalizeSubcategoryInternal(item.genero) === normalizedActiveSubcat)
@@ -500,6 +499,13 @@ const HomePage = ({
     ? getMasterpieceAnimatedGradient()
     : getCategoryAnimatedGradient(selectedCategory);
 
+  const [isClosingDetail, setIsClosingDetail] = useState(false);
+  // Función de cierre animado para detalle
+  const handleRequestClose = useCallback(() => {
+    console.log('[HomePage] handleRequestClose llamado');
+    setIsClosingDetail(true);
+  }, []);
+
   return (
     <UiLayout sx={{ marginTop: 8, width: '100vw', maxWidth: '100vw', px: 0 }}>
       {/* Título principal */}
@@ -540,16 +546,6 @@ const HomePage = ({
                 />
               )}
             </div>
-          )}
-          {/* SOLO DESKTOP: Menú superior y controles */}
-          {!isMobile && (
-            <HybridMenu
-              onSplashOpen={onSplashOpen}
-              splashAudio={splashAudio}
-              splashOpen={splashOpen}
-              onSplashClose={onSplashClose}
-              audioRef={audioRef}
-            />
           )}
           {/* SOLO DESKTOP: Categorías, subcategorías y botones especiales */}
           {!isMobile && (
@@ -642,6 +638,13 @@ const HomePage = ({
             />
           )}
         </div>
+      )}
+      {selectedItem && (
+        <UnifiedItemDetail
+          item={selectedItem}
+          onClose={() => { console.log('[HomePage] onClose (detalle) ejecutado'); handleRequestClose(); }}
+          selectedCategory={selectedCategory}
+        />
       )}
     </UiLayout>
   );

@@ -54,7 +54,7 @@ import {
  *   showSections={{ trailer: true, description: false }}
  * />
  */
-const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
+const UnifiedItemDetail = ({ item, onClose, selectedCategory, onRequestClose }) => {
   // Inyectar keyframes globales SOLO una vez
   useEffect(() => {
     if (!document.getElementById('item-detail-keyframes')) {
@@ -80,7 +80,11 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory }) => {
   const [isClosing, setIsClosing] = React.useState(false);
 
   const handleClose = () => {
-    setIsClosing(true);
+    if (onRequestClose) {
+      onRequestClose();
+    } else {
+      setIsClosing(true);
+    }
   };
 
   // Cuando termina la animación de salida, cerrar realmente
