@@ -1,26 +1,9 @@
 import React from 'react';
-import './Modal.css';
+import { Box, Typography } from '@mui/material';
 
 /**
- * Modal: Modal base personalizable.
+ * Modal: Modal base personalizable migrado a CSS-in-JS (MUI Box).
  * Permite definir título, acciones, estilos, callbacks y visibilidad de secciones.
- *
- * Props:
- * - open: boolean (si el modal está abierto)
- * - onClose: función (callback al cerrar)
- * - title: string o ReactNode (título opcional)
- * - actions: ReactNode (acciones opcionales, por ejemplo botones)
- * - children: contenido principal
- * - className: string (clase CSS para el modal)
- * - contentClassName: string (clase CSS para el contenido)
- * - backdropClassName: string (clase CSS para el fondo)
- * - sx: objeto de estilos adicionales { modal, content, backdrop }
- * - onBackdropClick: función (callback al hacer click en el fondo)
- *
- * Ejemplo de uso:
- * <Modal open={open} onClose={onClose} title="Título" actions={<button onClick={onClose}>Cerrar</button>}>
- *   <p>Contenido</p>
- * </Modal>
  */
 export default function Modal({
   open,
@@ -37,21 +20,41 @@ export default function Modal({
 }) {
   if (!open) return null;
   return (
-    <div
-      className={`mp-modal-backdrop ${backdropClassName}`}
-      style={sx.backdrop}
+    <Box
+      sx={{
+        position: 'fixed',
+        top: 0, left: 0, right: 0, bottom: 0,
+        background: 'rgba(0,0,0,0.35)',
+        zIndex: 1000,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        ...sx.backdrop
+      }}
+      className={backdropClassName}
       onClick={onBackdropClick || onClose}
     >
-      <div
-        className={`mp-modal ${className} ${contentClassName}`}
-        style={sx.modal}
+      <Box
+        sx={{
+          background: '#fff',
+          borderRadius: 2.5,
+          boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
+          p: '2em 1.5em',
+          minWidth: 320,
+          maxWidth: '90vw',
+          maxHeight: '90vh',
+          overflowY: 'auto',
+          position: 'relative',
+          ...sx.modal
+        }}
+        className={`${className} ${contentClassName}`}
         onClick={e => e.stopPropagation()}
         {...props}
       >
-        {title && <div className="mp-modal-title" style={sx.title}>{title}</div>}
-        <div className="mp-modal-content" style={sx.content}>{children}</div>
-        {actions && <div className="mp-modal-actions" style={sx.actions}>{actions}</div>}
-      </div>
-    </div>
+        {title && <Typography variant="h6" sx={{ mb: 2, ...sx.title }}>{title}</Typography>}
+        <Box sx={{ ...sx.content }}>{children}</Box>
+        {actions && <Box sx={{ mt: 2, display: 'flex', gap: 2, justifyContent: 'flex-end', ...sx.actions }}>{actions}</Box>}
+      </Box>
+    </Box>
   );
 }

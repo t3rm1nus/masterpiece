@@ -3,21 +3,57 @@ import { Button as MuiButton } from '@mui/material';
 
 /**
  * UiButton: Botón base reutilizable para toda la app.
- * Centraliza estilos y variantes. Extiende MUI Button.
- *
- * Props:
- * - variant: 'contained' | 'outlined' | 'text' (variante visual del botón, default: 'contained')
- * - color: string (color del botón, default: 'primary')
- * - size: 'small' | 'medium' | 'large' (tamaño del botón, default: 'medium')
- * - icon: ReactNode (icono opcional a la izquierda del contenido)
- * - onClick: function (callback al hacer click)
- * - sx: object (estilos adicionales MUI sx)
- * - className: string (clase CSS adicional)
- * - children: contenido del botón
- *
- * Ejemplo de uso:
- * <UiButton variant="outlined" color="secondary" onClick={handleClick} icon={<MyIcon />}>Aceptar</UiButton>
+ * Migrado a CSS-in-JS usando sx para variantes, tamaños y estados.
  */
+const variantStyles = {
+  contained: {
+    background: 'linear-gradient(90deg, #0078d4 60%, #005ea6 100%)',
+    color: '#fff',
+    boxShadow: '0 2px 8px 0 rgba(0,0,0,0.10)',
+    '&:hover': {
+      background: 'linear-gradient(90deg, #005ea6 60%, #0078d4 100%)',
+      boxShadow: '0 4px 16px 0 rgba(0,0,0,0.13)'
+    },
+    '&:active': {
+      background: '#005ea6',
+      boxShadow: 'none'
+    }
+  },
+  outlined: {
+    background: 'transparent',
+    color: '#0078d4',
+    border: '2px solid #0078d4',
+    '&:hover': {
+      background: '#e3f2fd',
+      borderColor: '#005ea6',
+      color: '#005ea6'
+    },
+    '&:active': {
+      background: '#bbdefb',
+      borderColor: '#005ea6',
+      color: '#005ea6'
+    }
+  },
+  text: {
+    background: 'none',
+    color: '#0078d4',
+    '&:hover': {
+      background: '#e3f2fd',
+      color: '#005ea6'
+    },
+    '&:active': {
+      background: '#bbdefb',
+      color: '#005ea6'
+    }
+  }
+};
+
+const sizeStyles = {
+  small: { fontSize: '0.95rem', padding: '4px 14px', minHeight: 32 },
+  medium: { fontSize: '1.05rem', padding: '8px 20px', minHeight: 40 },
+  large: { fontSize: '1.15rem', padding: '12px 28px', minHeight: 48 }
+};
+
 const UiButton = ({ children, variant = 'contained', color = 'primary', size = 'medium', icon, sx = {}, className = '', ...props }) => {
   return (
     <MuiButton
@@ -26,12 +62,16 @@ const UiButton = ({ children, variant = 'contained', color = 'primary', size = '
       size={size}
       className={className}
       startIcon={icon}
+      disableElevation
       sx={{
         borderRadius: 8,
         textTransform: 'none',
         fontWeight: 600,
         boxShadow: 'none',
-        ...sx // sx debe ir al final para sobrescribir cualquier valor por defecto
+        transition: 'all 0.2s',
+        ...variantStyles[variant],
+        ...sizeStyles[size],
+        ...sx
       }}
       {...props}
     >

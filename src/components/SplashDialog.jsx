@@ -75,27 +75,16 @@ const SplashDialog = ({
     }
   }, [open]);
 
-  // Clona el primer <img> y añade id y clase
+  // Elimina la clase y el id de la imagen splash, y aplica la animación directamente con sx
   function addIdToImg(element) {
     if (!React.isValidElement(element)) return element;
     if (element.type === 'img') {
       return React.cloneElement(element, {
-        id: 'splash-image',
-        className: (element.props.className || '') + ' splash-image',
         style: {
           ...element.props.style,
-          height: '100vh',
-          width: 'auto',
-          maxHeight: '100vh',
-          maxWidth: '100vw',
-          borderRadius: 32,
-          margin: 0,
-          cursor: 'pointer',
-          objectFit: 'contain',
-          background: 'transparent',
-          display: 'block',
-          boxShadow: 'none',
-          border: '4px solid #000',
+          ...splashImageStyle,
+          ...(animationClass === 'splash-animate-in' && splashInStyle),
+          ...(animationClass === 'splash-animate-out' && splashOutStyle),
         }
       });
     }
@@ -105,6 +94,54 @@ const SplashDialog = ({
     }
     return element;
   }
+
+  // Animaciones CSS-in-JS para splash
+  const splashInStyle = {
+    animation: 'splashIn 1.1s cubic-bezier(0.23, 1, 0.32, 1) both',
+  };
+  const splashOutStyle = {
+    animation: 'splashOut 0.7s cubic-bezier(0.23, 1, 0.32, 1) both',
+  };
+
+  // Keyframes para animación splash (se inyectan en un <style> global)
+  const splashKeyframes = `
+  @keyframes splashIn {
+    0% { opacity: 0; transform: scale(0.7) rotate(-10deg); filter: blur(16px) brightness(1.2); }
+    60% { opacity: 1; transform: scale(1.05) rotate(2deg); filter: blur(2px) brightness(1.05); }
+    100% { opacity: 1; transform: scale(1) rotate(0deg); filter: blur(0) brightness(1); }
+  }
+  @keyframes splashOut {
+    0% { opacity: 1; transform: scale(1) rotate(0deg); filter: blur(0) brightness(1); }
+    100% { opacity: 0; transform: scale(0.8) rotate(-8deg); filter: blur(18px) brightness(1.2); }
+  }
+  `;
+
+  // Inyecta los keyframes globalmente una sola vez
+  useEffect(() => {
+    if (!document.getElementById('splash-keyframes')) {
+      const style = document.createElement('style');
+      style.id = 'splash-keyframes';
+      style.innerHTML = splashKeyframes;
+      document.head.appendChild(style);
+    }
+  }, []);
+
+  // Estilos CSS-in-JS para la imagen splash
+  const splashImageStyle = {
+    height: isMobile ? '56vh' : '100vh',
+    width: isMobile ? 'auto' : 'auto',
+    maxHeight: isMobile ? '56vh' : '100vh',
+    maxWidth: isMobile ? '66vw' : '100vw',
+    borderRadius: isMobile ? 24 : 32,
+    margin: 0,
+    cursor: 'pointer',
+    objectFit: 'contain',
+    background: 'transparent',
+    display: 'block',
+    boxShadow: 'none',
+    border: '4px solid #000',
+    boxSizing: 'border-box',
+  };
 
   return (
     <Dialog
@@ -221,22 +258,12 @@ const SplashDialog = ({
                 : (
                 <img
                   id="splash-image"
-                  className="splash-image"
                   src="/imagenes/splash_image.png"
                   alt={getTranslation('ui.alt.splash', 'Splash')}
                   style={{
-                    height: '100vh',
-                    width: 'auto',
-                    maxHeight: '100vh',
-                    maxWidth: '100vw',
-                    borderRadius: 32,
-                    margin: 0,
-                    cursor: 'pointer',
-                    objectFit: 'contain',
-                    background: 'transparent',
-                    display: 'block',
-                    boxShadow: 'none',
-                    border: '4px solid #000',
+                    ...splashImageStyle,
+                    ...(animationClass === 'splash-animate-in' && splashInStyle),
+                    ...(animationClass === 'splash-animate-out' && splashOutStyle),
                   }}
                 />
               )}

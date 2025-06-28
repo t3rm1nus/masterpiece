@@ -70,12 +70,9 @@
   100% { opacity: 1; }
 }
 
-.splash-animate-in {
-  /* animation: splashIn 1.1s cubic-bezier(0.23, 1, 0.32, 1) both; */
-}
-.splash-animate-out {
-  /* animation: splashOut 0.7s cubic-bezier(0.23, 1, 0.32, 1) both; */
-}
+/* Reglas vaciadas: animación migrada a CSS-in-JS */
+.splash-animate-in {}
+.splash-animate-out {}
 
 @keyframes splashIn {
   0% {

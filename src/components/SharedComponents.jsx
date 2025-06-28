@@ -3,17 +3,37 @@ import { useLanguage } from '../LanguageContext';
 import { Box, Typography } from '@mui/material';
 
 // Componente de imagen optimizada
-export const OptimizedImage = ({ src, alt, sx = {}, loading = 'lazy', decoding = 'async', fallback, ...props }) => (
+export const OptimizedImage = ({ src, alt, sx = {}, loading = 'lazy', decoding = 'async', fallback, border = false, borderColor = '#eee', borderWidth = 2, ...props }) => (
   <Box
-    component="img"
-    src={src}
-    alt={alt}
-    loading={loading}
-    decoding={decoding}
-    onError={e => { if (fallback) e.target.src = fallback; }}
-    sx={{ display: 'block', maxWidth: '100%', height: 'auto', borderRadius: 2, ...sx }}
-    {...props}
-  />
+    sx={{
+      display: 'inline-block',
+      borderRadius: 3,
+      overflow: 'hidden',
+      boxShadow: 0,
+      p: 0,
+      m: 0,
+      border: border ? `${borderWidth}px solid ${borderColor}` : undefined,
+      ...sx
+    }}
+  >
+    <Box
+      component="img"
+      src={src}
+      alt={alt}
+      loading={loading}
+      decoding={decoding}
+      onError={e => { if (fallback) e.target.src = fallback; }}
+      sx={{
+        display: 'block',
+        width: '100%',
+        height: 'auto',
+        borderRadius: 3,
+        m: 0,
+        p: 0
+      }}
+      {...props}
+    />
+  </Box>
 );
 
 // Componente del badge de obra maestra
