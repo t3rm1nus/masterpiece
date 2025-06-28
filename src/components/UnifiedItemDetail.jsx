@@ -54,7 +54,7 @@ import {
  *   showSections={{ trailer: true, description: false }}
  * />
  */
-const UnifiedItemDetail = ({ item, onClose, selectedCategory, onRequestClose }) => {
+const UnifiedItemDetail = ({ item, onClose, selectedCategory, isClosing = false, onRequestClose }) => {
   // Inyectar keyframes globales SOLO una vez
   useEffect(() => {
     if (!document.getElementById('item-detail-keyframes')) {
@@ -62,6 +62,11 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, onRequestClose }) 
       style.id = 'item-detail-keyframes';
       style.innerHTML = `@keyframes slideInUp {0%{opacity:0;transform:translateY(60px);}100%{opacity:1;transform:translateY(0);}}
       @keyframes slideOutDown {0%{opacity:1;transform:translateY(0);}100%{opacity:0;transform:translateY(60px);}}`;
+      // DURACIÓN REDUCIDA
+      style.innerHTML += `
+        .slideInUpFast {animation: slideInUp 0.3s cubic-bezier(0.25,0.46,0.45,0.94);}
+        .slideOutDownFast {animation: slideOutDown 0.3s cubic-bezier(0.25,0.46,0.45,0.94);}
+      `;
       document.head.appendChild(style);
     }
   }, []);
@@ -77,19 +82,25 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, onRequestClose }) 
 
   const [imgLoaded, setImgLoaded] = React.useState(false);
   const [imageHover, setImageHover] = React.useState(false);
-  const [isClosing, setIsClosing] = React.useState(false);
+  const [internalClosing, setInternalClosing] = React.useState(false);
+
+  // Guardar referencia al último item mostrado para animación de cierre
+  const lastItemRef = React.useRef(item);
+  useEffect(() => {
+    if (item) lastItemRef.current = item;
+  }, [item]);
 
   const handleClose = () => {
     if (onRequestClose) {
       onRequestClose();
     } else {
-      setIsClosing(true);
+      setInternalClosing(true);
     }
   };
 
   // Cuando termina la animación de salida, cerrar realmente
   const handleAnimationEnd = () => {
-    if (isClosing && onClose) onClose();
+    if ((isClosing || internalClosing) && onClose) onClose();
   };
 
   if (!selectedItem) {
@@ -107,10 +118,13 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, onRequestClose }) 
   
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
-    console.log('[UnifiedItemDetail] Renderizando MobileItemDetail', selectedItem);
+    const safeItem = item || lastItemRef.current;
+    if (isClosing || internalClosing) {
+      console.log('[UnifiedItemDetail] Animación de cierre iniciada en móvil (isClosing=true)');
+    }
     return (
       <MobileItemDetail
-        selectedItem={selectedItem}
+        selectedItem={safeItem}
         title={title}
         description={description}
         lang={lang}
@@ -123,23 +137,27 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, onRequestClose }) 
         imgLoaded={imgLoaded}
         setImgLoaded={setImgLoaded}
         renderMobileSpecificContent={() => (
-          <MobileCategorySpecificContent selectedItem={selectedItem} lang={lang} t={t} />
+          <MobileCategorySpecificContent selectedItem={safeItem} lang={lang} t={t} />
         )}
         renderMobileActionButtons={() => (
           <MobileActionButtons
-            selectedItem={selectedItem}
+            selectedItem={safeItem}
             trailerUrl={trailerUrl}
             lang={lang}
             t={t}
             goToHowToDownload={goToHowToDownload}
           />
         )}
+        isClosing={isClosing || internalClosing}
+        onClose={() => {
+          console.log('[UnifiedItemDetail] Animación de cierre FINALIZADA en móvil (onClose llamado)');
+          if (onClose) onClose();
+        }}
       />
     );
   }
   // Renderizado para desktop usando estilos CSS-in-JS directamente
   if (!isMobile) {
-    console.log('[UnifiedItemDetail] Render desktop', selectedItem);
     const isMasterpiece = !!selectedItem.masterpiece;
     const categoryColor = getCategoryColor(selectedCategory, 'color');
     const gradientBg = `linear-gradient(135deg, ${categoryColor} 0%, ${theme.palette.mode === 'dark' ? 'rgba(24,24,24,0.92)' : 'rgba(255,255,255,0.85)'} 100%)`;
@@ -149,10 +167,10 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, onRequestClose }) 
           style={{
             ...styles.desktopWrapper,
             ...(isMasterpiece ? styles.desktopWrapperMasterpiece : {}),
-            background: gradientBg,
+            ...(isMasterpiece ? {} : { background: gradientBg }), // Solo aplica fondo de categoría si NO es masterpiece
             animation: isClosing
-              ? 'slideOutDown 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-              : 'slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+              ? 'slideOutDown 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+              : 'slideInUp 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
           }}
           onAnimationEnd={handleAnimationEnd}
         >
@@ -210,11 +228,11 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, onRequestClose }) 
           <div style={styles.rightCol}>
             <h2 style={styles.title}>{title}</h2>
             <div style={styles.chipRow}>
-              <span style={{...styles.chip, background: getCategoryColor(selectedCategory, 'color')}}>
+              <span style={{...styles.chip, background: getCategoryColor(selectedCategory, 'strong')}}>
                 {getCategoryTranslation(selectedCategory)}
               </span>
               {selectedItem.subcategory && (
-                <span style={{...styles.chip, background: getCategoryColor(selectedCategory, 'color')}}>
+                <span style={{...styles.chip, background: getCategoryColor(selectedCategory, 'strong')}}>
                   {(() => {
                     const subcat = selectedItem.subcategory;
                     if (typeof subcat === 'object' && subcat !== null) {
@@ -319,9 +337,7 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, onRequestClose }) 
 // 2. Definir estilos CSS-in-JS
 const styles = {
   page: (theme) => ({
-    background: theme.palette.mode === 'dark'
-      ? 'linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #2d2d2d 100%)'
-      : 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
+    background: '#fff', // FONDO BLANCO para el padre de detalles desktop
     position: 'relative',
     minHeight: '100vh',
     width: '100%',

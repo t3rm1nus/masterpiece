@@ -82,11 +82,6 @@ function DesktopMenu(props) {
   // Usar items custom si se pasan, si no usar hook por defecto
   const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems();
 
-  // Log de depuración en cada render
-  React.useEffect(() => {
-    console.log('[HybridMenu] Render, valor de onBack:', typeof onBack, onBack);
-  }, [onBack, currentView]);
-
   return (
     <nav className="main-menu" style={{
       position: 'fixed',
@@ -124,11 +119,10 @@ function DesktopMenu(props) {
             <button
               key="back-desktop-detail"
               onClick={e => {
-                console.log('[HybridMenu] Botón Volver clicado', { isDetailView, onBack });
                 if (typeof onBack === 'function') {
                   onBack();
                 } else if (isDetailView) {
-                  console.log('[HybridMenu] isDetailView pero onBack es undefined');
+                  goBackFromDetail();
                 } else if (isCoffeeView) {
                   goBackFromCoffee();
                 } else {

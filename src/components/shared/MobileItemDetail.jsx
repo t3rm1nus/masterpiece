@@ -64,13 +64,18 @@ const MobileItemDetail = ({
   style = {},
   onBack,
   getTranslation, // <-- Añadido correctamente como prop
+  isClosing = false,
+  onClose,
   ...props
 }) => {
   // Filtrar props internos que no deben ir al DOM
   const domSafeProps = { ...props };
   delete domSafeProps.showCategorySelect;
   delete domSafeProps.showSubcategoryChips;
-  if (!selectedItem) return null;
+
+  // Permitir renderizar el detalle durante la animación de cierre aunque selectedItem sea null
+  const shouldRender = selectedItem || isClosing;
+  if (!shouldRender) return null;
 
   // Helper para iconos por categoría
   const getCategoryIcon = (category) => {
@@ -98,161 +103,191 @@ const MobileItemDetail = ({
     }
   };
 
-  return (
-    <Box
-      sx={{
-        position: 'relative',
-        minHeight: '100vh',
-        padding: '16px',
-        pt: { xs: '11px', sm: '19px' }, // 5px menos de padding-top en xs y sm
-        ...sx
-      }}
-      style={{ ...style }}
-      {...domSafeProps}
-    >
-      {/* Botón de volver flotante */}
-      {showSections.backButton !== false && (onBack || goBackFromDetail) && (
-        <Fab
-          color="primary"
-          aria-label="volver"
-          onClick={onBack || goBackFromDetail}
-          sx={{
-            position: 'fixed',
-            top: '56px', // Ajustado para alinearse mejor con el nuevo padding superior
-            left: '16px',
-            zIndex: 1000,
-            backgroundColor: theme?.palette?.primary?.main,
-            '&:hover': {
-              backgroundColor: theme?.palette?.primary?.dark,
-            }
-          }}
-        >
-          <ArrowBackIcon />
-        </Fab>
-      )}
-      {/* Tarjeta principal */}
-      <UiCard
+  // Lógica para desmontar tras animación de salida
+  const handleAnimationEnd = () => {
+    if (isClosing) {
+      console.log('[MobileItemDetail] Animación de cierre FINALIZADA (onAnimationEnd)');
+    }
+    if (isClosing && typeof onClose === 'function') {
+      onClose();
+    }
+  };
+
+  React.useEffect(() => {
+    if (isClosing) {
+      console.log('[MobileItemDetail] Animación de cierre INICIADA (isClosing=true)', { selectedItem });
+    }
+  }, [isClosing, selectedItem]);
+
+  // Botón de volver flotante, fijo respecto a la ventana y fuera del Box animado
+  const BackButton = (
+    showSections.backButton !== false && (onBack || goBackFromDetail) && (
+      <Fab
+        color="primary"
+        aria-label="volver"
+        onClick={() => {
+          if (onBack) {
+            onBack();
+          } else if (goBackFromDetail) {
+            goBackFromDetail();
+          }
+        }}
         sx={{
-          maxWidth: 600,
-          width: '100%',
-          margin: '0 auto',
-          marginTop: 0,
-          borderRadius: '16px',
-          boxShadow: theme?.shadows?.[8],
-          border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
-          background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
-          position: 'relative' // necesario para posicionar el badge
+          position: 'fixed',
+          top: { xs: '63px', sm: 24 },
+          left: 16,
+          zIndex: 1300,
+          backgroundColor: theme?.palette?.primary?.main,
+          '&:hover': {
+            backgroundColor: theme?.palette?.primary?.dark,
+          }
         }}
       >
-        {/* Badge de masterpiece en la esquina del detalle */}
-        {selectedItem.masterpiece && (
-          <MasterpieceBadge
-            alt={getTranslation ? getTranslation('ui.alt.masterpiece', 'Obra maestra') : 'Obra maestra'}
-            title={getTranslation ? getTranslation('ui.badges.masterpiece', 'Obra maestra') : 'Obra maestra'}
-            absolute={true}
-            size={40}
-            sx={{ top: -17, right: -18, zIndex: 1201 }}
-          />
-        )}
-        {/* Header custom */}
-        {renderHeader && renderHeader(selectedItem)}
-        {/* Imagen principal + badge masterpiece */}
-        <Box sx={{ position: 'relative' }}>
-          {showSections.image !== false && (renderImage
-            ? renderImage(selectedItem)
-            : <CardMedia
-                component="img"
-                sx={{ height: 300, objectFit: 'cover', position: 'relative' }}
-                image={selectedItem.image}
-                alt={title}
-                onLoad={() => setImgLoaded && setImgLoaded(true)}
-              />
+        <ArrowBackIcon />
+      </Fab>
+    )
+  );
+
+  return (
+    <>
+      {BackButton}
+      <Box
+        sx={{
+          position: 'relative',
+          minHeight: '100vh',
+          padding: '16px',
+          pt: { xs: '20px', sm: '36px' }, // Espacio superior reducido a la mitad
+          ...sx
+        }}
+        style={{ ...style }}
+        className={isClosing ? 'slideOutDown' : 'slideInUp'}
+        onAnimationEnd={handleAnimationEnd}
+        {...domSafeProps}
+      >
+        {/* Tarjeta principal */}
+        <UiCard
+          sx={{
+            maxWidth: 600,
+            width: '100%',
+            margin: '0 auto',
+            marginTop: 0,
+            borderRadius: '16px',
+            boxShadow: theme?.shadows?.[8],
+            border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
+            background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
+            position: 'relative'
+          }}
+        >
+          {/* Badge de masterpiece en la esquina del detalle */}
+          {selectedItem.masterpiece && (
+            <MasterpieceBadge
+              alt={getTranslation ? getTranslation('ui.alt.masterpiece', 'Obra maestra') : 'Obra maestra'}
+              title={getTranslation ? getTranslation('ui.badges.masterpiece', 'Obra maestra') : 'Obra maestra'}
+              absolute={true}
+              size={40}
+              sx={{ top: -17, right: -18, zIndex: 1201 }}
+            />
           )}
-        </Box>
-        <CardContent sx={{ padding: '24px', position: 'relative' }}>
-          {/* Título */}
-          {showSections.title !== false && (
-            <Typography 
-              variant="h4" 
-              component="h1" 
-              gutterBottom
-              sx={{ 
-                fontWeight: 'bold',
-                fontSize: { xs: '1.5rem', sm: '2rem' },
-                textAlign: 'center',
-                marginBottom: '16px'
-              }}
-            >
-              {title}
-            </Typography>
-          )}
-          {/* Chips de categoría y subcategoría */}
-          {showSections.category !== false && (
-            renderCategory
-              ? renderCategory(selectedItem)
-              : <Stack direction="row" spacing={1} justifyContent="center" sx={{ marginBottom: '16px' }}>
-                  <Chip
-                    icon={getCategoryIcon(selectedItem.category)}
-                    label={getCategoryTranslation(selectedItem.category)}
-                    sx={{
-                      backgroundColor: selectedItem.category === 'boardgames' ? 'transparent' : getCategoryColor(selectedItem.category, 'strong'),
-                      color: selectedItem.category === 'boardgames' ? getCategoryColor(selectedItem.category, 'strong') : 'white',
-                      borderColor: selectedItem.category === 'boardgames' ? getCategoryColor(selectedItem.category, 'strong') : 'transparent',
-                      border: selectedItem.category === 'boardgames' ? '1.5px solid' : 'none',
-                      fontSize: '0.7rem',
-                      fontWeight: 600,
-                      letterSpacing: 0.2,
-                      alignSelf: 'flex-start',
-                      boxShadow: selectedItem.category === 'boardgames' ? undefined : '0 0 0 2px rgba(0,0,0,0.04)',
-                      '& .MuiChip-icon': {
-                        color: selectedItem.category === 'boardgames' ? '#fff' : 'white',
-                      }
-                    }}
-                  />
-                  {selectedItem.subcategory && (renderSubcategory
-                    ? renderSubcategory(selectedItem)
-                    : <Chip
-                        label={getSubcategoryTranslation(selectedItem.subcategory, selectedItem.category)}
-                        variant="outlined"
-                        sx={{
-                          fontSize: '0.68rem',
-                          borderColor: getCategoryColor(selectedItem.category, 'strong'),
-                          color: '#666',
-                          alignSelf: 'flex-start',
-                          marginTop: '0px',
-                          borderWidth: 2,
-                          borderStyle: 'solid',
-                          fontWeight: 500
-                        }}
-                      />
-                  )}
-                </Stack>
-          )}
-          {/* Información específica por categoría */}
-          {renderMobileSpecificContent && renderMobileSpecificContent(selectedItem)}
-          {/* Descripción */}
-          {showSections.description !== false && (
-            renderDescription
-              ? renderDescription(selectedItem)
-              : <Typography 
-                  variant="body1" 
-                  sx={{ fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '24px', color: 'text.primary' }}
-                >
-                  {description}
-                </Typography>
-          )}
-          {/* Botones de acción */}
-          {showSections.actions !== false && (renderActions
-            ? renderActions(selectedItem)
-            : renderMobileActionButtons
-              ? renderMobileActionButtons(selectedItem)
-              : <MobileActionButtons selectedItem={selectedItem} lang={lang} t={t} />
-          )}
-          {/* Footer custom */}
-          {showSections.footer !== false && renderFooter && renderFooter(selectedItem)}
-        </CardContent>
-      </UiCard>
-    </Box>
+          {/* Header custom */}
+          {renderHeader && renderHeader(selectedItem)}
+          {/* Imagen principal + badge masterpiece */}
+          <Box sx={{ position: 'relative' }}>
+            {showSections.image !== false && (renderImage
+              ? renderImage(selectedItem)
+              : <CardMedia
+                  component="img"
+                  sx={{ height: 300, objectFit: 'cover', position: 'relative' }}
+                  image={selectedItem.image}
+                  alt={title}
+                  onLoad={() => setImgLoaded && setImgLoaded(true)}
+                />
+            )}
+          </Box>
+          <CardContent sx={{ padding: '24px', position: 'relative' }}>
+            {/* Título */}
+            {showSections.title !== false && (
+              <Typography 
+                variant="h4" 
+                component="h1" 
+                gutterBottom
+                sx={{ 
+                  fontWeight: 'bold',
+                  fontSize: { xs: '1.5rem', sm: '2rem' },
+                  textAlign: 'center',
+                  marginBottom: '16px'
+                }}
+              >
+                {title}
+              </Typography>
+            )}
+            {/* Chips de categoría y subcategoría */}
+            {showSections.category !== false && (
+              renderCategory
+                ? renderCategory(selectedItem)
+                : <Stack direction="row" spacing={1} justifyContent="center" sx={{ marginBottom: '16px' }}>
+                    <Chip
+                      icon={getCategoryIcon(selectedItem.category)}
+                      label={getCategoryTranslation(selectedItem.category)}
+                      sx={{
+                        backgroundColor: selectedItem.category === 'boardgames' ? 'transparent' : getCategoryColor(selectedItem.category, 'strong'),
+                        color: selectedItem.category === 'boardgames' ? getCategoryColor(selectedItem.category, 'strong') : 'white',
+                        borderColor: selectedItem.category === 'boardgames' ? getCategoryColor(selectedItem.category, 'strong') : 'transparent',
+                        border: selectedItem.category === 'boardgames' ? '1.5px solid' : 'none',
+                        fontSize: '0.7rem',
+                        fontWeight: 600,
+                        letterSpacing: 0.2,
+                        alignSelf: 'flex-start',
+                        boxShadow: selectedItem.category === 'boardgames' ? undefined : '0 0 0 2px rgba(0,0,0,0.04)',
+                        '& .MuiChip-icon': {
+                          color: selectedItem.category === 'boardgames' ? '#fff' : 'white',
+                        }
+                      }}
+                    />
+                    {selectedItem.subcategory && (renderSubcategory
+                      ? renderSubcategory(selectedItem)
+                      : <Chip
+                          label={getSubcategoryTranslation(selectedItem.subcategory, selectedItem.category)}
+                          variant="outlined"
+                          sx={{
+                            fontSize: '0.68rem',
+                            borderColor: getCategoryColor(selectedItem.category, 'strong'),
+                            color: '#666',
+                            alignSelf: 'flex-start',
+                            marginTop: '0px',
+                            borderWidth: 2,
+                            borderStyle: 'solid',
+                            fontWeight: 500
+                          }}
+                        />
+                    )}
+                  </Stack>
+            )}
+            {/* Información específica por categoría */}
+            {renderMobileSpecificContent && renderMobileSpecificContent(selectedItem)}
+            {/* Descripción */}
+            {showSections.description !== false && (
+              renderDescription
+                ? renderDescription(selectedItem)
+                : <Typography 
+                    variant="body1" 
+                    sx={{ fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '24px', color: 'text.primary' }}
+                  >
+                    {description}
+                  </Typography>
+            )}
+            {/* Botones de acción */}
+            {showSections.actions !== false && (renderActions
+              ? renderActions(selectedItem)
+              : renderMobileActionButtons
+                ? renderMobileActionButtons(selectedItem)
+                : <MobileActionButtons selectedItem={selectedItem} lang={lang} t={t} />
+            )}
+            {/* Footer custom */}
+            {showSections.footer !== false && renderFooter && renderFooter(selectedItem)}
+          </CardContent>
+        </UiCard>
+      </Box>
+    </>
   );
 };
 

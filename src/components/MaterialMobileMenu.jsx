@@ -1,4 +1,3 @@
-console.log('[MaterialMobileMenu.jsx] Loaded from src/components/MaterialMobileMenu.jsx');
 import React, { useState, useEffect } from 'react';
 import { 
   AppBar, 
@@ -109,8 +108,6 @@ const MaterialMobileMenu = ({
     return null;
   }
 
-  console.log('[MaterialMobileMenu] render', { splashOpen, splashAudio, onSplashOpen, onSplashClose });
-
   return (
     <>
       {/* AppBar siempre visible en móvil para acceso al splash */}
@@ -156,7 +153,6 @@ const MaterialMobileMenu = ({
                 m: 0, p: 0
               }}
               onClick={() => {
-                console.log('[MaterialMobileMenu] Título Masterpiece click', { onSplashOpen });
                 onSplashOpen && onSplashOpen();
               }}
             >

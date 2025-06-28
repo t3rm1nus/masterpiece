@@ -185,9 +185,7 @@ const HomePage = ({
   const activePodcastDocumentaryLanguage = useAppStore(state => state.activePodcastDocumentaryLanguage);
   const resetActivePodcastDocumentaryLanguage = useAppStore(state => state.resetActivePodcastDocumentaryLanguage);
   // LOGS DE DEPURACIÓN
-  useEffect(() => {
-    console.log('[HomePage] currentView:', currentView, 'selectedItem:', selectedItem);
-  }, [currentView, selectedItem]);
+  // Eliminado: console.log('[HomePage] currentView:', currentView, 'selectedItem:', selectedItem);
 
   // Obtener categorías traducidas (se actualizará cuando cambie el idioma)
   const categoriesFromStore = getCategories();
@@ -348,7 +346,6 @@ const HomePage = ({
     toggleMasterpiece();
   };// Manejar clic en elemento
   const handleItemClick = (item) => {
-    console.log('[HomePage] handleItemClick', item);
     goToDetail(item);
   };  // Manejar cierre del detalle
   const handleCloseDetail = () => {
@@ -502,9 +499,19 @@ const HomePage = ({
   const [isClosingDetail, setIsClosingDetail] = useState(false);
   // Función de cierre animado para detalle
   const handleRequestClose = useCallback(() => {
-    console.log('[HomePage] handleRequestClose llamado');
     setIsClosingDetail(true);
   }, []);
+
+  // Efecto: desmontar el detalle solo después de la animación de salida (0.3s)
+  useEffect(() => {
+    if (isClosingDetail) {
+      const timeout = setTimeout(() => {
+        goBackFromDetail();
+        setIsClosingDetail(false);
+      }, 300); // Duración igual que la animación
+      return () => clearTimeout(timeout);
+    }
+  }, [isClosingDetail, goBackFromDetail]);
 
   return (
     <UiLayout sx={{ marginTop: 8, width: '100vw', maxWidth: '100vw', px: 0 }}>
@@ -639,11 +646,12 @@ const HomePage = ({
           )}
         </div>
       )}
-      {selectedItem && (
+      {(selectedItem || isClosingDetail) && (
         <UnifiedItemDetail
           item={selectedItem}
-          onClose={() => { console.log('[HomePage] onClose (detalle) ejecutado'); handleRequestClose(); }}
+          onClose={handleRequestClose}
           selectedCategory={selectedCategory}
+          isClosing={isClosingDetail}
         />
       )}
     </UiLayout>

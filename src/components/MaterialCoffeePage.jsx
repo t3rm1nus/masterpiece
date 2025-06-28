@@ -89,7 +89,7 @@ const MaterialCoffeePage = () => {
       maxWidth="md" 
       sx={{ 
         padding: { xs: '16px', sm: '24px' },
-        paddingTop: { xs: '10px', sm: '100px', md: '120px' },
+        paddingTop: { xs: '20px', sm: '80px', md: '100px' }, // Ajuste: separación superior aumentada 10px más
         paddingBottom: '40px',
         backgroundColor: '#fafafa',
         minHeight: '100vh',

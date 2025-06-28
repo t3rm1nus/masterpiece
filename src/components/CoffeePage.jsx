@@ -5,10 +5,6 @@ import MaterialCoffeePage from './MaterialCoffeePage';
 const CoffeePage = () => {
   const { t, getTranslation } = useLanguage();
   
-  console.log('[CoffeePage] Rendering with translations:', t);
-  console.log('[CoffeePage] Coffee title:', getTranslation('coffee.title'));
-  console.log('[CoffeePage] Coffee description:', getTranslation('coffee.description'));
-  console.log('[CoffeePage] Coffee button:', getTranslation('coffee.button'));
     return (
     <>
       {/* Componente Material UI para móviles Y desktop */}
