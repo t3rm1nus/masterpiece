@@ -1,6 +1,6 @@
 import React from 'react';
 import MaterialContentWrapper from './MaterialContentWrapper';
-import '../styles/components/cards.css';
+import { useLanguage } from '../LanguageContext';
 
 /**
  * MobileRecommendationsList
@@ -58,8 +58,6 @@ const MobileRecommendationsList = ({
   emptyComponent,
   pagination,
   sx = {},
-  className = '',
-  style = {},
   // legacy/compatibilidad
   recommendations,
   isHome,
@@ -81,6 +79,7 @@ const MobileRecommendationsList = ({
   ...rest
 }) => {
   const data = items || recommendations;
+  const { getTranslation } = useLanguage();
 
   return (
     <>
@@ -102,8 +101,6 @@ const MobileRecommendationsList = ({
         subcategoryChipsProps={subcategoryChipsProps}
         visible={visible}
         sx={sx}
-        className={className}
-        style={style}
         showCategorySelect={showCategorySelect}
         showSubcategoryChips={showSubcategoryChips}
         onLoadMore={rest.onLoadMore}
@@ -113,7 +110,11 @@ const MobileRecommendationsList = ({
       >
         {/* Render custom recommendations if provided, else fallback to default */}
         {loading && !data?.length ? (
-          <div className="recommendations-loading">{getTranslation('ui.states.loading', 'Cargando...')}</div>
+          <div
+            style={{ width: '100%', textAlign: 'center', padding: '32px 0', fontSize: '1.1rem', color: '#888' }}
+          >
+            {getTranslation('ui.states.loading', 'Cargando...')}
+          </div>
         ) : !data?.length ? (
           typeof emptyComponent === 'function' ? emptyComponent() : emptyComponent
         ) : renderItem ? (
@@ -123,22 +124,53 @@ const MobileRecommendationsList = ({
         ) : null}
         {/* Paginación si aplica */}
         {pagination && (
-          <div className="pagination-container">
-            <button 
-              className="pagination-button" 
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 16,
+              margin: '24px 0 8px 0',
+              flexWrap: 'wrap',
+            }}
+          >
+            <button
+              style={{
+                border: 'none',
+                background: '#eee',
+                color: '#333',
+                borderRadius: 6,
+                padding: '6px 18px',
+                fontWeight: 600,
+                fontSize: '1rem',
+                cursor: pagination.page <= 1 ? 'not-allowed' : 'pointer',
+                opacity: pagination.page <= 1 ? 0.5 : 1,
+                transition: 'background 0.2s',
+              }}
               onClick={() => pagination.onPageChange(pagination.page - 1)}
               disabled={pagination.page <= 1}
             >
               {getTranslation('ui.actions.previous', 'Anterior')}
             </button>
-            <span className="pagination-info">
+            <span style={{ fontWeight: 500, fontSize: '1rem', color: '#555' }}>
               {getTranslation('ui.pagination.page_of', 'Página {page} de {total}', {
                 page: pagination.page,
                 total: Math.ceil((data?.length || 0) / (pagination.pageSize || 1))
               })}
             </span>
-            <button 
-              className="pagination-button" 
+            <button
+              style={{
+                border: 'none',
+                background: '#eee',
+                color: '#333',
+                borderRadius: 6,
+                padding: '6px 18px',
+                fontWeight: 600,
+                fontSize: '1rem',
+                cursor: pagination.page >= Math.ceil((data?.length || 0) / (pagination.pageSize || 1)) ? 'not-allowed' : 'pointer',
+                opacity: pagination.page >= Math.ceil((data?.length || 0) / (pagination.pageSize || 1)) ? 0.5 : 1,
+                transition: 'background 0.2s',
+              }}
               onClick={() => pagination.onPageChange(pagination.page + 1)}
               disabled={pagination.page >= Math.ceil((data?.length || 0) / (pagination.pageSize || 1))}
             >

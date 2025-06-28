@@ -9,43 +9,57 @@ import useInfiniteScroll from '../hooks/useInfiniteScroll';
 import CircularProgress from '@mui/material/CircularProgress';
 import { randomNotFoundImage } from '../store/utils';
 
-/**
- * MaterialContentWrapper
- * Wrapper adaptable y parametrizable para recomendaciones, categorías y layout principal.
- * Orquesta la UI de listas, categorías, subcategorías y permite custom render, callbacks y layout flexible.
- *
- * Props avanzados:
- * - children: contenido a renderizar (usado en desktop)
- * - categories: array de categorías (para barra o select de categorías)
- * - selectedCategory: string (categoría activa)
- * - onCategoryClick: función para seleccionar categoría
- * - subcategories: array de subcategorías (para chips/barra de subcategorías)
- * - activeSubcategory: string (subcategoría activa)
- * - onSubcategoryClick: función para seleccionar subcategoría
- * - recommendations: array de recomendaciones a mostrar
- * - isHome: boolean (modo home, layout especial)
- * - categoryColor: string (color principal de la categoría)
- * - renderExtraActions: función opcional para renderizar acciones extra (ej: botones, filtros)
- * - showSections: objeto opcional para mostrar/ocultar secciones (ej: { recommendations: true, emptyState: true })
- * - sx: estilos adicionales para el wrapper
- * - ...props: cualquier otro prop para el contenedor principal
- *
- * Ejemplo de uso:
- * <MaterialContentWrapper
- *   categories={categories}
- *   selectedCategory={selectedCategory}
- *   onCategoryClick={onCategoryClick}
- *   subcategories={subcategories}
- *   activeSubcategory={activeSubcategory}
- *   onSubcategoryClick={setActiveSubcategory}
- *   recommendations={recommendations}
- *   renderExtraActions={() => <CustomActions />}
- *   showSections={{ recommendations: true }}
- *   sx={{ background: '#fafafa' }}
- * >
- *   {children}
- * </MaterialContentWrapper>
- */
+// --- Estilos centralizados ---
+const wrapperSx = (propsSx = {}, isMobile = false) => ({
+  width: '100%',
+  maxWidth: '100vw',
+  padding: '0 4px',
+  boxSizing: 'border-box',
+  ...(isMobile ? { position: 'relative', zIndex: 1 } : {}), // SOLO en móviles
+  ...propsSx
+});
+
+const recommendationsListSx = isHome => ({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: isHome ? '12px' : '24px',
+  padding: '4px',
+  width: '100%',
+  maxWidth: '100%',
+  boxSizing: 'border-box'
+});
+
+const sentinelSx = loaderColor => ({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: 2,
+  background: loaderColor + '22',
+  border: `1px dashed ${loaderColor}`,
+  borderRadius: 8,
+  margin: 1
+});
+
+const emptyStateSx = isMobile => ({
+  textAlign: 'center',
+  padding: isMobile ? 0 : '2rem',
+  color: 'text.secondary',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: isMobile ? 0 : '1rem'
+});
+
+const emptyImgSx = {
+  maxWidth: '90vw',
+  width: '90%',
+  height: 'auto',
+  borderRadius: '12px',
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  marginTop: '1rem',
+  marginBottom: 0
+};
 
 const MaterialContentWrapper = ({ 
   children, 
@@ -106,14 +120,7 @@ const MaterialContentWrapper = ({
   );
 
   return (
-    <Box sx={{ 
-      width: '100%',
-      maxWidth: '100vw',
-      padding: '0 4px',
-      // paddingTop: '64px', // Quitado para evitar padding extra
-      boxSizing: 'border-box',
-      ...props.sx
-    }} {...(() => {
+    <Box sx={wrapperSx(props.sx, isMobile)} {...(() => {
       // Eliminar props que no deben ir al DOM
       const { showCategoryBar, showSubcategoryBar, showCategorySelect, showSubcategoryChips, ...restProps } = props;
       return restProps;
@@ -145,18 +152,7 @@ const MaterialContentWrapper = ({
       )}
       {/* Lista de recomendaciones Material UI */}
       {recommendations && Array.isArray(recommendations) && recommendations.length > 0 && (
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: isHome ? '12px' : '24px',
-            padding: '4px',
-            width: '100%',
-            maxWidth: '100%',
-            boxSizing: 'border-box'
-          }}
-        >
+        <Box sx={recommendationsListSx(isHome)}>
           {recommendations.map((recommendation, index) => (
             <MaterialRecommendationCard
               key={recommendation.globalId || `${recommendation.title}-${index}`}
@@ -177,24 +173,12 @@ const MaterialContentWrapper = ({
                 bgColor = loaderColor + '22'; // añade transparencia solo si es hex
               }
               return (
-                <div
-                  ref={sentinelRef}
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    padding: 16,
-                    background: bgColor,
-                    border: `1px dashed ${loaderColor}`,
-                    borderRadius: 8,
-                    margin: 8
-                  }}
-                >
+                <Box ref={sentinelRef} sx={sentinelSx(loaderColor)}>
                   <span style={{ color: loaderColor, fontWeight: 'bold', marginRight: 12, fontSize: 18 }}>
                     {getTranslation('ui.states.loading', 'Cargando / Loading')}
                   </span>
                   {loadingMore && <CircularProgress size={32} sx={{ color: loaderColor }} />}
-                </div>
+                </Box>
               );
             }
             return null;
@@ -203,15 +187,7 @@ const MaterialContentWrapper = ({
       )}
       {/* Empty state */}
       {(!recommendations || !Array.isArray(recommendations) || recommendations.length === 0) && (
-        <Box sx={{ 
-          textAlign: 'center', 
-          padding: isMobile ? 0 : '2rem',
-          color: 'text.secondary',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: isMobile ? 0 : '1rem'
-        }}>
+        <Box sx={emptyStateSx(isMobile)}>
           <Typography variant="h6" sx={{ margin: 0, padding: 0 }}>
             {t.no_results || 'No se encontraron resultados'}
           </Typography>
@@ -222,15 +198,7 @@ const MaterialContentWrapper = ({
             component="img"
             src={randomNotFoundImage()}
             alt={getTranslation('ui.states.noResults', 'No se encontraron resultados')}
-            sx={{
-              maxWidth: '90vw',
-              width: '90%',
-              height: 'auto',
-              borderRadius: '12px',
-              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-              marginTop: '1rem',
-              marginBottom: 0
-            }}
+            sx={emptyImgSx}
           />
         </Box>
       )}

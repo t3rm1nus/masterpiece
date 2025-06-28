@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   CardContent,
   CardMedia,
@@ -32,14 +32,40 @@ import useViewStore from '../store/viewStore';
 import { getSubcategoryLabel } from '../utils/subcategoryLabel';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 import { processTitle, processDescription } from '../store/utils';
-import './styles/components/item-detail-action-btn.css';
+
+// --- Animación de gradiente para el título ---
+const animatedGradientKeyframes = {
+  '@keyframes animatedGradientBG': {
+    '0%': { backgroundPosition: '0% 50%' },
+    '50%': { backgroundPosition: '100% 50%' },
+    '100%': { backgroundPosition: '0% 50%' },
+  },
+};
+
+const getCategoryAnimatedGradient = (category) => {
+  switch (category) {
+    case 'movies':
+    case 'peliculas':
+      return 'linear-gradient(270deg, #ff9800, #2196f3, #8bc34a, #e91e63, #ff9800)';
+    case 'videogames':
+    case 'videojuegos':
+      return 'linear-gradient(270deg, #8bc34a, #2196f3, #ff9800, #e91e63, #8bc34a)';
+    case 'books':
+    case 'libros':
+      return 'linear-gradient(270deg, #2196f3, #ff9800, #8bc34a, #e91e63, #2196f3)';
+    case 'music':
+    case 'musica':
+      return 'linear-gradient(270deg, #e91e63, #8bc34a, #2196f3, #ff9800, #e91e63)';
+    default:
+      return 'linear-gradient(270deg, #ff9800, #2196f3, #8bc34a, #e91e63, #ff9800)';
+  }
+};
 
 const MaterialItemDetail = ({ item }) => {
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation, getTranslation } = useLanguage();
   const { goBackFromDetail } = useViewStore();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
-  
   // Solo renderizar en móviles
   if (!isMobile || !item) {
     return null;
@@ -75,39 +101,8 @@ const MaterialItemDetail = ({ item }) => {
 
   const trailerUrl = getTrailerUrl();
 
-  // Gradiente de fondo igual que en los listados
-  const getCategoryGradient = (category) => {
-    switch (category) {
-      case 'movies':
-      case 'peliculas':
-        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
-      case 'videogames':
-      case 'videojuegos':
-        return 'linear-gradient(135deg, #f8f3fa 0%, #e1bee7 100%)';
-      case 'books':
-      case 'libros':
-        return 'linear-gradient(135deg, #f4faf4 0%, #c8e6c9 100%)';
-      case 'music':
-      case 'musica':
-        return 'linear-gradient(135deg, #f2fbfc 0%, #b2ebf2 100%)';
-      case 'podcast':
-      case 'podcasts':
-        return 'linear-gradient(135deg, #f7fbf2 0%, #dcedc8 100%)';
-      case 'boardgames':
-      case 'juegos de mesa':
-        return 'linear-gradient(135deg, #fdf4f8 0%, #f8bbd0 100%)';
-      case 'comics':
-        return 'linear-gradient(135deg, #fff8f0 0%, #ffe0b2 100%)';
-      case 'documentales':
-      case 'documentaries':
-        return 'linear-gradient(135deg, #fdeaea 0%, #e57373 100%)';
-      default:
-        return 'linear-gradient(135deg, #f5fafd 0%, #bbdefb 100%)';
-    }
-  };
-
   // Estado para saber si la imagen principal ha cargado
-  const [imgLoaded, setImgLoaded] = React.useState(false);
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   // Scroll arriba en móviles solo cuando la imagen esté cargada
   useEffect(() => {
@@ -123,13 +118,100 @@ const MaterialItemDetail = ({ item }) => {
 
   // Función para manejar la acción de descarga
   const handleDownloadClick = () => {
-    // Aquí va la lógica de descarga personalizada
-    // Por ejemplo, mostrar un modal, iniciar descarga, etc.
     alert('Descarga iniciada (aquí va tu lógica)');
   };
 
+  // --- Estilos centralizados ---
+  const cardSx = {
+    maxWidth: 600,
+    margin: '0 auto',
+    marginTop: 14,
+    marginLeft: 5,
+    borderRadius: '16px',
+    overflow: 'hidden',
+    boxShadow: theme.shadows[8],
+    border: item.masterpiece ? '3px solid #ffd700' : 'none',
+    background: '#fff',
+    backgroundImage: 'none',
+    p: 0,
+  };
+  const badgeSx = {
+    position: 'absolute',
+    top: { xs: '60px', md: '-12px' },
+    right: { xs: '-9px', md: '-12px' },
+    zIndex: 100,
+    width: { xs: '57px', md: '40px' },
+    height: { xs: '38px', md: '40px' },
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: 'white',
+    borderRadius: { xs: '19px', md: '50%' },
+    boxShadow: 4,
+    p: 0,
+    m: 0
+  };
+  const titleSx = {
+    fontWeight: 'bold',
+    fontSize: { xs: '1.2rem', sm: '2rem' },
+    textAlign: 'center',
+    marginBottom: { xs: 0, sm: '16px' },
+    borderRadius: { xs: 0, sm: '8px' },
+    boxShadow: { xs: 'none', sm: 2 },
+    p: { xs: 0, sm: 1 },
+    mt: { xs: 0, sm: 0 },
+    mb: { xs: 0, sm: '16px' },
+    m: { xs: 0, sm: undefined },
+    background: getCategoryAnimatedGradient(item.category),
+    backgroundSize: '1200% 1200%',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+    color: 'transparent',
+    animation: 'animatedGradientBG 6s ease-in-out infinite',
+    ...animatedGradientKeyframes['@keyframes animatedGradientBG']
+  };
+  const chipSx = {
+    fontSize: { xs: '0.8rem', sm: '1rem' },
+    borderRadius: '16px',
+    fontWeight: 600,
+    boxShadow: 2,
+    py: '6px',
+    px: '12px',
+    m: '0 4px 8px 0',
+  };
+  const descSx = {
+    textAlign: 'justify',
+    fontSize: { xs: '0.9rem', sm: '1rem' },
+    lineHeight: 1.6,
+    mb: 2,
+    color: '#444',
+  };
+  const actionBtnSx = {
+    minWidth: 180,
+    maxWidth: 320,
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    display: 'block',
+    textAlign: 'center',
+    fontWeight: 700,
+    fontSize: '1rem',
+    paddingTop: '12px',
+    paddingBottom: '12px',
+    borderRadius: '8px',
+    boxShadow: '2px 2px 8px rgba(0,0,0,0.08)',
+    mx: 'auto',
+    my: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '8px',
+    p: 0,
+    m: 0
+  };
+
   return (
-    <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px' }} className="item-detail-mobile">
+    <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px', zIndex: 1 }}>
       {/* Botón de volver flotante */}
       <Fab
         color="primary"
@@ -139,7 +221,7 @@ const MaterialItemDetail = ({ item }) => {
           position: 'fixed',
           top: '80px',
           left: '16px',
-          zIndex: 1000,
+          zIndex: 1201, // Asegura que el botón esté por encima del AppBar
           backgroundColor: theme.palette.primary.main,
           '&:hover': {
             backgroundColor: theme.palette.primary.dark,
@@ -150,18 +232,7 @@ const MaterialItemDetail = ({ item }) => {
       </Fab>
       {/* Tarjeta principal */}
       <UiCard
-        className={`item-detail-mobile-card recommendation-card ${item.category || 'movies'}`}
-        sx={{
-          maxWidth: 600,
-          margin: '0 auto',
-          marginTop: 14,
-          marginLeft: 5,
-          borderRadius: '16px',
-          overflow: 'hidden',
-          boxShadow: theme.shadows[8],
-          border: item.masterpiece ? '3px solid #ffd700' : 'none',
-        }}
-        style={{ background: '#fff', backgroundImage: 'none' }}
+        sx={cardSx}
       >
         {/* Imagen principal */}
         <Box sx={{ position: 'relative' }}>
@@ -170,7 +241,9 @@ const MaterialItemDetail = ({ item }) => {
             sx={{
               height: 300,
               objectFit: 'cover',
-              width: '100%'
+              width: '100%',
+              borderRadius: 0,
+              boxShadow: 'none',
             }}
             image={item.image}
             alt={title}
@@ -179,24 +252,8 @@ const MaterialItemDetail = ({ item }) => {
           {/* Badge de masterpiece solo móviles, overlay absoluto sobre la imagen */}
           {item.masterpiece && (
             <Box
-              className="masterpiece-detail-badge force-mobile-badge"
               title={getTranslation('ui.badges.masterpiece', 'Obra maestra')}
-              sx={{
-                position: 'absolute',
-                top: { xs: '60px !important', md: '-12px' },
-                right: { xs: '-9px !important', md: '-12px' },
-                zIndex: 100,
-                width: { xs: '57px !important', md: '40px' },
-                height: { xs: '38px !important', md: '40px' },
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                background: 'white',
-                borderRadius: { xs: '19px', md: '50%' },
-                boxShadow: 4,
-                p: 0,
-                m: 0
-              }}
+              sx={badgeSx}
             >
               <img
                 alt={getTranslation('ui.alt.masterpiece', 'Obra maestra')}
@@ -213,23 +270,7 @@ const MaterialItemDetail = ({ item }) => {
             component="h1" 
             id="item-detail-mobile-title"
             gutterBottom
-            className="detail-title-mobile animated-gradient-title"
-            sx={{ 
-              fontWeight: 'bold',
-              fontSize: { xs: '1.2rem', sm: '2rem' },
-              textAlign: 'center',
-              marginBottom: { xs: 0, sm: '16px' },
-              borderRadius: { xs: 0, sm: '8px' },
-              boxShadow: { xs: 'none', sm: 2 },
-              p: { xs: 0, sm: 1 },
-              mt: { xs: 0, sm: 0 },
-              mb: { xs: 0, sm: '16px' },
-              m: { xs: 0, sm: undefined },
-              background: getCategoryAnimatedGradient(item.category),
-              backgroundSize: '200% 200%',
-              animation: 'animatedGradientBG 6s ease-in-out infinite',
-              color: '#222',
-            }}
+            sx={titleSx}
           >
             {title}
           </Typography>
@@ -242,12 +283,7 @@ const MaterialItemDetail = ({ item }) => {
                 sx={{ 
                   backgroundColor: getCategoryColor(item.category),
                   color: 'white',
-                  fontWeight: 'bold',
-                  borderRadius: '16px',
-                  py: '6px',
-                  px: '12px',
-                  fontSize: { xs: '0.8rem', sm: '1rem' },
-                  boxShadow: 2
+                  ...chipSx
                 }}
                 icon={
                   <CategoryIcon sx={{ mr: 0.5, fontSize: { xs: '1rem', sm: '1.2rem' } }} />
@@ -259,12 +295,7 @@ const MaterialItemDetail = ({ item }) => {
                   sx={{ 
                     backgroundColor: theme.palette.secondary.main,
                     color: 'white',
-                    fontWeight: 'bold',
-                    borderRadius: '16px',
-                    py: '6px',
-                    px: '12px',
-                    fontSize: { xs: '0.8rem', sm: '1rem' },
-                    boxShadow: 2
+                    ...chipSx
                   }}
                   icon={
                     <TranslateIcon sx={{ mr: 0.5, fontSize: { xs: '1rem', sm: '1.2rem' } }} />
@@ -276,12 +307,7 @@ const MaterialItemDetail = ({ item }) => {
             <Typography 
               variant="body1" 
               component="div"
-              sx={{ 
-                textAlign: 'justify',
-                fontSize: { xs: '0.9rem', sm: '1rem' },
-                lineHeight: 1.6,
-                mb: 2
-              }}
+              sx={descSx}
             >
               {description}
             </Typography>
@@ -297,26 +323,8 @@ const MaterialItemDetail = ({ item }) => {
                     rel="noopener noreferrer"
                     variant="contained"
                     color="primary"
-                    sx={{
-                      fontWeight: 700,
-                      fontSize: { xs: '1rem', md: '1.1rem' },
-                      py: '10px',
-                      borderRadius: '8px',
-                      boxShadow: 2,
-                      minWidth: 180,
-                      maxWidth: 320,
-                      width: '100%',
-                      mx: 'auto',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: '8px',
-                      textAlign: 'center',
-                      p: 0,
-                      m: 0
-                    }}
+                    sx={actionBtnSx}
                     startIcon={<PlayArrowIcon sx={{ ml: '-2px', mr: '2px', fontSize: '1.3em' }} />}
-                    className="item-detail-action-btn"
                   >
                     <span style={{ display: 'inline-block', verticalAlign: 'middle', lineHeight: 1 }}>{t?.ui?.actions?.watchTrailer ? t.ui.actions.watchTrailer : (lang === 'en' ? 'Watch Trailer' : 'Ver Trailer')}</span>
                   </Button>
@@ -330,27 +338,9 @@ const MaterialItemDetail = ({ item }) => {
                     href="#descargar"
                     variant="contained"
                     color="primary"
-                    sx={{
-                      fontWeight: 700,
-                      fontSize: { xs: '1rem', md: '1.1rem' },
-                      py: '10px',
-                      borderRadius: '8px',
-                      boxShadow: 2,
-                      minWidth: 180,
-                      maxWidth: 320,
-                      width: '100%',
-                      mx: 'auto',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: '8px',
-                      textAlign: 'center',
-                      p: 0,
-                      m: 0
-                    }}
+                    sx={actionBtnSx}
                     onClick={e => { e.preventDefault(); handleDownloadClick(); }}
                     startIcon={<LaunchIcon sx={{ ml: '-2px', mr: '2px', fontSize: '1.3em' }} />}
-                    className="item-detail-action-btn"
                   >
                     <span style={{ display: 'inline-block', verticalAlign: 'middle', lineHeight: 1 }}>{t?.ui?.actions?.download ? `${t.ui.actions.download} ${t.ui.categories?.movies?.toLowerCase?.() || ''}`.trim() : (lang === 'en' ? 'Download movie' : 'Descargar película')}</span>
                   </Button>
@@ -365,14 +355,3 @@ const MaterialItemDetail = ({ item }) => {
 };
 
 export default MaterialItemDetail;
-
-/*
-Agrega este CSS global si hay estilos globales que afectan los h1:
-@media (max-width: 900px) {
-  .detail-title-mobile {
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    margin: 0 !important;
-  }
-}
-*/

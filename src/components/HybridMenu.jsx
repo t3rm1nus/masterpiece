@@ -40,9 +40,11 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {}, onSpla
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   if (isMobile) return null;
 
+  // Detectar si estamos en detalle, donación o cómo descargar para mostrar el botón Volver en el menú superior
+  const isDetailView = currentView === 'detail';
   const isCoffeeView = currentView === 'coffee';
   const isHowToDownloadView = currentView === 'howToDownload';
-  const showBackButton = isCoffeeView || isHowToDownloadView;
+  const showBackButton = isDetailView || isCoffeeView || isHowToDownloadView;
 
   // --- Splash popup handlers ---
   // El handler y audio vienen de props (HomePage)
@@ -70,7 +72,16 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {}, onSpla
   const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems();
 
   return (
-    <nav className="main-menu" style={sx.menu}>
+    <nav className="main-menu" style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100vw',
+      zIndex: 1100,
+      background: '#fff',
+      boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+      ...sx.menu
+    }}>
       <div style={{ 
         display: 'flex', 
         alignItems: 'center', 
@@ -90,22 +101,19 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {}, onSpla
                     {item.label}
                   </button>
               }
-              {/* Si es el último botón principal y estamos en coffee/howToDownload, renderiza el botón Volver aquí */}
-              {showBackButton && idx === arr.length - 1 && (
-                <button
-                  key="back-desktop"
-                  onClick={() => {
-                    if (isCoffeeView) goHome();
-                    else if (isHowToDownloadView) goHome();
-                  }}
-                  style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8, marginLeft: 8 }}
-                >
-                  <span style={{display:'flex',alignItems:'center'}}>&larr;</span>
-                  {getTranslation('ui.navigation.back', 'Volver')}
-                </button>
-              )}
             </React.Fragment>
           ))}
+          {/* Botón Volver visible en detalle, donación o cómo descargar (desktop) */}
+          {showBackButton && (
+            <button
+              key="back-desktop-detail"
+              onClick={isDetailView ? goBackFromDetail : isCoffeeView ? goBackFromCoffee : goHome}
+              style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8, marginLeft: 8 }}
+            >
+              <span style={{display:'flex',alignItems:'center'}}>&larr;</span>
+              {getTranslation('ui.navigation.back', 'Volver')}
+            </button>
+          )}
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
           {/* Selector de idioma (LanguageSelector) siempre visible en desktop */}

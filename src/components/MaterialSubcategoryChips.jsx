@@ -3,11 +3,12 @@ import {
   Chip,
   Box,
   useTheme,
-  useMediaQuery
+  useMediaQuery,
+  Button
 } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
-import { useAppData, useAppTheme } from '../store/useAppStore';
-import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
+import { useAppData } from '../store/useAppStore';
+import { getCategoryColor } from '../utils/categoryPalette';
 import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 
 /**
@@ -87,29 +88,73 @@ const MaterialSubcategoryChips = ({
   console.log('[MaterialSubcategoryChips] subcategories prop:', subcategories);
   console.log('[MaterialSubcategoryChips] selectedCategory:', selectedCategory);
 
+  // Estilos centralizados
+  const chipsContainerSx = {
+    display: 'flex',
+    flexWrap: 'nowrap',
+    overflowX: 'auto',
+    gap: '8px',
+    justifyContent: 'flex-start',
+    padding: '8px 16px',
+    marginBottom: '8px',
+    ...sx
+  };
+
+  const chipBaseSx = (isActive) => ({
+    backgroundColor: isActive ? categoryColorFinal : 'transparent',
+    borderColor: categoryColorFinal,
+    color: isActive ? 'white' : categoryColorFinal,
+    fontWeight: isActive ? 'bold' : 'normal',
+    fontSize: '0.8rem',
+    transition: 'all 0.2s ease',
+    cursor: 'pointer',
+    borderRadius: 8, // Igual que las chips de MUI
+    '&:hover': {
+      backgroundColor: isActive ? categoryColorFinal : `${categoryColorFinal}20`,
+      transform: 'scale(1.05)',
+      boxShadow: theme.shadows[2]
+    },
+    '&:active': {
+      transform: 'scale(0.98)'
+    },
+    ...chipSx
+  });
+
+  const specialButtonSx = (active) => ({
+    fontWeight: active ? 'bold' : 'normal',
+    borderColor: categoryColorFinal,
+    color: active ? 'white' : categoryColorFinal,
+    backgroundColor: active ? categoryColorFinal : 'transparent',
+    textTransform: 'none',
+    fontSize: '0.85rem',
+    padding: '2px 14px',
+    minWidth: 0,
+    boxShadow: 'none',
+    borderRadius: 8, // Igual que las chips de MUI
+    '&:hover': {
+      backgroundColor: `${categoryColorFinal}22`,
+      borderColor: categoryColorFinal,
+      boxShadow: theme.shadows[2]
+    },
+    '&.Mui-selected': {
+      backgroundColor: categoryColorFinal,
+      color: 'white',
+      fontWeight: 'bold'
+    },
+    borderWidth: 2,
+    borderStyle: 'solid',
+    margin: '0 2px',
+    transition: 'all 0.2s',
+  });
+
   return (
     <>      {/* Chips de subcategorías normales */}
       {Array.isArray(subcategories) && subcategories.length > 0 && (
-        <Box
-          sx={{
-            display: 'flex',
-            flexWrap: 'nowrap', // Evita salto de línea
-            overflowX: 'auto', // Scroll horizontal
-            gap: '8px',
-            justifyContent: 'flex-start',
-            padding: '8px 16px',
-            marginBottom: '8px',
-            ...sx
-          }}
-          {...props}
-        >
+        <Box sx={chipsContainerSx} {...props}>
           {subcategories.map(({ sub, label }, idx) => {
             // LOG para cada chip
             console.log('[MaterialSubcategoryChips] Render chip:', { sub, label, idx });
             const isActive = activeSubcategory === sub;
-            const chipColor = isActive ? categoryColorFinal : 'transparent';
-            const chipTextColor = isActive ? 'white' : categoryColorFinal;
-            const chipBorderColor = categoryColorFinal;
             // Usar siempre el literal traducido
             const chipLabel = getSubcategoryLabel(sub, selectedCategory, useLanguage().t, useLanguage().lang);
             return renderChip ? (
@@ -120,24 +165,7 @@ const MaterialSubcategoryChips = ({
                 label={chipLabel}
                 onClick={onSubcategoryClick ? () => onSubcategoryClick(sub) : undefined}
                 variant={isActive ? 'filled' : 'outlined'}
-                sx={{
-                  backgroundColor: chipColor,
-                  borderColor: chipBorderColor,
-                  color: chipTextColor,
-                  fontWeight: isActive ? 'bold' : 'normal',
-                  fontSize: '0.8rem',
-                  transition: 'all 0.2s ease',
-                  cursor: 'pointer',
-                  '&:hover': {
-                    backgroundColor: isActive ? chipBorderColor : `${chipBorderColor}20`,
-                    transform: 'scale(1.05)',
-                    boxShadow: theme.shadows[2]
-                  },
-                  '&:active': {
-                    transform: 'scale(0.98)'
-                  },
-                  ...chipSx
-                }}
+                sx={chipBaseSx(isActive)}
               />
             );
           })}
@@ -146,7 +174,7 @@ const MaterialSubcategoryChips = ({
       
       {/* Botones especiales - SOLO en móvil y SOLO si hay categoría */}
       {isMobile && selectedCategory && (
-        <div className="special-buttons-container" style={{
+        <Box sx={{
           display: 'flex',
           flexDirection: 'row',
           gap: '8px',
@@ -157,41 +185,36 @@ const MaterialSubcategoryChips = ({
         }}>
           {/* Botón de Cine Español solo para categoría de películas */}
           {selectedCategory === 'movies' && (
-            <button
-              className={`MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorSecondary subcategory-btn spanish-cinema` + (isSpanishCinemaActive ? ' Mui-selected' : '')}
-              type="button"
-              tabIndex={0}
+            <Button
+              variant={isSpanishCinemaActive ? 'contained' : 'outlined'}
+              size="small"
               onClick={toggleSpanishCinema}
-              style={{ fontWeight: isSpanishCinemaActive ? 'bold' : 'normal' }}
+              sx={specialButtonSx(isSpanishCinemaActive)}
             >
               {getSpecialButtonLabel('spanishCinema', lang)}
-              <span className="MuiTouchRipple-root css-r3djoj-MuiTouchRipple-root"></span>
-            </button>
+            </Button>
           )}
           {/* Botón de Series Españolas solo para categoría de series */}
           {selectedCategory === 'series' && (
-            <button
-              className={`MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorSecondary subcategory-btn spanish-series` + (isSpanishSeriesActive ? ' Mui-selected' : '')}
-              type="button"
-              tabIndex={0}
+            <Button
+              variant={isSpanishSeriesActive ? 'contained' : 'outlined'}
+              size="small"
               onClick={toggleSpanishSeries}
-              style={{ fontWeight: isSpanishSeriesActive ? 'bold' : 'normal' }}
+              sx={specialButtonSx(isSpanishSeriesActive)}
             >
               {lang === 'es' ? 'Series Españolas' : 'Spanish Series'}
-              <span className="MuiTouchRipple-root css-r3djoj-MuiTouchRipple-root"></span>
-            </button>
+            </Button>
           )}
           {/* Botón de Masterpiece - siempre visible cuando hay categoría */}
-          <button
-            className={`MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorSecondary subcategory-btn masterpiece-btn css-2uqr7o-MuiButtonBase-root-MuiButton-root` + (isMasterpieceActive ? ' Mui-selected' : '')}
-            type="button"
-            tabIndex={0}
+          <Button
+            variant={isMasterpieceActive ? 'contained' : 'outlined'}
+            size="small"
             onClick={toggleMasterpiece}
-            style={{ fontWeight: isMasterpieceActive ? 'bold' : 'normal' }}
+            sx={specialButtonSx(isMasterpieceActive)}
           >
             {getSpecialButtonLabel('masterpiece', lang)}
-          </button>
-        </div>
+          </Button>
+        </Box>
       )}
     </>
   );

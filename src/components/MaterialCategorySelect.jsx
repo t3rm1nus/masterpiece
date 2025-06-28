@@ -55,7 +55,16 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
 
   return (
     <div
-      style={{ width: isMobile ? '80vw' : '100vw', maxWidth: isMobile ? '80vw' : '100vw', margin: isMobile ? '0 auto' : '0', boxSizing: 'border-box', position: 'relative', left: 'unset', transform: 'unset', zIndex: 900 }}
+      sx={{
+        width: isMobile ? '80vw' : '100vw',
+        maxWidth: isMobile ? '80vw' : '100vw',
+        margin: isMobile ? '0 auto' : '0',
+        boxSizing: 'border-box',
+        position: 'relative',
+        left: 'unset',
+        transform: 'unset',
+        zIndex: 900
+      }}
     >
       <FormControl
         fullWidth

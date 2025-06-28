@@ -22,7 +22,7 @@ import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 import MaterialContentWrapper from './MaterialContentWrapper';
 import useAppStore from '../store/useAppStore'; // <-- Usar solo el store NUEVO
 import { normalizeSubcategoryInternal } from '../utils/categoryUtils';
-import { keyframes } from '@mui/system';
+import { keyframes, styled } from '@mui/system';
 
 // Hook para detectar si es móvil SOLO por ancho de pantalla (robusto y compatible móvil)
 function useIsMobile() {
@@ -49,6 +49,42 @@ const animatedGradientBG = keyframes`
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 `;
+
+const AnimatedH1 = styled('h1')(({ isMobile, h1Gradient }) => ({
+  textTransform: 'capitalize',
+  textAlign: 'center',
+  margin: isMobile ? '4px 0 32px 0' : '20px auto 32px auto',
+  fontWeight: 700,
+  fontSize: isMobile ? '1.4rem' : '2.2rem',
+  color: 'black',
+  borderRadius: 0,
+  position: 'relative',
+  zIndex: 2,
+  border: 'none',
+  width: isMobile ? '100vw' : '99vw',
+  maxWidth: isMobile ? '100vw' : '1600px',
+  minWidth: isMobile ? '100vw' : '0',
+  minHeight: isMobile ? 0 : '70px',
+  padding: isMobile ? '12px 0 10px 0' : '32px 0 28px 0',
+  display: 'block',
+  boxShadow: 'none',
+  borderTop: '2px solid #bbb',
+  borderBottom: '2px solid #bbb',
+  background: h1Gradient,
+  backgroundSize: '200% 200%',
+  animation: `${animatedGradientBG} 6s ease-in-out infinite`,
+  transition: 'background 0.3s',
+  cursor: isMobile ? 'pointer' : 'default',
+  // Desactivar cualquier efecto hover en desktop
+  '&:hover': isMobile ? {} : {
+    color: 'black',
+    background: h1Gradient,
+    boxShadow: 'none',
+    cursor: 'default',
+    filter: 'none',
+    textDecoration: 'none',
+  },
+}));
 
 const HomePage = ({
   categoryBarProps = {},
@@ -469,41 +505,12 @@ const HomePage = ({
       {/* Título principal */}
       {!selectedItem && (
         <>
-          <h1
-            style={{
-              textTransform: 'capitalize',
-              textAlign: 'center',
-              margin: isMobile ? '4px 0 32px 0' : '20px 0 32px 0', // margen superior aún más reducido en móvil
-              fontWeight: 700,
-              fontSize: isMobile ? '1.4rem' : '2.2rem',
-              color: 'black',
-              borderRadius: 0,
-              position: 'relative',
-              zIndex: 2,
-              border: 'none',
-              width: isMobile ? '100vw' : '99vw',
-              left: '50%',
-              right: '50%',
-              transform: 'translateX(-50%)',
-              maxWidth: isMobile ? '100vw' : '1600px',
-              minWidth: isMobile ? '100vw' : '0',
-              minHeight: isMobile ? 0 : '70px',
-              padding: isMobile ? '12px 0 10px 0' : '32px 0 28px 0',
-              display: 'block',
-              boxShadow: 'none',
-              borderTop: '2px solid #bbb',
-              borderBottom: '2px solid #bbb',
-              background: h1Gradient,
-              backgroundSize: '200% 200%',
-              animation: `${animatedGradientBG} 6s ease-in-out infinite`,
-              transition: 'background 0.3s',
-            }}
-          >
+          <AnimatedH1 isMobile={isMobile} h1Gradient={h1Gradient}>
             {(!selectedCategory || selectedCategory === 'all')
               ? (t?.ui?.titles?.home_title || 'Lista de recomendados')
               : (t?.categories?.[selectedCategory] || selectedCategory)
             }
-          </h1>
+          </AnimatedH1>
           {/* SOLO MÓVIL: Selector de categorías justo debajo del h1 */}
           {isMobile && (
             <div style={{ width: '96vw', maxWidth: '96vw', margin: '0 auto', marginBottom: 4, marginTop: 4, zIndex: 2, position: 'relative', marginLeft: '10px' }}>

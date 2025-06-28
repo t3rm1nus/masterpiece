@@ -112,7 +112,7 @@ const AppContent = () => {
         <Box sx={{
           position: 'fixed',
           inset: 0,
-          zIndex: 1100, // Más bajo que el menú híbrido
+          zIndex: 1050, // Menor que el AppBar (1100)
           display: 'flex',
           alignItems: 'flex-start',
           justifyContent: 'center',

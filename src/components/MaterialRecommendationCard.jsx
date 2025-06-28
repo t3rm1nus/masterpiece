@@ -98,55 +98,85 @@ const MaterialRecommendationCard = memo(({
     else goToDetail(recommendation);
   };
 
+  const cardSx = theme => ({
+    maxWidth: { xs: '88vw', md: 245 },
+    minWidth: { xs: 0, md: 200 },
+    width: { xs: '82vw', md: undefined },
+    margin: '0 auto 12px auto',
+    cursor: 'pointer',
+    transition: 'all 0.3s ease',
+    boxShadow: recommendation.masterpiece ? theme.shadows[4] : theme.shadows[2],
+    overflow: 'visible',
+    border: recommendation.masterpiece ? '2px solid #ffd700' : 'none',
+    background: recommendation.masterpiece
+      ? (theme.palette.mode === 'dark' 
+        ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
+        : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
+      : (sx["--card-gradient"] || getCategoryGradient(recommendation.category)),
+    position: 'relative',
+    ...sx
+  });
+
+  const badgeSx = theme => ({
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    zIndex: 10,
+    pointerEvents: 'none',
+    '& .MuiBadge-badge': {
+      backgroundColor: 'white',
+      color: '#ffd700',
+      width: 28,
+      height: 28,
+      borderRadius: '50%',
+      border: '2px solid #ffd700',
+      boxShadow: theme.shadows[4],
+      display: 'flex !important',
+      alignItems: 'center',
+      justifyContent: 'center',
+      visibility: 'visible !important',
+      opacity: '1 !important',
+      padding: 0
+    }
+  });
+
+  const categoryChipSx = cat => ({
+    backgroundColor: cat === 'boardgames' ? 'transparent' : getCategoryColor(cat, 'strong'),
+    color: cat === 'boardgames' ? getCategoryColor(cat, 'strong') : 'white',
+    borderColor: cat === 'boardgames' ? getCategoryColor(cat, 'strong') : 'transparent',
+    border: cat === 'boardgames' ? '1.5px solid' : 'none',
+    fontSize: '0.7rem',
+    fontWeight: 600,
+    letterSpacing: 0.2,
+    alignSelf: 'flex-start',
+    boxShadow: cat === 'boardgames' ? undefined : '0 0 0 2px rgba(0,0,0,0.04)',
+    '& .MuiChip-icon': {
+      color: cat === 'boardgames' ? getCategoryColor(cat, 'strong') : 'white'
+    }
+  });
+
+  const subcategoryChipSx = cat => ({
+    fontSize: '0.68rem',
+    borderColor: getCategoryColor(cat, 'strong'),
+    color: '#666',
+    alignSelf: 'flex-start',
+    marginTop: '0px',
+    borderWidth: 2,
+    borderStyle: 'solid',
+    fontWeight: 500
+  });
+
   return (
     <UiCard
       className={`mp-card mp-card--material ${className}`}
-      style={{
-        maxWidth: isMobile ? '88vw' : 245,
-        minWidth: isMobile ? '0' : 200,
-        width: isMobile ? '82vw' : undefined,
-        margin: '0 auto 12px auto',
-        cursor: 'pointer',
-        transition: 'all 0.3s ease',
-        boxShadow: recommendation.masterpiece ? theme.shadows[4] : theme.shadows[2],
-        overflow: 'visible',
-        border: recommendation.masterpiece ? '2px solid #ffd700' : 'none',
-        background: recommendation.masterpiece
-          ? (theme.palette.mode === 'dark' 
-            ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
-            : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
-          : (sx["--card-gradient"] || getCategoryGradient(recommendation.category)),
-        position: 'relative',
-        ...sx
-      }}
+      sx={cardSx(theme)}
       onClick={handleCardClick}
     >
       {/* Badge de masterpiece - ahora sobre la esquina del card */}
       {recommendation.masterpiece && (
         <Badge
           badgeContent={<StarIcon sx={{ fontSize: '18px', color: '#ffd700' }} />} // Estrella dorada
-          sx={{
-            position: 'absolute',
-            top: 0,
-            right: 0,
-            zIndex: 10,
-            pointerEvents: 'none',
-            '& .MuiBadge-badge': {
-              backgroundColor: 'white',
-              color: '#ffd700',
-              width: 28,
-              height: 28,
-              borderRadius: '50%',
-              border: '2px solid #ffd700',
-              boxShadow: theme.shadows[4],
-              display: 'flex !important',
-              alignItems: 'center',
-              justifyContent: 'center',
-              visibility: 'visible !important',
-              opacity: '1 !important',
-              padding: 0
-            }
-          }}
+          sx={badgeSx(theme)}
         />
       )}
       <Box sx={{ position: 'relative' }}>
@@ -171,20 +201,7 @@ const MaterialRecommendationCard = memo(({
               icon={getCategoryIcon(recommendation.category)}
               label={getCategoryTranslation(recommendation.category)}
               size="small"
-              sx={{
-                backgroundColor: recommendation.category === 'boardgames' ? 'transparent' : getCategoryColor(recommendation.category, 'strong'),
-                color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category, 'strong') : 'white',
-                borderColor: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category, 'strong') : 'transparent',
-                border: recommendation.category === 'boardgames' ? '1.5px solid' : 'none',
-                fontSize: '0.7rem',
-                fontWeight: 600,
-                letterSpacing: 0.2,
-                alignSelf: 'flex-start',
-                boxShadow: recommendation.category === 'boardgames' ? undefined : '0 0 0 2px rgba(0,0,0,0.04)',
-                '& .MuiChip-icon': {
-                  color: recommendation.category === 'boardgames' ? getCategoryColor(recommendation.category, 'strong') : 'white'
-                }
-              }}
+              sx={categoryChipSx(recommendation.category)}
             />
           )}
         </Box>
@@ -194,16 +211,7 @@ const MaterialRecommendationCard = memo(({
               label={getSubcategoryTranslation(recommendation.subcategory, recommendation.category)}
               size="small"
               variant="outlined"
-              sx={{
-                fontSize: '0.68rem',
-                borderColor: getCategoryColor(recommendation.category, 'strong'),
-                color: '#666',
-                alignSelf: 'flex-start',
-                marginTop: '0px',
-                borderWidth: 2,
-                borderStyle: 'solid',
-                fontWeight: 500
-              }}
+              sx={subcategoryChipSx(recommendation.category)}
             />
           </Box>
         )}
