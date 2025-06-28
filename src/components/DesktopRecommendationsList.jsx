@@ -5,7 +5,6 @@ import { generateRecommendationKey } from '../utils/appUtils';
 import { getCategoryGradient } from '../utils/categoryPalette';
 import CategoryBar from './home/CategoryBar';
 import SubcategoryBar from './home/SubcategoryBar';
-import '../styles/components/cards.css';
 import { NoResults } from './SharedComponents';
 import MaterialRecommendationCard from './MaterialRecommendationCard';
 import { randomNotFoundImage } from '../store/utils';
@@ -148,17 +147,16 @@ const DesktopRecommendationsList = ({
       <img
         src={rec.image}
         alt={title}
-        className="rec-home-img"
-        style={{ width: '70%' }}
+        style={recHomeImgStyle}
         loading="lazy"
         decoding="async"
       />
       <div style={{ height: '8px' }} />
-      <div className="category-label">
+      <div style={categoryLabelStyle}>
         {getCategoryTranslation(rec.category)}
       </div>
       {rec.subcategory && (
-        <div className="subcategory-label" style={{ fontSize: '0.95em', color: '#666', textAlign: 'center' }}>
+        <div style={subcategoryLabelStyle}>
           {getSubcategoryTranslation(rec.subcategory, rec.category)}
         </div>
       )}
@@ -175,21 +173,20 @@ const DesktopRecommendationsList = ({
       <img
         src={rec.image}
         alt={title}
-        className="rec-home-img"
-        style={{ width: '70%' }}
+        style={recHomeImgStyle}
         loading="lazy"
         decoding="async"
       />
       <div style={{ height: '8px' }} />
-      <h3 className="rec-home-title" style={{ textAlign: 'center', margin: 0 }}>
+      <h3 style={recHomeTitleStyle}>
         {title}
       </h3>
       <div style={{ height: '8px' }} />
-      <div className="category-label">
+      <div style={categoryLabelStyle}>
         {getCategoryTranslation(rec.category)}
       </div>
       {rec.subcategory && (
-        <div className="subcategory-label" style={{ fontSize: '0.95em', color: '#666', textAlign: 'center' }}>
+        <div style={subcategoryLabelStyle}>
           {getSubcategoryTranslation(rec.subcategory, rec.category)}
         </div>
       )}
@@ -242,26 +239,25 @@ const DesktopRecommendationsList = ({
   }, [data, t, randomNotFoundImage, renderRecommendationCard, loading, emptyComponent]);
 
   // Estilos del contenedor desktop
-  const getWrapperStyles = () => ({
+  const wrapperStyles = {
     width: '100%',
     maxWidth: '1800px',
     margin: '0 auto',
     padding: '0 2vw',
-  });
-
-  const getListStyles = () => ({
+  };
+  const listStyles = {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: data && data.length < 6 ? 'center' : 'flex-start',
+    justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    gap: '20px 12px', // reducido el espacio entre items
+    gap: '20px 12px',
     width: '100%',
     marginLeft: 'auto',
     marginRight: 'auto',
-  });
+  };
 
   return (
-    <div className={`desktop-recommendations-list ${className}`} style={{ ...getWrapperStyles(), ...sx, ...style }} {...domSafeRest}>
+    <div className={`desktop-recommendations-list ${className}`} style={{ ...wrapperStyles, ...sx, ...style }} {...domSafeRest}>
       {/* Barra de categorías parametrizable */}
       {showCategoryBar && categories && (
         <CategoryBar
@@ -283,7 +279,7 @@ const DesktopRecommendationsList = ({
           sx={subcategoryBarSx}
         />
       )}
-      <div className="recommendations-list desktop-list" style={getListStyles()}>
+      <div className="recommendations-list desktop-list" style={listStyles}>
         {memoizedRecommendations}
       </div>
       {pagination && (
@@ -309,6 +305,32 @@ const DesktopRecommendationsList = ({
       )}
     </div>
   );
+};
+
+// Migrar estilos internos a CSS-in-JS en DesktopRecommendationsList.jsx
+const recHomeImgStyle = {
+  width: '70%',
+  borderRadius: 12,
+  marginBottom: 8,
+  objectFit: 'cover',
+};
+const categoryLabelStyle = {
+  fontWeight: 700,
+  fontSize: '1em',
+  color: '#666',
+  margin: '0 0 4px 0',
+  textAlign: 'center',
+};
+const subcategoryLabelStyle = {
+  fontSize: '0.95em',
+  color: '#666',
+  textAlign: 'center',
+};
+const recHomeTitleStyle = {
+  textAlign: 'center',
+  margin: 0,
+  fontWeight: 600,
+  fontSize: '1.13rem',
 };
 
 export default DesktopRecommendationsList;

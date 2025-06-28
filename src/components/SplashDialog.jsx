@@ -128,10 +128,10 @@ const SplashDialog = ({
 
   // Estilos CSS-in-JS para la imagen splash
   const splashImageStyle = {
-    height: isMobile ? '56vh' : '100vh',
-    width: isMobile ? 'auto' : 'auto',
-    maxHeight: isMobile ? '56vh' : '100vh',
-    maxWidth: isMobile ? '66vw' : '100vw',
+    height: isMobile ? '100%' : '100vh',
+    width: isMobile ? '100%' : 'auto',
+    maxHeight: isMobile ? '100%' : '100vh',
+    maxWidth: isMobile ? '100%' : '100vw',
     borderRadius: isMobile ? 24 : 32,
     margin: 0,
     cursor: 'pointer',
