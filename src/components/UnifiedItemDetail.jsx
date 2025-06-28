@@ -448,6 +448,7 @@ const styles = {
     boxShadow: '0 20px 40px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.1)',
     transition: 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
     transformStyle: 'preserve-3d',
+    border: '2px solid #111', // Borde negro en todos los dispositivos
   },
   imageHover: {
     transform: 'scale(1.03) rotateY(5deg)',

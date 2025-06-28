@@ -244,6 +244,7 @@ const MaterialItemDetail = ({ item }) => {
               width: '100%',
               borderRadius: 0,
               boxShadow: 'none',
+              border: '2px solid #111', // Borde negro en todos los dispositivos
             }}
             image={item.image}
             alt={title}

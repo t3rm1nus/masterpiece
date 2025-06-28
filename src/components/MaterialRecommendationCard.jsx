@@ -197,7 +197,8 @@ const MaterialRecommendationCard = memo(({
           sx={{
             height: 200,
             objectFit: 'cover',
-            width: '100%'
+            width: '100%',
+            border: '2px solid #111', // Borde negro en todos los dispositivos
           }}
           image={recommendation.image}
           alt={title}

@@ -206,7 +206,7 @@ const MobileItemDetail = ({
               ? renderImage(selectedItem)
               : <CardMedia
                   component="img"
-                  sx={{ height: 300, objectFit: 'cover', position: 'relative' }}
+                  sx={{ height: 300, objectFit: 'cover', position: 'relative', border: '2px solid #111' }}
                   image={selectedItem.image}
                   alt={title}
                   onLoad={() => setImgLoaded && setImgLoaded(true)}
