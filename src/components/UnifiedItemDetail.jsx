@@ -153,6 +153,7 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, isClosing = false,
           console.log('[UnifiedItemDetail] Animación de cierre FINALIZADA en móvil (onClose llamado)');
           if (onClose) onClose();
         }}
+        onBack={handleClose} // <-- Añadido para interceptar el botón volver y animar el cierre
       />
     );
   }

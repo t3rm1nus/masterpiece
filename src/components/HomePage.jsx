@@ -499,16 +499,19 @@ const HomePage = ({
   const [isClosingDetail, setIsClosingDetail] = useState(false);
   // Función de cierre animado para detalle
   const handleRequestClose = useCallback(() => {
+    console.log('[HomePage] handleRequestClose: INICIO (usuario pulsa volver)');
     setIsClosingDetail(true);
   }, []);
 
-  // Efecto: desmontar el detalle solo después de la animación de salida (0.3s)
+  // Efecto: desmontar el detalle solo después de la animación de salida (0.6s)
   useEffect(() => {
     if (isClosingDetail) {
+      console.log('[HomePage] isClosingDetail=true: Esperando animación de salida...');
       const timeout = setTimeout(() => {
+        console.log('[HomePage] Animación de salida terminada, desmontando detalle y llamando goBackFromDetail');
         goBackFromDetail();
         setIsClosingDetail(false);
-      }, 300); // Duración igual que la animación
+      }, 600); // Duración igual que la animación (600ms)
       return () => clearTimeout(timeout);
     }
   }, [isClosingDetail, goBackFromDetail]);
@@ -650,6 +653,7 @@ const HomePage = ({
         <UnifiedItemDetail
           item={selectedItem}
           onClose={handleRequestClose}
+          onRequestClose={handleRequestClose} // <-- Añadido para interceptar el botón volver
           selectedCategory={selectedCategory}
           isClosing={isClosingDetail}
         />

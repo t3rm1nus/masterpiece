@@ -175,8 +175,20 @@ const MaterialRecommendationCard = memo(({
       {/* Badge de masterpiece - ahora sobre la esquina del card */}
       {recommendation.masterpiece && (
         <Badge
-          badgeContent={<StarIcon sx={{ fontSize: '18px', color: '#ffd700' }} />} // Estrella dorada
-          sx={badgeSx(theme)}
+          badgeContent={<StarIcon sx={{ fontSize: { xs: '26px', sm: '22px', md: '18px' }, color: '#ffd700', animation: { xs: 'pulseGlow 2s ease-in-out infinite', md: 'none' } }} />} // Estrella dorada más grande y animada en móvil
+          sx={{
+            ...badgeSx(theme),
+            position: 'absolute',
+            top: { xs: '-21px', md: 0 },
+            right: { xs: '-20px', md: 0 },
+            '& .MuiBadge-badge': {
+              ...badgeSx(theme)['& .MuiBadge-badge'],
+              width: { xs: 38, sm: 32, md: 28 },
+              height: { xs: 38, sm: 32, md: 28 },
+              fontSize: { xs: '1.6rem', sm: '1.2rem', md: '1rem' },
+              animation: { xs: 'pulseGlow 2s ease-in-out infinite', md: 'none' },
+            }
+          }}
         />
       )}
       <Box sx={{ position: 'relative' }}>

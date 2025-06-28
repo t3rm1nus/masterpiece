@@ -168,8 +168,8 @@ const MobileItemDetail = ({
         {/* Tarjeta principal */}
         <UiCard
           sx={{
-            maxWidth: 600,
-            width: '100%',
+            maxWidth: { xs: 380, sm: 500, md: 600 }, // Reducido en móvil
+            width: '96vw', // Un poco menos que el 100% para dejar margen
             margin: '0 auto',
             marginTop: 0,
             borderRadius: '16px',
@@ -186,7 +186,16 @@ const MobileItemDetail = ({
               title={getTranslation ? getTranslation('ui.badges.masterpiece', 'Obra maestra') : 'Obra maestra'}
               absolute={true}
               size={40}
-              sx={{ top: -17, right: -18, zIndex: 1201 }}
+              sx={{
+                top: -17,
+                right: -18,
+                zIndex: 1201,
+                filter: 'drop-shadow(0 4px 16px rgba(255,215,0,0.5))',
+                background: '#FFD700',
+                border: '2.5px solid #111',
+                animation: 'pulseGlow 2s ease-in-out infinite',
+                transition: 'box-shadow 0.3s',
+              }}
             />
           )}
           {/* Header custom */}
