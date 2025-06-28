@@ -31,13 +31,12 @@ export default function Modal({
         justifyContent: 'center',
         ...sx.backdrop
       }}
-      className={backdropClassName}
       onClick={onBackdropClick || onClose}
     >
       <Box
         sx={{
           background: '#fff',
-          borderRadius: 2.5,
+          borderRadius: '12px',
           boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
           p: '2em 1.5em',
           minWidth: 320,
@@ -47,7 +46,6 @@ export default function Modal({
           position: 'relative',
           ...sx.modal
         }}
-        className={`${className} ${contentClassName}`}
         onClick={e => e.stopPropagation()}
         {...props}
       >
