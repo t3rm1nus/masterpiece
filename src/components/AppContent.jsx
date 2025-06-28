@@ -1,19 +1,15 @@
 import React, { useEffect, Suspense, useRef, useState } from 'react';
-import { useAppView, useAppUI } from '../store/useAppStore';
-import { isMobileDevice } from '../utils/appUtils';
+import { useAppView } from '../store/useAppStore';
+import { useLanguage } from '../LanguageContext';
 import HybridMenu from './HybridMenu';
 import HomePage from './HomePage';
 import UnifiedItemDetail from './UnifiedItemDetail';
 import { LazyCoffeePage, LazyHowToDownload, LoadingFallback } from './LazyComponents';
-import { useLanguage } from '../LanguageContext';
 import MaterialMobileMenu from './MaterialMobileMenu';
+import { Box, Fade, Slide } from '@mui/material';
 
 /**
- * AppContent
- *
- * Componente principal que orquesta la navegación y renderizado de las vistas principales de la app.
- * Siempre renderiza HomePage y muestra overlays/modales según el estado global (detalle, donaciones, instrucciones, etc).
- * Gestiona el scroll y la experiencia de usuario al cambiar de vista.
+ * AppContent (migrado a layout moderno con animaciones y overlays accesibles)
  */
 const splashAudios = [
   "/sonidos/samurai.mp3",
@@ -25,13 +21,11 @@ const splashAudios = [
 ];
 
 const AppContent = () => {
-  // Usando el store consolidado de vista para toda la gestión de UI
-  const { 
+  const {
     currentView,
     selectedItem,
     goBackFromDetail,
-    isMobile: isMobileView,
-    setViewport
+    isMobile: isMobileView
   } = useAppView();
   const { getTranslation } = useLanguage();
   const audioRef = useRef(null);
@@ -59,7 +53,6 @@ const AppContent = () => {
 
   // Scroll al top al volver a la vista 'home' desde 'detail' en desktop
   useEffect(() => {
-    // Si venimos de un detalle y estamos en desktop, sube el scroll al top
     if (currentView === 'home' && !isMobileView) {
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: 'auto' });
@@ -69,8 +62,7 @@ const AppContent = () => {
         if (main) main.scrollTop = 0;
         const root = document.getElementById('root');
         if (root) root.scrollTop = 0;
-        console.log('[AppContent] Scroll al top tras volver a home (desktop)');
-      }, 200); // Espera breve para asegurar que HomePage se haya renderizado
+      }, 200);
     }
   }, [currentView, isMobileView]);
 
@@ -80,14 +72,13 @@ const AppContent = () => {
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: 'auto' });
         document.documentElement.scrollTop = 0;
-      }, 200); // Espera breve para asegurar que el detalle se haya renderizado
+      }, 200);
     }
   }, [currentView]);
 
-  // Renderiza SIEMPRE HomePage y muestra el detalle como overlay/modal si corresponde
   return (
-    <>
-      {/* HybridMenu siempre visible para acceso global al splash/info */}
+    <Box sx={{ minHeight: '100vh', width: '100vw', position: 'relative', background: '#fafbfc' }}>
+      {/* Menús globales */}
       <HybridMenu
         onSplashOpen={handleSplashOpen}
         splashAudio={splashAudio}
@@ -95,7 +86,6 @@ const AppContent = () => {
         onSplashClose={handleSplashClose}
         audioRef={audioRef}
       />
-      {/* MaterialMobileMenu siempre visible en móvil para acceso global al splash/info */}
       {isMobileView && (
         <MaterialMobileMenu
           onSplashOpen={handleSplashOpen}
@@ -105,40 +95,68 @@ const AppContent = () => {
           audioRef={audioRef}
         />
       )}
-      {/* Renderiza HomePage solo si estamos en la vista home */}
-      {currentView === 'home' && (
-        <HomePage
-          splashAudio={splashAudio}
-          splashOpen={splashOpen}
-          onSplashOpen={handleSplashOpen}
-          onSplashClose={handleSplashClose}
-          audioRef={audioRef}
-        />
-      )}
-      {/* Overlay/modal de detalle solo si hay selectedItem y currentView es 'detail' */}
-      {currentView === 'detail' && selectedItem && (
-        <UnifiedItemDetail 
-          item={selectedItem}
-          onClose={goBackFromDetail}
-          selectedCategory={selectedItem.category}
-        />
-      )}
-      {/* Otras vistas (coffee, howToDownload, etc) */}
-      {currentView === 'coffee' && (
-        <Suspense fallback={<LoadingFallback message={getTranslation('ui.states.loading_coffee', 'Cargando página de donación...')} />}>
-          <LazyCoffeePage />
-        </Suspense>
-      )}
-      {currentView === 'howToDownload' && (
-        <Suspense fallback={<LoadingFallback message={getTranslation('ui.states.loading_how_to_download', 'Cargando instrucciones de descarga...')} />}>
-          <LazyHowToDownload />
-        </Suspense>
-      )}
-      {/* Renderiza mensaje de error si la vista no existe */}
-      {['home', 'detail', 'coffee', 'howToDownload'].indexOf(currentView) === -1 && (
-        <div>{getTranslation('ui.errors.page_not_found', 'Página no encontrada')}</div>
-      )}
-    </>
+      {/* HomePage animada */}
+      <Fade in={currentView === 'home'} timeout={400} unmountOnExit>
+        <Box>
+          <HomePage
+            splashAudio={splashAudio}
+            splashOpen={splashOpen}
+            onSplashOpen={handleSplashOpen}
+            onSplashClose={handleSplashClose}
+            audioRef={audioRef}
+          />
+        </Box>
+      </Fade>
+      {/* Overlay/modal de detalle animado y accesible */}
+      <Slide direction="up" in={currentView === 'detail' && !!selectedItem} mountOnEnter unmountOnExit timeout={400}>
+        <Box sx={{
+          position: 'fixed',
+          inset: 0,
+          zIndex: 1100, // Más bajo que el menú híbrido
+          display: 'flex',
+          alignItems: 'flex-start',
+          justifyContent: 'center',
+          background: 'none',
+          backdropFilter: 'none',
+          overflowY: 'auto',
+          pointerEvents: 'none', // Permite clicks a través del overlay
+          pt: { xs: '72px', md: '88px' },
+        }} aria-modal="true" role="dialog">
+          <Box sx={{ pointerEvents: 'auto', width: '100%' }}>
+            {selectedItem ? (
+              <UnifiedItemDetail
+                item={selectedItem}
+                onClose={goBackFromDetail}
+                selectedCategory={selectedItem.category}
+              />
+            ) : (
+              <Box sx={{ minHeight: 200 }} />
+            )}
+          </Box>
+        </Box>
+      </Slide>
+      {/* Otras vistas (coffee, howToDownload) animadas */}
+      <Fade in={currentView === 'coffee'} timeout={400} mountOnEnter unmountOnExit>
+        <Box>
+          <Suspense fallback={<LoadingFallback message={getTranslation('ui.states.loading_coffee', 'Cargando página de donación...')} />}>
+            <LazyCoffeePage />
+          </Suspense>
+        </Box>
+      </Fade>
+      <Fade in={currentView === 'howToDownload'} timeout={400} mountOnEnter unmountOnExit>
+        <Box>
+          <Suspense fallback={<LoadingFallback message={getTranslation('ui.states.loading_how_to_download', 'Cargando instrucciones de descarga...')} />}>
+            <LazyHowToDownload />
+          </Suspense>
+        </Box>
+      </Fade>
+      {/* Página no encontrada */}
+      <Fade in={['home', 'detail', 'coffee', 'howToDownload'].indexOf(currentView) === -1} timeout={400} unmountOnExit>
+        <Box sx={{ p: 6, textAlign: 'center', color: '#b00', fontWeight: 700 }}>
+          {getTranslation('ui.errors.page_not_found', 'Página no encontrada')}
+        </Box>
+      </Fade>
+    </Box>
   );
 };
 

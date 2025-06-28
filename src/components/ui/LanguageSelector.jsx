@@ -64,7 +64,7 @@ const LanguageSelector = ({
 
   // Desktop: Select clásico
   return (
-    <Box sx={{ minWidth: 120, ...sx }} className={className}>
+    <Box sx={{ ...sx }} className={className}>
       <Select
         value={lang}
         onChange={e => handleChange?.(e.target.value)}

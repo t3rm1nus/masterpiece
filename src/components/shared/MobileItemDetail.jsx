@@ -6,6 +6,7 @@ import { getCategoryColor, getCategoryGradient } from '../../utils/categoryPalet
 import { ensureString } from '../../utils/stringUtils';
 import UiCard from '../ui/UiCard';
 import { MobileActionButtons } from './ItemActionButtons';
+import MasterpieceBadge from './MasterpieceBadge';
 
 /**
  * MobileItemDetail
@@ -99,11 +100,14 @@ const MobileItemDetail = ({
 
   return (
     <Box
-      className={`item-detail-page mobile-only ${className || ''}`}
-      sx={{ position: 'relative', minHeight: '100vh', padding: '16px', ...sx }}
-      style={{
-        ...style
+      sx={{
+        position: 'relative',
+        minHeight: '100vh',
+        padding: '16px',
+        pt: { xs: '11px', sm: '19px' }, // 5px menos de padding-top en xs y sm
+        ...sx
       }}
+      style={{ ...style }}
       {...domSafeProps}
     >
       {/* Botón de volver flotante */}
@@ -114,7 +118,7 @@ const MobileItemDetail = ({
           onClick={onBack || goBackFromDetail}
           sx={{
             position: 'fixed',
-            top: '80px',
+            top: '56px', // Ajustado para alinearse mejor con el nuevo padding superior
             left: '16px',
             zIndex: 1000,
             backgroundColor: theme?.palette?.primary?.main,
@@ -134,32 +138,38 @@ const MobileItemDetail = ({
           margin: '0 auto',
           marginTop: 0,
           borderRadius: '16px',
-          overflow: 'hidden',
           boxShadow: theme?.shadows?.[8],
           border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
           background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
+          position: 'relative' // necesario para posicionar el badge
         }}
       >
+        {/* Badge de masterpiece en la esquina del detalle */}
+        {selectedItem.masterpiece && (
+          <MasterpieceBadge
+            alt={getTranslation ? getTranslation('ui.alt.masterpiece', 'Obra maestra') : 'Obra maestra'}
+            title={getTranslation ? getTranslation('ui.badges.masterpiece', 'Obra maestra') : 'Obra maestra'}
+            absolute={true}
+            size={40}
+            sx={{ top: -17, right: -18, zIndex: 1201 }}
+          />
+        )}
         {/* Header custom */}
         {renderHeader && renderHeader(selectedItem)}
-        {/* Imagen principal */}
-        {showSections.image !== false && (renderImage
-          ? renderImage(selectedItem)
-          : <CardMedia
-              component="img"
-              sx={{ height: 300, objectFit: 'cover', position: 'relative' }}
-              image={selectedItem.image}
-              alt={title}
-              onLoad={() => setImgLoaded && setImgLoaded(true)}
-            />
-        )}
-        {/* Badge de masterpiece en la imagen */}
-        {selectedItem.masterpiece && (
-          <span className="masterpiece-detail-badge" title={(getTranslation ? getTranslation('ui.badges.masterpiece', 'Obra maestra') : 'Obra maestra')}>
-            <img src="/imagenes/masterpiece-star.png" alt={(getTranslation ? getTranslation('ui.alt.masterpiece', 'Obra maestra') : 'Obra maestra')} style={{ width: 56, height: 56, display: 'block' }} />
-          </span>
-        )}
-        <CardContent sx={{ padding: '24px' }}>
+        {/* Imagen principal + badge masterpiece */}
+        <Box sx={{ position: 'relative' }}>
+          {showSections.image !== false && (renderImage
+            ? renderImage(selectedItem)
+            : <CardMedia
+                component="img"
+                sx={{ height: 300, objectFit: 'cover', position: 'relative' }}
+                image={selectedItem.image}
+                alt={title}
+                onLoad={() => setImgLoaded && setImgLoaded(true)}
+              />
+          )}
+        </Box>
+        <CardContent sx={{ padding: '24px', position: 'relative' }}>
           {/* Título */}
           {showSections.title !== false && (
             <Typography 
@@ -180,13 +190,10 @@ const MobileItemDetail = ({
           {showSections.category !== false && (
             renderCategory
               ? renderCategory(selectedItem)
-              : <Stack direction="row" spacing={1} justifyContent="center" sx={{ marginBottom: '16px' }} style={{
-                  '--category-color': getCategoryColor(selectedItem.category, 'strong')
-                }}>
+              : <Stack direction="row" spacing={1} justifyContent="center" sx={{ marginBottom: '16px' }}>
                   <Chip
                     icon={getCategoryIcon(selectedItem.category)}
                     label={getCategoryTranslation(selectedItem.category)}
-                    className="category-chip"
                     sx={{
                       backgroundColor: selectedItem.category === 'boardgames' ? 'transparent' : getCategoryColor(selectedItem.category, 'strong'),
                       color: selectedItem.category === 'boardgames' ? getCategoryColor(selectedItem.category, 'strong') : 'white',
@@ -207,7 +214,6 @@ const MobileItemDetail = ({
                     : <Chip
                         label={getSubcategoryTranslation(selectedItem.subcategory, selectedItem.category)}
                         variant="outlined"
-                        className="subcategory-chip"
                         sx={{
                           fontSize: '0.68rem',
                           borderColor: getCategoryColor(selectedItem.category, 'strong'),

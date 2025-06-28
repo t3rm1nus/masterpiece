@@ -21,7 +21,7 @@
 @import './components/home-page.css';
 
 /* === LEGACY & SPECIFIC STYLES === */
-@import './legacy.css';
+/* Eliminado import de legacy.css porque el archivo ya no existe */
 
 /* === LEGACY COMPATIBILITY === */
 /* Estilos específicos que aún no se han migrado completamente */

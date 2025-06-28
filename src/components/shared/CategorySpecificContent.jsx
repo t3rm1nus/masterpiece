@@ -12,7 +12,7 @@ import {
   Translate as TranslateIcon,
   PlaylistPlay as PlaylistPlayIcon
 } from '@mui/icons-material';
-import { getCategoryColor } from '../../utils/categoryUtils';
+import { getCategoryColor } from '../../utils/categoryPalette';
 import { ensureString } from '../../utils/stringUtils';
 
 export function MobileCategorySpecificContent({ selectedItem, lang, t, getTranslation }) {

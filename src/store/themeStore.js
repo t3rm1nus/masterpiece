@@ -1,4 +1,13 @@
+// =============================================
 // Slice de tema para Zustand
+// Contiene estado y acciones relacionadas con el tema visual de la app.
+// - isDarkMode: booleano para modo oscuro
+// - theme: 'light' | 'dark'
+// - toggleTheme: alterna entre modos
+// - setTheme: establece el tema
+// - getMasterpieceBadgeConfig: configuración SVG para badge de obra maestra
+// =============================================
+
 export const createThemeSlice = (set, get) => ({
   isDarkMode: false,
   theme: 'light',

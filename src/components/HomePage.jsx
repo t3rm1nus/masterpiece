@@ -5,11 +5,7 @@ import { useTitleSync } from '../hooks/useTitleSync';
 import { loadRealData } from '../utils/dataLoader';
 import RecommendationsList from './RecommendationsList';
 import ThemeToggle from './ThemeToggle';
-import '../styles/components/buttons.css';
-import '../styles/components/home-page.css';
-import '../styles/components/home-title-mobile.css';
 import UnifiedItemDetail from './UnifiedItemDetail';
-import { normalizeSubcategoryInternal } from '../utils/categoryUtils';
 import MaterialCategorySelect from './MaterialCategorySelect';
 import { useTheme } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
@@ -23,9 +19,10 @@ import { getCategoryGradient, getAllCategoriesAnimatedGradient, getCategoryAnima
 import HybridMenu from './HybridMenu';
 import MaterialMobileMenu from './MaterialMobileMenu';
 import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
-import '../styles/components/animations.css';
 import MaterialContentWrapper from './MaterialContentWrapper';
 import useAppStore from '../store/useAppStore'; // <-- Usar solo el store NUEVO
+import { normalizeSubcategoryInternal } from '../utils/categoryUtils';
+import { keyframes } from '@mui/system';
 
 // Hook para detectar si es móvil SOLO por ancho de pantalla (robusto y compatible móvil)
 function useIsMobile() {
@@ -45,6 +42,13 @@ function useIsMobile() {
   }, []);
   return isMobile;
 }
+
+// Definir keyframes para el gradiente animado de fondo
+const animatedGradientBG = keyframes`
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+`;
 
 const HomePage = ({
   categoryBarProps = {},
@@ -397,9 +401,11 @@ const HomePage = ({
   // Verificar si hay datos disponibles
   if (!allData || Object.keys(allData).length === 0) {
     return (
-      <div className="loading-container">
-        <div className="loading-spinner"></div>
-        <p>{getTranslation('ui.states.loading', 'Cargando...')}</p>
+      <div
+        style={{ width: '100vw', height: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}
+      >
+        <div style={{ width: 48, height: 48, border: '4px solid #ccc', borderTop: '4px solid #888', borderRadius: '50%', animation: 'spin 1s linear infinite' }} />
+        <p style={{ marginTop: 16 }}>{getTranslation('ui.states.loading', 'Cargando...')}</p>
       </div>
     );
   }
@@ -453,40 +459,28 @@ const HomePage = ({
     }
   };
 
+  // Obtener gradiente animado según categoría
+  const h1Gradient = (!selectedCategory || selectedCategory === 'all')
+    ? getMasterpieceAnimatedGradient()
+    : getCategoryAnimatedGradient(selectedCategory);
+
   return (
     <UiLayout sx={{ marginTop: 8, width: '100vw', maxWidth: '100vw', px: 0 }}>
-      {/* Eliminar controles de cabecera solo en desktop */}
-      {/* {isMobile && (
-        <div className="header-controls">
-          <ThemeToggle />
-        </div>
-      )} */}
-
-      {/* Hide all navigation controls when showing item detail */}
+      {/* Título principal */}
       {!selectedItem && (
         <>
-          {/* Mostrar título traducido */}
-          <h1 
-            className={
-              'home-title animated-gradient-title' +
-              (isMobile ? ' home-mobile-title' : '') +
-              (selectedCategory ? ' after-subcategories' : '')
-            }
+          <h1
             style={{
               textTransform: 'capitalize',
               textAlign: 'center',
-              margin: '20px 0 32px 0',
+              margin: isMobile ? '4px 0 32px 0' : '20px 0 32px 0', // margen superior aún más reducido en móvil
               fontWeight: 700,
-              fontSize: '2.2rem',
-              backgroundImage: (!selectedCategory || selectedCategory === 'all')
-                ? 'var(--all-categories-animated-gradient)'
-                : 'var(--category-animated-gradient)',
+              fontSize: isMobile ? '1.4rem' : '2.2rem',
               color: 'black',
               borderRadius: 0,
               position: 'relative',
               zIndex: 2,
               border: 'none',
-              transition: 'background-image 0.3s',
               width: isMobile ? '100vw' : '99vw',
               left: '50%',
               right: '50%',
@@ -494,13 +488,15 @@ const HomePage = ({
               maxWidth: isMobile ? '100vw' : '1600px',
               minWidth: isMobile ? '100vw' : '0',
               minHeight: isMobile ? 0 : '70px',
-              padding: isMobile ? undefined : '32px 0 28px 0',
+              padding: isMobile ? '12px 0 10px 0' : '32px 0 28px 0',
               display: 'block',
               boxShadow: 'none',
-              borderTop: isMobile ? undefined : '2px solid #bbb',
-              borderBottom: isMobile ? undefined : '2px solid #bbb',
+              borderTop: '2px solid #bbb',
+              borderBottom: '2px solid #bbb',
+              background: h1Gradient,
               backgroundSize: '200% 200%',
-              animation: 'animatedGradientBG 6s ease-in-out infinite',
+              animation: `${animatedGradientBG} 6s ease-in-out infinite`,
+              transition: 'background 0.3s',
             }}
           >
             {(!selectedCategory || selectedCategory === 'all')
@@ -510,7 +506,7 @@ const HomePage = ({
           </h1>
           {/* SOLO MÓVIL: Selector de categorías justo debajo del h1 */}
           {isMobile && (
-            <div style={{ width: '96vw', maxWidth: '96vw', margin: '0 auto', marginBottom: 12, marginTop: -8, zIndex: 2, position: 'relative', marginLeft: '10px' }}>
+            <div style={{ width: '96vw', maxWidth: '96vw', margin: '0 auto', marginBottom: 4, marginTop: 4, zIndex: 2, position: 'relative', marginLeft: '10px' }}>
               <MaterialCategorySelect
                 categories={categories}
                 selectedCategory={selectedCategory}
@@ -588,9 +584,6 @@ const HomePage = ({
         </>
       )}
       {/* Render either the recommendations list OR the item detail, not both */}
-      {/* {selectedItem ? (
-        renderItemDetail()
-      ) : ( */}
       {!selectedItem && (
         <div
           style={{
@@ -643,8 +636,6 @@ const HomePage = ({
           )}
         </div>
       )}
-      {/* SOLO EN MÓVIL: Menú superior centralizado para splash/audio */}
-      {/* MaterialMobileMenu eliminado de aquí; ahora se renderiza globalmente en AppContent.jsx */}
     </UiLayout>
   );
 };

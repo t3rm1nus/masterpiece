@@ -1,6 +1,6 @@
 import React from 'react';
 import UiButton from '../ui/UiButton';
-import { getCategoryGradient } from '../../utils/categoryUtils';
+import { getCategoryGradient } from '../../utils/categoryPalette';
 import useAppStore from '../../store/useAppStore';
 
 /**

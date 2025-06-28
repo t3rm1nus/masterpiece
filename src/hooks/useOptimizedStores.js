@@ -3,8 +3,11 @@ import { useAppView, useAppData, useAppTheme, useAppUI } from '../store/useAppSt
 import { useMultiLanguageData } from './useMultiLanguageData';
 
 /**
- * Hook personalizado para optimizar el rendimiento de componentes
- * que necesitan múltiples funciones de los stores
+ * useOptimizedStores
+ * Hook personalizado para obtener selectores y acciones optimizadas de los stores Zustand.
+ * - Memoiza configuraciones y callbacks para evitar renders innecesarios.
+ * - Devuelve selectores, datos, configuraciones y callbacks listos para usar en componentes.
+ * - Útil para vistas que requieren múltiples datos/acciones globales.
  */
 export const useOptimizedStores = () => {
   // Selectores específicos para evitar re-renders innecesarios
@@ -62,7 +65,10 @@ export const useOptimizedStores = () => {
 };
 
 /**
- * Hook para optimizar el manejo de estilos condicionales
+ * useOptimizedStyles
+ * Hook para obtener estilos condicionales optimizados según tema y dispositivo.
+ * - Devuelve estilos para contenedores, tarjetas y textos.
+ * - Útil para mantener consistencia visual y performance.
  */
 export const useOptimizedStyles = () => {
   const { isDarkTheme } = useAppTheme();

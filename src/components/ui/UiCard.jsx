@@ -70,7 +70,7 @@ const UiCard = ({
       elevation={variant === 'elevation' ? elevation : 0}
       variant={variant}
       className={`mp-ui-card ${className}`}
-      sx={{ borderRadius: 3, overflow: 'hidden', ...sx }}
+      sx={{ borderRadius: 3, overflow: 'visible', ...sx }}
       style={mergedStyle}
       {...props}
     >

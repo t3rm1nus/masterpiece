@@ -2,7 +2,7 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext';
 import { useAppView, useAppTheme } from '../store/useAppStore';
 import '../styles/components/item-detail.css';
-import { getCategoryColor } from '../utils/categoryUtils';
+import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 import { ensureString } from '../utils/stringUtils';
 import { useTrailerUrl } from '../hooks/useTrailerUrl';
 import MobileItemDetail from './shared/MobileItemDetail';

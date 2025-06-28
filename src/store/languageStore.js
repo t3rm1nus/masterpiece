@@ -1,3 +1,14 @@
+// =============================================
+// Slice de idioma y traducciones para Zustand
+// Contiene estado y acciones para la gestión de idioma y traducciones.
+// - language: idioma actual ('es' | 'en')
+// - translations: objeto de traducciones
+// - setLanguage: cambia el idioma
+// - toggleLanguage: alterna idioma
+// - setTranslations: actualiza traducciones
+// - getTranslation: obtiene traducción por clave
+// =============================================
+
 // Slice de idioma y traducciones para Zustand
 export const createLanguageSlice = (set, get) => ({
   language: 'es',

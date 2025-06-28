@@ -1,3 +1,11 @@
+// =============================================
+// Data slice para Zustand
+// Contiene estado y acciones para datos principales de la app.
+// - recommendations, categories, filteredItems, selectedCategory, activeSubcategory, title, isDataInitialized, allData
+// - updateWithRealData: actualiza datos desde fuente real
+// - Otros helpers y migraciones
+// =============================================
+
 import { processTitle, processDescription, randomNotFoundImage } from './utils';
 
 // Migration helper for persisted state

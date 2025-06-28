@@ -10,6 +10,7 @@
 // - Utilidades globales deben importarse desde './utils'.
 // - Los nombres de campos deben ser consistentes en todo el store y la app (ej: 'language', 'selectedCategory', 'activeSubcategory').
 // - Si se agregan nuevos estados globales, documentar aquí y en el slice correspondiente.
+// - Cada slice debe estar documentado en su propio archivo.
 // =============================================
 
 import { create } from 'zustand';

@@ -67,52 +67,13 @@ export const getUniqueSubcategories = (items, lang) => {
 };
 
 // Helpers para categorías y colores
-// getCategoryColor centralizado aquí, eliminar duplicados en otros archivos
-export function getCategoryColor(category, theme, intenseForSelect) {
-  switch (category) {
-    case 'movies':
-    case 'peliculas':
-      return '#90caf9'; // azul pastel claro
-    case 'videogames':
-    case 'videojuegos':
-      return '#ce93d8'; // lila pastel
-    case 'books':
-    case 'libros':
-      return '#a5d6a7'; // verde menta pastel
-    case 'music':
-    case 'musica':
-      return '#80cbc4'; // verde agua pastel
-    case 'podcast':
-    case 'podcasts':
-      return '#8bc34a'; // verde unificado
-    case 'boardgames':
-    case 'juegos de mesa':
-      return '#f8bbd0'; // rosa pastel
-    case 'comics':
-      return '#ffcc80'; // naranja pastel suave
-    case 'documentales':
-    case 'documentaries':
-      return '#ffab91'; // rojo pastel claro
-    case 'series':
-      return '#b39ddb'; // lavanda pastel
-    default:
-      return '#0078d4';
-  }
-}
+// getCategoryColor centralizado en categoryPalette.js, eliminar duplicados
 
 // Función utilitaria para obtener el degradado de la categoría
 import { getCategoryGradient as getCentralizedCategoryGradient } from './categoryPalette';
 
 export function getCategoryGradient(category) {
   return getCentralizedCategoryGradient(category);
-}
-
-// Export alternativo para compatibilidad con imports antiguos
-export { getCategoryColor as categoryColor };
-
-// Exportar versión especial para selects
-export function getCategoryColorForSelect(category, theme) {
-  return getCategoryColor(category, theme, true);
 }
 
 // ...otros helpers de categorías a futuro...

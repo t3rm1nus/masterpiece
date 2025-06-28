@@ -1,4 +1,12 @@
-// Navigation slice for Zustand store
+// =============================================
+// Navigation slice para Zustand
+// Contiene estado y acciones para la navegación de vistas y selección de ítems.
+// - currentView: vista actual ('home', 'detail', etc.)
+// - selectedItem: ítem seleccionado
+// - goHome, resetToHome, setView, setSelectedItem, goToDetail, goToHome, goToCoffee, goToHowToDownload: acciones de navegación
+// =============================================
+
+// Navigation slice for Zustand
 export const createNavigationSlice = (set, get) => ({
   currentView: 'home',
   selectedItem: null,

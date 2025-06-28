@@ -1,38 +1,13 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { useLanguage } from '../LanguageContext';
-import '../styles/components/splash-visual.css';
-import '../styles/components/splash-visual-mobile.css';
 
 /**
  * SplashDialog: Modal/diálogo de splash personalizable.
- * Permite definir título, contenido, acciones, estilos y callbacks de cierre.
- *
- * Props:
- * - open: boolean (si el diálogo está abierto)
- * - onClose: función (callback al cerrar)
- * - title: string o ReactNode (título opcional)
- * - content: ReactNode (contenido opcional, por defecto imagen splash)
- * - actions: ReactNode (acciones opcionales, por ejemplo botones)
- * - audio: string (ruta de audio opcional)
- * - dark: boolean (modo oscuro)
- * - sx: estilos adicionales para el diálogo
- * - PaperProps/DialogContentProps: props adicionales para personalizar estilos
- *
- * Ejemplo de uso:
- * <SplashDialog
- *   open={open}
- *   onClose={() => setOpen(false)}
- *   title="Bienvenido"
- *   content={<img src="/imagenes/splash_image.png" alt="Splash" />}
- *   actions={<Button onClick={onClose}>Cerrar</Button>}
- *   audio="/sonidos/samurai.mp3"
- *   dark={true}
- *   sx={{ background: '#111' }}
- * />
+ * Modernizado a CSS-in-JS, accesibilidad y buenas prácticas.
  */
 const SplashDialog = ({
   open,
@@ -45,23 +20,31 @@ const SplashDialog = ({
   sx = {},
   PaperProps = {},
   DialogContentProps = {},
-  audioRef: externalAudioRef // <-- allow parent to pass audioRef
+  audioRef: externalAudioRef
 }) => {
   const internalAudioRef = useRef(null);
   const audioRef = externalAudioRef || internalAudioRef;
   const { getTranslation } = useLanguage();
-  const [animationClass, setAnimationClass] = React.useState('');
-  const [visible, setVisible] = React.useState(false);
+  const [animationClass, setAnimationClass] = useState('');
+  const [visible, setVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Detecta si es móvil (SSR safe)
-  const [isMobile, setIsMobile] = React.useState(false);
-  React.useEffect(() => {
+  useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 600);
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Volumen del audio
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.75;
+    }
+  }, [audio]);
+
+  // Control de reproducción
   useEffect(() => {
     if (open && audioRef.current) {
       audioRef.current.currentTime = 0;
@@ -74,14 +57,13 @@ const SplashDialog = ({
     }
   }, [open]);
 
-  // Controla la animación al abrir/cerrar
+  // Animación de entrada/salida
   useEffect(() => {
     if (open) {
       setVisible(true);
       setAnimationClass('splash-animate-in');
     } else if (animationClass === 'splash-animate-in') {
       setAnimationClass('splash-animate-out');
-      // Espera la animación de salida antes de desmontar
       const timeout = setTimeout(() => {
         setAnimationClass('');
         setVisible(false);
@@ -91,16 +73,30 @@ const SplashDialog = ({
       setAnimationClass('');
       setVisible(false);
     }
-    // eslint-disable-next-line
   }, [open]);
 
-  // Función recursiva para clonar el primer <img> y añadir id y clase
+  // Clona el primer <img> y añade id y clase
   function addIdToImg(element) {
     if (!React.isValidElement(element)) return element;
     if (element.type === 'img') {
       return React.cloneElement(element, {
         id: 'splash-image',
         className: (element.props.className || '') + ' splash-image',
+        style: {
+          ...element.props.style,
+          height: '100vh',
+          width: 'auto',
+          maxHeight: '100vh',
+          maxWidth: '100vw',
+          borderRadius: 32,
+          margin: 0,
+          cursor: 'pointer',
+          objectFit: 'contain',
+          background: 'transparent',
+          display: 'block',
+          boxShadow: 'none',
+          border: '4px solid #000',
+        }
       });
     }
     if (element.props && element.props.children) {
@@ -118,9 +114,9 @@ const SplashDialog = ({
       fullWidth
       PaperProps={{
         sx: {
-          borderRadius: '18px',
-          background: 'transparent !important',
-          boxShadow: 'none !important',
+          borderRadius: 3,
+          background: 'transparent',
+          boxShadow: 'none',
           overflow: 'visible',
           m: 0,
           p: 0,
@@ -135,7 +131,7 @@ const SplashDialog = ({
         style: {
           background: 'transparent',
           boxShadow: 'none',
-          borderRadius: 18,
+          borderRadius: 24,
           overflow: 'visible',
           maxWidth: 'none',
           minWidth: 0,
@@ -157,15 +153,12 @@ const SplashDialog = ({
         ...sx.dialog
       }}
     >
-      {/* --- Advanced animated background and effects --- */}
-      {/* Fondo animado eliminado por requerimiento */}
-      {/* --- End advanced effects --- */}
       {visible && (
         <DialogContent
           sx={{
             p: 0,
             m: 0,
-            background: 'transparent !important',
+            background: 'transparent',
             overflow: 'visible',
             display: 'flex',
             alignItems: 'center',
@@ -176,7 +169,7 @@ const SplashDialog = ({
             width: '100vw',
             height: '100vh',
             boxSizing: 'border-box',
-            borderRadius: 0, // Revert to no border radius
+            borderRadius: 0,
             ...sx.content
           }}
           style={{
@@ -190,12 +183,11 @@ const SplashDialog = ({
             padding: 0,
             margin: 0,
             boxSizing: 'border-box',
-            borderRadius: 0, // Revert to no border radius
+            borderRadius: 0,
             ...sx.contentStyle
           }}
           {...DialogContentProps}
           onClick={isMobile ? (e => {
-            // Evita que el click en la imagen o el box lo vuelva a disparar
             if (e.target === e.currentTarget && typeof onClose === 'function') {
               onClose();
             }
@@ -217,13 +209,12 @@ const SplashDialog = ({
           className={animationClass}
           >
             {/* No title for desktop splash */}
-            <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 0 }}
+            <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 0, cursor: 'pointer' }}
               onClick={() => {
                 if (typeof onClose === 'function') {
                   onClose();
                 }
               }}
-              style={{ cursor: 'pointer' }}
             >
               {content
                 ? addIdToImg(content)
@@ -238,7 +229,7 @@ const SplashDialog = ({
                     width: 'auto',
                     maxHeight: '100vh',
                     maxWidth: '100vw',
-                    borderRadius: '32px',
+                    borderRadius: 32,
                     margin: 0,
                     cursor: 'pointer',
                     objectFit: 'contain',

@@ -1,6 +1,0 @@
-Eliminados por obsoletos y sin referencias:
-- src/components/ItemDetail.jsx
-- src/components/SharedComponents.jsx
-- src/components/useRecommendationLogic.js
-- src/components/ZustandDebug.jsx
-- src/components/CoffeeIcon.jsx

@@ -1,3 +1,11 @@
+/**
+ * useMultiLanguageData
+ * Hook centralizado para manejar datos multiidioma de manera consistente.
+ * - Proporciona helpers para extraer y procesar campos localizados (título, descripción, trailer, etc.).
+ * - Facilita la migración y mantenimiento de lógica multiidioma.
+ * - Devuelve funciones para obtener contenido localizado, truncar texto, etc.
+ */
+
 import { useCallback } from 'react';
 import { useLanguage } from '../LanguageContext';
 
@@ -143,11 +151,6 @@ export const useMultiLanguageData = () => {
     getItemField,
     getLocalizedItem,
     truncateText,
-    
-    // Alias para compatibilidad con código existente
-    processTitle: getTitle,
-    processDescription: getDescription,
-    ensureString: getString,
     
     // Idioma actual
     currentLanguage: lang

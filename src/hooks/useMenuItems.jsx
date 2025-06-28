@@ -44,7 +44,7 @@ export function useMenuItems(handleSplashOpen) {
   const showBackButton = isDetailView || isCoffeeView || isHowToDownloadView;
 
   // SVGs deben ir envueltos en un solo elemento React.Fragment
-  return [
+  let menu = [
     {
       label: getTranslation('ui.titles.home_title', 'Nuevas Recomendaciones'), // Usar el literal correcto
       icon: <HomeIcon />,
@@ -80,7 +80,7 @@ export function useMenuItems(handleSplashOpen) {
         </React.Fragment>
       ),
       action: handleHowToDownload,
-      show: true,
+      show: !isHowToDownloadView, // Ocultar en la página de cómo descargar
       special: false
     },
     {
@@ -99,4 +99,15 @@ export function useMenuItems(handleSplashOpen) {
       special: false
     }
   ];
+
+  // Reordenar menú SOLO en móvil: '¿Quiénes somos?' antes que 'Invítame a un café'
+  if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+    const aboutIdx = menu.findIndex(item => item.label === getTranslation('ui.navigation.about'));
+    const coffeeIdx = menu.findIndex(item => item.label === getTranslation('ui.navigation.buy_me_coffee'));
+    if (aboutIdx !== -1 && coffeeIdx !== -1 && coffeeIdx < aboutIdx) {
+      const [coffee] = menu.splice(coffeeIdx, 1);
+      menu.splice(aboutIdx + 1, 0, coffee);
+    }
+  }
+  return menu;
 }

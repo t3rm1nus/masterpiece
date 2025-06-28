@@ -38,9 +38,11 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {}, onSpla
   const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();  
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
-  // const [splashOpen, setSplashOpen] = React.useState(false);
-  // const audioRef = React.useRef(null);
   if (isMobile) return null;
+
+  const isCoffeeView = currentView === 'coffee';
+  const isHowToDownloadView = currentView === 'howToDownload';
+  const showBackButton = isCoffeeView || isHowToDownloadView;
 
   // --- Splash popup handlers ---
   // El handler y audio vienen de props (HomePage)
@@ -77,28 +79,40 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {}, onSpla
         maxWidth: '1200px',
         margin: '0 auto'
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: 1 }}>
           {/* Renderizar los items principales del menú */}
-          {menuItems.filter(item => item.show && !item.special && item.label !== getTranslation('ui.navigation.about')).map((item, idx) => (
-            renderMenuItem
-              ? renderMenuItem(item, idx)
-              : <button key={idx} onClick={item.action} style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8 }}>
-                  {item.icon}
-                  {item.label}
+          {menuItems.filter(item => item.show && !item.special && item.label !== getTranslation('ui.navigation.about')).map((item, idx, arr) => (
+            <React.Fragment key={idx}>
+              {renderMenuItem
+                ? renderMenuItem(item, idx)
+                : <button onClick={item.action} style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8 }}>
+                    {item.icon}
+                    {item.label}
+                  </button>
+              }
+              {/* Si es el último botón principal y estamos en coffee/howToDownload, renderiza el botón Volver aquí */}
+              {showBackButton && idx === arr.length - 1 && (
+                <button
+                  key="back-desktop"
+                  onClick={() => {
+                    if (isCoffeeView) goHome();
+                    else if (isHowToDownloadView) goHome();
+                  }}
+                  style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8, marginLeft: 8 }}
+                >
+                  <span style={{display:'flex',alignItems:'center'}}>&larr;</span>
+                  {getTranslation('ui.navigation.back', 'Volver')}
                 </button>
+              )}
+            </React.Fragment>
           ))}
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          {/* Renderizar los items especiales (donación, etc) */}
-          {menuItems.filter(item => item.show && item.special).map((item, idx) => (
-            renderMenuItem
-              ? renderMenuItem(item, idx)
-              : <button key={idx} className="donation-btn" onClick={item.action} style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8 }}>
-                  {item.icon}
-                  {item.label}
-                </button>
-          ))}
-          {/* Icono quienes somos (about) como imagen suelta a la derecha */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+          {/* Selector de idioma (LanguageSelector) siempre visible en desktop */}
+          <LanguageSelector variant="desktop" sx={{}} />
+          {/* Botón ThemeToggle a la derecha del selector de idioma */}
+          <ThemeToggle />
+          {/* Icono quienes somos (about) como imagen suelta a la izquierda del botón donación */}
           <img
             src="/imagenes/icono.png"
             alt={getTranslation('ui.alt.info', 'info')}
@@ -108,12 +122,22 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {}, onSpla
               width: '36px',
               height: '36px',
               marginLeft: '8px',
+              marginRight: '8px', // Espacio a la derecha para separar del botón donación
               cursor: 'pointer',
               verticalAlign: 'middle',
               display: 'inline-block',
               borderRadius: '6px'
             }}
           />
+          {/* Botón donación (Invítame a un café) a la derecha del icono info */}
+          {menuItems.filter(item => item.show && item.special).map((item, idx) => (
+            renderMenuItem
+              ? renderMenuItem(item, idx)
+              : <button key={idx} className="donation-btn" onClick={item.action} style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8 }}>
+                  {item.icon}
+                  {item.label}
+                </button>
+          ))}
           {/* Splash Dialog Desktop */}
           <SplashDialog
             open={splashOpen}
@@ -126,8 +150,6 @@ function DesktopMenu({ renderMenuItem, menuItems: menuItemsProp, sx = {}, onSpla
             }}
             audioRef={audioRef}
           />
-          <ThemeToggle />
-          <LanguageSelector variant="desktop" sx={{ marginLeft: 1 }} />
         </div>
       </div>
     </nav>
