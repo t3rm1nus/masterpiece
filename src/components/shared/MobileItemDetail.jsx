@@ -224,7 +224,8 @@ const MobileItemDetail = ({
                   fontWeight: { xs: 400, sm: 'bold' }, // 400 en móviles, bold en desktop
                   fontSize: { xs: '1.5rem', sm: '2rem' },
                   textAlign: 'center',
-                  marginBottom: '16px'
+                  marginBottom: '16px',
+                  margin: { xs: '4px 0 32px 7px', sm: undefined },
                 }}
               >
                 {title}

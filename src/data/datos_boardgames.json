@@ -294,8 +294,8 @@
       "category": "boardgames",
       "subcategory": "Dice",
       "description": {
-        "es": "Construye y mejora tus dados para obtener recursos y ganar gloria.",
-        "en": "Forge and customize your dice to gain resources and earn glory."
+        "es": "¡Controla la suerte y forja tu destino! En Dice Forge, los jugadores personalizan sus dados con caras intercambiables para obtener recursos y completar hazañas heroicas. Cada ronda, lanzarás tus dados, mejorarás sus caras y competirás por la gloria enfrentando desafíos divinos. La estrategia está en cómo y cuándo mejorar tus dados para maximizar tus oportunidades. Un juego innovador de construcción de dados y gestión de recursos.",
+        "en": "Control luck and forge your destiny! In Dice Forge, players customize their dice with interchangeable faces to gain resources and complete heroic feats. Each round, roll your dice, upgrade their faces, and compete for glory by facing divine challenges. Strategy lies in how and when you improve your dice to maximize your chances. An innovative dice-crafting and resource management game."
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -310,8 +310,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Juego de exploración y control de áreas en la Costa del Finisterre.",
-        "en": "Exploration and area control game set on the coast of Finisterre."
+        "es": "Finstere Flure nos propone una huida terrorífica por una sala en la que nos las vamos a ver con un terrible y estúpido monstruo sediento de sangre.  Bueno, en realidad más que terrorífica es divertida. Estamos ante un juego sencillo, de carreras. La victoria no es una medalla sino la supervivencia.",
+        "en": "Finstere Flure invite us into a terrifying escape through a room where we'll face a dreadful and stupid bloodthirsty monster.Well… truth be told, it's more fun than terrifying.It's a simple race game.Victory isn't about medals, it's about survival."
       },
       "minPlayers": 2,
       "maxPlayers": 5,
@@ -326,8 +326,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Construye el paisaje medieval colocando losetas y puntuando con seguidores.",
-        "en": "Tile-placement game where you build a medieval landscape and score with meeples."
+        "es": "Construye un paisaje medieval colocando losetas de terreno y expandiendo ciudades, caminos, monasterios y campos. Los jugadores colocan seguidores para reclamar áreas y puntuar según su control. Cada partida es única gracias a la disposición variable de las losetas. Estrategia y oportunidad se combinan en este clásico moderno de colocación de losetas.",
+        "en": "Build a medieval landscape by placing terrain tiles and expanding cities, roads, monasteries, and fields. Players deploy followers to claim areas and score based on their control. Each game is unique due to the variable tile layout. Strategy and opportunity blend in this modern classic of tile placement."
       },
       "minPlayers": 2,
       "maxPlayers": 5,
@@ -342,8 +342,8 @@
       "category": "boardgames",
       "subcategory": "adventure",
       "description": {
-        "es": "Juego de cartas humorístico que parodia los dungeon crawlers; sube de nivel y roba tesoros.",
-        "en": "Humorous card game parodying dungeon crawlers; level up and loot treasures."
+        "es": "Parodia los juegos de rol clásicos en una carrera por alcanzar el nivel 10. Explora mazmorras, derrota monstruos absurdos, traiciona a tus amigos y equípate con objetos ridículos. El humor y la competencia directa son el alma de este juego de cartas caótico y divertido.",
+        "en": "A parody of classic role-playing games in a race to reach level 10. Explore dungeons, defeat absurd monsters, betray your friends, and equip ridiculous items. Humor and direct competition are at the heart of this chaotic and fun card game."
       },
       "minPlayers": 3,
       "maxPlayers": 6,
@@ -358,8 +358,8 @@
       "category": "boardgames",
       "subcategory": "adventure",
       "description": {
-        "es": "Coopera o compite en mazmorras para recuperar tesoros antes del colapso.",
-        "en": "Cooperative or competitive dungeon crawling to retrieve treasures before collapse."
+        "es": "Adéntrate en una mazmorra llena de trampas, monstruos y tesoros. Coopera o compite con otros aventureros para sobrevivir y conseguir la mayor fortuna. Cada jugador gestiona sus cartas para superar desafíos y evitar peligros. ¿Serás el más rico o el más astuto al final de la aventura?",
+        "en": "Venture into a dungeon filled with traps, monsters, and treasures. Cooperate or compete with other adventurers to survive and amass the most fortune. Each player manages their cards to overcome challenges and avoid dangers. Will you be the richest or the cleverest at the end of the adventure?"
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -374,8 +374,8 @@
       "category": "boardgames",
       "subcategory": "cards",
       "description": {
-        "es": "Juego de cartas coleccionables pionero; construye mazos y lucha contra otros jugadores.",
-        "en": "Pioneering collectible card game; build decks and duel other players."
+        "es": "El juego de cartas coleccionables pionero. Construye tu mazo con criaturas, hechizos y artefactos, y enfréntate a otros jugadores en duelos estratégicos. Cada partida es diferente gracias a la enorme variedad de cartas y combinaciones posibles. La creatividad y la táctica son clave para la victoria.",
+        "en": "The pioneering collectible card game. Build your deck with creatures, spells, and artifacts, and face off against other players in strategic duels. Each game is different thanks to the vast variety of cards and possible combinations. Creativity and tactics are key to victory."
       },
       "minPlayers": 2,
       "maxPlayers": 2,
@@ -390,8 +390,8 @@
       "category": "boardgames",
       "subcategory": "adventure",
       "description": {
-        "es": "Juego de cartas de aventura enfrentándote a monstruos en mazmorras.",
-        "en": "Card adventure game facing off against monsters in dungeons."
+        "es": "Conviértete en el jefe final de una mazmorra y construye el calabozo más letal para atraer y derrotar héroes. Usa cartas de sala, trampas y monstruos para proteger tu botín. Inspirado en los videojuegos retro, combina estrategia, humor y nostalgia en partidas rápidas y competitivas.",
+        "en": "Become the final boss of a dungeon and build the deadliest lair to lure and defeat heroes. Use room, trap, and monster cards to protect your loot. Inspired by retro video games, it blends strategy, humor, and nostalgia in fast, competitive games."
       },
       "minPlayers": 1,
       "maxPlayers": 4,
@@ -422,8 +422,8 @@
       "category": "boardgames",
       "subcategory": "party",
       "description": {
-        "es": "Juego de reflejos y deducción rápida recogiendo objetos según cartas.",
-        "en": "Quick reflex and deduction game grabbing objects based on cards."
+        "es": "Pon a prueba tus reflejos y tu agudeza visual en este trepidante juego de cartas y objetos. Sé el primero en identificar y atrapar el objeto correcto según las cartas reveladas. Rápido, divertido y perfecto para todas las edades, Fantasma Blitz garantiza risas y competencia en cada ronda.",
+        "en": "Test your reflexes and visual acuity in this fast-paced game of cards and objects. Be the first to spot and grab the correct item according to the revealed cards. Fast, fun, and perfect for all ages, Ghost Blitz guarantees laughter and competition every round."
       },
       "minPlayers": 2,
       "maxPlayers": 8,
@@ -438,8 +438,8 @@
       "category": "boardgames",
       "subcategory": "party",
       "description": {
-        "es": "Juego de cartas de observación rápida: encuentra el símbolo común entre dos cartas.",
-        "en": "Observation card game: spot the common symbol between two cards."
+        "es": "Un juego de observación y rapidez donde cada carta comparte un solo símbolo con cualquier otra. Encuentra el símbolo común antes que los demás y gana la ronda. Dobble ofrece múltiples modos de juego y es ideal para grupos de cualquier edad. Sencillo, adictivo y siempre emocionante.",
+        "en": "A game of observation and speed where each card shares only one symbol with any other. Spot the common symbol before anyone else and win the round. Dobble offers multiple game modes and is ideal for groups of any age. Simple, addictive, and always exciting."
       },
       "minPlayers": 2,
       "maxPlayers": 8,
@@ -454,8 +454,8 @@
       "category": "boardgames",
       "subcategory": "cards",
       "description": {
-        "es": "Clásico juego de cartas donde se combinan colores y números para descartarse.",
-        "en": "Classic card game matching colors and numbers to discard cards."
+        "es": "El clásico juego de cartas donde el objetivo es quedarse sin cartas antes que los demás. Combina colores y números, usa cartas especiales para cambiar el rumbo de la partida y grita 'UNO' cuando te quede una sola carta. Diversión asegurada para toda la familia.",
+        "en": "The classic card game where the goal is to get rid of all your cards before anyone else. Match colors and numbers, use special cards to change the course of the game, and shout 'UNO' when you have just one card left. Guaranteed fun for the whole family."
       },
       "minPlayers": 2,
       "maxPlayers": 10,
@@ -470,8 +470,8 @@
       "category": "boardgames",
       "subcategory": "family",
       "description": {
-        "es": "Juego donde cultivas bambú para alimentar a un oso panda en un jardín imperial.",
-        "en": "Grow bamboo to feed a panda in an imperial garden."
+        "es": "En Takenoko, los jugadores cultivan un jardín de bambú para alimentar a un panda imperial. Deberás gestionar parcelas, irrigarlas y hacer crecer bambú de diferentes colores, mientras el jardinero y el panda recorren el tablero. Cumple objetivos secretos y equilibra el crecimiento del jardín con el apetito del panda. Un juego familiar de estrategia, gestión y mucha ternura visual..",
+        "en": "In Takenoko, players cultivate a bamboo garden to feed an imperial panda. Manage plots, irrigate them, and grow bamboo in different colors as the gardener and panda move across the board. Complete secret objectives and balance garden growth with the panda’s appetite. A family-friendly game of strategy, management, and charming visuals."
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -486,8 +486,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Juego asimétrico donde cada jugador controla un villano Disney con objetivos únicos.",
-        "en": "Asymmetric game where each player controls a Disney villain with unique goals."
+        "es": "Entra en el mundo de los villanos Disney y asume el papel de tu antagonista favorito. Cada jugador tiene un objetivo único y habilidades especiales, enfrentándose a héroes y rivales. Estrategia, interacción y temática envolvente hacen de Villainous una experiencia distinta en cada partida.",
+        "en": "Step into the world of Disney villains and take on the role of your favorite antagonist. Each player has a unique goal and special abilities, facing off against heroes and rivals. Strategy, interaction, and immersive theme make Villainous a unique experience every game."
       },
       "minPlayers": 2,
       "maxPlayers": 6,
@@ -502,8 +502,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Juego de control de áreas en la España medieval usando caballeros y mecanismos de subasta.",
-        "en": "Area control game in medieval Spain using knights and auction mechanics."
+        "es": "Juego de control de áreas ambientado en la España renacentista. Los jugadores utilizan cartas numeradas para colocar caballeros y dominar regiones clave. Sin dados, exige estrategia profunda y gestión del orden de turno.",
+        "en": "Area-control game set in Renaissance Spain. Players use numbered cards to place knights and dominate key regions. With no dice, it demands deep strategy and turn-order management."
       },
       "minPlayers": 2,
       "maxPlayers": 5,
@@ -518,8 +518,8 @@
       "category": "boardgames",
       "subcategory": "cards",
       "description": {
-        "es": "Juego de cartas caótico donde evitas gatitos explosivos usando acciones especiales.",
-        "en": "Chaotic card game avoiding exploding kittens with special actions."
+        "es": "Un juego de cartas caótico y lleno de humor donde debes evitar a los gatitos explosivos. Usa cartas de acción para desviar, mirar el mazo o salvarte en el último momento. Rápido, impredecible y perfecto para romper el hielo en cualquier reunión.",
+        "en": "A chaotic and humorous card game where you must avoid exploding kittens. Use action cards to deflect, peek at the deck, or save yourself at the last moment. Fast, unpredictable, and perfect for breaking the ice at any gathering."
       },
       "minPlayers": 2,
       "maxPlayers": 5,
@@ -534,8 +534,8 @@
       "category": "boardgames",
       "subcategory": "cards",
       "description": {
-        "es": "Juego de cartas estratégico para dos jugadores con mecánicas de selección de acciones limitadas.",
-        "en": "Strategic two-player card game with limited action selection."
+        "es": "Un duelo estratégico para dos jugadores ambientado en el Japón antiguo. Compite por el favor de las geishas usando cartas de obsequio y acciones limitadas. Cada decisión es crucial y la anticipación de los movimientos del rival es clave. Elegante, tenso y con reglas sencillas pero profundas.",
+        "en": "A strategic duel for two players set in ancient Japan. Compete for the favor of geishas using gift cards and limited actions. Every decision is crucial and anticipating your opponent's moves is key. Elegant, tense, and with simple yet deep rules."
       },
       "minPlayers": 2,
       "maxPlayers": 2,
@@ -550,8 +550,8 @@
       "category": "boardgames",
       "subcategory": "cards",
       "description": {
-        "es": "Juego de roles ocultos en el lejano oeste donde disparas a otros jugadores según tu personaje.",
-        "en": "Hidden roles game in the Wild West where you shoot others based on your character."
+        "es": "En el salvaje oeste, cada jugador asume un rol secreto: sheriff, forajido, renegado o ayudante. Usa cartas para atacar, defenderte y cumplir tu objetivo oculto. La deducción, el engaño y la suerte se mezclan en este clásico de roles ocultos y duelos a balazos.",
+        "en": "In the Wild West, each player takes on a secret role: sheriff, outlaw, renegade, or deputy. Use cards to attack, defend, and fulfill your hidden objective. Deduction, bluffing, and luck combine in this classic of hidden roles and shootouts."
       },
       "minPlayers": 4,
       "maxPlayers": 7,
@@ -566,8 +566,8 @@
       "category": "boardgames",
       "subcategory": "cards",
       "description": {
-        "es": "Juego de cartas rápido donde infectas órganos de otros jugadores para ganar.",
-        "en": "Fast-paced card game where you infect opponents' organs to win."
+        "es": "Un juego rápido y divertido donde debes completar un cuerpo sano antes que los demás. Infecta, cura y protege órganos usando cartas especiales, mientras saboteas a tus rivales. Sencillo de aprender, ideal para partidas familiares y con amigos.",
+        "en": "A fast and fun game where you must complete a healthy body before anyone else. Infect, cure, and protect organs using special cards while sabotaging your rivals. Easy to learn, perfect for family and friends."
       },
       "minPlayers": 2,
       "maxPlayers": 6,
@@ -582,8 +582,8 @@
       "category": "boardgames",
       "subcategory": "party",
       "description": {
-        "es": "Juego de memoria y rapidez para atrapar una polilla invisible antes que otros.",
-        "en": "Memory and speed game to catch an invisible moth before others."
+        "es": "Un juego de cartas donde hacer trampa está permitido… ¡si no te atrapan! Deshazte de tus cartas escondiéndolas o jugándolas legalmente, mientras un jugador vigila como guardián. Risas, picardía y mucha interacción en cada ronda.",
+        "en": "A card game where cheating is allowed… if you don't get caught! Get rid of your cards by hiding them or playing them legally, while one player acts as the guard. Laughter, mischief, and lots of interaction every round."
       },
       "minPlayers": 3,
       "maxPlayers": 6,
@@ -598,8 +598,8 @@
       "category": "boardgames",
       "subcategory": "cards",
       "description": {
-        "es": "Juego de cartas con mazos únicos donde compites por forjar llaves antes que tu oponente.",
-        "en": "Card game with unique decks competing to forge keys before your opponent."
+        "es": "Un innovador juego de cartas donde cada mazo es único en el mundo. Compite por forjar llaves antes que tu oponente, usando criaturas, artefactos y habilidades especiales. Estrategia, adaptación y sorpresas en cada partida.",
+        "en": "An innovative card game where every deck is unique in the world. Compete to forge keys before your opponent, using creatures, artifacts, and special abilities. Strategy, adaptation, and surprises in every game."
       },
       "minPlayers": 2,
       "maxPlayers": 2,
@@ -614,8 +614,8 @@
       "category": "boardgames",
       "subcategory": "cards",
       "description": {
-        "es": "Juego de construcción de mazos con temática de fantasía y combates rápidos.",
-        "en": "Deck-building game with fantasy theme and fast combat."
+        "es": "Un juego de construcción de mazos con ambientación fantástica. Recluta campeones, adquiere poderosas cartas y enfréntate a tus rivales en duelos rápidos y estratégicos. Expansiones permiten modos cooperativos y campañas. Ideal para fans de la fantasía y la táctica.",
+        "en": "A deck-building game with a fantasy setting. Recruit champions, acquire powerful cards, and face your rivals in fast, strategic duels. Expansions allow for cooperative modes and campaigns. Ideal for fans of fantasy and tactics."
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -630,8 +630,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Juego de colocación de losetas donde desarrollas tu principado en la Francia medieval.",
-        "en": "Tile-placement game developing your principality in medieval France."
+        "es": "Gestiona tu propio principado en la Francia medieval, expandiendo territorios con losetas de diferentes tipos. Planifica cada movimiento para optimizar recursos, construir castillos, criar ganado y comerciar. Un clásico de la estrategia con gran profundidad y rejugabilidad.",
+        "en": "Manage your own principality in medieval France, expanding territories with different types of tiles. Plan every move to optimize resources, build castles, raise livestock, and trade. A classic strategy game with great depth and replayability."
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -662,8 +662,8 @@
       "category": "boardgames",
       "subcategory": "deduction",
       "description": {
-        "es": "Clásico juego de misterio donde resuelves un asesinato descubriendo quién, cómo y dónde.",
-        "en": "Classic mystery game solving a murder by discovering who, how, and where."
+        "es": "Resuelve el misterio de un asesinato en la mansión. Interroga a los sospechosos, analiza pistas y deduce quién, cómo y dónde ocurrió el crimen. Un clásico de la deducción y el razonamiento lógico, ideal para detectives de todas las edades.",
+        "en": "Solve the mystery of a murder in the mansion. Question suspects, analyze clues, and deduce who, how, and where the crime happened. A classic of deduction and logical reasoning, perfect for detectives of all ages."
       },
       "minPlayers": 2,
       "maxPlayers": 6,
@@ -678,8 +678,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Juego de táctica militar donde ocultas tus piezas y atacas al ejército enemigo para capturar su bandera.",
-        "en": "Military tactics game hiding your pieces and attacking the enemy army to capture their flag."
+        "es": "Un duelo de estrategia militar donde ocultas tus piezas y planeas ataques para capturar la bandera enemiga. El engaño, la memoria y la táctica son esenciales para anticipar los movimientos del rival y lograr la victoria.",
+        "en": "A military strategy duel where you hide your pieces and plan attacks to capture the enemy flag. Deception, memory, and tactics are essential to anticipate your opponent's moves and achieve victory."
       },
       "minPlayers": 2,
       "maxPlayers": 2,
@@ -694,8 +694,8 @@
       "category": "boardgames",
       "subcategory": "deduction",
       "description": {
-        "es": "Juego de deducción con ladrón invisible, usando un dispositivo electrónico que da pistas sonoras.",
-        "en": "Deduction game featuring an invisible thief and an electronic device providing sound clues."
+        "es": "Un juego de deducción donde los jugadores persiguen a un ladrón invisible usando pistas sonoras de un dispositivo electrónico. Analiza los sonidos, deduce la ruta del criminal y sé el primero en atraparlo. Innovador y emocionante para toda la familia.",
+        "en": "A deduction game where players chase an invisible thief using sound clues from an electronic device. Analyze the sounds, deduce the criminal's route, and be the first to catch them. Innovative and exciting for the whole family."
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -710,8 +710,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Juego de conquista en un mundo pequeño con razas fantásticas que entran y salen de juego.",
-        "en": "Conquest game set in a small world with fantasy races that rise and fall."
+        "es": "Un mundo pequeño y lleno de razas fantásticas que luchan por el dominio. Elige combinaciones únicas de razas y poderes especiales, expándete, conquista territorios y retírate en el momento justo. Estrategia, interacción y humor en un juego de conquista dinámico y rejugable.",
+        "en": "A small world full of fantastic races fighting for dominance. Choose unique combinations of races and special powers, expand, conquer territories, and withdraw at the right moment. Strategy, interaction, and humor in a dynamic and replayable conquest game."
       },
       "minPlayers": 2,
       "maxPlayers": 5,
@@ -726,8 +726,8 @@
       "category": "boardgames",
       "subcategory": "adventure",
       "description": {
-        "es": "Juego cooperativo narrativo donde los jugadores son ratones que luchan contra enemigos en un castillo.",
-        "en": "Cooperative narrative game where players are mice fighting enemies in a castle."
+        "es": "Vive una aventura cooperativa donde los jugadores son ratones que exploran un castillo, enfrentan enemigos y superan desafíos. Narrativa envolvente, miniaturas detalladas y escenarios variados hacen de cada partida una historia única de valentía y amistad.",
+        "en": "Experience a cooperative adventure where players are mice exploring a castle, facing enemies, and overcoming challenges. Immersive storytelling, detailed miniatures, and varied scenarios make each game a unique tale of bravery and friendship."
       },
       "minPlayers": 1,
       "maxPlayers": 4,
@@ -742,8 +742,8 @@
       "category": "boardgames",
       "subcategory": "cooperative",
       "description": {
-        "es": "Juego cooperativo sin comunicación verbal donde los jugadores controlan héroes que roban un centro comercial.",
-        "en": "Cooperative real-time game without verbal communication where players control heroes stealing a mall."
+        "es": "Un juego cooperativo en tiempo real donde los jugadores, sin hablar, guían héroes por un centro comercial para robar objetos y escapar. La comunicación no verbal y la coordinación son clave en este reto frenético y original.",
+        "en": "A real-time cooperative game where players, without speaking, guide heroes through a mall to steal items and escape. Non-verbal communication and coordination are key in this frantic and original challenge."
       },
       "minPlayers": 1,
       "maxPlayers": 8,
@@ -758,8 +758,8 @@
       "category": "boardgames",
       "subcategory": "solo",
       "description": {
-        "es": "Juego solitario donde ayudas a Viernes a sobrevivir en una isla llena de peligros y desafíos.",
-        "en": "Solo game where you help Friday survive on a dangerous island."
+        "es": "Un juego solitario donde ayudas a Viernes a sobrevivir en una isla llena de peligros. Mejora tu mazo, supera desafíos y prepárate para el enfrentamiento final contra piratas. Ideal para quienes buscan un reto personal y partidas rápidas.",
+        "en": "A solo game where you help Friday survive on a perilous island. Improve your deck, overcome challenges, and prepare for the final showdown against pirates. Perfect for those seeking a personal challenge and quick games."
       },
       "minPlayers": 1,
       "maxPlayers": 1,
@@ -774,8 +774,8 @@
       "category": "boardgames",
       "subcategory": "cards",
       "description": {
-        "es": "Juego rápido de cartas donde los jugadores seleccionan platos de sushi para formar la mejor combinación.",
-        "en": "Fast card drafting game where players pick sushi dishes to create the best combos."
+        "es": "Un juego rápido de cartas donde los jugadores seleccionan platos de sushi para formar la mejor combinación. Drafting, estrategia y decisiones rápidas en partidas ágiles y llenas de sabor. Ideal para grupos y familias.",
+        "en": "A fast card game where players pick sushi dishes to create the best combination. Drafting, strategy, and quick decisions in lively, flavorful games. Ideal for groups and families."
       },
       "minPlayers": 2,
       "maxPlayers": 5,
@@ -790,8 +790,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Juego de estrategia abstracta con fichas de unidades y control de áreas.",
-        "en": "Abstract strategy game with unit tokens and area control."
+        "es": "Un juego abstracto de estrategia y control de áreas con fichas de unidades únicas. Combina gestión de bolsa, posicionamiento táctico y enfrentamientos directos. Elegante, profundo y con gran rejugabilidad para amantes de la táctica.",
+        "en": "An abstract strategy game with unique unit tokens and area control. Combines bag management, tactical positioning, and direct confrontations. Elegant, deep, and highly replayable for fans of tactics."
       },
       "minPlayers": 2,
       "maxPlayers": 2,
@@ -806,8 +806,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Los jugadores lideran tribus prehistóricas, colocando trabajadores para recolectar recursos y desarrollar la civilización.",
-        "en": "Players lead prehistoric tribes, placing workers to gather resources and develop civilization."
+        "es": "Lidera una tribu prehistórica en la búsqueda de recursos, construyendo herramientas y desarrollando tu aldea. Coloca trabajadores en diferentes áreas para recolectar madera, piedra y comida, mientras gestionas el crecimiento de tu población. La planificación y la adaptación son clave para prosperar en la Edad de Piedra. Cada partida ofrece nuevos retos y estrategias. Un clásico de la colocación de trabajadores y gestión de recursos.",
+        "en": "Lead a prehistoric tribe in the quest for resources, building tools and developing your village. Place workers in various areas to gather wood, stone, and food while managing your population's growth. Planning and adaptation are key to thriving in the Stone Age. Each game presents new challenges and strategies. A classic worker placement and resource management game."
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -822,8 +822,8 @@
       "category": "boardgames",
       "subcategory": "family",
       "description": {
-        "es": "Juego en 3D donde los jugadores interpretan bandidos que asaltan un tren, programando sus acciones para robar.",
-        "en": "3D game where players act as bandits robbing a train, programming actions to steal."
+        "es": "Embárcate en un asalto al tren en tres dimensiones, donde cada jugador es un bandido con su propio objetivo. Programa tus acciones para moverte, robar y enfrentarte a los demás en un entorno dinámico y lleno de sorpresas. El caos y la estrategia se mezclan en cada ronda, mientras el tren avanza y los planes cambian. Diversión garantizada para toda la familia.",
+        "en": "Embark on a 3D train heist where each player is a bandit with their own goal. Program your actions to move, steal, and confront others in a dynamic, ever-changing environment. Chaos and strategy blend in every round as the train moves and plans shift. Guaranteed fun for the whole family."
       },
       "minPlayers": 2,
       "maxPlayers": 6,
@@ -838,8 +838,8 @@
       "category": "boardgames",
       "subcategory": "abstract",
       "description": {
-        "es": "Juego para dos jugadores donde se compite por construir la colcha más completa con piezas de parches.",
-        "en": "Two-player game competing to build the most complete patchwork quilt with patch pieces."
+        "es": "Compite por crear la colcha más hermosa y completa usando piezas de diferentes formas y botones como moneda. Cada decisión cuenta al elegir y colocar las piezas en tu tablero personal. La gestión del tiempo y los recursos es esencial para ganar. Un duelo estratégico, sencillo de aprender y con gran profundidad táctica.",
+        "en": "Compete to create the most beautiful and complete quilt using pieces of various shapes and buttons as currency. Every decision matters as you select and place pieces on your personal board. Time and resource management are essential to win. A strategic duel, easy to learn and with great tactical depth."
       },
       "minPlayers": 2,
       "maxPlayers": 2,
@@ -854,8 +854,8 @@
       "category": "boardgames",
       "subcategory": "abstract",
       "description": {
-        "es": "Juego abstracto para dos jugadores sin tablero donde se colocan y mueven insectos para rodear a la abeja reina del oponente.",
-        "en": "Abstract two-player game without a board where players place and move insects to surround the opponent's queen bee."
+        "es": "Un duelo de ingenio donde insectos con movimientos únicos intentan rodear a la abeja reina rival. Sin tablero, cada partida es diferente y requiere adaptación constante. La estrategia pura y la profundidad táctica hacen de Hive un clásico moderno para dos jugadores. Compacto, rápido y siempre desafiante.",
+        "en": "A battle of wits where insects with unique movements try to surround the opponent's queen bee. Without a board, each game is different and requires constant adaptation. Pure strategy and tactical depth make Hive a modern classic for two players. Compact, fast, and always challenging."
       },
       "minPlayers": 2,
       "maxPlayers": 2,
@@ -870,8 +870,8 @@
       "category": "boardgames",
       "subcategory": "civilization",
       "description": {
-        "es": "Versión para dos jugadores del famoso juego 7 Wonders, con desarrollo de civilización y cartas de progreso.",
-        "en": "Two-player version of the famous 7 Wonders game, featuring civilization development and progress cards."
+        "es": "Enfréntate en un duelo de civilizaciones donde cada decisión puede cambiar el rumbo de la partida. Construye maravillas, avanza en ciencia y compite militarmente en partidas ágiles y profundas. El drafting y la gestión de recursos son clave para la victoria. Un clásico moderno para dos jugadores.",
+        "en": "Face off in a duel of civilizations where every decision can change the course of the game. Build wonders, advance in science, and compete militarily in fast-paced, deep games. Drafting and resource management are key to victory. A modern classic for two players."
       },
       "minPlayers": 2,
       "maxPlayers": 2,
@@ -886,8 +886,8 @@
       "category": "boardgames",
       "subcategory": "cards",
       "description": {
-        "es": "Juego rápido para dos jugadores donde compiten como comerciantes en el mercado de Jaipur.",
-        "en": "Fast two-player game where players compete as traders in the Jaipur market."
+        "es": "Compite como comerciante en el bullicioso mercado de Jaipur. Intercambia bienes, gestiona tu mano y busca el mejor momento para vender y obtener la mayor ganancia. Sencillo de aprender, estratégico y muy rejugable. Ideal para partidas rápidas y llenas de tensión.",
+        "en": "Compete as a merchant in the bustling Jaipur market. Trade goods, manage your hand, and find the best moment to sell for maximum profit. Easy to learn, strategic, and highly replayable. Ideal for quick, tense games."
       },
       "minPlayers": 2,
       "maxPlayers": 2,
@@ -902,8 +902,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Juego de colocación de trabajadores con engranajes giratorios que representan el calendario maya.",
-        "en": "Worker placement game featuring rotating gears that represent the Mayan calendar."
+        "es": "Descubre la magia del calendario maya con engranajes giratorios que marcan el paso del tiempo. Coloca trabajadores, planifica a largo plazo y gestiona recursos para prosperar en una civilización ancestral. Cada giro cambia las oportunidades y los retos. Un juego innovador de estrategia y planificación.",
+        "en": "Discover the magic of the Mayan calendar with rotating gears that mark the passage of time. Place workers, plan ahead, and manage resources to thrive in an ancient civilization. Each turn changes opportunities and challenges. An innovative game of strategy and planning."
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -918,8 +918,8 @@
       "category": "boardgames",
       "subcategory": "adventure",
       "description": {
-        "es": "Juego donde los jugadores viajan por la ruta de Tokaido disfrutando experiencias culturales y recogiendo objetos.",
-        "en": "Players travel the Tokaido road enjoying cultural experiences and collecting items."
+        "es": "Viaja por la histórica ruta de Tokaido, disfrutando de paisajes, experiencias culturales y encuentros únicos. Cada parada ofrece oportunidades para coleccionar recuerdos y saborear la tranquilidad del camino. Un juego relajante, visualmente hermoso y lleno de decisiones interesantes.",
+        "en": "Travel along the historic Tokaido road, enjoying landscapes, cultural experiences, and unique encounters. Each stop offers opportunities to collect memories and savor the journey's tranquility. A relaxing, visually beautiful game full of interesting decisions."
       },
       "minPlayers": 2,
       "maxPlayers": 5,
@@ -934,8 +934,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Juego de estrategia y comercio ambientado en el desierto del Sahara, inspirado en los nómadas tuareg.",
-        "en": "Strategy and trading game set in the Sahara desert, inspired by the Tuareg nomads."
+        "es": "Sumérgete en el desierto del Sahara como líder tuareg, comerciando y gestionando recursos para prosperar. Coloca tus figuras en el tablero para obtener ventajas y construir tu tribu. Estrategia, negociación y adaptación son esenciales en este duelo para dos jugadores.",
+        "en": "Immerse yourself in the Sahara desert as a Tuareg leader, trading and managing resources to prosper. Place your figures on the board to gain advantages and build your tribe. Strategy, negotiation, and adaptation are essential in this two-player duel."
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -950,8 +950,8 @@
       "category": "boardgames",
       "subcategory": "cooperative",
       "description": {
-        "es": "Juego cooperativo donde los jugadores trabajan juntos para recuperar tesoros en una isla que se hunde.",
-        "en": "Cooperative game where players work together to retrieve treasures on a sinking island."
+        "es": "Colabora con tu equipo para recuperar tesoros legendarios en una isla que se hunde rápidamente. Cada jugador tiene habilidades únicas y debe tomar decisiones críticas para sobrevivir. La tensión aumenta a medida que el agua sube y el tiempo se agota. Un clásico cooperativo lleno de emoción y trabajo en equipo.",
+        "en": "Work with your team to recover legendary treasures on a rapidly sinking island. Each player has unique abilities and must make critical decisions to survive. Tension rises as the water level increases and time runs out. A classic cooperative game full of excitement and teamwork."
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -966,8 +966,8 @@
       "category": "boardgames",
       "subcategory": "abstract",
       "description": {
-        "es": "Juego de estrategia abstracta donde los jugadores construyen una ciudad en la isla griega de Santorini, utilizando poderes de dioses y semidioses.",
-        "en": "Abstract strategy game where players build a city on the Greek island of Santorini, using powers of gods and demigods."
+        "es": "Construye la ciudad blanca y azul de Santorini ascendiendo niveles y bloqueando a tus rivales. Cada jugador controla dos constructores y puede usar poderes de dioses para cambiar el curso de la partida. El objetivo es alcanzar la cima antes que los demás. Estrategia pura, partidas rápidas y gran rejugabilidad en un entorno visualmente icónico.",
+        "en": "Build the iconic white and blue city of Santorini by ascending levels and blocking your rivals. Each player controls two builders and can use god powers to change the course of the game. The goal is to reach the top before anyone else. Pure strategy, quick games, and high replayability in a visually striking setting."
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -982,8 +982,8 @@
       "category": "boardgames",
       "subcategory": "abstract",
       "description": {
-        "es": "Juego para dos jugadores donde el objetivo es desplazar seis de las canicas del oponente fuera del tablero.",
-        "en": "Two-player game where the goal is to move six of the opponent's marbles off the board."
+        "es": "Un duelo de empuje y táctica donde el objetivo es sacar seis canicas del oponente fuera del tablero hexagonal. Planifica movimientos, forma líneas y anticipa la estrategia rival. Sencillo de aprender, pero con profundidad estratégica y partidas tensas hasta el final.",
+        "en": "A duel of pushing and tactics where the goal is to push six of your opponent's marbles off the hexagonal board. Plan your moves, form lines, and anticipate your rival's strategy. Easy to learn, but with strategic depth and tense games until the end."
       },
       "minPlayers": 2,
       "maxPlayers": 2,
@@ -998,8 +998,8 @@
       "category": "boardgames",
       "subcategory": "family",
       "description": {
-        "es": "Juego de apuestas en carreras de camellos donde los jugadores intentan predecir qué camello ganará.",
-        "en": "Betting game on camel races where players try to predict which camel will win."
+        "es": "Participa en una caótica carrera de camellos donde las apuestas y la suerte lo deciden todo. Los camellos pueden subirse unos a otros, cambiando el resultado en cada turno. Apuesta por el ganador, sabotea a tus rivales y disfruta de partidas llenas de risas y sorpresas. Ideal para grupos y familias.",
+        "en": "Join a chaotic camel race where betting and luck decide everything. Camels can stack on top of each other, changing the outcome every turn. Bet on the winner, sabotage your rivals, and enjoy games full of laughter and surprises. Ideal for groups and families."
       },
       "minPlayers": 3,
       "maxPlayers": 8,
@@ -1014,8 +1014,8 @@
       "category": "boardgames",
       "subcategory": "cards",
       "description": {
-        "es": "Juego de cartas para dos jugadores donde se compite por controlar facciones en un reino.",
-        "en": "Two-player card game where players compete to control factions in a kingdom."
+        "es": "Un duelo de cartas donde compites por el control de cinco facciones fantásticas en un reino en disputa. Juega dos fases: recluta seguidores y luego lucha por el dominio. Cada facción tiene habilidades únicas que cambian la estrategia. Rápido, tenso y con gran variedad de combinaciones.",
+        "en": "A card duel where you compete for control of five fantastic factions in a disputed kingdom. Play two phases: recruit followers and then battle for dominance. Each faction has unique abilities that change the strategy. Fast, tense, and with great variety in combinations."
       },
       "minPlayers": 2,
       "maxPlayers": 2,
@@ -1030,8 +1030,8 @@
       "category": "boardgames",
       "subcategory": "cards",
       "description": {
-        "es": "Un juego de cartas para dos jugadores donde recolectas setas en el bosque para cocinarlas o venderlas.",
-        "en": "A two-player card game where you collect mushrooms in the forest to cook or sell them."
+        "es": "Recolecta setas en el bosque y cocínalas para ganar puntos. Gestiona tu mano, elige el momento ideal para cocinar y usa cestas y sartenes para maximizar tu cosecha. Un juego para dos con mecánicas sencillas, pero decisiones tácticas en cada turno. Ideal para amantes de la naturaleza y la estrategia ligera.",
+        "en": "Collect mushrooms in the forest and cook them to score points. Manage your hand, choose the perfect moment to cook, and use baskets and pans to maximize your harvest. A two-player game with simple mechanics but tactical decisions every turn. Ideal for nature lovers and light strategy fans."
       },
       "minPlayers": 2,
       "maxPlayers": 2,
@@ -1046,8 +1046,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Juego donde los jugadores crían y venden criaturas monstruosas a los señores de las mazmorras.",
-        "en": "Game where players raise and sell monstrous creatures to dungeon lords."
+        "es": "Cría y vende criaturas monstruosas a los señores de las mazmorras, gestionando sus necesidades y emociones. Alimenta, cuida y mejora a tus mascotas para obtener la mejor puntuación. Un eurogame de gestión con humor, interacción y muchas decisiones en cada ronda.",
+        "en": "Raise and sell monstrous creatures to dungeon lords, managing their needs and emotions. Feed, care for, and upgrade your pets to score the most points. A management eurogame with humor, interaction, and many decisions each round."
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -1062,8 +1062,8 @@
       "category": "boardgames",
       "subcategory": "civilization",
       "description": {
-        "es": "Juego de construcción de ciudad donde los jugadores gestionan recursos y construyen estructuras en un bosque encantado.",
-        "en": "City-building game where players manage resources and construct buildings in an enchanted forest."
+        "es": "Construye una ciudad en un bosque encantado, gestionando recursos y cartas para crear edificios y atraer criaturas. Cada partida es una historia diferente con ilustraciones hermosas y mecánicas de colocación de trabajadores y cartas. Estrategia, planificación y encanto visual en un solo juego.",
+        "en": "Build a city in an enchanted forest, managing resources and cards to create buildings and attract creatures. Each game is a different story with beautiful illustrations and worker placement and card mechanics. Strategy, planning, and visual charm in one game."
       },
       "minPlayers": 1,
       "maxPlayers": 4,
@@ -1078,8 +1078,8 @@
       "category": "boardgames",
       "subcategory": "adventure",
       "description": {
-        "es": "Juego cooperativo donde los jugadores asumen los roles de Robin Hood y sus compañeros en la lucha contra los opresores.",
-        "en": "Cooperative game where players take on the roles of Robin Hood and his companions in fighting oppressors."
+        "es": "Vive la leyenda de Robin Hood en un juego cooperativo de aventuras y exploración. Los jugadores asumen roles de héroes, enfrentan desafíos y toman decisiones que afectan la historia. El tablero cambia durante la partida, creando una experiencia narrativa única cada vez.",
+        "en": "Live the legend of Robin Hood in a cooperative game of adventure and exploration. Players take on hero roles, face challenges, and make decisions that affect the story. The board changes during the game, creating a unique narrative experience every time."
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -1094,8 +1094,8 @@
       "category": "boardgames",
       "subcategory": "adventure",
       "description": {
-        "es": "Juego de terror y misterio donde los jugadores investigan sucesos extraños en una mansión.",
-        "en": "Horror and mystery game where players investigate strange occurrences in a mansion."
+        "es": "Investiga sucesos paranormales en una mansión llena de misterios y peligros. Colabora con otros jugadores para resolver enigmas, enfrentarte a monstruos y sobrevivir a la locura. Un juego de terror narrativo con app digital y escenarios variados para una experiencia inmersiva.",
+        "en": "Investigate paranormal events in a mansion full of mysteries and dangers. Collaborate with other players to solve puzzles, face monsters, and survive madness. A narrative horror game with a digital app and varied scenarios for an immersive experience."
       },
       "minPlayers": 1,
       "maxPlayers": 5,
@@ -1110,8 +1110,8 @@
       "category": "boardgames",
       "subcategory": "adventure",
       "description": {
-        "es": "Juego de aventura donde los jugadores exploran mazmorras, luchan contra monstruos y completan misiones.",
-        "en": "Adventure game where players explore dungeons, fight monsters, and complete quests."
+        "es": "Explora mazmorras, lucha contra monstruos y completa misiones en este clásico de aventuras. Cada jugador asume un rol único con habilidades especiales. La cooperación y la estrategia son clave para superar los desafíos y lograr la victoria.",
+        "en": "Explore dungeons, fight monsters, and complete quests in this classic adventure game. Each player takes on a unique role with special abilities. Cooperation and strategy are key to overcoming challenges and achieving victory."
       },
       "minPlayers": 2,
       "maxPlayers": 5,
@@ -1126,8 +1126,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Juego de construcción de territorio donde los jugadores crean su propio reino en una isla escocesa.",
-        "en": "Tile-laying game where players build their own kingdom on a Scottish island."
+        "es": "Construye tu propio reino en la isla de Skye colocando losetas y gestionando recursos. Apuesta, negocia y adapta tu estrategia a los objetivos de cada partida. Un juego de colocación de losetas con interacción y mucha rejugabilidad.",
+        "en": "Build your own kingdom on the Isle of Skye by placing tiles and managing resources. Bid, negotiate, and adapt your strategy to the objectives of each game. A tile-laying game with interaction and high replayability."
       },
       "minPlayers": 2,
       "maxPlayers": 5,
@@ -1142,8 +1142,8 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Juego de estrategia y comercio ambientado en el antiguo reino de Asante, donde los jugadores compiten por el control del comercio de oro.",
-        "en": "Strategy and trading game set in the ancient kingdom of Asante, where players compete for control of the gold trade."
+        "es": "Comercia en el antiguo reino de Asante, adquiriendo bienes y usando cartas especiales para obtener ventajas. Gestiona tu mano y recursos para superar a tu rival. Un juego de estrategia y comercio ágil, ideal para dos jugadores.",
+        "en": "Trade in the ancient kingdom of Asante, acquiring goods and using special cards to gain advantages. Manage your hand and resources to outplay your rival. A fast-paced strategy and trading game, ideal for two players."
       },
       "minPlayers": 2,
       "maxPlayers": 4,
@@ -1158,11 +1158,12 @@
       "category": "boardgames",
       "subcategory": "strategy",
       "description": {
-        "es": "Un juego de estrategia basado en el famoso castillo de Colditz durante la Segunda Guerra Mundial, donde los jugadores deben planificar y ejecutar audaces intentos de fuga.",
-        "en": "A strategy game based on the famous Colditz Castle during World War II, where players must plan and execute daring escape attempts."
+        "es": "Planifica y ejecuta audaces fugas del famoso castillo de Colditz durante la Segunda Guerra Mundial. Un jugador controla a los guardias y el resto a los prisioneros, cada uno con objetivos distintos. Estrategia, tensión y narrativa histórica en cada partida.",
+        "en": "Plan and execute daring escapes from the famous Colditz Castle during World War II. One player controls the guards and the rest the prisoners, each with different objectives. Strategy, tension, and historical narrative in every game."
       },
       "minPlayers": 2,
-      "maxPlayers": 6,      "playTime": 120,
+      "maxPlayers": 6,
+      "playTime": 120,
       "age": "+12",
       "masterpiece": true,
       "image": "/imagenes/juegos_de_mesa/colditz.jpg"
@@ -1173,8 +1174,8 @@
       "category": "boardgames",
       "subcategory": "adventure",
       "description": {
-        "es": "Un emocionante juego de supervivencia donde los jugadores deben escapar de una isla que se hunde, mientras lidian con tiburones, ballenas y otros peligros marinos.",
-        "en": "An exciting survival game where players must escape from a sinking island while dealing with sharks, whales, and other marine dangers."
+        "es": "Escapa de una isla que se hunde mientras tiburones, ballenas y serpientes marinas acechan a los jugadores. Salva a tus exploradores, recoge tesoros y sabotea a tus rivales en partidas llenas de emoción y giros inesperados. Un clásico de supervivencia y aventura.",
+        "en": "Escape from a sinking island while sharks, whales, and sea serpents lurk around. Save your explorers, collect treasures, and sabotage your rivals in games full of excitement and unexpected twists. A classic of survival and adventure."
       },
       "minPlayers": 2,
       "maxPlayers": 4,

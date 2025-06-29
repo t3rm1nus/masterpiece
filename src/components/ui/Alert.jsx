@@ -1,5 +1,34 @@
 import React from 'react';
-import './Alert.css';
+import { css } from '@emotion/react';
+
+const alertBase = css`
+  padding: 1em 1.5em;
+  border-radius: 8px;
+  margin: 1em 0;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+`;
+const alertTypes = {
+  info: css`
+    background: #e3f2fd;
+    color: #1565c0;
+  `,
+  success: css`
+    background: #e8f5e9;
+    color: #2e7d32;
+  `,
+  warning: css`
+    background: #fffde7;
+    color: #f9a825;
+  `,
+  error: css`
+    background: #ffebee;
+    color: #c62828;
+  `
+};
 
 /**
  * Alert: Alerta base personalizable.
@@ -35,15 +64,19 @@ export default function Alert({
 }) {
   if (!visible) return null;
   return (
-    <div className={`mp-alert mp-alert--${type} ${className}`} style={sx.root} {...props}>
-      {icon && <span className="mp-alert-icon" style={sx.icon}>{icon}</span>}
-      <div className="mp-alert-content" style={sx.content}>
-        {title && <div className="mp-alert-title" style={sx.title}>{title}</div>}
+    <div
+      css={[alertBase, alertTypes[type] || alertTypes.info, sx.root]}
+      className={className}
+      {...props}
+    >
+      {icon && <span style={sx.icon}>{icon}</span>}
+      <div style={sx.content}>
+        {title && <div style={sx.title}>{title}</div>}
         <div>{children}</div>
       </div>
-      {actions && <div className="mp-alert-actions" style={sx.actions}>{actions}</div>}
+      {actions && <div style={sx.actions}>{actions}</div>}
       {onClose && (
-        <button className="mp-alert-close" style={sx.close} onClick={onClose} aria-label="Cerrar alerta">×</button>
+        <button style={sx.close} onClick={onClose} aria-label="Cerrar alerta">×</button>
       )}
     </div>
   );

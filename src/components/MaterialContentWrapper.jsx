@@ -48,17 +48,22 @@ const emptyStateSx = isMobile => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  gap: isMobile ? 0 : '1rem'
+  justifyContent: 'center', // <-- centrado vertical
+  gap: isMobile ? 0 : '1rem',
+  height: isMobile ? 'auto' : '100%', // asegura centrado vertical en desktop
 });
 
 const emptyImgSx = {
   maxWidth: '90vw',
-  width: '90%',
+  width: '100%',
   height: 'auto',
   borderRadius: '12px',
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
   marginTop: '1rem',
-  marginBottom: 0
+  marginBottom: 0,
+  display: 'block',
+  marginLeft: 'auto',
+  marginRight: 'auto',
 };
 
 const MaterialContentWrapper = ({ 

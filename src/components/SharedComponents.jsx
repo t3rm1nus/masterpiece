@@ -93,7 +93,7 @@ export const NoResults = ({ t, randomNotFoundImage, image, text, subtext, childr
         component="img"
         src={notFoundImageUrl}
         alt={getTranslation('ui.states.noResults', 'No se encontraron resultados')}
-        sx={{ maxWidth: '90vw', width: '90%', height: 'auto', borderRadius: 2, boxShadow: 2, my: 2 }}
+        sx={{ maxWidth: '90vw', width: '100%', height: 'auto', borderRadius: 2, boxShadow: 2, my: 2 }}
       />
       {children}
     </Box>
