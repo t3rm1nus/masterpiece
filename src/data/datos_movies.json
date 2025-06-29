@@ -5693,6 +5693,132 @@
         "en": "https://www.youtube.com/watch?v=h6XP82TyFWw"
       },
       "masterpiece": true
+    },
+    {
+      "id": 269,
+      "category": "movies",
+      "subcategory": "sci-fi",
+      "title": {
+        "es": "Super 8",
+        "en": "Super 8"
+      },
+      "description": {
+        "es": "En el verano de 1979, un grupo de niños graba una película casera\ncon una cámara Super 8 cuando presencia un brutal descarrilamiento.\nDesde entonces, comienzan a suceder cosas extrañas en su pueblo:\npersonas desaparecen y se apagan luces sin explicación.\nPronto descubrirán que algo más ha escapado del tren.",
+        "en": "In the summer of 1979, a group of kids shooting a Super 8 film\nwitness a violent train derailment. Strange things begin to happen:\npeople vanish, electronics fail, and secrets unravel.\nThey soon realize something otherworldly escaped that wreck.\nMystery, danger, and childhood collide in this nostalgic tale."
+      },
+      "director": "J.J. Abrams",
+      "image": "/imagenes/peliculas/super8.jpg",
+      "year": 2011,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=89u6eSBSZmw",
+        "en": "https://www.youtube.com/watch?v=t-0XuYxh67w"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 270,
+      "category": "movies",
+      "subcategory": "sci-fi",
+      "title": {
+        "es": "Encuentros en la tercera fase",
+        "en": "Close Encounters of the Third Kind"
+      },
+        "description": {
+        "es": "Tras una serie de avistamientos OVNI, un hombre queda obsesionado\ncon una visión que no logra comprender. Al mismo tiempo, científicos\nsiguen señales que apuntan a un contacto extraterrestre inminente.\nEl destino reunirá a todos en un encuentro histórico\nmás allá de las palabras.",
+        "en": "After several UFO sightings, a man becomes obsessed with a vision\nhe can't explain. Meanwhile, scientists decode strange signals\nfrom space pointing to an imminent contact.\nAn emotional, majestic encounter awaits,\nforever altering what it means to be human."
+      },
+      "director": "Steven Spielberg",
+      "image": "/imagenes/peliculas/close_encounters.jpg",
+      "year": 1977,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=S8Grh29Rnng",
+        "en": "https://www.youtube.com/watch?v=dSpQ3G08k48"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 271,
+      "category": "movies",
+      "subcategory": "sci-fi",
+      "title": {
+        "es": "E.T. el Extraterrestre",
+        "en": "E.T. the Extra-Terrestrial"
+      },
+        "description": {
+        "es": "Un ser de otro mundo queda atrapado en la Tierra\ntras una misión fallida. Elliott, un niño solitario,\nlo encuentra y decide ayudarle a volver a casa.\nMientras el gobierno lo busca, crece entre ellos\nuna conexión que trasciende las especies.",
+        "en": "An alien stranded on Earth is discovered by Elliott,\na lonely boy who helps him hide and find a way home.\nAs government agents close in, the bond between them grows.\nA touching journey of friendship, innocence,\nand the universal need to belong."
+      },
+      "director": "Steven Spielberg",
+      "image": "/imagenes/peliculas/et.jpg",
+      "year": 1982,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=F8QgAwuxXtg",
+        "en": "https://www.youtube.com/watch?v=DSx8Jobx-Gs"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 272,
+      "category": "movies",
+      "subcategory": "romance",
+      "title": {
+        "es": "Pretty Woman",
+        "en": "Pretty Woman"
+      },
+        "description": {
+        "es": "Edward, un magnate solitario, contrata por accidente a Vivian,\nuna prostituta de espíritu libre. Lo que empieza como un acuerdo\ncomercial se convierte en una historia de transformación,\ndignidad y amor inesperado en el corazón de Los Ángeles.",
+        "en": "Edward, a wealthy but lonely businessman, meets Vivian,\na spirited prostitute. Their arrangement evolves into something\ndeeper, challenging social expectations\nand revealing the transformative power of love."
+      },
+      "director": "Garry Marshall",
+      "image": "/imagenes/peliculas/pretty-woman.jpg",
+      "year": 1990,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=DvPEFrTBu_0",
+        "en": "https://www.youtube.com/watch?v=2EBAVoN8L_U"
+      },
+      "masterpiece": true
+    },
+    {
+      "id": 273,
+      "category": "movies",
+      "subcategory": "romance",
+      "title": {
+        "es": "Dirty Dancing",
+        "en": "Dirty Dancing"
+      },
+        "description": {
+        "es": "Durante unas vacaciones familiares, Baby conoce a Johnny,\nun instructor de baile rebelde. A través del baile y la pasión,\nrompen barreras sociales y descubren el valor\nde ser uno mismo frente a las expectativas de los demás.",
+        "en": "While on vacation, Baby meets Johnny,\na rebellious dance instructor. Through music and movement,\nthey challenge class divisions and learn to stand up\nfor love, identity, and freedom."
+      },
+      "director": "Emile Ardolino",
+      "image": "/imagenes/peliculas/dirty-dancing.jpg",
+      "year": 1987,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=gf9Q0CzABnY",
+        "en": "https://www.youtube.com/watch?v=wcra0-0Gu4U"
+      },
+      "masterpiece": false
+    },
+    {
+      "id": 274,
+      "category": "movies",
+      "subcategory": "thriller",
+      "title": {
+        "es": "Instinto Básico",
+        "en": "Basic Instinct"
+      },
+        "description": {
+        "es": "Un detective investiga el asesinato de una estrella de rock.\nLa principal sospechosa es Catherine Tramell, una escritora\nseductora e inteligente. Mientras avanza el caso,\nel deseo y la paranoia lo arrastran a un juego letal.",
+        "en": "A detective investigates the murder of a rock star.\nThe prime suspect: Catherine Tramell, a brilliant,\nseductive novelist. As obsession deepens,\nhe's drawn into a deadly web of desire and doubt."
+      },
+      "director": "Paul Verhoeven",
+      "image": "/imagenes/peliculas/basic-instinct.jpg",
+      "year": 1992,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=R5CUFMJdL4E",
+        "en": "https://www.youtube.com/watch?v=Pz_FrkVUkOs"
+      },
+      "masterpiece": false
     }
     
   ]

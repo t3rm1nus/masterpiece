@@ -7,3 +7,9 @@ export function ensureString(value, lang = 'es') {
   }
   return String(value || '');
 }
+
+// Normaliza una clave a minúsculas y sin espacios para comparación case-insensitive
+export function normalizeKey(key) {
+  if (!key || typeof key !== 'string') return '';
+  return key.toLowerCase().trim();
+}

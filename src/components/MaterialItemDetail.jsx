@@ -29,7 +29,7 @@ import {
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 import useViewStore from '../store/viewStore';
-import { getSubcategoryLabel } from '../utils/subcategoryLabel';
+import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 import { processTitle, processDescription } from '../store/utils';
 

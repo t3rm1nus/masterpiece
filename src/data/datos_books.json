@@ -3,16 +3,2399 @@
     {
       "id": 1,
       "category": "books",
-      "subcategory": "Terror",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": "false",
       "title": { "es": "Misery", "en": "Misery" },
-      "author": "Sthephen King",
+      "author": "Stephen King",
       "year": 1987,
       "description": {
         "es": "Paul Sheldon es un novelista superventas que por fin ha conocido a su fan número uno. Se llama Annie Wilkes, y es más que una lectora obsesiva: es la enfermera de Paul, cuidando su cuerpo destrozado tras un accidente automovilístico. Pero también está furiosa porque el autor ha matado a su personaje favorito en su último libro. Annie se convierte en su captora, manteniéndolo prisionero en su casa aislada. Annie quiere que Paul escriba un libro que devuelva a la vida a Misery (la protagonista de sus novelas) —solo para ella. Tiene muchas formas de motivarlo. Una es una aguja. Otra es un hacha. Y si no funcionan, puede volverse realmente cruel.",
         "en": "Paul Sheldon is a bestselling novelist who has finally met his number one fan. Her name is Annie Wilkes, and she is more than a rabid reader—she is Paul’s nurse, tending his shattered body after an automobile accident. But she is also furious that the author has killed off her favorite character in his latest book. Annie becomes his captor, keeping him prisoner in her isolated house. Annie wants Paul to write a book that brings Misery back to life—just for her. She has a lot of ways to spur him on. One is a needle. Another is an axe. And if they don’t work, she can get really nasty."
       },
+      "isbn": "978-0-451-16869-6",
       "image": "/imagenes/libros/misery.jpg",
-      "masterpiece": true
+      "masterpiece": false
+    },
+    {
+      "id": 2,
+      "category": "books",
+      "subcategory": "poetry",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0527-2",
+      "title": { "es": "Romancero Gitano", "en": "Gypsy Ballads" },
+      "author": "Federico García Lorca",
+      "year": 1928,
+      "description": {
+        "es": "Lorca celebra la cultura gitana en poemas\nllenos de pasión, tragedia y simbolismo.\nLa muerte y el amor impregnan cada verso.\nUna obra maestra de la poesía española.\nUn canto a la identidad y el destino.",
+        "en": "Lorca celebrates Gypsy culture in poems\nfull of passion, tragedy, and symbolism.\nDeath and love permeate each verse.\nA masterpiece of Spanish poetry,\nit’s a song of identity and fate."
+      },
+      "image": "/imagenes/libros/romancero-gitano.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 3,
+      "category": "books",
+      "subcategory": "drama",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "A puerta cerrada", "en": "No Exit" },
+      "author": "Jean-Paul Sartre",
+      "year": 1944,
+      "description": {
+        "es": "Tres almas son confinadas en una sala sin ventanas, ni espejos, ni salida.\nAllí descubren que el infierno no son demonios ni castigos físicos:\nes estar condenado a convivir con la mirada del otro para siempre.\nUna obra claustrofóbica, existencial y brutalmente honesta\nsobre la condena del ser y la imposibilidad del escape.",
+        "en": "Three souls are locked in a room with no windows, no mirrors, no exit.\nThey soon realize that hell is not fire or torture—\nit’s being exposed to each other’s gaze for eternity.\nA claustrophobic, existential tale of self, guilt,\nand the torment of human relationships."
+      },
+      "isbn": "978-84-206-2998-8",
+      "image": "/imagenes/libros/a-puerta-cerrada.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 4,
+      "category": "books",
+      "subcategory": "history",
+      "type": "fiction",
+      "saga": "true",
+      "title": { "es": "El médico", "en": "The Physician" },
+      "author": "Noah Gordon",
+      "year": 1986,
+      "description": {
+        "es": "Rob J. Cole, un huérfano del Londres medieval,\nemprende un viaje hacia Persia para estudiar medicina con Avicena.\nSu don para percibir la muerte lo guía entre culturas, guerras y religiones.\nUna epopeya sobre la pasión por sanar,\ny el precio del conocimiento en un mundo dividido.",
+        "en": "Rob J. Cole, an orphan in medieval London,\ntravels to Persia to study medicine under Avicenna.\nGifted with a strange sense for death, he journeys through\ndanger, faith, and science in pursuit of healing.\nAn epic tale of transformation and the thirst for knowledge"
+      },
+      "isbn": "978-84-9759-379-3",
+      "image": "/imagenes/libros/el-medico.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 5,
+      "category": "books",
+      "subcategory": "history",
+      "type": "fiction",
+      "saga": "true",
+      "title": { "es": "Chamán", "en": "Shaman" },
+      "author": "Noah Gordon",
+      "year": 1992,
+      "description": {
+        "es": "En plena expansión hacia el oeste americano, Robert Judson Cole\nsigue el legado de su padre como médico y cirujano.\nLuchará contra el dolor, la guerra civil y la sordera de su hijo.\nChamán es un homenaje a los pioneros de la medicina\nque curaban con manos firmes y corazones aún más fuertes.",
+        "en": "As America pushes westward, Robert Judson Cole,\nson of the legendary physician, carries on the healing tradition.\nBattling civil war, suffering, and his son’s deafness,\nhe navigates pain and purpose.\nA tribute to early medicine and the resilience of the human spirit"
+      },
+      "isbn": "978-84-9793-144-1",
+      "image": "/imagenes/libros/chaman.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 6,
+      "category": "books",
+      "subcategory": "history",
+      "type": "fiction",
+      "saga": "true",
+      "title": { "es": "La doctora Cole", "en": "Matters of Choice" },
+      "author": "Noah Gordon",
+      "year": 1996,
+      "description": {
+        "es": "Roberta Cole, heredera del linaje médico, se enfrenta a dilemas éticos,\npresiones sociales y decisiones personales.\nMientras trabaja como médica rural, busca un equilibrio entre ciencia,\npasión y humanidad. Una novela íntima\nsobre elegir el camino correcto en un mundo confuso.",
+        "en": "Roberta Cole, last in a long line of healers,\nfaces moral dilemmas, personal doubts, and social pressures.\nPracticing rural medicine, she searches for balance\nbetween science, compassion, readyand self.\nA deeply human tale about choosing rightly in a complex world"
+      },
+      "isbn": "978-84-9759-378-6",
+      "image": "/imagenes/libros/doctora-cole.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 7,
+      "category": "books",
+      "subcategory": "history",
+      "type": "fiction",
+      "saga": "true",
+      "title": { "es": "Los pilares de la Tierra", "en": "The Pillars of the Earth" },
+      "author": "Ken Follett",
+      "year": 1989,
+      "description": {
+        "es": "En la Inglaterra del siglo XII, un humilde constructor\nsueña con levantar una catedral que desafíe al tiempo.\nIntrigas, guerras, pasiones y traiciones tejen una epopeya\nque abarca generaciones. Una novela monumental\nsobre la ambición, la fe y la resistencia humana.",
+        "en": "In 12th-century England, a mason dreams of building\na cathedral that will outlast time itself.\nThrough war, love, betrayal, and faith,\nthis sweeping saga spans generations.\nA towering novel of ambition and resilience"
+      },
+      "isbn": "978-0-451-20663-3",
+      "image": "/imagenes/libros/los-pilares.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 8,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "Miguel Strogoff", "en": "Michael Strogoff" },
+      "author": "Jules Verne",
+      "year": 1876,
+      "description": {
+        "es": "El zar encomienda a Miguel Strogoff una misión peligrosa:\navisar a su hermano en Siberia de una inminente invasión tártara.\nDeberá cruzar Rusia en secreto, enfrentando traiciones,\ntormentas y la brutalidad del enemigo. Una novela de honor,\nresistencia y valentía en estado puro.",
+        "en": "The Tsar sends Michael Strogoff on a perilous mission:\nwarn his brother in Siberia of a looming Tartar invasion.\nThrough treachery, storms, and brutal foes,\nhe must deliver a message that could save an empire.\nA relentless tale of honor and endurance"
+      },
+      "isbn": "978-84-206-5295-5",
+      "image": "/imagenes/libros/miguel-strogoff.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 9,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "Carrie", "en": "Carrie" },
+      "author": "Stephen King",
+      "year": 1974,
+      "description": {
+        "es": "Carrie White es una chica marginada, atormentada en el colegio y reprimida en casa\npor su fanática madre religiosa. Cuando descubre sus poderes telequinéticos,\nel miedo se transforma en furia. La humillación final en el baile desencadenará\nuna venganza imparable. Un clásico sobre el dolor, la adolescencia\ny el monstruo que puede despertar en el silencio.",
+        "en": "Carrie White is an outcast—bullied at school, oppressed at home\nby her fanatical mother. When she discovers her telekinetic powers,\nfear turns into rage. A final act of humiliation at prom\nunleashes a catastrophic revenge. A chilling tale of adolescence,\npain, and the monster that can grow in silence"
+      },
+      "isbn": "978-0-385-08695-0",
+      "image": "/imagenes/libros/carrie.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 10,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "El misterio de Salem's Lot", "en": "Salem's Lot" },
+      "author": "Stephen King",
+      "year": 1975,
+      "description": {
+        "es": "Un escritor regresa a su pueblo natal, solo para descubrir que\ntodo se ha vuelto extraño y oscuro. Algo maligno se ha instalado\nen Salem’s Lot: una presencia vampírica que crece en las sombras.\nUna historia de decadencia y terror clásico,\ncon un aire de inevitable tragedia.",
+        "en": "A writer returns to his hometown,\nonly to find it changed—eerie and dark.\nA vampiric force lurks, spreading through Salem’s Lot.\nClassic horror infused with dread and decay,\na slow descent into nightmare"
+      },
+      "isbn": "978-0-385-00804-4",
+      "image": "/imagenes/libros/salems-lot.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 11,
+      "category": "books",
+      "subcategory": "psychology",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "La zona muerta", "en": "The Dead Zone" },
+      "author": "Stephen King",
+      "year": 1979,
+      "description": {
+        "es": "Tras un coma de cinco años, Johnny despierta con un don inquietante:\npuede ver el futuro con solo tocar a alguien. Entre su angustia personal\ny una amenaza nacional, deberá decidir si cambiar el destino justifica\ntomar una vida. Un thriller psicológico con tintes sobrenaturales\nsobre moral, poder y culpa.",
+        "en": "After five years in a coma, Johnny awakens with a gift:\nthe ability to see the future by touch.\nHaunted by visions and faced with a terrible choice,\nhe must weigh morality against action.\nA haunting blend of psychic thriller and ethical dilemma"
+      },
+      "isbn": "978-0-451-15575-7",
+      "image": "/imagenes/libros/la-zona-muerta.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 12,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "Cujo", "en": "Cujo" },
+      "author": "Stephen King",
+      "year": 1981,
+      "description": {
+        "es": "Cujo es un San Bernardo amigable hasta que un mordisco lo cambia todo.\nInfectado de rabia, se convierte en una bestia imparable.\nUna madre y su hijo quedan atrapados en un coche bajo el sol ardiente,\nmientras el monstruo acecha afuera. Una pesadilla doméstica\nque explora el miedo más cotidiano.",
+        "en": "Cujo, once a gentle St. Bernard,\nturns rabid after a bat bite.\nA mother and son are trapped in a car under the blazing sun,\nwith the beast lurking outside.\nA terrifying portrait of ordinary life turned monstrous"
+      },
+      "isbn": "978-0-451-23181-9",
+      "image": "/imagenes/libros/cujo.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 13,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "Christine", "en": "Christine" },
+      "author": "Stephen King",
+      "year": 1983,
+      "description": {
+        "es": "Christine es un Plymouth Fury del 58, oxidado y siniestro,\npero para Arnie Cunningham, es amor a primera vista.\nCon cada reparación, el coche parece rejuvenecer... y Arnie cambia con él.\nUna historia de obsesión, posesión y violencia sobre ruedas,\ncon alma de motor vengativo.",
+        "en": "Christine is a rusty '58 Plymouth Fury,\nbut Arnie Cunningham is captivated.\nAs the car is restored, so is something darker—inside the car and its owner.\nA haunting ride through obsession and malevolence,\nwhere love turns deadly"
+      },
+      "isbn": "978-0-451-16944-0",
+      "image": "/imagenes/libros/christine.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 14,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "Eso", "en": "It" },
+      "author": "Stephen King",
+      "year": 1986,
+      "description": {
+        "es": "Cada 27 años, una entidad despierta en Derry, Maine,\nalimentándose del miedo de los niños. Un grupo de amigos\nse une en la infancia y vuelve como adultos para enfrentarlo.\nPayasos, traumas y terrores profundos se cruzan\nen esta monumental novela de horror y amistad eterna.",
+        "en": "Every 27 years, a shape-shifting entity awakens in Derry,\npreying on children's fears. A group of childhood friends\nreturns as adults to confront it once more.\nClowns, trauma, and timeless dread\ncollide in this horror epic of memory and courage"
+      },
+      "isbn": "978-0-451-16886-3",
+      "image": "/imagenes/libros/it.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 15,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "La tienda", "en": "Needful Things" },
+      "author": "Stephen King",
+      "year": 1991,
+      "description": {
+        "es": "En Castle Rock, abre una nueva tienda donde todos\nencuentran justo lo que desean... por un precio.\nPequeños favores se transforman en caos\ncuando los secretos salen a la luz.\nUna sátira oscura sobre el deseo, la manipulación y la codicia.",
+        "en": "In Castle Rock, a curious new store opens,\noffering everyone exactly what they want—for a price.\nFavors lead to feuds as secrets unravel.\nA dark satire of temptation and chaos,\nwhere desires come with deadly strings attached"
+      },
+      "isbn": "978-0-451-17129-0",
+      "image": "/imagenes/libros/la-tienda.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 16,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "El juego de Gerald", "en": "Gerald's Game" },
+      "author": "Stephen King",
+      "year": 1992,
+      "description": {
+        "es": "Un juego sexual en una cabaña remota se convierte\nen una pesadilla cuando Gerald muere, dejando a Jessie\natada a la cama. Sin ayuda a la vista,\ninicia un descenso al delirio, los traumas de su pasado,\ny un enemigo real que podría no ser imaginario.",
+        "en": "A secluded cabin, a game gone wrong.\nGerald dies, leaving Jessie handcuffed to the bed.\nWith no escape in sight, she spirals through trauma,\nhallucinations, and a growing fear\nthat something—or someone—is watching"
+      },
+      "isbn": "978-0-451-17486-4",
+      "image": "/imagenes/libros/el-juego-de-gerald.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 17,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "El retrato de Rose Madder", "en": "Rose Madder" },
+      "author": "Stephen King",
+      "year": 1995,
+      "description": {
+        "es": "Rose Daniels huye tras años de abusos a manos de su esposo policía.\nEn una nueva ciudad, compra un extraño cuadro... y este parece\nofrecerle una vía de escape sobrenatural. Una novela sobre el trauma,\nel empoderamiento y la delgada línea entre la locura y la liberación.",
+        "en": "Rose Daniels flees a violent husband and finds solace\nin a strange painting that may open a gateway to another world.\nPast and present blur in a journey of self-liberation,\ntrauma recovery, and hidden strength.\nA surreal psychological escape"
+      },
+      "isbn": "978-0-451-18846-5",
+      "image": "/imagenes/libros/rose-madder.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 18,
+      "category": "books",
+      "subcategory": "drama",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "La milla verde", "en": "The Green Mile" },
+      "author": "Stephen King",
+      "year": 1996,
+      "description": {
+        "es": "En el corredor de la muerte, llega un prisionero gigantesco y callado:\nJohn Coffey. A pesar de estar acusado de un crimen atroz,\nesconde un don milagroso. Un drama espiritual,\nlleno de compasión, racismo, y redención sobrenatural.",
+        "en": "In death row’s Green Mile, a quiet giant arrives:\nJohn Coffey. Though accused of a terrible crime,\nhe harbors a miraculous gift.\nA spiritual drama of injustice, grace,\nand healing power in a dark place"
+      },
+      "isbn": "978-0-451-19049-9",
+      "image": "/imagenes/libros/la-milla-verde.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 19,
+      "category": "books",
+      "subcategory": "philosophy",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "El Evangelio según Jesucristo", "en": "The Gospel According to Jesus Christ" },
+      "author": "José Saramago",
+      "year": 1991,
+      "description": {
+        "es": "Saramago reimagina la vida de Jesús como la de un hombre atrapado\nen un conflicto divino. Aquí, Dios y el Diablo pactan en un mundo\ndonde la compasión lucha contra la indiferencia. Una novela desafiante,\nhumana y filosófica sobre el libre albedrío\ny los juegos de poder en el cielo.",
+        "en": "Saramago reimagines Jesus not as a savior,\nbut a man ensnared in divine politics.\nGod and the Devil negotiate while humanity bleeds.\nA bold, philosophical exploration of free will,\ncompassion, and celestial power"
+      },
+      "isbn": "978-84-663-0902-8",
+      "image": "/imagenes/libros/evangelio-jesucristo.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 20,
+      "category": "books",
+      "subcategory": "philosophy",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "Ensayo sobre la ceguera", "en": "Blindness" },
+      "author": "José Saramago",
+      "year": 1995,
+      "description": {
+        "es": "Una epidemia de ceguera repentina arrasa una ciudad sin nombre.\nEl caos se desata cuando la humanidad pierde no solo la vista,\nsino la moral. Solo una mujer conserva la visión,\ny con ella, la esperanza. Una alegoría feroz sobre\nla fragilidad de la civilización.",
+        "en": "A sudden blindness epidemic throws society into collapse.\nAs vision fades, so does morality. One woman still sees,\nand carries the weight of salvation.\nA brutal allegory of civilization's fragility\nand the darkness within humanity"
+      },
+      "isbn": "978-84-663-0903-5",
+      "image": "/imagenes/libros/ensayo-ceguera.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 21,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "true",
+      "title": { "es": "Blackwater I: La riada", "en": "Blackwater I: The Flood" },
+      "author": "Michael McDowell",
+      "year": 1983,
+      "description": {
+        "es": "Perdido en Alabama, el pueblo de Perdido sufre una riada.\nUna extraña mujer emerge de las aguas, sin pasado ni explicación.\nCon su llegada, comienzan los cambios en la poderosa familia Caskey.\nUna saga sureña con tintes góticos,\ndonde el agua guarda secretos oscuros.",
+        "en": "Floodwaters rise in Perdido, Alabama.\nFrom them emerges a mysterious woman—Elinor—with no past.\nHer presence begins to reshape the Caskey dynasty.\nA Southern Gothic saga steeped in mystery,\nwhere rivers conceal ancient secrets"
+      },
+      "isbn": "978-84-19283-00-9",
+      "image": "/imagenes/libros/blackwater1.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 22,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "true",
+      "title": { "es": "Blackwater II: El dique", "en": "Blackwater II: The Levee" },
+      "author": "Michael McDowell",
+      "year": 1983,
+      "description": {
+        "es": "Elinor se casa con Oscar Caskey y entra al corazón del clan.\nPero no todo es armonía: tensiones familiares, ambiciones ocultas\ny el enigma de su naturaleza emergen. El agua, siempre presente,\nparece escuchar. Un nuevo capítulo lleno de intrigas,\nfantasmas y poder femenino.",
+        "en": "Elinor becomes part of the Caskey family.\nYet harmony gives way to suspicion and ambition.\nSecrets simmer beneath Southern gentility,\nwhile water still whispers.\nA rich blend of intrigue, ghostly tension, and veiled power"
+      },
+      "isbn": "978-84-19283-01-6",
+      "image": "/imagenes/libros/blackwater2.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 23,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "true",
+      "title": { "es": "Blackwater III: La casa", "en": "Blackwater III: The House" },
+      "author": "Michael McDowell",
+      "year": 1983,
+      "description": {
+        "es": "Elinor se afianza en Perdido mientras la familia Caskey\nse transforma. Una nueva casa, nuevas ambiciones,\ny antiguos odios resurgiendo. Las tensiones hierven entre generaciones,\ny el pasado se niega a quedar enterrado.\nEl sur es hermoso, pero no perdona.",
+        "en": "Elinor roots herself deeper in the town of Perdido.\nA grand house rises, mirroring shifting power.\nOld resentments resurface, new alliances form.\nSouthern elegance clashes with secrets and storms.\nThe past refuses to stay buried"
+      },
+      "isbn": "978-84-19283-02-3",
+      "image": "/imagenes/libros/blackwater3.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 24,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "true",
+      "title": { "es": "Blackwater IV: La guerra", "en": "Blackwater IV: The War" },
+      "author": "Michael McDowell",
+      "year": 1983,
+      "description": {
+        "es": "La guerra mundial golpea Perdido, pero es dentro del clan Caskey\ndonde la batalla más feroz se libra. Elinor guarda secretos\nque ni el tiempo ni la sangre pueden apagar.\nLos cambios se aceleran y la oscuridad crece\nbajo el calor húmedo del sur.",
+        "en": "World War looms, but the real war rages within the Caskeys.\nElinor’s secrets deepen, testing bloodlines and loyalties.\nTensions rise as tradition clashes with change.\nIn the sweltering Southern heat,\ndarkness grows beneath civility"
+      },
+      "isbn": "978-84-19283-03-0",
+      "image": "/imagenes/libros/blackwater4.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 25,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "true",
+      "title": { "es": "Blackwater V: La fortuna", "en": "Blackwater V: The Fortune" },
+      "author": "Michael McDowell",
+      "year": 1983,
+      "description": {
+        "es": "Los Caskey cosechan riqueza y poder, pero las grietas son visibles.\nElinor planea en silencio, mientras las nuevas generaciones\ncuestionan su herencia. El agua sigue presente, como un espejo oscuro.\nLa fortuna brilla, pero con un precio.\nEl ciclo se acerca a su clímax.",
+        "en": "The Caskeys grow wealthy and respected,\nbut cracks form beneath their legacy.\nElinor plots in silence, while heirs rebel.\nDark waters mirror old sins.\nThe family’s fortune gleams—but with a cost"
+      },
+      "isbn": "978-84-19283-04-7",
+      "image": "/imagenes/libros/blackwater5.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 26,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "true",
+      "title": { "es": "Blackwater VI: La lluvia", "en": "Blackwater VI: The Rain" },
+      "author": "Michael McDowell",
+      "year": 1983,
+      "description": {
+        "es": "El ciclo se cierra con tormentas, revelaciones y despedidas.\nElinor enfrenta su destino, y los Caskey deben pagar\nel precio de su legado. Las lluvias caen como juicio,\nlimpiando, castigando y liberando. El agua siempre recuerda.",
+        "en": "The saga ends in storms and reckonings.\nElinor confronts her fate,\nand the Caskeys face the cost of their legacy.\nRain falls like a final verdict—cleansing, punishing, freeing.\nWater never forgets"
+      },
+      "isbn": "978-84-19283-05-4",
+      "image": "/imagenes/libros/blackwater6.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 27,
+      "category": "books",
+      "subcategory": "fantasy",
+      "type": "fiction",
+      "saga": "true",
+      "title": { "es": "El Señor de los Anillos I: La Comunidad del Anillo", "en": "The Lord of the Rings I: The Fellowship of the Ring" },
+      "author": "J. R. R. Tolkien",
+      "year": 1954,
+      "description": {
+        "es": "Un anillo ancestral contiene un poder terrible.\nFrodo, un hobbit inesperado, emprende un viaje\npara destruirlo antes de que caiga en manos del mal.\nLa Tierra Media despierta en una épica de amistad,\nmagia y sacrificio.",
+        "en": "A powerful ancient ring threatens all.\nFrodo, an unlikely hobbit, must carry it to its doom.\nAn epic quest begins, with friends, foes, and fate intertwined.\nMiddle-earth stirs with magic,\nsacrifice, and the weight of destiny"
+      },
+      "isbn": "978-0-618-15398-5",
+      "image": "/imagenes/libros/lotr1.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 28,
+      "category": "books",
+      "subcategory": "fantasy",
+      "type": "fiction",
+      "saga": "true",
+      "title": { "es": "El Señor de los Anillos II: Las Dos Torres", "en": "The Lord of the Rings II: The Two Towers" },
+      "author": "J. R. R. Tolkien",
+      "year": 1954,
+      "description": {
+        "es": "La comunidad se ha roto. Frodo y Sam siguen hacia Mordor\nmientras otros combaten en guerras épicas.\nGollum guía, pero ¿puede confiarse en él?\nDos torres se alzan como amenaza, y el mal avanza.\nUn viaje más oscuro comienza.",
+        "en": "The fellowship is broken. Frodo and Sam press on to Mordor,\nwhile battles rage across the lands.\nGollum leads, but trust is thin.\nTwo towers loom, and darkness deepens.\nThe path grows perilous"
+      },
+      "isbn": "978-0-618-15399-2",
+      "image": "/imagenes/libros/lotr2.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 29,
+      "category": "books",
+      "subcategory": "fantasy",
+      "type": "fiction",
+      "saga": "true",
+      "title": { "es": "El Señor de los Anillos III: El Retorno del Rey", "en": "The Lord of the Rings III: The Return of the King" },
+      "author": "J. R. R. Tolkien",
+      "year": 1955,
+      "description": {
+        "es": "La batalla final se aproxima. Hombres, elfos y enanos\nunen fuerzas para resistir a Sauron. Frodo se acerca al Monte del Destino,\nmientras el peso del anillo lo consume.\nHonor, pérdida y redención sellan esta conclusión épica.",
+        "en": "The final battle approaches. Men, elves, and dwarves\nrally against Sauron. Frodo nears Mount Doom,\nwith the ring's burden growing.\nHonor, sacrifice, and destiny\ndefine the epic conclusion"
+      },
+      "isbn": "978-0-618-15400-5",
+      "image": "/imagenes/libros/lotr3.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 30,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "El resplandor", "en": "The Shining" },
+      "author": "Stephen King",
+      "year": 1977,
+      "description": {
+        "es": "Jack Torrance acepta un trabajo como cuidador de invierno\nen el hotel Overlook. Aislado por la nieve, el lugar despierta\nuna fuerza oscura que amenaza con destruir a su familia.\nMientras su hijo Danny percibe presencias sobrenaturales,\nla locura de Jack crece sin control.",
+        "en": "Jack Torrance takes a job as winter caretaker at the Overlook Hotel.\nTrapped by snow, an evil presence awakens in the building.\nHis son Danny sees things others can't,\nand Jack’s descent into madness becomes terrifying.\nA masterpiece of psychological horror"
+      },
+      "isbn": "978-0-385-12167-5",
+      "image": "/imagenes/libros/el-resplandor.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 31,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "Don Quijote de la Mancha", "en": "Don Quijote de la Mancha" },
+      "author": "Miguel de Cervantes",
+      "year": 1605,
+      "description": {
+        "es": "Alonso Quijano, obsesionado con los libros de caballería,\nse convierte en Don Quijote, caballero errante.\nAcompañado por su fiel escudero Sancho,\nafronta molinos, gigantes y su propia locura.\nLa novela que reinventó la literatura.",
+        "en": "Alonso Quijano, obsessed with chivalric tales,\nbecomes Don Quixote, the wandering knight.\nWith loyal Sancho, he tilts at windmills and dreams.\nA story of madness, idealism, and laughter,\nit changed the world of literature forever"
+      },
+      "isbn": "978-84-670-3560-5",
+      "image": "/imagenes/libros/el-quijote.jpg",
+      "masterpiece": false
+    },
+     {
+      "id": 32,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "false",
+      "title": { "es": "Asesinatos S.L.", "en": "The Assassination Bureau, Ltd" },
+      "author": "Jack London",
+      "year": 1963,
+      "description": {
+        "es": "Ivan Dragomiloff, un brillante idealista, lidera una organización secreta dedicada a asesinar a figuras poderosas consideradas moralmente corruptas. Cuando una periodista pone a prueba sus principios, lo reta a ordenar su propia muerte. Comienza entonces una persecución mortal por Europa, mientras Dragomiloff intenta eliminar a sus propios asesinos. Una sátira audaz sobre la ética, la justicia y el poder.",
+        "en": "Ivan Dragomiloff, a brilliant idealist, heads a secret organization that assassinates powerful figures deemed morally corrupt. When a journalist challenges his principles, she hires the Bureau to kill him. A deadly chase across Europe begins, as Dragomiloff faces the very killers he once led. A bold satire on ethics, justice, and the use of power."
+      },
+      "isbn": "978-84-88020-27-7",
+      "image": "/imagenes/libros/asesinos-sl.jpg"
+      
+    },
+    {
+      "id": 33,
+      "category": "books",
+      "subcategory": "dystopia",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-9789-095-3",
+      "title": { "es": "1984", "en": "Nineteen Eighty-Four" },
+      "author": "George Orwell",
+      "year": 1949,
+      "description": {
+        "es": "En un mundo donde el Gran Hermano vigila cada movimiento,\nWinston Smith lucha por mantener su humanidad.\nLa manipulación, la vigilancia y la verdad distorsionada\ndominan esta distopía aterradora. Una obra profética\nque cuestiona el poder y la libertad individual.",
+        "en": "In a world where Big Brother watches all,\nWinston Smith clings to his humanity.\nSurveillance, propaganda, and distorted truth\ndefine this chilling dystopia. A prophetic novel\nabout power, freedom, and resistance."
+      },
+      "image": "/imagenes/libros/1984.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 34,
+      "category": "books",
+      "subcategory": "dystopia",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-670-4267-2",
+      "title": { "es": "Rebelión en la granja", "en": "Animal Farm" },
+      "author": "George Orwell",
+      "year": 1945,
+      "description": {
+        "es": "Los animales de una granja se rebelan contra sus dueños humanos,\npero la libertad se convierte en tiranía.\nCon cerdos como líderes, el poder corrompe los ideales.\nUna sátira mordaz sobre la revolución y la opresión.\nUn clásico que desnuda la naturaleza del poder.",
+        "en": "Farm animals overthrow their human masters,\nbut freedom turns to tyranny under pig rule.\nIdeals erode as power corrupts.\nA sharp satire of revolution and oppression,\nthis classic exposes the dangers of unchecked authority."
+      },
+      "image": "/imagenes/libros/rebelion-en-la-granja.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 35,
+      "category": "books",
+      "subcategory": "romance",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-5207-8",
+      "title": { "es": "Anna Karenina", "en": "Anna Karenina" },
+      "author": "Leo Tolstoy",
+      "year": 1878,
+      "description": {
+        "es": "Anna Karenina desafía las normas sociales por amor,\npero su pasión la lleva a un trágico destino.\nEn la Rusia zarista, el deseo choca con el deber.\nUna novela épica sobre amor, culpa y sociedad.\nUn retrato inolvidable de la condición humana.",
+        "en": "Anna Karenina risks all for forbidden love,\nonly to face a tragic fate in Tsarist Russia.\nPassion clashes with duty and societal norms.\nAn epic novel of love, guilt, and sacrifice,\nit captures the complexities of human desires."
+      },
+      "image": "/imagenes/libros/anna-karenina.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 36,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-663-0900-4",
+      "title": { "es": "Cien años de soledad", "en": "One Hundred Years of Solitude" },
+      "author": "Gabriel García Márquez",
+      "year": 1967,
+      "description": {
+        "es": "La saga de la familia Buendía en Macondo\nteje un tapiz de magia, amor y destino.\nA través de generaciones, la vida y la muerte se entrelazan.\nUn hito del realismo mágico que captura el alma latinoamericana.\nUna obra eterna sobre el ciclo humano.",
+        "en": "The Buendía family’s saga in Macondo\nblends magic, love, and inescapable fate.\nAcross generations, life and death intertwine.\nA cornerstone of magical realism, it captures Latin America’s soul.\nA timeless epic of the human condition."
+      },
+      "image": "/imagenes/libros/cien-anos-de-soledad.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 37,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-670-3561-2",
+      "title": { "es": "El gran Gatsby", "en": "The Great Gatsby" },
+      "author": "F. Scott Fitzgerald",
+      "year": 1925,
+      "description": {
+        "es": "Jay Gatsby persigue el sueño americano y a su amor perdido,\nDaisy, en la opulenta Long Island de los años 20.\nLa riqueza y el glamour esconden vacío y tragedia.\nUna novela sobre la obsesión y la ilusión.\nUn retrato brillante de una era rota.",
+        "en": "Jay Gatsby chases the American Dream and his lost love,\nDaisy, in the lavish 1920s Long Island.\nWealth and glamour mask emptiness and tragedy.\nA novel of obsession and shattered illusions,\nit defines a broken era with vivid prose."
+      },
+      "image": "/imagenes/libros/el-gran-gatsby.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 38,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8194-8",
+      "title": { "es": "El guardián entre el centeno", "en": "The Catcher in the Rye" },
+      "author": "J.D. Salinger",
+      "year": 1951,
+      "description": {
+        "es": "Holden Caulfield, un adolescente rebelde,\nvaga por Nueva York tras ser expulsado del colegio.\nSu voz cínica revela el desencanto juvenil.\nUna novela icónica sobre la alienación y la búsqueda de sentido.\nUn retrato crudo de la adolescencia.",
+        "en": "Holden Caulfield, a rebellious teen,\nwanders New York after being expelled from school.\nHis cynical voice captures youthful disillusionment.\nAn iconic novel of alienation and the search for meaning,\nit remains a raw portrait of adolescence."
+      },
+      "image": "/imagenes/libros/el-guardian-entre-el-centeno.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 39,
+      "category": "books",
+      "subcategory": "philosophy",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-663-0904-2",
+      "title": { "es": "El lobo estepario", "en": "Steppenwolf" },
+      "author": "Hermann Hesse",
+      "year": 1927,
+      "description": {
+        "es": "Harry Haller, un hombre dividido entre su naturaleza humana\ny su lado salvaje, busca sentido en un mundo vacío.\nLa soledad lo lleva a un viaje introspectivo y místico.\nUna novela filosófica sobre la identidad y la espiritualidad.\nUn clásico que desafía la existencia moderna.",
+        "en": "Harry Haller, torn between humanity and wildness,\nseeks meaning in an empty world.\nLoneliness drives him to a mystical, introspective journey.\nA philosophical novel on identity and spirituality,\nit challenges the modern condition."
+      },
+      "image": "/imagenes/libros/el-lobo-estepario.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 40,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-9759-125-6",
+      "title": { "es": "El perfume", "en": "Perfume: The Story of a Murderer" },
+      "author": "Patrick Süskind",
+      "year": 1985,
+      "description": {
+        "es": "Jean-Baptiste Grenouille, obsesionado con los olores,\nbusca crear el perfume perfecto en la Francia del siglo XVIII.\nSu genio lo lleva a cometer asesinatos atroces.\nUna novela oscura sobre la obsesión y la humanidad.\nUn relato sensorial y perturbador.",
+        "en": "Jean-Baptiste Grenouille, obsessed with scents,\nseeks the perfect perfume in 18th-century France.\nHis genius drives him to horrific murders.\nA dark novel of obsession and human nature,\nit’s a haunting, sensory masterpiece."
+      },
+      "image": "/imagenes/libros/el-perfume.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 41,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8195-5",
+      "title": { "es": "El señor de las moscas", "en": "Lord of the Flies" },
+      "author": "William Golding",
+      "year": 1954,
+      "description": {
+        "es": "Un grupo de niños varados en una isla desierta\nintenta organizarse, pero el orden se desmorona.\nLa civilización cede ante el salvajismo innato.\nUna alegoría sombría sobre la naturaleza humana.\nUn clásico que explora el caos y el poder.",
+        "en": "Stranded boys on a deserted island try to govern themselves,\nbut order collapses into savagery.\nCivilization crumbles under primal instincts.\nA grim allegory of human nature,\nthis classic probes chaos and power."
+      },
+      "image": "/imagenes/libros/el-senor-de-las-moscas.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 42,
+      "category": "books",
+      "subcategory": "romance",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-663-0905-9",
+      "title": { "es": "La insoportable levedad del ser", "en": "The Unbearable Lightness of Being" },
+      "author": "Milan Kundera",
+      "year": 1984,
+      "description": {
+        "es": "En la Praga de los años 60, cuatro personajes\nentrelazan amor, libertad y compromiso.\nLa ligereza del ser choca con el peso de las decisiones.\nUna novela filosófica sobre la existencia y el amor.\nUn retrato profundo de la condición humana.",
+        "en": "In 1960s Prague, four lives intertwine\nthrough love, freedom, and commitment.\nThe lightness of being clashes with life’s weight.\nA philosophical novel on existence and love,\nit probes the depths of human choice."
+      },
+      "image": "/imagenes/libros/la-insoportable-levedad-del-ser.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 43,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0494-7",
+      "title": { "es": "La metamorfosis", "en": "The Metamorphosis" },
+      "author": "Franz Kafka",
+      "year": 1915,
+      "description": {
+        "es": "Gregor Samsa despierta convertido en un insecto gigante,\ny su vida y familia se desmoronan en el absurdo.\nLa alienación y el deber chocan con lo inhumano.\nUna obra maestra del existencialismo y lo absurdo.\nUn relato inquietante sobre identidad y rechazo.",
+        "en": "Gregor Samsa wakes as a giant insect,\nand his life and family unravel in absurdity.\nAlienation and duty clash with the inhumane.\nA masterpiece of existentialism and the absurd,\nit haunts with themes of identity and rejection."
+      },
+      "image": "/imagenes/libros/la-metamorfosis.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 44,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-5208-5",
+      "title": { "es": "Los hermanos Karamazov", "en": "The Brothers Karamazov" },
+      "author": "Fyodor Dostoevsky",
+      "year": 1880,
+      "description": {
+        "es": "Tres hermanos enfrentan dilemas morales y espirituales\ntras el asesinato de su padre en la Rusia zarista.\nFe, razón y pasión chocan en un drama épico.\nUna novela profunda sobre la familia y la fe.\nUn hito de la literatura universal.",
+        "en": "Three brothers grapple with morality and faith\nafter their father’s murder in Tsarist Russia.\nFaith, reason, and passion collide in an epic drama.\nA profound novel of family and belief,\nit’s a cornerstone of world literature."
+      },
+      "image": "/imagenes/libros/los-hermanos-karamazov.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 45,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-5209-2",
+      "title": { "es": "Madame Bovary", "en": "Madame Bovary" },
+      "author": "Gustave Flaubert",
+      "year": 1857,
+      "description": {
+        "es": "Emma Bovary, atrapada en un matrimonio aburrido,\nbusca pasión en aventuras amorosas y lujos.\nSus sueños chocan con la realidad provinciana.\nUna novela pionera del realismo literario.\nUn retrato trágico de deseo y desilusión.",
+        "en": "Emma Bovary, trapped in a dull marriage,\nseeks passion through affairs and extravagance.\nHer dreams crash against provincial reality.\nA pioneering realist novel,\nit’s a tragic portrait of desire and disillusionment."
+      },
+      "image": "/imagenes/libros/madame-bovary.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 46,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-5210-8",
+      "title": { "es": "Moby Dick", "en": "Moby-Dick" },
+      "author": "Herman Melville",
+      "year": 1851,
+      "description": {
+        "es": "El capitán Ahab persigue obsesivamente a Moby Dick,\nuna ballena blanca que simboliza el destino y la venganza.\nEl mar es el escenario de una épica trágica.\nUna novela sobre la obsesión y la lucha humana.\nUn clásico monumental de la literatura americana.",
+        "en": "Captain Ahab obsessively hunts Moby Dick,\na white whale embodying fate and vengeance.\nThe sea sets the stage for a tragic epic.\nA novel of obsession and human struggle,\nit’s a monumental American classic."
+      },
+      "image": "/imagenes/libros/moby-dick.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 47,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0495-4",
+      "title": { "es": "Ulises", "en": "Ulysses" },
+      "author": "James Joyce",
+      "year": 1922,
+      "description": {
+        "es": "Un día en la vida de Leopold Bloom en Dublín\nrevoluciona la narrativa con su estilo experimental.\nAmor, pérdida y lo cotidiano se entrelazan.\nUna obra maestra del modernismo literario.\nUn desafío y un triunfo narrativo.",
+        "en": "One day in Leopold Bloom’s Dublin life\nredefines narrative with experimental style.\nLove, loss, and the mundane intertwine.\nA modernist masterpiece,\nit’s a challenging and triumphant work."
+      },
+      "image": "/imagenes/libros/ulises.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 48,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-663-0906-6",
+      "title": { "es": "Crónica de una muerte anunciada", "en": "Chronicle of a Death Foretold" },
+      "author": "Gabriel García Márquez",
+      "year": 1981,
+      "description": {
+        "es": "Un asesinato en un pueblo latinoamericano\nse narra con un destino ya conocido.\nEl honor, la culpa y la fatalidad se entrelazan.\nUna novela breve pero poderosa del realismo mágico.\nUn estudio de la tragedia inevitable.",
+        "en": "A murder in a Latin American town\nunfolds with its outcome already known.\nHonor, guilt, and fate intertwine.\nA short, powerful magical realist novel,\nit explores the inevitability of tragedy."
+      },
+      "image": "/imagenes/libros/cronica-de-una-muerte-anunciada.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 49,
+      "category": "books",
+      "subcategory": "psychology",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-270-1165-6",
+      "title": { "es": "Los renglones torcidos de Dios", "en": "The Crooked Lines of God" },
+      "author": "Torcuato Luca de Tena",
+      "year": 1979,
+      "description": {
+        "es": "Alice Gould ingresa a un psiquiátrico para investigar un crimen,\npero su cordura se pone en duda.\nLa línea entre la locura y la verdad se difumina.\nUna novela psicológica llena de suspense.\nUn retrato inquietante de la mente humana.",
+        "en": "Alice Gould enters a mental hospital to solve a crime,\nbut her sanity comes under scrutiny.\nThe line between madness and truth blurs.\nA gripping psychological novel,\nit probes the depths of the human mind."
+      },
+      "image": "/imagenes/libros/los-renglones-torcidos-de-dios.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 50,
+      "category": "books",
+      "subcategory": "fantasy",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-450-7670-5",
+      "title": { "es": "El hobbit", "en": "The Hobbit" },
+      "author": "J.R.R. Tolkien",
+      "year": 1937,
+      "description": {
+        "es": "Bilbo Bolsón, un hobbit tranquilo, se une a una aventura\ncon enanos y un mago para recuperar un tesoro.\nDragones, trolls y magia llenan su viaje.\nUn clásico de la fantasía que encanta generaciones.\nEl preludio épico a El Señor de los Anillos.",
+        "en": "Bilbo Baggins, a quiet hobbit, joins dwarves\nand a wizard on a quest for stolen treasure.\nDragons, trolls, and magic fill his journey.\nA beloved fantasy classic for all ages,\nit’s the epic prelude to The Lord of the Rings."
+      },
+      "image": "/imagenes/libros/el-hobbit.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 51,
+      "category": "books",
+      "subcategory": "war",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-5211-5",
+      "title": { "es": "Guerra y paz", "en": "War and Peace" },
+      "author": "Leo Tolstoy",
+      "year": 1865,
+      "description": {
+        "es": "En la Rusia napoleónica, las vidas de aristócratas\nse entrelazan con batallas y amores épicos.\nLa historia y el destino humano se funden.\nUna novela monumental sobre guerra y humanidad.\nUn clásico que trasciende el tiempo.",
+        "en": "In Napoleonic Russia, aristocrats’ lives\nweave through epic battles and loves.\nHistory and human fate intertwine.\nA monumental novel of war and humanity,\nit transcends time as a literary titan."
+      },
+      "image": "/imagenes/libros/guerra-y-paz.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 52,
+      "category": "books",
+      "subcategory": "fantasy",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-01-33420-7",
+      "title": { "es": "El nombre del viento", "en": "The Name of the Wind" },
+      "author": "Patrick Rothfuss",
+      "year": 2007,
+      "description": {
+        "es": "Kvothe, un legendario héroe, narra su vida,\ndesde su infancia hasta su ascenso como mago.\nAventuras, magia y tragedias marcan su camino.\nUna épica moderna de fantasía lírica.\nUn debut que cautivó a millones.",
+        "en": "Kvothe, a legendary hero, recounts his life,\nfrom childhood to his rise as a wizard.\nAdventure, magic, and tragedy shape his path.\nA lyrical modern fantasy epic,\nthis debut captivated millions."
+      },
+      "image": "/imagenes/libros/el-nombre-del-viento.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 53,
+      "category": "books",
+      "subcategory": "humor",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-339-1475-0",
+      "title": { "es": "La conjura de los necios", "en": "A Confederacy of Dunces" },
+      "author": "John Kennedy Toole",
+      "year": 1980,
+      "description": {
+        "es": "Ignatius J. Reilly, un excéntrico genio,\ncausa caos en Nueva Orleans con sus planes absurdos.\nSu desprecio por la modernidad es hilarante.\nUna comedia brillante sobre la excentricidad.\nUn clásico póstumo de humor irreverente.",
+        "en": "Ignatius J. Reilly, an eccentric genius,\nwreaks havoc in New Orleans with absurd schemes.\nHis disdain for modernity is darkly funny.\nA brilliant comedy of eccentricity,\nthis posthumous classic shines with wit."
+      },
+      "image": "/imagenes/libros/la-conjura-de-los-necios.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 54,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-08-08239-2",
+      "title": { "es": "La sombra del viento", "en": "The Shadow of the Wind" },
+      "author": "Carlos Ruiz Zafón",
+      "year": 2001,
+      "description": {
+        "es": "En la Barcelona de posguerra, Daniel Sempere\ndescubre un libro que lo lleva a un misterio oscuro.\nSecretos literarios y tragedias familiares se entrelazan.\nUna novela gótica moderna llena de intriga.\nUn homenaje al poder de los libros.",
+        "en": "In post-war Barcelona, Daniel Sempere\nuncovers a book that leads to a dark mystery.\nLiterary secrets and family tragedies intertwine.\nA modern gothic novel of intrigue,\nit celebrates the power of stories."
+      },
+      "image": "/imagenes/libros/la-sombra-del-viento.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 55,
+      "category": "books",
+      "subcategory": "fantasy",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-01-49576-2",
+      "title": { "es": "Las crónicas de Narnia", "en": "The Chronicles of Narnia" },
+      "author": "C.S. Lewis",
+      "year": 1950,
+      "description": {
+        "es": "Cuatro hermanos descubren Narnia, un mundo mágico\nlleno de criaturas, aventuras y profecías.\nEl bien y el mal se enfrentan en una saga épica.\nUn clásico infantil con resonancia espiritual.\nUna serie que encanta a todas las edades.",
+        "en": "Four siblings discover Narnia, a magical world\nof creatures, adventures, and prophecies.\nGood and evil clash in an epic saga.\nA beloved children’s classic with spiritual depth,\nit captivates readers of all ages."
+      },
+      "image": "/imagenes/libros/las-cronicas-de-narnia.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 56,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-5212-2",
+      "title": { "es": "Los miserables", "en": "Les Misérables" },
+      "author": "Victor Hugo",
+      "year": 1862,
+      "description": {
+        "es": "Jean Valjean, un exconvicto, busca redención\nen la Francia del siglo XIX llena de injusticias.\nAmor, sacrificio y revolución se entrelazan.\nUna novela épica sobre la humanidad y la justicia.\nUn clásico inmortal de la literatura.",
+        "en": "Jean Valjean, an ex-convict, seeks redemption\nin 19th-century France amid injustice.\nLove, sacrifice, and revolution intertwine.\nAn epic novel of humanity and justice,\nit’s an immortal literary classic."
+      },
+      "image": "/imagenes/libros/los-miserables.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 57,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0496-1",
+      "title": { "es": "Rayuela", "en": "Hopscotch" },
+      "author": "Julio Cortázar",
+      "year": 1963,
+      "description": {
+        "es": "Horacio Oliveira vaga por París y Buenos Aires,\nbuscando sentido en el amor y la existencia.\nSu narrativa no lineal rompe todas las reglas.\nUna obra experimental del boom latinoamericano.\nUn desafío literario que invita al juego.",
+        "en": "Horacio Oliveira wanders Paris and Buenos Aires,\nseeking meaning in love and existence.\nIts non-linear narrative breaks all rules.\nAn experimental Latin American boom novel,\nit invites readers into a literary game."
+      },
+      "image": "/imagenes/libros/rayuela.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 58,
+      "category": "books",
+      "subcategory": "dystopia",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-670-4268-9",
+      "title": { "es": "Un mundo feliz", "en": "Brave New World" },
+      "author": "Aldous Huxley",
+      "year": 1932,
+      "description": {
+        "es": "En un futuro utópico, la humanidad vive en placer controlado,\npero sin libertad ni emociones auténticas.\nLa conformidad choca con el deseo de rebeldía.\nUna distopía visionaria sobre el control social.\nUn clásico que alerta sobre el futuro.",
+        "en": "In a utopian future, humanity lives in controlled bliss,\ndevoid of true freedom or emotions.\nConformity clashes with the urge to rebel.\nA visionary dystopia on social control,\nit warns of a dehumanized future."
+      },
+      "image": "/imagenes/libros/un-mundo-feliz.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 59,
+      "category": "books",
+      "subcategory": "dystopia",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09456-2",
+      "title": { "es": "Fahrenheit 451", "en": "Fahrenheit 451" },
+      "author": "Ray Bradbury",
+      "year": 1953,
+      "description": {
+        "es": "En un mundo donde los libros están prohibidos,\nlos bomberos queman conocimiento para controlar.\nUn hombre despierta a la verdad a través de la rebeldía.\nUna distopía sobre la censura y la libertad.\nUn himno a la importancia de las ideas.",
+        "en": "In a world where books are banned,\nfiremen burn knowledge to enforce control.\nOne man awakens to truth through rebellion.\nA dystopian tale of censorship and freedom,\nit’s a hymn to the power of ideas."
+      },
+      "image": "/imagenes/libros/fahrenheit-451.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 60,
+      "category": "books",
+      "subcategory": "romance",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8196-2",
+      "title": { "es": "Orgullo y prejuicio", "en": "Pride and Prejudice" },
+      "author": "Jane Austen",
+      "year": 1813,
+      "description": {
+        "es": "Elizabeth Bennet y Mr. Darcy navegan el amor,\nel orgullo y los prejuicios sociales.\nEn la Inglaterra del siglo XIX, el ingenio brilla.\nUna novela romántica de ingenio y transformación.\nUn clásico eterno sobre el amor verdadero.",
+        "en": "Elizabeth Bennet and Mr. Darcy navigate love,\npride, and social prejudices in 19th-century England.\nWit and transformation shine through.\nA timeless romantic novel,\nit celebrates love’s triumph over barriers."
+      },
+      "image": "/imagenes/libros/orgullo-y-prejuicio.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 61,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-5213-9",
+      "title": { "es": "Crimen y castigo", "en": "Crime and Punishment" },
+      "author": "Fyodor Dostoevsky",
+      "year": 1866,
+      "description": {
+        "es": "Raskólnikov, un estudiante atormentado,\ncomete un asesinato para probar su superioridad.\nLa culpa y la paranoia lo consumen.\nUna novela psicológica sobre moral y redención.\nUn clásico que explora el alma humana.",
+        "en": "Raskolnikov, a tormented student,\nmurders to prove his superiority, only to unravel.\nGuilt and paranoia consume him.\nA psychological novel of morality and redemption,\nit probes the depths of the human soul."
+      },
+      "image": "/imagenes/libros/crimen-y-castigo.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 62,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-663-0907-3",
+      "title": { "es": "Lolita", "en": "Lolita" },
+      "author": "Vladimir Nabokov",
+      "year": 1955,
+      "description": {
+        "es": "Humbert Humbert, obsesionado con una joven,\nnarra su amor prohibido con un estilo deslumbrante.\nLa moralidad y la belleza chocan en esta obra.\nUna novela controvertida sobre deseo y manipulación.\nUn hito literario por su prosa única.",
+        "en": "Humbert Humbert, obsessed with a young girl,\nnarrates his forbidden love with dazzling prose.\nMorality and beauty collide in this work.\nA controversial novel of desire and manipulation,\nit’s a literary landmark for its style."
+      },
+      "image": "/imagenes/libros/lolita.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 63,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09457-9",
+      "title": { "es": "El Principito", "en": "The Little Prince" },
+      "author": "Antoine de Saint-Exupéry",
+      "year": 1943,
+      "description": {
+        "es": "Un pequeño príncipe viaja por planetas,\nencontrando lecciones sobre amor y vida.\nSu simplicidad esconde verdades profundas.\nUn cuento universal para niños y adultos.\nUn clásico que toca el corazón.",
+        "en": "A little prince travels planets,\nlearning lessons of love and life.\nIts simplicity hides profound truths.\nA universal tale for children and adults,\nthis classic touches the heart."
+      },
+      "image": "/imagenes/libros/el-principito.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 64,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0497-8",
+      "title": { "es": "El proceso", "en": "The Trial" },
+      "author": "Franz Kafka",
+      "year": 1925,
+      "description": {
+        "es": "Josef K. es arrestado sin motivo aparente,\natrapado en un sistema judicial absurdo.\nLa burocracia y el sinsentido lo consumen.\nUna novela existencial sobre la impotencia.\nUn clásico que refleja la ansiedad moderna.",
+        "en": "Josef K. is arrested for no clear reason,\nensnared in an absurd judicial system.\nBureaucracy and meaninglessness overwhelm him.\nAn existential novel of powerlessness,\nit mirrors modern anxiety."
+      },
+      "image": "/imagenes/libros/el-proceso.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 65,
+      "category": "books",
+      "subcategory": "drama",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8197-9",
+      "title": { "es": "Hamlet", "en": "Hamlet" },
+      "author": "William Shakespeare",
+      "year": 1603,
+      "description": {
+        "es": "El príncipe Hamlet busca vengar a su padre,\npero la duda y la locura lo consumen.\nTraición, muerte y dilemas morales dominan.\nUna tragedia icónica sobre la existencia.\nUn pilar de la literatura universal.",
+        "en": "Prince Hamlet seeks to avenge his father,\nbut doubt and madness consume him.\nBetrayal, death, and moral dilemmas reign.\nAn iconic tragedy of existence,\nit’s a cornerstone of world literature."
+      },
+      "image": "/imagenes/libros/hamlet.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 66,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0498-5",
+      "title": { "es": "La Odisea", "en": "The Odyssey" },
+      "author": "Homero",
+      "year": -800,
+      "description": {
+        "es": "Odiseo enfrenta monstruos y dioses\nen su épico regreso a Ítaca tras la guerra de Troya.\nValor, astucia y lealtad definen su viaje.\nUn poema épico que fundó la literatura occidental.\nUna aventura eterna sobre el hogar.",
+        "en": "Odysseus battles monsters and gods\non his epic journey home from Troy.\nCourage, cunning, and loyalty define his quest.\nA foundational epic of Western literature,\nit’s a timeless tale of homecoming."
+      },
+      "image": "/imagenes/libros/la-odisea.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 67,
+      "category": "books",
+      "subcategory": "poetry",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0499-2",
+      "title": { "es": "La divina comedia", "en": "The Divine Comedy" },
+      "author": "Dante Alighieri",
+      "year": 1320,
+      "description": {
+        "es": "Dante viaja por el Infierno, el Purgatorio y el Paraíso,\nguiado por Virgilio y Beatriz en un poema épico.\nEl pecado, la redención y la fe se entrelazan.\nUna obra maestra de la poesía y la teología.\nUn viaje eterno por el alma humana.",
+        "en": "Dante journeys through Hell, Purgatory, and Paradise,\nguided by Virgil and Beatrice in an epic poem.\nSin, redemption, and faith intertwine.\nA masterpiece of poetry and theology,\nit’s an eternal journey through the soul."
+      },
+      "image": "/imagenes/libros/la-divina-comedia.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 68,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0500-5",
+      "title": { "es": "La Ilíada", "en": "The Iliad" },
+      "author": "Homero",
+      "year": -800,
+      "description": {
+        "es": "La guerra de Troya se desata por honor y venganza,\ncon héroes como Aquiles y Héctor en el centro.\nDioses y hombres chocan en un épico conflicto.\nUn poema fundacional de la literatura occidental.\nUna saga de gloria y tragedia.",
+        "en": "The Trojan War rages over honor and vengeance,\nwith heroes like Achilles and Hector at its core.\nGods and men clash in an epic struggle.\nA foundational poem of Western literature,\nit’s a saga of glory and tragedy."
+      },
+      "image": "/imagenes/libros/la-iliada.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 69,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-663-0908-0",
+      "title": { "es": "Pedro Páramo", "en": "Pedro Páramo" },
+      "author": "Juan Rulfo",
+      "year": 1955,
+      "description": {
+        "es": "Juan Preciado llega a Comala buscando a su padre,\npero encuentra un pueblo fantasma lleno de ecos.\nLa vida y la muerte se funden en un relato mágico.\nUna obra clave del realismo mágico mexicano.\nUn clásico breve pero inolvidable.",
+        "en": "Juan Preciado seeks his father in Comala,\nfinding a ghostly town of whispers and memories.\nLife and death blur in a magical tale.\nA key Mexican magical realist work,\nthis short classic is unforgettable."
+      },
+      "image": "/imagenes/libros/pedro-paramo.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 70,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-663-0909-7",
+      "title": { "es": "La casa de los espíritus", "en": "The House of the Spirits" },
+      "author": "Isabel Allende",
+      "year": 1982,
+      "description": {
+        "es": "La saga de la familia Trueba en Chile\nmezcla amor, política y magia a lo largo de generaciones.\nEl destino y el realismo mágico se entrelazan.\nUna novela épica sobre la historia y la familia.\nUn hito de la literatura latinoamericana.",
+        "en": "The Trueba family’s saga in Chile\nblends love, politics, and magic across generations.\nFate and magical realism intertwine.\nAn epic novel of history and family,\nit’s a landmark of Latin American literature."
+      },
+      "image": "/imagenes/libros/la-casa-de-los-espiritus.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 71,
+      "category": "books",
+      "subcategory": "sci-fi",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-450-7671-2",
+      "title": { "es": "Dune", "en": "Dune" },
+      "author": "Frank Herbert",
+      "year": 1965,
+      "description": {
+        "es": "Paul Atreides llega al desierto de Arrakis,\ndonde una especia controla el destino del universo.\nPoder, traición y misticismo se cruzan.\nUna épica de ciencia ficción sobre el destino.\nUn clásico que redefine el género.",
+        "en": "Paul Atreides arrives on the desert planet Arrakis,\nwhere a spice controls the universe’s fate.\nPower, betrayal, and mysticism collide.\nA sci-fi epic of destiny and ambition,\nit redefined the genre."
+      },
+      "image": "/imagenes/libros/dune.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 72,
+      "category": "books",
+      "subcategory": "sci-fi",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-450-7672-9",
+      "title": { "es": "Crónicas marcianas", "en": "The Martian Chronicles" },
+      "author": "Ray Bradbury",
+      "year": 1950,
+      "description": {
+        "es": "La colonización de Marte revela los sueños y errores humanos.\nRelatos entrelazados exploran la ambición y la pérdida.\nLa ciencia ficción se encuentra con la poesía.\nUna obra visionaria sobre la humanidad.\nUn clásico que trasciende el género.",
+        "en": "Mars’ colonization reveals human dreams and flaws.\nInterlinked stories explore ambition and loss.\nSci-fi meets poetic reflection.\nA visionary work on humanity’s reach,\nit transcends the genre."
+      },
+      "image": "/imagenes/libros/cronicas-marcianas.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 73,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8198-6",
+      "title": { "es": "Frankenstein", "en": "Frankenstein" },
+      "author": "Mary Shelley",
+      "year": 1818,
+      "description": {
+        "es": "Victor Frankenstein crea un ser vivo,\npero su criatura lo lleva a la tragedia.\nLa ambición y el rechazo definen esta historia.\nUna novela gótica sobre la ciencia y la humanidad.\nUn clásico que dio origen al terror moderno.",
+        "en": "Victor Frankenstein creates a living being,\nbut his creature leads to tragedy.\nAmbition and rejection shape this tale.\nA gothic novel of science and humanity,\nit birthed modern horror."
+      },
+      "image": "/imagenes/libros/frankenstein.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 74,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8199-3",
+      "title": { "es": "Drácula", "en": "Dracula" },
+      "author": "Bram Stoker",
+      "year": 1897,
+      "description": {
+        "es": "El conde Drácula, un vampiro, siembra terror\nen la Inglaterra victoriana con su sed de sangre.\nEl bien y el mal se enfrentan en un relato gótico.\nUna novela que definió el mito vampírico.\nUn clásico eterno del horror.",
+        "en": "Count Dracula, a vampire, spreads terror\nin Victorian England with his thirst for blood.\nGood and evil clash in a gothic tale.\nA novel that defined the vampire myth,\nit’s an eternal horror classic."
+      },
+      "image": "/imagenes/libros/dracula.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 75,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09458-6",
+      "title": { "es": "El código Da Vinci", "en": "The Da Vinci Code" },
+      "author": "Dan Brown",
+      "year": 2003,
+      "description": {
+        "es": "Robert Langdon descubre un misterio\nvinculado al Santo Grial y códigos ocultos.\nSecretos religiosos y conspiraciones se desvelan.\nUn thriller trepidante que cautivó al mundo.\nUna novela popular pero no unánimemente aclamada.",
+        "en": "Robert Langdon unravels a mystery\ntied to the Holy Grail and hidden codes.\nReligious secrets and conspiracies unfold.\nA fast-paced thriller that gripped millions,\npopular but not universally acclaimed."
+      },
+      "image": "/imagenes/libros/el-codigo-da-vinci.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 76,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0501-2",
+      "title": { "es": "Los crímenes de la calle Morgue", "en": "The Murders in the Rue Morgue" },
+      "author": "Edgar Allan Poe",
+      "year": 1841,
+      "description": {
+        "es": "El detective Dupin resuelve un brutal asesinato\nen París con lógica implacable.\nUn misterio que fundó el género detectivesco.\nUna historia corta pero revolucionaria.\nUn clásico del suspense literario.",
+        "en": "Detective Dupin solves a brutal murder\nin Paris with relentless logic.\nA mystery that birthed the detective genre.\nA short but revolutionary tale,\nit’s a classic of literary suspense."
+      },
+      "image": "/imagenes/libros/los-crimenes-de-la-calle-morgue.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 77,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09459-3",
+      "title": { "es": "El silencio de los corderos", "en": "The Silence of the Lambs" },
+      "author": "Thomas Harris",
+      "year": 1988,
+      "description": {
+        "es": "Clarice Starling persigue a un asesino en serie\ncon la ayuda del perturbador Hannibal Lecter.\nEl suspense psicológico reina en esta novela.\nUn thriller que definió el género moderno.\nUn clásico de terror y crimen.",
+        "en": "Clarice Starling hunts a serial killer\nwith help from the chilling Hannibal Lecter.\nPsychological suspense dominates this novel.\nA thriller that shaped the modern genre,\nit’s a classic of crime and horror."
+      },
+      "image": "/imagenes/libros/el-silencio-de-los-corderos.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 78,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09460-9",
+      "title": { "es": "Diez negritos", "en": "And Then There Were None" },
+      "author": "Agatha Christie",
+      "year": 1939,
+      "description": {
+        "es": "Diez extraños son invitados a una isla,\ndonde un asesino los elimina uno por uno.\nEl suspense y la intriga mantienen al lector en vilo.\nUna obra maestra del misterio clásico.\nUn referente del género policial.",
+        "en": "Ten strangers are lured to an island,\nwhere a killer picks them off one by one.\nSuspense and intrigue grip the reader.\nA masterpiece of classic mystery,\nit’s a cornerstone of the detective genre."
+      },
+      "image": "/imagenes/libros/diez-negritos.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 79,
+      "category": "books",
+      "subcategory": "romance",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8200-6",
+      "title": { "es": "Romeo y Julieta", "en": "Romeo and Juliet" },
+      "author": "William Shakespeare",
+      "year": 1597,
+      "description": {
+        "es": "Romeo y Julieta, amantes enfrentados por familias rivales,\nluchan por su amor en Verona.\nLa tragedia y la pasión definen su destino.\nUna obra icónica sobre el amor imposible.\nUn clásico eterno del drama romántico.",
+        "en": "Romeo and Juliet, star-crossed lovers,\nfight for love amid rival families in Verona.\nTragedy and passion shape their fate.\nAn iconic tale of impossible love,\nit’s a timeless romantic drama."
+      },
+      "image": "/imagenes/libros/romeo-y-julieta.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 80,
+      "category": "books",
+      "subcategory": "drama",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0502-9",
+      "title": { "es": "Bodas de sangre", "en": "Blood Wedding" },
+      "author": "Federico García Lorca",
+      "year": 1933,
+      "description": {
+        "es": "Una boda en la España rural se tiñe de tragedia\ncuando la pasión y el honor chocan.\nLa venganza y el destino dominan esta obra.\nUn drama poético de amor y muerte.\nUn clásico de la literatura española.",
+        "en": "A rural Spanish wedding turns tragic\nwhen passion and honor collide.\nVengeance and fate dominate this play.\nA poetic drama of love and death,\nit’s a Spanish literary classic."
+      },
+      "image": "/imagenes/libros/bodas-de-sangre.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 81,
+      "category": "books",
+      "subcategory": "poetry",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0503-6",
+      "title": { "es": "Veinte poemas de amor y una canción desesperada", "en": "Twenty Love Poems and a Song of Despair" },
+      "author": "Pablo Neruda",
+      "year": 1924,
+      "description": {
+        "es": "Neruda captura el amor y la pérdida\nen poemas llenos de pasión y melancolía.\nLa naturaleza y el deseo se entrelazan.\nUna obra maestra de la poesía amorosa.\nUn hito de la literatura latinoamericana.",
+        "en": "Neruda captures love and loss\nin poems brimming with passion and melancholy.\nNature and desire intertwine.\nA masterpiece of romantic poetry,\nit’s a landmark of Latin American literature."
+      },
+      "image": "/imagenes/libros/veinte-poemas-de-amor.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 82,
+      "category": "books",
+      "subcategory": "poetry",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0504-3",
+      "title": { "es": "Poeta en Nueva York", "en": "Poet in New York" },
+      "author": "Federico García Lorca",
+      "year": 1940,
+      "description": {
+        "es": "Lorca explora Nueva York con versos oscuros,\nreflejando alienación y deshumanización.\nLa ciudad moderna choca con su sensibilidad poética.\nUna obra visionaria de la poesía española.\nUn grito contra la opresión urbana.",
+        "en": "Lorca explores New York with dark verses,\nreflecting alienation and dehumanization.\nThe modern city clashes with his poetic soul.\nA visionary work of Spanish poetry,\nit’s a cry against urban oppression."
+      },
+      "image": "/imagenes/libros/poeta-en-nueva-york.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 83,
+      "category": "books",
+      "subcategory": "poetry",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8201-3",
+      "title": { "es": "El paraíso perdido", "en": "Paradise Lost" },
+      "author": "John Milton",
+      "year": 1667,
+      "description": {
+        "es": "Milton narra la caída de Adán y Eva,\ny la rebelión de Satanás contra Dios.\nUn poema épico sobre el pecado y la redención.\nUna obra maestra de la poesía inglesa.\nUn clásico que explora el bien y el mal.",
+        "en": "Milton recounts Adam and Eve’s fall\nand Satan’s rebellion against God.\nAn epic poem of sin and redemption.\nA masterpiece of English poetry,\nit probes the nature of good and evil."
+      },
+      "image": "/imagenes/libros/el-paraiso-perdido.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 84,
+      "category": "books",
+      "subcategory": "war",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0505-0",
+      "title": { "es": "El arte de la guerra", "en": "The Art of War" },
+      "author": "Sun Tzu",
+      "year": -500,
+      "description": {
+        "es": "Sun Tzu ofrece estrategias para la guerra,\naplicables a la vida y los negocios modernos.\nLa táctica y la filosofía se entrelazan.\nUn tratado antiguo que sigue siendo relevante.\nUn clásico de la sabiduría militar.",
+        "en": "Sun Tzu’s strategies for war\napply to modern life and business.\nTactics and philosophy intertwine.\nAn ancient treatise still relevant today,\nit’s a classic of military wisdom."
+      },
+      "image": "/imagenes/libros/el-arte-de-la-guerra.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 85,
+      "category": "books",
+      "subcategory": "philosophy",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09461-6",
+      "title": { "es": "El mundo de Sofía", "en": "Sophie’s World" },
+      "author": "Jostein Gaarder",
+      "year": 1991,
+      "description": {
+        "es": "Sofía, una joven, descubre la filosofía\na través de cartas misteriosas y preguntas profundas.\nLa historia del pensamiento humano se desvela.\nUna novela educativa que fascina a todas las edades.\nUn viaje por la mente y la curiosidad.",
+        "en": "Sophie, a young girl, discovers philosophy\nthrough mysterious letters and profound questions.\nThe history of human thought unfolds.\nAn educational novel for all ages,\nit’s a journey through the mind."
+      },
+      "image": "/imagenes/libros/el-mundo-de-sofia.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 86,
+      "category": "books",
+      "subcategory": "philosophy",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0506-7",
+      "title": { "es": "El contrato social", "en": "The Social Contract" },
+      "author": "Jean-Jacques Rousseau",
+      "year": 1762,
+      "description": {
+        "es": "Rousseau plantea cómo la libertad y la sociedad\npueden coexistir mediante un contrato colectivo.\nLa soberanía popular es su idea central.\nUn ensayo clave de la filosofía política.\nUn pilar del pensamiento moderno.",
+        "en": "Rousseau explores how freedom and society\ncoexist through a collective contract.\nPopular sovereignty is its core idea.\nA key essay in political philosophy,\nit’s a pillar of modern thought."
+      },
+      "image": "/imagenes/libros/el-contrato-social.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 87,
+      "category": "books",
+      "subcategory": "philosophy",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0507-4",
+      "title": { "es": "El príncipe", "en": "The Prince" },
+      "author": "Niccolò Machiavelli",
+      "year": 1532,
+      "description": {
+        "es": "Machiavelli ofrece un tratado sobre el poder,\nconsejos cínicos para gobernantes ambiciosos.\nLa política y la moral se enfrentan sin rodeos.\nUn ensayo que revolucionó el pensamiento político.\nUn clásico sobre la ambición y el liderazgo.",
+        "en": "Machiavelli’s treatise on power\noffers cynical advice for ambitious rulers.\nPolitics and morality clash head-on.\nAn essay that revolutionized political thought,\nit’s a classic on ambition and leadership."
+      },
+      "image": "/imagenes/libros/el-principe.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 88,
+      "category": "books",
+      "subcategory": "science",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09462-3",
+      "title": { "es": "Breve historia del tiempo", "en": "A Brief History of Time" },
+      "author": "Stephen Hawking",
+      "year": 1988,
+      "description": {
+        "es": "Hawking explica el universo, desde el Big Bang\nhasta los agujeros negros, con claridad.\nLa ciencia se hace accesible a todos.\nUn libro que cambió la divulgación científica.\nUn clásico moderno sobre el cosmos.",
+        "en": "Hawking explains the universe, from the Big Bang\nto black holes, with remarkable clarity.\nScience becomes accessible to all.\nA book that transformed scientific outreach,\nit’s a modern classic on the cosmos."
+      },
+      "image": "/imagenes/libros/breve-historia-del-tiempo.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 89,
+      "category": "books",
+      "subcategory": "history",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09463-0",
+      "title": { "es": "Sapiens: De animales a dioses", "en": "Sapiens: A Brief History of Humankind" },
+      "author": "Yuval Noah Harari",
+      "year": 2011,
+      "description": {
+        "es": "Harari traza la historia de la humanidad,\ndesde la evolución hasta la modernidad.\nCultura, ciencia y poder definen nuestro camino.\nUn ensayo revelador sobre quiénes somos.\nUn éxito moderno de la no ficción.",
+        "en": "Harari charts humanity’s journey,\nfrom evolution to the modern era.\nCulture, science, and power shape our path.\nA revealing essay on who we are,\nit’s a modern non-fiction triumph."
+      },
+      "image": "/imagenes/libros/sapiens.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 90,
+      "category": "books",
+      "subcategory": "fantasy",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09464-7",
+      "title": { "es": "Momo", "en": "Momo" },
+      "author": "Michael Ende",
+      "year": 1973,
+      "description": {
+        "es": "Momo, una niña, lucha contra los ladrones del tiempo\nque roban la vida de las personas.\nLa simplicidad y la amistad son sus armas.\nUna fábula sobre el valor del tiempo.\nUn clásico infantil con profundidad universal.",
+        "en": "Momo, a young girl, battles time thieves\nwho steal people’s lives.\nSimplicity and friendship are her weapons.\nA fable on the value of time,\nit’s a children’s classic with universal depth."
+      },
+      "image": "/imagenes/libros/momo.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 91,
+      "category": "books",
+      "subcategory": "dystopia",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-08-09465-4",
+      "title": { "es": "Los juegos del hambre", "en": "The Hunger Games" },
+      "author": "Suzanne Collins",
+      "year": 2008,
+      "description": {
+        "es": "Katniss Everdeen compite en un juego mortal\ncontrolado por un gobierno opresivo.\nLa supervivencia y la rebeldía la definen.\nUna distopía moderna sobre poder y resistencia.\nUn fenómeno que marcó una generación.",
+        "en": "Katniss Everdeen fights in a deadly game\nrun by an oppressive regime.\nSurvival and rebellion define her.\nA modern dystopia of power and resistance,\nit captivated a generation."
+      },
+      "image": "/imagenes/libros/los-juegos-del-hambre.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 92,
+      "category": "books",
+      "subcategory": "war",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8202-0",
+      "title": { "es": "Por quién doblan las campanas", "en": "For Whom the Bell Tolls" },
+      "author": "Ernest Hemingway",
+      "year": 1940,
+      "description": {
+        "es": "Robert Jordan, en la Guerra Civil Española,\nplanea volar un puente crucial para la resistencia.\nAmor y sacrificio se cruzan con la guerra.\nUna novela intensa sobre lealtad y pérdida.\nUn clásico de la literatura bélica.",
+        "en": "Robert Jordan, in the Spanish Civil War,\nplans to destroy a key bridge for the resistance.\nLove and sacrifice intertwine with war.\nAn intense novel of loyalty and loss,\nit’s a classic of war literature."
+      },
+      "image": "/imagenes/libros/por-quien-doblan-las-campanas.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 93,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8203-7",
+      "title": { "es": "Las aventuras de Huckleberry Finn", "en": "Adventures of Huckleberry Finn" },
+      "author": "Mark Twain",
+      "year": 1884,
+      "description": {
+        "es": "Huck Finn huye con Jim, un esclavo,\npor el río Misisipi en busca de libertad.\nAventuras y dilemas morales marcan su viaje.\nUna novela sobre amistad y justicia.\nUn clásico americano inolvidable.",
+        "en": "Huck Finn flees with Jim, a slave,\ndown the Mississippi River seeking freedom.\nAdventure and moral dilemmas shape their journey.\nA novel of friendship and justice,\nit’s an unforgettable American classic."
+      },
+      "image": "/imagenes/libros/las-aventuras-de-huckleberry-finn.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 94,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0508-1",
+      "title": { "es": "Los viajes de Gulliver", "en": "Gulliver’s Travels" },
+      "author": "Jonathan Swift",
+      "year": 1726,
+      "description": {
+        "es": "Gulliver explora tierras extrañas,\ndesde Liliput hasta los gigantes de Brobdingnag.\nLa sátira critica la sociedad y la naturaleza humana.\nUna aventura fantástica con humor mordaz.\nUn clásico de la literatura satírica.",
+        "en": "Gulliver explores strange lands,\nfrom Lilliput to the giants of Brobdingnag.\nSatire critiques society and human nature.\nA fantastical adventure with biting humor,\nit’s a classic of satirical literature."
+      },
+      "image": "/imagenes/libros/los-viajes-de-gulliver.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 95,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8204-4",
+      "title": { "es": "Viaje al centro de la Tierra", "en": "Journey to the Center of the Earth" },
+      "author": "Jules Verne",
+      "year": 1864,
+      "description": {
+        "es": "Un profesor y su sobrino exploran el interior de la Tierra,\nencontrando maravillas y peligros.\nLa ciencia y la aventura se fusionan.\nUna novela visionaria de exploración.\nUn clásico de la ciencia ficción temprana.",
+        "en": "A professor and his nephew explore Earth’s core,\nfinding wonders and dangers.\nScience and adventure merge seamlessly.\nA visionary novel of exploration,\nit’s a classic of early sci-fi."
+      },
+      "image": "/imagenes/libros/viaje-al-centro-de-la-tierra.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 96,
+      "category": "books",
+      "subcategory": "self-help",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09466-1",
+      "title": { "es": "El alquimista", "en": "The Alchemist" },
+      "author": "Paulo Coelho",
+      "year": 1988,
+      "description": {
+        "es": "Santiago, un pastor andaluz, sigue su sueño\nhacia un tesoro en las pirámides de Egipto.\nLa aventura le enseña a escuchar su corazón.\nUna fábula espiritual sobre el destino.\nUn éxito global de autoayuda literaria.",
+        "en": "Santiago, an Andalusian shepherd, follows a dream\nto a treasure at Egypt’s pyramids.\nAdventure teaches him to heed his heart.\nA spiritual fable on destiny,\nit’s a global literary self-help success."
+      },
+      "image": "/imagenes/libros/el-alquimista.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 97,
+      "category": "books",
+      "subcategory": "fantasy",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-01-33421-4",
+      "title": { "es": "Canción de hielo y fuego", "en": "A Song of Ice and Fire" },
+      "author": "George R.R. Martin",
+      "year": 1996,
+      "description": {
+        "es": "En Poniente, las familias nobles luchan por el Trono de Hierro,\nmientras un antiguo mal despierta en el norte.\nIntrigas, batallas y dragones llenan esta épica.\nUna saga de fantasía moderna que redefine el género.\nUn fenómeno global de poder y traición.",
+        "en": "In Westeros, noble families vie for the Iron Throne,\nas an ancient evil stirs in the north.\nIntrigue, battles, and dragons fuel this epic.\nA modern fantasy saga redefining the genre,\nit’s a global phenomenon of power and betrayal."
+      },
+      "image": "/imagenes/libros/cancion-de-hielo-y-fuego.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 98,
+      "category": "books",
+      "subcategory": "essay",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0509-8",
+      "title": { "es": "Manifiesto comunista", "en": "The Communist Manifesto" },
+      "author": "Karl Marx, Friedrich Engels",
+      "year": 1848,
+      "description": {
+        "es": "Marx y Engels llaman a la revolución proletaria,\ndenunciando la explotación del capitalismo.\nLa lucha de clases es el motor de la historia.\nUn texto político que marcó el siglo XIX.\nUn ensayo influyente y controvertido.",
+        "en": "Marx and Engels call for a proletarian revolution,\ndenouncing the exploitation of capitalism.\nClass struggle drives history’s course.\nA political text that shaped the 19th century,\nit remains influential and controversial."
+      },
+      "image": "/imagenes/libros/manifiesto-comunista.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 99,
+      "category": "books",
+      "subcategory": "essay",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0510-4",
+      "title": { "es": "El capital", "en": "Capital" },
+      "author": "Karl Marx",
+      "year": 1867,
+      "description": {
+        "es": "Marx analiza el sistema capitalista,\nexponiendo sus contradicciones y desigualdades.\nEl trabajo y el capital chocan en esta obra.\nUn tratado económico y social revolucionario.\nUn pilar del pensamiento político moderno.",
+        "en": "Marx dissects capitalism,\nexposing its contradictions and inequalities.\nLabor and capital clash in this work.\nA revolutionary economic and social treatise,\nit’s a cornerstone of modern political thought."
+      },
+      "image": "/imagenes/libros/el-capital.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 100,
+      "category": "books",
+      "subcategory": "philosophy",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0511-1",
+      "title": { "es": "El ser y la nada", "en": "Being and Nothingness" },
+      "author": "Jean-Paul Sartre",
+      "year": 1943,
+      "description": {
+        "es": "Sartre explora la existencia humana y la libertad,\na través de la filosofía existencialista.\nLa conciencia y la nada definen nuestra realidad.\nUn tratado denso pero revolucionario.\nUn hito del pensamiento del siglo XX.",
+        "en": "Sartre probes human existence and freedom\nthrough existentialist philosophy.\nConsciousness and nothingness shape reality.\nA dense but revolutionary treatise,\nit’s a landmark of 20th-century thought."
+      },
+      "image": "/imagenes/libros/el-ser-y-la-nada.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 101,
+      "category": "books",
+      "subcategory": "philosophy",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0512-8",
+      "title": { "es": "El hombre rebelde", "en": "The Rebel" },
+      "author": "Albert Camus",
+      "year": 1951,
+      "description": {
+        "es": "Camus analiza la rebeldía humana\nfrente a la opresión y el absurdo de la vida.\nLa libertad y la justicia guían su reflexión.\nUn ensayo filosófico sobre la resistencia.\nUn texto clave del existencialismo.",
+        "en": "Camus examines human rebellion\nagainst oppression and life’s absurdity.\nFreedom and justice guide his reflection.\nA philosophical essay on resistance,\nit’s a key existentialist text."
+      },
+      "image": "/imagenes/libros/el-hombre-rebelde.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 102,
+      "category": "books",
+      "subcategory": "philosophy",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0513-5",
+      "title": { "es": "El mito de Sísifo", "en": "The Myth of Sisyphus" },
+      "author": "Albert Camus",
+      "year": 1942,
+      "description": {
+        "es": "Camus reflexiona sobre el absurdo de la vida,\nusando a Sísifo como metáfora de la existencia.\nLa búsqueda de sentido choca con la nada.\nUn ensayo filosófico que desafía al lector.\nUn pilar del pensamiento existencialista.",
+        "en": "Camus reflects on life’s absurdity,\nusing Sisyphus as a metaphor for existence.\nThe search for meaning meets nothingness.\nA philosophical essay that challenges readers,\nit’s a cornerstone of existentialist thought."
+      },
+      "image": "/imagenes/libros/el-mito-de-sisifo.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 103,
+      "category": "books",
+      "subcategory": "poetry",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0514-2",
+      "title": { "es": "La Eneida", "en": "The Aeneid" },
+      "author": "Virgilio",
+      "year": -19,
+      "description": {
+        "es": "Eneas, un héroe troyano, funda el destino de Roma\ntras un viaje épico lleno de dioses y batallas.\nAmor y deber chocan en este poema clásico.\nUna obra fundacional de la literatura latina.\nUn canto a la gloria y el sacrificio.",
+        "en": "Aeneas, a Trojan hero, shapes Rome’s destiny\nthrough an epic journey of gods and battles.\nLove and duty clash in this classic poem.\nA foundational work of Latin literature,\nit sings of glory and sacrifice."
+      },
+      "image": "/imagenes/libros/la-eneida.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 104,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0515-9",
+      "title": { "es": "Las Mil y Una Noches", "en": "One Thousand and One Nights" },
+      "author": "Anónimo",
+      "year": 1704,
+      "description": {
+        "es": "Sherezade narra cuentos para salvar su vida,\ntejiendo historias de aventura, magia y amor.\nOriente y sus mitos cobran vida en cada relato.\nUna colección clásica de la literatura árabe.\nUn tesoro narrativo universal.",
+        "en": "Scheherazade tells tales to save her life,\nweaving stories of adventure, magic, and love.\nThe East and its myths come alive.\nA classic collection of Arabic literature,\nit’s a universal narrative treasure."
+      },
+      "image": "/imagenes/libros/las-mil-y-una-noches.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 105,
+      "category": "books",
+      "subcategory": "drama",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8205-1",
+      "title": { "es": "Otelo", "en": "Othello" },
+      "author": "William Shakespeare",
+      "year": 1604,
+      "description": {
+        "es": "Otelo, un general moro, es consumido por los celos,\nmanipulado por el astuto Yago en Venecia.\nLa tragedia del amor y la traición se desata.\nUna obra maestra sobre la envidia y el destino.\nUn pilar del drama shakesperiano.",
+        "en": "Othello, a Moorish general, is consumed by jealousy,\nmanipulated by the cunning Iago in Venice.\nA tragedy of love and betrayal unfolds.\nA masterpiece of envy and fate,\nit’s a cornerstone of Shakespearean drama."
+      },
+      "image": "/imagenes/libros/otelo.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 106,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8206-8",
+      "title": { "es": "Rojo y negro", "en": "The Red and the Black" },
+      "author": "Stendhal",
+      "year": 1830,
+      "description": {
+        "es": "Julien Sorel, un joven ambicioso, navega\namor y poder en la Francia post-napoleónica.\nLa hipocresía social y la pasión lo guían.\nUna novela realista sobre la lucha de clases.\nUn clásico de la literatura francesa.",
+        "en": "Julien Sorel, an ambitious youth, navigates\nlove and power in post-Napoleonic France.\nSocial hypocrisy and passion drive him.\nA realist novel of class struggle,\nit’s a French literary classic."
+      },
+      "image": "/imagenes/libros/rojo-y-negro.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 107,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8207-5",
+      "title": { "es": "Veinte mil leguas de viaje submarino", "en": "Twenty Thousand Leagues Under the Sea" },
+      "author": "Jules Verne",
+      "year": 1870,
+      "description": {
+        "es": "El capitán Nemo explora los océanos\nen su submarino Nautilus con un equipo variopinto.\nMaravillas y peligros submarinos llenan su viaje.\nUna novela de aventura y ciencia ficción temprana.\nUn clásico que inspira exploración.",
+        "en": "Captain Nemo explores the oceans\nin his submarine Nautilus with a motley crew.\nUndersea wonders and dangers abound.\nAn early sci-fi and adventure novel,\nit inspires exploration and wonder."
+      },
+      "image": "/imagenes/libros/veinte-mil-leguas-de-viaje-submarino.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 108,
+      "category": "books",
+      "subcategory": "sci-fi",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-450-7673-6",
+      "title": { "es": "La guerra de los mundos", "en": "The War of the Worlds" },
+      "author": "H.G. Wells",
+      "year": 1898,
+      "description": {
+        "es": "Marcianos invaden la Tierra con tecnología letal,\ndesatando pánico en la humanidad.\nLa supervivencia y el miedo dominan esta historia.\nUna obra pionera de la ciencia ficción.\nUn clásico sobre la fragilidad humana.",
+        "en": "Martians invade Earth with deadly technology,\nunleashing panic across humanity.\nSurvival and fear drive this story.\nA pioneering sci-fi novel,\nit’s a classic on human fragility."
+      },
+      "image": "/imagenes/libros/la-guerra-de-los-mundos.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 109,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09467-8",
+      "title": { "es": "El nombre de la rosa", "en": "The Name of the Rose" },
+      "author": "Umberto Eco",
+      "year": 1980,
+      "description": {
+        "es": "En una abadía medieval, un monje investiga asesinatos\nmientras explora el poder del conocimiento.\nMisterio, teología y simbolismo se entrelazan.\nUna novela histórica y detectivesca brillante.\nUn clásico moderno de intriga intelectual.",
+        "en": "In a medieval abbey, a monk probes murders\nwhile exploring the power of knowledge.\nMystery, theology, and symbolism intertwine.\nA brilliant historical and detective novel,\nit’s a modern classic of intellectual intrigue."
+      },
+      "image": "/imagenes/libros/el-nombre-de-la-rosa.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 110,
+      "category": "books",
+      "subcategory": "romance",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-663-0910-3",
+      "title": { "es": "El amor en los tiempos del cólera", "en": "Love in the Time of Cholera" },
+      "author": "Gabriel García Márquez",
+      "year": 1985,
+      "description": {
+        "es": "Florentino Ariza espera décadas por Fermina Daza,\nen un relato épico de amor y tiempo.\nLa pasión persiste frente a la adversidad.\nUna novela de realismo mágico sobre el corazón.\nUn clásico de la literatura latinoamericana.",
+        "en": "Florentino Ariza waits decades for Fermina Daza\nin an epic tale of love and time.\nPassion endures against all odds.\nA magical realist novel of the heart,\nit’s a Latin American literary classic."
+      },
+      "image": "/imagenes/libros/el-amor-en-los-tiempos-del-colera.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 111,
+      "category": "books",
+      "subcategory": "sci-fi",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-450-7674-3",
+      "title": { "es": "Yo, robot", "en": "I, Robot" },
+      "author": "Isaac Asimov",
+      "year": 1950,
+      "description": {
+        "es": "Relatos sobre robots que exploran la ética\ny las leyes de la robótica en un futuro tecnológico.\nLos humanos y las máquinas enfrentan dilemas morales.\nUna obra fundacional de la ciencia ficción.\nUn clásico que anticipa la inteligencia artificial.",
+        "en": "Stories of robots exploring ethics\nand the laws of robotics in a futuristic world.\nHumans and machines face moral dilemmas.\nA foundational sci-fi work,\nit foreshadows artificial intelligence."
+      },
+      "image": "/imagenes/libros/yo-robot.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 112,
+      "category": "books",
+      "subcategory": "sci-fi",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-450-7675-0",
+      "title": { "es": "¿Sueñan los androides con ovejas eléctricas?", "en": "Do Androids Dream of Electric Sheep?" },
+      "author": "Philip K. Dick",
+      "year": 1968,
+      "description": {
+        "es": "Rick Deckard caza androides en un mundo postapocalíptico,\ncuestionando qué significa ser humano.\nLa empatía y la identidad son temas centrales.\nUna novela de ciencia ficción filosófica.\nInspiró la icónica película *Blade Runner*.",
+        "en": "Rick Deckard hunts androids in a post-apocalyptic world,\nquestioning what it means to be human.\nEmpathy and identity drive the narrative.\nA philosophical sci-fi novel,\nit inspired the iconic film *Blade Runner*."
+      },
+      "image": "/imagenes/libros/suenan-los-androides.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 113,
+      "category": "books",
+      "subcategory": "sci-fi",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-08-09468-5",
+      "title": { "es": "El juego de Ender", "en": "Ender’s Game" },
+      "author": "Orson Scott Card",
+      "year": 1985,
+      "description": {
+        "es": "Ender Wiggin, un niño prodigio, entrena\npara liderar contra una invasión alienígena.\nEstrategia y sacrificio definen su destino.\nUna novela de ciencia ficción sobre la guerra.\nUn clásico moderno de liderazgo y moral.",
+        "en": "Ender Wiggin, a child prodigy, trains\nto lead against an alien invasion.\nStrategy and sacrifice shape his fate.\nA sci-fi novel of war and morality,\nit’s a modern classic of leadership."
+      },
+      "image": "/imagenes/libros/el-juego-de-ender.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 114,
+      "category": "books",
+      "subcategory": "science",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09469-2",
+      "title": { "es": "La teoría del todo", "en": "The Theory of Everything" },
+      "author": "Stephen Hawking",
+      "year": 2002,
+      "description": {
+        "es": "Hawking explora los orígenes del universo,\ndesde el Big Bang hasta la física moderna.\nConceptos complejos se presentan con claridad.\nUn libro que acerca la ciencia al público.\nUn hito de la divulgación científica.",
+        "en": "Hawking explores the universe’s origins,\nfrom the Big Bang to modern physics.\nComplex concepts are presented clearly.\nA book that brings science to the masses,\nit’s a landmark in scientific outreach."
+      },
+      "image": "/imagenes/libros/la-teoria-del-todo.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 115,
+      "category": "books",
+      "subcategory": "humor",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0516-6",
+      "title": { "es": "Tristram Shandy", "en": "The Life and Opinions of Tristram Shandy, Gentleman" },
+      "author": "Laurence Sterne",
+      "year": 1759,
+      "description": {
+        "es": "Tristram intenta contar su vida, pero divaga\nen un relato caótico lleno de humor y digresiones.\nLa narrativa rompe con las convenciones.\nUna obra experimental y satírica.\nUn clásico innovador de la literatura inglesa.",
+        "en": "Tristram tries to tell his life story,\nbut digresses in a chaotic, humorous narrative.\nThe story breaks all conventions.\nAn experimental and satirical work,\nit’s an innovative English classic."
+      },
+      "image": "/imagenes/libros/tristram-shandy.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 116,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8208-2",
+      "title": { "es": "Robinson Crusoe", "en": "Robinson Crusoe" },
+      "author": "Daniel Defoe",
+      "year": 1719,
+      "description": {
+        "es": "Robinson Crusoe, náufrago en una isla desierta,\nlucha por sobrevivir con ingenio y fe.\nLa soledad y la naturaleza desafían su espíritu.\nUna novela pionera de aventura y supervivencia.\nUn clásico que inspiró el género.",
+        "en": "Robinson Crusoe, shipwrecked on a desert island,\nfights to survive with wit and faith.\nSolitude and nature test his spirit.\nA pioneering novel of adventure and survival,\nit inspired the genre."
+      },
+      "image": "/imagenes/libros/robinson-crusoe.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 117,
+      "category": "books",
+      "subcategory": "humor",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0517-3",
+      "title": { "es": "Cándido", "en": "Candide" },
+      "author": "Voltaire",
+      "year": 1759,
+      "description": {
+        "es": "Cándido, un joven optimista, enfrenta desastres\nque desafían su fe en un mundo perfecto.\nLa sátira critica la filosofía y la sociedad.\nUna obra mordaz y divertida del Siglo de las Luces.\nUn clásico de humor filosófico.",
+        "en": "Candide, a young optimist, faces disasters\nthat challenge his belief in a perfect world.\nSatire critiques philosophy and society.\nA biting, witty Enlightenment work,\nit’s a classic of philosophical humor."
+      },
+      "image": "/imagenes/libros/candido.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 118,
+      "category": "books",
+      "subcategory": "essay",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0518-0",
+      "title": { "es": "Cartas filosóficas", "en": "Philosophical Letters" },
+      "author": "Voltaire",
+      "year": 1734,
+      "description": {
+        "es": "Voltaire critica la religión y la sociedad francesa\na través de cartas que alaban la libertad inglesa.\nLa tolerancia y la razón son sus temas clave.\nUn ensayo que marcó el Siglo de las Luces.\nUn texto provocador y visionario.",
+        "en": "Voltaire critiques French religion and society\nthrough letters praising English freedom.\nTolerance and reason are central themes.\nAn essay that shaped the Enlightenment,\nit’s a provocative and visionary work."
+      },
+      "image": "/imagenes/libros/cartas-filosoficas.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 119,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09470-8",
+      "title": { "es": "Memorias de una geisha", "en": "Memoirs of a Geisha" },
+      "author": "Arthur Golden",
+      "year": 1997,
+      "description": {
+        "es": "Chiyo, una joven japonesa, se convierte en geisha,\nnavegando amor y sacrificio en un mundo exótico.\nLa tradición y el deseo chocan en su vida.\nUna novela histórica rica en detalles culturales.\nUn éxito moderno de narrativa inmersiva.",
+        "en": "Chiyo, a young Japanese girl, becomes a geisha,\nnavigating love and sacrifice in an exotic world.\nTradition and desire clash in her life.\nA historical novel rich in cultural detail,\nit’s a modern immersive storytelling success."
+      },
+      "image": "/imagenes/libros/memorias-de-una-geisha.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 120,
+      "category": "books",
+      "subcategory": "philosophy",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0519-7",
+      "title": { "es": "Tao Te Ching", "en": "Tao Te Ching" },
+      "author": "Lao-Tsé",
+      "year": -400,
+      "description": {
+        "es": "Lao-Tsé ofrece sabiduría sobre la armonía\ny el equilibrio en la vida a través del Tao.\nLa simplicidad y la naturaleza guían su filosofía.\nUn texto fundamental del taoísmo.\nUn clásico eterno de la espiritualidad.",
+        "en": "Lao-Tzu offers wisdom on harmony\nand balance in life through the Tao.\nSimplicity and nature guide its philosophy.\nA foundational Taoist text,\nit’s a timeless spiritual classic."
+      },
+      "image": "/imagenes/libros/tao-te-ching.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 121,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-206-8209-9",
+      "title": { "es": "Las aventuras de Sherlock Holmes", "en": "The Adventures of Sherlock Holmes" },
+      "author": "Arthur Conan Doyle",
+      "year": 1892,
+      "description": {
+        "es": "Sherlock Holmes resuelve misterios con lógica,\nal lado de su fiel amigo Watson.\nObservación y deducción brillan en cada caso.\nUn clásico que definió el género detectivesco.\nUna colección icónica de relatos.",
+        "en": "Sherlock Holmes solves mysteries with logic,\nalongside his loyal friend Watson.\nObservation and deduction shine in each case.\nA classic that defined the detective genre,\nit’s an iconic collection of stories."
+      },
+      "image": "/imagenes/libros/las-aventuras-de-sherlock-holmes.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 122,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09471-5",
+      "title": { "es": "El club Dumas", "en": "The Club Dumas" },
+      "author": "Arturo Pérez-Reverte",
+      "year": 1993,
+      "description": {
+        "es": "Lucas Corso, un cazador de libros, busca un texto oculto\nque desata un misterio literario y esotérico.\nIntrigas y secretos envuelven su búsqueda.\nUn thriller culto sobre el poder de los libros.\nUna obra moderna de suspense intelectual.",
+        "en": "Lucas Corso, a book hunter, seeks a hidden text,\nunleashing a literary and esoteric mystery.\nIntrigue and secrets surround his quest.\nA cultured thriller on the power of books,\nit’s a modern intellectual suspense work."
+      },
+      "image": "/imagenes/libros/el-club-dumas.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 123,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-204-0223-9",
+      "title": { "es": "El capitán Alatriste", "en": "Captain Alatriste" },
+      "author": "Arturo Pérez-Reverte",
+      "year": 1996,
+      "description": {
+        "es": "Diego Alatriste, un espadachín en la España del siglo XVII,\nvive aventuras entre duelos y conspiraciones.\nEl honor y la lealtad guían sus acciones.\nUna saga histórica llena de acción.\nUn clásico moderno de la novela de capa y espada.",
+        "en": "Diego Alatriste, a swordsman in 17th-century Spain,\nlives adventures amid duels and conspiracies.\nHonor and loyalty guide his actions.\nA historical saga full of action,\nit’s a modern swashbuckling classic."
+      },
+      "image": "/imagenes/libros/el-capitan-alatriste.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 124,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-204-0224-6",
+      "title": { "es": "Limpieza de sangre", "en": "Purity of Blood" },
+      "author": "Arturo Pérez-Reverte",
+      "year": 1997,
+      "description": {
+        "es": "Alatriste enfrenta intrigas en Madrid,\ndonde la pureza de sangre define el poder.\nLa Inquisición y el honor chocan en su camino.\nUna continuación vibrante de la saga.\nUna novela histórica llena de tensión.",
+        "en": "Alatriste faces intrigue in Madrid,\nwhere blood purity defines power.\nThe Inquisition and honor clash on his path.\nA vibrant continuation of the saga,\nit’s a tense historical novel."
+      },
+      "image": "/imagenes/libros/limpieza-de-sangre.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 125,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-204-0225-3",
+      "title": { "es": "El sol de Breda", "en": "The Sun Over Breda" },
+      "author": "Arturo Pérez-Reverte",
+      "year": 1998,
+      "description": {
+        "es": "Alatriste lucha en la guerra de Flandes,\nenfrentando batallas y dilemas morales.\nLa camaradería y el sacrificio marcan su destino.\nUna novela histórica de la saga Alatriste.\nUn relato épico de guerra y honor.",
+        "en": "Alatriste fights in the Flanders war,\nfacing battles and moral dilemmas.\nCamaraderie and sacrifice shape his fate.\nA historical novel in the Alatriste saga,\nit’s an epic tale of war and honor."
+      },
+      "image": "/imagenes/libros/el-sol-de-breda.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 126,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-204-0226-0",
+      "title": { "es": "El oro del rey", "en": "The King’s Gold" },
+      "author": "Arturo Pérez-Reverte",
+      "year": 2000,
+      "description": {
+        "es": "Alatriste emprende una misión para recuperar oro,\nenfrentando traiciones y peligros en alta mar.\nLa lealtad y el coraje son puestos a prueba.\nUna entrega emocionante de la saga.\nUna aventura histórica llena de acción.",
+        "en": "Alatriste embarks on a mission to recover gold,\nfacing betrayals and dangers at sea.\nLoyalty and courage are tested.\nAn exciting Alatriste saga installment,\nit’s a historical adventure full of action."
+      },
+      "image": "/imagenes/libros/el-oro-del-rey.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 127,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-204-0227-7",
+      "title": { "es": "El caballero del jubón amarillo", "en": "The Man in the Yellow Doublet" },
+      "author": "Arturo Pérez-Reverte",
+      "year": 2003,
+      "description": {
+        "es": "Alatriste se ve envuelto en intrigas cortesanas,\ndonde el amor y el peligro se entrelazan.\nUn misterioso caballero amenaza su vida.\nUna novela de la saga llena de suspense.\nUn retrato vibrante de la España barroca.",
+        "en": "Alatriste navigates courtly intrigues,\nwhere love and danger intertwine.\nA mysterious knight threatens his life.\nA suspenseful Alatriste saga novel,\nit vividly portrays Baroque Spain."
+      },
+      "image": "/imagenes/libros/el-caballero-del-jubon-amarillo.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 128,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-204-0228-4",
+      "title": { "es": "Corsarios de Levante", "en": "Pirates of the Levant" },
+      "author": "Arturo Pérez-Reverte",
+      "year": 2006,
+      "description": {
+        "es": "Alatriste navega con corsarios en el Mediterráneo,\nenfrentando batallas navales y traiciones.\nLa aventura y el honor definen su viaje.\nUna entrega vibrante de la saga Alatriste.\nUna novela histórica de acción marítima.",
+        "en": "Alatriste sails with pirates in the Mediterranean,\nfacing naval battles and betrayals.\nAdventure and honor define his journey.\nA vibrant Alatriste saga installment,\nit’s a historical novel of maritime action."
+      },
+      "image": "/imagenes/libros/corsarios-de-levante.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 129,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "true",
+      "isbn": "978-84-204-0229-1",
+      "title": { "es": "El puente de los asesinos", "en": "The Bridge of Assassins" },
+      "author": "Arturo Pérez-Reverte",
+      "year": 2011,
+      "description": {
+        "es": "Alatriste viaja a Venecia en una misión secreta,\nenfrentando conspiraciones y asesinos.\nEl peligro acecha en cada esquina.\nUna novela de intriga en la saga Alatriste.\nUn relato histórico lleno de suspense.",
+        "en": "Alatriste travels to Venice on a secret mission,\nfacing conspiracies and assassins.\nDanger lurks around every corner.\nAn intriguing Alatriste saga novel,\nit’s a historical tale full of suspense."
+      },
+      "image": "/imagenes/libros/el-puente-de-los-asesinos.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 130,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09472-2",
+      "title": { "es": "La tabla de Flandes", "en": "The Flanders Panel" },
+      "author": "Arturo Pérez-Reverte",
+      "year": 1990,
+      "description": {
+        "es": "Una restauradora descubre un misterio oculto\nen un cuadro flamenco del siglo XV.\nAjedrez, arte y asesinatos se entrelazan.\nUn thriller intelectual lleno de intriga.\nUna novela moderna de suspense artístico.",
+        "en": "A restorer uncovers a mystery hidden\nin a 15th-century Flemish painting.\nChess, art, and murder intertwine.\nAn intellectual thriller full of intrigue,\nit’s a modern artistic suspense novel."
+      },
+      "image": "/imagenes/libros/la-tabla-de-flandes.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 131,
+      "category": "books",
+      "subcategory": "biography",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-08-09473-9",
+      "title": { "es": "El diario de Ana Frank", "en": "The Diary of Anne Frank" },
+      "author": "Anne Frank",
+      "year": 1947,
+      "description": {
+        "es": "Ana Frank relata su vida escondida\ndurante la ocupación nazi en Ámsterdam.\nSus reflexiones revelan esperanza y miedo.\nUn testimonio conmovedor del Hol Hotels.com.\nUn clásico de la literatura autobiográfica.",
+        "en": "Anne Frank recounts her life in hiding\nduring the Nazi occupation of Amsterdam.\nHer reflections reveal hope and fear.\nA poignant Holocaust testimony,\nit’s a classic of autobiographical literature."
+      },
+      "image": "/imagenes/libros/el-diario-de-ana-frank.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 132,
+      "category": "books",
+      "subcategory": "romance",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0520-3",
+      "title": { "es": "Noches blancas", "en": "White Nights" },
+      "author": "Fyodor Dostoevsky",
+      "year": 1848,
+      "description": {
+        "es": "Un soñador solitario conoce a una joven\nen las noches blancas de San Petersburgo.\nEl amor y la melancolía se entrelazan.\nUna novela breve sobre el deseo y la ilusión.\nUn clásico romántico de Dostoevsky.",
+        "en": "A lonely dreamer meets a young woman\nduring the white nights of St. Petersburg.\nLove and melancholy intertwine.\nA short novel of desire and illusion,\nit’s a romantic Dostoevsky classic."
+      },
+      "image": "/imagenes/libros/noches-blancas.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 133,
+      "category": "books",
+      "subcategory": "psychology",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0521-0",
+      "title": { "es": "Memorias del subsuelo", "en": "Notes from Underground" },
+      "author": "Fyodor Dostoevsky",
+      "year": 1864,
+      "description": {
+        "es": "Un hombre anónimo reflexiona desde su aislamiento,\ncriticando la sociedad y su propia existencia.\nLa alienación y la libertad chocan en su mente.\nUna novela psicológica que explora el alma.\nUn precursor del existencialismo.",
+        "en": "An anonymous man reflects from isolation,\ncritiquing society and his own existence.\nAlienation and freedom clash in his mind.\nA psychological novel probing the soul,\nit’s a precursor to existentialism."
+      },
+      "image": "/imagenes/libros/memorias-del-subsuelo.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 134,
+      "category": "books",
+      "subcategory": "biography",
+      "type": "non-fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0522-7",
+      "title": { "es": "Infancia", "en": "Childhood" },
+      "author": "Lev Tolstoy",
+      "year": 1852,
+      "description": {
+        "es": "Tolstoy narra su infancia en la Rusia zarista,\nreflexionando sobre la inocencia y el crecimiento.\nLa memoria y la familia moldean su relato.\nUna obra autobiográfica llena de nostalgia.\nUn clásico de la literatura rusa.",
+        "en": "Tolstoy recounts his childhood in Tsarist Russia,\nreflecting on innocence and growth.\nMemory and family shape his narrative.\nAn autobiographical work full of nostalgia,\nit’s a Russian literary classic."
+      },
+      "image": "/imagenes/libros/infancia.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 135,
+      "category": "books",
+      "subcategory": "clasic",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8210-5",
+      "title": { "es": "Oliver Twist", "en": "Oliver Twist" },
+      "author": "Charles Dickens",
+      "year": 1838,
+      "description": {
+        "es": "Oliver, un huérfano, enfrenta pobreza y crimen\nen el Londres del siglo XIX.\nLa inocencia choca con la crueldad social.\nUna novela sobre justicia y redención.\nUn clásico de la literatura victoriana.",
+        "en": "Oliver, an orphan, faces poverty and crime\nin 19th-century London.\nInnocence clashes with social cruelty.\nA novel of justice and redemption,\nit’s a Victorian literary classic."
+      },
+      "image": "/imagenes/libros/oliver-twist.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 136,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-206-8211-2",
+      "title": { "es": "Los tres mosqueteros", "en": "The Three Musketeers" },
+      "author": "Alexandre Dumas",
+      "year": 1844,
+      "description": {
+        "es": "D’Artagnan se une a tres mosqueteros\nen aventuras de lealtad y traición en Francia.\nDuelos y conspiraciones llenan su camino.\nUna novela de capa y espada llena de acción.\nUn clásico de la literatura de aventuras.",
+        "en": "D’Artagnan joins three musketeers\nin adventures of loyalty and betrayal in France.\nDuels and conspiracies fill their path.\nA swashbuckling novel full of action,\nit’s a classic of adventure literature."
+      },
+      "image": "/imagenes/libros/los-tres-mosqueteros.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 137,
+      "category": "books",
+      "subcategory": "sci-fi",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-450-7676-7",
+      "title": { "es": "2001: Una odisea del espacio", "en": "2001: A Space Odyssey" },
+      "author": "Arthur C. Clarke",
+      "year": 1968,
+      "description": {
+        "es": "Una misión espacial descubre un monolito alienígena,\ndesatando preguntas sobre la humanidad y el cosmos.\nLa inteligencia artificial HAL añade tensión.\nUna novela de ciencia ficción visionaria.\nUn clásico que inspiró una película icónica.",
+        "en": "A space mission uncovers an alien monolith,\nraising questions about humanity and the cosmos.\nThe AI HAL adds gripping tension.\nA visionary sci-fi novel,\nit inspired an iconic film."
+      },
+      "image": "/imagenes/libros/2001-una-odisea-del-espacio.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 138,
+      "category": "books",
+      "subcategory": "thriller",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0523-4",
+      "title": { "es": "Cuentos completos", "en": "Complete Stories" },
+      "author": "Edgar Allan Poe",
+      "year": 1838,
+      "description": {
+        "es": "Poe explora el terror, el misterio y lo macabro\nen relatos que definieron el género gótico.\nSus historias atrapan con atmósferas oscuras.\nUna colección de suspense y psicología.\nUn pilar de la literatura americana.",
+        "en": "Poe delves into terror, mystery, and the macabre\nin stories that defined the gothic genre.\nHis tales grip with dark atmospheres.\nA collection of suspense and psychology,\nit’s a pillar of American literature."
+      },
+      "image": "/imagenes/libros/cuentos-completos.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 139,
+      "category": "books",
+      "subcategory": "drama",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0524-1",
+      "title": { "es": "Tío Vania", "en": "Uncle Vanya" },
+      "author": "Anton Chekhov",
+      "year": 1899,
+      "description": {
+        "es": "Vania y su familia enfrentan el desencanto\nen una Rusia rural llena de tensiones.\nLa frustración y el deseo marcan sus vidas.\nUn drama sobre la inutilidad y la esperanza.\nUn clásico del teatro ruso.",
+        "en": "Vanya and his family face disillusionment\nin a tense rural Russia.\nFrustration and desire shape their lives.\nA drama of futility and hope,\nit’s a Russian theatrical classic."
+      },
+      "image": "/imagenes/libros/tio-vania.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 140,
+      "category": "books",
+      "subcategory": "drama",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0525-8",
+      "title": { "es": "Un tranvía llamado deseo", "en": "A Streetcar Named Desire" },
+      "author": "Tennessee Williams",
+      "year": 1947,
+      "description": {
+        "es": "Blanche DuBois busca refugio en Nueva Orleans,\npero choca con la cruda realidad de Stanley.\nLa pasión y la fragilidad mental se enfrentan.\nUn drama icónico sobre deseo y conflicto.\nUn clásico del teatro americano.",
+        "en": "Blanche DuBois seeks refuge in New Orleans,\nbut clashes with Stanley’s harsh reality.\nPassion and mental fragility collide.\nAn iconic drama of desire and conflict,\nit’s a classic of American theater."
+      },
+      "image": "/imagenes/libros/un-tranvia-llamado-deseo.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 141,
+      "category": "books",
+      "subcategory": "drama",
+      "type": "fiction",
+      "saga": "false",
+      "isbn": "978-84-376-0526-5",
+      "title": { "es": "Esperando a Godot", "en": "Waiting for Godot" },
+      "author": "Samuel Beckett",
+      "year": 1952,
+      "description": {
+        "es": "Vladimir y Estragón esperan a Godot,\nen un absurdo que refleja la existencia humana.\nEl tiempo y la esperanza se desvanecen.\nUn drama existencialista revolucionario.\nUn clásico del teatro del absurdo.",
+        "en": "Vladimir and Estragon wait for Godot,\nin an absurdity reflecting human existence.\nTime and hope fade in their wait.\nA revolutionary existentialist drama,\nit’s a classic of the theater of the absurd."
+      },
+      "image": "/imagenes/libros/esperando-a-godot.jpg",
+      "masterpiece": false
     }
   ]
 }

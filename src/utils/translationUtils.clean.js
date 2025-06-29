@@ -6,14 +6,6 @@
  */
 
 /**
- * Normalize a key to lowercase for case-insensitive comparison
- */
-export const normalizeKey = (key) => {
-  if (!key || typeof key !== 'string') return '';
-  return key.toLowerCase().trim();
-};
-
-/**
  * Safe get function for nested object access
  */
 export const safeGet = (obj, path, fallback = undefined) => {

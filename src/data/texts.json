@@ -207,21 +207,28 @@
         "wildlife": "Vida salvaje"
       },
       "books": {
-        "fiction": "Ficción",
-        "non-fiction": "No ficción",
         "mystery": "Misterio",
         "romance": "Romance",
         "sci-fi": "Ciencia Ficción",
         "fantasy": "Fantasía",
         "biography": "Biografía",
         "history": "Historia",
+        "clasic": "Clásico",
         "philosophy": "Filosofía",
         "psychology": "Psicología",
+        "sociology": "Sociología",
         "science": "Ciencia",
         "self-help": "Autoayuda",
         "business": "Negocios",
         "poetry": "Poesía",
-        "essay": "Ensayo"
+        "essay": "Ensayo",
+        "drama": "Drama",
+        "adventure": "Aventura",
+        "dystopia": "Distopía",
+        "humor": "Humor",
+        "terror": "Terror",
+        "thriller": "Thriller",
+        "war": "Bélico"
       },
       "comics": {
         "superhero": "Superhéroes",
@@ -590,21 +597,26 @@
         "wildlife": "Wildlife"
       },
       "books": {
-        "fiction": "Fiction",
-        "non-fiction": "Non-fiction",
         "mystery": "Mystery",
         "romance": "Romance",
-        "sci-fi": "Sci-Fi",
+        "sci-fi": "Science Fiction",
         "fantasy": "Fantasy",
+        "biography-": "Biography-",
         "biography": "Biography",
         "history": "History",
         "philosophy": "Philosophy",
         "psychology": "Psychology",
+        "sociology": "Sociology",
         "science": "Science",
         "self-help": "Self-help",
         "business": "Business",
         "poetry": "Poetry",
-        "essay": "Essay"
+        "essay": "Essay",
+        "drama": "Drama",
+        "adventure": "Adventure",
+        "dystopia": "Dystopia",
+        "humor": "Humor",
+        "war": "War"
       },
       "comics": {
         "superhero": "Superhero",
