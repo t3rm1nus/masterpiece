@@ -37,7 +37,7 @@
     {
       "id": 3,
       "category": "books",
-      "subcategory": "drama",
+      "subcategory": "philosophy",
       "type": "fiction",
       "saga": "false",
       "title": { "es": "A puerta cerrada", "en": "No Exit" },
@@ -49,7 +49,7 @@
       },
       "isbn": "978-84-206-2998-8",
       "image": "/imagenes/libros/a-puerta-cerrada.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 4,
@@ -66,7 +66,7 @@
       },
       "isbn": "978-84-9759-379-3",
       "image": "/imagenes/libros/el-medico.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 5,
@@ -83,7 +83,7 @@
       },
       "isbn": "978-84-9793-144-1",
       "image": "/imagenes/libros/chaman.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 6,
@@ -117,7 +117,7 @@
       },
       "isbn": "978-0-451-20663-3",
       "image": "/imagenes/libros/los-pilares.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 8,
@@ -134,7 +134,7 @@
       },
       "isbn": "978-84-206-5295-5",
       "image": "/imagenes/libros/miguel-strogoff.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 9,
@@ -236,7 +236,7 @@
       },
       "isbn": "978-0-451-16886-3",
       "image": "/imagenes/libros/it.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 15,
@@ -253,7 +253,7 @@
       },
       "isbn": "978-0-451-17129-0",
       "image": "/imagenes/libros/la-tienda.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 16,
@@ -321,7 +321,7 @@
       },
       "isbn": "978-84-663-0902-8",
       "image": "/imagenes/libros/evangelio-jesucristo.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 20,
@@ -338,7 +338,7 @@
       },
       "isbn": "978-84-663-0903-5",
       "image": "/imagenes/libros/ensayo-ceguera.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 21,
@@ -457,7 +457,7 @@
       },
       "isbn": "978-0-618-15398-5",
       "image": "/imagenes/libros/lotr1.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 28,
@@ -474,7 +474,7 @@
       },
       "isbn": "978-0-618-15399-2",
       "image": "/imagenes/libros/lotr2.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 29,
@@ -491,7 +491,7 @@
       },
       "isbn": "978-0-618-15400-5",
       "image": "/imagenes/libros/lotr3.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 30,
@@ -525,7 +525,7 @@
       },
       "isbn": "978-84-670-3560-5",
       "image": "/imagenes/libros/el-quijote.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
      {
       "id": 32,
@@ -541,7 +541,8 @@
         "en": "Ivan Dragomiloff, a brilliant idealist, heads a secret organization that assassinates powerful figures deemed morally corrupt. When a journalist challenges his principles, she hires the Bureau to kill him. A deadly chase across Europe begins, as Dragomiloff faces the very killers he once led. A bold satire on ethics, justice, and the use of power."
       },
       "isbn": "978-84-88020-27-7",
-      "image": "/imagenes/libros/asesinos-sl.jpg"
+      "image": "/imagenes/libros/asesinos-sl.jpg",
+      "masterpiece": true
       
     },
     {
@@ -559,7 +560,7 @@
         "en": "In a world where Big Brother watches all,\nWinston Smith clings to his humanity.\nSurveillance, propaganda, and distorted truth\ndefine this chilling dystopia. A prophetic novel\nabout power, freedom, and resistance."
       },
       "image": "/imagenes/libros/1984.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 34,
@@ -661,7 +662,7 @@
         "en": "Harry Haller, torn between humanity and wildness,\nseeks meaning in an empty world.\nLoneliness drives him to a mystical, introspective journey.\nA philosophical novel on identity and spirituality,\nit challenges the modern condition."
       },
       "image": "/imagenes/libros/el-lobo-estepario.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 40,
@@ -678,7 +679,7 @@
         "en": "Jean-Baptiste Grenouille, obsessed with scents,\nseeks the perfect perfume in 18th-century France.\nHis genius drives him to horrific murders.\nA dark novel of obsession and human nature,\nit’s a haunting, sensory masterpiece."
       },
       "image": "/imagenes/libros/el-perfume.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 41,
@@ -695,7 +696,7 @@
         "en": "Stranded boys on a deserted island try to govern themselves,\nbut order collapses into savagery.\nCivilization crumbles under primal instincts.\nA grim allegory of human nature,\nthis classic probes chaos and power."
       },
       "image": "/imagenes/libros/el-senor-de-las-moscas.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 42,
@@ -746,7 +747,7 @@
         "en": "Three brothers grapple with morality and faith\nafter their father’s murder in Tsarist Russia.\nFaith, reason, and passion collide in an epic drama.\nA profound novel of family and belief,\nit’s a cornerstone of world literature."
       },
       "image": "/imagenes/libros/los-hermanos-karamazov.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 45,
@@ -831,7 +832,7 @@
         "en": "Alice Gould enters a mental hospital to solve a crime,\nbut her sanity comes under scrutiny.\nThe line between madness and truth blurs.\nA gripping psychological novel,\nit probes the depths of the human mind."
       },
       "image": "/imagenes/libros/los-renglones-torcidos-de-dios.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 50,
@@ -899,7 +900,7 @@
         "en": "Ignatius J. Reilly, an eccentric genius,\nwreaks havoc in New Orleans with absurd schemes.\nHis disdain for modernity is darkly funny.\nA brilliant comedy of eccentricity,\nthis posthumous classic shines with wit."
       },
       "image": "/imagenes/libros/la-conjura-de-los-necios.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 54,
@@ -916,7 +917,7 @@
         "en": "In post-war Barcelona, Daniel Sempere\nuncovers a book that leads to a dark mystery.\nLiterary secrets and family tragedies intertwine.\nA modern gothic novel of intrigue,\nit celebrates the power of stories."
       },
       "image": "/imagenes/libros/la-sombra-del-viento.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 55,
@@ -950,7 +951,7 @@
         "en": "Jean Valjean, an ex-convict, seeks redemption\nin 19th-century France amid injustice.\nLove, sacrifice, and revolution intertwine.\nAn epic novel of humanity and justice,\nit’s an immortal literary classic."
       },
       "image": "/imagenes/libros/los-miserables.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 57,
@@ -984,7 +985,7 @@
         "en": "In a utopian future, humanity lives in controlled bliss,\ndevoid of true freedom or emotions.\nConformity clashes with the urge to rebel.\nA visionary dystopia on social control,\nit warns of a dehumanized future."
       },
       "image": "/imagenes/libros/un-mundo-feliz.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 59,
@@ -1001,7 +1002,7 @@
         "en": "In a world where books are banned,\nfiremen burn knowledge to enforce control.\nOne man awakens to truth through rebellion.\nA dystopian tale of censorship and freedom,\nit’s a hymn to the power of ideas."
       },
       "image": "/imagenes/libros/fahrenheit-451.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 60,
@@ -1120,7 +1121,7 @@
         "en": "Odysseus battles monsters and gods\non his epic journey home from Troy.\nCourage, cunning, and loyalty define his quest.\nA foundational epic of Western literature,\nit’s a timeless tale of homecoming."
       },
       "image": "/imagenes/libros/la-odisea.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 67,
@@ -1137,7 +1138,7 @@
         "en": "Dante journeys through Hell, Purgatory, and Paradise,\nguided by Virgil and Beatrice in an epic poem.\nSin, redemption, and faith intertwine.\nA masterpiece of poetry and theology,\nit’s an eternal journey through the soul."
       },
       "image": "/imagenes/libros/la-divina-comedia.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 68,
@@ -1154,7 +1155,7 @@
         "en": "The Trojan War rages over honor and vengeance,\nwith heroes like Achilles and Hector at its core.\nGods and men clash in an epic struggle.\nA foundational poem of Western literature,\nit’s a saga of glory and tragedy."
       },
       "image": "/imagenes/libros/la-iliada.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 69,
@@ -1222,12 +1223,12 @@
         "en": "Mars’ colonization reveals human dreams and flaws.\nInterlinked stories explore ambition and loss.\nSci-fi meets poetic reflection.\nA visionary work on humanity’s reach,\nit transcends the genre."
       },
       "image": "/imagenes/libros/cronicas-marcianas.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 73,
       "category": "books",
-      "subcategory": "clasic",
+      "subcategory": "terror",
       "type": "fiction",
       "saga": "false",
       "isbn": "978-84-206-8198-6",
@@ -1244,7 +1245,7 @@
     {
       "id": 74,
       "category": "books",
-      "subcategory": "thriller",
+      "subcategory": "terror",
       "type": "fiction",
       "saga": "false",
       "isbn": "978-84-206-8199-3",
@@ -1358,7 +1359,7 @@
         "en": "A rural Spanish wedding turns tragic\nwhen passion and honor collide.\nVengeance and fate dominate this play.\nA poetic drama of love and death,\nit’s a Spanish literary classic."
       },
       "image": "/imagenes/libros/bodas-de-sangre.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 81,
@@ -1426,7 +1427,7 @@
         "en": "Sun Tzu’s strategies for war\napply to modern life and business.\nTactics and philosophy intertwine.\nAn ancient treatise still relevant today,\nit’s a classic of military wisdom."
       },
       "image": "/imagenes/libros/el-arte-de-la-guerra.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 85,
@@ -1528,7 +1529,7 @@
         "en": "Momo, a young girl, battles time thieves\nwho steal people’s lives.\nSimplicity and friendship are her weapons.\nA fable on the value of time,\nit’s a children’s classic with universal depth."
       },
       "image": "/imagenes/libros/momo.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 91,
@@ -1613,7 +1614,7 @@
         "en": "A professor and his nephew explore Earth’s core,\nfinding wonders and dangers.\nScience and adventure merge seamlessly.\nA visionary novel of exploration,\nit’s a classic of early sci-fi."
       },
       "image": "/imagenes/libros/viaje-al-centro-de-la-tierra.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 96,
@@ -1698,7 +1699,7 @@
         "en": "Sartre probes human existence and freedom\nthrough existentialist philosophy.\nConsciousness and nothingness shape reality.\nA dense but revolutionary treatise,\nit’s a landmark of 20th-century thought."
       },
       "image": "/imagenes/libros/el-ser-y-la-nada.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 101,
@@ -1800,7 +1801,7 @@
         "en": "Julien Sorel, an ambitious youth, navigates\nlove and power in post-Napoleonic France.\nSocial hypocrisy and passion drive him.\nA realist novel of class struggle,\nit’s a French literary classic."
       },
       "image": "/imagenes/libros/rojo-y-negro.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 107,
@@ -1817,7 +1818,7 @@
         "en": "Captain Nemo explores the oceans\nin his submarine Nautilus with a motley crew.\nUndersea wonders and dangers abound.\nAn early sci-fi and adventure novel,\nit inspires exploration and wonder."
       },
       "image": "/imagenes/libros/veinte-mil-leguas-de-viaje-submarino.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 108,
@@ -1851,7 +1852,7 @@
         "en": "In a medieval abbey, a monk probes murders\nwhile exploring the power of knowledge.\nMystery, theology, and symbolism intertwine.\nA brilliant historical and detective novel,\nit’s a modern classic of intellectual intrigue."
       },
       "image": "/imagenes/libros/el-nombre-de-la-rosa.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 110,
@@ -1902,7 +1903,7 @@
         "en": "Rick Deckard hunts androids in a post-apocalyptic world,\nquestioning what it means to be human.\nEmpathy and identity drive the narrative.\nA philosophical sci-fi novel,\nit inspired the iconic film *Blade Runner*."
       },
       "image": "/imagenes/libros/suenan-los-androides.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 113,
@@ -1970,7 +1971,7 @@
         "en": "Robinson Crusoe, shipwrecked on a desert island,\nfights to survive with wit and faith.\nSolitude and nature test his spirit.\nA pioneering novel of adventure and survival,\nit inspired the genre."
       },
       "image": "/imagenes/libros/robinson-crusoe.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 117,
@@ -2038,7 +2039,7 @@
         "en": "Lao-Tzu offers wisdom on harmony\nand balance in life through the Tao.\nSimplicity and nature guide its philosophy.\nA foundational Taoist text,\nit’s a timeless spiritual classic."
       },
       "image": "/imagenes/libros/tao-te-ching.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 121,
@@ -2089,7 +2090,7 @@
         "en": "Diego Alatriste, a swordsman in 17th-century Spain,\nlives adventures amid duels and conspiracies.\nHonor and loyalty guide his actions.\nA historical saga full of action,\nit’s a modern swashbuckling classic."
       },
       "image": "/imagenes/libros/el-capitan-alatriste.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 124,
@@ -2106,7 +2107,7 @@
         "en": "Alatriste faces intrigue in Madrid,\nwhere blood purity defines power.\nThe Inquisition and honor clash on his path.\nA vibrant continuation of the saga,\nit’s a tense historical novel."
       },
       "image": "/imagenes/libros/limpieza-de-sangre.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 125,
@@ -2123,7 +2124,7 @@
         "en": "Alatriste fights in the Flanders war,\nfacing battles and moral dilemmas.\nCamaraderie and sacrifice shape his fate.\nA historical novel in the Alatriste saga,\nit’s an epic tale of war and honor."
       },
       "image": "/imagenes/libros/el-sol-de-breda.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 126,
@@ -2140,7 +2141,7 @@
         "en": "Alatriste embarks on a mission to recover gold,\nfacing betrayals and dangers at sea.\nLoyalty and courage are tested.\nAn exciting Alatriste saga installment,\nit’s a historical adventure full of action."
       },
       "image": "/imagenes/libros/el-oro-del-rey.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 127,
@@ -2157,7 +2158,7 @@
         "en": "Alatriste navigates courtly intrigues,\nwhere love and danger intertwine.\nA mysterious knight threatens his life.\nA suspenseful Alatriste saga novel,\nit vividly portrays Baroque Spain."
       },
       "image": "/imagenes/libros/el-caballero-del-jubon-amarillo.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 128,
@@ -2174,7 +2175,7 @@
         "en": "Alatriste sails with pirates in the Mediterranean,\nfacing naval battles and betrayals.\nAdventure and honor define his journey.\nA vibrant Alatriste saga installment,\nit’s a historical novel of maritime action."
       },
       "image": "/imagenes/libros/corsarios-de-levante.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 129,
@@ -2191,7 +2192,7 @@
         "en": "Alatriste travels to Venice on a secret mission,\nfacing conspiracies and assassins.\nDanger lurks around every corner.\nAn intriguing Alatriste saga novel,\nit’s a historical tale full of suspense."
       },
       "image": "/imagenes/libros/el-puente-de-los-asesinos.jpg",
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 130,
@@ -2395,6 +2396,294 @@
         "en": "Vladimir and Estragon wait for Godot,\nin an absurdity reflecting human existence.\nTime and hope fade in their wait.\nA revolutionary existentialist drama,\nit’s a classic of the theater of the absurd."
       },
       "image": "/imagenes/libros/esperando-a-godot.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 142,
+      "category": "books",
+      "subcategory": "humor",
+      "type": "fiction",
+      "saga": false,
+      "title": { "es": "El Buscón", "en": "The Swindler" },
+      "author": "Francisco de Quevedo",
+      "year": 1626,
+      "description": {
+        "es": "Pablos, un joven ambicioso, intenta ascender en la sociedad española a través del engaño y la picardía. Su historia es un desfile de situaciones grotescas y personajes miserables. Esta sátira del Siglo de Oro español critica la hipocresía y el hambre de estatus. Con un lenguaje agudo y barroco, retrata la miseria con humor oscuro. Una obra maestra de la picaresca.",
+        "en": "Pablos, an ambitious young man, tries to climb Spain's social ladder through deceit and trickery. His tale is filled with grotesque scenes and miserable characters. This Golden Age satire criticizes hypocrisy and the hunger for status. With sharp, baroque language, it portrays misery with dark humor. A masterpiece of Spanish picaresque."
+      },
+      "image": "/imagenes/libros/el_buscon.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 143,
+      "category": "books",
+      "subcategory": "fantasy",
+      "type": "fiction",
+      "saga": false,
+      "title": { "es": "El vizconde demediado", "en": "The Cloven Viscount" },
+      "author": "Italo Calvino",
+      "year": 1952,
+      "description": {
+        "es": "Un vizconde es partido en dos por una bala de cañón en la guerra, y ambas mitades sobreviven. Una es cruel y despiadada, la otra amable y generosa. La novela explora el dualismo humano con humor y fantasía. Es un cuento filosófico sobre el bien, el mal y la identidad. Uno de los relatos más simbólicos y encantadores de Calvino.",
+        "en": "A viscount is split in two by a cannonball in war, and both halves survive. One becomes cruel and merciless, the other kind and generous. The novel explores human duality with humor and fantasy. A philosophical tale about good, evil, and identity. One of Calvino’s most symbolic and charming stories."
+      },
+      "image": "/imagenes/libros/vizconde_demediado.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 144,
+      "category": "books",
+      "subcategory": "humor",
+      "type": "fiction",
+      "saga": false,
+      "title": { "es": "Wilt", "en": "Wilt" },
+      "author": "Tom Sharpe",
+      "year": 1976,
+      "description": {
+        "es": "Henry Wilt es un profesor frustrado que fantasea con asesinar a su esposa. Cuando una muñeca hinchable desaparece misteriosamente, comienza una investigación absurda. Wilt se ve atrapado en una cadena de malentendidos hilarantes. Sharpe mezcla crítica social con comedia negra en esta novela irreverente. Una obra de humor británico inteligente y ácido.",
+        "en": "Henry Wilt is a frustrated teacher who fantasizes about killing his wife. When an inflatable doll mysteriously disappears, a ridiculous investigation begins. Wilt becomes entangled in a chain of hilarious misunderstandings. Sharpe blends social satire with dark comedy in this irreverent novel. A work of sharp and intelligent British humor."
+      },
+      "image": "/imagenes/libros/wilt.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 145,
+      "category": "books",
+      "subcategory": "humor",
+      "type": "fiction",
+      "saga": false,
+      "title": { "es": "Tres hombres en una barca (por no hablar del perro)", "en": "Three Men in a Boat (To Say Nothing of the Dog)" },
+      "author": "Jerome K. Jerome",
+      "year": 1889,
+      "description": {
+        "es": "Tres amigos deciden hacer un viaje en barca por el Támesis para escapar del estrés de la vida moderna. Lo que debería ser una excursión tranquila se convierte en una sucesión de desastres ridículos. El humor absurdo y la observación aguda de Jerome brillan en cada página. La novela es un clásico imperecedero de la comedia inglesa. Ligera, encantadora y brillantemente divertida.",
+        "en": "Three friends embark on a boating trip along the Thames to escape the stresses of modern life. What should be a peaceful excursion turns into a series of hilarious disasters. Jerome’s absurd humor and sharp observations shine throughout. The novel is a timeless classic of English comedy. Light-hearted, charming, and brilliantly funny."
+      },
+      "image": "/imagenes/libros/tres_hombres.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 146,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": true,
+      "title": { "es": "El Clan del Oso Cavernario", "en": "The Clan of the Cave Bear" },
+      "author": "Jean M. Auel",
+      "year": 1980,
+      "description": {
+        "es": "Ayla, una niña cromañón, es adoptada por un clan de neandertales tras quedar huérfana. Su inteligencia y habilidades avanzadas la hacen diferente y sospechosa para los suyos. La historia retrata la supervivencia, la lucha por la identidad y la convivencia entre especies humanas. Auel mezcla ficción con rigor antropológico. Una epopeya prehistórica apasionante.",
+        "en": "Ayla, a Cro-Magnon girl, is adopted by a clan of Neanderthals after being orphaned. Her advanced intelligence and skills make her different and suspicious to her peers. The story portrays survival, identity struggles, and coexistence between human species. Auel blends fiction with anthropological accuracy. A thrilling prehistoric saga."
+      },
+      "image": "/imagenes/libros/clan_oso.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 147,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": true,
+      "title": { "es": "El Valle de los Caballos", "en": "The Valley of Horses" },
+      "author": "Jean M. Auel",
+      "year": 1982,
+      "description": {
+        "es": "Tras ser expulsada del clan, Ayla sobrevive sola en un valle remoto. Aprende a domesticar animales y a valerse por sí misma. La llegada de Jondalar, un hombre de su misma especie, cambia su destino. El amor, el descubrimiento mutuo y la evolución son temas centrales. Una historia íntima y aventurera sobre el origen del vínculo humano.",
+        "en": "After being cast out of the clan, Ayla survives alone in a remote valley. She learns to tame animals and fend for herself. The arrival of Jondalar, a man of her own kind, changes her fate. Love, mutual discovery, and evolution are central themes. An intimate and adventurous story about the origins of human connection."
+      },
+      "image": "/imagenes/libros/valle_caballos.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 148,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": true,
+      "title": { "es": "Los Cazadores de Mamuts", "en": "The Mammoth Hunters" },
+      "author": "Jean M. Auel",
+      "year": 1985,
+      "description": {
+        "es": "Ayla y Jondalar se integran en una nueva tribu, los Mamutoi. Las tensiones culturales y los celos amenazan con separarlos. Ayla lucha por ser aceptada mientras continúa explorando sus dones curativos. La novela combina aventura, drama y exploración emocional. Un retrato humano en el corazón de la Edad de Hielo.",
+        "en": "Ayla and Jondalar join a new tribe, the Mamutoi. Cultural tensions and jealousy threaten to pull them apart. Ayla struggles for acceptance while continuing to explore her healing gifts. The novel blends adventure, drama, and emotional depth. A human portrait set in the heart of the Ice Age."
+      },
+      "image": "/imagenes/libros/cazadores_mamuts.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 149,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": true,
+      "title": { "es": "Las Llanuras del Tránsito", "en": "The Plains of Passage" },
+      "author": "Jean M. Auel",
+      "year": 1990,
+      "description": {
+        "es": "Ayla y Jondalar emprenden un largo viaje hacia la tierra natal de él. Cruzan vastas llanuras, enfrentan peligros y descubren nuevas culturas. El viaje es tanto físico como espiritual. Auel detalla minuciosamente la vida prehistórica. Una travesía épica hacia el reencuentro con el pasado.",
+        "en": "Ayla and Jondalar embark on a long journey to his homeland. They cross vast plains, face dangers, and encounter new cultures. The journey is both physical and spiritual. Auel vividly details prehistoric life. An epic trek toward a reunion with the past."
+      },
+      "image": "/imagenes/libros/llanuras_transito.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 150,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": true,
+      "title": { "es": "Los Refugios de Piedra", "en": "The Shelters of Stone" },
+      "author": "Jean M. Auel",
+      "year": 2002,
+      "description": {
+        "es": "Ayla y Jondalar llegan finalmente a la tribu Zelandonii. Mientras se adaptan a su nuevo hogar, Ayla enfrenta prejuicios y debe demostrar su valor. Se abordan temas como maternidad, religión y pertenencia. La integración social se convierte en su mayor reto. Una novela de consolidación personal y cultural.",
+        "en": "Ayla and Jondalar finally arrive at the Zelandonii tribe. As they settle into their new home, Ayla faces prejudice and must prove her worth. Themes of motherhood, religion, and belonging are explored. Social integration becomes her greatest challenge. A novel of personal and cultural consolidation."
+      },
+      "image": "/imagenes/libros/refugios_piedra.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 151,
+      "category": "books",
+      "subcategory": "adventure",
+      "type": "fiction",
+      "saga": true,
+      "title": { "es": "La Tierra de las Cuevas Pintadas", "en": "The Land of Painted Caves" },
+      "author": "Jean M. Auel",
+      "year": 2011,
+      "description": {
+        "es": "Convertida en aprendiz espiritual, Ayla recorre cuevas sagradas junto a su mentora. La novela explora rituales, visiones y desafíos internos. Las pinturas rupestres revelan la conexión entre arte y trascendencia. Ayla deberá elegir su camino definitivo. Un cierre contemplativo y místico de la saga.",
+        "en": "Now a spiritual apprentice, Ayla journeys through sacred caves with her mentor. The novel explores rituals, visions, and internal challenges. The cave paintings reveal the bond between art and transcendence. Ayla must choose her ultimate path. A contemplative and mystical conclusion to the saga."
+      },
+      "image": "/imagenes/libros/tierra_cuevas.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 152,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": false,
+      "title": { "es": "El exorcista", "en": "The Exorcist" },
+      "author": "William Peter Blatty",
+      "year": 1971,
+      "description": {
+        "es": "Una niña comienza a comportarse de forma perturbadora. Su madre, desesperada, acude a un sacerdote que descubre que está poseída por una fuerza demoníaca. Lo que sigue es una batalla aterradora entre el bien y el mal. Un clásico del terror sobrenatural que marcó época. Basado en un supuesto caso real.",
+        "en": "A young girl begins exhibiting disturbing behavior. Her mother, desperate, turns to a priest who discovers she is possessed by a demonic force. What follows is a terrifying battle between good and evil. A landmark of supernatural horror. Inspired by a supposed real-life case."
+      },
+      "image": "/imagenes/libros/el-exorcista.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 153,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": false,
+      "title": { "es": "La maldición de Hill House", "en": "The Haunting of Hill House" },
+      "author": "Shirley Jackson",
+      "year": 1959,
+      "description": {
+        "es": "Un investigador del ocultismo reúne a un pequeño grupo para estudiar una mansión embrujada. La casa parece tener vida propia y afecta la mente de sus habitantes. Eleanor, una joven sensible, empieza a perder la noción de la realidad. Una obra maestra del terror psicológico. Misteriosa, ambigua e inquietante.",
+        "en": "An occult investigator gathers a small group to study a haunted mansion. The house seems alive and begins to manipulate the minds of its guests. Eleanor, a sensitive woman, starts to lose her grip on reality. A masterpiece of psychological horror. Mysterious, ambiguous, and deeply unsettling."
+      },
+      "image": "/imagenes/libros/hill-house.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 154,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": false,
+      "title": { "es": "La llamada de Cthulhu y otros cuentos", "en": "The Call of Cthulhu and Other Stories" },
+      "author": "H. P. Lovecraft",
+      "year": 1928,
+      "description": {
+        "es": "Antiguas criaturas cósmicas amenazan con despertar bajo la superficie del mundo. A través de diarios, cartas y testimonios, se construye una atmósfera de horror indescriptible. Cthulhu representa el terror ante lo incomprensible. Estos relatos fundaron el terror cósmico moderno. Una lectura perturbadora e inolvidable.",
+        "en": "Ancient cosmic beings threaten to awaken beneath the surface of the world. Through diaries, letters, and testimonies, Lovecraft builds an atmosphere of unspeakable dread. Cthulhu embodies fear of the unknowable. These tales established modern cosmic horror. A disturbing and unforgettable read."
+      },
+      "image": "/imagenes/libros/cthulhu.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 155,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": false,
+      "title": { "es": "Coraline", "en": "Coraline" },
+      "author": "Neil Gaiman",
+      "year": 2002,
+      "description": {
+        "es": "Coraline descubre una puerta secreta en su nueva casa. Detrás, hay un mundo paralelo que imita su vida, pero todo es más oscuro. Sus 'otros padres' quieren retenerla para siempre. Una historia de terror infantil con tintes de fábula macabra. Elegante, inquietante y poéticamente siniestra.",
+        "en": "Coraline discovers a secret door in her new home. Behind it lies a parallel world that mirrors her own—but darker. Her 'other parents' want to keep her forever. A chilling children's tale with the feel of a dark fable. Elegant, eerie, and hauntingly poetic."
+      },
+      "image": "/imagenes/libros/coraline.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 156,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": false,
+      "title": { "es": "Hell House", "en": "Hell House" },
+      "author": "Richard Matheson",
+      "year": 1971,
+      "description": {
+        "es": "Un millonario contrata a un equipo de expertos para investigar la casa más embrujada del mundo. Lo que encuentran desafía la razón y corroe sus mentes. Hell House está viva, y su mal se alimenta de las debilidades humanas. Un clásico del horror visceral y psicológico. Cruda, intensa y estremecedora.",
+        "en": "A millionaire hires a team of experts to investigate the most haunted house in the world. What they find defies reason and corrodes their sanity. Hell House is alive, and its evil feeds on human weakness. A classic of visceral and psychological horror. Raw, intense, and chilling."
+      },
+      "image": "/imagenes/libros/hell-house.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 157,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": false,
+      "title": { "es": "La semilla del diablo", "en": "Rosemary's Baby" },
+      "author": "Ira Levin",
+      "year": 1967,
+      "description": {
+        "es": "Una joven pareja se muda a un antiguo edificio de Nueva York. Pronto, Rosemary queda embarazada, pero empieza a sospechar de quienes la rodean. ¿Y si su hijo no fuera humano? Un thriller de paranoia y manipulación satánica. Elegante, sutil y profundamente inquietante.",
+        "en": "A young couple moves into an old New York apartment. Soon, Rosemary becomes pregnant but starts suspecting everyone around her. What if her baby isn't human? A paranoid, satanic thriller. Elegant, subtle, and deeply unsettling."
+      },
+      "image": "/imagenes/libros/rosemarys-baby.jpg",
+      "masterpiece": true
+    },
+    {
+      "id": 158,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": false,
+      "title": { "es": "La casa infernal", "en": "The Legend of Hell House" },
+      "author": "Richard Matheson",
+      "year": 1971,
+      "description": {
+        "es": "Cuatro investigadores entran en la Casa Belasco, conocida como la 'casa infernal'. Lo que allí ocurre desafía toda lógica científica. La mansión parece moldearse a los miedos y pecados de sus visitantes. Un relato inquietante sobre posesión, trauma y redención. Terror puro con tintes filosóficos.",
+        "en": "Four investigators enter the Belasco House, known as the 'Hell House'. What occurs defies all scientific logic. The mansion seems to mold itself to the fears and sins of its visitors. A chilling tale of possession, trauma, and redemption. Pure terror with philosophical overtones."
+      },
+      "image": "/imagenes/libros/hell-house-matheson.jpg",
+      "masterpiece": false
+    },
+    {
+      "id": 159,
+      "category": "books",
+      "subcategory": "terror",
+      "type": "fiction",
+      "saga": false,
+      "title": { "es": "El extraño caso del Dr. Jekyll y Mr. Hyde", "en": "Strange Case of Dr Jekyll and Mr Hyde" },
+      "author": "Robert Louis Stevenson",
+      "year": 1886,
+      "description": {
+        "es": "El Dr. Jekyll crea una poción que lo transforma en el cruel y desinhibido Mr. Hyde. Su doble vida se descontrola, y el mal amenaza con dominarlo por completo. Un clásico sobre la dualidad humana y el monstruo interior. Breve pero poderoso, sigue siendo profundamente actual.",
+        "en": "Dr. Jekyll creates a potion that transforms him into the cruel and uninhibited Mr. Hyde. His double life spirals out of control, and evil threatens to consume him. A classic tale of human duality and the inner monster. Short but powerful, still deeply relevant."
+      },
+      "image": "/imagenes/libros/jekyll-hyde.jpg",
       "masterpiece": false
     }
   ]

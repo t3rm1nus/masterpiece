@@ -261,18 +261,15 @@
       },
       "videogames": {
         "action": "Acción",
-        "adventure": "Aventura",
         "rpg": "RPG",
-        "strategy": "Estrategia",
-        "simulation": "Simulación",
-        "sports": "Deportes",
-        "racing": "Carreras",
-        "puzzle": "Puzzle",
-        "platform": "Plataformas",
         "shooter": "Disparos",
-        "fighting": "Lucha",
+        "strategy": "Estrategia",
+        "sandbox": "Mundo abierto",
         "horror": "Terror",
-        "indie": "Independiente"
+        "indie": "Independiente",
+        "platformer": "Plataformas",
+        "sports": "Deportes",
+        "retro": "Retro"
       },
       "boardgames": {
         "strategy": "Estrategia",
@@ -649,18 +646,15 @@
       },
       "videogames": {
         "action": "Action",
-        "adventure": "Adventure",
         "rpg": "RPG",
-        "strategy": "Strategy",
-        "simulation": "Simulation",
-        "sports": "Sports",
-        "racing": "Racing",
-        "puzzle": "Puzzle",
-        "platform": "Platform",
         "shooter": "Shooter",
-        "fighting": "Fighting",
+        "strategy": "Strategy",
+        "sandbox": "Sandbox",
         "horror": "Horror",
-        "indie": "Indie"
+        "indie": "Indie",
+        "platformer": "Platformer",
+        "sports": "Sports",
+        "retro": "Retro"
       },
       "boardgames": {
         "strategy": "Strategy",
