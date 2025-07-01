@@ -3,12 +3,12 @@ export class MusicDataLoader {
   static async loadAllMusicData() {
     try {
       // Primero cargar el índice para saber qué chunks cargar
-      const indexResponse = await fetch('/src/data/music-chunks/index.json');
+      const indexResponse = await fetch('/music-chunks/index.json');
       const indexData = await indexResponse.json();
       
       // Cargar todos los chunks en paralelo
       const chunkPromises = indexData.chunks.map(async (chunkInfo) => {
-        const response = await fetch(`/src/data/music-chunks/${chunkInfo.fileName}`);
+        const response = await fetch(`/music-chunks/${chunkInfo.fileName}`);
         return response.json();
       });
       
@@ -36,7 +36,7 @@ export class MusicDataLoader {
       // Fallback: intentar cargar el archivo original
       try {
         console.log('🔄 Attempting to load from original file as fallback...');
-        const response = await fetch('/src/data/datos_music.json');
+        const response = await fetch('/datos_music.json');
         const data = await response.json();
         console.log(`⚠️ Loaded ${data.recommendations.length} recommendations from original file`);
         return data;
@@ -50,7 +50,7 @@ export class MusicDataLoader {
   // Método para cargar un chunk específico
   static async loadMusicChunk(chunkNumber) {
     try {
-      const response = await fetch(`/src/data/music-chunks/music-chunk-${chunkNumber}.json`);
+      const response = await fetch(`/music-chunks/music-chunk-${chunkNumber}.json`);
       const data = await response.json();
       console.log(`✅ Loaded chunk ${chunkNumber} with ${data.recommendations.length} items`);
       return data;
@@ -63,7 +63,7 @@ export class MusicDataLoader {
   // Método para obtener información de los chunks
   static async getChunksInfo() {
     try {
-      const response = await fetch('/src/data/music-chunks/index.json');
+      const response = await fetch('/music-chunks/index.json');
       return await response.json();
     } catch (error) {
       console.error('❌ Error loading chunks info:', error);

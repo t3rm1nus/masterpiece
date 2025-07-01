@@ -1,0 +1,100 @@
+{
+  "recommendations": [
+    {
+      "id": 1,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Pink Floyd",
+      "title": {
+        "es": "The Dark Side of the Moon",
+        "en": "The Dark Side of the Moon"
+      },
+      "description": {
+        "es": "The Dark Side of the Moon es el octavo álbum de estudio de la banda de rock progresivo Pink Floyd, lanzado el 1 de marzo de 1973 por Harvest Records en el Reino Unido y Capitol Records en Estados Unidos. Desarrollado durante presentaciones en vivo antes de que comenzara la grabación, fue concebido como un álbum conceptual que se centraría en las presiones que enfrentó la banda durante su arduo estilo de vida y también abordaría los problemas de salud mental del exmiembro de la banda Syd Barrett, quien dejó el grupo en 1968.",
+        "en": "The Dark Side of the Moon is the eighth studio album by the progressive rock band Pink Floyd, released on March 1, 1973, by Harvest Records in the United Kingdom and Capitol Records in the United States. Developed during live performances before recording began, it was conceived as a concept album focusing on the pressures the band faced due to their intense lifestyle, as well as addressing the mental health issues of former band member Syd Barrett, who left the group in 1968."
+      },
+      "image": "/imagenes/musica/Dark_Side_of_the_Moon.jpg",
+      "tags": ["album"],
+      "youtube": "https://www.youtube.com/watch?v=k9ynZnEBtvw&list=RDk9ynZnEBtvw&start_radio=1&t=116s",
+      "spotify": "https://open.spotify.com/intl-es/album/4LH4d3cOWNNsVw41Gqt2kv",
+      "masterpiece": true
+    },
+    {
+      "id": 2,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Mojinos Escozíos",
+      "title": {
+        "es": "Que trabajen los romanos (Que tienen el pecho de lata)",
+        "en": "Let the Romans Work (With Their Tin Chests)"
+      },
+      "description": {
+        "es": "Una sátira musical hilarante y provocadora, donde Mojinos Escozíos fusionan rock cañero con un humor irreverente. La letra ridiculiza el esfuerzo laboral con referencias absurdas a los romanos. Es un ejemplo clásico del estilo único de la banda: ruidoso, directo y sin filtros.",
+        "en": "A hilarious and provocative musical satire where Mojinos Escozíos blend heavy rock with irreverent humor. The lyrics mock hard work with absurd references to the Romans. It’s a classic example of the band’s unique style: loud, direct, and unapologetic."
+      },
+      "image": "/imagenes/musica/mojinos.jpg",
+      "tags": ["song"],
+      "youtube": "https://www.youtube.com/watch?v=PPP_oDjYHlI&list=RDPPP_oDjYHlI&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/0NwfbtvfmCqt3dWevQSx2g",
+      "masterpiece": true
+    },
+    {
+      "id": 3,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Bonobo",
+      "title": {
+        "es": "Boiler Room New York DJ Set",
+        "en": "Boiler Room New York DJ Set"
+      },
+      "description": {
+        "es": "Una sesión envolvente desde el corazón de Nueva York donde Bonobo despliega su mezcla única de electrónica, downtempo y house. Con una selección exquisita, el set fluye con elegancia entre texturas sonoras, ritmos suaves y una atmósfera introspectiva. Ideal para dejarse llevar.",
+        "en": "An immersive session from the heart of New York where Bonobo showcases his unique blend of electronica, downtempo, and house. With an exquisite selection, the set flows elegantly through sonic textures, smooth rhythms, and a contemplative atmosphere. Perfect for getting lost in the sound."
+      },
+      "image": "/imagenes/musica/bonobo_live_New_York.jpg",
+      "tags": ["djset", "live"],
+      "youtube": "https://www.youtube.com/watch?v=uynCeLheCPc&list=RDuynCeLheCPc&start_radio=1&t=1191s",
+      "spotify": "https://open.spotify.com/playlist/7L6WBCc33Xxg4rB37N3B6w",
+      "masterpiece": true
+    },
+    {
+      "id": 4,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Delinqüentes",
+      "title": {
+        "es": "Chinchetas en el aire",
+        "en": "Chinchetas en el aire"
+      },
+      "description": {
+        "es": "Un tema emblemático de la banda Los Delinqüentes, mezcla de rock andaluz y blues. Clásico de su repertorio, transmite alegría y desenfado con letras festivas. Su pegadizo ritmo invita a moverse y celebrar la vida cotidiana. Canción viva y enérgica, representativa de su estilo único.",
+        "en": "An emblematic track by Los Delinqüentes, blending Andalusian rock and blues. A classic in their repertoire, it conveys joy and nonchalance through festive lyrics. Its catchy rhythm invites movement and celebration of everyday life. A lively and energetic song representing their unique style."
+      },
+      "image": "/imagenes/musica/chinchetas",
+      "tags": ["song"],
+      "youtube": "https://www.youtube.com/watch?pp=0gcJCf0Ao7VqN5tD&v=-iVTpD90w8k",
+      "spotify": "https://open.spotify.com/intl-es/track/7kOUc3VhkHpIMn3PFOKuh2g",
+      "masterpiece": false
+    },
+    {
+      "id": 5,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Orbital",
+      "title": {
+        "es": "The Girl With The Sun In Her Head",
+        "en": "The Girl With The Sun In Her Head"
+      },
+      "description": {
+        "es": "Un track ambient-electrónico de Orbital, parte de su quinto álbum In Sides (1996). Música relajante y atmosférica que destaca por su capa de texturas y ritmos pausados. Inspirada en la energía solar y la memoria de una fotógrafa, crea una sensación introspectiva. Clásico del ambient techno británico.",
+        "en": "An ambient-electronic track by Orbital, from their fifth album In Sides (1996). Relaxing and atmospheric music notable for its layers of textures and slow rhythms. Inspired by solar energy and the memory of a photographer, it creates a contemplative feeling. A classic of British ambient techno."
+      },
+      "image": "/imagenes/musica/orbital_sun.jpg",
+      "tags": ["song"],
+      "youtube": "https://www.youtube.com/watch?v=somevideoid",
+      "spotify": "https://open.spotify.com/track/sometrackid",
+      "masterpiece": false
+    }
+    // ...more items from the original file...
+  ]
+}
