@@ -245,7 +245,18 @@
         "adventure": "Aventura"
       },
       "music": {
-        
+        "pop": "Pop",
+        "rock": "Rock",
+        "rap": "Rap",
+        "jazz": "Jazz",
+        "classical": "Clásica",
+        "electronic": "Electrónica",
+        "reggae": "Reggae",
+        "metal": "Metal",
+        "latin": "Latina",
+        "ethnic": "Étnica",
+        "punk": "Punk",
+        "chillout": "Chill out"
       },
       "videogames": {
         "action": "Acción",
@@ -618,7 +629,18 @@
         "adventure": "Adventure"
       },
       "music": {
-        
+        "pop": "Pop",
+        "rock": "Rock",
+        "rap": "Rap",
+        "jazz": "Jazz",
+        "classical": "Classical",
+        "electronic": "Electronic",
+        "reggae": "Reggae",
+        "metal": "Metal",
+        "latin": "Latin",
+        "ethnic": "Ethnic",
+        "punk": "Punk",
+        "chillout": "Chill out"
       },
       "videogames": {
         "action": "Action",

@@ -233,6 +233,19 @@
       "image": "/imagenes/comics/Pyongyang.jpg",
       "masterpiece": true,
       "author": "Guy Delisle"
+    },
+    {
+      "id": 18,
+      "category": "comics",
+      "subcategory": "crónica",
+      "title": {"es": "Persepolis", "en": "Persepolis"},
+      "description": {
+        "es": "Persépolis es el título de una novela gráfica autobiográfica escrita e ilustrada en blanco y negro por la iraní Marjane Satrapi. La autora relata las etapas fundamentales que marcaron su vida, desde su niñez en Teherán durante la revolución islámica, hasta su difícil entrada a la vida adulta en Europa.[1]​ La buena recepción de la crítica hizo de Satrapi una de las autoras francófonas más reconocidas.[2]​ En 2007, la adaptación en largometraje de animación de Persépolis, obra de Vincent Paronnaud y la misma Marjane Satrapi, obtuvo el Premio del Jurado del Festival de Cannes.",
+        "en": "Persepolis is the title of an autobiographical graphic novel written and illustrated in black and white by Iranian author Marjane Satrapi. The author recounts the key stages that shaped her life, from her childhood in Tehran during the Islamic Revolution to her challenging transition into adulthood in Europe. The novel’s critical acclaim made Satrapi one of the most recognized Francophone authors. In 2007, the animated feature film adaptation of Persepolis, directed by Vincent Paronnaud and Satrapi herself, won the Jury Prize at the Cannes Film Festival."
+      },
+      "image": "/imagenes/comics/persepolis.jpg",
+      "masterpiece": false,
+      "author": "Marjane Satrapi"
     }
   ]
 }
