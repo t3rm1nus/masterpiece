@@ -1,6 +1,6 @@
 {
   "recommendations": [
     {"id": 201, "category": "music", "subcategory": "rap", "artist": "ABOCAJARRO", "title": {"es": "De día y de noche", "en": "By Day and By Night"}, "description": {"es": "Videoclip oficial de ABOCAJARRO para el tema 'De día y de noche', una producción que mezcla ritmos urbanos con letras profundas y un enfoque audiovisual cuidado. La dirección estuvo a cargo de Juan Miguel del Castillo y Caliche Films.", "en": "Official music video by ABOCAJARRO for the track 'By Day and By Night', a production mixing urban rhythms with deep lyrics and a well-crafted audiovisual approach. Directed by Juan Miguel del Castillo and Caliche Films."}, "image": "/imagenes/musica/abocajarro.jpg", "tags": ["song"], "youtube": "https://www.youtube.com/watch?v=somevideoid", "spotify": "https://open.spotify.com/track/sometrackid", "masterpiece": true}
-    // ...truncated for brevity, copy all content from the original file...
+    
   ]
 }
