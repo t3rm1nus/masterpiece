@@ -81,7 +81,7 @@
       },
       "image": "/imagenes/comics/palestina.jpg",
       "download": "https://archive.org/download/PalestinaJoeSacco/PalestinaJoeSacco.pdf",
-      "masterpiece": false,
+      "masterpiece": true,
       "author": "Joe Sacco"
     },
     {
