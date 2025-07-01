@@ -1,7 +1,12 @@
 // Utilidad para cargar datos reales desde JSON
+import { MusicDataLoader } from './musicDataLoader.js';
+
 export const loadRealData = async () => {
   try {
-    // Importar todos los archivos JSON
+    // Cargar datos de música de forma chunked
+    const musicDataPromise = MusicDataLoader.loadAllMusicData();
+    
+    // Importar todos los demás archivos JSON
     const [
       moviesData,
       booksData,
@@ -16,7 +21,7 @@ export const loadRealData = async () => {
       import('/src/data/datos_movies.json'),
       import('/src/data/datos_books.json'),
       import('/src/data/datos_videogames.json'),
-      import('/src/data/datos_music.json'),
+      musicDataPromise, // Usar la nueva carga chunked
       import('/src/data/datos_comics.json'),
       import('/src/data/datos_boardgames.json'),
       import('/src/data/datos_podcast.json'),
@@ -29,7 +34,10 @@ export const loadRealData = async () => {
       // Manejo flexible de diferentes estructuras JSON
       let itemsArray = null;
       
-      if (data?.default?.recommendations && Array.isArray(data.default.recommendations)) {
+      // Si es datos de música chunked, usar el array de recommendations directamente
+      if (categoryName === 'music' && data?.recommendations && Array.isArray(data.recommendations)) {
+        itemsArray = data.recommendations;
+      } else if (data?.default?.recommendations && Array.isArray(data.default.recommendations)) {
         itemsArray = data.default.recommendations;
       } else if (data?.default?.[categoryName] && Array.isArray(data.default[categoryName])) {
         itemsArray = data.default[categoryName];
