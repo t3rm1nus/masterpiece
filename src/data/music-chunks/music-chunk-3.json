@@ -1,564 +1,634 @@
 {
-  "recommendations": [    
-  
-  {
-    "id": 401,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": { "es": "RapSinCorte XXXVII", "en": "rapsincorte xxxvii" },
-    "description": {
-      "es": "Trigésimo séptima entrega con flow refinado y presencia escénica.\nImprovisación pura sin cortes, fuerte actitud.\nRecibida con entusiasmo por la comunidad.",
-      "en": "Thirty-seventh installment with refined flow and stage presence.\nPure improvisation uncut, strong attitude.\nReceived enthusiastically by the community."
+  "recommendations": [
+    {
+      "id": 401,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "RapSinCorte XXXVII",
+        "en": "rapsincorte xxxvii"
+      },
+      "description": {
+        "es": "Trigésimo séptima entrega con flow refinado y presencia escénica.\nImprovisación pura sin cortes, fuerte actitud.\nRecibida con entusiasmo por la comunidad.",
+        "en": "Thirty-seventh installment with refined flow and stage presence.\nPure improvisation uncut, strong attitude.\nReceived enthusiastically by the community."
+      },
+      "image": "/imagenes/musica/rapsincortexxxvii.jpg",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
     },
-    "image": "/imagenes/musica/rapsincortexxxvii.jpg",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": false
-  },
-  {
-    "id": 402,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": { "es": "RapSinCorte XXXVIII", "en": "rapsincorte xxxviii" },
-    "description": {
-      "es": "Trigésimo octava parte con barras introspectivas y beat suave.\nUn solo take que mantiene la esencia de la saga.\nBien valorada por su lírica y atmósfera.",
-      "en": "Thirty-eighth part with introspective bars and soft beat.\nSingle take maintaining the saga's essence.\nWell praised for its lyrics and atmosphere."
+    {
+      "id": 402,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "RapSinCorte XXXVIII",
+        "en": "rapsincorte xxxviii"
+      },
+      "description": {
+        "es": "Trigésimo octava parte con barras introspectivas y beat suave.\nUn solo take que mantiene la esencia de la saga.\nBien valorada por su lírica y atmósfera.",
+        "en": "Thirty-eighth part with introspective bars and soft beat.\nSingle take maintaining the saga's essence.\nWell praised for its lyrics and atmosphere."
+      },
+      "image": "/imagenes/musica/rapsincortexxxviii.jpg",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
     },
-    "image": "/imagenes/musica/rapsincortexxxviii.jpg",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": false
-  },
-  {
-    "id": 403,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": { "es": "RapSinCorte XXXIX", "en": "rapsincorte xxxix" },
-    "description": {
-      "es": "Trigésimo novena entrega con fuerza y ritmo marcado.\nImprovisación sin cortes, ritmo constante.\nAclamada por su energía y técnica vocal.",
-      "en": "Thirty-ninth installment with strength and marked rhythm.\nUncut improvisation, steady rhythm.\nAcclaimed for its energy and vocal technique."
+    {
+      "id": 403,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "RapSinCorte XXXIX",
+        "en": "rapsincorte xxxix"
+      },
+      "description": {
+        "es": "Trigésimo novena entrega con fuerza y ritmo marcado.\nImprovisación sin cortes, ritmo constante.\nAclamada por su energía y técnica vocal.",
+        "en": "Thirty-ninth installment with strength and marked rhythm.\nUncut improvisation, steady rhythm.\nAcclaimed for its energy and vocal technique."
+      },
+      "image": "/imagenes/musica/rapsincortexxxix.jpg",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
     },
-    "image": "/imagenes/musica/rapsincortexxxix.jpg",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": false
-  },
-  {
-    "id": 404,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": { "es": "RapSinCorte XL", "en": "rapsincorte xl" },
-    "description": {
-      "es": "Cuadragésima entrega con producción impecable y flow maduro.\nFormato one-shot sin edición, improvisación sólida.\nMarca un hito en la saga RapSinCorte.",
-      "en": "Fortieth installment with impeccable production and mature flow.\nOne-shot format unedited, solid improvisation.\nMarks a milestone in the RapSinCorte saga."
+    {
+      "id": 404,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "RapSinCorte XL",
+        "en": "rapsincorte xl"
+      },
+      "description": {
+        "es": "Cuadragésima entrega con producción impecable y flow maduro.\nFormato one-shot sin edición, improvisación sólida.\nMarca un hito en la saga RapSinCorte.",
+        "en": "Fortieth installment with impeccable production and mature flow.\nOne-shot format unedited, solid improvisation.\nMarks a milestone in the RapSinCorte saga."
+      },
+      "image": "/imagenes/musica/rapsincortexl.jpg",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "image": "/imagenes/musica/rapsincortexl.jpg",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 405,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": {
-      "es": "Rap sin corte 41",
-      "en": "Rap sin corte 41"
+    {
+      "id": 405,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte 41",
+        "en": "Rap sin corte 41"
+      },
+      "description": {
+        "es": "Una muestra potente de la lírica cruda y real de Foyone que refleja las vivencias urbanas y sociales con ritmo agresivo y flow único.",
+        "en": "A powerful showcase of Foyone's raw and real lyrics reflecting urban and social experiences with aggressive rhythm and unique flow."
+      },
+      "image": "/imagenes/musica/rapsincorte41",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "description": {
-      "es": "Una muestra potente de la lírica cruda y real de Foyone que refleja las vivencias urbanas y sociales con ritmo agresivo y flow único.",
-      "en": "A powerful showcase of Foyone's raw and real lyrics reflecting urban and social experiences with aggressive rhythm and unique flow."
+    {
+      "id": 406,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte 42",
+        "en": "Rap sin corte 42"
+      },
+      "description": {
+        "es": "Un track que profundiza en la crítica social desde la perspectiva personal de Foyone, con beats contundentes y versos afilados.",
+        "en": "A track that delves into social criticism from Foyone's personal perspective, with strong beats and sharp verses."
+      },
+      "image": "/imagenes/musica/rapsincorte42",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "image": "/imagenes/musica/rapsincorte41",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 406,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": {
-      "es": "Rap sin corte 42",
-      "en": "Rap sin corte 42"
+    {
+      "id": 407,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte 43",
+        "en": "Rap sin corte 43"
+      },
+      "description": {
+        "es": "Versos directos que expresan la realidad cruda sin filtros, acompañados de una producción sonora que resalta cada palabra.",
+        "en": "Direct verses expressing raw reality without filters, accompanied by a sound production that highlights every word."
+      },
+      "image": "/imagenes/musica/rapsincorte43",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "description": {
-      "es": "Un track que profundiza en la crítica social desde la perspectiva personal de Foyone, con beats contundentes y versos afilados.",
-      "en": "A track that delves into social criticism from Foyone's personal perspective, with strong beats and sharp verses."
+    {
+      "id": 408,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte 44",
+        "en": "Rap sin corte 44"
+      },
+      "description": {
+        "es": "Un viaje a través de las emociones y conflictos internos que Foyone plasma con autenticidad y ritmo firme.",
+        "en": "A journey through emotions and inner conflicts that Foyone portrays with authenticity and firm rhythm."
+      },
+      "image": "/imagenes/musica/rapsincorte44",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "image": "/imagenes/musica/rapsincorte42",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 407,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": {
-      "es": "Rap sin corte 43",
-      "en": "Rap sin corte 43"
+    {
+      "id": 409,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte 45",
+        "en": "Rap sin corte 45"
+      },
+      "description": {
+        "es": "Una canción que mezcla crítica social con poesía urbana, destacando el ingenio lírico y la fluidez del artista.",
+        "en": "A song that mixes social criticism with urban poetry, highlighting the artist's lyrical wit and flow."
+      },
+      "image": "/imagenes/musica/rapsincorte45",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "description": {
-      "es": "Versos directos que expresan la realidad cruda sin filtros, acompañados de una producción sonora que resalta cada palabra.",
-      "en": "Direct verses expressing raw reality without filters, accompanied by a sound production that highlights every word."
+    {
+      "id": 410,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte 46",
+        "en": "Rap sin corte 46"
+      },
+      "description": {
+        "es": "Una pieza que enfatiza el poder de la palabra como arma contra la injusticia y la hipocresía social.",
+        "en": "A piece emphasizing the power of words as a weapon against injustice and social hypocrisy."
+      },
+      "image": "/imagenes/musica/rapsincorte46",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "image": "/imagenes/musica/rapsincorte43",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 408,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": {
-      "es": "Rap sin corte 44",
-      "en": "Rap sin corte 44"
+    {
+      "id": 411,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte 47",
+        "en": "Rap sin corte 47"
+      },
+      "description": {
+        "es": "Un tema que aborda la lucha interna y externa, con una producción oscura que potencia el mensaje intenso.",
+        "en": "A track addressing internal and external struggles, with a dark production that enhances the intense message."
+      },
+      "image": "/imagenes/musica/rapsincorte47",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "description": {
-      "es": "Un viaje a través de las emociones y conflictos internos que Foyone plasma con autenticidad y ritmo firme.",
-      "en": "A journey through emotions and inner conflicts that Foyone portrays with authenticity and firm rhythm."
+    {
+      "id": 412,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte 48",
+        "en": "Rap sin corte 48"
+      },
+      "description": {
+        "es": "Un relato urbano contado con lirismo afilado y crítica profunda a los sistemas que oprimen a las minorías.",
+        "en": "An urban tale told with sharp lyricism and deep criticism of systems that oppress minorities."
+      },
+      "image": "/imagenes/musica/rapsincorte48",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "image": "/imagenes/musica/rapsincorte44",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 409,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": {
-      "es": "Rap sin corte 45",
-      "en": "Rap sin corte 45"
+    {
+      "id": 413,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte 49",
+        "en": "Rap sin corte 49"
+      },
+      "description": {
+        "es": "Un corte donde la sinceridad y el realismo se combinan para mostrar el lado más crudo de la realidad social.",
+        "en": "A track where sincerity and realism combine to show the rawest side of social reality."
+      },
+      "image": "/imagenes/musica/rapsincorte49",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "description": {
-      "es": "Una canción que mezcla crítica social con poesía urbana, destacando el ingenio lírico y la fluidez del artista.",
-      "en": "A song that mixes social criticism with urban poetry, highlighting the artist's lyrical wit and flow."
+    {
+      "id": 414,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte 50",
+        "en": "Rap sin corte 50"
+      },
+      "description": {
+        "es": "El cierre de esta serie destaca por su fuerza lírica y crítica incisiva hacia la realidad política y social actual.",
+        "en": "The closing of this series stands out for its lyrical strength and incisive critique of current political and social reality."
+      },
+      "image": "/imagenes/musica/rapsincorte50",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "image": "/imagenes/musica/rapsincorte45",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 410,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": {
-      "es": "Rap sin corte 46",
-      "en": "Rap sin corte 46"
+    {
+      "id": 415,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte 51",
+        "en": "Rap sin corte 51"
+      },
+      "description": {
+        "es": "Un tema donde Foyone sigue mostrando su estilo directo y sin concesiones, combinando crítica social con versos afilados y contundentes. La producción acompaña con ritmos que resaltan cada palabra y emoción transmitida.",
+        "en": "A track where Foyone continues showing his direct and uncompromising style, blending social criticism with sharp and powerful verses. The production supports with beats that highlight every word and emotion conveyed."
+      },
+      "image": "/imagenes/musica/rapsincorte51",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "description": {
-      "es": "Una pieza que enfatiza el poder de la palabra como arma contra la injusticia y la hipocresía social.",
-      "en": "A piece emphasizing the power of words as a weapon against injustice and social hypocrisy."
+    {
+      "id": 416,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte 52",
+        "en": "Rap sin corte 52"
+      },
+      "description": {
+        "es": "Este corte mantiene la esencia de Foyone con letras que reflejan la realidad urbana y sus contradicciones, acompañadas de una base musical que aporta intensidad y ritmo sostenido.",
+        "en": "This track keeps Foyone’s essence with lyrics that reflect urban reality and its contradictions, accompanied by a musical base that provides intensity and steady rhythm."
+      },
+      "image": "/imagenes/musica/rapsincorte52",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "image": "/imagenes/musica/rapsincorte46",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 411,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": {
-      "es": "Rap sin corte 47",
-      "en": "Rap sin corte 47"
+    {
+      "id": 417,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tote King",
+      "title": {
+        "es": "Tu madre es una foca",
+        "en": "Tu madre es una foca"
+      },
+      "description": {
+        "es": "El álbum debut de Tote King marcó un antes y un después en el rap español. Letras intensas y directas, cargadas de crítica social y estilo propio, con bases contundentes que potencian cada verso.",
+        "en": "Tote King's debut album marked a turning point in Spanish rap. Intense and direct lyrics, loaded with social critique and unique style, with powerful beats that enhance every verse."
+      },
+      "image": "/imagenes/musica/tumadre",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=XYMJZwT2TYE",
+      "spotify": "https://open.spotify.com/album/3KX1PDeLmwTx4vxo4MEySd",
+      "masterpiece": true
     },
-    "description": {
-      "es": "Un tema que aborda la lucha interna y externa, con una producción oscura que potencia el mensaje intenso.",
-      "en": "A track addressing internal and external struggles, with a dark production that enhances the intense message."
+    {
+      "id": 418,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tote King",
+      "title": {
+        "es": "Música para enfermos",
+        "en": "Música para enfermos"
+      },
+      "description": {
+        "es": "Segundo álbum que reafirma la madurez artística de Tote King. Combina lirismo ácido con instrumentales más elaboradas, explorando temáticas personales y sociales con autenticidad.",
+        "en": "Second album that reaffirms Tote King's artistic maturity. Combines sharp lyrics with more elaborate instrumentals, exploring personal and social themes with authenticity."
+      },
+      "image": "/imagenes/musica/musica",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=RWwQDz9QnKk",
+      "spotify": "https://open.spotify.com/album/6kEdJHPaMzhq3nnfImxWcQ",
+      "masterpiece": true
     },
-    "image": "/imagenes/musica/rapsincorte47",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 412,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": {
-      "es": "Rap sin corte 48",
-      "en": "Rap sin corte 48"
+    {
+      "id": 419,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tote King",
+      "title": {
+        "es": "El lado oscuro de Gandhi",
+        "en": "El lado oscuro de Gandhi"
+      },
+      "description": {
+        "es": "Álbum donde Tote King mezcla crítica social con una visión personal de la realidad, acompañado de ritmos potentes y variados que demuestran su versatilidad y compromiso artístico.",
+        "en": "Album where Tote King mixes social critique with a personal view of reality, accompanied by powerful and varied rhythms demonstrating his versatility and artistic commitment."
+      },
+      "image": "/imagenes/musica/gandhi",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=zjI15NAGQYo",
+      "spotify": "https://open.spotify.com/album/1IBQbh7W7ql7eA3QMLHRlu",
+      "masterpiece": true
     },
-    "description": {
-      "es": "Un relato urbano contado con lirismo afilado y crítica profunda a los sistemas que oprimen a las minorías.",
-      "en": "An urban tale told with sharp lyricism and deep criticism of systems that oppress minorities."
+    {
+      "id": 420,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tote King",
+      "title": {
+        "es": "Lebron",
+        "en": "Lebron"
+      },
+      "description": {
+        "es": "En este álbum, Tote King ofrece una mirada más personal y madura, con letras que exploran emociones complejas y realidades urbanas, respaldadas por producciones modernas y envolventes.",
+        "en": "In this album, Tote King offers a more personal and mature look, with lyrics exploring complex emotions and urban realities, backed by modern and immersive productions."
+      },
+      "image": "/imagenes/musica/lebron",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=VhfxMWHRpJQ",
+      "spotify": "https://open.spotify.com/album/3juq9tp0E4CftZq4qSqxr3",
+      "masterpiece": true
     },
-    "image": "/imagenes/musica/rapsincorte48",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 413,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": {
-      "es": "Rap sin corte 49",
-      "en": "Rap sin corte 49"
+    {
+      "id": 421,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tote King",
+      "title": {
+        "es": "The kingtape",
+        "en": "The kingtape"
+      },
+      "description": {
+        "es": "Mixtape que muestra la habilidad lírica y el estilo único de Tote King, con un enfoque más crudo y directo, manteniendo su esencia y ganando seguidores en la escena del rap español.",
+        "en": "Mixtape showcasing Tote King's lyrical skill and unique style, with a rawer and more direct approach, maintaining his essence and gaining followers in the Spanish rap scene."
+      },
+      "image": "/imagenes/musica/kingtape",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=biBqjQtb9Wo",
+      "spotify": "https://open.spotify.com/album/4rln8WnPthLu1j5Fpm6TxT",
+      "masterpiece": true
     },
-    "description": {
-      "es": "Un corte donde la sinceridad y el realismo se combinan para mostrar el lado más crudo de la realidad social.",
-      "en": "A track where sincerity and realism combine to show the rawest side of social reality."
+    {
+      "id": 422,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Nada Pa Mí",
+        "en": "Nada Pa Mí"
+      },
+      "description": {
+        "es": "Maxi que marca el inicio de Shotta en el rap con letras sinceras y directas. Su estilo refleja la crudeza y realidad de las calles, con una producción clásica que potencia su voz única.",
+        "en": "Maxi that marks Shotta's debut in rap with sincere and direct lyrics. His style reflects the harshness and reality of the streets, with classic production that enhances his unique voice."
+      },
+      "image": "/imagenes/musica/nadapami",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "image": "/imagenes/musica/rapsincorte49",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 414,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": {
-      "es": "Rap sin corte 50",
-      "en": "Rap sin corte 50"
+    {
+      "id": 423,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Salvaje",
+        "en": "Salvaje"
+      },
+      "description": {
+        "es": "Último LP que muestra a Shotta en su máxima expresión, con un rap agresivo y maduro que combina letras personales y sociales con una producción potente y actual.",
+        "en": "Latest LP showing Shotta at his best, with aggressive and mature rap combining personal and social lyrics with powerful and modern production."
+      },
+      "image": "/imagenes/musica/salvaje",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "description": {
-      "es": "El cierre de esta serie destaca por su fuerza lírica y crítica incisiva hacia la realidad política y social actual.",
-      "en": "The closing of this series stands out for its lyrical strength and incisive critique of current political and social reality."
+    {
+      "id": 424,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Héroe",
+        "en": "Héroe"
+      },
+      "description": {
+        "es": "Álbum donde Shotta muestra una evolución lírica y musical, combinando introspección y crítica social. Una producción que mezcla sonidos clásicos con influencias modernas del rap.",
+        "en": "Album where Shotta shows lyrical and musical evolution, combining introspection and social critique. A production mixing classic sounds with modern rap influences."
+      },
+      "image": "/imagenes/musica/heroe",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "image": "/imagenes/musica/rapsincorte50",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 415,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": {
-      "es": "Rap sin corte 51",
-      "en": "Rap sin corte 51"
+    {
+      "id": 425,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "La Selva",
+        "en": "La Selva"
+      },
+      "description": {
+        "es": "LP que presenta a Shotta en una etapa madura, con letras profundas que abordan temas de vida, lucha y supervivencia. Su estilo combina energía y reflexión con beats poderosos.",
+        "en": "LP presenting Shotta in a mature stage, with deep lyrics addressing life, struggle, and survival. His style combines energy and reflection with powerful beats."
+      },
+      "image": "/imagenes/musica/laselva",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "description": {
-      "es": "Un tema donde Foyone sigue mostrando su estilo directo y sin concesiones, combinando crítica social con versos afilados y contundentes. La producción acompaña con ritmos que resaltan cada palabra y emoción transmitida.",
-      "en": "A track where Foyone continues showing his direct and uncompromising style, blending social criticism with sharp and powerful verses. The production supports with beats that highlight every word and emotion conveyed."
+    {
+      "id": 426,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Los Raperos Nunca Mueren",
+        "en": "Los Raperos Nunca Mueren"
+      },
+      "description": {
+        "es": "Maxi que reafirma la posición de Shotta en el rap español, con temas potentes y un flow que combina agresividad y técnica. Una muestra clara de su compromiso con el género.",
+        "en": "Maxi that reaffirms Shotta's position in Spanish rap, with powerful tracks and a flow combining aggression and technique. A clear display of his commitment to the genre."
+      },
+      "image": "/imagenes/musica/losraperos",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "image": "/imagenes/musica/rapsincorte51",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 416,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Foyone",
-    "title": {
-      "es": "Rap sin corte 52",
-      "en": "Rap sin corte 52"
+    {
+      "id": 427,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Sangre",
+        "en": "Sangre"
+      },
+      "description": {
+        "es": "Este LP muestra a Shotta en plena forma, con letras comprometidas y una producción sólida que combina ritmos clásicos y actuales para potenciar el mensaje de sus canciones.",
+        "en": "This LP shows Shotta in great form, with committed lyrics and solid production that combines classic and current rhythms to enhance the message of his songs."
+      },
+      "image": "/imagenes/musica/sangre",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "description": {
-      "es": "Este corte mantiene la esencia de Foyone con letras que reflejan la realidad urbana y sus contradicciones, acompañadas de una base musical que aporta intensidad y ritmo sostenido.",
-      "en": "This track keeps Foyone’s essence with lyrics that reflect urban reality and its contradictions, accompanied by a musical base that provides intensity and steady rhythm."
+    {
+      "id": 428,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Profundo",
+        "en": "Profundo"
+      },
+      "description": {
+        "es": "Un álbum introspectivo donde Shotta combina experiencias personales con críticas sociales. La producción es cuidada y el flow se adapta a un rap más maduro y reflexivo.",
+        "en": "An introspective album where Shotta combines personal experiences with social critiques. The production is polished and the flow adapts to a more mature and reflective rap."
+      },
+      "image": "/imagenes/musica/profundo",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "image": "/imagenes/musica/rapsincorte52",
-    "tags": ["song"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 417,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Tote King",
-    "title": {
-      "es": "Tu madre es una foca",
-      "en": "Tu madre es una foca"
+    {
+      "id": 429,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Flowesia",
+        "en": "Flowesia"
+      },
+      "description": {
+        "es": "LP que mezcla técnica y energía, mostrando la versatilidad de Shotta con ritmos variados y letras que recorren desde lo personal hasta lo social, siempre con autenticidad.",
+        "en": "LP mixing technique and energy, showing Shotta's versatility with varied rhythms and lyrics ranging from personal to social topics, always with authenticity."
+      },
+      "image": "/imagenes/musica/flowesia",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
     },
-    "description": {
-      "es": "El álbum debut de Tote King marcó un antes y un después en el rap español. Letras intensas y directas, cargadas de crítica social y estilo propio, con bases contundentes que potencian cada verso.",
-      "en": "Tote King's debut album marked a turning point in Spanish rap. Intense and direct lyrics, loaded with social critique and unique style, with powerful beats that enhance every verse."
-    },
-    "image": "/imagenes/musica/tumadre",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/watch?v=XYMJZwT2TYE",
-    "spotify": "https://open.spotify.com/album/3KX1PDeLmwTx4vxo4MEySd",
-    "masterpiece": true
-  },
-  {
-    "id": 418,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Tote King",
-    "title": {
-      "es": "Música para enfermos",
-      "en": "Música para enfermos"
-    },
-    "description": {
-      "es": "Segundo álbum que reafirma la madurez artística de Tote King. Combina lirismo ácido con instrumentales más elaboradas, explorando temáticas personales y sociales con autenticidad.",
-      "en": "Second album that reaffirms Tote King's artistic maturity. Combines sharp lyrics with more elaborate instrumentals, exploring personal and social themes with authenticity."
-    },
-    "image": "/imagenes/musica/musica",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/watch?v=RWwQDz9QnKk",
-    "spotify": "https://open.spotify.com/album/6kEdJHPaMzhq3nnfImxWcQ",
-    "masterpiece": true
-  },
-  {
-    "id": 419,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Tote King",
-    "title": {
-      "es": "El lado oscuro de Gandhi",
-      "en": "El lado oscuro de Gandhi"
-    },
-    "description": {
-      "es": "Álbum donde Tote King mezcla crítica social con una visión personal de la realidad, acompañado de ritmos potentes y variados que demuestran su versatilidad y compromiso artístico.",
-      "en": "Album where Tote King mixes social critique with a personal view of reality, accompanied by powerful and varied rhythms demonstrating his versatility and artistic commitment."
-    },
-    "image": "/imagenes/musica/gandhi",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/watch?v=zjI15NAGQYo",
-    "spotify": "https://open.spotify.com/album/1IBQbh7W7ql7eA3QMLHRlu",
-    "masterpiece": true
-  },
-  {
-    "id": 420,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Tote King",
-    "title": {
-      "es": "Lebron",
-      "en": "Lebron"
-    },
-    "description": {
-      "es": "En este álbum, Tote King ofrece una mirada más personal y madura, con letras que exploran emociones complejas y realidades urbanas, respaldadas por producciones modernas y envolventes.",
-      "en": "In this album, Tote King offers a more personal and mature look, with lyrics exploring complex emotions and urban realities, backed by modern and immersive productions."
-    },
-    "image": "/imagenes/musica/lebron",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/watch?v=VhfxMWHRpJQ",
-    "spotify": "https://open.spotify.com/album/3juq9tp0E4CftZq4qSqxr3",
-    "masterpiece": true
-  },
-  {
-    "id": 421,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Tote King",
-    "title": {
-      "es": "The kingtape",
-      "en": "The kingtape"
-    },
-    "description": {
-      "es": "Mixtape que muestra la habilidad lírica y el estilo único de Tote King, con un enfoque más crudo y directo, manteniendo su esencia y ganando seguidores en la escena del rap español.",
-      "en": "Mixtape showcasing Tote King's lyrical skill and unique style, with a rawer and more direct approach, maintaining his essence and gaining followers in the Spanish rap scene."
-    },
-    "image": "/imagenes/musica/kingtape",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/watch?v=biBqjQtb9Wo",
-    "spotify": "https://open.spotify.com/album/4rln8WnPthLu1j5Fpm6TxT",
-    "masterpiece": true
-  },
-  {
-    "id": 422,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Shotta",
-    "title": {
-      "es": "Nada Pa Mí",
-      "en": "Nada Pa Mí"
-    },
-    "description": {
-      "es": "Maxi que marca el inicio de Shotta en el rap con letras sinceras y directas. Su estilo refleja la crudeza y realidad de las calles, con una producción clásica que potencia su voz única.",
-      "en": "Maxi that marks Shotta's debut in rap with sincere and direct lyrics. His style reflects the harshness and reality of the streets, with classic production that enhances his unique voice."
-    },
-    "image": "/imagenes/musica/nadapami",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
- {
-    "id": 423,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Shotta",
-    "title": {
-      "es": "Salvaje",
-      "en": "Salvaje"
-    },
-    "description": {
-      "es": "Último LP que muestra a Shotta en su máxima expresión, con un rap agresivo y maduro que combina letras personales y sociales con una producción potente y actual.",
-      "en": "Latest LP showing Shotta at his best, with aggressive and mature rap combining personal and social lyrics with powerful and modern production."
-    },
-    "image": "/imagenes/musica/salvaje",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 424,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Shotta",
-    "title": {
-      "es": "Héroe",
-      "en": "Héroe"
-    },
-    "description": {
-      "es": "Álbum donde Shotta muestra una evolución lírica y musical, combinando introspección y crítica social. Una producción que mezcla sonidos clásicos con influencias modernas del rap.",
-      "en": "Album where Shotta shows lyrical and musical evolution, combining introspection and social critique. A production mixing classic sounds with modern rap influences."
-    },
-    "image": "/imagenes/musica/heroe",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 425,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Shotta",
-    "title": {
-      "es": "La Selva",
-      "en": "La Selva"
-    },
-    "description": {
-      "es": "LP que presenta a Shotta en una etapa madura, con letras profundas que abordan temas de vida, lucha y supervivencia. Su estilo combina energía y reflexión con beats poderosos.",
-      "en": "LP presenting Shotta in a mature stage, with deep lyrics addressing life, struggle, and survival. His style combines energy and reflection with powerful beats."
-    },
-    "image": "/imagenes/musica/laselva",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 426,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Shotta",
-    "title": {
-      "es": "Los Raperos Nunca Mueren",
-      "en": "Los Raperos Nunca Mueren"
-    },
-    "description": {
-      "es": "Maxi que reafirma la posición de Shotta en el rap español, con temas potentes y un flow que combina agresividad y técnica. Una muestra clara de su compromiso con el género.",
-      "en": "Maxi that reaffirms Shotta's position in Spanish rap, with powerful tracks and a flow combining aggression and technique. A clear display of his commitment to the genre."
-    },
-    "image": "/imagenes/musica/losraperos",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 427,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Shotta",
-    "title": {
-      "es": "Sangre",
-      "en": "Sangre"
-    },
-    "description": {
-      "es": "Este LP muestra a Shotta en plena forma, con letras comprometidas y una producción sólida que combina ritmos clásicos y actuales para potenciar el mensaje de sus canciones.",
-      "en": "This LP shows Shotta in great form, with committed lyrics and solid production that combines classic and current rhythms to enhance the message of his songs."
-    },
-    "image": "/imagenes/musica/sangre",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 428,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Shotta",
-    "title": {
-      "es": "Profundo",
-      "en": "Profundo"
-    },
-    "description": {
-      "es": "Un álbum introspectivo donde Shotta combina experiencias personales con críticas sociales. La producción es cuidada y el flow se adapta a un rap más maduro y reflexivo.",
-      "en": "An introspective album where Shotta combines personal experiences with social critiques. The production is polished and the flow adapts to a more mature and reflective rap."
-    },
-    "image": "/imagenes/musica/profundo",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 429,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Shotta",
-    "title": {
-      "es": "Flowesia",
-      "en": "Flowesia"
-    },
-    "description": {
-      "es": "LP que mezcla técnica y energía, mostrando la versatilidad de Shotta con ritmos variados y letras que recorren desde lo personal hasta lo social, siempre con autenticidad.",
-      "en": "LP mixing technique and energy, showing Shotta's versatility with varied rhythms and lyrics ranging from personal to social topics, always with authenticity."
-    },
-    "image": "/imagenes/musica/flowesia",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  },
-  {
-    "id": 430,
-    "category": "music",
-    "subcategory": "rap",
-    "artist": "Shotta",
-    "title": {
-      "es": "Para Mi Gente",
-      "en": "Para Mi Gente"
-    },
-    "description": {
-      "es": "Álbum dedicado a la gente que apoya a Shotta, con una combinación de temas festivos y reflexivos. El sonido es fresco, manteniendo la esencia del rap callejero español.",
-      "en": "Album dedicated to the people supporting Shotta, combining festive and reflective tracks. The sound is fresh, maintaining the essence of Spanish street rap."
-    },
-    "image": "/imagenes/musica/pramigente",
-    "tags": ["album"],
-    "youtube": "https://www.youtube.com/",
-    "spotify": "https://open.spotify.com/",
-    "masterpiece": true
-  }
-  
+    {
+      "id": 430,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Para Mi Gente",
+        "en": "Para Mi Gente"
+      },
+      "description": {
+        "es": "Álbum dedicado a la gente que apoya a Shotta, con una combinación de temas festivos y reflexivos. El sonido es fresco, manteniendo la esencia del rap callejero español.",
+        "en": "Album dedicated to the people supporting Shotta, combining festive and reflective tracks. The sound is fresh, maintaining the essence of Spanish street rap."
+      },
+      "image": "/imagenes/musica/pramigente",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
+    }
   ]
 }

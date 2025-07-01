@@ -8,6 +8,8 @@ import SubcategoryBar from './home/SubcategoryBar';
 import { NoResults } from './SharedComponents';
 import MaterialRecommendationCard from './MaterialRecommendationCard';
 import { randomNotFoundImage } from '../store/utils';
+import useInfiniteScroll from '../hooks/useInfiniteScroll';
+import { CircularProgress, Box } from '@mui/material';
 
 /**
  * DesktopRecommendationsList
@@ -67,6 +69,11 @@ const DesktopRecommendationsList = ({
   sx = {},
   className = '',
   style = {},
+  // Infinite scroll props
+  onLoadMore,
+  hasMore,
+  loadingMore,
+  categoryColor,
   // legacy/compatibilidad
   recommendations,
   isHome,
@@ -92,12 +99,23 @@ const DesktopRecommendationsList = ({
   const domSafeRest = { ...rest };
   delete domSafeRest.showCategorySelect;
   delete domSafeRest.showSubcategoryChips;
+  delete domSafeRest.onLoadMore;
+  delete domSafeRest.hasMore;
+  delete domSafeRest.loadingMore;
+  delete domSafeRest.categoryColor;
 
   const data = items || recommendations;
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation, getTranslation } = useLanguage();
   const { goToDetail } = useAppView();
   const { getMasterpieceBadgeConfig } = useAppTheme();
   const badgeConfig = getMasterpieceBadgeConfig();
+
+  // Infinite scroll hook
+  const { sentinelRef } = useInfiniteScroll(
+    onLoadMore || (() => {}),
+    !!hasMore,
+    !!loadingMore
+  );
 
   // Funciones utilitarias
   const processMultiLanguageField = useCallback((field) => {
@@ -282,6 +300,40 @@ const DesktopRecommendationsList = ({
       <div className="recommendations-list desktop-list" style={listStyles}>
         {memoizedRecommendations}
       </div>
+      
+      {/* Infinite scroll sentinel para desktop */}
+      {hasMore && (
+        <Box
+          ref={sentinelRef}
+          sx={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '20px',
+            minHeight: '60px',
+            backgroundColor: categoryColor ? `${categoryColor}22` : '#ff980022',
+            borderRadius: '8px',
+            margin: '20px 0'
+          }}
+        >
+          <span style={{ 
+            color: categoryColor || '#ff9800', 
+            fontWeight: 'bold', 
+            marginRight: 12, 
+            fontSize: 18 
+          }}>
+            {getTranslation('ui.states.loading', 'Cargando / Loading')}
+          </span>
+          {loadingMore && (
+            <CircularProgress 
+              size={32} 
+              sx={{ color: categoryColor || '#ff9800' }} 
+            />
+          )}
+        </Box>
+      )}
+      
       {pagination && (
         <div className="pagination-container">
           <button 

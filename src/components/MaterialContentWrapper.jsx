@@ -117,7 +117,7 @@ const MaterialContentWrapper = ({
     }
   }, [recommendations]);
 
-  // Infinite scroll solo en móvil y solo en listados de categorías
+  // Infinite scroll para móvil y desktop cuando hay categorías específicas
   const { sentinelRef } = useInfiniteScroll(
     onLoadMore || (() => {}),
     !!hasMore,
@@ -166,7 +166,7 @@ const MaterialContentWrapper = ({
               className={visibleIndexes.includes(index) ? '' : 'entering'}
             />
           ))}
-          {/* Sentinel para infinite scroll */}
+          {/* Sentinel para infinite scroll en móvil y desktop */}
           {(() => {
             if (hasMore) {
               // Normaliza el color: si no hay, usa naranja por defecto

@@ -1,7 +1,7 @@
 {
-  "totalItems": 334,
+  "totalItems": 430,
   "chunkSize": 200,
-  "totalChunks": 2,
+  "totalChunks": 3,
   "chunks": [
     {
       "fileName": "music-chunk-1.json",
@@ -13,13 +13,13 @@
       "fileName": "music-chunk-2.json",
       "startId": 201,
       "endId": 400,
-      "itemCount": 199
+      "itemCount": 200
     },
     {
       "fileName": "music-chunk-3.json",
       "startId": 401,
-      "endId": 600,
-      "itemCount": 1199
+      "endId": 430,
+      "itemCount": 30
     }
   ]
 }

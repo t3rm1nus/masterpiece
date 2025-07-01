@@ -20,6 +20,7 @@ import HybridMenu from './HybridMenu';
 import MaterialMobileMenu from './MaterialMobileMenu';
 import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 import MaterialContentWrapper from './MaterialContentWrapper';
+import DesktopRecommendationsList from './DesktopRecommendationsList';
 import useAppStore from '../store/useAppStore'; // <-- Usar solo el store NUEVO
 import { normalizeSubcategoryInternal } from '../utils/categoryUtils';
 import { keyframes, styled } from '@mui/system';
@@ -400,35 +401,65 @@ const HomePage = ({
   const isMobile = useIsMobile();
   const isCategoryListMobile = isMobile && selectedCategory && selectedCategory !== 'all';
 
-  // Estado de paginación SOLO para móvil
+  // Estado de paginación para móvil y desktop (independientes)
   const [mobilePage, setMobilePage] = useState(1);
+  const [desktopPage, setDesktopPage] = useState(1);
   const [loadingMoreMobile, setLoadingMoreMobile] = useState(false);
+  const [loadingMoreDesktop, setLoadingMoreDesktop] = useState(false);
   const pageSize = 10; // Ajusta a 10 para cumplir el requerimiento
 
   // Resetear página al cambiar de categoría, subcategoría o filtros relevantes
   useEffect(() => {
     if (isMobile) setMobilePage(1);
+    else setDesktopPage(1);
   }, [selectedCategory, activeSubcategory, isSpanishCinemaActive, isMasterpieceActive, isMobile]);
 
-  // Calcular los ítems a mostrar SOLO en móvil (paginados)
+  // Calcular los ítems a mostrar con paginación (móvil y desktop)
   const paginatedItems = React.useMemo(() => {
-    if (!isMobile) return filteredItems;
-    return filteredItems.slice(0, mobilePage * pageSize);
-  }, [filteredItems, mobilePage, isMobile]);
-
-  // Calcular si hay más para infinite scroll SOLO en móvil
-  const hasMoreMobile = isMobile && (paginatedItems.length < filteredItems.length);
-
-  // Callback para cargar más SOLO en móvil
-  const handleLoadMoreMobile = React.useCallback(() => {
-    if (hasMoreMobile && !loadingMoreMobile) {
-      setLoadingMoreMobile(true);
-      setTimeout(() => {
-        setMobilePage(p => p + 1);
-        setLoadingMoreMobile(false);
-      }, 600); // Simula carga para mostrar el loader
+    const page = isMobile ? mobilePage : desktopPage;
+    console.log('[HomePage] paginatedItems:', {
+      filteredItemsLength: filteredItems.length,
+      selectedCategory,
+      isMobile,
+      mobilePage,
+      desktopPage,
+      pageSize,
+      filteredItems,
+    });
+    // En home sin categoría seleccionada, mostrar solo las recomendaciones curadas
+    if (!selectedCategory || selectedCategory === 'all') {
+      console.log('[HomePage] Home: mostrando recomendaciones curadas', filteredItems);
+      return filteredItems; // Mostrar las 12 recomendaciones curadas
     }
-  }, [hasMoreMobile, loadingMoreMobile]);
+    // En categorías específicas, usar paginación tanto en móvil como desktop
+    const result = filteredItems.slice(0, page * pageSize);
+    console.log('[HomePage] Categoria:', selectedCategory, 'Mostrando', result.length, 'de', filteredItems.length, 'items', result);
+    return result;
+  }, [filteredItems, mobilePage, desktopPage, selectedCategory, isMobile, pageSize]);
+
+  // Calcular si hay más para infinite scroll (móvil y desktop)
+  const hasMore = (selectedCategory && selectedCategory !== 'all') && (paginatedItems.length < filteredItems.length);
+
+  // Callback para cargar más (móvil y desktop)
+  const handleLoadMore = React.useCallback(() => {
+    if (isMobile) {
+      if (hasMore && !loadingMoreMobile) {
+        setLoadingMoreMobile(true);
+        setTimeout(() => {
+          setMobilePage(p => p + 1);
+          setLoadingMoreMobile(false);
+        }, 600); // Simula carga para mostrar el loader
+      }
+    } else {
+      if (hasMore && !loadingMoreDesktop) {
+        setLoadingMoreDesktop(true);
+        setTimeout(() => {
+          setDesktopPage(p => p + 1);
+          setLoadingMoreDesktop(false);
+        }, 600); // Simula carga para mostrar el loader
+      }
+    }
+  }, [hasMore, loadingMoreMobile, loadingMoreDesktop, isMobile]);
 
   // Verificar si hay datos disponibles
   if (!allData || Object.keys(allData).length === 0) {
@@ -611,10 +642,10 @@ const HomePage = ({
               : {})
           }}
         >
-          {/* Renderizado condicional: SOLO en móvil y SOLO para listado de categorías, usa MaterialContentWrapper con infinite scroll */}
-          {isCategoryListMobile ? (
+          {/* Renderizado condicional: para listado de categorías específicas, usar MaterialContentWrapper con infinite scroll */}
+          {(selectedCategory && selectedCategory !== 'all') ? (
             <MaterialContentWrapper
-              recommendations={paginatedItems}
+              recommendations={isMobile ? paginatedItems : undefined}
               categories={categories}
               selectedCategory={selectedCategory}
               onCategoryClick={handleCategoryClick}
@@ -628,14 +659,39 @@ const HomePage = ({
               categorySelectProps={materialCategorySelectProps}
               subcategoryChipsProps={subcategoryBarProps}
               isHome={false}
-              onLoadMore={handleLoadMoreMobile}
-              hasMore={hasMoreMobile}
-              loadingMore={loadingMoreMobile}
+              onLoadMore={handleLoadMore}
+              hasMore={hasMore}
+              loadingMore={isMobile ? loadingMoreMobile : loadingMoreDesktop}
               categoryColor={categoryColor(selectedCategory)}
-            />
+              showCategorySelect={!isMobile}
+              showSubcategoryChips={!isMobile}
+            >
+              {/* Desktop: Render the recommendations list as a child */}
+              {!isMobile && (
+                <DesktopRecommendationsList
+                  items={paginatedItems}
+                  categories={categories}
+                  selectedCategory={selectedCategory}
+                  onCategoryClick={handleCategoryClick}
+                  subcategories={categorySubcategories}
+                  activeSubcategory={activeSubcategory}
+                  onSubcategoryClick={setActiveSubcategory}
+                  renderCategoryButton={renderCategoryButton}
+                  renderSubcategoryChip={renderSubcategoryChip}
+                  categoryBarSx={categoryBarSx}
+                  subcategoryBarSx={subcategoryBarSx}
+                  showCategoryBar={false}
+                  showSubcategoryBar={false}
+                  onLoadMore={handleLoadMore}
+                  hasMore={hasMore}
+                  loadingMore={loadingMoreDesktop}
+                  categoryColor={categoryColor(selectedCategory)}
+                />
+              )}
+            </MaterialContentWrapper>
           ) : (
             <RecommendationsList            
-              recommendations={isMobile ? paginatedItems : filteredItems}
+              recommendations={filteredItems}
               isHome={!selectedCategory}
               onItemClick={handleItemClick}
               categories={categories}
