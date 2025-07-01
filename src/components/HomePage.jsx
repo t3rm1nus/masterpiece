@@ -41,7 +41,7 @@ function useIsMobile() {
       window.removeEventListener('orientationchange', handleResize);
     };
   }, []);
-  return isMobile;
+  return isMobile; 
 }
 
 // Definir keyframes para el gradiente animado de fondo
