@@ -13,7 +13,7 @@
       },
       "image": "/imagenes/videojuegos/The_Legend_of_Zelda_Breath_of_the_Wild.jpg",
       "platfomrs":"Nintendo Switch, Wii U",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 2,
@@ -28,7 +28,7 @@
       },
       "image": "/imagenes/videojuegos/Doom_1993.jpg",
       "platfomrs": "PC, SNES, Sega 32X, entre otros",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 3,
@@ -43,7 +43,7 @@
       },
       "image": "/imagenes/videojuegos/Doom_II.jpg",
       "platfomrs": "PC, Macintosh, GBA, entre otros",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 4,
@@ -58,7 +58,7 @@
       },
       "image": "/imagenes/videojuegos/Doom_3.jpg",
       "platfomrs": "PC, Xbox, PlayStation 3, Xbox 360",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 5,
@@ -73,7 +73,7 @@
       },
       "image": "/imagenes/videojuegos/Doom_2016.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 6,
@@ -88,7 +88,7 @@
       },
       "image": "/imagenes/videojuegos/Doom_Eternal.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One, Nintendo Switch, Google Stadia",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 7,
@@ -103,7 +103,7 @@
       },
       "image": "/imagenes/videojuegos/Grand_Theft_Auto_III.jpg",
       "platfomrs": "PlayStation 2, PC, Xbox, iOS, Android",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 8,
@@ -118,7 +118,7 @@
       },
       "image": "/imagenes/videojuegos/Grand_Theft_Auto_Vice_City.jpg",
       "platfomrs": "PlayStation 2, PC, Xbox, iOS, Android",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 9,
@@ -133,7 +133,7 @@
       },
       "image": "/imagenes/videojuegos/Grand_Theft_Auto_San_Andreas.jpg",
       "platfomrs": "PlayStation 2, PC, Xbox, iOS, Android",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 10,
@@ -148,7 +148,7 @@
       },
       "image": "/imagenes/videojuegos/Grand_Theft_Auto_IV.jpg",
       "platfomrs": "PlayStation 3, Xbox 360, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 11,
@@ -163,7 +163,7 @@
       },
       "image": "/imagenes/videojuegos/Grand_Theft_Auto_V.jpg",
       "platfomrs": "PlayStation 3, Xbox 360, PC, PlayStation 4, Xbox One, PlayStation 5, Xbox Series X/S",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 12,
@@ -178,7 +178,7 @@
       },
       "image": "/imagenes/videojuegos/Civilization_1991.jpg",
       "platfomrs": "PC, Amiga, Macintosh, SNES",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 13,
@@ -193,7 +193,7 @@
       },
       "image": "/imagenes/videojuegos/Civilization_II.jpg",
       "platfomrs": "PC, PlayStation",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 14,
@@ -208,7 +208,7 @@
       },
       "image": "/imagenes/videojuegos/Civilization_III.jpg",
       "platfomrs": "PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 15,
@@ -223,7 +223,7 @@
       },
       "image": "/imagenes/videojuegos/Civilization_IV.jpg",
       "platfomrs": "PC, Mac OS X",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 16,
@@ -238,7 +238,7 @@
       },
       "image": "/imagenes/videojuegos/Civilization_V.jpg",
       "platfomrs": "PC, Mac OS X, Linux",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 17,
@@ -253,7 +253,7 @@
       },
       "image": "/imagenes/videojuegos/Civilization_VI.jpg",
       "platfomrs": "PC, Mac OS, Linux, iOS, Android, Nintendo Switch, PlayStation 4, Xbox One",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 18,
@@ -268,7 +268,7 @@
       },
       "image": "/imagenes/videojuegos/Super_Mario_Bros.jpg",
       "platfomrs": "NES, Famicom",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 19,
@@ -283,7 +283,7 @@
       },
       "image": "/imagenes/videojuegos/Super_Mario_Bros._2.jpg",
       "platfomrs": "NES, Famicom",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 20,
@@ -298,7 +298,7 @@
       },
       "image": "/imagenes/videojuegos/Super_Mario_Bros._3.jpg",
       "platfomrs": "NES, Famicom",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 21,
@@ -313,7 +313,7 @@
       },
       "image": "/imagenes/videojuegos/Horizon_Zero_Dawn.jpg",
       "platfomrs": "PlayStation 4, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 22,
@@ -328,7 +328,7 @@
       },
       "image": "/imagenes/videojuegos/Horizon_Forbidden_West.jpg",
       "platfomrs": "PlayStation 4, PlayStation 5, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 23,
@@ -343,7 +343,7 @@
       },
       "image": "/imagenes/videojuegos/Red_Dead_Redemption.jpg",
       "platfomrs": "PlayStation 3, Xbox 360",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 24,
@@ -358,7 +358,7 @@
       },
       "image": "/imagenes/videojuegos/Red_Dead_Redemption_2.jpg",
       "platfomrs": "PlayStation 4, Xbox One, PC, Google Stadia",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 25,
@@ -373,7 +373,7 @@
       },
       "image": "/imagenes/videojuegos/Darkest_Dungeon.jpg",
       "platfomrs": "PC, PlayStation 4, PlayStation Vita, iOS, Nintendo Switch, Xbox One",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 26,
@@ -388,7 +388,7 @@
       },
       "image": "/imagenes/videojuegos/League_of_Legends.jpg",
       "platfomrs": "PC, Mac OS X",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 27,
@@ -403,7 +403,7 @@
       },
       "image": "/imagenes/videojuegos/Dota_2.jpg",
       "platfomrs": "PC, Mac OS, Linux",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 28,
@@ -418,7 +418,7 @@
       },
       "image": "/imagenes/videojuegos/The_Legend_of_Zelda_1986.jpg",
       "platfomrs": "NES, Famicom",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 29,
@@ -433,7 +433,7 @@
       },
       "image": "/imagenes/videojuegos/Zelda_II_The_Adventure_of_Link.jpg",
       "platfomrs": "NES, Famicom",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 30,
@@ -448,7 +448,7 @@
       },
       "image": "/imagenes/videojuegos/The_Legend_of_Zelda_A_Link_to_the_Past.jpg",
       "platfomrs": "SNES",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 31,
@@ -463,7 +463,7 @@
       },
       "image": "/imagenes/videojuegos/The_Legend_of_Zelda_Ocarina_of_Time.jpg",
       "platfomrs": "Nintendo 64",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 32,
@@ -478,7 +478,7 @@
       },
       "image": "/imagenes/videojuegos/The_Legend_of_Zelda_Majoras_Mask.jpg",
       "platfomrs": "Nintendo 64",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 33,
@@ -493,7 +493,7 @@
       },
       "image": "/imagenes/videojuegos/The_Legend_of_Zelda_The_Wind_Waker.jpg",
       "platfomrs": "Nintendo GameCube",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 34,
@@ -508,7 +508,7 @@
       },
       "image": "/imagenes/videojuegos/The_Legend_of_Zelda_Twilight_Princess.jpg",
       "platfomrs": "Nintendo GameCube, Wii",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 35,
@@ -523,7 +523,7 @@
       },
       "image": "/imagenes/videojuegos/The_Legend_of_Zelda_Skyward_Sword.jpg",
       "platfomrs": "Wii, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 36,
@@ -538,7 +538,7 @@
       },
       "image": "/imagenes/videojuegos/The_Legend_of_Zelda_Tears_of_the_Kingdom.jpg",
       "platfomrs": "Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 37,
@@ -553,7 +553,7 @@
       },
       "image": "/imagenes/videojuegos/Street_Fighter_1987.jpg",
       "platfomrs": "Arcade, PC, Commodore 64, Amiga, NES",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 38,
@@ -568,7 +568,7 @@
       },
       "image": "/imagenes/videojuegos/Street_Fighter_II.jpg",
       "platfomrs": "Arcade, SNES, Sega Genesis",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 39,
@@ -583,7 +583,7 @@
       },
       "image": "/imagenes/videojuegos/Street_Fighter_Alpha_3.jpg",
       "platfomrs": "Arcade, PlayStation, Sega Saturn, Dreamcast",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 40,
@@ -598,7 +598,7 @@
       },
       "image": "/imagenes/videojuegos/Street_Fighter_III_3rd_Strike.jpg",
       "platfomrs": "Arcade, Dreamcast, PlayStation 2",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 41,
@@ -613,7 +613,7 @@
       },
       "image": "/imagenes/videojuegos/Street_Fighter_IV.jpg",
       "platfomrs": "Arcade, PlayStation 3, Xbox 360, PC, iOS",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 42,
@@ -628,7 +628,7 @@
       },
       "image": "/imagenes/videojuegos/Street_Fighter_V.jpg",
       "platfomrs": "PlayStation 4, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 43,
@@ -643,7 +643,7 @@
       },
       "image": "/imagenes/videojuegos/Street_Fighter_6.jpg",
       "platfomrs": "PlayStation 4, PlayStation 5, Xbox Series X/S, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 44,
@@ -658,7 +658,7 @@
       },
       "image": "/imagenes/videojuegos/Tetris.jpg",
       "platfomrs": "Múltiples plataformas (desde computadoras soviéticas hasta consolas y móviles)",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 45,
@@ -688,7 +688,7 @@
       },
       "image": "/imagenes/videojuegos/GoldenEye_007.jpg",
       "platfomrs": "Nintendo 64",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 47,
@@ -703,7 +703,7 @@
       },
       "image": "/imagenes/videojuegos/Metroid_1986.jpg",
       "platfomrs": "NES, Famicom Disk System",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 48,
@@ -718,7 +718,7 @@
       },
       "image": "/imagenes/videojuegos/Sonic_the_Hedgehog.jpg",
       "platfomrs": "Sega Genesis/Mega Drive",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 49,
@@ -733,7 +733,7 @@
       },
       "image": "/imagenes/videojuegos/Sonic_the_Hedgehog_2.jpg",
       "platfomrs": "Sega Genesis/Mega Drive",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 50,
@@ -748,7 +748,7 @@
       },
       "image": "/imagenes/videojuegos/Sonic_the_Hedgehog_3_and_Knuckles.jpg",
       "platfomrs": "Sega Genesis/Mega Drive",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 51,
@@ -763,7 +763,7 @@
       },
       "image": "/imagenes/videojuegos/Donkey_Kong_Country.jpg",
       "platfomrs": "SNES",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 52,
@@ -778,7 +778,7 @@
       },
       "image": "/imagenes/videojuegos/Half-Life.jpg",
       "platfomrs": "PC, PlayStation 2",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 53,
@@ -793,7 +793,7 @@
       },
       "image": "/imagenes/videojuegos/Star_Fox_64.jpg",
       "platfomrs": "Nintendo 64",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 54,
@@ -808,7 +808,7 @@
       },
       "image": "/imagenes/videojuegos/Resident_Evil_1996.jpg",
       "platfomrs": "PlayStation, Sega Saturn, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 55,
@@ -823,7 +823,7 @@
       },
       "image": "/imagenes/videojuegos/Resident_Evil_2_1998.jpg",
       "platfomrs": "PlayStation, PC, Nintendo 64, Dreamcast",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 56,
@@ -838,7 +838,7 @@
       },
       "image": "/imagenes/videojuegos/Resident_Evil_3_Nemesis.jpg",
       "platfomrs": "PlayStation, PC, Dreamcast, GameCube",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 57,
@@ -853,7 +853,7 @@
       },
       "image": "/imagenes/videojuegos/Quake.jpg",
       "platfomrs": "PC, Nintendo 64, Sega Saturn",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 58,
@@ -868,7 +868,7 @@
       },
       "image": "/imagenes/videojuegos/Quake_II.jpg",
       "platfomrs": "PC, Nintendo 64, PlayStation",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 59,
@@ -883,7 +883,7 @@
       },
       "image": "/imagenes/videojuegos/Quake_III_Arena.jpg",
       "platfomrs": "PC, Dreamcast, PlayStation 2, Xbox 360",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 60,
@@ -898,7 +898,7 @@
       },
       "image": "/imagenes/videojuegos/Tony_Hawks_Pro_Skater_2.jpg",
       "platfomrs": "PlayStation, Nintendo 64, Dreamcast, PC, Game Boy Advance",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 61,
@@ -913,7 +913,7 @@
       },
       "image": "/imagenes/videojuegos/StarCraft.jpg",
       "platfomrs": "PC, Mac OS, Nintendo 64",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 62,
@@ -928,7 +928,7 @@
       },
       "image": "/imagenes/videojuegos/StarCraft_II_Wings_of_Liberty.jpg",
       "platfomrs": "PC, Mac OS",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 63,
@@ -943,7 +943,7 @@
       },
       "image": "/imagenes/videojuegos/Warcraft_Orcs_and_Humans.jpg",
       "platfomrs": "PC, Mac OS",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 64,
@@ -958,7 +958,7 @@
       },
       "image": "/imagenes/videojuegos/Warcraft_II_Tides_of_Darkness.jpg",
       "platfomrs": "PC, Mac OS, PlayStation, Sega Saturn",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 65,
@@ -973,7 +973,7 @@
       },
       "image": "/imagenes/videojuegos/Warcraft_III_Reign_of_Chaos.jpg",
       "platfomrs": "PC, Mac OS",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 66,
@@ -988,7 +988,7 @@
       },
       "image": "/imagenes/videojuegos/World_of_Warcraft.jpg",
       "platfomrs": "PC, Mac OS",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 67,
@@ -1003,7 +1003,7 @@
       },
       "image": "/imagenes/videojuegos/SimCity_2000.jpg",
       "platfomrs": "PC, Macintosh, Amiga, SNES, PlayStation, Sega Saturn",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 68,
@@ -1018,7 +1018,7 @@
       },
       "image": "/imagenes/videojuegos/Out_Run.jpg",
       "platfomrs": "Arcade, Sega Master System, Mega Drive, PC, Amiga",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 69,
@@ -1033,7 +1033,7 @@
       },
       "image": "/imagenes/videojuegos/Gauntlet.jpg",
       "platfomrs": "Arcade, NES, Amiga, Atari ST, Commodore 64, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 70,
@@ -1048,7 +1048,7 @@
       },
       "image": "/imagenes/videojuegos/Space_Invaders.jpg",
       "platfomrs": "Arcade, Atari 2600, NES, múltiples plataformas",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 71,
@@ -1063,7 +1063,7 @@
       },
       "image": "/imagenes/videojuegos/Day_of_the_Tentacle.jpg",
       "platfomrs": "PC, Mac, Amiga, PlayStation 4, PlayStation Vita, Xbox One, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 72,
@@ -1078,7 +1078,7 @@
       },
       "image": "/imagenes/videojuegos/Streets_of_Rage.jpg",
       "platfomrs": "Sega Genesis/Mega Drive, Arcade, Master System, Game Gear",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 73,
@@ -1093,7 +1093,7 @@
       },
       "image": "/imagenes/videojuegos/Streets_of_Rage_2.jpg",
       "platfomrs": "Sega Genesis/Mega Drive, Arcade, Master System, Game Gear",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 74,
@@ -1108,7 +1108,7 @@
       },
       "image": "/imagenes/videojuegos/Streets_of_Rage_3.jpg",
       "platfomrs": "Sega Genesis/Mega Drive",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 75,
@@ -1123,7 +1123,7 @@
       },
       "image": "/imagenes/videojuegos/Streets_of_Rage_4.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 76,
@@ -1138,7 +1138,7 @@
       },
       "image": "/imagenes/videojuegos/Double_Dragon.jpg",
       "platfomrs": "Arcade, NES, Master System, Amiga, Commodore 64, ZX Spectrum",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 77,
@@ -1153,7 +1153,7 @@
       },
       "image": "/imagenes/videojuegos/Double_Dragon_II_The_Revenge.jpg",
       "platfomrs": "Arcade, NES, Master System, Amiga, Commodore 64",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 78,
@@ -1183,7 +1183,7 @@
       },
       "image": "/imagenes/videojuegos/Prince_of_Persia_1989.jpg",
       "platfomrs": "Apple II, PC, Amiga, Macintosh, SNES, Master System",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 80,
@@ -1198,7 +1198,7 @@
       },
       "image": "/imagenes/videojuegos/Prince_of_Persia_2_The_Shadow_and_the_Flame.jpg",
       "platfomrs": "PC, Mac OS, Super NES",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 81,
@@ -1213,7 +1213,7 @@
       },
       "image": "/imagenes/videojuegos/Prince_of_Persia_The_Sands_of_Time.jpg",
       "platfomrs": "PC, PlayStation 2, Xbox, GameCube",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 82,
@@ -1228,7 +1228,7 @@
       },
       "image": "/imagenes/videojuegos/Lemmings.jpg",
       "platfomrs": "Amiga, PC, SNES, Sega Genesis, PlayStation, entre otros",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 83,
@@ -1243,7 +1243,7 @@
       },
       "image": "/imagenes/videojuegos/Theme_Hospital.jpg",
       "platfomrs": "PC, PlayStation",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 84,
@@ -1258,7 +1258,7 @@
       },
       "image": "/imagenes/videojuegos/RollerCoaster_Tycoon.jpg",
       "platfomrs": "PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 85,
@@ -1273,7 +1273,7 @@
       },
       "image": "/imagenes/videojuegos/Worms_Armageddon.jpg",
       "platfomrs": "PC, PlayStation, Nintendo 64, Dreamcast",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 86,
@@ -1288,7 +1288,7 @@
       },
       "image": "/imagenes/videojuegos/Metal_Slug.jpg",
       "platfomrs": "Neo Geo, Arcade",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 87,
@@ -1303,7 +1303,7 @@
       },
       "image": "/imagenes/videojuegos/Metal_Slug_2.jpg",
       "platfomrs": "Neo Geo, Arcade",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 88,
@@ -1318,7 +1318,7 @@
       },
       "image": "/imagenes/videojuegos/Metal_Slug_3.jpg",
       "platfomrs": "Neo Geo, Arcade, PlayStation 2, Xbox",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 89,
@@ -1333,7 +1333,7 @@
       },
       "image": "/imagenes/videojuegos/Donkey_Kong_1981.jpg",
       "platfomrs": "Arcade, NES, Atari 2600, múltiples plataformas",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 90,
@@ -1348,7 +1348,7 @@
       },
       "image": "/imagenes/videojuegos/Asteroids.jpg",
       "platfomrs": "Arcade, Atari 2600, múltiples plataformas",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 91,
@@ -1363,7 +1363,7 @@
       },
       "image": "/imagenes/videojuegos/Final_Fantasy_1987.jpg",
       "platfomrs": "NES, Famicom",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 92,
@@ -1378,7 +1378,7 @@
       },
       "image": "/imagenes/videojuegos/Final_Fantasy_VII.jpg",
       "platfomrs": "PlayStation, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 93,
@@ -1393,7 +1393,7 @@
       },
       "image": "/imagenes/videojuegos/Final_Fantasy_X.jpg",
       "platfomrs": "PlayStation 2",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 94,
@@ -1408,7 +1408,7 @@
       },
       "image": "/imagenes/videojuegos/Final_Fantasy_XIV.jpg",
       "platfomrs": "PC, PlayStation 3, PlayStation 4, PlayStation 5, Xbox Series X/S",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 95,
@@ -1423,7 +1423,7 @@
       },
       "image": "/imagenes/videojuegos/Diablo_1996.jpg",
       "platfomrs": "PC, Mac OS, PlayStation",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 96,
@@ -1438,7 +1438,7 @@
       },
       "image": "/imagenes/videojuegos/Diablo_II.jpg",
       "platfomrs": "PC, Mac OS",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 97,
@@ -1453,7 +1453,7 @@
       },
       "image": "/imagenes/videojuegos/Diablo_III.jpg",
       "platfomrs": "PC, Mac OS, PlayStation 3, Xbox 360, PlayStation 4, Xbox One, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 98,
@@ -1468,7 +1468,7 @@
       },
       "image": "/imagenes/videojuegos/Diablo_IV.jpg",
       "platfomrs": "PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 99,
@@ -1483,7 +1483,7 @@
       },
       "image": "/imagenes/videojuegos/Path_of_Exile.jpg",
       "platfomrs": "PC, Xbox One, PlayStation 4, Mac OS",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 100,
@@ -1513,7 +1513,7 @@
       },
       "image": "/imagenes/videojuegos/Baldurs_Gate_1998.jpg",
       "platfomrs": "PC, Mac OS",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 102,
@@ -1528,7 +1528,7 @@
       },
       "image": "/imagenes/videojuegos/Baldurs_Gate_II_Shadows_of_Amn.jpg",
       "platfomrs": "PC, Mac OS",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 103,
@@ -1543,7 +1543,7 @@
       },
       "image": "/imagenes/videojuegos/Baldurs_Gate_3.jpg",
       "platfomrs": "PC, PlayStation 5, Xbox Series X/S",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 104,
@@ -1558,7 +1558,7 @@
       },
       "image": "/imagenes/videojuegos/Monkey_Island_2_LeChucks_Revenge.jpg",
       "platfomrs": "PC, Amiga, Mac OS, iOS, PlayStation 3, Xbox 360",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 105,
@@ -1573,7 +1573,7 @@
       },
       "image": "/imagenes/videojuegos/Resident_Evil_7_Biohazard.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 106,
@@ -1588,7 +1588,7 @@
       },
       "image": "/imagenes/videojuegos/Resident_Evil_Village.jpg",
       "platfomrs": "PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 107,
@@ -1603,7 +1603,7 @@
       },
       "image": "/imagenes/videojuegos/The_Secret_of_Monkey_Island.jpg",
       "platfomrs": "PC, Amiga, Atari ST, Sega CD, PlayStation 2, PlayStation 3, Xbox 360",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 108,
@@ -1618,7 +1618,7 @@
       },
       "image": "/imagenes/videojuegos/Age_of_Empires.jpg",
       "platfomrs": "PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 109,
@@ -1633,7 +1633,7 @@
       },
       "image": "/imagenes/videojuegos/Age_of_Empires_II_The_Age_of_Kings.jpg",
       "platfomrs": "PC, PlayStation 2",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 110,
@@ -1648,7 +1648,7 @@
       },
       "image": "/imagenes/videojuegos/Age_of_Empires_III.jpg",
       "platfomrs": "PC, Mac OS X",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 111,
@@ -1663,7 +1663,7 @@
       },
       "image": "/imagenes/videojuegos/Age_of_Empires_IV.jpg",
       "platfomrs": "PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 112,
@@ -1678,7 +1678,7 @@
       },
       "image": "/imagenes/videojuegos/Tekken.jpg",
       "platfomrs": "Arcade, PlayStation",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 113,
@@ -1693,7 +1693,7 @@
       },
       "image": "/imagenes/videojuegos/Tekken_3.jpg",
       "platfomrs": "Arcade, PlayStation",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 114,
@@ -1708,7 +1708,7 @@
       },
       "image": "/imagenes/videojuegos/Tekken_7.jpg",
       "platfomrs": "Arcade, PlayStation 4, Xbox One, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 115,
@@ -1723,7 +1723,7 @@
       },
       "image": "/imagenes/videojuegos/Mortal_Kombat_1992.jpg",
       "platfomrs": "Arcade, Super NES, Sega Genesis",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 116,
@@ -1738,7 +1738,7 @@
       },
       "image": "/imagenes/videojuegos/Mortal_Kombat_II.jpg",
       "platfomrs": "Arcade, Super NES, Sega Genesis, PlayStation, Sega Saturn",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 117,
@@ -1753,7 +1753,7 @@
       },
       "image": "/imagenes/videojuegos/Mortal_Kombat_11.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One, Nintendo Switch, Google Stadia",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 118,
@@ -1768,7 +1768,7 @@
       },
       "image": "/imagenes/videojuegos/Gran_Turismo_1997.jpg",
       "platfomrs": "PlayStation",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 119,
@@ -1783,7 +1783,7 @@
       },
       "image": "/imagenes/videojuegos/Gran_Turismo_3_A-Spec.jpg",
       "platfomrs": "PlayStation 2",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 120,
@@ -1798,7 +1798,7 @@
       },
       "image": "/imagenes/videojuegos/Gran_Turismo_7.jpg",
       "platfomrs": "PlayStation 4, PlayStation 5",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 121,
@@ -1813,7 +1813,7 @@
       },
       "image": "/imagenes/videojuegos/Duke_Nukem_3D.jpg",
       "platfomrs": "PC, Sega Saturn, PlayStation, Nintendo 64, Xbox 360",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 122,
@@ -1828,7 +1828,7 @@
       },
       "image": "/imagenes/videojuegos/Tomb_Raider_1996.jpg",
       "platfomrs": "PC, PlayStation, Sega Saturn",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 123,
@@ -1843,7 +1843,7 @@
       },
       "image": "/imagenes/videojuegos/Uncharted_Drakes_Fortune.jpg",
       "platfomrs": "PlayStation 3",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 124,
@@ -1858,7 +1858,7 @@
       },
       "image": "/imagenes/videojuegos/Uncharted_2_Among_Thieves.jpg",
       "platfomrs": "PlayStation 3",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 125,
@@ -1873,7 +1873,7 @@
       },
       "image": "/imagenes/videojuegos/Uncharted_3_Drakes_Deception.jpg",
       "platfomrs": "PlayStation 3",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 126,
@@ -1888,7 +1888,7 @@
       },
       "image": "/imagenes/videojuegos/Uncharted_4_A_Thiefs_End.jpg",
       "platfomrs": "PlayStation 4, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 127,
@@ -1903,7 +1903,7 @@
       },
       "image": "/imagenes/videojuegos/NBA_Jam.jpg",
       "platfomrs": "Arcade, Super NES, Sega Genesis, múltiples plataformas",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 128,
@@ -1918,7 +1918,7 @@
       },
       "image": "/imagenes/videojuegos/Cadillacs_and_Dinosaurs.jpg",
       "platfomrs": "Arcade",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 129,
@@ -1933,7 +1933,7 @@
       },
       "image": "/imagenes/videojuegos/Pang.jpg",
       "platfomrs": "Arcade, NES, Amiga, Commodore 64, ZX Spectrum",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 130,
@@ -1948,7 +1948,7 @@
       },
       "image": "/imagenes/videojuegos/Super_Pang.jpg",
       "platfomrs": "Arcade, Super NES, Game Boy",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 131,
@@ -1978,7 +1978,7 @@
       },
       "image": "/imagenes/videojuegos/Puzzle_Bobble.jpg",
       "platfomrs": "Arcade, Neo Geo, Super NES, PlayStation, Sega Saturn, entre otros",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 133,
@@ -1993,7 +1993,7 @@
       },
       "image": "/imagenes/videojuegos/The_Simpsons_Arcade_Game.jpg",
       "platfomrs": "Arcade, PlayStation 3, Xbox 360",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 134,
@@ -2008,7 +2008,7 @@
       },
       "image": "/imagenes/videojuegos/Sunset_Sliders.jpg",
       "platfomrs": "Arcade, Super NES, Sega Genesis",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 135,
@@ -2023,7 +2023,7 @@
       },
       "image": "/imagenes/videojuegos/TMNT_Turtles_in_Time.jpg",
       "platfomrs": "Arcade, Super NES",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 136,
@@ -2038,7 +2038,7 @@
       },
       "image": "/imagenes/videojuegos/Street_Hoop.jpg",
       "platfomrs": "Arcade, Neo Geo",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 137,
@@ -2053,7 +2053,7 @@
       },
       "image": "/imagenes/videojuegos/Knights_of_the_Round.jpg",
       "platfomrs": "Arcade, Super NES",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 138,
@@ -2068,7 +2068,7 @@
       },
       "image": "/imagenes/videojuegos/Cabal.jpg",
       "platfomrs": "Arcade, NES, Amiga, Commodore 64, ZX Spectrum",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 139,
@@ -2083,7 +2083,7 @@
       },
       "image": "/imagenes/videojuegos/Star_Wars_Battlefront_2004.jpg",
       "platfomrs": "PlayStation 2, Xbox, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 140,
@@ -2098,7 +2098,7 @@
       },
       "image": "/imagenes/videojuegos/Star_Wars_Battlefront_II_2005.jpg",
       "platfomrs": "PlayStation 2, Xbox, PC, PlayStation Portable",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 141,
@@ -2143,7 +2143,7 @@
       },
       "image": "/imagenes/videojuegos/Little_Nightmares.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 144,
@@ -2158,7 +2158,7 @@
       },
       "image": "/imagenes/videojuegos/Little_Nightmares_II.jpg",
       "platfomrs": "PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 145,
@@ -2173,7 +2173,7 @@
       },
       "image": "/imagenes/videojuegos/Toki.jpg",
       "platfomrs": "Arcade, NES, Amiga, Atari ST, Commodore 64, Sega Genesis",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 146,
@@ -2188,7 +2188,7 @@
       },
       "image": "/imagenes/videojuegos/Yie_Ar_Kung-Fu.jpg",
       "platfomrs": "Arcade, NES, MSX, Commodore 64, ZX Spectrum",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 147,
@@ -2203,7 +2203,7 @@
       },
       "image": "/imagenes/videojuegos/Kung_Fu_Master.jpg",
       "platfomrs": "Arcade, NES, Atari 2600, Commodore 64, ZX Spectrum",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 148,
@@ -2218,7 +2218,7 @@
       },
       "image": "/imagenes/videojuegos/Commandos_Behind_Enemy_Lines.jpg",
       "platfomrs": "PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 149,
@@ -2233,7 +2233,7 @@
       },
       "image": "/imagenes/videojuegos/Hammerin_Harry.jpg",
       "platfomrs": "Arcade, NES, Game Boy",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 150,
@@ -2248,7 +2248,7 @@
       },
       "image": "/imagenes/videojuegos/Fatal_Fury_3.jpg",
       "platfomrs": "Neo Geo, Neo Geo CD, Sega Saturn, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 151,
@@ -2278,7 +2278,7 @@
       },
       "image": "/imagenes/videojuegos/Karate_Champ.jpg",
       "platfomrs": "Arcade, NES, Commodore 64, Apple II",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 153,
@@ -2293,7 +2293,7 @@
       },
       "image": "/imagenes/videojuegos/Green_Beret.jpg",
       "platfomrs": "Arcade, NES, Commodore 64, ZX Spectrum, Amstrad CPC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 154,
@@ -2308,7 +2308,7 @@
       },
       "image": "/imagenes/videojuegos/Combat_School.jpg",
       "platfomrs": "Arcade, NES, Commodore 64, ZX Spectrum",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 155,
@@ -2323,7 +2323,7 @@
       },
       "image": "/imagenes/videojuegos/Operation_Wolf.jpg",
       "platfomrs": "Arcade, NES, Master System, Amiga, Commodore 64, ZX Spectrum",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 156,
@@ -2338,7 +2338,7 @@
       },
       "image": "/imagenes/videojuegos/Rainbow_Islands.jpg",
       "platfomrs": "Arcade, Amiga, Atari ST, Commodore 64, NES, Master System",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 157,
@@ -2353,7 +2353,7 @@
       },
       "image": "/imagenes/videojuegos/Snow_Bros.jpg",
       "platfomrs": "Arcade, NES, Game Boy, Mega Drive",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 158,
@@ -2368,7 +2368,7 @@
       },
       "image": "/imagenes/videojuegos/Final_Fight.jpg",
       "platfomrs": "Arcade, Super NES, Amiga, Commodore 64, ZX Spectrum",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 159,
@@ -2383,7 +2383,7 @@
       },
       "image": "/imagenes/videojuegos/Three_Wonders.jpg",
       "platfomrs": "Arcade, PlayStation, Sega Saturn",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 160,
@@ -2398,7 +2398,7 @@
       },
       "image": "/imagenes/videojuegos/Commandos_2_Men_of_Courage.jpg",
       "platfomrs": "PC, PlayStation 2, Xbox",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 161,
@@ -2413,7 +2413,7 @@
       },
       "image": "/imagenes/videojuegos/Bomberman.jpg",
       "platfomrs": "PC Engine, NES, múltiples plataformas",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 162,
@@ -2428,7 +2428,7 @@
       },
       "image": "/imagenes/videojuegos/Manic_Miner.jpg",
       "platfomrs": "ZX Spectrum, Commodore 64, Amstrad CPC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 163,
@@ -2443,7 +2443,7 @@
       },
       "image": "/imagenes/videojuegos/The_Ancient_Art_of_War.jpg",
       "platfomrs": "PC, Commodore 64, Apple II",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 164,
@@ -2458,7 +2458,7 @@
       },
       "image": "/imagenes/videojuegos/Call_of_Duty.jpg",
       "platfomrs": "PC, N-Gage, PlayStation 2, Xbox, GameCube",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 165,
@@ -2473,7 +2473,7 @@
       },
       "image": "/imagenes/videojuegos/Call_of_Duty_4_Modern_Warfare.jpg",
       "platfomrs": "PC, PlayStation 3, Xbox 360, Wii",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 166,
@@ -2488,7 +2488,7 @@
       },
       "image": "/imagenes/videojuegos/Call_of_Duty_Black_Ops.jpg",
       "platfomrs": "PC, PlayStation 3, Xbox 360, Wii, Nintendo DS",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 167,
@@ -2503,7 +2503,7 @@
       },
       "image": "/imagenes/videojuegos/Call_of_Duty_Warzone.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One, PlayStation 5, Xbox Series X/S",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 168,
@@ -2518,7 +2518,7 @@
       },
       "image": "/imagenes/videojuegos/Loom.jpg",
       "platfomrs": "PC, Amiga, Atari ST",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 169,
@@ -2533,7 +2533,7 @@
       },
       "image": "/imagenes/videojuegos/Another_World.jpg",
       "platfomrs": "Amiga, Atari ST, PC, Sega Genesis, Super NES, múltiples plataformas",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 170,
@@ -2548,7 +2548,7 @@
       },
       "image": "/imagenes/videojuegos/Shinobi_1987.jpg",
       "platfomrs": "Arcade, Master System, NES, PC Engine",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 171,
@@ -2563,7 +2563,7 @@
       },
       "image": "/imagenes/videojuegos/Shadow_Dancer.jpg",
       "platfomrs": "Arcade, Sega Master System, Mega Drive, Commodore 64, Amiga",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 172,
@@ -2578,7 +2578,7 @@
       },
       "image": "/imagenes/videojuegos/Outlast.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 173,
@@ -2593,7 +2593,7 @@
       },
       "image": "/imagenes/videojuegos/Outlast_2.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 174,
@@ -2608,7 +2608,7 @@
       },
       "image": "/imagenes/videojuegos/Alien_Isolation.jpg",
       "platfomrs": "PC, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 175,
@@ -2623,7 +2623,7 @@
       },
       "image": "/imagenes/videojuegos/Visage.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 176,
@@ -2638,7 +2638,7 @@
       },
       "image": "/imagenes/videojuegos/Wolfenstein_3D.jpg",
       "platfomrs": "PC, SNES, Atari Jaguar, 3DO, GBA",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 177,
@@ -2653,7 +2653,7 @@
       },
       "image": "/imagenes/videojuegos/Wolfenstein_The_New_Order.jpg",
       "platfomrs": "PC, PlayStation 3, PlayStation 4, Xbox 360, Xbox One",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 178,
@@ -2668,7 +2668,7 @@
       },
       "image": "/imagenes/videojuegos/Wolfenstein_II_The_New_Colossus.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 179,
@@ -2713,7 +2713,7 @@
       },
       "image": "/imagenes/videojuegos/Hades.jpg",
       "platfomrs": "PC, Nintendo Switch, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 182,
@@ -2728,7 +2728,7 @@
       },
       "image": "/imagenes/videojuegos/Stronghold_2001.jpg",
       "platfomrs": "PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 183,
@@ -2743,7 +2743,7 @@
       },
       "image": "/imagenes/videojuegos/Stronghold_Crusader.jpg",
       "platfomrs": "PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 184,
@@ -2758,7 +2758,7 @@
       },
       "image": "/imagenes/videojuegos/Stronghold_Definitive_Edition.jpg",
       "platfomrs": "PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 185,
@@ -2773,7 +2773,7 @@
       },
       "image": "/imagenes/videojuegos/God_of_War_2005.jpg",
       "platfomrs": "PlayStation 2",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 186,
@@ -2788,7 +2788,7 @@
       },
       "image": "/imagenes/videojuegos/God_of_War_II.jpg",
       "platfomrs": "PlayStation 2",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 187,
@@ -2803,7 +2803,7 @@
       },
       "image": "/imagenes/videojuegos/God_of_War_2018.jpg",
       "platfomrs": "PlayStation 4, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 188,
@@ -2818,7 +2818,7 @@
       },
       "image": "/imagenes/videojuegos/God_of_War_Ragnarok.jpg",
       "platfomrs": "PlayStation 4, PlayStation 5",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 189,
@@ -2833,7 +2833,7 @@
       },
       "image": "/imagenes/videojuegos/Cuphead.jpg",
       "platfomrs": "PC, Xbox One, Nintendo Switch, PlayStation 4",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 190,
@@ -2863,7 +2863,7 @@
       },
       "image": "/imagenes/videojuegos/Elden_Ring.jpg",
       "platfomrs": "PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 192,
@@ -2908,7 +2908,7 @@
       },
       "image": "/imagenes/videojuegos/Trine.jpg",
       "platfomrs": "PC, PlayStation 3, Xbox 360, Wii U",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 195,
@@ -2923,7 +2923,7 @@
       },
       "image": "/imagenes/videojuegos/Trine_2.jpg",
       "platfomrs": "PC, PlayStation 3, Xbox 360, Wii U, PlayStation 4, Xbox One",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 196,
@@ -2953,7 +2953,7 @@
       },
       "image": "/imagenes/videojuegos/Trine_4_The_Nightmare_Prince.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 198,
@@ -2968,7 +2968,7 @@
       },
       "image": "/imagenes/videojuegos/Minecraft.jpg",
       "platfomrs": "Múltiples plataformas (PC, consolas, móviles)",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 199,
@@ -2983,7 +2983,7 @@
       },
       "image": "/imagenes/videojuegos/Sekiro_Shadows_Die_Twice.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 200,
@@ -2998,7 +2998,7 @@
       },
       "image": "/imagenes/videojuegos/Demons_Souls.jpg",
       "platfomrs": "PlayStation 3",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 201,
@@ -3013,7 +3013,7 @@
       },
       "image": "/imagenes/videojuegos/Injustice_2.jpg",
       "platfomrs": "PlayStation 4, Xbox One, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 202,
@@ -3028,7 +3028,7 @@
       },
       "image": "/imagenes/videojuegos/Bloodborne.jpg",
       "platfomrs": "PlayStation 4",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 203,
@@ -3043,7 +3043,7 @@
       },
       "image": "/imagenes/videojuegos/Dark_Souls.jpg",
       "platfomrs": "PlayStation 3, Xbox 360, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 204,
@@ -3103,7 +3103,7 @@
       },
       "image": "/imagenes/videojuegos/Assassins_Creed.jpg",
       "platfomrs": "PlayStation 3, Xbox 360, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 208,
@@ -3118,7 +3118,7 @@
       },
       "image": "/imagenes/videojuegos/Assassins_Creed_II.jpg",
       "platfomrs": "PlayStation 3, Xbox 360, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 209,
@@ -3133,7 +3133,7 @@
       },
       "image": "/imagenes/videojuegos/Assassins_Creed_IV_Black_Flag.jpg",
       "platfomrs": "PC, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Wii U",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 210,
@@ -3178,7 +3178,7 @@
       },
       "image": "/imagenes/videojuegos/Heretic.jpg",
       "platfomrs": "PC, Mac OS, Linux, Amiga",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 213,
@@ -3193,7 +3193,7 @@
       },
       "image": "/imagenes/videojuegos/The_Last_of_Us.jpg",
       "platfomrs": "PlayStation 3, PlayStation 4, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 214,
@@ -3208,7 +3208,7 @@
       },
       "image": "/imagenes/videojuegos/Silent_Hill_2.jpg",
       "platfomrs": "PlayStation 2, Xbox, PC",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 215,
@@ -3223,7 +3223,7 @@
       },
       "image": "/imagenes/videojuegos/Tony_Hawks_Pro_Skater_2.jpg",
       "platfomrs": "PlayStation, Nintendo 64, Dreamcast, PC, Game Boy Advance",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 216,
@@ -3238,7 +3238,7 @@
       },
       "image": "/imagenes/videojuegos/Wipeout_HD.jpg",
       "platfomrs": "PlayStation 3",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 217,
@@ -3253,7 +3253,7 @@
       },
       "image": "/imagenes/videojuegos/Guitar_Hero_III_Legends_of_Rock.jpg",
       "platfomrs": "PlayStation 2, PlayStation 3, Xbox 360, Wii, PC, Mac OS X",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 218,
@@ -3268,7 +3268,7 @@
       },
       "image": "/imagenes/videojuegos/The_Walking_Dead_A_Telltale_Games_Series.jpg",
       "platfomrs": "PC, PlayStation 3, Xbox 360, iOS, Android, PlayStation 4, Xbox One, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 219,
@@ -3283,7 +3283,7 @@
       },
       "image": "/imagenes/videojuegos/LittleBigPlanet.jpg",
       "platfomrs": "PlayStation 3",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 220,
@@ -3298,7 +3298,7 @@
       },
       "image": "/imagenes/videojuegos/Patapon.jpg",
       "platfomrs": "PSP",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 221,
@@ -3313,7 +3313,7 @@
       },
       "image": "/imagenes/videojuegos/Patapon_2.jpg",
       "platfomrs": "PSP",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 222,
@@ -3328,7 +3328,7 @@
       },
       "image": "/imagenes/videojuegos/Patapon_3.jpg",
       "platfomrs": "PSP",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 223,
@@ -3343,7 +3343,7 @@
       },
       "image": "/imagenes/videojuegos/LocoRoco.jpg",
       "platfomrs": "PSP",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 224,
@@ -3358,7 +3358,7 @@
       },
       "image": "/imagenes/videojuegos/Half-Life_2.jpg",
       "platfomrs": "PC, Xbox, Xbox 360, PlayStation 3",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 225,
@@ -3373,7 +3373,7 @@
       },
       "image": "/imagenes/videojuegos/Life_is_Strange.jpg",
       "platfomrs": "PC, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, iOS, Android, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 226,
@@ -3388,7 +3388,7 @@
       },
       "image": "/imagenes/videojuegos/Overwatch.jpg",
       "platfomrs": "PC, PlayStation 4, Xbox One, Nintendo Switch",
-      "masterpiece": true
+      "masterpiece": false
     },
     {
       "id": 227,
@@ -3418,7 +3418,7 @@
       },
       "image": "/imagenes/videojuegos/Bubble_Bobble.jpg",
       "platfomrs": "Arcade, NES, Master System, Commodore 64, Amiga, múltiples plataformas",
-      "masterpiece": true
+      "masterpiece": false
     }
   ]
 }
