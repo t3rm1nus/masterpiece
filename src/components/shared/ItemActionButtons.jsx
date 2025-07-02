@@ -30,6 +30,48 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
     }
   };
   const buttons = [];
+  // ...existing code...
+  // Botón para música: YouTube
+  if (selectedItem.category === 'music' && selectedItem.youtube) {
+    buttons.push(
+      <Box key="music-youtube" sx={{ textAlign: 'center', marginBottom: '16px' }}>
+        <UiButton
+          variant="contained"
+          href={selectedItem.youtube}
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            ...getButtonSx,
+            backgroundColor: '#e53935',
+            '&:hover': { backgroundColor: '#b71c1c' }
+          }}
+        >
+          {lang === 'es' ? 'Oír en YouTube' : 'Listen in YouTube'}
+        </UiButton>
+      </Box>
+    );
+  }
+  // Botón para música: Spotify
+  if (selectedItem.category === 'music' && selectedItem.spotify) {
+    buttons.push(
+      <Box key="music-spotify" sx={{ textAlign: 'center', marginBottom: '16px' }}>
+        <UiButton
+          variant="contained"
+          href={selectedItem.spotify}
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            ...getButtonSx,
+            backgroundColor: '#1DB954',
+            '&:hover': { backgroundColor: '#1ed760' }
+          }}
+        >
+          {lang === 'es' ? 'Oír en Spotify' : 'Listen in Spotify'}
+        </UiButton>
+      </Box>
+    );
+  }
+  // ...existing code...
   if (selectedItem.category === 'documentales' && selectedItem.link) {
     buttons.push(
       <Box key="documental" sx={{ textAlign: 'center', marginBottom: '16px' }}>
@@ -126,6 +168,47 @@ export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHo
     }
   };
   const buttons = [];
+  // Botón para música: YouTube
+  if (selectedItem.category === 'music' && selectedItem.youtube) {
+    buttons.push(
+      <Box key="music-youtube" sx={{ textAlign: 'center', marginBottom: '16px' }}>
+        <UiButton
+          variant="contained"
+          href={selectedItem.youtube}
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            ...getButtonSx,
+            backgroundColor: '#e53935',
+            '&:hover': { backgroundColor: '#b71c1c' }
+          }}
+        >
+          {lang === 'es' ? 'Oír en YouTube' : 'Listen in YouTube'}
+        </UiButton>
+      </Box>
+    );
+  }
+  // Botón para música: Spotify
+  if (selectedItem.category === 'music' && selectedItem.spotify) {
+    buttons.push(
+      <Box key="music-spotify" sx={{ textAlign: 'center', marginBottom: '16px' }}>
+        <UiButton
+          variant="contained"
+          href={selectedItem.spotify}
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            ...getButtonSx,
+            backgroundColor: '#1DB954',
+            '&:hover': { backgroundColor: '#1ed760' }
+          }}
+        >
+          {lang === 'es' ? 'Oír en Spotify' : 'Listen in Spotify'}
+        </UiButton>
+      </Box>
+    );
+  }
+  // ...existing code...
   if (selectedItem.category === 'documentales' && selectedItem.link) {
     buttons.push(
       <Box key="documental" sx={{ textAlign: 'center', marginBottom: '16px' }}>

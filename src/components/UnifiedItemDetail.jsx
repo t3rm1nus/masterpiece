@@ -247,7 +247,12 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, isClosing = false,
               )}
             </div>
             <div style={styles.metaRow}>
-              {selectedItem.author && (
+              {/* Mostrar autor/artista para música */}
+              {selectedItem.category === 'music' && selectedItem.artist && (
+                <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {selectedItem.artist}</span>
+              )}
+              {/* Mostrar autor para otras categorías */}
+              {selectedItem.category !== 'music' && selectedItem.author && (
                 <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {selectedItem.author}</span>
               )}
               {selectedItem.year && (
