@@ -1,0 +1,3747 @@
+{
+  "recommendations": [
+    {
+    "id": 601,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Nas",
+    "title": {
+      "es": "Illmatic",
+      "en": "Illmatic"
+    },
+    "description": {
+      "es": "‘Illmatic’ es el álbum debut que definió a Nas como uno de los mejores letristas del hip hop. Con producciones clásicas y letras profundas, este disco es un pilar del rap de los años 90.",
+      "en": "'Illmatic' is the debut album that defined Nas as one of the best lyricists in hip hop. Featuring classic production and profound lyrics, this record is a pillar of 90s rap."
+    },
+    "image": "/imagenes/musica/illmatic",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=DhA1g4BZlXE",
+    "spotify": "https://open.spotify.com/album/2noRn2Aes5aoNVsU6iWThc",
+    "masterpiece": true
+  },
+  {
+    "id": 602,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Nas",
+    "title": {
+      "es": "It Was Written",
+      "en": "It Was Written"
+    },
+    "description": {
+      "es": "‘It Was Written’ expande el sonido de Nas con producciones más sofisticadas y colaboraciones importantes. El álbum combina relatos urbanos con un estilo narrativo muy personal y potente.",
+      "en": "'It Was Written' expands Nas's sound with more sophisticated productions and key collaborations. The album combines urban storytelling with a very personal and powerful narrative style."
+    },
+    "image": "/imagenes/musica/itwaswritten",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=_dVy4o1sLfA",
+    "spotify": "https://open.spotify.com/album/0JpWSCRtMd9KOQkfRLBvL9",
+    "masterpiece": true
+  },
+  {
+    "id": 603,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Nas",
+    "title": {
+      "es": "I Am...",
+      "en": "I Am..."
+    },
+    "description": {
+      "es": "‘I Am...’ muestra a Nas en una fase introspectiva, explorando temas personales y sociales con una producción rica y variada. Es un álbum clave para entender su evolución artística.",
+      "en": "'I Am...' shows Nas in an introspective phase, exploring personal and social themes with rich and varied production. It is a key album to understand his artistic evolution."
+    },
+    "image": "/imagenes/musica/iam",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=V2pMY88EqXY",
+    "spotify": "https://open.spotify.com/album/3a59xuHl7eCsZ9kFGzvuow",
+    "masterpiece": true
+  },
+  {
+    "id": 604,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Nas",
+    "title": {
+      "es": "Nastradamus",
+      "en": "Nastradamus"
+    },
+    "description": {
+      "es": "‘Nastradamus’ presenta un sonido más comercial y experimental. Aunque recibió críticas mixtas, contiene momentos destacados y refleja la ambición de Nas por diversificar su estilo.",
+      "en": "'Nastradamus' features a more commercial and experimental sound. Though it received mixed reviews, it contains standout moments and reflects Nas’s ambition to diversify his style."
+    },
+    "image": "/imagenes/musica/nastradamus",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=C7Z1RGhJ_M8",
+    "spotify": "https://open.spotify.com/album/6cLCTs3RdDvt3vJphc0bWp",
+    "masterpiece": true
+  },
+  {
+    "id": 605,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Nas",
+    "title": {
+      "es": "Stillmatic",
+      "en": "Stillmatic"
+    },
+    "description": {
+      "es": "‘Stillmatic’ marcó el regreso de Nas con un disco contundente y crítico. Reafirma su legado con letras afiladas y producciones intensas que mantienen viva la esencia del rap clásico.",
+      "en": "'Stillmatic' marked Nas's comeback with a strong and critical album. It reaffirms his legacy with sharp lyrics and intense production that keep the essence of classic rap alive."
+    },
+    "image": "/imagenes/musica/stillmatic",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=9kZqLHX8sc8",
+    "spotify": "https://open.spotify.com/album/1Swm3Oaqb3xMBRUn3Mz0Pi",
+    "masterpiece": true
+  },
+  {
+    "id": 606,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Nas",
+    "title": {
+      "es": "God's Son",
+      "en": "God's Son"
+    },
+    "description": {
+      "es": "‘God’s Son’ es un álbum personal y emotivo donde Nas reflexiona sobre la pérdida y la vida. La producción es variada y las letras muestran un lado más vulnerable y maduro del artista.",
+      "en": "'God’s Son' is a personal and emotional album where Nas reflects on loss and life. The production is varied and the lyrics show a more vulnerable and mature side of the artist."
+    },
+    "image": "/imagenes/musica/godsson",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=1UoQXyWMaB8",
+    "spotify": "https://open.spotify.com/album/7fpeLL0oD3hP0L9Jc7x71f",
+    "masterpiece": true
+  },
+  {
+    "id": 607,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Nas",
+    "title": {
+      "es": "Street's Disciple",
+      "en": "Street's Disciple"
+    },
+    "description": {
+      "es": "‘Street’s Disciple’ es un ambicioso doble álbum que explora distintos aspectos de la vida urbana y la cultura hip hop. La diversidad musical y lírica es uno de sus puntos más fuertes.",
+      "en": "'Street’s Disciple' is an ambitious double album exploring different aspects of urban life and hip hop culture. The musical and lyrical diversity is one of its strongest points."
+    },
+    "image": "/imagenes/musica/streetsdisciple",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0J4dHZcN7Jo",
+    "spotify": "https://open.spotify.com/album/2I1Bsvhdk0gHeHzkrTnx1u",
+    "masterpiece": true
+  },
+  {
+    "id": 608,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Nas",
+    "title": {
+      "es": "Hip Hop Is Dead",
+      "en": "Hip Hop Is Dead"
+    },
+    "description": {
+      "es": "‘Hip Hop Is Dead’ critica la comercialización del género mientras muestra a Nas en su faceta más combativa. Es un álbum potente con colaboraciones importantes y producción cuidada.",
+      "en": "'Hip Hop Is Dead' criticizes the commercialization of the genre while showing Nas at his most combative. It is a powerful album with important collaborations and careful production."
+    },
+    "image": "/imagenes/musica/hiphopisdead",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=2cIyNLXfU9A",
+    "spotify": "https://open.spotify.com/album/6XrP1tgYYH6q9TJ6cw7EVx",
+    "masterpiece": true
+  },
+  {
+    "id": 609,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Nas",
+    "title": {
+      "es": "Untitled",
+      "en": "Untitled"
+    },
+    "description": {
+      "es": "‘Untitled’ es un álbum provocador que aborda temas raciales y sociales con letras directas y contundentes. Nas reafirma su compromiso con la crítica social y la reflexión profunda.",
+      "en": "'Untitled' is a provocative album addressing racial and social issues with direct and powerful lyrics. Nas reaffirms his commitment to social critique and deep reflection."
+    },
+    "image": "/imagenes/musica/untitled",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=xBkWOu8Mn7Y",
+    "spotify": "https://open.spotify.com/album/4CJqWmzvOTx3ChpC2aZ1BZ",
+    "masterpiece": true
+  },
+  {
+    "id": 610,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "EPMD",
+    "title": {
+      "es": "Strictly Business",
+      "en": "Strictly Business"
+    },
+    "description": {
+      "es": "'Strictly Business' es el álbum debut de EPMD que definió el sonido del rap de los 80 con ritmos funk y letras ingeniosas. Este disco marcó una influencia duradera en el hip hop de la costa este.\"",
+      "en": "'Strictly Business' is EPMD's debut album that defined the sound of 80s rap with funk rhythms and clever lyrics. This record left a lasting influence on East Coast hip hop.\""
+    },
+    "image": "/imagenes/musica/strictlybusiness",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=QUZR_DXFm48",
+    "spotify": "https://open.spotify.com/album/7b08QXDE4leP6B3ybDlqNc",
+    "masterpiece": true
+  },
+  {
+    "id": 611,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "EPMD",
+    "title": {
+      "es": "Unfinished Business",
+      "en": "Unfinished Business"
+    },
+    "description": {
+      "es": "'Unfinished Business' es el segundo álbum de EPMD que continuó con su estilo característico, fusionando beats pesados con letras confiadas y actitud callejera. Es un clásico del rap de finales de los 80.\"",
+      "en": "'Unfinished Business' is EPMD's second album, continuing their signature style by combining heavy beats with confident lyrics and street attitude. It is a late 80s rap classic.\""
+    },
+    "image": "/imagenes/musica/unfinishedbusiness",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=46uR6Yo6f_E",
+    "spotify": "https://open.spotify.com/album/0JSzYKiL99yfj85T5hR3Wz",
+    "masterpiece": true
+  },
+  {
+    "id": 612,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "EPMD",
+    "title": {
+      "es": "Business as Usual",
+      "en": "Business as Usual"
+    },
+    "description": {
+      "es": "'Business as Usual' mantiene la esencia de EPMD con producción pulida y letras que reflejan la experiencia en el rap. Este álbum consolidó su posición en la escena del hip hop underground.\"",
+      "en": "'Business as Usual' keeps EPMD's essence with polished production and lyrics that reflect their rap experience. This album consolidated their position in the underground hip hop scene.\""
+    },
+    "image": "/imagenes/musica/businessasusual",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=wTbp-Tve-Uw",
+    "spotify": "https://open.spotify.com/album/5bHWgFpq1z6LhfvoEn2PEJ",
+    "masterpiece": true
+  },
+  {
+    "id": 613,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "EPMD",
+    "title": {
+      "es": "Business Never Personal",
+      "en": "Business Never Personal"
+    },
+    "description": {
+      "es": "'Business Never Personal' es un álbum que mezcla ritmos contundentes con letras agudas, reafirmando la habilidad lírica de EPMD y su influencia en el rap de los 90.\"",
+      "en": "'Business Never Personal' is an album mixing hard-hitting beats with sharp lyrics, reaffirming EPMD's lyrical skills and their influence on 90s rap.\""
+    },
+    "image": "/imagenes/musica/businessneverpersonal",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=LgJYfQvJ7dA",
+    "spotify": "https://open.spotify.com/album/6r25LWVp5q7ZRLzFLArbRE",
+    "masterpiece": true
+  },
+  {
+    "id": 614,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "EPMD",
+    "title": {
+      "es": "Back in Business",
+      "en": "Back in Business"
+    },
+    "description": {
+      "es": "'Back in Business' es el álbum del regreso de EPMD tras una pausa, con una mezcla de sonido clásico y frescura renovada, mostrando madurez y energía renovada en sus letras.\"",
+      "en": "'Back in Business' is EPMD's comeback album after a break, blending classic sound with renewed freshness, showing maturity and renewed energy in their lyrics.\""
+    },
+    "image": "/imagenes/musica/backinbusiness",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=OyUjWJSljNQ",
+    "spotify": "https://open.spotify.com/album/3Xr96GmO2RV7kM3PltsB2k",
+    "masterpiece": true
+  },
+  {
+    "id": 615,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "EPMD",
+    "title": {
+      "es": "Out of Business",
+      "en": "Out of Business"
+    },
+    "description": {
+      "es": "'Out of Business' es el último álbum de EPMD, que cierra su discografía con un sonido maduro y colaboraciones notables, destacando su legado en el rap.\"",
+      "en": "'Out of Business' is EPMD's final album, closing their discography with a mature sound and notable collaborations, highlighting their legacy in rap.\""
+    },
+    "image": "/imagenes/musica/outofbusiness",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0G4EvkOzvU8",
+    "spotify": "https://open.spotify.com/album/0a2kSHRcWntL0iKwzSLoYJ",
+    "masterpiece": true
+  },
+  {
+    "id": 616,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Cypress Hill",
+    "title": {
+      "es": "Cypress Hill",
+      "en": "Cypress Hill"
+    },
+    "description": {
+      "es": "El álbum debut de Cypress Hill revolucionó el rap con su mezcla de hip hop y elementos psicodélicos. Sus letras contundentes y el estilo único los convirtieron en pioneros del rap latino.\"",
+      "en": "Cypress Hill's debut album revolutionized rap by blending hip hop with psychedelic elements. Their sharp lyrics and unique style made them pioneers of Latin rap.\""
+    },
+    "image": "/imagenes/musica/cypresshill",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=dyY6EE5D_HI",
+    "spotify": "https://open.spotify.com/album/4P9YfI4V6iKNBfK6B6kCDv",
+    "masterpiece": true
+  },
+  {
+    "id": 617,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Cypress Hill",
+    "title": {
+      "es": "Black Sunday",
+      "en": "Black Sunday"
+    },
+    "description": {
+      "es": "'Black Sunday' consolidó a Cypress Hill como leyendas del hip hop con hits como 'Insane in the Brain'. El álbum combina ritmos oscuros con letras directas y una atmósfera densa.\"",
+      "en": "'Black Sunday' cemented Cypress Hill's status as hip hop legends with hits like 'Insane in the Brain'. The album combines dark beats with direct lyrics and a dense atmosphere.\""
+    },
+    "image": "/imagenes/musica/blacksunday",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=4YsV6ujvQJo",
+    "spotify": "https://open.spotify.com/album/3spDqYv0y66Gd4NNsz0TSc",
+    "masterpiece": true
+  },
+  {
+    "id": 618,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Cypress Hill",
+    "title": {
+      "es": "III: Temples of Boom",
+      "en": "III: Temples of Boom"
+    },
+    "description": {
+      "es": "El tercer álbum de Cypress Hill explora sonidos más sombríos y experimentales, consolidando su estilo único con letras crudas y producción innovadora.\"",
+      "en": "Cypress Hill's third album explores darker, more experimental sounds, cementing their unique style with raw lyrics and innovative production.\""
+    },
+    "image": "/imagenes/musica/templesofboom",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=1Y0Dz2A9v3Q",
+    "spotify": "https://open.spotify.com/album/0SqnhLojq2hSe9IoqdXW00",
+    "masterpiece": true
+  },
+  {
+    "id": 619,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Cypress Hill",
+    "title": {
+      "es": "IV",
+      "en": "IV"
+    },
+    "description": {
+      "es": "El álbum 'IV' combina el sonido clásico de Cypress Hill con influencias más modernas, manteniendo la esencia que los hizo icónicos en el mundo del rap.\"",
+      "en": "The album 'IV' blends Cypress Hill's classic sound with more modern influences, maintaining the essence that made them iconic in the rap world.\""
+    },
+    "image": "/imagenes/musica/iv",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=SKC0LMLlY8c",
+    "spotify": "https://open.spotify.com/album/3Hyw7bPHzYIxtXjZoE5gGk",
+    "masterpiece": true
+  },
+  {
+    "id": 620,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Cypress Hill",
+    "title": {
+      "es": "Skull & Bones",
+      "en": "Skull & Bones"
+    },
+    "description": {
+      "es": "'Skull & Bones' es un álbum doble que mezcla hip hop tradicional con elementos de rock, demostrando la versatilidad y creatividad de Cypress Hill.\"",
+      "en": "'Skull & Bones' is a double album mixing traditional hip hop with rock elements, showcasing Cypress Hill's versatility and creativity.\""
+    },
+    "image": "/imagenes/musica/skull",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=2WpI7PVJ6A4",
+    "spotify": "https://open.spotify.com/album/7iT8J9DLGTNQXef3d6S06m",
+    "masterpiece": true
+  },
+  {
+    "id": 621,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Cypress Hill",
+    "title": {
+      "es": "Till Death Do Us Part",
+      "en": "Till Death Do Us Part"
+    },
+    "description": {
+      "es": "Este álbum mezcla el sonido clásico con temas sociales y experimentación sonora, mostrando la evolución constante de Cypress Hill.\"",
+      "en": "This album blends classic sound with social themes and sonic experimentation, showing Cypress Hill's constant evolution.\""
+    },
+    "image": "/imagenes/musica/tilldeathdouspart",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=UiL5EHyR45M",
+    "spotify": "https://open.spotify.com/album/6iIYISXpmLJOIrDDg4xwyV",
+    "masterpiece": true
+  },
+  {
+    "id": 622,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Cypress Hill",
+    "title": {
+      "es": "Stoned Raiders",
+      "en": "Stoned Raiders"
+    },
+    "description": {
+      "es": "Con 'Stoned Raiders', Cypress Hill explora ritmos más agresivos y letras cargadas de actitud, reafirmando su lugar en el hip hop.\"",
+      "en": "With 'Stoned Raiders', Cypress Hill explores more aggressive beats and attitude-filled lyrics, reaffirming their place in hip hop.\""
+    },
+    "image": "/imagenes/musica/stonedraiders",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=UQLkv8KfM-0",
+    "spotify": "https://open.spotify.com/album/4Lyf0jC2cKc5mz0lgWDkPY",
+    "masterpiece": true
+  },
+  {
+    "id": 623,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Cypress Hill",
+    "title": {
+      "es": "Till Death Do Us Part",
+      "en": "Till Death Do Us Part"
+    },
+    "description": {
+      "es": "Este álbum mezcla el sonido clásico con temas sociales y experimentación sonora, mostrando la evolución constante de Cypress Hill.\"",
+      "en": "This album blends classic sound with social themes and sonic experimentation, showing Cypress Hill's constant evolution.\""
+    },
+    "image": "/imagenes/musica/tilldeathdouspart",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=UiL5EHyR45M",
+    "spotify": "https://open.spotify.com/album/6iIYISXpmLJOIrDDg4xwyV",
+    "masterpiece": true
+  },
+  {
+    "id": 624,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Cypress Hill",
+    "title": {
+      "es": "Rise Up",
+      "en": "Rise Up"
+    },
+    "description": {
+      "es": "'Rise Up' es un álbum que refleja la madurez del grupo con mensajes de resistencia y superación, además de sonidos variados y colaboraciones importantes.\"",
+      "en": "'Rise Up' is an album reflecting the group's maturity with messages of resistance and overcoming, alongside varied sounds and important collaborations.\""
+    },
+    "image": "/imagenes/musica/riseup",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=ZXVKjZv8IKw",
+    "spotify": "https://open.spotify.com/album/2MqIKRYySHZTxqfgQEtDzt",
+    "masterpiece": true
+  },
+  {
+    "id": 625,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Cypress Hill",
+    "title": {
+      "es": "Elephants on Acid",
+      "en": "Elephants on Acid"
+    },
+    "description": {
+      "es": "'Elephants on Acid' es un álbum reciente que mezcla psicodelia y rap con un enfoque experimental, destacando la capacidad de reinvención de Cypress Hill.\"",
+      "en": "'Elephants on Acid' is a recent album mixing psychedelia and rap with an experimental approach, highlighting Cypress Hill's ability to reinvent.\""
+    },
+    "image": "/imagenes/musica/elephants",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=J3LP95i8Djw",
+    "spotify": "https://open.spotify.com/album/1N3Lx4Mpbd1uU7amL0S9ci",
+    "masterpiece": true
+  },
+  {
+    "id": 626,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Psycho Realm",
+    "title": {
+      "es": "The Psycho Realm",
+      "en": "The Psycho Realm"
+    },
+    "description": {
+      "es": "El álbum debut de Psycho Realm marcó un hito en el rap underground con letras crudas y una atmósfera oscura. Su sonido reflejó las realidades difíciles y la lucha urbana con intensidad y honestidad.\"",
+      "en": "Psycho Realm's debut album marked a milestone in underground rap with raw lyrics and a dark atmosphere. Its sound reflected harsh realities and urban struggle with intensity and honesty.\""
+    },
+    "image": "/imagenes/musica/psycho",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=7xkOQGd9U9A",
+    "spotify": "https://open.spotify.com/album/4Fd5yWh91MJrWhZx2LzGgE",
+    "masterpiece": true
+  },
+  {
+    "id": 627,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Psycho Realm",
+    "title": {
+      "es": "A War Story Book I",
+      "en": "A War Story Book I"
+    },
+    "description": {
+      "es": "Este segundo álbum profundiza en la narrativa bélica y social, mostrando la crudeza de la vida en las calles. Musicalmente, mezcla beats agresivos con letras impactantes y llenas de sentimiento.\"",
+      "en": "This second album dives into war and social narratives, showing the harsh realities of street life. Musically, it mixes aggressive beats with impactful and heartfelt lyrics.\""
+    },
+    "image": "/imagenes/musica/warstory",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=oF9VJ7WkMt0",
+    "spotify": "https://open.spotify.com/album/0xR7yKnB7FpkAklRf7KZnY",
+    "masterpiece": true
+  },
+  {
+    "id": 628,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Psycho Realm",
+    "title": {
+      "es": "A War Story Book II",
+      "en": "A War Story Book II"
+    },
+    "description": {
+      "es": "La continuación de la saga 'A War Story' ofrece un sonido más maduro y oscuro. Las letras reflejan la violencia y el conflicto urbano con un enfoque realista y poético.\"",
+      "en": "The continuation of the 'A War Story' saga offers a darker and more mature sound. The lyrics reflect urban violence and conflict with a realistic and poetic approach.\""
+    },
+    "image": "/imagenes/musica/warstory2",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=zxM9_HfV99A",
+    "spotify": "https://open.spotify.com/album/3GvTr2gtNeRqHDWZMMxK3X",
+    "masterpiece": true
+  },
+  {
+    "id": 629,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Brujería",
+    "title": {
+      "es": "Matando Güeros",
+      "en": "Killing Whites"
+    },
+    "description": {
+      "es": "Álbum debut de Brujería, lanzado en 1993, que combina grindcore con letras satíricas y provocadoras sobre temas como narcotráfico y violencia. Su portada polémica y sonido crudo marcaron un hito en el metal extremo latinoamericano.\"",
+      "en": "Brujería's debut album, released in 1993, blends grindcore with satirical and provocative lyrics on topics like drug trafficking and violence. Its controversial cover and raw sound marked a milestone in Latin American extreme metal.\""
+    },
+    "image": "/imagenes/musica/matando",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Gv0X0z0V3x4",
+    "spotify": "https://open.spotify.com/album/4Fd5yWh91MJrWhZx2LzGgE",
+    "masterpiece": true
+  },
+  {
+    "id": 630,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Brujería",
+    "title": {
+      "es": "Raza Odiada",
+      "en": "Hated Race"
+    },
+    "description": {
+      "es": "Lanzado en 1995, este álbum profundiza en temas políticos y sociales con un sonido más pesado. Canciones como 'La Migra' y 'Revolución' reflejan la postura crítica de la banda hacia la situación de los inmigrantes y la opresión.\"",
+      "en": "Released in 1995, this album delves into political and social themes with a heavier sound. Songs like 'La Migra' and 'Revolución' reflect the band's critical stance on immigrant issues and oppression.\""
+    },
+    "image": "/imagenes/musica/razaodiada",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Gv0X0z0V3x4",
+    "spotify": "https://open.spotify.com/album/4Fd5yWh91MJrWhZx2LzGgE",
+    "masterpiece": true
+  },
+  {
+    "id": 631,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Brujería",
+    "title": {
+      "es": "Brujerizmo",
+      "en": "Brujerizmo"
+    },
+    "description": {
+      "es": "En 2000, Brujería presentó 'Brujerizmo', un álbum que mantiene su estilo agresivo y letras provocadoras. Con temas como 'Vayan Sin Miedo' y 'Anti-Castro', la banda continúa su crítica social y política con su característico sonido grindcore.\"",
+      "en": "In 2000, Brujería released 'Brujerizmo', an album that maintains their aggressive style and provocative lyrics. With tracks like 'Vayan Sin Miedo' and 'Anti-Castro', the band continues their social and political critique with their characteristic grindcore sound.\""
+    },
+    "image": "/imagenes/musica/brujerizmo",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Gv0X0z0V3x4",
+    "spotify": "https://open.spotify.com/album/4Fd5yWh91MJrWhZx2LzGgE",
+    "masterpiece": true
+  },
+  {
+    "id": 632,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Brujería",
+    "title": {
+      "es": "Pocho Aztlan",
+      "en": "Pocho Aztlan"
+    },
+    "description": {
+      "es": "Lanzado en 2016, 'Pocho Aztlan' es el regreso de Brujería con un sonido más maduro y letras que abordan temas como el nacionalismo y la identidad. El álbum muestra la evolución de la banda sin perder su esencia provocadora.\"",
+      "en": "Released in 2016, 'Pocho Aztlan' marks Brujería's return with a more mature sound and lyrics addressing themes like nationalism and identity. The album showcases the band's evolution without losing their provocative essence.\""
+    },
+    "image": "/imagenes/musica/pochoaztlan",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Gv0X0z0V3x4",
+    "spotify": "https://open.spotify.com/album/4Fd5yWh91MJrWhZx2LzGgE",
+    "masterpiece": true
+  },
+  {
+    "id": 633,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Brujería",
+    "title": {
+      "es": "Esto Es Brujería",
+      "en": "This Is Brujería"
+    },
+    "description": {
+      "es": "En 2023, Brujería lanzó 'Esto Es Brujería', un álbum que combina su estilo característico con influencias modernas. Con temas como 'Mochado' y 'Covid-666', la banda continúa su crítica social y política con su inconfundible sonido.\"",
+      "en": "In 2023, Brujería released 'Esto Es Brujería', an album that combines their characteristic style with modern influences. With tracks like 'Mochado' and 'Covid-666', the band continues their social and political critique with their unmistakable sound.\""
+    },
+    "image": "/imagenes/musica/estoesbrujeria",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Gv0X0z0V3x4",
+    "spotify": "https://open.spotify.com/album/4Fd5yWh91MJrWhZx2LzGgE",
+    "masterpiece": true
+  },
+  {
+    "id": 634,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Amon Tobin",
+    "title": {
+      "es": "Bricolage",
+      "en": "Bricolage"
+    },
+    "description": {
+      "es": "Lanzado en 1997, 'Bricolage' es el segundo álbum de Amon Tobin y destaca por su mezcla innovadora de jazz, electrónica y breakbeats. Este álbum marcó un antes y un después en la música electrónica experimental.\"",
+      "en": "Released in 1997, 'Bricolage' is Amon Tobin's second album and stands out for its innovative blend of jazz, electronic, and breakbeats. This album marked a milestone in experimental electronic music.\""
+    },
+    "image": "/imagenes/musica/bricolage",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=59tF7qGO5b4",
+    "spotify": "https://open.spotify.com/album/1vQqyWITlF5cmO2dvtE3Np",
+    "masterpiece": true
+  },
+  {
+    "id": 635,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Amon Tobin",
+    "title": {
+      "es": "Permutation",
+      "en": "Permutation"
+    },
+    "description": {
+      "es": "Este álbum de 1998 continuó la exploración de Tobin en la música electrónica con texturas complejas y ritmos fragmentados. 'Permutation' combina sonidos orgánicos y digitales creando una atmósfera única y envolvente.\"",
+      "en": "This 1998 album continued Tobin's exploration of electronic music with complex textures and fragmented rhythms. 'Permutation' combines organic and digital sounds creating a unique and immersive atmosphere.\""
+    },
+    "image": "/imagenes/musica/permutation",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Eknr0U5CsXk",
+    "spotify": "https://open.spotify.com/album/2vqizLdOqOS8Q4vOtSKdCu",
+    "masterpiece": true
+  },
+  {
+    "id": 636,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Amon Tobin",
+    "title": {
+      "es": "Supermodified",
+      "en": "Supermodified"
+    },
+    "description": {
+      "es": "Publicada en 2000, 'Supermodified' es considerada una obra maestra por su fusión de jazz, drum and bass y sonidos experimentales. La producción detallada y atmosférica la hace una experiencia auditiva envolvente.\"",
+      "en": "Released in 2000, 'Supermodified' is considered a masterpiece for its fusion of jazz, drum and bass, and experimental sounds. Its detailed and atmospheric production makes it an immersive listening experience.\""
+    },
+    "image": "/imagenes/musica/supermodified",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Zysr1W9-xDk",
+    "spotify": "https://open.spotify.com/album/3yqVb6PJzE7C4veNRDHwzR",
+    "masterpiece": true
+  },
+  {
+    "id": 637,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Amon Tobin",
+    "title": {
+      "es": "Out From Out Where",
+      "en": "Out From Out Where"
+    },
+    "description": {
+      "es": "En 2002, este álbum llevó a Tobin a nuevas dimensiones con texturas densas y ritmos hipnóticos. 'Out From Out Where' combina complejidad rítmica y ambientes sonoros que retan los límites de la electrónica.\"",
+      "en": "In 2002, this album took Tobin to new dimensions with dense textures and hypnotic rhythms. 'Out From Out Where' combines rhythmic complexity and soundscapes that push the boundaries of electronic music.\""
+    },
+    "image": "/imagenes/musica/outfromoutwhere",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=jDyz1NlIyxk",
+    "spotify": "https://open.spotify.com/album/5ZrnpHmXKdDfWjKgQ12rVm",
+    "masterpiece": true
+  },
+  {
+    "id": 638,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Amon Tobin",
+    "title": {
+      "es": "Foley Room",
+      "en": "Foley Room"
+    },
+    "description": {
+      "es": "Lanzado en 2007, 'Foley Room' destaca por incorporar grabaciones de campo y sonidos ambientales en su producción. Tobin crea paisajes sonoros innovadores que mezclan elementos orgánicos y electrónicos.\"",
+      "en": "Released in 2007, 'Foley Room' stands out for incorporating field recordings and ambient sounds into its production. Tobin creates innovative soundscapes blending organic and electronic elements.\""
+    },
+    "image": "/imagenes/musica/foleyroom",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=EgU-fMAapVo",
+    "spotify": "https://open.spotify.com/album/5IFUQnAwvPt5dRtf2EDB6C",
+    "masterpiece": true
+  },
+  {
+    "id": 639,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Amon Tobin",
+    "title": {
+      "es": "ISAM",
+      "en": "ISAM"
+    },
+    "description": {
+      "es": "'ISAM', lanzado en 2011, es un álbum de gran complejidad sonora donde Tobin experimenta con sonidos digitales fracturados y capas densas. Representa una evolución audaz en su carrera y en la música electrónica experimental.\"",
+      "en": "'ISAM', released in 2011, is an album of great sonic complexity where Tobin experiments with fractured digital sounds and dense layers. It represents a bold evolution in his career and experimental electronic music.\""
+    },
+    "image": "/imagenes/musica/isam",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Gb3RrZy1H3Q",
+    "spotify": "https://open.spotify.com/album/5USq3w2iWLVbqkq4ivqztg",
+    "masterpiece": true
+  },
+  {
+    "id": 640,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Dheformer Galinier",
+    "title": {
+      "es": "Outlaws",
+      "en": "Outlaws"
+    },
+    "description": {
+      "es": "\"'Outlaws' es un álbum de hip-hop lanzado en 2021 por Dheformer Galinier, Dano y N-Wise Allah. Con una producción que fusiona beats urbanos con letras conscientes, el álbum ofrece una visión cruda de la vida en las calles. Incluye remixes de Manu Beats, Ciclo y Sceno.\"",
+      "en": "\"'Outlaws' is a 2021 hip-hop album by Dheformer Galinier, Dano, and N-Wise Allah. With a production that blends urban beats with conscious lyrics, the album provides a raw insight into street life. It features remixes by Manu Beats, Ciclo, and Sceno.\""
+    },
+    "image": "/imagenes/musica/outlaws",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=OutlawsOfficialVideo",
+    "spotify": "https://open.spotify.com/album/OutlawsAlbumLink",
+    "masterpiece": false
+  },
+  {
+    "id": 641,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "DUB FX",
+    "title": {
+      "es": "A Matter of Time",
+      "en": "A Matter of Time"
+    },
+    "description": {
+      "es": "\"'A Matter of Time' es un álbum lanzado en 2010 por DUB FX que combina elementos de dub, hip-hop y música electrónica. La producción destaca por sus letras conscientes y su fusión de sonidos orgánicos con técnicas de looping en vivo. Este trabajo marcó un antes y un después en su carrera como artista callejero global.\"",
+      "en": "\"'A Matter of Time' is a 2010 album by DUB FX blending dub, hip-hop, and electronic music elements. The production stands out for its conscious lyrics and fusion of organic sounds with live looping techniques. This work marked a turning point in his global street artist career.\""
+    },
+    "image": "/imagenes/musica/matter",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=QFJ7h28duKo",
+    "spotify": "https://open.spotify.com/album/4aHuYYrQvtgLg7YyG6OwxH",
+    "masterpiece": true
+  },
+  {
+    "id": 642,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "DUB FX",
+    "title": {
+      "es": "Everythinks a Ripple",
+      "en": "Everythinks a Ripple"
+    },
+    "description": {
+      "es": "\"Lanzado en 2013, 'Everythinks a Ripple' es un álbum de DUB FX que profundiza en sonidos experimentales de dub y electrónica con influencias de reggae y hip-hop. Las letras promueven mensajes de unidad y conciencia social. El álbum refleja la evolución artística y la exploración sonora del músico australiano.\"",
+      "en": "\"Released in 2013, 'Everythinks a Ripple' is an album by DUB FX exploring experimental dub and electronic sounds with reggae and hip-hop influences. The lyrics promote messages of unity and social awareness. The album reflects the artist's sonic evolution and exploration.\""
+    },
+    "image": "/imagenes/musica/ripple",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=7k2P3XDiR6g",
+    "spotify": "https://open.spotify.com/album/4GX6k21pZm6vSAVdGAX9V1",
+    "masterpiece": true
+  },
+  {
+    "id": 643,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "DUB FX",
+    "title": {
+      "es": "Theory of Harmony",
+      "en": "Theory of Harmony"
+    },
+    "description": {
+      "es": "\"'Theory of Harmony', lanzado en 2017, es un álbum que combina el dub, hip-hop y música electrónica con una fuerte base de mensajes conscientes y activismo social. DUB FX sigue explorando la producción en vivo y el uso creativo de la tecnología musical para transmitir su visión artística única.\"",
+      "en": "\"'Theory of Harmony', released in 2017, is an album combining dub, hip-hop, and electronic music with strong conscious messages and social activism. DUB FX continues exploring live production and creative use of music technology to convey his unique artistic vision.\""
+    },
+    "image": "/imagenes/musica/harmony",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=3nqykY1jH3w",
+    "spotify": "https://open.spotify.com/album/0OQ8vP83Oq5tTDY39V1kfj",
+    "masterpiece": true
+  },
+  {
+    "id": 644,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Public Enemy",
+    "title": {
+      "es": "Yo! Bum Rush the Show",
+      "en": "Yo! Bum Rush the Show"
+    },
+    "description": {
+      "es": "\"Lanzado en 1987, 'Yo! Bum Rush the Show' es el álbum debut de Public Enemy que revolucionó el rap con su energía cruda y sus letras políticas. Combina samples innovadores con un mensaje potente contra la injusticia social y racial. Fue fundamental para establecer el sonido distintivo del grupo.\"",
+      "en": "\"Released in 1987, 'Yo! Bum Rush the Show' is Public Enemy's debut album that revolutionized rap with its raw energy and political lyrics. It combines innovative sampling with a powerful message against social and racial injustice. It was key to establishing the group's distinctive sound.\""
+    },
+    "image": "/imagenes/musica/bumrush",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=ymVNBY2VxiA",
+    "spotify": "https://open.spotify.com/album/5AAJfHlWm7Le1b7yOq2zGb",
+    "masterpiece": true
+  },
+  {
+    "id": 645,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Public Enemy",
+    "title": {
+      "es": "It Takes a Nation of Millions to Hold Us Back",
+      "en": "It Takes a Nation of Millions to Hold Us Back"
+    },
+    "description": {
+      "es": "\"Publicado en 1988, este segundo álbum de Public Enemy es considerado un clásico del hip-hop. Con un sonido agresivo y complejo, fusiona beats contundentes y samples con letras que denuncian el racismo, la brutalidad policial y la opresión. Consolidó a la banda como líder del rap político.\"",
+      "en": "\"Released in 1988, Public Enemy's second album is regarded as a hip-hop classic. With an aggressive, complex sound, it fuses powerful beats and samples with lyrics denouncing racism, police brutality, and oppression. It established the band as leaders of political rap.\""
+    },
+    "image": "/imagenes/musica/nation",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=xryMgXxP9V8",
+    "spotify": "https://open.spotify.com/album/0u0M7eKXS2PDEdDPOv2dMD",
+    "masterpiece": true
+  },
+  {
+    "id": 646,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Public Enemy",
+    "title": {
+      "es": "Fear of a Black Planet",
+      "en": "Fear of a Black Planet"
+    },
+    "description": {
+      "es": "\"Lanzado en 1990, este álbum es un hito en la historia del hip-hop por su sonido innovador y su mensaje poderoso sobre la raza y la política en Estados Unidos. 'Fear of a Black Planet' combina producción avanzada y letras que abogan por el empoderamiento y la resistencia.\"",
+      "en": "\"Released in 1990, this album is a milestone in hip-hop history for its innovative sound and powerful message on race and politics in the United States. 'Fear of a Black Planet' blends advanced production with lyrics advocating empowerment and resistance.\""
+    },
+    "image": "/imagenes/musica/fear",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=GbuWIF_U_1M",
+    "spotify": "https://open.spotify.com/album/5QKBrLqGzCP3TXmRl8QuKb",
+    "masterpiece": true
+  },
+  {
+    "id": 647,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Public Enemy",
+    "title": {
+      "es": "Apocalypse 91... The Enemy Strikes Black",
+      "en": "Apocalypse 91... The Enemy Strikes Black"
+    },
+    "description": {
+      "es": "\"Este álbum de 1991 continúa la línea combativa de Public Enemy con producción de avanzada y letras que abordan temas como la injusticia social, el racismo y la resistencia cultural. Refuerza el impacto político y cultural del grupo en la escena del hip-hop.\"",
+      "en": "\"This 1991 album continues Public Enemy's combative line with advanced production and lyrics addressing social injustice, racism, and cultural resistance. It reinforces the group's political and cultural impact in the hip-hop scene.\""
+    },
+    "image": "/imagenes/musica/apocalypse",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Q0zMPSAIEiI",
+    "spotify": "https://open.spotify.com/album/4b5yejfq7x9hWcD7IKMHEk",
+    "masterpiece": true
+  },
+  {
+    "id": 648,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Public Enemy",
+    "title": {
+      "es": "Muse Sick-n-Hour Mess Age",
+      "en": "Muse Sick-n-Hour Mess Age"
+    },
+    "description": {
+      "es": "\"Publicado en 1994, este álbum muestra una evolución en el sonido de Public Enemy, con más experimentación y temas complejos. Continúa explorando cuestiones sociales y políticas con letras densas y producción arriesgada, reflejando los desafíos de la década de los 90.\"",
+      "en": "\"Released in 1994, this album shows an evolution in Public Enemy's sound with more experimentation and complex themes. It continues exploring social and political issues with dense lyrics and bold production, reflecting the challenges of the 1990s.\""
+    },
+    "image": "/imagenes/musica/muse",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=NzQJx7wKVEk",
+    "spotify": "https://open.spotify.com/album/6GkllYMD7RyULk70eY36mh",
+    "masterpiece": true
+  },
+  {
+    "id": 649,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Public Enemy",
+    "title": {
+      "es": "He Got Game",
+      "en": "He Got Game"
+    },
+    "description": {
+      "es": "\"Lanzado en 1998 como banda sonora de la película de Spike Lee, este álbum mezcla el estilo clásico de Public Enemy con temas relacionados al deporte, la lucha y la cultura negra. Es una obra que une su mensaje político con la atmósfera cinematográfica.\"",
+      "en": "\"Released in 1998 as the soundtrack for Spike Lee's film, this album mixes Public Enemy's classic style with themes related to sports, struggle, and black culture. It is a work that unites their political message with a cinematic atmosphere.\""
+    },
+    "image": "/imagenes/musica/hegotgame",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Q9L_0gvm0rI",
+    "spotify": "https://open.spotify.com/album/3dzq3gOCEBHKkPMkXwx9Qg",
+    "masterpiece": true
+  },
+  {
+    "id": 650,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Public Enemy",
+    "title": {
+      "es": "There's a Poison Goin' On",
+      "en": "There's a Poison Goin' On"
+    },
+    "description": {
+      "es": "\"Este álbum de 1999 retoma la línea crítica de Public Enemy con un sonido renovado y letras que atacan la corrupción, la política y los medios de comunicación. Es un trabajo que mantiene la vigencia de su mensaje y fuerza combativa.\"",
+      "en": "\"This 1999 album resumes Public Enemy's critical line with a renewed sound and lyrics attacking corruption, politics, and the media. It is a work that keeps their message relevant and combative strength.\""
+    },
+    "image": "/imagenes/musica/poison",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=3aHvMwr2cNw",
+    "spotify": "https://open.spotify.com/album/5zQYtxIP1hrPS4i3fXD8uM",
+    "masterpiece": true
+  },
+  {
+    "id": 651,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Public Enemy",
+    "title": {
+      "es": "Revolverlution",
+      "en": "Revolverlution"
+    },
+    "description": {
+      "es": "\"Lanzado en 2002, 'Revolverlution' es un álbum que mezcla sonidos clásicos de Public Enemy con elementos contemporáneos. Las letras mantienen la crítica social y política, reafirmando el compromiso del grupo con su legado y mensaje activista.\"",
+      "en": "\"Released in 2002, 'Revolverlution' is an album blending Public Enemy's classic sounds with contemporary elements. The lyrics maintain social and political critique, reaffirming the group's commitment to their legacy and activist message.\""
+    },
+    "image": "/imagenes/musica/revolverlution",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=F0mjvLgKnzQ",
+    "spotify": "https://open.spotify.com/album/3frWNaTghqwd7k3a9wBnlN",
+    "masterpiece": true
+  },
+  {
+    "id": 652,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Rage Against the Machine",
+    "title": {
+      "es": "Rage Against the Machine",
+      "en": "Rage Against the Machine"
+    },
+    "description": {
+      "es": "\"Lanzado en 1992, este álbum debut de Rage Against the Machine fusiona el rap y el metal con letras combativas que denuncian la injusticia social y política. Su energía cruda y riffs poderosos marcaron un nuevo camino para el rock alternativo. Fue un disco revolucionario que definió su estilo único.\"",
+      "en": "\"Released in 1992, Rage Against the Machine's debut album fuses rap and metal with combative lyrics denouncing social and political injustice. Its raw energy and powerful riffs paved a new way for alternative rock. It was a revolutionary album that defined their unique style.\""
+    },
+    "image": "/imagenes/musica/rage",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=W9X9aZ_7U7c",
+    "spotify": "https://open.spotify.com/album/1cGPkn2Z8iRxR3T4xEtnhP",
+    "masterpiece": true
+  },
+  {
+    "id": 653,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Rage Against the Machine",
+    "title": {
+      "es": "Evil Empire",
+      "en": "Evil Empire"
+    },
+    "description": {
+      "es": "\"Este segundo álbum de 1996 profundiza en el sonido agresivo y las letras políticas de la banda. 'Evil Empire' critica el poder, la corrupción y el sistema capitalista con una intensidad sonora que combina metal pesado y rap directo. Fue un éxito crítico y comercial que consolidó su legado.\"",
+      "en": "\"This 1996 second album deepens the band's aggressive sound and political lyrics. 'Evil Empire' criticizes power, corruption, and the capitalist system with sonic intensity combining heavy metal and direct rap. It was a critical and commercial success that cemented their legacy.\""
+    },
+    "image": "/imagenes/musica/evil",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=hNQmAhr0r7o",
+    "spotify": "https://open.spotify.com/album/7i46AzPN9HsxvtiVKKPQH2",
+    "masterpiece": true
+  },
+  {
+    "id": 654,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Rage Against the Machine",
+    "title": {
+      "es": "The Battle of Los Angeles",
+      "en": "The Battle of Los Angeles"
+    },
+    "description": {
+      "es": "\"Publicado en 1999, este álbum refleja la madurez musical y política de la banda. 'The Battle of Los Angeles' mezcla riffs intensos y letras que denuncian la opresión y la lucha social, consolidando a Rage Against the Machine como una voz potente y necesaria del rock político.\"",
+      "en": "\"Released in 1999, this album reflects the band's musical and political maturity. 'The Battle of Los Angeles' mixes intense riffs and lyrics denouncing oppression and social struggle, cementing Rage Against the Machine as a powerful and necessary voice in political rock.\""
+    },
+    "image": "/imagenes/musica/battle",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0eE2mGMWicA",
+    "spotify": "https://open.spotify.com/album/0fYPSx3yk2Y2VfQCu2rv79",
+    "masterpiece": true
+  },
+  {
+    "id": 655,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Rage Against the Machine",
+    "title": {
+      "es": "Renegades",
+      "en": "Renegades"
+    },
+    "description": {
+      "es": "\"Este álbum de 2000 es una colección de versiones que muestran la influencia de la banda en el rock y el hip-hop. 'Renegades' reinterpretó canciones clásicas con su estilo único, demostrando su versatilidad y compromiso con la crítica social a través de diferentes géneros musicales.\"",
+      "en": "\"This 2000 album is a collection of covers showcasing the band's influence on rock and hip-hop. 'Renegades' reinterpreted classic songs with their unique style, demonstrating versatility and commitment to social critique across different musical genres.\""
+    },
+    "image": "/imagenes/musica/renegades",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=qyVz8g2z1RQ",
+    "spotify": "https://open.spotify.com/album/3f4aDsoLttYdWQbV0d2GZZ",
+    "masterpiece": true
+  },
+  {
+    "id": 656,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "KRS-One",
+    "title": {
+      "es": "Return of the Boom Bap",
+      "en": "Return of the Boom Bap"
+    },
+    "description": {
+      "es": "\"Lanzado en 1993, este álbum marcó el debut en solitario de KRS-One, fusionando letras conscientes con ritmos clásicos del hip-hop. Es un regreso a las raíces del boom bap que influyó en toda una generación y reafirmó su posición como voz fundamental del rap consciente.\"",
+      "en": "\"Released in 1993, this album marked KRS-One's solo debut, blending conscious lyrics with classic hip-hop beats. It is a return to the roots of boom bap that influenced a generation and reaffirmed his position as a fundamental voice in conscious rap.\""
+    },
+    "image": "/imagenes/musica/return",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=KX3B7fT-WKQ",
+    "spotify": "https://open.spotify.com/album/3EKLuTKuH6PbGZMdHXGEQq",
+    "masterpiece": true
+  },
+  {
+    "id": 657,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "KRS-One",
+    "title": {
+      "es": "KRS-One",
+      "en": "KRS-One"
+    },
+    "description": {
+      "es": "\"Este álbum homónimo de 1995 consolidó a KRS-One como una leyenda del hip-hop. Mezclando mensajes políticos y sociales con ritmos duros y precisos, reafirmó su estilo como educador y revolucionario dentro del rap.\"",
+      "en": "\"This 1995 self-titled album solidified KRS-One as a hip-hop legend. Mixing political and social messages with hard and precise beats, it reaffirmed his style as an educator and revolutionary within rap.\""
+    },
+    "image": "/imagenes/musica/krsone",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=HvG6Q1lhSjc",
+    "spotify": "https://open.spotify.com/album/3EiKhb0AxJ1TxR70r6Qq6O",
+    "masterpiece": true
+  },
+  {
+    "id": 658,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "KRS-One",
+    "title": {
+      "es": "I Got Next",
+      "en": "I Got Next"
+    },
+    "description": {
+      "es": "\"Lanzado en 1997, 'I Got Next' muestra la madurez artística de KRS-One con temas que abordan la espiritualidad, la política y la cultura hip-hop. Sus ritmos variados y letras incisivas lo mantienen como un referente en el rap consciente.\"",
+      "en": "\"Released in 1997, 'I Got Next' showcases KRS-One's artistic maturity with themes addressing spirituality, politics, and hip-hop culture. Its varied beats and incisive lyrics keep him as a benchmark in conscious rap.\""
+    },
+    "image": "/imagenes/musica/next",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=CDZc0cCMF9c",
+    "spotify": "https://open.spotify.com/album/7Ej4t3y6eqfMbYp5J28swA",
+    "masterpiece": true
+  },
+  {
+    "id": 659,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "KRS-One",
+    "title": {
+      "es": "Kristyles",
+      "en": "Kristyles"
+    },
+    "description": {
+      "es": "\"Publicado en 2003, 'Kristyles' combina el estilo clásico de KRS-One con influencias contemporáneas. Sus letras mantienen la crítica social y la defensa del hip-hop auténtico, mostrando su evolución sin perder esencia.\"",
+      "en": "\"Released in 2003, 'Kristyles' combines KRS-One's classic style with contemporary influences. Its lyrics maintain social critique and defense of authentic hip-hop, showing his evolution without losing essence.\""
+    },
+    "image": "/imagenes/musica/kristyles",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=cF5hNgLG7_Y",
+    "spotify": "https://open.spotify.com/album/2AeDxG3oQvMS9YooBQjTp8",
+    "masterpiece": true
+  },
+  {
+    "id": 660,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "KRS-One",
+    "title": {
+      "es": "Life",
+      "en": "Life"
+    },
+    "description": {
+      "es": "\"'Life' es un álbum de 2006 donde KRS-One profundiza en temas de conciencia y espiritualidad, acompañado de beats que mezclan tradición y modernidad. Es un trabajo que reafirma su compromiso con el hip-hop como herramienta de cambio.\"",
+      "en": "\"'Life' is a 2006 album where KRS-One delves into themes of consciousness and spirituality, accompanied by beats mixing tradition and modernity. It is a work that reaffirms his commitment to hip-hop as a tool for change.\""
+    },
+    "image": "/imagenes/musica/life",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=6bkjPjM5Qxk",
+    "spotify": "https://open.spotify.com/album/5rfxRnrI4ffYjMaQZIVC5w",
+    "masterpiece": true
+  },
+  {
+    "id": 661,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "IAM",
+    "title": {
+      "es": "...De la planète Mars",
+      "en": "...De la planète Mars"
+    },
+    "description": {
+      "es": "\"Este es el álbum debut de IAM, lanzado en 1991. Con letras que abordan temas sociales y políticos, marcó el inicio de su carrera en la escena del rap francés. Su estilo único y compromiso con el mensaje lo han convertido en una obra fundamental del género.\"",
+      "en": "\"This is IAM's debut album, released in 1991. With lyrics addressing social and political themes, it marked the beginning of their career in the French rap scene. Its unique style and commitment to the message have made it a cornerstone of the genre.\""
+    },
+    "image": "/imagenes/musica/planetemars",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0eE2mGMWicA",
+    "spotify": "https://open.spotify.com/album/1cGPkn2Z8iRxR3T4xEtnhP",
+    "masterpiece": true
+  },
+  {
+    "id": 662,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "IAM",
+    "title": {
+      "es": "Ombre est lumière",
+      "en": "Ombre est lumière"
+    },
+    "description": {
+      "es": "\"Lanzado en 1993, este álbum doble presenta una evolución en el sonido de IAM. Con temas que exploran la luz y la oscuridad, refleja la madurez artística del grupo y su capacidad para fusionar rap con elementos culturales diversos.\"",
+      "en": "\"Released in 1993, this double album showcases an evolution in IAM's sound. With themes exploring light and darkness, it reflects the group's artistic maturity and their ability to blend rap with diverse cultural elements.\""
+    },
+    "image": "/imagenes/musica/ombreetlumiere",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0eE2mGMWicA",
+    "spotify": "https://open.spotify.com/album/1cGPkn2Z8iRxR3T4xEtnhP",
+    "masterpiece": true
+  },
+  {
+    "id": 663,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "IAM",
+    "title": {
+      "es": "L'école du micro d'argent",
+      "en": "L'école du micro d'argent"
+    },
+    "description": {
+      "es": "\"Este álbum de 1997 es considerado una obra maestra del rap francés. Con influencias del Wu-Tang Clan y temas profundos sobre la sociedad, consolidó a IAM como uno de los grupos más influyentes del género.\"",
+      "en": "\"This 1997 album is considered a masterpiece of French rap. With influences from the Wu-Tang Clan and deep themes about society, it solidified IAM as one of the most influential groups in the genre.\""
+    },
+    "image": "/imagenes/musica/ecoledumicro",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0eE2mGMWicA",
+    "spotify": "https://open.spotify.com/album/1cGPkn2Z8iRxR3T4xEtnhP",
+    "masterpiece": true
+  },
+  {
+    "id": 664,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "IAM",
+    "title": {
+      "es": "Revoir un printemps",
+      "en": "Revoir un printemps"
+    },
+    "description": {
+      "es": "\"Lanzado en 2003, este álbum presenta colaboraciones con artistas internacionales como Redman y Method Man. Con un sonido más maduro, aborda temas de esperanza y renovación, mostrando la evolución del grupo.\"",
+      "en": "\"Released in 2003, this album features collaborations with international artists like Redman and Method Man. With a more mature sound, it addresses themes of hope and renewal, showcasing the group's evolution.\""
+    },
+    "image": "/imagenes/musica/revoirunprintemps",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0eE2mGMWicA",
+    "spotify": "https://open.spotify.com/album/1cGPkn2Z8iRxR3T4xEtnhP",
+    "masterpiece": true
+  },
+  {
+    "id": 665,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "IAM",
+    "title": {
+      "es": "Saison 5",
+      "en": "Saison 5"
+    },
+    "description": {
+      "es": "\"Este álbum de 2007 marca el regreso de IAM con un sonido renovado. Con letras que abordan temas actuales, demuestra que el grupo sigue siendo relevante en la escena del rap francés.\"",
+      "en": "\"This 2007 album marks IAM's return with a refreshed sound. With lyrics addressing current themes, it demonstrates that the group remains relevant in the French rap scene.\""
+    },
+    "image": "/imagenes/musica/saison5",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0eE2mGMWicA",
+    "spotify": "https://open.spotify.com/album/1cGPkn2Z8iRxR3T4xEtnhP",
+    "masterpiece": true
+  },
+  {
+    "id": 666,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "IAM",
+    "title": {
+      "es": "Arts Martiens",
+      "en": "Arts Martiens"
+    },
+    "description": {
+      "es": "\"Lanzado en 2013, este álbum presenta una fusión de sonidos electrónicos y tradicionales. Con letras que exploran temas cósmicos y filosóficos, muestra la versatilidad del grupo.\"",
+      "en": "\"Released in 2013, this album features a fusion of electronic and traditional sounds. With lyrics exploring cosmic and philosophical themes, it showcases the group's versatility.\""
+    },
+    "image": "/imagenes/musica/artsmartiens",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0eE2mGMWicA",
+    "spotify": "https://open.spotify.com/album/1cGPkn2Z8iRxR3T4xEtnhP",
+    "masterpiece": true
+  },
+  {
+    "id": 667,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "IAM",
+    "title": {
+      "es": "Rêvolution",
+      "en": "Rêvolution"
+    },
+    "description": {
+      "es": "\"Este álbum de 2017 presenta un sonido más experimental y colaboraciones con artistas internacionales. Aborda temas de cambio y resistencia, reflejando la evolución del grupo.\"",
+      "en": "\"This 2017 album features a more experimental sound and collaborations with international artists. It addresses themes of change and resistance, reflecting the group's evolution.\""
+    },
+    "image": "/imagenes/musica/revolution",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0eE2mGMWicA",
+    "spotify": "https://open.spotify.com/album/1cGPkn2Z8iRxR3T4xEtnhP",
+    "masterpiece": true
+  },
+  {
+    "id": 668,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "IAM",
+    "title": {
+      "es": "Yasuke",
+      "en": "Yasuke"
+    },
+    "description": {
+      "es": "\"Lanzado en 2019, este álbum rinde homenaje al samurái africano Yasuke. Con influencias de la cultura japonesa y africana, demuestra la capacidad de IAM para fusionar diferentes culturas en su música.\"",
+      "en": "\"Released in 2019, this album pays tribute to the African samurai Yasuke. With influences from Japanese and African cultures, it demonstrates IAM's ability to blend different cultures in their music.\""
+    },
+    "image": "/imagenes/musica/yasuke",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0eE2mGMWicA",
+    "spotify": "https://open.spotify.com/album/1cGPkn2Z8iRxR3T4xEtnhP",
+    "masterpiece": true
+  },
+  {
+    "id": 669,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "IAM",
+    "title": {
+      "es": "Monde Asie",
+      "en": "Monde Asie"
+    },
+    "description": {
+      "es": "\"Este álbum de 2025 explora sonidos y temas inspirados en Asia. Con colaboraciones internacionales, muestra la continua evolución de IAM y su capacidad para innovar.\"",
+      "en": "\"This 2025 album explores sounds and themes inspired by Asia. With international collaborations, it showcases IAM's continuous evolution and their ability to innovate.\""
+    },
+    "image": "/imagenes/musica/mondeasie",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0eE2mGMWicA",
+    "spotify": "https://open.spotify.com/album/1cGPkn2Z8iRxR3T4xEtnhP",
+    "masterpiece": true
+  },
+  {
+    "id": 670,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "NTM",
+    "title": {
+      "es": "Authentik",
+      "en": "Authentik"
+    },
+    "description": {
+      "es": "El álbum debut de NTM marcó un antes y un después en el rap francés. Con letras crudas y potentes, se consolidó como un manifiesto social y cultural. Su estilo directo y agresivo influyó en toda una generación.",
+      "en": "NTM's debut album marked a turning point in French rap. With raw and powerful lyrics, it established itself as a social and cultural manifesto. Its direct and aggressive style influenced an entire generation."
+    },
+    "image": "/imagenes/musica/authentik",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=ghVxU-N7QjA",
+    "spotify": "https://open.spotify.com/album/5i7VvSe4udB1Z1ihmKaDcT",
+    "masterpiece": true
+  },
+  {
+    "id": 671,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "NTM",
+    "title": {
+      "es": "J'appuie sur la gâchette",
+      "en": "J'appuie sur la gâchette"
+    },
+    "description": {
+      "es": "Segundo álbum de NTM que profundiza en críticas sociales y políticas con un tono más oscuro. Explora la realidad urbana con beats contundentes y letras afiladas, reafirmando su lugar en la escena del rap francés.",
+      "en": "NTM's second album dives deeper into social and political critiques with a darker tone. It explores urban reality with hard beats and sharp lyrics, reaffirming their place in French rap."
+    },
+    "image": "/imagenes/musica/gachette",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Lc8AAJK0fUI",
+    "spotify": "https://open.spotify.com/album/2TXaNqicp6JsI0slMVKqwA",
+    "masterpiece": true
+  },
+  {
+    "id": 672,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "NTM",
+    "title": {
+      "es": "Paris Sous les Bombes",
+      "en": "Paris Sous les Bombes"
+    },
+    "description": {
+      "es": "Este álbum consolidó a NTM como uno de los referentes del rap francés con una producción más refinada. Las letras reflejan la vida urbana y la resistencia frente a la opresión, con un sonido contundente y variado.",
+      "en": "This album established NTM as one of the key figures in French rap with more refined production. The lyrics reflect urban life and resistance to oppression, featuring a strong and varied sound."
+    },
+    "image": "/imagenes/musica/paris",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=rsVqaA2NgxA",
+    "spotify": "https://open.spotify.com/album/3klkZj0oAmJ5t1RZfuW2hZ",
+    "masterpiece": true
+  },
+  {
+    "id": 673,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "NTM",
+    "title": {
+      "es": "Suprême NTM",
+      "en": "Suprême NTM"
+    },
+    "description": {
+      "es": "El álbum más exitoso y emblemático de NTM, lanzado en 1998. Combina letras combativas con beats potentes y samples variados, consolidando el legado de la banda en el rap francés y mundial.",
+      "en": "NTM's most successful and emblematic album, released in 1998. It combines combative lyrics with powerful beats and varied samples, solidifying the band's legacy in French and global rap."
+    },
+    "image": "/imagenes/musica/supreme",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=UyA7QJyR-qI",
+    "spotify": "https://open.spotify.com/album/7n45my51C7cnmVk9yFuVTE",
+    "masterpiece": true
+  },
+  {
+    "id": 674,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "NTM",
+    "title": {
+      "es": "NTM Live",
+      "en": "NTM Live"
+    },
+    "description": {
+      "es": "Un álbum en vivo que captura la energía explosiva y la interacción directa con el público. Presenta versiones potentes de sus éxitos y muestra el talento de NTM en el escenario con una fuerza incomparable.",
+      "en": "A live album capturing the explosive energy and direct interaction with the audience. It features powerful versions of their hits and showcases NTM's talent on stage with unparalleled force."
+    },
+    "image": "/imagenes/musica/live",
+    "tags": ["album", "live"],
+    "youtube": "https://www.youtube.com/watch?v=1T9K6O3gwJk",
+    "spotify": "https://open.spotify.com/album/1dPTJxUEQoPPRvHv7DdRXV",
+    "masterpiece": true
+  },
+  {
+    "id": 675,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Colour Haze",
+    "title": {
+      "es": "Periscope",
+      "en": "Periscope"
+    },
+    "description": {
+      "es": "Periscope es el álbum debut de Colour Haze, lanzado en 1999. Combina psicodelia y stoner rock con atmósferas densas y envolventes que transportan al oyente a paisajes sonoros profundos y misteriosos.",
+      "en": "Periscope is Colour Haze's debut album, released in 1999. It combines psychedelia and stoner rock with dense and immersive atmospheres that transport the listener to deep and mysterious soundscapes."
+    },
+    "image": "/imagenes/musica/periscope",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=LBkL-oJ0V2Q",
+    "spotify": "https://open.spotify.com/album/5mjVg7PYZC0Aeq5EHvXyqt",
+    "masterpiece": true
+  },
+  {
+    "id": 676,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Colour Haze",
+    "title": {
+      "es": "Seven",
+      "en": "Seven"
+    },
+    "description": {
+      "es": "Seven es un álbum poderoso que muestra la evolución de Colour Haze hacia sonidos más maduros y experimentales. Sus composiciones fusionan riffs pesados con psicodelia expansiva y un pulso hipnótico.",
+      "en": "Seven is a powerful album that shows Colour Haze's evolution towards more mature and experimental sounds. Its compositions fuse heavy riffs with expansive psychedelia and a hypnotic pulse."
+    },
+    "image": "/imagenes/musica/seven",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=qIQYc13AlZ4",
+    "spotify": "https://open.spotify.com/album/7zAqjxdu7Ywn7izqfiVYki",
+    "masterpiece": true
+  },
+  {
+    "id": 677,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Colour Haze",
+    "title": {
+      "es": "Los Sounds de Krauts",
+      "en": "Los Sounds de Krauts"
+    },
+    "description": {
+      "es": "Este álbum muestra la capacidad de Colour Haze para crear paisajes sonoros complejos y psicodélicos con una base sólida de stoner rock. Los temas se expanden en largos viajes instrumentales y texturas envolventes.",
+      "en": "This album shows Colour Haze's ability to create complex and psychedelic soundscapes with a solid stoner rock foundation. Tracks expand into long instrumental journeys and immersive textures."
+    },
+    "image": "/imagenes/musica/krauts",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=l1Tq2rBf4BQ",
+    "spotify": "https://open.spotify.com/album/2LJO8q2iN7BGk0vMKGbWgF",
+    "masterpiece": true
+  },
+  {
+    "id": 678,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Colour Haze",
+    "title": {
+      "es": "Tempel",
+      "en": "Tempel"
+    },
+    "description": {
+      "es": "Tempel es un álbum emblemático que mezcla psicodelia, stoner y rock progresivo. Su sonido se caracteriza por largas composiciones llenas de capas sonoras que crean una experiencia auditiva profunda y mística.",
+      "en": "Tempel is an emblematic album blending psychedelia, stoner, and progressive rock. Its sound features long compositions filled with layered sounds that create a deep and mystical listening experience."
+    },
+    "image": "/imagenes/musica/tempel",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0H_KzPVV9Bg",
+    "spotify": "https://open.spotify.com/album/1QwKNylLZRV9FC0OcIZo7q",
+    "masterpiece": true
+  },
+  {
+    "id": 679,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Colour Haze",
+    "title": {
+      "es": "She Said",
+      "en": "She Said"
+    },
+    "description": {
+      "es": "She Said destaca por su atmósfera más melódica y relajada, aunque sin perder la potencia característica de la banda. Es un viaje psicodélico con melodías envolventes y ritmos profundos que hipnotizan.",
+      "en": "She Said stands out for its more melodic and relaxed atmosphere, without losing the band's characteristic power. It's a psychedelic journey with immersive melodies and deep, hypnotic rhythms."
+    },
+    "image": "/imagenes/musica/shesaid",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=9zUPGAPsVhA",
+    "spotify": "https://open.spotify.com/album/4PCPq4N0KUXm61HpJw3vVK",
+    "masterpiece": true
+  },
+  {
+    "id": 680,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Colour Haze",
+    "title": {
+      "es": "To the Highest Gods We Know",
+      "en": "To the Highest Gods We Know"
+    },
+    "description": {
+      "es": "El álbum más reciente que continúa la exploración sonora de Colour Haze con un enfoque hacia texturas atmosféricas y riffs psicodélicos. Refleja madurez artística y un compromiso con la experimentación musical.",
+      "en": "The latest album continues Colour Haze's sonic exploration with a focus on atmospheric textures and psychedelic riffs. It reflects artistic maturity and a commitment to musical experimentation."
+    },
+    "image": "/imagenes/musica/highestgods",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=38MSWZpqY0I",
+    "spotify": "https://open.spotify.com/album/3HSpuB6i3lRvq1nP6HK7TR",
+    "masterpiece": true
+  },
+  {
+    "id": 681,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Geronación",
+    "title": {
+      "es": "Pa' representar",
+      "en": "Pa' representar"
+    },
+    "description": {
+      "es": "Maqueta lanzada en 1995 que muestra los primeros pasos de Geronación en el rap. Con letras directas y un estilo underground, representa el compromiso con la cultura urbana. Es una obra clave para entender sus raíces musicales.",
+      "en": "Demo released in 1995 showcasing Geronación's early steps in rap. With direct lyrics and an underground style, it represents commitment to urban culture. A key work to understand their musical roots."
+    },
+    "image": "/imagenes/musica/representar",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 682,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Geronación",
+    "title": {
+      "es": "Guerrilla MC's",
+      "en": "Guerrilla MC's"
+    },
+    "description": {
+      "es": "Maxi single de 1997 que refleja la evolución del grupo hacia un rap más maduro y agresivo. Este trabajo destaca por su energía y compromiso social en las letras, mostrando su crecimiento artístico.",
+      "en": "Maxi single from 1997 reflecting the group's evolution toward a more mature and aggressive rap. This work stands out for its energy and social commitment in the lyrics, showing their artistic growth."
+    },
+    "image": "/imagenes/musica/guerrilla",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 683,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Geronación",
+    "title": {
+      "es": "En el sitio",
+      "en": "En el sitio"
+    },
+    "description": {
+      "es": "LP lanzado en 1999 que consolida el sonido de Geronación con beats contundentes y letras cargadas de crítica social. Un álbum representativo del rap underground en esa época.",
+      "en": "LP released in 1999 consolidating Geronación's sound with strong beats and socially critical lyrics. A representative album of underground rap in that era."
+    },
+    "image": "/imagenes/musica/sitio",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 684,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Geronación",
+    "title": {
+      "es": "Pa representar",
+      "en": "Pa representar"
+    },
+    "description": {
+      "es": "LP de 2002 que reafirma el compromiso del grupo con el rap consciente y el underground. Este álbum destaca por su lírica profunda y producción cuidada, consolidando su lugar en la escena.",
+      "en": "2002 LP reaffirming the group's commitment to conscious and underground rap. This album stands out for its deep lyrics and careful production, consolidating their place in the scene."
+    },
+    "image": "/imagenes/musica/representar",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 685,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Geronación",
+    "title": {
+      "es": "El zulo",
+      "en": "El zulo"
+    },
+    "description": {
+      "es": "EP lanzado en 2002 con una energía intensa y letras comprometidas. Un trabajo corto pero potente que mantiene la esencia de Geronación en el rap underground.",
+      "en": "EP released in 2002 with intense energy and committed lyrics. A short but powerful work that maintains Geronación's essence in underground rap."
+    },
+    "image": "/imagenes/musica/zulo",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 686,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Geronación",
+    "title": {
+      "es": "Superhéroes del underground",
+      "en": "Superhéroes del underground"
+    },
+    "description": {
+      "es": "Maxi single de 2004 que presenta un sonido renovado y letras llenas de crítica social y cultural. Refleja la madurez del grupo y su compromiso con el hip hop auténtico.",
+      "en": "2004 maxi single presenting a renewed sound and lyrics full of social and cultural criticism. Reflects the group's maturity and commitment to authentic hip hop."
+    },
+    "image": "/imagenes/musica/superheroes",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 687,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Geronación",
+    "title": {
+      "es": "Teatro",
+      "en": "Teatro"
+    },
+    "description": {
+      "es": "LP de 2004 que muestra una gran variedad temática y musical, combinando letras intensas con una producción elaborada. Un álbum fundamental en la discografía de Geronación.",
+      "en": "2004 LP showing great thematic and musical variety, combining intense lyrics with elaborate production. A fundamental album in Geronación's discography."
+    },
+    "image": "/imagenes/musica/teatro",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 688,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Geronación",
+    "title": {
+      "es": "Pa' Representar (Remasterizada)",
+      "en": "Pa' Representar (Remastered)"
+    },
+    "description": {
+      "es": "Versión remasterizada lanzada en 2002 que mejora la calidad sonora del álbum original. Mantiene la fuerza y mensaje de la obra, acercándola a nuevas generaciones.",
+      "en": "Remastered version released in 2002 improving the sound quality of the original album. It keeps the strength and message of the work, bringing it closer to new generations."
+    },
+    "image": "/imagenes/musica/representar",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 689,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Dimmu Borgir",
+    "title": {
+      "es": "For All Tid",
+      "en": "For All Tid"
+    },
+    "description": {
+      "es": "Este álbum debut lanzado en 1994 mezcla black metal con elementos sinfónicos oscuros. Representa el comienzo de la evolución musical de Dimmu Borgir, mostrando atmósferas sombrías y agresividad controlada. Un clásico inicial imprescindible para los fans del metal extremo.",
+      "en": "This debut album released in 1994 blends black metal with dark symphonic elements. It represents the beginning of Dimmu Borgir's musical evolution, showing somber atmospheres and controlled aggression. An essential early classic for extreme metal fans."
+    },
+    "image": "/imagenes/musica/fortid",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=9Q2v1VUYHeM",
+    "spotify": "https://open.spotify.com/album/4aNpROHSmKqv8k9PAkGe3a",
+    "masterpiece": true
+  },
+  {
+    "id": 690,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Dimmu Borgir",
+    "title": {
+      "es": "Stormblåst",
+      "en": "Stormblåst"
+    },
+    "description": {
+      "es": "Segundo álbum de 1996 que perfecciona el black metal sinfónico con riffs intensos y atmósferas frías. La producción mejora, mostrando mayor agresividad y melodía, y consolidando a la banda en la escena extrema europea.",
+      "en": "Second album from 1996 that perfects symphonic black metal with intense riffs and cold atmospheres. The production improves, showing greater aggression and melody, consolidating the band in the European extreme scene."
+    },
+    "image": "/imagenes/musica/stormblast",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=3Zh6kOC5h70",
+    "spotify": "https://open.spotify.com/album/5I6KEa9i5t0Rze2v1AXDPF",
+    "masterpiece": true
+  },
+  {
+    "id": 691,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Dimmu Borgir",
+    "title": {
+      "es": "Enthrone Darkness Triumphant",
+      "en": "Enthrone Darkness Triumphant"
+    },
+    "description": {
+      "es": "Álbum clave de 1997 que popularizó el black metal sinfónico a nivel mundial. Combina brutalidad y sofisticación con teclados orquestales, riffs potentes y voces guturales. Es un referente fundamental para el género y la banda.",
+      "en": "Key 1997 album that popularized symphonic black metal worldwide. It combines brutality and sophistication with orchestral keyboards, powerful riffs, and guttural vocals. A fundamental reference for the genre and the band."
+    },
+    "image": "/imagenes/musica/enthrone",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=QKnE8S7VGqk",
+    "spotify": "https://open.spotify.com/album/4I1OBBqtZG62Qv1d56oCQ9",
+    "masterpiece": true
+  },
+  {
+    "id": 692,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Dimmu Borgir",
+    "title": {
+      "es": "Spiritual Black Dimensions",
+      "en": "Spiritual Black Dimensions"
+    },
+    "description": {
+      "es": "Lanzado en 1999, este álbum combina elementos sinfónicos con un sonido más técnico y complejo. Las composiciones son más largas y atmosféricas, mostrando la madurez musical de la banda en la escena del black metal.",
+      "en": "Released in 1999, this album combines symphonic elements with a more technical and complex sound. The compositions are longer and atmospheric, showing the band's musical maturity in the black metal scene."
+    },
+    "image": "/imagenes/musica/spiritual",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=ZIHPRoI4Fc0",
+    "spotify": "https://open.spotify.com/album/5vZPYn4y69slMFVqRVPXe6",
+    "masterpiece": true
+  },
+  {
+    "id": 693,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Dimmu Borgir",
+    "title": {
+      "es": "Puritanical Euphoric Misanthropia",
+      "en": "Puritanical Euphoric Misanthropia"
+    },
+    "description": {
+      "es": "Álbum de 2001 que expande la orquestación y los arreglos sinfónicos en un black metal agresivo. Presenta una producción pulida y compleja, con un equilibrio entre brutalidad y melodía que marcó un hito en su carrera.",
+      "en": "2001 album that expands orchestration and symphonic arrangements in aggressive black metal. Features polished and complex production, balancing brutality and melody that marked a milestone in their career."
+    },
+    "image": "/imagenes/musica/puritanical",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=DWQmJveDkRQ",
+    "spotify": "https://open.spotify.com/album/6LMEqJ3qwHzVj7kJeZLKUv",
+    "masterpiece": true
+  },
+  {
+    "id": 694,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Dimmu Borgir",
+    "title": {
+      "es": "Death Cult Armageddon",
+      "en": "Death Cult Armageddon"
+    },
+    "description": {
+      "es": "Este álbum de 2003 destaca por su producción grandiosa con orquestas completas y coros. Combina la intensidad del black metal con épicos arreglos sinfónicos, consolidando a Dimmu Borgir como pioneros del género.",
+      "en": "This 2003 album stands out for its grand production with full orchestras and choirs. Combines black metal intensity with epic symphonic arrangements, consolidating Dimmu Borgir as pioneers of the genre."
+    },
+    "image": "/imagenes/musica/armageddon",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=GHP1SlNj5rQ",
+    "spotify": "https://open.spotify.com/album/6cDfVJyoxTlXu47CMOHJpy",
+    "masterpiece": true
+  },
+  {
+    "id": 695,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Dimmu Borgir",
+    "title": {
+      "es": "In Sorte Diaboli",
+      "en": "In Sorte Diaboli"
+    },
+    "description": {
+      "es": "Lanzado en 2007, este álbum conceptual presenta un black metal sinfónico oscuro y teatral. La narrativa lírica y la producción refinada lo convierten en una de las obras más ambiciosas de la banda.",
+      "en": "Released in 2007, this concept album presents dark and theatrical symphonic black metal. The lyrical narrative and refined production make it one of the band's most ambitious works."
+    },
+    "image": "/imagenes/musica/sorte",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=yzbLXMJ9qXQ",
+    "spotify": "https://open.spotify.com/album/5bRyM8Q6ny7ZkcdwwRgDke",
+    "masterpiece": true
+  },
+  {
+    "id": 696,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Dimmu Borgir",
+    "title": {
+      "es": "Abrahadabra",
+      "en": "Abrahadabra"
+    },
+    "description": {
+      "es": "Álbum de 2010 que muestra una evolución hacia un sonido más épico y experimental, con amplias orquestaciones y arreglos complejos. Su producción brillante reafirma la posición de la banda en el metal sinfónico.",
+      "en": "2010 album showing an evolution towards a more epic and experimental sound, with extensive orchestrations and complex arrangements. Its brilliant production reaffirms the band's position in symphonic metal."
+    },
+    "image": "/imagenes/musica/abrahadabra",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=vujckA8-m6g",
+    "spotify": "https://open.spotify.com/album/5BxP9r5zXhVQy3gjoBHVDE",
+    "masterpiece": true
+  },
+  {
+    "id": 697,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Dimmu Borgir",
+    "title": {
+      "es": "Eonian",
+      "en": "Eonian"
+    },
+    "description": {
+      "es": "Lanzado en 2018, este álbum mezcla elementos tradicionales del black metal sinfónico con sonidos modernos y atmósferas profundas. Representa una continuación madura y ambiciosa en la discografía de Dimmu Borgir.",
+      "en": "Released in 2018, this album blends traditional symphonic black metal elements with modern sounds and deep atmospheres. Represents a mature and ambitious continuation in Dimmu Borgir's discography."
+    },
+    "image": "/imagenes/musica/eonian",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=cwUQqxmqGXQ",
+    "spotify": "https://open.spotify.com/album/2zGTSW8bqQG2AkPr3a4rF7",
+    "masterpiece": true
+  },
+  {
+    "id": 698,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Cradle of Filth",
+    "title": {
+      "es": "The Principle of Evil Made Flesh",
+      "en": "The Principle of Evil Made Flesh"
+    },
+    "description": {
+      "es": "Primer álbum de Cradle of Filth lanzado en 1994, que combina black metal con influencias góticas. Su sonido oscuro y agresivo marcó el inicio de su carrera con letras sobre ocultismo y horror. Es un clásico fundamental para entender su evolución.",
+      "en": "Cradle of Filth's debut album released in 1994, combining black metal with gothic influences. Its dark and aggressive sound marked the start of their career with lyrics about occultism and horror. A fundamental classic to understand their evolution."
+    },
+    "image": "/imagenes/musica/principle",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=GjSJU0qH6J4",
+    "spotify": "https://open.spotify.com/album/7k7Z6XYyBj2AqN4rUIY2RO",
+    "masterpiece": true
+  },
+  {
+    "id": 699,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Cradle of Filth",
+    "title": {
+      "es": "Dusk... and Her Embrace",
+      "en": "Dusk... and Her Embrace"
+    },
+    "description": {
+      "es": "Segundo álbum de 1996 que refina su sonido black metal gótico con atmósferas más densas y melodías sombrías. Se destaca por la complejidad lírica y musical, consolidando su estilo único en la escena extrema. Considerado uno de sus mejores trabajos.",
+      "en": "Second album from 1996 that refines their gothic black metal sound with denser atmospheres and somber melodies. Noted for lyrical and musical complexity, consolidating their unique style in the extreme scene. Considered one of their best works."
+    },
+    "image": "/imagenes/musica/dusk",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=4DdwcGfRAgM",
+    "spotify": "https://open.spotify.com/album/3xIH7WqBgiYp4aY9tNBS2q",
+    "masterpiece": true
+  },
+  {
+    "id": 700,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Cradle of Filth",
+    "title": {
+      "es": "Cruelty and the Beast",
+      "en": "Cruelty and the Beast"
+    },
+    "description": {
+      "es": "Lanzado en 1998, este álbum conceptual narra la historia de la condesa Bathory. Combina agresividad y melodía con orquestaciones y coros, mostrando una producción más elaborada y oscura. Es un álbum clave en la discografía de la banda.",
+      "en": "Released in 1998, this concept album tells the story of Countess Bathory. It combines aggression and melody with orchestration and choirs, featuring a more elaborate and dark production. A key album in the band's discography."
+    },
+    "image": "/imagenes/musica/cruelty",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=1uXTA51u36M",
+    "spotify": "https://open.spotify.com/album/0O1OshX12Oqjpr0FYh9X9X",
+    "masterpiece": true
+  },
+  {
+    "id": 701,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Cradle of Filth",
+    "title": {
+      "es": "Midian",
+      "en": "Midian"
+    },
+    "description": {
+      "es": "Álbum de 2000 inspirado en la novela 'Cabal' y la ciudad de Midian. Presenta un black metal sinfónico más pulido, con arreglos orquestales y coros. La narrativa oscura y la atmósfera densa lo convierten en un trabajo emblemático.",
+      "en": "2000 album inspired by the novel 'Cabal' and the city of Midian. Features more polished symphonic black metal with orchestral arrangements and choirs. The dark narrative and dense atmosphere make it an emblematic work."
+    },
+    "image": "/imagenes/musica/midian",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=ZnNhEzVlJjQ",
+    "spotify": "https://open.spotify.com/album/4msC5ZcDq1g9H4p9ZLWrxD",
+    "masterpiece": true
+  },
+  {
+    "id": 702,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Cradle of Filth",
+    "title": {
+      "es": "Damnation and a Day",
+      "en": "Damnation and a Day"
+    },
+    "description": {
+      "es": "Lanzado en 2003, este álbum combina black metal con una producción orquestal y coral grandiosa. La complejidad musical y lírica alcanza un nuevo nivel, con temas que exploran el horror, la religión y la mitología.",
+      "en": "Released in 2003, this album combines black metal with grand orchestral and choral production. Musical and lyrical complexity reaches a new level, exploring themes of horror, religion, and mythology."
+    },
+    "image": "/imagenes/musica/damnation",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=EY6biB0lIVQ",
+    "spotify": "https://open.spotify.com/album/5g7xR1Lxfu0UxDD9Trb8Kl",
+    "masterpiece": true
+  },
+  {
+    "id": 703,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Cradle of Filth",
+    "title": {
+      "es": "Nymphetamine",
+      "en": "Nymphetamine"
+    },
+    "description": {
+      "es": "Álbum de 2004 que mezcla el black metal sinfónico con influencias más melódicas y góticas. Contiene colaboraciones vocales y temas más accesibles sin perder la esencia oscura y agresiva. Ganó reconocimiento comercial y crítico.",
+      "en": "2004 album mixing symphonic black metal with more melodic and gothic influences. Features vocal collaborations and more accessible tracks without losing the dark and aggressive essence. Achieved commercial and critical recognition."
+    },
+    "image": "/imagenes/musica/nymphetamine",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=GOCF7cI4uL4",
+    "spotify": "https://open.spotify.com/album/3PwDyXtj2OcIqckKwZqshj",
+    "masterpiece": true
+  },
+  {
+    "id": 704,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Cradle of Filth",
+    "title": {
+      "es": "Thornography",
+      "en": "Thornography"
+    },
+    "description": {
+      "es": "Lanzado en 2006, este álbum continúa la mezcla de metal extremo y elementos góticos, con un sonido más pulido y potente. Las letras exploran temas de erotismo, oscuridad y blasfemia. Es uno de sus álbumes más influyentes.",
+      "en": "Released in 2006, this album continues the mix of extreme metal and gothic elements, with a more polished and powerful sound. Lyrics explore themes of eroticism, darkness, and blasphemy. One of their most influential albums."
+    },
+    "image": "/imagenes/musica/thornography",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Ba4yxZ6PyRs",
+    "spotify": "https://open.spotify.com/album/1he59j9q9qf56CG5Hh9oKg",
+    "masterpiece": true
+  },
+  {
+    "id": 705,
+    "category": "music",
+    "subcategory": "metal",
+    "artist": "Cradle of Filth",
+    "title": {
+      "es": "Godspeed on the Devil’s Thunder",
+      "en": "Godspeed on the Devil’s Thunder"
+    },
+    "description": {
+      "es": "Álbum conceptual de 2008 basado en la vida del asesino en serie Gilles de Rais. Combina black metal con una atmósfera teatral y orquestal, profundizando en la narrativa histórica y macabra con intensidad y dramatismo.",
+      "en": "2008 concept album based on the life of serial killer Gilles de Rais. Combines black metal with theatrical and orchestral atmosphere, delving into historical and macabre narrative with intensity and drama."
+    },
+    "image": "/imagenes/musica/godspeed",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=1n4Pe4q6FJ0",
+    "spotify": "https://open.spotify.com/album/6sFJcLkTvFpoXGVVrVpP08",
+    "masterpiece": true
+  },
+  {
+    "id": 706,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Scorn",
+    "title": {
+      "es": "Evanescence",
+      "en": "Evanescence"
+    },
+    "description": {
+      "es": "Álbum de 1994 que marca una mezcla oscura de dub, industrial y ambient. Con ritmos lentos y atmósferas densas, crea una sensación opresiva y experimental. Es un trabajo fundamental en el género del dub industrial.",
+      "en": "1994 album that marks a dark blend of dub, industrial, and ambient. With slow rhythms and dense atmospheres, it creates an oppressive and experimental feel. A fundamental work in the industrial dub genre."
+    },
+    "image": "/imagenes/musica/evanescence",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=VamqDu6XZ6g",
+    "spotify": "https://open.spotify.com/album/1ZUz7NmNZqhpV2t1V4L4hG",
+    "masterpiece": true
+  },
+  {
+    "id": 707,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Scorn",
+    "title": {
+      "es": "Gyral",
+      "en": "Gyral"
+    },
+    "description": {
+      "es": "Lanzado en 1995, este álbum continúa explorando paisajes sonoros minimalistas y oscuros con influencias de dub y electrónica experimental. La atmósfera es tensa y mecánica, destacando la innovación en el género electrónico underground.",
+      "en": "Released in 1995, this album continues exploring minimalist and dark soundscapes with influences from dub and experimental electronic music. The atmosphere is tense and mechanical, highlighting innovation in the underground electronic genre."
+    },
+    "image": "/imagenes/musica/gyral",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=DFkPvERzZUE",
+    "spotify": "https://open.spotify.com/album/2XQH8nhSgIkxIfsRAFFKPT",
+    "masterpiece": true
+  },
+  {
+    "id": 708,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Stoned Jesus",
+    "title": {
+      "es": "First Communion",
+      "en": "First Communion"
+    },
+    "description": {
+      "es": "Primer álbum de Stoned Jesus, lanzado en 2010. Combina stoner rock con toques psicodélicos y riffs pesados. Su sonido crudo y directo marcó un nuevo camino en la escena del rock ucraniano.",
+      "en": "Stoned Jesus's debut album released in 2010. It combines stoner rock with psychedelic touches and heavy riffs. Its raw and direct sound marked a new path in the Ukrainian rock scene."
+    },
+    "image": "/imagenes/musica/first",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=LVpTzRhO1Pc",
+    "spotify": "https://open.spotify.com/album/0mU2qJm5ktJ8K1xnSMBFGG",
+    "masterpiece": true
+  },
+  {
+    "id": 709,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Stoned Jesus",
+    "title": {
+      "es": "Seven Thunders Roar",
+      "en": "Seven Thunders Roar"
+    },
+    "description": {
+      "es": "Segundo álbum lanzado en 2012 que presenta un sonido más pulido y atmosférico. La banda explora estructuras más complejas manteniendo riffs pesados y un estilo stoner inconfundible. Un disco clave en su carrera.",
+      "en": "Second album released in 2012 featuring a more polished and atmospheric sound. The band explores more complex structures while maintaining heavy riffs and unmistakable stoner style. A key album in their career."
+    },
+    "image": "/imagenes/musica/seven",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=GV2sH2rdRUI",
+    "spotify": "https://open.spotify.com/album/0nQMrLhFqKfBdr4NWjogIn",
+    "masterpiece": true
+  },
+  {
+    "id": 710,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Stoned Jesus",
+    "title": {
+      "es": "Pilgrims",
+      "en": "Pilgrims"
+    },
+    "description": {
+      "es": "Álbum lanzado en 2015 que consolida a Stoned Jesus como referente del stoner rock moderno. Combina pesadez con melodías psicodélicas y un groove poderoso. Su sonido madura con composiciones intensas y atmosféricas.",
+      "en": "Album released in 2015 that consolidates Stoned Jesus as a modern stoner rock benchmark. Combines heaviness with psychedelic melodies and a powerful groove. Its sound matures with intense and atmospheric compositions."
+    },
+    "image": "/imagenes/musica/pilgrims",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=nVIXsGdk8nI",
+    "spotify": "https://open.spotify.com/album/2qMh4C1CNLMCDK3w7W22yt",
+    "masterpiece": true
+  },
+  {
+    "id": 711,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Stoned Jesus",
+    "title": {
+      "es": "Pilgrims + EP",
+      "en": "Pilgrims + EP"
+    },
+    "description": {
+      "es": "Reedición de 2016 que incluye el álbum Pilgrims junto a un EP adicional con material extra. Ofrece una visión más completa del desarrollo musical de la banda en esa etapa, con temas poderosos y atmosféricos.",
+      "en": "2016 reissue including the album Pilgrims plus an additional EP with extra material. Offers a more complete view of the band's musical development at that stage, with powerful and atmospheric tracks."
+    },
+    "image": "/imagenes/musica/pilgrims",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=nVIXsGdk8nI",
+    "spotify": "https://open.spotify.com/album/2qMh4C1CNLMCDK3w7W22yt",
+    "masterpiece": true
+  },
+  {
+    "id": 712,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Stoned Jesus",
+    "title": {
+      "es": "Song of the Black River",
+      "en": "Song of the Black River"
+    },
+    "description": {
+      "es": "Lanzado en 2018, este álbum muestra una evolución hacia un sonido más oscuro y experimental, con influencias de doom y psicodelia. Presenta composiciones largas y atmosféricas, consolidando la madurez musical de la banda.",
+      "en": "Released in 2018, this album shows an evolution toward a darker and more experimental sound, with doom and psychedelic influences. Features long and atmospheric compositions, consolidating the band's musical maturity."
+    },
+    "image": "/imagenes/musica/song",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Xd-xCmSwS7g",
+    "spotify": "https://open.spotify.com/album/2dDh7I5lH5Icwk6dmK7U2J",
+    "masterpiece": true
+  },
+  {
+    "id": 713,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Disparition",
+    "title": {
+      "es": "Trasmutations",
+      "en": "Trasmutations"
+    },
+    "description": {
+      "es": "Trasmutations es un álbum que fusiona el black metal atmosférico con elementos electrónicos. Presenta texturas densas y ambientes sombríos que crean una experiencia auditiva envolvente y experimental. Explora temas de transformación y misterio a través de sus composiciones.",
+      "en": "Trasmutations is an album that blends atmospheric black metal with electronic elements. It features dense textures and shadowy atmospheres creating an immersive and experimental listening experience. It explores themes of transformation and mystery through its compositions."
+    },
+    "image": "/imagenes/musica/trasmutations",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=G3zP3yDVRxY",
+    "spotify": "https://open.spotify.com/album/2C0O0uFiN7P3V38Dvp6lDQ",
+    "masterpiece": true
+  },
+  {
+    "id": 714,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Boards of Canada",
+    "title": {
+      "es": "Music Has the Right to Children",
+      "en": "Music Has the Right to Children"
+    },
+    "description": {
+      "es": "Álbum debut de Boards of Canada lanzado en 1998. Este trabajo seminal combina música electrónica con ambientes nostálgicos y texturas analógicas. Es reconocido por su atmósfera cálida y melancólica que ha influenciado el género IDM.",
+      "en": "Boards of Canada's debut album released in 1998. This seminal work blends electronic music with nostalgic atmospheres and analog textures. It is renowned for its warm and melancholic atmosphere that has influenced the IDM genre."
+    },
+    "image": "/imagenes/musica/music",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=tr9fHLkLsf4",
+    "spotify": "https://open.spotify.com/album/4J9cz4vGiS3UXDR0oFr2Tz",
+    "masterpiece": true
+  },
+  {
+    "id": 715,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Boards of Canada",
+    "title": {
+      "es": "Geogaddi",
+      "en": "Geogaddi"
+    },
+    "description": {
+      "es": "Segundo álbum de Boards of Canada lanzado en 2002. Se caracteriza por su atmósfera oscura y enigmática, con texturas complejas y una producción meticulosa. Explora temas misteriosos con un enfoque hipnótico y profundo.",
+      "en": "Boards of Canada's second album released in 2002. It is characterized by its dark and enigmatic atmosphere, complex textures, and meticulous production. It explores mysterious themes with a hypnotic and profound approach."
+    },
+    "image": "/imagenes/musica/geogaddi",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=krGTPX7sjYs",
+    "spotify": "https://open.spotify.com/album/0v8SdcO4B01fSWruaOcJo7",
+    "masterpiece": true
+  },
+  {
+    "id": 716,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Boards of Canada",
+    "title": {
+      "es": "The Campfire Headphase",
+      "en": "The Campfire Headphase"
+    },
+    "description": {
+      "es": "Álbum lanzado en 2005 que incorpora elementos más melódicos y acústicos, fusionando electrónica con sonidos orgánicos. Destaca por su cálida sensación nostálgica y sus capas sonoras detalladas que evocan paisajes emocionales.",
+      "en": "Album released in 2005 incorporating more melodic and acoustic elements, blending electronics with organic sounds. It stands out for its warm nostalgic feel and detailed sound layers evoking emotional landscapes."
+    },
+    "image": "/imagenes/musica/campfire",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=2j_mCZ_JMyY",
+    "spotify": "https://open.spotify.com/album/4GjUiFMY5dbfzT04c12I14",
+    "masterpiece": true
+  },
+  {
+    "id": 717,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Boards of Canada",
+    "title": {
+      "es": "Tomorrow's Harvest",
+      "en": "Tomorrow's Harvest"
+    },
+    "description": {
+      "es": "Lanzado en 2013, este álbum presenta un tono más oscuro y cinematográfico. Combina ambientes espaciales con ritmos hipnóticos y texturas complejas, explorando temas futuristas y distópicos a través de una producción sofisticada.",
+      "en": "Released in 2013, this album presents a darker and cinematic tone. It combines spacey atmospheres with hypnotic rhythms and complex textures, exploring futuristic and dystopian themes through sophisticated production."
+    },
+    "image": "/imagenes/musica/tomorrows",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=CMQK9F82O5A",
+    "spotify": "https://open.spotify.com/album/6lB1JzjUIBAWokVrS6N9JY",
+    "masterpiece": true
+  },
+  {
+    "id": 718,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Fuel Fandango",
+    "title": {
+      "es": "Fuel Fandango",
+      "en": "Fuel Fandango"
+    },
+    "description": {
+      "es": "El álbum debut homónimo de Fuel Fandango combina electrónica, funk y flamenco con una energía vibrante. Sus ritmos contagiosos y letras emotivas crean una mezcla única que destaca en la escena española contemporánea. Un trabajo lleno de frescura y creatividad.",
+      "en": "Fuel Fandango's self-titled debut album combines electronic, funk, and flamenco with vibrant energy. Its catchy rhythms and emotive lyrics create a unique blend that stands out in the contemporary Spanish scene. A work full of freshness and creativity."
+    },
+    "image": "/imagenes/musica/fuelfandango",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=0G4HXT_SqzQ",
+    "spotify": "https://open.spotify.com/album/4bwJ5GIT6z0fLsoD9yeYpT",
+    "masterpiece": true
+  },
+  {
+    "id": 719,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Fuel Fandango",
+    "title": {
+      "es": "Aurora",
+      "en": "Aurora"
+    },
+    "description": {
+      "es": "Segundo álbum de Fuel Fandango lanzado en 2014 que intensifica la fusión de electrónica con sonidos orgánicos y ritmos latinos. Este disco ofrece una atmósfera más profunda y elaborada, mostrando la evolución artística del dúo andaluz. Destacan sus melodías envolventes y letras introspectivas.",
+      "en": "Fuel Fandango's second album, released in 2014, intensifies the fusion of electronic music with organic sounds and Latin rhythms. This record offers a deeper and more elaborate atmosphere, showcasing the artistic evolution of the Andalusian duo. Highlights include its enveloping melodies and introspective lyrics."
+    },
+    "image": "/imagenes/musica/aurora",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=J-Jn-NYx_lQ",
+    "spotify": "https://open.spotify.com/album/4SKCyS9U90Pnv9vEDALMZB",
+    "masterpiece": true
+  },
+  {
+    "id": 720,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Fuel Fandango",
+    "title": {
+      "es": "Sagramental",
+      "en": "Sagramental"
+    },
+    "description": {
+      "es": "Lanzado en 2016, Sagramental es un álbum donde Fuel Fandango experimenta con una mezcla más intensa de electrónica, flamenco y funk. El disco destaca por su riqueza sonora y su poderosa energía, reflejando una madurez artística que une tradición y modernidad.",
+      "en": "Released in 2016, Sagramental is an album where Fuel Fandango experiments with a more intense blend of electronic, flamenco, and funk. The record stands out for its sonic richness and powerful energy, reflecting an artistic maturity that unites tradition and modernity."
+    },
+    "image": "/imagenes/musica/sagramental",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=xjK9w6Rtuqk",
+    "spotify": "https://open.spotify.com/album/1XH6fTFhLdx1hcFyT9EmrC",
+    "masterpiece": true
+  },
+  {
+    "id": 721,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Fuel Fandango",
+    "title": {
+      "es": "Aurora Sagramental",
+      "en": "Aurora Sagramental"
+    },
+    "description": {
+      "es": "Este álbum especial combina lo mejor de 'Aurora' y 'Sagramental' en un solo proyecto que profundiza en la fusión de electrónica, flamenco y funk. Ofrece versiones renovadas y colaboraciones que enriquecen la propuesta sonora del dúo.",
+      "en": "This special album combines the best of 'Aurora' and 'Sagramental' into a single project that delves into the fusion of electronic, flamenco, and funk. It offers renewed versions and collaborations that enrich the duo's sonic proposal."
+    },
+    "image": "/imagenes/musica/aurorasagramental",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Z9XIfZsFgM8",
+    "spotify": "https://open.spotify.com/album/0EcdGEqz6a5DGYYXDkhtHZ",
+    "masterpiece": true
+  },
+  {
+    "id": 722,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Akapellah",
+    "title": {
+      "es": "Como Antes",
+      "en": "Como Antes"
+    },
+    "description": {
+      "es": "Un álbum que regresa a las raíces clásicas del rap latino con letras crudas y rimas afiladas. Akapellah muestra su versatilidad manteniendo un flow potente y un mensaje auténtico. Destaca por su producción orgánica y su conexión con el rap tradicional.",
+      "en": "An album that returns to the classic roots of Latin rap with raw lyrics and sharp rhymes. Akapellah showcases his versatility by maintaining a powerful flow and an authentic message. It stands out for its organic production and connection to traditional rap."
+    },
+    "image": "/imagenes/musica/comoantes",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 723,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Akapellah",
+    "title": {
+      "es": "Como Nunca",
+      "en": "Como Nunca"
+    },
+    "description": {
+      "es": "Este álbum representa la evolución artística de Akapellah, con beats modernos y letras más introspectivas. Combina elementos tradicionales con sonidos contemporáneos, logrando un equilibrio entre innovación y autenticidad. Su narrativa es personal y directa.",
+      "en": "This album represents Akapellah's artistic evolution, with modern beats and more introspective lyrics. It combines traditional elements with contemporary sounds, achieving a balance between innovation and authenticity. Its narrative is personal and direct."
+    },
+    "image": "/imagenes/musica/comonunca",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 724,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Akapellah",
+    "title": {
+      "es": "Como Siempre",
+      "en": "Como Siempre"
+    },
+    "description": {
+      "es": "Un trabajo que reafirma la esencia de Akapellah dentro del rap latino, con ritmos contundentes y letras que reflejan la realidad social y personal. El álbum combina energía y reflexión en una producción sólida y coherente, ideal para quienes buscan profundidad y ritmo.",
+      "en": "A work that reaffirms Akapellah's essence within Latin rap, with powerful beats and lyrics reflecting social and personal reality. The album combines energy and reflection in a solid and coherent production, ideal for those seeking depth and rhythm."
+    },
+    "image": "/imagenes/musica/comosiempre",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 725,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Lil Supa & Akapellah",
+    "title": {
+      "es": "Funky Fresco",
+      "en": "Funky Fresco"
+    },
+    "description": {
+      "es": "Un álbum colaborativo que mezcla el rap con funk y ritmos frescos, mostrando la química entre Lil Supa y Akapellah. La producción vibrante y las letras llenas de estilo hacen de este disco una pieza clave dentro del hip-hop venezolano. Energía pura y flow inconfundible.",
+      "en": "A collaborative album that blends rap with funk and fresh rhythms, showing the chemistry between Lil Supa and Akapellah. The vibrant production and stylish lyrics make this record a key piece in Venezuelan hip-hop. Pure energy and unmistakable flow."
+    },
+    "image": "/imagenes/musica/funkyfresco",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 726,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Akapellah",
+    "title": {
+      "es": "Goldo Funky",
+      "en": "Goldo Funky"
+    },
+    "description": {
+      "es": "Un disco donde Akapellah explora sonidos funk combinados con el rap callejero. Las letras son vibrantes y reflejan la personalidad única del artista, que busca innovar manteniendo la esencia de sus raíces. Es un viaje sonoro lleno de ritmo y actitud.",
+      "en": "An album where Akapellah explores funk sounds combined with street rap. The lyrics are vibrant and reflect the artist's unique personality, aiming to innovate while maintaining the essence of his roots. It's a sonic journey full of rhythm and attitude."
+    },
+    "image": "/imagenes/musica/goldofunky",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 727,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Akapellah",
+    "title": {
+      "es": "16 Millas",
+      "en": "16 Millas"
+    },
+    "description": {
+      "es": "Un álbum que destaca por sus letras cargadas de crítica social y vivencias personales. Akapellah combina un rap contundente con beats modernos y variados, reflejando la realidad desde una perspectiva única. Un trabajo profundo y con fuerza dentro del género.",
+      "en": "An album that stands out for its lyrics loaded with social critique and personal experiences. Akapellah combines powerful rap with modern and varied beats, reflecting reality from a unique perspective. A deep and strong work within the genre."
+    },
+    "image": "/imagenes/musica/16millas",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 728,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Zarman",
+    "title": {
+      "es": "PRESENTA CRUEL SOUL CLUB",
+      "en": "PRESENTA CRUEL SOUL CLUB"
+    },
+    "description": {
+      "es": "Un álbum que fusiona el rap con atmósferas oscuras y soul melancólico. Zarman despliega una producción cuidada y letras profundas que reflexionan sobre la vida y las emociones. Es una obra introspectiva con fuerte carga emocional.",
+      "en": "An album blending rap with dark atmospheres and melancholic soul. Zarman delivers careful production and deep lyrics reflecting on life and emotions. It is an introspective work with a strong emotional charge."
+    },
+    "image": "/imagenes/musica/cruelsoul",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/1UQ3HfPrAvxDYxyWH8tWNO",
+    "masterpiece": true
+  },
+  {
+    "id": 729,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Zarman",
+    "title": {
+      "es": "One",
+      "en": "One"
+    },
+    "description": {
+      "es": "Este álbum destaca por su enfoque lírico y su ritmo fluido. Zarman combina el rap clásico con elementos contemporáneos, abordando temas de identidad y superación personal. La producción es elegante y contundente.",
+      "en": "This album stands out for its lyrical focus and smooth rhythm. Zarman combines classic rap with contemporary elements, addressing themes of identity and personal growth. The production is sleek and impactful."
+    },
+    "image": "/imagenes/musica/one",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/0JQvT1kE0FUIaMd6EjvCxP",
+    "masterpiece": true
+  },
+  {
+    "id": 730,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Mala Rodríguez",
+    "title": {
+      "es": "Lujo Ibérico",
+      "en": "Lujo Ibérico"
+    },
+    "description": {
+      "es": "Lujo Ibérico es un álbum que combina el rap con ritmos flamencos y electrónicos, mostrando la versatilidad y fuerza de Mala Rodríguez. Letras poderosas y una producción innovadora marcan este trabajo que ha sido clave en su carrera. Un recorrido por el orgullo y la identidad ibérica con estilo contemporáneo.",
+      "en": "Lujo Ibérico is an album that blends rap with flamenco and electronic rhythms, showcasing Mala Rodríguez's versatility and strength. Powerful lyrics and innovative production mark this work, which has been key in her career. A journey through Iberian pride and identity with a contemporary style."
+    },
+    "image": "/imagenes/musica/lujo",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=8Rb-2kGzhIE",
+    "spotify": "https://open.spotify.com/album/5lEdjUQyeY5LGb6MFZxKwl",
+    "masterpiece": true
+  },
+  {
+    "id": 731,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Mala Rodríguez",
+    "title": {
+      "es": "Alevosía",
+      "en": "Alevosía"
+    },
+    "description": {
+      "es": "Alevosía es un álbum que refleja la intensidad y el poder de Mala Rodríguez, con letras cargadas de crítica social y vivencias personales. La fusión de sonidos urbanos con influencias latinas y electrónicas crea un ambiente único. Un disco que reafirma su lugar en el rap español.",
+      "en": "Alevosía is an album that reflects Mala Rodríguez's intensity and power, with lyrics full of social critique and personal experiences. The fusion of urban sounds with Latin and electronic influences creates a unique atmosphere. A record that reaffirms her place in Spanish rap."
+    },
+    "image": "/imagenes/musica/alevosia",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=nLu6xZCgNWQ",
+    "spotify": "https://open.spotify.com/album/3Z3uMwsu0L7KTP0Tq2Q5ks",
+    "masterpiece": true
+  },
+  {
+    "id": 732,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Mala Rodríguez",
+    "title": {
+      "es": "Malamarismo",
+      "en": "Malamarismo"
+    },
+    "description": {
+      "es": "Malamarismo es un álbum que explora sonidos más oscuros y profundos, combinando el rap con elementos electrónicos y flamencos. Mala Rodríguez entrega un trabajo intenso y lleno de emoción, con letras que revelan la complejidad de sus vivencias. Un disco con personalidad única y fuerza expresiva.",
+      "en": "Malamarismo is an album that explores darker and deeper sounds, combining rap with electronic and flamenco elements. Mala Rodríguez delivers an intense and emotional work, with lyrics revealing the complexity of her experiences. An album with unique personality and expressive strength."
+    },
+    "image": "/imagenes/musica/malamarismo",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Ls1d3DJgUEs",
+    "spotify": "https://open.spotify.com/album/7mXxvB5h1f7q6oz4vlQQq6",
+    "masterpiece": true
+  },
+  {
+    "id": 733,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Mala Rodríguez",
+    "title": {
+      "es": "Dirty Bailarina",
+      "en": "Dirty Bailarina"
+    },
+    "description": {
+      "es": "Dirty Bailarina es un álbum que mezcla la crudeza del rap con sonidos flamencos y urbanos, mostrando la evolución artística de Mala Rodríguez. Sus letras son directas y cargadas de emociones, reflejando una fuerte personalidad. Es un disco que destaca por su autenticidad y potencia.",
+      "en": "Dirty Bailarina is an album that mixes the rawness of rap with flamenco and urban sounds, showing Mala Rodríguez's artistic evolution. Her lyrics are direct and full of emotion, reflecting a strong personality. It is a record that stands out for its authenticity and power."
+    },
+    "image": "/imagenes/musica/dirty",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=l3UkAdV2eT8",
+    "spotify": "https://open.spotify.com/album/1aVZzvNNZ9EtLr1FOuKntK",
+    "masterpiece": true
+  },
+  {
+    "id": 734,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Mala Rodríguez",
+    "title": {
+      "es": "Bruja",
+      "en": "Bruja"
+    },
+    "description": {
+      "es": "Bruja es un álbum donde Mala Rodríguez reafirma su estilo único con letras potentes y beats variados. La mezcla de rap con sonidos flamencos y electrónicos crea una atmósfera intensa. Este disco representa una etapa madura y segura de la artista.",
+      "en": "Bruja is an album where Mala Rodríguez reaffirms her unique style with powerful lyrics and varied beats. The mix of rap with flamenco and electronic sounds creates an intense atmosphere. This record represents a mature and confident stage of the artist."
+    },
+    "image": "/imagenes/musica/bruja",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=CXhz3_0F8Gc",
+    "spotify": "https://open.spotify.com/album/4uZgXXrQVu9vVd2v0PqK2f",
+    "masterpiece": true
+  },
+  {
+    "id": 735,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Mala Rodríguez",
+    "title": {
+      "es": "Mala",
+      "en": "Mala"
+    },
+    "description": {
+      "es": "Mala es un álbum de referencia en la carrera de Mala Rodríguez, con una combinación de letras sinceras y beats poderosos. El disco explora temas sociales y personales con un sonido fresco y urbano. Una pieza esencial del rap en español.",
+      "en": "Mala is a landmark album in Mala Rodríguez's career, combining sincere lyrics and powerful beats. The record explores social and personal themes with a fresh urban sound. An essential piece of Spanish rap."
+    },
+    "image": "/imagenes/musica/mala",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=JMevSkgLeaE",
+    "spotify": "https://open.spotify.com/album/2MrdkWw4QptqPC9Bmgp0y7",
+    "masterpiece": true
+  },
+  {
+    "id": 736,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Mala Rodríguez",
+    "title": {
+      "es": "Un Mundo Raro",
+      "en": "Un Mundo Raro"
+    },
+    "description": {
+      "es": "Un Mundo Raro es un álbum donde Mala Rodríguez explora sonidos más variados, incorporando influencias de la música latina y urbana. Las letras profundizan en experiencias personales y sociales con una voz renovada y potente. Una evolución destacada en su discografía.",
+      "en": "Un Mundo Raro is an album where Mala Rodríguez explores more varied sounds, incorporating influences from Latin and urban music. The lyrics delve into personal and social experiences with a renewed and powerful voice. A notable evolution in her discography."
+    },
+    "image": "/imagenes/musica/unmundoraro",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=d1b7KMPVj30",
+    "spotify": "https://open.spotify.com/album/6jBPS4RoP3d0CGl3ltPpZK",
+    "masterpiece": true
+  },
+  {
+    "id": 740,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Ariana Puello",
+    "title": {
+      "es": "Gancho Perfecto",
+      "en": "Gancho Perfecto"
+    },
+    "description": {
+      "es": "Gancho Perfecto es un álbum que combina letras contundentes con ritmos urbanos. Ariana Puello muestra su fuerza y autenticidad en cada tema, abordando temas sociales y personales con claridad. Es una obra representativa del rap español contemporáneo.",
+      "en": "Gancho Perfecto is an album combining powerful lyrics with urban rhythms. Ariana Puello showcases her strength and authenticity in each track, tackling social and personal themes clearly. It is a representative work of contemporary Spanish rap."
+    },
+    "image": "/imagenes/musica/gancho",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=x5gQlHvPlCw",
+    "spotify": "https://open.spotify.com/album/2HT3lREsdN6eA3Fx8d4Hkn",
+    "masterpiece": true
+  },
+  {
+    "id": 741,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Ariana Puello",
+    "title": {
+      "es": "La Fecha",
+      "en": "La Fecha"
+    },
+    "description": {
+      "es": "La Fecha es un álbum en el que Ariana Puello fusiona sonidos urbanos con mensajes directos y personales. Las letras reflejan vivencias y realidades sociales con un estilo único. Este trabajo reafirma su posición en la escena del rap español.",
+      "en": "La Fecha is an album where Ariana Puello blends urban sounds with direct and personal messages. The lyrics reflect experiences and social realities with a unique style. This work reaffirms her position in the Spanish rap scene."
+    },
+    "image": "/imagenes/musica/fecha",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 742,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Ariana Puello",
+    "title": {
+      "es": "Así Lo Siento",
+      "en": "Así Lo Siento"
+    },
+    "description": {
+      "es": "Así Lo Siento presenta a Ariana Puello con una voz firme y letras sinceras. El álbum combina melodías urbanas con un enfoque introspectivo y social. Refleja la madurez artística y el compromiso de la rapera con su mensaje.",
+      "en": "Así Lo Siento features Ariana Puello with a strong voice and sincere lyrics. The album combines urban melodies with an introspective and social approach. It reflects the rapper's artistic maturity and commitment to her message."
+    },
+    "image": "/imagenes/musica/siento",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 743,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Ariana Puello",
+    "title": {
+      "es": "Teatro Hip Hop: Oro Negro",
+      "en": "Teatro Hip Hop: Oro Negro"
+    },
+    "description": {
+      "es": "Teatro Hip Hop: Oro Negro es un proyecto en el que Ariana Puello mezcla hip hop con elementos teatrales y sociales. El álbum destaca por su contenido comprometido y la fuerza de sus interpretaciones. Una obra que desafía y emociona al oyente.",
+      "en": "Teatro Hip Hop: Oro Negro is a project where Ariana Puello blends hip hop with theatrical and social elements. The album stands out for its committed content and powerful performances. A work that challenges and moves the listener."
+    },
+    "image": "/imagenes/musica/oronegro",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 744,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Ariana Puello",
+    "title": {
+      "es": "13 razones",
+      "en": "13 razones"
+    },
+    "description": {
+      "es": "13 razones es un álbum intenso y reflexivo donde Ariana Puello aborda temas sociales con profundidad. Las letras crudas y directas invitan a la reflexión sobre la realidad contemporánea. Un trabajo que reafirma su compromiso con el rap de contenido.",
+      "en": "13 razones is an intense and reflective album where Ariana Puello tackles social themes deeply. The raw and direct lyrics invite reflection on contemporary reality. A work that reaffirms her commitment to content-driven rap."
+    },
+    "image": "/imagenes/musica/13razones",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 745,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Ariana Puello",
+    "title": {
+      "es": "Kombate O Muere",
+      "en": "Kombate O Muere"
+    },
+    "description": {
+      "es": "Kombate O Muere es un álbum donde Ariana Puello muestra su lado más combativo y sincero. El rap se convierte en un arma para denunciar injusticias y contar historias reales. Una obra que destaca por su energía y mensaje claro.",
+      "en": "Kombate O Muere is an album where Ariana Puello shows her most combative and sincere side. Rap becomes a weapon to denounce injustices and tell real stories. A work that stands out for its energy and clear message."
+    },
+    "image": "/imagenes/musica/kombate",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 746,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Ariana Puello",
+    "title": {
+      "es": "Despierta",
+      "en": "Despierta"
+    },
+    "description": {
+      "es": "Despierta es un álbum que impulsa la conciencia y el despertar social a través del rap. Ariana Puello entrega un mensaje poderoso con letras comprometidas y una producción impactante. Un disco que invita a la acción y al cambio.",
+      "en": "Despierta is an album that drives consciousness and social awakening through rap. Ariana Puello delivers a powerful message with committed lyrics and impactful production. A record that invites action and change."
+    },
+    "image": "/imagenes/musica/despierta",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 747,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Keny Arkana",
+    "title": {
+      "es": "Entre ciment et belle étoile",
+      "en": "Entre ciment et belle étoile"
+    },
+    "description": {
+      "es": "Entre ciment et belle étoile es el álbum debut de Keny Arkana, donde combina un rap poderoso con letras sociales y políticas. Cada canción refleja la lucha y la esperanza en la voz de una de las voces más fuertes del rap francés. Un disco fundamental para entender su mensaje de resistencia.",
+      "en": "Entre ciment et belle étoile is Keny Arkana's debut album, combining powerful rap with social and political lyrics. Each track reflects struggle and hope through the voice of one of French rap's strongest voices. A fundamental record to understand her message of resistance."
+    },
+    "image": "/imagenes/musica/entre",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=_m94y0Id7FI",
+    "spotify": "https://open.spotify.com/album/3nRzWqcWX6vcvhPZ8zbdRg",
+    "masterpiece": true
+  },
+  {
+    "id": 748,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Keny Arkana",
+    "title": {
+      "es": "La Rage du Peuple",
+      "en": "La Rage du Peuple"
+    },
+    "description": {
+      "es": "La Rage du Peuple es un álbum en vivo que captura la energía y la pasión de Keny Arkana sobre el escenario. Con letras directas y comprometidas, este disco refleja el fervor de sus actuaciones y su conexión con el público. Un testimonio potente de su activismo musical.",
+      "en": "La Rage du Peuple is a live album capturing Keny Arkana's energy and passion on stage. With direct and committed lyrics, this record reflects the fervor of her performances and her connection with the audience. A powerful testimony of her musical activism."
+    },
+    "image": "/imagenes/musica/rage",
+    "tags": ["live"],
+    "youtube": "https://www.youtube.com/watch?v=I8TnI_DNHf4",
+    "spotify": "https://open.spotify.com/album/4oN3D9uUyQ7JtjOrTWlP4P",
+    "masterpiece": true
+  },
+  {
+    "id": 749,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Keny Arkana",
+    "title": {
+      "es": "Tout tourne autour du soleil",
+      "en": "Tout tourne autour du soleil"
+    },
+    "description": {
+      "es": "Tout tourne autour du soleil es un álbum donde Keny Arkana profundiza en temas existenciales y sociales con una lírica intensa y emotiva. La producción musical acompaña perfectamente su mensaje de lucha y esperanza. Un trabajo imprescindible para seguidores del rap consciente.",
+      "en": "Tout tourne autour du soleil is an album where Keny Arkana delves into existential and social themes with intense and emotive lyrics. The musical production perfectly accompanies her message of struggle and hope. An essential work for conscious rap followers."
+    },
+    "image": "/imagenes/musica/tout",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=LVP0piZ8bDY",
+    "spotify": "https://open.spotify.com/album/1XyLzhDbByTRm6Uo2M3BgC",
+    "masterpiece": true
+  },
+  {
+    "id": 750,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Keny Arkana",
+    "title": {
+      "es": "L'Esquisse 2",
+      "en": "L'Esquisse 2"
+    },
+    "description": {
+      "es": "L'Esquisse 2 es un EP que muestra la evolución de Keny Arkana, con canciones que mezclan crítica social y reflexión personal. Su estilo directo y apasionado brilla en cada tema, consolidando su lugar en el rap francés. Un paso importante en su trayectoria musical.",
+      "en": "L'Esquisse 2 is an EP showcasing Keny Arkana's evolution, with songs mixing social critique and personal reflection. Her direct and passionate style shines in every track, consolidating her place in French rap. An important step in her musical career."
+    },
+    "image": "/imagenes/musica/esquisse",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=8rlh0bOrsSQ",
+    "spotify": "https://open.spotify.com/album/1uLEIXx1wqL6l6vPDRlvv3",
+    "masterpiece": true
+  },
+  {
+    "id": 751,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Mafia K'1 Fry",
+    "title": {
+      "es": "La Cerise sur le Ghetto",
+      "en": "La Cerise sur le Ghetto"
+    },
+    "description": {
+      "es": "La Cerise sur le Ghetto es un álbum que refleja la vida urbana con fuerza y autenticidad. Las letras expresan las realidades sociales de los suburbios franceses con un estilo crudo y directo. Un clásico esencial para entender el rap francés de los años 2000.",
+      "en": "La Cerise sur le Ghetto is an album that powerfully and authentically reflects urban life. The lyrics express social realities of French suburbs with a raw and direct style. An essential classic to understand French rap of the 2000s."
+    },
+    "image": "/imagenes/musica/cerise",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=TPBrhuikWVk",
+    "spotify": "https://open.spotify.com/album/4Vz4dQ0Tb6jH2kz7Axkx4B",
+    "masterpiece": true
+  },
+  {
+    "id": 752,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Mafia K'1 Fry",
+    "title": {
+      "es": "Jusqu'à la mort",
+      "en": "Jusqu'à la mort"
+    },
+    "description": {
+      "es": "Jusqu'à la mort es un álbum que muestra la hermandad y la resistencia dentro de la mafia K'1 Fry. Combina letras intensas con ritmos profundos, retratando la realidad dura de los barrios. Un disco que consolidó su influencia en el rap francés.",
+      "en": "Jusqu'à la mort is an album showcasing the brotherhood and resilience within Mafia K'1 Fry. It combines intense lyrics with deep beats, portraying harsh neighborhood realities. A record that solidified their influence in French rap."
+    },
+    "image": "/imagenes/musica/jusqua",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=3Kfh72skgkA",
+    "spotify": "https://open.spotify.com/album/6mg2c8RjCUdInTWGYO7sVR",
+    "masterpiece": true
+  },
+  {
+    "id": 753,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Mafia K'1 Fry",
+    "title": {
+      "es": "Mafia K'1 Fry",
+      "en": "Mafia K'1 Fry"
+    },
+    "description": {
+      "es": "Este álbum homónimo reúne la esencia y fuerza de Mafia K'1 Fry, con colaboraciones de varios miembros del colectivo. El contenido refleja la crudeza y solidaridad del grupo en su máxima expresión. Un hito imprescindible del rap francés.",
+      "en": "This self-titled album gathers the essence and power of Mafia K'1 Fry, featuring collaborations from various collective members. The content reflects the group's rawness and solidarity at its best. An essential milestone of French rap."
+    },
+    "image": "/imagenes/musica/mafia",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=dPzSVOMpWgM",
+    "spotify": "https://open.spotify.com/album/1q3l1uHs4oA6fv3v8Q6hDG",
+    "masterpiece": true
+  },
+  {
+    "id": 754,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Mafia K'1 Fry",
+    "title": {
+      "es": "Dernier Round",
+      "en": "Dernier Round"
+    },
+    "description": {
+      "es": "Dernier Round es un álbum que combina fuerza lírica con ritmos contundentes. Mafia K'1 Fry expresa la dureza de su entorno y la lucha constante por sobrevivir. Un trabajo sólido que refuerza su legado en el rap francés.",
+      "en": "Dernier Round is an album combining lyrical strength with powerful beats. Mafia K'1 Fry expresses the harshness of their environment and the constant struggle to survive. A solid work reinforcing their legacy in French rap."
+    },
+    "image": "/imagenes/musica/dernier",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=wUIjGpT6xNg",
+    "spotify": "https://open.spotify.com/album/5LEZDj1cuy20QbwLnQd6xB",
+    "masterpiece": true
+  },
+  {
+    "id": 755,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Wu-Tang Clan",
+    "title": {
+      "es": "Enter the Wu-Tang (36 Chambers)",
+      "en": "Enter the Wu-Tang (36 Chambers)"
+    },
+    "description": {
+      "es": "Enter the Wu-Tang (36 Chambers) es el álbum debut que definió el sonido del hip hop hardcore de los años 90. Con ritmos crudos y letras cargadas de metáforas y referencias a artes marciales, este disco marcó un antes y un después en la cultura del rap. Una obra fundamental para entender la influencia del Wu-Tang Clan.",
+      "en": "Enter the Wu-Tang (36 Chambers) is the debut album that defined the hardcore hip hop sound of the 90s. With raw beats and lyrics full of metaphors and martial arts references, this record marked a turning point in rap culture. A fundamental work to understand Wu-Tang Clan's influence."
+    },
+    "image": "/imagenes/musica/enter",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=5mW9EKn3aQA",
+    "spotify": "https://open.spotify.com/album/1Av0wxymbPyZyGpqGf5D7c",
+    "masterpiece": true
+  },
+  {
+    "id": 756,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Wu-Tang Clan",
+    "title": {
+      "es": "Wu-Tang Forever",
+      "en": "Wu-Tang Forever"
+    },
+    "description": {
+      "es": "Wu-Tang Forever es el segundo álbum doble que consolidó el éxito del grupo con letras más maduras y producción más elaborada. Explora temas de lealtad, poder y la vida en las calles, manteniendo la esencia agresiva del colectivo. Un clásico imprescindible para fans del rap.",
+      "en": "Wu-Tang Forever is the second double album that solidified the group's success with more mature lyrics and elaborate production. It explores themes of loyalty, power, and street life, maintaining the collective's aggressive essence. An essential classic for rap fans."
+    },
+    "image": "/imagenes/musica/forever",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=PMgYXCrSwCk",
+    "spotify": "https://open.spotify.com/album/3IfkFXQtJmQPK17fMJnoZB",
+    "masterpiece": true
+  },
+  {
+    "id": 757,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Wu-Tang Clan",
+    "title": {
+      "es": "The W",
+      "en": "The W"
+    },
+    "description": {
+      "es": "The W es un álbum que combina sonidos clásicos con nuevas influencias, mostrando la evolución del Wu-Tang Clan. Sus letras siguen siendo duras y profundas, con producción que refuerza el impacto del grupo en el hip hop. Un disco que reafirma su legado.",
+      "en": "The W is an album that combines classic sounds with new influences, showing Wu-Tang Clan's evolution. Its lyrics remain hard and deep, with production that reinforces the group's impact on hip hop. A record that reaffirms their legacy."
+    },
+    "image": "/imagenes/musica/thew",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=uk4y-uQbdXA",
+    "spotify": "https://open.spotify.com/album/6pRk4NsFO7qpzmKipQ5mEq",
+    "masterpiece": true
+  },
+  {
+    "id": 758,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Wu-Tang Clan",
+    "title": {
+      "es": "Iron Flag",
+      "en": "Iron Flag"
+    },
+    "description": {
+      "es": "Iron Flag presenta un Wu-Tang Clan con fuerza renovada y colaboraciones internas que mantienen la energía del grupo. Este álbum mezcla beats duros con ritmos más accesibles, ofreciendo variedad sin perder su identidad. Una pieza sólida dentro de su discografía.",
+      "en": "Iron Flag presents a renewed Wu-Tang Clan with internal collaborations that keep the group's energy. This album mixes hard beats with more accessible rhythms, offering variety without losing their identity. A solid piece in their discography."
+    },
+    "image": "/imagenes/musica/iron",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=2HdbHs0YPuE",
+    "spotify": "https://open.spotify.com/album/3IjcWJfT4D0Aj1RSc7PAju",
+    "masterpiece": true
+  },
+  {
+    "id": 759,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Wu-Tang Clan",
+    "title": {
+      "es": "8 Diagrams",
+      "en": "8 Diagrams"
+    },
+    "description": {
+      "es": "8 Diagrams es un álbum que explora nuevas texturas musicales y un enfoque experimental sin perder la esencia del grupo. Sus letras son reflexivas y complejas, mostrando un Wu-Tang Clan maduro y en evolución. Un trabajo desafiante y recomendable.",
+      "en": "8 Diagrams is an album exploring new musical textures and an experimental approach without losing the group's essence. Its lyrics are reflective and complex, showing a mature and evolving Wu-Tang Clan. A challenging and recommendable work."
+    },
+    "image": "/imagenes/musica/diagrams",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Hqv4fW30R4E",
+    "spotify": "https://open.spotify.com/album/4FdwSkpAl7TJKtRypjAFJE",
+    "masterpiece": true
+  },
+  {
+    "id": 760,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "The Beatles",
+    "title": {
+      "es": "Please Please Me",
+      "en": "Please Please Me"
+    },
+    "description": {
+      "es": "Please Please Me es el álbum debut de The Beatles, que captura la energía fresca y juvenil de la banda. Con canciones pegajosas y armonías vocales, marcó el inicio de una revolución musical. Un clásico que aún resuena en la historia del rock.",
+      "en": "Please Please Me is The Beatles' debut album, capturing the band's fresh and youthful energy. With catchy songs and vocal harmonies, it marked the beginning of a musical revolution. A classic that still resonates in rock history."
+    },
+    "image": "/imagenes/musica/please",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=6tXQZnI9yT4",
+    "spotify": "https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN",
+    "masterpiece": true
+  },
+  {
+    "id": 761,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "The Beatles",
+    "title": {
+      "es": "With the Beatles",
+      "en": "With the Beatles"
+    },
+    "description": {
+      "es": "With the Beatles es el segundo álbum que mostró la evolución musical del grupo. Mezcla covers con composiciones propias y destaca por su energía y frescura. Consolidó a The Beatles como líderes del rock británico.",
+      "en": "With the Beatles is the second album showing the group's musical evolution. It mixes covers with original compositions and stands out for its energy and freshness. It solidified The Beatles as leaders of British rock."
+    },
+    "image": "/imagenes/musica/with",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=IUnP7I3E-3A",
+    "spotify": "https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN",
+    "masterpiece": true
+  },
+  {
+    "id": 762,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "The Beatles",
+    "title": {
+      "es": "A Hard Day's Night",
+      "en": "A Hard Day's Night"
+    },
+    "description": {
+      "es": "A Hard Day's Night es un álbum icónico que acompañó la película del mismo nombre. Presenta una mezcla de pop y rock con letras ingeniosas y melodías inolvidables. Un disco que consolidó el estatus de The Beatles como superestrellas mundiales.",
+      "en": "A Hard Day's Night is an iconic album accompanying the film of the same name. It features a mix of pop and rock with witty lyrics and unforgettable melodies. A record that cemented The Beatles' status as global superstars."
+    },
+    "image": "/imagenes/musica/hard",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=OqDf6R3lt2E",
+    "spotify": "https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN",
+    "masterpiece": true
+  },
+  {
+    "id": 763,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "The Beatles",
+    "title": {
+      "es": "Beatles for Sale",
+      "en": "Beatles for Sale"
+    },
+    "description": {
+      "es": "Beatles for Sale es un álbum que muestra un lado más oscuro y melancólico de la banda. Combina el rock con influencias folk y letras introspectivas. Un trabajo que refleja las presiones de la fama sobre The Beatles.",
+      "en": "Beatles for Sale is an album showing a darker and more melancholic side of the band. It combines rock with folk influences and introspective lyrics. A work that reflects the pressures of fame on The Beatles."
+    },
+    "image": "/imagenes/musica/sale",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=3XQW5vDv4ik",
+    "spotify": "https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN",
+    "masterpiece": true
+  },
+  {
+    "id": 764,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "The Beatles",
+    "title": {
+      "es": "Help!",
+      "en": "Help!"
+    },
+    "description": {
+      "es": "Help! es el quinto álbum de The Beatles que combina el sonido pop con elementos más maduros y variados. Incluye clásicos inolvidables que capturan el espíritu de los años 60. Un álbum esencial para entender la evolución del grupo.",
+      "en": "Help! is The Beatles' fifth album combining pop sound with more mature and varied elements. It includes unforgettable classics that capture the spirit of the 60s. An essential album to understand the group's evolution."
+    },
+    "image": "/imagenes/musica/help",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=2Q_ZzBGPdqE",
+    "spotify": "https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN",
+    "masterpiece": true
+  },
+  {
+    "id": 765,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "The Beatles",
+    "title": {
+      "es": "Rubber Soul",
+      "en": "Rubber Soul"
+    },
+    "description": {
+      "es": "Rubber Soul es un álbum innovador que marcó un antes y un después en la música popular. Introduce sonidos folk y psicodélicos, junto con letras introspectivas y maduras. Una obra maestra que amplió los límites del rock.",
+      "en": "Rubber Soul is an innovative album marking a turning point in popular music. It introduces folk and psychedelic sounds, along with introspective and mature lyrics. A masterpiece that expanded rock's boundaries."
+    },
+    "image": "/imagenes/musica/rubber",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=1ay6VH7oBMA",
+    "spotify": "https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN",
+    "masterpiece": true
+  },
+  {
+    "id": 766,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "The Beatles",
+    "title": {
+      "es": "Revolver",
+      "en": "Revolver"
+    },
+    "description": {
+      "es": "Revolver es uno de los álbumes más experimentales de The Beatles, que explora nuevos sonidos y técnicas en estudio. Sus letras son profundas y variadas, mostrando una madurez artística notable. Un disco fundamental en la historia del rock.",
+      "en": "Revolver is one of The Beatles' most experimental albums, exploring new sounds and studio techniques. Its lyrics are deep and varied, showing notable artistic maturity. A fundamental record in rock history."
+    },
+    "image": "/imagenes/musica/revolver",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=HkH95bG8JSc",
+    "spotify": "https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN",
+    "masterpiece": true
+  },
+  {
+    "id": 767,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "The Beatles",
+    "title": {
+      "es": "Sgt. Pepper's Lonely Hearts Club Band",
+      "en": "Sgt. Pepper's Lonely Hearts Club Band"
+    },
+    "description": {
+      "es": "Sgt. Pepper's Lonely Hearts Club Band es un álbum revolucionario que cambió la música para siempre. Con su concepto innovador, producción elaborada y letras psicodélicas, es considerado una obra maestra indiscutible del rock. Un viaje auditivo que sigue fascinando.",
+      "en": "Sgt. Pepper's Lonely Hearts Club Band is a revolutionary album that changed music forever. With its innovative concept, elaborate production, and psychedelic lyrics, it is considered an undisputed rock masterpiece. An auditory journey that continues to fascinate."
+    },
+    "image": "/imagenes/musica/sgtpepper",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=HhjHYkPQ8F0",
+    "spotify": "https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN",
+    "masterpiece": true
+  },
+  {
+    "id": 768,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "The Beatles",
+    "title": {
+      "es": "Magical Mystery Tour",
+      "en": "Magical Mystery Tour"
+    },
+    "description": {
+      "es": "Magical Mystery Tour es un álbum que acompaña la película homónima y representa la etapa más psicodélica del grupo. Con canciones llenas de imaginación y efectos sonoros, invita a un viaje mágico y surrealista. Un clásico que muestra la creatividad de The Beatles.",
+      "en": "Magical Mystery Tour is an album accompanying the film of the same name and represents the band's most psychedelic stage. With songs full of imagination and sound effects, it invites a magical and surreal journey. A classic showcasing The Beatles' creativity."
+    },
+    "image": "/imagenes/musica/magical",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=UDlNaD0PSl0",
+    "spotify": "https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN",
+    "masterpiece": true
+  },
+  {
+    "id": 769,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "The Beatles",
+    "title": {
+      "es": "The Beatles (Álbum Blanco)",
+      "en": "The Beatles (The White Album)"
+    },
+    "description": {
+      "es": "The Beatles (Álbum Blanco) es un disco doble que refleja la diversidad musical y creativa de la banda. Desde rock crudo hasta baladas delicadas, su amplitud sonora y letras complejas muestran un grupo en plena exploración artística.",
+      "en": "The Beatles (The White Album) is a double album reflecting the band's musical and creative diversity. From raw rock to delicate ballads, its sonic breadth and complex lyrics show a band in full artistic exploration."
+    },
+    "image": "/imagenes/musica/whitealbum",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=XLq5krLOPns",
+    "spotify": "https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN",
+    "masterpiece": true
+  },
+  {
+    "id": 770,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Janis Joplin",
+    "title": {
+      "es": "Pearl",
+      "en": "Pearl"
+    },
+    "description": {
+      "es": "Pearl es el segundo y último álbum de estudio de Janis Joplin como solista. Fue lanzado de forma póstuma en 1971, tres meses después de su fallecimiento. El álbum incluye su mayor éxito, 'Me and Bobby McGee', y la última grabación de Joplin, 'Mercedes Benz'.",
+      "en": "Pearl is Janis Joplin's second and final solo studio album. Released posthumously in 1971, three months after her death, it features her biggest hit, 'Me and Bobby McGee', and her final recording, 'Mercedes Benz'."
+    },
+    "image": "/imagenes/musica/pearl",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=9vSTk3J7qgM",
+    "spotify": "https://open.spotify.com/album/1n7J6l5V2V0z5n5X5f5c5f",
+    "masterpiece": true
+  },
+  {
+    "id": 771,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Janis Joplin",
+    "title": {
+      "es": "I Got Dem Ol' Kozmic Blues Again Mama!",
+      "en": "I Got Dem Ol' Kozmic Blues Again Mama!"
+    },
+    "description": {
+      "es": "Este es el primer álbum en solitario de Janis Joplin, lanzado en 1969. Presenta una mezcla de blues, soul y rock psicodélico. Incluye canciones como 'Kozmic Blues' y 'Try (Just a Little Bit Harder)'.",
+      "en": "This is Janis Joplin's first solo album, released in 1969. It features a blend of blues, soul, and psychedelic rock. Includes tracks like 'Kozmic Blues' and 'Try (Just a Little Bit Harder)'."
+    },
+    "image": "/imagenes/musica/kozmic",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=9vSTk3J7qgM",
+    "spotify": "https://open.spotify.com/album/1n7J6l5V2V0z5n5X5f5c5f",
+    "masterpiece": true
+  },
+  {
+    "id": 772,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Big Brother and the Holding Company",
+    "title": {
+      "es": "Cheap Thrills",
+      "en": "Cheap Thrills"
+    },
+    "description": {
+      "es": "Lanzado en 1968, este es el segundo álbum de Big Brother and the Holding Company con Janis Joplin como vocalista. Incluye la exitosa canción 'Piece of My Heart'.",
+      "en": "Released in 1968, this is Big Brother and the Holding Company's second album with Janis Joplin as the lead vocalist. Features the hit song 'Piece of My Heart'."
+    },
+    "image": "/imagenes/musica/cheap",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=9vSTk3J7qgM",
+    "spotify": "https://open.spotify.com/album/1n7J6l5V2V0z5n5X5f5c5f",
+    "masterpiece": true
+  },
+  {
+    "id": 773,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Janis Joplin",
+    "title": {
+      "es": "In Concert",
+      "en": "In Concert"
+    },
+    "description": {
+      "es": "Este álbum en vivo fue lanzado en 1972, dos años después de la muerte de Joplin. Incluye actuaciones en vivo de sus conciertos entre 1968 y 1970.",
+      "en": "This live album was released in 1972, two years after Joplin's death. It features live performances from her concerts between 1968 and 1970."
+    },
+    "image": "/imagenes/musica/inconcert",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=9vSTk3J7qgM",
+    "spotify": "https://open.spotify.com/album/1n7J6l5V2V0z5n5X5f5c5f",
+    "masterpiece": true
+  },
+  {
+    "id": 774,
+    "category": "music",
+    "subcategory": "rock",
+    "artist": "Janis Joplin",
+    "title": {
+      "es": "Janis",
+      "en": "Janis"
+    },
+    "description": {
+      "es": "Lanzado en 1975, este álbum recopilatorio incluye algunas de las mejores canciones de Janis Joplin. Es una excelente introducción a su música.",
+      "en": "Released in 1975, this compilation album includes some of Janis Joplin's best songs. It's an excellent introduction to her music."
+    },
+    "image": "/imagenes/musica/janis",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=9vSTk3J7qgM",
+    "spotify": "https://open.spotify.com/album/1n7J6l5V2V0z5n5X5f5c5f",
+    "masterpiece": true
+  },
+  {
+    "id": 775,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Hablando en Plata",
+    "title": {
+      "es": "A Sangre Fría",
+      "en": "A Sangre Fría"
+    },
+    "description": {
+      "es": "Este álbum representa la crudeza y sinceridad del rap underground de Hablando en Plata. Con letras directas y beats potentes, refleja el compromiso social y la lucha constante. Es un viaje emocional por las calles y la realidad.",
+      "en": "This album represents the rawness and sincerity of Hablando en Plata's underground rap. With direct lyrics and powerful beats, it reflects social commitment and constant struggle. It's an emotional journey through streets and reality."
+    },
+    "image": "/imagenes/musica/asangrefria",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 776,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Hablando en Plata",
+    "title": {
+      "es": "Supervillanos De Alquiler",
+      "en": "Supervillanos De Alquiler"
+    },
+    "description": {
+      "es": "Supervillanos De Alquiler destaca por su estilo agresivo y la crítica social contenida en cada verso. El álbum mezcla beats oscuros con rimas inteligentes, mostrando la evolución artística del grupo. Una obra indispensable del rap español.",
+      "en": "Supervillanos De Alquiler stands out for its aggressive style and social criticism in every verse. The album mixes dark beats with smart rhymes, showing the group's artistic evolution. An essential work of Spanish rap."
+    },
+    "image": "/imagenes/musica/supervillanos",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 777,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Hablando en Plata",
+    "title": {
+      "es": "La División De La Victoria",
+      "en": "La División De La Victoria"
+    },
+    "description": {
+      "es": "La División De La Victoria fusiona ritmos clásicos con un mensaje potente y claro. El álbum muestra la unidad y resistencia en las calles, con letras que invitan a la reflexión profunda. Es uno de los trabajos más representativos del grupo.",
+      "en": "La División De La Victoria fuses classic rhythms with a powerful and clear message. The album shows unity and resistance in the streets, with lyrics that invite deep reflection. It is one of the group's most representative works."
+    },
+    "image": "/imagenes/musica/division",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 778,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Hablando en Plata",
+    "title": {
+      "es": "Libertad / Hambre",
+      "en": "Libertad / Hambre"
+    },
+    "description": {
+      "es": "Libertad / Hambre es un álbum que refleja las contradicciones y aspiraciones del entorno urbano. Con letras profundas y producciones intensas, expresa la búsqueda de libertad frente a la adversidad constante. Un disco cargado de emotividad y realidad.",
+      "en": "Libertad / Hambre is an album that reflects the contradictions and aspirations of the urban environment. With deep lyrics and intense productions, it expresses the search for freedom against constant adversity. A record full of emotion and reality."
+    },
+    "image": "/imagenes/musica/libertad",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 779,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Hablando en Plata",
+    "title": {
+      "es": "#TUFAMILIAHASTAMORIR",
+      "en": "#TUFAMILIAHASTAMORIR"
+    },
+    "description": {
+      "es": "#TUFAMILIAHASTAMORIR es una declaración contundente de lealtad y compromiso con las raíces del grupo. Con un sonido crudo y directo, este álbum sigue explorando la realidad social desde un punto de vista honesto y personal.",
+      "en": "#TUFAMILIAHASTAMORIR is a strong declaration of loyalty and commitment to the group's roots. With a raw and direct sound, this album continues exploring social reality from an honest and personal perspective."
+    },
+    "image": "/imagenes/musica/tufamiliahastamorir",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 780,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "James Shinra",
+    "title": {
+      "es": "Vital Heat",
+      "en": "Vital Heat"
+    },
+    "description": {
+      "es": "Vital Heat es un álbum que fusiona el rap contemporáneo con influencias de sonidos urbanos y electrónicos. James Shinra ofrece letras intensas y rimas afiladas que reflejan su evolución artística. Un trabajo lleno de energía y sensibilidad.",
+      "en": "Vital Heat is an album that blends contemporary rap with influences from urban and electronic sounds. James Shinra delivers intense lyrics and sharp rhymes that reflect his artistic evolution. A work full of energy and sensitivity."
+    },
+    "image": "/imagenes/musica/vital",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/4YZbRuOkCzJQKQoQskF14n",
+    "masterpiece": true
+  },
+  {
+    "id": 781,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "James Shinra",
+    "title": {
+      "es": "Meteorites",
+      "en": "Meteorites"
+    },
+    "description": {
+      "es": "Meteorites es un álbum donde James Shinra explora temas profundos a través de un rap introspectivo y melódico. Las producciones combinan bases electrónicas y beats envolventes que crean una atmósfera única. Es un disco que invita a la reflexión.",
+      "en": "Meteorites is an album where James Shinra explores deep themes through introspective and melodic rap. The productions combine electronic beats and immersive rhythms that create a unique atmosphere. It's a record that invites reflection."
+    },
+    "image": "/imagenes/musica/meteorites",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/2Jy8Gd6ZshhpFg5nr0QplG",
+    "masterpiece": true
+  },
+  {
+    "id": 782,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Tiro de Gracia",
+    "title": {
+      "es": "Ser Humano",
+      "en": "Ser Humano"
+    },
+    "description": {
+      "es": "Ser Humano es un álbum icónico del rap chileno que combina letras profundas con ritmos clásicos del hip hop. Tiro de Gracia explora temas sociales y personales con un estilo auténtico y directo. Una obra fundamental para entender la evolución del rap en Latinoamérica.",
+      "en": "Ser Humano is an iconic Chilean rap album blending deep lyrics with classic hip hop beats. Tiro de Gracia explores social and personal themes with an authentic, direct style. A fundamental work to understand the evolution of rap in Latin America."
+    },
+    "image": "/imagenes/musica/ser",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/4FwFLdKloXXFQ5wnXOa1bE",
+    "masterpiece": true
+  },
+  {
+    "id": 783,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Tiro de Gracia",
+    "title": {
+      "es": "Decisión",
+      "en": "Decisión"
+    },
+    "description": {
+      "es": "Decisión es un álbum que reafirma la fuerza lírica y la identidad de Tiro de Gracia en el rap chileno. Las producciones combinan samples clásicos con beats contundentes, mientras las letras abordan la realidad social y la lucha diaria. Un disco que impacta por su mensaje.",
+      "en": "Decisión is an album that reaffirms Tiro de Gracia's lyrical strength and identity in Chilean rap. The production mixes classic samples with powerful beats, while the lyrics address social reality and daily struggles. An album impactful for its message."
+    },
+    "image": "/imagenes/musica/decision",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/0wCF6CTjTnCGl7x0rSSTQN",
+    "masterpiece": true
+  },
+  {
+    "id": 784,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Tiro de Gracia",
+    "title": {
+      "es": "Retorno de Misericordia",
+      "en": "Retorno de Misericordia"
+    },
+    "description": {
+      "es": "Retorno de Misericordia es un álbum que mezcla sonidos oscuros y atmosféricos con letras contundentes y críticas. Tiro de Gracia ofrece una visión madura del rap, explorando la complejidad humana y las contradicciones sociales. Un álbum que invita a la reflexión profunda.",
+      "en": "Retorno de Misericordia is an album mixing dark and atmospheric sounds with strong and critical lyrics. Tiro de Gracia offers a mature vision of rap, exploring human complexity and social contradictions. An album that invites deep reflection."
+    },
+    "image": "/imagenes/musica/retorno",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/1oC3XTdYvJb6v1Mw6N8K9Z",
+    "masterpiece": true
+  },
+  {
+    "id": 785,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Tiro de Gracia",
+    "title": {
+      "es": "Patrón del Vicio",
+      "en": "Patrón del Vicio"
+    },
+    "description": {
+      "es": "Patrón del Vicio es un disco que destaca por su ritmo potente y letras que denuncian las adicciones y los desafíos sociales. Tiro de Gracia combina estilo clásico con temas actuales, creando un trabajo que conecta con varias generaciones de oyentes.",
+      "en": "Patrón del Vicio is an album notable for its powerful rhythm and lyrics denouncing addictions and social challenges. Tiro de Gracia combines classic style with current topics, creating a work that connects with multiple generations of listeners."
+    },
+    "image": "/imagenes/musica/patron",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/5gUYVURX9wp1VvYuPt0zZ0",
+    "masterpiece": true
+  },
+  {
+    "id": 786,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Tiro de Gracia",
+    "title": {
+      "es": "Impacto Certero",
+      "en": "Impacto Certero"
+    },
+    "description": {
+      "es": "Impacto Certero ofrece una mezcla de beats agresivos y letras que golpean fuerte, reflejando la realidad dura y cruda de la sociedad chilena. El álbum mantiene la esencia del rap combativo con una producción cuidada y mensajes directos.",
+      "en": "Impacto Certero offers a mix of aggressive beats and lyrics that hit hard, reflecting the harsh and raw reality of Chilean society. The album keeps the essence of combative rap with careful production and direct messages."
+    },
+    "image": "/imagenes/musica/impacto",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/3BqX8nqpzUnRhxFGkiVccM",
+    "masterpiece": true
+  },
+  {
+    "id": 787,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Tiro de Gracia",
+    "title": {
+      "es": "Música de Vida",
+      "en": "Música de Vida"
+    },
+    "description": {
+      "es": "Música de Vida es un álbum que explora el valor de la vida y la resistencia a través del rap. Las letras son profundas y emotivas, acompañadas de beats que van desde lo melódico hasta lo contundente, reflejando la versatilidad del grupo.",
+      "en": "Música de Vida is an album exploring the value of life and resilience through rap. The lyrics are deep and emotional, accompanied by beats ranging from melodic to powerful, reflecting the group's versatility."
+    },
+    "image": "/imagenes/musica/musica",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/6Nq9KQ3E7WIMI89DJcHq1T",
+    "masterpiece": true
+  },
+  {
+    "id": 788,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Bubaseta",
+    "title": {
+      "es": "Magia",
+      "en": "Magia"
+    },
+    "description": {
+      "es": "Magia es un álbum que combina beats frescos con letras sinceras y emotivas. Bubaseta explora la vida cotidiana y sus complejidades con un flow único y auténtico. Una obra que reafirma su estilo en la escena del rap latino.",
+      "en": "Magia is an album that combines fresh beats with sincere and emotional lyrics. Bubaseta explores everyday life and its complexities with a unique and authentic flow. A work that reaffirms his style in the Latin rap scene."
+    },
+    "image": "/imagenes/musica/magia",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/0smY8wrRm6xEfA7PcEb1zt",
+    "masterpiece": true
+  },
+  {
+    "id": 789,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Bubaseta",
+    "title": {
+      "es": "Serafines",
+      "en": "Serafines"
+    },
+    "description": {
+      "es": "Serafines es un álbum cargado de energía y letras contundentes. Bubaseta mezcla sonidos urbanos con un mensaje profundo que refleja experiencias personales y sociales. Un disco que muestra madurez artística.",
+      "en": "Serafines is an album full of energy and strong lyrics. Bubaseta mixes urban sounds with a deep message reflecting personal and social experiences. A record that shows artistic maturity."
+    },
+    "image": "/imagenes/musica/serafines",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/7eDJ9ujlxkXwFcf5p2nHD3",
+    "masterpiece": true
+  },
+  {
+    "id": 790,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Bubaseta",
+    "title": {
+      "es": "Babybumblebee",
+      "en": "Babybumblebee"
+    },
+    "description": {
+      "es": "Babybumblebee es un álbum que combina ritmos vibrantes y letras originales. Bubaseta demuestra su versatilidad y creatividad, explorando temas variados con un estilo fresco y pegajoso. Una propuesta fresca en el rap latino.",
+      "en": "Babybumblebee is an album combining vibrant rhythms and original lyrics. Bubaseta shows his versatility and creativity, exploring varied themes with a fresh and catchy style. A fresh proposal in Latin rap."
+    },
+    "image": "/imagenes/musica/babybumblebee",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/2GkMY1HzXQg3bC2lFbNfFq",
+    "masterpiece": true
+  },
+  {
+    "id": 791,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Bubaseta",
+    "title": {
+      "es": "Flow Fantasy",
+      "en": "Flow Fantasy"
+    },
+    "description": {
+      "es": "Flow Fantasy es un álbum que destaca por su originalidad y fluidez lírica. Bubaseta combina beats modernos con una narrativa que atrapa al oyente, mostrando su capacidad para innovar dentro del rap. Una pieza clave en su discografía.",
+      "en": "Flow Fantasy is an album that stands out for its originality and lyrical flow. Bubaseta combines modern beats with storytelling that captivates the listener, showing his ability to innovate within rap. A key piece in his discography."
+    },
+    "image": "/imagenes/musica/flow",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/4B81qDrNWUFlbAr7fSzlnD",
+    "masterpiece": true
+  },
+  {
+    "id": 792,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Bubaseta",
+    "title": {
+      "es": "El Juego Sucio",
+      "en": "El Juego Sucio"
+    },
+    "description": {
+      "es": "El Juego Sucio es un álbum que refleja la crudeza de la vida urbana con letras directas y beats agresivos. Bubaseta aborda temas de lucha y supervivencia con un estilo inconfundible y contundente. Un trabajo que no deja indiferente.",
+      "en": "El Juego Sucio is an album that reflects the harshness of urban life with direct lyrics and aggressive beats. Bubaseta tackles themes of struggle and survival with an unmistakable and powerful style. A work that leaves no one indifferent."
+    },
+    "image": "/imagenes/musica/juego",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/6DrlQoOEWvK0eIL7NXhTkf",
+    "masterpiece": true
+  },
+  {
+    "id": 793,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Bubaseta",
+    "title": {
+      "es": "Sexymadafaka",
+      "en": "Sexymadafaka"
+    },
+    "description": {
+      "es": "Sexymadafaka es un álbum lleno de energía, ritmo y letras atrevidas. Bubaseta mezcla el rap con influencias urbanas y sonidos actuales, creando un disco que destaca por su frescura y actitud. Un aporte vibrante a su carrera.",
+      "en": "Sexymadafaka is an album full of energy, rhythm, and bold lyrics. Bubaseta mixes rap with urban influences and contemporary sounds, creating a record that stands out for its freshness and attitude. A vibrant addition to his career."
+    },
+    "image": "/imagenes/musica/sexymadafaka",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/3NmYdZ2GH34E1x1BqOw8Ly",
+    "masterpiece": true
+  },
+  {
+    "id": 794,
+    "category": "music",
+    "subcategory": "latin",
+    "artist": "Hijos de las Hojas",
+    "title": {
+      "es": "El Camino de la Serpiente",
+      "en": "The Path of the Serpent"
+    },
+    "description": {
+      "es": "El Camino de la Serpiente es un álbum que fusiona sonidos latinos tradicionales con ritmos modernos y frescos. Hijos de las Hojas exploran temáticas profundas sobre la vida, la naturaleza y la identidad cultural. Un trabajo que destaca por su autenticidad y calidad musical.",
+      "en": "The Path of the Serpent is an album that blends traditional Latin sounds with fresh modern rhythms. Hijos de las Hojas explore deep themes about life, nature, and cultural identity. A work that stands out for its authenticity and musical quality."
+    },
+    "image": "/imagenes/musica/serpiente",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/0JZWsU9paRTs99qXpS9BqR",
+    "masterpiece": true
+  },
+  {
+    "id": 795,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Cloaka Company",
+    "title": {
+      "es": "Verso",
+      "en": "Verso"
+    },
+    "description": {
+      "es": "Verso es un álbum de Cloaka Company que mezcla la crudeza del rap con ritmos urbanos contemporáneos. Las letras profundizan en la realidad social y la introspección personal. Un trabajo que resalta por su autenticidad y flow directo.",
+      "en": "Verso is an album by Cloaka Company that mixes raw rap with contemporary urban rhythms. The lyrics delve into social realities and personal introspection. A work that stands out for its authenticity and direct flow."
+    },
+    "image": "/imagenes/musica/verso",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/3vZzFpOVL8zU6Y9FyPeoA8",
+    "masterpiece": true
+  },
+  {
+    "id": 796,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Cloaka Company",
+    "title": {
+      "es": "Municcione",
+      "en": "Municcione"
+    },
+    "description": {
+      "es": "Municcione es un álbum que refleja la fuerza y la realidad urbana a través de beats contundentes y letras impactantes. Cloaka Company explora temas sociales con un estilo crudo y honesto, consolidando su presencia en la escena rap.",
+      "en": "Municcione is an album that reflects urban strength and reality through powerful beats and impactful lyrics. Cloaka Company explores social themes with a raw and honest style, solidifying their presence in the rap scene."
+    },
+    "image": "/imagenes/musica/municcione",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/5wCgQxMQc0tgUeS0zKNLJW",
+    "masterpiece": true
+  },
+  {
+    "id": 797,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Snoop Dogg",
+    "title": {
+      "es": "Doggystyle",
+      "en": "Doggystyle"
+    },
+    "description": {
+      "es": "Doggystyle es el álbum debut de Snoop Dogg, lanzado en 1993. Representa un hito del rap West Coast con beats clásicos de Dr. Dre y letras que mezclan gangsta rap y flow único. Es un trabajo influyente que marcó toda una generación.",
+      "en": "Doggystyle is Snoop Dogg's debut album, released in 1993. It stands as a West Coast rap milestone with classic Dr. Dre beats and lyrics that blend gangsta rap with unique flow. An influential work that defined a generation."
+    },
+    "image": "/imagenes/musica/doggystyle",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=LYfzNxz38XA",
+    "spotify": "https://open.spotify.com/album/1H9sVmh5ETLQ1BXYmSldR0",
+    "masterpiece": true
+  },
+  {
+    "id": 798,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Snoop Dogg",
+    "title": {
+      "es": "Tha Doggfather",
+      "en": "Tha Doggfather"
+    },
+    "description": {
+      "es": "Tha Doggfather es el segundo álbum de Snoop Dogg, lanzado en 1996. Continuó con su estilo West Coast, pero con una temática más madura y profunda. Contiene producciones de Daz Dillinger y refleja la evolución artística de Snoop.",
+      "en": "Tha Doggfather is Snoop Dogg's second album, released in 1996. It continues his West Coast style with a more mature and deeper theme. Produced by Daz Dillinger, it reflects Snoop's artistic evolution."
+    },
+    "image": "/imagenes/musica/doggfather",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=7-w22L4LhPA",
+    "spotify": "https://open.spotify.com/album/5EZ4D7Bpxf9JUkIplxQnCr",
+    "masterpiece": true
+  },
+  {
+    "id": 799,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Snoop Dogg",
+    "title": {
+      "es": "No Limit Top Dogg",
+      "en": "No Limit Top Dogg"
+    },
+    "description": {
+      "es": "No Limit Top Dogg, lanzado en 1999, es un álbum que mezcla el sonido tradicional de Snoop Dogg con la producción de No Limit Records. Refleja una etapa de transición y colaboración dentro de la escena rap de finales de los 90.",
+      "en": "No Limit Top Dogg, released in 1999, is an album that blends Snoop Dogg's traditional sound with No Limit Records production. It reflects a transitional stage and collaboration in the late 90s rap scene."
+    },
+    "image": "/imagenes/musica/nolimit",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=LVfN1xlLoYk",
+    "spotify": "https://open.spotify.com/album/4xYnpeT0JoVplPtOZMH6Vs",
+    "masterpiece": true
+  },
+  {
+    "id": 800,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Snoop Dogg",
+    "title": {
+      "es": "Paid tha Cost to Be da Boss",
+      "en": "Paid tha Cost to Be da Boss"
+    },
+    "description": {
+      "es": "Paid tha Cost to Be da Boss es un álbum de 2002 que muestra la consolidación de Snoop Dogg como una figura influyente en el rap. Con producciones variadas y colaboraciones destacadas, mantiene su estilo característico y frescura sonora.",
+      "en": "Paid tha Cost to Be da Boss is a 2002 album showcasing Snoop Dogg's consolidation as an influential rap figure. Featuring varied productions and notable collaborations, it maintains his characteristic style and sonic freshness."
+    },
+    "image": "/imagenes/musica/paid",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=JK77SwkvlEY",
+    "spotify": "https://open.spotify.com/album/0c0CqGSz8Nf6lZnE3L76v8",
+    "masterpiece": true
+  }
+  ]
+}

@@ -14,7 +14,9 @@
         "en": "The Dark Side of the Moon is the eighth studio album by the progressive rock band Pink Floyd, released on March 1, 1973, by Harvest Records in the United Kingdom and Capitol Records in the United States. Developed during live performances before recording began, it was conceived as a concept album focusing on the pressures the band faced due to their intense lifestyle, as well as addressing the mental health issues of former band member Syd Barrett, who left the group in 1968."
       },
       "image": "/imagenes/musica/Dark_Side_of_the_Moon.jpg",
-      "tags": ["album"],
+      "tags": [
+        "album"
+      ],
       "youtube": "https://www.youtube.com/watch?v=k9ynZnEBtvw&list=RDk9ynZnEBtvw&start_radio=1&t=116s",
       "spotify": "https://open.spotify.com/intl-es/album/4LH4d3cOWNNsVw41Gqt2kv",
       "masterpiece": true
@@ -30,10 +32,12 @@
       },
       "description": {
         "es": "Una sátira musical hilarante y provocadora, donde Mojinos Escozíos fusionan rock cañero con un humor irreverente. La letra ridiculiza el esfuerzo laboral con referencias absurdas a los romanos. Es un ejemplo clásico del estilo único de la banda: ruidoso, directo y sin filtros.",
-        "en": "A hilarious and provocative musical satire where Mojinos Escozíos blend heavy rock with irreverent humor. The lyrics mock hard work with absurd references to the Romans. It’s a classic example of the band’s unique style: loud, direct, and unapologetic."
+        "en": "A hilarious and provocative musical satire where Mojinos Escozíos blend heavy rock with irreverent humor. The lyrics mock hard work with absurd references to the Romans. It's a classic example of the band's unique style: loud, direct, and unapologetic."
       },
       "image": "/imagenes/musica/mojinos.jpg",
-      "tags": ["song"],
+      "tags": [
+        "song"
+      ],
       "youtube": "https://www.youtube.com/watch?v=PPP_oDjYHlI&list=RDPPP_oDjYHlI&start_radio=1",
       "spotify": "https://open.spotify.com/intl-es/track/0NwfbtvfmCqt3dWevQSx2g",
       "masterpiece": true
@@ -52,7 +56,10 @@
         "en": "An immersive session from the heart of New York where Bonobo showcases his unique blend of electronica, downtempo, and house. With an exquisite selection, the set flows elegantly through sonic textures, smooth rhythms, and a contemplative atmosphere. Perfect for getting lost in the sound."
       },
       "image": "/imagenes/musica/bonobo_live_New_York.jpg",
-      "tags": ["djset", "live"],
+      "tags": [
+        "djset",
+        "live"
+      ],
       "youtube": "https://www.youtube.com/watch?v=uynCeLheCPc&list=RDuynCeLheCPc&start_radio=1&t=1191s",
       "spotify": "https://open.spotify.com/playlist/7L6WBCc33Xxg4rB37N3B6w",
       "masterpiece": true
@@ -71,7 +78,9 @@
         "en": "An emblematic track by Los Delinqüentes, blending Andalusian rock and blues. A classic in their repertoire, it conveys joy and nonchalance through festive lyrics. Its catchy rhythm invites movement and celebration of everyday life. A lively and energetic song representing their unique style."
       },
       "image": "/imagenes/musica/chinchetas",
-      "tags": ["song"],
+      "tags": [
+        "song"
+      ],
       "youtube": "https://www.youtube.com/watch?pp=0gcJCf0Ao7VqN5tD&v=-iVTpD90w8k",
       "spotify": "https://open.spotify.com/intl-es/track/7kOUc3VhkHpIMn3PFOKuh2g",
       "masterpiece": false
@@ -89,12 +98,4109 @@
         "es": "Un track ambient-electrónico de Orbital, parte de su quinto álbum In Sides (1996). Música relajante y atmosférica que destaca por su capa de texturas y ritmos pausados. Inspirada en la energía solar y la memoria de una fotógrafa, crea una sensación introspectiva. Clásico del ambient techno británico.",
         "en": "An ambient-electronic track by Orbital, from their fifth album In Sides (1996). Relaxing and atmospheric music notable for its layers of textures and slow rhythms. Inspired by solar energy and the memory of a photographer, it creates a contemplative feeling. A classic of British ambient techno."
       },
-      "image": "/imagenes/musica/orbital_sun.jpg",
-      "tags": ["song"],
+      "image": "/imagenes/musica/girlwiththesun",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=k1x5IpGaBZQ",
+      "spotify": "https://open.spotify.com/track/4r1lzfS8e3WtrKhDBqSRgy",
+      "masterpiece": true
+    },
+    {
+      "id": 6,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Delinqüentes",
+      "title": {
+        "es": "Chinchetas en el aire",
+        "en": "Chinchetas en el aire"
+      },
+      "description": {
+        "es": "Un tema emblemático de Los Delinqüentes que mezcla rock andaluz y blues. Evoca alegría y un desenfado festivo. Su ritmo pegadizo invita a moverse. Representa muy bien el estilo único de la banda.",
+        "en": "An emblematic track by Los Delinqüentes blending Andalusian rock and blues. It evokes joy and festive nonchalance. Its catchy rhythm invites movement. It perfectly represents the bands unique style."
+      },
+      "image": "/imagenes/musica/chinchetas",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=-iVTpD90w8k",
+      "spotify": "https://open.spotify.com/track/7kOUc3VhkHpIMn3PFOKuh2g",
+      "masterpiece": false
+    },
+    {
+      "id": 7,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Javat y Kamel",
+      "title": {
+        "es": "Javat y Kamel",
+        "en": "Javat y Kamel"
+      },
+      "description": {
+        "es": "Dúo emergente del rap hispano que combina letras urbanas con ritmos contundentes. Hablan de la calle, aspiraciones y cultura urbana. La producción destaca por su energía cruda y autenticidad contemporánea.",
+        "en": "Emerging duo in Hispanic rap combining urban lyrics with powerful beats. They talk about street life, aspirations, and urban culture. Production stands out for raw energy and contemporary authenticity."
+      },
+      "image": "/imagenes/musica/javatkamel",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?list=RDPPP_oDjYHlI&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/0NwfbtvfmCqt3dWevQSx2g",
+      "masterpiece": false
+    },
+    {
+      "id": 8,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Luchè feat. Sfera Ebbasta & Simba La Rue",
+      "title": {
+        "es": "Miami Vice",
+        "en": "Miami Vice"
+      },
+      "description": {
+        "es": "Tema urbano que fusiona rap e influencias trap en un entorno glamuroso. Luchè se une a Sfera Ebbasta y Simba La Rue para crear un himno de lujo y ostentación. Letra centrada en riqueza, coches y vida nocturna.",
+        "en": "Urban track fusing rap and trap influences in a glamorous setting. Luchè teams up with Sfera Ebbasta and Simba La Rue to create a luxury anthem. Lyrics center around wealth, cars, and nightlife."
+      },
+      "image": "/imagenes/musica/miamivice",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=PPP_oDjYHlI&list=RDPPP_oDjYHlI&start_radio=1",
+      "spotify": "https://open.spotify.com/track/0NwfbtvfmCqt3dWevQSx2g",
+      "masterpiece": false
+    },
+    {
+      "id": 9,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "ILL PEKEÑO, ERGO PRO, SASKE",
+      "title": {
+        "es": "ANBU",
+        "en": "ANBU"
+      },
+      "description": {
+        "es": "Colaboración poderosa entre tres MCs del rap underground. Beat oscuro y agresivo, con letras que exploran lucha interna y cultura urbana. Intenso y crudo, refleja vitalidad y actitud del circuito.",
+        "en": "Powerful collaboration between three MCs in underground rap. Dark and aggressive beat with lyrics exploring inner struggle and urban culture. Intense and raw, it reflects the vitality and attitude of the scene."
+      },
+      "image": "/imagenes/musica/anbu",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=PPP_oDjYHlI",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 10,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Ergo Pro",
+      "title": {
+        "es": "Dolor en Efectivo (Full Album)",
+        "en": "Dolor en Efectivo (Full Album)"
+      },
+      "description": {
+        "es": "Álbum completo que muestra la versatilidad y fiereza lírica de Ergo Pro. Mezcla beats duros con contenidos que hablan de vida urbana, dolor y superación. Producción cuidada y mensaje introspectivo lo hacen destacar.",
+        "en": "Full album showcasing Ergo Pro's versatility and lyrical fierceness. Mixes hard beats with themes of urban life, pain, and overcoming. Well-crafted production and introspective message make it stand out."
+      },
+      "image": "/imagenes/musica/dolorenefectivo",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 11,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Orbital",
+      "title": {
+        "es": "The Girl With The Sun In The Head",
+        "en": "The Girl With The Sun In The Head"
+      },
+      "description": {
+        "es": "Track emblemático de Orbital, perteneciente al álbum In Sides (1996). Su mezcla de ambient y electrónica crea atmósferas introspectivas y etéreas. Destaca por texturas sonoras envolventes y ritmo hipnótico.",
+        "en": "Emblematic track by Orbital from the album In Sides (1996). Its blend of ambient and electronic creates introspective, ethereal atmospheres. It stands out for its enveloping sonic textures and hypnotic rhythm."
+      },
+      "image": "/imagenes/musica/girlwiththesun",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=uynCeLheCPc",
+      "spotify": "https://open.spotify.com/playlist/7L6WBCc33Xxg4rB37N3B6w",
+      "masterpiece": true
+    },
+    {
+      "id": 12,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Talvin Singh",
+      "title": {
+        "es": "Traveller",
+        "en": "Traveller"
+      },
+      "description": {
+        "es": "Pionero del bhangra electrónico, fusiona ritmos tradicionales indios con downtempo y electrónica ambiental. Traveller ofrece paisajes sonoros exóticos y sofisticados. Es un puente cultural entre Occidente y Oriente en los 90.",
+        "en": "Pioneer of electronic bhangra, fusing traditional Indian rhythms with downtempo and ambient electronics. 'Traveller' offers exotic and sophisticated soundscapes. It is a cultural bridge between East and West in the '90s."
+      },
+      "image": "/imagenes/musica/traveller",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 13,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Juno Reactor",
+      "title": {
+        "es": "Pistolero (Astrix Remix)",
+        "en": "Pistolero (Astrix Remix)"
+      },
+      "description": {
+        "es": "Remix psytrance de 'Pistolero' con energía poderosa y ritmos acelerados. Astrix dota la pista de un drive hipnótico y texturas psicodélicas. Ideal para entornos festival y trance introspectivo.",
+        "en": "Psytrance remix of 'Pistolero' with powerful energy and fast rhythms. Astrix gives the track a hypnotic drive and psychedelic textures. Perfect for festival settings and introspective trance."
+      },
+      "image": "/imagenes/musica/pistolero",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 14,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Noisia",
+      "title": {
+        "es": "Split The Atom",
+        "en": "Split The Atom"
+      },
+      "description": {
+        "es": "Track emblemático del álbum del mismo nombre (2010), mezcla drum & bass y neurofunk con precisión técnica. Su producción nítida, bajos potentes y samples cortantes lo convirtieron en un hito electrónico. Representa lo mejor de la escena underground.",
+        "en": "Emblematic track from the album of the same name (2010), mixing drum & bass and neurofunk with technical precision. Its clean production, powerful bass, and sharp samples made it an electronic milestone. Represents the best of the underground scene."
+      },
+      "image": "/imagenes/musica/splittheatoma",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
+    },
+    {
+      "id": 15,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Griselda",
+      "title": {
+        "es": "Dr Birds",
+        "en": "Dr Birds"
+      },
+      "description": {
+        "es": "Tema oscuro y crudo de Griselda, con letras sobre crimen, poder y supervivencia. Producción minimalista con bajos profundos y percusión intensa. Refleja el estilo realista y sin concesiones del colectivo neoyorquino.",
+        "en": "Dark and raw track by Griselda, with lyrics about crime, power, and survival. Minimalist production with deep bass and intense percussion. Reflects the realistic and uncompromising style of the New York collective."
+      },
+      "image": "/imagenes/musica/drbirds",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 16,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Siempre Ganas",
+        "en": "Siempre Ganas"
+      },
+      "description": {
+        "es": "Tema motivacional de Foyone donde mezcla rap crudo con mensaje de superación urbana. Aborda esfuerzo, autoestima y triunfo frente a la adversidad. La producción es intensa y directa, con sampleos contundentes.",
+        "en": "A motivational track by Foyone blending raw rap with a message of urban empowerment. It tackles themes of effort, self-esteem, and triumph over adversity. The production is intense and direct, featuring bold samples."
+      },
+      "image": "/imagenes/musica/siempreganas",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 17,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Los Ganglios",
+      "title": {
+        "es": "La guapa y los ninjas",
+        "en": "The Beauty and the Ninjas"
+      },
+      "description": {
+        "es": "Tema surrealista con tonos de punk y electrónica minimalista. La letra juega con imágenes disparatadas y humor underground. Ritmo frenético y bailable, muy representativo del estilo ecléctico de Los Ganglios.",
+        "en": "A surreal track with punk tones and minimalist electronics. Its lyrics use absurd imagery and underground humor. Fast-paced and danceable, truly representative of Los Ganglios' eclectic style."
+      },
+      "image": "/imagenes/musica/ninja",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 18,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Spectre feat. Sensational",
+      "title": {
+        "es": "Pillars of Smoke",
+        "en": "Pillars of Smoke"
+      },
+      "description": {
+        "es": "Fusión de electrónica oscura y ritmos hipnóticos con la voz de Sensational. Pista atmosférica que evoluciona hacia pasajes melódicos. Ideal para ambientes introspectivos y sonoridades profundas.",
+        "en": "A fusion of dark electronics and hypnotic rhythms featuring Sensational's vocals. An atmospheric track that evolves into melodic passages. Perfect for introspective settings and deep soundscapes."
+      },
+      "image": "/imagenes/musica/pillars",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 19,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Beachdust",
+      "title": {
+        "es": "You",
+        "en": "You"
+      },
+      "description": {
+        "es": "Tema downtempo con atmósfera veraniega y ritmos suaves. Beachdust mezcla texturas electrónicas y vocales etéreos. Perfecto para momentos de relax al aire libre.",
+        "en": "A downtempo track with a summery atmosphere and gentle rhythms. Beachdust combines electronic textures and ethereal vocals. Perfect for relaxing outdoors."
+      },
+      "image": "/imagenes/musica/beachdust",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 20,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "Gotye feat. Kimbra",
+      "title": {
+        "es": "Somebody That I Used to Know",
+        "en": "Somebody That I Used to Know"
+      },
+      "description": {
+        "es": "Hit global de 2011 que mezcla pop alternativo con indie y art pop. Dueto emotivo sobre la ruptura y el reproche. Melodía pegadiza y arreglo minimalista que lo hicieron inolvidable.",
+        "en": "A global 2011 hit mixing alternative pop with indie and art pop. An emotional duet about breakup and blame. Catchy melody and minimal arrangement made it unforgettable."
+      },
+      "image": "/imagenes/musica/somebody",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=8UVNT4wvIGY",
+      "spotify": "https://open.spotify.com/track/7GhIk7Il098yCjg4BQjzvb",
+      "masterpiece": true
+    },
+    {
+      "id": 21,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "FJ.Ramos feat. Kultama",
+      "title": {
+        "es": "¿Se me entiende?",
+        "en": "Do You Understand Me?"
+      },
+      "description": {
+        "es": "Colaboración urbana con ritmo pausado y líricas directas sobre identidad y comunicación. FJ.Ramos y Kultama exploran temas cotidianos con versos claros y ritmo sólido. Ambiente íntimo y sincero.",
+        "en": "Urban collaboration with a slow rhythm and direct lyrics about identity and communication. FJ.Ramos and Kultama explore everyday themes with clear verses and solid beats. An intimate and sincere atmosphere."
+      },
+      "image": "/imagenes/musica/semeentiende",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 22,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Panda Dub",
+      "title": {
+        "es": "Psychotic Symphony (Full Album)",
+        "en": "Psychotic Symphony (Full Album)"
+      },
+      "description": {
+        "es": "Álbum que mezcla dub, reggae, electrónica y sonidos pausados. Panda Dub crea paisajes sonoros envolventes con bajo marcado y atmósfera nocturna. Ideal para sesiones de relajación profunda.",
+        "en": "An album mixing dub, reggae, electronics, and slow sounds. Panda Dub creates immersive soundscapes with pronounced bass and a nocturnal atmosphere. Perfect for deep relaxation sessions."
+      },
+      "image": "/imagenes/musica/psychoticsymphony",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 23,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Manta Ray",
+      "title": {
+        "es": "Soy Quien no Fui",
+        "en": "Soy Quien no Fui"
+      },
+      "description": {
+        "es": "Canción enérgica que mezcla rock alternativo con melodías emotivas. Letra introspectiva sobre identidad y transformación personal. Ritmos intensos y coros que acompañan el drama interno.",
+        "en": "An energetic song blending alternative rock with emotive melodies. Introspective lyrics about identity and personal transformation. Intense rhythms and choruses that support inner drama."
+      },
+      "image": "/imagenes/musica/soyquien",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 24,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Rexa",
+      "title": {
+        "es": "Manta Ray",
+        "en": "Manta Ray"
+      },
+      "description": {
+        "es": "Tema rock alternativo con riffs contundentes y actitud melancólica. Rexa explora temas de libertad e introspección. La voz rasgada y emocional resalta la fuerza del mensaje.",
+        "en": "Alternative rock track with powerful riffs and a melancholic attitude. Rexa explores themes of freedom and introspection. The raspy, emotional vocals highlight the strength of the message."
+      },
+      "image": "/imagenes/musica/rexamantaray",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 25,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Manta Ray",
+      "title": {
+        "es": "Torres de electricidad",
+        "en": "Electricity Towers"
+      },
+      "description": {
+        "es": "Canción atmosférica de rock indie que mezcla sonidos densos y letra evocadora. Manta Ray juega con imágenes urbanas y metáforas de soledad. El crescendo instrumental transmite tensión emocional.",
+        "en": "An atmospheric indie-rock song that blends dense sounds and evocative lyrics. Manta Ray uses urban imagery and metaphors of loneliness. The instrumental crescendo conveys emotional tension."
+      },
+      "image": "/imagenes/musica/torres",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 26,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Steve Cutts",
+      "title": {
+        "es": "A Brief Disagreement",
+        "en": "A Brief Disagreement"
+      },
+      "description": {
+        "es": "Producción cinematográfica con electrónica ambiental y texturas oscuras. Creado por artista audiovisual Steve Cutts, mezcla sonido y narrativa. Pone énfasis en atmósferas tensas y reflexivas.",
+        "en": "Cinematic production with ambient electronics and dark textures. Created by audiovisual artist Steve Cutts, it blends sound and narrative. It emphasizes tense and reflective atmospheres."
+      },
+      "image": "/imagenes/musica/disagreement",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 27,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Souljah Jerome feat. BadFame",
+      "title": {
+        "es": "Underground Warriors",
+        "en": "Underground Warriors"
+      },
+      "description": {
+        "es": "Tema potente del rap underground, con letras de lucha y resiliencia. Souljah Jerome y BadFame muestran desafío y orgullo colectivo. Beat crudo con percusión marcada y actitud combativa.",
+        "en": "A powerful underground rap track with lyrics about struggle and resilience. Souljah Jerome and BadFame show defiance and collective pride. A raw beat with strong percussion and combative attitude."
+      },
+      "image": "/imagenes/musica/underground",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 28,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Psicotico",
+        "en": "Psicotico"
+      },
+      "description": {
+        "es": "Tema con una estética oscura, beat contundente y flow agresivo. Foyone explora estados mentales extremos y sensaciones de paranoia. Lírica intensa con mensaje de denuncia social.",
+        "en": "A track with a dark aesthetic, powerful beat, and aggressive flow. Foyone explores extreme mental states and feelings of paranoia. Intense lyrics with a message of social protest."
+      },
+      "image": "/imagenes/musica/psicotico",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 29,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Negro Luto (cutyjazz Remix)",
+        "en": "Negro Luto (cutyjazz Remix)"
+      },
+      "description": {
+        "es": "Remix jazz-rap con toque melancólico y beat sofisticado. Foyone revisita su tema con arreglos de jazz y producción depurada por cutyjazz. Ambiente introspectivo y elegante.",
+        "en": "A jazz-rap remix with a melancholic touch and sophisticated beat. Foyone revisits his track with jazz arrangements and refined production by cutyjazz. Introspective and elegant atmosphere."
+      },
+      "image": "/imagenes/musica/negroluto",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 30,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Vangelis",
+      "title": {
+        "es": "The Dragon (Full Album)",
+        "en": "The Dragon (Full Album)"
+      },
+      "description": {
+        "es": "Álbum instrumental de Vangelis de 1978 que mezcla electrónica, new age y sinfonismo. Paisajes sonoros épicos y melódicos que crean una narrativa auditiva exuberante. Ejemplo temprano de música electrónica cinematográfica.",
+        "en": "A 1978 instrumental album by Vangelis blending electronics, new age, and symphonic elements. Epic and melodic soundscapes create an exuberant auditory narrative. An early example of cinematic electronic music."
+      },
+      "image": "/imagenes/musica/dragon",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
+    },
+    {
+      "id": 31,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Ganglios",
+      "title": {
+        "es": "Maese Testarossa - En Noruega",
+        "en": "Maese Testarossa - In Norway"
+      },
+      "description": {
+        "es": "Tema surrealista con sonidos de synth-pop, electrónica y humor absurdo. Los Ganglios ofrecen ritmo bailable con letra irreverente. Una pieza divertida y ecléctica representativa de su estilo.",
+        "en": "A surreal track with synth-pop sounds, electronics, and absurd humor. Los Ganglios deliver a danceable rhythm with irreverent lyrics. A fun and eclectic piece representative of their style."
+      },
+      "image": "/imagenes/musica/noruega",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 32,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "El Meswy feat. Shanghai Asesinos",
+      "title": {
+        "es": "Dedicado",
+        "en": "Dedicado"
+      },
+      "description": {
+        "es": "Colaboración urbana con beats agresivos y líricas de lealtad, calle y personaje. El Meswy y Shanghai Asesinos combinan crónica urbana con flow potente y actitud combativa.",
+        "en": "Urban collaboration with aggressive beats and lyrics about loyalty, street life, and persona. El Meswy and Shanghai Asesinos combine urban chronicle with powerful flow and combative attitude."
+      },
+      "image": "/imagenes/musica/dedicado",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 33,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Meko",
+      "title": {
+        "es": "Zona de guerra",
+        "en": "War Zone"
+      },
+      "description": {
+        "es": "Rap agresivo que describe el entorno urbano como campo de batalla. Meko presenta líricas duras sobre violencia y supervivencia. Ritmo contundente con percussion marcada.",
+        "en": "Aggressive rap depicting the urban environment as a battlefield. Meko presents hard lyrics about violence and survival. A powerful beat with marked percussion."
+      },
+      "image": "/imagenes/musica/zonadeguerra",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 34,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Sho-Hai",
+      "title": {
+        "es": "La Bella Muerte",
+        "en": "The Beautiful Death"
+      },
+      "description": {
+        "es": "Tema introspectivo y oscuro de Sho-Hai con lirismo maduro. Su flow reflexivo explora la vida, la muerte y el sentido. Beat sobrio que acompaña una lírica profunda y personal.",
+        "en": "An introspective and dark track by Sho-Hai with mature lyricism. His reflective flow explores life, death, and meaning. A sober beat accompanies deep, personal lyrics."
+      },
+      "image": "/imagenes/musica/bellamuerte",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 35,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Two Lone Swordsmen",
+      "title": {
+        "es": "Hope We Never Surface",
+        "en": "Hope We Never Surface"
+      },
+      "description": {
+        "es": "Pieza electrónica experimental con paisajes sonoros oscuros y texturas densas. El dúo británico crea atmósferas hipnóticas y ambientes de introspección nocturna. Ideal para escucha atenta y meditación electrónica.",
+        "en": "An experimental electronic piece with dark soundscapes and dense textures. The British duo creates hypnotic atmospheres and nocturnal introspection. Ideal for attentive listening and electronic meditation."
+      },
+      "image": "/imagenes/musica/hope",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 36,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Two Lone Swordsmen",
+      "title": {
+        "es": "Topic",
+        "en": "Topic"
+      },
+      "description": {
+        "es": "Tema hipnótico con ritmos electro-minimalistas y repetición constante. Crea ambiente introspectivo y mecánico. Su producción limpia y repetitiva genera un efecto meditativo.",
+        "en": "A hypnotic track with electro-minimalist rhythms and constant repetition. It creates an introspective and mechanical atmosphere. Its clean, repetitive production generates a meditative effect."
+      },
+      "image": "/imagenes/musica/topic",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 37,
+      "category": "music",
+      "subcategory": "latin",
+      "artist": "Bebo Valdés & Diego El Cigala",
+      "title": {
+        "es": "Inolvidable",
+        "en": "Unforgettable"
+      },
+      "description": {
+        "es": "Bolero clásico interpretado por Bebo Valdés y Diego El Cigala con estilo excepcional. Voces emotivas y arreglos de piano y cuerdas que transmiten nostalgia y elegancia. Versión moderna de un estándar inolvidable.",
+        "en": "A classic bolero performed by Bebo Valdés and Diego El Cigala with exceptional style. Emotional vocals and piano/strings arrangements convey nostalgia and elegance. A modern rendition of an unforgettable standard."
+      },
+      "image": "/imagenes/musica/inolvidable",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
+    },
+    {
+      "id": 38,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Extremoduro",
+      "title": {
+        "es": "Cabezabajo",
+        "en": "Cabezabajo"
+      },
+      "description": {
+        "es": "Tema directo y potente de Extremoduro, con guitarras fuertes y letra que expresa descontento y desafío. Estilo roquero crudo y visceral. Clásico moderno de la banda.",
+        "en": "A direct and powerful track by Extremoduro, with strong guitars and lyrics expressing discontent and defiance. Raw and visceral rock style. A modern classic for the band."
+      },
+      "image": "/imagenes/musica/cabezabajo",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 39,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Ilegales",
+      "title": {
+        "es": "Agotados de esperar el fin",
+        "en": "Tired of Waiting for the End"
+      },
+      "description": {
+        "es": "Ácida crítica punk-rock sobre la desgastante espera del final. Ilegales canaliza frustración y rebeldía con energía cruda. Guitarras agresivas y estribillos directos definen su estilo único.",
+        "en": "A sharp punk-rock critique about the exhausting wait for the end. Ilegales channels frustration and rebellion with raw energy. Aggressive guitars and direct choruses define their unique style."
+      },
+      "image": "/imagenes/musica/agotados",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 40,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Ilegales",
+      "title": {
+        "es": "Dextroanfetamina",
+        "en": "Dextroamphetamine"
+      },
+      "description": {
+        "es": "Tema rápido y enérgico que refleja el caos urbano y la alienación. Letras directas con ritmo acelerado y guitarras cortantes. Representa la actitud rebelde de la España ochentera.",
+        "en": "A fast, energetic track reflecting urban chaos and alienation. Direct lyrics with a rapid rhythm and sharp guitars. It captures the rebellious attitude of 80s Spain."
+      },
+      "image": "/imagenes/musica/dextroanfetamina",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 41,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Extremoduro",
+      "title": {
+        "es": "La carrera",
+        "en": "The Race"
+      },
+      "description": {
+        "es": "Rock potente con lírica poética sobre la carrera vital y el afán de superación. Guitarras intensas y emotivas al servicio de la narrativa personal. Uno de los temas más emblemáticos de Extremoduro.",
+        "en": "Powerful rock with poetic lyrics about life's race and the drive to overcome. Intense and emotional guitars support the personal narrative. One of Extremoduro's most emblematic tracks."
+      },
+      "image": "/imagenes/musica/carrera",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 42,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Extremoduro",
+      "title": {
+        "es": "Estate al loro!",
+        "en": "Stay Alert!"
+      },
+      "description": {
+        "es": "Enérgico tema en vivo con carácter festivo, guitarras afiladas y buen humor. El grupo conecta con el público en un canto a la vida y la amistad desacomplejada. Gran momento en directo de Extremoduro.",
+        "en": "Energetic live track with festive character, sharp guitars and good humor. The band connects with the audience in a celebration of life and unashamed friendship. A highlight of Extremoduro's live shows."
+      },
+      "image": "/imagenes/musica/estate",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 43,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "La Polla Records",
+      "title": {
+        "es": "Ya no quiero ser yo",
+        "en": "I Don't Want to Be Me Anymore"
+      },
+      "description": {
+        "es": "Punk irreverente con crítica social y actitud provocadora. Guitarras rápidas y letra desafiante sobre identidad y rechazo. Clásico del punk español con energía insubordinada.",
+        "en": "Irreverent punk with social critique and provocative attitude. Fast guitars and defiant lyrics about identity and rejection. A classic of Spanish punk with insubordinate energy."
+      },
+      "image": "/imagenes/musica/yanoyquieroseryo",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 44,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Cráneo feat. Escandaloso Xpósito",
+      "title": {
+        "es": "En Las Nubes",
+        "en": "In the Clouds"
+      },
+      "description": {
+        "es": "Rock melódico con letra emotiva sobre soñar y escapar de la rutina. Cráneo y Escandaloso Xpósito imprimen sensibilidad urbana y reflexión personal. Melodías envolventes acompañadas de guitarras cálidas.",
+        "en": "Melodic rock with an emotional lyric about dreaming and escaping routine. Cráneo and Escandaloso Xpósito bring urban sensitivity and personal reflection. Enveloping melodies accompanied by warm guitars."
+      },
+      "image": "/imagenes/musica/enlasnubes",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 45,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Bejo",
+      "title": {
+        "es": "SÍLABA TÓNICA R.I.P.",
+        "en": "TONIC SYLLABLE R.I.P."
+      },
+      "description": {
+        "es": "Rap alternativo con flow juguetón y líricas ingeniosas. Bejo mezcla recursos lingüísticos con ritmo pegadizo. Humor y crítica suave definen su estilo único y urbano.",
+        "en": "Alternative rap with playful flow and clever lyrics. Bejo mixes linguistic resources with a catchy rhythm. Humor and gentle critique define his unique urban style."
+      },
+      "image": "/imagenes/musica/silabatónica",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 46,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Original Juan / Mucho Muchacho / Kamikaze",
+      "title": {
+        "es": "Gorilla Live Festival BSF Seeds 2021",
+        "en": "Gorilla Live Festival BSF Seeds 2021"
+      },
+      "description": {
+        "es": "Grabación de concierto en vivo con energía festiva y rap-hiphop rockero. Un momento poderoso de fusión entre rock urbano y cultura de festival. Público vibrante y artistas en gran forma.",
+        "en": "Live concert recording with festive energy and rock-infused rap-hiphop. A powerful fusion moment between urban rock and festival culture. Vibrant audience and artists in top form."
+      },
+      "image": "/imagenes/musica/gorilla",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 47,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Pink Floyd",
+      "title": {
+        "es": "Wish You Were Here – Shine On You Crazy Diamond (Part I)",
+        "en": "Wish You Were Here – Shine On You Crazy Diamond (Part I)"
+      },
+      "description": {
+        "es": "Medley emotivo que empieza con Wish You Were Here y transita hacia Shine On You Crazy Diamond Part I. Rock progresivo lleno de melancolía y homenaje a Syd Barrett. Guitarras atmosféricas y solos memorables.",
+        "en": "An emotional medley starting with Wish You Were Here flowing into Shine On You Crazy Diamond Part I. Progressive rock filled with melancholy and tribute to Syd Barrett. Atmospheric guitars and memorable solos."
+      },
+      "image": "/imagenes/musica/shinesyd",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
+    },
+    {
+      "id": 48,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Espíritus",
+      "title": {
+        "es": "Gratitud (Full Album)",
+        "en": "Gratitude (Full Album)"
+      },
+      "description": {
+        "es": "Álbum completo que fusiona rock, blues y ritmos sudamericanos. Letras introspectivas sobre agradecimiento y vida. Texturas sonoras cálidas y orgánicas que envuelven al oyente.",
+        "en": "A full album fusing rock, blues, and South American rhythms. Introspective lyrics about gratitude and life. Warm and organic sound textures that envelop the listener."
+      },
+      "image": "/imagenes/musica/gratitud",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 49,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Glass Beams",
+      "title": {
+        "es": "One Raga to a Disco Beat",
+        "en": "One Raga to a Disco Beat"
+      },
+      "description": {
+        "es": "Track que fusiona música india tradicional (raga) con ritmos disco modernos. Glass Beams crea puente sonoro entre culturas con estilo bailable y psicodélico. Texturas hipnóticas y groove contundente.",
+        "en": "A track that fuses traditional Indian raga with modern disco beats. Glass Beams creates a sonic bridge between cultures with a danceable and psychedelic style. Hypnotic textures and strong groove."
+      },
+      "image": "/imagenes/musica/glassraga",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
+    },
+    {
+      "id": 50,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Chaquetas De Cuero (Live)",
+        "en": "Leather Jackets (Live)"
+      },
+      "description": {
+        "es": "Grabación en vivo de rock enérgico y clásico, con guitarras potentes y actitud festivalera. Los Suaves conectan con su público con riffs intensos y performance vibrante. Gran momento en directo.",
+        "en": "Live recording of energetic, classic rock with powerful guitars and festival attitude. Los Suaves connect with their audience through intense riffs and a vibrant performance. A great moment live."
+      },
+      "image": "/imagenes/musica/chaquetas",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 51,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Dulce Castigo (Live)",
+        "en": "Dulce Castigo (Live)"
+      },
+      "description": {
+        "es": "Interpretación en vivo cargada de energía y emoción. Las guitarras rugen mientras la voz transmite nostalgia. El público responde con fuerza. Una pieza emblemática del directo de Los Suaves.",
+        "en": "A live performance loaded with energy and emotion. Guitars roar as the vocals convey nostalgia. The audience responds powerfully. An emblematic piece from Los Suaves' live shows."
+      },
+      "image": "/imagenes/musica/dulcecastigo",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 52,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Dame Rock & Roll (Live)",
+        "en": "Dame Rock & Roll (Live)"
+      },
+      "description": {
+        "es": "Temazo en vivo con ritmo arrollador y actitud rockera. Invitación directa a moverse y contagiarse del sonido crudo. El ambiente de concierto se siente en cada acorde.",
+        "en": "A live anthem with overwhelming rhythm and rock attitude. A direct invitation to move and dive into the raw sound. The concert atmosphere is felt in every chord."
+      },
+      "image": "/imagenes/musica/damerockroll",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 53,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Hendrix (Live)",
+        "en": "Hendrix (Live)"
+      },
+      "description": {
+        "es": "Homenaje vivo a Jimi Hendrix con espíritu de improvisación. Guitarras chispeantes y solos inspirados. Una pieza que combina virtuosismo y sentimiento.",
+        "en": "A live tribute to Jimi Hendrix with an improvisational spirit. Crisp guitars and inspired solos. A piece that combines virtuosity and feeling."
+      },
+      "image": "/imagenes/musica/hendrix",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 54,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Por Una Vez En La Vida (Live)",
+        "en": "For Once in Life (Live)"
+      },
+      "description": {
+        "es": "Balada rock en directo con gran carga emocional. Voces intensas y atmósfera profunda. Los Suaves demuestran su poder para conmover al público.",
+        "en": "A live rock ballad with great emotional impact. Intense vocals and deep atmosphere. Los Suaves demonstrate their power to move the audience."
+      },
+      "image": "/imagenes/musica/porunavez",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 55,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Pardao (Live)",
+        "en": "Pardao (Live)"
+      },
+      "description": {
+        "es": "En directo, este tema transmite una mezcla de melancolía y fuerza. Guitarras limpias que se transforman en riff potentes. El público vibra con cada nota.",
+        "en": "Live, this track conveys a mix of melancholy and strength. Clean guitars that evolve into powerful riffs. The audience vibrates with every note."
+      },
+      "image": "/imagenes/musica/pardao",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 56,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Malas Noticias (Live)",
+        "en": "Bad News (Live)"
+      },
+      "description": {
+        "es": "Tema rock directo con guitarras crudas y letra de desengaño. Grabación en vivo que destaca la conexión con los fans. Actitud combativa y sentimiento sincero.",
+        "en": "A straightforward rock track with raw guitars and lyrics of disappointment. Live recording highlighting connection with fans. Combative attitude and sincere emotion."
+      },
+      "image": "/imagenes/musica/malasnoticias",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 57,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Parece Que Aún Fue Ayer",
+        "en": "It Seems Like It Was Just Yesterday"
+      },
+      "description": {
+        "es": "Rock nostálgico con letra que rememora tiempos pasados. Melodía suave al inicio que crescendo hacia riffs intensos. Conmovedora en directo.",
+        "en": "Nostalgic rock with lyrics that reminisce about past times. A soft melody at first that crescendos into intense riffs. Moving live."
+      },
+      "image": "/imagenes/musica/parece",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 58,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "No Me Mires (Live)",
+        "en": "Don't Look at Me (Live)"
+      },
+      "description": {
+        "es": "Tema en vivo con guitarras envolventes y voz llena de sentimiento. Melodía intensa y estribillo que atrapa. Ejemplo de su capacidad para emocionar.",
+        "en": "Live track with enveloping guitars and heartfelt vocals. Intense melody and captivating chorus. An example of their ability to evoke emotion."
+      },
+      "image": "/imagenes/musica/nomemires",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 59,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Viajando Al Fin De La Noche (Live)",
+        "en": "Traveling to the End of the Night (Live)"
+      },
+      "description": {
+        "es": "Rock oscuro en directo con atmósfera nocturna. Guitarras densas y tempo envolvente. El público se sumerge en la narrativa musical.",
+        "en": "Dark live rock with a nocturnal atmosphere. Dense guitars and immersive tempo. The audience is immersed in the musical narrative."
+      },
+      "image": "/imagenes/musica/viajando",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 60,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Si Pudiera (Live)",
+        "en": "Si Pudiera (Live)"
+      },
+      "description": {
+        "es": "Balada en directo llena de emoción y nostalgia, donde la voz transmite profunda melancolía. Guitarras limpias evolucionan hacia pasajes más potentes. Se percibe la conexión íntima con el público en cada estrofa.",
+        "en": "A live ballad filled with emotion and nostalgia, where the vocals convey deep melancholy. Clean guitars evolve into more powerful passages. You can feel the intimate connection with the audience in every verse."
+      },
+      "image": "/imagenes/musica/sipudiera",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 61,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Pobre Jugador!",
+        "en": "Poor Player!"
+      },
+      "description": {
+        "es": "Tema contundente con letra de crítica y resignación, cargado de fuerza emocional. Guitarras vigorosas y actitud desafiante definen su carácter. Excelente ejemplo del rock crudo de la banda.",
+        "en": "A punchy track with lyrics of critique and resignation, full of emotional strength. Vigorous guitars and defiant attitude define its character. A great example of the band's raw rock."
+      },
+      "image": "/imagenes/musica/pobrejugador",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 62,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Dolores Se Llamaba Lola",
+        "en": "Her Name Was Lola"
+      },
+      "description": {
+        "es": "Historia rockera con fuerte carga sentimental, narrada con tono dramático. Arreglos de guitarras melódicas que acompañan la emoción de la pérdida. Uno de los temas más recordados y sentidos del grupo.",
+        "en": "A rock story with strong sentimental weight, narrated dramatically. Melodic guitar arrangements accompany the emotion of loss. One of the group's most remembered and heartfelt songs."
+      },
+      "image": "/imagenes/musica/dolores",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 63,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "La Noche Se Muere",
+        "en": "The Night Is Dying"
+      },
+      "description": {
+        "es": "Rock con atmósfera nocturna y melancólica, muy sugestivo. Voces rasgadas y guitarras densas generan tensión emocional. Un tema que cautiva por su intensidad y oscuridad.",
+        "en": "Rock with a nocturnal, melancholic atmosphere, very evocative. Raspy vocals and dense guitars generate emotional tension. A track that captivates with its intensity and darkness."
+      },
+      "image": "/imagenes/musica/noche",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 64,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Dile Siempre Que No Estoy",
+        "en": "Always Tell Them I'm Not Here"
+      },
+      "description": {
+        "es": "Balada rock llena de nostalgia y sinceridad, con letra sobre ausencia y desamor. Guitarras envolventes crean una atmósfera íntima. El público se identifica con su melancolía en directo.",
+        "en": "A rock ballad full of nostalgia and sincerity, with lyrics about absence and heartbreak. Enveloping guitars create an intimate atmosphere. The audience identifies with its melancholy live."
+      },
+      "image": "/imagenes/musica/dilesiempre",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 65,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "Maldita Sea Mi Suerte",
+        "en": "Damn My Luck"
+      },
+      "description": {
+        "es": "Tema con actitud irreverente, mezcla de ironía y resentimiento. Guitarras agresivas y coro pegadizo proyectan energía canalla. Refleja la crudeza y humor del grupo.",
+        "en": "A song with irreverent attitude, mixing irony and resentment. Aggressive guitars and catchy chorus project rogue energy. It reflects the band's rawness and humor."
+      },
+      "image": "/imagenes/musica/malditasure",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 66,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Los Suaves",
+      "title": {
+        "es": "No Puedo Dejar El Rock (Live)",
+        "en": "I Can't Quit Rock (Live)"
+      },
+      "description": {
+        "es": "Himno en directo al rock, con guitarras vibrantes y pasión evidente. El público canta y participa en cada estribillo. Uno de los momentos más memorables de sus conciertos.",
+        "en": "A live anthem to rock, with vibrant guitars and visible passion. The audience sings along each chorus. One of the most memorable moments of their concerts."
+      },
+      "image": "/imagenes/musica/nopuedodejar",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 67,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone ft. Mcklopedia",
+      "title": {
+        "es": "Un Millar de Ojos",
+        "en": "A Thousand Eyes"
+      },
+      "description": {
+        "es": "Colaboración del rap español que aborda la vigilancia social y colectiva. Letras crudas y conscientes con ritmo pausado y grave. Beat sólido que da peso al mensaje crítico.",
+        "en": "A collaboration in Spanish rap addressing social and collective surveillance. Raw, conscious lyrics with a slow, heavy rhythm. A solid beat that gives weight to the critical message."
+      },
+      "image": "/imagenes/musica/millarojos",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 68,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "EPMD 2 ft. Nas & Eminem",
+      "title": {
+        "es": "EPMD 2",
+        "en": "EPMD 2"
+      },
+      "description": {
+        "es": "Colaboración legendaria de rap: Nas y Eminem junto a EPMD 2 en tema con barras afiladas. Flow impecable y producción clásica. Versos potentes sobre ritmo entrante y pegadizo.",
+        "en": "Legendary rap collaboration: Nas and Eminem alongside EPMD 2 in a track with razor-sharp bars. Impeccable flow and classic production. Powerful verses over an engaging, catchy beat."
+      },
+      "image": "/imagenes/musica/epmd2",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 69,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Cráneo / Sloth Brite",
+      "title": {
+        "es": "Fue un Veranito de Ensueño",
+        "en": "It Was a Dreamy Little Summer"
+      },
+      "description": {
+        "es": "Rock alternativo veraniego con tono nostálgico y melódico. Letras evocadoras de momentos pasados y sensaciones cálidas. Guitarras brillantes que subrayan la ligereza del tema.",
+        "en": "Alternative summer rock with a nostalgic and melodic tone. Lyrics evoke past moments and warm sensations. Bright guitars underline the song's lightness."
+      },
+      "image": "/imagenes/musica/veranito",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 70,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Santa Fe Klan",
+      "title": {
+        "es": "Tornillo",
+        "en": "Tornillo"
+      },
+      "description": {
+        "es": "Tema representativo del rap mexicano con letras crudas que reflejan la realidad social. La producción combina ritmos urbanos con melodías pegajosas, creando un ambiente intenso y auténtico. El videoclip oficial potencia la narrativa visual del mensaje.",
+        "en": "Representative track of Mexican rap with raw lyrics reflecting social reality. The production mixes urban beats with catchy melodies, creating an intense and authentic atmosphere. The official video enhances the visual narrative of the message."
+      },
+      "image": "/imagenes/musica/tornillo",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=J7YyU63w0S4",
+      "spotify": "https://open.spotify.com/track/6f1Q0CfvIcf9CrnUfdzZyo",
+      "masterpiece": false
+    },
+    {
+      "id": 71,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Comes",
+      "title": {
+        "es": "Brasov",
+        "en": "Brasov"
+      },
+      "description": {
+        "es": "Pieza electrónica ambiental que envuelve con texturas sonoras profundas y ritmos pausados. Ideal para la relajación o introspección, su atmósfera evoca paisajes sonoros urbanos y naturales. Una composición minimalista y envolvente.",
+        "en": "Ambient electronic piece that envelops with deep sound textures and slow rhythms. Ideal for relaxation or introspection, its atmosphere evokes urban and natural soundscapes. A minimalist and immersive composition."
+      },
+      "image": "/imagenes/musica/brasov",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 72,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Canserbero",
+      "title": {
+        "es": "CANpesino",
+        "en": "CANpesino"
+      },
+      "description": {
+        "es": "Canción de rap con fuerte crítica social y política, típica del estilo de Canserbero. La lírica potente se combina con un beat contundente que resalta el mensaje de resistencia y denuncia. Una pieza que marca la escena del rap latino.",
+        "en": "Rap song with strong social and political criticism, typical of Canserbero's style. Powerful lyrics combine with a strong beat that highlights the message of resistance and protest. A track that marks the Latin rap scene."
+      },
+      "image": "/imagenes/musica/canpesino",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=tiu48yNjpk8",
+      "spotify": "https://open.spotify.com/track/4WslbD9tXROcST3cjSmmPB",
+      "masterpiece": false
+    },
+    {
+      "id": 73,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Canserbero",
+      "title": {
+        "es": "Las Animas",
+        "en": "The Souls"
+      },
+      "description": {
+        "es": "Tema con profunda carga emocional y filosófica, que reflexiona sobre la vida y la muerte. Letras poéticas acompañadas de ritmos cadenciosos que invitan a la meditación. Es una de las obras más emblemáticas de Canserbero.",
+        "en": "Track with deep emotional and philosophical charge, reflecting on life and death. Poetic lyrics accompanied by steady rhythms that invite meditation. One of Canserbero's most emblematic works."
+      },
+      "image": "/imagenes/musica/lasanimas",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=HfMDqGZc8v4",
+      "spotify": "https://open.spotify.com/track/2WbMYMBhcY9PSrXtwB65vI",
+      "masterpiece": false
+    },
+    {
+      "id": 74,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Anne Clark",
+      "title": {
+        "es": "Our Darkness",
+        "en": "Our Darkness"
+      },
+      "description": {
+        "es": "Combinación de spoken word y electrónica oscura que crea una atmósfera inquietante y reflexiva. La voz poética de Anne Clark se fusiona con sintetizadores sombríos, explorando temas de alienación y lucha interna.",
+        "en": "Combination of spoken word and dark electronic music creating an unsettling and reflective atmosphere. Anne Clark's poetic voice fuses with somber synthesizers, exploring themes of alienation and internal struggle."
+      },
+      "image": "/imagenes/musica/ourdarkness",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=JX9FSE-6Cis",
+      "spotify": "https://open.spotify.com/track/0F4YTN6N01iihBkn13kSqN",
+      "masterpiece": false
+    },
+    {
+      "id": 75,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Dub FX",
+      "title": {
+        "es": "Thinking Clear",
+        "en": "Thinking Clear"
+      },
+      "description": {
+        "es": "Canción que mezcla hip hop, dub y electrónica, con letras sobre la claridad mental y la superación personal. La voz procesada y los beats orgánicos crean una sensación de energía positiva y profundidad.",
+        "en": "Song mixing hip hop, dub, and electronic, with lyrics about mental clarity and personal overcoming. Processed vocals and organic beats create a feeling of positive energy and depth."
+      },
+      "image": "/imagenes/musica/thinkingclear",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=4i_U6bXZgrc",
+      "spotify": "https://open.spotify.com/track/2o2pVxHjAdMlCq3V3CgfqL",
+      "masterpiece": false
+    },
+    {
+      "id": 76,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Amon Tobin",
+      "title": {
+        "es": "Like Regular Chickens",
+        "en": "Like Regular Chickens"
+      },
+      "description": {
+        "es": "Tema instrumental experimental que fusiona jazz, electrónica y ritmos complejos. Su riqueza sonora y texturas intrincadas ofrecen una experiencia auditiva envolvente y sofisticada.",
+        "en": "Experimental instrumental track fusing jazz, electronic and complex rhythms. Its rich sound and intricate textures offer an immersive and sophisticated listening experience."
+      },
+      "image": "/imagenes/musica/like",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 77,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Dheformer Galinier",
+      "title": {
+        "es": "El Elegido",
+        "en": "The Chosen"
+      },
+      "description": {
+        "es": "Pieza electrónica con atmósferas oscuras y sonidos envolventes que transmiten misterio y tensión. Ideal para ambientes introspectivos o de suspenso, destaca por su producción cuidada y original.",
+        "en": "Electronic piece with dark atmospheres and enveloping sounds conveying mystery and tension. Ideal for introspective or suspenseful environments, it stands out for its careful and original production."
+      },
+      "image": "/imagenes/musica/elelegido",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 78,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Public Enemy",
+      "title": {
+        "es": "REVOLUTION",
+        "en": "REVOLUTION"
+      },
+      "description": {
+        "es": "Himno icónico del rap político estadounidense que denuncia injusticias sociales y raciales. Rítmico y agresivo, con letras cargadas de protesta y llamado al cambio. Un referente del hip hop consciente.",
+        "en": "Iconic anthem of American political rap denouncing social and racial injustices. Rhythmic and aggressive, with lyrics full of protest and calls for change. A benchmark of conscious hip hop."
+      },
+      "image": "/imagenes/musica/revolution",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=li2vuYLb_4o",
+      "spotify": "https://open.spotify.com/track/0UqG3J3OCxYZt0nK74q4AA",
+      "masterpiece": false
+    },
+    {
+      "id": 79,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Marconi Union",
+      "title": {
+        "es": "Weightless",
+        "en": "Weightless"
+      },
+      "description": {
+        "es": "Composición electrónica ambiental considerada una de las más relajantes del mundo. Mezcla sonidos suaves, armonías fluidas y ritmos lentos para inducir calma profunda y meditación. Una obra maestra del chillout.",
+        "en": "Ambient electronic composition considered one of the most relaxing in the world. It mixes soft sounds, flowing harmonies, and slow rhythms to induce deep calm and meditation. A chillout masterpiece."
+      },
+      "image": "/imagenes/musica/weightless",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=UfcAVejslrU",
+      "spotify": "https://open.spotify.com/track/5f9fHZvHr7CqYbq5ffRwr7",
+      "masterpiece": true
+    },
+    {
+      "id": 80,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Sniper",
+      "title": {
+        "es": "Trait pour Trait",
+        "en": "Trait pour Trait"
+      },
+      "description": {
+        "es": "Canción emblemática del grupo francés Sniper que mezcla rap contundente con letras cargadas de crítica social y compromiso político. El videoclip oficial complementa la intensidad del mensaje, mostrando la realidad urbana con crudeza. Un clásico del rap francés moderno.",
+        "en": "Emblematic track from French group Sniper mixing strong rap with socially and politically charged lyrics. The official clip complements the message's intensity, showing urban reality with rawness. A classic of modern French rap."
+      },
+      "image": "/imagenes/musica/trait",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=8y0CUdqPo0o",
+      "spotify": "https://open.spotify.com/track/3h6PE2wtGLkN5IAdzXukZz",
+      "masterpiece": false
+    },
+    {
+      "id": 81,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Toteking & Shotta ft. Swan Fyahbwoy",
+      "title": {
+        "es": "Muchas Gracias",
+        "en": "Muchas Gracias"
+      },
+      "description": {
+        "es": "Tema potente que reúne a tres pesos pesados del rap español y reggae. Letras directas sobre la vida en la calle y el esfuerzo personal, acompañadas de un ritmo pegajoso y mezcla de estilos urbanos. El videoclip oficial refleja la fuerza y unidad del colectivo.",
+        "en": "Powerful track bringing together three heavyweights of Spanish rap and reggae. Direct lyrics about street life and personal struggle, backed by a catchy rhythm and urban style mix. The official video reflects the strength and unity of the collective."
+      },
+      "image": "/imagenes/musica/muchas",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=9RxyrLnVMEk",
+      "spotify": "https://open.spotify.com/track/3HXHXvgTDbGGBjH1xRzshU",
+      "masterpiece": false
+    },
+    {
+      "id": 82,
+      "category": "music",
+      "subcategory": "jazz",
+      "artist": "Weather Report",
+      "title": {
+        "es": "Black Market",
+        "en": "Black Market"
+      },
+      "description": {
+        "es": "Álbum clásico de jazz fusión de Weather Report, publicado en 1976. Combina jazz, rock y elementos electrónicos para crear paisajes sonoros innovadores. Reconocido por sus melodías complejas y atmósferas envolventes, sigue siendo un referente del género.",
+        "en": "Classic jazz fusion album by Weather Report, released in 1976. Combines jazz, rock and electronic elements to create innovative soundscapes. Known for complex melodies and immersive atmospheres, it remains a genre benchmark."
+      },
+      "image": "/imagenes/musica/blackmarket",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=41rHn1Qe1uI",
+      "spotify": "https://open.spotify.com/album/1qN7IbVj3Fikn6x6qGxcRd",
+      "masterpiece": true
+    },
+    {
+      "id": 83,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Thievery Corporation",
+      "title": {
+        "es": "Décollage",
+        "en": "Décollage"
+      },
+      "description": {
+        "es": "Canción emblemática de Thievery Corporation que mezcla electrónica con elementos lounge y dub, creando una atmósfera relajada y sofisticada. Su ritmo hipnótico y melodías suaves invitan a un viaje sonoro único. Muy apreciada en la escena downtempo.",
+        "en": "Emblematic song by Thievery Corporation blending electronic with lounge and dub elements, creating a relaxed and sophisticated atmosphere. Its hypnotic rhythm and smooth melodies invite a unique sonic journey. Highly regarded in the downtempo scene."
+      },
+      "image": "/imagenes/musica/decollage",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=NWwm-1Syvlk",
+      "spotify": "https://open.spotify.com/track/1SVkkf6fIXZayIBdcvaW7j",
+      "masterpiece": false
+    },
+    {
+      "id": 84,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "Billie Eilish",
+      "title": {
+        "es": "bad guy",
+        "en": "bad guy"
+      },
+      "description": {
+        "es": "Hit mundial que revolucionó el pop contemporáneo con su producción minimalista y voz susurrante. Letras irónicas y actitud desenfadada crean un estilo único y fresco. 'bad guy' catapultó a Billie Eilish a la fama global con un sonido innovador.",
+        "en": "Global hit that revolutionized contemporary pop with minimalist production and whispery vocals. Ironic lyrics and carefree attitude create a unique and fresh style. 'bad guy' catapulted Billie Eilish to global fame with innovative sound."
+      },
+      "image": "/imagenes/musica/badguy",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=DyDfgMOUjCI",
+      "spotify": "https://open.spotify.com/track/2Fxmhks0bxGSBdJ92vM42m",
+      "masterpiece": false
+    },
+    {
+      "id": 85,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Thievery Corporation",
+      "title": {
+        "es": "Heaven's Gonna Burn Your Eyes",
+        "en": "Heaven's Gonna Burn Your Eyes"
+      },
+      "description": {
+        "es": "Canción melancólica y atmosférica de Thievery Corporation, con una mezcla de electrónica downtempo y soul. Las letras introspectivas acompañan melodías suaves y un ritmo pausado, creando un ambiente contemplativo y emotivo.",
+        "en": "Melancholic and atmospheric song by Thievery Corporation, mixing downtempo electronic and soul. Introspective lyrics accompany soft melodies and slow rhythm, creating a contemplative and emotional atmosphere."
+      },
+      "image": "/imagenes/musica/heavens",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=4tkdTVbmBTA",
+      "spotify": "https://open.spotify.com/track/5aMbGpDWqYX5EekOcrI2bo",
+      "masterpiece": false
+    },
+    {
+      "id": 86,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Fat Bass Dj Ralph",
+      "title": {
+        "es": "Fat Bass",
+        "en": "Fat Bass"
+      },
+      "description": {
+        "es": "Track energético y bailable con fuertes líneas de bajo y ritmos contundentes. Ideal para sesiones de DJ y fiestas, destaca por su producción potente y ritmo contagioso. Un ejemplo claro del estilo bass en la música electrónica.",
+        "en": "Energetic and danceable track with strong bass lines and powerful rhythms. Ideal for DJ sets and parties, it stands out for its potent production and catchy beat. A clear example of bass style in electronic music."
+      },
+      "image": "/imagenes/musica/fatbass",
+      "tags": [
+        "djset"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 87,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Blackstar",
+      "title": {
+        "es": "Thieves in the Night",
+        "en": "Thieves in the Night"
+      },
+      "description": {
+        "es": "Canción de rap con letras profundas que abordan temas de injusticia, moralidad y oscuridad urbana. La producción es sobria, resaltando la voz y el mensaje. Blackstar es reconocido por su lirismo poético y conciencia social.",
+        "en": "Rap song with deep lyrics addressing injustice, morality, and urban darkness. The production is sober, highlighting the voice and message. Blackstar is known for poetic lyricism and social awareness."
+      },
+      "image": "/imagenes/musica/thieves",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=zmNQKdD0oSc",
+      "spotify": "https://open.spotify.com/track/4q1oIGshVmsGRkb8ZrHy8e",
+      "masterpiece": false
+    },
+    {
+      "id": 88,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Kae Tempest",
+      "title": {
+        "es": "Europe Is Lost",
+        "en": "Europe Is Lost"
+      },
+      "description": {
+        "es": "Poema rap intenso y crítico sobre la crisis social y política en Europa. La voz potente de Kae Tempest y la producción minimalista crean una experiencia contundente y emocional, que invita a la reflexión y acción.",
+        "en": "Intense and critical rap poem about social and political crisis in Europe. Kae Tempest's powerful voice and minimalist production create a strong and emotional experience that invites reflection and action."
+      },
+      "image": "/imagenes/musica/europe",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=g9DB5QnjNKM",
+      "spotify": "https://open.spotify.com/track/3C5tHWQb1SuHCzzG2YjAF4",
+      "masterpiece": false
+    },
+    {
+      "id": 89,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Kae Tempest",
+      "title": {
+        "es": "Europe Is Lost (Live on KEXP)",
+        "en": "Europe Is Lost (Live on KEXP)"
+      },
+      "description": {
+        "es": "Versión en vivo de 'Europe Is Lost' grabada en KEXP, que intensifica la emoción y el mensaje social. La interpretación en directo destaca la fuerza y autenticidad de Kae Tempest, consolidándola como voz clave del rap consciente.",
+        "en": "Live version of 'Europe Is Lost' recorded at KEXP, intensifying the emotion and social message. The live performance highlights Kae Tempest's strength and authenticity, consolidating her as a key voice in conscious rap."
+      },
+      "image": "/imagenes/musica/europelive",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=5zJUyyH0fHk",
+      "spotify": "https://open.spotify.com/track/1Jv2YxlvXnnjXxn12MgS8v",
+      "masterpiece": false
+    },
+    {
+      "id": 90,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Suprême NTM",
+      "title": {
+        "es": "That's My People",
+        "en": "That's My People"
+      },
+      "description": {
+        "es": "Canción emblemática del dúo francés Suprême NTM que refleja la realidad social y urbana con líricas contundentes y auténticas. Su energía cruda y ritmo potente la convierten en un himno del rap francés. Un tema que habla de orgullo y hermandad en el barrio.",
+        "en": "Emblematic track by French duo Suprême NTM reflecting social and urban reality with strong and authentic lyrics. Its raw energy and powerful rhythm make it an anthem of French rap. A song about pride and brotherhood in the neighborhood."
+      },
+      "image": "/imagenes/musica/thats",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=UaWRGTOSebc",
+      "spotify": "https://open.spotify.com/track/0uw7DUqNk6YAzDVTCIl1sT",
+      "masterpiece": false
+    },
+    {
+      "id": 91,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Colour Haze",
+      "title": {
+        "es": "Tempel",
+        "en": "Tempel"
+      },
+      "description": {
+        "es": "Álbum del grupo alemán Colour Haze que mezcla rock psicodélico y stoner rock con atmósferas envolventes y guitarras hipnóticas. 'Tempel' es un viaje sonoro denso y atmosférico, perfecto para los amantes del rock experimental y el sonido vintage.",
+        "en": "Album by German band Colour Haze blending psychedelic rock and stoner rock with immersive atmospheres and hypnotic guitars. 'Tempel' is a dense and atmospheric sonic journey, perfect for lovers of experimental rock and vintage sound."
+      },
+      "image": "/imagenes/musica/tempel",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=QbFhRmlMCvA",
+      "spotify": "https://open.spotify.com/album/7yMdE3Vyr39sykQZdS2ihZ",
+      "masterpiece": false
+    },
+    {
+      "id": 92,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Geronación",
+      "title": {
+        "es": "Terapia de grupo",
+        "en": "Terapia de grupo"
+      },
+      "description": {
+        "es": "Canción que aborda temas de introspección y conflictos emocionales con letras sinceras y un flow relajado. Geronación aporta una voz fresca al rap español, mezclando melodías suaves con ritmos urbanos contemporáneos. Una invitación a la reflexión personal.",
+        "en": "Song addressing introspection and emotional conflicts with sincere lyrics and a relaxed flow. Geronación brings a fresh voice to Spanish rap, mixing smooth melodies with contemporary urban beats. An invitation to personal reflection."
+      },
+      "image": "/imagenes/musica/terapia",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=9I1KO8ayP1c",
+      "spotify": "https://open.spotify.com/track/3RDvQhqV7DDbQku9PvYOKq",
+      "masterpiece": false
+    },
+    {
+      "id": 93,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Dimmu Borgir",
+      "title": {
+        "es": "Live Ozzfest 2004",
+        "en": "Live Ozzfest 2004"
+      },
+      "description": {
+        "es": "Actuación en vivo del grupo noruego Dimmu Borgir en el Ozzfest 2004, donde mostraron su metal sinfónico oscuro y agresivo. La energía en el escenario y la calidad instrumental consolidaron su posición como referentes del metal extremo.",
+        "en": "Live performance by Norwegian band Dimmu Borgir at Ozzfest 2004, showcasing their dark and aggressive symphonic metal. The stage energy and instrumental quality cemented their status as extreme metal icons."
+      },
+      "image": "/imagenes/musica/ozzfest",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=z6Zl9s5aRog",
+      "spotify": "https://open.spotify.com/artist/4Z8W4fKeB5YxbusRsdQVPb",
+      "masterpiece": false
+    },
+    {
+      "id": 94,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Muse",
+      "title": {
+        "es": "Knights Of Cydonia",
+        "en": "Knights Of Cydonia"
+      },
+      "description": {
+        "es": "Canción épica de Muse con una mezcla poderosa de rock alternativo, electrónica y elementos progresivos. Destaca por su riff icónico, voces dramáticas y un videoclip futurista que complementa la intensidad musical. Un clásico moderno del rock.",
+        "en": "Epic song by Muse blending powerful alternative rock, electronic, and progressive elements. Notable for its iconic riff, dramatic vocals, and a futuristic video complementing the musical intensity. A modern rock classic."
+      },
+      "image": "/imagenes/musica/cydonia",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=G_sBOsh-vyI",
+      "spotify": "https://open.spotify.com/track/1zBnX5tRJo71hIVfQdrY75",
+      "masterpiece": false
+    },
+    {
+      "id": 95,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Rage Against The Machine",
+      "title": {
+        "es": "Know Your Enemy",
+        "en": "Know Your Enemy"
+      },
+      "description": {
+        "es": "Canción emblemática que combina rock y rap con letras políticas que incitan a la resistencia y conciencia social. La energía explosiva y los riffs agresivos hacen de este tema un himno para la rebelión y el activismo.",
+        "en": "Emblematic song combining rock and rap with political lyrics urging resistance and social awareness. Explosive energy and aggressive riffs make this track an anthem for rebellion and activism."
+      },
+      "image": "/imagenes/musica/enemy",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=7swz2k94MFY",
+      "spotify": "https://open.spotify.com/track/2ENxNja7glrTySiv8WlzhV",
+      "masterpiece": false
+    },
+    {
+      "id": 96,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "06 SHOTTA",
+      "title": {
+        "es": "PASARLA BIEN",
+        "en": "PASARLA BIEN"
+      },
+      "description": {
+        "es": "Tema de rap urbano producido por XINKOA que mezcla ritmos contagiosos con letras sobre disfrutar la vida y superar adversidades. 06 SHOTTA destaca por su flow enérgico y su estilo directo, ideal para el ambiente de fiesta y buen rollo.",
+        "en": "Urban rap track produced by XINKOA mixing catchy rhythms with lyrics about enjoying life and overcoming adversity. 06 SHOTTA stands out for energetic flow and direct style, perfect for party vibes and good mood."
+      },
+      "image": "/imagenes/musica/pasarla",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 97,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Aphex Twin",
+      "title": {
+        "es": "Stone In Focus",
+        "en": "Stone In Focus"
+      },
+      "description": {
+        "es": "Pieza instrumental de Aphex Twin que combina texturas electrónicas atmosféricas con un ritmo minimalista y envolvente. 'Stone In Focus' es un viaje introspectivo dentro del IDM, mostrando la habilidad del artista para crear ambientes sonoros únicos.",
+        "en": "Instrumental piece by Aphex Twin combining atmospheric electronic textures with a minimalist and immersive rhythm. 'Stone In Focus' is an introspective journey within IDM, showcasing the artist's skill for creating unique soundscapes."
+      },
+      "image": "/imagenes/musica/stone",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=YH1Ets_DX9s",
+      "spotify": "https://open.spotify.com/track/5zlg3XOS99byD2YAZ1EklC",
+      "masterpiece": false
+    },
+    {
+      "id": 98,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Scorn",
+      "title": {
+        "es": "Evanescence",
+        "en": "Evanescence"
+      },
+      "description": {
+        "es": "Canción oscura y experimental de Scorn que mezcla dub, industrial y electrónica. 'Evanescence' crea una atmósfera inquietante y profunda, con texturas densas y ritmos lentos, ideal para los amantes de sonidos vanguardistas y ambientes sombríos.",
+        "en": "Dark and experimental track by Scorn blending dub, industrial, and electronic. 'Evanescence' creates a haunting and deep atmosphere with dense textures and slow rhythms, ideal for lovers of avant-garde sounds and somber vibes."
+      },
+      "image": "/imagenes/musica/evanescence",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=4EoOaCy2pzA",
+      "spotify": "https://open.spotify.com/track/1Rk3pZNH3PyhWl0xbklh4M",
+      "masterpiece": false
+    },
+    {
+      "id": 99,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Pendulum",
+      "title": {
+        "es": "Witchcraft",
+        "en": "Witchcraft"
+      },
+      "description": {
+        "es": "Canción electrónica de Pendulum que fusiona drum and bass con elementos de rock, creando un ritmo energético y melódico. 'Witchcraft' destaca por sus sintetizadores potentes y una producción impecable que mantiene la intensidad constante.",
+        "en": "Electronic song by Pendulum blending drum and bass with rock elements, creating an energetic and melodic rhythm. 'Witchcraft' stands out for powerful synthesizers and flawless production maintaining constant intensity."
+      },
+      "image": "/imagenes/musica/witchcraft",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=IO2XqvJlWnM",
+      "spotify": "https://open.spotify.com/track/1qPpTQvI7MwYh1Tf0OHcuK",
+      "masterpiece": false
+    },
+    {
+      "id": 100,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Pink Floyd",
+      "title": {
+        "es": "Wish You Were Here",
+        "en": "Wish You Were Here"
+      },
+      "description": {
+        "es": "Álbum emblemático de Pink Floyd que explora la ausencia y la alienación con sonidos progresivos y psicodélicos. Sus letras profundas y atmósferas envolventes lo convierten en una obra maestra del rock. Un viaje emocional y musical imprescindible.",
+        "en": "Iconic Pink Floyd album exploring absence and alienation with progressive and psychedelic sounds. Its deep lyrics and immersive atmospheres make it a rock masterpiece. An essential emotional and musical journey."
+      },
+      "image": "/imagenes/musica/wishyouwerehere",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=IXdNnw99-Ic",
+      "spotify": "https://open.spotify.com/album/1bt6q2SruMsBtcerNVtpZB",
+      "masterpiece": true
+    },
+    {
+      "id": 101,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Li Kwan",
+      "title": {
+        "es": "Point Zero",
+        "en": "Point Zero"
+      },
+      "description": {
+        "es": "Clásico tema trance de 1994 que marcó la escena electrónica con su atmósfera hipnótica y sintetizadores envolventes. 'Point Zero' es un himno del trance temprano que sigue influenciando a productores actuales con su energía etérea y melódica.",
+        "en": "'Point Zero' is a 1994 classic trance track that shaped the electronic scene with hypnotic atmosphere and immersive synths. It remains an anthem of early trance, influencing current producers with its ethereal and melodic energy."
+      },
+      "image": "/imagenes/musica/pointzero",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=ST3_G6AFaTA",
+      "spotify": "https://open.spotify.com/track/6E1QvF3fcHx4aQhKWvVghS",
+      "masterpiece": false
+    },
+    {
+      "id": 102,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Red Hot Chili Peppers",
+      "title": {
+        "es": "Dark Necessities",
+        "en": "Dark Necessities"
+      },
+      "description": {
+        "es": "Canción que mezcla funk y rock alternativo con letras introspectivas sobre la lucha interna y la aceptación. 'Dark Necessities' muestra la evolución de RHCP con un sonido fresco y melódico, acompañado de una producción pulida y energética.",
+        "en": "'Dark Necessities' blends funk and alternative rock with introspective lyrics about inner struggle and acceptance. It showcases RHCP's evolution with fresh, melodic sound and polished, energetic production."
+      },
+      "image": "/imagenes/musica/darknecessities",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=3zC8wpP2wg8",
+      "spotify": "https://open.spotify.com/track/4Vb9bLH6J3E1jovhT8csMx",
+      "masterpiece": false
+    },
+    {
+      "id": 103,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Stoned Jesus",
+      "title": {
+        "es": "Seven Thunders Roar",
+        "en": "Seven Thunders Roar"
+      },
+      "description": {
+        "es": "Álbum de stoner rock y doom metal con riffs pesados y atmósferas densas. 'Seven Thunders Roar' fusiona psicodelia y potencia, creando un sonido envolvente y oscuro que sumerge al oyente en un viaje sónico intenso y poderoso.",
+        "en": "'Seven Thunders Roar' is a stoner rock and doom metal album with heavy riffs and dense atmospheres. It blends psychedelia and power, creating an immersive and dark sound that takes listeners on an intense sonic journey."
+      },
+      "image": "/imagenes/musica/seventhundersroar",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=1y5xGyNnEoQ",
+      "spotify": "https://open.spotify.com/album/3KJ0eRlgNjDDaA1r6CGo52",
+      "masterpiece": false
+    },
+    {
+      "id": 104,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Disparition",
+      "title": {
+        "es": "Transmutations",
+        "en": "Transmutations"
+      },
+      "description": {
+        "es": "Álbum de dark ambient que mezcla texturas oscuras y sonidos atmosféricos para crear paisajes sonoros introspectivos y envolventes. 'Transmutations' invita a una experiencia auditiva meditativa y profunda, perfecta para la exploración interior.",
+        "en": "'Transmutations' is a dark ambient album blending dark textures and atmospheric sounds to create introspective and immersive soundscapes. It invites a meditative and deep listening experience, perfect for inner exploration."
+      },
+      "image": "/imagenes/musica/transmutations",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Gqmw2mPH7Jk",
+      "spotify": "https://open.spotify.com/album/4Rw3aONZxHCxN1IP3v0wo9",
+      "masterpiece": false
+    },
+    {
+      "id": 105,
+      "category": "music",
+      "subcategory": "latin",
+      "artist": "Fuel Fandango",
+      "title": {
+        "es": "Always Searching",
+        "en": "Always Searching"
+      },
+      "description": {
+        "es": "Canción que fusiona electrónica, flamenco y soul con una voz femenina cautivadora y ritmos vibrantes. 'Always Searching' destaca por su energía y frescura, creando un sonido innovador y bailable que emociona y conecta con el público.",
+        "en": "'Always Searching' blends electronic, flamenco, and soul with captivating female vocals and vibrant rhythms. It stands out for its energy and freshness, creating an innovative and danceable sound that moves and connects with the audience."
+      },
+      "image": "/imagenes/musica/alwayssearching",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=8bIMMY1Ul88",
+      "spotify": "https://open.spotify.com/track/7Hbhk4BOMSwA8kJvGkUgwP",
+      "masterpiece": false
+    },
+    {
+      "id": 106,
+      "category": "music",
+      "subcategory": "latin",
+      "artist": "Fuel Fandango",
+      "title": {
+        "es": "Toda la vida",
+        "en": "Toda la vida"
+      },
+      "description": {
+        "es": "Tema que mezcla electrónica, flamenco y pop con una atmósfera íntima y melódica. 'Toda la vida' transmite emoción y calidez con una producción cuidada y una voz expresiva, representando la versatilidad del dúo andaluz.",
+        "en": "'Toda la vida' mixes electronic, flamenco, and pop with an intimate and melodic atmosphere. It conveys emotion and warmth through careful production and expressive vocals, showcasing the versatility of the Andalusian duo."
+      },
+      "image": "/imagenes/musica/todalavida",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=7zQCPfp4xGk",
+      "spotify": "https://open.spotify.com/track/3Ol7HWnBRvZaM5OvlS4tuU",
+      "masterpiece": false
+    },
+    {
+      "id": 107,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "THE UNGUIDED",
+      "title": {
+        "es": "Phoenix Down (Zardonic Remix)",
+        "en": "Phoenix Down (Zardonic Remix)"
+      },
+      "description": {
+        "es": "Remix potente que mezcla metal melódico y electrónica con un ritmo intenso y agresivo. 'Phoenix Down' en versión Zardonic ofrece una experiencia sonora energética y vibrante, fusionando dos estilos con fuerza y precisión.",
+        "en": "Powerful remix blending melodic metal and electronic music with an intense and aggressive rhythm. 'Phoenix Down' Zardonic version delivers an energetic and vibrant sonic experience, fusing two styles with strength and precision."
+      },
+      "image": "/imagenes/musica/phoenixdown",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Emo3b_vnPKM",
+      "spotify": "https://open.spotify.com/track/6l3Uo7qC7vEDvjSmEKZpYD",
+      "masterpiece": false
+    },
+    {
+      "id": 108,
+      "category": "music",
+      "subcategory": "reggae",
+      "artist": "Skrillex & Damian \"Jr. Gong\" Marley",
+      "title": {
+        "es": "Make It Bun Dem",
+        "en": "Make It Bun Dem"
+      },
+      "description": {
+        "es": "Fusión explosiva de dubstep y reggae con la colaboración de Damian Marley. 'Make It Bun Dem' destaca por su ritmo vibrante y su mezcla innovadora que combina la energía electrónica con la raíz reggae clásica.",
+        "en": "Explosive fusion of dubstep and reggae featuring Damian Marley. 'Make It Bun Dem' stands out for its vibrant rhythm and innovative mix combining electronic energy with classic reggae roots."
+      },
+      "image": "/imagenes/musica/makeitbundem",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Fq0Ejz7JwzI",
+      "spotify": "https://open.spotify.com/track/3uw9C2S6Hmf3qhExi4yAdc",
+      "masterpiece": false
+    },
+    {
+      "id": 109,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Sho-Hai",
+      "title": {
+        "es": "Dando Brea",
+        "en": "Dando Brea"
+      },
+      "description": {
+        "es": "Canción de rap con letras contundentes y ritmo potente que refleja la realidad urbana con autenticidad. 'Dando Brea' muestra la habilidad lírica de Sho-Hai y su capacidad para conectar con la calle y el público.",
+        "en": "'Dando Brea' is a rap song with strong lyrics and powerful rhythm reflecting urban reality with authenticity. It showcases Sho-Hai's lyrical skill and ability to connect with the streets and audience."
+      },
+      "image": "/imagenes/musica/dandobrea",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=1I9T7X78hLQ",
+      "spotify": "https://open.spotify.com/track/3C8t2wJyozKiqjc4x1UiY5",
+      "masterpiece": false
+    },
+    {
+      "id": 110,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Akapellah",
+      "title": {
+        "es": "Layback",
+        "en": "Layback"
+      },
+      "description": {
+        "es": "Tema de rap con un ritmo relajado y un flow distintivo de Akapellah. La canción combina letras introspectivas con una producción sencilla pero efectiva, mostrando la versatilidad del artista venezolano en el género urbano.",
+        "en": "Rap track with a laid-back rhythm and Akapellah's distinctive flow. The song combines introspective lyrics with simple yet effective production, showcasing the Venezuelan artist's versatility in urban music."
+      },
+      "image": "/imagenes/musica/layback",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Ti6kZWdvl6w",
+      "spotify": "https://open.spotify.com/track/0m58bBYXrWu6kF9WhLV3Aw",
+      "masterpiece": false
+    },
+    {
+      "id": 111,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Dollar vs Jefe Yisus",
+      "title": {
+        "es": "Batallón",
+        "en": "Batallón"
+      },
+      "description": {
+        "es": "Video oficial de esta intensa batalla de rap entre Dollar y Jefe Yisus. Un enfrentamiento lleno de ingenio, ritmo y líricas afiladas que muestran la pasión por el freestyle y la cultura del hip hop.",
+        "en": "Official video of this intense rap battle between Dollar and Jefe Yisus. A confrontation full of wit, rhythm, and sharp lyrics that showcase passion for freestyle and hip hop culture."
+      },
+      "image": "/imagenes/musica/batallon",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=HDK37A52bOA",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 112,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Apolo - 11",
+      "title": {
+        "es": "Tristezas del Fin del Mundo",
+        "en": "Tristezas del Fin del Mundo"
+      },
+      "description": {
+        "es": "Canción de rap que mezcla melodías melancólicas con letras profundas y reflexivas. Apolo - 11 transmite emociones intensas con un estilo único que conecta con oyentes que buscan mensajes sinceros y auténticos.",
+        "en": "Rap song blending melancholic melodies with deep, reflective lyrics. Apolo - 11 conveys intense emotions with a unique style that connects with listeners seeking sincere and authentic messages."
+      },
+      "image": "/imagenes/musica/tristezas",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=2qCwG3A2cMw",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 113,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Geronación",
+      "title": {
+        "es": "Buen mc, Mejor persona",
+        "en": "Buen mc, Mejor persona"
+      },
+      "description": {
+        "es": "Tema clásico de 1999 que resalta la importancia del respeto y la humildad en el rap. Geronación mezcla letras conscientes con un ritmo cadencioso que invita a la reflexión dentro del panorama del hip hop en español.",
+        "en": "Classic 1999 track highlighting the importance of respect and humility in rap. Geronación mixes conscious lyrics with a steady rhythm inviting reflection within the Spanish hip hop scene."
+      },
+      "image": "/imagenes/musica/buenmc",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=bQROQGfTuXg",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 114,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Baron 🇪🇸 vs FD 🇺🇾",
+      "title": {
+        "es": "Exhibición Gold Battle Internacional",
+        "en": "Exhibición Gold Battle Internacional"
+      },
+      "description": {
+        "es": "Exhibición internacional de batalla de rap en el MACBA entre Baron y FD. Una demostración de técnica, rapidez mental y creatividad que refleja la esencia de las competiciones de freestyle más respetadas.",
+        "en": "International rap battle exhibition at MACBA between Baron and FD. A showcase of technique, quick wit, and creativity reflecting the essence of the most respected freestyle competitions."
+      },
+      "image": "/imagenes/musica/exhibicion",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=4C2e5PfEAA8",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 115,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Teko vs Noult",
+      "title": {
+        "es": "Final Batalla de los Gallos Barcelona 2006",
+        "en": "Final Batalla de los Gallos Barcelona 2006"
+      },
+      "description": {
+        "es": "Final histórica de la Batalla de los Gallos en Barcelona 2006 entre Teko y Noult. Una confrontación legendaria que muestra lo mejor del freestyle con rimas afiladas y un ambiente cargado de tensión y energía.",
+        "en": "Historic final of Batalla de los Gallos Barcelona 2006 between Teko and Noult. A legendary confrontation showcasing the best of freestyle with sharp rhymes and a tense, energetic atmosphere."
+      },
+      "image": "/imagenes/musica/batallagallos",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=YZ6qxvVmtmQ",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 116,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Picolo con La Gato & Gecko",
+      "title": {
+        "es": "Traigo flores muertas",
+        "en": "Traigo flores muertas"
+      },
+      "description": {
+        "es": "Canción de rap con letras introspectivas y un ritmo envolvente. Picolo, La Gato y Gecko combinan sus estilos para crear un tema lleno de emociones y crítica social, representando la voz de la calle con autenticidad.",
+        "en": "Rap song with introspective lyrics and an immersive rhythm. Picolo, La Gato, and Gecko combine their styles to create a track full of emotion and social critique, representing the street's authentic voice."
+      },
+      "image": "/imagenes/musica/traigoflores",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=vRkSgKucb44",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 117,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Artes Verbales feat. Microfonk",
+      "title": {
+        "es": "A mansalva",
+        "en": "A mansalva"
+      },
+      "description": {
+        "es": "Colaboración de rap con energía y letras contundentes. 'A mansalva' fusiona estilos urbanos con mensajes directos, mostrando la fuerza del hip hop colaborativo en la escena underground.",
+        "en": "'A mansalva' is a rap collaboration with energy and powerful lyrics. It fuses urban styles with direct messages, showcasing the strength of collaborative hip hop in the underground scene."
+      },
+      "image": "/imagenes/musica/amansalva",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=3by9W8syRlE",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 118,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Artes Verbales",
+      "title": {
+        "es": "Tiro con arco",
+        "en": "Tiro con arco"
+      },
+      "description": {
+        "es": "Tema de rap que utiliza la metáfora del tiro con arco para hablar de precisión y enfoque. Artes Verbales entrega rimas contundentes y un ritmo que impulsa el mensaje con fuerza y claridad.",
+        "en": "'Tiro con arco' is a rap track using the archery metaphor to talk about precision and focus. Artes Verbales delivers powerful rhymes and a rhythm that drives the message with strength and clarity."
+      },
+      "image": "/imagenes/musica/tiroconarco",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=ytxvn5bVhUo",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 119,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Artes Verbales",
+      "title": {
+        "es": "En Badalona...",
+        "en": "En Badalona..."
+      },
+      "description": {
+        "es": "Canción de rap que retrata la vida y las experiencias urbanas en Badalona. Con un ritmo pegajoso y letras cercanas, Artes Verbales muestra la realidad cotidiana con un estilo auténtico y directo.",
+        "en": "Rap song portraying urban life and experiences in Badalona. With a catchy rhythm and close lyrics, Artes Verbales shows everyday reality with an authentic and direct style."
+      },
+      "image": "/imagenes/musica/enbadalona",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=3sW9Q2xfBHE",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 120,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Zarman",
+      "title": {
+        "es": "Creo",
+        "en": "Creo"
+      },
+      "description": {
+        "es": "Canción de rap con un mensaje poderoso sobre la fe y la determinación personal. Zarman combina letras introspectivas con un ritmo intenso, reflejando su estilo único dentro del hip hop español.",
+        "en": "Rap song with a powerful message about faith and personal determination. Zarman combines introspective lyrics with an intense beat, reflecting his unique style in Spanish hip hop."
+      },
+      "image": "/imagenes/musica/creo",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=8vSEat0-fA4",
+      "spotify": "https://open.spotify.com/track/1R0eUpQbR3Xt7MUG9eZzBc",
+      "masterpiece": false
+    },
+    {
+      "id": 121,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Zarman",
+      "title": {
+        "es": "Yo soy Hip Hop (Prod Zarman)",
+        "en": "Yo soy Hip Hop (Prod Zarman)"
+      },
+      "description": {
+        "es": "Himno del rap español producido por el mismo Zarman, que reafirma el amor y la dedicación por el hip hop. Letras directas y contundentes acompañadas de un beat clásico y efectivo.",
+        "en": "Spanish rap anthem produced by Zarman himself, reaffirming love and dedication to hip hop. Direct and powerful lyrics accompanied by a classic and effective beat."
+      },
+      "image": "/imagenes/musica/hiphop",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=jYlYrVogqVo",
+      "spotify": "https://open.spotify.com/track/6SR7KfrLVLCJgTlUlYuN1c",
+      "masterpiece": false
+    },
+    {
+      "id": 122,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Inspira Flowklorikos",
+      "title": {
+        "es": "Donde Duele",
+        "en": "Donde Duele"
+      },
+      "description": {
+        "es": "Canción que mezcla rap con elementos folclóricos, expresando las heridas emocionales y la resiliencia. Inspira Flowklorikos ofrece una producción original y letras cargadas de sentimiento.",
+        "en": "Song mixing rap with folk elements, expressing emotional wounds and resilience. Inspira Flowklorikos offers original production and deeply emotional lyrics."
+      },
+      "image": "/imagenes/musica/dondeduele",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=gxh2JsN_cwA",
+      "spotify": "https://open.spotify.com/track/3fSCcAGTrcIuXnTPGpm7Zo",
+      "masterpiece": false
+    },
+    {
+      "id": 123,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Toteking & Easy-S",
+      "title": {
+        "es": "Brindis (Prod. Stash House)",
+        "en": "Brindis (Prod. Stash House)"
+      },
+      "description": {
+        "es": "Colaboración de dos grandes del rap español con producción de Stash House. 'Brindis' celebra la amistad, la lucha y el éxito con rimas potentes y un beat envolvente.",
+        "en": "Collaboration of two Spanish rap greats with production by Stash House. 'Brindis' celebrates friendship, struggle, and success with powerful rhymes and an immersive beat."
+      },
+      "image": "/imagenes/musica/brindis",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=2vDUCIMLYcg",
+      "spotify": "https://open.spotify.com/track/2HqNyy8S65jAlxNYOdQeoh",
+      "masterpiece": false
+    },
+    {
+      "id": 124,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Arma Blanca",
+      "title": {
+        "es": "Manual de Supervivencia",
+        "en": "Manual de Supervivencia"
+      },
+      "description": {
+        "es": "Tema de rap con un mensaje crudo y realista sobre la vida urbana y la lucha diaria. Arma Blanca entrega rimas afiladas que reflejan la dureza y la esperanza en ambientes difíciles.",
+        "en": "Rap track with a raw, realistic message about urban life and daily struggle. Arma Blanca delivers sharp rhymes reflecting hardship and hope in tough environments."
+      },
+      "image": "/imagenes/musica/manualdesupervivencia",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=dY3C-wfT1cY",
+      "spotify": "https://open.spotify.com/track/5TQ5p5T6W9DQ6DXQEdPIFM",
+      "masterpiece": false
+    },
+    {
+      "id": 125,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Jefe De La M Ft. Titó",
+      "title": {
+        "es": "Recuerdos",
+        "en": "Recuerdos"
+      },
+      "description": {
+        "es": "Canción emotiva que rememora experiencias pasadas y las huellas que dejan en el presente. Jefe De La M y Titó combinan sus estilos para crear un tema nostálgico y profundo.",
+        "en": "Emotional song that recalls past experiences and their marks on the present. Jefe De La M and Titó combine their styles to create a nostalgic and deep track."
+      },
+      "image": "/imagenes/musica/recuerdos",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=RqbJu4qbiZ8",
+      "spotify": "https://open.spotify.com/track/0v9qXnwl0kN1vGgMeYu7l1",
+      "masterpiece": false
+    },
+    {
+      "id": 126,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Kultama",
+      "title": {
+        "es": "Nacional e Importación",
+        "en": "Nacional e Importación"
+      },
+      "description": {
+        "es": "Canción de rap que reflexiona sobre las diferencias culturales y la identidad. Kultama utiliza su estilo fresco para tratar temas de pertenencia y diversidad con un ritmo pegadizo.",
+        "en": "Rap song reflecting on cultural differences and identity. Kultama uses his fresh style to address belonging and diversity with a catchy rhythm."
+      },
+      "image": "/imagenes/musica/nacional",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=y_3WIVvX2vM",
+      "spotify": "https://open.spotify.com/track/4EjQiKELxnvwITCQmrTMyF",
+      "masterpiece": false
+    },
+    {
+      "id": 127,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Chinatown",
+      "title": {
+        "es": "Mis Armas",
+        "en": "Mis Armas"
+      },
+      "description": {
+        "es": "Tema de rap con un enfoque combativo, donde Chinatown expone sus armas como metáforas de sus herramientas para enfrentar la vida. Letras potentes y ritmo dinámico definen esta canción.",
+        "en": "Rap track with a combative focus, where Chinatown exposes his weapons as metaphors for his tools to face life. Powerful lyrics and dynamic rhythm define this song."
+      },
+      "image": "/imagenes/musica/misarmas",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=06AnCeCZk1I",
+      "spotify": "https://open.spotify.com/track/3yGUiqNGTu6rQ8QlGqTEOZ",
+      "masterpiece": false
+    },
+    {
+      "id": 128,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Chinatown",
+      "title": {
+        "es": "Serpientes",
+        "en": "Serpientes"
+      },
+      "description": {
+        "es": "Canción de rap que utiliza la metáfora de las serpientes para hablar de traiciones y peligros en el entorno urbano. Chinatown ofrece letras agudas y un ritmo intenso que captura la atención.",
+        "en": "Rap song using the metaphor of snakes to talk about betrayals and dangers in the urban environment. Chinatown offers sharp lyrics and an intense rhythm that captures attention."
+      },
+      "image": "/imagenes/musica/serpientes",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=h5LgZwM9NcE",
+      "spotify": "https://open.spotify.com/track/7KjYy7Wd0RWhxXld3XAZ5X",
+      "masterpiece": false
+    },
+    {
+      "id": 129,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Furax Barbarossa",
+      "title": {
+        "es": "Qui m'demande? (Subtitulado en español)",
+        "en": "Qui m'demande? (Spanish Subtitled)"
+      },
+      "description": {
+        "es": "Canción en francés con un mensaje potente y reflexivo. Furax Barbarossa presenta letras densas y un ritmo que combina agresividad con ritmo, acompañado de subtítulos para el público hispanohablante.",
+        "en": "French song with a powerful and reflective message. Furax Barbarossa presents dense lyrics and a rhythm combining aggression and flow, accompanied by subtitles for Spanish-speaking audiences."
+      },
+      "image": "/imagenes/musica/quimdemande",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=8XwdxE8CRzw",
+      "spotify": "https://open.spotify.com/track/5RxLrCSXJYZsd7L1ZyQcyV",
+      "masterpiece": false
+    },
+    {
+      "id": 130,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Casey",
+      "title": {
+        "es": "Créature Ratée",
+        "en": "Créature Ratée"
+      },
+      "description": {
+        "es": "Canción intensa y cruda de Casey que mezcla poesía urbana con ritmos profundos. Sus letras reflejan la complejidad del ser y las luchas internas. Un clip oficial que complementa la atmósfera densa de la canción.",
+        "en": "Intense and raw song by Casey blending urban poetry with deep beats. The lyrics reflect the complexity of being and inner struggles. An official video that complements the song's dense atmosphere."
+      },
+      "image": "/imagenes/musica/creature",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=BY5hFYGq9B8",
+      "spotify": "https://open.spotify.com/track/5NsBDWYf4clzLF1V58xyFc",
+      "masterpiece": false
+    },
+    {
+      "id": 131,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Casey",
+      "title": {
+        "es": "Apprends à t'taire",
+        "en": "Apprends à t'taire"
+      },
+      "description": {
+        "es": "Pieza poderosa de Casey con letras directas y un ritmo hipnótico. El tema aborda el silencio como forma de resistencia y reflexión, acompañado de un videoclip oficial que enfatiza su mensaje.",
+        "en": "Powerful track by Casey with direct lyrics and hypnotic rhythm. The song addresses silence as a form of resistance and reflection, accompanied by an official video emphasizing its message."
+      },
+      "image": "/imagenes/musica/apprends",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=VLzdRZtG6qc",
+      "spotify": "https://open.spotify.com/track/4bl6ZHxk6Mz5Wm7bZCmrwE",
+      "masterpiece": false
+    },
+    {
+      "id": 132,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Casey",
+      "title": {
+        "es": "Rêves illimités",
+        "en": "Rêves illimités"
+      },
+      "description": {
+        "es": "Canción que invita a soñar sin límites, con una producción envolvente y la voz característica de Casey. Las letras motivan a superar obstáculos y creer en uno mismo.",
+        "en": "Song that invites dreaming without limits, with immersive production and Casey's distinctive voice. The lyrics motivate overcoming obstacles and self-belief."
+      },
+      "image": "/imagenes/musica/reves",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=6MrHzzAj9jw",
+      "spotify": "https://open.spotify.com/track/6dWyM9q1D9jxxVnlrfvWOT",
+      "masterpiece": false
+    },
+    {
+      "id": 133,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "IAM",
+      "title": {
+        "es": "Une autre dimension",
+        "en": "Une autre dimension"
+      },
+      "description": {
+        "es": "Tema clásico del grupo francés IAM que explora otras dimensiones del rap con letras profundas y producción impecable. Un videoclip oficial que acompaña esta obra imprescindible del hip hop francés.",
+        "en": "Classic track from French group IAM exploring other dimensions of rap with deep lyrics and flawless production. An official video accompanies this essential French hip hop work."
+      },
+      "image": "/imagenes/musica/dimension",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=zyd7dyA5hfE",
+      "spotify": "https://open.spotify.com/track/2XRykU8IWh66iJ0O4D62XT",
+      "masterpiece": false
+    },
+    {
+      "id": 134,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Keny Arkana",
+      "title": {
+        "es": "5ème soleil (sub español)",
+        "en": "5ème soleil (Spanish Sub)"
+      },
+      "description": {
+        "es": "Canción potente de Keny Arkana con mensajes de protesta social y esperanza. La versión con subtítulos en español permite comprender mejor sus letras conscientes y comprometidas.",
+        "en": "Powerful song by Keny Arkana with messages of social protest and hope. The Spanish-subtitled version helps better understand her conscious and committed lyrics."
+      },
+      "image": "/imagenes/musica/5emesoleil",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=6p-5W37ZqgQ",
+      "spotify": "https://open.spotify.com/track/4WnVgLZ6XRTgPMVfK0dzxt",
+      "masterpiece": false
+    },
+    {
+      "id": 135,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Mafia K'1 Fry",
+      "title": {
+        "es": "Pour ceux",
+        "en": "Pour ceux"
+      },
+      "description": {
+        "es": "Tema emblemático del colectivo Mafia K'1 Fry que habla de la realidad de las calles con sinceridad y fuerza. El videoclip oficial intensifica la experiencia visual y auditiva de la canción.",
+        "en": "Emblematic track from Mafia K'1 Fry collective talking about street reality with honesty and strength. The official video intensifies the song's visual and auditory experience."
+      },
+      "image": "/imagenes/musica/pourceux",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=9xLUdEjZ9YU",
+      "spotify": "https://open.spotify.com/track/3F1cQIQvLf2m9CmcxAyxfN",
+      "masterpiece": false
+    },
+    {
+      "id": 136,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Keny Arkana",
+      "title": {
+        "es": "La rage (subtítulos en español)",
+        "en": "La rage (Spanish Subtitles)"
+      },
+      "description": {
+        "es": "Canción con un ritmo agresivo y letras combativas que reflejan la rabia social de Keny Arkana. La versión con subtítulos en español facilita la comprensión de su mensaje revolucionario.",
+        "en": "Song with aggressive rhythm and combative lyrics reflecting Keny Arkana's social anger. The Spanish-subtitled version makes her revolutionary message easier to understand."
+      },
+      "image": "/imagenes/musica/larage",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=8RcX5iXYH3k",
+      "spotify": "https://open.spotify.com/track/0f8FyhrGOL83PgDbWuYvIT",
+      "masterpiece": false
+    },
+    {
+      "id": 137,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Mafia K'1 Fry",
+      "title": {
+        "es": "Guerre (subtítulos en español)",
+        "en": "Guerre (Spanish Subtitles)"
+      },
+      "description": {
+        "es": "Tema intenso que aborda la guerra y sus consecuencias desde la perspectiva del colectivo Mafia K'1 Fry. La versión con subtítulos en español facilita la comprensión del mensaje.",
+        "en": "Intense track addressing war and its consequences from Mafia K'1 Fry collective's perspective. The Spanish-subtitled version facilitates message understanding."
+      },
+      "image": "/imagenes/musica/guerre",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=ysC-J0HZTUc",
+      "spotify": "https://open.spotify.com/track/0AyBjxibmpC2xa0wjsiJ4Y",
+      "masterpiece": false
+    },
+    {
+      "id": 138,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Control Machete",
+      "title": {
+        "es": "¿Comprendes, Mendes?",
+        "en": "¿Comprendes, Mendes?"
+      },
+      "description": {
+        "es": "Clásico del hip hop mexicano que combina letras inteligentes con un ritmo inconfundible. Control Machete ofrece un mensaje directo y contundente, reflejando la realidad urbana.",
+        "en": "Classic Mexican hip hop track combining smart lyrics with an unmistakable rhythm. Control Machete delivers a direct and powerful message reflecting urban reality."
+      },
+      "image": "/imagenes/musica/comprendes",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=ivO_Fv2uA_E",
+      "spotify": "https://open.spotify.com/track/2dDdQAzqlz0QlHUpbNfO2k",
+      "masterpiece": false
+    },
+    {
+      "id": 139,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tres Coronas",
+      "title": {
+        "es": "Falsedades",
+        "en": "Falsedades"
+      },
+      "description": {
+        "es": "Tema que aborda la hipocresía y las mentiras en el entorno social, con la lírica característica de Tres Coronas. El video oficial aporta fuerza visual a la denuncia del tema.",
+        "en": "Track addressing hypocrisy and lies in social surroundings, with Tres Coronas' characteristic lyricism. The official video adds visual strength to the song's denunciation."
+      },
+      "image": "/imagenes/musica/falsedades",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=VOUwUBOVRmE",
+      "spotify": "https://open.spotify.com/track/3pW6Sg2FXHxqOjCl1uQZgX",
+      "masterpiece": false
+    },
+    {
+      "id": 140,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tres Coronas",
+      "title": {
+        "es": "Envidias",
+        "en": "Envidias"
+      },
+      "description": {
+        "es": "Canción potente de Tres Coronas que refleja las tensiones y rivalidades en el entorno urbano. Letras afiladas y ritmo contundente, acompañado de un video oficial que intensifica su mensaje. Una pieza clave en el rap latino.",
+        "en": "Powerful song by Tres Coronas reflecting tensions and rivalries in the urban environment. Sharp lyrics and strong rhythm, accompanied by an official video that intensifies its message. A key piece in Latin rap."
+      },
+      "image": "/imagenes/musica/envidias",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=_lVNjW0q0a4",
+      "spotify": "https://open.spotify.com/track/7y7fuEJkk4b2PIL05oYZYQ",
+      "masterpiece": false
+    },
+    {
+      "id": 141,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "LOS LOCOS",
+      "title": {
+        "es": "MITSURUGGY",
+        "en": "MITSURUGGY"
+      },
+      "description": {
+        "es": "Track energético de LOS LOCOS que combina ritmos urbanos con letras incisivas. Su estilo dinámico se refleja en un videoclip visualmente impactante y una producción pulida.",
+        "en": "Energetic track by LOS LOCOS combining urban rhythms with incisive lyrics. Their dynamic style is reflected in a visually impactful video and polished production."
+      },
+      "image": "/imagenes/musica/mitsruggy",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=rAlfa7Kg0P8",
+      "spotify": "https://open.spotify.com/track/4s1brygo1wDk6AzRZi1T6c",
+      "masterpiece": false
+    },
+    {
+      "id": 142,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tremendo",
+      "title": {
+        "es": "Efectos Especiales",
+        "en": "Efectos Especiales"
+      },
+      "description": {
+        "es": "Canción que combina lírica consciente con beats envolventes, destacando el talento de Tremendo. El tema presenta una narrativa fuerte y una producción que resalta cada detalle.",
+        "en": "Song combining conscious lyrics with immersive beats, highlighting Tremendo's talent. The track features a strong narrative and production that emphasizes every detail."
+      },
+      "image": "/imagenes/musica/efectos",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=c-Hem0sj2WU",
+      "spotify": "https://open.spotify.com/track/3p5bZ7jEpA8KgIEz4X7blQ",
+      "masterpiece": false
+    },
+    {
+      "id": 143,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Chirie Vegas",
+      "title": {
+        "es": "Disciplina",
+        "en": "Disciplina"
+      },
+      "description": {
+        "es": "Tema que explora la dedicación y esfuerzo en el camino del artista. Chirie Vegas presenta letras honestas y un ritmo que impulsa la motivación, acompañado de un video en alta calidad.",
+        "en": "Track exploring dedication and effort in the artist's path. Chirie Vegas delivers honest lyrics and a motivating rhythm, accompanied by a high-quality video."
+      },
+      "image": "/imagenes/musica/disciplina",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=78qM3G0q5L4",
+      "spotify": "https://open.spotify.com/track/5Ic6GmYbRHfRk0xK59yCn6",
+      "masterpiece": false
+    },
+    {
+      "id": 144,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "360 Grados",
+      "title": {
+        "es": "Apache",
+        "en": "Apache"
+      },
+      "description": {
+        "es": "Clásico del rap español, 'Apache' de 360 Grados destaca por su flow auténtico y letras urbanas. Representa una época dorada del hip hop con un estilo inconfundible y ritmo envolvente.",
+        "en": "'Apache' by 360 Grados is a Spanish rap classic, featuring authentic flow and urban lyrics. It represents a golden era of hip hop with an unmistakable style and immersive rhythm."
+      },
+      "image": "/imagenes/musica/apache",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=IV0wSxU7-Dk",
+      "spotify": "https://open.spotify.com/track/6iP1Co3rO1GHLcty1OCWWx",
+      "masterpiece": false
+    },
+    {
+      "id": 145,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Apache",
+      "title": {
+        "es": "Rompiendo el Hielo",
+        "en": "Rompiendo el Hielo"
+      },
+      "description": {
+        "es": "Vídeo oficial de Apache que refleja la realidad social con un mensaje fuerte y claro. Letras profundas y ritmo contundente que conectan con la audiencia, respaldados por una producción visual impecable.",
+        "en": "Official video by Apache reflecting social reality with a strong and clear message. Deep lyrics and a powerful rhythm connect with the audience, supported by impeccable visual production."
+      },
+      "image": "/imagenes/musica/rompiendo",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=YNQh6hJIK6E",
+      "spotify": "https://open.spotify.com/track/4phwH1A0qAxG6OaBp8Gi3R",
+      "masterpiece": false
+    },
+    {
+      "id": 146,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Canserbero",
+      "title": {
+        "es": "Indigo [Can + Zoo Indigos]",
+        "en": "Indigo [Can + Zoo Indigos]"
+      },
+      "description": {
+        "es": "Canción emotiva de Canserbero junto a Zoo Indigos que mezcla rap con mensajes profundos sobre la vida y la sociedad. Letras cargadas de sentimiento y ritmo envolvente que capturan al oyente.",
+        "en": "Emotional song by Canserbero with Zoo Indigos mixing rap with deep messages about life and society. Lyrics full of feeling and an immersive rhythm that captivate the listener."
+      },
+      "image": "/imagenes/musica/indigo",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=40brnx7wz_I",
+      "spotify": "https://open.spotify.com/track/2A6ZYxEB1hSjoU5urDgkCV",
+      "masterpiece": false
+    },
+    {
+      "id": 147,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Mamá Ladilla",
+      "title": {
+        "es": "En el Vergel del Edén",
+        "en": "En el Vergel del Edén"
+      },
+      "description": {
+        "es": "Canción de Mamá Ladilla que mezcla punk y humor ácido para crear una crítica social mordaz. El ritmo rápido y las letras irónicas reflejan un estilo irreverente y original.",
+        "en": "Song by Mamá Ladilla mixing punk and acidic humor to create a biting social critique. The fast rhythm and ironic lyrics reflect an irreverent and original style."
+      },
+      "image": "/imagenes/musica/vergel",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=AxYbhR6kC_Y",
+      "spotify": "https://open.spotify.com/track/1xXvixqPp0DtROV1ZzO1Pi",
+      "masterpiece": false
+    },
+    {
+      "id": 148,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "MESWY & NUTSO",
+      "title": {
+        "es": "Rabiosamente",
+        "en": "Rabiosamente"
+      },
+      "description": {
+        "es": "Tema explosivo de MESWY & NUTSO producido por Jameson Killah, con letras contundentes y un ritmo que no da tregua. Representa el rap callejero con energía pura y mensajes intensos.",
+        "en": "Explosive track by MESWY & NUTSO produced by Jameson Killah, featuring powerful lyrics and relentless rhythm. Represents street rap with pure energy and intense messages."
+      },
+      "image": "/imagenes/musica/rabiosamente",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=9zZpHGxUMe0",
+      "spotify": "https://open.spotify.com/track/6T1BKlxlKBY1ZnzEUE2QpJ",
+      "masterpiece": false
+    },
+    {
+      "id": 149,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "PIEL ROJA 🇨🇴",
+      "title": {
+        "es": "One Shot 4 Elementos #14",
+        "en": "One Shot 4 Elementos #14"
+      },
+      "description": {
+        "es": "Participación de PIEL ROJA en la batalla 'One Shot 4 Elementos #14', demostrando habilidad y estilo en el freestyle. Ritmo y letras que reflejan la esencia del rap competitivo y callejero.",
+        "en": "PIEL ROJA's participation in the 'One Shot 4 Elementos #14' battle, showcasing skill and style in freestyle. Rhythm and lyrics that reflect the essence of competitive and street rap."
+      },
+      "image": "/imagenes/musica/oneshot",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=VYQW3G0rh2w",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 150,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Sicario",
+      "title": {
+        "es": "Escribe Tu Nombre",
+        "en": "Escribe Tu Nombre"
+      },
+      "description": {
+        "es": "Canción potente de Sicario que mezcla letras directas con un ritmo envolvente. Explora temas de identidad y desafío con un enfoque lírico profundo. Video oficial con imágenes urbanas y energía cruda.",
+        "en": "Powerful song by Sicario mixing direct lyrics with an immersive rhythm. Explores themes of identity and challenge with a deep lyrical focus. Official video with urban imagery and raw energy."
+      },
+      "image": "/imagenes/musica/escribetunombre",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=x-QDDAGfgMc",
+      "spotify": "https://open.spotify.com/track/5jC5nixCq8Z9sPU1WY5h33",
+      "masterpiece": false
+    },
+    {
+      "id": 151,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Arianna Puello",
+      "title": {
+        "es": "La Ley de Murphy",
+        "en": "La Ley de Murphy"
+      },
+      "description": {
+        "es": "Videoclip oficial de Arianna Puello que presenta un rap con fuerza y actitud. Letras sobre las dificultades cotidianas y cómo enfrentarlas con valentía. Producción audiovisual de alta calidad que potencia el mensaje.",
+        "en": "Official video by Arianna Puello featuring rap with strength and attitude. Lyrics about daily struggles and how to face them bravely. High-quality audiovisual production that enhances the message."
+      },
+      "image": "/imagenes/musica/laleydemurphy",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=kG7js47vAQY",
+      "spotify": "https://open.spotify.com/track/0HKmCT6MTBtwSYd72C26L1",
+      "masterpiece": false
+    },
+    {
+      "id": 152,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tiro de Gracia",
+      "title": {
+        "es": "Sueños - Retorno de Misericordia",
+        "en": "Sueños - Retorno de Misericordia"
+      },
+      "description": {
+        "es": "Canción emblemática de Tiro de Gracia que combina rap consciente con beats profundos. El tema reflexiona sobre la esperanza y la lucha personal, acompañado por una producción sonora cuidadosa.",
+        "en": "Iconic song by Tiro de Gracia combining conscious rap with deep beats. The track reflects on hope and personal struggle, supported by careful sound production."
+      },
+      "image": "/imagenes/musica/suenos",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=3Y1NxF0q6RY",
+      "spotify": "https://open.spotify.com/track/6fH60p5uRgP8qDn0dzH4Ua",
+      "masterpiece": false
+    },
+    {
+      "id": 153,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "James Shinra",
+      "title": {
+        "es": "Nebula",
+        "en": "Nebula"
+      },
+      "description": {
+        "es": "Track de James Shinra que fusiona electrónica y sonidos espaciales con una atmósfera envolvente. 'Nebula' invita a un viaje sonoro a través de texturas y ritmos futuristas.",
+        "en": "Track by James Shinra blending electronic and spacey sounds with an immersive atmosphere. 'Nebula' invites a sonic journey through textures and futuristic rhythms."
+      },
+      "image": "/imagenes/musica/nebula",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=n2O8hXDJpzY",
+      "spotify": "https://open.spotify.com/track/0Q1EzyiWkD8V49iwNe0Lxz",
+      "masterpiece": false
+    },
+    {
+      "id": 154,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "KRS-One & Buckshot",
+      "title": {
+        "es": "Robot",
+        "en": "Robot"
+      },
+      "description": {
+        "es": "Video oficial de KRS-One y Buckshot, una colaboración que fusiona estilos clásicos del rap con un mensaje sobre la humanidad y la tecnología. Letras contundentes y un beat sólido que acompañan el concepto.",
+        "en": "Official video by KRS-One and Buckshot, a collaboration blending classic rap styles with a message about humanity and technology. Powerful lyrics and a solid beat supporting the concept."
+      },
+      "image": "/imagenes/musica/robot",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=QejCqg-AtDk",
+      "spotify": "https://open.spotify.com/track/7dNKWL2Vv3DnW7E33pl3Wy",
+      "masterpiece": false
+    },
+    {
+      "id": 155,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "KRS-One feat Marley Marl",
+      "title": {
+        "es": "Hip Hop Lives",
+        "en": "Hip Hop Lives"
+      },
+      "description": {
+        "es": "Vídeo subtitulado en español de KRS-One junto a Marley Marl que celebra la esencia del hip hop. Rimas clásicas y un homenaje a la cultura que mantiene viva la música urbana.",
+        "en": "Spanish-subtitled video of KRS-One with Marley Marl celebrating the essence of hip hop. Classic rhymes and a tribute to the culture that keeps urban music alive."
+      },
+      "image": "/imagenes/musica/hiphoplives",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=6NrfklJ3n2w",
+      "spotify": "https://open.spotify.com/track/1CJUhG8e9u2ZY7eXX20XG8",
+      "masterpiece": false
+    },
+    {
+      "id": 156,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "JOSELE (ZNP)",
+      "title": {
+        "es": "Una Pistola",
+        "en": "Una Pistola"
+      },
+      "description": {
+        "es": "Tema de rock alternativo con toques intensos y lírica introspectiva. JOSELE (ZNP) ofrece una interpretación cargada de emociones y energía cruda que conecta con el oyente.",
+        "en": "Alternative rock track with intense touches and introspective lyrics. JOSELE (ZNP) delivers a performance full of emotions and raw energy that connects with the listener."
+      },
+      "image": "/imagenes/musica/unapistola",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=CVO0jhzZ6mc",
+      "spotify": "https://open.spotify.com/track/4Nmb89tHwfhp6Zp8tJU2qe",
+      "masterpiece": false
+    },
+    {
+      "id": 157,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Cloaka Company",
+      "title": {
+        "es": "Desde las sombras",
+        "en": "Desde las sombras"
+      },
+      "description": {
+        "es": "Álbum completo de Cloaka Company publicado en 2001, que destaca por su estilo crudo y letras comprometidas. Una obra que captura la esencia del rap underground con beats potentes y mensajes claros.",
+        "en": "Full album by Cloaka Company released in 2001, notable for its raw style and committed lyrics. A work capturing the essence of underground rap with powerful beats and clear messages."
+      },
+      "image": "/imagenes/musica/desde",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=5sTt8rjLgUA&list=PL67D1376A72A2F5A1",
+      "spotify": "https://open.spotify.com/album/3uMPJp3vTb6ixEZHsd2qyV",
+      "masterpiece": false
+    },
+    {
+      "id": 158,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Hijos de las Hojas",
+      "title": {
+        "es": "Caerán",
+        "en": "Caerán"
+      },
+      "description": {
+        "es": "Videoclip oficial de Hijos de las Hojas que muestra un punk directo y enérgico. Letras combativas y un ritmo acelerado que refleja la esencia rebelde del género y un mensaje contundente.",
+        "en": "Official video by Hijos de las Hojas showcasing direct and energetic punk. Combative lyrics and fast rhythm reflecting the rebellious essence of the genre and a strong message."
+      },
+      "image": "/imagenes/musica/caeran",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=1-Zqn7V4P6w",
+      "spotify": "https://open.spotify.com/track/5gClDqGhjG2ih2qQp1n3Gq",
+      "masterpiece": false
+    },
+    {
+      "id": 159,
+      "category": "music",
+      "subcategory": "reggae",
+      "artist": "Snoop Lion Ft. Mavado & Pocaan",
+      "title": {
+        "es": "Lighters Up",
+        "en": "Lighters Up"
+      },
+      "description": {
+        "es": "Canción de reggae con Snoop Lion, Mavado y Pocaan que mezcla ritmos caribeños con letras sobre la resistencia y la unidad. Producción vibrante y un video subtitulado en español que potencia su mensaje.",
+        "en": "Reggae song by Snoop Lion, Mavado, and Pocaan mixing Caribbean rhythms with lyrics about resistance and unity. Vibrant production and a Spanish-subtitled video that enhances its message."
+      },
+      "image": "/imagenes/musica/lightersup",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=CKe5ZjH39xE",
+      "spotify": "https://open.spotify.com/track/0Z1tRzvRhG4cP4DJ3kx9J5",
+      "masterpiece": false
+    },
+    {
+      "id": 160,
+      "category": "music",
+      "subcategory": "reggae",
+      "artist": "Snoop Lion ft. Mavado & Popcaan",
+      "title": {
+        "es": "Lighters Up",
+        "en": "Lighters Up"
+      },
+      "description": {
+        "es": "Canción de reggae que fusiona el estilo inconfundible de Snoop Lion con las voces de Mavado y Popcaan. Un tema vibrante que celebra la resistencia y la unidad en la cultura caribeña. El ritmo contagioso y el mensaje social hacen de este track un clásico moderno.",
+        "en": "Reggae song blending Snoop Lion's unmistakable style with vocals from Mavado and Popcaan. A vibrant track celebrating resistance and unity in Caribbean culture. Its catchy rhythm and social message make it a modern classic."
+      },
+      "image": "/imagenes/musica/lightersup",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=CKe5ZjH39xE",
+      "spotify": "https://open.spotify.com/track/0Z1tRzvRhG4cP4DJ3kx9J5",
+      "masterpiece": false
+    },
+    {
+      "id": 161,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tha Shiznit",
+      "title": {
+        "es": "SnoopDoggTV",
+        "en": "SnoopDoggTV"
+      },
+      "description": {
+        "es": "Video oficial de Tha Shiznit para el tema 'SnoopDoggTV', que combina el rap clásico con una producción audiovisual potente. Letras directas y una energía enérgica que reflejan el estilo West Coast. Un homenaje a la cultura hip hop.",
+        "en": "'SnoopDoggTV' official video by Tha Shiznit, blending classic rap with strong audiovisual production. Direct lyrics and energetic vibe reflecting West Coast style. A tribute to hip hop culture."
+      },
+      "image": "/imagenes/musica/snoopdoggtv",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=7nLjO_pLuMo",
+      "spotify": "https://open.spotify.com/track/0P2e5Zj6zH8tQeOgLFq7Hv",
+      "masterpiece": false
+    },
+    {
+      "id": 162,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Noiseferatu",
+      "title": {
+        "es": "Satín",
+        "en": "Satín"
+      },
+      "description": {
+        "es": "Tema electrónico oscuro y atmosférico de Noiseferatu, caracterizado por texturas densas y ritmos profundos. 'Satín' crea una experiencia sonora envolvente que mezcla sensibilidad industrial con matices melódicos.",
+        "en": "'Satín' is a dark, atmospheric electronic track by Noiseferatu, featuring dense textures and deep rhythms. It creates an immersive sonic experience blending industrial sensitivity with melodic nuances."
+      },
+      "image": "/imagenes/musica/satin",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=rv9LIXG_UEQ",
+      "spotify": "https://open.spotify.com/track/2IY6lK8u3vY5KNrFmpKpef",
+      "masterpiece": false
+    },
+    {
+      "id": 163,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Funkferatu",
+      "title": {
+        "es": "3. Entropía",
+        "en": "3. Entropy"
+      },
+      "description": {
+        "es": "'Entropía' es un tema electrónico experimental de Funkferatu que juega con estructuras rítmicas complejas y sonidos envolventes. Una exploración sonora que desafía las convenciones y crea atmósferas futuristas.",
+        "en": "'Entropy' is an experimental electronic track by Funkferatu playing with complex rhythmic structures and immersive sounds. A sonic exploration challenging conventions and creating futuristic atmospheres."
+      },
+      "image": "/imagenes/musica/entropia",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=bTKRWXsntT0",
+      "spotify": "https://open.spotify.com/track/5KIfdWTF3rMxGj3goQ7LhX",
+      "masterpiece": false
+    },
+    {
+      "id": 164,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Funkferatu",
+      "title": {
+        "es": "5. No Sleep",
+        "en": "5. No Sleep"
+      },
+      "description": {
+        "es": "Pista electrónica intensa y energética de Funkferatu que combina beats dinámicos con texturas sintéticas. 'No Sleep' es una invitación a la vigilia sonora, perfecta para ambientes nocturnos y vibrantes.",
+        "en": "'No Sleep' is an intense and energetic electronic track by Funkferatu, combining dynamic beats with synthetic textures. It invites a sonic wakefulness, perfect for vibrant nighttime settings."
+      },
+      "image": "/imagenes/musica/nosleep",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=3Lmq3-AYYZ0",
+      "spotify": "https://open.spotify.com/track/3NxHZytw38jea9dt5VAX6Z",
+      "masterpiece": false
+    },
+    {
+      "id": 165,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "Mueveloreina",
+      "title": {
+        "es": "Vivas",
+        "en": "Vivas"
+      },
+      "description": {
+        "es": "Video oficial de Mueveloreina para 'Vivas', un tema pop electrónico con ritmos pegajosos y letras que empoderan. La producción visual destaca por su estética futurista y colorida, reforzando el mensaje de fuerza femenina.",
+        "en": "'Vivas' official video by Mueveloreina, an electronic pop track with catchy rhythms and empowering lyrics. The visual production stands out for its futuristic and colorful aesthetics, reinforcing the message of female strength."
+      },
+      "image": "/imagenes/musica/vivas",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=knB8QSRhsik",
+      "spotify": "https://open.spotify.com/track/2l9J3jVjTJXJfAqcz0UHE1",
+      "masterpiece": false
+    },
+    {
+      "id": 166,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "Mueveloreina",
+      "title": {
+        "es": "Universos",
+        "en": "Universos"
+      },
+      "description": {
+        "es": "Video oficial de 'Universos' por Mueveloreina, que fusiona pop y electrónica con un estilo vibrante y letras introspectivas. El video resalta por su puesta en escena visualmente impactante y su energía contagiosa.",
+        "en": "'Universos' official video by Mueveloreina, blending pop and electronic styles with vibrant flair and introspective lyrics. The video is notable for its visually striking staging and contagious energy."
+      },
+      "image": "/imagenes/musica/universos",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=V1NTrwrK3uI",
+      "spotify": "https://open.spotify.com/track/0c2y11PnItRQgyEjW0Q2It",
+      "masterpiece": false
+    },
+    {
+      "id": 167,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "El Coleta con Mueveloreina",
+      "title": {
+        "es": "Camaradas Cañeros",
+        "en": "Camaradas Cañeros"
+      },
+      "description": {
+        "es": "Colaboración entre El Coleta y Mueveloreina que mezcla pop con sonidos electrónicos y elementos urbanos. 'Camaradas Cañeros' destaca por su ritmo bailable y letras que celebran la amistad y la fiesta.",
+        "en": "Collaboration between El Coleta and Mueveloreina mixing pop with electronic sounds and urban elements. 'Camaradas Cañeros' stands out for its danceable rhythm and lyrics celebrating friendship and partying."
+      },
+      "image": "/imagenes/musica/camaradas",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=G7HT-MAzHeo",
+      "spotify": "https://open.spotify.com/track/4U3VthZldSHv4hHZjfEVvP",
+      "masterpiece": false
+    },
+    {
+      "id": 168,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "Mueveloreina",
+      "title": {
+        "es": "Défense",
+        "en": "Défense"
+      },
+      "description": {
+        "es": "Video oficial de 'Défense' por Mueveloreina, una pieza de pop electrónico con un ritmo hipnótico y letras sugestivas. La producción visual utiliza efectos psicodélicos que potencian la atmósfera del tema.",
+        "en": "'Défense' official video by Mueveloreina, an electronic pop piece with hypnotic rhythm and suggestive lyrics. The visual production uses psychedelic effects that enhance the song's atmosphere."
+      },
+      "image": "/imagenes/musica/defense",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=nt7y9X1H1Ww",
+      "spotify": "https://open.spotify.com/track/0MwJlKRSxVuNMavIkATN2Z",
+      "masterpiece": false
+    },
+    {
+      "id": 169,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "MIDAS ALONSO",
+      "title": {
+        "es": "Brixton",
+        "en": "Brixton"
+      },
+      "description": {
+        "es": "Videoclip oficial de 'Brixton' por MIDAS ALONSO, un tema pop con influencias urbanas que combina melodías pegajosas y una producción visual estilizada. La canción destaca por su energía juvenil y letra introspectiva.",
+        "en": "'Brixton' official video by MIDAS ALONSO is a pop track with urban influences combining catchy melodies and stylish visual production. The song stands out for its youthful energy and introspective lyrics."
+      },
+      "image": "/imagenes/musica/brixton",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Yw0Bz5qB7k0",
+      "spotify": "https://open.spotify.com/track/1Lb7uTPxm84UfO6zFpFcJs",
+      "masterpiece": false
+    },
+    {
+      "id": 170,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Jack Russell, Foyone, Akapellah, Big Soto, Trainer",
+      "title": {
+        "es": "Colaboración",
+        "en": "Collaboration"
+      },
+      "description": {
+        "es": "Tema colaborativo que reúne a destacados raperos Jack Russell, Foyone, Akapellah, Big Soto y Trainer. La canción ofrece letras potentes y flows variados que reflejan la diversidad del rap en español.",
+        "en": "Collaborative track featuring prominent rappers Jack Russell, Foyone, Akapellah, Big Soto, and Trainer. The song delivers powerful lyrics and varied flows showcasing the diversity of Spanish rap."
+      },
+      "image": "/imagenes/musica/colaboracion",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=abcd1234xyz",
+      "spotify": "https://open.spotify.com/track/6rtXZLtRd9e2uTqUoAh29B",
+      "masterpiece": false
+    },
+    {
+      "id": 171,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Akapellah",
+      "title": {
+        "es": "Gordo Funky",
+        "en": "Gordo Funky"
+      },
+      "description": {
+        "es": "'Gordo Funky' es un videoclip oficial de Akapellah que mezcla ritmos funky con letras incisivas y actitud callejera. Destaca por su energía contagiosa y producción audiovisual llamativa.",
+        "en": "'Gordo Funky' official video by Akapellah blends funky rhythms with incisive lyrics and street attitude. It stands out for its contagious energy and striking audiovisual production."
+      },
+      "image": "/imagenes/musica/gordofunky",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=V9m3WcLpzz4",
+      "spotify": "https://open.spotify.com/track/7lXJ2cW9HRD0zMw4ZslLwi",
+      "masterpiece": false
+    },
+    {
+      "id": 172,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Pielroja",
+      "title": {
+        "es": "Modo Avión",
+        "en": "Modo Avión"
+      },
+      "description": {
+        "es": "'Modo Avión' producido por UNLGD es un tema de Pielroja que mezcla letras introspectivas con beats modernos. El videoclip oficial refuerza la atmósfera de desconexión y autoexploración.",
+        "en": "'Modo Avión', produced by UNLGD, is a Pielroja track blending introspective lyrics with modern beats. The official video enhances the atmosphere of disconnection and self-exploration."
+      },
+      "image": "/imagenes/musica/modoavion",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=pFZ1cTynsh0",
+      "spotify": "https://open.spotify.com/track/5J1v1qjNw9XGpTXxqXQq8n",
+      "masterpiece": false
+    },
+    {
+      "id": 173,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Pielroja",
+      "title": {
+        "es": "Fugitivo",
+        "en": "Fugitivo"
+      },
+      "description": {
+        "es": "'Fugitivo' es un tema de Pielroja que explora la huida interior y la búsqueda de libertad. Su producción combina sonidos urbanos con letras profundas, consolidando su estilo único dentro del rap contemporáneo.",
+        "en": "'Fugitivo' is a track by Pielroja exploring inner escape and the search for freedom. Its production combines urban sounds with deep lyrics, cementing her unique style in contemporary rap."
+      },
+      "image": "/imagenes/musica/fugitivo",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=URiQokjv2x8",
+      "spotify": "https://open.spotify.com/track/2bfFo7dGlcYlCoD8RQtE3h",
+      "masterpiece": false
+    },
+    {
+      "id": 174,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Canserbero feat. Solo Soul, IceOd, Mcklopedia",
+      "title": {
+        "es": "El Mundito del Rap",
+        "en": "El Mundito del Rap"
+      },
+      "description": {
+        "es": "'El Mundito del Rap' reúne a Canserbero con Solo Soul, IceOd y Mcklopedia en una canción que rinde tributo al rap consciente. Letras que invitan a la reflexión sobre la realidad social y el poder de la palabra.",
+        "en": "'El Mundito del Rap' brings together Canserbero with Solo Soul, IceOd, and Mcklopedia in a song paying tribute to conscious rap. Lyrics invite reflection on social reality and the power of words."
+      },
+      "image": "/imagenes/musica/elmundito",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=hMJgpEC1rJo",
+      "spotify": "https://open.spotify.com/track/3wRLvPYELsj4Qqk3xyGeHo",
+      "masterpiece": false
+    },
+    {
+      "id": 175,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Nitro & Pepe Grillo 🇨🇱 🆚 Xinako & Sof",
+      "title": {
+        "es": "4 Elementos (Semis)",
+        "en": "4 Elements (Semis)"
+      },
+      "description": {
+        "es": "Batalla de freestyle semis entre Nitro & Pepe Grillo contra Xinako & Sof en la competición '4 Elementos'. Exhibición de habilidad lírica, ingenio y energía competitiva en el rap improvisado.",
+        "en": "Freestyle battle semifinals between Nitro & Pepe Grillo and Xinako & Sof in the '4 Elements' competition. Showcasing lyrical skill, wit, and competitive energy in improvised rap."
+      },
+      "image": "/imagenes/musica/4elementos",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=3GVU9CzQaWE",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 176,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "LXL16, Lobo Estepario, Mcklopedia",
+      "title": {
+        "es": "Linea Dieciséis Sin Límite",
+        "en": "Linea Dieciséis Sin Limite"
+      },
+      "description": {
+        "es": "Vídeo oficial de la batalla 'Linea Dieciséis Sin Límite' entre Lobo Estepario y Mcklopedia. Una confrontación de estilos y técnicas en el circuito underground de batallas de rap.",
+        "en": "Official video of the battle 'Linea Dieciséis Sin Límite' between Lobo Estepario and Mcklopedia. A confrontation of styles and techniques in the underground rap battle circuit."
+      },
+      "image": "/imagenes/musica/lineadieciséis",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=1cTlrM5WvHQ",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 177,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "L16XL, Muelas, Shotta",
+      "title": {
+        "es": "Callejón sin Salida",
+        "en": "Callejón sin Salida"
+      },
+      "description": {
+        "es": "Batalla oficial 'Callejón sin Salida' entre Muelas y Shotta en la liga L16XL. Rimas afiladas y fuerte presencia escénica en uno de los encuentros más intensos del circuito.",
+        "en": "'Callejón sin Salida' official battle between Muelas and Shotta in the L16XL league. Sharp rhymes and strong stage presence in one of the most intense battles of the circuit."
+      },
+      "image": "/imagenes/musica/callejón",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=7MV-cIf-cRY",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 178,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Zodiaco vs Phillipe",
+      "title": {
+        "es": "Rapero Ateo vs Rapero Cristiano",
+        "en": "Rapero Ateo vs Rapero Cristiano"
+      },
+      "description": {
+        "es": "Una batalla intensa de rap en la que se enfrentan dos estilos y creencias opuestas: el ateísmo y el cristianismo. Letras cargadas de crítica social y filosofía, demostrando la destreza lírica de ambos competidores. Esta batalla es un clásico del circuito underground hispano.",
+        "en": "An intense rap battle confronting two opposing beliefs: atheism and Christianity. Loaded with social critique and philosophy, showcasing the lyrical skill of both competitors. This battle is a classic in the Spanish underground scene."
+      },
+      "image": "/imagenes/musica/rapero.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=example1",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 179,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Sara Socas vs Kharma",
+      "title": {
+        "es": "Sara Socas vs Kharma - Batallote FEM - Final",
+        "en": "Sara Socas vs Kharma - FEM Battle - Final"
+      },
+      "description": {
+        "es": "El enfrentamiento final de la liga femenina de batallas de rap, con dos de las mejores MCs del momento. Sara Socas y Kharma entregan una batalla vibrante, con rimas contundentes y presencia escénica inigualable. Un momento histórico para la escena femenina.",
+        "en": "The final showdown of the female rap battle league, featuring two of the best MCs currently. Sara Socas and Kharma deliver a vibrant battle with powerful rhymes and unmatched stage presence. A historic moment for the female scene."
+      },
+      "image": "/imagenes/musica/sarasocas.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=example2",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
+    },
+    {
+      "id": 180,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "El Niño Snake",
+      "title": {
+        "es": "Punki Rap",
+        "en": "Punki Rap"
+      },
+      "description": {
+        "es": "Álbum que fusiona el punk y el rap en una explosión de energía y protesta. El Niño Snake combina la crudeza del punk con la lírica directa del rap, generando un sonido único dentro de la escena underground. Letras cargadas de rebeldía y crítica social.",
+        "en": "Album that fuses punk and rap in an explosion of energy and protest. El Niño Snake blends punk's rawness with rap's direct lyrics, creating a unique sound within the underground scene. Lyrics filled with rebellion and social critique."
+      },
+      "image": "/imagenes/musica/punki.jpg",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 181,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Sara Socas vs NG",
+      "title": {
+        "es": "Sara Socas vs NG | Formato FMS | Exhibición BDM Logroño 2019",
+        "en": "Sara Socas vs NG | FMS Format | Exhibition BDM Logroño 2019"
+      },
+      "description": {
+        "es": "Una exhibición memorable en el BDM Logroño 2019 donde Sara Socas y NG demostraron gran habilidad lírica y presencia escénica. La batalla en formato FMS destacó por su energía y respeto entre competidores, dejando claro el nivel del freestyle nacional.",
+        "en": "A memorable exhibition at BDM Logroño 2019 where Sara Socas and NG showcased great lyrical skill and stage presence. The FMS format battle stood out for its energy and mutual respect between competitors, highlighting the level of national freestyle."
+      },
+      "image": "/imagenes/musica/sarasocas.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Q_NxNVmvznk",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 182,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "NG vs Dragma",
+      "title": {
+        "es": "NG vs Dragma - (Batallón) - 16avos - Clasificatoria General Rap Nacional",
+        "en": "NG vs Dragma - (Batallón) - Round of 16 - National Rap General Qualifier"
+      },
+      "description": {
+        "es": "Batalla de 16avos en la fase clasificatoria nacional de rap en el evento Batallón, con NG y Dragma mostrando rimas agudas y mucha técnica. Esta pelea puso a prueba la creatividad y la capacidad de improvisación de ambos competidores.",
+        "en": "Round of 16 battle in the national rap qualifying phase at the Batallón event, featuring NG and Dragma showcasing sharp rhymes and strong technique. This fight tested both competitors' creativity and improvisation skills."
+      },
+      "image": "/imagenes/musica/ng.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 183,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "El Perillas vs HeySaki",
+      "title": {
+        "es": "(Risas) El Perillas vs HeySaki - 3er puesto // Revenge 2a Clas. Flowrap Alicante",
+        "en": "(Laughter) El Perillas vs HeySaki - 3rd Place // Revenge 2nd Qual. Flowrap Alicante"
+      },
+      "description": {
+        "es": "Batalla por el tercer puesto en la segunda clasificatoria de Flowrap Alicante. El Perillas y HeySaki se enfrentan con rimas cargadas de humor y agresividad controlada. Un encuentro lleno de risas, técnica y mucho carisma.",
+        "en": "Battle for third place in the second qualifier of Flowrap Alicante. El Perillas and HeySaki face off with rhymes full of humor and controlled aggressiveness. A match full of laughs, technique, and charisma."
+      },
+      "image": "/imagenes/musica/perillas.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 184,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Salcedo vs Souljah Jerome",
+      "title": {
+        "es": "Salcedo vs Souljah Jerome - (Batallón) - 8avos - General Rap Nacional Alicante",
+        "en": "Salcedo vs Souljah Jerome - (Batallón) - Round of 8 - National Rap General Alicante"
+      },
+      "description": {
+        "es": "Intensa batalla de octavos de final en el circuito nacional de rap Batallón. Salcedo y Souljah Jerome mostraron un duelo de estilos muy marcado, donde la destreza verbal y la estrategia fueron clave para dominar el escenario.",
+        "en": "Intense round of 8 battle in the national rap circuit Batallón. Salcedo and Souljah Jerome displayed a clash of distinct styles, where verbal skill and strategy were key to dominating the stage."
+      },
+      "image": "/imagenes/musica/salcedo.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 185,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Souljah Jerome vs Sola",
+      "title": {
+        "es": "Souljah Jerome vs Sola - (Batallón) - 4tos - General Rap Nacional Alicante",
+        "en": "Souljah Jerome vs Sola - (Batallón) - Quarterfinals - National Rap General Alicante"
+      },
+      "description": {
+        "es": "Cuartos de final en el torneo nacional de rap Batallón. Souljah Jerome y Sola entregan una batalla electrizante con letras potentes y mucha improvisación. La rivalidad y el respeto se mezclan en este enfrentamiento memorable.",
+        "en": "Quarterfinals in the national rap tournament Batallón. Souljah Jerome and Sola deliver an electrifying battle with powerful lyrics and lots of improvisation. Rivalry and respect mix in this memorable confrontation."
+      },
+      "image": "/imagenes/musica/souljah.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 186,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Nitro & Stigma vs Rastachai & Souljah",
+      "title": {
+        "es": "Nitro & Stigma 🆚 Rastachai & Souljah - (Cuartos) - MACBA 2vs2 | 4 Elementos",
+        "en": "Nitro & Stigma 🆚 Rastachai & Souljah - (Quarterfinals) - MACBA 2vs2 | 4 Elements"
+      },
+      "description": {
+        "es": "Duelo de equipos en los cuartos de final del torneo MACBA 2vs2, parte de la famosa competición 4 Elementos. Nitro y Stigma enfrentan a Rastachai y Souljah con mucho nivel, ritmo y conexión en escena, brindando un espectáculo intenso para los fanáticos.",
+        "en": "Team duel in the quarterfinals of the MACBA 2vs2 tournament, part of the famous 4 Elements competition. Nitro and Stigma face Rastachai and Souljah with high skill, rhythm, and stage connection, delivering an intense show for fans."
+      },
+      "image": "/imagenes/musica/nitro.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 187,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Nitro & Stigma vs Xinako & Sof",
+      "title": {
+        "es": "Nitro & Stigma 🆚 Xinako & Sof - (Final) - MACBA 2vs2 | 4 Elementos",
+        "en": "Nitro & Stigma 🆚 Xinako & Sof - (Final) - MACBA 2vs2 | 4 Elements"
+      },
+      "description": {
+        "es": "La final del torneo MACBA 2vs2 dentro de la competencia 4 Elementos. Nitro & Stigma se enfrentan a Xinako & Sof en una batalla épica, con habilidades excepcionales, entrega total y un nivel de improvisación que dejó huella en el público.",
+        "en": "The final of the MACBA 2vs2 tournament within the 4 Elements competition. Nitro & Stigma face Xinako & Sof in an epic battle, with exceptional skills, full commitment, and improvisation level that left a mark on the audience."
+      },
+      "image": "/imagenes/musica/nitro.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
+    },
+    {
+      "id": 188,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Swit Eme vs El Perillas vs Azor",
+      "title": {
+        "es": "Swit Eme vs El Perillas vs Azor - Octavos // Pre Gold Battle",
+        "en": "Swit Eme vs El Perillas vs Azor - Round of 16 // Pre Gold Battle"
+      },
+      "description": {
+        "es": "Batalla triple en los octavos de final de la Pre Gold Battle, con Swit Eme, El Perillas y Azor. Una competencia llena de talento, agresividad controlada y versatilidad para dominar el escenario. Destaca por la energía y la técnica de los tres MCs.",
+        "en": "Triple battle in the round of 16 of the Pre Gold Battle, featuring Swit Eme, El Perillas, and Azor. A competition full of talent, controlled aggressiveness, and versatility to dominate the stage. Notable for the energy and technique of the three MCs."
+      },
+      "image": "/imagenes/musica/perillas.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 189,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Lato Efe vs El Perillas",
+      "title": {
+        "es": "Lato Efe vs El Perillas - (Final) - Batalla por el título Oro Flowrap Alicante",
+        "en": "Lato Efe vs El Perillas - (Final) - Battle for Gold Title Flowrap Alicante"
+      },
+      "description": {
+        "es": "Final decisiva en Flowrap Alicante donde Lato Efe y El Perillas se enfrentan por el título Oro. Una batalla repleta de técnica, ingenio y estilo personal, que definió al campeón con una presentación inolvidable.",
+        "en": "Decisive final at Flowrap Alicante where Lato Efe and El Perillas face off for the Gold title. A battle full of technique, wit, and personal style that defined the champion with an unforgettable performance."
+      },
+      "image": "/imagenes/musica/perillas.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": true
+    },
+    {
+      "id": 190,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "MNAK vs BTA",
+      "title": {
+        "es": "MNAK vs BTA - (Batallón) - 4tos - General Rap Nacional Alicante",
+        "en": "MNAK vs BTA - (Batallón) - Quarterfinals - National Rap General Alicante"
+      },
+      "description": {
+        "es": "Una batalla por los cuartos de final en la fase nacional del circuito Batallón entre MNAK y BTA. Se destaca la creatividad y la capacidad de improvisación en este enfrentamiento cargado de intensidad y técnica.",
+        "en": "A battle for the quarterfinals in the national phase of the Batallón circuit between MNAK and BTA. Creativity and improvisation ability stand out in this intense and technical confrontation."
+      },
+      "image": "/imagenes/musica/mnak.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 191,
+      "category": "music",
+      "subcategory": "battle",
+      "artist": "Sara Socas vs El Perillas vs Viler",
+      "title": {
+        "es": "(BATALLON) SARA SOCAS vs EL PERILLAS vs VILER - OCTAVOS // REVENGE 2a CLAS. FLOWRAP ALICANTE",
+        "en": "(BATALLON) SARA SOCAS vs EL PERILLAS vs VILER - ROUND OF 16 // REVENGE 2nd PLACE FLOWRAP ALICANTE"
+      },
+      "description": {
+        "es": "Batalla intensa en el circuito Batallón donde Sara Socas, El Perillas y Viler compiten por avanzar a la siguiente ronda. Esta contienda destaca por la versatilidad y la rapidez en el flow de los tres MCs. Un espectáculo de talento puro en el escenario de Flowrap Alicante.",
+        "en": "Intense battle in the Batallón circuit where Sara Socas, El Perillas, and Viler compete to advance to the next round. This contest stands out for the versatility and speed in the flow of the three MCs. A pure talent showcase at Flowrap Alicante."
+      },
+      "image": "/imagenes/musica/revenge.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=somevideoid",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
+    },
+    {
+      "id": 192,
+      "category": "music",
+      "subcategory": "latin",
+      "artist": "Hijos de las Hojas",
+      "title": {
+        "es": "El Camino de la Serpiente",
+        "en": "The Path of the Serpent"
+      },
+      "description": {
+        "es": "Un álbum que fusiona sonidos tradicionales con ritmos modernos latinoamericanos. Hijos de las Hojas exploran temáticas ancestrales en un viaje sonoro que mezcla lo orgánico y lo contemporáneo. Ideal para quienes buscan un sonido auténtico y profundo.",
+        "en": "An album that fuses traditional sounds with modern Latin American rhythms. Hijos de las Hojas explore ancestral themes in a sonic journey that blends organic and contemporary elements. Perfect for those seeking an authentic and deep sound."
+      },
+      "image": "/imagenes/musica/serpiente.jpg",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=somevideoid",
+      "spotify": "https://open.spotify.com/album/somealbumid",
+      "masterpiece": false
+    },
+    {
+      "id": 193,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Toteking, Dheformer",
+      "title": {
+        "es": "Escupiéndolo (Prod. Drama Theme)",
+        "en": "Spitting It (Prod. Drama Theme)"
+      },
+      "description": {
+        "es": "Videoclip oficial del tema 'Escupiéndolo', donde Toteking y Dheformer muestran su habilidad lírica con una producción contundente de Drama Theme. El vídeo destaca por su estética urbana y su energía directa al mensaje del rap.",
+        "en": "Official music video for 'Escupiéndolo', where Toteking and Dheformer showcase their lyrical skills with a strong production by Drama Theme. The video stands out for its urban aesthetic and direct energy to the rap message."
+      },
+      "image": "/imagenes/musica/escupiendolo.jpg",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=somevideoid",
+      "spotify": "https://open.spotify.com/track/sometrackid",
+      "masterpiece": true
+    },
+    {
+      "id": 194,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Julia Bondar",
+      "title": {
+        "es": "Modular Techno Live",
+        "en": "Modular Techno Live"
+      },
+      "description": {
+        "es": "Actuación en vivo de Julia Bondar con un set de techno modular. Una experiencia sonora que combina sintetizadores analógicos y beats profundos, mostrando la creatividad y el dominio técnico de la artista. Ideal para amantes de la electrónica experimental.",
+        "en": "Live performance by Julia Bondar featuring a modular techno set. A sonic experience combining analog synthesizers and deep beats, showcasing the artist's creativity and technical mastery. Perfect for lovers of experimental electronic music."
+      },
+      "image": "/imagenes/musica/juliabondar.jpg",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=somevideoid",
+      "spotify": "https://open.spotify.com/artist/someartistid",
+      "masterpiece": false
+    },
+    {
+      "id": 195,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Tale Of Us",
+      "title": {
+        "es": "Awakenings ADE 2021",
+        "en": "Awakenings ADE 2021"
+      },
+      "description": {
+        "es": "Grabación en vivo del evento Awakenings durante el Amsterdam Dance Event 2021, con Tale Of Us presentando su característico sonido melódico y envolvente. Una sesión que captura la esencia del techno contemporáneo y la energía del público.",
+        "en": "Live recording of the Awakenings event during Amsterdam Dance Event 2021, featuring Tale Of Us presenting their characteristic melodic and immersive sound. A session that captures the essence of contemporary techno and crowd energy."
+      },
+      "image": "/imagenes/musica/awakenings.jpg",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=somevideoid",
+      "spotify": "https://open.spotify.com/artist/someartistid",
+      "masterpiece": false
+    },
+    {
+      "id": 196,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "El Sicario",
+      "title": {
+        "es": "La Ley de Ohm (Directo Barcelona 2008)",
+        "en": "The Law of Ohm (Live Barcelona 2008)"
+      },
+      "description": {
+        "es": "Concierto en vivo del grupo El Sicario en Barcelona, 2008, donde interpretan 'La Ley de Ohm' con toda su energía y fuerza rockera. Un tema que mezcla riffs potentes con letras contundentes y un ambiente intenso en directo.",
+        "en": "Live concert by the band El Sicario in Barcelona, 2008, performing 'La Ley de Ohm' with full energy and rock strength. A song blending powerful riffs with strong lyrics and an intense live atmosphere."
+      },
+      "image": "/imagenes/musica/ohm.jpg",
+      "tags": [
+        "live",
+        "song"
+      ],
       "youtube": "https://www.youtube.com/watch?v=somevideoid",
       "spotify": "https://open.spotify.com/track/sometrackid",
       "masterpiece": false
+    },
+    {
+      "id": 197,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "Mueveloreina",
+      "title": {
+        "es": "Colateral",
+        "en": "Collateral"
+      },
+      "description": {
+        "es": "Videoclip oficial de 'Colateral' de Mueveloreina, grupo que mezcla ritmos latinos y urbanos con una producción fresca y moderna. El video destaca por su estética colorida y vibrante, acompañando la energía del tema.",
+        "en": "Official music video for 'Colateral' by Mueveloreina, a group that mixes Latin and urban rhythms with fresh and modern production. The video stands out for its colorful and vibrant aesthetics, matching the energy of the track."
+      },
+      "image": "/imagenes/musica/colateral.jpg",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=somevideoid",
+      "spotify": "https://open.spotify.com/track/sometrackid",
+      "masterpiece": false
+    },
+    {
+      "id": 198,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "abocajarro",
+      "title": {
+        "es": "doy mi vía.",
+        "en": "I Give My Way."
+      },
+      "description": {
+        "es": "Tema de rap con letras introspectivas y ritmo cadencioso que refleja la voz auténtica del artista abocajarro. La producción es minimalista pero efectiva, creando una atmósfera íntima para conectar con el oyente.",
+        "en": "Rap track with introspective lyrics and steady rhythm reflecting abocajarro's authentic voice. The production is minimalist yet effective, creating an intimate atmosphere to connect with the listener."
+      },
+      "image": "/imagenes/musica/abocajarro.jpg",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=somevideoid",
+      "spotify": "https://open.spotify.com/track/sometrackid",
+      "masterpiece": false
+    },
+    {
+      "id": 199,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "RABIOSOMENTE",
+      "title": {
+        "es": "El Meswy x Nutso",
+        "en": "El Meswy x Nutso"
+      },
+      "description": {
+        "es": "Colaboración entre RABIOSOMENTE, El Meswy y Nutso, un tema de rap cargado de energía, técnica y lírica potente. La canción destaca por sus versos dinámicos y un beat agresivo que mantiene la intensidad durante todo el track.",
+        "en": "Collaboration between RABIOSOMENTE, El Meswy, and Nutso, a rap track full of energy, technique, and powerful lyrics. The song stands out for its dynamic verses and an aggressive beat maintaining intensity throughout."
+      },
+      "image": "/imagenes/musica/rabiosomente.jpg",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=somevideoid",
+      "spotify": "https://open.spotify.com/track/sometrackid",
+      "masterpiece": false
+    },
+    {
+      "id": 200,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "PURE NEGGA",
+      "title": {
+        "es": "ONE SHOT 4 ELEMENTOS #10 | 4 ELEMENTOS |",
+        "en": "ONE SHOT 4 ELEMENTOS #10 | 4 ELEMENTOS |"
+      },
+      "description": {
+        "es": "Participación de PURE NEGGA en la batalla de rap '4 Elementos' edición número 10. Un enfrentamiento lleno de punchlines y habilidad improvisatoria que resalta el talento del MC en la escena nacional.",
+        "en": "PURE NEGGA's participation in the rap battle '4 Elementos' edition number 10. A confrontation full of punchlines and improvisational skills highlighting the MC's talent in the national scene."
+      },
+      "image": "/imagenes/musica/purenegga.jpg",
+      "tags": [
+        "battle"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=somevideoid",
+      "spotify": "https://open.spotify.com/",
+      "masterpiece": false
     }
-    
   ]
 }

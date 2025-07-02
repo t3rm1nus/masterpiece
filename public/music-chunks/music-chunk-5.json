@@ -1,0 +1,631 @@
+{
+  "recommendations": [
+  {
+    "id": 801,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Snoop Dogg",
+    "title": {
+      "es": "R&G (Rhythm & Gangsta): The Masterpiece",
+      "en": "R&G (Rhythm & Gangsta): The Masterpiece"
+    },
+    "description": {
+      "es": "R&G (Rhythm & Gangsta): The Masterpiece es un álbum de 2004 que combina hip hop con elementos R&B y funk. Con éxitos como 'Drop It Like It's Hot', refleja la versatilidad y el alcance comercial de Snoop Dogg en la escena mundial.",
+      "en": "R&G (Rhythm & Gangsta): The Masterpiece is a 2004 album blending hip hop with R&B and funk elements. Featuring hits like 'Drop It Like It's Hot', it showcases Snoop Dogg's versatility and commercial reach worldwide."
+    },
+    "image": "/imagenes/musica/rg",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=1cGMqBX95fQ",
+    "spotify": "https://open.spotify.com/album/7LPCR5pUnltVZcPJjTpF8R",
+    "masterpiece": true
+  },
+  {
+    "id": 802,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Rapiphero",
+    "title": {
+      "es": "Noiseferatu",
+      "en": "Noiseferatu"
+    },
+    "description": {
+      "es": "Noiseferatu es un álbum que muestra la capacidad lírica de Rapiphero para fusionar temas oscuros con ritmos contundentes. A través de sus versos, explora las sombras del alma y la realidad urbana con intensidad y profundidad. Este trabajo es una mezcla de fuerza y reflexión.",
+      "en": "Noiseferatu is an album showcasing Rapiphero's lyrical ability to blend dark themes with powerful beats. Through his verses, he explores the shadows of the soul and urban reality with intensity and depth. This work is a mix of strength and reflection."
+    },
+    "image": "/imagenes/musica/noiseferatu",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 803,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Rapiphero",
+    "title": {
+      "es": "Dope",
+      "en": "Dope"
+    },
+    "description": {
+      "es": "Dope representa una evolución en el estilo de Rapiphero, combinando beats oscuros y modernos con letras que hablan de lucha, superación y crítica social. Este álbum atrapa al oyente en un viaje intenso por la realidad callejera y emocional.",
+      "en": "Dope represents an evolution in Rapiphero's style, combining dark and modern beats with lyrics about struggle, overcoming, and social critique. This album takes the listener on an intense journey through street and emotional reality."
+    },
+    "image": "/imagenes/musica/dope",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 804,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Rapiphero",
+    "title": {
+      "es": "Quimeras",
+      "en": "Quimeras"
+    },
+    "description": {
+      "es": "Quimeras fusiona ritmos innovadores con letras cargadas de metáforas y reflexiones sobre los sueños y las falsas esperanzas. Rapiphero muestra un lado más introspectivo y experimental, abriendo nuevas puertas dentro del rap contemporáneo.",
+      "en": "Quimeras blends innovative rhythms with lyrics full of metaphors and reflections on dreams and false hopes. Rapiphero shows a more introspective and experimental side, opening new doors within contemporary rap."
+    },
+    "image": "/imagenes/musica/quimeras",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 805,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Rapiphero",
+    "title": {
+      "es": "Sfumatu",
+      "en": "Sfumatu"
+    },
+    "description": {
+      "es": "Sfumatu es un cierre conceptual donde Rapiphero mezcla sonidos densos con una narrativa que explora la dualidad humana. Este álbum representa madurez artística y una producción cuidada que sumerge al oyente en atmósferas intensas.",
+      "en": "Sfumatu is a conceptual closure where Rapiphero mixes dense sounds with a narrative exploring human duality. This album represents artistic maturity and a careful production that immerses the listener in intense atmospheres."
+    },
+    "image": "/imagenes/musica/sfumatu",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 806,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Abocajarro",
+    "title": {
+      "es": "CD Multimedia 2009",
+      "en": "CD Multimedia 2009"
+    },
+    "description": {
+      "es": "CD Multimedia 2009 es una obra que recoge la esencia del rap español con ritmos contundentes y letras cargadas de mensaje. Abocajarro combina historias urbanas con una producción cuidada que refleja su evolución artística. Un álbum imprescindible para los amantes del rap comprometido.",
+      "en": "CD Multimedia 2009 is a work that captures the essence of Spanish rap with strong beats and meaningful lyrics. Abocajarro combines urban stories with refined production that reflects their artistic growth. An essential album for fans of committed rap."
+    },
+    "image": "/imagenes/musica/multimedia",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 807,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Abocajarro",
+    "title": {
+      "es": "Los Jereles · 2006",
+      "en": "Los Jereles · 2006"
+    },
+    "description": {
+      "es": "Los Jereles · 2006 destaca por su lírica directa y sus beats urbanos que reflejan la realidad cotidiana. Abocajarro mezcla flow y crítica social en un álbum que representa una etapa clave dentro del rap underground. Una muestra de talento y autenticidad.",
+      "en": "Los Jereles · 2006 stands out for its direct lyrics and urban beats that reflect everyday reality. Abocajarro mixes flow and social critique in an album representing a key stage in underground rap. A display of talent and authenticity."
+    },
+    "image": "/imagenes/musica/jereles",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 808,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Abocajarro",
+    "title": {
+      "es": "Demo 04",
+      "en": "Demo 04"
+    },
+    "description": {
+      "es": "Demo 04 captura la crudeza inicial del grupo, con rimas afiladas y una producción sencilla pero efectiva. Este demo muestra el potencial y la energía de Abocajarro en sus comienzos, con letras que exploran temas sociales y personales con honestidad.",
+      "en": "Demo 04 captures the group's early rawness, with sharp rhymes and simple but effective production. This demo shows Abocajarro's potential and energy at the start, with lyrics exploring social and personal themes honestly."
+    },
+    "image": "/imagenes/musica/demo",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 809,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "Abocajarro",
+    "title": {
+      "es": "En la Boca 2003",
+      "en": "En la Boca 2003"
+    },
+    "description": {
+      "es": "En la Boca 2003 es el debut que marca el inicio de Abocajarro en la escena rap. Letras directas, ritmos contundentes y una atmósfera cruda definen este trabajo. Un punto de partida fundamental para comprender su desarrollo posterior.",
+      "en": "En la Boca 2003 is the debut marking Abocajarro's start in the rap scene. Direct lyrics, strong beats, and a raw atmosphere define this work. A fundamental starting point to understand their later development."
+    },
+    "image": "/imagenes/musica/boca",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 810,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Paul St. Hilaire",
+    "title": {
+      "es": "Unspecified",
+      "en": "Unspecified"
+    },
+    "description": {
+      "es": "Unspecified es una obra que refleja la versatilidad vocal de Paul St. Hilaire dentro del house y el dub. El álbum combina ritmos profundos con atmósferas envolventes, destacando la voz característica del artista en cada pista. Es un viaje sonoro que fusiona tradición y modernidad.",
+      "en": "Unspecified is a work that reflects Paul St. Hilaire's vocal versatility within house and dub. The album combines deep rhythms with immersive atmospheres, highlighting the artist's distinctive voice in each track. It is a sonic journey blending tradition and modernity."
+    },
+    "image": "/imagenes/musica/unspecified",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 811,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Paul St. Hilaire",
+    "title": {
+      "es": "Asom - A Divine State Of Mind",
+      "en": "Asom - A Divine State Of Mind"
+    },
+    "description": {
+      "es": "Asom - A Divine State Of Mind destaca por su fusión de house y dub con la voz profunda de Paul St. Hilaire. Este álbum es un viaje espiritual a través de sonidos cuidadosamente elaborados, que transmiten emoción y energía en cada tema. Es un clásico contemporáneo dentro de la escena electrónica.",
+      "en": "Asom - A Divine State Of Mind stands out for its fusion of house and dub with Paul St. Hilaire's deep voice. This album is a spiritual journey through carefully crafted sounds, conveying emotion and energy in every track. It is a contemporary classic in the electronic scene."
+    },
+    "image": "/imagenes/musica/asom",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 812,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Deadbeat and Paul St. Hilaire",
+    "title": {
+      "es": "The Infinity Dub Sessions",
+      "en": "The Infinity Dub Sessions"
+    },
+    "description": {
+      "es": "The Infinity Dub Sessions es una colaboración emblemática entre Deadbeat y Paul St. Hilaire. El álbum mezcla dub, electrónica y house, creando paisajes sonoros ricos y profundos donde la voz de St. Hilaire aporta una calidez única. Un referente para amantes del dub moderno.",
+      "en": "The Infinity Dub Sessions is an iconic collaboration between Deadbeat and Paul St. Hilaire. The album blends dub, electronic, and house, creating rich and deep soundscapes where St. Hilaire's voice adds a unique warmth. A benchmark for modern dub lovers."
+    },
+    "image": "/imagenes/musica/infinity",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/album/0Q48oN5TG14Edc7roLFxDE",
+    "masterpiece": true
+  },
+  {
+    "id": 813,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Paul St. Hilaire + Rhauder",
+    "title": {
+      "es": "Derdeoc",
+      "en": "Derdeoc"
+    },
+    "description": {
+      "es": "Derdeoc es un álbum que reúne la sensibilidad vocal de Paul St. Hilaire con la producción innovadora de Rhauder. La mezcla de house, dub y ritmos electrónicos crea una atmósfera envolvente y profunda, ideal para amantes de sonidos sofisticados y urbanos.",
+      "en": "Derdeoc is an album that combines Paul St. Hilaire's vocal sensitivity with Rhauder's innovative production. The mix of house, dub, and electronic rhythms creates an immersive and deep atmosphere, perfect for lovers of sophisticated urban sounds."
+    },
+    "image": "/imagenes/musica/derdeoc",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 814,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Rhauder & Paul St. Hilaire",
+    "title": {
+      "es": "Assemblage",
+      "en": "Assemblage"
+    },
+    "description": {
+      "es": "Assemblage fusiona la producción de Rhauder con la voz profunda y expresiva de Paul St. Hilaire. Este álbum ofrece un viaje entre dub, house y electrónica, destacando por su atmósfera cálida y la perfecta armonía entre voz y sonido. Es una pieza clave en la música electrónica contemporánea.",
+      "en": "Assemblage merges Rhauder's production with Paul St. Hilaire's deep and expressive voice. This album offers a journey through dub, house, and electronic music, standing out for its warm atmosphere and perfect harmony between voice and sound. A key piece in contemporary electronic music."
+    },
+    "image": "/imagenes/musica/assemblage",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 815,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Deadbeat & Paul St. Hilaire",
+    "title": {
+      "es": "Four Quarters Of Love And Modern Lash",
+      "en": "Four Quarters Of Love And Modern Lash"
+    },
+    "description": {
+      "es": "Four Quarters Of Love And Modern Lash es una colaboración que explora sonidos dub y electrónicos con la voz inconfundible de Paul St. Hilaire. El álbum destaca por sus texturas profundas y su mezcla innovadora que desafía los límites del género. Una obra esencial para los amantes del dub moderno.",
+      "en": "Four Quarters Of Love And Modern Lash is a collaboration exploring dub and electronic sounds with Paul St. Hilaire's unmistakable voice. The album stands out for its deep textures and innovative blend that challenges genre boundaries. An essential work for modern dub lovers."
+    },
+    "image": "/imagenes/musica/fourquarters",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 816,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Paul St. Hilaire",
+    "title": {
+      "es": "Tikiman Vol. 1",
+      "en": "Tikiman Vol. 1"
+    },
+    "description": {
+      "es": "Tikiman Vol. 1 es un álbum que resalta la capacidad de Paul St. Hilaire para adaptarse a diferentes estilos dentro del dub y el house. Sus colaboraciones y la producción musical ofrecen un recorrido dinámico y lleno de energía, consolidándolo como una voz fundamental en la escena electrónica.",
+      "en": "Tikiman Vol. 1 is an album that highlights Paul St. Hilaire's ability to adapt to different styles within dub and house. His collaborations and musical production offer a dynamic and energetic journey, establishing him as a fundamental voice in the electronic scene."
+    },
+    "image": "/imagenes/musica/tikiman",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 817,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "La Excepción",
+    "title": {
+      "es": "Cata Cheli",
+      "en": "Cata Cheli"
+    },
+    "description": {
+      "es": "Cata Cheli es el álbum debut de La Excepción, lanzado en 2003. Con letras cargadas de humor y crítica social, fusiona el rap con el estilo 'cheli' característico del grupo. Su sonido fresco y auténtico marcó un antes y un después en la escena del hip hop español.",
+      "en": "Cata Cheli is La Excepción's debut album, released in 2003. Filled with humorous and socially critical lyrics, it blends rap with the group's characteristic 'cheli' style. Its fresh and authentic sound marked a turning point in Spanish hip hop."
+    },
+    "image": "/imagenes/musica/catacheli",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=LRO3ny0NQpI",
+    "spotify": "https://open.spotify.com/album/4TfXDZxD55OmC5zoV38j5z",
+    "masterpiece": true
+  },
+  {
+    "id": 818,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "La Excepción",
+    "title": {
+      "es": "Aguantando el tirón",
+      "en": "Aguantando el tirón"
+    },
+    "description": {
+      "es": "Este álbum, lanzado en 2006, refuerza el estilo único de La Excepción, combinando ritmos pegadizos con letras que narran historias urbanas y sociales. 'Aguantando el tirón' destaca por su autenticidad y energía vibrante.",
+      "en": "Released in 2006, this album strengthens La Excepción's unique style by combining catchy beats with lyrics that tell urban and social stories. 'Aguantando el tirón' stands out for its authenticity and vibrant energy."
+    },
+    "image": "/imagenes/musica/aguantando",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=I7QGU1coKnY",
+    "spotify": "https://open.spotify.com/album/3Ib26ciAhzWBNME4Ku1qfD",
+    "masterpiece": true
+  },
+  {
+    "id": 819,
+    "category": "music",
+    "subcategory": "rap",
+    "artist": "La Excepción",
+    "title": {
+      "es": "La verdad más verdadera",
+      "en": "La verdad más verdadera"
+    },
+    "description": {
+      "es": "Publicada en 2013, esta producción presenta una evolución en el sonido de La Excepción, con beats más elaborados y letras que profundizan en temas personales y sociales. Un álbum que reafirma su posición en el rap español.",
+      "en": "Released in 2013, this production shows an evolution in La Excepción's sound, with more elaborate beats and lyrics that delve into personal and social topics. An album that reaffirms their position in Spanish rap."
+    },
+    "image": "/imagenes/musica/verdad",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=2jV3lI1QSi0",
+    "spotify": "https://open.spotify.com/album/6H9N9h1R5yeBXOQUXB3lIe",
+    "masterpiece": true
+  },
+  {
+    "id": 820,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Bonobo",
+    "title": {
+      "es": "Animal Magic",
+      "en": "Animal Magic"
+    },
+    "description": {
+      "es": "Animal Magic es el álbum debut de Bonobo, lanzado en 2000. Combina trip-hop y downtempo con un enfoque atmosférico y melódico que sentó las bases de su estilo distintivo. La producción suave y los arreglos orgánicos crean un ambiente introspectivo y envolvente.",
+      "en": "Animal Magic is Bonobo's debut album, released in 2000. It blends trip-hop and downtempo with an atmospheric and melodic approach that laid the foundation for his distinctive style. The smooth production and organic arrangements create an introspective and immersive mood."
+    },
+    "image": "/imagenes/musica/animal",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=9Im1Ooe9Qxg",
+    "spotify": "https://open.spotify.com/album/1P5YB6vGOaAe7uNf7pXB5F",
+    "masterpiece": true
+  },
+  {
+    "id": 821,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Bonobo",
+    "title": {
+      "es": "Dial 'M' for Monkey",
+      "en": "Dial 'M' for Monkey"
+    },
+    "description": {
+      "es": "Este álbum de 2003 profundiza en sonidos downtempo y electrónica, enriquecidos con influencias jazz y world music. Dial 'M' for Monkey destaca por su creatividad y por crear paisajes sonoros que equilibran la calma y el ritmo, consolidando a Bonobo como un referente del género.",
+      "en": "This 2003 album delves into downtempo and electronic sounds enriched with jazz and world music influences. Dial 'M' for Monkey stands out for its creativity and for crafting soundscapes that balance calm and rhythm, cementing Bonobo as a genre icon."
+    },
+    "image": "/imagenes/musica/dial",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=lEhz4Ujf6GM",
+    "spotify": "https://open.spotify.com/album/3J1HdpRmKJESpvwhpCnLq5",
+    "masterpiece": true
+  },
+  {
+    "id": 822,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Bonobo",
+    "title": {
+      "es": "Days to Come",
+      "en": "Days to Come"
+    },
+    "description": {
+      "es": "Days to Come, lanzado en 2006, integra vocales y colaboraciones, ampliando el rango emocional y sonoro de Bonobo. El álbum mezcla electrónica, downtempo y soul, ofreciendo una experiencia sonora rica y emotiva que ha influido a numerosos artistas.",
+      "en": "Days to Come, released in 2006, incorporates vocals and collaborations, expanding Bonobo's emotional and sonic range. The album blends electronic, downtempo, and soul, delivering a rich and emotive sound experience that has influenced many artists."
+    },
+    "image": "/imagenes/musica/days",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=UgqdmG-P7N8",
+    "spotify": "https://open.spotify.com/album/3IqZR20y5nRwF4UxKw3QbW",
+    "masterpiece": true
+  },
+  {
+    "id": 823,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Bonobo",
+    "title": {
+      "es": "Black Sands",
+      "en": "Black Sands"
+    },
+    "description": {
+      "es": "Black Sands, de 2010, es considerado uno de los mejores álbumes de Bonobo. Combina elementos electrónicos con instrumentación orgánica y samples ambientales. El álbum crea una atmósfera evocadora que ha sido ampliamente aclamada por críticos y fans por igual.",
+      "en": "Black Sands, from 2010, is considered one of Bonobo's best albums. It combines electronic elements with organic instrumentation and ambient samples. The album creates an evocative atmosphere that has been widely acclaimed by critics and fans alike."
+    },
+    "image": "/imagenes/musica/blacksands",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Mw_95lwGM64",
+    "spotify": "https://open.spotify.com/album/1qTzHt3K2bknPLZ8dwO3sS",
+    "masterpiece": true
+  },
+  {
+    "id": 824,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Bonobo",
+    "title": {
+      "es": "The North Borders",
+      "en": "The North Borders"
+    },
+    "description": {
+      "es": "The North Borders, lanzado en 2013, presenta una mezcla sofisticada de downtempo, electrónica y soul. El álbum destaca por su producción pulida y colaboraciones destacadas, consolidando a Bonobo como uno de los referentes de la música electrónica moderna.",
+      "en": "The North Borders, released in 2013, features a sophisticated mix of downtempo, electronic, and soul. The album stands out for its polished production and notable collaborations, cementing Bonobo as a leading figure in modern electronic music."
+    },
+    "image": "/imagenes/musica/northborders",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=R7mi53bAOlE",
+    "spotify": "https://open.spotify.com/album/0wZqEr8dtU1mufoh41tIhf",
+    "masterpiece": true
+  },
+  {
+    "id": 825,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Bonobo",
+    "title": {
+      "es": "Migration",
+      "en": "Migration"
+    },
+    "description": {
+      "es": "Migration, lanzado en 2017, explora nuevos horizontes con sonidos más variados e influencias globales. Este álbum mezcla electrónica con jazz, funk y ritmos orgánicos, mostrando la madurez artística de Bonobo y su capacidad para innovar sin perder su esencia.",
+      "en": "Migration, released in 2017, explores new horizons with more varied sounds and global influences. This album mixes electronic with jazz, funk, and organic rhythms, showcasing Bonobo's artistic maturity and ability to innovate while retaining his essence."
+    },
+    "image": "/imagenes/musica/migration",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=OwNzZT0PJUg",
+    "spotify": "https://open.spotify.com/album/1kULRjw0dSdT8lvruBLYhz",
+    "masterpiece": true
+  },
+  {
+    "id": 826,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Bonobo",
+    "title": {
+      "es": "Fragments",
+      "en": "Fragments"
+    },
+    "description": {
+      "es": "Fragments, lanzado en 2022, continúa la evolución sonora de Bonobo con composiciones ricas y texturizadas. El álbum combina la electrónica moderna con elementos orgánicos y colaboraciones que enriquecen su sonido, reafirmando su posición como un referente contemporáneo.",
+      "en": "Fragments, released in 2022, continues Bonobo's sonic evolution with rich, textured compositions. The album combines modern electronic music with organic elements and collaborations that enrich his sound, reaffirming his position as a contemporary benchmark."
+    },
+    "image": "/imagenes/musica/fragments",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=66YqvhtapQE",
+    "spotify": "https://open.spotify.com/album/6OKGEbcgftlQJPzgHhkNZB",
+    "masterpiece": true
+  },
+  {
+    "id": 827,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Justice",
+    "title": {
+      "es": "†",
+      "en": "†"
+    },
+    "description": {
+      "es": "† es el álbum debut de Justice, lanzado en 2007. Su sonido combina electrónica con influencias de rock y funk, creando pistas intensas y memorables. Este disco marcó un antes y un después en la escena electrónica francesa.",
+      "en": "† is Justice's debut album, released in 2007. Its sound blends electronic music with rock and funk influences, creating intense and memorable tracks. This record marked a turning point in the French electronic scene."
+    },
+    "image": "/imagenes/musica/cross",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=Vt1f9fQVC1I",
+    "spotify": "https://open.spotify.com/album/7hIlH0wHa2kYXQTO6xTEmW",
+    "masterpiece": true
+  },
+  {
+    "id": 828,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Justice",
+    "title": {
+      "es": "Audio, Video, Disco",
+      "en": "Audio, Video, Disco"
+    },
+    "description": {
+      "es": "Audio, Video, Disco, lanzado en 2011, explora sonidos más melódicos y pop dentro de la electrónica. Combina sintetizadores con guitarras y voces procesadas, ofreciendo una atmósfera fresca y experimental. Fue un álbum que dividió opiniones pero consolidó la evolución de Justice.",
+      "en": "Audio, Video, Disco, released in 2011, explores more melodic and pop sounds within electronic music. It combines synthesizers with guitars and processed vocals, offering a fresh and experimental atmosphere. This album divided opinions but solidified Justice's evolution."
+    },
+    "image": "/imagenes/musica/audiovideo",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=UFPAsjgOK8w",
+    "spotify": "https://open.spotify.com/album/5AmcJ6XbcE0hXZ4SEj2U6V",
+    "masterpiece": true
+  },
+  {
+    "id": 829,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Justice",
+    "title": {
+      "es": "Woman",
+      "en": "Woman"
+    },
+    "description": {
+      "es": "Woman, lanzado en 2016, muestra un sonido más orgánico y funk, fusionado con electrónica y disco. El álbum refleja la madurez artística del dúo francés con pistas dinámicas y sofisticadas. Es uno de sus trabajos más celebrados.",
+      "en": "Woman, released in 2016, features a more organic and funk sound blended with electronic and disco elements. The album reflects the French duo's artistic maturity with dynamic and sophisticated tracks. It is one of their most celebrated works."
+    },
+    "image": "/imagenes/musica/woman",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/watch?v=IIbXWqL5meY",
+    "spotify": "https://open.spotify.com/album/1eUWEc1q5Q9t8CpI7ABFvP",
+    "masterpiece": true
+  },
+  {
+    "id": 830,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Justice",
+    "title": {
+      "es": "Hyperdrama",
+      "en": "Hyperdrama"
+    },
+    "description": {
+      "es": "Hyperdrama es el álbum más reciente de Justice, lanzado en 2024. Presenta una mezcla intensa de electrónica con influencias cinematográficas y dramáticas. Este trabajo destaca por su energía y por empujar los límites del sonido del dúo.",
+      "en": "Hyperdrama is Justice's latest album, released in 2024. It features an intense mix of electronic music with cinematic and dramatic influences. This work stands out for its energy and for pushing the duo's sound boundaries."
+    },
+    "image": "/imagenes/musica/hyperdrama",
+    "tags": ["album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 831,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Justice",
+    "title": {
+      "es": "Woman Worldwide",
+      "en": "Woman Worldwide"
+    },
+    "description": {
+      "es": "Woman Worldwide, lanzado en 2018, es un álbum en vivo que reinterpreta y mezcla las canciones del disco Woman. Ofrece versiones renovadas con un sonido más potente y enérgico, capturando la esencia de sus actuaciones en directo.",
+      "en": "Woman Worldwide, released in 2018, is a live album that reinterprets and mixes tracks from the Woman album. It offers renewed versions with a more powerful and energetic sound, capturing the essence of their live performances."
+    },
+    "image": "/imagenes/musica/womanworldwide",
+    "tags": ["live", "album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 832,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Justice",
+    "title": {
+      "es": "A Cross the Universe",
+      "en": "A Cross the Universe"
+    },
+    "description": {
+      "es": "A Cross the Universe, lanzado en 2008, es un álbum en vivo y documental que captura la energía de Justice en directo durante su gira por Estados Unidos. Es un reflejo auténtico de su impacto en la escena electrónica mundial.",
+      "en": "A Cross the Universe, released in 2008, is a live album and documentary capturing Justice's energy during their US tour. It is an authentic reflection of their impact on the global electronic scene."
+    },
+    "image": "/imagenes/musica/acrosstheuniverse",
+    "tags": ["live", "album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  },
+  {
+    "id": 833,
+    "category": "music",
+    "subcategory": "electronic",
+    "artist": "Justice",
+    "title": {
+      "es": "Access All Arenas",
+      "en": "Access All Arenas"
+    },
+    "description": {
+      "es": "Access All Arenas, lanzado en 2013, es otro álbum en vivo que documenta la gira de Justice en el festival Rock en Seine. El disco destaca por la potencia y la precisión de sus actuaciones en directo, reafirmando su lugar en la electrónica contemporánea.",
+      "en": "Access All Arenas, released in 2013, is another live album documenting Justice's tour at the Rock en Seine festival. The record stands out for the power and precision of their live performances, reaffirming their place in contemporary electronic music."
+    },
+    "image": "/imagenes/musica/accessallarenas",
+    "tags": ["live", "album"],
+    "youtube": "https://www.youtube.com/",
+    "spotify": "https://open.spotify.com/",
+    "masterpiece": true
+  }
+  ]
+}
