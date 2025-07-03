@@ -104,6 +104,11 @@ const HomePage = ({
   audioRef,
   ...rest
 } = {}) => {
+  // Estado para filtro especial de música (debe ir antes de cualquier uso)
+  const [musicFilterType, setMusicFilterType] = React.useState(null);
+  // Estado para filtro especial de batalla (battle)
+  const [battleFilterActive, setBattleFilterActive] = React.useState(false);
+
   const { lang, t, getTranslation } = useLanguage();
   // Hook para sincronizar títulos automáticamente
   useTitleSync();
@@ -295,6 +300,18 @@ const HomePage = ({
         if ((selectedCategory === 'podcast' || selectedCategory === 'documentales') && activePodcastDocumentaryLanguage) {
           filteredData = filteredData.filter(item => item.idioma === activePodcastDocumentaryLanguage);
         }
+        // Filtro especial para música: song/album/session (session busca djset)
+        if (selectedCategory === 'music' && musicFilterType) {
+          if (musicFilterType === 'session') {
+            filteredData = filteredData.filter(item => item.tags && item.tags.includes('djset'));
+          } else {
+            filteredData = filteredData.filter(item => item.tags && item.tags.includes(musicFilterType));
+          }
+        }
+        // Filtro especial para batalla: solo si está activo
+        if (selectedCategory === 'music' && activeSubcategory === 'rap' && battleFilterActive) {
+          filteredData = filteredData.filter(item => item.tags && item.tags.includes('battle'));
+        }
         // Filtro de subcategoría (AJUSTE PARA MÓVIL TAMBIÉN)
         if (activeSubcategory && activeSubcategory !== 'all') {
           const normalizedActiveSubcat = normalizeSubcategoryInternal(activeSubcategory);
@@ -327,6 +344,8 @@ const HomePage = ({
     isSpanishSeriesActive, // <-- añadido para que el filtro reaccione al cambio
     isMasterpieceActive,
     activePodcastDocumentaryLanguage,
+    musicFilterType, // <-- para que reaccione al filtro de música
+    battleFilterActive, // <-- para que reaccione al filtro de batalla
     updateFilteredItems
   ]);
   const handleCategoryClick = (category) => {
@@ -584,6 +603,11 @@ const HomePage = ({
                   handleSpanishSeriesToggle={toggleSpanishSeries}
                   {...specialButtonsProps}
                   isMobile={true}
+                  musicFilterType={musicFilterType}
+                  setMusicFilterType={setMusicFilterType}
+                  activeSubcategory={activeSubcategory}
+                  battleFilterActive={battleFilterActive}
+                  setBattleFilterActive={setBattleFilterActive}
                 />
               )}
             </div>
@@ -622,6 +646,11 @@ const HomePage = ({
                 isSpanishSeriesActive={isSpanishSeriesActive}
                 handleSpanishSeriesToggle={toggleSpanishSeries}
                 {...specialButtonsProps}
+                musicFilterType={musicFilterType}
+                setMusicFilterType={setMusicFilterType}
+                activeSubcategory={activeSubcategory}
+                battleFilterActive={battleFilterActive}
+                setBattleFilterActive={setBattleFilterActive}
               />
             </>
           )}

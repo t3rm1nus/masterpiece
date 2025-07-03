@@ -18,8 +18,15 @@ const SpecialButtons = ({
   isRecommendedActive,
   isMobile,
   isSpanishSeriesActive,
-  handleSpanishSeriesToggle
+  handleSpanishSeriesToggle,
+  musicFilterType,
+  setMusicFilterType,
+  activeSubcategory,
+  battleFilterActive,
+  setBattleFilterActive
 }) => {
+  // Botones especiales para música (tipo canción/álbum)
+  const showMusicButtons = selectedCategory === 'music';
   // Nuevo: idioma activo para podcasts/documentales
   const activePodcastDocumentaryLanguage = useAppStore(s => s.activePodcastDocumentaryLanguage);
   const setActivePodcastDocumentaryLanguage = useAppStore(s => s.setActivePodcastDocumentaryLanguage);
@@ -29,6 +36,97 @@ const SpecialButtons = ({
 
   return (
     <div className="special-buttons-container" style={isMobile ? { display: 'flex', flexDirection: 'row', gap: 8, justifyContent: 'center', alignItems: 'center', width: '100%', margin: '8px 0' } : {}}>
+      {/* Botones especiales para música: canción y álbum */}
+      {showMusicButtons && (
+        <>
+          <UiButton
+            className={`subcategory-btn music-btn${musicFilterType === 'song' ? ' active' : ''}`}
+            variant={musicFilterType === 'song' ? 'contained' : 'outlined'}
+            color="secondary"
+            size="small"
+            onClick={() => {
+              setMusicFilterType(musicFilterType === 'song' ? null : 'song');
+              if (battleFilterActive) setBattleFilterActive(false);
+            }}
+            sx={{
+              margin: '0 4px',
+              minWidth: 90,
+              background: '#fff !important',
+              color: '#757575',
+              borderColor: '#bdbdbd',
+              fontWeight: musicFilterType === 'song' ? 700 : 500
+            }}
+          >
+            {lang === 'es' ? 'Canción' : 'Song'}
+          </UiButton>
+          <UiButton
+            className={`subcategory-btn music-btn${musicFilterType === 'album' ? ' active' : ''}`}
+            variant={musicFilterType === 'album' ? 'contained' : 'outlined'}
+            color="secondary"
+            size="small"
+            onClick={() => {
+              setMusicFilterType(musicFilterType === 'album' ? null : 'album');
+              if (battleFilterActive) setBattleFilterActive(false);
+            }}
+            sx={{
+              margin: '0 4px',
+              minWidth: 90,
+              background: '#fff !important',
+              color: '#757575',
+              borderColor: '#bdbdbd',
+              fontWeight: musicFilterType === 'album' ? 700 : 500
+            }}
+          >
+            {lang === 'es' ? 'Álbum' : 'Album'}
+          </UiButton>
+          {/* Botón especial Batalla/Battle solo si subcategoría rap activa */}
+          {activeSubcategory === 'rap' && (
+            <UiButton
+              className={`subcategory-btn battle-btn${battleFilterActive ? ' active' : ''}`}
+              variant={battleFilterActive ? 'contained' : 'outlined'}
+              color="secondary"
+              size="small"
+              onClick={() => {
+                setBattleFilterActive(!battleFilterActive);
+                if (musicFilterType) setMusicFilterType(null);
+              }}
+              sx={{
+                margin: '0 4px',
+                minWidth: 90,
+                background: '#fff !important',
+                color: '#757575',
+                borderColor: '#bdbdbd',
+                fontWeight: battleFilterActive ? 700 : 500
+              }}
+            >
+              {lang === 'es' ? 'Batalla' : 'Battle'}
+            </UiButton>
+          )}
+          {/* Botón especial Sesión/Session solo si subcategoría electronica activa (acepta variantes de nombre) */}
+          {['electronica', 'electronic', 'electrónica'].includes((activeSubcategory || '').toLowerCase()) && (
+            <UiButton
+              className={`subcategory-btn session-btn${musicFilterType === 'session' ? ' active' : ''}`}
+              variant={musicFilterType === 'session' ? 'contained' : 'outlined'}
+              color="secondary"
+              size="small"
+              onClick={() => {
+                setMusicFilterType(musicFilterType === 'session' ? null : 'session');
+                if (battleFilterActive) setBattleFilterActive(false);
+              }}
+              sx={{
+                margin: '0 4px',
+                minWidth: 90,
+                background: '#fff !important',
+                color: '#757575',
+                borderColor: '#bdbdbd',
+                fontWeight: musicFilterType === 'session' ? 700 : 500
+              }}
+            >
+              {lang === 'es' ? 'Sesión' : 'Session'}
+            </UiButton>
+          )}
+        </>
+      )}
       {/* Botones de idioma para podcasts/documentales */}
       {showLanguageButtons && (
         <>

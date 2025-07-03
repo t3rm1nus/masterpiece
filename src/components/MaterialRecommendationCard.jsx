@@ -228,6 +228,25 @@ const MaterialRecommendationCard = memo(({
             />
           </Box>
         )}
+        {recommendation.artist && (
+          <div
+            style={{
+              fontSize: '0.97rem',
+              color: '#232323',
+              fontWeight: 400,
+              marginBottom: 8,
+              marginTop: 18,
+              textAlign: 'left',
+              letterSpacing: 0.01,
+              lineHeight: 1.35,
+              fontFamily: 'inherit',
+              wordBreak: 'break-word',
+              opacity: 0.93
+            }}
+          >
+            {recommendation.artist}
+          </div>
+        )}
         <Typography 
           variant="body2" 
           color="text.secondary"

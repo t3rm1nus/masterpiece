@@ -1369,7 +1369,7 @@
     {
       "id": 267,
       "category": "music",
-      "subcategory": "live",
+      "subcategory": "electronic",
       "artist": "Justice",
       "title": {
         "es": "Live MadCool",
@@ -1381,7 +1381,7 @@
       },
       "image": "/imagenes/musica/live.png",
       "tags": [
-        "live"
+        "djset"
       ],
       "youtube": "https://www.youtube.com/watch?v=GgDg2m9kuyw",
       "spotify": "https://open.spotify.com/album/4GGazqHvuKwxBjWLFaJkDL",

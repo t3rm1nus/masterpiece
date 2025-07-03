@@ -57,8 +57,7 @@
       },
       "image": "/imagenes/musica/live.png",
       "tags": [
-        "djset",
-        "live"
+        "djset"
       ],
       "youtube": "https://www.youtube.com/watch?v=uynCeLheCPc&list=RDuynCeLheCPc&start_radio=1&t=1191s",
       "spotify": "https://open.spotify.com/album/2T64N96AVfsrRFJCUXQEoZ",
@@ -3654,8 +3653,8 @@
       "subcategory": "rap",
       "artist": "Nitro & Pepe Grillo 🇨🇱 🆚 Xinako & Sof",
       "title": {
-        "es": "4 Elementos (Semis)",
-        "en": "4 Elements (Semis)"
+        "es": "Nitro & Pepe Grillo 🇨🇱 🆚 Xinako & Sof",
+        "en": "Nitro & Pepe Grillo 🇨🇱 🆚 Xinako & Sof"
       },
       "description": {
         "es": "Batalla de freestyle semis entre Nitro & Pepe Grillo contra Xinako & Sof en la competición '4 Elementos'. Exhibición de habilidad lírica, ingenio y energía competitiva en el rap improvisado.",
@@ -3675,8 +3674,8 @@
       "subcategory": "rap",
       "artist": "LXL16, Lobo Estepario, Mcklopedia",
       "title": {
-        "es": "Linea Dieciséis Sin Límite",
-        "en": "Linea Dieciséis Sin Limite"
+        "es": "Estepario vs Mcklopedia",
+        "en": "Estepario vs Mcklopedia"
       },
       "description": {
         "es": "Vídeo oficial de la batalla 'Linea Dieciséis Sin Límite' entre Lobo Estepario y Mcklopedia. Una confrontación de estilos y técnicas en el circuito underground de batallas de rap.",
@@ -3738,8 +3737,8 @@
       "subcategory": "rap",
       "artist": "Sara Socas vs Kharma",
       "title": {
-        "es": "Sara Socas vs Kharma - Batallote FEM - Final",
-        "en": "Sara Socas vs Kharma - FEM Battle - Final"
+        "es": "Sara Socas vs Kharma",
+        "en": "Sara Socas vs Kharma"
       },
       "description": {
         "es": "El enfrentamiento final de la liga femenina de batallas de rap, con dos de las mejores MCs del momento. Sara Socas y Kharma entregan una batalla vibrante, con rimas contundentes y presencia escénica inigualable. Un momento histórico para la escena femenina.",
@@ -3780,8 +3779,8 @@
       "subcategory": "rap",
       "artist": "Sara Socas vs NG",
       "title": {
-        "es": "Sara Socas vs NG | Formato FMS | Exhibición BDM Logroño 2019",
-        "en": "Sara Socas vs NG | FMS Format | Exhibition BDM Logroño 2019"
+        "es": "Sara Socas vs NG",
+        "en": "Sara Socas vs NG"
       },
       "description": {
         "es": "Una exhibición memorable en el BDM Logroño 2019 donde Sara Socas y NG demostraron gran habilidad lírica y presencia escénica. La batalla en formato FMS destacó por su energía y respeto entre competidores, dejando claro el nivel del freestyle nacional.",
@@ -3801,8 +3800,8 @@
       "subcategory": "rap",
       "artist": "NG vs Dragma",
       "title": {
-        "es": "NG vs Dragma - (Batallón) - 16avos - Clasificatoria General Rap Nacional",
-        "en": "NG vs Dragma - (Batallón) - Round of 16 - National Rap General Qualifier"
+        "es": "NG vs Dragma",
+        "en": "NG vs Dragma"
       },
       "description": {
         "es": "Batalla de 16avos en la fase clasificatoria nacional de rap en el evento Batallón, con NG y Dragma mostrando rimas agudas y mucha técnica. Esta pelea puso a prueba la creatividad y la capacidad de improvisación de ambos competidores.",
@@ -3822,8 +3821,8 @@
       "subcategory": "rap",
       "artist": "El Perillas vs HeySaki",
       "title": {
-        "es": "(Risas) El Perillas vs HeySaki - 3er puesto // Revenge 2a Clas. Flowrap Alicante",
-        "en": "(Laughter) El Perillas vs HeySaki - 3rd Place // Revenge 2nd Qual. Flowrap Alicante"
+        "es": "El Perillas vs HeySaki",
+        "en": "El Perillas vs HeySaki"
       },
       "description": {
         "es": "Batalla por el tercer puesto en la segunda clasificatoria de Flowrap Alicante. El Perillas y HeySaki se enfrentan con rimas cargadas de humor y agresividad controlada. Un encuentro lleno de risas, técnica y mucho carisma.",
@@ -3843,8 +3842,8 @@
       "subcategory": "rap",
       "artist": "Salcedo vs Souljah Jerome",
       "title": {
-        "es": "Salcedo vs Souljah Jerome - (Batallón) - 8avos - General Rap Nacional Alicante",
-        "en": "Salcedo vs Souljah Jerome - (Batallón) - Round of 8 - National Rap General Alicante"
+        "es": "Salcedo vs Souljah Jerome",
+        "en": "Salcedo vs Souljah Jerome"
       },
       "description": {
         "es": "Intensa batalla de octavos de final en el circuito nacional de rap Batallón. Salcedo y Souljah Jerome mostraron un duelo de estilos muy marcado, donde la destreza verbal y la estrategia fueron clave para dominar el escenario.",
@@ -3864,8 +3863,8 @@
       "subcategory": "rap",
       "artist": "Souljah Jerome vs Sola",
       "title": {
-        "es": "Souljah Jerome vs Sola - (Batallón) - 4tos - General Rap Nacional Alicante",
-        "en": "Souljah Jerome vs Sola - (Batallón) - Quarterfinals - National Rap General Alicante"
+        "es": "Souljah Jerome vs Sola",
+        "en": "Souljah Jerome vs Sola"
       },
       "description": {
         "es": "Cuartos de final en el torneo nacional de rap Batallón. Souljah Jerome y Sola entregan una batalla electrizante con letras potentes y mucha improvisación. La rivalidad y el respeto se mezclan en este enfrentamiento memorable.",
@@ -3885,8 +3884,8 @@
       "subcategory": "rap",
       "artist": "Nitro & Stigma vs Rastachai & Souljah",
       "title": {
-        "es": "Nitro & Stigma 🆚 Rastachai & Souljah - (Cuartos) - MACBA 2vs2 | 4 Elementos",
-        "en": "Nitro & Stigma 🆚 Rastachai & Souljah - (Quarterfinals) - MACBA 2vs2 | 4 Elements"
+        "es": "Nitro & Stigma 🆚 Rastachai & Souljah",
+        "en": "Nitro & Stigma 🆚 Rastachai & Souljah"
       },
       "description": {
         "es": "Duelo de equipos en los cuartos de final del torneo MACBA 2vs2, parte de la famosa competición 4 Elementos. Nitro y Stigma enfrentan a Rastachai y Souljah con mucho nivel, ritmo y conexión en escena, brindando un espectáculo intenso para los fanáticos.",
@@ -3906,8 +3905,8 @@
       "subcategory": "rap",
       "artist": "Nitro & Stigma vs Xinako & Sof",
       "title": {
-        "es": "Nitro & Stigma 🆚 Xinako & Sof - (Final) - MACBA 2vs2 | 4 Elementos",
-        "en": "Nitro & Stigma 🆚 Xinako & Sof - (Final) - MACBA 2vs2 | 4 Elements"
+        "es": "Nitro & Stigma 🆚 Xinako & Sof",
+        "en": "Nitro & Stigma 🆚 Xinako & Sof"
       },
       "description": {
         "es": "La final del torneo MACBA 2vs2 dentro de la competencia 4 Elementos. Nitro & Stigma se enfrentan a Xinako & Sof en una batalla épica, con habilidades excepcionales, entrega total y un nivel de improvisación que dejó huella en el público.",
@@ -3927,8 +3926,8 @@
       "subcategory": "rap",
       "artist": "Swit Eme vs El Perillas vs Azor",
       "title": {
-        "es": "Swit Eme vs El Perillas vs Azor - Octavos // Pre Gold Battle",
-        "en": "Swit Eme vs El Perillas vs Azor - Round of 16 // Pre Gold Battle"
+        "es": "Swit Eme vs El Perillas vs Azor",
+        "en": "Swit Eme vs El Perillas vs Azor"
       },
       "description": {
         "es": "Batalla triple en los octavos de final de la Pre Gold Battle, con Swit Eme, El Perillas y Azor. Una competencia llena de talento, agresividad controlada y versatilidad para dominar el escenario. Destaca por la energía y la técnica de los tres MCs.",
@@ -3948,8 +3947,8 @@
       "subcategory": "rap",
       "artist": "Lato Efe vs El Perillas",
       "title": {
-        "es": "Lato Efe vs El Perillas - (Final) - Batalla por el título Oro Flowrap Alicante",
-        "en": "Lato Efe vs El Perillas - (Final) - Battle for Gold Title Flowrap Alicante"
+        "es": "Lato Efe vs El Perillas",
+        "en": "Lato Efe vs El Perillas"
       },
       "description": {
         "es": "Final decisiva en Flowrap Alicante donde Lato Efe y El Perillas se enfrentan por el título Oro. Una batalla repleta de técnica, ingenio y estilo personal, que definió al campeón con una presentación inolvidable.",
@@ -3969,8 +3968,8 @@
       "subcategory": "rap",
       "artist": "MNAK vs BTA",
       "title": {
-        "es": "MNAK vs BTA - (Batallón) - 4tos - General Rap Nacional Alicante",
-        "en": "MNAK vs BTA - (Batallón) - Quarterfinals - National Rap General Alicante"
+        "es": "MNAK vs BTA",
+        "en": "MNAK vs BTA"
       },
       "description": {
         "es": "Una batalla por los cuartos de final en la fase nacional del circuito Batallón entre MNAK y BTA. Se destaca la creatividad y la capacidad de improvisación en este enfrentamiento cargado de intensidad y técnica.",
@@ -3990,8 +3989,8 @@
       "subcategory": "rap",
       "artist": "Sara Socas vs El Perillas vs Viler",
       "title": {
-        "es": "(BATALLON) SARA SOCAS vs EL PERILLAS vs VILER - OCTAVOS // REVENGE 2a CLAS. FLOWRAP ALICANTE",
-        "en": "(BATALLON) SARA SOCAS vs EL PERILLAS vs VILER - ROUND OF 16 // REVENGE 2nd PLACE FLOWRAP ALICANTE"
+        "es": "Sara Socas vs El Perillas",
+        "en": "Sara Socas vs El Perillas"
       },
       "description": {
         "es": "Batalla intensa en el circuito Batallón donde Sara Socas, El Perillas y Viler compiten por avanzar a la siguiente ronda. Esta contienda destaca por la versatilidad y la rapidez en el flow de los tres MCs. Un espectáculo de talento puro en el escenario de Flowrap Alicante.",
