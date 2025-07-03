@@ -24,7 +24,7 @@
     {
       "id": 202,
       "category": "music",
-      "subcategory": "reggae",
+      "subcategory": "dub",
       "artist": "Damian Marley & NAS",
       "title": {
         "es": "Sabali (Paciencia)",
@@ -87,7 +87,7 @@
     {
       "id": 205,
       "category": "music",
-      "subcategory": "reggae",
+      "subcategory": "dub",
       "artist": "O.B.F x CHARLIE P",
       "title": {
         "es": "FUFU LALA",
@@ -395,8 +395,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=los+ganglios+infocreacion",
-      "spotify": "https://open.spotify.com/album/3fVXh36WypsZR2JGathvkq",
+      "youtube": "https://www.youtube.com/watch?v=EgFk2Es2T3E&list=RDEgFk2Es2T3E&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/1HhyDUxuJdmfhR7fYJG1Km",
       "masterpiece": true
     },
     {
@@ -1362,31 +1362,11 @@
       "tags": [
         "djset"
       ],
-      "youtube": "https://www.youtube.com/watch?v=1QJfq-RY5zo",
-      "spotify": "https://open.spotify.com/album/5HLoU4oijKdSIFOk2o7mYn",
+      "youtube": "https://www.youtube.com/watch?v=ERLy4Dam1pU&list=RDERLy4Dam1pU&start_radio=1",
+      "spotify": "https://open.spotify.com/playlist/1J0qy4TD23D8YV8GYB1Qaj",
       "masterpiece": true
     },
-    {
-      "id": 267,
-      "category": "music",
-      "subcategory": "electronic",
-      "artist": "Justice",
-      "title": {
-        "es": "Live MadCool",
-        "en": "Live MadCool"
-      },
-      "description": {
-        "es": "Una actuación en vivo de Justice en el festival MadCool que destaca por su energía y presencia escénica. El dúo francés ofrece un espectáculo de electrónica con una puesta en escena visual impactante. Un momento memorable para los fans del género.\"",
-        "en": "A live performance by Justice at the MadCool festival that stands out for its energy and stage presence. The French duo offers an electronic show with impactful visual staging. A memorable moment for fans of the genre.\""
-      },
-      "image": "/imagenes/musica/live.png",
-      "tags": [
-        "djset"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=GgDg2m9kuyw",
-      "spotify": "https://open.spotify.com/album/4GGazqHvuKwxBjWLFaJkDL",
-      "masterpiece": true
-    },
+   
     {
       "id": 268,
       "category": "music",
@@ -1404,8 +1384,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=4Oxo0H-4MjA",
-      "spotify": "https://open.spotify.com/album/7uxfQPw7jZrMCwmFijglNT",
+      "youtube": "https://www.youtube.com/watch?v=BI2Et19vDCM&list=PL4lEESSgxM_7_AtmGWlkrBI5_s1EpsI2f",
+      "spotify": "https://open.spotify.com/intl-es/album/44reU0ojnJfLw8n9bkIwTf",
       "masterpiece": true
     },
     {
@@ -1719,7 +1699,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=vO4KlyRe_Fc",
+      "youtube": "https://www.youtube.com/watch?v=NJesxnyCMbU&list=RDNJesxnyCMbU&start_radio=1",
       "spotify": "https://open.spotify.com/album/6TmEZKJtPJ9mPsMBmyteCE",
       "masterpiece": true
     },
@@ -1740,8 +1720,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=MGG3TZ51A0Y",
-      "spotify": "https://open.spotify.com/album/2oJo7cB45gMVuRsaWNwDq2",
+      "youtube": "https://www.youtube.com/watch?v=lyXgX7OmCuA&list=PLiN-7mukU_RHfppe7hjRD6WU06C9ib-T4",
+      "spotify": "https://open.spotify.com/intl-es/album/77Lae5VorRCNpgZFMW8yRO",
       "masterpiece": true
     },
     {
@@ -1761,7 +1741,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=QlNHK06_NuI",
+      "youtube": "https://www.youtube.com/watch?v=u3UhZfJElek&list=RDu3UhZfJElek&start_radio=1",
       "spotify": "https://open.spotify.com/album/2oJo7cB45gMVuRsaWNwDq2",
       "masterpiece": true
     },
@@ -1782,7 +1762,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=kJ5XuwLGQMM",
+      "youtube": "https://www.youtube.com/watch?v=oR4gjzXs5EE&list=RDoR4gjzXs5EE&start_radio=1",
       "spotify": "https://open.spotify.com/album/4mwrMLVKo940qLFXEIef4w",
       "masterpiece": true
     },
@@ -1803,8 +1783,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=_tiNvh5SjcI",
-      "spotify": "https://open.spotify.com/album/7aNclGRxTysfh6z0d8671k",
+      "youtube": "https://www.youtube.com/watch?v=lAuE_5NoksM&list=RDlAuE_5NoksM&start_radio=1",
+      "spotify": "https://open.spotify.com/playlist/1fXWpN6WwVgBeDaOq5b2fa",
       "masterpiece": true
     },
     {
@@ -1824,7 +1804,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=I_izvAbhExY",
+      "youtube": "https://www.youtube.com/watch?v=7orEiTI6X_4&list=PLunAs_VfWjqd6ZhNLiZaZnjRaDUtXPJpA",
       "spotify": "https://open.spotify.com/album/6sIEBpy5gl3DqC6KPasPpx",
       "masterpiece": true
     },
@@ -1845,8 +1825,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=9SzBgfU83fQ",
-      "spotify": "https://open.spotify.com/album/7aNclGRxTysfh6z0d8671k",
+      "youtube": "https://www.youtube.com/watch?v=m8UCZfaYACo&list=PLW0ZJ_VCP5zn6UuVRd6QC7CZBEbYQ-LCQ",
+      "spotify": "https://open.spotify.com/intl-es/track/409z4jUHpq7eIkg3N3FzZh",
       "masterpiece": true
     },
     {
@@ -2538,7 +2518,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLt24tI24q-R9F6636774D388E40B48003",
+      "youtube": "https://www.youtube.com/watch?v=TDVym1SRedk&list=RDTDVym1SRedk&start_radio=1",
       "spotify": "https://open.spotify.com/album/447aAsTmmXFZ0tyoB7sK3z",
       "masterpiece": false
     },
@@ -2559,7 +2539,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLB5A03A4E8364EDEF",
+      "youtube": "https://www.youtube.com/watch?v=q-lgdQA7Dys&list=PL4lEESSgxM_5VOY6rEaqwNHwclSdeO5Fu",
       "spotify": "https://open.spotify.com/album/65TXyh4nfpqV0pttAN439J",
       "masterpiece": true
     },
@@ -2580,7 +2560,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PL9BA39B079D1FC557",
+      "youtube": "https://www.youtube.com/watch?v=3uO8yIBUswc&list=PL4lEESSgxM_4M684wj9e0kkiG9yF9jEAH",
       "spotify": "https://open.spotify.com/album/4oG14WGnh4TXMI92JQJ5SZ",
       "masterpiece": true
     },
@@ -2601,7 +2581,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLQ8x7Q3_wK4yFqJb8z2P2C2B222A9F5E4",
+      "youtube": "https://www.youtube.com/watch?v=LpZ-sX0wwCY&list=PL4lEESSgxM_7mVZwE-4IGkeGi7dLtBCA7",
       "spotify": "https://open.spotify.com/album/5n3825ZA6mFbK0aL42f4jP",
       "masterpiece": true
     },
@@ -2622,7 +2602,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLQ8x7Q3_wK4w0L0B2K8X1H6L3M3J1A4G5",
+      "youtube": "https://www.youtube.com/watch?v=VxPPbPYMPn8&list=PL4lEESSgxM_6XAmcuD81VTG-sSbHvN5Xg",
       "spotify": "https://open.spotify.com/album/1lL2AaLIWqdM0UArMxAPkp",
       "masterpiece": true
     },
@@ -2643,7 +2623,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PL2-fS1y-yvL7j7j2k0H3J82N4L8X9A5B6",
+      "youtube": "https://www.youtube.com/watch?v=BI2Et19vDCM&list=PL4lEESSgxM_7_AtmGWlkrBI5_s1EpsI2f",
       "spotify": "https://open.spotify.com/album/5ysMC5s4nOCDtPBYrTa5pl",
       "masterpiece": true
     },
@@ -2664,7 +2644,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLrK3D984v0e8M2N5J1B7K1B6E0B1R7E7",
+      "youtube": "https://www.youtube.com/watch?v=UF9hrn9ZU-w&list=RDUF9hrn9ZU-w&start_radio=1",
       "spotify": "https://open.spotify.com/album/34iY3hgyKCn1EJe6YVNFro",
       "masterpiece": true
     },
@@ -2683,10 +2663,10 @@
       },
       "image": "/imagenes/musica/cherry.png",
       "tags": [
-        "album"
+        "song"
       ],
-      "youtube": "https://www.youtube.com",
-      "spotify": "https://open.spotify.com/album/7uxfQPw7jZrMCwmFijglNT",
+      "youtube": "https://www.youtube.com/watch?v=qqI5-2G-x4w&list=RDqqI5-2G-x4w&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/7qdthSAP02SdvLGisBEVtI",
       "masterpiece": false
     },
     {

@@ -60,7 +60,7 @@
         "djset"
       ],
       "youtube": "https://www.youtube.com/watch?v=uynCeLheCPc&list=RDuynCeLheCPc&start_radio=1&t=1191s",
-      "spotify": "https://open.spotify.com/album/2T64N96AVfsrRFJCUXQEoZ",
+      "spotify": "https://open.spotify.com/playlist/3BEdkFlPJgkEtGgkBBLHUC",
       "masterpiece": true
     },
     {
@@ -101,8 +101,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=k1x5IpGaBZQ",
-      "spotify": "https://open.spotify.com/album/1h1axszMdFUpEBZ71UW2jR",
+      "youtube": "https://www.youtube.com/watch?v=4xc2eNFFvzs&list=RD4xc2eNFFvzs&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/2lbQIq3wQTZvdWnqL2e3Zp",
       "masterpiece": true
     },
     {
@@ -210,27 +210,7 @@
       "spotify": "https://open.spotify.com/album/3rsutH7js571uJJGEMWGhW",
       "masterpiece": false
     },
-    {
-      "id": 11,
-      "category": "music",
-      "subcategory": "electronic",
-      "artist": "Orbital",
-      "title": {
-        "es": "The Girl With The Sun In The Head",
-        "en": "The Girl With The Sun In The Head"
-      },
-      "description": {
-        "es": "Track emblemático de Orbital, perteneciente al álbum In Sides (1996). Su mezcla de ambient y electrónica crea atmósferas introspectivas y etéreas. Destaca por texturas sonoras envolventes y ritmo hipnótico.",
-        "en": "Emblematic track by Orbital from the album In Sides (1996). Its blend of ambient and electronic creates introspective, ethereal atmospheres. It stands out for its enveloping sonic textures and hypnotic rhythm."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b2738582db75b4e80ca0077697bc",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=uynCeLheCPc",
-      "spotify": "https://open.spotify.com/album/1h1axszMdFUpEBZ71UW2jR",
-      "masterpiece": true
-    },
+    
     {
       "id": 12,
       "category": "music",
@@ -248,8 +228,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6V7eIfyQSwyDNVoKArO2HK",
+      "youtube": "https://www.youtube.com/watch?v=V1ROyUVIeaw&list=RDV1ROyUVIeaw&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/1SfaQ79lWHRocAxALQgIWS",
       "masterpiece": false
     },
     {
@@ -269,31 +249,11 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/0cs8cpJ3NB1Omcz5wfLQyi",
+      "youtube": "https://www.youtube.com/watch?v=niKUNXG3H3I&list=RDniKUNXG3H3I&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/6pBse6HwV9DOzACkMkHMsA",
       "masterpiece": false
     },
-    {
-      "id": 14,
-      "category": "music",
-      "subcategory": "electronic",
-      "artist": "Noisia",
-      "title": {
-        "es": "Split The Atom",
-        "en": "Split The Atom"
-      },
-      "description": {
-        "es": "Track emblemático del álbum del mismo nombre (2010), mezcla drum & bass y neurofunk con precisión técnica. Su producción nítida, bajos potentes y samples cortantes lo convirtieron en un hito electrónico. Representa lo mejor de la escena underground.",
-        "en": "Emblematic track from the album of the same name (2010), mixing drum & bass and neurofunk with technical precision. Its clean production, powerful bass, and sharp samples made it an electronic milestone. Represents the best of the underground scene."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b27340817045256bc4d693640a49",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/0UGDLn4DDbawdIoA3FU8pj",
-      "masterpiece": true
-    },
+   
     {
       "id": 15,
       "category": "music",
@@ -626,8 +586,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/1Bof5WLdaxLYn3owI7CCx0",
+      "youtube": "https://www.youtube.com/watch?v=_RKnzGiUllI&list=RD_RKnzGiUllI&start_radio=1&t=106s",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -1564,7 +1524,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=JX9FSE-6Cis",
+      "youtube": "https://www.youtube.com/watch?v=OguHIyNNblM&list=RDOguHIyNNblM&start_radio=1",
       "spotify": "https://open.spotify.com/album/4d76vEILnWEV4hCM9pnAik",
       "masterpiece": false
     },
@@ -1606,7 +1566,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=V4zGRmrG20w&list=RDV4zGRmrG20w&start_radio=1",
       "spotify": "https://open.spotify.com/album/6i7rxe7MEgawub3xs97lqv",
       "masterpiece": false
     },
@@ -2068,8 +2028,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=IO2XqvJlWnM",
-      "spotify": "https://open.spotify.com/album/3KZ8Aw6rcxsAivtLgma2pk",
+      "youtube": "https://www.youtube.com/watch?v=U2KjySY9wvw&list=RDU2KjySY9wvw&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/4Y2glvLjQGOb4dXnwm1hQf",
       "masterpiece": false
     },
     {
@@ -2110,8 +2070,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=ST3_G6AFaTA",
-      "spotify": "https://open.spotify.com/album/3mPiFouusRjVabuHTto0HG",
+      "youtube": "https://www.youtube.com/watch?v=JWIXkF_7JII&list=RDJWIXkF_7JII&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/0PqxE6f0TeL65r3WqBOOvP",
       "masterpiece": false
     },
     {
@@ -2243,7 +2203,7 @@
     {
       "id": 108,
       "category": "music",
-      "subcategory": "reggae",
+      "subcategory": "dub",
       "artist": "Skrillex & Damian \"Jr. Gong\" Marley",
       "title": {
         "es": "Make It Bun Dem",
@@ -3202,7 +3162,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=n2O8hXDJpzY",
+      "youtube": "https://www.youtube.com/watch?v=lY6GUj_-Tjc&list=RDlY6GUj_-Tjc&start_radio=1",
       "spotify": "https://open.spotify.com/album/5DyJyPd1uYQrE0iWTkhmRf",
       "masterpiece": false
     },
@@ -3314,7 +3274,7 @@
     {
       "id": 159,
       "category": "music",
-      "subcategory": "reggae",
+      "subcategory": "dub",
       "artist": "Snoop Lion Ft. Mavado & Pocaan",
       "title": {
         "es": "Lighters Up",
@@ -3335,7 +3295,7 @@
     {
       "id": 160,
       "category": "music",
-      "subcategory": "reggae",
+      "subcategory": "dub",
       "artist": "Snoop Lion ft. Mavado & Popcaan",
       "title": {
         "es": "Lighters Up",
@@ -4063,8 +4023,8 @@
       "tags": [
         "live"
       ],
-      "youtube": "https://www.youtube.com/watch?v=somevideoid",
-      "spotify": "https://open.spotify.com/album/3rH4Ue2sF62eMMzawjhZSk",
+      "youtube": "https://www.youtube.com/watch?v=3y0VMyAM5kU&list=RD3y0VMyAM5kU&start_radio=1&t=3011s",
+      "spotify": "https://open.spotify.com/intl-es/album/3rH4Ue2sF62eMMzawjhZSk",
       "masterpiece": false
     },
     {
@@ -4080,7 +4040,7 @@
         "es": "Grabación en vivo del evento Awakenings durante el Amsterdam Dance Event 2021, con Tale Of Us presentando su característico sonido melódico y envolvente. Una sesión que captura la esencia del techno contemporáneo y la energía del público.",
         "en": "Live recording of the Awakenings event during Amsterdam Dance Event 2021, featuring Tale Of Us presenting their characteristic melodic and immersive sound. A session that captures the essence of contemporary techno and crowd energy."
       },
-      "image": "/imagenes/musica/awakenings.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],

@@ -563,8 +563,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=Vt1f9fQVC1I",
-      "spotify": "https://open.spotify.com/album/5dGWwsZ9iB2Xc3UKR0gif2",
+      "youtube": "https://www.youtube.com/watch?v=Yt0kHiRsnHA&list=RDYt0kHiRsnHA&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/album/6moXrbUfTHYc0aJcuGwIgR",
       "masterpiece": true
     },
     {
@@ -584,31 +584,11 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=UFPAsjgOK8w",
+      "youtube": "https://www.youtube.com/watch?v=EXP1BwY7YcA&list=RDEXP1BwY7YcA&start_radio=1",
       "spotify": "https://open.spotify.com/album/0dLnnm4PjeyqM4CoHqo6DI",
       "masterpiece": true
     },
-    {
-      "id": 829,
-      "category": "music",
-      "subcategory": "electronic",
-      "artist": "Justice",
-      "title": {
-        "es": "Woman",
-        "en": "Woman"
-      },
-      "description": {
-        "es": "Woman, lanzado en 2016, muestra un sonido más orgánico y funk, fusionado con electrónica y disco. El álbum refleja la madurez artística del dúo francés con pistas dinámicas y sofisticadas. Es uno de sus trabajos más celebrados.",
-        "en": "Woman, released in 2016, features a more organic and funk sound blended with electronic and disco elements. The album reflects the French duo's artistic maturity with dynamic and sophisticated tracks. It is one of their most celebrated works."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273d4a2f9a24620e329d2db7078",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=IIbXWqL5meY",
-      "spotify": "https://open.spotify.com/album/23EaoI8dXfDGfxF54sd1DP",
-      "masterpiece": true
-    },
+   
     {
       "id": 830,
       "category": "music",
@@ -626,7 +606,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=716ZRDeac-s&list=RD716ZRDeac-s&start_radio=1&t=104s",
       "spotify": "https://open.spotify.com/album/6ooBxhsOVedpX4zPTCyL86",
       "masterpiece": true
     },
@@ -645,10 +625,9 @@
       },
       "image": "https://i.scdn.co/image/ab67616d0000b27314a99b6cf89499f1c4ca200c",
       "tags": [
-        "live",
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=AykIpu59Kds&list=RDAykIpu59Kds&start_radio=1",
       "spotify": "https://open.spotify.com/album/7E3c9dmZ1KnZOQLZTgRqWx",
       "masterpiece": true
     },
@@ -670,7 +649,7 @@
         "live",
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=hwZ_SKWrNzk",
       "spotify": "https://open.spotify.com/album/41solTO3bJJh1OTzBF1GUo",
       "masterpiece": true
     },
@@ -692,7 +671,7 @@
         "live",
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=hxSaI9xNgIY",
       "spotify": "https://open.spotify.com/album/3ZJErwtxUtDkPlhrrSAw0R",
       "masterpiece": true
     },

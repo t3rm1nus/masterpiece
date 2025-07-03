@@ -256,7 +256,10 @@
         "latin": "Latina",
         "ethnic": "Étnica",
         "punk": "Punk",
-        "chillout": "Chill out"
+        "chillout": "Chill out",
+        "dub": "Dub",
+        "others": "Otros",
+        "trap": "Trap"
       },
       "videogames": {
         "action": "Acción",
@@ -640,7 +643,10 @@
         "latin": "Latin",
         "ethnic": "Ethnic",
         "punk": "Punk",
-        "chillout": "Chill out"
+        "chillout": "Chill out",
+        "dub": "Dub",
+        "others": "Others",
+        "trap": "Trap"
       },
       "videogames": {
         "action": "Action",
