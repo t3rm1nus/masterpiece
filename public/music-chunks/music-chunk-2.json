@@ -108,15 +108,15 @@
     {
       "id": 206,
       "category": "music",
-      "subcategory": "electronic",
-      "artist": "SEKSO924",
+      "subcategory": "trap",
+      "artist": "Brasov",
       "title": {
-        "es": "7:30 BRASOV // DALÍ",
-        "en": "7:30 BRASOV // DALÍ"
+        "es": "Dalí",
+        "en": "Dalí"
       },
       "description": {
-        "es": "Un tema electrónico producido por SEKSO924 que mezcla sonidos atmosféricos y beats profundos, ideal para ambientes introspectivos y nocturnos.",
-        "en": "An electronic track produced by SEKSO924 mixing atmospheric sounds and deep beats, ideal for introspective and nocturnal settings."
+        "es": "EDICION: SieteTreinta @andreeagirimia GRABACION: @kikereptilcorp @guillermanhedo gradecimentos a DIOS Y A @the.cheshire.cat",
+        "en": "EDITING: SieteTreinta @andreeagirimia RECORDING: @kikereptilcorp @guillermanhedo Thanks to GOD and @the.cheshire.cat"
       },
       "image": "/imagenes/musica/pordefecto.jpg",
       "tags": [
@@ -181,7 +181,7 @@
         "es": "'Crucificado' es una pieza electrónica producida por Stash House que combina elementos atmosféricos y voces etéreas, con la colaboración de Galinier Dheformer.",
         "en": "'Crucificado' is an electronic piece produced by Stash House combining atmospheric elements and ethereal vocals, featuring Galinier Dheformer."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/galinier.jpg",
       "tags": [
         "song"
       ],
@@ -559,7 +559,7 @@
         "es": "'Rap Sin Corte XLVIII' es una sesión intensa y directa de Foyone, donde la improvisación y la crítica social se combinan para ofrecer un mensaje poderoso y sin filtros.",
         "en": "'Rap Sin Corte XLVIII' is an intense and direct session by Foyone, combining improvisation and social critique to deliver a powerful and unfiltered message."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -895,7 +895,7 @@
         "es": "‘So Payaso’ es uno de los temas más reconocidos de Extremoduro, incluido en su álbum 'Ágila' (1996). Con una mezcla de rock duro y letras poéticas, la canción aborda la vulnerabilidad y las contradicciones humanas. Un clásico imprescindible del rock español que ha marcado a varias generaciones.",
         "en": "'So Payaso' is one of Extremoduro's most recognized tracks, included in their album 'Ágila' (1996). With a mix of hard rock and poetic lyrics, the song addresses human vulnerability and contradictions. An essential classic of Spanish rock that has influenced several generations."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273489635998e8b3a9dec1ae455",
       "tags": [
         "song"
       ],
@@ -916,7 +916,7 @@
         "es": "Gutalax es una banda checa de grindcore conocida por su sonido intenso y letras irreverentes. Este concierto en vivo en el Obscene Extreme Fest 2014 captura la energía brutal y la conexión con el público. Una experiencia vibrante para los amantes del metal extremo.",
         "en": "Gutalax is a Czech grindcore band known for their intense sound and irreverent lyrics. This live concert at Obscene Extreme Fest 2014 captures their brutal energy and audience connection. A vibrant experience for extreme metal fans."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -1001,7 +1001,7 @@
         "es": "Grabación icónica del enfrentamiento entre MC Klopedia y Kabuto en la Batalla de Gallos de Madrid 2008. Una muestra de la esencia del freestyle y la improvisación en la escena española, cargada de ingenio y habilidad verbal.",
         "en": "Iconic recording of the battle between MC Klopedia and Kabuto at the Madrid Batalla de Gallos 2008. A showcase of freestyle essence and improvisation in the Spanish scene, full of wit and verbal skill."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -1078,14 +1078,14 @@
       "subcategory": "rap",
       "artist": "RMS ft. Gona",
       "title": {
-        "es": "2. Sombras (Tema Oficial)",
-        "en": "2. Sombras (Official Track)"
+        "es": "Sombras",
+        "en": "Sombras"
       },
       "description": {
         "es": "Sombras es un tema oficial de RMS con la colaboración de Gona. La canción explora temáticas profundas con una producción cuidada, mostrando la madurez artística de ambos intérpretes dentro del rap español.",
         "en": "Sombras is an official track by RMS featuring Gona. The song explores deep themes with polished production, showing the artistic maturity of both performers within Spanish rap."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/rms.jpg",
       "tags": [
         "song"
       ],
@@ -1106,7 +1106,7 @@
         "es": "El Mostrico es una canción destacada de Mcklopedia que refleja la fuerza del rap consciente y la narrativa urbana. El tema combina letras afiladas con un beat contundente, capturando la esencia del artista.",
         "en": "El Mostrico is a standout song by Mcklopedia reflecting the strength of conscious rap and urban storytelling. The track combines sharp lyrics with a strong beat, capturing the artist's essence."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/rms.jpg",
       "tags": [
         "song"
       ],
@@ -1115,40 +1115,19 @@
       "masterpiece": true
     },
     {
-      "id": 254,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Sombras - RMS",
-      "title": {
-        "es": "Sombras",
-        "en": "Sombras"
-      },
-      "description": {
-        "es": "Sombras es una canción introspectiva de RMS que aborda temas personales y sociales con un tono melancólico. Su producción sencilla permite que las letras y la emotividad destaquen con claridad.",
-        "en": "Sombras is an introspective song by RMS addressing personal and social themes with a melancholic tone. Its simple production allows the lyrics and emotion to stand out clearly."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/results?search_query=RMS+Sombras",
-      "spotify": "https://open.spotify.com/album/5MEFUV7gOqNys84HWq8w8t",
-      "masterpiece": true
-    },
-    {
       "id": 255,
       "category": "music",
       "subcategory": "rap",
       "artist": "RMS",
       "title": {
-        "es": "1. Napalm (Tema Oficial)",
-        "en": "1. Napalm (Official Track)"
+        "es": "Napalm",
+        "en": "Napalm"
       },
       "description": {
         "es": "Napalm es un tema oficial de RMS que destaca por su fuerza lírica y producción impactante. El artista muestra su compromiso con la crítica social a través de versos potentes y directos.",
         "en": "Napalm is an official track by RMS noted for its lyrical strength and impactful production. The artist shows commitment to social criticism through powerful and direct verses."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/rms.jpg",
       "tags": [
         "song"
       ],
@@ -1162,14 +1141,14 @@
       "subcategory": "rap",
       "artist": "RMS",
       "title": {
-        "es": "6. Nunca, Siempre (Tema Oficial)",
-        "en": "6. Nunca, Siempre (Official Track)"
+        "es": "Nunca, Siempre",
+        "en": "Nunca, Siempre"
       },
       "description": {
         "es": "Nunca, Siempre es una canción oficial de RMS que combina introspección con crítica social. El tema destaca por su ritmo dinámico y letras que invitan a la reflexión profunda.",
         "en": "Nunca, Siempre is an official song by RMS combining introspection with social criticism. The track stands out for its dynamic rhythm and lyrics inviting deep reflection."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/rms.jpg",
       "tags": [
         "song"
       ],
@@ -1183,14 +1162,14 @@
       "subcategory": "rap",
       "artist": "RMS",
       "title": {
-        "es": "4. Voz (Tema Oficial)",
-        "en": "4. Voz (Official Track)"
+        "es": "Voz",
+        "en": "Voz"
       },
       "description": {
         "es": "Voz es un tema oficial de RMS en el que la voz y el mensaje se vuelven protagonistas. Con una producción clara y letras profundas, esta canción refleja la madurez artística del rapero.",
         "en": "Voz is an official track by RMS where the voice and message become protagonists. With clear production and deep lyrics, this song reflects the rappers artistic maturity."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/rms.jpg",
       "tags": [
         "song"
       ],
@@ -1204,14 +1183,14 @@
       "subcategory": "rap",
       "artist": "Ramsés Meneses",
       "title": {
-        "es": "Soy (TEMA OFICIAL)",
-        "en": "Soy (OFFICIAL THEME)"
+        "es": "Soy",
+        "en": "Soy"
       },
       "description": {
         "es": "Una canción que refleja la esencia del rap español desde la perspectiva profunda y auténtica de Ramsés Meneses. Letras que hablan de identidad, lucha y superación personal. Un tema emblemático en su carrera que conecta con la realidad social.\"",
         "en": "A song that reflects the essence of Spanish rap from the deep and authentic perspective of Ramsés Meneses. Lyrics speak of identity, struggle and personal overcoming. An emblematic theme in his career that connects with social reality.\""
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/rms.jpg",
       "tags": [
         "song"
       ],
@@ -1400,7 +1379,7 @@
         "es": "Una actuación en vivo de Justice en el festival MadCool que destaca por su energía y presencia escénica. El dúo francés ofrece un espectáculo de electrónica con una puesta en escena visual impactante. Un momento memorable para los fans del género.\"",
         "en": "A live performance by Justice at the MadCool festival that stands out for its energy and stage presence. The French duo offers an electronic show with impactful visual staging. A memorable moment for fans of the genre.\""
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -1421,7 +1400,7 @@
         "es": "Un álbum que combina elementos de electrónica y psicodelia con toques melódicos y atmosféricos. Caribou crea un viaje sonoro íntimo que explora emociones y recuerdos. Su producción destaca por su riqueza de texturas y ritmo envolvente.",
         "en": "An album blending elements of electronic and psychedelic music with melodic and atmospheric touches. Caribou crafts an intimate sonic journey exploring emotions and memories. The production stands out for its rich textures and immersive rhythm."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/BackHome.jpg",
       "tags": [
         "album"
       ],
@@ -1820,7 +1799,7 @@
         "es": "Último álbum de estudio con la formación original. Explora sonidos más experimentales y sintetizadores, mostrando un cambio en la evolución musical de la banda.",
         "en": "Last studio album with the original lineup. Explores more experimental sounds and synthesizers, showing a shift in the band's musical evolution."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/analogue.jpg",
       "tags": [
         "album"
       ],
@@ -1841,7 +1820,7 @@
         "es": "Último álbum de estudio con la formación original. Explora sonidos más experimentales y sintetizadores, mostrando un cambio en la evolución musical de la banda.",
         "en": "Last studio album with the original lineup. Explores more experimental sounds and synthesizers, showing a shift in the band's musical evolution."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/cometodaddy.jpg",
       "tags": [
         "album"
       ],
@@ -1862,7 +1841,7 @@
         "es": "Último álbum de estudio con la formación original. Explora sonidos más experimentales y sintetizadores, mostrando un cambio en la evolución musical de la banda.",
         "en": "Last studio album with the original lineup. Explores more experimental sounds and synthesizers, showing a shift in the band's musical evolution."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/window.jpg",
       "tags": [
         "album"
       ],
@@ -2702,7 +2681,7 @@
         "es": "Un álbum reciente que profundiza en la melancolía y la reflexión con su estilo característico.\nCombina ritmos intrincados con melodías etéreas y vocales emotivas.\nUn trabajo que demuestra su maestría en la creación de atmósferas sonoras envolventes y profundas.",
         "en": "A recent album that delves into melancholy and reflection with his characteristic style.\nIt combines intricate rhythms with ethereal melodies and emotive vocals.\nA work that demonstrates his mastery in creating immersive and profound sound atmospheres."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/cherry.png",
       "tags": [
         "album"
       ],

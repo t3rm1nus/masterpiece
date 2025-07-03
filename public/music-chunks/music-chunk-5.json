@@ -223,7 +223,7 @@
         "es": "Asom - A Divine State Of Mind destaca por su fusión de house y dub con la voz profunda de Paul St. Hilaire. Este álbum es un viaje espiritual a través de sonidos cuidadosamente elaborados, que transmiten emoción y energía en cada tema. Es un clásico contemporáneo dentro de la escena electrónica.",
         "en": "Asom - A Divine State Of Mind stands out for its fusion of house and dub with Paul St. Hilaire's deep voice. This album is a spiritual journey through carefully crafted sounds, conveying emotion and energy in every track. It is a contemporary classic in the electronic scene."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/adsom.jpg",
       "tags": [
         "album"
       ],
@@ -234,7 +234,7 @@
     {
       "id": 812,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "dub",
       "artist": "Deadbeat and Paul St. Hilaire",
       "title": {
         "es": "The Infinity Dub Sessions",
@@ -244,7 +244,7 @@
         "es": "The Infinity Dub Sessions es una colaboración emblemática entre Deadbeat y Paul St. Hilaire. El álbum mezcla dub, electrónica y house, creando paisajes sonoros ricos y profundos donde la voz de St. Hilaire aporta una calidez única. Un referente para amantes del dub moderno.",
         "en": "The Infinity Dub Sessions is an iconic collaboration between Deadbeat and Paul St. Hilaire. The album blends dub, electronic, and house, creating rich and deep soundscapes where St. Hilaire's voice adds a unique warmth. A benchmark for modern dub lovers."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/dubsesions.jpg",
       "tags": [
         "album"
       ],
@@ -297,7 +297,7 @@
     {
       "id": 815,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "dub",
       "artist": "Deadbeat & Paul St. Hilaire",
       "title": {
         "es": "Four Quarters Of Love And Modern Lash",
@@ -307,7 +307,7 @@
         "es": "Four Quarters Of Love And Modern Lash es una colaboración que explora sonidos dub y electrónicos con la voz inconfundible de Paul St. Hilaire. El álbum destaca por sus texturas profundas y su mezcla innovadora que desafía los límites del género. Una obra esencial para los amantes del dub moderno.",
         "en": "Four Quarters Of Love And Modern Lash is a collaboration exploring dub and electronic sounds with Paul St. Hilaire's unmistakable voice. The album stands out for its deep textures and innovative blend that challenges genre boundaries. An essential work for modern dub lovers."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/four.jpg",
       "tags": [
         "album"
       ],
@@ -318,7 +318,7 @@
     {
       "id": 816,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "dub",
       "artist": "Paul St. Hilaire",
       "title": {
         "es": "Tikiman Vol. 1",

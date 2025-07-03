@@ -55,7 +55,7 @@
         "es": "Una sesión envolvente desde el corazón de Nueva York donde Bonobo despliega su mezcla única de electrónica, downtempo y house. Con una selección exquisita, el set fluye con elegancia entre texturas sonoras, ritmos suaves y una atmósfera introspectiva. Ideal para dejarse llevar.",
         "en": "An immersive session from the heart of New York where Bonobo showcases his unique blend of electronica, downtempo, and house. With an exquisite selection, the set flows elegantly through sonic textures, smooth rhythms, and a contemplative atmosphere. Perfect for getting lost in the sound."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "djset",
         "live"
@@ -361,7 +361,7 @@
     {
       "id": 18,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Spectre feat. Sensational",
       "title": {
         "es": "Pillars of Smoke",
@@ -371,7 +371,7 @@
         "es": "Fusión de electrónica oscura y ritmos hipnóticos con la voz de Sensational. Pista atmosférica que evoluciona hacia pasajes melódicos. Ideal para ambientes introspectivos y sonoridades profundas.",
         "en": "A fusion of dark electronics and hypnotic rhythms featuring Sensational's vocals. An atmospheric track that evolves into melodic passages. Perfect for introspective settings and deep soundscapes."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/pillars.jpg",
       "tags": [
         "song"
       ],
@@ -445,7 +445,7 @@
     {
       "id": 22,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "dub",
       "artist": "Panda Dub",
       "title": {
         "es": "Psychotic Symphony (Full Album)",
@@ -455,7 +455,7 @@
         "es": "Álbum que mezcla dub, reggae, electrónica y sonidos pausados. Panda Dub crea paisajes sonoros envolventes con bajo marcado y atmósfera nocturna. Ideal para sesiones de relajación profunda.",
         "en": "An album mixing dub, reggae, electronics, and slow sounds. Panda Dub creates immersive soundscapes with pronounced bass and a nocturnal atmosphere. Perfect for deep relaxation sessions."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/panda.jpg",
       "tags": [
         "album"
       ],
@@ -508,7 +508,7 @@
     {
       "id": 25,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "chillout",
       "artist": "Manta Ray",
       "title": {
         "es": "Torres de electricidad",
@@ -518,7 +518,7 @@
         "es": "Canción atmosférica de rock indie que mezcla sonidos densos y letra evocadora. Manta Ray juega con imágenes urbanas y metáforas de soledad. El crescendo instrumental transmite tensión emocional.",
         "en": "An atmospheric indie-rock song that blends dense sounds and evocative lyrics. Manta Ray uses urban imagery and metaphors of loneliness. The instrumental crescendo conveys emotional tension."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/torres.jpg",
       "tags": [
         "song"
       ],
@@ -539,7 +539,7 @@
         "es": "Producción cinematográfica con electrónica ambiental y texturas oscuras. Creado por artista audiovisual Steve Cutts, mezcla sonido y narrativa. Pone énfasis en atmósferas tensas y reflexivas.",
         "en": "Cinematic production with ambient electronics and dark textures. Created by audiovisual artist Steve Cutts, it blends sound and narrative. It emphasizes tense and reflective atmospheres."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/brief.jpg",
       "tags": [
         "song"
       ],
@@ -616,14 +616,14 @@
       "subcategory": "electronic",
       "artist": "Vangelis",
       "title": {
-        "es": "The Dragon (Full Album)",
-        "en": "The Dragon (Full Album)"
+        "es": "The Dragon",
+        "en": "The Dragon"
       },
       "description": {
         "es": "Álbum instrumental de Vangelis de 1978 que mezcla electrónica, new age y sinfonismo. Paisajes sonoros épicos y melódicos que crean una narrativa auditiva exuberante. Ejemplo temprano de música electrónica cinematográfica.",
         "en": "A 1978 instrumental album by Vangelis blending electronics, new age, and symphonic elements. Epic and melodic soundscapes create an exuberant auditory narrative. An early example of cinematic electronic music."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/dragon.jpg",
       "tags": [
         "album"
       ],
@@ -718,7 +718,7 @@
     {
       "id": 35,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Two Lone Swordsmen",
       "title": {
         "es": "Hope We Never Surface",
@@ -749,7 +749,7 @@
         "es": "Tema hipnótico con ritmos electro-minimalistas y repetición constante. Crea ambiente introspectivo y mecánico. Su producción limpia y repetitiva genera un efecto meditativo.",
         "en": "A hypnotic track with electro-minimalist rhythms and constant repetition. It creates an introspective and mechanical atmosphere. Its clean, repetitive production generates a meditative effect."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/topic.jpg",
       "tags": [
         "song"
       ],
@@ -875,7 +875,7 @@
         "es": "Enérgico tema en vivo con carácter festivo, guitarras afiladas y buen humor. El grupo conecta con el público en un canto a la vida y la amistad desacomplejada. Gran momento en directo de Extremoduro.",
         "en": "Energetic live track with festive character, sharp guitars and good humor. The band connects with the audience in a celebration of life and unashamed friendship. A highlight of Extremoduro's live shows."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -961,7 +961,7 @@
         "en": "Live concert recording with festive energy and rock-infused rap-hiphop. A powerful fusion moment between urban rock and festival culture. Vibrant audience and artists in top form."
       },
       "year": "2021",
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -1016,7 +1016,7 @@
     {
       "id": 49,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rock",
       "artist": "Glass Beams",
       "title": {
         "es": "One Raga to a Disco Beat",
@@ -1027,7 +1027,7 @@
         "en": "A track that fuses traditional Indian raga with modern disco beats. Glass Beams creates a sonic bridge between cultures with a danceable and psychedelic style. Hypnotic textures and strong groove."
       },
       "year": "2021",
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/glass.jpg",
       "tags": [
         "song"
       ],
@@ -1049,7 +1049,7 @@
         "en": "Live recording of energetic, classic rock with powerful guitars and festival attitude. Los Suaves connect with their audience through intense riffs and a vibrant performance. A great moment live."
       },
       "year": "2002",
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -1137,7 +1137,7 @@
         "en": "A live rock ballad with great emotional impact. Intense vocals and deep atmosphere. Los Suaves demonstrate their power to move the audience."
       },
       "year": "2002",
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -1179,7 +1179,7 @@
         "es": "Tema rock directo con guitarras crudas y letra de desengaño. Grabación en vivo que destaca la conexión con los fans. Actitud combativa y sentimiento sincero.",
         "en": "A straightforward rock track with raw guitars and lyrics of disappointment. Live recording highlighting connection with fans. Combative attitude and sincere emotion."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -1221,7 +1221,7 @@
         "es": "Tema en vivo con guitarras envolventes y voz llena de sentimiento. Melodía intensa y estribillo que atrapa. Ejemplo de su capacidad para emocionar.",
         "en": "Live track with enveloping guitars and heartfelt vocals. Intense melody and captivating chorus. An example of their ability to evoke emotion."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -1242,7 +1242,7 @@
         "es": "Rock oscuro en directo con atmósfera nocturna. Guitarras densas y tempo envolvente. El público se sumerge en la narrativa musical.",
         "en": "Dark live rock with a nocturnal atmosphere. Dense guitars and immersive tempo. The audience is immersed in the musical narrative."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -1393,7 +1393,7 @@
         "es": "Himno en directo al rock, con guitarras vibrantes y pasión evidente. El público canta y participa en cada estribillo. Uno de los momentos más memorables de sus conciertos.",
         "en": "A live anthem to rock, with vibrant guitars and visible passion. The audience sings along each chorus. One of the most memorable moments of their concerts."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -1488,7 +1488,7 @@
     {
       "id": 71,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "trap",
       "artist": "Comes",
       "title": {
         "es": "Brasov",
@@ -1498,7 +1498,7 @@
         "es": "Pieza electrónica ambiental que envuelve con texturas sonoras profundas y ritmos pausados. Ideal para la relajación o introspección, su atmósfera evoca paisajes sonoros urbanos y naturales. Una composición minimalista y envolvente.",
         "en": "Ambient electronic piece that envelops with deep sound textures and slow rhythms. Ideal for relaxation or introspection, its atmosphere evokes urban and natural soundscapes. A minimalist and immersive composition."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/brasov.jpeg",
       "tags": [
         "song"
       ],
@@ -1572,7 +1572,7 @@
     {
       "id": 75,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "dub",
       "artist": "Dub FX",
       "title": {
         "es": "Thinking Clear",
@@ -1614,7 +1614,7 @@
     {
       "id": 77,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Dheformer Galinier",
       "title": {
         "es": "El Elegido",
@@ -1624,7 +1624,7 @@
         "es": "Pieza electrónica con atmósferas oscuras y sonidos envolventes que transmiten misterio y tensión. Ideal para ambientes introspectivos o de suspenso, destaca por su producción cuidada y original.",
         "en": "Electronic piece with dark atmospheres and enveloping sounds conveying mystery and tension. Ideal for introspective or suspenseful environments, it stands out for its careful and original production."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/elelegido.jpg",
       "tags": [
         "song"
       ],
@@ -1803,7 +1803,7 @@
     {
       "id": 86,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Fat Bass Dj Ralph",
       "title": {
         "es": "Fat Bass",
@@ -1813,7 +1813,7 @@
         "es": "Track energético y bailable con fuertes líneas de bajo y ritmos contundentes. Ideal para sesiones de DJ y fiestas, destaca por su producción potente y ritmo contagioso. Un ejemplo claro del estilo bass en la música electrónica.",
         "en": "Energetic and danceable track with strong bass lines and powerful rhythms. Ideal for DJ sets and parties, it stands out for its potent production and catchy beat. A clear example of bass style in electronic music."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/electro.jpg",
       "tags": [
         "djset"
       ],
@@ -1876,7 +1876,7 @@
         "es": "Versión en vivo de 'Europe Is Lost' grabada en KEXP, que intensifica la emoción y el mensaje social. La interpretación en directo destaca la fuerza y autenticidad de Kae Tempest, consolidándola como voz clave del rap consciente.",
         "en": "Live version of 'Europe Is Lost' recorded at KEXP, intensifying the emotion and social message. The live performance highlights Kae Tempest's strength and authenticity, consolidating her as a key voice in conscious rap."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -1960,7 +1960,7 @@
         "es": "Actuación en vivo del grupo noruego Dimmu Borgir en el Ozzfest 2004, donde mostraron su metal sinfónico oscuro y agresivo. La energía en el escenario y la calidad instrumental consolidaron su posición como referentes del metal extremo.",
         "en": "Live performance by Norwegian band Dimmu Borgir at Ozzfest 2004, showcasing their dark and aggressive symphonic metal. The stage energy and instrumental quality cemented their status as extreme metal icons."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -2044,33 +2044,12 @@
         "es": "Pieza instrumental de Aphex Twin que combina texturas electrónicas atmosféricas con un ritmo minimalista y envolvente. 'Stone In Focus' es un viaje introspectivo dentro del IDM, mostrando la habilidad del artista para crear ambientes sonoros únicos.",
         "en": "Instrumental piece by Aphex Twin combining atmospheric electronic textures with a minimalist and immersive rhythm. 'Stone In Focus' is an introspective journey within IDM, showcasing the artist's skill for creating unique soundscapes."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/stone.jpg",
       "tags": [
         "song"
       ],
       "youtube": "https://www.youtube.com/watch?v=YH1Ets_DX9s",
       "spotify": "https://open.spotify.com/album/7aNclGRxTysfh6z0d8671k",
-      "masterpiece": false
-    },
-    {
-      "id": 98,
-      "category": "music",
-      "subcategory": "electronic",
-      "artist": "Scorn",
-      "title": {
-        "es": "Evanescence",
-        "en": "Evanescence"
-      },
-      "description": {
-        "es": "Canción oscura y experimental de Scorn que mezcla dub, industrial y electrónica. 'Evanescence' crea una atmósfera inquietante y profunda, con texturas densas y ritmos lentos, ideal para los amantes de sonidos vanguardistas y ambientes sombríos.",
-        "en": "Dark and experimental track by Scorn blending dub, industrial, and electronic. 'Evanescence' creates a haunting and deep atmosphere with dense textures and slow rhythms, ideal for lovers of avant-garde sounds and somber vibes."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=4EoOaCy2pzA",
-      "spotify": "https://open.spotify.com/album/0Vwzlrwn6ENELkr6Qei0Jf",
       "masterpiece": false
     },
     {
@@ -2181,7 +2160,7 @@
     {
       "id": 104,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Disparition",
       "title": {
         "es": "Transmutations",
@@ -3262,7 +3241,7 @@
         "es": "Vídeo subtitulado en español de KRS-One junto a Marley Marl que celebra la esencia del hip hop. Rimas clásicas y un homenaje a la cultura que mantiene viva la música urbana.",
         "en": "Spanish-subtitled video of KRS-One with Marley Marl celebrating the essence of hip hop. Classic rhymes and a tribute to the culture that keeps urban music alive."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -3420,17 +3399,17 @@
     {
       "id": 163,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Funkferatu",
       "title": {
-        "es": "3. Entropía",
-        "en": "3. Entropy"
+        "es": "Entropía",
+        "en": "Entropy"
       },
       "description": {
         "es": "'Entropía' es un tema electrónico experimental de Funkferatu que juega con estructuras rítmicas complejas y sonidos envolventes. Una exploración sonora que desafía las convenciones y crea atmósferas futuristas.",
         "en": "'Entropy' is an experimental electronic track by Funkferatu playing with complex rhythmic structures and immersive sounds. A sonic exploration challenging conventions and creating futuristic atmospheres."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/entropia.jpg",
       "tags": [
         "song"
       ],
@@ -3441,17 +3420,17 @@
     {
       "id": 164,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Funkferatu",
       "title": {
-        "es": "5. No Sleep",
-        "en": "5. No Sleep"
+        "es": "No Sleep",
+        "en": "No Sleep"
       },
       "description": {
         "es": "Pista electrónica intensa y energética de Funkferatu que combina beats dinámicos con texturas sintéticas. 'No Sleep' es una invitación a la vigilia sonora, perfecta para ambientes nocturnos y vibrantes.",
         "en": "'No Sleep' is an intense and energetic electronic track by Funkferatu, combining dynamic beats with synthetic textures. It invites a sonic wakefulness, perfect for vibrant nighttime settings."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/entropia.jpg",
       "tags": [
         "song"
       ],
@@ -4081,7 +4060,7 @@
         "es": "Actuación en vivo de Julia Bondar con un set de techno modular. Una experiencia sonora que combina sintetizadores analógicos y beats profundos, mostrando la creatividad y el dominio técnico de la artista. Ideal para amantes de la electrónica experimental.",
         "en": "Live performance by Julia Bondar featuring a modular techno set. A sonic experience combining analog synthesizers and deep beats, showcasing the artist's creativity and technical mastery. Perfect for lovers of experimental electronic music."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -4102,7 +4081,7 @@
         "es": "Grabación en vivo del evento Awakenings durante el Amsterdam Dance Event 2021, con Tale Of Us presentando su característico sonido melódico y envolvente. Una sesión que captura la esencia del techno contemporáneo y la energía del público.",
         "en": "Live recording of the Awakenings event during Amsterdam Dance Event 2021, featuring Tale Of Us presenting their characteristic melodic and immersive sound. A session that captures the essence of contemporary techno and crowd energy."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/awakenings.jpg",
       "tags": [
         "live"
       ],
@@ -4123,7 +4102,7 @@
         "es": "Concierto en vivo del grupo El Sicario en Barcelona, 2008, donde interpretan 'La Ley de Ohm' con toda su energía y fuerza rockera. Un tema que mezcla riffs potentes con letras contundentes y un ambiente intenso en directo.",
         "en": "Live concert by the band El Sicario in Barcelona, 2008, performing 'La Ley de Ohm' with full energy and rock strength. A song blending powerful riffs with strong lyrics and an intense live atmosphere."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "live",
         "song"

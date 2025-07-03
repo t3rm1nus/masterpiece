@@ -1596,27 +1596,7 @@
       "spotify": "https://open.spotify.com/album/3lKu7U6RSfQrQlZjV0aRTL",
       "masterpiece": true
     },
-    {
-      "id": 477,
-      "category": "music",
-      "subcategory": "electronic",
-      "artist": "Talvin Singh",
-      "title": {
-        "es": "Sweet Box",
-        "en": "Sweet Box"
-      },
-      "description": {
-        "es": "Tercer álbum de estudio lanzado en 2008.\nContinúa explorando la fusión de música india con electrónica.\nRecibió críticas mixtas por su estilo experimental.",
-        "en": "Third studio album released in 2008.\nContinued exploring the fusion of Indian music with electronics.\nReceived mixed reviews for its experimental style."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com",
-      "spotify": "https://open.spotify.com/album/4zTXYBo17dUAANAVmiJLtO",
-      "masterpiece": false
-    },
+    
     {
       "id": 478,
       "category": "music",
@@ -1630,7 +1610,7 @@
         "es": "Compilado lanzado en 1997.\nIncluye artistas del movimiento Asian Underground.\nCurado por Talvin Singh y State of Bengal.",
         "en": "Compilation released in 1997.\nFeatures artists from the Asian Underground movement.\nCurated by Talvin Singh and State of Bengal."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/anokha.jpg",
       "tags": [
         "album"
       ],
@@ -1651,7 +1631,7 @@
         "es": "Compilado lanzado en 2001.\nIncluye una selección ecléctica de música ambiental y downtempo.\nRefleja las influencias musicales de Talvin Singh.",
         "en": "Compilation released in 2001.\nIncludes an eclectic selection of ambient and downtempo music.\nReflects Talvin Singh's musical influences."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/BacktoMine.jpg",
       "tags": [
         "album"
       ],
@@ -1861,7 +1841,7 @@
         "es": "Mix álbum lanzado en 2008 para la serie FabricLive.\nUna selección potente de drum and bass y bass music.\nCaptura la energía de Noisia en vivo y sus habilidades como DJs.",
         "en": "Mix album released in 2008 for the FabricLive series.\nA powerful selection of drum and bass and bass music.\nCaptures Noisia's live energy and DJ skills."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/FabricLive40.jpg",
       "tags": [
         "djset",
         "live"
@@ -1996,90 +1976,8 @@
       "spotify": "https://open.spotify.com/album/0KtFP56RU7bd32pcvdeWOU",
       "masterpiece": true
     },
-    {
-      "id": 496,
-      "category": "music",
-      "subcategory": "electronic",
-      "artist": "Los Ganglios",
-      "title": {
-        "es": "Cómeme",
-        "en": "Cómeme"
-      },
-      "description": {
-        "es": "Álbum debut de Los Ganglios, lanzado en 2005. Combina sonidos electrónicos con humor absurdo y un estilo muy particular. Es una obra que marcó un antes y un después en la música electrónica española.",
-        "en": "Los Ganglios' debut album, released in 2005. It blends electronic sounds with absurd humor and a very distinctive style. This work marked a turning point in Spanish electronic music."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=4exETcjvP58",
-      "spotify": "https://open.spotify.com/album/0GMA4LtsdymEbIuMfEoVWY",
-      "masterpiece": true
-    },
-    {
-      "id": 497,
-      "category": "music",
-      "subcategory": "electronic",
-      "artist": "Los Ganglios",
-      "title": {
-        "es": "La Reforma",
-        "en": "La Reforma"
-      },
-      "description": {
-        "es": "Segundo álbum del grupo lanzado en 2007. Sigue explorando la electrónica experimental con letras y sonidos excéntricos que los definen. Un disco clave para entender su evolución musical.",
-        "en": "The group's second album, released in 2007. It continues exploring experimental electronic music with eccentric lyrics and sounds that define them. A key record to understand their musical evolution."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=uh4fLF2iHlo",
-      "spotify": "https://open.spotify.com/album/6136J8VjN76qt3frhLedzK",
-      "masterpiece": true
-    },
-    {
-      "id": 498,
-      "category": "music",
-      "subcategory": "electronic",
-      "artist": "Los Ganglios",
-      "title": {
-        "es": "¡Menuda Planaza!",
-        "en": "¡Menuda Planaza!"
-      },
-      "description": {
-        "es": "Álbum publicado en 2011 que sigue la línea de su característico sonido electrónico con toques de humor. Una obra que reafirma la personalidad única del grupo dentro del panorama musical.",
-        "en": "Album released in 2011 that continues with their characteristic electronic sound with touches of humor. A work that reaffirms the group's unique personality within the musical landscape."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=6R7i7XJXGuw",
-      "spotify": "https://open.spotify.com/album/0bFrRKmqzgPqL1ej485WLf",
-      "masterpiece": true
-    },
-    {
-      "id": 499,
-      "category": "music",
-      "subcategory": "electronic",
-      "artist": "Los Ganglios",
-      "title": {
-        "es": "Por Fin Llegó la Navidad",
-        "en": "Por Fin Llegó la Navidad"
-      },
-      "description": {
-        "es": "Disco navideño lanzado en 2014 que mezcla electrónica y festividad con el estilo irreverente de Los Ganglios. Ideal para disfrutar de una Navidad diferente y muy original.",
-        "en": "Christmas album released in 2014 mixing electronic music and festivity with Los Ganglios' irreverent style. Perfect to enjoy a different and very original Christmas."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=cG1Qa2b2tUM",
-      "spotify": "https://open.spotify.com/album/3T8AlXxccB12MFEnfYNhXf",
-      "masterpiece": true
-    },
+    
+    
     {
       "id": 500,
       "category": "music",
@@ -2125,7 +2023,7 @@
     {
       "id": 502,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Manta Ray",
       "title": {
         "es": "Manta Ray",
@@ -2135,7 +2033,7 @@
         "es": "Debut homónimo que combina electrónica ambiental y texturas sonoras profundas. Este álbum se caracteriza por su atmósfera introspectiva y sus capas melódicas que invitan a la contemplación. Una obra esencial dentro de la escena electrónica experimental.",
         "en": "Self-titled debut blending ambient electronics and deep sound textures. This album is characterized by its introspective atmosphere and melodic layers that invite contemplation. An essential work within the experimental electronic scene."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/mantaray.jpg",
       "tags": [
         "album"
       ],
@@ -2146,7 +2044,7 @@
     {
       "id": 503,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Manta Ray",
       "title": {
         "es": "Pequeñas puertas que se abren y pequeñas puertas que se cierran",
@@ -2156,7 +2054,7 @@
         "es": "Un álbum lleno de sonidos delicados y atmósferas envolventes que exploran los matices emocionales a través de la electrónica. Su enfoque en las transiciones sonoras crea una narrativa auditiva única y sugerente. Ideal para oyentes atentos y reflexivos.",
         "en": "An album full of delicate sounds and immersive atmospheres exploring emotional nuances through electronics. Its focus on sound transitions creates a unique and suggestive auditory narrative. Ideal for attentive and reflective listeners."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/mantaray.jpg",
       "tags": [
         "album"
       ],
@@ -2713,17 +2611,17 @@
     {
       "id": 530,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Chinatown",
       "title": {
         "es": "Llenos de amor por",
         "en": "Llenos de amor por"
       },
       "description": {
-        "es": "Llenos de amor por es un álbum emblemático que mezcla electrónica con sonidos orgánicos y ritmos profundos. Presenta una atmósfera íntima y cálida que invita a la reflexión y la conexión emocional. Fue lanzado en 2003 por FAK Records, consolidando a Chinatown como un proyecto destacado.",
-        "en": "Llenos de amor por is a landmark album blending electronic with organic sounds and deep rhythms. It presents an intimate and warm atmosphere inviting reflection and emotional connection. Released in 2003 by FAK Records, it established Chinatown as a notable project."
+        "es": "Ya desde el primer tema, Llenos de amor por (Fak Records, 2003) marca la diferencia. La mezcla de PRT y GND al micro y con DJ UVE multiplicándose en la producción, los platos, el estudio e incluso aportando sus líneas también, se desvela como una apuesta ganadora. El disco no les va a hacer aparecer en los medios mayoritarios, pero poco a poco les irá labrando una reputación que no parará de crecer con cada nuevo disco y que perdura más allá que el propio grupo.",
+        "en": "Right from the first track, Llenos de amor (Fak Records, 2003) stands out. The combination of PRT and GND on the mic, along with DJ UVE multiplying his role in production, turntables, the studio, and even contributing his own lines, reveals itself as a winning formula. The album won’t make them appear in mainstream media, but little by little it will build a reputation that keeps growing with every new release and that lasts beyond the group itself."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/llenos.jpg",
       "tags": [
         "album"
       ],
@@ -2755,7 +2653,7 @@
     {
       "id": 532,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Chinatown",
       "title": {
         "es": "Carta Bomba",
@@ -2765,7 +2663,7 @@
         "es": "Carta Bomba es un EP lanzado en 2007 por 1L Records, que combina electrónica con elementos de techno y ambient. Sus sonidos dinámicos y envolventes logran una experiencia auditiva intensa y cargada de energía, marcando un punto clave en la evolución del proyecto Chinatown.",
         "en": "Carta Bomba is an EP released in 2007 by 1L Records, blending electronic music with elements of techno and ambient. Its dynamic and immersive sounds deliver an intense and energetic listening experience, marking a key point in Chinatown's evolution."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/cartabomba.jpeg",
       "tags": [
         "album"
       ],
@@ -2776,17 +2674,17 @@
     {
       "id": 533,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Chinatown",
       "title": {
         "es": "Uranio",
         "en": "Uranio"
       },
       "description": {
-        "es": "Uranio, publicado en 2008 por 1L Records, es un EP que explora sonidos electrónicos oscuros y texturas densas. La obra destaca por su atmósfera misteriosa y sus ritmos contundentes que mantienen una energía constante, consolidando el carácter experimental de Chinatown.",
-        "en": "Uranio, released in 2008 by 1L Records, is an EP exploring dark electronic sounds and dense textures. The work stands out for its mysterious atmosphere and strong rhythms that maintain constant energy, consolidating Chinatown's experimental character."
+        "es": "Uranio de Chinatown es un disco cargado de energía oscura y lirismo incisivo. Con una producción densa y atmósferas pesadas, el grupo explora los rincones más sombríos de la experiencia urbana, tocando temas como la alienación, la violencia estructural y la supervivencia emocional. Es un proyecto intenso, directo y sin concesiones.",
+        "en": "Uranio by Chinatown is an album charged with dark energy and sharp lyricism. With dense production and heavy atmospheres, the group explores the darker corners of urban experience, addressing themes like alienation, structural violence, and emotional survival. It’s an intense, raw, and uncompromising project."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/uranio.jpg",
       "tags": [
         "album"
       ],
@@ -2797,17 +2695,17 @@
     {
       "id": 534,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Chinatown",
       "title": {
         "es": "Sobre Mojado",
         "en": "Sobre Mojado"
       },
       "description": {
-        "es": "Sobre Mojado es un álbum de 2010 lanzado por 1L Records que fusiona electrónica con sonidos orgánicos y melodías hipnóticas. Su propuesta crea un ambiente inmersivo y evocador, reflejando madurez y profundidad en la producción musical de Chinatown.",
-        "en": "Sobre Mojado is a 2010 album released by 1L Records that fuses electronic music with organic sounds and hypnotic melodies. Its approach creates an immersive and evocative atmosphere, reflecting maturity and depth in Chinatown's musical production."
+        "es": "Sobre Mojado de Chinatown es un álbum que combina el rap con sonidos urbanos contemporáneos, reflejando las vivencias y emociones de la vida en la ciudad. Con letras directas y un estilo auténtico, este trabajo aborda temas como la identidad, la resistencia y las experiencias cotidianas, ofreciendo una visión cruda pero honesta del entorno urbano.",
+        "en": "Sobre Mojado by Chinatown is an album that blends rap with contemporary urban sounds, reflecting the experiences and emotions of city life. With direct lyrics and an authentic style, this work tackles themes such as identity, resilience, and everyday struggles, offering a raw yet honest view of the urban environment. ¿Quieres que te lo pase también en formato JSON o con algún otro detalle?"
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/sobremojado.jpg",
       "tags": [
         "album"
       ],
@@ -3963,7 +3861,7 @@
         "es": "‘Behind The Glass’ es un álbum que combina sintetizadores atmosféricos y ritmos electrónicos hipnóticos. Glass Beams crea paisajes sonoros envolventes que invitan a la introspección y al viaje interior, destacando en la escena electrónica contemporánea.",
         "en": "'Behind The Glass' is an album that blends atmospheric synthesizers with hypnotic electronic rhythms. Glass Beams crafts immersive soundscapes that invite introspection and inner journeys, standing out in the contemporary electronic scene."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/glass.png",
       "tags": [
         "album"
       ],
@@ -3974,7 +3872,7 @@
     {
       "id": 588,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rock",
       "artist": "Glass Beams",
       "title": {
         "es": "Stellar Wind",
@@ -3984,7 +3882,7 @@
         "es": "En ‘Stellar Wind’, Glass Beams explora texturas electrónicas más dinámicas, fusionando elementos orgánicos con sintetizadores espaciales. Este álbum destaca por su energía y por transportar al oyente a paisajes sonoros futuristas.",
         "en": "'Stellar Wind' sees Glass Beams exploring more dynamic electronic textures, blending organic elements with spacey synthesizers. This album stands out for its energy and transporting listeners to futuristic soundscapes."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/glass.jpg",
       "tags": [
         "album"
       ],
@@ -4005,7 +3903,7 @@
         "es": "‘Dimensional View’ presenta una exploración profunda en la electrónica ambiental y experimental. Glass Beams ofrece sonidos espaciales y envolventes que desafían las percepciones tradicionales de la música electrónica.",
         "en": "'Dimensional View' offers a deep exploration of ambient and experimental electronic music. Glass Beams provides spatial and immersive sounds that challenge traditional perceptions of electronic music."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/glass.jpg",
       "tags": [
         "album"
       ],
@@ -4037,17 +3935,17 @@
     {
       "id": 591,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Mcklopedia",
       "title": {
         "es": "RMS",
         "en": "RMS"
       },
       "description": {
-        "es": "‘RMS’ es un trabajo que explora ritmos electrónicos y elementos del hip-hop con una producción cuidada y una lírica potente. Mcklopedia navega entre lo experimental y lo accesible, mostrando su versatilidad y talento.",
-        "en": "'RMS' is a work exploring electronic rhythms and hip-hop elements with polished production and powerful lyrics. Mcklopedia navigates between experimental and accessible, showcasing his versatility and talent."
+        "es": "RMS mcklopedia es un álbum que fusiona el rap consciente con beats innovadores y letras cargadas de crítica social y reflexión personal. Con un estilo auténtico y una producción cuidada, McKlopedia ofrece un viaje sonoro que explora temas como la identidad, la lucha urbana y la búsqueda de sentido en un mundo complejo.",
+        "en": "RMS mcklopedia is an album that blends conscious rap with innovative beats and lyrics filled with social critique and personal reflection. With an authentic style and polished production, McKlopedia delivers a sonic journey exploring themes such as identity, urban struggle, and the search for meaning in a complex world."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/rms.jpg",
       "tags": [
         "album"
       ],
