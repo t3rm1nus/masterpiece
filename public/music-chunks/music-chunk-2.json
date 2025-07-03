@@ -129,7 +129,7 @@
     {
       "id": 207,
       "category": "music",
-      "subcategory": "reggae",
+      "subcategory": "dub",
       "artist": "Nah Ina It & Paul St. Hilaire",
       "title": {
         "es": "Nah Ina It",
@@ -1358,7 +1358,7 @@
         "es": "Un djset en vivo donde BONOBO ofrece una mezcla atmosférica y envolvente. Su estilo combina electrónica, downtempo y ritmos orgánicos para crear una experiencia auditiva única. Este set es uno de los más reconocidos en la escena electrónica.\"",
         "en": "A live djset where BONOBO offers an atmospheric and immersive mix. His style combines electronic, downtempo and organic rhythms to create a unique listening experience. This set is one of the most recognized in the electronic scene.\""
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/live.png",
       "tags": [
         "djset"
       ],

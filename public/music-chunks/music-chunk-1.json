@@ -382,7 +382,7 @@
     {
       "id": 19,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rock",
       "artist": "Beachdust",
       "title": {
         "es": "You",
@@ -392,7 +392,7 @@
         "es": "Tema downtempo con atmósfera veraniega y ritmos suaves. Beachdust mezcla texturas electrónicas y vocales etéreos. Perfecto para momentos de relax al aire libre.",
         "en": "A downtempo track with a summery atmosphere and gentle rhythms. Beachdust combines electronic textures and ethereal vocals. Perfect for relaxing outdoors."
       },
-      "image": "https://i.scdn.co/image/ab67616d0000b2736412a5b4d38661c9d692270b",
+      "image": "https://i.scdn.co/image/ab67616d0000b273905d3d7a7e68d776a868dcc0",
       "tags": [
         "song"
       ],
@@ -1656,7 +1656,7 @@
     {
       "id": 79,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Marconi Union",
       "title": {
         "es": "Weightless",
