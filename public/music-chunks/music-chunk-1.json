@@ -443,27 +443,7 @@
       "spotify": "https://open.spotify.com/album/28Et1GjQGMGNY9oQNDVkGF",
       "masterpiece": false
     },
-    {
-      "id": 24,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Rexa",
-      "title": {
-        "es": "Manta Ray",
-        "en": "Manta Ray"
-      },
-      "description": {
-        "es": "Tema rock alternativo con riffs contundentes y actitud melancólica. Rexa explora temas de libertad e introspección. La voz rasgada y emocional resalta la fuerza del mensaje.",
-        "en": "Alternative rock track with powerful riffs and a melancholic attitude. Rexa explores themes of freedom and introspection. The raspy, emotional vocals highlight the strength of the message."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/4wwDCg1A5ufLNYgGlaRfZc",
-      "masterpiece": false
-    },
+    
     {
       "id": 25,
       "category": "music",
@@ -481,7 +461,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "http://youtube.com/watch?v=_kdHgH2g5aI&list=PLed3_UnUCx2lNydLEJGTa63kGC61V1GCI",
       "spotify": "https://open.spotify.com/album/2woldnXBlkMa4RunMGPUBn",
       "masterpiece": false
     },
@@ -691,8 +671,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/46wdJVw84s53vDb0wLjKXg",
+      "youtube": "https://www.youtube.com/watch?v=cLo7Xaxn_Ig&list=RDcLo7Xaxn_Ig&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/3xJW4rrff7M1jD8t1J5Dj0",
       "masterpiece": false
     },
     {
@@ -701,18 +681,18 @@
       "subcategory": "chillout",
       "artist": "Two Lone Swordsmen",
       "title": {
-        "es": "Topic",
-        "en": "Topic"
+        "es": "A Bag Of Blue Sparks Full Album",
+        "en": "A Bag Of Blue Sparks Full Album"
       },
       "description": {
-        "es": "Tema hipnótico con ritmos electro-minimalistas y repetición constante. Crea ambiente introspectivo y mecánico. Su producción limpia y repetitiva genera un efecto meditativo.",
-        "en": "A hypnotic track with electro-minimalist rhythms and constant repetition. It creates an introspective and mechanical atmosphere. Its clean, repetitive production generates a meditative effect."
+        "es": "A Bag of Blue Sparks es una exploración cruda y minimalista de la electrónica experimental. Two Lone Swordsmen combinan ritmos lo-fi, sintetizadores ásperos y una atmósfera densa que invita a perderse en un universo sonoro introspectivo y urbano.",
+        "en": "A Bag of Blue Sparks is a raw, minimalist journey through experimental electronica. Two Lone Swordsmen blend lo-fi rhythms, gritty synths, and a dense atmosphere that pulls the listener into an introspective, urban sonic world."
       },
-      "image": "/imagenes/musica/topic.jpg",
+      "image": "/imagenes/musica/bag.jpeg",
       "tags": [
-        "song"
+        "album"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=ndeJUd8vSjg&list=PLYntX9AEZzhQrZKZdn8NVfo-HzX04tYZD",
       "spotify": "https://open.spotify.com/album/1EqLdtiBSgULHA01ooROeY",
       "masterpiece": false
     },
@@ -1629,7 +1609,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=UfcAVejslrU",
+      "youtube": "https://www.youtube.com/watch?v=UfcAVejslrU&list=RDUfcAVejslrU&start_radio=1",
       "spotify": "https://open.spotify.com/album/3d8apQ32ZVRDPFtllVTKGR",
       "masterpiece": true
     },
@@ -1713,8 +1693,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=NWwm-1Syvlk",
-      "spotify": "https://open.spotify.com/album/7eH0DZ6Y9bInoU0breGFFe",
+      "youtube": "https://www.youtube.com/watch?v=Ko35fhJKHYU&list=RDKo35fhJKHYU&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/4lYa0StDrab39X1panRPN7",
       "masterpiece": false
     },
     {
@@ -1755,8 +1735,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=4tkdTVbmBTA",
-      "spotify": "https://open.spotify.com/album/2xcefdOQyuKRsVpkwO9E32",
+      "youtube": "https://www.youtube.com/watch?v=Fee4OSdbh-U&list=RDFee4OSdbh-U&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/1fwqgMXXwqEypnltDtmkGF",
       "masterpiece": false
     },
     {
@@ -2007,8 +1987,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=YH1Ets_DX9s",
-      "spotify": "https://open.spotify.com/album/7aNclGRxTysfh6z0d8671k",
+      "youtube": "https://www.youtube.com/watch?v=nS9QtzGwBcc&list=RDnS9QtzGwBcc&start_radio=1",
+      "spotify": "https://open.spotify.com/playlist/72EgJRw1HNYBdwtj2IbG3I",
       "masterpiece": false
     },
     {
@@ -2133,7 +2113,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=Gqmw2mPH7Jk",
+      "youtube": "https://www.youtube.com/watch?v=zOPAdG2n46I&list=RDzOPAdG2n46I&start_radio=1&t=1493s",
       "spotify": "https://open.spotify.com/album/1QoQCB7N4b3H3VRpBxFFOf",
       "masterpiece": false
     },

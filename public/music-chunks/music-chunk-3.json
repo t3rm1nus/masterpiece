@@ -1445,7 +1445,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=ggROGmRPP0w&list=PLwONyKTAj2-6W5r4YQ8Zeq3XKcWfxAEKb",
       "spotify": "https://open.spotify.com/album/007tzHgpqG9Rcu9zcOs8N8",
       "masterpiece": true
     },
@@ -1466,7 +1466,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=cLo7Xaxn_Ig&list=PLTkZvXIxL5hpsQtF9nGXSPglPcGZ4It0Z",
       "spotify": "https://open.spotify.com/album/6UUJq06fTAr9H7xLiE1VFS",
       "masterpiece": true
     },
@@ -1487,7 +1487,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=MWsXc3UsAzI&list=PLCei4GhgSvgDsR7M-Y3PJCPAIkQIMwe01",
       "spotify": "https://open.spotify.com/album/2V2qCQNcIwy6sqkEHmBERc",
       "masterpiece": true
     },
@@ -1508,7 +1508,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=Fk3THND-E0w&list=PLhSRyKNDyOl0Cjtvae0RzrMFrevjP8pqo",
       "spotify": "https://open.spotify.com/album/7ecrjdbz8YSjt1zQlTxCoy",
       "masterpiece": true
     },
@@ -1529,8 +1529,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
-      "spotify": "https://open.spotify.com/album/1MXSB83aq1OIl8aRnYttRv",
+      "youtube": "https://www.youtube.com/watch?v=7baKPiWIUCY&list=PLLoDEv2adEv7gk6E4N4hLXkUdCy0q3jR3",
+      "spotify": "https://open.spotify.com/intl-es/album/5SEFXZ3YDWUPmHKC6BPIC4",
       "masterpiece": true
     },
     {
@@ -1550,8 +1550,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
-      "spotify": "https://open.spotify.com/album/1MXSB83aq1OIl8aRnYttRv",
+      "youtube": "https://www.youtube.com/watch?v=KQpcV9cf0ic&list=PLE7nt7cv-GXu1rVIBzMs2sIUKiESxr-N3",
+      "spotify": "https://open.spotify.com/intl-es/album/1MXSB83aq1OIl8aRnYttRv",
       "masterpiece": false
     },
     {
@@ -2058,7 +2058,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=QX4PQhRXKcw",
+      "youtube": "https://www.youtube.com/watch?v=11xliV2rxLM&list=PLErUZhGuCDN87LQN3v5TX6-dAwWfliA65",
       "spotify": "https://open.spotify.com/album/7fvaV71V9Qj7cAKAcH1zSg",
       "masterpiece": true
     },
@@ -2079,7 +2079,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=hqk3Ux_YD7k",
+      "youtube": "https://www.youtube.com/watch?v=7rqxSl86WXs&list=PLktwM2tNW2PoYQhaaKtYYf95CEiKqLv5a",
       "spotify": "https://open.spotify.com/album/2HudJOClfOdb3fVPFECncL",
       "masterpiece": true
     },
@@ -2100,31 +2100,11 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=6YfExYZtkVs",
+      "youtube": "https://www.youtube.com/watch?v=7JTapzFyONg&list=RD7JTapzFyONg&start_radio=1",
       "spotify": "https://open.spotify.com/album/1ewNHsEClNnjuRF5BTOCId",
       "masterpiece": true
     },
-    {
-      "id": 506,
-      "category": "music",
-      "subcategory": "chillout",
-      "artist": "Manta Ray",
-      "title": {
-        "es": "Torres de electricidad",
-        "en": "Electricity Towers"
-      },
-      "description": {
-        "es": "Un álbum que explora la energía y la conexión a través de la electrónica. Con sonidos industriales y vibraciones pulsantes, Torres de electricidad crea una atmósfera cargada de tensión y dinamismo, reflejando la modernidad y la tecnología.",
-        "en": "An album exploring energy and connection through electronics. With industrial sounds and pulsing vibrations, Electricity Towers creates an atmosphere charged with tension and dynamism, reflecting modernity and technology."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=Twkp1rqJlns",
-      "spotify": "https://open.spotify.com/album/2woldnXBlkMa4RunMGPUBn",
-      "masterpiece": true
-    },
+    
     {
       "id": 507,
       "category": "music",
