@@ -1431,7 +1431,7 @@
     {
       "id": 469,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Two Lone Swordsmen",
       "title": {
         "es": "The Fifth Mission (Return to Flightpath Estate)",
@@ -1452,7 +1452,7 @@
     {
       "id": 470,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Two Lone Swordsmen",
       "title": {
         "es": "Stay Down",
@@ -1473,7 +1473,7 @@
     {
       "id": 471,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Two Lone Swordsmen",
       "title": {
         "es": "Tiny Reminders",
@@ -1494,7 +1494,7 @@
     {
       "id": 472,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Two Lone Swordsmen",
       "title": {
         "es": "From the Double Gone Chapel",
@@ -1515,7 +1515,7 @@
     {
       "id": 473,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Two Lone Swordsmen",
       "title": {
         "es": "Wrong Meeting",
@@ -1536,7 +1536,7 @@
     {
       "id": 474,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Two Lone Swordsmen",
       "title": {
         "es": "Wrong Meeting II",
@@ -2002,7 +2002,7 @@
     {
       "id": 501,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rock",
       "artist": "Beachdust",
       "title": {
         "es": "Midnight Sally",
@@ -2065,7 +2065,7 @@
     {
       "id": 504,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Manta Ray",
       "title": {
         "es": "Esperanza",
@@ -2086,7 +2086,7 @@
     {
       "id": 505,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Manta Ray",
       "title": {
         "es": "Estratexa",
@@ -2107,7 +2107,7 @@
     {
       "id": 506,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Manta Ray",
       "title": {
         "es": "Torres de electricidad",
@@ -2632,15 +2632,15 @@
     {
       "id": 531,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Chinatown",
       "title": {
         "es": "Opio",
         "en": "Opio"
       },
       "description": {
-        "es": "Opio es un álbum de 2005 que profundiza en la fusión de electrónica con matices experimentales y atmósferas envolventes. Publicado por Mari Nakome, destaca por sus texturas suaves y un ritmo cadencioso que crea un ambiente contemplativo y sugestivo.",
-        "en": "Opio is a 2005 album that delves into a fusion of electronic music with experimental nuances and immersive atmospheres. Released by Mari Nakome, it stands out for its smooth textures and a steady rhythm that creates a contemplative and suggestive mood."
+        "es": "Opio de Chinatown es un álbum introspectivo y envolvente, donde las atmósferas melancólicas se mezclan con letras afiladas y cargadas de simbolismo. Es una obra que habla del hastío, del deseo de evasión y del peso emocional de lo cotidiano. Cada track actúa como una dosis lenta, poética y penetrante de realidad distorsionada.",
+        "en": "Opio by Chinatown is an introspective and immersive album, where melancholic atmospheres blend with sharp, symbolic lyrics. It’s a work that speaks of weariness, the urge to escape, and the emotional weight of daily life. Each track acts as a slow, poetic, and piercing dose of distorted reality."
       },
       "image": "https://i.scdn.co/image/ab67616d0000b273810a2d4a5f760239612d988f",
       "tags": [
@@ -3851,7 +3851,7 @@
     {
       "id": 587,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rock",
       "artist": "Glass Beams",
       "title": {
         "es": "Behind The Glass",
@@ -3893,7 +3893,7 @@
     {
       "id": 589,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rock",
       "artist": "Glass Beams",
       "title": {
         "es": "Dimensional View",
@@ -3914,7 +3914,7 @@
     {
       "id": 590,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Mcklopedia",
       "title": {
         "es": "Superlirical",
@@ -3956,7 +3956,7 @@
     {
       "id": 592,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Mcklopedia & Orestes Gómez",
       "title": {
         "es": "Dealers In Caracas",

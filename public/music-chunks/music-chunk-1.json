@@ -529,7 +529,7 @@
     {
       "id": 26,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "others",
       "artist": "Steve Cutts",
       "title": {
         "es": "A Brief Disagreement",
@@ -623,7 +623,7 @@
         "es": "Álbum instrumental de Vangelis de 1978 que mezcla electrónica, new age y sinfonismo. Paisajes sonoros épicos y melódicos que crean una narrativa auditiva exuberante. Ejemplo temprano de música electrónica cinematográfica.",
         "en": "A 1978 instrumental album by Vangelis blending electronics, new age, and symphonic elements. Epic and melodic soundscapes create an exuberant auditory narrative. An early example of cinematic electronic music."
       },
-      "image": "/imagenes/musica/dragon.jpg",
+      "image": "/imagenes/musica/dragon.jpeg",
       "tags": [
         "album"
       ],
@@ -739,7 +739,7 @@
     {
       "id": 36,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Two Lone Swordsmen",
       "title": {
         "es": "Topic",
@@ -2034,7 +2034,7 @@
     {
       "id": 97,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Aphex Twin",
       "title": {
         "es": "Stone In Focus",
@@ -2044,7 +2044,7 @@
         "es": "Pieza instrumental de Aphex Twin que combina texturas electrónicas atmosféricas con un ritmo minimalista y envolvente. 'Stone In Focus' es un viaje introspectivo dentro del IDM, mostrando la habilidad del artista para crear ambientes sonoros únicos.",
         "en": "Instrumental piece by Aphex Twin combining atmospheric electronic textures with a minimalist and immersive rhythm. 'Stone In Focus' is an introspective journey within IDM, showcasing the artist's skill for creating unique soundscapes."
       },
-      "image": "/imagenes/musica/stone.jpg",
+      "image": "/imagenes/musica/stone.png",
       "tags": [
         "song"
       ],
@@ -2107,7 +2107,7 @@
         "es": "Clásico tema trance de 1994 que marcó la escena electrónica con su atmósfera hipnótica y sintetizadores envolventes. 'Point Zero' es un himno del trance temprano que sigue influenciando a productores actuales con su energía etérea y melódica.",
         "en": "'Point Zero' is a 1994 classic trance track that shaped the electronic scene with hypnotic atmosphere and immersive synths. It remains an anthem of early trance, influencing current producers with its ethereal and melodic energy."
       },
-      "image": "https://i.scdn.co/image/ab67616d0000b273df956b2d319e3dac4f8989db",
+      "image": "/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -3378,7 +3378,7 @@
     {
       "id": 162,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Noiseferatu",
       "title": {
         "es": "Satín",

@@ -213,7 +213,7 @@
     {
       "id": 811,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "dub",
       "artist": "Paul St. Hilaire",
       "title": {
         "es": "Asom - A Divine State Of Mind",
@@ -255,7 +255,7 @@
     {
       "id": 813,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "dub",
       "artist": "Paul St. Hilaire + Rhauder",
       "title": {
         "es": "Derdeoc",
@@ -402,7 +402,7 @@
     {
       "id": 820,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Bonobo",
       "title": {
         "es": "Animal Magic",
@@ -423,7 +423,7 @@
     {
       "id": 821,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Bonobo",
       "title": {
         "es": "Dial 'M' for Monkey",
@@ -444,7 +444,7 @@
     {
       "id": 822,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Bonobo",
       "title": {
         "es": "Days to Come",
@@ -465,7 +465,7 @@
     {
       "id": 823,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Bonobo",
       "title": {
         "es": "Black Sands",
@@ -486,7 +486,7 @@
     {
       "id": 824,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Bonobo",
       "title": {
         "es": "The North Borders",
@@ -507,7 +507,7 @@
     {
       "id": 825,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Bonobo",
       "title": {
         "es": "Migration",
@@ -528,7 +528,7 @@
     {
       "id": 826,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Bonobo",
       "title": {
         "es": "Fragments",

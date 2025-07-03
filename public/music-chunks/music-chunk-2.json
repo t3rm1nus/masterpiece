@@ -171,15 +171,15 @@
     {
       "id": 209,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "rap",
       "artist": "Domenica feat. Galinier Dheformer",
       "title": {
         "es": "Crucificado",
         "en": "Crucificado"
       },
       "description": {
-        "es": "'Crucificado' es una pieza electrónica producida por Stash House que combina elementos atmosféricos y voces etéreas, con la colaboración de Galinier Dheformer.",
-        "en": "'Crucificado' is an electronic piece produced by Stash House combining atmospheric elements and ethereal vocals, featuring Galinier Dheformer."
+        "es": "Crucificado es un viaje lírico y existencial donde Domenica y Dheformer despliegan versos cargados de dolor, fe y redención. Con una base sombría y minimalista, la canción ahonda en la cruz personal que cada uno lleva a cuestas, en medio de un mundo hostil. Galinier aporta un coro etéreo que eleva el mensaje a un plano casi espiritual.",
+        "en": "Crucificado is a lyrical and existential journey where Domenica and Dheformer unfold verses filled with pain, faith, and redemption. Backed by a dark and minimalist beat, the track dives into the personal cross each carries in a hostile world. Galinier adds an ethereal chorus that lifts the message to an almost spiritual level."
       },
       "image": "/imagenes/musica/galinier.jpg",
       "tags": [
@@ -1348,8 +1348,8 @@
     {
       "id": 266,
       "category": "music",
-      "subcategory": "live",
-      "artist": "BONOBO",
+      "subcategory": "electronic",
+      "artist": "Bonobo",
       "title": {
         "es": "Mixmag Live 2017",
         "en": "Mixmag Live 2017"
@@ -1852,7 +1852,7 @@
     {
       "id": 290,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Fila Brazillia",
       "title": {
         "es": "Old Codes New Chaos",
@@ -1873,7 +1873,7 @@
     {
       "id": 291,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Fila Brazillia",
       "title": {
         "es": "Maim That Tune",
@@ -1894,7 +1894,7 @@
     {
       "id": 292,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Fila Brazillia",
       "title": {
         "es": "Power Clown",
@@ -1915,7 +1915,7 @@
     {
       "id": 293,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Fila Brazillia",
       "title": {
         "es": "Jump Leads",
@@ -1936,7 +1936,7 @@
     {
       "id": 294,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Fila Brazillia",
       "title": {
         "es": "Retrospective",
@@ -1957,7 +1957,7 @@
     {
       "id": 295,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "chillout",
       "artist": "Fila Brazillia",
       "title": {
         "es": "Mess",
