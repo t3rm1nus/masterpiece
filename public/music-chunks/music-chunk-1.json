@@ -143,14 +143,14 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?list=RDPPP_oDjYHlI&start_radio=1",
-      "spotify": "https://open.spotify.com/album/47mHy8jE2iHxI7kKVyZnCv",
+      "youtube": "https://www.youtube.com/results?search_query=R+De+Rumba+Javat+Y+Kamel",
+      "spotify": "https://open.spotify.com/intl-es/track/3SgvnQco35HHgE75uMZ5C2",
       "masterpiece": false
     },
     {
       "id": 8,
       "category": "music",
-      "subcategory": "rap",
+      "subcategory": "trap",
       "artist": "Luchè feat. Sfera Ebbasta & Simba La Rue",
       "title": {
         "es": "Miami Vice",
@@ -164,8 +164,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=PPP_oDjYHlI&list=RDPPP_oDjYHlI&start_radio=1",
-      "spotify": "https://open.spotify.com/album/0ePoAsHC4vvO8tZzPKtYC3",
+      "youtube": "https://www.youtube.com/watch?v=L9e45yEf4No&list=RDL9e45yEf4No&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -185,31 +185,11 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=PPP_oDjYHlI",
-      "spotify": "https://open.spotify.com/album/5ANllXrlPvSfmcWW8oTkyw",
+      "youtube": "https://www.youtube.com/watch?v=dyPwvQYQ0sw&list=RDdyPwvQYQ0sw&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/album/5ANllXrlPvSfmcWW8oTkyw",
       "masterpiece": false
     },
-    {
-      "id": 10,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Ergo Pro",
-      "title": {
-        "es": "Dolor en Efectivo (Full Album)",
-        "en": "Dolor en Efectivo (Full Album)"
-      },
-      "description": {
-        "es": "Álbum completo que muestra la versatilidad y fiereza lírica de Ergo Pro. Mezcla beats duros con contenidos que hablan de vida urbana, dolor y superación. Producción cuidada y mensaje introspectivo lo hacen destacar.",
-        "en": "Full album showcasing Ergo Pro's versatility and lyrical fierceness. Mixes hard beats with themes of urban life, pain, and overcoming. Well-crafted production and introspective message make it stand out."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/3rsutH7js571uJJGEMWGhW",
-      "masterpiece": false
-    },
+   
     
     {
       "id": 12,
@@ -271,8 +251,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/4osCFrOglcjahnP2TUs4ps",
+      "youtube": "https://www.youtube.com/watch?v=-ynm4H8IyhY&list=RD-ynm4H8IyhY&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/77EseIwL4dnUACjF3YmDWz",
       "masterpiece": false
     },
     {
@@ -292,14 +272,14 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "youtube": "https://www.youtube.com/watch?v=-6TtuoXh1wY&list=RD-6TtuoXh1wY&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
       "id": 17,
       "category": "music",
-      "subcategory": "punk",
+      "subcategory": "electronic",
       "artist": "Los Ganglios",
       "title": {
         "es": "La guapa y los ninjas",
@@ -309,11 +289,11 @@
         "es": "Tema surrealista con tonos de punk y electrónica minimalista. La letra juega con imágenes disparatadas y humor underground. Ritmo frenético y bailable, muy representativo del estilo ecléctico de Los Ganglios.",
         "en": "A surreal track with punk tones and minimalist electronics. Its lyrics use absurd imagery and underground humor. Fast-paced and danceable, truly representative of Los Ganglios' eclectic style."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/guapa.jpg",
       "tags": [
-        "song"
+        "album"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=vJookDxDZ24&list=OLAK5uy_n296BGiCttXcLDYjYYIhGyn52yUC5eUMI&index=2",
       "spotify": "https://open.spotify.com/album/3OyyAX4BlwbTrPh8wwP2vU",
       "masterpiece": false
     },
@@ -334,8 +314,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/0y08bMqqr3OeleiJO20Uzr",
+      "youtube": "https://www.youtube.com/watch?v=_gDlyCrUtlE&list=RD_gDlyCrUtlE&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/1PKyGEwod60zhDoyP5z7Ty",
       "masterpiece": false
     },
     {
@@ -393,12 +373,12 @@
         "es": "Colaboración urbana con ritmo pausado y líricas directas sobre identidad y comunicación. FJ.Ramos y Kultama exploran temas cotidianos con versos claros y ritmo sólido. Ambiente íntimo y sincero.",
         "en": "Urban collaboration with a slow rhythm and direct lyrics about identity and communication. FJ.Ramos and Kultama explore everyday themes with clear verses and solid beats. An intimate and sincere atmosphere."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/fjkultama.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/0Sv4SXAi4vysSOzkfscO96",
+      "youtube": "https://www.youtube.com/watch?v=CXHsPttQAyo&list=RDCXHsPttQAyo&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/3v4BNpDHbacgBYiksTQOju",
       "masterpiece": false
     },
     {
@@ -418,8 +398,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/1Siw414k0ggN7Q1R97PoAb",
+      "youtube": "https://www.youtube.com/watch?v=D_1__V-o12w&list=RDD_1__V-o12w&start_radio=1&t=2s",
+      "spotify": "https://open.spotify.com/intl-es/album/1Siw414k0ggN7Q1R97PoAb",
       "masterpiece": false
     },
     {
@@ -503,8 +483,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/2zwyBK8ea29FqWuY8IiRJu",
+      "youtube": "https://www.youtube.com/watch?v=vu-xwXQt_2U&list=RDvu-xwXQt_2U&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -524,8 +504,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "youtube": "https://www.youtube.com/watch?v=18fbPU_4rbQ&list=RD18fbPU_4rbQ&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -541,12 +521,12 @@
         "es": "Remix jazz-rap con toque melancólico y beat sofisticado. Foyone revisita su tema con arreglos de jazz y producción depurada por cutyjazz. Ambiente introspectivo y elegante.",
         "en": "A jazz-rap remix with a melancholic touch and sophisticated beat. Foyone revisits his track with jazz arrangements and refined production by cutyjazz. Introspective and elegant atmosphere."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/foyone.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "youtube": "https://www.youtube.com/watch?v=f_qZa1ICZp4&list=RDf_qZa1ICZp4&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -629,7 +609,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=8i6ukwIY9sQ&list=OLAK5uy_ktMkkyt7lhMWPMCL3o3IEui-gHEPt4ZxI&index=2",
       "spotify": "https://open.spotify.com/album/7holdIkJcEGdJUrW8aZNHX",
       "masterpiece": false
     },
@@ -646,12 +626,12 @@
         "es": "Tema introspectivo y oscuro de Sho-Hai con lirismo maduro. Su flow reflexivo explora la vida, la muerte y el sentido. Beat sobrio que acompaña una lírica profunda y personal.",
         "en": "An introspective and dark track by Sho-Hai with mature lyricism. His reflective flow explores life, death, and meaning. A sober beat accompanies deep, personal lyrics."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/sho_hai.jpg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/64jt82cpFdslmuEXLoLSzB",
+      "youtube": "https://www.youtube.com/watch?v=yUELKQx99o4&list=RDyUELKQx99o4&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/7rW9Yz8fKkhjz0hTRixBmz",
       "masterpiece": false
     },
     {
@@ -751,11 +731,11 @@
         "es": "Ácida crítica punk-rock sobre la desgastante espera del final. Ilegales canaliza frustración y rebeldía con energía cruda. Guitarras agresivas y estribillos directos definen su estilo único.",
         "en": "A sharp punk-rock critique about the exhausting wait for the end. Ilegales channels frustration and rebellion with raw energy. Aggressive guitars and direct choruses define their unique style."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/ilegales2.jpg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=OI-HUs4uAko&list=RDOI-HUs4uAko&start_radio=1",
       "spotify": "https://open.spotify.com/album/32he74feHMqHYrG8lE7nou",
       "masterpiece": false
     },
@@ -776,8 +756,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/2kvzVR1bpkXKLmai4ZfMqS",
+      "youtube": "https://www.youtube.com/watch?v=hjO_17-GZCg&list=RDhjO_17-GZCg&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/5LkM9hf0Jh9gdk3qFtaIWQ",
       "masterpiece": false
     },
     {
@@ -882,8 +862,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6WWrwUtBXsCGckOI8fGci5",
+      "youtube": "https://www.youtube.com/watch?v=aYPzI65exEg&list=RDaYPzI65exEg&index=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -1357,7 +1337,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=8nq-3H7P-PU&list=RD8nq-3H7P-PU&start_radio=1",
       "spotify": "https://open.spotify.com/album/0Ck9fDN3WcEuvwQju9GV9E",
       "masterpiece": false
     },
@@ -1374,12 +1354,12 @@
         "es": "Colaboración legendaria de rap: Nas y Eminem junto a EPMD 2 en tema con barras afiladas. Flow impecable y producción clásica. Versos potentes sobre ritmo entrante y pegadizo.",
         "en": "Legendary rap collaboration: Nas and Eminem alongside EPMD 2 in a track with razor-sharp bars. Impeccable flow and classic production. Powerful verses over an engaging, catchy beat."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/epmd2.jpg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/1Qt9lGRPR8IVorUnjscB3u",
+      "youtube": "https://www.youtube.com/watch?v=yDSCNs77l28&list=RDyDSCNs77l28&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/4bRPecD9suGW8CfNZhzjS1",
       "masterpiece": false
     },
     {
@@ -1416,12 +1396,12 @@
         "es": "Tema representativo del rap mexicano con letras crudas que reflejan la realidad social. La producción combina ritmos urbanos con melodías pegajosas, creando un ambiente intenso y auténtico. El videoclip oficial potencia la narrativa visual del mensaje.",
         "en": "Representative track of Mexican rap with raw lyrics reflecting social reality. The production mixes urban beats with catchy melodies, creating an intense and authentic atmosphere. The official video enhances the visual narrative of the message."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/tornillo.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=J7YyU63w0S4",
-      "spotify": "https://open.spotify.com/album/5avfygcAoK3LQ0vGSXWrVI",
+      "youtube": "https://www.youtube.com/watch?v=cu-AMfMgmKY&list=RDcu-AMfMgmKY&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/3a7qCKAsriTv30qXsh2zV9",
       "masterpiece": false
     },
     {
@@ -1462,8 +1442,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=tiu48yNjpk8",
-      "spotify": "https://open.spotify.com/album/29N9nfcvov8KfyF2X8Mj6P",
+      "youtube": "https://www.youtube.com/watch?v=KxUFS7QUftI&list=RDKxUFS7QUftI&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -1479,12 +1459,12 @@
         "es": "Tema con profunda carga emocional y filosófica, que reflexiona sobre la vida y la muerte. Letras poéticas acompañadas de ritmos cadenciosos que invitan a la meditación. Es una de las obras más emblemáticas de Canserbero.",
         "en": "Track with deep emotional and philosophical charge, reflecting on life and death. Poetic lyrics accompanied by steady rhythms that invite meditation. One of Canserbero's most emblematic works."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/lasanimas.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=HfMDqGZc8v4",
-      "spotify": "https://open.spotify.com/album/76ywaqsFNRaMkZEDyA8YWC",
+      "youtube": "https://www.youtube.com/watch?v=nc5Udryxe5c&list=RDnc5Udryxe5c&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/album/76ywaqsFNRaMkZEDyA8YWC",
       "masterpiece": false
     },
     {
@@ -1525,7 +1505,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=4i_U6bXZgrc",
+      "youtube": "https://www.youtube.com/watch?v=N_n_28erWVE&list=RDN_n_28erWVE&start_radio=1",
       "spotify": "https://open.spotify.com/album/0toTbRp35hIanEhHn8HsYl",
       "masterpiece": false
     },
@@ -1563,11 +1543,11 @@
         "es": "Pieza electrónica con atmósferas oscuras y sonidos envolventes que transmiten misterio y tensión. Ideal para ambientes introspectivos o de suspenso, destaca por su producción cuidada y original.",
         "en": "Electronic piece with dark atmospheres and enveloping sounds conveying mystery and tension. Ideal for introspective or suspenseful environments, it stands out for its careful and original production."
       },
-      "image": "/imagenes/musica/elelegido.jpg",
+      "image": "/imagenes/musica/elegido.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=JJ_RfYSPiBg&list=RDJJ_RfYSPiBg&start_radio=1",
       "spotify": "https://open.spotify.com/album/5fkz5impnr04IhEcEEF9uz",
       "masterpiece": false
     },
@@ -1588,8 +1568,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=li2vuYLb_4o",
-      "spotify": "https://open.spotify.com/album/265OEkRcX40ppxgHGuu4cI",
+      "youtube": "https://www.youtube.com/watch?v=MkCFCye8FTY&list=RDMkCFCye8FTY",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -1628,9 +1608,9 @@
       },
       "image": "https://i.scdn.co/image/ab67616d0000b273bc417c0ea3eb8427f467243a",
       "tags": [
-        "song"
+        "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=8y0CUdqPo0o",
+      "youtube": "https://www.youtube.com/watch?v=wm25gvWjGuA&list=PLjiqcPf4NWZFOR6jH9balVaoz8UtxBdFl",
       "spotify": "https://open.spotify.com/album/7wWV7fPoyYnj5u8y7zqg5S",
       "masterpiece": false
     },
@@ -1651,8 +1631,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=9RxyrLnVMEk",
-      "spotify": "https://open.spotify.com/album/7IGTTwVnwYMZg3dPXt6XGS",
+      "youtube": "https://www.youtube.com/watch?v=kw1E2ETp00Y&list=RDkw1E2ETp00Y&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -1743,10 +1723,10 @@
       "id": 86,
       "category": "music",
       "subcategory": "rap",
-      "artist": "Fat Bass Dj Ralph",
+      "artist": "AKHENATON",
       "title": {
-        "es": "Fat Bass",
-        "en": "Fat Bass"
+        "es": "ELECTRO CYPHER",
+        "en": "ELECTRO CYPHER"
       },
       "description": {
         "es": "Track energético y bailable con fuertes líneas de bajo y ritmos contundentes. Ideal para sesiones de DJ y fiestas, destaca por su producción potente y ritmo contagioso. Un ejemplo claro del estilo bass en la música electrónica.",
@@ -1756,29 +1736,29 @@
       "tags": [
         "djset"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/7KdsjQmMyF9B25UqADi117",
+      "youtube": "https://www.youtube.com/watch?v=u7BlzHnmrF8&list=PLE01Ss-sv4_yyB26t2qAFev4hMS18bSpm",
+      "spotify": "https://open.spotify.com/intl-es/album/3CrXqXIeHS9eqGGhiApSBN",
       "masterpiece": false
     },
     {
       "id": 87,
       "category": "music",
       "subcategory": "rap",
-      "artist": "Blackstar",
+      "artist": "Mos Def & Talib Kweli ",
       "title": {
-        "es": "Thieves in the Night",
-        "en": "Thieves in the Night"
+        "es": "BlackStar",
+        "en": "BlackStar"
       },
       "description": {
-        "es": "Canción de rap con letras profundas que abordan temas de injusticia, moralidad y oscuridad urbana. La producción es sobria, resaltando la voz y el mensaje. Blackstar es reconocido por su lirismo poético y conciencia social.",
-        "en": "Rap song with deep lyrics addressing injustice, morality, and urban darkness. The production is sober, highlighting the voice and message. Blackstar is known for poetic lyricism and social awareness."
+        "es": "BlackStar es un manifiesto del hip hop consciente, nacido de la unión de Mos Def y Talib Kweli. Con letras agudas y beats orgánicos, el álbum se alza como una respuesta poética a la violencia, el racismo y el materialismo. Es una joya underground que marcó una era.",
+        "en": "Black Star is a manifesto of conscious hip hop, born from the union of Mos Def and Talib Kweli. With sharp lyrics and organic beats, the album stands as a poetic response to violence, racism, and materialism. It's an underground gem that defined an era."
       },
-      "image": "https://i.scdn.co/image/ab67616d0000b273ca878fac8926a2a7e54a6a84",
+      "image": "/imagenes/musica/blackstar.jpg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=zmNQKdD0oSc",
-      "spotify": "https://open.spotify.com/album/1cDhSWgzdHoEYcmLaj2wnR",
+      "youtube": "https://www.youtube.com/watch?v=Halb24Rpgn8&list=PLrbFUdbfepXXkg85LxUJ8Tg-oFlglWjja",
+      "spotify": "https://open.spotify.com/intl-es/album/6GRzmk9UGL7odxprOPop1Q",
       "masterpiece": false
     },
     {
@@ -1798,8 +1778,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=g9DB5QnjNKM",
-      "spotify": "https://open.spotify.com/album/6qHNj0wpB4UGEzO8YH5Sqf",
+      "youtube": "https://www.youtube.com/watch?v=QSVyyykaEOo&list=RDQSVyyykaEOo&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/3I5vi9XbNrEsPdhcJhlfgY",
       "masterpiece": false
     },
     {
@@ -1815,12 +1795,12 @@
         "es": "Versión en vivo de 'Europe Is Lost' grabada en KEXP, que intensifica la emoción y el mensaje social. La interpretación en directo destaca la fuerza y autenticidad de Kae Tempest, consolidándola como voz clave del rap consciente.",
         "en": "Live version of 'Europe Is Lost' recorded at KEXP, intensifying the emotion and social message. The live performance highlights Kae Tempest's strength and authenticity, consolidating her as a key voice in conscious rap."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://i.scdn.co/image/ab67616d0000b27324b2b16e6e48db1d2c869170",
       "tags": [
         "live"
       ],
-      "youtube": "https://www.youtube.com/watch?v=5zJUyyH0fHk",
-      "spotify": "https://open.spotify.com/album/5bmSkzrpPUCfimC9pBt5MD",
+      "youtube": "https://www.youtube.com/watch?v=ffxrCDvJ8LI&list=RDffxrCDvJ8LI&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -1840,8 +1820,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=UaWRGTOSebc",
-      "spotify": "https://open.spotify.com/album/3Qr0Y25HEKvPJP2BOGqkhS",
+      "youtube": "https://www.youtube.com/watch?v=zKFqbyDR6M4&list=RDzKFqbyDR6M4&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/1RWXFHOJ6XjK8a9pitucrX",
       "masterpiece": false
     },
     {
@@ -1882,8 +1862,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=9I1KO8ayP1c",
-      "spotify": "https://open.spotify.com/album/5fdtvNyK0wjGt074kbuuj7",
+      "youtube": "https://www.youtube.com/watch?v=a0ZbClIYnEY&list=RDa0ZbClIYnEY&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -1966,8 +1946,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "spotify": "https://open.spotify.com/album/2h22PLV8b7HeEf29cyZayk",
+      "youtube": "https://www.youtube.com/watch?v=ODIRD_wFmvY&list=RDODIRD_wFmvY&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/1XAfHXDqNbAVDSGC3IJ7uW",
       "masterpiece": false
     },
     {
@@ -2197,8 +2177,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=Fq0Ejz7JwzI",
-      "spotify": "https://open.spotify.com/album/381oom8nio77eU6BuUb4UO",
+      "youtube": "https://www.youtube.com/watch?v=BGpzGu9Yp6Y&list=RDBGpzGu9Yp6Y&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/6AbVJjzv7thIvmMCuhZrmK",
       "masterpiece": false
     },
     {
@@ -2218,8 +2198,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=1I9T7X78hLQ",
-      "spotify": "https://open.spotify.com/album/0iduTBCh47iksgjLsjPjda",
+      "youtube": "https://www.youtube.com/watch?v=dPExEA4WKEk&list=RDdPExEA4WKEk&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/6eY2pFunYrkyLPTCBzQb0G",
       "masterpiece": false
     },
     {
@@ -2239,8 +2219,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=Ti6kZWdvl6w",
-      "spotify": "https://open.spotify.com/album/0a6JfB23BjM0aj9vSsnoMv",
+      "youtube": "https://www.youtube.com/watch?v=QPb4LDV6j5o&list=RDQPb4LDV6j5o&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/7lIdxlGqcX0j7L75qRda8Z",
       "masterpiece": false
     },
     {
@@ -2249,8 +2229,8 @@
       "subcategory": "rap",
       "artist": "Dollar vs Jefe Yisus",
       "title": {
-        "es": "Batallón",
-        "en": "Batallón"
+        "es": "Dollar vs Jefe Yisus",
+        "en": "Dollar vs Jefe Yisus"
       },
       "description": {
         "es": "Video oficial de esta intensa batalla de rap entre Dollar y Jefe Yisus. Un enfrentamiento lleno de ingenio, ritmo y líricas afiladas que muestran la pasión por el freestyle y la cultura del hip hop.",
@@ -2260,8 +2240,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/watch?v=HDK37A52bOA",
-      "spotify": "https://open.spotify.com/album/2V14ldv99m9dF99f7h0JDN",
+      "youtube": "https://www.youtube.com/watch?v=O8U9nc_rMhY&list=RDO8U9nc_rMhY&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -2281,8 +2261,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=2qCwG3A2cMw",
-      "spotify": "https://open.spotify.com/album/1IxY9bcAPSu0ENtX3oLRlS",
+      "youtube": "https://www.youtube.com/watch?v=ihxscxXwnfA&list=RDihxscxXwnfA&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -2291,8 +2271,8 @@
       "subcategory": "rap",
       "artist": "Geronación",
       "title": {
-        "es": "Buen mc, Mejor persona",
-        "en": "Buen mc, Mejor persona"
+        "es": "Gran mc, Mejor persona",
+        "en": "Gran mc, Mejor persona"
       },
       "description": {
         "es": "Tema clásico de 1999 que resalta la importancia del respeto y la humildad en el rap. Geronación mezcla letras conscientes con un ritmo cadencioso que invita a la reflexión dentro del panorama del hip hop en español.",
@@ -2302,8 +2282,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=bQROQGfTuXg",
-      "spotify": "https://open.spotify.com/album/2Sp85NL3kFL3paJQcWg529",
+      "youtube": "https://www.youtube.com/watch?v=ptnJadYjzFw&list=RDptnJadYjzFw&start_radio=1&pp=ygUWQnVlbiBtYywgTWVqb3IgcGVyc29uYaAHAQ%3D%3D",
+      "spotify": "https://open.spotify.com/intl-es/track/1XWExwJR8X6DumEobdiIDp",
       "masterpiece": false
     },
     {
@@ -2312,8 +2292,8 @@
       "subcategory": "rap",
       "artist": "Baron 🇪🇸 vs FD 🇺🇾",
       "title": {
-        "es": "Exhibición Gold Battle Internacional",
-        "en": "Exhibición Gold Battle Internacional"
+        "es": "Baron 🇪🇸 vs FD 🇺🇾",
+        "en": "Baron 🇪🇸 vs FD 🇺🇾"
       },
       "description": {
         "es": "Exhibición internacional de batalla de rap en el MACBA entre Baron y FD. Una demostración de técnica, rapidez mental y creatividad que refleja la esencia de las competiciones de freestyle más respetadas.",
@@ -2323,8 +2303,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/watch?v=4C2e5PfEAA8",
-      "spotify": "https://open.spotify.com/album/0f7V240QVPY2zanoVZHSx2",
+      "youtube": "https://www.youtube.com/watch?v=47ToD-pknt8&list=LL&index=122&t=215s",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -2333,8 +2313,8 @@
       "subcategory": "rap",
       "artist": "Teko vs Noult",
       "title": {
-        "es": "Final Batalla de los Gallos Barcelona 2006",
-        "en": "Final Batalla de los Gallos Barcelona 2006"
+        "es": "Teko vs Noult",
+        "en": "Teko vs Noult"
       },
       "description": {
         "es": "Final histórica de la Batalla de los Gallos en Barcelona 2006 entre Teko y Noult. Una confrontación legendaria que muestra lo mejor del freestyle con rimas afiladas y un ambiente cargado de tensión y energía.",
@@ -2344,8 +2324,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/watch?v=YZ6qxvVmtmQ",
-      "spotify": "https://open.spotify.com/album/4S61s6maxf0oJ5JpodnfZt",
+      "youtube": "https://www.youtube.com/watch?v=2_SUOMe6ci8&t=2s",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -2365,8 +2345,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=vRkSgKucb44",
-      "spotify": "https://open.spotify.com/album/0aHLR7YMTanDuRlha6NgAH",
+      "youtube": "https://www.youtube.com/watch?v=WT-Yjai9E1A&list=RDWT-Yjai9E1A&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -2382,12 +2362,12 @@
         "es": "Colaboración de rap con energía y letras contundentes. 'A mansalva' fusiona estilos urbanos con mensajes directos, mostrando la fuerza del hip hop colaborativo en la escena underground.",
         "en": "'A mansalva' is a rap collaboration with energy and powerful lyrics. It fuses urban styles with direct messages, showcasing the strength of collaborative hip hop in the underground scene."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/artes.jpg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=3by9W8syRlE",
-      "spotify": "https://open.spotify.com/album/6ZCnNpmcsTnDbQ8FcXqVGj",
+      "youtube": "https://www.youtube.com/watch?v=yWBwHcPoiOI&list=RDyWBwHcPoiOI&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -2396,42 +2376,22 @@
       "subcategory": "rap",
       "artist": "Artes Verbales",
       "title": {
-        "es": "Tiro con arco",
+        "es": "Cuéntenos su caso",
         "en": "Tiro con arco"
       },
       "description": {
-        "es": "Tema de rap que utiliza la metáfora del tiro con arco para hablar de precisión y enfoque. Artes Verbales entrega rimas contundentes y un ritmo que impulsa el mensaje con fuerza y claridad.",
-        "en": "'Tiro con arco' is a rap track using the archery metaphor to talk about precision and focus. Artes Verbales delivers powerful rhymes and a rhythm that drives the message with strength and clarity."
+        "es": "Cuéntenos su caso es un álbum que recoge testimonios del margen, mezclando rap con crítica social y vivencias reales. Artes Verbales transforma cada verso en una denuncia y cada pista en un relato crudo y directo. Una obra comprometida, nacida desde abajo.",
+        "en": "Cuéntenos su caso is an album that captures stories from the margins, blending rap with social critique and raw life experiences. Artes Verbales turns each verse into a protest and every track into a powerful tale. A committed work, born from the ground up."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/artes.jpg",
       "tags": [
-        "song"
+        "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=ytxvn5bVhUo",
-      "spotify": "https://open.spotify.com/album/6ZCnNpmcsTnDbQ8FcXqVGj",
+      "youtube": "https://www.youtube.com/watch?v=SrLmMsmwx8k&list=PLFF84C7635D35EF59",
+      "spotify": "",
       "masterpiece": false
     },
-    {
-      "id": 119,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Artes Verbales",
-      "title": {
-        "es": "En Badalona...",
-        "en": "En Badalona..."
-      },
-      "description": {
-        "es": "Canción de rap que retrata la vida y las experiencias urbanas en Badalona. Con un ritmo pegajoso y letras cercanas, Artes Verbales muestra la realidad cotidiana con un estilo auténtico y directo.",
-        "en": "Rap song portraying urban life and experiences in Badalona. With a catchy rhythm and close lyrics, Artes Verbales shows everyday reality with an authentic and direct style."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=3sW9Q2xfBHE",
-      "spotify": "https://open.spotify.com/album/0UkNPqUQQ7rQHksNLW8Nky",
-      "masterpiece": false
-    },
+    
     {
       "id": 120,
       "category": "music",
@@ -2449,8 +2409,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=8vSEat0-fA4",
-      "spotify": "https://open.spotify.com/album/7d8StpjxEGDHyNCQctokS3",
+      "youtube": "https://www.youtube.com/watch?v=lIf1HUFepHE&list=RDlIf1HUFepHE&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/1VcbJ0Pl1BMPy6ELmgtBf9",
       "masterpiece": false
     },
     {
@@ -2459,8 +2419,8 @@
       "subcategory": "rap",
       "artist": "Zarman",
       "title": {
-        "es": "Yo soy Hip Hop (Prod Zarman)",
-        "en": "Yo soy Hip Hop (Prod Zarman)"
+        "es": "Yo soy Hip Hop",
+        "en": "Yo soy Hip Hop"
       },
       "description": {
         "es": "Himno del rap español producido por el mismo Zarman, que reafirma el amor y la dedicación por el hip hop. Letras directas y contundentes acompañadas de un beat clásico y efectivo.",
@@ -2470,8 +2430,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=jYlYrVogqVo",
-      "spotify": "https://open.spotify.com/album/0JukPIl7YXm8FAQnkOvHGt",
+      "youtube": "https://www.youtube.com/watch?v=ZVu0_ABaFbk&list=RDZVu0_ABaFbk&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/2nFlaFfTkzxXRY5NnPBTnT",
       "masterpiece": false
     },
     {
@@ -2480,19 +2440,19 @@
       "subcategory": "rap",
       "artist": "Inspira Flowklorikos",
       "title": {
-        "es": "Donde Duele",
-        "en": "Donde Duele"
+        "es": "Donde Duele Inspira",
+        "en": "Donde Duele Inspira"
       },
       "description": {
         "es": "Canción que mezcla rap con elementos folclóricos, expresando las heridas emocionales y la resiliencia. Inspira Flowklorikos ofrece una producción original y letras cargadas de sentimiento.",
         "en": "Song mixing rap with folk elements, expressing emotional wounds and resilience. Inspira Flowklorikos offers original production and deeply emotional lyrics."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/dondeduele.jpg",
       "tags": [
-        "song"
+        "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=gxh2JsN_cwA",
-      "spotify": "https://open.spotify.com/album/27uZ3jB8ecCUztUeeUx3QV",
+      "youtube": "https://www.youtube.com/watch?v=M7R3jJOZNh4&list=PL69C613E42933A090",
+      "spotify": "https://open.spotify.com/intl-es/album/27uZ3jB8ecCUztUeeUx3QV",
       "masterpiece": false
     },
     {
@@ -2501,19 +2461,19 @@
       "subcategory": "rap",
       "artist": "Toteking & Easy-S",
       "title": {
-        "es": "Brindis (Prod. Stash House)",
-        "en": "Brindis (Prod. Stash House)"
+        "es": "Brindis",
+        "en": "Brindis"
       },
       "description": {
         "es": "Colaboración de dos grandes del rap español con producción de Stash House. 'Brindis' celebra la amistad, la lucha y el éxito con rimas potentes y un beat envolvente.",
         "en": "Collaboration of two Spanish rap greats with production by Stash House. 'Brindis' celebrates friendship, struggle, and success with powerful rhymes and an immersive beat."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/brindis.jpg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=2vDUCIMLYcg",
-      "spotify": "https://open.spotify.com/album/7c5DjR4VNkX4vCBricJmcp",
+      "youtube": "https://www.youtube.com/watch?v=5Q5s9N1vlLs&list=RD5Q5s9N1vlLs&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/0A7D6XTMWcwrzdSjhBIx0D",
       "masterpiece": false
     },
     {
@@ -2533,8 +2493,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=dY3C-wfT1cY",
-      "spotify": "https://open.spotify.com/album/6puvnfTCbx57W3IEncPQ7M",
+      "youtube": "https://www.youtube.com/watch?v=YOkqGx6zdbw&list=RDYOkqGx6zdbw&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/7oHOzRRVd5cQOoEYmSbbUf",
       "masterpiece": false
     },
     {
@@ -2554,31 +2514,11 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=RqbJu4qbiZ8",
-      "spotify": "https://open.spotify.com/album/0hTSs8AKjoZH8oGJdfJPmJ",
+      "youtube": "https://www.youtube.com/watch?v=glPbPJb2qaY&list=RDglPbPJb2qaY&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/3cK2Ez2InzvFc9eBVVaXOE",
       "masterpiece": false
     },
-    {
-      "id": 126,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Kultama",
-      "title": {
-        "es": "Nacional e Importación",
-        "en": "Nacional e Importación"
-      },
-      "description": {
-        "es": "Canción de rap que reflexiona sobre las diferencias culturales y la identidad. Kultama utiliza su estilo fresco para tratar temas de pertenencia y diversidad con un ritmo pegadizo.",
-        "en": "Rap song reflecting on cultural differences and identity. Kultama uses his fresh style to address belonging and diversity with a catchy rhythm."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273ff5a4e4c596b303ed94a8814",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=y_3WIVvX2vM",
-      "spotify": "https://open.spotify.com/album/09R9jRVJBYQ164rC5OC7U1",
-      "masterpiece": false
-    },
+   
     {
       "id": 127,
       "category": "music",
@@ -2596,8 +2536,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=06AnCeCZk1I",
-      "spotify": "https://open.spotify.com/album/6ZHHP1lKpGjWnMFC8nSsqT",
+      "youtube": "https://www.youtube.com/watch?v=KVqOHgZBWWQ&list=RDKVqOHgZBWWQ&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -2617,8 +2557,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=h5LgZwM9NcE",
-      "spotify": "https://open.spotify.com/album/5vPhvxs6I4n2HgigAGk5bh",
+      "youtube": "https://www.youtube.com/watch?v=HnIDQjSpGD4&list=RDHnIDQjSpGD4",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -2627,8 +2567,8 @@
       "subcategory": "rap",
       "artist": "Furax Barbarossa",
       "title": {
-        "es": "Qui m'demande? (Subtitulado en español)",
-        "en": "Qui m'demande? (Spanish Subtitled)"
+        "es": "Qui m'demande?",
+        "en": "Qui m'demande?"
       },
       "description": {
         "es": "Canción en francés con un mensaje potente y reflexivo. Furax Barbarossa presenta letras densas y un ritmo que combina agresividad con ritmo, acompañado de subtítulos para el público hispanohablante.",
@@ -2638,8 +2578,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=8XwdxE8CRzw",
-      "spotify": "https://open.spotify.com/album/6MT8fyt3RARXlahv7CrXPa",
+      "youtube": "https://www.youtube.com/watch?v=Jir_pb0cweo&list=LL&index=138",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -2659,8 +2599,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=BY5hFYGq9B8",
-      "spotify": "https://open.spotify.com/album/2zAMnLCedRWRm8JRJzYPWX",
+      "youtube": "https://www.youtube.com/watch?v=Fa7nN1YXQv0&list=RDFa7nN1YXQv0&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/0FpevCPRswb3a2VseZfSZV",
       "masterpiece": false
     },
     {
@@ -2680,8 +2620,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=VLzdRZtG6qc",
-      "spotify": "https://open.spotify.com/album/2f19PIhQ7MLa2nUtCB9ouz",
+      "youtube": "https://www.youtube.com/watch?v=yI1-Azh-t48&list=RDyI1-Azh-t48&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/1wN3nTvtFkdR0cZ68ipRxA",
       "masterpiece": false
     },
     {
@@ -2701,8 +2641,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=6MrHzzAj9jw",
-      "spotify": "https://open.spotify.com/album/34r0OW12E9mT1Y6HvueONc",
+      "youtube": "https://www.youtube.com/watch?v=7-_2eTH1808&list=RD7-_2eTH1808&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/1Y2Z29h2JmNxklt6dtz8rq",
       "masterpiece": false
     },
     {
@@ -2718,12 +2658,12 @@
         "es": "Tema clásico del grupo francés IAM que explora otras dimensiones del rap con letras profundas y producción impecable. Un videoclip oficial que acompaña esta obra imprescindible del hip hop francés.",
         "en": "Classic track from French group IAM exploring other dimensions of rap with deep lyrics and flawless production. An official video accompanies this essential French hip hop work."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/electro.jpg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=zyd7dyA5hfE",
-      "spotify": "https://open.spotify.com/album/1C9ntuHw6x28dAA00ZdX7Y",
+      "youtube": "https://www.youtube.com/watch?v=m-cVC_Vqo2I&list=RDm-cVC_Vqo2I&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -2739,12 +2679,12 @@
         "es": "Canción potente de Keny Arkana con mensajes de protesta social y esperanza. La versión con subtítulos en español permite comprender mejor sus letras conscientes y comprometidas.",
         "en": "Powerful song by Keny Arkana with messages of social protest and hope. The Spanish-subtitled version helps better understand her conscious and committed lyrics."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/keny.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=6p-5W37ZqgQ",
-      "spotify": "https://open.spotify.com/album/0NVMD77N6PJHoKRugFmr8q",
+      "youtube": "https://www.youtube.com/watch?v=Dda3KKqojRw&list=RDDda3KKqojRw&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/66IQDeNfl4Lu0LamXmyJ9f",
       "masterpiece": false
     },
     {
@@ -2764,8 +2704,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=9xLUdEjZ9YU",
-      "spotify": "https://open.spotify.com/album/7z97wkwffRj4CLAcESZRS7",
+      "youtube": "https://www.youtube.com/watch?v=QzoBB9NO9Dc&list=RDQzoBB9NO9Dc&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/3JjnCqQwWlgIz5ty1ByAbO",
       "masterpiece": false
     },
     {
@@ -2781,12 +2721,12 @@
         "es": "Canción con un ritmo agresivo y letras combativas que reflejan la rabia social de Keny Arkana. La versión con subtítulos en español facilita la comprensión de su mensaje revolucionario.",
         "en": "Song with aggressive rhythm and combative lyrics reflecting Keny Arkana's social anger. The Spanish-subtitled version makes her revolutionary message easier to understand."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/larage.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=8RcX5iXYH3k",
-      "spotify": "https://open.spotify.com/album/50sxd5RESS3S74gUAFrpwf",
+      "youtube": "https://www.youtube.com/watch?v=8wyiHcgD7PE&list=RD8wyiHcgD7PE&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/0cCi1Gf9lHNf6s17GwreLa",
       "masterpiece": false
     },
     {
@@ -2795,8 +2735,8 @@
       "subcategory": "rap",
       "artist": "Mafia K'1 Fry",
       "title": {
-        "es": "Guerre (subtítulos en español)",
-        "en": "Guerre (Spanish Subtitles)"
+        "es": "Guerre",
+        "en": "Guerre"
       },
       "description": {
         "es": "Tema intenso que aborda la guerra y sus consecuencias desde la perspectiva del colectivo Mafia K'1 Fry. La versión con subtítulos en español facilita la comprensión del mensaje.",
@@ -2806,31 +2746,11 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=ysC-J0HZTUc",
-      "spotify": "https://open.spotify.com/album/3r5ULHGpUxRIktPmz0HXvH",
+      "youtube": "https://www.youtube.com/watch?v=Us0VTACIR1g&list=RDUs0VTACIR1g&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/6xGtNkQcG4YgM1SOxEH3v2",
       "masterpiece": false
     },
-    {
-      "id": 138,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Control Machete",
-      "title": {
-        "es": "¿Comprendes, Mendes?",
-        "en": "¿Comprendes, Mendes?"
-      },
-      "description": {
-        "es": "Clásico del hip hop mexicano que combina letras inteligentes con un ritmo inconfundible. Control Machete ofrece un mensaje directo y contundente, reflejando la realidad urbana.",
-        "en": "Classic Mexican hip hop track combining smart lyrics with an unmistakable rhythm. Control Machete delivers a direct and powerful message reflecting urban reality."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b27350f0cf7caf71702c8797b11d",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=ivO_Fv2uA_E",
-      "spotify": "https://open.spotify.com/album/4EK8c4DmpA3uhyKt6P2B2v",
-      "masterpiece": false
-    },
+   
     {
       "id": 139,
       "category": "music",
@@ -2846,10 +2766,10 @@
       },
       "image": "https://i.scdn.co/image/ab67616d0000b2739a0e68fc6761a742bf9b8659",
       "tags": [
-        "song"
+        "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=VOUwUBOVRmE",
-      "spotify": "https://open.spotify.com/album/3XBIEuPt853rX8Fn5DbG5s",
+      "youtube": "https://www.youtube.com/watch?v=YA47tYzKd8w&list=RDYA47tYzKd8w&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/2ruECBeMo1OYLgj4UclxgV",
       "masterpiece": false
     },
     {
@@ -2869,8 +2789,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=_lVNjW0q0a4",
-      "spotify": "https://open.spotify.com/album/3XBIEuPt853rX8Fn5DbG5s",
+      "youtube": "https://www.youtube.com/watch?v=KRS0wPv9esQ&list=RDKRS0wPv9esQ&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/5kJIzN6mV5MslzE6zfvF56",
       "masterpiece": false
     },
     {
@@ -2890,8 +2810,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=rAlfa7Kg0P8",
-      "spotify": "https://open.spotify.com/album/4GXT2w4cSreLj3Sm8qBFXk",
+      "youtube": "https://www.youtube.com/watch?v=-yaGcLW6cSo&list=RD-yaGcLW6cSo&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -2900,19 +2820,19 @@
       "subcategory": "rap",
       "artist": "Tremendo",
       "title": {
-        "es": "Efectos Especiales",
-        "en": "Efectos Especiales"
+        "es": "Vidalogia",
+        "en": "Vidalogia"
       },
       "description": {
-        "es": "Canción que combina lírica consciente con beats envolventes, destacando el talento de Tremendo. El tema presenta una narrativa fuerte y una producción que resalta cada detalle.",
-        "en": "Song combining conscious lyrics with immersive beats, highlighting Tremendo's talent. The track features a strong narrative and production that emphasizes every detail."
+        "es": "Vidalogia es uno de los discos más personales y profundos del rapero español Tremendo. Con una lírica introspectiva y una producción sobria, el álbum explora temas como la identidad, la lucha interna y el paso del tiempo. Es considerado una obra de culto en el hip hop underground hispano.",
+        "en": "Vidalogia is one of the most personal and profound albums by Spanish rapper Tremendo. With introspective lyrics and sober production, the record explores themes such as identity, inner struggle, and the passage of time. It is regarded as a cult classic in Spanish underground hip hop."
       },
       "image": "https://i.scdn.co/image/ab67616d0000b273a38c2e94761afdfcdf831bad",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=c-Hem0sj2WU",
-      "spotify": "https://open.spotify.com/album/2uDAGE4oRnDO76MDnTs32M",
+      "youtube": "https://www.youtube.com/watch?v=9WchrYAczZs&list=PLvZQTqeUW_jFg63MxooMbjHNs_d0BBbmA",
+      "spotify": "https://open.spotify.com/intl-es/album/2dFR4poQ9KD6lFBI6TMQgo",
       "masterpiece": false
     },
     {
@@ -2932,7 +2852,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=78qM3G0q5L4",
+      "youtube": "https://www.youtube.com/watch?v=mw4d2UPjCr8&list=RDmw4d2UPjCr8&start_radio=1",
       "spotify": "https://open.spotify.com/album/5dZfxOnEFBUgUszXhz6Lgg",
       "masterpiece": false
     },
@@ -2940,10 +2860,10 @@
       "id": 144,
       "category": "music",
       "subcategory": "rap",
-      "artist": "360 Grados",
+      "artist": "Apache",
       "title": {
-        "es": "Apache",
-        "en": "Apache"
+        "es": "360 Grados",
+        "en": "360 Grados"
       },
       "description": {
         "es": "Clásico del rap español, 'Apache' de 360 Grados destaca por su flow auténtico y letras urbanas. Representa una época dorada del hip hop con un estilo inconfundible y ritmo envolvente.",
@@ -2953,8 +2873,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=IV0wSxU7-Dk",
-      "spotify": "https://open.spotify.com/album/2pSzm0McnbNqzUrxbmaQli",
+      "youtube": "https://www.youtube.com/watch?v=H7Lrv2_9UvY&list=RDH7Lrv2_9UvY&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/6U1VvQPdQhFGus2jGxf4vp",
       "masterpiece": false
     },
     {
@@ -2974,8 +2894,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=YNQh6hJIK6E",
-      "spotify": "https://open.spotify.com/album/4TaG2wkqRP03AhD2z4T4sY",
+      "youtube": "https://www.youtube.com/watch?v=TpaAKupfCEU&list=RDTpaAKupfCEU",
+      "spotify": "https://open.spotify.com/intl-es/track/14R6HWKOkzOVbpUvFpdHSn",
       "masterpiece": false
     },
     {
@@ -2984,18 +2904,18 @@
       "subcategory": "rap",
       "artist": "Canserbero",
       "title": {
-        "es": "Indigo [Can + Zoo Indigos]",
-        "en": "Indigo [Can + Zoo Indigos]"
+        "es": "Indigo",
+        "en": "Indigo"
       },
       "description": {
         "es": "Canción emotiva de Canserbero junto a Zoo Indigos que mezcla rap con mensajes profundos sobre la vida y la sociedad. Letras cargadas de sentimiento y ritmo envolvente que capturan al oyente.",
         "en": "Emotional song by Canserbero with Zoo Indigos mixing rap with deep messages about life and society. Lyrics full of feeling and an immersive rhythm that captivate the listener."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/can.jpeg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=40brnx7wz_I",
+      "youtube": "https://www.youtube.com/watch?v=AWvU-Xfs0Vk&list=RDAWvU-Xfs0Vk&start_radio=1",
       "spotify": "https://open.spotify.com/album/0IzR6HSsoGzrM0gL5dTlYz",
       "masterpiece": false
     },
@@ -3016,8 +2936,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=AxYbhR6kC_Y",
-      "spotify": "https://open.spotify.com/album/3AMtCdlF0izfCo2yXMFpKF",
+      "youtube": "https://www.youtube.com/watch?v=TnCALg66Sjk&list=RDTnCALg66Sjk&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/54qhKTvMyWXG5hylJlP3xf",
       "masterpiece": false
     },
     {
@@ -3026,19 +2946,19 @@
       "subcategory": "rap",
       "artist": "MESWY & NUTSO",
       "title": {
-        "es": "Rabiosamente",
-        "en": "Rabiosamente"
+        "es": "Rabiosomente",
+        "en": "Rabiosomente"
       },
       "description": {
         "es": "Tema explosivo de MESWY & NUTSO producido por Jameson Killah, con letras contundentes y un ritmo que no da tregua. Representa el rap callejero con energía pura y mensajes intensos.",
         "en": "Explosive track by MESWY & NUTSO produced by Jameson Killah, featuring powerful lyrics and relentless rhythm. Represents street rap with pure energy and intense messages."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/rabiosomente.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=9zZpHGxUMe0",
-      "spotify": "https://open.spotify.com/album/2k7SzJHQKAapyNECIvx6rY",
+      "youtube": "https://www.youtube.com/watch?v=wu2t5L5lM8Q&list=RDwu2t5L5lM8Q&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/album/6ec6hQJWMDbFULR3NEkt3g",
       "masterpiece": false
     },
     {
@@ -3047,8 +2967,8 @@
       "subcategory": "rap",
       "artist": "PIEL ROJA 🇨🇴",
       "title": {
-        "es": "One Shot 4 Elementos #14",
-        "en": "One Shot 4 Elementos #14"
+        "es": "4 Elementos #14",
+        "en": "4 Elementos #14"
       },
       "description": {
         "es": "Participación de PIEL ROJA en la batalla 'One Shot 4 Elementos #14', demostrando habilidad y estilo en el freestyle. Ritmo y letras que reflejan la esencia del rap competitivo y callejero.",
@@ -3058,8 +2978,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/watch?v=VYQW3G0rh2w",
-      "spotify": "https://open.spotify.com/album/5a6QdOGQEhR3y3gbVZeERE",
+      "youtube": "https://www.youtube.com/watch?v=l_4drTywsio&list=RDl_4drTywsio&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3075,12 +2995,12 @@
         "es": "Canción potente de Sicario que mezcla letras directas con un ritmo envolvente. Explora temas de identidad y desafío con un enfoque lírico profundo. Video oficial con imágenes urbanas y energía cruda.",
         "en": "Powerful song by Sicario mixing direct lyrics with an immersive rhythm. Explores themes of identity and challenge with a deep lyrical focus. Official video with urban imagery and raw energy."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/sicario.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=x-QDDAGfgMc",
-      "spotify": "https://open.spotify.com/album/1JjX0ZugqeC1QXPLqSi1pu",
+      "youtube": "https://www.youtube.com/watch?v=V4wBpoA-MmE&list=RDV4wBpoA-MmE&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3100,8 +3020,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=kG7js47vAQY",
-      "spotify": "https://open.spotify.com/album/188Jt3FCGpNaXwbQW1l1Ii",
+      "youtube": "https://www.youtube.com/watch?v=WONhauS7_vs&list=RDWONhauS7_vs&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/0aPWlaDQSfM6HNCXQYtkLz",
       "masterpiece": false
     },
     {
@@ -3110,8 +3030,8 @@
       "subcategory": "rap",
       "artist": "Tiro de Gracia",
       "title": {
-        "es": "Sueños - Retorno de Misericordia",
-        "en": "Sueños - Retorno de Misericordia"
+        "es": "Sueños",
+        "en": "Sueños"
       },
       "description": {
         "es": "Canción emblemática de Tiro de Gracia que combina rap consciente con beats profundos. El tema reflexiona sobre la esperanza y la lucha personal, acompañado por una producción sonora cuidadosa.",
@@ -3121,7 +3041,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=3Y1NxF0q6RY",
+      "youtube": "https://www.youtube.com/watch?v=SiabBYr86qo&list=RDSiabBYr86qo&start_radio=1",
       "spotify": "https://open.spotify.com/album/0sTT5nGJb2ogaB0mvCmFBu",
       "masterpiece": false
     },
@@ -3163,8 +3083,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=QejCqg-AtDk",
-      "spotify": "https://open.spotify.com/album/4XbUZbCiZynKWMCWFoNSbY",
+      "youtube": "https://www.youtube.com/watch?v=i8RqgDsO3c4&list=RDi8RqgDsO3c4&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/7GOIgYhbOINAlIVKMrMhXv",
       "masterpiece": false
     },
     {
@@ -3184,7 +3104,7 @@
       "tags": [
         "live"
       ],
-      "youtube": "https://www.youtube.com/watch?v=6NrfklJ3n2w",
+      "youtube": "https://www.youtube.com/watch?v=AxisugCi2e8&list=OLAK5uy_lG2_OG_n_FtU876EoRiSjZrMHbgBqK29c&index=2",
       "spotify": "https://open.spotify.com/album/0ZdQT7haPQcT3vuQiklcAi",
       "masterpiece": false
     },
@@ -3222,18 +3142,18 @@
         "es": "Álbum completo de Cloaka Company publicado en 2001, que destaca por su estilo crudo y letras comprometidas. Una obra que captura la esencia del rap underground con beats potentes y mensajes claros.",
         "en": "Full album by Cloaka Company released in 2001, notable for its raw style and committed lyrics. A work capturing the essence of underground rap with powerful beats and clear messages."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/cloacka.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=5sTt8rjLgUA&list=PL67D1376A72A2F5A1",
-      "spotify": "https://open.spotify.com/album/7C2RrxAFNTX0qklJnrHXTj",
+      "youtube": "https://www.youtube.com/watch?v=Fyb1SFtoX0c&list=RDFyb1SFtoX0c&start_radio=1&t=246s",
+      "spotify": "",
       "masterpiece": false
     },
     {
       "id": 158,
       "category": "music",
-      "subcategory": "punk",
+      "subcategory": "rap",
       "artist": "Hijos de las Hojas",
       "title": {
         "es": "Caerán",
@@ -3247,8 +3167,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=1-Zqn7V4P6w",
-      "spotify": "https://open.spotify.com/album/5VaYKNDJhjfWtghV9UL1Bj",
+      "youtube": "https://www.youtube.com/watch?v=TAvKGQ74P6Q&list=RDTAvKGQ74P6Q&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/3oO9LRw1GLRSCnqRGms09A",
       "masterpiece": false
     },
     {
@@ -3264,54 +3184,34 @@
         "es": "Canción de reggae con Snoop Lion, Mavado y Pocaan que mezcla ritmos caribeños con letras sobre la resistencia y la unidad. Producción vibrante y un video subtitulado en español que potencia su mensaje.",
         "en": "Reggae song by Snoop Lion, Mavado, and Pocaan mixing Caribbean rhythms with lyrics about resistance and unity. Vibrant production and a Spanish-subtitled video that enhances its message."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/ligthers.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=CKe5ZjH39xE",
-      "spotify": "https://open.spotify.com/album/4K2UL6467Xdg2plwSNMO6m",
+      "youtube": "https://www.youtube.com/watch?v=7_sH_K8vZl8&list=RD7_sH_K8vZl8&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/0Gv6sr4tFPkYDIuUVxOx7H",
       "masterpiece": false
     },
-    {
-      "id": 160,
-      "category": "music",
-      "subcategory": "dub",
-      "artist": "Snoop Lion ft. Mavado & Popcaan",
-      "title": {
-        "es": "Lighters Up",
-        "en": "Lighters Up"
-      },
-      "description": {
-        "es": "Canción de reggae que fusiona el estilo inconfundible de Snoop Lion con las voces de Mavado y Popcaan. Un tema vibrante que celebra la resistencia y la unidad en la cultura caribeña. El ritmo contagioso y el mensaje social hacen de este track un clásico moderno.",
-        "en": "Reggae song blending Snoop Lion's unmistakable style with vocals from Mavado and Popcaan. A vibrant track celebrating resistance and unity in Caribbean culture. Its catchy rhythm and social message make it a modern classic."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=CKe5ZjH39xE",
-      "spotify": "https://open.spotify.com/album/5VUd2RpxoXyxGehYhO7AVn",
-      "masterpiece": false
-    },
+    
     {
       "id": 161,
       "category": "music",
       "subcategory": "rap",
-      "artist": "Tha Shiznit",
+      "artist": "Snoop Dogg",
       "title": {
-        "es": "SnoopDoggTV",
-        "en": "SnoopDoggTV"
+        "es": "Tha Shiznit",
+        "en": "Tha Shiznit"
       },
       "description": {
         "es": "Video oficial de Tha Shiznit para el tema 'SnoopDoggTV', que combina el rap clásico con una producción audiovisual potente. Letras directas y una energía enérgica que reflejan el estilo West Coast. Un homenaje a la cultura hip hop.",
         "en": "'SnoopDoggTV' official video by Tha Shiznit, blending classic rap with strong audiovisual production. Direct lyrics and energetic vibe reflecting West Coast style. A tribute to hip hop culture."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/tha.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=7nLjO_pLuMo",
-      "spotify": "https://open.spotify.com/album/1qCaXMufzGyuuhkwvl2TYy",
+      "youtube": "https://www.youtube.com/watch?v=3TNAZ_IZ1tI&list=RD3TNAZ_IZ1tI",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3331,8 +3231,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=rv9LIXG_UEQ",
-      "spotify": "https://open.spotify.com/album/0SbXA1RL0qUMjEx8quy6l0",
+      "youtube": "https://www.youtube.com/watch?v=fsvuLWbpZks&list=RDfsvuLWbpZks",
+      "spotify": "https://open.spotify.com/intl-es/track/6s06MhqI23UNLthLaRPwjd",
       "masterpiece": false
     },
     {
@@ -3352,8 +3252,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=bTKRWXsntT0",
-      "spotify": "https://open.spotify.com/album/3Kl11BjOdLfjIqv8vqW5dp",
+      "youtube": "https://www.youtube.com/watch?v=At_2xS6V9aI&list=RDAt_2xS6V9aI&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/0mXS6WwBClaN8h4CXmwlpq",
       "masterpiece": false
     },
     {
@@ -3373,8 +3273,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=3Lmq3-AYYZ0",
-      "spotify": "https://open.spotify.com/album/3Kl11BjOdLfjIqv8vqW5dp",
+      "youtube": "https://www.youtube.com/watch?v=ndcAZ5g7G_Y&list=RDndcAZ5g7G_Y&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3488,8 +3388,8 @@
       "subcategory": "rap",
       "artist": "Jack Russell, Foyone, Akapellah, Big Soto, Trainer",
       "title": {
-        "es": "Colaboración",
-        "en": "Collaboration"
+        "es": "flama",
+        "en": "flama"
       },
       "description": {
         "es": "Tema colaborativo que reúne a destacados raperos Jack Russell, Foyone, Akapellah, Big Soto y Trainer. La canción ofrece letras potentes y flows variados que reflejan la diversidad del rap en español.",
@@ -3499,31 +3399,11 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=abcd1234xyz",
-      "spotify": "https://open.spotify.com/album/1I6wAeKCRVWsQUYrFUwTUA",
+      "youtube": "https://www.youtube.com/watch?v=oAqxROjLX0M&list=RDoAqxROjLX0M&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
-    {
-      "id": 171,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Akapellah",
-      "title": {
-        "es": "Gordo Funky",
-        "en": "Gordo Funky"
-      },
-      "description": {
-        "es": "'Gordo Funky' es un videoclip oficial de Akapellah que mezcla ritmos funky con letras incisivas y actitud callejera. Destaca por su energía contagiosa y producción audiovisual llamativa.",
-        "en": "'Gordo Funky' official video by Akapellah blends funky rhythms with incisive lyrics and street attitude. It stands out for its contagious energy and striking audiovisual production."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b2734b6380e7b5aca13f8aa68476",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=V9m3WcLpzz4",
-      "spotify": "https://open.spotify.com/album/2oXQPfCfJ1JKWrpyyGSoHl",
-      "masterpiece": false
-    },
+   
     {
       "id": 172,
       "category": "music",
@@ -3541,8 +3421,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=pFZ1cTynsh0",
-      "spotify": "https://open.spotify.com/album/4tgqH5hZ3VlvzZbDuWlLsP",
+      "youtube": "https://www.youtube.com/watch?v=fHnTgv76CmM&list=RDfHnTgv76CmM&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3562,8 +3442,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=URiQokjv2x8",
-      "spotify": "https://open.spotify.com/album/1HEuAu29W7ZPvW4jffSyGh",
+      "youtube": "https://www.youtube.com/watch?v=DJ6VRwkHUSs&list=RDDJ6VRwkHUSs&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3579,22 +3459,22 @@
         "es": "'El Mundito del Rap' reúne a Canserbero con Solo Soul, IceOd y Mcklopedia en una canción que rinde tributo al rap consciente. Letras que invitan a la reflexión sobre la realidad social y el poder de la palabra.",
         "en": "'El Mundito del Rap' brings together Canserbero with Solo Soul, IceOd, and Mcklopedia in a song paying tribute to conscious rap. Lyrics invite reflection on social reality and the power of words."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/mundito.jpg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=hMJgpEC1rJo",
-      "spotify": "https://open.spotify.com/album/29N9nfcvov8KfyF2X8Mj6P",
+      "youtube": "https://www.youtube.com/watch?v=m3Nr7DyDdvs&list=RDm3Nr7DyDdvs&start_radio=1&pp=ygUSRWwgTXVuZGl0byBkZWwgUmFwoAcB",
+      "spotify": "https://open.spotify.com/intl-es/track/0bM21gIMibK5FIGBtmon2W",
       "masterpiece": false
     },
     {
       "id": 175,
       "category": "music",
       "subcategory": "rap",
-      "artist": "Nitro & Pepe Grillo 🇨🇱 🆚 Xinako & Sof",
+      "artist": "Nitro & Pepe Grillo 🆚 Xinako & Sof",
       "title": {
-        "es": "Nitro & Pepe Grillo 🇨🇱 🆚 Xinako & Sof",
-        "en": "Nitro & Pepe Grillo 🇨🇱 🆚 Xinako & Sof"
+        "es": "Nitro & Pepe Grillo 🆚 Xinako & Sof",
+        "en": "Nitro & Pepe Grillo 🆚 Xinako & Sof"
       },
       "description": {
         "es": "Batalla de freestyle semis entre Nitro & Pepe Grillo contra Xinako & Sof en la competición '4 Elementos'. Exhibición de habilidad lírica, ingenio y energía competitiva en el rap improvisado.",
@@ -3604,8 +3484,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/watch?v=3GVU9CzQaWE",
-      "spotify": "https://open.spotify.com/album/2H1GZRUTnZKiVYm7BQzw4h",
+      "youtube": "https://www.youtube.com/watch?v=oxnqexdncoU&list=RDoxnqexdncoU&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3625,18 +3505,18 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/watch?v=1cTlrM5WvHQ",
-      "spotify": "https://open.spotify.com/album/44SLIKHXF7xNvMnohkIVAg",
+      "youtube": "https://www.youtube.com/watch?v=8qZieh5jwPg&list=RD8qZieh5jwPg&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
       "id": 177,
       "category": "music",
       "subcategory": "rap",
-      "artist": "L16XL, Muelas, Shotta",
+      "artist": "Muelas vs Shotta",
       "title": {
-        "es": "Callejón sin Salida",
-        "en": "Callejón sin Salida"
+        "es": "Muelas vs Shotta",
+        "en": "Muelas vs Shotta"
       },
       "description": {
         "es": "Batalla oficial 'Callejón sin Salida' entre Muelas y Shotta en la liga L16XL. Rimas afiladas y fuerte presencia escénica en uno de los encuentros más intensos del circuito.",
@@ -3646,8 +3526,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/watch?v=7MV-cIf-cRY",
-      "spotify": "https://open.spotify.com/album/4jeVDaf2C58zlGlC4xnpHz",
+      "youtube": "https://www.youtube.com/watch?v=mWe4MPWx_PE&t=1313s",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3667,8 +3547,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/watch?v=example1",
-      "spotify": "https://open.spotify.com/album/4GA8ZkVgS0DTEKvn9g2iw1",
+      "youtube": "https://www.youtube.com/watch?v=zmBFfCgX_bs&t=285s",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3688,8 +3568,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/watch?v=example2",
-      "spotify": "https://open.spotify.com/album/5Z0Pg4NivyaTXBBB3DYkpd",
+      "youtube": "https://www.youtube.com/watch?v=Ii4EzcG2JSA&list=RDIi4EzcG2JSA&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -3730,8 +3610,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/watch?v=Q_NxNVmvznk",
-      "spotify": "https://open.spotify.com/album/0v9wA3PqXjWkt2PgGAdi5W",
+      "youtube": "https://www.youtube.com/watch?v=16nAhjm-bdI&list=RD16nAhjm-bdI",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3751,8 +3631,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/2HuxsQYFSvXsKtVOGKZgas",
+      "youtube": "https://www.youtube.com/watch?v=uS4WIbzCSMQ&list=RDuS4WIbzCSMQ&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3772,18 +3652,18 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6B6qzmsvSXGqVtXKjSxA6c",
+      "youtube": "https://www.youtube.com/watch?v=rY9CA2ZVQbQ&list=RDrY9CA2ZVQbQ&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
       "id": 184,
       "category": "music",
       "subcategory": "rap",
-      "artist": "Salcedo vs Souljah Jerome",
+      "artist": "Salcedo vs Souljah",
       "title": {
-        "es": "Salcedo vs Souljah Jerome",
-        "en": "Salcedo vs Souljah Jerome"
+        "es": "Salcedo vs Souljah",
+        "en": "Salcedo vs Souljah"
       },
       "description": {
         "es": "Intensa batalla de octavos de final en el circuito nacional de rap Batallón. Salcedo y Souljah Jerome mostraron un duelo de estilos muy marcado, donde la destreza verbal y la estrategia fueron clave para dominar el escenario.",
@@ -3793,8 +3673,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/1Nux8B69WySS5XMMprdgL3",
+      "youtube": "https://www.youtube.com/watch?v=yFoDiOtH804&list=RDyFoDiOtH804",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3814,8 +3694,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/1Nux8B69WySS5XMMprdgL3",
+      "youtube": "https://www.youtube.com/watch?v=kQyCQToOvqY&list=RDkQyCQToOvqY&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3835,8 +3715,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/0Hsi0PyuKmIDDtLK2wn9xN",
+      "youtube": "https://www.youtube.com/watch?v=i8em7i0SnDU&list=RDi8em7i0SnDU&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3856,8 +3736,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/0Hsi0PyuKmIDDtLK2wn9xN",
+      "youtube": "https://www.youtube.com/watch?v=c60nvl55ry4&list=RDc60nvl55ry4&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -3877,8 +3757,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/0vMBxeVrRa481LBKqN9zXI",
+      "youtube": "https://www.youtube.com/watch?v=CKtDNtTDUBQ",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3898,8 +3778,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/47cKeHSRPpq01MrnXA8pj4",
+      "youtube": "https://www.youtube.com/watch?v=mcKyAWZfNtg&t=331s",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -3919,8 +3799,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/05g1MjzuLk0dHZnrZnpPgo",
+      "youtube": "https://www.youtube.com/watch?v=jQIwWrOA7_w&list=RDjQIwWrOA7_w&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3940,28 +3820,28 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/watch?v=somevideoid",
-      "spotify": "https://open.spotify.com/album/5Z0Pg4NivyaTXBBB3DYkpd",
+      "youtube": "https://www.youtube.com/watch?v=buGi_Rounso&list=RDbuGi_Rounso",
+      "spotify": "",
       "masterpiece": false
     },
     {
       "id": 192,
       "category": "music",
-      "subcategory": "latin",
+      "subcategory": "rap",
       "artist": "Hijos de las Hojas",
       "title": {
         "es": "El Camino de la Serpiente",
         "en": "The Path of the Serpent"
       },
       "description": {
-        "es": "Un álbum que fusiona sonidos tradicionales con ritmos modernos latinoamericanos. Hijos de las Hojas exploran temáticas ancestrales en un viaje sonoro que mezcla lo orgánico y lo contemporáneo. Ideal para quienes buscan un sonido auténtico y profundo.",
-        "en": "An album that fuses traditional sounds with modern Latin American rhythms. Hijos de las Hojas explore ancestral themes in a sonic journey that blends organic and contemporary elements. Perfect for those seeking an authentic and deep sound."
+        "es": "El Camino de la Serpiente es un ritual sonoro donde el hip hop se funde con la naturaleza, la poesía ancestral y paisajes sonoros chamánicos. Hijos de las Hojas invoca una espiritualidad terrenal con beats orgánicos y letras que despiertan conciencia.",
+        "en": "El Camino de la Serpiente is a sonic ritual where hip hop blends with nature, ancestral poetry, and shamanic soundscapes. Hijos de las Hojas invoke an earthy spirituality through organic beats and lyrics that awaken consciousness."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/hijos.png",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=somevideoid",
+      "youtube": "https://www.youtube.com/watch?v=OBzZdamxdsc&list=RDOBzZdamxdsc&start_radio=1",
       "spotify": "https://open.spotify.com/album/0Dg2f3GApbo99D3aclUNo9",
       "masterpiece": false
     },
@@ -3978,12 +3858,12 @@
         "es": "Videoclip oficial del tema 'Escupiéndolo', donde Toteking y Dheformer muestran su habilidad lírica con una producción contundente de Drama Theme. El vídeo destaca por su estética urbana y su energía directa al mensaje del rap.",
         "en": "Official music video for 'Escupiéndolo', where Toteking and Dheformer showcase their lyrical skills with a strong production by Drama Theme. The video stands out for its urban aesthetic and direct energy to the rap message."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/tyson.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=somevideoid",
-      "spotify": "https://open.spotify.com/album/7IGTTwVnwYMZg3dPXt6XGS",
+      "youtube": "https://www.youtube.com/watch?v=4Hhzdc7s3rE&list=RD4Hhzdc7s3rE&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/7JJ0s3yS6C5LBkhb0ZffGE",
       "masterpiece": true
     },
     {
@@ -4077,8 +3957,8 @@
       "subcategory": "rap",
       "artist": "abocajarro",
       "title": {
-        "es": "doy mi vía.",
-        "en": "I Give My Way."
+        "es": "doy mi vía",
+        "en": "I Give My Way"
       },
       "description": {
         "es": "Tema de rap con letras introspectivas y ritmo cadencioso que refleja la voz auténtica del artista abocajarro. La producción es minimalista pero efectiva, creando una atmósfera íntima para conectar con el oyente.",
@@ -4088,29 +3968,29 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=somevideoid",
-      "spotify": "https://open.spotify.com/album/5QSBSlBhXJ4el8Ntziruj5",
+      "youtube": "https://www.youtube.com/watch?v=v4Tcetqr7s8&list=RDv4Tcetqr7s8&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/5E5kG3HwIu6InmbDBbA3yt",
       "masterpiece": false
     },
     {
       "id": 199,
       "category": "music",
       "subcategory": "rap",
-      "artist": "RABIOSOMENTE",
+      "artist": "El Meswy x NutsoE",
       "title": {
-        "es": "El Meswy x Nutso",
-        "en": "El Meswy x Nutso"
+        "es": "",
+        "en": "RABIOSOMENTE"
       },
       "description": {
         "es": "Colaboración entre RABIOSOMENTE, El Meswy y Nutso, un tema de rap cargado de energía, técnica y lírica potente. La canción destaca por sus versos dinámicos y un beat agresivo que mantiene la intensidad durante todo el track.",
         "en": "Collaboration between RABIOSOMENTE, El Meswy, and Nutso, a rap track full of energy, technique, and powerful lyrics. The song stands out for its dynamic verses and an aggressive beat maintaining intensity throughout."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/rabioso.png",
       "tags": [
-        "song"
+        "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=somevideoid",
-      "spotify": "https://open.spotify.com/album/4eQbcS77ljJWc7ncbWjsaS",
+      "youtube": "https://www.youtube.com/watch?v=gScs6NG2218&list=OLAK5uy_m7HjcpW_tuTPauXZgael53gekjOKbbLSs&index=2",
+      "spotify": "https://open.spotify.com/intl-es/track/27pduRtavLvlU7Fn8IZiDF",
       "masterpiece": false
     },
     {
@@ -4119,8 +3999,8 @@
       "subcategory": "rap",
       "artist": "PURE NEGGA",
       "title": {
-        "es": "ONE SHOT 4 ELEMENTOS #10 | 4 ELEMENTOS |",
-        "en": "ONE SHOT 4 ELEMENTOS #10 | 4 ELEMENTOS |"
+        "es": "4 ELEMENTOS #10",
+        "en": "4 ELEMENTOS #10"
       },
       "description": {
         "es": "Participación de PURE NEGGA en la batalla de rap '4 Elementos' edición número 10. Un enfrentamiento lleno de punchlines y habilidad improvisatoria que resalta el talento del MC en la escena nacional.",
@@ -4128,8 +4008,8 @@
       },
       "image": "/imagenes/musica/pordefecto.jpg",
       "tags": [],
-      "youtube": "https://www.youtube.com/watch?v=somevideoid",
-      "spotify": "https://open.spotify.com/album/7aIyKLPj7UAP4uHzzXZgQH",
+      "youtube": "https://www.youtube.com/watch?v=L_FXquG6H3s&list=RDL_FXquG6H3s&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     }
   ]

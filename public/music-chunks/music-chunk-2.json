@@ -13,12 +13,12 @@
         "es": "Videoclip oficial de ABOCAJARRO para el tema 'De día y de noche', una producción que mezcla ritmos urbanos con letras profundas y un enfoque audiovisual cuidado. La dirección estuvo a cargo de Juan Miguel del Castillo y Caliche Films.",
         "en": "Official music video by ABOCAJARRO for the track 'De día y de noche', a production mixing urban rhythms with deep lyrics and a well-crafted audiovisual approach. Directed by Juan Miguel del Castillo and Caliche Films."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/abocajarro.jpg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=somevideoid",
-      "spotify": "https://open.spotify.com/album/4rgnEx9ojVYnOStRbXQDlb",
+      "youtube": "https://www.youtube.com/watch?v=kYefBTh0gN8&list=RDkYefBTh0gN8&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/07s8tFI1xGhC8U9SfHwHDQ",
       "masterpiece": true
     },
     {
@@ -38,52 +38,12 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=EecJMYn3A0A",
-      "spotify": "https://open.spotify.com/album/2P6QCxokMaNDkQcpVRi2f4",
+      "youtube": "https://www.youtube.com/watch?v=eC_hnkpCeNk&list=RDeC_hnkpCeNk&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/2y8pG9CF0HC4cttJ50Pufk",
       "masterpiece": true
     },
-    {
-      "id": 203,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Hablando en Plata Squad",
-      "title": {
-        "es": "Kryptonita",
-        "en": "Kryptonita"
-      },
-      "description": {
-        "es": "Un tema potente de Hablando en Plata Squad que destaca por su energía cruda y letras directas. 'Kryptonita' refleja la esencia del rap underground español con ritmo intenso y mensaje contundente.",
-        "en": "'Kryptonita' is a powerful track by Hablando en Plata Squad, featuring raw energy and direct lyrics. It reflects the essence of Spanish underground rap with an intense beat and strong message."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273058cd36c8d188dd3d67d4640",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=V4GjD9VFnjQ",
-      "spotify": "https://open.spotify.com/album/711kCEcjlE8DucV3Z7b2fp",
-      "masterpiece": true
-    },
-    {
-      "id": 204,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Hablando en Plata Squad",
-      "title": {
-        "es": "A Sangre Fría",
-        "en": "A Sangre Fría"
-      },
-      "description": {
-        "es": "'A Sangre Fría' muestra la destreza lírica y la intensidad emocional del grupo, con un ritmo duro que envuelve el mensaje de resistencia y realismo urbano.",
-        "en": "'A Sangre Fría' showcases the group's lyrical skill and emotional intensity, with a hard rhythm that wraps the message of resistance and urban realism."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273af8a65b0aa6f15584f57caf3",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "spotify": "https://open.spotify.com/album/69RTTjhj4aXZvzh1lvhlX9",
-      "masterpiece": true
-    },
+   
+    
     {
       "id": 205,
       "category": "music",
@@ -101,8 +61,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=somevideoid",
-      "spotify": "https://open.spotify.com/album/51IRea92KxdOogF4ud1wnA",
+      "youtube": "https://www.youtube.com/watch?v=-J0WwiKq4zI&list=RD-J0WwiKq4zI&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/2cd7nw8ffoJBDaNKc6aMYO",
       "masterpiece": true
     },
     {
@@ -139,12 +99,12 @@
         "es": "Un clásico del reggae interpretado por Nah Ina It y Paul St. Hilaire, con un ritmo contagioso y una letra que invita a la unidad y la reflexión.",
         "en": "A reggae classic performed by Nah Ina It and Paul St. Hilaire, featuring a catchy rhythm and lyrics inviting unity and reflection."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/NahInaIt.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=placeholder",
-      "spotify": "https://open.spotify.com/album/2va3cVnc4dAyLkN5c4B5Wg",
+      "youtube": "https://www.youtube.com/watch?v=7WN2Ber6hQs&list=RD7WN2Ber6hQs&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/7u6Jp2Trsxge5cVvSX1BIr",
       "masterpiece": true
     },
     {
@@ -185,8 +145,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=placeholder",
-      "spotify": "https://open.spotify.com/album/4UpoIXzS9tzbRFYlImRFjK",
+      "youtube": "https://www.youtube.com/watch?v=pV1Ki_ebcbQ&list=RDpV1Ki_ebcbQ&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/0xMx92dlys2oatFGBY3wQw",
       "masterpiece": true
     },
     {
@@ -206,8 +166,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=placeholder",
-      "spotify": "https://open.spotify.com/album/5HTtQMQxpNk64Uj1zXjufs",
+      "youtube": "https://www.youtube.com/watch?v=6s0EprXEocw&list=RD6s0EprXEocw&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/3e7L26rIFDRwnO1FE2ZNJ1",
       "masterpiece": true
     },
     {
@@ -244,12 +204,12 @@
         "es": "Un freestyle puro donde McKlopedia y YOSHI muestran su habilidad lírica y dominio del ritmo. 'Freestyle #4' es un ejemplo claro de improvisación y talento en el rap underground español.",
         "en": "'Freestyle #4' showcases McKlopedia and YOSHI's lyrical skill and rhythm mastery. It is a clear example of improvisation and talent in Spanish underground rap."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "/imagenes/musica/pordefecto.jpg",
       "tags": [
-        "battle"
+        "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=mcklopedia+freestyle+4+yoshi",
-      "spotify": "https://open.spotify.com/album/592K0XSlTPGSfEWg4k9clq",
+      "youtube": "https://www.youtube.com/watch?v=CQWneszOws0&list=RDCQWneszOws0&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -258,8 +218,8 @@
       "subcategory": "rap",
       "artist": "FOYONE VS TKILLA",
       "title": {
-        "es": "Linea Dieciseis 2017 Callejón Sin Salida",
-        "en": "Linea Dieciseis 2017 Callejón Sin Salida"
+        "es": "FOYONE VS TKILLA",
+        "en": "FOYONE VS TKILLA"
       },
       "description": {
         "es": "Batalla completa entre FOYONE y TKILLA en la emblemática escena de Línea Dieciséis. Un duelo de ingenio, ritmo y lírica que refleja la esencia del rap competitivo y la cultura battle.",
@@ -269,8 +229,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=foyone+vs+tkilla+linea+dieciseis+2017",
-      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "youtube": "https://www.youtube.com/watch?v=3zPa-Tbw3BM&list=RD3zPa-Tbw3BM&start_radio=1&t=1735s",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -290,7 +250,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=mcklopedia+vida+eterna",
+      "youtube": "https://www.youtube.com/watch?v=1nvXtgDc-mM&list=RD1nvXtgDc-mM&start_radio=1",
       "spotify": "https://open.spotify.com/album/243F9X01ypu39S723UeoB7",
       "masterpiece": true
     },
@@ -300,8 +260,8 @@
       "subcategory": "rap",
       "artist": "McKlopedia vs Danger",
       "title": {
-        "es": "Round 2 Linea 16 XL",
-        "en": "Round 2 Linea 16 XL"
+        "es": "McKlopedia vs Danger Linea 16",
+        "en": "McKlopedia vs Danger Linea 16"
       },
       "description": {
         "es": "Duelo intenso entre McKlopedia y Danger en la segunda ronda de Línea 16 XL. Una batalla que combina habilidad lírica con ritmo dinámico, representando la esencia del freestyle competitivo.",
@@ -311,8 +271,8 @@
       "tags": [
         "battle"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=mcklopedia+vs+danger+linea+16",
-      "spotify": "https://open.spotify.com/album/3vqfArwNlflN3NtNTJINqF",
+      "youtube": "https://www.youtube.com/watch?v=eDl2YGPVk-4",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -332,8 +292,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=pA4Zn4F7kMs",
-      "spotify": "https://open.spotify.com/album/4ZPNx8Uv70Y9xsIoAo6e6d",
+      "youtube": "https://www.youtube.com/watch?v=hB7VdbHfxrQ&list=RDhB7VdbHfxrQ&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -342,19 +302,19 @@
       "subcategory": "rap",
       "artist": "Nas",
       "title": {
-        "es": "Rare",
-        "en": "Rare"
+        "es": "King’s Disease II",
+        "en": "King’s Disease II"
       },
       "description": {
-        "es": "'Rare' es uno de los temas más profundos y personales de Nas, mostrando su maestría lírica y narrativa. El videoclip oficial refleja su evolución artística y compromiso con historias reales.",
-        "en": "'Rare' is one of Nas's most deep and personal tracks, showcasing his lyrical and narrative mastery. The official video reflects his artistic evolution and commitment to real stories."
+        "es": "King’s Disease II es una obra maestra de madurez lírica y producción moderna, donde Nas reflexiona sobre el legado, la calle y la superación. Con beats pulidos y colaboraciones de alto nivel, el álbum confirma su relevancia y dominio en el rap contemporáneo.",
+        "en": "King’s Disease II is a lyrical masterpiece of maturity and modern production, where Nas reflects on legacy, the streets, and personal growth. With polished beats and top-tier collaborations, the album reaffirms his relevance and dominance in contemporary rap."
       },
       "image": "https://i.scdn.co/image/ab67616d0000b273d0673d1dd6938dad8530823b",
       "tags": [
-        "song"
+        "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=F9L5g_uRBTs",
-      "spotify": "https://open.spotify.com/album/7yefFOrOAkxXx3c3N35UJV",
+      "youtube": "https://www.youtube.com/watch?v=1ofy51Fq818&list=PLxA687tYuMWgKE2bQbYG_pbNJKbmJdCFx",
+      "spotify": "https://open.spotify.com/intl-es/album/6CM5qhYBvpgYNek5kYwuOJ",
       "masterpiece": true
     },
     {
@@ -374,8 +334,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=Q2elNgRZ3D0",
-      "spotify": "https://open.spotify.com/album/0hug0ng6LCzWO0pIpHGumA",
+      "youtube": "https://www.youtube.com/watch?v=qTzKh5ykLU0&list=RDqTzKh5ykLU0&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/3YzxXVNHGZF09eGqhsYuHI",
       "masterpiece": true
     },
     {
@@ -416,18 +376,18 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Los+Ganglios+Rajaculero",
-      "spotify": "https://open.spotify.com/album/4ZkgTWa46CL7Zg0KsbbWqD",
+      "youtube": "https://www.youtube.com/watch?v=f9aDksBwanE",
+      "spotify": "https://open.spotify.com/intl-es/track/2cBGs7beYwtnz667EonTle",
       "masterpiece": true
     },
     {
       "id": 221,
       "category": "music",
       "subcategory": "rap",
-      "artist": "Patillas de Canastero",
+      "artist": "Gitano Antón",
       "title": {
-        "es": "Gitano Antón",
-        "en": "Gitano Antón"
+        "es": "",
+        "en": "Patillas de Canastero"
       },
       "description": {
         "es": "Un tema que fusiona la esencia del flamenco con sonidos tradicionales gitanos y toques modernos. 'Gitano Antón' es una pieza emotiva que transmite la identidad cultural y la pasión por la música folklórica.",
@@ -437,8 +397,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Patillas+de+Canastero+Gitano+Antón",
-      "spotify": "https://open.spotify.com/album/1IZlGp5wCk7lFxWHqHE57T",
+      "youtube": "https://www.youtube.com/watch?v=HVVctAOkJlc&list=RDHVVctAOkJlc&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -458,8 +418,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Bejo+El+Bucle+Nico+Miseria",
-      "spotify": "https://open.spotify.com/album/5SW47x3ctsSgqbCJ2iFLx7",
+      "youtube": "https://www.youtube.com/watch?v=y4zMmrTzrHQ&list=RDy4zMmrTzrHQ&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/3zrZ0HJJktWGX03JGfAwin",
       "masterpiece": true
     },
     {
@@ -479,8 +439,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Ergo+Pro+Still+Hungry+Lou+Fresco",
-      "spotify": "https://open.spotify.com/album/7gUarnXi8fkaT7EuJZAPd3",
+      "youtube": "https://www.youtube.com/watch?v=GaiKshx4izo&list=RDGaiKshx4izo&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -500,8 +460,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=ToteKing+Ill+Pekeño+Ergo+Pro+The+Lox",
-      "spotify": "https://open.spotify.com/album/3kledHeySuGr5oXC39ncnl",
+      "youtube": "https://www.youtube.com/watch?v=E9EQtpcuY6U&list=RDE9EQtpcuY6U&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/6xaduapgnoNZHXPikD986H",
       "masterpiece": true
     },
     {
@@ -521,8 +481,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Ill+Pekeño+Ergo+Pro+Tierra+Abatida",
-      "spotify": "https://open.spotify.com/album/1w3uFEP5WXgoAIVFKiV7yb",
+      "youtube": "https://www.youtube.com/watch?v=L8bg5vcOItc&list=RDL8bg5vcOItc&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -542,7 +502,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Ill+Pekeño+Ergo+Pro+Candela+Cuore+No+Ice+Cream",
+      "youtube": "https://www.youtube.com/watch?v=pB0B-jeqayw&list=RDpB0B-jeqayw&start_radio=1",
       "spotify": "https://open.spotify.com/album/1HlI5Kl3QViBEiwFOJ93NZ",
       "masterpiece": true
     },
@@ -559,11 +519,11 @@
         "es": "'Rap Sin Corte XLVIII' es una sesión intensa y directa de Foyone, donde la improvisación y la crítica social se combinan para ofrecer un mensaje poderoso y sin filtros.",
         "en": "'Rap Sin Corte XLVIII' is an intense and direct session by Foyone, combining improvisation and social critique to deliver a powerful and unfiltered message."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
       "tags": [
         "live"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Foyone+Rap+Sin+Corte+XLVIII",
+      "youtube": "https://www.youtube.com/watch?v=1WATuK6_BXw&list=RD1WATuK6_BXw&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": true
     },
@@ -571,10 +531,10 @@
       "id": 228,
       "category": "music",
       "subcategory": "rap",
-      "artist": "West Coast",
+      "artist": "FJ.Ramos VKR",
       "title": {
-        "es": "Homenaje FJ.Ramos VKR",
-        "en": "Homenaje FJ.Ramos VKR"
+        "es": "West Coast Homenaje",
+        "en": "West Coast Homenaje"
       },
       "description": {
         "es": "Un homenaje especial a FJ.Ramos VKR con una recopilación de temas que resaltan la influencia y legado dentro del rap de la costa oeste española.",
@@ -584,8 +544,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=West+Coast+Homenaje+FJ.Ramos+VKR",
-      "spotify": "https://open.spotify.com/album/3kledHeySuGr5oXC39ncnl",
+      "youtube": "https://www.youtube.com/watch?v=o7FUGFowPQU&list=RDo7FUGFowPQU&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -626,7 +586,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Pielroja+Paseo+Unloged",
+      "youtube": "https://www.youtube.com/watch?v=LAYofMi37SM&list=RDLAYofMi37SM&start_radio=1",
       "spotify": "https://open.spotify.com/album/7HuZYKjuQdK1dicLhGoBK0",
       "masterpiece": true
     },
@@ -647,39 +607,19 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Toteking+Shotta+Voy+A",
+      "youtube": "https://www.youtube.com/watch?v=a-Sc_30OVUU&list=RDa-Sc_30OVUU&start_radio=1",
       "spotify": "https://open.spotify.com/album/3pbWxKnA1OPy3OYvgsG5qQ",
       "masterpiece": true
     },
-    {
-      "id": 232,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Shotta",
-      "title": {
-        "es": "Flowesía (CD Completo) 2014",
-        "en": "Flowesía (Full Album) 2014"
-      },
-      "description": {
-        "es": "Flowesía es un álbum de Shotta lanzado en 2014 que muestra la versatilidad y fuerza lírica del rapero. Este trabajo combina beats agresivos con rimas elaboradas que reflejan la realidad urbana y la lucha personal. Un clásico para seguidores del rap español.",
-        "en": "Flowesía is a 2014 album by Shotta showcasing the rapper's lyrical versatility and strength. This work combines aggressive beats with elaborate rhymes reflecting urban reality and personal struggle. A classic for Spanish rap followers."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/playlist?list=PL_flowesia",
-      "spotify": "https://open.spotify.com/album/52gbiT2ApObI14zIbgPqrX",
-      "masterpiece": true
-    },
+    
     {
       "id": 233,
       "category": "music",
       "subcategory": "rap",
       "artist": "FOYONE",
       "title": {
-        "es": "#RapSinCorte XLVII",
-        "en": "#RapSinCorte XLVII"
+        "es": "RapSinCorte XLVII",
+        "en": "RapSinCorte XLVII"
       },
       "description": {
         "es": "El episodio XLVII de #RapSinCorte presenta a Foyone en su máximo exponente, con letras afiladas y críticas sociales directas. Su estilo crudo y sincero conecta con la realidad y el sentir del público urbano. Un imprescindible del rap consciente español.",
@@ -689,7 +629,7 @@
       "tags": [
         "live"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Foyone+RapSinCorte+XLVII",
+      "youtube": "https://www.youtube.com/watch?v=Q97_AzVrCds&list=RDQ97_AzVrCds&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": true
     },
@@ -699,19 +639,19 @@
       "subcategory": "rap",
       "artist": "Original Juan",
       "title": {
-        "es": "Dominican Gang Star (Álbum Completo)",
-        "en": "Dominican Gang Star (Full Album)"
+        "es": "Dominican Gang Star",
+        "en": "Dominican Gang Star"
       },
       "description": {
         "es": "Dominican Gang Star es el álbum completo de Original Juan que refleja la vida y las luchas del rap dominicano. Con ritmos contundentes y letras llenas de fuerza y autenticidad, este trabajo se ha convertido en un referente del género en el Caribe.",
         "en": "Dominican Gang Star is Original Juan's full album that reflects the life and struggles of Dominican rap. With strong rhythms and lyrics full of power and authenticity, this work has become a reference in the Caribbean genre."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/dominican.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Original+Juan+Dominican+Gang+Star",
-      "spotify": "https://open.spotify.com/album/3TCsvfamjiEUZ46X6R3Ovg",
+      "youtube": "https://www.youtube.com/watch?v=6n9PQ8OHs7M&list=RD6n9PQ8OHs7M&start_radio=1&t=19s",
+      "spotify": "https://open.spotify.com/intl-es/album/3TCsvfamjiEUZ46X6R3Ovg",
       "masterpiece": true
     },
     {
@@ -727,12 +667,12 @@
         "es": "‘Hombre rico hombre pobre’ es un tema emblemático de Verdaderos Kreyentes de la Religión del Hip-Hop que expone con sinceridad las desigualdades sociales a través del rap consciente. Sus letras cargadas de crítica social y ritmo contundente lo convierten en una pieza clave del rap en español. El tema refleja la realidad y lucha de las clases populares.",
         "en": "'Hombre rico hombre pobre' is an emblematic track by Verdaderos Kreyentes de la Religión del Hip-Hop that honestly exposes social inequalities through conscious rap. Its lyrics loaded with social criticism and strong rhythm make it a key piece in Spanish rap. The song reflects the reality and struggle of the working class."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/enlascalles.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Verdaderos+Kreyentes+Hombre+rico+hombre+pobre",
-      "spotify": "https://open.spotify.com/album/4WIaXgizM2h4DmOK0j52I6",
+      "youtube": "https://www.youtube.com/watch?v=K7IGg_MKH0k&list=RDK7IGg_MKH0k&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/1OkyyknLPndNJnPNFVH2UG",
       "masterpiece": true
     },
     {
@@ -745,15 +685,15 @@
         "en": "The Anuel Syndrome"
       },
       "description": {
-        "es": "‘El síndrome de Anuel’ es una crítica directa y afilada de Foyone a la industria musical y a la figura del trapero Anuel AA. Con una lírica mordaz y ritmo potente, Foyone cuestiona las realidades del éxito y la cultura urbana actual. Un tema que genera debate y refleja la realidad del rap español.",
-        "en": "'El síndrome de Anuel' is a direct and sharp critique by Foyone of the music industry and the figure of trap artist Anuel AA. With biting lyrics and powerful rhythm, Foyone questions the realities of success and current urban culture. A track that sparks debate and reflects Spanish rap reality."
+        "es": "‘El síndrome de Anuel’ es una crítica directa y afilada de Foyone a la industria musical y a la figura del toyaco Jicho Con una lírica mordaz y ritmo potente, Foyone cuestiona las realidades del éxito y la cultura urbana actual. Un tema que genera debate y refleja la realidad del rap español.",
+        "en": "'El síndrome de Anuel' is a direct and sharp critique by Foyone of the music industry and the figure of rap topyaco Jincho With biting lyrics and powerful rhythm, Foyone questions the realities of success and current urban culture. A track that sparks debate and reflects Spanish rap reality."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/anuel.png",
       "tags": [
         "song"
       ],
       "youtube": "https://www.youtube.com/results?search_query=Foyone+El+síndrome+de+Anuel",
-      "spotify": "https://open.spotify.com/album/0fXuzbHstaWBl63d5oiskq",
+      "spotify": "https://open.spotify.com/intl-es/track/53qaPJ0HVAi7dMyd6htXIH",
       "masterpiece": true
     },
     {
@@ -762,8 +702,8 @@
       "subcategory": "rap",
       "artist": "Canserbero",
       "title": {
-        "es": "Tripolar (Letra)",
-        "en": "Tripolar (Lyrics)"
+        "es": "Tripolar",
+        "en": "Tripolar"
       },
       "description": {
         "es": "‘Tripolar’ es una canción profunda y emotiva de Canserbero que explora la complejidad de los estados emocionales y la lucha interna. Con una letra introspectiva y una mezcla de rap y rock, se ha convertido en un himno para quienes enfrentan sus demonios personales. Un clásico del rap latinoamericano.",
@@ -773,7 +713,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Canserbero+Tripolar+letra",
+      "youtube": "https://www.youtube.com/watch?v=6Vbq5JFbsjY&list=RD6Vbq5JFbsjY&start_radio=1",
       "spotify": "https://open.spotify.com/album/29N9nfcvov8KfyF2X8Mj6P",
       "masterpiece": true
     },
@@ -783,8 +723,8 @@
       "subcategory": "rap",
       "artist": "FOYONE",
       "title": {
-        "es": "#RapSinCorte XXXIV",
-        "en": "#RapSinCorte XXXIV"
+        "es": "RapSinCorte XXXIV",
+        "en": "RapSinCorte XXXIV"
       },
       "description": {
         "es": "#RapSinCorte XXXIV es un episodio de freestyle de FOYONE donde demuestra su habilidad lírica y crítica social sin filtros. Este formato en vivo destaca por la espontaneidad y contundencia de sus rimas, convirtiéndose en un referente dentro de la escena underground española. Una muestra de talento y autenticidad.",
@@ -794,7 +734,7 @@
       "tags": [
         "live"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Foyone+RapSinCorte+XXXIV",
+      "youtube": "https://www.youtube.com/watch?v=MsLXdEJwGFs&list=RDMsLXdEJwGFs&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": true
     },
@@ -804,18 +744,18 @@
       "subcategory": "rap",
       "artist": "SOULJAH JEROME aka NOITE",
       "title": {
-        "es": "TIRITAS (Prod Sotan)",
-        "en": "TIRITAS (Prod Sotan)"
+        "es": "TIRITAS",
+        "en": "TIRITAS"
       },
       "description": {
         "es": "‘TIRITAS’ es un tema producido por Sotan y presentado por SOULJAH JEROME aka NOITE que mezcla ritmos modernos con letras introspectivas y emotivas. La producción destaca por su atmósfera envolvente y su beat cuidado, creando una experiencia auditiva única en el rap contemporáneo. Un ejemplo de calidad y originalidad.",
         "en": "'TIRITAS' is a track produced by Sotan and presented by SOULJAH JEROME aka NOITE, mixing modern rhythms with introspective and emotional lyrics. The production stands out for its immersive atmosphere and careful beat, creating a unique listening experience in contemporary rap. An example of quality and originality."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/tiritas.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=SOULJAH+JEROME+TIRITAS+Prod+Sotan",
+      "youtube": "https://www.youtube.com/watch?v=wvloie_yQlc&list=RDwvloie_yQlc&start_radio=1",
       "spotify": "https://open.spotify.com/album/7nE7owDrdPPheDkdXTYCIe",
       "masterpiece": true
     },
@@ -836,8 +776,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Secuaces+Cru+Dame+Mas+Vida",
-      "spotify": "https://open.spotify.com/album/1qW06R0Yxt6pxIZu2mzKnv",
+      "youtube": "https://www.youtube.com/watch?v=sLaaOHmC_fw&list=RDsLaaOHmC_fw&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -857,8 +797,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Kage+Mismo+Mal+Mirados",
-      "spotify": "https://open.spotify.com/album/2VUckgtfYcasl2SoiuT77x",
+      "youtube": "https://www.youtube.com/watch?v=6xh6VKR6DxE&list=RD6xh6VKR6DxE&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -878,8 +818,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Kage+Mahs+Beats+No+Saben+Na",
-      "spotify": "https://open.spotify.com/album/2TUPvDbFbwhciYYH7kAJZb",
+      "youtube": "https://www.youtube.com/watch?v=VcSHaH98C0I&list=RDVcSHaH98C0I&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -930,8 +870,8 @@
       "subcategory": "rap",
       "artist": "Mcklopedia & Orestes Gomez",
       "title": {
-        "es": "1, 2, 3 (Video Oficial)",
-        "en": "1, 2, 3 (Official Video)"
+        "es": "1, 2, 3",
+        "en": "1, 2, 3"
       },
       "description": {
         "es": "‘1, 2, 3’ es un video oficial que muestra la versatilidad y talento de Mcklopedia junto a Orestes Gomez. El tema combina letras reflexivas con un ritmo contagioso que destaca en la escena del rap latino. Un proyecto que mezcla calidad visual y musical.",
@@ -939,11 +879,10 @@
       },
       "image": "/imagenes/musica/pordefecto.jpg",
       "tags": [
-        "video",
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=0cMWkc8hpC8",
-      "spotify": "https://open.spotify.com/album/27GBknSpZjPzPdrxRPs06Y",
+      "youtube": "https://www.youtube.com/watch?v=P8IFYblJUj4&list=RDP8IFYblJUj4&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/1hzcH9cFyo1VytxRAKK71V",
       "masterpiece": true
     },
     {
@@ -963,8 +902,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Zaturno+en+la+casa",
-      "spotify": "https://open.spotify.com/album/5AcRssiG0Zqu3lqYW7hMoM",
+      "youtube": "https://www.youtube.com/watch?v=1jKmOn3ZRhQ&list=RD1jKmOn3ZRhQ&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -994,8 +933,8 @@
       "subcategory": "rap",
       "artist": "MC Klopedia vs Kabuto",
       "title": {
-        "es": "Madrid Batalla Gallos 2008",
-        "en": "Madrid Batalla Gallos 2008"
+        "es": "MC Klopedia vs Kabuto",
+        "en": "MC Klopedia vs Kabuto"
       },
       "description": {
         "es": "Grabación icónica del enfrentamiento entre MC Klopedia y Kabuto en la Batalla de Gallos de Madrid 2008. Una muestra de la esencia del freestyle y la improvisación en la escena española, cargada de ingenio y habilidad verbal.",
@@ -1005,8 +944,8 @@
       "tags": [
         "live"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=MC+Klopedia+vs+Kabuto+Madrid+Batalla+Gallos+2008",
-      "spotify": "https://open.spotify.com/album/0GP7Pjaum9YDmAQRVaWW4Q",
+      "youtube": "https://www.youtube.com/watch?v=kvdTO6sONTw&list=RDkvdTO6sONTw&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -1026,8 +965,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=SOULJAH+JEROME+Avispero",
-      "spotify": "https://open.spotify.com/album/1QFlR1PEgfOSZ7f7gk8bce",
+      "youtube": "https://www.youtube.com/watch?v=C8M4C7olrFI&list=RDC8M4C7olrFI&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/album/1QFlR1PEgfOSZ7f7gk8bce",
       "masterpiece": true
     },
     {
@@ -1045,33 +984,13 @@
       },
       "image": "https://i.scdn.co/image/ab67616d0000b27343abfc77aef87721f0383c80",
       "tags": [
-        "song"
+        "album"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=PURE+NEGGA+Cnv+Sound+Vol.8",
+      "youtube": "https://www.youtube.com/watch?v=c5rPe2SaQg4&list=PLl-1LgdeXmvKerYQAd_QxgZUjI2kmeAU1",
       "spotify": "https://open.spotify.com/album/7aIyKLPj7UAP4uHzzXZgQH",
       "masterpiece": true
     },
-    {
-      "id": 251,
-      "category": "music",
-      "subcategory": "latin",
-      "artist": "R De Rumba",
-      "title": {
-        "es": "Javat Y Kamel",
-        "en": "Javat Y Kamel"
-      },
-      "description": {
-        "es": "Javat Y Kamel es un tema con ritmos latinos que fusiona la energía del reguetón con influencias del rap y la rumba. R De Rumba entrega un estilo fresco y bailable, ideal para la pista.",
-        "en": "Javat Y Kamel is a track with Latin rhythms that fuses reggaeton energy with influences from rap and rumba. R De Rumba delivers a fresh and danceable style, perfect for the dance floor."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273ec3e45a26f53902120ed6a5e",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/results?search_query=R+De+Rumba+Javat+Y+Kamel",
-      "spotify": "https://open.spotify.com/album/1iDHoMi8yg1XY3E1vcMNmi",
-      "masterpiece": true
-    },
+    
     {
       "id": 252,
       "category": "music",
@@ -1089,29 +1008,29 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=RMS+Sombras+Gona",
-      "spotify": "https://open.spotify.com/album/5MEFUV7gOqNys84HWq8w8t",
+      "youtube": "https://www.youtube.com/watch?v=vKWzcT-7_q0&list=RDvKWzcT-7_q0&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/7J5RAphJ4T3YgJsEZdgYEk",
       "masterpiece": true
     },
     {
       "id": 253,
       "category": "music",
       "subcategory": "rap",
-      "artist": "Mcklopedia RMS",
+      "artist": "Mcklopedia",
       "title": {
-        "es": "El Mostrico",
-        "en": "El Mostrico"
+        "es": "Lirical Lacra",
+        "en": "Lirical Lacra"
       },
       "description": {
-        "es": "El Mostrico es una canción destacada de Mcklopedia que refleja la fuerza del rap consciente y la narrativa urbana. El tema combina letras afiladas con un beat contundente, capturando la esencia del artista.",
+        "es": "RMS es un viaje sonoro de McKlopedia que mezcla rap, spoken word y sonidos latinos con una intensidad única. El álbum explora la rabia contenida, el pensamiento crítico y la poesía urbana desde una perspectiva madura y filosófica. Es una obra que desafía etiquetas y se sostiene por su autenticidad lírica.",
         "en": "El Mostrico is a standout song by Mcklopedia reflecting the strength of conscious rap and urban storytelling. The track combines sharp lyrics with a strong beat, capturing the artist's essence."
       },
-      "image": "/imagenes/musica/rms.jpg",
+      "image": "/imagenes/musica/lirical.jpg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Mcklopedia+El+Mostrico",
-      "spotify": "https://open.spotify.com/album/44SLIKHXF7xNvMnohkIVAg",
+      "youtube": "https://www.youtube.com/watch?v=QVbT99p6qF8&list=RDQVbT99p6qF8&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/album/2cglnWU5liYujISSCIK3xn",
       "masterpiece": true
     },
     {
@@ -1131,8 +1050,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=RMS+Napalm",
-      "spotify": "https://open.spotify.com/album/2rNqusmCdApyYULSlhqhjx",
+      "youtube": "https://www.youtube.com/watch?v=Bt2lvLFfRhA&list=RDBt2lvLFfRhA&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -1152,8 +1071,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=RMS+Nunca+Siempre",
-      "spotify": "https://open.spotify.com/album/7hBr5qhzkdHR53B2F9a33n",
+      "youtube": "https://www.youtube.com/watch?v=aWehDSscnyA&list=RDaWehDSscnyA&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -1173,8 +1092,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=RMS+Voz",
-      "spotify": "https://open.spotify.com/album/7f3vr9igj7vDgo3SBIN8Fv",
+      "youtube": "https://www.youtube.com/watch?v=DhWSR8VpXb8&list=RDDhWSR8VpXb8&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/1hTxO5N7LSI2wCPA6rBqAA",
       "masterpiece": true
     },
     {
@@ -1194,8 +1113,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=9iX8AtVzLFo",
-      "spotify": "https://open.spotify.com/album/10FIZ9MLyrK0ddmsMmDE98",
+      "youtube": "https://www.youtube.com/watch?v=xLMicNTocFo&list=RDxLMicNTocFo&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/5Zw9UnbSdEo8J9oHgYgcU7",
       "masterpiece": true
     },
     {
@@ -1204,8 +1123,8 @@
       "subcategory": "rap",
       "artist": "RAMSET",
       "title": {
-        "es": "One Shot 4 Elementos #11",
-        "en": "One Shot 4 Elementos #11"
+        "es": "4 Elementos #11",
+        "en": "4 Elementos #11"
       },
       "description": {
         "es": "Un tema producido por Nigma Beats que forma parte de la serie 4Elementos. Combina rimas contundentes con un ritmo enérgico y directo. Representa la fuerza del rap underground en España y destaca la colaboración con artistas emergentes.\"",
@@ -1215,8 +1134,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=KjX7r4NDr3c",
-      "spotify": "https://open.spotify.com/album/3qKOFShuykEERE1J9d78Un",
+      "youtube": "https://www.youtube.com/watch?v=45A4DV-WxiA&list=RD45A4DV-WxiA&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -1236,8 +1155,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=Jtp2WLk8LRo",
-      "spotify": "https://open.spotify.com/album/6PmD7zIK28bAB0rPV99Bzm",
+      "youtube": "https://www.youtube.com/watch?v=v_kh1ZXEZhw&list=RDv_kh1ZXEZhw&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/79FdLBpALYcwE2eoP8udgX",
       "masterpiece": true
     },
     {
@@ -1257,49 +1176,29 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=HEm0P4fChBQ",
+      "youtube": "https://www.youtube.com/watch?v=9mW2ylrJKEk&list=RD9mW2ylrJKEk&start_radio=1",
       "spotify": "https://open.spotify.com/album/7ATgzlY9dq2hmc82eH9sSD",
       "masterpiece": true
     },
-    {
-      "id": 262,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "KASE.O",
-      "title": {
-        "es": "EL CIRCULO COMPLETO",
-        "en": "THE COMPLETE CIRCLE"
-      },
-      "description": {
-        "es": "Un álbum que refleja la madurez artística y personal de KASE.O. Letras profundas combinadas con beats que abarcan desde el jazz hasta el rap clásico. Una obra que ha marcado un antes y un después en la escena española.\"",
-        "en": "An album reflecting the artistic and personal maturity of KASE.O. Deep lyrics combined with beats ranging from jazz to classic rap. A work that marked a before and after in the Spanish scene.\""
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=SuixURw4pwE",
-      "spotify": "https://open.spotify.com/album/5HTtQMQxpNk64Uj1zXjufs",
-      "masterpiece": true
-    },
+    
     {
       "id": 263,
       "category": "music",
       "subcategory": "rap",
-      "artist": "KASE.O",
+      "artist": "KASE.O & MCKLOPEDIA",
       "title": {
-        "es": "08. PAVOS REALES con HERMANO L, SHABU ONE SHANT y MCKLOPEDIA Prod.",
-        "en": "08. PAVOS REALES with HERMANO L SHABU ONE SHANT and MCKLOPEDIA Prod."
+        "es": "Pavos Reales",
+        "en": "Pavos Reales"
       },
       "description": {
         "es": "Una colaboración que une a destacados MCs del rap español. El tema destaca por su ritmo potente y letras cargadas de mensajes sociales. Producción impecable que mantiene la esencia del rap clásico con un toque moderno.\"",
         "en": "A collaboration that unites prominent MCs of Spanish rap. The track stands out for its powerful rhythm and lyrics full of social messages. Impeccable production that keeps the essence of classic rap with a modern touch.\""
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/circulo.jpeg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=ZWGx4xhtQlY",
+      "youtube": "https://www.youtube.com/watch?v=AdBfUTsMhMI&list=RDAdBfUTsMhMI&start_radio=1",
       "spotify": "https://open.spotify.com/album/5HTtQMQxpNk64Uj1zXjufs",
       "masterpiece": true
     },
@@ -1309,8 +1208,8 @@
       "subcategory": "rap",
       "artist": "Mcklopedia Ft. Apache",
       "title": {
-        "es": "Como somos (Video Oficial)",
-        "en": "How We Are (Official Video)"
+        "es": "Como somos",
+        "en": "How We Are"
       },
       "description": {
         "es": "Un videoclip que acompaña a un tema representativo de Mcklopedia. Letras directas que describen la realidad cotidiana con honestidad y fuerza. La colaboración con Apache añade profundidad y versatilidad al proyecto.\"",
@@ -1320,18 +1219,18 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=SzP9cWmfSUw",
-      "spotify": "https://open.spotify.com/album/0Lsj9AVrWNV5zIUvB349uD",
+      "youtube": "https://www.youtube.com/watch?v=Hru9-YuLtDg&list=RDHru9-YuLtDg&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/1g8fukLt9dFJTItkzA9N37",
       "masterpiece": true
     },
     {
       "id": 265,
       "category": "music",
       "subcategory": "rap",
-      "artist": "08 Ataques de Ansiedad feat Poison (VKR) FJ.Ramos",
+      "artist": "Poison (VKR) FJ.Ramos",
       "title": {
-        "es": "08 Ataques de Ansiedad",
-        "en": "08 Anxiety Attacks"
+        "es": "Ataques de Ansiedad",
+        "en": "Anxiety Attacks"
       },
       "description": {
         "es": "Una canción que aborda temas de ansiedad y emociones profundas. La colaboración entre los artistas aporta diversidad vocal y lírica. Un tema que conecta con quienes enfrentan luchas internas y buscan una voz para su realidad.\"",
@@ -1341,8 +1240,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=1jEJTiVybSk",
-      "spotify": "https://open.spotify.com/album/592K0XSlTPGSfEWg4k9clq",
+      "youtube": "https://www.youtube.com/watch?v=NBMmhRGgyUQ&list=RDNBMmhRGgyUQ&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -1394,8 +1293,8 @@
       "subcategory": "rap",
       "artist": "Ribon feat. Dejota Rena",
       "title": {
-        "es": "Tru Skul (Videoclip oficial)",
-        "en": "Tru Skul (Official Video)"
+        "es": "Tru Skul",
+        "en": "Tru Skul"
       },
       "description": {
         "es": "Un videoclip oficial que muestra la fuerza y el estilo de Ribon junto a Dejota Rena. La canción combina letras potentes y un ritmo contundente que representan la autenticidad del rap contemporáneo. Visualmente impactante, refleja la cultura urbana actual.",
@@ -1405,8 +1304,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=VqjOg3TkG7w",
-      "spotify": "https://open.spotify.com/album/1Em1AH6NyWHAPyCaVM7iGX",
+      "youtube": "https://www.youtube.com/watch?v=KJOWjF7c9dw&list=RDKJOWjF7c9dw&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -2241,7 +2140,7 @@
         "es": "Último álbum de estudio con la formación original. Explora sonidos más experimentales y sintetizadores, mostrando un cambio en la evolución musical de la banda.",
         "en": "Last studio album with the original lineup. Explores more experimental sounds and synthesizers, showing a shift in the band's musical evolution."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/ilegales.jpg",
       "tags": [
         "album"
       ],
@@ -2249,27 +2148,7 @@
       "spotify": "https://open.spotify.com/album/3zYFvSvwwb52XuXf25rtCg",
       "masterpiece": true
     },
-    {
-      "id": 310,
-      "category": "music",
-      "subcategory": "punk",
-      "artist": "Los Ilegales",
-      "title": {
-        "es": "El Acto",
-        "en": "El Acto"
-      },
-      "description": {
-        "es": "Último álbum de estudio con la formación original. Explora sonidos más experimentales y sintetizadores, mostrando un cambio en la evolución musical de la banda.",
-        "en": "Last studio album with the original lineup. Explores more experimental sounds and synthesizers, showing a shift in the band's musical evolution."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=6xU0KhfVo0A",
-      "spotify": "https://open.spotify.com/album/3tVLhJouDYHOpQa6JQFRd9",
-      "masterpiece": true
-    },
+    
     {
       "id": 311,
       "category": "music",
@@ -2333,27 +2212,7 @@
       "spotify": "https://open.spotify.com/album/3tVLhJouDYHOpQa6JQFRd9",
       "masterpiece": true
     },
-    {
-      "id": 314,
-      "category": "music",
-      "subcategory": "punk",
-      "artist": "Los Ilegales",
-      "title": {
-        "es": "Bajo Otra Bandera",
-        "en": "Bajo Otra Bandera"
-      },
-      "description": {
-        "es": "Último álbum de estudio con la formación original. Explora sonidos más experimentales y sintetizadores, mostrando un cambio en la evolución musical de la banda.",
-        "en": "Last studio album with the original lineup. Explores more experimental sounds and synthesizers, showing a shift in the band's musical evolution."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=YIhcREsRmyE",
-      "spotify": "https://open.spotify.com/album/3tVLhJouDYHOpQa6JQFRd9",
-      "masterpiece": true
-    },
+    
     {
       "id": 315,
       "category": "music",
@@ -2367,11 +2226,11 @@
         "es": "Último álbum de estudio con la formación original. Explora sonidos más experimentales y sintetizadores, mostrando un cambio en la evolución musical de la banda.",
         "en": "Last studio album with the original lineup. Explores more experimental sounds and synthesizers, showing a shift in the band's musical evolution."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/ilegales.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=ZxvYOzZ9RZk",
+      "youtube": "https://www.youtube.com/watch?v=Ek7eauk1LrM&list=RDEk7eauk1LrM&start_radio=1",
       "spotify": "https://open.spotify.com/album/3tVLhJouDYHOpQa6JQFRd9",
       "masterpiece": true
     },
@@ -2682,11 +2541,11 @@
         "es": "El influyente álbum debut de VKR, lanzado en 1996, un pilar del hip-hop español.\nPresenta ritmos contundentes y letras crudas que definieron una era.\nConsiderado esencial por la crítica y los fans, marcó el inicio de una leyenda.\nUn disco fundamental que sentó las bases para el rap en la península ibérica.",
         "en": "VKR's influential debut album, released in 1996, a cornerstone of Spanish hip-hop.\nIt features hard-hitting beats and raw lyrics that defined an era.\nConsidered essential by critics and fans, it marked the beginning of a legend.\nA fundamental record that laid the groundwork for rap in the Iberian Peninsula."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/vkrmas.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=K9PiFPvpoAE",
+      "youtube": "https://www.youtube.com/watch?v=BFGqRsZvRhE&list=PLD8A509F58A953345",
       "spotify": "https://open.spotify.com/album/4iQHluokvfWR48Cs9CNFWj",
       "masterpiece": true
     },
@@ -2703,11 +2562,11 @@
         "es": "El segundo álbum de VKR, que solidificó su posición en la escena del rap español.\nOfrece una evolución en su sonido, manteniendo la intensidad lírica y musical.\nIncluye colaboraciones destacadas y temas que se convirtieron en himnos para sus seguidores.",
         "en": "VKR's second album, which solidified their position in the Spanish rap scene.\nIt offers an evolution in their sound, maintaining lyrical and musical intensity.\nIt includes notable collaborations and tracks that became anthems for their followers."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/vkr.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=iYoCa2y2Crw",
+      "youtube": "https://www.youtube.com/watch?v=cnD_5x1kc-g&list=PLUDFTYssJXXjjuYu5vY4jTkVSn7GQDYTh",
       "spotify": "https://open.spotify.com/album/4CBOwjY4Sl6pL8zqlft20x",
       "masterpiece": true
     },
@@ -2724,35 +2583,15 @@
         "es": "Este álbum continúa explorando las realidades urbanas y sociales con la autenticidad de VKR.\nSus letras son un reflejo crudo de la vida y las experiencias de la calle.\nUn trabajo que reafirma su compromiso con el mensaje y su estilo inconfundible.",
         "en": "This album continues to explore urban and social realities with VKR's authenticity.\nIts lyrics are a raw reflection of life and street experiences.\nA work that reaffirms their commitment to the message and their unmistakable style."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/enlascalles.png",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=xiBfRvrsGC4",
-      "spotify": "https://open.spotify.com/album/4WIaXgizM2h4DmOK0j52I6",
+      "youtube": "https://www.youtube.com/watch?v=zpAhtctg-_M&list=PL01AABF8404A472B0",
+      "spotify": "https://open.spotify.com/intl-es/album/4WIaXgizM2h4DmOK0j52I6",
       "masterpiece": false
     },
-    {
-      "id": 333,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "VKR (Verdaderos Kreyentes de la Religión del Hiphop)",
-      "title": {
-        "es": "Entrenaos",
-        "en": "Entrenaos"
-      },
-      "description": {
-        "es": "Con 'Entrenaos', VKR muestra su madurez y evolución en la producción y lírica.\nEl álbum ofrece una cohesión sonora y una profundidad en los temas tratados.\nRefleja la experiencia y el desarrollo de un grupo legendario en el panorama del hip-hop.",
-        "en": "With 'Entrenaos', VKR demonstrates their maturity and evolution in production and lyrics.\nThe album offers sonic cohesion and depth in the themes addressed.\nIt reflects the experience and development of a legendary group in the hip-hop scene."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com",
-      "spotify": "https://open.spotify.com/album/2rWMEx26W79N05xBT5uEF4",
-      "masterpiece": false
-    },
+   
     {
       "id": 334,
       "category": "music",
@@ -2770,8 +2609,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
-      "spotify": "https://open.spotify.com/album/6SaShuiobMOc9mIiSmP2kY",
+      "youtube": "https://www.youtube.com/watch?v=raLsi3Qyzsg&list=RDraLsi3Qyzsg&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/album/1zcmdKZ9qXfqbHXV1ruScX",
       "masterpiece": false
     },
     {
@@ -2791,7 +2630,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=XLLnagKV6CQ&list=PL1F50EC0C18566E60",
       "spotify": "https://open.spotify.com/album/0zWxvZhW8Y4j4wLjJmG0WO",
       "masterpiece": false
     },
@@ -2812,7 +2651,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=KTMW8uPOeMI&list=PL33Hgj24sj59FHaYxHr2JE7fw6-fLxbHl",
       "spotify": "https://open.spotify.com/album/2ZEySddfviyv4LAIwLmP9W",
       "masterpiece": false
     },
@@ -2833,7 +2672,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=vBBYmPcGa3U&list=OLAK5uy_nMYYhrOqwLtcqr-NPQ4zZJGWR5Y7aGRM0&index=2",
       "spotify": "https://open.spotify.com/album/59HzpnCJjpQI06vfozBBFs",
       "masterpiece": false
     },
@@ -2854,7 +2693,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=Wv7JsRi70LY&list=PLFUPimLxqFdw86vCDTTfbQoCHBOYBgj2R",
       "spotify": "https://open.spotify.com/album/6iyXjiDMiX6yj5cjO8cZLd",
       "masterpiece": false
     },
@@ -2875,7 +2714,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=ROJ7XkA4sCA&list=PL20EF3F6B15485F55",
       "spotify": "https://open.spotify.com/album/5u4E11ukoP89qpiCPQXSl7",
       "masterpiece": false
     },
@@ -2896,7 +2735,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=P5hUVdoo93M&list=RDP5hUVdoo93M&start_radio=1",
       "spotify": "https://open.spotify.com/album/7ANVCjt4nyzAwHAHsGGdQc",
       "masterpiece": false
     },
@@ -2917,7 +2756,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=k1BUdcg7hUY&list=RDk1BUdcg7hUY&start_radio=1",
       "spotify": "https://open.spotify.com/album/0xElYfxH7E9JXw5Sq3s8Gi",
       "masterpiece": false
     },
@@ -2938,7 +2777,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=IEfz-VF6kns&list=PL3AshJDPy8GSW_Qw-ev5PycT9d7IrcHC2",
       "spotify": "https://open.spotify.com/album/4cn1RxUAk4iXkwY8xfw4gk",
       "masterpiece": false
     },
@@ -3001,7 +2840,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=boCEOEg-sPI&list=PL3AshJDPy8GQkKwJ6ejTgN2ocqjEJACOS",
       "spotify": "https://open.spotify.com/album/2M01SAPFz7BZOJ8piHZInA",
       "masterpiece": false
     },
@@ -3022,7 +2861,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=xJFxFVdacmw&list=PL3AshJDPy8GSZvFBb6S6ee66JjI8VhKfz",
       "spotify": "https://open.spotify.com/album/1hzaOkku7AMj92JecmPEyo",
       "masterpiece": false
     },
@@ -3043,7 +2882,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=0NLszzV22IM&list=PLjiqaKk4mc_mlci9QDbCGlV5ZDerLqwIe",
       "spotify": "https://open.spotify.com/album/5xbpUWWXTf2GlSc4KQJt5U",
       "masterpiece": false
     },
@@ -3064,7 +2903,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=9xUaRa7r58A&list=PL3vL_1056Zfyivg6Hoa_moyFaKCUzkTSF",
       "spotify": "https://open.spotify.com/album/6wQ46bpHy3muHmfLYc6N2P",
       "masterpiece": false
     },
@@ -3085,7 +2924,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=4mI78dNQtMw&list=PL6VDqnoDEd3fV-jLcFchpLGy9O1eCUtX5",
       "spotify": "https://open.spotify.com/album/4vLj76A9jEv1z5I9Gpu57S",
       "masterpiece": false
     },
@@ -3106,7 +2945,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=HfW997xERcw&list=PL92FC8B761C63C732",
       "spotify": "https://open.spotify.com/album/31O2vpR4TonFPi0uY7m7Id",
       "masterpiece": false
     },
@@ -3117,17 +2956,17 @@
       "artist": "Frank T",
       "title": {
         "es": "Los pájaros no pueden vivir en el agua porque no son peces",
-        "en": "Lostbirds"
+        "en": "Los pájaros no pueden vivir en el agua porque no son peces"
       },
       "description": {
         "es": "Segundo LP con título metafórico y letras profundas.\nExplora identidad, sociedad y raíces culturales.\nConsiderado un clásico del rap español de los 90.",
         "en": "Second LP featuring a metaphorical title and profound lyrics.\nExplores identity, society, and cultural roots.\nRegarded as a classic of 90s Spanish rap."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/lospajaros.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=KOtxx78aGno&list=OLAK5uy_nxqf9sxScHjwRNRZNXjPJ3HyyJAcxwXVY&index=2",
       "spotify": "https://open.spotify.com/album/4ayqcnLDbIv4pKGux3uWdQ",
       "masterpiece": true
     },
@@ -3148,7 +2987,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=-a8aV0WAeuA&list=PLFUPimLxqFdyTtz_8szuQodlkoE9sxCDg",
       "spotify": "https://open.spotify.com/album/1W5ceOPM9VHMn2recln1B9",
       "masterpiece": false
     },
@@ -3169,7 +3008,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=CmsKaRWG7U0&list=PLFxGbknoJYqOQd7aFudL7wg112Ovmp4Ba",
       "spotify": "https://open.spotify.com/album/2gqmLNWntcW337gZmiwqrb",
       "masterpiece": true
     },
@@ -3180,17 +3019,17 @@
       "artist": "Frank T",
       "title": {
         "es": "Sonrían por favor",
-        "en": "Smileplease"
+        "en": "Sonrían por favor"
       },
       "description": {
         "es": "Álbum con tono optimista y reflexivo a la vez.\nCombina crítica social con mensajes de esperanza.\nRefuerza su conexión con el oyente.",
         "en": "An album both optimistic and reflective.\nCombines social critique with messages of hope.\nStrengthens his connection with the listener."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/sonrian.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=SEYBa0N844k&list=PLkHNuLafWdAuf9lUoifU9n6s5zNE6u_7B",
       "spotify": "https://open.spotify.com/album/4PHWOVIPxcwxcupvINo69Z",
       "masterpiece": false
     },
@@ -3201,17 +3040,17 @@
       "artist": "Frank T",
       "title": {
         "es": "Soy una tostadora",
-        "en": "Toaster"
+        "en": "Soy una tostadora"
       },
       "description": {
         "es": "LP con producción variada y estilo más maduro.\nIncluye temas cargados de originalidad y crítica.\nConsolidó su posición en la escena urbana.",
         "en": "LP with varied production and a more mature style.\nIncludes tracks full of originality and critique.\nConsolidated his place in the urban scene."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/tostadora.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=Rcs1fWVGsyQ&list=PL90221563536CD60F",
       "spotify": "https://open.spotify.com/album/3P76v4voGhMRaCsWux76WS",
       "masterpiece": false
     },
@@ -3222,17 +3061,17 @@
       "artist": "Frank T",
       "title": {
         "es": "Los negros también iremos a la luna",
-        "en": "Wewillmoon"
+        "en": "Los negros también iremos a la luna"
       },
       "description": {
         "es": "Álbum con mensaje esperanzador y reivindicativo.\nTemas que abordan raza, igualdad y futuro.\nUn hito potente en su discografía reciente.",
         "en": "Album with hopeful and reivindicative message.\nTracks addressing race, equality, and the future.\nA powerful milestone in his recent discography."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/losnegros.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=vdVbHyLGiek&list=PLkHNuLafWdAsXI1dmkxsOvtCu3eJcrfai",
       "spotify": "https://open.spotify.com/album/1EmxQEERxEycwnTHfHV7P3",
       "masterpiece": true
     },
@@ -3253,7 +3092,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=HhDD549SQdM&list=OLAK5uy_kDYDfONm8JwuQR1YBX8dlZgDZsfuJGTsM",
       "spotify": "https://open.spotify.com/album/1AI3JZT5P8XVf7Yc0dhasQ",
       "masterpiece": false
     },
@@ -3270,12 +3109,12 @@
         "es": "Álbum debut de 2011 con estilo crudo y directo.\nIncluye varios sencillos y marca sus inicios en el rap.\nFundacional para su trayectoria posterior.",
         "en": "2011 debut album with raw and direct style.\nIncludes several singles and marks his entry into rap.\nFoundational for his later career."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/zoo.png",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
-      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "youtube": "https://www.youtube.com/watch?v=V_FcSP2SgiQ&list=PLOis0nbanGxEgVkR2u-d_wPnsPwH5LvSY",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3295,7 +3134,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=uLqYNCvHuQE&list=RDuLqYNCvHuQE&start_radio=1&t=13s",
       "spotify": "https://open.spotify.com/album/0DCGftO2sY8ljZDxJQOrbk",
       "masterpiece": false
     },
@@ -3316,7 +3155,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=zMbhDg1tcp0&list=PLfnd--3w6AMAc3ENjTE7lY_L1etcT5nv2",
       "spotify": "https://open.spotify.com/album/2EkYoV5ib1pm8MVlk1nziM",
       "masterpiece": false
     },
@@ -3337,7 +3176,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=_w85Wp3MXdc&list=RD_w85Wp3MXdc&start_radio=1",
       "spotify": "https://open.spotify.com/album/3zsl3qdL8hod7NvuotMBxf",
       "masterpiece": true
     },
@@ -3358,7 +3197,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=w4TCiN3KF8s&list=PLfnd--3w6AMBG5YdhiLSaSgB6fhmGyBm7",
       "spotify": "https://open.spotify.com/album/7Ma1RR2wFEAI5iEOL4Yubn",
       "masterpiece": true
     },
@@ -3379,7 +3218,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=_vnN8E_DUGU&list=RD_vnN8E_DUGU",
       "spotify": "https://open.spotify.com/album/3U2rN0w6949YG38RtO4RHo",
       "masterpiece": true
     },
@@ -3400,7 +3239,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=orysPG1mAH4&list=RDorysPG1mAH4&start_radio=1",
       "spotify": "https://open.spotify.com/album/579QwAdy8vNKS8oA9saZNt",
       "masterpiece": true
     },
@@ -3421,7 +3260,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=sXpTajU_hBg&list=RDsXpTajU_hBg&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3442,7 +3281,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=fl-QeQhJU-Y&list=RDfl-QeQhJU-Y&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3463,7 +3302,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=GZxxuTUAP88&list=RDGZxxuTUAP88&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3484,7 +3323,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=EH9hh3LNzH8",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3505,7 +3344,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=h81Z8bo9hQM&list=RDh81Z8bo9hQM&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3526,7 +3365,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=CU5jGd_pemM&list=RDCU5jGd_pemM&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3547,7 +3386,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=9fEDE1QzBp4",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3568,7 +3407,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=0kNQgvpv8Yg",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3589,7 +3428,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=Yap6rcZ2gTQ&list=RDYap6rcZ2gTQ&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3610,7 +3449,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=iL6ClesMEt8&list=RDiL6ClesMEt8&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3631,7 +3470,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=U4qjyKdY9qM",
+      "youtube": "https://www.youtube.com/watch?v=U4qjyKdY9qM&list=RDU4qjyKdY9qM&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3652,7 +3491,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=Infbra37UkA",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3673,7 +3512,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=XekwOnPWrt4&list=RDXekwOnPWrt4&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3694,7 +3533,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=SE77w8Np2qw&list=RDSE77w8Np2qw&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3715,7 +3554,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=bPwdc9Tpv1k&list=RDbPwdc9Tpv1k&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3736,7 +3575,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=i-8HPAEJPzk",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3757,7 +3596,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=X60ghwJuWmY",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3778,7 +3617,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=FBnehO_oSZk&list=RDFBnehO_oSZk&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3799,7 +3638,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=X9EMrpVjvuw",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3820,7 +3659,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=VJFAzjT96aI&list=RDVJFAzjT96aI&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3841,7 +3680,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=3K4MMGmh6ks",
+      "youtube": "https://www.youtube.com/watch?v=3K4MMGmh6ks&list=RD3K4MMGmh6ks&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3862,7 +3701,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=vEZmOijBU14&list=RDvEZmOijBU14",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3883,7 +3722,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=VpmoC8cMkXY&list=RDVpmoC8cMkXY&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3904,7 +3743,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=JEdKcX3SSH4&list=RDJEdKcX3SSH4",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3925,7 +3764,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=3FUzpMmBdUY&list=RD3FUzpMmBdUY",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3946,7 +3785,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=9b2CD9pLvlY&list=RD9b2CD9pLvlY",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3967,7 +3806,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=U-rS1RlTHZ4",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -3988,7 +3827,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=6lpgrL-wogA&list=RD6lpgrL-wogA",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -4009,7 +3848,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=Ag7bo2j84MM&list=RDAg7bo2j84MM",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -4030,7 +3869,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=CBpZKzZ9Dzs&list=RDCBpZKzZ9Dzs&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -4051,7 +3890,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=1x8I2ykLYY4&list=RD1x8I2ykLYY4&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -4072,7 +3911,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=IuxZqrbtGA0&list=RDIuxZqrbtGA0",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -4093,7 +3932,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=qqWs80-Tgp0&list=RDqqWs80-Tgp0&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -4114,7 +3953,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=MsLXdEJwGFs&list=RDMsLXdEJwGFs&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -4135,7 +3974,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=QpwXW6qQRoQ&list=RDQpwXW6qQRoQ&start_radio=1",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     },
@@ -4156,7 +3995,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=j3QcSalDLmo&list=RDj3QcSalDLmo",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
     }

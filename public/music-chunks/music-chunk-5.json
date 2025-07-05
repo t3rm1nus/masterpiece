@@ -17,52 +17,11 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=1cGMqBX95fQ",
+      "youtube": "https://www.youtube.com/watch?v=sDo1JAHG8XE&list=PLTlz5MMhLagN8XgMxCwttizaijkuSssFI",
       "spotify": "https://open.spotify.com/album/797fkvAtk0iZvP1HHPCWbp",
       "masterpiece": true
     },
-    {
-      "id": 802,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Rapiphero",
-      "title": {
-        "es": "Noiseferatu",
-        "en": "Noiseferatu"
-      },
-      "description": {
-        "es": "Noiseferatu es un álbum que muestra la capacidad lírica de Rapiphero para fusionar temas oscuros con ritmos contundentes. A través de sus versos, explora las sombras del alma y la realidad urbana con intensidad y profundidad. Este trabajo es una mezcla de fuerza y reflexión.",
-        "en": "Noiseferatu is an album showcasing Rapiphero's lyrical ability to blend dark themes with powerful beats. Through his verses, he explores the shadows of the soul and urban reality with intensity and depth. This work is a mix of strength and reflection."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/0SbXA1RL0qUMjEx8quy6l0",
-      "masterpiece": true
-    },
-    {
-      "id": 803,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Rapiphero",
-      "title": {
-        "es": "Dope",
-        "en": "Dope"
-      },
-      "description": {
-        "es": "Dope representa una evolución en el estilo de Rapiphero, combinando beats oscuros y modernos con letras que hablan de lucha, superación y crítica social. Este álbum atrapa al oyente en un viaje intenso por la realidad callejera y emocional.",
-        "en": "Dope represents an evolution in Rapiphero's style, combining dark and modern beats with lyrics about struggle, overcoming, and social critique. This album takes the listener on an intense journey through street and emotional reality."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
-      "masterpiece": true
-    },
+    
     {
       "id": 804,
       "category": "music",
@@ -80,7 +39,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=BYQSNu-ldYc&list=PLPLp9P3LwPtPks3oZjDaJp3ZLmCEX8vSW",
       "spotify": "https://open.spotify.com/album/6E47rBfTH9mu7FZH15kM9f",
       "masterpiece": true
     },
@@ -97,12 +56,12 @@
         "es": "Sfumatu es un cierre conceptual donde Rapiphero mezcla sonidos densos con una narrativa que explora la dualidad humana. Este álbum representa madurez artística y una producción cuidada que sumerge al oyente en atmósferas intensas.",
         "en": "Sfumatu is a conceptual closure where Rapiphero mixes dense sounds with a narrative exploring human duality. This album represents artistic maturity and a careful production that immerses the listener in intense atmospheres."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/Sfumatu.png",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/7KdsjQmMyF9B25UqADi117",
+      "youtube": "https://www.youtube.com/watch?v=XYcrbWajgoU&list=PLQh-44nE49wNoLEE8jdd0vTGinr28HDp6",
+      "spotify": "https://open.spotify.com/intl-es/album/60xNVEl8FkoGoXR1oMNJAm",
       "masterpiece": true
     },
     {
@@ -118,12 +77,12 @@
         "es": "CD Multimedia 2009 es una obra que recoge la esencia del rap español con ritmos contundentes y letras cargadas de mensaje. Abocajarro combina historias urbanas con una producción cuidada que refleja su evolución artística. Un álbum imprescindible para los amantes del rap comprometido.",
         "en": "CD Multimedia 2009 is a work that captures the essence of Spanish rap with strong beats and meaningful lyrics. Abocajarro combines urban stories with refined production that reflects their artistic growth. An essential album for fans of committed rap."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/abocajarro.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/4rgnEx9ojVYnOStRbXQDlb",
+      "youtube": "https://www.youtube.com/watch?v=CI-L-QyVziw&list=OLAK5uy_n8CkXQQ53zYODh41e718NHnzJmnoQCzQU&index=2",
+      "spotify": "https://open.spotify.com/intl-es/album/0O3M7u8gFlE7zaQHa1SbaO",
       "masterpiece": true
     },
     {
@@ -139,11 +98,11 @@
         "es": "Los Jereles · 2006 destaca por su lírica directa y sus beats urbanos que reflejan la realidad cotidiana. Abocajarro mezcla flow y crítica social en un álbum que representa una etapa clave dentro del rap underground. Una muestra de talento y autenticidad.",
         "en": "Los Jereles · 2006 stands out for its direct lyrics and urban beats that reflect everyday reality. Abocajarro mixes flow and social critique in an album representing a key stage in underground rap. A display of talent and authenticity."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/jereles.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=mhTBiS44_mQ&list=PL0AD17DBE8B52BC64",
       "spotify": "https://open.spotify.com/album/3ByXNnt6fDXjZdNGHNw82n",
       "masterpiece": true
     },
@@ -164,7 +123,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=SeuhEjZx_5o&list=OLAK5uy_lvI5zxSXk1328fXudf6ct6_jh1BQ_hNPE&index=2",
       "spotify": "https://open.spotify.com/album/35dD2uVx9NODFu9Wbk6MaL",
       "masterpiece": true
     },
@@ -181,12 +140,12 @@
         "es": "En la Boca 2003 es el debut que marca el inicio de Abocajarro en la escena rap. Letras directas, ritmos contundentes y una atmósfera cruda definen este trabajo. Un punto de partida fundamental para comprender su desarrollo posterior.",
         "en": "En la Boca 2003 is the debut marking Abocajarro's start in the rap scene. Direct lyrics, strong beats, and a raw atmosphere define this work. A fundamental starting point to understand their later development."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/enlaboca.png",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/5iW5yzlJsGBIfsemMr8v8y",
+      "youtube": "https://www.youtube.com/watch?v=4w1SGAEGQc4&list=RD4w1SGAEGQc4&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/album/5e5DMocIkNewyoqbf5D5sM",
       "masterpiece": true
     },
     {
@@ -206,8 +165,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/2THakG7CPK4ZME7x3XQskJ",
+      "youtube": "https://www.youtube.com/watch?v=aY5VM3aYjZ4&list=PL_tI9_f9VosxmoVCxaHUKV0TgYLnpGrvf",
+      "spotify": "https://open.spotify.com/intl-es/album/2THakG7CPK4ZME7x3XQskJ",
       "masterpiece": true
     },
     {
@@ -216,19 +175,19 @@
       "subcategory": "dub",
       "artist": "Paul St. Hilaire",
       "title": {
-        "es": "Asom - A Divine State Of Mind",
-        "en": "Asom - A Divine State Of Mind"
+        "es": "Adsom - A Divine State Of Mind",
+        "en": "Adsom - A Divine State Of Mind"
       },
       "description": {
-        "es": "Asom - A Divine State Of Mind destaca por su fusión de house y dub con la voz profunda de Paul St. Hilaire. Este álbum es un viaje espiritual a través de sonidos cuidadosamente elaborados, que transmiten emoción y energía en cada tema. Es un clásico contemporáneo dentro de la escena electrónica.",
-        "en": "Asom - A Divine State Of Mind stands out for its fusion of house and dub with Paul St. Hilaire's deep voice. This album is a spiritual journey through carefully crafted sounds, conveying emotion and energy in every track. It is a contemporary classic in the electronic scene."
+        "es": "Adsom - A Divine State Of Mind destaca por su fusión de house y dub con la voz profunda de Paul St. Hilaire. Este álbum es un viaje espiritual a través de sonidos cuidadosamente elaborados, que transmiten emoción y energía en cada tema. Es un clásico contemporáneo dentro de la escena electrónica.",
+        "en": "Asdom - A Divine State Of Mind stands out for its fusion of house and dub with Paul St. Hilaire's deep voice. This album is a spiritual journey through carefully crafted sounds, conveying emotion and energy in every track. It is a contemporary classic in the electronic scene."
       },
       "image": "/imagenes/musica/adsom.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/4MzfgepEdxmAkKrLzxnDit",
+      "youtube": "https://www.youtube.com/https://www.youtube.com/watch?v=EpNj-HJWZ00&list=PLvFPizwjl9UrhDhGUiV0Gby6oRZ5ulu00",
+      "spotify": "https://open.spotify.com/intl-es/album/5wDDLX0TUR8lkNgBz3DpBR",
       "masterpiece": true
     },
     {
@@ -248,8 +207,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/67rR5NTyuH7WsIBM9L6S2C",
+      "youtube": "https://www.youtube.com/watch?v=hakOLgdP3X8&list=RDhakOLgdP3X8&start_radio=1",
+      "spotify": "https://open.spotify.com/search/The%20Infinity%20Dub%20Sessions",
       "masterpiece": true
     },
     {
@@ -269,31 +228,11 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=oMiPBqPm8to&list=RDoMiPBqPm8to&start_radio=1",
       "spotify": "https://open.spotify.com/album/78ec2w9ZHUYn9W5QDXvUrU",
       "masterpiece": true
     },
-    {
-      "id": 814,
-      "category": "music",
-      "subcategory": "dub",
-      "artist": "Rhauder & Paul St. Hilaire",
-      "title": {
-        "es": "Assemblage",
-        "en": "Assemblage"
-      },
-      "description": {
-        "es": "Assemblage fusiona la producción de Rhauder con la voz profunda y expresiva de Paul St. Hilaire. Este álbum ofrece un viaje entre dub, house y electrónica, destacando por su atmósfera cálida y la perfecta armonía entre voz y sonido. Es una pieza clave en la música electrónica contemporánea.",
-        "en": "Assemblage merges Rhauder's production with Paul St. Hilaire's deep and expressive voice. This album offers a journey through dub, house, and electronic music, standing out for its warm atmosphere and perfect harmony between voice and sound. A key piece in contemporary electronic music."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273db2d3afe4c9174c67d9487b6",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/5lNpdwFJvaZs0UCcaXfz8b",
-      "masterpiece": true
-    },
+    
     {
       "id": 815,
       "category": "music",
@@ -311,8 +250,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/67Ljepy44OPSzsUxL79URN",
+      "youtube": "https://www.youtube.com/results?search_query=Four+Quarters+Of+Love+And+Modern+Lash+full+album",
+      "spotify": "https://open.spotify.com/intl-es/album/67Ljepy44OPSzsUxL79URN",
       "masterpiece": true
     },
     {
@@ -332,8 +271,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/4Fu1si4cHvjLUGAcuADiT3",
+      "youtube": "https://www.youtube.com/watch?v=KfcjmPu5q4E&list=PL0E0qpvbtwXK4oU1hFIqaj02YsoOD3lU8",
+      "spotify": "https://open.spotify.com/intl-es/album/4Fu1si4cHvjLUGAcuADiT3",
       "masterpiece": true
     },
     {
@@ -353,7 +292,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=LRO3ny0NQpI",
+      "youtube": "https://www.youtube.com/watch?v=uTzwReGigr8&list=PLfRcAAxNWyjPbzPtCTmsTW45TMCCthKaF",
       "spotify": "https://open.spotify.com/album/4SPyGeaVg6LpQ95237zn34",
       "masterpiece": true
     },
@@ -374,7 +313,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=I7QGU1coKnY",
+      "youtube": "https://www.youtube.com/watch?v=tc-FFlFhByU&list=OLAK5uy_mDidvTn2khm18HdHEbzgrI-wLH_8ZxLpE",
       "spotify": "https://open.spotify.com/album/4WSwiIpcaIHrTJWosN5NRU",
       "masterpiece": true
     },
@@ -391,11 +330,11 @@
         "es": "Publicada en 2013, esta producción presenta una evolución en el sonido de La Excepción, con beats más elaborados y letras que profundizan en temas personales y sociales. Un álbum que reafirma su posición en el rap español.",
         "en": "Released in 2013, this production shows an evolution in La Excepción's sound, with more elaborate beats and lyrics that delve into personal and social topics. An album that reaffirms their position in Spanish rap."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/laverdad.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=2jV3lI1QSi0",
+      "youtube": "https://www.youtube.com/watch?v=JqOjf16Q_9Q&list=RDJqOjf16Q_9Q&start_radio=1",
       "spotify": "https://open.spotify.com/album/4WSwiIpcaIHrTJWosN5NRU",
       "masterpiece": true
     },
@@ -859,7 +798,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=eRWvRAFWO38",
+      "youtube": "https://www.youtube.com/watch?v=YqK11bHVkZ4&list=RDYqK11bHVkZ4&start_radio=1",
       "spotify": "https://open.spotify.com/album/1ASN9C5KKT8pbqH7KxVH2l",
       "masterpiece": true
     },
@@ -880,7 +819,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=LA_LINK_BASE",
+      "youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lzkUkrDEgH1yx40LuxfInsMywzexjo0HU&playnext=1&index=1",
       "spotify": "https://open.spotify.com/album/0a8VPhi07ueOcaMpW8Ay0t",
       "masterpiece": true
     },
@@ -943,7 +882,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=LA_LINK_BASE",
+      "youtube": "https://www.youtube.com/watch?v=uWFY6PQSsrM&list=PLVJAZJ0jKONFyUz_TEClxbvtd-DM6c2HI",
       "spotify": "https://open.spotify.com/album/06jJMaPtFcbDkuzuIeKywk",
       "masterpiece": false
     },
@@ -964,7 +903,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=LA_LINK_BASE",
+      "youtube": "https://www.youtube.com/watch?v=f80WHhHo8y4&list=PLrOHuARYP0ufRDa1CjP4Urp8AyLH4K9eW",
       "spotify": "https://open.spotify.com/album/6tkNuZUkvpjSNtuB98uUiw",
       "masterpiece": false
     },
@@ -985,7 +924,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=LA_LINK_BASE",
+      "youtube": "https://www.youtube.com/watch?v=xY3lq4Oeh2M&list=PL5967pRr7FdqZaM-oFroJx2e0fTfCq4dL",
       "spotify": "https://open.spotify.com/album/2Ww207Wxz9gTB0sKhWWIFP",
       "masterpiece": false
     }
