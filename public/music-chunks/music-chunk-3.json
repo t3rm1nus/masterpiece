@@ -719,7 +719,7 @@
     {
       "id": 437,
       "category": "music",
-      "subcategory": "latin",
+      "subcategory": "flamenco",
       "artist": "Los Delinqüentes",
       "title": {
         "es": "El sentimiento garrapatero que nos traen las flores",
@@ -740,7 +740,7 @@
     {
       "id": 438,
       "category": "music",
-      "subcategory": "latin",
+      "subcategory": "flamenco",
       "artist": "Los Delinqüentes",
       "title": {
         "es": "Arquitectura del aire en la calle",
@@ -761,7 +761,7 @@
     {
       "id": 439,
       "category": "music",
-      "subcategory": "latin",
+      "subcategory": "flamenco",
       "artist": "Los Delinqüentes",
       "title": {
         "es": "El verde rebelde vuelve",
@@ -782,7 +782,7 @@
     {
       "id": 440,
       "category": "music",
-      "subcategory": "latin",
+      "subcategory": "flamenco",
       "artist": "Los Delinqüentes",
       "title": {
         "es": "Recuerdos garrapateros de la flama y del carril",
@@ -803,7 +803,7 @@
     {
       "id": 441,
       "category": "music",
-      "subcategory": "latin",
+      "subcategory": "flamenco",
       "artist": "Los Delinqüentes",
       "title": {
         "es": "Bienvenidos a la época iconoclasta",
@@ -824,7 +824,7 @@
     {
       "id": 442,
       "category": "music",
-      "subcategory": "latin",
+      "subcategory": "flamenco",
       "artist": "Los Delinqüentes",
       "title": {
         "es": "Los hombres de las praderas y sus bordones calientes",
@@ -1976,7 +1976,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=6p7UEl0N43E",
+      "youtube": "https://www.youtube.com/watch?v=hdGUReb-E3k&list=OLAK5uy_mciSE6BvCVzyWGb5rL7mISJ6Wl-nEYKsQ&index=2",
       "spotify": "https://open.spotify.com/album/1GxLpnkXKrSWcIXCOMDAkY",
       "masterpiece": true
     },
@@ -2490,7 +2490,7 @@
     {
       "id": 529,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "rap",
       "artist": "Fill Black",
       "title": {
         "es": "Fill Project",
@@ -2504,7 +2504,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=3ma7kVyTqng&list=RD3ma7kVyTqng&start_radio=1",
       "spotify": "https://open.spotify.com/album/2KVhvKDc7JZdO7VP7E2plR",
       "masterpiece": true
     },
@@ -2576,7 +2576,7 @@
     {
       "id": 535,
       "category": "music",
-      "subcategory": "latin",
+      "subcategory": "flamenco",
       "artist": "Bebo Valdés & Diego El Cigala",
       "title": {
         "es": "Lágrimas Negras",
@@ -2597,7 +2597,7 @@
     {
       "id": 536,
       "category": "music",
-      "subcategory": "latin",
+      "subcategory": "flamenco",
       "artist": "Bebo Valdés & Diego El Cigala",
       "title": {
         "es": "Dos Lágrimas",
@@ -2632,7 +2632,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=UvXMQOglgNs",
+      "youtube": "https://www.youtube.com/watch?v=tJfTY_iSoks&list=PL0E1A7DB3E590329A",
       "spotify": "https://open.spotify.com/album/4f7hfg6zPldUQf9DY4ihqq",
       "masterpiece": true
     },
@@ -2653,7 +2653,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=R_0bDeNuF2c",
+      "youtube": "https://www.youtube.com/watch?v=nfMpeLIZ8qY&list=PL1D322A5D65AA6242",
       "spotify": "https://open.spotify.com/album/7cMPHSCmlJVpO9EH0a6bSp",
       "masterpiece": true
     },
@@ -2674,7 +2674,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=hvNVxH6Tyy8",
+      "youtube": "https://www.youtube.com/watch?v=yeJ6JFbTK40&list=PL61DC4B28B4C38DCA",
       "spotify": "https://open.spotify.com/album/022zIyy4TicgTuuqLco8t8",
       "masterpiece": true
     },
@@ -2695,7 +2695,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=OP0A1C95bCg",
+      "youtube": "https://www.youtube.com/watch?v=mnSPuwAOjpc&list=PLEE07A214938B8C07",
       "spotify": "https://open.spotify.com/album/03L4vb7pXkv4UCTyniPGh7",
       "masterpiece": true
     },
@@ -2716,7 +2716,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=H30c7DlRbBY",
+      "youtube": "https://www.youtube.com/watch?v=djNw8TZLqz0&list=PL764B504FA0D6450B",
       "spotify": "https://open.spotify.com/album/3msSCqpQLoY0nl4RTSf1Is",
       "masterpiece": true
     },
@@ -2737,31 +2737,11 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=AvS3SvoF_Jo",
+      "youtube": "https://www.youtube.com/watch?v=--1I7-ovA8U&list=PL02A8751918734476",
       "spotify": "https://open.spotify.com/album/5QHJB2blBbAL8BjrD9hrhG",
       "masterpiece": true
     },
-    {
-      "id": 543,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Extremoduro",
-      "title": {
-        "es": "Yo, Minoría Absoluta",
-        "en": "Yo, Minoría Absoluta"
-      },
-      "description": {
-        "es": "Publicada en 2002, Yo, Minoría Absoluta es una obra que refleja madurez y crítica social, con letras profundas y un rock potente. Extremoduro explora nuevas texturas manteniendo su esencia transgresora y poética.",
-        "en": "Released in 2002, Yo, Minoría Absoluta is a work reflecting maturity and social critique, with deep lyrics and powerful rock. Extremoduro explores new textures while maintaining their transgressive and poetic essence."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b2737d95383aa4544f540f26c513",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=3Jk8u8W9s4E",
-      "spotify": "https://open.spotify.com/album/3FgvMxabfL5UtlcPzASEhh",
-      "masterpiece": true
-    },
+    
     {
       "id": 544,
       "category": "music",
@@ -2779,7 +2759,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=RmLhhjpQZV4",
+      "youtube": "https://www.youtube.com/watch?v=mt074XH7EiI&list=RDmt074XH7EiI&start_radio=1",
       "spotify": "https://open.spotify.com/album/1GYJUlbVr5FuNU7awwMGzu",
       "masterpiece": true
     },
@@ -2800,7 +2780,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=zH1by-1BJo4",
+      "youtube": "https://www.youtube.com/watch?v=qY-4ZLJ8KPo&list=RDqY-4ZLJ8KPo&start_radio=1",
       "spotify": "https://open.spotify.com/album/3JFryzZ2dByJ7Z2Ik2fVua",
       "masterpiece": true
     },
@@ -2810,19 +2790,19 @@
       "subcategory": "rock",
       "artist": "Robe",
       "title": {
-        "es": "Lo Que Más",
-        "en": "Lo Que Más"
+        "es": "Se nos lleva el aire",
+        "en": "Se nos lleva el aire"
       },
       "description": {
-        "es": "Lo Que Más es el álbum debut en solitario de Robe, lanzado en 2015. Con una mezcla de rock potente y letras profundas, el disco refleja una nueva etapa en la carrera del artista tras Extremoduro. La producción es cruda y emotiva, con influencias variadas.",
-        "en": "Lo Que Más is Robe's solo debut album, released in 2015. With a mix of powerful rock and deep lyrics, the record reflects a new stage in the artist's career after Extremoduro. The production is raw and emotional, with varied influences."
+        "es": "Se nos lleva el aire es el álbum debut en solitario de Robe, lanzado en 2015. Con una mezcla de rock potente y letras profundas, el disco refleja una nueva etapa en la carrera del artista tras Extremoduro. La producción es cruda y emotiva, con influencias variadas.",
+        "en": "Se nos lleva el aire is Robe's solo debut album, released in 2015. With a mix of powerful rock and deep lyrics, the record reflects a new stage in the artist's career after Extremoduro. The production is raw and emotional, with varied influences."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/aire.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=XzHqYx06w18",
-      "spotify": "https://open.spotify.com/album/5XLtzDM5rjkHnqAWeQz6DW",
+      "youtube": "https://www.youtube.com/watch?v=ZtBUHGtI6mc&list=RDZtBUHGtI6mc&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/album/3V0gXpeLYWle5J3vy1O4Lu",
       "masterpiece": true
     },
     {
@@ -2842,7 +2822,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=RfTjyUbWiE0",
+      "youtube": "https://www.youtube.com/watch?v=JogGZ3uTrTQ&list=PLRsokzPil_pmufkVsXO2NmRS1RKwjnEcT",
       "spotify": "https://open.spotify.com/album/3fmYkBz172Kmgge6qv7WZ5",
       "masterpiece": true
     },
@@ -2863,7 +2843,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=fMJSdP7JvZs",
+      "youtube": "https://www.youtube.com/watch?v=OpmrLR9wRAo&list=RDOpmrLR9wRAo&start_radio=1",
       "spotify": "https://open.spotify.com/album/1MGCh37XCo1s9byceYHzNx",
       "masterpiece": true
     },
@@ -2934,7 +2914,7 @@
     {
       "id": 553,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "chillout",
       "artist": "FANSO",
       "title": {
         "es": "Música para Lagartos",
@@ -2944,11 +2924,11 @@
         "es": "Música para Lagartos es un álbum debut de FANSO que mezcla rock alternativo con influencias de sonidos experimentales. Las letras introspectivas y la atmósfera sonora crean una experiencia única para los amantes del género. Este trabajo destaca por su autenticidad y frescura.",
         "en": "Music for Lizards is FANSO's debut album blending alternative rock with experimental sound influences. The introspective lyrics and atmospheric sound create a unique experience for genre lovers. This work stands out for its authenticity and freshness."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/lagartos.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=8LU9cjrFwo4",
+      "youtube": "https://www.youtube.com/watch?v=GQqZYZqaGFc&list=OLAK5uy_l1yCY1H1PbzmeEaQaeaEbTO2OCx9ORh9E",
       "spotify": "https://open.spotify.com/album/7BilLfa8n8rQDpbmJAOGxG",
       "masterpiece": true
     },
@@ -3116,7 +3096,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PL590L5WQmH8fJhAq-R1LZ3h8TD6Y7gV09",
+      "youtube": "https://www.youtube.com/watch?v=cbG7HEEPE1o&list=PL1RRNXldMeRFm7CqtN44oav-TgaWT3yt_",
       "spotify": "https://open.spotify.com/album/7rSZXXHHvIhF4yUFdaOCy9",
       "masterpiece": true
     },
@@ -3137,7 +3117,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PL590L5WQmH8fJhAq-R1LZ3h8TD6Y7gV09",
+      "youtube": "https://www.youtube.com/watch?v=7rOeELO4v20&list=PLNPGM2D7aODeeRDxgwwtnwZTAApuJznnu",
       "spotify": "https://open.spotify.com/album/3uFZf8rykoHo7XMIQVYW6r",
       "masterpiece": true
     },
@@ -3158,7 +3138,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PL590L5WQmH8fJhAq-R1LZ3h8TD6Y7gV09",
+      "youtube": "https://www.youtube.com/watch?v=nDeog4iLbi0&list=PL1RRNXldMeREitKT6vfk54RMpzn6ofKHW",
       "spotify": "https://open.spotify.com/album/5z090LQztiqh13wYspQvKQ",
       "masterpiece": true
     },
@@ -3180,7 +3160,7 @@
         "album",
         "live"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PL590L5WQmH8fJhAq-R1LZ3h8TD6Y7gV09",
+      "youtube": "https://www.youtube.com/watch?v=AFHlolQ8N-A&list=PL1RRNXldMeRFFOeeeNxNif5k0XGkNe_tR",
       "spotify": "https://open.spotify.com/album/0B0Zwfcy4pAY2JAoxIEkR5",
       "masterpiece": true
     },
@@ -3201,7 +3181,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=8UbNbor3OqQ&list=PL0SqtI95X6o0UYiDahh6KzAypztqUAopW",
       "spotify": "https://open.spotify.com/album/2Se4ZylF9NkFGD92yv1aZC",
       "masterpiece": true
     },
@@ -3222,7 +3202,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=26iQAWPHTNY&list=RD26iQAWPHTNY&start_radio=1",
       "spotify": "https://open.spotify.com/album/2vnJKtGjZXRUg0mYPZ3HGH",
       "masterpiece": true
     },
@@ -3243,31 +3223,11 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=90zyF3gPF8M&list=RD90zyF3gPF8M&start_radio=1",
       "spotify": "https://open.spotify.com/album/468ZwCchVtzEbt9BHmXopb",
       "masterpiece": true
     },
-    {
-      "id": 568,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Pink Floyd",
-      "title": {
-        "es": "The Dark Side of the Moon",
-        "en": "The Dark Side of the Moon"
-      },
-      "description": {
-        "es": "The Dark Side of the Moon es uno de los álbumes más influyentes y emblemáticos de Pink Floyd. Combina rock progresivo con letras profundas sobre la vida, el estrés y la alienación. Su producción y efectos sonoros lo convierten en un clásico atemporal.",
-        "en": "The Dark Side of the Moon is one of Pink Floyd's most influential and iconic albums. It combines progressive rock with deep lyrics about life, stress, and alienation. Its production and sound effects make it a timeless classic."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273ea7caaff71dea1051d49b2fe",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=DLOth-BuCNY",
-      "spotify": "https://open.spotify.com/album/4LH4d3cOWNNsVw41Gqt2kv",
-      "masterpiece": true
-    },
+    
     {
       "id": 569,
       "category": "music",
@@ -3285,7 +3245,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=TMy_mYkwl4M&list=RDTMy_mYkwl4M&start_radio=1",
       "spotify": "https://open.spotify.com/album/0bCAjiUamIFqKJsekOYuRw",
       "masterpiece": true
     },
@@ -3306,7 +3266,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=D4KQae9oMWs&list=RDD4KQae9oMWs&start_radio=1",
       "spotify": "https://open.spotify.com/album/3b4E89rxzZQ9zkhgKpj8N4",
       "masterpiece": true
     },
@@ -3327,7 +3287,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=r48BLz42NuI&list=RDr48BLz42NuI&start_radio=1",
       "spotify": "https://open.spotify.com/album/5Dbax7G8SWrP9xyzkOvy2F",
       "masterpiece": true
     },
@@ -3348,7 +3308,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=qZyXLX7bxDk&list=RDqZyXLX7bxDk&start_radio=1",
       "spotify": "https://open.spotify.com/album/1yMenUMOx7BpfTDuVQs99y",
       "masterpiece": true
     },
@@ -3369,7 +3329,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=DEf0iT6r7z4&list=RDDEf0iT6r7z4&start_radio=1",
       "spotify": "https://open.spotify.com/album/4xODvcpjOOgu4oKWL0sCte",
       "masterpiece": true
     },
@@ -3390,7 +3350,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=k-ltGvfwLJI&list=RDk-ltGvfwLJI&start_radio=1",
       "spotify": "https://open.spotify.com/album/5F0IQXuHfTV7SBvZVnXERl",
       "masterpiece": true
     },
@@ -3411,7 +3371,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=0CNPR2qNzxk&list=PL6ogdCG3tAWiPhX1-iTHcvnsO2ek1nlJl",
       "spotify": "https://open.spotify.com/album/28yHV3Gdg30AiB8h8em1eW",
       "masterpiece": true
     },
@@ -3432,7 +3392,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=G4CfGsBz9aY&list=PL4J5vKEAoxN1JYfU1b76ApIOiQMXUIH4W",
       "spotify": "https://open.spotify.com/album/6z5LStxyQzrUTrVxjiOXVU",
       "masterpiece": true
     },
@@ -3453,7 +3413,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=Zqo7j2yFoFs&list=PL4J5vKEAoxN01Z3E7gztv6CNvSLALN_cA",
       "spotify": "https://open.spotify.com/album/0CxPbTRARqKUYighiEY9Sz",
       "masterpiece": true
     },
@@ -3474,7 +3434,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=isCh4kCeNYU&list=PL4J5vKEAoxN14WAHr_kIcpVBcsn24oa3m",
       "spotify": "https://open.spotify.com/album/00eiw4KOJZ7eC3NBEpmH4C",
       "masterpiece": true
     },
@@ -3495,7 +3455,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=mmB0URLdwpE&list=PLVMgMdYqIEkY42B3shInBQuEiesEzl4_-",
       "spotify": "https://open.spotify.com/album/4ieR19hRkKeE81CalJPQNu",
       "masterpiece": true
     },
@@ -3516,7 +3476,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLkCv3pYg4hQ0pX_Bo3nyHkZKiD2ruZfyH",
+      "youtube": "https://www.youtube.com/watch?v=FfIZr38DLSg&list=PLVMgMdYqIEkbiG4IX-bbhz8-ANoKN5qK0",
       "spotify": "https://open.spotify.com/album/0suNLpB9xraAv1FcdlITjQ",
       "masterpiece": true
     },
@@ -3533,11 +3493,11 @@
         "es": "El álbum debut de Los Espíritus mezcla rock psicodélico y blues con influencias clásicas. Su sonido crudo y orgánico evoca paisajes sonoros intensos y emociones profundas que capturan la esencia del rock alternativo argentino.",
         "en": "The debut album by Los Espíritus blends psychedelic rock and blues with classic influences. Its raw and organic sound evokes intense soundscapes and deep emotions that capture the essence of Argentine alternative rock."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/espiritus.png",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=KshXs8c8XmE",
+      "youtube": "https://www.youtube.com/watch?v=QJfupslEsAo&list=RDQJfupslEsAo&start_radio=1",
       "spotify": "https://open.spotify.com/album/3jIrLCi1YnbMJHybfNExxS",
       "masterpiece": true
     },
@@ -3558,7 +3518,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=oSvSCfXH4y8",
+      "youtube": "https://www.youtube.com/watch?v=q9NuIVwYa9Q&list=RDq9NuIVwYa9Q&start_radio=1&t=1s",
       "spotify": "https://open.spotify.com/album/4wojL8SZIhIi5DRxx7NYbN",
       "masterpiece": true
     },
@@ -3575,12 +3535,12 @@
         "es": "Este álbum introduce elementos más experimentales y psicodélicos, llevando el sonido de Los Espíritus a nuevas dimensiones. 'Alucinaciones' invita al oyente a un viaje sonoro que mezcla melancolía y energía vibrante, consolidando su identidad en la escena rock.",
         "en": "This album introduces more experimental and psychedelic elements, taking Los Espíritus' sound to new dimensions. 'Alucinaciones' invites the listener on a sonic journey mixing melancholy and vibrant energy, consolidating their identity in the rock scene."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/alucina.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=yn0UPAWTS5w",
-      "spotify": "https://open.spotify.com/album/6BeoDtcSMpDzQq3qWQejbn",
+      "youtube": "https://www.youtube.com/watch?v=k2cNl0xjoI4&list=RDk2cNl0xjoI4&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/album/3jIrLCi1YnbMJHybfNExxS",
       "masterpiece": true
     },
     {
@@ -3600,7 +3560,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=j1SXB8L9pDQ",
+      "youtube": "https://www.youtube.com/watch?v=k2cNl0xjoI4&list=RDk2cNl0xjoI4&start_radio=1",
       "spotify": "https://open.spotify.com/album/1ahdp3YzkgsUZZl3gJPYgL",
       "masterpiece": true
     },
@@ -3654,63 +3614,23 @@
       "subcategory": "rock",
       "artist": "Glass Beams",
       "title": {
-        "es": "Behind The Glass",
-        "en": "Behind The Glass"
+        "es": "Mahal",
+        "en": "Mahal"
       },
       "description": {
-        "es": "‘Behind The Glass’ es un álbum que combina sintetizadores atmosféricos y ritmos electrónicos hipnóticos. Glass Beams crea paisajes sonoros envolventes que invitan a la introspección y al viaje interior, destacando en la escena electrónica contemporánea.",
-        "en": "'Behind The Glass' is an album that blends atmospheric synthesizers with hypnotic electronic rhythms. Glass Beams crafts immersive soundscapes that invite introspection and inner journeys, standing out in the contemporary electronic scene."
+        "es": "‘Mahal’ es un álbum que combina sintetizadores atmosféricos y ritmos electrónicos hipnóticos. Glass Beams crea paisajes sonoros envolventes que invitan a la introspección y al viaje interior, destacando en la escena electrónica contemporánea.",
+        "en": "'‘Mahal' is an album that blends atmospheric synthesizers with hypnotic electronic rhythms. Glass Beams crafts immersive soundscapes that invite introspection and inner journeys, standing out in the contemporary electronic scene."
       },
       "image": "/imagenes/musica/glass.png",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=F3vQGcKvWzg",
+      "youtube": "https://www.youtube.com/watch?v=vzro-uV8Fl4&list=PLEpjZ6a3i26c84JkY6vz7umVTGjQAYYrv",
       "spotify": "https://open.spotify.com/album/32yQDx3IeVTHLPxT07PFDy",
       "masterpiece": true
     },
-    {
-      "id": 588,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Glass Beams",
-      "title": {
-        "es": "Stellar Wind",
-        "en": "Stellar Wind"
-      },
-      "description": {
-        "es": "En ‘Stellar Wind’, Glass Beams explora texturas electrónicas más dinámicas, fusionando elementos orgánicos con sintetizadores espaciales. Este álbum destaca por su energía y por transportar al oyente a paisajes sonoros futuristas.",
-        "en": "'Stellar Wind' sees Glass Beams exploring more dynamic electronic textures, blending organic elements with spacey synthesizers. This album stands out for its energy and transporting listeners to futuristic soundscapes."
-      },
-      "image": "/imagenes/musica/glass.png",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=Zjz15NcYUi0",
-      "spotify": "https://open.spotify.com/album/32yQDx3IeVTHLPxT07PFDy",
-      "masterpiece": true
-    },
-    {
-      "id": 589,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Glass Beams",
-      "title": {
-        "es": "Dimensional View",
-        "en": "Dimensional View"
-      },
-      "description": {
-        "es": "‘Dimensional View’ presenta una exploración profunda en la electrónica ambiental y experimental. Glass Beams ofrece sonidos espaciales y envolventes que desafían las percepciones tradicionales de la música electrónica.",
-        "en": "'Dimensional View' offers a deep exploration of ambient and experimental electronic music. Glass Beams provides spatial and immersive sounds that challenge traditional perceptions of electronic music."
-      },
-      "image": "/imagenes/musica/glass.png",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=Cd6RfM7SjrM",
-      "spotify": "https://open.spotify.com/album/32yQDx3IeVTHLPxT07PFDy",
-      "masterpiece": true
-    },
+    
+    
     {
       "id": 590,
       "category": "music",
@@ -3820,7 +3740,7 @@
     {
       "id": 598,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "rap",
       "artist": "Los Solos",
       "title": {
         "es": "Todo el Mundo lo Sabe",
@@ -3830,18 +3750,18 @@
         "es": "‘Todo el Mundo lo Sabe’ es un álbum que combina rock intenso con letras profundas y emotivas. La banda explora temas personales y sociales con un sonido sólido y contundente que atrapa desde la primera canción.",
         "en": "'Everybody Knows' is an album combining intense rock with deep and emotional lyrics. The band explores personal and social themes with a solid and powerful sound that captivates from the first track."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/lossolo.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=example_todomundo",
+      "youtube": "https://www.youtube.com/watch?v=BQ6YkxlX-Lc&list=PL6wMEEFNrEcKiRqYKmxOsYUAF-K0ZYHMp",
       "spotify": "https://open.spotify.com/album/4xofJkNh4PoDxdS5Bvpj8x",
       "masterpiece": true
     },
     {
       "id": 599,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "rap",
       "artist": "Los Solos",
       "title": {
         "es": "Retorno al Principio",
@@ -3851,19 +3771,19 @@
         "es": "‘Retorno al Principio’ retoma la esencia de la banda con un sonido renovado y una lírica introspectiva. Este álbum muestra una evolución en la madurez musical y temática, manteniendo la fuerza del rock clásico.",
         "en": "'Return to the Beginning' revisits the band's essence with a renewed sound and introspective lyrics. This album shows an evolution in musical and thematic maturity, maintaining the power of classic rock."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/retorno.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=example_retorno",
+      "youtube": "https://www.youtube.com/watch?v=tN01MGywiCA&list=PL9E3964F7131CD024",
       "spotify": "https://open.spotify.com/album/3f6OeI5QHbzU9jB5RrAT5f",
       "masterpiece": true
     },
     {
       "id": 600,
       "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Solos",
+      "subcategory": "rap",
+      "artist": "Solo Los Solo",
       "title": {
         "es": "Quimera",
         "en": "Chimera"
@@ -3872,11 +3792,11 @@
         "es": "‘Quimera’ es un álbum que mezcla el rock con matices experimentales y poéticos. La banda despliega una creatividad notable en sus composiciones, entregando un trabajo intenso y lleno de contrastes.",
         "en": "'Chimera' is an album that blends rock with experimental and poetic nuances. The band shows remarkable creativity in its compositions, delivering an intense and contrast-rich work."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/quimera.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=example_quimera",
+      "youtube": "https://www.youtube.com/watch?v=yz4prBSTzE0&list=RDyz4prBSTzE0&start_radio=1",
       "spotify": "https://open.spotify.com/album/1H253IQKA8CO7yRkALXunc",
       "masterpiece": true
     }

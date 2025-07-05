@@ -631,7 +631,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=FeHjpPLcN4E",
+      "youtube": "https://www.youtube.com/watch?v=H-v5oHH3iWs&list=RDH-v5oHH3iWs&start_radio=1",
       "spotify": "https://open.spotify.com/album/6SVLH6Z9dRnCfOa0zOPRAr",
       "masterpiece": false
     },
@@ -652,14 +652,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=HyHNuVaZJ-k",
+      "youtube": "https://www.youtube.com/watch?v=dC7zzhVXdWI&list=RDdC7zzhVXdWI&start_radio=1",
       "spotify": "https://open.spotify.com/album/0bUTHlWbkSQysoM3VsWldT",
       "masterpiece": true
     },
     {
       "id": 836,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "electronic",
       "artist": "Gorillaz",
       "title": {
         "es": "Plastic Beach",
@@ -673,14 +673,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=geDNrPy05ls",
+      "youtube": "https://www.youtube.com/watch?v=8hfkE62WUJk&list=RD8hfkE62WUJk&start_radio=1",
       "spotify": "https://open.spotify.com/album/2dIGnmEIy1WZIcZCFSj6i8",
       "masterpiece": true
     },
     {
       "id": 837,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "electronic",
       "artist": "Gorillaz",
       "title": {
         "es": "The Fall",
@@ -694,14 +694,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=LIEtYduzwPk",
+      "youtube": "https://www.youtube.com/watch?v=07aYsN9znVM&list=OLAK5uy_lZR3Qu2LcGCD14zIjXioseFJ8H4DqDouc&index=2",
       "spotify": "https://open.spotify.com/album/5jJGGsAztgUEXUHHZ2zrah",
       "masterpiece": false
     },
     {
       "id": 838,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "electronic",
       "artist": "Gorillaz",
       "title": {
         "es": "Humanz",
@@ -715,14 +715,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=_dK2tDK9grQ",
+      "youtube": "https://www.youtube.com/watch?v=f2aPPgSdsKc&list=RDf2aPPgSdsKc&start_radio=1",
       "spotify": "https://open.spotify.com/album/0NvirtaDCaZU5PAW1O5FDE",
       "masterpiece": false
     },
     {
       "id": 839,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "electronic",
       "artist": "Gorillaz",
       "title": {
         "es": "The Now Now",
@@ -736,14 +736,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=J9oY3qUWxC4",
+      "youtube": "https://www.youtube.com/watch?v=8UbNbor3OqQ&list=PL0SqtI95X6o0UYiDahh6KzAypztqUAopW",
       "spotify": "https://open.spotify.com/album/1amYhlukNF8WdaQC3gKkgL",
       "masterpiece": false
     },
     {
       "id": 840,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "electronic",
       "artist": "Gorillaz",
       "title": {
         "es": "Song Machine, Season One: Strange Timez",
@@ -757,14 +757,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=_SeqY1bR9mM",
+      "youtube": "https://www.youtube.com/watch?v=bbA5p54Rw2M&list=PLxA687tYuMWja9nqeXUzc2KmdglKjKKdn",
       "spotify": "https://open.spotify.com/album/5I9K0u8r52jp4Y2bF8mOaz",
       "masterpiece": false
     },
     {
       "id": 841,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "electronic",
       "artist": "Gorillaz",
       "title": {
         "es": "Cracker Island",
@@ -778,7 +778,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=NewGold",
+      "youtube": "https://www.youtube.com/watch?v=7f0K30fDgS0&list=PLxA687tYuMWhmu3r_FRyOUS7qkShN2J-6",
       "spotify": "https://open.spotify.com/album/4wtZQMNTC1O79kDxMBsEan"
     },
     {

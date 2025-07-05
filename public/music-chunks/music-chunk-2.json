@@ -828,8 +828,8 @@
       "subcategory": "rock",
       "artist": "Extremoduro",
       "title": {
-        "es": "Ágila - So Payaso",
-        "en": "Ágila - You Clown"
+        "es": "So Payaso",
+        "en": "You Clown"
       },
       "description": {
         "es": "‘So Payaso’ es uno de los temas más reconocidos de Extremoduro, incluido en su álbum 'Ágila' (1996). Con una mezcla de rock duro y letras poéticas, la canción aborda la vulnerabilidad y las contradicciones humanas. Un clásico imprescindible del rock español que ha marcado a varias generaciones.",
@@ -839,7 +839,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=vQynxAQk5Qg",
+      "youtube": "https://www.youtube.com/watch?v=72Rk1N7cYYs&list=PL764B504FA0D6450B&index=4",
       "spotify": "https://open.spotify.com/album/3msSCqpQLoY0nl4RTSf1Is",
       "masterpiece": true
     },
@@ -909,7 +909,7 @@
     {
       "id": 247,
       "category": "music",
-      "subcategory": "latin",
+      "subcategory": "rap",
       "artist": "Nathy Peluso",
       "title": {
         "es": "Copa Glasé",
@@ -923,7 +923,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=UQ1WLyePSuY",
+      "youtube": "https://www.youtube.com/watch?v=Y_GfOJsR3hg&list=RDY_GfOJsR3hg&start_radio=1",
       "spotify": "https://open.spotify.com/album/4eOjiG8Gdp5S04SYpcjgav",
       "masterpiece": true
     },
@@ -1321,12 +1321,12 @@
         "es": "El álbum debut de Led Zeppelin marcó un hito en el rock con su fusión de blues y hard rock. Contiene clásicos que definen su sonido crudo y potente. Fue fundamental para el desarrollo del rock pesado.",
         "en": "Led Zeppelin's debut album was a milestone in rock with its blend of blues and hard rock. It contains classics that define their raw and powerful sound. It was crucial for the development of heavy rock."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/led.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=HlxuU3WY_E4",
-      "spotify": "https://open.spotify.com/album/44Ig8dzqOkvkGDzaUof9lK",
+      "youtube": "https://www.youtube.com/watch?v=LKbDC3lNVPQ&list=RDLKbDC3lNVPQ&start_radio=1",
+      "spotify": "https://open.spotify.com/playlist/0SawbnPk6H9nwN3xKs7Qkj",
       "masterpiece": true
     },
     {
@@ -1346,7 +1346,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=HQmmM_qwG4k",
+      "youtube": "https://www.youtube.com/watch?v=W2bxOJX-E3M&list=RDW2bxOJX-E3M&start_radio=1",
       "spotify": "https://open.spotify.com/album/70lQYZtypdCALtFVlQAcvx",
       "masterpiece": true
     },
@@ -1367,7 +1367,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=4QDNgMtGkAc",
+      "youtube": "https://www.youtube.com/watch?v=4ryKUOjCgds&list=RD4ryKUOjCgds&start_radio=1",
       "spotify": "https://open.spotify.com/album/6P5QHz4XtxOmS5EuiGIPut",
       "masterpiece": true
     },
@@ -1388,7 +1388,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=QkF3oxziUI4",
+      "youtube": "https://www.youtube.com/watch?v=0hLESLXqBLI&list=RD0hLESLXqBLI&start_radio=1",
       "spotify": "https://open.spotify.com/album/44Ig8dzqOkvkGDzaUof9lK",
       "masterpiece": true
     },
@@ -1409,7 +1409,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=pa2xZh60-5E",
+      "youtube": "https://www.youtube.com/watch?v=3oEcLH0KB4g&list=PLMBlmXntszvan10cG6XLPdTNsncGFiUlQ",
       "spotify": "https://open.spotify.com/album/0GqpoHJREPp0iuXK3HzrHk",
       "masterpiece": true
     },
@@ -1430,7 +1430,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=Juwv3eCmAZc",
+      "youtube": "https://www.youtube.com/watch?v=EH6I31ev1GM&list=RDEH6I31ev1GM&start_radio=1",
       "spotify": "https://open.spotify.com/album/26tH0kjUhkxBEd3ipGkx3Y",
       "masterpiece": true
     },
@@ -1451,7 +1451,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=3e7CRrcHkEw",
+      "youtube": "https://www.youtube.com/watch?v=1t4KLOm7pO0&list=PLMmd10177iHs9yszOnhoFEinWi0TQ0-tH",
       "spotify": "https://open.spotify.com/album/3uhD8hNpb0m3iIZ18RHH5u",
       "masterpiece": true
     },
@@ -1472,7 +1472,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=7F36-9NnZ7k",
+      "youtube": "https://www.youtube.com/watch?v=QRkTo3WbMMQ&list=RDQRkTo3WbMMQ&start_radio=1",
       "spotify": "https://open.spotify.com/album/1W5CtQ7Ng0kP3lXyz7PIT2",
       "masterpiece": true
     },
@@ -1493,7 +1493,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=psGr_rEIRmE",
+      "youtube": "https://www.youtube.com/watch?v=7E-KAP359ys&list=PLCx_l3FfC445NnYd4unxCZeZnzGE0E19j",
       "spotify": "https://open.spotify.com/album/1KVGLuPtrMrLlyy4Je6df7",
       "masterpiece": true
     },
@@ -1514,7 +1514,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=hTWKbfoikeg",
+      "youtube": "https://www.youtube.com/watch?v=V0hDhjO3AwM&list=PL2Kt87NbIXSWhmsp8YEXDLU5nFi_qnBPq",
       "spotify": "https://open.spotify.com/album/2UJcKiJxNryhL050F5Z1Fk",
       "masterpiece": true
     },
@@ -1535,7 +1535,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=JQ9q6xd6Nz0",
+      "youtube": "https://www.youtube.com/watch?v=QtXYIECB6V8&list=RDQtXYIECB6V8&start_radio=1",
       "spotify": "https://open.spotify.com/album/6ohX7moZZnF1FwYrli1OJ6",
       "masterpiece": true
     },
@@ -1871,7 +1871,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=Qv3z_Hxi5o0",
+      "youtube": "https://www.youtube.com/watch?v=QucmeFo-G_E&list=PLhimz2c0mcY3646AxL1I9Ut6d-NYDWI2_",
       "spotify": "https://open.spotify.com/album/1H9g6j4Wwj6wh6p8YHVtkf",
       "masterpiece": true
     },
@@ -1892,7 +1892,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=k2bJu2I81Ho",
+      "youtube": "https://www.youtube.com/watch?v=WMl1xKJeuuQ&list=PLBnJv6rImVe9d2c5lJRP2ThrQ0ypway1j",
       "spotify": "https://open.spotify.com/album/2EpuND32cO7CX0gXZl2NB6",
       "masterpiece": true
     },
@@ -1913,7 +1913,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=HaGyXWt8Wy0",
+      "youtube": "https://www.youtube.com/watch?v=1uKeeRdQlEA&list=RD1uKeeRdQlEA&start_radio=1",
       "spotify": "https://open.spotify.com/album/23enz9nXJhH1BR1Rm5CzDJ",
       "masterpiece": true
     },
@@ -1934,7 +1934,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=7YxAJpFZfr8",
+      "youtube": "https://www.youtube.com/watch?v=9Q73LMKKxbc&list=PLA9-lU434qdtc0G531QtWm3BZD4F8cbqK",
       "spotify": "https://open.spotify.com/album/5jkwdY6jS1Hzi8epr6HW7h",
       "masterpiece": true
     },
@@ -1955,7 +1955,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=2t-1phUAGYQ",
+      "youtube": "https://www.youtube.com/watch?v=Si5CSpUCDGY&list=PLBnJv6rImVe9ReRWEytmSuTL67PT4zu-r",
       "spotify": "https://open.spotify.com/album/5W9OT0a5iZlBr83a9WMKFY",
       "masterpiece": true
     },
@@ -1976,7 +1976,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=6zI_HnZ3gIc",
+      "youtube": "https://www.youtube.com/watch?v=d8ZLqnfvoYQ&list=PL7krxmMTW11DCx-PN1iAzainaosxzov7y",
       "spotify": "https://open.spotify.com/album/17mrdCgqrWfqpJlaCNGCdF",
       "masterpiece": true
     },
@@ -1990,15 +1990,15 @@
         "en": "...Nothing Like the Sun"
       },
       "description": {
-        "es": "Último álbum de estudio con la formación original. Explora sonidos más experimentales y sintetizadores, mostrando un cambio en la evolución musical de la banda.",
-        "en": "Last studio album with the original lineup. Explores more experimental sounds and synthesizers, showing a shift in the band's musical evolution."
+        "es": "...Nothing Like the Sun es una obra introspectiva y sofisticada donde Sting fusiona pop, jazz y sonidos latinos con una sensibilidad lírica poética. Inspirado en parte por la muerte de su madre, el álbum refleja melancolía, amor y crítica social. Es una declaración madura y emocional que consolidó a Sting como artista solista.",
+        "en": "...Nothing Like the Sun is an introspective and sophisticated work in which Sting blends pop, jazz, and Latin sounds with poetic lyrical sensitivity. Partly inspired by his mother’s death, the album expresses melancholy, love, and social commentary. A mature and emotional statement that cemented Sting’s solo artistry."
       },
       "image": "https://i.scdn.co/image/ab67616d0000b273d0c7c131a979c9e5436f89ce",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=2Wc7UEyRVsA",
-      "spotify": "https://open.spotify.com/album/3mVCQqgwEvwD7lHy9KHi7R",
+      "youtube": "https://www.youtube.com/watch?v=HtnFCyla8H8&list=PL8Imvh4rWiAI1DAwClh-hkhaVXaowjFbl",
+      "spotify": "https://open.spotify.com/intl-es/album/2mcQg5lM1KfhVZCte8PkhD",
       "masterpiece": true
     },
     {
@@ -2018,7 +2018,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=GGmQtfqhNhQ",
+      "youtube": "https://www.youtube.com/watch?v=mrUMCYwZpi4&list=PLpeaulzvRx0qNwXl8w6v41ngZf1EUeT49",
       "spotify": "https://open.spotify.com/album/5bdLY9rbyqZduRw5ySy0eX",
       "masterpiece": true
     },
@@ -2039,7 +2039,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=2W4Jr_GpX8w",
+      "youtube": "https://www.youtube.com/watch?v=rw1UnY7ye_U&list=PLfGibfZATlGofWirE2tKJLRhVXEQncojB",
       "spotify": "https://open.spotify.com/album/1Z4RIxVodiz0V9x8veQ9Rr",
       "masterpiece": true
     },
@@ -2060,7 +2060,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=UMVCg_p7rQg",
+      "youtube": "https://www.youtube.com/watch?v=Zn7eWTsj9wU&list=PLpeaulzvRx0oojhvLzh4mEWp08C4Q5mjn",
       "spotify": "https://open.spotify.com/album/2lKs5704qlvP9V9muKZwqY",
       "masterpiece": true
     },
@@ -2081,7 +2081,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=zMTGsL8GdiE",
+      "youtube": "https://www.youtube.com/watch?v=13HymVYXpfs&list=PL8C5C31F378A69733",
       "spotify": "https://open.spotify.com/album/2Pv81V3LlCRNFGk4fQOlX6",
       "masterpiece": true
     },
@@ -2102,7 +2102,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=xJkW_qDQy3w",
+      "youtube": "https://www.youtube.com/watch?v=GdeMcOHLHoo&list=PLvp2PYHf6VJ3irsWVHjosqJU2wBrMV4pm",
       "spotify": "https://open.spotify.com/album/1Q9bwZdkYAZvbvUhiexCEh",
       "masterpiece": true
     },

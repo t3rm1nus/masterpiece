@@ -34,7 +34,7 @@
         "es": "Una sátira musical hilarante y provocadora, donde Mojinos Escozíos fusionan rock cañero con un humor irreverente. La letra ridiculiza el esfuerzo laboral con referencias absurdas a los romanos. Es un ejemplo clásico del estilo único de la banda: ruidoso, directo y sin filtros.",
         "en": "A hilarious and provocative musical satire where Mojinos Escozíos blend heavy rock with irreverent humor. The lyrics mock hard work with absurd references to the Romans. It's a classic example of the band's unique style: loud, direct, and unapologetic."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/mojinos.jpg",
       "tags": [
         "song"
       ],
@@ -63,27 +63,7 @@
       "spotify": "https://open.spotify.com/playlist/3BEdkFlPJgkEtGgkBBLHUC",
       "masterpiece": true
     },
-    {
-      "id": 4,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Delinqüentes",
-      "title": {
-        "es": "Chinchetas en el aire",
-        "en": "Chinchetas en el aire"
-      },
-      "description": {
-        "es": "Un tema emblemático de la banda Los Delinqüentes, mezcla de rock andaluz y blues. Clásico de su repertorio, transmite alegría y desenfado con letras festivas. Su pegadizo ritmo invita a moverse y celebrar la vida cotidiana. Canción viva y enérgica, representativa de su estilo único.",
-        "en": "An emblematic track by Los Delinqüentes, blending Andalusian rock and blues. A classic in their repertoire, it conveys joy and nonchalance through festive lyrics. Its catchy rhythm invites movement and celebration of everyday life. A lively and energetic song representing their unique style."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273425c052c33c1db0d8fe7752a",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?pp=0gcJCf0Ao7VqN5tD&v=-iVTpD90w8k",
-      "spotify": "https://open.spotify.com/album/2GmC3j6Wzb2PETn8vhyeJt",
-      "masterpiece": false
-    },
+    
     {
       "id": 5,
       "category": "music",
@@ -108,7 +88,7 @@
     {
       "id": 6,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "flamenco",
       "artist": "Los Delinqüentes",
       "title": {
         "es": "Chinchetas en el aire",
@@ -122,8 +102,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=-iVTpD90w8k",
-      "spotify": "https://open.spotify.com/album/2GmC3j6Wzb2PETn8vhyeJt",
+      "youtube": "https://www.youtube.com/watch?v=-iVTpD90w8k&list=RD-iVTpD90w8k&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/69btiejQOmpHxMEGuoQuQZ",
       "masterpiece": false
     },
     {
@@ -318,27 +298,7 @@
       "spotify": "https://open.spotify.com/intl-es/track/1PKyGEwod60zhDoyP5z7Ty",
       "masterpiece": false
     },
-    {
-      "id": 19,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Beachdust",
-      "title": {
-        "es": "You",
-        "en": "You"
-      },
-      "description": {
-        "es": "Tema downtempo con atmósfera veraniega y ritmos suaves. Beachdust mezcla texturas electrónicas y vocales etéreos. Perfecto para momentos de relax al aire libre.",
-        "en": "A downtempo track with a summery atmosphere and gentle rhythms. Beachdust combines electronic textures and ethereal vocals. Perfect for relaxing outdoors."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273905d3d7a7e68d776a868dcc0",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/7Kusf5plZjl76X5ARWJbNO",
-      "masterpiece": false
-    },
+    
     {
       "id": 20,
       "category": "music",
@@ -405,7 +365,7 @@
     {
       "id": 23,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "chillout",
       "artist": "Manta Ray",
       "title": {
         "es": "Soy Quien no Fui",
@@ -419,8 +379,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/28Et1GjQGMGNY9oQNDVkGF",
+      "youtube": "https://www.youtube.com/watch?v=9vHl5oHV3Hk&list=RD9vHl5oHV3Hk&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     
@@ -553,7 +513,7 @@
     {
       "id": 31,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "dub",
       "artist": "Los Ganglios",
       "title": {
         "es": "Maese Testarossa - En Noruega",
@@ -563,12 +523,12 @@
         "es": "Tema surrealista con sonidos de synth-pop, electrónica y humor absurdo. Los Ganglios ofrecen ritmo bailable con letra irreverente. Una pieza divertida y ecléctica representativa de su estilo.",
         "en": "A surreal track with synth-pop sounds, electronics, and absurd humor. Los Ganglios deliver a danceable rhythm with irreverent lyrics. A fun and eclectic piece representative of their style."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/noruega.png",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/06J4b4Na031FIRML8k21RR",
+      "youtube": "https://www.youtube.com/watch?v=aInMx3ZxYgI&list=RDaInMx3ZxYgI&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -679,7 +639,7 @@
     {
       "id": 37,
       "category": "music",
-      "subcategory": "latin",
+      "subcategory": "flamenco",
       "artist": "Bebo Valdés & Diego El Cigala",
       "title": {
         "es": "Inolvidable",
@@ -714,7 +674,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=A5tBE1Wn2gI&list=RDA5tBE1Wn2gI&start_radio=1",
       "spotify": "https://open.spotify.com/album/3msSCqpQLoY0nl4RTSf1Is",
       "masterpiece": false
     },
@@ -766,18 +726,18 @@
       "subcategory": "rock",
       "artist": "Extremoduro",
       "title": {
-        "es": "La carrera",
-        "en": "The Race"
+        "es": "Yo minoria absoluta",
+        "en": "Yo minoria absoluta"
       },
       "description": {
         "es": "Rock potente con lírica poética sobre la carrera vital y el afán de superación. Guitarras intensas y emotivas al servicio de la narrativa personal. Uno de los temas más emblemáticos de Extremoduro.",
         "en": "Powerful rock with poetic lyrics about life's race and the drive to overcome. Intense and emotional guitars support the personal narrative. One of Extremoduro's most emblematic tracks."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/minoria.jpg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=Oz5qg4pLm78&list=PLF2CADA05E3DAA5B1",
       "spotify": "https://open.spotify.com/album/3FgvMxabfL5UtlcPzASEhh",
       "masterpiece": false
     },
@@ -787,19 +747,19 @@
       "subcategory": "rock",
       "artist": "Extremoduro",
       "title": {
-        "es": "Estate al loro!",
+        "es": "Correcaminos Estate al loro!",
         "en": "Stay Alert!"
       },
       "description": {
         "es": "Enérgico tema en vivo con carácter festivo, guitarras afiladas y buen humor. El grupo conecta con el público en un canto a la vida y la amistad desacomplejada. Gran momento en directo de Extremoduro.",
         "en": "Energetic live track with festive character, sharp guitars and good humor. The band connects with the audience in a celebration of life and unashamed friendship. A highlight of Extremoduro's live shows."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://i.scdn.co/image/ab67616d0000b273489635998e8b3a9dec1ae455",
       "tags": [
         "live"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/3msSCqpQLoY0nl4RTSf1Is",
+      "youtube": "https://www.youtube.com/watch?v=s_2_Sixt-Sw&list=RDs_2_Sixt-Sw&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/6f6SOVV9QJjWnwART9RgQJ",
       "masterpiece": false
     },
     {
@@ -829,8 +789,8 @@
       "subcategory": "rock",
       "artist": "Cráneo feat. Escandaloso Xpósito",
       "title": {
-        "es": "En Las Nubes",
-        "en": "In the Clouds"
+        "es": "Picnic",
+        "en": "Picnic"
       },
       "description": {
         "es": "Rock melódico con letra emotiva sobre soñar y escapar de la rutina. Cráneo y Escandaloso Xpósito imprimen sensibilidad urbana y reflexión personal. Melodías envolventes acompañadas de guitarras cálidas.",
@@ -838,10 +798,10 @@
       },
       "image": "/imagenes/musica/pordefecto.jpg",
       "tags": [
-        "song"
+        "album"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/73KT9WlDKkzNMOqtnOxnCa",
+      "youtube": "https://www.youtube.com/watch?v=jze9eBhjY7A&list=RDjze9eBhjY7A&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/album/3lis08qlrQ26tP79Ql72Zp",
       "masterpiece": false
     },
     {
@@ -884,356 +844,39 @@
       "tags": [
         "live"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/3JDxhTB9pdSsbXDz4hRFSs",
+      "youtube": "https://www.youtube.com/watch?v=M5_WGgkzAcw&list=PLhGC5I7hp8omVqhZVMNQFirZ1X_41q3iq",
+      "spotify": "",
       "masterpiece": false
     },
-    {
-      "id": 47,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Pink Floyd",
-      "title": {
-        "es": "Wish You Were Here – Shine On You Crazy Diamond (Part I)",
-        "en": "Wish You Were Here – Shine On You Crazy Diamond (Part I)"
-      },
-      "description": {
-        "es": "Medley emotivo que empieza con Wish You Were Here y transita hacia Shine On You Crazy Diamond Part I. Rock progresivo lleno de melancolía y homenaje a Syd Barrett. Guitarras atmosféricas y solos memorables.",
-        "en": "An emotional medley starting with Wish You Were Here flowing into Shine On You Crazy Diamond Part I. Progressive rock filled with melancholy and tribute to Syd Barrett. Atmospheric guitars and memorable solos."
-      },
-      "year": "1975",
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/0bCAjiUamIFqKJsekOYuRw",
-      "masterpiece": true
-    },
-    {
-      "id": 48,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Espíritus",
-      "title": {
-        "es": "Gratitud (Full Album)",
-        "en": "Gratitude (Full Album)"
-      },
-      "description": {
-        "es": "Álbum completo que fusiona rock, blues y ritmos sudamericanos. Letras introspectivas sobre agradecimiento y vida. Texturas sonoras cálidas y orgánicas que envuelven al oyente.",
-        "en": "A full album fusing rock, blues, and South American rhythms. Introspective lyrics about gratitude and life. Warm and organic sound textures that envelop the listener."
-      },
-      "year": "",
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/4wojL8SZIhIi5DRxx7NYbN",
-      "masterpiece": false
-    },
-    {
-      "id": 49,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Glass Beams",
-      "title": {
-        "es": "One Raga to a Disco Beat",
-        "en": "One Raga to a Disco Beat"
-      },
-      "description": {
-        "es": "Track que fusiona música india tradicional (raga) con ritmos disco modernos. Glass Beams crea puente sonoro entre culturas con estilo bailable y psicodélico. Texturas hipnóticas y groove contundente.",
-        "en": "A track that fuses traditional Indian raga with modern disco beats. Glass Beams creates a sonic bridge between cultures with a danceable and psychedelic style. Hypnotic textures and strong groove."
-      },
-      "year": "2021",
-      "image": "/imagenes/musica/glass.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/5bKF2z5wFo7fLEqU0Ay1Jg",
-      "masterpiece": true
-    },
+    
+   
+   
     {
       "id": 50,
       "category": "music",
       "subcategory": "rock",
       "artist": "Los Suaves",
       "title": {
-        "es": "Chaquetas De Cuero (Live)",
-        "en": "Leather Jackets (Live)"
+        "es": "¿Hay alguien ahí?",
+        "en": "¿Hay alguien ahí?"
       },
       "description": {
-        "es": "Grabación en vivo de rock enérgico y clásico, con guitarras potentes y actitud festivalera. Los Suaves conectan con su público con riffs intensos y performance vibrante. Gran momento en directo.",
-        "en": "Live recording of energetic, classic rock with powerful guitars and festival attitude. Los Suaves connect with their audience through intense riffs and a vibrant performance. A great moment live."
+        "es": "Hay alguien ahí es un grito melancólico y crudo desde la soledad. Con guitarras intensas y la voz quebrada de Yosi, Los Suaves convierten el vacío existencial en pura electricidad emocional. Un himno del rock español más visceral.",
+        "en": "Hay alguien ahí is a raw, melancholic cry from loneliness. With powerful guitars and Yosi’s broken voice, Los Suaves turn existential emptiness into emotional electricity. A visceral anthem of Spanish rock."
       },
       "year": "2002",
-      "image": "/imagenes/musica/live.png",
+      "image": "/imagenes/musica/suaves.jpg",
       "tags": [
         "live"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6MXM5OM3TjFsYtOQJVBxtu",
+      "youtube": "https://www.youtube.com/watch?v=HvlyxB5Vr2Q&list=PL9QttKtn1jsHNfu7SxtOrfqZplB7tFjtD",
+      "spotify": "https://open.spotify.com/intl-es/album/019W9SmD7B6UJrVmYAamuj",
       "masterpiece": false
     },
-    {
-      "id": 51,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "Dulce Castigo (Live)",
-        "en": "Dulce Castigo (Live)"
-      },
-      "description": {
-        "es": "Interpretación en vivo cargada de energía y emoción. Las guitarras rugen mientras la voz transmite nostalgia. El público responde con fuerza. Una pieza emblemática del directo de Los Suaves.",
-        "en": "A live performance loaded with energy and emotion. Guitars roar as the vocals convey nostalgia. The audience responds powerfully. An emblematic piece from Los Suaves' live shows."
-      },
-      "year": "2002",
-      "image": "https://i.scdn.co/image/ab67616d0000b27313b98ab056a1c9308fa82f69",
-      "tags": [
-        "live"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6MXM5OM3TjFsYtOQJVBxtu",
-      "masterpiece": false
-    },
-    {
-      "id": 52,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "Dame Rock & Roll (Live)",
-        "en": "Dame Rock & Roll (Live)"
-      },
-      "description": {
-        "es": "Temazo en vivo con ritmo arrollador y actitud rockera. Invitación directa a moverse y contagiarse del sonido crudo. El ambiente de concierto se siente en cada acorde.",
-        "en": "A live anthem with overwhelming rhythm and rock attitude. A direct invitation to move and dive into the raw sound. The concert atmosphere is felt in every chord."
-      },
-      "year": "2002",
-      "image": "https://i.scdn.co/image/ab67616d0000b27363beb6bccfaac2cc667111e3",
-      "tags": [
-        "live"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/2dFMdArzhieL38xrO5S5Bv",
-      "masterpiece": false
-    },
-    {
-      "id": 53,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "Hendrix (Live)",
-        "en": "Hendrix (Live)"
-      },
-      "description": {
-        "es": "Homenaje vivo a Jimi Hendrix con espíritu de improvisación. Guitarras chispeantes y solos inspirados. Una pieza que combina virtuosismo y sentimiento.",
-        "en": "A live tribute to Jimi Hendrix with an improvisational spirit. Crisp guitars and inspired solos. A piece that combines virtuosity and feeling."
-      },
-      "year": "2002",
-      "image": "https://i.scdn.co/image/ab67616d0000b27363beb6bccfaac2cc667111e3",
-      "tags": [
-        "live"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/5z090LQztiqh13wYspQvKQ",
-      "masterpiece": false
-    },
-    {
-      "id": 54,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "Por Una Vez En La Vida (Live)",
-        "en": "For Once in Life (Live)"
-      },
-      "description": {
-        "es": "Balada rock en directo con gran carga emocional. Voces intensas y atmósfera profunda. Los Suaves demuestran su poder para conmover al público.",
-        "en": "A live rock ballad with great emotional impact. Intense vocals and deep atmosphere. Los Suaves demonstrate their power to move the audience."
-      },
-      "year": "2002",
-      "image": "/imagenes/musica/live.png",
-      "tags": [
-        "live"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6MXM5OM3TjFsYtOQJVBxtu",
-      "masterpiece": false
-    },
-    {
-      "id": 55,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "Pardao (Live)",
-        "en": "Pardao (Live)"
-      },
-      "description": {
-        "es": "En directo, este tema transmite una mezcla de melancolía y fuerza. Guitarras limpias que se transforman en riff potentes. El público vibra con cada nota.",
-        "en": "Live, this track conveys a mix of melancholy and strength. Clean guitars that evolve into powerful riffs. The audience vibrates with every note."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b27313b98ab056a1c9308fa82f69",
-      "tags": [
-        "live"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6MXM5OM3TjFsYtOQJVBxtu",
-      "masterpiece": false
-    },
-    {
-      "id": 56,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "Malas Noticias (Live)",
-        "en": "Bad News (Live)"
-      },
-      "description": {
-        "es": "Tema rock directo con guitarras crudas y letra de desengaño. Grabación en vivo que destaca la conexión con los fans. Actitud combativa y sentimiento sincero.",
-        "en": "A straightforward rock track with raw guitars and lyrics of disappointment. Live recording highlighting connection with fans. Combative attitude and sincere emotion."
-      },
-      "image": "/imagenes/musica/live.png",
-      "tags": [
-        "live"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/1ic9j2WwLCengMff4g0SOC",
-      "masterpiece": false
-    },
-    {
-      "id": 57,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "Parece Que Aún Fue Ayer",
-        "en": "It Seems Like It Was Just Yesterday"
-      },
-      "description": {
-        "es": "Rock nostálgico con letra que rememora tiempos pasados. Melodía suave al inicio que crescendo hacia riffs intensos. Conmovedora en directo.",
-        "en": "Nostalgic rock with lyrics that reminisce about past times. A soft melody at first that crescendos into intense riffs. Moving live."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6MXM5OM3TjFsYtOQJVBxtu",
-      "masterpiece": false
-    },
-    {
-      "id": 58,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "No Me Mires (Live)",
-        "en": "Don't Look at Me (Live)"
-      },
-      "description": {
-        "es": "Tema en vivo con guitarras envolventes y voz llena de sentimiento. Melodía intensa y estribillo que atrapa. Ejemplo de su capacidad para emocionar.",
-        "en": "Live track with enveloping guitars and heartfelt vocals. Intense melody and captivating chorus. An example of their ability to evoke emotion."
-      },
-      "image": "/imagenes/musica/live.png",
-      "tags": [
-        "live"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6MXM5OM3TjFsYtOQJVBxtu",
-      "masterpiece": false
-    },
-    {
-      "id": 59,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "Viajando Al Fin De La Noche (Live)",
-        "en": "Traveling to the End of the Night (Live)"
-      },
-      "description": {
-        "es": "Rock oscuro en directo con atmósfera nocturna. Guitarras densas y tempo envolvente. El público se sumerge en la narrativa musical.",
-        "en": "Dark live rock with a nocturnal atmosphere. Dense guitars and immersive tempo. The audience is immersed in the musical narrative."
-      },
-      "image": "/imagenes/musica/live.png",
-      "tags": [
-        "live"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6MXM5OM3TjFsYtOQJVBxtu",
-      "masterpiece": false
-    },
-    {
-      "id": 60,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "Si Pudiera (Live)",
-        "en": "Si Pudiera (Live)"
-      },
-      "description": {
-        "es": "Balada en directo llena de emoción y nostalgia, donde la voz transmite profunda melancolía. Guitarras limpias evolucionan hacia pasajes más potentes. Se percibe la conexión íntima con el público en cada estrofa.",
-        "en": "A live ballad filled with emotion and nostalgia, where the vocals convey deep melancholy. Clean guitars evolve into more powerful passages. You can feel the intimate connection with the audience in every verse."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b27363beb6bccfaac2cc667111e3",
-      "tags": [
-        "live"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6MXM5OM3TjFsYtOQJVBxtu",
-      "masterpiece": false
-    },
-    {
-      "id": 61,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "Pobre Jugador!",
-        "en": "Poor Player!"
-      },
-      "year": 1989,
-      "description": {
-        "es": "Tema contundente con letra de crítica y resignación, cargado de fuerza emocional. Guitarras vigorosas y actitud desafiante definen su carácter. Excelente ejemplo del rock crudo de la banda.",
-        "en": "A punchy track with lyrics of critique and resignation, full of emotional strength. Vigorous guitars and defiant attitude define its character. A great example of the band's raw rock."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6MXM5OM3TjFsYtOQJVBxtu",
-      "masterpiece": false
-    },
-    {
-      "id": 62,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "Dolores Se Llamaba Lola",
-        "en": "Her Name Was Lola"
-      },
-      "year": 1989,
-      "description": {
-        "es": "Historia rockera con fuerte carga sentimental, narrada con tono dramático. Arreglos de guitarras melódicas que acompañan la emoción de la pérdida. Uno de los temas más recordados y sentidos del grupo.",
-        "en": "A rock story with strong sentimental weight, narrated dramatically. Melodic guitar arrangements accompany the emotion of loss. One of the group's most remembered and heartfelt songs."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/3t7NIRetS6dQVLcQIUTkQg",
-      "masterpiece": false
-    },
+    
+    
+    
+   
     {
       "id": 63,
       "category": "music",
@@ -1248,78 +891,15 @@
         "es": "Rock con atmósfera nocturna y melancólica, muy sugestivo. Voces rasgadas y guitarras densas generan tensión emocional. Un tema que cautiva por su intensidad y oscuridad.",
         "en": "Rock with a nocturnal, melancholic atmosphere, very evocative. Raspy vocals and dense guitars generate emotional tension. A track that captivates with its intensity and darkness."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/suaves.jpg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6MXM5OM3TjFsYtOQJVBxtu",
+      "youtube": "https://www.youtube.com/watch?v=UuwcrYFEzA0&list=RDUuwcrYFEzA0&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
-    {
-      "id": 64,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "Dile Siempre Que No Estoy",
-        "en": "Always Tell Them I'm Not Here"
-      },
-      "year": 1993,
-      "description": {
-        "es": "Balada rock llena de nostalgia y sinceridad, con letra sobre ausencia y desamor. Guitarras envolventes crean una atmósfera íntima. El público se identifica con su melancolía en directo.",
-        "en": "A rock ballad full of nostalgia and sincerity, with lyrics about absence and heartbreak. Enveloping guitars create an intimate atmosphere. The audience identifies with its melancholy live."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/6MXM5OM3TjFsYtOQJVBxtu",
-      "masterpiece": false
-    },
-    {
-      "id": 65,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "Maldita Sea Mi Suerte",
-        "en": "Damn My Luck"
-      },
-      "description": {
-        "es": "Tema con actitud irreverente, mezcla de ironía y resentimiento. Guitarras agresivas y coro pegadizo proyectan energía canalla. Refleja la crudeza y humor del grupo.",
-        "en": "A song with irreverent attitude, mixing irony and resentment. Aggressive guitars and catchy chorus project rogue energy. It reflects the band's rawness and humor."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/3mBjYPWKpUOMqQmv55Jq4K",
-      "masterpiece": false
-    },
-    {
-      "id": 66,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Los Suaves",
-      "title": {
-        "es": "No Puedo Dejar El Rock (Live)",
-        "en": "I Can't Quit Rock (Live)"
-      },
-      "description": {
-        "es": "Himno en directo al rock, con guitarras vibrantes y pasión evidente. El público canta y participa en cada estribillo. Uno de los momentos más memorables de sus conciertos.",
-        "en": "A live anthem to rock, with vibrant guitars and visible passion. The audience sings along each chorus. One of the most memorable moments of their concerts."
-      },
-      "image": "/imagenes/musica/live.png",
-      "tags": [
-        "live"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/2dFMdArzhieL38xrO5S5Bv",
-      "masterpiece": false
-    },
+    
     {
       "id": 67,
       "category": "music",
@@ -1362,27 +942,7 @@
       "spotify": "https://open.spotify.com/intl-es/track/4bRPecD9suGW8CfNZhzjS1",
       "masterpiece": false
     },
-    {
-      "id": 69,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Cráneo / Sloth Brite",
-      "title": {
-        "es": "Fue un Veranito de Ensueño",
-        "en": "It Was a Dreamy Little Summer"
-      },
-      "description": {
-        "es": "Rock alternativo veraniego con tono nostálgico y melódico. Letras evocadoras de momentos pasados y sensaciones cálidas. Guitarras brillantes que subrayan la ligereza del tema.",
-        "en": "Alternative summer rock with a nostalgic and melodic tone. Lyrics evoke past moments and warm sensations. Bright guitars underline the song's lightness."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/2YDFvGYKnaUcB5O84yvsvM",
-      "masterpiece": false
-    },
+   
     {
       "id": 70,
       "category": "music",
@@ -1652,7 +1212,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=41rHn1Qe1uI",
+      "youtube": "https://www.youtube.com/watch?v=IxISohLjMqY&list=RDIxISohLjMqY&start_radio=1",
       "spotify": "https://open.spotify.com/album/4COZn5okauxP5luXkwEPLd",
       "masterpiece": true
     },
@@ -1824,27 +1384,7 @@
       "spotify": "https://open.spotify.com/intl-es/track/1RWXFHOJ6XjK8a9pitucrX",
       "masterpiece": false
     },
-    {
-      "id": 91,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Colour Haze",
-      "title": {
-        "es": "Tempel",
-        "en": "Tempel"
-      },
-      "description": {
-        "es": "Álbum del grupo alemán Colour Haze que mezcla rock psicodélico y stoner rock con atmósferas envolventes y guitarras hipnóticas. 'Tempel' es un viaje sonoro denso y atmosférico, perfecto para los amantes del rock experimental y el sonido vintage.",
-        "en": "Album by German band Colour Haze blending psychedelic rock and stoner rock with immersive atmospheres and hypnotic guitars. 'Tempel' is a dense and atmospheric sonic journey, perfect for lovers of experimental rock and vintage sound."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273c9b05526dba5e4d1f27d8309",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=QbFhRmlMCvA",
-      "spotify": "https://open.spotify.com/album/5KuXPHPuYVisNCwUgunWG5",
-      "masterpiece": false
-    },
+   
     {
       "id": 92,
       "category": "music",
@@ -1904,7 +1444,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=G_sBOsh-vyI",
+      "youtube": "https://www.youtube.com/watch?v=G_sBOsh-vyI&list=RDG_sBOsh-vyI&start_radio=1",
       "spotify": "https://open.spotify.com/album/0eOpLKj4pKTz3ApWsDbH8C",
       "masterpiece": false
     },
@@ -1925,7 +1465,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=7swz2k94MFY",
+      "youtube": "https://www.youtube.com/watch?v=JukTvlrh-Wk&list=RDJukTvlrh-Wk&start_radio=1",
       "spotify": "https://open.spotify.com/album/3PAQc5qpnGKTGoZHakj1zt",
       "masterpiece": false
     },
@@ -1992,27 +1532,7 @@
       "spotify": "https://open.spotify.com/intl-es/track/4Y2glvLjQGOb4dXnwm1hQf",
       "masterpiece": false
     },
-    {
-      "id": 100,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Pink Floyd",
-      "title": {
-        "es": "Wish You Were Here",
-        "en": "Wish You Were Here"
-      },
-      "description": {
-        "es": "Álbum emblemático de Pink Floyd que explora la ausencia y la alienación con sonidos progresivos y psicodélicos. Sus letras profundas y atmósferas envolventes lo convierten en una obra maestra del rock. Un viaje emocional y musical imprescindible.",
-        "en": "Iconic Pink Floyd album exploring absence and alienation with progressive and psychedelic sounds. Its deep lyrics and immersive atmospheres make it a rock masterpiece. An essential emotional and musical journey."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b2731a84d71391df7469c5ab8539",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=IXdNnw99-Ic",
-      "spotify": "https://open.spotify.com/album/0bCAjiUamIFqKJsekOYuRw",
-      "masterpiece": true
-    },
+    
     {
       "id": 101,
       "category": "music",
@@ -2051,31 +1571,11 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=3zC8wpP2wg8",
+      "youtube": "https://www.youtube.com/watch?v=Q0oIoR9mLwc&list=RDQ0oIoR9mLwc&start_radio=1",
       "spotify": "https://open.spotify.com/album/37eXSZNVEY3XthbJzTGIIo",
       "masterpiece": false
     },
-    {
-      "id": 103,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Stoned Jesus",
-      "title": {
-        "es": "Seven Thunders Roar",
-        "en": "Seven Thunders Roar"
-      },
-      "description": {
-        "es": "Álbum de stoner rock y doom metal con riffs pesados y atmósferas densas. 'Seven Thunders Roar' fusiona psicodelia y potencia, creando un sonido envolvente y oscuro que sumerge al oyente en un viaje sónico intenso y poderoso.",
-        "en": "'Seven Thunders Roar' is a stoner rock and doom metal album with heavy riffs and dense atmospheres. It blends psychedelia and power, creating an immersive and dark sound that takes listeners on an intense sonic journey."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273ceec2c1d0703e79715f9f452",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=1y5xGyNnEoQ",
-      "spotify": "https://open.spotify.com/album/6fJyDBNvLw8fj67g29OECJ",
-      "masterpiece": false
-    },
+   
     {
       "id": 104,
       "category": "music",
@@ -2100,7 +1600,7 @@
     {
       "id": 105,
       "category": "music",
-      "subcategory": "latin",
+      "subcategory": "flamenco",
       "artist": "Fuel Fandango",
       "title": {
         "es": "Always Searching",
@@ -2114,14 +1614,14 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=8bIMMY1Ul88",
+      "youtube": "https://www.youtube.com/watch?v=KkrDZJ11Cdk&list=RDKkrDZJ11Cdk&start_radio=1",
       "spotify": "https://open.spotify.com/album/6NqYTQiv0OluEf9u3vwbtS",
       "masterpiece": false
     },
     {
       "id": 106,
       "category": "music",
-      "subcategory": "latin",
+      "subcategory": "flamenco",
       "artist": "Fuel Fandango",
       "title": {
         "es": "Toda la vida",
@@ -2135,7 +1635,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=7zQCPfp4xGk",
+      "youtube": "https://www.youtube.com/watch?v=Y_GfOJsR3hg&list=RDY_GfOJsR3hg&start_radio=1",
       "spotify": "https://open.spotify.com/album/7kCj2sfkXEqOg9zODUGCHK",
       "masterpiece": false
     },
@@ -3111,7 +2611,7 @@
     {
       "id": 156,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "rap",
       "artist": "JOSELE (ZNP)",
       "title": {
         "es": "Una Pistola",
@@ -3125,8 +2625,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=CVO0jhzZ6mc",
-      "spotify": "https://open.spotify.com/album/3JDxhTB9pdSsbXDz4hRFSs",
+      "youtube": "https://www.youtube.com/watch?v=6fBJwrohhLU&list=RD6fBJwrohhLU&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -3911,11 +3411,11 @@
     {
       "id": 196,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "rap",
       "artist": "El Sicario",
       "title": {
-        "es": "La Ley de Ohm (Directo Barcelona 2008)",
-        "en": "The Law of Ohm (Live Barcelona 2008)"
+        "es": "La Ley de Ohm",
+        "en": "The Law of Ohm"
       },
       "description": {
         "es": "Concierto en vivo del grupo El Sicario en Barcelona, 2008, donde interpretan 'La Ley de Ohm' con toda su energía y fuerza rockera. Un tema que mezcla riffs potentes con letras contundentes y un ambiente intenso en directo.",
@@ -3926,8 +3426,8 @@
         "live",
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=somevideoid",
-      "spotify": "https://open.spotify.com/album/188Jt3FCGpNaXwbQW1l1Ii",
+      "youtube": "https://www.youtube.com/watch?v=Uhj0VPkqUc8&list=RDUhj0VPkqUc8&start_radio=1&t=487s",
+      "spotify": "",
       "masterpiece": false
     },
     {

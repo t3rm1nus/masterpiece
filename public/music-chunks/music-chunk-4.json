@@ -1014,7 +1014,7 @@
     {
       "id": 652,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "punk",
       "artist": "Rage Against the Machine",
       "title": {
         "es": "Rage Against the Machine",
@@ -1028,14 +1028,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=W9X9aZ_7U7c",
-      "spotify": "https://open.spotify.com/album/7FyJiNPCsjaS8tRJgsyxqS",
+      "youtube": "https://www.youtube.com/watch?v=cXvoNtuZS4s&list=PLZSpx1qgL044RQ9gam5dpLD-EYl1BwEND",
+      "spotify": "https://open.spotify.com/intl-es/album/4LaRYkT4oy47wEuQgkLBul",
       "masterpiece": true
     },
     {
       "id": 653,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "punk",
       "artist": "Rage Against the Machine",
       "title": {
         "es": "Evil Empire",
@@ -1049,14 +1049,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=hNQmAhr0r7o",
+      "youtube": "https://www.youtube.com/watch?v=QkM-r4ZdX1o&list=PL0Yz4dINw_VIJ0bkHJe3ZV5ktsFsYxL2K",
       "spotify": "https://open.spotify.com/album/24E6rDvGDuYFjlGewp4ntF",
       "masterpiece": true
     },
     {
       "id": 654,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "punk",
       "artist": "Rage Against the Machine",
       "title": {
         "es": "The Battle of Los Angeles",
@@ -1070,14 +1070,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=0eE2mGMWicA",
+      "youtube": "https://www.youtube.com/watch?v=sWmog0Ue4Wo&list=RDsWmog0Ue4Wo&start_radio=1",
       "spotify": "https://open.spotify.com/album/2eia0myWFgoHuttJytCxgX",
       "masterpiece": true
     },
     {
       "id": 655,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "punk",
       "artist": "Rage Against the Machine",
       "title": {
         "es": "Renegades",
@@ -1091,7 +1091,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=qyVz8g2z1RQ",
+      "youtube": "https://www.youtube.com/watch?v=lgKOmdY68TU&list=PLiN-7mukU_REkHjzju_Aels1vQ3lEFI2d",
       "spotify": "https://open.spotify.com/album/6iVOwFVjFRoQPgj8GUwSsi",
       "masterpiece": true
     },
@@ -1492,7 +1492,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=LBkL-oJ0V2Q",
+      "youtube": "https://www.youtube.com/watch?v=ZYCQP-6XaYI&list=PLwU-TQrYVN3i1lgsdD7jcGm6eoAMhk4Qy",
       "spotify": "https://open.spotify.com/album/6q08XAhUvwQiXkBr3qcJOE",
       "masterpiece": true
     },
@@ -1509,12 +1509,12 @@
         "es": "Seven es un álbum poderoso que muestra la evolución de Colour Haze hacia sonidos más maduros y experimentales. Sus composiciones fusionan riffs pesados con psicodelia expansiva y un pulso hipnótico.",
         "en": "Seven is a powerful album that shows Colour Haze's evolution towards more mature and experimental sounds. Its compositions fuse heavy riffs with expansive psychedelia and a hypnotic pulse."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/seven.png",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=qIQYc13AlZ4",
-      "spotify": "https://open.spotify.com/album/6XM7UsikbFR5jswcGzslUx",
+      "youtube": "https://www.youtube.com/watch?v=EoT1XTrpVqo&list=PLx-v6CN-qPYft_c7AmgF3bG4M1AqMDNXV",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -1534,7 +1534,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=l1Tq2rBf4BQ",
+      "youtube": "https://www.youtube.com/watch?v=Ne2ALVhRR98&list=PLLxJ2larDKKxenaMsRet0UwjNyMEM0Hid",
       "spotify": "https://open.spotify.com/album/7arNkuWGhPKDUTFjUQZpXW",
       "masterpiece": true
     },
@@ -1555,7 +1555,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=0H_KzPVV9Bg",
+      "youtube": "https://www.youtube.com/watch?v=KSHFhHnguZ0&list=PLIxG4t3Q6FTlGQiA989OZLB_hTseBNUrC",
       "spotify": "https://open.spotify.com/album/5KuXPHPuYVisNCwUgunWG5",
       "masterpiece": true
     },
@@ -1576,7 +1576,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=9zUPGAPsVhA",
+      "youtube": "https://www.youtube.com/watch?v=s5kd8caqt6U&list=PLA_k6jeZLgwGroWgn_LhG5nFLi3PcIy9w",
       "spotify": "https://open.spotify.com/album/5GPkJFN7mq1kggxtC3pUNB",
       "masterpiece": true
     },
@@ -1597,7 +1597,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=38MSWZpqY0I",
+      "youtube": "https://www.youtube.com/watch?v=i-uC9so_wMQ&list=RDi-uC9so_wMQ&start_radio=1",
       "spotify": "https://open.spotify.com/album/0t0DM6n6xAAiR2PWRYH0ID",
       "masterpiece": true
     },
@@ -2145,7 +2145,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=LVpTzRhO1Pc",
+      "youtube": "https://www.youtube.com/watch?v=e-u0jeEaXio&list=RDe-u0jeEaXio&start_radio=1",
       "spotify": "https://open.spotify.com/album/4aXhX1cye8Aht6IvBrh11Q",
       "masterpiece": true
     },
@@ -2166,7 +2166,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=GV2sH2rdRUI",
+      "youtube": "https://www.youtube.com/watch?v=RJZYCL07cRU&list=RDRJZYCL07cRU&start_radio=1",
       "spotify": "https://open.spotify.com/album/6fJyDBNvLw8fj67g29OECJ",
       "masterpiece": true
     },
@@ -2187,52 +2187,12 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=nVIXsGdk8nI",
+      "youtube": "https://www.youtube.com/watch?v=EBZcKgNmLuc&list=PLEaSuDtBT1gggp-OCDGMEP6L0NwONj3wj",
       "spotify": "https://open.spotify.com/album/1M9OLlIB81ygaauBdOK1sQ",
       "masterpiece": true
     },
-    {
-      "id": 711,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Stoned Jesus",
-      "title": {
-        "es": "Pilgrims + EP",
-        "en": "Pilgrims + EP"
-      },
-      "description": {
-        "es": "Reedición de 2016 que incluye el álbum Pilgrims junto a un EP adicional con material extra. Ofrece una visión más completa del desarrollo musical de la banda en esa etapa, con temas poderosos y atmosféricos.",
-        "en": "2016 reissue including the album Pilgrims plus an additional EP with extra material. Offers a more complete view of the band's musical development at that stage, with powerful and atmospheric tracks."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=nVIXsGdk8nI",
-      "spotify": "https://open.spotify.com/album/6ufoOtpwsgx0wpbQBQOH7H",
-      "masterpiece": true
-    },
-    {
-      "id": 712,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Stoned Jesus",
-      "title": {
-        "es": "Song of the Black River",
-        "en": "Song of the Black River"
-      },
-      "description": {
-        "es": "Lanzado en 2018, este álbum muestra una evolución hacia un sonido más oscuro y experimental, con influencias de doom y psicodelia. Presenta composiciones largas y atmosféricas, consolidando la madurez musical de la banda.",
-        "en": "Released in 2018, this album shows an evolution toward a darker and more experimental sound, with doom and psychedelic influences. Features long and atmospheric compositions, consolidating the band's musical maturity."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=Xd-xCmSwS7g",
-      "spotify": "https://open.spotify.com/album/3UBVghJdzMUBfrrt0rAXYH",
-      "masterpiece": true
-    },
+   
+    
     {
       "id": 714,
       "category": "music",
@@ -2320,7 +2280,7 @@
     {
       "id": 718,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "flamenco",
       "artist": "Fuel Fandango",
       "title": {
         "es": "Fuel Fandango",
@@ -2341,7 +2301,7 @@
     {
       "id": 719,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "flamenco",
       "artist": "Fuel Fandango",
       "title": {
         "es": "Aurora",
@@ -2362,7 +2322,7 @@
     {
       "id": 720,
       "category": "music",
-      "subcategory": "electronic",
+      "subcategory": "flamenco",
       "artist": "Fuel Fandango",
       "title": {
         "es": "Origen",
@@ -3039,7 +2999,7 @@
     {
       "id": 760,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "pop",
       "artist": "The Beatles",
       "title": {
         "es": "Please Please Me",
@@ -3053,7 +3013,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=6tXQZnI9yT4",
+      "youtube": "https://www.youtube.com/watch?v=oxwAB3SECtc&list=PLycVTiaj8OI9COuVDJdw_RdBWy11ALc4T",
       "spotify": "https://open.spotify.com/album/3KzAvEXcqJKBF97HrXwlgf",
       "masterpiece": true
     },
@@ -3074,14 +3034,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=IUnP7I3E-3A",
+      "youtube": "https://www.youtube.com/watch?v=UVKU6SevefY&list=PLL-NbN8uTOij0F1ZNZDIUIBrGrf74RG7r",
       "spotify": "https://open.spotify.com/album/1aYdiJk6XKeHWGO3FzHHTr",
       "masterpiece": true
     },
     {
       "id": 762,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "pop",
       "artist": "The Beatles",
       "title": {
         "es": "A Hard Day's Night",
@@ -3095,14 +3055,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=OqDf6R3lt2E",
+      "youtube": "https://www.youtube.com/watch?v=5en2JMLA8Z0&list=PLycVTiaj8OI-HjTjakWPpJO9Y6kh1icp2",
       "spotify": "https://open.spotify.com/album/6wCttLq0ADzkPgtRnUihLV",
       "masterpiece": true
     },
     {
       "id": 763,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "pop",
       "artist": "The Beatles",
       "title": {
         "es": "Beatles for Sale",
@@ -3116,14 +3076,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=3XQW5vDv4ik",
+      "youtube": "https://www.youtube.com/watch?v=YgFo9STa70E&list=PL_O_p_fmCqpYoAIfLW4T7r-yksNnX1cSQ",
       "spotify": "https://open.spotify.com/album/1vANZV20H5B4Fk6yf7Ot9a",
       "masterpiece": true
     },
     {
       "id": 764,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "pop",
       "artist": "The Beatles",
       "title": {
         "es": "Help!",
@@ -3137,7 +3097,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=2Q_ZzBGPdqE",
+      "youtube": "https://www.youtube.com/watch?v=MKUex3fci5c&list=PLycVTiaj8OI9JtydS7uKMO1FGl8UDBmcZ",
       "spotify": "https://open.spotify.com/album/0PT5m6hwPRrpBwIHVnvbFX",
       "masterpiece": true
     },
@@ -3158,14 +3118,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=1ay6VH7oBMA",
+      "youtube": "https://www.youtube.com/watch?v=OsjTO0yZQjk&list=PLycVTiaj8OI9Ptzsl9nzxfwUgZ0jx-Hyb",
       "spotify": "https://open.spotify.com/album/50o7kf2wLwVmOTVYJOTplm",
       "masterpiece": true
     },
     {
       "id": 766,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "pop",
       "artist": "The Beatles",
       "title": {
         "es": "Revolver",
@@ -3179,14 +3139,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=HkH95bG8JSc",
+      "youtube": "https://www.youtube.com/watch?v=l0zaebtU-CA&list=PLycVTiaj8OI9QBZWsldja1JJwsIO-2xtY",
       "spotify": "https://open.spotify.com/album/3PRoXYsngSwjEQWR5PsHWR",
       "masterpiece": true
     },
     {
       "id": 767,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "pop",
       "artist": "The Beatles",
       "title": {
         "es": "Sgt. Pepper's Lonely Hearts Club Band",
@@ -3200,14 +3160,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=HhjHYkPQ8F0",
+      "youtube": "https://www.youtube.com/watch?v=W2kbRGPQGZc&list=RDW2kbRGPQGZc&start_radio=1",
       "spotify": "https://open.spotify.com/album/6QaVfG1pHYl1z15ZxkvVDW",
       "masterpiece": true
     },
     {
       "id": 768,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "pop",
       "artist": "The Beatles",
       "title": {
         "es": "Magical Mystery Tour",
@@ -3221,14 +3181,14 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=UDlNaD0PSl0",
+      "youtube": "https://www.youtube.com/watch?v=l8WMGBuNaus&list=PLycVTiaj8OI8F5vZlwv4NnvGwc84ITnW2",
       "spotify": "https://open.spotify.com/album/2BtE7qm1qzM80p9vLSiXkj",
       "masterpiece": true
     },
     {
       "id": 769,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "pop",
       "artist": "The Beatles",
       "title": {
         "es": "The Beatles (Álbum Blanco)",
@@ -3242,7 +3202,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=XLq5krLOPns",
+      "youtube": "https://www.youtube.com/watch?v=0ArlUSVDQIw&list=PLycVTiaj8OI80AsTGjYJAPi7-i8kTH-Bq",
       "spotify": "https://open.spotify.com/album/1klALx0u4AavZNEvC4LrTL",
       "masterpiece": true
     },
@@ -3284,31 +3244,11 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=9vSTk3J7qgM",
+      "youtube": "https://www.youtube.com/watch?v=1Sb797ajPAw&list=PLP1lC0FnuI0Ia0Zj-2h7S_QwUhRd7YxHq",
       "spotify": "https://open.spotify.com/album/5rFRfDq52l2l5RtS5kxA9A",
       "masterpiece": true
     },
-    {
-      "id": 772,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Big Brother and the Holding Company",
-      "title": {
-        "es": "Cheap Thrills",
-        "en": "Cheap Thrills"
-      },
-      "description": {
-        "es": "Lanzado en 1968, este es el segundo álbum de Big Brother and the Holding Company con Janis Joplin como vocalista. Incluye la exitosa canción 'Piece of My Heart'.",
-        "en": "Released in 1968, this is Big Brother and the Holding Company's second album with Janis Joplin as the lead vocalist. Features the hit song 'Piece of My Heart'."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b2731ba5ee8bc24979ce3eee4797",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=9vSTk3J7qgM",
-      "spotify": "https://open.spotify.com/album/2rogKfOpmCFuqNhtGKf2dX",
-      "masterpiece": true
-    },
+    
     {
       "id": 773,
       "category": "music",
@@ -3326,7 +3266,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=9vSTk3J7qgM",
+      "youtube": "https://www.youtube.com/watch?v=lnjZ4IUD6Tg&list=PLma8XWuNtNO76yxt5iHGdC_VdjxIbFbUv",
       "spotify": "https://open.spotify.com/album/2wb0OEOLPIiEtsqq2tgCk5",
       "masterpiece": true
     },
@@ -3336,19 +3276,19 @@
       "subcategory": "rock",
       "artist": "Janis Joplin",
       "title": {
-        "es": "Janis",
-        "en": "Janis"
+        "es": "Pearl",
+        "en": "Pearl"
       },
       "description": {
         "es": "Lanzado en 1975, este álbum recopilatorio incluye algunas de las mejores canciones de Janis Joplin. Es una excelente introducción a su música.",
         "en": "Released in 1975, this compilation album includes some of Janis Joplin's best songs. It's an excellent introduction to her music."
       },
-      "image": "https://i.scdn.co/image/ab67616d0000b273bd1e98815e82e04ba980c65c",
+      "image": "/imagenes/musica/pearl.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=9vSTk3J7qgM",
-      "spotify": "https://open.spotify.com/album/4qHWXbp5TbUWqH35c6m8kN",
+      "youtube": "https://www.youtube.com/watch?v=W4zumh4m7Kg&list=PLNPGM2D7aODfsmHjxYvBI9gI0FM-HM6fK",
+      "spotify": "https://open.spotify.com/intl-es/album/3j7nicLAWXM0Fb08q9XGyf",
       "masterpiece": true
     },
     {
