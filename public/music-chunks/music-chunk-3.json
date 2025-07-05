@@ -2884,7 +2884,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=QvnM0YZz32A",
+      "youtube": "https://www.youtube.com/watch?v=VmYTtHqQcPs&list=RDVmYTtHqQcPs&start_radio=1",
       "spotify": "https://open.spotify.com/album/57AwljF0RpTwtEd5A1SzUP",
       "masterpiece": true
     },
@@ -2901,35 +2901,15 @@
         "es": "Revolución, publicado en 1985, es un álbum fundamental de La Polla Records. Repleto de canciones cargadas de energía y críticas sociales, este trabajo marcó un antes y un después en el punk español. Un clásico imprescindible para entender el movimiento.",
         "en": "Revolution, released in 1985, is a cornerstone album by La Polla Records. Filled with energetic songs and social critiques, this work marked a turning point in Spanish punk. An essential classic to understand the movement."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/revo.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=3tq1RFl1DD4",
+      "youtube": "https://www.youtube.com/watch?v=h51MXEoflZ4&list=RDh51MXEoflZ4&start_radio=1",
       "spotify": "https://open.spotify.com/album/2OTpx6ous4CgHRjdw5ck68",
       "masterpiece": true
     },
-    {
-      "id": 551,
-      "category": "music",
-      "subcategory": "punk",
-      "artist": "La Polla Records",
-      "title": {
-        "es": "Ni Dios Ni Amo",
-        "en": "Neither God Nor Master"
-      },
-      "description": {
-        "es": "Ni Dios Ni Amo es un álbum emblemático de 1987 que consolidó a La Polla Records como una voz crítica dentro del punk español. Con letras provocadoras y una actitud rebelde, el disco aborda temas políticos y sociales con contundencia y humor negro.",
-        "en": "Neither God Nor Master is a landmark 1987 album that established La Polla Records as a critical voice in Spanish punk. With provocative lyrics and a rebellious attitude, the record tackles political and social themes with force and dark humor."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=uzCmZ-K3kOg",
-      "spotify": "https://open.spotify.com/album/57AwljF0RpTwtEd5A1SzUP",
-      "masterpiece": true
-    },
+   
     {
       "id": 552,
       "category": "music",

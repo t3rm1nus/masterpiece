@@ -2144,8 +2144,8 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=7bGMrSfp6wo",
-      "spotify": "https://open.spotify.com/album/3zYFvSvwwb52XuXf25rtCg",
+      "youtube": "https://www.youtube.com/watch?v=6FgKp8QgnkA&list=PLJR6PJrV0SZXIk5IzcAWcLFlebPnDilnO",
+      "spotify": "https://open.spotify.com/intl-es/album/3tVLhJouDYHOpQa6JQFRd9",
       "masterpiece": true
     },
     
@@ -2155,63 +2155,23 @@
       "subcategory": "punk",
       "artist": "Los Ilegales",
       "title": {
-        "es": "Violencia de Clase",
-        "en": "Violencia de Clase"
+        "es": "Todos estan muertos",
+        "en": "Todos estan muertos"
       },
       "description": {
-        "es": "Último álbum de estudio con la formación original. Explora sonidos más experimentales y sintetizadores, mostrando un cambio en la evolución musical de la banda.",
-        "en": "Last studio album with the original lineup. Explores more experimental sounds and synthesizers, showing a shift in the band's musical evolution."
+        "es": "Todos están muertos es un grito crudo y despiadado de los Ilegales, banda española de rock provocador. Con su característico estilo directo y áspero, la canción denuncia la hipocresía social, la mediocridad cultural y la muerte simbólica de quienes se conforman. Es una declaración de guerra contra lo establecido.",
+        "en": "Todos están muertos is a raw, merciless scream from Ilegales, Spain’s provocative rock band. With their signature blunt and gritty style, the song denounces social hypocrisy, cultural mediocrity, and the symbolic death of those who conform. It’s a declaration of war against the status quo."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/muertos.jpeg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=cjqOjUkqY3Y",
-      "spotify": "https://open.spotify.com/album/3tVLhJouDYHOpQa6JQFRd9",
+      "youtube": "https://www.youtube.com/watch?v=WWulFXhrA3I&list=RDWWulFXhrA3I&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/album/3pgOKc9UYnSu97yS2mcANv",
       "masterpiece": true
     },
-    {
-      "id": 312,
-      "category": "music",
-      "subcategory": "punk",
-      "artist": "Los Ilegales",
-      "title": {
-        "es": "La Vida es un Enfermedad",
-        "en": "La Vida es un Enfermedad"
-      },
-      "description": {
-        "es": "Último álbum de estudio con la formación original. Explora sonidos más experimentales y sintetizadores, mostrando un cambio en la evolución musical de la banda.",
-        "en": "Last studio album with the original lineup. Explores more experimental sounds and synthesizers, showing a shift in the band's musical evolution."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=h7Se7M3k1SA",
-      "spotify": "https://open.spotify.com/album/3tVLhJouDYHOpQa6JQFRd9",
-      "masterpiece": true
-    },
-    {
-      "id": 313,
-      "category": "music",
-      "subcategory": "punk",
-      "artist": "Los Ilegales",
-      "title": {
-        "es": "Menos Humanos, Más Animales",
-        "en": "Menos Humanos, Más Animales"
-      },
-      "description": {
-        "es": "Último álbum de estudio con la formación original. Explora sonidos más experimentales y sintetizadores, mostrando un cambio en la evolución musical de la banda.",
-        "en": "Last studio album with the original lineup. Explores more experimental sounds and synthesizers, showing a shift in the band's musical evolution."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=V85b9PnJNm8",
-      "spotify": "https://open.spotify.com/album/3tVLhJouDYHOpQa6JQFRd9",
-      "masterpiece": true
-    },
+    
+    
     
     {
       "id": 315,

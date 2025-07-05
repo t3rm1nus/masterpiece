@@ -752,7 +752,7 @@
         "es": "Tema rápido y enérgico que refleja el caos urbano y la alienación. Letras directas con ritmo acelerado y guitarras cortantes. Representa la actitud rebelde de la España ochentera.",
         "en": "A fast, energetic track reflecting urban chaos and alienation. Direct lyrics with a rapid rhythm and sharp guitars. It captures the rebellious attitude of 80s Spain."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/ilegales.jpg",
       "tags": [
         "song"
       ],
@@ -808,18 +808,18 @@
       "subcategory": "punk",
       "artist": "La Polla Records",
       "title": {
-        "es": "Ya no quiero ser yo",
-        "en": "I Don't Want to Be Me Anymore"
+        "es": "Toda la puta vida igual",
+        "en": "Toda la puta vida igual"
       },
       "description": {
-        "es": "Punk irreverente con crítica social y actitud provocadora. Guitarras rápidas y letra desafiante sobre identidad y rechazo. Clásico del punk español con energía insubordinada.",
-        "en": "Irreverent punk with social critique and provocative attitude. Fast guitars and defiant lyrics about identity and rejection. A classic of Spanish punk with insubordinate energy."
+        "es": "Toda la puta vida igual es uno de los himnos más furiosos y certeros de La Polla Records. Con una letra incendiaria, la canción retrata la monotonía, el hastío y la resignación de una sociedad atrapada en un ciclo sin sentido. Punk directo, sin concesiones, que escupe verdad tras verdad.",
+        "en": "Toda la puta vida igual (“The Fucking Same Life Forever”) is one of La Polla Records' most furious and sharp anthems. With incendiary lyrics, the song portrays monotony, frustration, and the resignation of a society trapped in a meaningless cycle. Raw, uncompromising punk that spits truth after truth."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/toda.jpg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=l9FxF7C5J0U&list=OLAK5uy_mC4HxH7TbHIndSy2HYsKdYXL06VwgzXBM&index=2",
       "spotify": "https://open.spotify.com/album/2EkiweBIxMFWxUq7mPR3Zd",
       "masterpiece": false
     },
@@ -3575,7 +3575,7 @@
     {
       "id": 180,
       "category": "music",
-      "subcategory": "punk",
+      "subcategory": "rap",
       "artist": "El Niño Snake",
       "title": {
         "es": "Punki Rap",
@@ -3585,11 +3585,11 @@
         "es": "Álbum que fusiona el punk y el rap en una explosión de energía y protesta. El Niño Snake combina la crudeza del punk con la lírica directa del rap, generando un sonido único dentro de la escena underground. Letras cargadas de rebeldía y crítica social.",
         "en": "Album that fuses punk and rap in an explosion of energy and protest. El Niño Snake blends punk's rawness with rap's direct lyrics, creating a unique sound within the underground scene. Lyrics filled with rebellion and social critique."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/punki.jpg",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=CutB5T8Temc&list=RDCutB5T8Temc&start_radio=1",
       "spotify": "https://open.spotify.com/album/5bP0j1RmelVeoRv9CnpbKt",
       "masterpiece": false
     },
