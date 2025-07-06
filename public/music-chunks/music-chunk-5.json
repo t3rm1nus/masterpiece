@@ -3,428 +3,6 @@
     {
       "id": 801,
       "category": "music",
-      "subcategory": "rap",
-      "artist": "Snoop Dogg",
-      "title": {
-        "es": "R&G (Rhythm & Gangsta): The Masterpiece",
-        "en": "R&G (Rhythm & Gangsta): The Masterpiece"
-      },
-      "description": {
-        "es": "R&G (Rhythm & Gangsta): The Masterpiece es un álbum de 2004 que combina hip hop con elementos R&B y funk. Con éxitos como 'Drop It Like It's Hot', refleja la versatilidad y el alcance comercial de Snoop Dogg en la escena mundial.",
-        "en": "R&G (Rhythm & Gangsta): The Masterpiece is a 2004 album blending hip hop with R&B and funk elements. Featuring hits like 'Drop It Like It's Hot', it showcases Snoop Dogg's versatility and commercial reach worldwide."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273e803716268c173c3f9a0c057",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=sDo1JAHG8XE&list=PLTlz5MMhLagN8XgMxCwttizaijkuSssFI",
-      "spotify": "https://open.spotify.com/album/797fkvAtk0iZvP1HHPCWbp",
-      "masterpiece": true
-    },
-    
-    {
-      "id": 804,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Rapiphero",
-      "title": {
-        "es": "Quimeras",
-        "en": "Quimeras"
-      },
-      "description": {
-        "es": "Quimeras fusiona ritmos innovadores con letras cargadas de metáforas y reflexiones sobre los sueños y las falsas esperanzas. Rapiphero muestra un lado más introspectivo y experimental, abriendo nuevas puertas dentro del rap contemporáneo.",
-        "en": "Quimeras blends innovative rhythms with lyrics full of metaphors and reflections on dreams and false hopes. Rapiphero shows a more introspective and experimental side, opening new doors within contemporary rap."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=BYQSNu-ldYc&list=PLPLp9P3LwPtPks3oZjDaJp3ZLmCEX8vSW",
-      "spotify": "https://open.spotify.com/album/6E47rBfTH9mu7FZH15kM9f",
-      "masterpiece": true
-    },
-    {
-      "id": 805,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Rapiphero",
-      "title": {
-        "es": "Sfumatu",
-        "en": "Sfumatu"
-      },
-      "description": {
-        "es": "Sfumatu es un cierre conceptual donde Rapiphero mezcla sonidos densos con una narrativa que explora la dualidad humana. Este álbum representa madurez artística y una producción cuidada que sumerge al oyente en atmósferas intensas.",
-        "en": "Sfumatu is a conceptual closure where Rapiphero mixes dense sounds with a narrative exploring human duality. This album represents artistic maturity and a careful production that immerses the listener in intense atmospheres."
-      },
-      "image": "/imagenes/musica/Sfumatu.png",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=XYcrbWajgoU&list=PLQh-44nE49wNoLEE8jdd0vTGinr28HDp6",
-      "spotify": "https://open.spotify.com/intl-es/album/60xNVEl8FkoGoXR1oMNJAm",
-      "masterpiece": true
-    },
-    {
-      "id": 806,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Abocajarro",
-      "title": {
-        "es": "CD Multimedia 2009",
-        "en": "CD Multimedia 2009"
-      },
-      "description": {
-        "es": "CD Multimedia 2009 es una obra que recoge la esencia del rap español con ritmos contundentes y letras cargadas de mensaje. Abocajarro combina historias urbanas con una producción cuidada que refleja su evolución artística. Un álbum imprescindible para los amantes del rap comprometido.",
-        "en": "CD Multimedia 2009 is a work that captures the essence of Spanish rap with strong beats and meaningful lyrics. Abocajarro combines urban stories with refined production that reflects their artistic growth. An essential album for fans of committed rap."
-      },
-      "image": "/imagenes/musica/abocajarro.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=CI-L-QyVziw&list=OLAK5uy_n8CkXQQ53zYODh41e718NHnzJmnoQCzQU&index=2",
-      "spotify": "https://open.spotify.com/intl-es/album/0O3M7u8gFlE7zaQHa1SbaO",
-      "masterpiece": true
-    },
-    {
-      "id": 807,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Abocajarro",
-      "title": {
-        "es": "Los Jereles · 2006",
-        "en": "Los Jereles · 2006"
-      },
-      "description": {
-        "es": "Los Jereles · 2006 destaca por su lírica directa y sus beats urbanos que reflejan la realidad cotidiana. Abocajarro mezcla flow y crítica social en un álbum que representa una etapa clave dentro del rap underground. Una muestra de talento y autenticidad.",
-        "en": "Los Jereles · 2006 stands out for its direct lyrics and urban beats that reflect everyday reality. Abocajarro mixes flow and social critique in an album representing a key stage in underground rap. A display of talent and authenticity."
-      },
-      "image": "/imagenes/musica/jereles.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=mhTBiS44_mQ&list=PL0AD17DBE8B52BC64",
-      "spotify": "https://open.spotify.com/album/3ByXNnt6fDXjZdNGHNw82n",
-      "masterpiece": true
-    },
-    {
-      "id": 808,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Abocajarro",
-      "title": {
-        "es": "Demo 04",
-        "en": "Demo 04"
-      },
-      "description": {
-        "es": "Demo 04 captura la crudeza inicial del grupo, con rimas afiladas y una producción sencilla pero efectiva. Este demo muestra el potencial y la energía de Abocajarro en sus comienzos, con letras que exploran temas sociales y personales con honestidad.",
-        "en": "Demo 04 captures the group's early rawness, with sharp rhymes and simple but effective production. This demo shows Abocajarro's potential and energy at the start, with lyrics exploring social and personal themes honestly."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273e2be5447f07ed3ed4e37814b",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=SeuhEjZx_5o&list=OLAK5uy_lvI5zxSXk1328fXudf6ct6_jh1BQ_hNPE&index=2",
-      "spotify": "https://open.spotify.com/album/35dD2uVx9NODFu9Wbk6MaL",
-      "masterpiece": true
-    },
-    {
-      "id": 809,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Abocajarro",
-      "title": {
-        "es": "En la Boca 2003",
-        "en": "En la Boca 2003"
-      },
-      "description": {
-        "es": "En la Boca 2003 es el debut que marca el inicio de Abocajarro en la escena rap. Letras directas, ritmos contundentes y una atmósfera cruda definen este trabajo. Un punto de partida fundamental para comprender su desarrollo posterior.",
-        "en": "En la Boca 2003 is the debut marking Abocajarro's start in the rap scene. Direct lyrics, strong beats, and a raw atmosphere define this work. A fundamental starting point to understand their later development."
-      },
-      "image": "/imagenes/musica/enlaboca.png",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=4w1SGAEGQc4&list=RD4w1SGAEGQc4&start_radio=1",
-      "spotify": "https://open.spotify.com/intl-es/album/5e5DMocIkNewyoqbf5D5sM",
-      "masterpiece": true
-    },
-    {
-      "id": 810,
-      "category": "music",
-      "subcategory": "dub",
-      "artist": "Paul St. Hilaire",
-      "title": {
-        "es": "Unspecified",
-        "en": "Unspecified"
-      },
-      "description": {
-        "es": "Unspecified es una obra que refleja la versatilidad vocal de Paul St. Hilaire dentro del house y el dub. El álbum combina ritmos profundos con atmósferas envolventes, destacando la voz característica del artista en cada pista. Es un viaje sonoro que fusiona tradición y modernidad.",
-        "en": "Unspecified is a work that reflects Paul St. Hilaire's vocal versatility within house and dub. The album combines deep rhythms with immersive atmospheres, highlighting the artist's distinctive voice in each track. It is a sonic journey blending tradition and modernity."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b27391c2d00a2e92b90057641583",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=aY5VM3aYjZ4&list=PL_tI9_f9VosxmoVCxaHUKV0TgYLnpGrvf",
-      "spotify": "https://open.spotify.com/intl-es/album/2THakG7CPK4ZME7x3XQskJ",
-      "masterpiece": true
-    },
-    {
-      "id": 811,
-      "category": "music",
-      "subcategory": "dub",
-      "artist": "Paul St. Hilaire",
-      "title": {
-        "es": "Adsom - A Divine State Of Mind",
-        "en": "Adsom - A Divine State Of Mind"
-      },
-      "description": {
-        "es": "Adsom - A Divine State Of Mind destaca por su fusión de house y dub con la voz profunda de Paul St. Hilaire. Este álbum es un viaje espiritual a través de sonidos cuidadosamente elaborados, que transmiten emoción y energía en cada tema. Es un clásico contemporáneo dentro de la escena electrónica.",
-        "en": "Asdom - A Divine State Of Mind stands out for its fusion of house and dub with Paul St. Hilaire's deep voice. This album is a spiritual journey through carefully crafted sounds, conveying emotion and energy in every track. It is a contemporary classic in the electronic scene."
-      },
-      "image": "/imagenes/musica/adsom.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/https://www.youtube.com/watch?v=EpNj-HJWZ00&list=PLvFPizwjl9UrhDhGUiV0Gby6oRZ5ulu00",
-      "spotify": "https://open.spotify.com/intl-es/album/5wDDLX0TUR8lkNgBz3DpBR",
-      "masterpiece": true
-    },
-    {
-      "id": 812,
-      "category": "music",
-      "subcategory": "dub",
-      "artist": "Deadbeat and Paul St. Hilaire",
-      "title": {
-        "es": "The Infinity Dub Sessions",
-        "en": "The Infinity Dub Sessions"
-      },
-      "description": {
-        "es": "The Infinity Dub Sessions es una colaboración emblemática entre Deadbeat y Paul St. Hilaire. El álbum mezcla dub, electrónica y house, creando paisajes sonoros ricos y profundos donde la voz de St. Hilaire aporta una calidez única. Un referente para amantes del dub moderno.",
-        "en": "The Infinity Dub Sessions is an iconic collaboration between Deadbeat and Paul St. Hilaire. The album blends dub, electronic, and house, creating rich and deep soundscapes where St. Hilaire's voice adds a unique warmth. A benchmark for modern dub lovers."
-      },
-      "image": "/imagenes/musica/dubsesions.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=hakOLgdP3X8&list=RDhakOLgdP3X8&start_radio=1",
-      "spotify": "https://open.spotify.com/search/The%20Infinity%20Dub%20Sessions",
-      "masterpiece": true
-    },
-    {
-      "id": 813,
-      "category": "music",
-      "subcategory": "dub",
-      "artist": "Paul St. Hilaire + Rhauder",
-      "title": {
-        "es": "Derdeoc",
-        "en": "Derdeoc"
-      },
-      "description": {
-        "es": "Derdeoc es un álbum que reúne la sensibilidad vocal de Paul St. Hilaire con la producción innovadora de Rhauder. La mezcla de house, dub y ritmos electrónicos crea una atmósfera envolvente y profunda, ideal para amantes de sonidos sofisticados y urbanos.",
-        "en": "Derdeoc is an album that combines Paul St. Hilaire's vocal sensitivity with Rhauder's innovative production. The mix of house, dub, and electronic rhythms creates an immersive and deep atmosphere, perfect for lovers of sophisticated urban sounds."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b27338b0a9c647ac2c880e4af12b",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=oMiPBqPm8to&list=RDoMiPBqPm8to&start_radio=1",
-      "spotify": "https://open.spotify.com/album/78ec2w9ZHUYn9W5QDXvUrU",
-      "masterpiece": true
-    },
-    
-    {
-      "id": 815,
-      "category": "music",
-      "subcategory": "dub",
-      "artist": "Deadbeat & Paul St. Hilaire",
-      "title": {
-        "es": "Four Quarters Of Love And Modern Lash",
-        "en": "Four Quarters Of Love And Modern Lash"
-      },
-      "description": {
-        "es": "Four Quarters Of Love And Modern Lash es una colaboración que explora sonidos dub y electrónicos con la voz inconfundible de Paul St. Hilaire. El álbum destaca por sus texturas profundas y su mezcla innovadora que desafía los límites del género. Una obra esencial para los amantes del dub moderno.",
-        "en": "Four Quarters Of Love And Modern Lash is a collaboration exploring dub and electronic sounds with Paul St. Hilaire's unmistakable voice. The album stands out for its deep textures and innovative blend that challenges genre boundaries. An essential work for modern dub lovers."
-      },
-      "image": "/imagenes/musica/four.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/results?search_query=Four+Quarters+Of+Love+And+Modern+Lash+full+album",
-      "spotify": "https://open.spotify.com/intl-es/album/67Ljepy44OPSzsUxL79URN",
-      "masterpiece": true
-    },
-    {
-      "id": 816,
-      "category": "music",
-      "subcategory": "dub",
-      "artist": "Paul St. Hilaire",
-      "title": {
-        "es": "Tikiman Vol. 1",
-        "en": "Tikiman Vol. 1"
-      },
-      "description": {
-        "es": "Tikiman Vol. 1 es un álbum que resalta la capacidad de Paul St. Hilaire para adaptarse a diferentes estilos dentro del dub y el house. Sus colaboraciones y la producción musical ofrecen un recorrido dinámico y lleno de energía, consolidándolo como una voz fundamental en la escena electrónica.",
-        "en": "Tikiman Vol. 1 is an album that highlights Paul St. Hilaire's ability to adapt to different styles within dub and house. His collaborations and musical production offer a dynamic and energetic journey, establishing him as a fundamental voice in the electronic scene."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273391b7bb00e0237523b0143bd",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=KfcjmPu5q4E&list=PL0E0qpvbtwXK4oU1hFIqaj02YsoOD3lU8",
-      "spotify": "https://open.spotify.com/intl-es/album/4Fu1si4cHvjLUGAcuADiT3",
-      "masterpiece": true
-    },
-    {
-      "id": 817,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "La Excepción",
-      "title": {
-        "es": "Cata Cheli",
-        "en": "Cata Cheli"
-      },
-      "description": {
-        "es": "Cata Cheli es el álbum debut de La Excepción, lanzado en 2003. Con letras cargadas de humor y crítica social, fusiona el rap con el estilo 'cheli' característico del grupo. Su sonido fresco y auténtico marcó un antes y un después en la escena del hip hop español.",
-        "en": "Cata Cheli is La Excepción's debut album, released in 2003. Filled with humorous and socially critical lyrics, it blends rap with the group's characteristic 'cheli' style. Its fresh and authentic sound marked a turning point in Spanish hip hop."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b2732fc99095e1df70d8fc2b1bdc",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=uTzwReGigr8&list=PLfRcAAxNWyjPbzPtCTmsTW45TMCCthKaF",
-      "spotify": "https://open.spotify.com/album/4SPyGeaVg6LpQ95237zn34",
-      "masterpiece": true
-    },
-    {
-      "id": 818,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "La Excepción",
-      "title": {
-        "es": "Aguantando el tirón",
-        "en": "Aguantando el tirón"
-      },
-      "description": {
-        "es": "Este álbum, lanzado en 2006, refuerza el estilo único de La Excepción, combinando ritmos pegadizos con letras que narran historias urbanas y sociales. 'Aguantando el tirón' destaca por su autenticidad y energía vibrante.",
-        "en": "Released in 2006, this album strengthens La Excepción's unique style by combining catchy beats with lyrics that tell urban and social stories. 'Aguantando el tirón' stands out for its authenticity and vibrant energy."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273d8fedd9174492869b5feb144",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=tc-FFlFhByU&list=OLAK5uy_mDidvTn2khm18HdHEbzgrI-wLH_8ZxLpE",
-      "spotify": "https://open.spotify.com/album/4WSwiIpcaIHrTJWosN5NRU",
-      "masterpiece": true
-    },
-    {
-      "id": 819,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "La Excepción",
-      "title": {
-        "es": "La verdad más verdadera",
-        "en": "La verdad más verdadera"
-      },
-      "description": {
-        "es": "Publicada en 2013, esta producción presenta una evolución en el sonido de La Excepción, con beats más elaborados y letras que profundizan en temas personales y sociales. Un álbum que reafirma su posición en el rap español.",
-        "en": "Released in 2013, this production shows an evolution in La Excepción's sound, with more elaborate beats and lyrics that delve into personal and social topics. An album that reaffirms their position in Spanish rap."
-      },
-      "image": "/imagenes/musica/laverdad.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=JqOjf16Q_9Q&list=RDJqOjf16Q_9Q&start_radio=1",
-      "spotify": "https://open.spotify.com/album/4WSwiIpcaIHrTJWosN5NRU",
-      "masterpiece": true
-    },
-    {
-      "id": 820,
-      "category": "music",
-      "subcategory": "chillout",
-      "artist": "Bonobo",
-      "title": {
-        "es": "Animal Magic",
-        "en": "Animal Magic"
-      },
-      "description": {
-        "es": "Animal Magic es el álbum debut de Bonobo, lanzado en 2000. Combina trip-hop y downtempo con un enfoque atmosférico y melódico que sentó las bases de su estilo distintivo. La producción suave y los arreglos orgánicos crean un ambiente introspectivo y envolvente.",
-        "en": "Animal Magic is Bonobo's debut album, released in 2000. It blends trip-hop and downtempo with an atmospheric and melodic approach that laid the foundation for his distinctive style. The smooth production and organic arrangements create an introspective and immersive mood."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273dcaf8002f79ec69e045319de",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=clsczmHXf9U&list=RDclsczmHXf9U&start_radio=1",
-      "spotify": "https://open.spotify.com/album/4fwdKlGLJuEB9UuCHaNKql",
-      "masterpiece": true
-    },
-    {
-      "id": 821,
-      "category": "music",
-      "subcategory": "chillout",
-      "artist": "Bonobo",
-      "title": {
-        "es": "Dial 'M' for Monkey",
-        "en": "Dial 'M' for Monkey"
-      },
-      "description": {
-        "es": "Este álbum de 2003 profundiza en sonidos downtempo y electrónica, enriquecidos con influencias jazz y world music. Dial 'M' for Monkey destaca por su creatividad y por crear paisajes sonoros que equilibran la calma y el ritmo, consolidando a Bonobo como un referente del género.",
-        "en": "This 2003 album delves into downtempo and electronic sounds enriched with jazz and world music influences. Dial 'M' for Monkey stands out for its creativity and for crafting soundscapes that balance calm and rhythm, cementing Bonobo as a genre icon."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273383a4bb71daef9859ba98259",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=miTBUVboIFk&list=RDmiTBUVboIFk&start_radio=1",
-      "spotify": "https://open.spotify.com/album/6TaDSeHRXqw06H2PlYsD5K",
-      "masterpiece": true
-    },
-    {
-      "id": 822,
-      "category": "music",
-      "subcategory": "chillout",
-      "artist": "Bonobo",
-      "title": {
-        "es": "Days to Come",
-        "en": "Days to Come"
-      },
-      "description": {
-        "es": "Days to Come, lanzado en 2006, integra vocales y colaboraciones, ampliando el rango emocional y sonoro de Bonobo. El álbum mezcla electrónica, downtempo y soul, ofreciendo una experiencia sonora rica y emotiva que ha influido a numerosos artistas.",
-        "en": "Days to Come, released in 2006, incorporates vocals and collaborations, expanding Bonobo's emotional and sonic range. The album blends electronic, downtempo, and soul, delivering a rich and emotive sound experience that has influenced many artists."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273772c8ad8cfe3474f36bbad4a",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=oV4pyWGYV8c&list=RDoV4pyWGYV8c&start_radio=1",
-      "spotify": "https://open.spotify.com/album/5HLoU4oijKdSIFOk2o7mYn",
-      "masterpiece": true
-    },
-    {
-      "id": 823,
-      "category": "music",
-      "subcategory": "chillout",
-      "artist": "Bonobo",
-      "title": {
-        "es": "Black Sands",
-        "en": "Black Sands"
-      },
-      "description": {
-        "es": "Black Sands, de 2010, es considerado uno de los mejores álbumes de Bonobo. Combina elementos electrónicos con instrumentación orgánica y samples ambientales. El álbum crea una atmósfera evocadora que ha sido ampliamente aclamada por críticos y fans por igual.",
-        "en": "Black Sands, from 2010, is considered one of Bonobo's best albums. It combines electronic elements with organic instrumentation and ambient samples. The album creates an evocative atmosphere that has been widely acclaimed by critics and fans alike."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b2737da6d6787071a97593cfbcee",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=-RbSogwKY94&list=RD-RbSogwKY94&start_radio=1",
-      "spotify": "https://open.spotify.com/album/5m1RkwKeU7MV0Ni6PH2lPy",
-      "masterpiece": true
-    },
-    {
-      "id": 824,
-      "category": "music",
       "subcategory": "chillout",
       "artist": "Bonobo",
       "title": {
@@ -444,7 +22,7 @@
       "masterpiece": true
     },
     {
-      "id": 825,
+      "id": 802,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Bonobo",
@@ -465,7 +43,7 @@
       "masterpiece": true
     },
     {
-      "id": 826,
+      "id": 803,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Bonobo",
@@ -486,7 +64,7 @@
       "masterpiece": true
     },
     {
-      "id": 827,
+      "id": 804,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Justice",
@@ -507,7 +85,7 @@
       "masterpiece": true
     },
     {
-      "id": 828,
+      "id": 805,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Justice",
@@ -527,9 +105,8 @@
       "spotify": "https://open.spotify.com/album/0dLnnm4PjeyqM4CoHqo6DI",
       "masterpiece": true
     },
-   
     {
-      "id": 830,
+      "id": 806,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Justice",
@@ -550,7 +127,7 @@
       "masterpiece": true
     },
     {
-      "id": 831,
+      "id": 807,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Justice",
@@ -571,7 +148,7 @@
       "masterpiece": true
     },
     {
-      "id": 832,
+      "id": 808,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Justice",
@@ -593,7 +170,7 @@
       "masterpiece": true
     },
     {
-      "id": 833,
+      "id": 809,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Justice",
@@ -615,7 +192,7 @@
       "masterpiece": true
     },
     {
-      "id": 834,
+      "id": 810,
       "category": "music",
       "subcategory": "rock",
       "artist": "Gorillaz",
@@ -636,7 +213,7 @@
       "masterpiece": false
     },
     {
-      "id": 835,
+      "id": 811,
       "category": "music",
       "subcategory": "rock",
       "artist": "Gorillaz",
@@ -657,7 +234,7 @@
       "masterpiece": true
     },
     {
-      "id": 836,
+      "id": 812,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Gorillaz",
@@ -678,7 +255,7 @@
       "masterpiece": true
     },
     {
-      "id": 837,
+      "id": 813,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Gorillaz",
@@ -699,7 +276,7 @@
       "masterpiece": false
     },
     {
-      "id": 838,
+      "id": 814,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Gorillaz",
@@ -720,7 +297,7 @@
       "masterpiece": false
     },
     {
-      "id": 839,
+      "id": 815,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Gorillaz",
@@ -741,7 +318,7 @@
       "masterpiece": false
     },
     {
-      "id": 840,
+      "id": 816,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Gorillaz",
@@ -762,7 +339,7 @@
       "masterpiece": false
     },
     {
-      "id": 841,
+      "id": 817,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Gorillaz",
@@ -782,7 +359,7 @@
       "spotify": "https://open.spotify.com/album/4wtZQMNTC1O79kDxMBsEan"
     },
     {
-      "id": 842,
+      "id": 818,
       "category": "music",
       "subcategory": "punk",
       "artist": "Eskorbuto",
@@ -803,7 +380,7 @@
       "masterpiece": true
     },
     {
-      "id": 843,
+      "id": 819,
       "category": "music",
       "subcategory": "punk",
       "artist": "Eskorbuto",
@@ -824,7 +401,7 @@
       "masterpiece": true
     },
     {
-      "id": 844,
+      "id": 820,
       "category": "music",
       "subcategory": "punk",
       "artist": "Eskorbuto",
@@ -845,7 +422,7 @@
       "masterpiece": true
     },
     {
-      "id": 845,
+      "id": 821,
       "category": "music",
       "subcategory": "punk",
       "artist": "Eskorbuto",
@@ -866,7 +443,7 @@
       "masterpiece": false
     },
     {
-      "id": 846,
+      "id": 822,
       "category": "music",
       "subcategory": "punk",
       "artist": "Eskorbuto",
@@ -887,7 +464,7 @@
       "masterpiece": false
     },
     {
-      "id": 847,
+      "id": 823,
       "category": "music",
       "subcategory": "punk",
       "artist": "Eskorbuto",
@@ -908,7 +485,7 @@
       "masterpiece": false
     },
     {
-      "id": 848,
+      "id": 824,
       "category": "music",
       "subcategory": "punk",
       "artist": "Eskorbuto",

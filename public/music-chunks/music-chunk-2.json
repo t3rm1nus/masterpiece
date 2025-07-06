@@ -1,745 +1,8 @@
 {
   "recommendations": [
+    
     {
       "id": 201,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "ABOCAJARRO",
-      "title": {
-        "es": "De día y de noche",
-        "en": "By Day and By Night"
-      },
-      "description": {
-        "es": "Videoclip oficial de ABOCAJARRO para el tema 'De día y de noche', una producción que mezcla ritmos urbanos con letras profundas y un enfoque audiovisual cuidado. La dirección estuvo a cargo de Juan Miguel del Castillo y Caliche Films.",
-        "en": "Official music video by ABOCAJARRO for the track 'De día y de noche', a production mixing urban rhythms with deep lyrics and a well-crafted audiovisual approach. Directed by Juan Miguel del Castillo and Caliche Films."
-      },
-      "image": "/imagenes/musica/abocajarro.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=kYefBTh0gN8&list=RDkYefBTh0gN8&start_radio=1",
-      "spotify": "https://open.spotify.com/intl-es/track/07s8tFI1xGhC8U9SfHwHDQ",
-      "masterpiece": true
-    },
-    {
-      "id": 202,
-      "category": "music",
-      "subcategory": "dub",
-      "artist": "Damian Marley & NAS",
-      "title": {
-        "es": "Sabali (Paciencia)",
-        "en": "Sabali (Patience)"
-      },
-      "description": {
-        "es": "Una colaboración poderosa entre Damian Marley y NAS, que mezcla reggae con hip-hop de forma magistral. 'Sabali' transmite un mensaje de paciencia y resistencia. La letra y el ritmo evocan reflexiones sobre la lucha y la esperanza.",
-        "en": "A powerful collaboration between Damian Marley and NAS blending reggae and hip-hop masterfully. 'Sabali' conveys a message of patience and resilience. The lyrics and rhythm evoke reflections on struggle and hope."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=eC_hnkpCeNk&list=RDeC_hnkpCeNk&start_radio=1",
-      "spotify": "https://open.spotify.com/intl-es/track/2y8pG9CF0HC4cttJ50Pufk",
-      "masterpiece": true
-    },
-   
-    
-    {
-      "id": 205,
-      "category": "music",
-      "subcategory": "dub",
-      "artist": "O.B.F x CHARLIE P",
-      "title": {
-        "es": "FUFU LALA",
-        "en": "FUFU LALA"
-      },
-      "description": {
-        "es": "Un tema de reggae contemporáneo que une el estilo de O.B.F con la voz inconfundible de Charlie P. 'FUFU LALA' combina ritmos vibrantes con letras positivas y conscientes.",
-        "en": "'FUFU LALA' is a contemporary reggae track uniting O.B.F's style with Charlie P's unmistakable voice. It blends vibrant rhythms with positive and conscious lyrics."
-      },
-      "image": "/imagenes/musica/fufu.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=-J0WwiKq4zI&list=RD-J0WwiKq4zI&start_radio=1",
-      "spotify": "https://open.spotify.com/intl-es/track/2cd7nw8ffoJBDaNKc6aMYO",
-      "masterpiece": true
-    },
-    {
-      "id": 206,
-      "category": "music",
-      "subcategory": "trap",
-      "artist": "Brasov",
-      "title": {
-        "es": "Dalí",
-        "en": "Dalí"
-      },
-      "description": {
-        "es": "EDICION: SieteTreinta @andreeagirimia GRABACION: @kikereptilcorp @guillermanhedo gradecimentos a DIOS Y A @the.cheshire.cat",
-        "en": "EDITING: SieteTreinta @andreeagirimia RECORDING: @kikereptilcorp @guillermanhedo Thanks to GOD and @the.cheshire.cat"
-      },
-      "image": "/imagenes/musica/brasov.jpeg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=NH4kfm-WwSU&list=RDNH4kfm-WwSU&start_radio=1",
-      "spotify": "",
-      "masterpiece": true
-    },
-    {
-      "id": 207,
-      "category": "music",
-      "subcategory": "dub",
-      "artist": "Nah Ina It & Paul St. Hilaire",
-      "title": {
-        "es": "Nah Ina It",
-        "en": "Nah Ina It"
-      },
-      "description": {
-        "es": "Un clásico del reggae interpretado por Nah Ina It y Paul St. Hilaire, con un ritmo contagioso y una letra que invita a la unidad y la reflexión.",
-        "en": "A reggae classic performed by Nah Ina It and Paul St. Hilaire, featuring a catchy rhythm and lyrics inviting unity and reflection."
-      },
-      "image": "/imagenes/musica/NahInaIt.png",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=7WN2Ber6hQs&list=RD7WN2Ber6hQs&start_radio=1",
-      "spotify": "https://open.spotify.com/intl-es/track/7u6Jp2Trsxge5cVvSX1BIr",
-      "masterpiece": true
-    },
-    {
-      "id": 208,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Noiseferatu",
-      "title": {
-        "es": "Cicuta",
-        "en": "Cicuta"
-      },
-      "description": {
-        "es": "'Cicuta' es un potente tema de metal que destaca por sus riffs intensos y la energía cruda que caracteriza a Noiseferatu, combinando agresividad y técnica.",
-        "en": "'Cicuta' is a powerful metal track featuring intense riffs and raw energy characteristic of Noiseferatu, combining aggression and technique."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273fc8856251b63a57bb7735be3",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=GJXROBcKC1c&list=RDGJXROBcKC1c&start_radio=1",
-      "spotify": "https://open.spotify.com/album/0SbXA1RL0qUMjEx8quy6l0",
-      "masterpiece": true
-    },
-    {
-      "id": 209,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Domenica feat. Galinier Dheformer",
-      "title": {
-        "es": "Crucificado",
-        "en": "Crucificado"
-      },
-      "description": {
-        "es": "Crucificado es un viaje lírico y existencial donde Domenica y Dheformer despliegan versos cargados de dolor, fe y redención. Con una base sombría y minimalista, la canción ahonda en la cruz personal que cada uno lleva a cuestas, en medio de un mundo hostil. Galinier aporta un coro etéreo que eleva el mensaje a un plano casi espiritual.",
-        "en": "Crucificado is a lyrical and existential journey where Domenica and Dheformer unfold verses filled with pain, faith, and redemption. Backed by a dark and minimalist beat, the track dives into the personal cross each carries in a hostile world. Galinier adds an ethereal chorus that lifts the message to an almost spiritual level."
-      },
-      "image": "/imagenes/musica/galinier.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=pV1Ki_ebcbQ&list=RDpV1Ki_ebcbQ&start_radio=1",
-      "spotify": "https://open.spotify.com/intl-es/track/0xMx92dlys2oatFGBY3wQw",
-      "masterpiece": true
-    },
-    {
-      "id": 210,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "KASE.O feat. PMD",
-      "title": {
-        "es": "Hardcore Funk",
-        "en": "Hardcore Funk"
-      },
-      "description": {
-        "es": "'Hardcore Funk' fusiona el rap con ritmos funk y la colaboración de PMD, mostrando la versatilidad y maestría lírica de KASE.O.",
-        "en": "'Hardcore Funk' fuses rap with funk rhythms and features PMD, showcasing KASE.O's lyrical versatility and mastery."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=6s0EprXEocw&list=RD6s0EprXEocw&start_radio=1",
-      "spotify": "https://open.spotify.com/intl-es/track/3e7L26rIFDRwnO1FE2ZNJ1",
-      "masterpiece": true
-    },
-    {
-      "id": 211,
-      "category": "music",
-      "subcategory": "metal",
-      "artist": "Noiseferatu ft. The Equation Beats",
-      "title": {
-        "es": "Estático",
-        "en": "Estático"
-      },
-      "description": {
-        "es": "Un tema que fusiona la potencia del metal con bases electrónicas de The Equation Beats. 'Estático' destaca por su atmósfera oscura y su energía cruda, creando un contraste intenso y único.",
-        "en": "'Estático' fuses the power of metal with electronic beats by The Equation Beats. It stands out for its dark atmosphere and raw energy, creating an intense and unique contrast."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273fc8856251b63a57bb7735be3",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=iRT-9kEj8y4&list=RDiRT-9kEj8y4&start_radio=1",
-      "spotify": "https://open.spotify.com/intl-es/track/3hOdxnksQXmWPg980tbk2B",
-      "masterpiece": true
-    },
-    {
-      "id": 212,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "McKlopedia Ft. YOSHI",
-      "title": {
-        "es": "Freestyle #4",
-        "en": "Freestyle #4"
-      },
-      "description": {
-        "es": "Un freestyle puro donde McKlopedia y YOSHI muestran su habilidad lírica y dominio del ritmo. 'Freestyle #4' es un ejemplo claro de improvisación y talento en el rap underground español.",
-        "en": "'Freestyle #4' showcases McKlopedia and YOSHI's lyrical skill and rhythm mastery. It is a clear example of improvisation and talent in Spanish underground rap."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=CQWneszOws0&list=RDCQWneszOws0&start_radio=1",
-      "spotify": "",
-      "masterpiece": true
-    },
-    {
-      "id": 213,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "FOYONE VS TKILLA",
-      "title": {
-        "es": "FOYONE VS TKILLA",
-        "en": "FOYONE VS TKILLA"
-      },
-      "description": {
-        "es": "Batalla completa entre FOYONE y TKILLA en la emblemática escena de Línea Dieciséis. Un duelo de ingenio, ritmo y lírica que refleja la esencia del rap competitivo y la cultura battle.",
-        "en": "Complete battle between FOYONE and TKILLA in the iconic Línea Dieciséis scene. A duel of wit, rhythm, and lyrics reflecting the essence of competitive rap and battle culture."
-      },
-      "image": "/imagenes/musica/battle.png",
-      "tags": [
-        "battle"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=3zPa-Tbw3BM&list=RD3zPa-Tbw3BM&start_radio=1&t=1735s",
-      "spotify": "",
-      "masterpiece": true
-    },
-    {
-      "id": 214,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "McKlopedia",
-      "title": {
-        "es": "Vida Eterna",
-        "en": "Vida Eterna"
-      },
-      "description": {
-        "es": "En 'Vida Eterna', McKlopedia profundiza en temas existenciales y sociales con una lírica incisiva y profunda. El tema destaca por su ritmo envolvente y mensaje contundente.",
-        "en": "'Vida Eterna' is McKlopedia's deep dive into existential and social themes with incisive and profound lyrics. The track stands out for its engaging rhythm and powerful message."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273e422383872f6a7c4cafdd4d4",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=1nvXtgDc-mM&list=RD1nvXtgDc-mM&start_radio=1",
-      "spotify": "https://open.spotify.com/album/243F9X01ypu39S723UeoB7",
-      "masterpiece": true
-    },
-    {
-      "id": 215,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "McKlopedia vs Danger",
-      "title": {
-        "es": "McKlopedia vs Danger Linea 16",
-        "en": "McKlopedia vs Danger Linea 16"
-      },
-      "description": {
-        "es": "Duelo intenso entre McKlopedia y Danger en la segunda ronda de Línea 16 XL. Una batalla que combina habilidad lírica con ritmo dinámico, representando la esencia del freestyle competitivo.",
-        "en": "Intense duel between McKlopedia and Danger in Round 2 of Línea 16 XL. A battle combining lyrical skill with dynamic rhythm, embodying the essence of competitive freestyle."
-      },
-      "image": "/imagenes/musica/battle.png",
-      "tags": [
-        "battle"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=eDl2YGPVk-4",
-      "spotify": "",
-      "masterpiece": true
-    },
-    {
-      "id": 216,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Arianna Puello",
-      "title": {
-        "es": "Rap Pa Mi-Pa Ti",
-        "en": "Rap Pa Mi-Pa Ti"
-      },
-      "description": {
-        "es": "Arianna Puello presenta 'Rap Pa Mi-Pa Ti', un videoclip que combina fuerza femenina y lirismo directo. Un himno que resalta la autenticidad y la voz de la mujer en el rap hispano.",
-        "en": "Arianna Puello delivers 'Rap Pa Mi-Pa Ti', a videoclip combining female strength and direct lyricism. An anthem highlighting authenticity and the female voice in Hispanic rap."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b2732abfbabef28167c41d229980",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=hB7VdbHfxrQ&list=RDhB7VdbHfxrQ&start_radio=1",
-      "spotify": "",
-      "masterpiece": true
-    },
-    {
-      "id": 217,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Nas",
-      "title": {
-        "es": "King’s Disease II",
-        "en": "King’s Disease II"
-      },
-      "description": {
-        "es": "King’s Disease II es una obra maestra de madurez lírica y producción moderna, donde Nas reflexiona sobre el legado, la calle y la superación. Con beats pulidos y colaboraciones de alto nivel, el álbum confirma su relevancia y dominio en el rap contemporáneo.",
-        "en": "King’s Disease II is a lyrical masterpiece of maturity and modern production, where Nas reflects on legacy, the streets, and personal growth. With polished beats and top-tier collaborations, the album reaffirms his relevance and dominance in contemporary rap."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273d0673d1dd6938dad8530823b",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=1ofy51Fq818&list=PLxA687tYuMWgKE2bQbYG_pbNJKbmJdCFx",
-      "spotify": "https://open.spotify.com/intl-es/album/6CM5qhYBvpgYNek5kYwuOJ",
-      "masterpiece": true
-    },
-    {
-      "id": 218,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Nas",
-      "title": {
-        "es": "The Pressure",
-        "en": "The Pressure"
-      },
-      "description": {
-        "es": "'The Pressure' es una pieza intensa y crítica donde Nas aborda la lucha interna y las presiones sociales. La versión subtitulada facilita la comprensión de su mensaje profundo.",
-        "en": "'The Pressure' is an intense and critical piece where Nas addresses internal struggle and social pressures. The subtitled version enhances the understanding of his profound message."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273d0673d1dd6938dad8530823b",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=qTzKh5ykLU0&list=RDqTzKh5ykLU0&start_radio=1",
-      "spotify": "https://open.spotify.com/intl-es/track/3YzxXVNHGZF09eGqhsYuHI",
-      "masterpiece": true
-    },
-    {
-      "id": 219,
-      "category": "music",
-      "subcategory": "electronic",
-      "artist": "Los Ganglios",
-      "title": {
-        "es": "InfoCreación",
-        "en": "InfoCreación"
-      },
-      "description": {
-        "es": "'InfoCreación' es un tema emblemático de Los Ganglios, fusionando electrónica y humor con crítica social. Su estilo único y su sonido experimental los han hecho referentes del género.",
-        "en": "'InfoCreación' is an emblematic track by Los Ganglios, blending electronic music and humor with social critique. Their unique style and experimental sound have made them genre references."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273507b2f6283fc29103954a52b",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=EgFk2Es2T3E&list=RDEgFk2Es2T3E&start_radio=1",
-      "spotify": "https://open.spotify.com/intl-es/track/1HhyDUxuJdmfhR7fYJG1Km",
-      "masterpiece": true
-    },
-    {
-      "id": 220,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Los Ganglios",
-      "title": {
-        "es": "Rajaculero",
-        "en": "Rajaculero"
-      },
-      "description": {
-        "es": "Una canción con un ritmo fresco que mezcla el rap con sonidos electrónicos y experimentales. 'Rajaculero' es una muestra del estilo irreverente y original de Los Ganglios en la escena urbana española.",
-        "en": "'Rajaculero' features a fresh rhythm blending rap with electronic and experimental sounds. It showcases Los Ganglios' irreverent and original style in the Spanish urban scene."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273d7346342f0eaac29fb69eb9d",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=f9aDksBwanE",
-      "spotify": "https://open.spotify.com/intl-es/track/2cBGs7beYwtnz667EonTle",
-      "masterpiece": true
-    },
-    {
-      "id": 221,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Gitano Antón",
-      "title": {
-        "es": "",
-        "en": "Patillas de Canastero"
-      },
-      "description": {
-        "es": "Un tema que fusiona la esencia del flamenco con sonidos tradicionales gitanos y toques modernos. 'Gitano Antón' es una pieza emotiva que transmite la identidad cultural y la pasión por la música folklórica.",
-        "en": "'Gitano Antón' merges flamenco essence with traditional gypsy sounds and modern touches. It's an emotional piece that conveys cultural identity and passion for folk music."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=HVVctAOkJlc&list=RDHVVctAOkJlc&start_radio=1",
-      "spotify": "",
-      "masterpiece": true
-    },
-    {
-      "id": 222,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Bejo",
-      "title": {
-        "es": "El Bucle",
-        "en": "El Bucle"
-      },
-      "description": {
-        "es": "'El Bucle', producido por Nico Miseria, es un tema vibrante que mezcla ritmos pegajosos con letras ingeniosas y un flow carismático. Bejo demuestra su talento con una propuesta fresca y dinámica.",
-        "en": "'El Bucle', produced by Nico Miseria, is a vibrant track mixing catchy rhythms with clever lyrics and charismatic flow. Bejo showcases his talent with a fresh and dynamic approach."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273d3137603405b9d781450cfa4",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=y4zMmrTzrHQ&list=RDy4zMmrTzrHQ&start_radio=1",
-      "spotify": "https://open.spotify.com/intl-es/track/3zrZ0HJJktWGX03JGfAwin",
-      "masterpiece": true
-    },
-    {
-      "id": 223,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Ergo Pro ft. Lou Fresco",
-      "title": {
-        "es": "Still Hungry",
-        "en": "Still Hungry"
-      },
-      "description": {
-        "es": "'Still Hungry', producido por Tru Comers, es una colaboración que destaca por su energía cruda y letras directas. Ergo Pro y Lou Fresco entregan un tema potente dentro del rap contemporáneo.",
-        "en": "'Still Hungry', produced by Tru Comers, is a collaboration that stands out for its raw energy and direct lyrics. Ergo Pro and Lou Fresco deliver a powerful track within contemporary rap."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=GaiKshx4izo&list=RDGaiKshx4izo&start_radio=1",
-      "spotify": "",
-      "masterpiece": true
-    },
-    {
-      "id": 224,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "ToteKing & Ill Pekeño & Ergo Pro",
-      "title": {
-        "es": "The Lox",
-        "en": "The Lox"
-      },
-      "description": {
-        "es": "'The Lox', producido por Titó, reúne a tres grandes del rap español. La canción destaca por su lírica afilada y la química entre ToteKing, Ill Pekeño y Ergo Pro, ofreciendo un tema potente y memorable.",
-        "en": "'The Lox', produced by Titó, brings together three greats of Spanish rap. The track features sharp lyrics and great chemistry between ToteKing, Ill Pekeño, and Ergo Pro, delivering a powerful and memorable song."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b2732a95f694c851b245fc4b3417",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=E9EQtpcuY6U&list=RDE9EQtpcuY6U&start_radio=1",
-      "spotify": "https://open.spotify.com/intl-es/track/6xaduapgnoNZHXPikD986H",
-      "masterpiece": true
-    },
-    {
-      "id": 225,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Ill Pekeño & Ergo Pro",
-      "title": {
-        "es": "Tierra Abatida",
-        "en": "Tierra Abatida"
-      },
-      "description": {
-        "es": "'Tierra Abatida', producido por Gese da O, es un videoclip que refleja la cruda realidad social y el compromiso de Ill Pekeño y Ergo Pro con la poesía urbana de calidad.",
-        "en": "'Tierra Abatida', produced by Gese da O, is a videoclip reflecting harsh social reality and the commitment of Ill Pekeño and Ergo Pro to quality urban poetry."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b2733292e86c0aad2fa99de07fd0",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=L8bg5vcOItc&list=RDL8bg5vcOItc&start_radio=1",
-      "spotify": "",
-      "masterpiece": true
-    },
-    {
-      "id": 226,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Ill Pekeño, Ergo Pro & Candela Cuore",
-      "title": {
-        "es": "No Ice Cream",
-        "en": "No Ice Cream"
-      },
-      "description": {
-        "es": "'No Ice Cream' es una colaboración donde Ill Pekeño, Ergo Pro y Candela Cuore mezclan sus estilos únicos en un tema que combina crítica social con ritmos contundentes y letras inteligentes.",
-        "en": "'No Ice Cream' is a collaboration where Ill Pekeño, Ergo Pro, and Candela Cuore mix their unique styles in a track combining social critique with strong rhythms and smart lyrics."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b27306cd176c6690cfdea17da942",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=pB0B-jeqayw&list=RDpB0B-jeqayw&start_radio=1",
-      "spotify": "https://open.spotify.com/album/1HlI5Kl3QViBEiwFOJ93NZ",
-      "masterpiece": true
-    },
-    {
-      "id": 227,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Foyone",
-      "title": {
-        "es": "Rap Sin Corte XLVIII",
-        "en": "Rap Sin Corte XLVIII"
-      },
-      "description": {
-        "es": "'Rap Sin Corte XLVIII' es una sesión intensa y directa de Foyone, donde la improvisación y la crítica social se combinan para ofrecer un mensaje poderoso y sin filtros.",
-        "en": "'Rap Sin Corte XLVIII' is an intense and direct session by Foyone, combining improvisation and social critique to deliver a powerful and unfiltered message."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
-      "tags": [
-        "live"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=1WATuK6_BXw&list=RD1WATuK6_BXw&start_radio=1",
-      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
-      "masterpiece": true
-    },
-    {
-      "id": 228,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "FJ.Ramos VKR",
-      "title": {
-        "es": "West Coast Homenaje",
-        "en": "West Coast Homenaje"
-      },
-      "description": {
-        "es": "Un homenaje especial a FJ.Ramos VKR con una recopilación de temas que resaltan la influencia y legado dentro del rap de la costa oeste española.",
-        "en": "A special tribute to FJ.Ramos VKR featuring a collection of tracks highlighting his influence and legacy within the Spanish west coast rap scene."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=o7FUGFowPQU&list=RDo7FUGFowPQU&start_radio=1",
-      "spotify": "",
-      "masterpiece": true
-    },
-    {
-      "id": 229,
-      "category": "music",
-      "subcategory": "flamenco",
-      "artist": "Paco Ibáñez",
-      "title": {
-        "es": "La Mala Reputación",
-        "en": "La Mala Reputación"
-      },
-      "description": {
-        "es": "'La Mala Reputación' es uno de los temas más emblemáticos de Paco Ibáñez, una crítica poética a las normas sociales y la hipocresía, interpretada con un estilo folk que perdura en el tiempo.",
-        "en": "'La Mala Reputación' is one of Paco Ibáñez's most emblematic songs, a poetic critique of social norms and hypocrisy, performed in a timeless folk style."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273fd02a3aa935a9c1913395187",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=gosi6_vR6eE&list=RDgosi6_vR6eE&start_radio=1",
-      "spotify": "",
-      "masterpiece": true
-    },
-    {
-      "id": 230,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Pielroja",
-      "title": {
-        "es": "Paseo",
-        "en": "Paseo"
-      },
-      "description": {
-        "es": "Paseo es un tema producido por Unloged que combina letras profundas con ritmos urbanos y un flow fresco. La colaboración resalta la energía del rap contemporáneo español. Es un ejemplo claro de la creatividad y el talento emergente en la escena.",
-        "en": "Paseo is a track produced by Unloged that combines deep lyrics with urban beats and a fresh flow. The collaboration highlights the energy of contemporary Spanish rap. It is a clear example of creativity and emerging talent in the scene."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273e2534d99055941c543bac87d",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=LAYofMi37SM&list=RDLAYofMi37SM&start_radio=1",
-      "spotify": "https://open.spotify.com/album/7HuZYKjuQdK1dicLhGoBK0",
-      "masterpiece": true
-    },
-    {
-      "id": 231,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Toteking, Shotta",
-      "title": {
-        "es": "Voy A....",
-        "en": "Voy A...."
-      },
-      "description": {
-        "es": "‘Voy A....’ es una colaboración potente entre Toteking y Shotta, dos grandes referentes del rap español. La canción destaca por sus letras intensas y ritmo marcado, con un estilo urbano auténtico. Refleja la esencia del hip-hop en la península.",
-        "en": "‘Voy A....’ is a powerful collaboration between Toteking and Shotta, two major figures in Spanish rap. The song stands out for its intense lyrics and strong rhythm, with an authentic urban style. It reflects the essence of hip-hop in the peninsula."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273b9b1030fd5c54262e85e7e1e",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=a-Sc_30OVUU&list=RDa-Sc_30OVUU&start_radio=1",
-      "spotify": "https://open.spotify.com/album/3pbWxKnA1OPy3OYvgsG5qQ",
-      "masterpiece": true
-    },
-    
-    {
-      "id": 233,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "FOYONE",
-      "title": {
-        "es": "RapSinCorte XLVII",
-        "en": "RapSinCorte XLVII"
-      },
-      "description": {
-        "es": "El episodio XLVII de #RapSinCorte presenta a Foyone en su máximo exponente, con letras afiladas y críticas sociales directas. Su estilo crudo y sincero conecta con la realidad y el sentir del público urbano. Un imprescindible del rap consciente español.",
-        "en": "The XLVII episode of #RapSinCorte features Foyone at his best, with sharp lyrics and direct social criticism. His raw and sincere style connects with urban reality and the feelings of the audience. A must in Spanish conscious rap."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
-      "tags": [
-        "live"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=Q97_AzVrCds&list=RDQ97_AzVrCds&start_radio=1",
-      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
-      "masterpiece": true
-    },
-    {
-      "id": 234,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Original Juan",
-      "title": {
-        "es": "Dominican Gang Star",
-        "en": "Dominican Gang Star"
-      },
-      "description": {
-        "es": "Dominican Gang Star es el álbum completo de Original Juan que refleja la vida y las luchas del rap dominicano. Con ritmos contundentes y letras llenas de fuerza y autenticidad, este trabajo se ha convertido en un referente del género en el Caribe.",
-        "en": "Dominican Gang Star is Original Juan's full album that reflects the life and struggles of Dominican rap. With strong rhythms and lyrics full of power and authenticity, this work has become a reference in the Caribbean genre."
-      },
-      "image": "/imagenes/musica/dominican.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=6n9PQ8OHs7M&list=RD6n9PQ8OHs7M&start_radio=1&t=19s",
-      "spotify": "https://open.spotify.com/intl-es/album/3TCsvfamjiEUZ46X6R3Ovg",
-      "masterpiece": true
-    },
-    {
-      "id": 235,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Verdaderos Kreyentes de la Religión del Hip-Hop",
-      "title": {
-        "es": "Hombre rico hombre pobre",
-        "en": "Rich Man Poor Man"
-      },
-      "description": {
-        "es": "‘Hombre rico hombre pobre’ es un tema emblemático de Verdaderos Kreyentes de la Religión del Hip-Hop que expone con sinceridad las desigualdades sociales a través del rap consciente. Sus letras cargadas de crítica social y ritmo contundente lo convierten en una pieza clave del rap en español. El tema refleja la realidad y lucha de las clases populares.",
-        "en": "'Hombre rico hombre pobre' is an emblematic track by Verdaderos Kreyentes de la Religión del Hip-Hop that honestly exposes social inequalities through conscious rap. Its lyrics loaded with social criticism and strong rhythm make it a key piece in Spanish rap. The song reflects the reality and struggle of the working class."
-      },
-      "image": "/imagenes/musica/enlascalles.png",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=K7IGg_MKH0k&list=RDK7IGg_MKH0k&start_radio=1",
-      "spotify": "https://open.spotify.com/intl-es/track/1OkyyknLPndNJnPNFVH2UG",
-      "masterpiece": true
-    },
-    {
-      "id": 236,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Foyone",
-      "title": {
-        "es": "El síndrome de Anuel",
-        "en": "The Anuel Syndrome"
-      },
-      "description": {
-        "es": "‘El síndrome de Anuel’ es una crítica directa y afilada de Foyone a la industria musical y a la figura del toyaco Jicho Con una lírica mordaz y ritmo potente, Foyone cuestiona las realidades del éxito y la cultura urbana actual. Un tema que genera debate y refleja la realidad del rap español.",
-        "en": "'El síndrome de Anuel' is a direct and sharp critique by Foyone of the music industry and the figure of rap topyaco Jincho With biting lyrics and powerful rhythm, Foyone questions the realities of success and current urban culture. A track that sparks debate and reflects Spanish rap reality."
-      },
-      "image": "/imagenes/musica/anuel.png",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/results?search_query=Foyone+El+síndrome+de+Anuel",
-      "spotify": "https://open.spotify.com/intl-es/track/53qaPJ0HVAi7dMyd6htXIH",
-      "masterpiece": true
-    },
-    {
-      "id": 237,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "Canserbero",
-      "title": {
-        "es": "Tripolar",
-        "en": "Tripolar"
-      },
-      "description": {
-        "es": "‘Tripolar’ es una canción profunda y emotiva de Canserbero que explora la complejidad de los estados emocionales y la lucha interna. Con una letra introspectiva y una mezcla de rap y rock, se ha convertido en un himno para quienes enfrentan sus demonios personales. Un clásico del rap latinoamericano.",
-        "en": "'Tripolar' is a deep and emotional song by Canserbero that explores the complexity of emotional states and internal struggle. With introspective lyrics and a blend of rap and rock, it has become an anthem for those facing personal demons. A classic of Latin American rap."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=6Vbq5JFbsjY&list=RD6Vbq5JFbsjY&start_radio=1",
-      "spotify": "https://open.spotify.com/album/29N9nfcvov8KfyF2X8Mj6P",
-      "masterpiece": true
-    },
-    {
-      "id": 238,
-      "category": "music",
-      "subcategory": "rap",
-      "artist": "FOYONE",
-      "title": {
-        "es": "RapSinCorte XXXIV",
-        "en": "RapSinCorte XXXIV"
-      },
-      "description": {
-        "es": "#RapSinCorte XXXIV es un episodio de freestyle de FOYONE donde demuestra su habilidad lírica y crítica social sin filtros. Este formato en vivo destaca por la espontaneidad y contundencia de sus rimas, convirtiéndose en un referente dentro de la escena underground española. Una muestra de talento y autenticidad.",
-        "en": "#RapSinCorte XXXIV is a freestyle episode by FOYONE showcasing his lyrical skill and unfiltered social criticism. This live format stands out for spontaneity and the strength of his rhymes, becoming a benchmark in the Spanish underground scene. A display of talent and authenticity."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
-      "tags": [
-        "live"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=MsLXdEJwGFs&list=RDMsLXdEJwGFs&start_radio=1",
-      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
-      "masterpiece": true
-    },
-    {
-      "id": 239,
       "category": "music",
       "subcategory": "rap",
       "artist": "SOULJAH JEROME aka NOITE",
@@ -760,7 +23,7 @@
       "masterpiece": true
     },
     {
-      "id": 240,
+      "id": 202,
       "category": "music",
       "subcategory": "rap",
       "artist": "Secuaces Cru",
@@ -781,7 +44,7 @@
       "masterpiece": true
     },
     {
-      "id": 241,
+      "id": 203,
       "category": "music",
       "subcategory": "rap",
       "artist": "Kage & Mismo",
@@ -802,7 +65,7 @@
       "masterpiece": true
     },
     {
-      "id": 242,
+      "id": 204,
       "category": "music",
       "subcategory": "rap",
       "artist": "Kage",
@@ -823,7 +86,7 @@
       "masterpiece": true
     },
     {
-      "id": 243,
+      "id": 205,
       "category": "music",
       "subcategory": "rock",
       "artist": "Extremoduro",
@@ -844,7 +107,7 @@
       "masterpiece": true
     },
     {
-      "id": 244,
+      "id": 206,
       "category": "music",
       "subcategory": "metal",
       "artist": "Gutalax",
@@ -865,7 +128,7 @@
       "masterpiece": true
     },
     {
-      "id": 245,
+      "id": 207,
       "category": "music",
       "subcategory": "rap",
       "artist": "Mcklopedia & Orestes Gomez",
@@ -886,7 +149,7 @@
       "masterpiece": true
     },
     {
-      "id": 246,
+      "id": 208,
       "category": "music",
       "subcategory": "rap",
       "artist": "Zaturno",
@@ -907,7 +170,7 @@
       "masterpiece": true
     },
     {
-      "id": 247,
+      "id": 209,
       "category": "music",
       "subcategory": "rap",
       "artist": "Nathy Peluso",
@@ -928,7 +191,7 @@
       "masterpiece": true
     },
     {
-      "id": 248,
+      "id": 210,
       "category": "music",
       "subcategory": "rap",
       "artist": "MC Klopedia vs Kabuto",
@@ -949,7 +212,7 @@
       "masterpiece": true
     },
     {
-      "id": 249,
+      "id": 211,
       "category": "music",
       "subcategory": "rap",
       "artist": "SOULJAH JEROME",
@@ -970,7 +233,7 @@
       "masterpiece": true
     },
     {
-      "id": 250,
+      "id": 212,
       "category": "music",
       "subcategory": "rap",
       "artist": "PURE NEGGA",
@@ -992,7 +255,7 @@
     },
     
     {
-      "id": 252,
+      "id": 213,
       "category": "music",
       "subcategory": "rap",
       "artist": "RMS ft. Gona",
@@ -1013,7 +276,7 @@
       "masterpiece": true
     },
     {
-      "id": 253,
+      "id": 214,
       "category": "music",
       "subcategory": "rap",
       "artist": "Mcklopedia",
@@ -1034,7 +297,7 @@
       "masterpiece": true
     },
     {
-      "id": 255,
+      "id": 215,
       "category": "music",
       "subcategory": "rap",
       "artist": "RMS",
@@ -1055,7 +318,7 @@
       "masterpiece": true
     },
     {
-      "id": 256,
+      "id": 216,
       "category": "music",
       "subcategory": "rap",
       "artist": "RMS",
@@ -1076,7 +339,7 @@
       "masterpiece": true
     },
     {
-      "id": 257,
+      "id": 217,
       "category": "music",
       "subcategory": "rap",
       "artist": "RMS",
@@ -1097,7 +360,7 @@
       "masterpiece": true
     },
     {
-      "id": 258,
+      "id": 218,
       "category": "music",
       "subcategory": "rap",
       "artist": "Ramsés Meneses",
@@ -1118,7 +381,7 @@
       "masterpiece": true
     },
     {
-      "id": 259,
+      "id": 219,
       "category": "music",
       "subcategory": "rap",
       "artist": "RAMSET",
@@ -1139,7 +402,7 @@
       "masterpiece": true
     },
     {
-      "id": 260,
+      "id": 220,
       "category": "music",
       "subcategory": "rap",
       "artist": "Ozelot",
@@ -1160,7 +423,7 @@
       "masterpiece": true
     },
     {
-      "id": 261,
+      "id": 221,
       "category": "music",
       "subcategory": "rap",
       "artist": "FOYONE",
@@ -1182,7 +445,7 @@
     },
     
     {
-      "id": 263,
+      "id": 222,
       "category": "music",
       "subcategory": "rap",
       "artist": "KASE.O & MCKLOPEDIA",
@@ -1203,7 +466,7 @@
       "masterpiece": true
     },
     {
-      "id": 264,
+      "id": 223,
       "category": "music",
       "subcategory": "rap",
       "artist": "Mcklopedia Ft. Apache",
@@ -1224,7 +487,7 @@
       "masterpiece": true
     },
     {
-      "id": 265,
+      "id": 224,
       "category": "music",
       "subcategory": "rap",
       "artist": "Poison (VKR) FJ.Ramos",
@@ -1245,7 +508,7 @@
       "masterpiece": true
     },
     {
-      "id": 266,
+      "id": 225,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Bonobo",
@@ -1267,7 +530,7 @@
     },
    
     {
-      "id": 268,
+      "id": 226,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Caribou",
@@ -1288,7 +551,7 @@
       "masterpiece": true
     },
     {
-      "id": 269,
+      "id": 227,
       "category": "music",
       "subcategory": "rap",
       "artist": "Ribon feat. Dejota Rena",
@@ -1309,7 +572,7 @@
       "masterpiece": true
     },
     {
-      "id": 270,
+      "id": 228,
       "category": "music",
       "subcategory": "rock",
       "artist": "Led Zeppelin",
@@ -1330,7 +593,7 @@
       "masterpiece": true
     },
     {
-      "id": 271,
+      "id": 229,
       "category": "music",
       "subcategory": "rock",
       "artist": "Led Zeppelin",
@@ -1351,7 +614,7 @@
       "masterpiece": true
     },
     {
-      "id": 272,
+      "id": 230,
       "category": "music",
       "subcategory": "rock",
       "artist": "Led Zeppelin",
@@ -1372,7 +635,7 @@
       "masterpiece": true
     },
     {
-      "id": 273,
+      "id": 231,
       "category": "music",
       "subcategory": "rock",
       "artist": "Led Zeppelin",
@@ -1393,7 +656,7 @@
       "masterpiece": true
     },
     {
-      "id": 274,
+      "id": 232,
       "category": "music",
       "subcategory": "rock",
       "artist": "Led Zeppelin",
@@ -1414,7 +677,7 @@
       "masterpiece": true
     },
     {
-      "id": 275,
+      "id": 233,
       "category": "music",
       "subcategory": "rock",
       "artist": "Led Zeppelin",
@@ -1435,7 +698,7 @@
       "masterpiece": true
     },
     {
-      "id": 276,
+      "id": 234,
       "category": "music",
       "subcategory": "rock",
       "artist": "Led Zeppelin",
@@ -1456,7 +719,7 @@
       "masterpiece": true
     },
     {
-      "id": 277,
+      "id": 235,
       "category": "music",
       "subcategory": "rock",
       "artist": "Led Zeppelin",
@@ -1477,7 +740,7 @@
       "masterpiece": true
     },
     {
-      "id": 278,
+      "id": 236,
       "category": "music",
       "subcategory": "rock",
       "artist": "Nirvana",
@@ -1498,7 +761,7 @@
       "masterpiece": true
     },
     {
-      "id": 279,
+      "id": 237,
       "category": "music",
       "subcategory": "rock",
       "artist": "Nirvana",
@@ -1519,7 +782,7 @@
       "masterpiece": true
     },
     {
-      "id": 280,
+      "id": 238,
       "category": "music",
       "subcategory": "rock",
       "artist": "Nirvana",
@@ -1540,7 +803,7 @@
       "masterpiece": true
     },
     {
-      "id": 281,
+      "id": 239,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Aphex Twin",
@@ -1561,7 +824,7 @@
       "masterpiece": true
     },
     {
-      "id": 282,
+      "id": 240,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Aphex Twin",
@@ -1582,7 +845,7 @@
       "masterpiece": true
     },
     {
-      "id": 283,
+      "id": 241,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Aphex Twin",
@@ -1603,7 +866,7 @@
       "masterpiece": true
     },
     {
-      "id": 284,
+      "id": 242,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Aphex Twin",
@@ -1624,7 +887,7 @@
       "masterpiece": true
     },
     {
-      "id": 285,
+      "id": 243,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Aphex Twin",
@@ -1645,7 +908,7 @@
       "masterpiece": true
     },
     {
-      "id": 286,
+      "id": 244,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Aphex Twin",
@@ -1666,7 +929,7 @@
       "masterpiece": true
     },
     {
-      "id": 287,
+      "id": 245,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Aphex Twin",
@@ -1687,7 +950,7 @@
       "masterpiece": true
     },
     {
-      "id": 288,
+      "id": 246,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Aphex Twin",
@@ -1708,7 +971,7 @@
       "masterpiece": true
     },
     {
-      "id": 289,
+      "id": 247,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Aphex Twin",
@@ -1729,7 +992,7 @@
       "masterpiece": true
     },
     {
-      "id": 290,
+      "id": 248,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Fila Brazillia",
@@ -1750,7 +1013,7 @@
       "masterpiece": true
     },
     {
-      "id": 291,
+      "id": 249,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Fila Brazillia",
@@ -1771,7 +1034,7 @@
       "masterpiece": true
     },
     {
-      "id": 292,
+      "id": 250,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Fila Brazillia",
@@ -1792,7 +1055,7 @@
       "masterpiece": true
     },
     {
-      "id": 293,
+      "id": 251,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Fila Brazillia",
@@ -1813,7 +1076,7 @@
       "masterpiece": true
     },
     {
-      "id": 294,
+      "id": 252,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Fila Brazillia",
@@ -1834,7 +1097,7 @@
       "masterpiece": true
     },
     {
-      "id": 295,
+      "id": 253,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Fila Brazillia",
@@ -1855,7 +1118,7 @@
       "masterpiece": true
     },
     {
-      "id": 296,
+      "id": 254,
       "category": "music",
       "subcategory": "rock",
       "artist": "The Police",
@@ -1876,7 +1139,7 @@
       "masterpiece": true
     },
     {
-      "id": 297,
+      "id": 255,
       "category": "music",
       "subcategory": "rock",
       "artist": "The Police",
@@ -1897,7 +1160,7 @@
       "masterpiece": true
     },
     {
-      "id": 298,
+      "id": 256,
       "category": "music",
       "subcategory": "rock",
       "artist": "The Police",
@@ -1918,7 +1181,7 @@
       "masterpiece": true
     },
     {
-      "id": 299,
+      "id": 257,
       "category": "music",
       "subcategory": "rock",
       "artist": "The Police",
@@ -1939,7 +1202,7 @@
       "masterpiece": true
     },
     {
-      "id": 300,
+      "id": 258,
       "category": "music",
       "subcategory": "rock",
       "artist": "The Police",
@@ -1960,7 +1223,7 @@
       "masterpiece": true
     },
     {
-      "id": 301,
+      "id": 259,
       "category": "music",
       "subcategory": "rock",
       "artist": "Sting",
@@ -1981,7 +1244,7 @@
       "masterpiece": true
     },
     {
-      "id": 302,
+      "id": 260,
       "category": "music",
       "subcategory": "rock",
       "artist": "Sting",
@@ -2002,7 +1265,7 @@
       "masterpiece": true
     },
     {
-      "id": 303,
+      "id": 261,
       "category": "music",
       "subcategory": "rock",
       "artist": "Sting",
@@ -2023,7 +1286,7 @@
       "masterpiece": true
     },
     {
-      "id": 304,
+      "id": 262,
       "category": "music",
       "subcategory": "rock",
       "artist": "Sting",
@@ -2044,7 +1307,7 @@
       "masterpiece": true
     },
     {
-      "id": 305,
+      "id": 263,
       "category": "music",
       "subcategory": "rock",
       "artist": "Sting",
@@ -2065,7 +1328,7 @@
       "masterpiece": true
     },
     {
-      "id": 306,
+      "id": 264,
       "category": "music",
       "subcategory": "rock",
       "artist": "Sting",
@@ -2086,7 +1349,7 @@
       "masterpiece": true
     },
     {
-      "id": 307,
+      "id": 265,
       "category": "music",
       "subcategory": "rock",
       "artist": "Sting",
@@ -2107,7 +1370,7 @@
       "masterpiece": true
     },
     {
-      "id": 308,
+      "id": 266,
       "category": "music",
       "subcategory": "rock",
       "artist": "Sting",
@@ -2128,7 +1391,7 @@
       "masterpiece": true
     },
     {
-      "id": 309,
+      "id": 267,
       "category": "music",
       "subcategory": "punk",
       "artist": "Los Ilegales",
@@ -2150,7 +1413,7 @@
     },
     
     {
-      "id": 311,
+      "id": 268,
       "category": "music",
       "subcategory": "punk",
       "artist": "Los Ilegales",
@@ -2174,7 +1437,7 @@
     
     
     {
-      "id": 315,
+      "id": 269,
       "category": "music",
       "subcategory": "punk",
       "artist": "Los Ilegales",
@@ -2195,7 +1458,7 @@
       "masterpiece": true
     },
     {
-      "id": 316,
+      "id": 270,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Thievery Corporation",
@@ -2216,7 +1479,7 @@
       "masterpiece": true
     },
     {
-      "id": 317,
+      "id": 271,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Thievery Corporation",
@@ -2237,7 +1500,7 @@
       "masterpiece": true
     },
     {
-      "id": 318,
+      "id": 272,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Thievery Corporation",
@@ -2258,7 +1521,7 @@
       "masterpiece": true
     },
     {
-      "id": 319,
+      "id": 273,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Thievery Corporation",
@@ -2279,7 +1542,7 @@
       "masterpiece": true
     },
     {
-      "id": 320,
+      "id": 274,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Thievery Corporation",
@@ -2300,7 +1563,7 @@
       "masterpiece": true
     },
     {
-      "id": 321,
+      "id": 275,
       "category": "music",
       "subcategory": "chillout",
       "artist": "Thievery Corporation",
@@ -2321,7 +1584,7 @@
       "masterpiece": true
     },
     {
-      "id": 322,
+      "id": 276,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Caribou",
@@ -2342,7 +1605,7 @@
       "masterpiece": false
     },
     {
-      "id": 323,
+      "id": 277,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Caribou",
@@ -2363,7 +1626,7 @@
       "masterpiece": true
     },
     {
-      "id": 324,
+      "id": 278,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Caribou",
@@ -2384,7 +1647,7 @@
       "masterpiece": true
     },
     {
-      "id": 325,
+      "id": 279,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Caribou",
@@ -2405,7 +1668,7 @@
       "masterpiece": true
     },
     {
-      "id": 326,
+      "id": 280,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Caribou",
@@ -2426,7 +1689,7 @@
       "masterpiece": true
     },
     {
-      "id": 327,
+      "id": 281,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Caribou",
@@ -2447,7 +1710,7 @@
       "masterpiece": true
     },
     {
-      "id": 328,
+      "id": 282,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Caribou",
@@ -2468,7 +1731,7 @@
       "masterpiece": true
     },
     {
-      "id": 329,
+      "id": 283,
       "category": "music",
       "subcategory": "electronic",
       "artist": "Caribou",
@@ -2489,7 +1752,7 @@
       "masterpiece": false
     },
     {
-      "id": 330,
+      "id": 284,
       "category": "music",
       "subcategory": "rap",
       "artist": "VKR (Verdaderos Kreyentes de la Religión del Hiphop)",
@@ -2510,7 +1773,7 @@
       "masterpiece": true
     },
     {
-      "id": 331,
+      "id": 285,
       "category": "music",
       "subcategory": "rap",
       "artist": "VKR (Verdaderos Kreyentes de la Religión del Hiphop)",
@@ -2531,7 +1794,7 @@
       "masterpiece": true
     },
     {
-      "id": 332,
+      "id": 286,
       "category": "music",
       "subcategory": "rap",
       "artist": "VKR (Verdaderos Kreyentes de la Religión del Hiphop)",
@@ -2553,7 +1816,7 @@
     },
    
     {
-      "id": 334,
+      "id": 287,
       "category": "music",
       "subcategory": "rap",
       "artist": "VKR (Verdaderos Kreyentes de la Religión del Hiphop)",
@@ -2574,7 +1837,7 @@
       "masterpiece": false
     },
     {
-      "id": 335,
+      "id": 288,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2595,7 +1858,7 @@
       "masterpiece": false
     },
     {
-      "id": 336,
+      "id": 289,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2616,7 +1879,7 @@
       "masterpiece": false
     },
     {
-      "id": 337,
+      "id": 290,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2637,7 +1900,7 @@
       "masterpiece": false
     },
     {
-      "id": 338,
+      "id": 291,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2658,7 +1921,7 @@
       "masterpiece": false
     },
     {
-      "id": 339,
+      "id": 292,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2679,7 +1942,7 @@
       "masterpiece": false
     },
     {
-      "id": 340,
+      "id": 293,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2700,7 +1963,7 @@
       "masterpiece": false
     },
     {
-      "id": 341,
+      "id": 294,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2721,7 +1984,7 @@
       "masterpiece": false
     },
     {
-      "id": 342,
+      "id": 295,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2742,7 +2005,7 @@
       "masterpiece": false
     },
     {
-      "id": 343,
+      "id": 296,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2763,7 +2026,7 @@
       "masterpiece": false
     },
     {
-      "id": 344,
+      "id": 297,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2784,7 +2047,7 @@
       "masterpiece": true
     },
     {
-      "id": 345,
+      "id": 298,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2805,7 +2068,7 @@
       "masterpiece": false
     },
     {
-      "id": 346,
+      "id": 299,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2826,7 +2089,7 @@
       "masterpiece": false
     },
     {
-      "id": 347,
+      "id": 300,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2847,7 +2110,7 @@
       "masterpiece": false
     },
     {
-      "id": 348,
+      "id": 301,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2868,7 +2131,7 @@
       "masterpiece": false
     },
     {
-      "id": 349,
+      "id": 302,
       "category": "music",
       "subcategory": "rap",
       "artist": "El Chojin",
@@ -2889,7 +2152,7 @@
       "masterpiece": false
     },
     {
-      "id": 350,
+      "id": 303,
       "category": "music",
       "subcategory": "rap",
       "artist": "Frank T",
@@ -2910,7 +2173,7 @@
       "masterpiece": false
     },
     {
-      "id": 351,
+      "id": 304,
       "category": "music",
       "subcategory": "rap",
       "artist": "Frank T",
@@ -2931,7 +2194,7 @@
       "masterpiece": true
     },
     {
-      "id": 352,
+      "id": 305,
       "category": "music",
       "subcategory": "rap",
       "artist": "Frank T",
@@ -2952,7 +2215,7 @@
       "masterpiece": false
     },
     {
-      "id": 353,
+      "id": 306,
       "category": "music",
       "subcategory": "rap",
       "artist": "Frank T",
@@ -2973,7 +2236,7 @@
       "masterpiece": true
     },
     {
-      "id": 354,
+      "id": 307,
       "category": "music",
       "subcategory": "rap",
       "artist": "Frank T",
@@ -2994,7 +2257,7 @@
       "masterpiece": false
     },
     {
-      "id": 355,
+      "id": 308,
       "category": "music",
       "subcategory": "rap",
       "artist": "Frank T",
@@ -3015,7 +2278,7 @@
       "masterpiece": false
     },
     {
-      "id": 356,
+      "id": 309,
       "category": "music",
       "subcategory": "rap",
       "artist": "Frank T",
@@ -3036,7 +2299,7 @@
       "masterpiece": true
     },
     {
-      "id": 357,
+      "id": 310,
       "category": "music",
       "subcategory": "rap",
       "artist": "Frank T",
@@ -3057,7 +2320,7 @@
       "masterpiece": false
     },
     {
-      "id": 358,
+      "id": 311,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3078,7 +2341,7 @@
       "masterpiece": false
     },
     {
-      "id": 359,
+      "id": 312,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3099,7 +2362,7 @@
       "masterpiece": false
     },
     {
-      "id": 360,
+      "id": 313,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3120,7 +2383,7 @@
       "masterpiece": false
     },
     {
-      "id": 361,
+      "id": 314,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3141,7 +2404,7 @@
       "masterpiece": true
     },
     {
-      "id": 362,
+      "id": 315,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3162,7 +2425,7 @@
       "masterpiece": true
     },
     {
-      "id": 363,
+      "id": 316,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3183,7 +2446,7 @@
       "masterpiece": true
     },
     {
-      "id": 364,
+      "id": 317,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3204,7 +2467,7 @@
       "masterpiece": true
     },
     {
-      "id": 365,
+      "id": 318,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3225,7 +2488,7 @@
       "masterpiece": false
     },
     {
-      "id": 366,
+      "id": 319,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3246,7 +2509,7 @@
       "masterpiece": false
     },
     {
-      "id": 367,
+      "id": 320,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3267,7 +2530,7 @@
       "masterpiece": false
     },
     {
-      "id": 368,
+      "id": 321,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3288,7 +2551,7 @@
       "masterpiece": false
     },
     {
-      "id": 369,
+      "id": 322,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3309,7 +2572,7 @@
       "masterpiece": false
     },
     {
-      "id": 370,
+      "id": 323,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3330,7 +2593,7 @@
       "masterpiece": false
     },
     {
-      "id": 371,
+      "id": 324,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3351,7 +2614,7 @@
       "masterpiece": false
     },
     {
-      "id": 372,
+      "id": 325,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3372,7 +2635,7 @@
       "masterpiece": false
     },
     {
-      "id": 373,
+      "id": 326,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3393,7 +2656,7 @@
       "masterpiece": false
     },
     {
-      "id": 374,
+      "id": 327,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3414,7 +2677,7 @@
       "masterpiece": false
     },
     {
-      "id": 375,
+      "id": 328,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3435,7 +2698,7 @@
       "masterpiece": false
     },
     {
-      "id": 376,
+      "id": 329,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3456,7 +2719,7 @@
       "masterpiece": false
     },
     {
-      "id": 377,
+      "id": 330,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3477,7 +2740,7 @@
       "masterpiece": false
     },
     {
-      "id": 378,
+      "id": 331,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3498,7 +2761,7 @@
       "masterpiece": false
     },
     {
-      "id": 379,
+      "id": 332,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3519,7 +2782,7 @@
       "masterpiece": false
     },
     {
-      "id": 380,
+      "id": 333,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3540,7 +2803,7 @@
       "masterpiece": false
     },
     {
-      "id": 381,
+      "id": 334,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3561,7 +2824,7 @@
       "masterpiece": false
     },
     {
-      "id": 382,
+      "id": 335,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3582,7 +2845,7 @@
       "masterpiece": false
     },
     {
-      "id": 383,
+      "id": 336,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3603,7 +2866,7 @@
       "masterpiece": false
     },
     {
-      "id": 384,
+      "id": 337,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3624,7 +2887,7 @@
       "masterpiece": false
     },
     {
-      "id": 385,
+      "id": 338,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3645,7 +2908,7 @@
       "masterpiece": false
     },
     {
-      "id": 386,
+      "id": 339,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3666,7 +2929,7 @@
       "masterpiece": false
     },
     {
-      "id": 387,
+      "id": 340,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3687,7 +2950,7 @@
       "masterpiece": false
     },
     {
-      "id": 388,
+      "id": 341,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3708,7 +2971,7 @@
       "masterpiece": false
     },
     {
-      "id": 389,
+      "id": 342,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3729,7 +2992,7 @@
       "masterpiece": false
     },
     {
-      "id": 390,
+      "id": 343,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3750,7 +3013,7 @@
       "masterpiece": false
     },
     {
-      "id": 391,
+      "id": 344,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3771,7 +3034,7 @@
       "masterpiece": false
     },
     {
-      "id": 392,
+      "id": 345,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3792,7 +3055,7 @@
       "masterpiece": false
     },
     {
-      "id": 393,
+      "id": 346,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3813,7 +3076,7 @@
       "masterpiece": false
     },
     {
-      "id": 394,
+      "id": 347,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3834,7 +3097,7 @@
       "masterpiece": false
     },
     {
-      "id": 395,
+      "id": 348,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3855,7 +3118,7 @@
       "masterpiece": false
     },
     {
-      "id": 396,
+      "id": 349,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3876,7 +3139,7 @@
       "masterpiece": false
     },
     {
-      "id": 397,
+      "id": 350,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3897,7 +3160,7 @@
       "masterpiece": false
     },
     {
-      "id": 398,
+      "id": 351,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3918,7 +3181,7 @@
       "masterpiece": false
     },
     {
-      "id": 399,
+      "id": 352,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3939,7 +3202,7 @@
       "masterpiece": false
     },
     {
-      "id": 400,
+      "id": 353,
       "category": "music",
       "subcategory": "rap",
       "artist": "Foyone",
@@ -3958,6 +3221,995 @@
       "youtube": "https://www.youtube.com/watch?v=j3QcSalDLmo&list=RDj3QcSalDLmo",
       "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
       "masterpiece": false
+    },
+    {
+      "id": 354,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "RapSinCorte XXXVII",
+        "en": "rapsincorte xxxvii"
+      },
+      "description": {
+        "es": "Trigésimo séptima entrega con flow refinado y presencia escénica.\nImprovisación pura sin cortes, fuerte actitud.\nRecibida con entusiasmo por la comunidad.",
+        "en": "Thirty-seventh installment with refined flow and stage presence.\nPure improvisation uncut, strong attitude.\nReceived enthusiastically by the community."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=vqEEKCqXZ1o&list=RDvqEEKCqXZ1o&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": false
+    },
+    {
+      "id": 355,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "RapSinCorte XXXVIII",
+        "en": "rapsincorte xxxviii"
+      },
+      "description": {
+        "es": "Trigésimo octava parte con barras introspectivas y beat suave.\nUn solo take que mantiene la esencia de la saga.\nBien valorada por su lírica y atmósfera.",
+        "en": "Thirty-eighth part with introspective bars and soft beat.\nSingle take maintaining the saga's essence.\nWell praised for its lyrics and atmosphere."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=01ZVeX1-eEY&list=RD01ZVeX1-eEY&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": false
+    },
+    {
+      "id": 356,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "RapSinCorte XXXIX",
+        "en": "rapsincorte xxxix"
+      },
+      "description": {
+        "es": "Trigésimo novena entrega con fuerza y ritmo marcado.\nImprovisación sin cortes, ritmo constante.\nAclamada por su energía y técnica vocal.",
+        "en": "Thirty-ninth installment with strength and marked rhythm.\nUncut improvisation, steady rhythm.\nAcclaimed for its energy and vocal technique."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=3GU-vuoMGGI&list=RD3GU-vuoMGGI&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": false
+    },
+    {
+      "id": 357,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "RapSinCorte XL",
+        "en": "rapsincorte xl"
+      },
+      "description": {
+        "es": "Cuadragésima entrega con producción impecable y flow maduro.\nFormato one-shot sin edición, improvisación sólida.\nMarca un hito en la saga RapSinCorte.",
+        "en": "Fortieth installment with impeccable production and mature flow.\nOne-shot format unedited, solid improvisation.\nMarks a milestone in the RapSinCorte saga."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=HJgmfJTy2Bk&list=RDHJgmfJTy2Bk&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": true
+    },
+    {
+      "id": 358,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte XLI",
+        "en": "Rap sin corte XLI"
+      },
+      "description": {
+        "es": "Una muestra potente de la lírica cruda y real de Foyone que refleja las vivencias urbanas y sociales con ritmo agresivo y flow único.",
+        "en": "A powerful showcase of Foyone's raw and real lyrics reflecting urban and social experiences with aggressive rhythm and unique flow."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=y5H0cY5I4mo&list=RDy5H0cY5I4mo",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": true
+    },
+    {
+      "id": 359,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte XLII",
+        "en": "Rap sin corte XLII"
+      },
+      "description": {
+        "es": "Un track que profundiza en la crítica social desde la perspectiva personal de Foyone, con beats contundentes y versos afilados.",
+        "en": "A track that delves into social criticism from Foyone's personal perspective, with strong beats and sharp verses."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=pb_XZ8so4to&list=RDpb_XZ8so4to&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": true
+    },
+    {
+      "id": 360,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte XLIII",
+        "en": "Rap sin corte XLIII"
+      },
+      "description": {
+        "es": "Versos directos que expresan la realidad cruda sin filtros, acompañados de una producción sonora que resalta cada palabra.",
+        "en": "Direct verses expressing raw reality without filters, accompanied by a sound production that highlights every word."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=QWVBrOXML1g",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": true
+    },
+    {
+      "id": 361,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte XLIV",
+        "en": "Rap sin corte XLIV"
+      },
+      "description": {
+        "es": "Un viaje a través de las emociones y conflictos internos que Foyone plasma con autenticidad y ritmo firme.",
+        "en": "A journey through emotions and inner conflicts that Foyone portrays with authenticity and firm rhythm."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=JpIopz41Dg0&list=RDJpIopz41Dg0&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": true
+    },
+    {
+      "id": 362,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte XLV",
+        "en": "Rap sin corte XLV"
+      },
+      "description": {
+        "es": "Una canción que mezcla crítica social con poesía urbana, destacando el ingenio lírico y la fluidez del artista.",
+        "en": "A song that mixes social criticism with urban poetry, highlighting the artist's lyrical wit and flow."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=bPwdc9Tpv1k&list=RDbPwdc9Tpv1k&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": true
+    },
+    {
+      "id": 363,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte XLVI",
+        "en": "Rap sin corte XLVI"
+      },
+      "description": {
+        "es": "Una pieza que enfatiza el poder de la palabra como arma contra la injusticia y la hipocresía social.",
+        "en": "A piece emphasizing the power of words as a weapon against injustice and social hypocrisy."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Pe4Pgajig9c&list=RDPe4Pgajig9c",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": true
+    },
+    {
+      "id": 364,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte XLVII",
+        "en": "Rap sin corte XLVII"
+      },
+      "description": {
+        "es": "Un tema que aborda la lucha interna y externa, con una producción oscura que potencia el mensaje intenso.",
+        "en": "A track addressing internal and external struggles, with a dark production that enhances the intense message."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Q97_AzVrCds&list=RDQ97_AzVrCds&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": true
+    },
+    {
+      "id": 365,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte XLVIII",
+        "en": "Rap sin corte XLVIII"
+      },
+      "description": {
+        "es": "Un relato urbano contado con lirismo afilado y crítica profunda a los sistemas que oprimen a las minorías.",
+        "en": "An urban tale told with sharp lyricism and deep criticism of systems that oppress minorities."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=1WATuK6_BXw&list=RD1WATuK6_BXw",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": true
+    },
+    {
+      "id": 366,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte XLIX",
+        "en": "Rap sin corte XLIX"
+      },
+      "description": {
+        "es": "Un corte donde la sinceridad y el realismo se combinan para mostrar el lado más crudo de la realidad social.",
+        "en": "A track where sincerity and realism combine to show the rawest side of social reality."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=10S9u9u5jlg&list=RD10S9u9u5jlg&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": true
+    },
+    {
+      "id": 367,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte L",
+        "en": "Rap sin corte L"
+      },
+      "description": {
+        "es": "El cierre de esta serie destaca por su fuerza lírica y crítica incisiva hacia la realidad política y social actual.",
+        "en": "The closing of this series stands out for its lyrical strength and incisive critique of current political and social reality."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=gOSkdIvNWCM&list=RDgOSkdIvNWCM",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": true
+    },
+    {
+      "id": 368,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Foyone",
+      "title": {
+        "es": "Rap sin corte LI",
+        "en": "Rap sin corte LI"
+      },
+      "description": {
+        "es": "Un tema donde Foyone sigue mostrando su estilo directo y sin concesiones, combinando crítica social con versos afilados y contundentes. La producción acompaña con ritmos que resaltan cada palabra y emoción transmitida.",
+        "en": "A track where Foyone continues showing his direct and uncompromising style, blending social criticism with sharp and powerful verses. The production supports with beats that highlight every word and emotion conveyed."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=y5H0cY5I4mo&list=RDy5H0cY5I4mo",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": true
+    },
+    
+    {
+      "id": 369,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tote King",
+      "title": {
+        "es": "Tu madre es una foca",
+        "en": "Tu madre es una foca"
+      },
+      "description": {
+        "es": "El álbum debut de Tote King marcó un antes y un después en el rap español. Letras intensas y directas, cargadas de crítica social y estilo propio, con bases contundentes que potencian cada verso.",
+        "en": "Tote King's debut album marked a turning point in Spanish rap. Intense and direct lyrics, loaded with social critique and unique style, with powerful beats that enhance every verse."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273ae3b5418489537b98fb6cb87",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=nhbM-khYJME&list=PL6Mo9t2-mUpAnOI11zBh2QrV7atRUmbyU",
+      "spotify": "https://open.spotify.com/album/3wcVG8c9P7qujhX8qa1kn2",
+      "masterpiece": true
+    },
+    {
+      "id": 370,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tote King",
+      "title": {
+        "es": "Música para enfermos",
+        "en": "Música para enfermos"
+      },
+      "description": {
+        "es": "Segundo álbum que reafirma la madurez artística de Tote King. Combina lirismo ácido con instrumentales más elaboradas, explorando temáticas personales y sociales con autenticidad.",
+        "en": "Second album that reaffirms Tote King's artistic maturity. Combines sharp lyrics with more elaborate instrumentals, exploring personal and social themes with authenticity."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273922ac3b14ed4b06426d83a8e",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=MkRCysQOJz4&list=PL6Mo9t2-mUpC_YMf7xcpNTjCQaeWLaLfO",
+      "spotify": "https://open.spotify.com/album/3PHqQRda1oRVu5UfqcPKFO",
+      "masterpiece": true
+    },
+    {
+      "id": 371,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tote King",
+      "title": {
+        "es": "El lado oscuro de Gandhi",
+        "en": "El lado oscuro de Gandhi"
+      },
+      "description": {
+        "es": "Álbum donde Tote King mezcla crítica social con una visión personal de la realidad, acompañado de ritmos potentes y variados que demuestran su versatilidad y compromiso artístico.",
+        "en": "Album where Tote King mixes social critique with a personal view of reality, accompanied by powerful and varied rhythms demonstrating his versatility and artistic commitment."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2732a5e592e47b3c704acd781b6",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=YgS_gk-mowU&list=PLBB8006F6CE67C7A7",
+      "spotify": "https://open.spotify.com/album/0DDGNUC4aEqcKuHlcc8nSr",
+      "masterpiece": true
+    },
+    {
+      "id": 372,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tote King",
+      "title": {
+        "es": "Lebron",
+        "en": "Lebron"
+      },
+      "description": {
+        "es": "En este álbum, Tote King ofrece una mirada más personal y madura, con letras que exploran emociones complejas y realidades urbanas, respaldadas por producciones modernas y envolventes.",
+        "en": "In this album, Tote King offers a more personal and mature look, with lyrics exploring complex emotions and urban realities, backed by modern and immersive productions."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f3ec97ec0f90a4d6b7c28ebd",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=spIxPqKchDo&list=PLvaFoyf0ssYdxH107uQGVvFa6mEzUEQU8",
+      "spotify": "https://open.spotify.com/album/1v0n7wm5OuCWKcoQtJBnak",
+      "masterpiece": true
+    },
+    {
+      "id": 373,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Tote King",
+      "title": {
+        "es": "The kingtape",
+        "en": "The kingtape"
+      },
+      "description": {
+        "es": "Mixtape que muestra la habilidad lírica y el estilo único de Tote King, con un enfoque más crudo y directo, manteniendo su esencia y ganando seguidores en la escena del rap español.",
+        "en": "Mixtape showcasing Tote King's lyrical skill and unique style, with a rawer and more direct approach, maintaining his essence and gaining followers in the Spanish rap scene."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2732a95f694c851b245fc4b3417",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=pMSLmqDavEI&list=PLsgJZnNTvLu4as4-A6OwRhvL6hy53q8Kv",
+      "spotify": "https://open.spotify.com/album/7IGTTwVnwYMZg3dPXt6XGS",
+      "masterpiece": true
+    },
+    {
+      "id": 374,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Nada Pa Mí",
+        "en": "Nada Pa Mí"
+      },
+      "description": {
+        "es": "Maxi que marca el inicio de Shotta en el rap con letras sinceras y directas. Su estilo refleja la crudeza y realidad de las calles, con una producción clásica que potencia su voz única.",
+        "en": "Maxi that marks Shotta's debut in rap with sincere and direct lyrics. His style reflects the harshness and reality of the streets, with classic production that enhances his unique voice."
+      },
+      "image": "/imagenes/musica/pordefecto.jpg",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=RaDciJEFpbY&list=RDRaDciJEFpbY&start_radio=1",
+      "spotify": "",
+      "masterpiece": true
+    },
+    {
+      "id": 375,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Salvaje",
+        "en": "Salvaje"
+      },
+      "description": {
+        "es": "Último LP que muestra a Shotta en su máxima expresión, con un rap agresivo y maduro que combina letras personales y sociales con una producción potente y actual.",
+        "en": "Latest LP showing Shotta at his best, with aggressive and mature rap combining personal and social lyrics with powerful and modern production."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273fb77afa43644630901a736c3",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=0-YwAQOpjR4&list=PLedZUGJKbpN7Xq8H-WUC3a96_Tz2jmAsv",
+      "spotify": "https://open.spotify.com/album/56k5uTSq7vXFSDvwcUo2XK",
+      "masterpiece": true
+    },
+    {
+      "id": 376,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Héroe",
+        "en": "Héroe"
+      },
+      "description": {
+        "es": "Álbum donde Shotta muestra una evolución lírica y musical, combinando introspección y crítica social. Una producción que mezcla sonidos clásicos con influencias modernas del rap.",
+        "en": "Album where Shotta shows lyrical and musical evolution, combining introspection and social critique. A production mixing classic sounds with modern rap influences."
+      },
+      "image": "/imagenes/musica/heroe.jpg",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=5CJzuPgB7dM&list=PLedZUGJKbpN6D-PLj0CP4O6B54_F5oBGP",
+      "spotify": "https://open.spotify.com/album/3pbWxKnA1OPy3OYvgsG5qQ",
+      "masterpiece": true
+    },
+    {
+      "id": 377,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "La Selva",
+        "en": "La Selva"
+      },
+      "description": {
+        "es": "LP que presenta a Shotta en una etapa madura, con letras profundas que abordan temas de vida, lucha y supervivencia. Su estilo combina energía y reflexión con beats poderosos.",
+        "en": "LP presenting Shotta in a mature stage, with deep lyrics addressing life, struggle, and survival. His style combines energy and reflection with powerful beats."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273727b57080543c0ffd56698de",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=YDUFCIlSydQ&list=PLqhBEV1Rx7uO1vdhJ15sn_7ASSP6PtnNa",
+      "spotify": "https://open.spotify.com/intl-es/album/6CYinlq49VRM4NShVHm2xu",
+      "masterpiece": true
+    },
+    {
+      "id": 378,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Los Raperos Nunca Mueren",
+        "en": "Los Raperos Nunca Mueren"
+      },
+      "description": {
+        "es": "Maxi que reafirma la posición de Shotta en el rap español, con temas potentes y un flow que combina agresividad y técnica. Una muestra clara de su compromiso con el género.",
+        "en": "Maxi that reaffirms Shotta's position in Spanish rap, with powerful tracks and a flow combining aggression and technique. A clear display of his commitment to the genre."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273cb9d79e789558522a3c51d32",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=4m49WNA0IBo&list=OLAK5uy_nTEqtPYEKzcvWhvWbKc5OhMJ2EN_GgfXM&index=2",
+      "spotify": "https://open.spotify.com/album/37EmBi2odwCirCJXpVzfye",
+      "masterpiece": true
+    },
+    {
+      "id": 379,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Sangre",
+        "en": "Sangre"
+      },
+      "description": {
+        "es": "Este LP muestra a Shotta en plena forma, con letras comprometidas y una producción sólida que combina ritmos clásicos y actuales para potenciar el mensaje de sus canciones.",
+        "en": "This LP shows Shotta in great form, with committed lyrics and solid production that combines classic and current rhythms to enhance the message of his songs."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27343d1b4b3d9f624125ae4fe91",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/",
+      "spotify": "https://open.spotify.com/album/6rR3KVO0zQKJBwal4smwsP",
+      "masterpiece": true
+    },
+    {
+      "id": 380,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Profundo",
+        "en": "Profundo"
+      },
+      "description": {
+        "es": "Un álbum introspectivo donde Shotta combina experiencias personales con críticas sociales. La producción es cuidada y el flow se adapta a un rap más maduro y reflexivo.",
+        "en": "An introspective album where Shotta combines personal experiences with social critiques. The production is polished and the flow adapts to a more mature and reflective rap."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273eae4c54949378bb3ba87cc01",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Ufaw5RJwYkk&list=PL93C9A31ED36442D1",
+      "spotify": "https://open.spotify.com/album/0vJDbEXxzYQAfsaktif38z",
+      "masterpiece": true
+    },
+    {
+      "id": 381,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Flowesia",
+        "en": "Flowesia"
+      },
+      "description": {
+        "es": "LP que mezcla técnica y energía, mostrando la versatilidad de Shotta con ritmos variados y letras que recorren desde lo personal hasta lo social, siempre con autenticidad.",
+        "en": "LP mixing technique and energy, showing Shotta's versatility with varied rhythms and lyrics ranging from personal to social topics, always with authenticity."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273578c323938ad75519d12a9f5",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Sog6M69o2d0&list=PLSSZgdZJ0IOTzLkF0eCPxA2Qyx4EnvFJb",
+      "spotify": "https://open.spotify.com/album/52gbiT2ApObI14zIbgPqrX",
+      "masterpiece": true
+    },
+    {
+      "id": 382,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Shotta",
+      "title": {
+        "es": "Para Mi Gente",
+        "en": "Para Mi Gente"
+      },
+      "description": {
+        "es": "Álbum dedicado a la gente que apoya a Shotta, con una combinación de temas festivos y reflexivos. El sonido es fresco, manteniendo la esencia del rap callejero español.",
+        "en": "Album dedicated to the people supporting Shotta, combining festive and reflective tracks. The sound is fresh, maintaining the essence of Spanish street rap."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2737e94961650ec8b247ccc35c7",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=MTvIuPWedOk&list=PLedZUGJKbpN4F2QLCOKIokc3WOoEdAMn9",
+      "spotify": "https://open.spotify.com/intl-es/album/7GbN62VFyulRUlr4sw0nS1",
+      "masterpiece": true
+    },
+    
+    {
+      "id": 383,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "El Niño Snake",
+      "title": {
+        "es": "Punky Rap",
+        "en": "Punky Rap"
+      },
+      "description": {
+        "es": "Fusión de rap y punk enérgico.\nRimas agresivas y batería potente.\nMarca un giro en su estilo musical.",
+        "en": "Fusion of rap and energetic punk.\nAggressive rhymes and powerful drums.\nMarks a shift in his musical style."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2732c1b02032652ed0ed0d74e74",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=CutB5T8Temc&list=RDCutB5T8Temc&start_radio=1",
+      "spotify": "https://open.spotify.com/album/5bP0j1RmelVeoRv9CnpbKt",
+      "masterpiece": false
+    },
+    {
+      "id": 384,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "El Niño Snake",
+      "title": {
+        "es": "En Blanco y Negro",
+        "en": "En Blanco y Negro"
+      },
+      "description": {
+        "es": "Álbum que contrasta emociones y realidades.\nBeats sobrios con letras profundas.\nUn viaje entre luz y oscuridad.",
+        "en": "Album contrasting emotions and realities.\nSober beats with deep lyrics.\nA journey between light and darkness."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27392085497d082f2e6eb930b30",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=jka4oTmushM&list=PL_lBBgqV_b-PfkYVfApMz6SzJt8ct-tFR",
+      "spotify": "https://open.spotify.com/album/7sdScO5PE9lPeZl6ifQjTc",
+      "masterpiece": false
+    },
+    {
+      "id": 385,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "El Niño Snake",
+      "title": {
+        "es": "DL50",
+        "en": "DL50"
+      },
+      "description": {
+        "es": "Trabajo con colaboraciones destacadas.\nRitmos urbanos y productivos.\nRefleja evolución personal y musical.",
+        "en": "Work with notable collaborations.\nUrban and productive beats.\nReflects personal and musical evolution."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27333230ce75b24ae7c0b44a73f",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=tZnOoJnUCjE&list=PLAfutdW1uJTOdxJzv4WzkR4xfr40Y2JoJ",
+      "spotify": "https://open.spotify.com/intl-es/album/6itfDvMv0bsVACVPWRpO2g",
+      "masterpiece": false
+    },
+    {
+      "id": 386,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "El Niño Snake",
+      "title": {
+        "es": "03:33",
+        "en": "03:33"
+      },
+      "description": {
+        "es": "Álbum producido con atmósfera nocturna.\nLíricas profundas y reflexivas.\nEvoca sensaciones de madrugada.",
+        "en": "Album produced with nocturnal atmosphere.\nDeep and reflective lyrics.\nEvokes early morning sensations."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27310961dd0ab3acb6e7f40f6aa",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=GuxZIU9pL8s&list=PLF6z3aRT1MKkBGhkXmMi5ndkrJiLC3IN9",
+      "spotify": "https://open.spotify.com/album/3bGqT1VNhFEH3zQzxVoCXc",
+      "masterpiece": false
+    },
+    {
+      "id": 387,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "El Niño Snake",
+      "title": {
+        "es": "Triada",
+        "en": "Triada"
+      },
+      "description": {
+        "es": "EP reciente con estilo consolidado.\nTres temas instrumentales y potentes.\nMuestra su madurez sonora.",
+        "en": "Recent EP with a consolidated style.\nThree powerful instrumental tracks.\nShows his sonic maturity."
+      },
+      "image": "/imagenes/musica/pordefecto.jpg",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=XPHmPdtYSZs&list=PLdBvbMIXb3W2wHRoBuAZ_gqcPm8SOnbiw",
+      "spotify": "https://open.spotify.com/album/0lX7ULjfV3lA8SpjoGLa5c",
+      "masterpiece": false
+    },
+    {
+      "id": 388,
+      "category": "music",
+      "subcategory": "flamenco",
+      "artist": "Los Delinqüentes",
+      "title": {
+        "es": "El sentimiento garrapatero que nos traen las flores",
+        "en": "El Sentimiento Garrapatero Que Nos Traen Las Flores"
+      },
+      "description": {
+        "es": "Álbum debut que mezcla flamenco y rock con fuerza.\nTemas en andaluz y ritmo festivo, muy auténtico.\nCaptura la esencia callejera de Jerez.",
+        "en": "Debut album blending flamenco and rock powerfully.\nTracks in Andalusian dialect with festive, authentic vibe.\nCaptures the street essence of Jerez."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273197a8b87fcdde907e7f0bc03",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=fkLnLZaPBhI&list=PLdVoxgLrGsvSX5Hkb7I_RUPuyZ-6prhl-",
+      "spotify": "https://open.spotify.com/album/2GmC3j6Wzb2PETn8vhyeJt",
+      "masterpiece": true
+    },
+    {
+      "id": 389,
+      "category": "music",
+      "subcategory": "flamenco",
+      "artist": "Los Delinqüentes",
+      "title": {
+        "es": "Arquitectura del aire en la calle",
+        "en": "Arquitectura Del Aire En La Calle"
+      },
+      "description": {
+        "es": "Segundo álbum con fusión de guitarra y ritmos flamencos.\nTemas bailables que consolidan su estilo único.\nMuy valorado por crítica y fans en 2003.",
+        "en": "Second album fusing guitar and flamenco rhythms.\nDanceable tracks that cement their unique style.\nHighly praised by critics and fans in 2003."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27376e355ec063df550691552e0",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=NbGptvkHEp4&list=PLLDr4JYWuLub9HTe9RS2rW9D1B9SQmbRs",
+      "spotify": "https://open.spotify.com/album/368UupR12FzInX9Fiw9SGn",
+      "masterpiece": true
+    },
+    {
+      "id": 390,
+      "category": "music",
+      "subcategory": "flamenco",
+      "artist": "Los Delinqüentes",
+      "title": {
+        "es": "El verde rebelde vuelve",
+        "en": "El Verde Rebelde Vuelve"
+      },
+      "description": {
+        "es": "Álbum posterior a la muerte de 'Er Migue', más melancólico.\nIncluye su éxito «La primavera trompetera».\nMuestra madurez en sus letras y sonidos.",
+        "en": "Album released after 'Er Migue' death, more melancholic.\nIncludes their hit “La primavera trompetera”.\nShows maturity in lyrics and sounds."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27300da20309aff30533c9ba835",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=DOdsE7D_K1A&list=PLUuyWqfjXFB3NVW7RzhhzwcQuFhOSZc2D",
+      "spotify": "https://open.spotify.com/album/2H7fvSPBZYZzMej92pEun8",
+      "masterpiece": false
+    },
+    {
+      "id": 391,
+      "category": "music",
+      "subcategory": "flamenco",
+      "artist": "Los Delinqüentes",
+      "title": {
+        "es": "Recuerdos garrapateros de la flama y del carril",
+        "en": "Recuerdos Garrapateros De La Flama Y Del Carril"
+      },
+      "description": {
+        "es": "Recopilatorio de éxitos y joyas del grupo hasta 2006.\nIncluye DVD homenaje a 'Er Migue'.\nIdeal para conocer lo mejor de su trayectoria.",
+        "en": "Compilation of hits and gems up to 2006.\nIncludes homage DVD to 'Er Migue'.\nPerfect to discover the best of their career."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273425c052c33c1db0d8fe7752a",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=zslZQYVUL_0&list=PL-0Dnt0L5FsR__bRjPoGfFs7dxO4R9h4n",
+      "spotify": "https://open.spotify.com/album/1397WYVgrsmNBAhwSzGtGg",
+      "masterpiece": false
+    },
+    {
+      "id": 392,
+      "category": "music",
+      "subcategory": "flamenco",
+      "artist": "Los Delinqüentes",
+      "title": {
+        "es": "Bienvenidos a la época iconoclasta",
+        "en": "Bienvenidos A La Época Iconoclasta"
+      },
+      "description": {
+        "es": "Retorno en 2009 con energía renovada.\nCombina flamenco, rock y letras críticas.\nLlegó al nº2 en listas españolas.",
+        "en": "2009 comeback with renewed energy.\nCombines flamenco, rock and critical lyrics.\nReached No.2 on Spanish charts."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273891dd49bc68bfbd2206cf1cb",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=T0_KXzae5Yw&list=PL6B062275BBC85DC7",
+      "spotify": "https://open.spotify.com/album/2VwhT1gq20OuSElCFaRRqO",
+      "masterpiece": false
+    },
+    {
+      "id": 393,
+      "category": "music",
+      "subcategory": "flamenco",
+      "artist": "Los Delinqüentes",
+      "title": {
+        "es": "Los hombres de las praderas y sus bordones calientes",
+        "en": "Los Hombres De Las Praderas Y Sus Bordones Calientes"
+      },
+      "description": {
+        "es": "Álbum colaborativo con Tomasito en 2010.\nRitmos más sueltos y juerga flamenca.\nCelebración sonora de raíces andaluzas.",
+        "en": "Collaborative album with Tomasito in 2010.\nLooser rhythms and flamenco party vibes.\nA sonic celebration of Andalusian roots."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273db33326863d0dbeeef26ef87",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=FewxX4Oi5IU&list=PLE99CA50AC5B30C1F",
+      "spotify": "https://open.spotify.com/album/7iPCuscZQRsk3dL2h6yyv3",
+      "masterpiece": false
+    },
+    {
+      "id": 394,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Violadores del Verso",
+      "title": {
+        "es": "Genios",
+        "en": "Genios"
+      },
+      "description": {
+        "es": "Álbum debut de estudio lanzado en 1999.\nIncluye ritmos potentes y letras técnicas.\nEstableció al grupo en el rap español.",
+        "en": "Debut studio album released in 1999.\nFeatures powerful beats and technical lyrics.\nEstablished the group in Spanish rap."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273a4a5526faeb23b859c63ee48",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=zypy18raIgI&list=PLAhq3vaaxFJaHiz4ejn8ObrbXdo9A0qvy",
+      "spotify": "https://open.spotify.com/album/6vITZwKghkUpzfi33lIa45",
+      "masterpiece": true
+    },
+    {
+      "id": 395,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Violadores del Verso",
+      "title": {
+        "es": "Vicios y Virtudes",
+        "en": "Vicios y Virtudes"
+      },
+      "description": {
+        "es": "Segundo álbum de estudio de 2001.\nCombina introspección y energía urbana.\nClásico del rap ibérico contemporáneo.",
+        "en": "Second studio album from 2001.\nCombines introspection and urban energy.\nA classic of contemporary Iberian rap."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27345d19551956f53b12be0975d",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=fSQLP-7Uvvo&list=PLCF16C72C3284FA3D",
+      "spotify": "https://open.spotify.com/album/6SaShuiobMOc9mIiSmP2kY",
+      "masterpiece": true
+    },
+    {
+      "id": 396,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Violadores del Verso",
+      "title": {
+        "es": "Vivir para contarlo",
+        "en": "Vivir para Contarlo"
+      },
+      "description": {
+        "es": "Lanzado el 2 de noviembre de 2006, disco clave.\nProducción pulida y letras profundas.\nSe convirtió en disco de oro en España.",
+        "en": "Released November 2, 2006, a landmark record.\nPolished production with deep lyrics.\nAchieved gold certification in Spain."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27399c9ee69804b18897af3ff3a",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=cnPKQ9OnzLA&list=PLCBEED5E4673E21E7",
+      "spotify": "https://open.spotify.com/album/6LeLj7gigY7PBgPVZ6P25f",
+      "masterpiece": true
+    },
+    {
+      "id": 397,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Violadores del Verso",
+      "title": {
+        "es": "Gira 06/07 Presente",
+        "en": "Gira 06/07 Presente"
+      },
+      "description": {
+        "es": "Álbum en vivo y DVD documentando la gira 2006–2007.\nCaptura la energía del directo del grupo.\nIncluye grabaciones en diferentes ciudades.",
+        "en": "Live album and DVD documenting the 2006–2007 tour.\nCaptures the group's live energy.\nIncludes recordings from various cities."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273eb30dbe3f1bf33802a98f7fc",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=iiUe6xdPO78&list=PL9033928BEC4279D1",
+      "spotify": "https://open.spotify.com/album/5LWXJVgZPckjjBWj2ruR5q",
+      "masterpiece": false
+    },
+    {
+      "id": 398,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Kase.O",
+      "title": {
+        "es": "Jazz Magnetism",
+        "en": "Jazz Magnetism"
+      },
+      "description": {
+        "es": "Álbum que mezcla rap con jazz de forma experimental.\nRevisita clásicos con acompañamiento de cuarteto de jazz.\nReconocido por su innovación en el hip-hop español.",
+        "en": "Album mixing rap with jazz in an experimental way.\nRevisits classics with jazz quartet accompaniment.\nKnown for its innovation in Spanish hip-hop."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273c3921a51e8369f998ec79813",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=H2RhjJFHxYg&list=PL95564E7805147538",
+      "spotify": "https://open.spotify.com/album/0Xtm1ILSm1hdlgQEOJjMx4",
+      "masterpiece": true
+    },
+    {
+      "id": 399,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Kase.O",
+      "title": {
+        "es": "El Círculo",
+        "en": "El Círculo"
+      },
+      "description": {
+        "es": "Segundo álbum que marca un antes y después en su carrera.\nLetras introspectivas sobre salud mental y espiritualidad.\nFue aclamado y obtuvo disco de oro en España.",
+        "en": "Second album marking a milestone in his career.\nIntrospective lyrics about mental health and spirituality.\nIt was acclaimed and reached gold certification in Spain."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273bc81387c8a0832745989f02a",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=VfEgaiiuhWo&list=RDVfEgaiiuhWo&start_radio=1&t=1s",
+      "spotify": "https://open.spotify.com/album/5HTtQMQxpNk64Uj1zXjufs",
+      "masterpiece": true
+    },
+    {
+      "id": 400,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Kultama",
+      "title": {
+        "es": "Nacional e importación",
+        "en": "Nacional e Importacion"
+      },
+      "description": {
+        "es": "Álbum debut en solitario lanzado en 2006.\nContiene 19 cortes con colaboraciones destacadas.\nProducciones de Zarman, Mala Rodríguez y otros.",
+        "en": "Debut solo album released in 2006.\nFeatures 19 tracks with notable collaborations.\nProduced by Zarman, Mala Rodríguez and others."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273ff5a4e4c596b303ed94a8814",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=WvjvvfxKqO4&list=PLA35CA4A97E94D8E8",
+      "spotify": "https://open.spotify.com/album/09R9jRVJBYQ164rC5OC7U1",
+      "masterpiece": true
     }
   ]
 }
