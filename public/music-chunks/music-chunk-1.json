@@ -347,8 +347,8 @@
       "subcategory": "dub",
       "artist": "Panda Dub",
       "title": {
-        "es": "Psychotic Symphony (Full Album)",
-        "en": "Psychotic Symphony (Full Album)"
+        "es": "Psychotic Symphony",
+        "en": "Psychotic Symphony"
       },
       "description": {
         "es": "Álbum que mezcla dub, reggae, electrónica y sonidos pausados. Panda Dub crea paisajes sonoros envolventes con bajo marcado y atmósfera nocturna. Ideal para sesiones de relajación profunda.",
@@ -422,8 +422,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/4Ryz78Yx7cCL1gzHOxTpPQ",
+      "youtube": "https://www.youtube.com/watch?v=9x7FGbW3IVc&t=23s",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -636,27 +636,7 @@
       "spotify": "https://open.spotify.com/album/1EqLdtiBSgULHA01ooROeY",
       "masterpiece": false
     },
-    {
-      "id": 37,
-      "category": "music",
-      "subcategory": "flamenco",
-      "artist": "Bebo Valdés & Diego El Cigala",
-      "title": {
-        "es": "Inolvidable",
-        "en": "Unforgettable"
-      },
-      "description": {
-        "es": "Bolero clásico interpretado por Bebo Valdés y Diego El Cigala con estilo excepcional. Voces emotivas y arreglos de piano y cuerdas que transmiten nostalgia y elegancia. Versión moderna de un estándar inolvidable.",
-        "en": "A classic bolero performed by Bebo Valdés and Diego El Cigala with exceptional style. Emotional vocals and piano/strings arrangements convey nostalgia and elegance. A modern rendition of an unforgettable standard."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/",
-      "spotify": "https://open.spotify.com/album/3wgl1oWW9Ww8KmaHhgm78v",
-      "masterpiece": true
-    },
+    
     {
       "id": 38,
       "category": "music",
@@ -981,7 +961,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/",
+      "youtube": "https://www.youtube.com/watch?v=pw6kNfpNBRQ&list=RDpw6kNfpNBRQ&start_radio=1",
       "spotify": "https://open.spotify.com/album/2Z5cXu9hzTkjNEkcOQQPP3",
       "masterpiece": false
     },
@@ -1254,7 +1234,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=DyDfgMOUjCI",
+      "youtube": "https://www.youtube.com/watch?v=DyDfgMOUjCI&list=RDDyDfgMOUjCI&start_radio=1",
       "spotify": "https://open.spotify.com/album/6lMlX68jJrx67hiCqdiDvW",
       "masterpiece": false
     },
@@ -1423,8 +1403,8 @@
       "tags": [
         "live"
       ],
-      "youtube": "https://www.youtube.com/watch?v=z6Zl9s5aRog",
-      "spotify": "https://open.spotify.com/album/3Eubo97y5NcXWz7PsCzHIT",
+      "youtube": "https://www.youtube.com/watch?v=tRcZ0k63CdA&list=RDtRcZ0k63CdA&start_radio=1&t=1009s",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -1656,8 +1636,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=Emo3b_vnPKM",
-      "spotify": "https://open.spotify.com/album/5MBUL8d9FAYCCMrogOFX68",
+      "youtube": "https://www.youtube.com/watch?v=3SunWtjn9_I&list=RD3SunWtjn9_I&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
@@ -2780,7 +2760,7 @@
     {
       "id": 165,
       "category": "music",
-      "subcategory": "pop",
+      "subcategory": "rap",
       "artist": "Mueveloreina",
       "title": {
         "es": "Vivas",
@@ -2794,14 +2774,14 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=knB8QSRhsik",
+      "youtube": "https://www.youtube.com/watch?v=aXM8pr3I8ag&list=RDaXM8pr3I8ag&start_radio=1",
       "spotify": "https://open.spotify.com/album/2f7mByJvph3WKWJbamXb5c",
       "masterpiece": false
     },
     {
       "id": 166,
       "category": "music",
-      "subcategory": "pop",
+      "subcategory": "rap",
       "artist": "Mueveloreina",
       "title": {
         "es": "Universos",
@@ -2815,14 +2795,14 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=V1NTrwrK3uI",
-      "spotify": "https://open.spotify.com/album/2iLYjVwnzIN0XNrBXe2RuN",
+      "youtube": "https://www.youtube.com/watch?v=MDkFSouUER0&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
       "id": 167,
       "category": "music",
-      "subcategory": "pop",
+      "subcategory": "rap",
       "artist": "El Coleta con Mueveloreina",
       "title": {
         "es": "Camaradas Cañeros",
@@ -2836,14 +2816,14 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=G7HT-MAzHeo",
-      "spotify": "https://open.spotify.com/album/5WTpWmfAR30aX7BFZ24XmY",
+      "youtube": "https://www.youtube.com/watch?v=Z-rKtCkkc8w&list=RDZ-rKtCkkc8w&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
       "id": 168,
       "category": "music",
-      "subcategory": "pop",
+      "subcategory": "rap",
       "artist": "Mueveloreina",
       "title": {
         "es": "Défense",
@@ -2857,14 +2837,14 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=nt7y9X1H1Ww",
-      "spotify": "https://open.spotify.com/album/2Uly4hbF9tkCHHuRaOjN2d",
+      "youtube": "https://www.youtube.com/watch?v=cNXSgm6YHz4&list=RDcNXSgm6YHz4&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {
       "id": 169,
       "category": "music",
-      "subcategory": "pop",
+      "subcategory": "rap",
       "artist": "MIDAS ALONSO",
       "title": {
         "es": "Brixton",
@@ -2878,7 +2858,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=Yw0Bz5qB7k0",
+      "youtube": "https://www.youtube.com/watch?v=a7XPeHE9SAM&list=RDa7XPeHE9SAM&start_radio=1",
       "spotify": "https://open.spotify.com/album/1rLpq42WtOGBZuB6fmFHTq",
       "masterpiece": false
     },
@@ -3433,7 +3413,7 @@
     {
       "id": 197,
       "category": "music",
-      "subcategory": "pop",
+      "subcategory": "rap",
       "artist": "Mueveloreina",
       "title": {
         "es": "Colateral",
@@ -3447,8 +3427,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=somevideoid",
-      "spotify": "https://open.spotify.com/album/6o0wyJs2dUKDQ4vxmqVOze",
+      "youtube": "https://www.youtube.com/watch?v=ED5oUMlcUw0&list=RDED5oUMlcUw0&start_radio=1",
+      "spotify": "",
       "masterpiece": false
     },
     {

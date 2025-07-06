@@ -57,7 +57,7 @@
         "es": "Un tema de reggae contemporáneo que une el estilo de O.B.F con la voz inconfundible de Charlie P. 'FUFU LALA' combina ritmos vibrantes con letras positivas y conscientes.",
         "en": "'FUFU LALA' is a contemporary reggae track uniting O.B.F's style with Charlie P's unmistakable voice. It blends vibrant rhythms with positive and conscious lyrics."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/fufu.jpg",
       "tags": [
         "song"
       ],
@@ -78,12 +78,12 @@
         "es": "EDICION: SieteTreinta @andreeagirimia GRABACION: @kikereptilcorp @guillermanhedo gradecimentos a DIOS Y A @the.cheshire.cat",
         "en": "EDITING: SieteTreinta @andreeagirimia RECORDING: @kikereptilcorp @guillermanhedo Thanks to GOD and @the.cheshire.cat"
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/brasov.jpeg",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=placeholder",
-      "spotify": "https://open.spotify.com/album/6c5uQ7ApweOF7C9mw7Bvge",
+      "youtube": "https://www.youtube.com/watch?v=NH4kfm-WwSU&list=RDNH4kfm-WwSU&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -110,7 +110,7 @@
     {
       "id": 208,
       "category": "music",
-      "subcategory": "metal",
+      "subcategory": "rap",
       "artist": "Noiseferatu",
       "title": {
         "es": "Cicuta",
@@ -124,7 +124,7 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=placeholder",
+      "youtube": "https://www.youtube.com/watch?v=GJXROBcKC1c&list=RDGJXROBcKC1c&start_radio=1",
       "spotify": "https://open.spotify.com/album/0SbXA1RL0qUMjEx8quy6l0",
       "masterpiece": true
     },
@@ -183,12 +183,12 @@
         "es": "Un tema que fusiona la potencia del metal con bases electrónicas de The Equation Beats. 'Estático' destaca por su atmósfera oscura y su energía cruda, creando un contraste intenso y único.",
         "en": "'Estático' fuses the power of metal with electronic beats by The Equation Beats. It stands out for its dark atmosphere and raw energy, creating an intense and unique contrast."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273fc8856251b63a57bb7735be3",
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=noiseferatu+estatico",
-      "spotify": "https://open.spotify.com/album/60xNVEl8FkoGoXR1oMNJAm",
+      "youtube": "https://www.youtube.com/watch?v=iRT-9kEj8y4&list=RDiRT-9kEj8y4&start_radio=1",
+      "spotify": "https://open.spotify.com/intl-es/track/3hOdxnksQXmWPg980tbk2B",
       "masterpiece": true
     },
     {
@@ -551,7 +551,7 @@
     {
       "id": 229,
       "category": "music",
-      "subcategory": "ethnic",
+      "subcategory": "flamenco",
       "artist": "Paco Ibáñez",
       "title": {
         "es": "La Mala Reputación",
@@ -565,8 +565,8 @@
       "tags": [
         "song"
       ],
-      "youtube": "https://www.youtube.com/results?search_query=Paco+Ibáñez+La+Mala+Reputación",
-      "spotify": "https://open.spotify.com/album/0ycJF878Wf8qM7kiY1PLtp",
+      "youtube": "https://www.youtube.com/watch?v=gosi6_vR6eE&list=RDgosi6_vR6eE&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {
@@ -856,12 +856,12 @@
         "es": "Gutalax es una banda checa de grindcore conocida por su sonido intenso y letras irreverentes. Este concierto en vivo en el Obscene Extreme Fest 2014 captura la energía brutal y la conexión con el público. Una experiencia vibrante para los amantes del metal extremo.",
         "en": "Gutalax is a Czech grindcore band known for their intense sound and irreverent lyrics. This live concert at Obscene Extreme Fest 2014 captures their brutal energy and audience connection. A vibrant experience for extreme metal fans."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "/imagenes/musica/gutalax.png",
       "tags": [
         "live"
       ],
-      "youtube": "https://www.youtube.com/watch?v=LnF01gOmiog",
-      "spotify": "https://open.spotify.com/album/3BDwyojdwMAmBEsXZlyQjW",
+      "youtube": "https://www.youtube.com/watch?v=anh0Kn9nGV4&list=RDanh0Kn9nGV4&start_radio=1",
+      "spotify": "",
       "masterpiece": true
     },
     {

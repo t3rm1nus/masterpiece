@@ -733,7 +733,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=fkLnLZaPBhI&list=PLdVoxgLrGsvSX5Hkb7I_RUPuyZ-6prhl-",
       "spotify": "https://open.spotify.com/album/2GmC3j6Wzb2PETn8vhyeJt",
       "masterpiece": true
     },
@@ -754,7 +754,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=NbGptvkHEp4&list=PLLDr4JYWuLub9HTe9RS2rW9D1B9SQmbRs",
       "spotify": "https://open.spotify.com/album/368UupR12FzInX9Fiw9SGn",
       "masterpiece": true
     },
@@ -775,7 +775,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=DOdsE7D_K1A&list=PLUuyWqfjXFB3NVW7RzhhzwcQuFhOSZc2D",
       "spotify": "https://open.spotify.com/album/2H7fvSPBZYZzMej92pEun8",
       "masterpiece": false
     },
@@ -796,7 +796,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=zslZQYVUL_0&list=PL-0Dnt0L5FsR__bRjPoGfFs7dxO4R9h4n",
       "spotify": "https://open.spotify.com/album/1397WYVgrsmNBAhwSzGtGg",
       "masterpiece": false
     },
@@ -817,7 +817,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=T0_KXzae5Yw&list=PL6B062275BBC85DC7",
       "spotify": "https://open.spotify.com/album/2VwhT1gq20OuSElCFaRRqO",
       "masterpiece": false
     },
@@ -838,7 +838,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com",
+      "youtube": "https://www.youtube.com/watch?v=FewxX4Oi5IU&list=PLE99CA50AC5B30C1F",
       "spotify": "https://open.spotify.com/album/7iPCuscZQRsk3dL2h6yyv3",
       "masterpiece": false
     },
@@ -2590,31 +2590,11 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=2XRXK1p5vV4",
+      "youtube": "https://www.youtube.com/watch?v=UT-JoJO1GEk&list=PL2DD633BA0AE8142E",
       "spotify": "https://open.spotify.com/album/3wgl1oWW9Ww8KmaHhgm78v",
       "masterpiece": true
     },
-    {
-      "id": 536,
-      "category": "music",
-      "subcategory": "flamenco",
-      "artist": "Bebo Valdés & Diego El Cigala",
-      "title": {
-        "es": "Dos Lágrimas",
-        "en": "Dos Lágrimas"
-      },
-      "description": {
-        "es": "Dos Lágrimas es un álbum que continúa la emotiva colaboración entre Bebo Valdés y Diego El Cigala, explorando nuevas texturas entre el flamenco y el jazz. El disco ofrece una experiencia íntima y melancólica, resaltando la maestría y química de ambos artistas.",
-        "en": "Dos Lágrimas is an album that continues the emotional collaboration between Bebo Valdés and Diego El Cigala, exploring new textures between flamenco and jazz. The record offers an intimate and melancholic experience, highlighting the mastery and chemistry of both artists."
-      },
-      "image": "/imagenes/musica/pordefecto.jpg",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=YFoKxwy-Xfw",
-      "spotify": "https://open.spotify.com/album/3wgl1oWW9Ww8KmaHhgm78v",
-      "masterpiece": true
-    },
+    
     {
       "id": 537,
       "category": "music",
@@ -3033,7 +3013,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj",
+      "youtube": "https://www.youtube.com/watch?v=rayMT3OIOC4&list=PL5AA307D515AC052B",
       "spotify": "https://open.spotify.com/album/2rWBGF3pKx8Jla9VYMQ8Xc",
       "masterpiece": true
     },
@@ -3054,7 +3034,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj",
+      "youtube": "https://www.youtube.com/watch?v=t2TKqJ2FXGM&list=PLDCdjwiC90TGLe5any6XHKHogPqdfb_yP",
       "spotify": "https://open.spotify.com/album/0E4xv5gPjykrwBgBZzI8XG",
       "masterpiece": true
     },
@@ -3075,7 +3055,7 @@
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/playlist?list=PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj",
+      "youtube": "https://www.youtube.com/watch?v=qmdDIxQC0Ao&list=PLRkE5-eyt9iVKuNBuJJfpVkrJSHcKd4Hb",
       "spotify": "https://open.spotify.com/album/4xdRjOhY9NHmMpI7U3e2c3",
       "masterpiece": true
     },
