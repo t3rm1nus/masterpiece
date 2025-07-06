@@ -1099,6 +1099,66 @@
       "idioma": "en",
       "link": "https://www.youtube.com/watch?v=5E7xYRt_VqQ&t=460s",
       "autor": "Jane Preston"
+    },
+    {
+      "id": 56,
+      "title": {
+        "es": "The american dream film",
+        "en": "The american dream film"
+      },
+      "description": {
+        "es": "Fandub realizado por Kainkrup de la película The American Dream Film en la que se nos explican los motivos de la crisis y el funcionamiento de los bancos y la reserva federal.",
+        "en": "Fandub by Kainkrup of the film The American Dream Film, which explains the causes of the crisis and how banks and the Federal Reserve operate."
+      },
+      "image": "/imagenes/documentales/american.jpg",
+      "category": "documentales",
+      "subcategory": "politics",
+      "duration": "39 min",
+      "episodes": 1,
+      "masterpiece": true,
+      "idioma": "es",
+      "link": "https://www.youtube.com/watch?v=A1nggbtuzEA&t=10s",
+      "autor": "Jane Preston"
+    },
+    {
+      "id": 57,
+      "title": {
+        "es": "Dark Star: El Universo de H.R.Giger",
+        "en": "Dark Star: El Universo de H.R.Giger"
+      },
+      "description": {
+        "es": "Dark Star: El Universo de H.R. Giger explora la obra del icónico artista suizo H.R. Giger, conocido por su estilo oscuro y biomecánico. La película muestra sus creaciones más impactantes, que influyeron en el cine y el arte contemporáneo. Un viaje visual por su mente inquietante y fascinante.",
+        "en": "Dark Star: The Universe of H.R. Giger explores the work of the iconic Swiss artist H.R. Giger, famous for his dark, biomechanical style. The film showcases his most striking creations that influenced cinema and contemporary art. A visual journey through his haunting and captivating mind."
+      },
+      "image": "/imagenes/documentales/dark.jpg",
+      "category": "documentales",
+      "subcategory": "art",
+      "duration": "1 h 35 min",
+      "episodes": 1,
+      "masterpiece": true,
+      "idioma": "en",
+      "link": "https://www.youtube.com/watch?v=wfbZkxKpatg",
+      "autor": "Belinda Sallin"
+    },
+    {
+      "id": 58,
+      "title": {
+        "es": "Comprar, tirar, comprar",
+        "en": "Comprar, tirar, comprar"
+      },
+      "description": {
+        "es": "Obsolescencia Programada es un documental que revela cómo las empresas diseñan productos para que tengan una vida útil limitada, fomentando el consumo constante. Analiza el impacto económico y ambiental de esta práctica en la sociedad moderna. Una crítica profunda al modelo de consumo actual.",
+        "en": "Planned Obsolescence is a documentary that exposes how companies design products with a limited lifespan, encouraging constant consumption. It examines the economic and environmental impact of this practice on modern society. A deep critique of today’s consumer model."
+      },
+      "image": "/imagenes/documentales/comprar.jpg",
+      "category": "documentales",
+      "subcategory": "science",
+      "duration": "52 min",
+      "episodes": 1,
+      "masterpiece": true,
+      "idioma": "es",
+      "link": "https://www.youtube.com/watch?v=fzwT1GGY0Ds",
+      "autor": "Cosima Dannoritze"
     }
   ]
 }

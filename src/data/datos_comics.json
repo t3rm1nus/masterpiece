@@ -246,6 +246,19 @@
       "image": "/imagenes/comics/persepolis.jpg",
       "masterpiece": false,
       "author": "Marjane Satrapi"
+    },
+    {
+      "id": 18,
+      "category": "comics",
+      "subcategory": "crónica",
+      "title": {"es": "Paracuellos", "en": "Paracuellos"},
+      "description": {
+        "es": "Paracuellos es la gran obra-río del maestro Carlos Giménez. En ella retrata la vida diaria en los Hogares de Auxilio Social de la postguerra franquista, siempre desde el punto de vista de los niños. Todas las historias que componen la serie se basan en las vivencias del propio autor, que creció en uno de estos centros, y de algunos de sus compañeros de infancia.",
+        "en": "Paracuellos is the great river-work of master Carlos Giménez. In it, he portrays daily life in the Social Aid Homes of post–Francoist Spain, always from the children's point of view. All the stories in the series are based on the author's own experiences—he grew up in one of these institutions—as well as those of some of his childhood companions."
+      },
+      "image": "/imagenes/comics/paracuellos.jpg",
+      "masterpiece": false,
+      "author": "Carlos Giménez"
     }
   ]
 }
