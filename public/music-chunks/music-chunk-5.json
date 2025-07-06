@@ -504,6 +504,3222 @@
       "youtube": "https://www.youtube.com/watch?v=xY3lq4Oeh2M&list=PL5967pRr7FdqZaM-oFroJx2e0fTfCq4dL",
       "spotify": "https://open.spotify.com/album/2Ww207Wxz9gTB0sKhWWIFP",
       "masterpiece": false
+    },
+    {
+      "id": 825,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Jedi Mind Tricks",
+      "title": {
+        "es": "The Psycho-Social, Chemical, Biological & Electro-Magnetic Manipulation of Human Consciousness",
+        "en": "The Psycho-Social, Chemical, Biological & Electro‑Magnetic Manipulation of Human Consciousness"
+      },
+      "description": {
+        "es": "“The Psycho‑Social…” es el álbum debut del grupo, lleno de beats crudos, samples oscuros y letras sobre conspiraciones y violencia extrema. Explora temas metafísicos e inicia su carrera en el underground con una propuesta única. Es un manifiesto oscuro e intelectual del hip hop alternativo.",
+        "en": "“The Psycho‑Social…” is the group’s debut, packed with raw beats, dark samples and lyrics about conspiracy and extreme violence. It explores metaphysical themes and launches their career in the underground with a unique approach. It’s a dark, intellectual manifesto of alternative hip hop."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273a78b2bb20dfb98541267e3c5",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=3y6_FT65xi8&list=PLbrf71SZysCuizvvj4CS7sIq0nljGTEdu",
+      "spotify": "https://open.spotify.com/album/3xMDjL08rbSMqYTGzXHEdu",
+      "masterpiece": true
+    },
+    {
+      "id": 826,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Jedi Mind Tricks",
+      "title": {
+        "es": "Violent by Design",
+        "en": "Violent by Design"
+      },
+      "description": {
+        "es": "“Violent by Design” intensifica su sonido con beats agresivos y letras potentes llenas de imágenes violentas y filosóficas. El dúo Vinnie Paz y Stoupe se consolida con su estilo hardcore, elevando el nivel técnico y lírico respecto al debut. Se convierte en un clásico del hip hop subterráneo.",
+        "en": "“Violent by Design” ramps up their sound with aggressive beats and powerful lyrics filled with violent and philosophical imagery. The duo Vinnie Paz and Stoupe hone their hardcore style, raising the technical and lyrical bar from their debut. It becomes an underground hip hop classic."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2732cfd85c28ae1b7bad826ce35",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=AVLV-CR2hpE&list=PLjyAiNZYWkGbMTCymbk57JB0vNeP7732v",
+      "spotify": "https://open.spotify.com/album/68e1Ou1jnKgDwLkCsOPc4M",
+      "masterpiece": true
+    },
+    {
+      "id": 827,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Jedi Mind Tricks",
+      "title": {
+        "es": "Visions of Gandhi",
+        "en": "Visions of Gandhi"
+      },
+      "description": {
+        "es": "“Visions of Gandhi” muestra un giro hacia sonidos más pulidos con instrumentales orquestales y samples latinos, manteniendo su lírica cruda y combativa. Es un álbum polarizante, amado por su calidad musical y cuestionado por algunos fans. Representa crecimiento y experimentación.",
+        "en": "“Visions of Gandhi” shifts to more polished sounds with orchestral instrumentals and Latin samples, while keeping its raw, combative lyrics. It’s a polarizing album, loved for its musical quality and questioned by some fans. It represents growth and experimentation."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2733eae6a31d3e2c49230709741",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Bpk1nUVrJyE&list=PLHM1MRwUfb-igbMXvksGfLx3_Ep3K7udO",
+      "spotify": "https://open.spotify.com/album/6ZkgLNCoApyC62eYrsKukV",
+      "masterpiece": true
+    },
+    {
+      "id": 828,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Jedi Mind Tricks",
+      "title": {
+        "es": "Legacy of Blood",
+        "en": "Legacy of Blood"
+      },
+      "description": {
+        "es": "“Legacy of Blood” retoma el boom bap clásico con beats concisos producidos por Stoupe y letras afiladas sobre historia, religión y violencia urbana. Cuenta con invitados como GZA y Killah Priest, reforzando su enfoque consciente y maduro. Es uno de sus trabajos más sólidos.",
+        "en": "“Legacy of Blood” returns to classic boom bap with tight beats produced by Stoupe and sharp lyrics about history, religion, and urban violence. It features guests like GZA and Killah Priest, reinforcing its conscious and mature focus. It’s one of their strongest works."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f0a58e32ad770fd71aa8aa2c",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=JfCom3vyU6Y&list=PLHM1MRwUfb-hzWMzVrFz8OD8KreAnTG1f",
+      "spotify": "https://open.spotify.com/album/46k1KxVfky4xelptsV1mhh",
+      "masterpiece": true
+    },
+    {
+      "id": 829,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Jedi Mind Tricks",
+      "title": {
+        "es": "Servants in Heaven, Kings in Hell",
+        "en": "Servants in Heaven, Kings in Hell"
+      },
+      "description": {
+        "es": "“Servants in Heaven, Kings in Hell” es su obra más aclamada, fusionando agresividad y profundidad emocional. Con brazaletes pesados y colaboraciones memorables, explora dualidades morales y épicas. Consolidó su legado en el hip hop alternativo.",
+        "en": "“Servants in Heaven, Kings in Hell” is their most acclaimed work, fusing aggression and emotional depth. With heavy-handed beats and memorable collaborations, it explores moral and epic dualities. It solidified their legacy in alternative hip hop."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2734fa0ed2b7a939415ad890127",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=MDVePv8OvJA&list=PLHM1MRwUfb-hzEg1yFxh52gWsPKSUSXnU",
+      "spotify": "https://open.spotify.com/album/1Po1bRIZS7PXEF7qyVP0J4",
+      "masterpiece": true
+    },
+    {
+      "id": 830,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Jedi Mind Tricks",
+      "title": {
+        "es": "A History of Violence",
+        "en": "A History of Violence"
+      },
+      "description": {
+        "es": "“A History of Violence” marca el regreso reflexivo del grupo con producción robusta y letras introspectivas sobre conflicto personal y colectivo. Con Jus Allah de vuelta, mezcla agresividad y resonancia emocional. Es un disco equilibrado y potente.",
+        "en": "“A History of Violence” marks the group’s reflective comeback with robust production and introspective lyrics on personal and collective conflict. With Jus Allah returning, it blends aggression with emotional resonance. It’s a balanced and powerful record."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273589cdaae0c7254cec1c42008",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=OeYJ4M8MFbA&list=PL5jqJ2fm-QngPpWGcqizIfWkwzhogHUVy",
+      "spotify": "https://open.spotify.com/album/4nFst0pvcY0kzLbbgXS3GH",
+      "masterpiece": true
+    },
+    {
+      "id": 831,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Jedi Mind Tricks",
+      "title": {
+        "es": "Violence Begets Violence",
+        "en": "Violence Begets Violence"
+      },
+      "description": {
+        "es": "“Violence Begets Violence” es su disco sin Stoupe, con producción más cruda y directa, y letras intensas sobre ira, resistencia y horror urbano. Refleja una etapa agresiva y sin filtros en su evolución. Un álbum duro y visceral.",
+        "en": "“Violence Begets Violence” is their album without Stoupe, featuring rawer production and intense lyrics about anger, resistance, and urban horror. It reflects an aggressive, no‑filters stage in their evolution. A hard, visceral album."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273d882c3f0608894fb91118739",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=M8JQ1a7askw&list=PLmO6RcdPn0iuANCsB87f3_N-LszwF09Ai",
+      "spotify": "https://open.spotify.com/album/1OT6Ow2YWScyicn8IIO8E5",
+      "masterpiece": false
+    },
+    {
+      "id": 832,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Jedi Mind Tricks",
+      "title": {
+        "es": "The Thief and the Fallen",
+        "en": "The Thief and the Fallen"
+      },
+      "description": {
+        "es": "“The Thief and the Fallen” marca el regreso de Stoupe con producción cinemática y presencia de múltiples artistas invitados. Es un viaje oscuro y dramático con narrativa compleja y beats atmosféricos. Recibió elogios por su cohesión y creatividad.",
+        "en": "“The Thief and the Fallen” marks Stoupe’s return with cinematic production and multiple featured guests. It’s a dark, dramatic journey with complex narrative and atmospheric beats. It received praise for its cohesion and creativity."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27344fadc33805befbb398643a6",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=dEi0D2Ed4uU&list=PLW4FwY30hQ3YaAsDsWAlgFTbt85eRAvLC",
+      "spotify": "https://open.spotify.com/album/4TwVDBmAV1DXSwXbGu5vGD",
+      "masterpiece": false
+    },
+    {
+      "id": 833,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Jedi Mind Tricks",
+      "title": {
+        "es": "The Bridge and the Abyss",
+        "en": "The Bridge and the Abyss"
+      },
+      "description": {
+        "es": "“The Bridge and the Abyss” presenta un sonido refinado y colaboraciones de alto perfil como Sean Price y CZARFACE. Reflexiona sobre dualidades y mantiene su potencia lírica. Es un álbum sólido que reafirma su vigencia en la escena.",
+        "en": "“The Bridge and the Abyss” showcases a refined sound and high‑profile collaborations like Sean Price and CZARFACE. It reflects on dualities and maintains their lyrical power. It’s a solid album that reaffirms their relevance in the scene."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27320f97ddf22e815d89c148b7c",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=wpJg4duVIP0&list=PLfKqpRMvmGbP6H-PTP7eXb5VFac12WJ6l",
+      "spotify": "https://open.spotify.com/album/6EToH3CGIwlrBCPRHLOyHK",
+      "masterpiece": false
+    },
+    {
+      "id": 834,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Jedi Mind Tricks",
+      "title": {
+        "es": "The Funeral and the Raven",
+        "en": "The Funeral and the Raven"
+      },
+      "description": {
+        "es": "“The Funeral and the Raven” explora temas de muerte, resurgimiento y melancolía con la producción atmosférica de Stoupe. Su lírica es introspectiva y madura, cerrando una etapa con elegancia y profundidad emocional. Un broche final conmovedor.",
+        "en": "“The Funeral and the Raven” explores themes of death, rebirth, and melancholy with Stoupe’s atmospheric production. Its lyrics are introspective and mature, closing a chapter with elegance and emotional depth. A poignant final touch."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27316326d32baec338feac8f530",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=HTS0f4diUgY&list=PLGvRLBbU3AMV0rafQxKAZ3uWaFi_l1mXh",
+      "spotify": "https://open.spotify.com/album/0luIhw6DgrXfq9DKNwRdmY",
+      "masterpiece": false
+    },
+    {
+      "id": 835,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "The Prodigy",
+      "title": {
+        "es": "Experience",
+        "en": "Experience"
+      },
+      "description": {
+        "es": "“Experience” es el debut que capturó la vibración rave de principios de los 90, con ritmos frenéticos y sonidos energéticos. Fue un hito en la música electrónica británica y recibió certificación de platino en el Reino Unido. Es una obra clave del breakbeat hardcore.",
+        "en": "“Experience” is their debut capturing the early ’90s rave vibe with frenetic rhythms and energetic sounds. It was a milestone in British electronic music and earned platinum in the UK. A key work of breakbeat hardcore."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2738cd856419c4f5ac9994c64fe",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=XMn_YFuQd-c&list=PL87E3336A3701683F",
+      "spotify": "https://open.spotify.com/album/2hEyYIrm4e6gVgfaYLY00x",
+      "masterpiece": true
+    },
+    {
+      "id": 836,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "The Prodigy",
+      "title": {
+        "es": "Music for the Jilted Generation",
+        "en": "Music for the Jilted Generation"
+      },
+      "description": {
+        "es": "“Music for the Jilted Generation” es un álbum explosivo que combinó breakbeat y hardcore con actitud rebelde. Incluye himnos como “No Good” y “Voodoo People” que definieron una era. Recibió elogios por su innovación musical.",
+        "en": "“Music for the Jilted Generation” is an explosive album mixing breakbeat and hardcore with a rebellious attitude. It features anthems like “No Good” and “Voodoo People” that defined an era. It was praised for its musical innovation."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273c0f16d3c653999907e74e5ba",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=0PEkoVCdMRc&list=PLimw25lHncBSXIUJwz_lMnU2jzoe0Hn_B",
+      "spotify": "https://open.spotify.com/album/4qhJwKBr2ksxAUFjfJd3rb",
+      "masterpiece": true
+    },
+    {
+      "id": 837,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "The Prodigy",
+      "title": {
+        "es": "The Fat of the Land",
+        "en": "The Fat of the Land"
+      },
+      "description": {
+        "es": "“The Fat of the Land” es un clásico global que fusionó electrónica, rock y punk con hits como “Firestarter” y “Breathe”. Alcanzó el nº 1 en Reino Unido y EE. UU. y vendió millones de copias, consolidándolo como un icono de la década.",
+        "en": "“The Fat of the Land” is a global classic blending electronic, rock and punk with hits like “Firestarter” and “Breathe”. It hit No.1 in the UK and US and sold millions, cementing it as an icon of the decade."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2738688e410538bc27972791f4c",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=GLSr0BAlndM&list=PLMxy067kbpQgkz5J28fyA0UsfeFOosO64",
+      "spotify": "https://open.spotify.com/album/4fdgcEVMdJe0KVgupMNJAP",
+      "masterpiece": true
+    },
+    {
+      "id": 838,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "The Prodigy",
+      "title": {
+        "es": "Always Outnumbered, Never Outgunned",
+        "en": "Always Outnumbered, Never Outgunned"
+      },
+      "description": {
+        "es": "“Always Outnumbered, Never Outgunned” muestra un sonido más introspectivo y urbano, con colaboraciones vocales y ritmos más sobrios. Fue bien recibido por su versatilidad aunque menos agresivo que sus obras anteriores. Destaca en su evolución artística.",
+        "en": "“Always Outnumbered, Never Outgunned” shows a more introspective, urban sound with vocal collaborations and sober rhythms. It was well received for its versatility though less aggressive than earlier works. It stands out in their artistic evolution."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27389eb06a89ec7288b82131f54",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=r7lNHWO0fY4&list=PL5967pRr7FdrUh-ZO1aGaPR0WmW70WMZw",
+      "spotify": "https://open.spotify.com/album/5c7coIRdQXVBZIAd2VqXux",
+      "masterpiece": false
+    },
+    {
+      "id": 839,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "The Prodigy",
+      "title": {
+        "es": "Invaders Must Die",
+        "en": "Invaders Must Die"
+      },
+      "description": {
+        "es": "“Invaders Must Die” representa un regreso triunfal a su estilo agresivo y brillante con temas como “Omen” y “Take Me to the Hospital”. Fue nº 1 en Reino Unido y reafirmó su estatus en la electrónica. Tiene colaboraciones potentes y producción enérgica.",
+        "en": "“Invaders Must Die” marks a triumphant return to their aggressive, bright style with tracks like “Omen” and “Take Me to the Hospital”. It was No.1 in the UK and reaffirmed their status in electronic music. It features powerful collaborations and energetic production."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273bce53a924b756cbaf8aa245c",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=L_nN0MnHptw&list=OLAK5uy_mdT8Ojh5wl4x60yO6pm1ovPreIOCqAi0o&index=2",
+      "spotify": "https://open.spotify.com/album/13PiGMs22YuX1kq7w8WNGM",
+      "masterpiece": true
+    },
+    {
+      "id": 840,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "The Prodigy",
+      "title": {
+        "es": "The Day Is My Enemy",
+        "en": "The Day Is My Enemy"
+      },
+      "description": {
+        "es": "“The Day Is My Enemy” ofrece un sonido oscuro y agresivo con ritmos distorsionados y energía punk‑electrónica. Es una declaración de furia moderna que combina sintetizadores intensos y letras combativas. Destacó por su potencia y actitud.",
+        "en": "“The Day Is My Enemy” delivers a dark, aggressive sound with distorted rhythms and punk‑electronic energy. It’s a modern fury statement combining intense synths and combative lyrics. It stood out for its power and attitude."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273872772e0b165e57a104fd37a",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=9-LD3a28ePE&list=PLfimnwaZdumj0yAq5kD7y3flP0Nk2el68",
+      "spotify": "https://open.spotify.com/album/2Iz1KZSeCEeP5fmiOJmvHI",
+      "masterpiece": false
+    },
+    {
+      "id": 841,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "The Prodigy",
+      "title": {
+        "es": "No Tourists",
+        "en": "No Tourists"
+      },
+      "description": {
+        "es": "“No Tourists” es su despedida antes del fallecimiento de Keith Flint, con electrónica potente, beats densos y vibras de rave moderna. Debutó nº1 en Reino Unido y refleja su legado por la energía y estilo único. Es un cierre emotivo e intenso.",
+        "en": "“No Tourists” is their farewell before Keith Flint’s death, featuring powerful electronics, dense beats and modern rave vibes. It debuted No.1 in the UK and reflects their legacy through energy and unique style. A poignant and intense closure."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2736e4d5faa5afd045c2238add6",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=uHCHUzBz6Ws&list=PLHTo__bpnlYUap1azXNPSBzy2pL9H5n5J",
+      "spotify": "https://open.spotify.com/album/53McTme1ugOjYfqMMmyZre",
+      "masterpiece": false
+    },
+    {
+      "id": 842,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "James Shinra",
+      "title": {
+        "es": "Vital Heat",
+        "en": "Vital Heat"
+      },
+      "description": {
+        "es": "“Vital Heat” es un recorrido atmosférico con ritmos breakbeat e IDM que envuelven sonidos melódicos y paisajes sonoros intensos. James Shinra fusiona texturas sintetizadas con sensibilidad emocional creando una experiencia introspectiva. Fue publicado en 2018 y mantiene relevancia en la escena electrónica.",
+        "en": "“Vital Heat” is an atmospheric journey with breakbeat and IDM rhythms surrounding melodic textures and intense soundscapes. James Shinra blends synthesized textures with emotional sensitivity, creating an introspective experience. Released in 2018, it remains relevant in the electronic scene."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2734b072ac4d8e12b52ea7103a9",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=hV5mmo5ram4&list=PL2pDitPdxj8e4C8iGr9wBmE5fpUZyaLjh",
+      "spotify": "https://open.spotify.com/album/4wiGplMon4PCRID3QZ4WsM",
+      "masterpiece": true
+    },
+    {
+      "id": 843,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "James Shinra",
+      "title": {
+        "es": "Meteorites",
+        "en": "Meteorites"
+      },
+      "description": {
+        "es": "“Meteorites” reúne reworks y nuevas composiciones que profundizan en IDM, braindance y electro con atmósferas evocadoras. Lanzado en 2025, muestra una evolución del sonido de Shinra con texturas pulidas y emoción contenida. Es una obra madura y cohesionada dentro de su discografía.",
+        "en": "“Meteorites” gathers reworks and new compositions delving into IDM, braindance and electro with evocative atmospheres. Released in 2025, it shows an evolution of Shinra’s sound with polished textures and contained emotion. It’s a mature, cohesive work in his discography."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27362c342be532d767d550d8615",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Yg2o58so04Q&list=PL-9NTuYgU6zMGhtdRrRSOBZiaqkakFtwq",
+      "spotify": "https://open.spotify.com/album/69FiPRgwbHxqNaroCEywuA",
+      "masterpiece": true
+    },
+    {
+      "id": 844,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "James Shinra",
+      "title": {
+        "es": "Shinra Electro Company Vol 1",
+        "en": "Shinra Electro Company Vol 1"
+      },
+      "description": {
+        "es": "“Shinra Electro Company Vol 1” es un EP vibrante con grooves ghetto y braindance dirigido al club con actitud rave moderna. Publicado en 2024, contiene temas como “Turn It Up” que combinan energía melódica y ritmos ácidos. Marca un punto clave en su evolución electrónica.",
+        "en": "“Shinra Electro Company Vol 1” is a vibrant EP featuring ghetto grooves and braindance aimed at the club with a modern rave attitude. Released in 2024, it includes tracks like “Turn It Up” that blend melodic energy and acid rhythms. It marks a key point in his electronic evolution."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2735201e13864fabd0ba9fcee71",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=LIAwe1Jl1os&list=OLAK5uy_m7reBSbQc91u5Oun_sse0rdcvqATrXu78&index=2",
+      "spotify": "https://open.spotify.com/album/1L4xGv2ytBkQpOxRR2pqnp",
+      "masterpiece": false
+    },
+    {
+      "id": 845,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Sumac Dub",
+      "title": {
+        "es": "Le Jardin De Lucy",
+        "en": "Le Jardin De Lucy"
+      },
+      "description": {
+        "es": "“Le Jardin De Lucy” es un disco de dub ambiental que evoca jardines oníricos con bajos profundos y ecos envolventes. Combina atmósferas densas con ritmos pausados que relajan y transportan a otro espacio mental. Es ideal para escenarios introspectivos y meditativos.",
+        "en": "“Le Jardin De Lucy” is an ambient dub record evoking dreamlike gardens with deep bass and enveloping echoes. It combines dense atmospheres with slow rhythms that relax and transport to another mental space. It is ideal for introspective and meditative settings."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2732be8fc23aa3a7500f470b0ef",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=fQCu6EQVm3s&list=RDfQCu6EQVm3s&start_radio=1",
+      "spotify": "https://open.spotify.com/album/2mD8SJXAG13hM3QAkyVO6K",
+      "masterpiece": true
+    },
+    {
+      "id": 846,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Sumac Dub",
+      "title": {
+        "es": "Old Man Willow",
+        "en": "Old Man Willow"
+      },
+      "description": {
+        "es": "“Old Man Willow” mezcla dub profundo con texturas orgánicas y paisajes sonoros que recuerdan bosques antiguos. El bajo y los delays crean un ambiente místico y reverberante que acecha como un viejo árbol. Es una obra envolvente y evocadora.",
+        "en": "“Old Man Willow” blends deep dub with organic textures and soundscapes reminiscent of ancient forests. The bass and delays create a mystical, reverberating atmosphere that lurks like an old tree. It is an immersive and evocative piece."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2739313e75c1981210e1611f2e9",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Se4rby0R8pM&list=PL-SdiDK9Vw6Kt4I_9_gpaktndoWwpR1nU",
+      "spotify": "https://open.spotify.com/album/7q04YhakVVshuI2od5qN6l",
+      "masterpiece": true
+    },
+    {
+      "id": 847,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Sumac Dub",
+      "title": {
+        "es": "Norska",
+        "en": "Norska"
+      },
+      "description": {
+        "es": "“Norska” es un álbum de dub minimalista con influencias nórdicas y melancólicas que se sienten en cada vibración. Sus ritmos sutiles y graves espaciales crean una sensación de lejanía y contemplación. Un viaje sonoro delicado y sobrio.",
+        "en": "“Norska” is a minimalist dub album with Nordic, melancholic influences felt in every vibration. Its subtle rhythms and spacious bass create a sense of remoteness and contemplation. A delicate and sober sonic journey."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2736e28e3fcec18cd05a0e50615",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=XFvKgOu1148&list=PLu_REat30znuRXLakRQSvzQTjvDJ33KV2",
+      "spotify": "https://open.spotify.com/album/5H2nbK3ZIEeF9365C4ugo6",
+      "masterpiece": false
+    },
+    {
+      "id": 848,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Sumac Dub",
+      "title": {
+        "es": "Lyrae",
+        "en": "Lyrae"
+      },
+      "description": {
+        "es": "“Lyrae” navega entre dub espacial y armonías etéreas con beats suaves y bajos flotantes. Es una exploración cósmica que evoca estrellas lejanas y paisajes sonoros etéreos. Un disco elegante, introspectivo y conectado con la inmensidad.",
+        "en": "“Lyrae” sails between space dub and ethereal harmonies with smooth beats and floating bass. It is a cosmic exploration evoking distant stars and ethereal soundscapes. An elegant, introspective album connected to vastness."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27399cb1466aa0437ac961b9460",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Lcc6Rb9KcIE&list=PLpzC2k9bAHR-etSezaSOCTLK6IEvVWyUl",
+      "spotify": "https://open.spotify.com/album/1B6LK21edcCAEA3Nc3LtKe",
+      "masterpiece": false
+    },
+    {
+      "id": 849,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Panda Dub",
+      "title": {
+        "es": "Antilogy",
+        "en": "Antilogy"
+      },
+      "description": {
+        "es": "“Antilogy” es una colección de dub atmosférico y profundo que recorre paisajes sonoros meditativos. Publicado en 2012, fusiona bajos envolventes con texturas étnicas y ritmos hipnóticos. Es un álbum referencial dentro de la escena dub contemporánea.",
+        "en": "“Antilogy” is a collection of deep, atmospheric dub traversing meditative soundscapes. Released in 2012, it fuses enveloping bass with ethnic textures and hypnotic rhythms. It is a seminal album in the contemporary dub scene."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2731c91af954d24aeea46a43d4a",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=WQEbfNLXGuw&list=PLnFVvHMhflfPa_4DnEE5uXu8xmMWUUwQK",
+      "spotify": "https://open.spotify.com/album/3hBx7ZGvuey9sGmYjynCln",
+      "masterpiece": true
+    },
+    {
+      "id": 850,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Panda Dub",
+      "title": {
+        "es": "The Lost Ship",
+        "en": "The Lost Ship"
+      },
+      "description": {
+        "es": "“The Lost Ship” es un viaje dub que evoca navegación introspectiva con bajos profundos y melodías ligeras. Lanzado en 2015, equilibra misticismo y ritmo, destacando por su cohesión temática. Es un disco atmosférico y envolvente.",
+        "en": "“The Lost Ship” is a dub journey evoking introspective navigation with deep bass and light melodies. Released in 2015, it balances mysticism and rhythm, standing out for its thematic cohesion. It’s an atmospheric, enveloping record."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2735ade4f22e17719c7627f4426",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=4obR6RfwrJg&list=PLh7lJ5_d9U859y4jmGgCyEEsyXco8sJma",
+      "spotify": "https://open.spotify.com/album/4aa493JentnPmmXFuHVTZ6",
+      "masterpiece": true
+    },
+    {
+      "id": 851,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Panda Dub",
+      "title": {
+        "es": "Shapes and Shadows",
+        "en": "Shapes and Shadows"
+      },
+      "description": {
+        "es": "“Shapes and Shadows” combina ritmos dub con influencias étnicas y melodías sintéticas en una exploración sonora refinada. Publicado en 2017, equilibra energía y calma con gran riqueza textural. Resalta como obra madura en su carrera.",
+        "en": "“Shapes and Shadows” combines dub rhythms with ethnic influences and synthetic melodies in a refined sonic exploration. Released in 2017, it balances energy and calm with rich textures. It stands out as a mature work in his career."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27392bc8533e1150eb4fccfc3bf",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=1EBZW85_g5c&list=PLh7lJ5_d9U86_MI3EENo7N3Mf4EBwv8Ie",
+      "spotify": "https://open.spotify.com/album/4mIuJmOPLbSC7MvvMmQWPP",
+      "masterpiece": true
+    },
+    {
+      "id": 852,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Panda Dub",
+      "title": {
+        "es": "Horizons",
+        "en": "Horizons"
+      },
+      "description": {
+        "es": "“Horizons” ofrece un dub elevado con ritmos envolventes y un enfoque melódico que evoca paisajes amplios y espaciales. Publicado en 2019, destaca por su producción limpia y emotiva. Es un álbum expansivo y emotivo.",
+        "en": "“Horizons” offers elevated dub with enveloping rhythms and a melodic focus evoking vast, spatial landscapes. Released in 2019, it stands out for its clean, emotional production. It’s an expansive and moving album."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273bf80376d392e2a40e52fabac",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=uo6q8FmN2qs&list=PLh7lJ5_d9U86RLYdRbyFvNVlI_WoEfxuQ",
+      "spotify": "https://open.spotify.com/album/3Q5UhEy7qqlEmch1RqfUF3",
+      "masterpiece": true
+    },
+    {
+      "id": 853,
+      "category": "music",
+      "subcategory": "flamenco",
+      "artist": "Kiko Veneno",
+      "title": {
+        "es": "Échate un cantecito",
+        "en": "Echate un Cantecito"
+      },
+      "description": {
+        "es": "“Échate un cantecito” marca el resurgir de Kiko Veneno en 1992, con ritmos flamenco-pop y letras cargadas de surrealismo urbano. Producido por Joe Dworniak y con la colaboración de Santiago Auserón, incluye temas emblemáticos como “Echo de menos”. Es considerado un clásico del pop español de los 90.",
+        "en": "“Échate un cantecito” marks Kiko Veneno’s 1992 comeback, with flamenco-pop rhythms and surreal urban lyrics. Produced by Joe Dworniak and featuring Santiago Auserón, it includes iconic tracks like “Echo de menos”. It’s regarded as a classic of 90s Spanish pop."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f644472a50de4bb637cf33d6",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=8xhQyvQB55E&list=PL2AVtjnLL3PEugcK5Vl7UfOnJ9EhPEXdC",
+      "spotify": "https://open.spotify.com/album/3QnBLii4RPTbbQNvXM5L1M",
+      "masterpiece": true
+    },
+    {
+      "id": 854,
+      "category": "music",
+      "subcategory": "flamenco",
+      "artist": "Kiko Veneno",
+      "title": {
+        "es": "Está muy bien eso del cariño",
+        "en": "Esta Muy Bien Eso Del Cariño"
+      },
+      "description": {
+        "es": "“Está muy bien eso del cariño” continúa la senda iniciada en el álbum anterior, combinando pop mestizo y flamenco con letras íntimas y creativas. Publicado en 1995, presenta una producción más pulida y accesible, consolidando su popularidad. Es otro referente de la canción española contemporánea.",
+        "en": "“Esta Muy Bien Eso Del Cariño” continues the path from the previous album, blending mestizo pop and flamenco with intimate and creative lyrics. Released in 1995, it presents a more polished and accessible production, cementing his popularity. It’s another benchmark in contemporary Spanish song."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273c0032c314e63d5777d9f7e98",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=H6JR5GT4DSQ&list=PL-hEAJMUhMHQdEFtoIhmUJRGb5jQqRbv3",
+      "spotify": "https://open.spotify.com/album/36wHhrCSqXwnmeJl0onKJl",
+      "masterpiece": false
+    },
+    {
+      "id": 855,
+      "category": "music",
+      "subcategory": "flamenco",
+      "artist": "Kiko Veneno",
+      "title": {
+        "es": "Punta Paloma",
+        "en": "Punta Paloma"
+      },
+      "description": {
+        "es": "“Punta Paloma” (1997) mezcla sonidos mediterráneos y ritmos playeros con la voz relajada de Veneno. Incluye una producción ligera y temáticas veraniegas, reflejando su versatilidad artística. Es un disco cálido y evocador de sensaciones costeras.",
+        "en": "“Punta Paloma” (1997) mixes Mediterranean sounds and beach rhythms with Veneno’s relaxed vocals. It features light production and summery themes, reflecting his artistic versatility. It’s a warm record evoking coastal sensations."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273c70b1efea4fae2af414580f5",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=2fHaKoMEXQk&list=PL-9Ahn41_FKwYHkRP9pLjedxoq7D6t4ul",
+      "spotify": "https://open.spotify.com/album/0XBHsXFX3qhvsFJdwJeW73",
+      "masterpiece": false
+    },
+    {
+      "id": 856,
+      "category": "music",
+      "subcategory": "rumba",
+      "artist": "La Pegatina",
+      "title": {
+        "es": "Al carrer!",
+        "en": "Al carrer!"
+      },
+      "description": {
+        "es": "“Al carrer!” es su álbum debut autoeditado de 2007, lleno de explosión festiva y fusiones de rumba catalana, ska y punk. Captura la energía de sus primeras giras y colaboraciones con Manu Chao y Che Sudaka. Es un himno callejero con espíritu de comunidad.",
+        "en": "“Al carrer!” is their 2007 self-released debut album, bursting with festive energy and fusions of Catalan rumba, ska, and punk. It captures the spirit of their early tours and collaborations with Manu Chao and Che Sudaka. It’s a street anthem with a sense of community."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2734909971f8b2f55d81b03aa49",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=ZK62QP_zA68&list=PLOg7jq5piiXQWXN6FR9WEcVeH_d0MxfYc",
+      "spotify": "https://open.spotify.com/album/4GDvxuvYI9ZrnBOiE8of32",
+      "masterpiece": true
+    },
+    {
+      "id": 857,
+      "category": "music",
+      "subcategory": "rumba",
+      "artist": "La Pegatina",
+      "title": {
+        "es": "Via Mandarina",
+        "en": "Via Mandarina"
+      },
+      "description": {
+        "es": "“Via Mandarina” (2009) amplía su sonido con influencias multilingües y ritmos bailables, consolidando su estilo único de rumba y ska. Incluye canciones emblemáticas con colaboración de D’Callaos. Demuestra madurez en producción y repertorio festivo.",
+        "en": "“Via Mandarina” (2009) expands their sound with multilingual influences and danceable rhythms, cementing their unique rumba‑ska style. It includes emblematic songs featuring D’Callaos collaboration. It demonstrates maturity in production and festive repertoire."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2735d752f0833dad4aa47a4a1d0",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=SM6jiBGSLFY&list=PLOg7jq5piiXRwaS_vwwexOX9UxnTNNsAT",
+      "spotify": "https://open.spotify.com/album/17xrJ6CwY9OEtof17QV9OB",
+      "masterpiece": true
+    },
+    {
+      "id": 858,
+      "category": "music",
+      "subcategory": "rumba",
+      "artist": "La Pegatina",
+      "title": {
+        "es": "Xapomelön",
+        "en": "Xapomelön"
+      },
+      "description": {
+        "es": "“Xapomelön” (2011) los consolida con una mezcla de rumba, ska y world music que les lleva a giras por Europa y Asia. Cuenta con invitados como Joan Garriga y Amparo Sánchez. Es un disco festivo, diverso y repleto de colaboraciones.",
+        "en": "“Xapomelön” (2011) cements their place with a mix of rumba, ska, and world music that takes them on tours through Europe and Asia. Features guests like Joan Garriga and Amparo Sánchez. It’s a festive, diverse record full of collaborations."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27353a2d29ceb2403da1eddf109",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=UY7CSscOxHQ&list=PLNo_eVQ8Re3yBrT3QY-mI8PGTh_04j2vX",
+      "spotify": "https://open.spotify.com/album/5YGUW9OJPCoT3bUySE50X7",
+      "masterpiece": true
+    },
+    {
+      "id": 859,
+      "category": "music",
+      "subcategory": "rumba",
+      "artist": "La Pegatina",
+      "title": {
+        "es": "Eureka!",
+        "en": "Eureka!"
+      },
+      "description": {
+        "es": "“Eureka!” (2013) mezcla ritmos latinos, ska y electrónica ligera con colaboraciones como Love of Lesbian. Es un trabajo ecléctico y brillante que mantiene su esencia festiva. Refleja evolución musical sin perder su chispa.",
+        "en": "“Eureka!” (2013) blends Latin rhythms, ska, and light electronics with collaborations like Love of Lesbian. It’s an eclectic, vibrant work that retains their festive essence. It reflects musical evolution without losing its spark."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27388064380c40ffee34e1a9d96",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=fbB-n7oG5zU&list=PLOg7jq5piiXSV0BXnTZPh7YKwDE9AUK_z",
+      "spotify": "https://open.spotify.com/album/6wTQ7zBcv3hwG3jSvBb6nI",
+      "masterpiece": true
+    },
+    {
+      "id": 860,
+      "category": "music",
+      "subcategory": "rumba",
+      "artist": "La Pegatina",
+      "title": {
+        "es": "Revulsiu",
+        "en": "Revulsiu"
+      },
+      "description": {
+        "es": "“Revulsiu” (2015) reafirma su energía enérgica con colaboraciones de Rebeka Brown y Ska‑P. Es un disco que mezcla fiesta y compromiso social con letras críticas y ritmos irresistibles. Un punto alto en su carrera.",
+        "en": "“Revulsiu” (2015) reaffirms their energetic vigour with collaborations from Rebeka Brown and Ska‑P. It mixes party vibes and social commitment with critical lyrics and irresistible rhythms. A high point in their career."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273ab9934dca7485167f81b8b64",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=hHLBtzdrc0g&list=RDhHLBtzdrc0g&start_radio=1",
+      "spotify": "https://open.spotify.com/album/1QhYAMuClrXwodJbdWr9kb",
+      "masterpiece": true
+    },
+    {
+      "id": 861,
+      "category": "music",
+      "subcategory": "rumba",
+      "artist": "La Pegatina",
+      "title": {
+        "es": "Ahora o Nunca",
+        "en": "Ahora o Nunca"
+      },
+      "description": {
+        "es": "“Ahora o Nunca” (2018) ofrece un sonido más pulido y colaborativo, con letras que invitan al baile y la reflexión. Publicado por Warner, incluye éxitos como “Tu madre es una cabra”. Mantiene su esencia festiva con producción mejorada.",
+        "en": "“Ahora o Nunca” (2018) delivers a more polished and collaborative sound, with lyrics that invite both dance and reflection. Released by Warner, features hits like “Tu madre es una cabra”. It retains their festive essence with enhanced production."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27360545187d8acfa29dcb4b6eb",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=suylFFH1yWo&list=RDsuylFFH1yWo&start_radio=1",
+      "spotify": "https://open.spotify.com/album/1gVTdZJaemKysGPHgMQfvD",
+      "masterpiece": true
+    },
+    {
+      "id": 862,
+      "category": "music",
+      "subcategory": "rumba",
+      "artist": "La Pegatina",
+      "title": {
+        "es": "Darle la vuelta",
+        "en": "Darle la vuelta"
+      },
+      "description": {
+        "es": "“Darle la vuelta” (2020) es un viaje de autoafirmación con ritmos urbanos, pop y sonidos mediterráneos. Incluye colaboraciones destacadas como “Siempre te pedí” con Travis Birds. Es un disco fresco y optimista en tiempos difíciles.",
+        "en": "“Darle la vuelta” (2020) is a journey of self‑affirmation with urban rhythms, pop and Mediterranean sounds. Includes standout collaborations like “Siempre te pedí” with Travis Birds. It’s a fresh, optimistic record in challenging times."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273bc40a6ecfd16af841576f223",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Sa7eV-7_VKE&list=PLOg7jq5piiXQJ2AtIgjBBd6MIKsk45yDM",
+      "spotify": "https://open.spotify.com/album/3gEAJtsVBALtzwpHZGdAMP",
+      "masterpiece": true
+    },
+    {
+      "id": 863,
+      "category": "music",
+      "subcategory": "rumba",
+      "artist": "La Pegatina",
+      "title": {
+        "es": "Hacia otra parte",
+        "en": "Hacia otra parte"
+      },
+      "description": {
+        "es": "“Hacia otra parte” (2022) es un doble álbum que viaja por estilos como reggae, salsa y electrónica con colaboraciones internacionales. Es una obra ambiciosa que evidencia su crecimiento global y versatilidad sonora.",
+        "en": "“Hacia otra parte” (2022) is a double album exploring styles like reggae, salsa and electronics with international collaborations. It’s an ambitious work showcasing their global growth and sonic versatility."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273846acd88449033b8a710401d",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=m5316zbrYAk&list=PLOg7jq5piiXQPPpxxV8dGK8x9x2v4BXA8",
+      "spotify": "https://open.spotify.com/album/6V9X2Z1BnzRS5YFGHytLWc",
+      "masterpiece": true
+    },
+    {
+      "id": 864,
+      "category": "music",
+      "subcategory": "chillout",
+      "artist": "Fila de Brasilia",
+      "title": {
+        "es": "Black Market Gardening",
+        "en": "Black Market Gardening"
+      },
+      "description": {
+        "es": "“Black Market Gardening” mezcla electrónica y sonidos industriales con ritmos densos y texturas orgánicas. Lanzado en 2014, evoca oscilaciones urbanas y ambientes subterráneos. Es una obra intensa y envolvente, ideal para exploraciones auditivas profundas.",
+        "en": "“Black Market Gardening” blends electronic and industrial sounds with dense rhythms and organic textures. Released in 2014, it evokes urban oscillations and underground atmospheres. It’s an intense and immersive work, ideal for deep listening explorations."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27313c49410a66fba936b622280",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=a0NmJnKmp7k&list=PL_5IUzLj0UvgZhEqXJMGGl6tPkyhNVhS8",
+      "spotify": "https://open.spotify.com/album/5CBvvWCyVoCaae2EvgTaZy",
+      "masterpiece": true
+    },
+    {
+      "id": 865,
+      "category": "music",
+      "subcategory": "chillout",
+      "artist": "Fila de Brasilia",
+      "title": {
+        "es": "Luck Be A Weirdo Tonight",
+        "en": "Luck Be A Weirdo Tonight"
+      },
+      "description": {
+        "es": "“Luck Be A Weirdo Tonight” ofrece ritmos rotos y elementos dub-tech fusionados con atmósferas retorcidas. Publicado en 2016, su título juguetón encierra una experimentación sonora audaz. Es un disco desafiante y original dentro de su carrera.",
+        "en": "“Luck Be A Weirdo Tonight” delivers broken beats and dub‑tech elements fused with twisted atmospheres. Released in 2016, its playful title hides bold sonic experimentation. It’s a challenging and original LP in their catalog."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2735ab7cf4d202c7da14f63781b",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=dNHnbjiTmBk&list=PL5AsDpj2j71z7Dri_XZORIGX4HE2ijevq",
+      "spotify": "https://open.spotify.com/album/6PrcFRlDc651cqABIcmgET",
+      "masterpiece": false
+    },
+    {
+      "id": 866,
+      "category": "music",
+      "subcategory": "chillout",
+      "artist": "Fila de Brasilia",
+      "title": {
+        "es": "A Touch Of Cloth",
+        "en": "A Touch Of Cloth"
+      },
+      "description": {
+        "es": "“A Touch Of Cloth” es un viaje sintético con texturas lavadas y beats suaves que bordean el ambient experimental. Lanzado en 2018, mezcla minimalismo y atmósfera íntima. Es un trabajo sutil, delicado y evocador.",
+        "en": "“A Touch Of Cloth” is a synthetic journey with washed textures and soft beats bordering experimental ambient. Released in 2018, it blends minimalism with intimate atmosphere. It’s a subtle, delicate and evocative work."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273b04fbbb51100e2d8337c1360",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=S3sJmLmCITI&list=PLa_qhWo59TZAWPshXP70P3ipir1whzN2_",
+      "spotify": "https://open.spotify.com/album/0aRFybustgRXMeOp40A5No",
+      "masterpiece": false
+    },
+    {
+      "id": 867,
+      "category": "music",
+      "subcategory": "chillout",
+      "artist": "Fila de Brasilia",
+      "title": {
+        "es": "Another Late Night",
+        "en": "Another Late Night"
+      },
+      "description": {
+        "es": "“Another Late Night” registra una sesión en vivo del colectivo en la galería V&A, capturando la energía del directo con electrónica cruda y espontánea. Publicado en 2019, su carácter documental y vibrante lo hace único. Es pura improvisación y atmósfera en directo.",
+        "en": "“Another Late Night” records a live session by the collective at the V&A gallery, capturing live energy with raw and spontaneous electronics. Released in 2019, its documentary and vibrant character makes it unique. It’s pure improvisation and atmosphere live."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273b415fc6505fe00219d017df4",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=blPRjtiShe4&list=PLFF51D1C0A2CD35D2",
+      "spotify": "https://open.spotify.com/album/09HBh8LHnAjxwMPWmIWgDb",
+      "masterpiece": false
+    },
+    {
+      "id": 868,
+      "category": "music",
+      "subcategory": "chillout",
+      "artist": "Fila de Brasilia",
+      "title": {
+        "es": "B2",
+        "en": "B2"
+      },
+      "description": {
+        "es": "“B2” es un EP compacto de electrónica minimal que destaca por sus ritmos pulsantes y bajos profundos. Publicado en 2020, explora repetición y groove hipnótico. Es una pieza concisa pero impactante de la evolución del colectivo.",
+        "en": "“B2” is a compact minimal electronic EP that stands out for pulsating rhythms and deep bass. Released in 2020, it explores repetition and hypnotic groove. It’s a concise but impactful piece of the collective’s evolution."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273b415fc6505fe00219d017df4",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=lRU8xrWG8E0&list=RDlRU8xrWG8E0&start_radio=1",
+      "spotify": "https://open.spotify.com/album/09HBh8LHnAjxwMPWmIWgDb",
+      "masterpiece": false
+    },
+    {
+      "id": 869,
+      "category": "music",
+      "subcategory": "chillout",
+      "artist": "Fila de Brasilia",
+      "title": {
+        "es": "The Life And Times Of Phoebus Brumal",
+        "en": "The Life And Times Of Phoebus Brumal"
+      },
+      "description": {
+        "es": "“The Life And Times Of Phoebus Brumal” es una obra conceptual que combina narrativa y electrónica ambiental con texturas frías y ritmos lentos. Lanzada en 2021, plantea un universo sonoro invernal y misterioso. Es un álbum introspectivo y cinematográfico.",
+        "en": "“The Life And Times Of Phoebus Brumal” is a conceptual work combining narrative and ambient electronics with cold textures and slow rhythms. Released in 2021, it presents an icy and mysterious sonic universe. It’s an introspective and cinematic album."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2731d0ae501877ce02bb7e6b3fa",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=RuZSS_geZsQ&list=PLaZtMIH6kT9pPSEXHqydBK8t4JOSTkVA5",
+      "spotify": "https://open.spotify.com/album/2mfFxJ2o67hqlX2tlSCtnO",
+      "masterpiece": true
+    },
+    {
+      "id": 870,
+      "category": "music",
+      "subcategory": "chillout",
+      "artist": "Fila de Brasilia",
+      "title": {
+        "es": "Dicks",
+        "en": "Dicks"
+      },
+      "description": {
+        "es": "“Dicks” es un experimento sonoro crudo con ritmos rotos y loops agresivos que desafían estructuras convencionales. Publicado en 2022, es una obra corrosiva con texturas ásperas y actitud disruptiva. Ideal para oyentes que buscan innovación radical.",
+        "en": "“Dicks” is a raw sonic experiment with broken beats and aggressive loops challenging conventional structures. Released in 2022, it’s a corrosive work with rough textures and disruptive attitude. Ideal for listeners seeking radical innovation."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273b415fc6505fe00219d017df4",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=hn2YGzpp2EA&list=OLAK5uy_lLFa5KbVXv3q76Vra3jCXN50PYYSmbd2E&index=2",
+      "spotify": "https://open.spotify.com/album/09HBh8LHnAjxwMPWmIWgDb",
+      "masterpiece": false
+    },
+    {
+      "id": 871,
+      "category": "music",
+      "subcategory": "flamenco",
+      "artist": "Fuel Fandango",
+      "title": {
+        "es": "Trece Lunas",
+        "en": "Trece Lunas"
+      },
+      "description": {
+        "es": "“Trece Lunas” fusiona ritmos latinos con electrónica y funk, creando un sonido vibrante y moderno. El álbum explora emociones intensas y texturas rítmicas con un toque sensual. Es una obra que destaca por su energía y sofisticación sonora.",
+        "en": "“Trece Lunas” blends Latin rhythms with electronic and funk, creating a vibrant and modern sound. The album explores intense emotions and rhythmic textures with a sensual touch. It stands out for its energy and sonic sophistication."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2736b2770d6f4155ed848e579f4",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=W1581DKo3xs&list=PLr1sa7bCsF_ZloXeDaEfkCru_IkuK7JZj",
+      "spotify": "https://open.spotify.com/album/2VW7FxYO9KFB25cHre62oU",
+      "masterpiece": true
+    },
+    {
+      "id": 872,
+      "category": "music",
+      "subcategory": "chillout",
+      "artist": "Marconi Union",
+      "title": {
+        "es": "Under Wires and Searchlights",
+        "en": "Under Wires and Searchlights"
+      },
+      "description": {
+        "es": "“Under Wires and Searchlights” es un álbum de electrónica ambiental que combina texturas espaciales con melodías suaves y atmósferas introspectivas. Su sonido invita a la meditación y a la exploración interior, ofreciendo una experiencia auditiva calmada y profunda.",
+        "en": "“Under Wires and Searchlights” is an ambient electronic album combining spatial textures with soft melodies and introspective atmospheres. Its sound invites meditation and inner exploration, offering a calm and deep listening experience."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27380d3c7b6a9eddeefc22aaa5a",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=IcrbM1l_BoI",
+      "spotify": "https://open.spotify.com/album/1NwWrOKjVF5zwarOtZW2PS",
+      "masterpiece": true
+    },
+    {
+      "id": 873,
+      "category": "music",
+      "subcategory": "chillout",
+      "artist": "Marconi Union",
+      "title": {
+        "es": "Different Colours",
+        "en": "Different Colours"
+      },
+      "description": {
+        "es": "“Different Colours” ofrece una mezcla de electrónica ambiental y downtempo con texturas emotivas y relajantes. El álbum es ideal para momentos de introspección y calma, destacando por su riqueza sonora y atmósfera envolvente.",
+        "en": "“Different Colours” offers a blend of ambient electronic and downtempo with emotional and relaxing textures. The album is perfect for moments of introspection and calm, standing out for its sonic richness and immersive atmosphere."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273e168bf677519d7ebd5ceb156",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=nHY5f2DYpYc",
+      "spotify": "https://open.spotify.com/album/5e6EDDIWF7EfgslBV6Zo18",
+      "masterpiece": false
+    },
+    {
+      "id": 874,
+      "category": "music",
+      "subcategory": "chillout",
+      "artist": "Marconi Union",
+      "title": {
+        "es": "Ghost Stations",
+        "en": "Ghost Stations"
+      },
+      "description": {
+        "es": "“Ghost Stations” es un álbum que fusiona electrónica ambiental con sonidos etéreos y pulsos hipnóticos. Cada pista crea un paisaje sonoro envolvente, ideal para relajación y contemplación profunda.",
+        "en": "“Ghost Stations” is an album that fuses ambient electronics with ethereal sounds and hypnotic pulses. Each track creates an immersive soundscape, ideal for relaxation and deep contemplation."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273873f7c796813ecbad2cfbaca",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=3qQ4lX_YQb0",
+      "spotify": "https://open.spotify.com/album/5C404YdrT9TuLToJOPEr6v",
+      "masterpiece": false
+    },
+    {
+      "id": 875,
+      "category": "music",
+      "subcategory": "chillout",
+      "artist": "Marconi Union",
+      "title": {
+        "es": "Distance",
+        "en": "Distance"
+      },
+      "description": {
+        "es": "“Distance” presenta una colección de piezas electrónicas atmosféricas que exploran la serenidad y la expansión espacial. El álbum es una invitación a la calma, con capas sonoras sutiles y envolventes.",
+        "en": "“Distance” features a collection of atmospheric electronic pieces exploring serenity and spatial expansion. The album invites calm with subtle and immersive sound layers."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273ce00d2c46946566cb56c141e",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=QFOZVJhMhtY",
+      "spotify": "https://open.spotify.com/album/3ddc2BBzOphGHJWq4MP8bu",
+      "masterpiece": false
+    },
+    {
+      "id": 876,
+      "category": "music",
+      "subcategory": "chillout",
+      "artist": "Marconi Union",
+      "title": {
+        "es": "A Lost Connection",
+        "en": "A Lost Connection"
+      },
+      "description": {
+        "es": "“A Lost Connection” combina atmósferas electrónicas envolventes con melodías melancólicas y pausadas. Es un álbum introspectivo que invita a la reflexión y a un viaje emocional profundo.",
+        "en": "“A Lost Connection” combines immersive electronic atmospheres with melancholic and slow melodies. It’s an introspective album inviting reflection and a deep emotional journey."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273cc547cfc4ccfac2ca9144106",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=sKX5L2L3qRo",
+      "spotify": "https://open.spotify.com/album/1YGz2BTmmE11Lcf3rPBDu8",
+      "masterpiece": false
+    },
+    {
+      "id": 877,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Mike Oldfield",
+      "title": {
+        "es": "Tubular Bells",
+        "en": "Tubular Bells"
+      },
+      "description": {
+        "es": "“Tubular Bells” es una obra icónica que revolucionó la música progresiva con su mezcla de rock, folk y música clásica. Su instrumental complejo y envolvente invita a un viaje sonoro único y memorable. Este álbum marcó un antes y un después en la carrera de Oldfield y en la historia musical.",
+        "en": "“Tubular Bells” is an iconic work that revolutionized progressive music with its blend of rock, folk, and classical styles. Its complex and immersive instrumentation invites a unique and memorable sonic journey. This album marked a milestone in Oldfield’s career and music history."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27335d9766e9bb9bdcf0c2ce58d",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=bv_4sZCLlr0&list=RDbv_4sZCLlr0&start_radio=1",
+      "spotify": "https://open.spotify.com/album/3DSrfmHKb8WWgrX1Mvsx6K",
+      "masterpiece": true
+    },
+    {
+      "id": 878,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Mike Oldfield",
+      "title": {
+        "es": "Ommadawn",
+        "en": "Ommadawn"
+      },
+      "description": {
+        "es": "“Ommadawn” es un álbum instrumental que combina elementos de folk, rock progresivo y música celta. Su atmósfera mística y emotiva hace que sea una pieza fundamental para los amantes de la música experimental. Cada pista es una narrativa sonora llena de sensibilidad y virtuosismo.",
+        "en": "“Ommadawn” is an instrumental album blending folk, progressive rock, and Celtic music elements. Its mystical and emotional atmosphere makes it a key piece for lovers of experimental music. Each track is a sonic narrative full of sensitivity and virtuosity."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2731db51dc591a63a802cdf6fe3",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=RCgURx6UkoQ&list=PLy5kryT0xrJMwRpHKv7JMsz84wcPOE5et",
+      "spotify": "https://open.spotify.com/album/200p7O3raeXT2jNhmzK4TE",
+      "masterpiece": true
+    },
+    {
+      "id": 879,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Mike Oldfield",
+      "title": {
+        "es": "Incantations",
+        "en": "Incantations"
+      },
+      "description": {
+        "es": "“Incantations” es un álbum que destaca por su fusión de rock progresivo y música clásica, creando paisajes sonoros complejos y evocadores. La obra invita a la reflexión profunda y ofrece una experiencia auditiva intensa y diversa. Es un clásico del catálogo de Oldfield.",
+        "en": "“Incantations” stands out for its fusion of progressive rock and classical music, creating complex and evocative soundscapes. The work invites deep reflection and offers an intense and diverse listening experience. It is a classic in Oldfield’s catalog."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27339fe216e08573ceaac4ff7ab",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Y9v-Bpx7hII&list=RDY9v-Bpx7hII&start_radio=1",
+      "spotify": "https://open.spotify.com/album/0O6OgkgdNbYYLQj06FLFhf",
+      "masterpiece": true
+    },
+    {
+      "id": 880,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Mike Oldfield",
+      "title": {
+        "es": "Crises",
+        "en": "Crises"
+      },
+      "description": {
+        "es": "“Crises” mezcla rock progresivo con toques de pop y música instrumental, destacando por su variedad y energía. Este álbum incluye algunos de los temas más reconocidos de Oldfield, consolidando su versatilidad y talento. Es una pieza fundamental para su discografía.",
+        "en": "“Crises” mixes progressive rock with hints of pop and instrumental music, standing out for its variety and energy. This album includes some of Oldfield’s most recognized tracks, cementing his versatility and talent. It is a cornerstone in his discography."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2733a361d9e04368bf2cc28f14c",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=FnX8CWzn4Gg&list=PLF-LiKcpokPnkyTctqe9oO_34Tx74lrn0",
+      "spotify": "https://open.spotify.com/album/0LV4hwe1982xjN0bVBhpFw",
+      "masterpiece": false
+    },
+    {
+      "id": 881,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Mike Oldfield",
+      "title": {
+        "es": "The Songs of Distant Earth",
+        "en": "The Songs of Distant Earth"
+      },
+      "description": {
+        "es": "Inspirado en la novela de Arthur C. Clarke, este álbum combina sonidos electrónicos y acústicos para crear una atmósfera futurista y contemplativa. Es un trabajo conceptual que explora la conexión entre la ciencia ficción y la música.",
+        "en": "Inspired by Arthur C. Clarke’s novel, this album combines electronic and acoustic sounds to create a futuristic and contemplative atmosphere. It is a conceptual work exploring the connection between science fiction and music."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2731f08a5c749b749e30317c9ae",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=gRivMEEZZE8&list=RDgRivMEEZZE8&start_radio=1",
+      "spotify": "https://open.spotify.com/album/7AbAn57Y429agHSHIJXu8h",
+      "masterpiece": false
+    },
+    {
+      "id": 882,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Mike Oldfield",
+      "title": {
+        "es": "Heaven’s Open",
+        "en": "Heaven’s Open"
+      },
+      "description": {
+        "es": "“Heaven’s Open” es un álbum que fusiona rock progresivo con elementos acústicos y electrónicos. Se caracteriza por su sonido expansivo y su enfoque más personal, mostrando a Oldfield en un momento creativo maduro y expresivo.",
+        "en": "“Heaven’s Open” is an album that blends progressive rock with acoustic and electronic elements. It is characterized by its expansive sound and a more personal approach, showcasing Oldfield in a mature and expressive creative phase."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273cd1c554382c58ce0fb521435",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=LiOB52l0jXM&list=OLAK5uy_m39QSt_wDc0cr3yNwBZjjo_vL3NppGY04&index=2",
+      "spotify": "https://open.spotify.com/album/2P4gGEWFH9zpJFXiLVRAJR",
+      "masterpiece": false
+    },
+    {
+      "id": 883,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Kaka de Luxe",
+      "title": {
+        "es": "Pero Qué Público Más Tonto Tengo",
+        "en": "Pero Qué Público Más Tonto Tengo"
+      },
+      "description": {
+        "es": "“Pero Qué Público Más Tonto Tengo” es un himno del punk madrileño de 1978 lleno de ironía y crítica hacia la audiencia. Su estilo directo y guitarras crudas reflejan la actitud irreverente del grupo. Es una pieza emblemática de la Movida madrileña.",
+        "en": "“Pero Qué Público Más Tonto Tengo” is a Madrid punk anthem from 1978 filled with irony and audience critique. Its direct style and raw guitars reflect the band's irreverent attitude. It is an emblematic piece of the Movida punk scene."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273c03cc2a05da04e95c085087a",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=9oO5P2bDIwQ&list=RD9oO5P2bDIwQ&start_radio=1",
+      "spotify": "https://open.spotify.com/album/1GhiwLYFbeFzqnTmVnIQRK",
+      "masterpiece": true
+    },
+    {
+      "id": 884,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Kinder Malo",
+      "title": {
+        "es": "La Ley de Eddie Murphy",
+        "en": "La Ley de Eddie Murphy"
+      },
+      "description": {
+        "es": "“La Ley de Eddie Murphy” es un single de rap experimental de Kinder Malo publicado en 2015 con letras irónicas y ritmos contundentes. Mezcla humor ácido con producción urbana y voz performativa. Es uno de los temas más reconocidos del artista.",
+        "en": "“La Ley de Eddie Murphy” is an experimental rap single by Kinder Malo released in 2015 with ironic lyrics and punchy rhythms. It mixes dark humor with urban production and performative vocals. It is one of the artist’s most recognized tracks."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2730ebfb707a0cbbfed3f5206ca",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=4o64oHEZWkU&list=RD4o64oHEZWkU&start_radio=1",
+      "spotify": "https://open.spotify.com/album/3XLjjTf7EkXSD47pmUZl8l",
+      "masterpiece": false
+    },
+    {
+      "id": 883,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Kinder Malo ft. Cecilio G",
+      "title": {
+        "es": "Baumschuelnweg",
+        "en": "Baumschuelnweg"
+      },
+      "description": {
+        "es": "“Baumschuelnweg” es una colaboración intensa de rap entre Kinder Malo y Cecilio G con beat crudo y lírica callejera. Destaca por su energía agresiva y ritmo hipnótico que impulsa la narrativa urbana. Fue lanzado como single y ha recibido atención en la escena emergente.",
+        "en": "“Baumschuelnweg” is an intense rap collaboration between Kinder Malo and Cecilio G featuring a raw beat and streetwise lyrics. It stands out for its aggressive energy and hypnotic rhythm driving the urban narrative. Released as a single, it has gained traction in the emerging scene."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273d69df2525c1afd3b9b6486de",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=j3sOgmxmCfk&list=RDj3sOgmxmCfk&start_radio=1",
+      "spotify": "https://open.spotify.com/album/0Kg15LTHIDpIA0jYkRFTbS",
+      "masterpiece": false
+    },
+    {
+      "id": 884,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Kinder Malo ft. Cecilio G",
+      "title": {
+        "es": "Cual es el tabaco mas caro que hay?",
+        "en": "Cual es el tabaco mas caro que hay?"
+      },
+      "description": {
+        "es": "“Cual es el tabaco mas caro que hay?” es un tema irónico de rap con Kinder Malo y Cecilio G, que mezcla humor y crítica social. El beat es minimalista, permitiendo que la voz y la ironía sean protagonistas. Se lanzó como single y ha generado conversación en redes.",
+        "en": "“Cual es el tabaco mas caro que hay?” is an ironic rap track by Kinder Malo and Cecilio G blending humor and social critique. The beat is minimalist, letting the voice and irony shine. Released as a single, it's sparked conversation online."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273c270cfb478eb4d3335c99821",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=4feGCtdvruo&list=RD4feGCtdvruo&start_radio=1",
+      "spotify": "https://open.spotify.com/album/5bW7OKnYfHQCNfuYWcPE9K",
+      "masterpiece": false
+    },
+    {
+      "id": 885,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Pimp Flaco",
+      "title": {
+        "es": "Haters",
+        "en": "Haters"
+      },
+      "description": {
+        "es": "“Haters” es un videoclip de Pimp Flaco con sonidos trap y actitud desafiante, dirigido a su base de haters. Tiene un ritmo contundente y visuales urbanos que reflejan su estilo provocador. Se ha convertido en uno de sus temas más virales.",
+        "en": "“Haters” is a music video by Pimp Flaco featuring trap sounds and a defiant attitude aimed at his haters. It includes a punchy beat and urban visuals that reflect his provocative style. It has become one of his most viral tracks."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2732b93193020875266bf81c073",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=0m3pGVWWRgw&list=RD0m3pGVWWRgw&start_radio=1",
+      "spotify": "https://open.spotify.com/album/2ryD9DjyYM2Z2ILdYFG1Yj",
+      "masterpiece": false
+    },
+    {
+      "id": 886,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Kinder Malo",
+      "title": {
+        "es": "Noméllame",
+        "en": "Nomellame"
+      },
+      "description": {
+        "es": "“Noméllame” es un tema crudo y directo de Kinder Malo con lírica confrontativa y actitud desafiante. El beat es potente y minimalista dejando espacio a la voz agresiva. Se presentó como single y resonó en la escena urbana independientemente.",
+        "en": "“Nomellame” is a raw and direct track by Kinder Malo with confrontational lyrics and a defiant attitude. The beat is powerful and minimalist leaving room for the aggressive vocals. It was released as a single and resonated in the independent urban scene."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273d0f41e396dc342deb114d157",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=X4gRAm2TUjo&list=RDX4gRAm2TUjo&start_radio=1",
+      "spotify": "https://open.spotify.com/album/2ak9vVO45sC9U7twQvm2Ik",
+      "masterpiece": false
+    },
+    {
+      "id": 887,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Kinder Malo ✡ Pimp Flaco ✡ El Perla",
+      "title": {
+        "es": "Carmen",
+        "en": "Carmen"
+      },
+      "description": {
+        "es": "“Carmen” es una colaboración entre Kinder Malo, Pimp Flaco y El Perla con ritmos densos y lírica intensa. La mezcla de estilos trae un single urbano oscuro y visceral. Destaca la química entre los tres artistas en esta producción.",
+        "en": "“Carmen” is a collaboration between Kinder Malo, Pimp Flaco and El Perla featuring dense rhythms and intense lyrics. The blend of styles brings a dark, visceral urban single. The chemistry between the three artists stands out in this production."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273da08c121b50ce1bf78bd5d54",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=jsOhTAp9QFc&list=RDjsOhTAp9QFc&start_radio=1",
+      "spotify": "https://open.spotify.com/album/1w1Pkm33rA5TconxPy3FS6",
+      "masterpiece": false
+    },
+    {
+      "id": 888,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Kinder Malo",
+      "title": {
+        "es": "Voy a dormir",
+        "en": "Voy a dormir"
+      },
+      "description": {
+        "es": "“Voy a dormir” es un tema introspectivo de Kinder Malo con producción relajada y atmósfera nocturna. Las letras exploran el descanso y la rutina en tono casi confesional. Se percibe como una pieza personal dentro de su discografía.",
+        "en": "“Voy a dormir” is an introspective track by Kinder Malo with relaxed production and a nocturnal atmosphere. The lyrics explore rest and routine in an almost confessional tone. It feels like a personal piece in his discography."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2739b7891d28048b82c287a4639",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=1SYWpxPj4VA&list=RD1SYWpxPj4VA&start_radio=1",
+      "spotify": "https://open.spotify.com/album/1Af2yDS4xK3fEI7G33u7L1",
+      "masterpiece": false
+    },
+    {
+      "id": 889,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Kinder Malo",
+      "title": {
+        "es": "Deuna",
+        "en": "Deuna"
+      },
+      "description": {
+        "es": "“Deuna” presenta ritmos urbanos con ataque lírico rápido y líneas ácidas de Kinder Malo. El tema destaca por su narrativa veloz y producción cruda. Es una canción breve pero impactante en su galería de temas.",
+        "en": "“Deuna” features urban rhythms with fast lyrical attack and sharp lines from Kinder Malo. The track stands out for its rapid narrative and raw production. It’s a brief yet impactful song in his repertoire."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273d0f41e396dc342deb114d157",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=8r_LySpts_w&list=RD8r_LySpts_w&start_radio=1",
+      "spotify": "https://open.spotify.com/album/2ak9vVO45sC9U7twQvm2Ik",
+      "masterpiece": false
+    },
+    {
+      "id": 890,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Kinder Malo",
+      "title": {
+        "es": "Beso Negro",
+        "en": "Beso Negro"
+      },
+      "description": {
+        "es": "“Beso Negro” es una balada oscura de rap con beat lento y tono melancólico. Kinder Malo explora el deseo y la obsesión en versos poéticos, con atmósfera cargada de tensión emocional. Se siente íntima y potente a la vez.",
+        "en": "“Beso Negro” is a dark rap ballad with a slow beat and melancholic tone. Kinder Malo explores desire and obsession in poetic verses, with an atmosphere heavy in emotional tension. It feels intimate and powerful at once."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273056fa8927c55457e68114a55",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=FZwe75Cj768&list=RDFZwe75Cj768&start_radio=1",
+      "spotify": "https://open.spotify.com/album/6FMqqNJAjqwSyi1z1p3z1P",
+      "masterpiece": false
+    },
+    {
+      "id": 891,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Kinder Malo ; DICC ; Perla ; Pimp Flaco",
+      "title": {
+        "es": "Toyota",
+        "en": "Toyota"
+      },
+      "description": {
+        "es": "“Toyota” es una colaboración masiva entre Kinder Malo, DICC, Perla y Pimp Flaco con producción vibrante y estribillo pegadizo. Mezcla estilos urbanos y coro colectivo para un single festivo. Se posiciona como una propuesta colaborativa relevante.",
+        "en": "“Toyota” is a massive collaboration among Kinder Malo, DICC, Perla and Pimp Flaco with vibrant production and a catchy chorus. It blends urban styles and collective chorus for a festive single. It stands out as a relevant collaborative proposal."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2735e30dc9cad615e885111b920",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=lCn55d9fmoM&list=RDlCn55d9fmoM&start_radio=1",
+      "spotify": "https://open.spotify.com/album/0GcM2QK3GN1iIIj66bMbzR",
+      "masterpiece": false
+    },
+    {
+      "id": 892,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Kinder Malo",
+      "title": {
+        "es": "Bon Voyage",
+        "en": "Bon Voyage"
+      },
+      "description": {
+        "es": "“Bon Voyage” es un single de rap con ritmos contundentes y lírica introspectiva, lanzado en 2016. Kinder Malo mezcla sensibilidad urbana con atmósfera melancólica adaptada a un viaje emocional. Es una muestra representativa de su estilo personal.",
+        "en": "“Bon Voyage” is a rap single with punchy rhythms and introspective lyrics, released in 2016. Kinder Malo blends urban sensitivity with a melancholic atmosphere suited for an emotional journey. It’s a representative showcase of his personal style."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27311699fc19b2db42d316a82b4",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=9rUPrfKNJHQ&list=RD9rUPrfKNJHQ&start_radio=1",
+      "spotify": "https://open.spotify.com/album/5XJHV695KfOhtcdnrH3lqF",
+      "masterpiece": false
+    },
+    {
+      "id": 893,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Kinder Malo ft. Pimp Flaco & Tommy Cash",
+      "title": {
+        "es": "Apel",
+        "en": "Apel"
+      },
+      "description": {
+        "es": "“Apel” reúne a Kinder Malo, Pimp Flaco y Tommy Cash en un single explosivo de rap con energía cruda y beat potente. La colaboración destaca por su fusión de estilos urbanos y actitud performativa. Lanzado en 2016, se ha convertido en una referencia underground.",
+        "en": "“Apel” brings together Kinder Malo, Pimp Flaco and Tommy Cash in an explosive rap single with raw energy and a powerful beat. The collaboration stands out for its fusion of urban styles and performative attitude. Released in 2016, it has become an underground reference."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273e6ccb4b3d4c58679d6f4ba56",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=8T1HOfnzxPk&list=RD8T1HOfnzxPk&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4lHjtAszeKi6o0QJpLoONM",
+      "masterpiece": false
+    },
+    {
+      "id": 894,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Kinder Malo",
+      "title": {
+        "es": "Why Always Me",
+        "en": "Why Always Me"
+      },
+      "description": {
+        "es": "“Why Always Me” es un tema de rap introspectivo y desafiante, donde Kinder Malo explora dudas existenciales con flow relajado. El beat suave permite que la voz destaque y aporta un tono reflexivo. Es una muestra íntima de su evolución lírica.",
+        "en": "“Why Always Me” is an introspective and defiant rap track where Kinder Malo explores existential doubts with a relaxed flow. The smooth beat allows the vocals to shine and imparts a reflective tone. It’s an intimate showcase of his lyrical evolution."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2731fdd0c4aa55661347731fe57",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=VeY7SRMjUrQ&list=RDVeY7SRMjUrQ&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4iaRh5su57A4qVONsYNDz9",
+      "masterpiece": false
+    },
+    {
+      "id": 895,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Pimp Flaco & Kinder Malo",
+      "title": {
+        "es": "Laberinto de Amor",
+        "en": "Laberinto de Amor"
+      },
+      "description": {
+        "es": "“Laberinto de Amor” forma parte de la BSO de “Algo muy gordo” y combina rap íntimo con una atmósfera cinematográfica. Pimp Flaco y Kinder Malo crean un tema que mezcla narrativa emocional con ritmo pausado y envolvente. La mezcla de voces y la producción elegante le dan carácter memorable.",
+        "en": "“Laberinto de Amor” is part of the “Algo muy gordo” soundtrack combining intimate rap with a cinematic atmosphere. Pimp Flaco and Kinder Malo craft a track blending emotional narrative with slow, immersive rhythm. The vocal mix and sleek production give it a memorable character."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27336d7363ff711cd2ce4d342c6",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=YOHfMrV0S1Y&list=RDYOHfMrV0S1Y&start_radio=1",
+      "spotify": "https://open.spotify.com/album/2vToXem13dmNPZfsutHeKO",
+      "masterpiece": false
+    },
+    {
+      "id": 896,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "DICC",
+      "title": {
+        "es": "Rapapapa",
+        "en": "Rapapapa"
+      },
+      "description": {
+        "es": "“Rapapapa” es un tema rap urbano producido por SAOX que destaca por su beat vibrante y ritmo acelerado. DICC hace una performance contundente, fusionando flow agresivo y letras pegadizas. Es una muestra clara de su estilo fresco y energético.",
+        "en": "“Rapapapa” is an urban rap track produced by SAOX that stands out with its vibrant beat and fast-paced rhythm. DICC delivers a powerful performance, fusing aggressive flow and catchy lyrics. It’s a clear showcase of his fresh and energetic style."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27318fb63faf6a78f349a982255",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=UCVfRmy_9jI&list=RDUCVfRmy_9jI&start_radio=1",
+      "spotify": "https://open.spotify.com/album/0yCX5D02wtwF9qvRhu6pgo",
+      "masterpiece": false
+    },
+    {
+      "id": 897,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Little Big feat. Tommy Cash",
+      "title": {
+        "es": "Give Me Your Money",
+        "en": "Give Me Your Money"
+      },
+      "description": {
+        "es": "“Give Me Your Money” es un banger electro‑punk de Little Big con la participación de Tommy Cash, que critica la cultura del consumo con humor mordaz. Ritmos explosivos y una producción estrafalaria lo convierten en un hit energético. Es una obra satírica y pegadiza.",
+        "en": "“Give Me Your Money” is an electro-punk banger by Little Big featuring Tommy Cash, critiquing consumer culture with biting humor. Explosive rhythms and flamboyant production make it an energetic hit. It’s a satirical and catchy piece."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273929f9a354ce8663284206829",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=2uTMTyqQxl4&list=RD2uTMTyqQxl4&start_radio=1",
+      "spotify": "https://open.spotify.com/album/018HEkMXoCIIQdnp1f1DnU",
+      "masterpiece": false
+    },
+    {
+      "id": 898,
+      "category": "music",
+      "subcategory": "trap",
+      "artist": "Tommy Cash",
+      "title": {
+        "es": "Winaloto",
+        "en": "Winaloto"
+      },
+      "description": {
+        "es": "“Winaloto” es un tema electrónico hipnótico de Tommy Cash con estética excéntrica y beat minimalista. Su estilo audiovisual extravagante y ritmo envolvente lo hacen distintivo. Ha ganado notoriedad por su mezcla de provocación y groove.",
+        "en": "“Winaloto” is a hypnotic electronic track by Tommy Cash with eccentric aesthetic and minimalist beat. Its extravagant audiovisual style and immersive rhythm make it distinctive. It has gained notoriety for its blend of provocation and groove."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2739c82dadfa8d6ad2450814d96",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=3OGMrZKIjKU&list=RD3OGMrZKIjKU&start_radio=1",
+      "spotify": "https://open.spotify.com/album/0uCWPZ8T5L2Slsw7SQx3Pu",
+      "masterpiece": false
+    },
+    {
+      "id": 899,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Mamá Ladilla",
+      "title": {
+        "es": "Arzobispofobia",
+        "en": "Arzobispofobia"
+      },
+      "description": {
+        "es": "“Arzobispofobia” es su primer álbum oficial, lanzado en 1996, lleno de humor escatológico y crítica social. Sus riffs elaborados salpican letras surrealistas que reflejan el espíritu provocador del grupo. Representa una base sólida del punk‑rock progresivo zafio.",
+        "en": "“Arzobispofobia” is their first official album, released in 1996, full of scatological humor and social critique. Its refined riffs pepper surreal lyrics reflecting the group’s provocative spirit. It represents a solid foundation of their progressive‑zany punk‑rock."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273cd28d321d63388d2e4c2bc5b",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=N8TteXeqDm4&list=PL6mpyAioMZGgsOrDKZBrEhxBMtprbheA8",
+      "spotify": "https://open.spotify.com/album/1J0DvqRR7NKEcWztBOtBdt",
+      "masterpiece": true
+    },
+    {
+      "id": 900,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Mamá Ladilla",
+      "title": {
+        "es": "Naces, creces, te jodes y mueres",
+        "en": "Naces, Creces, Te Jodes Y Mueres"
+      },
+      "description": {
+        "es": "“Naces, creces, te jodes y mueres” (1998) mezcla punk-rock con crítica mordaz y letras irreverentes. Con producción más pulida de RCA, mantiene su humor zafio pero con riffs intensos y actitud combativa. Es uno de sus trabajos más reconocibles y ácidos.",
+        "en": "“Naces, Creces, Te Jodes Y Mueres” (1998) mixes punk‑rock with biting critique and irreverent lyrics. With more polished RCA production, it keeps its bawdy humor but adds intense riffs and combative attitude. It’s one of their most recognizable and caustic works."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273861623ec49333d65589af2ed",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=QQbvucYrfiA&list=RDQQbvucYrfiA&start_radio=1",
+      "spotify": "https://open.spotify.com/album/3AMtCdlF0izfCo2yXMFpKF",
+      "masterpiece": true
+    },
+    {
+      "id": 901,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Mamá Ladilla",
+      "title": {
+        "es": "Requesound",
+        "en": "Requesound"
+      },
+      "description": {
+        "es": "“Requesound” (1999) fue grabado casi en directo y conserva la frescura de sus dos primeros trabajos. Su estilo sigue siendo humorístico y crítico, con letras ingeniosas y energía cruda en cada pista. Es un testamento a su autenticidad sonora.",
+        "en": "“Requesound” (1999) was recorded nearly live and retains the freshness of their first two works. Its style remains humorous and critical, with clever lyrics and raw energy in every track. It’s a testament to their sonic authenticity."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2737c7c51684a1e7587a3f8f39d",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=RQRL6KBrGfE&list=PL6mpyAioMZGhMksV72HpwpWPb81LfI7va",
+      "spotify": "https://open.spotify.com/album/6WnLDOIKWknBeiRuDgtS7y",
+      "masterpiece": false
+    },
+    {
+      "id": 902,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Mamá Ladilla",
+      "title": {
+        "es": "Autorretrete",
+        "en": "Autorretrete"
+      },
+      "description": {
+        "es": "“Autorretrete” (2005) mezcla punk‑rock con riffs elaborados y letras provocadoras. Fue grabado en Estudios Korsakov y marcó una nueva etapa tras cambios de formación. Refuerza su estilo irreverente y técnico, consolidando su madurez musical.",
+        "en": "“Autorretrete” (2005) mixes punk‑rock with refined riffs and provocative lyrics. Recorded at Estudios Korsakov, it marked a new phase after lineup changes. It reinforces their irreverent and technical style, cementing their musical maturity."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273721c27984ea3a3e792cae463",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=mBR_6ZP3h5E&list=RDmBR_6ZP3h5E&start_radio=1",
+      "spotify": "https://open.spotify.com/album/2Ggsom0l71YHad4M4JK5zG",
+      "masterpiece": false
+    },
+    {
+      "id": 903,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Mamá Ladilla",
+      "title": {
+        "es": "Jamón beibe",
+        "en": "Jamón Beibe"
+      },
+      "description": {
+        "es": "“Jamón beibe” (2010) es un disco‑libro de 96 páginas que combina su característico humor con punk-rock afilado. Fue autoeditado y mantiene letras cargadas de surrealismo y crítica social. Se convirtió en un proyecto mediático dentro de su carrera.",
+        "en": "“Jamón Beibe” (2010) is a 96‑page album‑book combining their characteristic humor with sharp punk‑rock. Self‑produced, it maintains surreal lyrics and social critique. It became a media project within their discography."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27319cbc1050612fbd3c0ca6746",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=1KtZbfotWDg&list=PL6Z_z0SoScUVps_iDBH0eG8uYCmOOeKJC",
+      "spotify": "https://open.spotify.com/album/247c9WERiKYLoQRSLqKaZ7",
+      "masterpiece": true
+    },
+    {
+      "id": 904,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Mamá Ladilla",
+      "title": {
+        "es": "Coprofonía",
+        "en": "Coprofonía"
+      },
+      "description": {
+        "es": "“Coprofonía” (2015) retoma el humor escatológico y agrega sonidos más elaborados, con producción limpia. El disco equilibra sarcasmo y virtuosismo en riffs y solos, sin perder su esencia irreverente. Fue bien recibido por fans del género.",
+        "en": "“Coprofonía” (2015) resumes scatological humor while adding more elaborate sounds with clean production. The album balances sarcasm and virtuosity in riffs and solos without losing its irreverent essence. It was well received by genre fans."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273999385de76c76b1e8b0a4020",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=lrMk--9pJM4&list=OLAK5uy_l5U2i_0Mfb_LPnI9EPoGWjuCD3wDmNCoo&index=2",
+      "spotify": "https://open.spotify.com/album/2DYAHEXvShB1baKBYUMjXk",
+      "masterpiece": false
+    },
+    {
+      "id": 905,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Mamá Ladilla",
+      "title": {
+        "es": "Quién pudriera",
+        "en": "Quien Pudriera"
+      },
+      "description": {
+        "es": "“Quién pudriera” (2018) explora la complicidad entre humor y crítica social, con letras mordaces y riffs afilados. Su estilo sigue siendo progresivo y sarcástico, reflejando la madurez del grupo. Es un trabajo sólido dentro de su trayectoria.",
+        "en": "“Quien Pudriera” (2018) explores the blend of humor and social criticism with biting lyrics and sharp riffs. Its style remains progressive and sarcastic, reflecting the group’s maturity. It’s a solid work within their trajectory."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273e80d373bcbd8edda60311055",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=HHv-mCrJ_1U&list=PL6-gbvjJxOvU4HiO0RW0EEMyGBh6YKTly",
+      "spotify": "https://open.spotify.com/album/1qddckIgxQoKBbBMLBcwYX",
+      "masterpiece": false
+    },
+    {
+      "id": 906,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "Mamá Ladilla",
+      "title": {
+        "es": "Exhuma y sigue",
+        "en": "Exhuma y Sigue"
+      },
+      "description": {
+        "es": "“Exhuma y sigue” (2021) es un álbum reciente que mezcla crítica social con humor grotesco y riffs elaborados. Publicado con producción actualizada, refleja su continuidad y relevancia dentro del punk‑rock progresivo. Ha sido bien valorado por crítica y público.",
+        "en": "“Exhuma y Sigue” (2021) is a recent album blending social critique with grotesque humor and elaborate riffs. Released with updated production, it reflects their continuity and relevance within progressive punk‑rock. It has been well regarded by critics and fans."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273569def2e8abff6db72ea376e",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=m9-pvCac_X4&list=PLn9lVV8Ayrvq5vJlFBPb7j5ay2Z_4MxsJ",
+      "spotify": "https://open.spotify.com/album/4OuE24j8sTiI00xk7ulcZd",
+      "masterpiece": true
+    },
+    {
+      "id": 907,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Ozelot",
+      "title": {
+        "es": "Singularity",
+        "en": "Singularity"
+      },
+      "description": {
+        "es": "“Singularity” es un álbum de hip‑hop experimental publicado en 2023 que fusiona rap con texturas electrónicas y ambientes espaciales. Ozelot combina beats variados con flujos introspectivos y reflexiones existenciales. Representa un punto culminante en su desarrollo artístico underground.",
+        "en": "“Singularity” is an experimental hip‑hop album released in 2023 blending rap with electronic textures and spatial atmospheres. Ozelot combines varied beats with introspective flows and existential reflections. It represents a high point in his underground artistic development."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273d6eb23fa0b38e308a9618d49",
+      "tags": [
+        "album"
+      ],
+      "youtube": "http://youtube.com/watch?v=Ngugt55avNM&list=RDNgugt55avNM&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4kcCGa9xXmZ7VZo3drgE0r",
+      "masterpiece": true
+    },
+    {
+      "id": 908,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Ozelot",
+      "title": {
+        "es": "Dimensiones y Cuerdas",
+        "en": "Dimensiones y Cuerdas"
+      },
+      "description": {
+        "es": "“Dimensiones y Cuerdas” explora paisajes sonoros poéticos combinando rap con atmósferas íntimas y loops de cuerdas. Lanzado en 2022, destaca por su sensibilidad lírica y producción minimalista. Es un disco introspectivo que profundiza en la conexión emocional y sonora.",
+        "en": "“Dimensiones y Cuerdas” explores poetic soundscapes combining rap with intimate atmospheres and string loops. Released in 2022, it stands out for its lyrical sensitivity and minimalistic production. It’s an introspective album delving into emotional and sonic connection."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27372103a330a10e3629bde84dd",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=y-_EJBXqmjk&list=PL358hxIPtqko4nRpG9n04WZWH2KDlo-E6",
+      "spotify": "https://open.spotify.com/album/3HdBmPeGhpZx7NM076eMiQ",
+      "masterpiece": false
+    },
+    {
+      "id": 909,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Ozelot",
+      "title": {
+        "es": "El hombre de masa cero",
+        "en": "El hombre de masa cero"
+      },
+      "description": {
+        "es": "“El hombre de masa cero” fue publicado como EP en 2020 e incluye la canción que da nombre al proyecto junto a Mees Bickle. Ozelot mezcla rap con poesía reflexiva y atmósferas meditativas. El trabajo destaca por su carga emocional y profundidad conceptual.",
+        "en": "“El hombre de masa cero” was released as an EP in 2020 featuring the title track with Mees Bickle. Ozelot mixes rap with reflective poetry and meditative atmospheres. The work stands out for its emotional weight and conceptual depth."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2731904443a7d06193ac8a030c9",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=y-_EJBXqmjk&list=PL358hxIPtqko4nRpG9n04WZWH2KDlo-E6",
+      "spotify": "https://open.spotify.com/album/2j21EksBZnBfNslyegw2eW",
+      "masterpiece": false
+    },
+    {
+      "id": 910,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "Christine and the Queens",
+      "title": {
+        "es": "Chaleur humaine",
+        "en": "Chaleur humaine"
+      },
+      "description": {
+        "es": "“Chaleur humaine” es el álbum debut de 2014 que combina synth‑pop y indie pop con temas existenciales y emoción franco‑inglés. Las letras reflexionan sobre identidad y vulnerabilidad en un entorno pop elegante. Fue un éxito comercial y crítico, marcando su irrupción internacional.",
+        "en": "“Chaleur humaine” is the 2014 debut album that blends synth‑pop and indie pop with existential themes and Franco‑English emotion. The lyrics reflect on identity and vulnerability within a polished pop setting. It was a critical and commercial success, marking the artist’s international breakthrough."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273f163fa3e84f8f189fe5b2156",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=--CnO-qTM6Y&list=RD--CnO-qTM6Y&start_radio=1",
+      "spotify": "https://open.spotify.com/album/326nKcn9e238BwduPDzld7",
+      "masterpiece": true
+    },
+    {
+      "id": 911,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "Christine and the Queens",
+      "title": {
+        "es": "Christine And The Queens",
+        "en": "Christine And The Queens"
+      },
+      "description": {
+        "es": "“Christine And The Queens” es el álbum debut internacional de Héloïse Letissier, lanzado en 2015. Combina synthpop y pop alternativo con letras introspectivas y temas de identidad y dualidad. Este disco marcó su irrupción global con sonidos melódicos y atmósferas envolventes.",
+        "en": "“Christine And The Queens” is Héloïse Letissier’s international debut album released in 2015. It blends synthpop and alternative pop with introspective lyrics and themes of identity and duality. The album marked her global breakthrough with melodic sounds and immersive atmospheres."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2730728ab0d4178bc9ed6b0d151",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=i9XeN3MSbyk&list=PLew_R9ehafcbhLIICstVK7EwxQuoK2SV9",
+      "spotify": "https://open.spotify.com/album/2Yg3Rha1y4PDlIWh5vy6rJ",
+      "masterpiece": true
+    },
+    {
+      "id": 912,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "Christine and the Queens",
+      "title": {
+        "es": "Nuit 17 À 52",
+        "en": "Nuit 17 À 52"
+      },
+      "description": {
+        "es": "“Nuit 17 À 52” es un EP lanzado en 2013 que presenta una mezcla experimental de electropop y synthpop. Este trabajo temprano de Christine and the Queens explora temas oscuros y nocturnos con una producción minimalista y atmósferas melancólicas que anticipan su evolución musical.",
+        "en": "“Nuit 17 À 52” is an EP released in 2013 featuring an experimental mix of electropop and synthpop. This early work by Christine and the Queens explores dark, nocturnal themes with minimalist production and melancholic atmospheres, foreshadowing her musical evolution."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2732ebb1fef721a85c59c10f353",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=FONX8V7qZlw&list=RDFONX8V7qZlw&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4cs2w6vZu5FiybB2uJFWlj",
+      "masterpiece": true
+    },
+    {
+      "id": 913,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "Christine and the Queens",
+      "title": {
+        "es": "Paranoïa, Angels, True Love",
+        "en": "Paranoïa, Angels, True Love"
+      },
+      "description": {
+        "es": "“Paranoïa, Angels, True Love” es el álbum lanzado en 2023 que fusiona art pop y electro‑goth. Explora temas como el duelo, la identidad y la transformación personal a través de una producción dramática y colaboraciones destacadas, incluyendo a Madonna. Es una obra de gran intensidad emocional.",
+        "en": "“Paranoïa, Angels, True Love” is the 2023 album blending art pop and electro‑goth. It explores themes like grief, identity, and personal transformation through dramatic production and notable collaborations, including Madonna. It is a work of great emotional intensity."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2730728ab0d4178bc9ed6b0d151",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=FacHm4AQZO0&list=PL61CSmcjUDL4u6PW7rIiBv3dEeFqFeI_B",
+      "spotify": "https://open.spotify.com/album/2Yg3Rha1y4PDlIWh5vy6rJ",
+      "masterpiece": true
+    },
+    {
+      "id": 914,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "CPV",
+      "title": {
+        "es": "Madrid Zona Bruta",
+        "en": "Madrid Zona Bruta"
+      },
+      "description": {
+        "es": "“Madrid Zona Bruta” es una compilación emblemática del rap español de los años 90 que marcó el inicio de la escena underground en Madrid. Reúne a varios artistas del sello homónimo con letras crudas y ritmos contundentes. Es un reflejo auténtico de la cultura urbana de la época.",
+        "en": "“Madrid Zona Bruta” is an iconic compilation of 90s Spanish rap that marked the underground scene's beginning in Madrid. It brings together several artists from the label with raw lyrics and hard-hitting beats. It authentically reflects the urban culture of the era."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273672e00f341b80a6ce5be0ead",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=AL8IU_peUJQ&list=PLFUPimLxqFdxWD7TO2rlW7KrKfo1cMf4q",
+      "spotify": "https://open.spotify.com/album/0sU9Q4Pk9VanilsgnRnVIm",
+      "masterpiece": true
+    },
+    {
+      "id": 915,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "CPV",
+      "title": {
+        "es": "La saga continua 24/7",
+        "en": "La saga continua 24/7"
+      },
+      "description": {
+        "es": "Este álbum, “La saga continua 24/7”, es una muestra intensa y continuada del rap callejero español. Publicado en los 2000s, mantiene la esencia combativa y el espíritu crítico del movimiento. Incluye colaboraciones de los artistas clave de CPV con beats clásicos y letras directas.",
+        "en": "The album “La saga continua 24/7” is an intense and continuous showcase of Spanish street rap. Released in the 2000s, it retains the combative essence and critical spirit of the movement. Features key CPV artists with classic beats and direct lyrics."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273fb42581f4cc73b66c107638d",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=4sMXIc9lfYM&list=PLFUPimLxqFdznkBNr0IebW8UsqoCmogVS",
+      "spotify": "https://open.spotify.com/album/46SuLwmcbNc8bPkZA7x63m",
+      "masterpiece": true
+    },
+    {
+      "id": 916,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "CPV",
+      "title": {
+        "es": "Grandes Planes",
+        "en": "Grandes Planes"
+      },
+      "description": {
+        "es": "“Grandes Planes” es un álbum representativo del rap madrileño que combina ritmo agresivo con letras cargadas de crítica social y vivencias urbanas. Este disco reafirma la importancia de CPV en la escena hip hop española y su compromiso con la realidad cotidiana.",
+        "en": "“Grandes Planes” is a representative album of Madrid rap combining aggressive rhythms with socially charged lyrics and urban experiences. This record reaffirms CPV’s importance in the Spanish hip hop scene and their commitment to everyday reality."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273bb4da839f0a3ae97fb98d269",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=iARPGqsLfvA&list=PL2C2BEEE0C7DC37E8",
+      "spotify": "https://open.spotify.com/album/63cRlzjRihSdheA6lKonRy",
+      "masterpiece": true
+    },
+    {
+      "id": 917,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "CPV",
+      "title": {
+        "es": "Siempre",
+        "en": "Siempre"
+      },
+      "description": {
+        "es": "“Siempre” es un álbum que recoge el espíritu auténtico de CPV, con rimas potentes y crítica social presente en cada tema. Mantiene la esencia del rap consciente madrileño y destaca por su producción sobria y directa. Es una obra clave para entender la evolución del grupo.",
+        "en": "“Siempre” is an album capturing the authentic spirit of CPV, with powerful rhymes and social critique in every track. It maintains the essence of conscious Madrid rap and stands out for its sober and direct production. A key work to understand the group’s evolution."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273ce750295a5eca32898b24d62",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=ASpCHOsLYqI&list=PL0800EB23A272D5E4",
+      "spotify": "https://open.spotify.com/album/1TcdRwrcgOVdORV2XOaHmh",
+      "masterpiece": true
+    },
+    {
+      "id": 918,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "Billie Eilish",
+      "title": {
+        "es": "When We All Fall Asleep, Where Do We Go?",
+        "en": "When We All Fall Asleep, Where Do We Go?"
+      },
+      "description": {
+        "es": "“When We All Fall Asleep, Where Do We Go?” es el álbum debut de Billie Eilish que revolucionó el pop moderno con su estilo oscuro y minimalista. Las letras introspectivas y la producción innovadora capturan la voz de una generación joven. Fue un éxito mundial que marcó un antes y un después.",
+        "en": "“When We All Fall Asleep, Where Do We Go?” is Billie Eilish’s debut album that revolutionized modern pop with its dark and minimalist style. The introspective lyrics and innovative production capture the voice of a young generation. It was a worldwide success marking a turning point."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27350a3147b4edd7701a876c6ce",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=XJBUWZsT38c&list=PLMSmPqvJ6siJwH_c2H_N8j9JqDt8ogyny",
+      "spotify": "https://open.spotify.com/album/0S0KGZnfBGSIssfF54WSJh",
+      "masterpiece": true
+    },
+    {
+      "id": 919,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "Billie Eilish",
+      "title": {
+        "es": "Happier Than Ever",
+        "en": "Happier Than Ever"
+      },
+      "description": {
+        "es": "“Happier Than Ever” es el segundo álbum de Billie Eilish que profundiza en emociones complejas con una producción más madura y variada. Combina baladas íntimas con temas enérgicos, mostrando el crecimiento artístico y personal de la cantante. Fue aclamado por crítica y público por igual.",
+        "en": "“Happier Than Ever” is Billie Eilish’s second album that delves into complex emotions with a more mature and varied production. It combines intimate ballads with energetic tracks, showcasing the singer’s artistic and personal growth. It was acclaimed by critics and fans alike."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2732a038d3bf875d23e4aeaa84e",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=7AS9r_E0PY4&list=PLsCPTY_MPoPZLKsjasPhYLuoWG-s-rdKq",
+      "spotify": "https://open.spotify.com/album/0JGOiO34nwfUdDrD612dOp",
+      "masterpiece": true
+    },
+    {
+      "id": 920,
+      "category": "music",
+      "subcategory": "pop",
+      "artist": "Billie Eilish",
+      "title": {
+        "es": "Hit Me Hard and Soft",
+        "en": "Hit Me Hard and Soft"
+      },
+      "description": {
+        "es": "“Hit Me Hard and Soft” es un álbum recopilatorio de Billie Eilish que incluye remixes, colaboraciones y temas inéditos que muestran diferentes facetas de su estilo musical. Presenta una mezcla dinámica entre sonidos suaves y ritmos contundentes, reflejando su versatilidad artística.",
+        "en": "“Hit Me Hard and Soft” is a Billie Eilish compilation album including remixes, collaborations, and unreleased tracks that show different facets of her musical style. It presents a dynamic mix between soft sounds and powerful beats, reflecting her artistic versatility."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=fcX8qE6c9Do&list=RDfcX8qE6c9Do&start_radio=1",
+      "spotify": "https://open.spotify.com/album/7aJuG4TFXa2hmE4z1yxc3n",
+      "masterpiece": true
+    },
+    {
+      "id": 918,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Nirvana",
+      "title": {
+        "es": "MTV Unplugged",
+        "en": "MTV Unplugged"
+      },
+      "description": {
+        "es": "“MTV Unplugged” (1994) muestra a Nirvana en acústico, con versiones íntimas de sus éxitos y covers llenos de melancolía. La voz quebrada de Cobain resalta en un ambiente crudo y emocional. Es uno de los conciertos más emblemáticos del grunge.",
+        "en": "“MTV Unplugged” (1994) presents Nirvana in acoustic form, with intimate renditions of their hits and melancholic covers. Cobain’s fragile voice stands out in a raw, emotional setting. It is one of the most iconic grunge performances."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27336c5417732e53e23cb219246",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=_24pJQUj7zg&list=PLyUVnCw_kLV0J2OjvADXZL-NrSghlEgDg",
+      "spotify": "https://open.spotify.com/album/1To7kv722A8SpZF789MZy7",
+      "masterpiece": true
+    },
+    {
+      "id": 919,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Simón Díaz",
+      "title": {
+        "es": "The Pilgrim - Walking Into The Forest",
+        "en": "The Pilgrim - Walking Into The Forest"
+      },
+      "description": {
+        "es": "“The Pilgrim – Walking Into The Forest” es un álbum de folk meditativo con instrumentación acústica y atmósfera introspectiva. Cada pista evoca calma y conexión con la naturaleza, ideal para meditación y reflexión. Su sencillez lo convierte en una obra envolvente.",
+        "en": "“The Pilgrim – Walking Into The Forest” is a meditative folk album featuring acoustic instrumentation and introspective atmosphere. Each track evokes calm and connection with nature, ideal for meditation and reflection. Its simplicity makes it immersive."
+      },
+      "image": "/imagenes/musica/pilgrim.jpg",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=wlYmw4AuJiI&list=RDwlYmw4AuJiI&start_radio=1",
+      "spotify": "https://open.spotify.com/album/64BfOoLD6TpTpwiQh5aE2T",
+      "masterpiece": false
+    },
+    {
+      "id": 920,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Intoxikazión Etílika",
+        "en": "Intoxicacion Etilica"
+      },
+      "description": {
+        "es": "“Intoxikazión Etílika” (1991) mezcla punk, hardcore y thrash con letras combativas contra la injusticia y el poder. Sus riffs rápidos y voz agresiva muestran la fuerza de su propuesta desde su debut. Fue clave para la definición del metal protesta en España.",
+        "en": "“Intoxicacion Etilica” (1991) blends punk, hardcore and thrash with combative lyrics against injustice and power. Its fast riffs and aggressive vocals showcase their raw energy since the debut. It was key in defining protest metal in Spain."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2738203e5f70c965d7036296f50",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=NaV1itvyHPU&list=RDNaV1itvyHPU&start_radio=1&t=304s",
+      "spotify": "https://open.spotify.com/album/2tGiGBHjDW7cgrZkgQUdwn",
+      "masterpiece": true
+    },
+    {
+      "id": 921,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Soziedad Alkoholika",
+        "en": "Soziedad Alkoholika"
+      },
+      "description": {
+        "es": "“Soziedad Alkoholika” (1994) consolida su sonido con producción potente y letras antisistema. Combina agresividad sonora con crítica social profunda. Este álbum reforzó su posición en el metal estatal con una base de fans firme.",
+        "en": "“Soziedad Alkoholika” (1994) solidifies their sound with powerful production and anti‑system lyrics. It combines sonic aggression with deep social critique. This album reinforced their position in Spanish metal with a solid fan base."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2733183a8f50b4dd89c8aa6b585",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=07JtFzpfdF8",
+      "spotify": "https://open.spotify.com/album/3qdUtCbIlIF7dBqtNoKLvd",
+      "masterpiece": true
+    },
+    {
+      "id": 922,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Feliz falsedad",
+        "en": "Feliz falsedad"
+      },
+      "description": {
+        "es": "“Feliz falsedad” (1997) intensifica su mensaje antisistema con riffs melódicos y estribillos potentes. Las letras denuncian la hipocresía social con sarcasmo ácido. Es uno de sus discos más maduros tanto en sonido como en contenido.",
+        "en": "“Feliz falsedad” (1997) heightens their anti‑system message with melodic riffs and powerful choruses. The lyrics denounce social hypocrisy with acidic sarcasm. It is one of their most mature albums in both sound and content."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2734c3b7a8cdbb6d91134a138c5",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=ih8Ic3RGUO0&list=RDih8Ic3RGUO0&start_radio=1",
+      "spotify": "https://open.spotify.com/album/7lOsZxz7DjuNyKmYJwVASy",
+      "masterpiece": false
+    },
+    {
+      "id": 923,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Y ese que tanto habla está totalmente hueco",
+        "en": "Y Ese Que Tanto Habla Esta Totalmente Hueco"
+      },
+      "description": {
+        "es": "“Y ese que tanto habla...” (2000) es un álbum crudo y directo que critica con dureza al poder silencioso. Su sonido es más duro y su mensaje aún más enfocado. Mantiene su estilo contestatario y crece en contundencia sonora.",
+        "en": "“Y Ese Que Tanto Habla...” (2000) is a raw, direct album that harshly criticizes silent power. Its sound is harsher and its message even more focused. It maintains their defiant style and grows in sonic intensity."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2737451345a0d6dc28f19c1d6d5",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=xyk59wrJg90&list=RDxyk59wrJg90&start_radio=1",
+      "spotify": "https://open.spotify.com/album/0PrJNlHXHAqblYWh0drbUD",
+      "masterpiece": false
+    },
+    {
+      "id": 924,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Ratas",
+        "en": "Ratas"
+      },
+      "description": {
+        "es": "“Ratas” (2003) continúa su línea combativa con riffs gancheros y letras sobre injusticia y corrupción. Su producción es más pulida sin perder crudeza ni impacto. Se reafirma como referente del metal reivindicativo.",
+        "en": "“Ratas” (2003) continues their combative line with catchy riffs and lyrics about injustice and corruption. Its production is more polished without losing rawness or impact. It reaffirms them as a reference in protest metal."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273dcc2a56831b5b1a06af29eb9",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=ls1EM33c5lw&list=RDls1EM33c5lw&start_radio=1",
+      "spotify": "https://open.spotify.com/album/6vC60mjHNKvTmCIw3xlLOq",
+      "masterpiece": false
+    },
+    {
+      "id": 925,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Diversiones...?",
+        "en": "Diversiones...?"
+      },
+      "description": {
+        "es": "“Diversiones...?” (2005) mezcla agresividad con melodía y crítica social en un tono reflexivo. Las guitarras ejecutan riffs tensos mientras la voz mantiene la carga emocional y política. Es una mezcla de fuerza y conciencia.",
+        "en": "“Diversiones...?” (2005) blends aggression with melody and social critique in a reflective tone. Guitars deliver tense riffs while the vocals carry emotional and political weight. It’s a fusion of force and awareness."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2734c3b7a8cdbb6d91134a138c5",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=jwTVdWa37w4&list=PLoXFG2uLoLCWJ9HzayZDmGEy8I5oOYxZd",
+      "spotify": "https://open.spotify.com/album/7lOsZxz7DjuNyKmYJwVASy",
+      "masterpiece": false
+    },
+    {
+      "id": 926,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "¡No intente hacer esto en su casa!",
+        "en": "No Intente Hacer Esto En Su Casa"
+      },
+      "description": {
+        "es": "“¡No intente hacer esto en su casa!” (2007) es un directo cargado de energía y actitud punk‑metal, repleto de versiones y clásicos del grupo. Captura su ferocidad en vivo con potencia sonora. Es un documento esencial para los fans.",
+        "en": "“No Intente Hacer Esto En Su Casa!” (2007) is a live album full of punk‑metal energy and band classics. It captures their live ferocity with sonic power. It is an essential document for fans."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2733183a8f50b4dd89c8aa6b585",
+      "tags": [
+        "live",
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=VqYPos0G3gg&list=RDVqYPos0G3gg&start_radio=1",
+      "spotify": "https://open.spotify.com/album/3qdUtCbIlIF7dBqtNoKLvd",
+      "masterpiece": false
+    },
+    {
+      "id": 927,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Polvo en los ojos",
+        "en": "Polvo en los ojos"
+      },
+      "description": {
+        "es": "“Polvo en los ojos” (2011) ofrece una mezcla potente de thrash y hardcore con letras sobre alienación y manipulación social. Su sonido es agresivo y directo, con riffs envolventes. Reafirma su estilo comprometido y visceral.",
+        "en": "“Polvo en los ojos” (2011) offers a powerful mix of thrash and hardcore with lyrics about alienation and social manipulation. Its sound is aggressive and direct, with enveloping riffs. It reaffirms their committed and visceral style."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2737be57929a225f50d8fb18bdc",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=nkww8p-4BUE&list=OLAK5uy_mmOj_ZwuEj61IVjaI9XEEXss-SnOBGBsU&index=2",
+      "spotify": "https://open.spotify.com/album/7cswb8RgZLY6Yynf9DfNSw",
+      "masterpiece": false
+    },
+    {
+      "id": 928,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Tiempos oscuros",
+        "en": "Tiempos oscuros"
+      },
+      "description": {
+        "es": "“Tiempos oscuros” (2013) reflexiona sobre crisis y desigualdad con riffs densos y cargas emotivas. Su sonido es más maduro y complejo, con matices melódicos entre la crudeza. Es un disco introspectivo y combativo.",
+        "en": "“Tiempos oscuros” (2013) reflects on crisis and inequality with dense riffs and emotional depth. Its sound is more mature and complex, with melodic nuances amid the rawness. It is an introspective and combative album."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273ffeb334c6c100818a08a2b00",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=aKDttsqMf3E&list=PLVeqwnED9McI8CGfbxRMYqE3V5_xV8Zw0",
+      "spotify": "https://open.spotify.com/album/7aQjiTfTyA9eMNkuMc09k9",
+      "masterpiece": false
+    },
+    {
+      "id": 929,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Mala sangre",
+        "en": "Mala sangre"
+      },
+      "description": {
+        "es": "“Mala sangre” (2015) mezcla groove y potencia con letras críticas sobre violencia y opresión. El riff es más funkie y el coro directo, mostrando un sonido evolucionado. Se destaca por su equilibrio entre contundencia y ritmo.",
+        "en": "“Mala sangre” (2015) blends groove and power with critical lyrics about violence and oppression. The riff is funkier and the chorus direct, showing an evolved sound. It stands out for its balance between punch and rhythm."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2732642c728a94e0f8ad23d98f8",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=GuhIVZ5NWOE&list=RDGuhIVZ5NWOE&start_radio=1",
+      "spotify": "https://open.spotify.com/album/2HAn0RE1UZ20NrPNwgmc1T",
+      "masterpiece": false
+    },
+    {
+      "id": 930,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Sesión#2",
+        "en": "Sesion#2"
+      },
+      "description": {
+        "es": "“Sesión#2” (2017) es un EP grabado en directo en estudio con versiones de sus temas más conocidos y nuevas interpretaciones. Su sonido es fresco y directo, respetando su estilo crudo, ideal para seguidores de su energía inicial.",
+        "en": "“Sesion#2” (2017) is a live-in-studio EP featuring versions of their best-known tracks and new interpretations. Its sound is fresh and direct, preserving their raw style, ideal for fans of their early energy."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2730faee866f3042ab87447aca2",
+      "tags": [
+        "live"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=wyVlEZKsaWY&list=RDwyVlEZKsaWY&start_radio=1s",
+      "spotify": "https://open.spotify.com/album/2FIjjVrVvlh44Lz3688RBf",
+      "masterpiece": false
+    },
+    {
+      "id": 931,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Cadenas de odio",
+        "en": "Cadenas de odio"
+      },
+      "description": {
+        "es": "“Cadenas de odio” (2019) combina riffs modernos con crítica social profunda sobre el aumento del odio y la represión. Su producción es potente y clara, con letras directas y ritmo constante. Continua su trayectoria comprometida.",
+        "en": "“Cadenas de odio” (2019) combines modern riffs with deep social critique about rising hate and repression. Its production is powerful and clear, with direct lyrics and steady rhythm. It continues their committed trajectory."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2730b1f39541d4b1debae4a8a51",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Hl8yIwwXng8&list=PLB715D250771C4EAC",
+      "spotify": "https://open.spotify.com/album/6HAGkjaIOWd3kTNRZymGI5",
+      "masterpiece": false
+    },
+    {
+      "id": 932,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Caucho Ardiendo",
+        "en": "Caucho Ardiendo"
+      },
+      "description": {
+        "es": "“Caucho Ardiendo” (2021) presenta un sonido rabioso con riffs densos y temas sobre crisis climática y violencia urbana. Su estilo es directo y agresivo, con producción contundente. Es un álbum actual y enérgico.",
+        "en": "“Caucho Ardiendo” (2021) delivers a furious sound with dense riffs and themes about climate crisis and urban violence. Its style is direct and aggressive, with strong production. It is a current and energetic album."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27316dad69beb898957b1084fac",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=85fcmghzEEg&list=RD85fcmghzEEg&start_radio=1",
+      "spotify": "https://open.spotify.com/album/2YDFvGYKnaUcB5O84yvsvM",
+      "masterpiece": false
+    },
+    {
+      "id": 933,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Sistema Antisocial",
+        "en": "Sistema Antisocial"
+      },
+      "description": {
+        "es": "“Sistema Antisocial” (2023) es un álbum reciente que ataca estructuras de poder y represión con sonido feroz y directo. Sus riffs son filosos y la voz combativa, con un mensaje de resistencia clara. Reafirma su vigencia en el metal social.",
+        "en": "“Sistema Antisocial” (2023) is a recent album attacking power structures and repression with fierce and direct sound. Its riffs are sharp and vocals combative, with a clear message of resistance. It reaffirms their relevance in social metal."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273ffb701bbfccac2667407c8a8",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=kSILwHK1zd8&list=RDkSILwHK1zd8&start_radio=1",
+      "spotify": "https://open.spotify.com/album/2JOAaODzVdCQ4tYCCJs1o3",
+      "masterpiece": true
+    },
+    {
+      "id": 934,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Soziedad Alkoholika",
+      "title": {
+        "es": "Confrontación",
+        "en": "Confrontacion"
+      },
+      "description": {
+        "es": "“Confrontación” (2024) es su último trabajo hasta la fecha que fusiona furia y reflexión, con riffs modernos y mensaje político contundente. Su sonido es nítido y agresivo, mostrando evolución sin perder su espíritu rebelde. Es un disco de resistencia actual.",
+        "en": "“Confrontacion” (2024) is their latest work to date, blending fury and reflection with modern riffs and a strong political message. Its sound is crisp and aggressive, showing evolution while keeping its rebellious spirit. It’s an album of contemporary resistance."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27383dd6f8ee814c3aa34a3c540",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Uvh89TfHN-Y&list=RDUvh89TfHN-Y&start_radio=1",
+      "spotify": "https://open.spotify.com/album/1wWBq7tWLplVKsSCIVTtkp",
+      "masterpiece": true
+    },
+    {
+      "id": 935,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Rammstein",
+      "title": {
+        "es": "Herzeleid",
+        "en": "Herzeleid"
+      },
+      "description": {
+        "es": "“Herzeleid” (1995) fue el disco debut de Rammstein, mezcla de metal industrial con ritmos pesados y letras en alemán sobre dolor emocional. Grabado en Suecia, muestra la crudeza y atmósfera contundente que definirían su estilo. Es un álbum icónico del género Neue Deutsche Härte.",
+        "en": "“Herzeleid” (1995) was Rammstein’s debut album, blending industrial metal with heavy rhythms and German lyrics about emotional pain. Recorded in Sweden, it showcases the raw heft and atmosphere that defined their style. It is an iconic album of the Neue Deutsche Härte genre."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273dcdfc25819de77e79c2edf49",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=70tvVuj4v5g&list=PLBnJv6rImVe_KGSfoH6AtDnfT2eTCH8qr",
+      "spotify": "https://open.spotify.com/album/6HlDm9fzYxk4vkkr3YEvSv",
+      "masterpiece": true
+    },
+    {
+      "id": 936,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Rammstein",
+      "title": {
+        "es": "Sehnsucht",
+        "en": "Sehnsucht"
+      },
+      "description": {
+        "es": "“Sehnsucht” (1997) reforzó su éxito con himnos como «Du hast» y sonidos más refinados. El álbum mantiene la agresividad de su debut pero con producción más pulida. Fue un éxito internacional y consolidó su reputación en la escena metal europea.",
+        "en": "“Sehnsucht” (1997) reinforced their success with anthems like “Du hast” and more refined sounds. The album maintains the aggression of their debut but with polished production. It was an international hit, cementing their reputation in the European metal scene."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273030cda12ffbebd6561c1c0f0",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=ZXjNjuLOi_k&list=PLLZUjlvnKF04buS7bDLszuW-lNl-_Wgs_",
+      "spotify": "https://open.spotify.com/album/6hh5ax5BomINXGoi4q7FDP",
+      "masterpiece": true
+    },
+    {
+      "id": 937,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Rammstein",
+      "title": {
+        "es": "Mutter",
+        "en": "Mutter"
+      },
+      "description": {
+        "es": "“Mutter” (2001) introdujo melodías más profundas y letras introspectivas, manteniendo su fuerza industrial. Temas como «Sonne» y «Ich will» mostraron su versatilidad y capacidad de evolución. Es considerado uno de sus trabajos más completos.",
+        "en": "“Mutter” (2001) introduced deeper melodies and introspective lyrics while retaining their industrial strength. Tracks like “Sonne” and “Ich will” showcased their versatility and evolution. It is regarded as one of their most complete works."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2738b2c42026277efc3e058855b",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Cp31A_iqoDw&list=PLBnJv6rImVe9QqeefeqgHtc9WAMxBMu4Z",
+      "spotify": "https://open.spotify.com/album/1CtTTpKbHU8KbHRB4LmBbv",
+      "masterpiece": true
+    },
+    {
+      "id": 938,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Rammstein",
+      "title": {
+        "es": "Reise, Reise",
+        "en": "Reise, Reise"
+      },
+      "description": {
+        "es": "“Reise, Reise” (2004) retomó elementos acústicos y marinos junto a su potente base industrial. Con temas como «Mein Teil», exploran temáticas controvertidas. Es un álbum variado que amplía su universo sónico.",
+        "en": "“Reise, Reise” (2004) revisited acoustic and maritime elements alongside their powerful industrial base. With tracks like “Mein Teil”, they explore controversial themes. It is a varied album that expands their sonic universe."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273cbe7573e1175f842e24b34c2",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=VEG_T4UUc1I&list=PLBnJv6rImVe_c48UHwQB7BiAmPdA2z8p3",
+      "spotify": "https://open.spotify.com/album/74ydDCcXTco741y42ceRJ5",
+      "masterpiece": true
+    },
+    {
+      "id": 939,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Rammstein",
+      "title": {
+        "es": "Rosenrot",
+        "en": "Rosenrot"
+      },
+      "description": {
+        "es": "“Rosenrot” (2005) continuó con su estilo industrial pero con tonalidades más melódicas y temas introspectivos. Incluye «Mann gegen Mann» y mantiene su fuerza sonora. Es un álbum que combina oscuridad y elegancia.",
+        "en": "“Rosenrot” (2005) continued their industrial style but with more melodic tones and introspective themes. Featuring “Mann gegen Mann”, it maintains their sonic power. It’s an album blending darkness and elegance."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2734ea617c398a01a5228069744",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=rf9og-hBM1E&list=PLBnJv6rImVe8vllmokGZUbGFrOEpxAowt",
+      "spotify": "https://open.spotify.com/album/3PrS5X3QNdDUlBIE4bz6J2",
+      "masterpiece": false
+    },
+    {
+      "id": 940,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Rammstein",
+      "title": {
+        "es": "Liebe ist für alle da",
+        "en": "Liebe ist für alle da"
+      },
+      "description": {
+        "es": "“Liebe ist für alle da” (2009) mezcló groove y mezcla de guitarras industriales con letras provocadoras. Incluye «Pussy» y fue objeto de censura en algunos países. Es un álbum que muestra su capacidad para impactar culturalmente.",
+        "en": "“Liebe ist für alle da” (2009) mixed groove and industrial guitars with provocative lyrics. Featuring “Pussy”, it faced censorship in some countries. It is an album that demonstrates their ability to make cultural impact."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273952d246fd1eac33a1a2c2603",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=vUA7ff_wLMo&list=PLBnJv6rImVe89Psvjv3Bi5UqOcJ1CZW8V",
+      "spotify": "https://open.spotify.com/album/29J0MchD0OWNeiMNbPDwfa",
+      "masterpiece": true
+    },
+    {
+      "id": 941,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Rammstein",
+      "title": {
+        "es": "Rammstein",
+        "en": "Rammstein"
+      },
+      "description": {
+        "es": "“Rammstein” (2019) es su álbum homónimo no oficial, con producciones modernas y colaboraciones electrónicas. Mezcla la fuerza clásica del grupo con nuevos sonidos. marcando una nueva era tras diez años sin estudio.",
+        "en": "“Rammstein” (2019) is their unofficial eponymous album, featuring modern productions and electronic collaborations. It blends the band’s classic strength with new sounds, marking a new era after a decade without studio work."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2738b2c42026277efc3e058855b",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=vGtaDvhSxaI&list=PLQalcZ6-OvQCNLuu-aRBBn1Pf0CNc4ZxX",
+      "spotify": "https://open.spotify.com/album/1CtTTpKbHU8KbHRB4LmBbv",
+      "masterpiece": true
+    },
+    {
+      "id": 942,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Rammstein",
+      "title": {
+        "es": "Zeit",
+        "en": "Zeit"
+      },
+      "description": {
+        "es": "“Zeit” (2022) explora temas existenciales y temporales con ritmos poderosos e introspectivos. Es un álbum reflexivo con toques sinfónicos y letras profundas. Ha sido aplaudido por su madurez y cohesión temática.",
+        "en": "“Zeit” (2022) explores existential and time‑related themes with powerful and introspective rhythms. It is a reflective album with symphonic touches and deep lyrics. It has been praised for its maturity and thematic cohesion."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2731108fef87966d83948b6a037",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=QiQKOevyfBc&list=RDQiQKOevyfBc&start_radio=1",
+      "spotify": "https://open.spotify.com/album/75OE7M0wduJyffbffehHuR",
+      "masterpiece": true
+    },
+    {
+      "id": 943,
+      "category": "music",
+      "subcategory": "metal",
+      "artist": "Rammstein",
+      "title": {
+        "es": "Live aus Berlin",
+        "en": "Live aus Berlin"
+      },
+      "description": {
+        "es": "“Live aus Berlin” (1999) captura la fuerza escénica de Rammstein en dos conciertos de 1998, con performances de temas clave como «Spiel mit mir» y «Engel». Fue lanzado en CD, DVD y VHS obteniendo reconocimiento por su intensidad audiovisual. Es un documento esencial en directo.",
+        "en": "“Live aus Berlin” (1999) captures Rammstein’s stage power in two 1998 concerts, featuring key performances like “Spiel mit mir” and “Engel”. Released on CD, DVD and VHS, it gained acclaim for its audiovisual intensity. It is an essential live document."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27335001a591bcdfa8c3a12e566",
+      "tags": [
+        "live",
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=9ma4OTvIguM&list=PLiN-7mukU_RGz3_9bFOZOTIgp_hRER6wc",
+      "spotify": "https://open.spotify.com/album/0P3nXUvcows985g3qGA8mm",
+      "masterpiece": true
+    },
+    {
+      "id": 944,
+      "category": "music",
+      "subcategory": "rap",
+      "artist": "Apache y Canserbero",
+      "title": {
+        "es": "Ready",
+        "en": "Ready"
+      },
+      "description": {
+        "es": "“Ready” es un tema colaborativo del álbum “Apa y Can” de 2013, que une el carisma de Apache con la intensidad lírica de Canserbero. Su producción combina ritmos urbanos con un aire melancólico, acompañando letras de búsqueda emocional. Es uno de los cortes más recordados del rap venezolano.",
+        "en": "“Ready” is a collaborative track from the 2013 album “Apa y Can,” merging Apache’s charisma with Canserbero’s lyrical intensity. Its production blends urban rhythms with a melancholic vibe, underscoring emotionally searching lyrics. It remains one of the most memorable cuts in Venezuelan rap."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2733697bf2a43bed1e72c768452",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Jd5BdGRMzk8&list=RDJd5BdGRMzk8&start_radio=1",
+      "spotify": "https://open.spotify.com/album/0Lsj9AVrWNV5zIUvB349uD",
+      "masterpiece": true
+    },
+    {
+      "id": 945,
+      "category": "music",
+      "subcategory": "flamenco",
+      "artist": "El Cabrero",
+      "title": {
+        "es": "Grandes éxitos",
+        "en": "Greatest Hits"
+      },
+      "description": {
+        "es": "“Grandes éxitos” recopila los temas más emblemáticos del cabrero en un formato que mezcla flamenco, humor y folclore andaluz. Ofrece una mirada nostálgica al repertorio del artista con versiones que mantienen su autenticidad. Es un álbum alegre y representativo de su personalidad única.",
+        "en": "“Greatest Hits” compiles the most emblematic tracks of El Cabrero in a format mixing flamenco, humor, and Andalusian folklore. It provides a nostalgic look at the artist’s repertoire with versions that retain his authenticity. It is a joyful album representative of his unique personality."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273c6e55c9fe3d4c13b57e1f966",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=l8kOEeGS0nk&list=PLxvvWIxKPB6mWfpCVF-5Xvbj1q5-pjIwl",
+      "spotify": "https://open.spotify.com/album/5S48Ys1MCzpCvqsaVli09T",
+      "masterpiece": false
+    },
+    {
+      "id": 935,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Asian Dub Foundation",
+      "title": {
+        "es": "Facts and Fictions",
+        "en": "Facts and Fictions"
+      },
+      "description": {
+        "es": "“Facts and Fictions” (1995) marca el debut de Asian Dub Foundation, fusionando dub, reggae electrónica y ritmos breakbeat con lirismo político contra el racismo. Su mezcla de sonidos asiáticos y urbanos crea una identidad sonora única. Fue el inicio potente de un movimiento musical influente.",
+        "en": "“Facts and Fictions” (1995) marks Asian Dub Foundation’s debut, blending dub, electronic reggae and breakbeat rhythms with political lyrics against racism. Their mix of Asian and urban sounds creates a unique sonic identity. It was a powerful start to an influential musical movement."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273c96d1e36dcc42a7987e66e49",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=1N2r4KHym2k&list=PL6NC4AcMUPZgFnMzKz2f5KvNfNB1zjDKg",
+      "spotify": "https://open.spotify.com/album/17xzSQuixOlaDOeO4jsZHN",
+      "masterpiece": true
+    },
+    {
+      "id": 936,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Asian Dub Foundation",
+      "title": {
+        "es": "Rafi's Revenge",
+        "en": "Rafi's Revenge"
+      },
+      "description": {
+        "es": "“Rafi's Revenge” (1998) es la versión internacional de R.A.F.I., enfatizando el rap‑jungle y la electrónica política. Incluye temas intensos como “Naxalite”. Su ritmo frenético y mensaje combativo lo consolidaron como su álbum de consagración global.",
+        "en": "“Rafi's Revenge” (1998) is the international version of R.A.F.I., emphasizing rap‑jungle and political electronics. It includes intense tracks like “Naxalite”. Its frenetic rhythms and combative message cemented it as their global breakthrough."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273eb79d6755eccb4a27fac6180",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=4972mYaiezg&list=RD4972mYaiezg&start_radio=1",
+      "spotify": "https://open.spotify.com/album/6bI22G1Vu3g3Qji8Xs8pjx",
+      "masterpiece": true
+    },
+    {
+      "id": 937,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Asian Dub Foundation",
+      "title": {
+        "es": "Community Music",
+        "en": "Community Music"
+      },
+      "description": {
+        "es": "“Community Music” (2000) mezcla reggae, electronica y punk con letras sociales sobre colectividad y resistencia. Destacan colaboraciones con vocalistas y flautistas que amplían su paleta sonora. Es un disco de identidad y unidad política.",
+        "en": "“Community Music” (2000) blends reggae, electronica and punk with social lyrics about community and resistance. It features collaborations with vocalists and flutists that expand their sonic palette. It’s an album of identity and political unity."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2737d8c992b2841eeed377c359b",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=uiJohO4TdGo&list=PL1xm0HhIaKcEhVu23z0o5Zg4TPGGfO_yo",
+      "spotify": "https://open.spotify.com/album/6OgJ62rEJaOivz3KHU4aSQ",
+      "masterpiece": true
+    },
+    {
+      "id": 938,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Asian Dub Foundation",
+      "title": {
+        "es": "Enemy of the Enemy",
+        "en": "Enemy of the Enemy"
+      },
+      "description": {
+        "es": "“Enemy of the Enemy” (2003) combina drum and bass, electrónica política y voces agresivas en defensa de causas globales. Incluye el exitoso tema “1000 Mirrors”. Es un trabajo directo y sobrecogedor con arraigo social.",
+        "en": "“Enemy of the Enemy” (2003) combines drum and bass, political electronics and aggressive vocals in defense of global causes. It includes the hit track “1000 Mirrors”. It’s a direct and powerful work with social engagement."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2730b33211e2448df2ff09a4d72",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=2MO77AmE1AQ&list=RD2MO77AmE1AQ&start_radio=1",
+      "spotify": "https://open.spotify.com/album/6GF2qqHOvnLxBLRmTq5JTQ",
+      "masterpiece": true
+    },
+    {
+      "id": 939,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Asian Dub Foundation",
+      "title": {
+        "es": "Tank",
+        "en": "Tank"
+      },
+      "description": {
+        "es": "“Tank” (2005) es un álbum crudo y contundente que refuerza su fusión de electrónica, dub y jungle con letras antifascistas. Su producción agresiva y moderna resalta el compromiso político y musical del grupo. Fortalece su presencia en la escena electrónica.",
+        "en": "“Tank” (2005) is a raw, powerful album strengthening their fusion of electronics, dub and jungle with antifascist lyrics. Its aggressive modern production highlights the group’s political and musical commitment. It bolsters their presence in the electronic scene."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273a97ee05722b1556e419f8938",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=6m3z3IAtlzk&list=PLqSYK4LcLi-ncezIJs6ElnSCZTxDeNZpe",
+      "spotify": "https://open.spotify.com/album/2tXkixNWN7fsUMHhr6DbsN",
+      "masterpiece": false
+    },
+    {
+      "id": 940,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Asian Dub Foundation",
+      "title": {
+        "es": "More Signal More Noise",
+        "en": "More Signal More Noise"
+      },
+      "description": {
+        "es": "“More Signal More Noise” (2015) retoma su sonido militante con producción actualizada y colaboración de Adrian Sherwood. El álbum refuerza su energía dub‑rock y temas de resistencia global. Es un regreso a sus raíces con renovado vigor.",
+        "en": "“More Signal More Noise” (2015) returns to their militant sound with updated production and Adrian Sherwood collaboration. The album reinforces their dub‑rock energy and global resistance themes. It’s a return to their roots with renewed vigor."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273b80987a8f95f497479818d78",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=1sAV3pBpwis&list=PLo5kBq-8iakdMaIE6NrXzutLGcqBjCfY5",
+      "spotify": "https://open.spotify.com/album/4K6vRRzWtEamqGk07R9s3k",
+      "masterpiece": true
+    },
+    {
+      "id": 941,
+      "category": "music",
+      "subcategory": "dub",
+      "artist": "Asian Dub Foundation",
+      "title": {
+        "es": "Access Denied",
+        "en": "Access Denied"
+      },
+      "description": {
+        "es": "“Access Denied” (2020) es un álbum reciente que aborda represión política, justicia social y activismo global con beats contundentes y mensajes claros. Cuenta con colaboraciones como Stewart Lee y 47Soul. Refleja su compromiso contemporáneo.",
+        "en": "“Access Denied” (2020) is a recent album addressing political repression, social justice and global activism with hard‑hitting beats and clear messages. Featuring collaborations like Stewart Lee and 47Soul. It reflects their contemporary commitment."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27333b5aeb114f5699be16c5657",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=VzJ2wYYrGMs&list=PLo5kBq-8iakdPbkjG6uXrlq8KKYZQZfsg",
+      "spotify": "https://open.spotify.com/album/69lmLKGf3tx0T415Ut1FiY",
+      "masterpiece": true
+    },
+    {
+      "id": 942,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Dire Straits",
+      "title": {
+        "es": "Dire Straits",
+        "en": "Dire Straits"
+      },
+      "description": {
+        "es": "“Dire Straits” (1978) fue el álbum debut que lanzó al grupo al estrellato. Su mezcla de rock clásico con guitarra limpia y letras narrativas creó una atmósfera íntima y auténtica. Incluye éxitos como “Sultans of Swing”.",
+        "en": "“Dire Straits” (1978) was the debut album that launched the band to stardom. Its blend of classic rock with clean guitar and storytelling lyrics created an intimate and authentic atmosphere. Includes hits like “Sultans of Swing.”"
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273b49d49cc95564aede7998bb8",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Y2Duog7ZWcA&list=PLBnJv6rImVe_jNeIg6nMEdRGSFvuvbV_L",
+      "spotify": "https://open.spotify.com/album/2rCS6Xwx32V27pvgFzLzlT",
+      "masterpiece": true
+    },
+    {
+      "id": 943,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Dire Straits",
+      "title": {
+        "es": "Communiqué",
+        "en": "Communiqué"
+      },
+      "description": {
+        "es": "“Communiqué” (1979) consolidó el sonido característico de Dire Straits con una producción más pulida y canciones que narran historias de la vida cotidiana. Mantiene la esencia rock con melodías limpias y letras profundas.",
+        "en": "“Communiqué” (1979) cemented Dire Straits’ signature sound with polished production and songs that tell stories of everyday life. It keeps the rock essence with clean melodies and thoughtful lyrics."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273b1f7f1d5898b28c1ce3f4947",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=LnlfwZcJXOY&list=RDLnlfwZcJXOY&start_radio=1",
+      "spotify": "https://open.spotify.com/album/2xQBCPq2gQ7l8thLUUZSKu",
+      "masterpiece": true
+    },
+    {
+      "id": 944,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Dire Straits",
+      "title": {
+        "es": "Making Movies",
+        "en": "Making Movies"
+      },
+      "description": {
+        "es": "“Making Movies” (1980) es un álbum con una carga emocional mayor, reflejando conflictos personales y sociales con guitarras expresivas y letras narrativas. Destaca el tema “Romeo and Juliet”.",
+        "en": "“Making Movies” (1980) is an album with greater emotional weight, reflecting personal and social conflicts with expressive guitars and narrative lyrics. The track “Romeo and Juliet” stands out."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27389ac804ee51f66fe370c4577",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=-HUfFtCHEzk&list=PL4-oCE2y-CrFJN3O5QzBG-Hyuz3qlZALG",
+      "spotify": "https://open.spotify.com/album/3wvclpO3LJmpSQGQ9gBa2a",
+      "masterpiece": true
+    },
+    {
+      "id": 945,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Dire Straits",
+      "title": {
+        "es": "Love Over Gold",
+        "en": "Love Over Gold"
+      },
+      "description": {
+        "es": "“Love Over Gold” (1982) se caracteriza por sus composiciones largas y atmosféricas, con un sonido más experimental y una gran riqueza instrumental. Canciones como “Private Investigations” son emblemáticas del álbum.",
+        "en": "“Love Over Gold” (1982) features long, atmospheric compositions with a more experimental sound and rich instrumentation. Tracks like “Private Investigations” are iconic from this album."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27321ebb685af8162c4ed890852",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=e-FFdiWxzWs&list=RDe-FFdiWxzWs&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4hJqOIahWodpSJU6uDgjvN",
+      "masterpiece": true
+    },
+    {
+      "id": 946,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Dire Straits",
+      "title": {
+        "es": "Brothers in Arms",
+        "en": "Brothers in Arms"
+      },
+      "description": {
+        "es": "“Brothers in Arms” (1985) es uno de los álbumes más reconocidos del grupo, combinando rock con sintetizadores y una producción digital innovadora. Contiene clásicos como “Money for Nothing” y la balada “Brothers in Arms”.",
+        "en": "“Brothers in Arms” (1985) is one of the band's most acclaimed albums, combining rock with synthesizers and innovative digital production. It contains classics like “Money for Nothing” and the ballad “Brothers in Arms.”"
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=ZtdRdgHkUsU&list=PLLZUjlvnKF07y7bRePqubb_Jgjl1z2F-i",
+      "spotify": "https://open.spotify.com/album/6Pz06FAaeym0JSqVqIkN56",
+      "masterpiece": true
+    },
+    {
+      "id": 947,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Dire Straits",
+      "title": {
+        "es": "On Every Street",
+        "en": "On Every Street"
+      },
+      "description": {
+        "es": "“On Every Street” (1991) fue el último álbum de estudio de Dire Straits. Mantiene su característico sonido rock con elementos blues y letras maduras que reflexionan sobre la vida y el paso del tiempo.",
+        "en": "“On Every Street” (1991) was Dire Straits' final studio album. It maintains their characteristic rock sound with blues elements and mature lyrics reflecting on life and the passage of time."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273ee92e1d463ee63440431179c",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=_BuGhfzw5as&list=PLndx1pUIcUR9Yv16JVcMj1dWH5W39FX2b",
+      "spotify": "https://open.spotify.com/album/7gk5j9Ok764TbTsmkxthYt",
+      "masterpiece": true
+    },
+    {
+      "id": 948,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Creedence Clearwater Revival",
+      "title": {
+        "es": "Creedence Clearwater Revival",
+        "en": "Creedence Clearwater Revival"
+      },
+      "description": {
+        "es": "“Creedence Clearwater Revival” (1968) es el álbum debut de la banda, con un sonido crudo que fusiona rock, blues y country occidental. Destacan temas como “Susie Q” y dejan claro su estilo directo y auténtico. Marca el inicio de su influencia en la música americana.",
+        "en": "“Creedence Clearwater Revival” (1968) is the band's debut album, featuring a raw sound blending rock, blues, and country-western. Standout tracks like “Susie Q” establish their direct, authentic style. It marks the beginning of their influence on American music."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27351f311c2fb06ad2789e3ff91",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=xyhKwNbPVWo&list=PLHTo__bpnlYU_iW-wnWb1fUrqznTdpC1r",
+      "spotify": "https://open.spotify.com/album/372cMadhAGlNuDnc8TssqF",
+      "masterpiece": true
+    },
+    {
+      "id": 949,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Creedence Clearwater Revival",
+      "title": {
+        "es": "Bayou Country",
+        "en": "Bayou Country"
+      },
+      "description": {
+        "es": "“Bayou Country” (1969) introduce ritmos sureños con guitarras densas y letras evocadoras del pantano. Canciones como “Born on the Bayou” y “Proud Mary” consolidan su estilo swamp rock. Es un álbum lleno de energía y musicalidad genuina.",
+        "en": "“Bayou Country” (1969) introduces southern rhythms with dense guitars and swamp‑evoking lyrics. Tracks like “Born on the Bayou” and “Proud Mary” cement their swamp rock style. It’s an album full of energy and genuine musicianship."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2731afccd261170f1d8f3cadb3d",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=7weyghBh6J4&list=PL0ryVRgv4iE0tfpa4941YIyjf7jdvtZql",
+      "spotify": "https://open.spotify.com/album/5pCRW9AT4BgoMOS52pRoJq",
+      "masterpiece": true
+    },
+    {
+      "id": 950,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Creedence Clearwater Revival",
+      "title": {
+        "es": "Green River",
+        "en": "Green River"
+      },
+      "description": {
+        "es": "“Green River” (1969) mezcla rock sureño con melodías pegadizas y letras nostálgicas. Destacan “Green River” y “Bad Moon Rising”. Es un disco equilibrado que muestra su dominio en la creación de clásicos atemporales.",
+        "en": "“Green River” (1969) blends southern rock with catchy melodies and nostalgic lyrics. Highlights include “Green River” and “Bad Moon Rising.” It’s a well‑balanced album showcasing their mastery in crafting timeless classics."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2733efcd243aaa5638f55318f91",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=w0VI1zByJ3s&list=PLBnJv6rImVe_-piZIKNnFFdlEl5ekpL4b",
+      "spotify": "https://open.spotify.com/album/0i9mOB6mPGqwVvtJEXiwPG",
+      "masterpiece": true
+    },
+    {
+      "id": 951,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Creedence Clearwater Revival",
+      "title": {
+        "es": "Willy and the Poor Boys",
+        "en": "Willy and the Poor Boys"
+      },
+      "description": {
+        "es": "“Willy and the Poor Boys” (1969) combina folk, rock y conciencia social con éxitos como “Down on the Corner” y “Fortunate Son”. Su mensaje político y su sonido pegadizo lo convierten en un álbum influyente y representativo de su época.",
+        "en": "“Willy and the Poor Boys” (1969) mixes folk, rock and social awareness with hits like “Down on the Corner” and “Fortunate Son.” Its political message and catchy sound make it an influential and era‑defining album."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2739f39192f9f8ca1c90847b3e5",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=q55uXM5G-SE&list=RDq55uXM5G-SE&start_radio=1",
+      "spotify": "https://open.spotify.com/album/31q47gQszFt0CddSyMksgO",
+      "masterpiece": true
+    },
+    {
+      "id": 952,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Creedence Clearwater Revival",
+      "title": {
+        "es": "Cosmo's Factory",
+        "en": "Cosmo's Factory"
+      },
+      "description": {
+        "es": "“Cosmo's Factory” (1970) es un álbum sólido con clásicos como “Who’ll Stop the Rain” o “Run Through the Jungle”. Su sonido es fresco, directo y lleno de groove sureño, confirmando su popularidad y consistencia musical.",
+        "en": "“Cosmo's Factory” (1970) is a solid album featuring classics like “Who’ll Stop the Rain” and “Run Through the Jungle.” Its sound is fresh, direct, and full of southern groove, confirming their popularity and musical consistency."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2736e186edfb8fe3710fdc1f7c2",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=nuEM3s7vxGw&list=PL6ogdCG3tAWg4PBi87_pVGFAwXB57ZU0H",
+      "spotify": "https://open.spotify.com/album/5w2X5ZmdE4u0XGkOU7BiLG",
+      "masterpiece": true
+    },
+    {
+      "id": 953,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Creedence Clearwater Revival",
+      "title": {
+        "es": "Pendulum",
+        "en": "Pendulum"
+      },
+      "description": {
+        "es": "“Pendulum” (1970) introduce teclados y composiciones más elaboradas sin perder su esencia cruda. Temas como “Have You Ever Seen the Rain” muestran su lado melódico y reflexivo. Es un disco de transición importante.",
+        "en": "“Pendulum” (1970) introduces keyboards and more elaborate compositions without losing their raw essence. Songs like “Have You Ever Seen the Rain” showcase their melodic and reflective side. It’s an important transitional album."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27351f311c2fb06ad2789e3ff91",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=dHsglyyr7QU&list=PLJfwklRIOOp1kfD7R9ORMULd-ASzFMmOX",
+      "spotify": "https://open.spotify.com/album/372cMadhAGlNuDnc8TssqF",
+      "masterpiece": false
+    },
+    {
+      "id": 954,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Creedence Clearwater Revival",
+      "title": {
+        "es": "Mardi Gras",
+        "en": "Mardi Gras"
+      },
+      "description": {
+        "es": "“Mardi Gras” (1972) mezcla funk, soul y rock con un enfoque más experimental, aunque recibió críticas mixtas. Temas como “Sweet Hitch‑Hiker” destacan por su ritmo festivo. Es un álbum que muestra su voluntad de arriesgar.",
+        "en": "“Mardi Gras” (1972) blends funk, soul and rock in a more experimental approach, although it received mixed reviews. Tracks like “Sweet Hitch‑Hiker” stand out for their festive rhythm. It’s an album showing their willingness to take risks."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2738be6c7e974cc6c9ac8d5be86",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=zTei8gZNqMo&list=PLhCutDzz-jQ7UIyBuGyHcPEZ6ICYe8o0J",
+      "spotify": "https://open.spotify.com/album/4HirIvj3y4Ok3o2MCZtdfB",
+      "masterpiece": false
+    },
+    {
+      "id": 955,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Jethro Tull",
+      "title": {
+        "es": "Stand Up",
+        "en": "Stand Up"
+      },
+      "description": {
+        "es": "“Stand Up” (1969) es el segundo álbum de Jethro Tull y el primero con Martin Barre en guitarra, marcando su giro hacia un rock más progresivo. Fusiona folk, blues y pasajes instrumentales con la distintiva flauta de Ian Anderson. Es una obra clave en su evolución musical.",
+        "en": "“Stand Up” (1969) is Jethro Tull’s second album and the first featuring Martin Barre on guitar, marking their shift to more progressive rock. It blends folk, blues, and instrumental passages with Ian Anderson’s signature flute. It’s a key work in their musical development."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b27301760906028d3ea549f10a8c",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=wlNwOJkP5P8&list=PLrnz4iRZQNlcw5pp_JuTZLuqLgDmqSHUD",
+      "spotify": "https://open.spotify.com/album/7kHvpj74cgrJuJ2K6E0mUm",
+      "masterpiece": true
+    },
+    {
+      "id": 956,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Jethro Tull",
+      "title": {
+        "es": "Aqualung",
+        "en": "Aqualung"
+      },
+      "description": {
+        "es": "“Aqualung” (1971) es uno de los álbumes más emblemáticos de la banda, con letras que exploran temas sociales y espirituales. Combina rock progresivo y folk con canciones intensas como “Locomotive Breath”. Alcanzó el top 10 en EE. UU. y se mantiene influyente.",
+        "en": "“Aqualung” (1971) is one of the band’s most iconic albums, with lyrics exploring social and spiritual themes. It combines progressive rock and folk with intense songs like “Locomotive Breath.” It reached the U.S. top 10 and remains influential."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273be6e758fe8300a72eceddb8f",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=ghi3JERO8_A&list=PLzEG2f9QAl8OyT-ILMN-8OnMic9I8DrSK",
+      "spotify": "https://open.spotify.com/album/0NGM3Ftwjw0dLNpAowmz3x",
+      "masterpiece": true
+    },
+    {
+      "id": 957,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Jethro Tull",
+      "title": {
+        "es": "Thick as a Brick",
+        "en": "Thick as a Brick"
+      },
+      "description": {
+        "es": "“Thick as a Brick” (1972) es un álbum conceptual de una única canción extendida que satiriza la pomposidad del rock progresivo. Destaca por su complejidad instrumental, lirismo teatral y estructuras inusuales. Se considera una obra maestra del género.",
+        "en": "“Thick as a Brick” (1972) is a conceptual album composed as one extended song satirizing the pomp of progressive rock. It features complex instrumentation, theatrical lyrics, and unusual structures. It is regarded as a prog‑rock masterpiece."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273a9df5b3eff8dc6bdb6a7e550",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=X15PsqN0DHc&list=RDX15PsqN0DHc&start_radio=1",
+      "spotify": "https://open.spotify.com/album/1ZxChDw03SUFGUz0RC8A8M",
+      "masterpiece": true
+    },
+    {
+      "id": 958,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Jethro Tull",
+      "title": {
+        "es": "Songs from the Wood",
+        "en": "Songs from the Wood"
+      },
+      "description": {
+        "es": "“Songs from the Wood” (1977) fusiona folk británico con rock progresivo y letras que celebran la naturaleza y la mitología. La instrumentación acústica se combina con armonías vocales y flauta, creando una atmósfera campestre y evocadora.",
+        "en": "“Songs from the Wood” (1977) merges British folk with progressive rock and lyrics celebrating nature and mythology. Acoustic instrumentation pairs with vocal harmonies and flute, creating an evocative rustic atmosphere."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2733af8c61026e278d673f982ff",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=jjbG19VgUCQ&list=PLiN-7mukU_RGHNUeDNhaih0ZVCrhTHf94",
+      "spotify": "https://open.spotify.com/album/3hqr2lQ7zQdnyguyuID177",
+      "masterpiece": true
+    },
+    {
+      "id": 958,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "The Who",
+      "title": {
+        "es": "Quadrophenia",
+        "en": "Quadrophenia"
+      },
+      "description": {
+        "es": "“Quadrophenia” (1973) es una ópera rock doble centrada en Jimmy, un joven mod en Londres y Brighton, explorando su identidad y alienación. La producción es ambiciosa, con sintetizadores, secciones de metales y narrativa compleja. Se considera una de las obras más audaces de The Who.",
+        "en": "“Quadrophenia” (1973) is a double rock opera focusing on Jimmy, a young mod in London and Brighton, exploring his identity and alienation. The production is ambitious, with synthesizers, brass sections, and complex storytelling. It is regarded as one of The Who’s most daring works."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273183cf7b28749f1f74ed66477",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=nyN7WUKRicw&list=PL705A234F43DA0E34",
+      "spotify": "https://open.spotify.com/album/3JV6BIIXo3mj6GLIGH9p8a",
+      "masterpiece": true
+    },
+    {
+      "id": 959,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Iron Butterfly",
+      "title": {
+        "es": "In-A-Gadda-Da-Vida",
+        "en": "In-A-Gadda-Da-Vida"
+      },
+      "description": {
+        "es": "“In-A-Gadda-Da-Vida” (1968) definió el rock psicodélico con su canción de 17 minutos que ocupa toda la cara B del disco y riffs hipnóticos. Fue un éxito comercial, alcanzando el n.º 4 en Billboard y convirtiéndose en uno de los primeros álbumes platinum en EE. UU. Está considerado un hito del rock pesado y experimental.",
+        "en": "“In-A-Gadda-Da-Vida” (1968) defined psychedelic rock with its 17‑minute title track that fills the entire B‑side and hypnotic riffs. It was a commercial hit, reaching No. 4 on Billboard and becoming one of the first platinum albums in the U.S. It is considered a milestone in heavy and experimental rock."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b273df214eac062671ef30c7bb81",
+      "tags": [
+        "album"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=5QZdITJX6I0&list=PLNPGM2D7aODdNNtotIYryDQdhDDsOrOoj",
+      "spotify": "https://open.spotify.com/album/4L1Qw49gKwFuQwQovBxsKI",
+      "masterpiece": true
+    },
+    {
+      "id": 960,
+      "category": "music",
+      "subcategory": "rock",
+      "artist": "Black Sabbath",
+      "title": {
+        "es": "Paranoid",
+        "en": "Paranoid"
+      },
+      "description": {
+        "es": "“Paranoid” (1970) fue el primer single de Black Sabbath y se ha convertido en uno de los himnos más grandes del heavy metal, con riffs memorables y mezcla de blues oscuro. Alcanzó el n.º 4 en Reino Unido y el n.º 61 en EE. UU. Es reconocido como clásico esencial del género.",
+        "en": "“Paranoid” (1970) was Black Sabbath’s first single and has become one of heavy metal’s greatest anthems, with memorable riffs and dark blues influence. It reached No. 4 in the UK and No. 61 in the U.S. It is regarded as an essential genre classic."
+      },
+      "image": "https://i.scdn.co/image/ab67616d0000b2739f0a9474c47a841c6f03e990",
+      "tags": [
+        "song"
+      ],
+      "youtube": "https://www.youtube.com/watch?v=0qanF-91aJo&list=RD0qanF-91aJo&start_radio=1",
+      "spotify": "https://open.spotify.com/album/7LGVdC9fFwgWYaIrZwsSv6",
+      "masterpiece": true
     }
+    
   ]
 }

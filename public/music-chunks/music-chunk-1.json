@@ -776,7 +776,7 @@
         "es": "Rock melódico con letra emotiva sobre soñar y escapar de la rutina. Cráneo y Escandaloso Xpósito imprimen sensibilidad urbana y reflexión personal. Melodías envolventes acompañadas de guitarras cálidas.",
         "en": "Melodic rock with an emotional lyric about dreaming and escaping routine. Cráneo and Escandaloso Xpósito bring urban sensitivity and personal reflection. Enveloping melodies accompanied by warm guitars."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/picnic.jpg",
       "tags": [
         "album"
       ],
@@ -809,7 +809,7 @@
     {
       "id": 39,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "rap",
       "artist": "Original Juan / Mucho Muchacho / Kamikaze",
       "title": {
         "es": "Gorilla Live Festival BSF Seeds 2021",
