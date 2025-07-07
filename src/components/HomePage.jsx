@@ -433,26 +433,71 @@ const HomePage = ({
     else setDesktopPage(1);
   }, [selectedCategory, activeSubcategory, isSpanishCinemaActive, isMasterpieceActive, isMobile]);
 
+  // HOOKS MOVIDOS - Deben estar antes de cualquier return condicional
+  // Subir scroll arriba al volver atrás en móviles
+  useEffect(() => {
+    const handlePopState = () => {
+      if (window.innerWidth < 900) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Subir scroll arriba al recargar en móviles
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth < 900) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, []);
+
+  // Scroll al top en el primer render de la home
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+  }, []);
+
+  // Setea las variables CSS para los gradientes animados
+  useEffect(() => {
+    const root = document.documentElement;
+    // Usar solo en la home el gradiente dorado+grises+blancos
+    root.style.setProperty('--all-categories-animated-gradient', getMasterpieceAnimatedGradient());
+    root.style.setProperty('--category-animated-gradient', getCategoryAnimatedGradient(selectedCategory));
+  }, [selectedCategory]);
+
+  // Estado para animación de cierre de detalle
+  const [isClosingDetail, setIsClosingDetail] = useState(false);
+
+  // Función de cierre animado para detalle
+  const handleRequestClose = useCallback(() => {
+    console.log('[HomePage] handleRequestClose: INICIO (usuario pulsa volver)');
+    setIsClosingDetail(true);
+  }, []);
+
+  // Efecto: desmontar el detalle solo después de la animación de salida (0.6s)
+  useEffect(() => {
+    if (isClosingDetail) {
+      console.log('[HomePage] isClosingDetail=true: Esperando animación de salida...');
+      const timeout = setTimeout(() => {
+        console.log('[HomePage] Animación de salida terminada, desmontando detalle y llamando goBackFromDetail');
+        goBackFromDetail();
+        setIsClosingDetail(false);
+      }, 600); // Duración igual que la animación (600ms)
+      return () => clearTimeout(timeout);
+    }
+  }, [isClosingDetail, goBackFromDetail]);
+
   // Calcular los ítems a mostrar con paginación (móvil y desktop)
   const paginatedItems = React.useMemo(() => {
     const page = isMobile ? mobilePage : desktopPage;
-    console.log('[HomePage] paginatedItems:', {
-      filteredItemsLength: filteredItems.length,
-      selectedCategory,
-      isMobile,
-      mobilePage,
-      desktopPage,
-      pageSize,
-      filteredItems,
-    });
     // En home sin categoría seleccionada, mostrar solo las recomendaciones curadas
     if (!selectedCategory || selectedCategory === 'all') {
-      console.log('[HomePage] Home: mostrando recomendaciones curadas', filteredItems);
       return filteredItems; // Mostrar las 12 recomendaciones curadas
     }
     // En categorías específicas, usar paginación tanto en móvil como desktop
     const result = filteredItems.slice(0, page * pageSize);
-    console.log('[HomePage] Categoria:', selectedCategory, 'Mostrando', result.length, 'de', filteredItems.length, 'items', result);
     return result;
   }, [filteredItems, mobilePage, desktopPage, selectedCategory, isMobile, pageSize]);
 
@@ -497,39 +542,6 @@ const HomePage = ({
     window.history.scrollRestoration = 'manual';
   }
 
-  // Subir scroll arriba al volver atrás en móviles
-  useEffect(() => {
-    const handlePopState = () => {
-      if (window.innerWidth < 900) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    };
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
-
-  // Subir scroll arriba al recargar en móviles
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.innerWidth < 900) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  }, []);
-
-  // Scroll al top en el primer render de la home
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }
-  }, []);
-
-  // Setea las variables CSS para los gradientes animados
-  useEffect(() => {
-    const root = document.documentElement;
-    // Usar solo en la home el gradiente dorado+grises+blancos
-    root.style.setProperty('--all-categories-animated-gradient', getMasterpieceAnimatedGradient());
-    root.style.setProperty('--category-animated-gradient', getCategoryAnimatedGradient(selectedCategory));
-  }, [selectedCategory]);
-
   // Callback unificado para cambios de categoría o subcategoría en móvil
   const handleCategoryOrSubcategoryChange = (category, subcategory) => {
     if (category !== selectedCategory) {
@@ -545,26 +557,6 @@ const HomePage = ({
   const h1Gradient = (!selectedCategory || selectedCategory === 'all')
     ? getMasterpieceAnimatedGradient()
     : getCategoryAnimatedGradient(selectedCategory);
-
-  const [isClosingDetail, setIsClosingDetail] = useState(false);
-  // Función de cierre animado para detalle
-  const handleRequestClose = useCallback(() => {
-    console.log('[HomePage] handleRequestClose: INICIO (usuario pulsa volver)');
-    setIsClosingDetail(true);
-  }, []);
-
-  // Efecto: desmontar el detalle solo después de la animación de salida (0.6s)
-  useEffect(() => {
-    if (isClosingDetail) {
-      console.log('[HomePage] isClosingDetail=true: Esperando animación de salida...');
-      const timeout = setTimeout(() => {
-        console.log('[HomePage] Animación de salida terminada, desmontando detalle y llamando goBackFromDetail');
-        goBackFromDetail();
-        setIsClosingDetail(false);
-      }, 600); // Duración igual que la animación (600ms)
-      return () => clearTimeout(timeout);
-    }
-  }, [isClosingDetail, goBackFromDetail]);
 
   return (
     <UiLayout sx={{ marginTop: 8, width: '100vw', maxWidth: '100vw', px: 0 }}>

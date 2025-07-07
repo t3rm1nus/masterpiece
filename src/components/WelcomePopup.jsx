@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useLanguage } from "../LanguageContext";
+import texts from "../data/texts.json";
 
 const WELCOME_POPUP_KEY = "masterpiece_welcome_popup_seen";
 
@@ -20,28 +21,18 @@ export default function WelcomePopup({ open, onClose }) {
     es: (
       <>
         <div style={{ fontSize: "1.1em", lineHeight: 1.6 }}>
-          {!isMobile && (
-            <>
-              <span role="img" aria-label="art">🎨📚🎶🎬</span> Durante 46 años he ido guardando todas las grandes obras maestras con las que me he ido encontrando en todos los ámbitos.<br /><br />
-              <span role="img" aria-label="target">🎯📲</span> El objetivo final de esta aplicación es compartir todas esas obras maestras encontradas, para que no pierdas el tiempo viendo o leyendo obras vulgares y aburridas.<br /><br />
-            </>
-          )}
-          <span role="img" aria-label="legacy">👨‍👧‍👧✨</span> Este es mi legado cultural para mis hijas: para que, el día en que yo falte, pueda seguir recomendándoles cosas maravillosas.<br /><br />
-          <span role="img" aria-label="welcome">🌟🎁</span> <b>Bienvenid@s a Masterpiece.</b>
+         <span role="img" aria-label="art">🎨📚🎶🎬</span> {texts.es.ui.welcome_popup.intro}<br />
+         <span role="img" aria-label="target">🎯📲</span> {texts.es.ui.welcome_popup.objective}<br />
+        <span role="img" aria-label="welcome">🌟🎁</span> <b>{texts.es.ui.welcome_popup.welcome}</b>
         </div>
       </>
     ),
     en: (
       <>
         <div style={{ fontSize: "1.1em", lineHeight: 1.6 }}>
-          {!isMobile && (
-            <>
-              <span role="img" aria-label="art">🎨📚🎶🎬</span> For 46 years, I’ve been collecting all the great masterpieces I’ve come across in every field.<br /><br />
-              <span role="img" aria-label="target">🎯📲</span> The ultimate goal of this app is to share all those discovered masterpieces, so you don’t waste time watching or reading vulgar and boring works.<br /><br />
-            </>
-          )}
-          <span role="img" aria-label="legacy">👨‍👧‍👧✨</span> This is my cultural legacy for my daughters—so that, when I’m gone, I can keep recommending them wonderful things.<br /><br />
-          <span role="img" aria-label="welcome">🌟🎁</span> <b>Welcome to Masterpiece.</b>
+          <span role="img" aria-label="art">🎨📚🎶🎬</span> {texts.en.ui.welcome_popup.intro}<br /><br />
+          <span role="img" aria-label="target">🎯📲</span> {texts.en.ui.welcome_popup.objective}<br /><br />
+          <span role="img" aria-label="welcome">🌟🎁</span> <b>{texts.en.ui.welcome_popup.welcome}</b>
         </div>
       </>
     )

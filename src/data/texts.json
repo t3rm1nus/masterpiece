@@ -91,6 +91,11 @@
       },
       "badges": {
         "masterpiece": "Obra maestra"
+      },
+      "welcome_popup": {
+        "intro": "Durante 46 años he ido guardando todas las grandes obras maestras con las que me he ido encontrando en todos los ámbitos.",
+        "objective": "El objetivo final de esta aplicación es compartir todas esas obras maestras encontradas, para que no pierdas el tiempo viendo o leyendo obras vulgares y mediocres.",
+        "welcome": "Bienvenid@s a Masterpiece."
       }
     },
     "coffee": {
@@ -480,6 +485,11 @@
       },
       "badges": {
         "masterpiece": "Masterpiece"
+      },
+      "welcome_popup": {
+        "intro": "For 46 years, I've been collecting all the great masterpieces I've come across in every field.",
+        "objective": "The ultimate goal of this app is to share all those discovered masterpieces, so you don't waste time watching or reading vulgar and boring works.",
+        "welcome": "Welcome to Masterpiece."
       }
     },
     "coffee": {

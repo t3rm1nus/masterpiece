@@ -42,11 +42,7 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
   const { t, lang } = useLanguage();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
-  React.useEffect(() => {
-    if (isMobile) {
-      console.log('ESTOY EN MODO MOVIL');
-    }
-  }, [isMobile]);
+  
   if (!isMobile) return null;
   if (!Array.isArray(categories)) return null;
 
