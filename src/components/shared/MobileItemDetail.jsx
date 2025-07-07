@@ -157,7 +157,8 @@ const MobileItemDetail = ({
           position: 'relative',
           minHeight: '100vh',
           padding: '16px',
-          pt: { xs: '20px', sm: '36px' }, // Espacio superior reducido a la mitad
+          pt: { xs: '20px', sm: '36px' },
+          overflowX: { xs: 'hidden', sm: undefined }, // Anula scroll horizontal en móviles
           ...sx
         }}
         style={{ ...style }}
@@ -168,15 +169,16 @@ const MobileItemDetail = ({
         {/* Tarjeta principal */}
         <UiCard
           sx={{
-            maxWidth: { xs: 360, sm: 500, md: 600 }, // Reducido 20px extra en móvil
-            width: { xs: 'calc(100vw - 20px)', sm: '96vw' }, // 20px menos en móviles
+            maxWidth: { xs: 340, sm: 500, md: 600 }, // Reducido 40px extra en móvil
+            width: { xs: 'calc(100vw - 40px)', sm: '96vw' }, // 40px menos en móviles
             margin: '0 auto',
             marginTop: 0,
             borderRadius: '16px',
             boxShadow: theme?.shadows?.[8],
             border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
             background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
-            position: 'relative'
+            position: 'relative',
+            overflowX: { xs: 'hidden', sm: undefined } // Anula scroll horizontal en móviles
           }}
         >
           {/* Badge de masterpiece en la esquina del detalle */}
