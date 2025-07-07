@@ -3852,7 +3852,226 @@
       "spotify": "https://open.spotify.com/album/3JV6BIIXo3mj6GLIGH9p8a",
       "masterpiece": true,
       "year": "1973"
-    }
-    
+    },
+    {
+      "id": 959,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Solomun",
+      "title": {
+        "es": "Boiler Room: Tulum",
+        "en": "Boiler Room: Tulum"
+      },
+      "description": {
+        "es": "Solomun lleva su sonido característico a la selva de Tulum en un set hipnótico y emocional. Con transiciones suaves y una selección melódica impecable, fusiona house profundo con atmósferas tribales. El entorno natural y la energía del público elevan la experiencia.",
+        "en": "Solomun brings his signature sound to the jungle of Tulum in a hypnotic, emotional set. With smooth transitions and impeccable melodic choices, he blends deep house with tribal atmospheres. The natural setting and crowd energy elevate the experience."
+      },
+      "image": "imagenes/musica/live.jpg",
+      "tags": ["live", "djset", "house"],
+      "youtube": "https://www.youtube.com/watch?v=bk6Xst6euQk&list=RDbk6Xst6euQk&start_radio=1&t=2218s",
+      "spotify": "",
+      "masterpiece": true,
+      "year": "2015"
+    },
+    {
+      "id": 960,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Fatima Yamaha",
+      "title": {
+        "es": "Boiler Room x Dekmantel Festival",
+        "en": "Boiler Room x Dekmantel Festival"
+      },
+      "description": {
+        "es": "Fatima Yamaha desata un directo cargado de sintetizadores cálidos y grooves nostálgicos. Mezclando electro, funk y techno melódico, crea un ambiente íntimo y sofisticado. Su clásico 'What's A Girl To Do' corona una actuación inolvidable.",
+        "en": "Fatima Yamaha delivers a live set full of warm synths and nostalgic grooves. Blending electro, funk, and melodic techno, he crafts an intimate, sophisticated atmosphere. His classic 'What's A Girl To Do' crowns an unforgettable performance."
+      },
+      "image": "imagenes/musica/live.jpg",
+      "tags": ["live", "djset", "synth", "electro"],
+      "youtube": "https://www.youtube.com/watch?v=ExxN2Kzr4vQ&list=RDExxN2Kzr4vQ",
+      "spotify": "",
+      "masterpiece": true,
+      "year": "2016"
+    },
+    {
+      "id": 961,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Surgeon",
+      "title": {
+        "es": "Boiler Room x Dekmantel Festival",
+        "en": "Boiler Room x Dekmantel Festival"
+      },
+      "description": {
+        "es": "Surgeon ofrece una sesión feroz y cerebral en el corazón de Dekmantel. Su enfoque industrial y sin concesiones transforma la pista en una máquina rítmica imparable. Un directo donde la técnica y la tensión conviven con elegancia brutal.",
+        "en": "Surgeon delivers a fierce, cerebral session in the heart of Dekmantel. His industrial, no-compromise approach turns the floor into a relentless rhythmic machine. A live performance where tension and technique meet brutal elegance."
+      },
+      "image": "imagenes/musica/live.jpg",
+      "tags": ["live", "djset", "techno", "industrial"],
+      "youtube": "https://www.youtube.com/watch?v=Ww9VtKqprUY",
+      "spotify": "",
+      "masterpiece": true,
+      "year": "2017"
+    },
+    {
+      "id": 962,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Surgeon",
+      "title": {
+        "es": "Boiler Room x Eristoff: Porto",
+        "en": "Boiler Room x Eristoff: Porto"
+      },
+      "description": {
+        "es": "En Porto, Surgeon despliega su lado más oscuro e hipnótico en un set donde cada golpe resuena como un ritual. Entre capas de drones y percusión quirúrgica, guía al público hacia un trance maquinal. Intensidad pura bajo la estética 'Into The Dark'.",
+        "en": "In Porto, Surgeon reveals his darkest, most hypnotic side in a set where every beat resonates like a ritual. Between drone layers and surgical percussion, he leads the crowd into mechanical trance. Pure intensity under the 'Into The Dark' concept."
+      },
+      "image": "imagenes/musica/live.jpg",
+      "tags": ["live", "djset", "boiler room", "dark"],
+      "youtube": "https://www.youtube.com/watch?v=rl1a3oZdMvI&list=RDrl1a3oZdMvI",
+      "spotify": "",
+      "masterpiece": true,
+      "year": "2018"
+    },
+    {
+      "id": 963,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Arcanoid aka Dj Muerto",
+      "title": {
+        "es": "@ Zona De Confort",
+        "en": "@ Zona De Confort"
+      },
+      "description": {
+        "es": "Arcanoid (Dj Muerto) rompe moldes en Zona De Confort con un viaje sonoro que cruza IDM, techno mental y glitch. Su estilo impredecible y denso transforma la pista en un espacio de exploración electrónica profunda.",
+        "en": "Arcanoid (Dj Muerto) breaks boundaries at Zona De Confort with a sonic journey blending IDM, mental techno, and glitch. His unpredictable, dense style turns the floor into a deep electronic exploration space."
+      },
+      "image": "imagenes/musica/live.jpg",
+      "tags": ["live", "djset", "techno", "experimental"],
+      "youtube": "https://www.youtube.com/watch?v=EpiCU_5hByg",
+      "spotify": "",
+      "masterpiece": true,
+      "year": "2020"
+    },
+    {
+      "id": 964,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Arcanoid aka Dj Muerto",
+      "title": {
+        "es": "Dj Set",
+        "en": "Dj Set"
+      },
+      "description": {
+        "es": "En este DJ set, Arcanoid despliega una sesión cerebral y oscura, llena de texturas industriales y ritmos mutantes. La mezcla fluye como una narrativa distópica, manteniendo una tensión constante que desafía al oyente.",
+        "en": "In this DJ set, Arcanoid delivers a cerebral, dark session filled with industrial textures and mutant rhythms. The mix flows like a dystopian narrative, maintaining constant tension that challenges the listener."
+      },
+      "image": "imagenes/musica/live.jpg",
+      "tags": ["live", "djset", "techno", "IDM"],
+      "youtube": "https://www.youtube.com/watch?v=QwHSJ-tdihs&list=RDQwHSJ-tdihs",
+      "spotify": "",
+      "masterpiece": true,
+      "year": "2021"
+    },
+    {
+      "id": 965,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Die Antwoord",
+      "title": {
+        "es": "$O$",
+        "en": "$O$"
+      },
+      "description": {
+        "es": "$O$ marca el nacimiento global de Die Antwoord, con su estética zef, beats agresivos y letras provocadoras. El álbum mezcla rap, electro y cultura sudafricana con una energía cruda e irreverente. 'Enter the Ninja' lo convirtió en fenómeno viral.",
+        "en": "$O$ marks Die Antwoord’s global breakout, fusing zef aesthetics, aggressive beats, and provocative lyrics. The album blends rap, electro, and South African culture with raw, irreverent energy. 'Enter the Ninja' became a viral sensation."
+      },
+      "image": "imagenes/musica/live.jpg",
+      "tags": ["album", "rap-rave", "debut", "underground"],
+      "youtube": "https://www.youtube.com/watch?v=cegdR0GiJl4",
+      "spotify": "https://open.spotify.com/album/1n64MptZ3FcoUdyRX1S3HL",
+      "masterpiece": true,
+      "year": "2009"
+    },
+    {
+      "id": 966,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Die Antwoord",
+      "title": {
+        "es": "Ten$Ion",
+        "en": "Ten$Ion"
+      },
+      "description": {
+        "es": "En *Ten$Ion*, Die Antwoord se separa de Interscope y redobla su estilo radical. Beats glitch, estética oscura y letras cargadas de sátira social hacen de este álbum un acto de desafío puro. Zef se convierte en arma y manifiesto.",
+        "en": "With *Ten$Ion*, Die Antwoord parts ways with Interscope and doubles down on radical style. Glitchy beats, dark aesthetics, and socially satirical lyrics make this album a bold act of defiance. Zef becomes weapon and manifesto."
+      },
+      "image": "imagenes/musica/live.jpg",
+      "tags": ["album", "independent", "glitch", "shock"],
+      "youtube": "https://www.youtube.com/watch?v=AIXUgtNC4Kc",
+      "spotify": "https://open.spotify.com/album/6KEM9bS4gPPh0xX8pOBVBc",
+      "masterpiece": true,
+      "year": "2012"
+    },
+    {
+      "id": 967,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Die Antwoord",
+      "title": {
+        "es": "Donker Mag",
+        "en": "Donker Mag"
+      },
+      "description": {
+        "es": "*Donker Mag* profundiza en el lado más siniestro y cinematográfico de Die Antwoord. Ritmos lentos, atmósferas perturbadoras y letras que oscilan entre lo absurdo y lo aterrador. Es su disco más oscuro y teatral hasta la fecha.",
+        "en": "*Donker Mag* dives into Die Antwoord's darker, more cinematic side. Slow beats, unsettling atmospheres, and lyrics that swing between absurd and terrifying. It's their most theatrical and ominous record to date."
+      },
+      "image": "imagenes/musica/live.jpg",
+      "tags": ["album", "dark", "cinematic", "experimental"],
+      "youtube": "https://www.youtube.com/watch?v=KbW9JqM7vho",
+      "spotify": "https://open.spotify.com/album/3zSYReeRcu5GVkWrr0d9yI",
+      "masterpiece": true,
+      "year": "2014"
+    },
+    {
+      "id": 968,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Die Antwoord",
+      "title": {
+        "es": "Mount Ninji and da Nice Time Kid",
+        "en": "Mount Ninji and da Nice Time Kid"
+      },
+      "description": {
+        "es": "Un viaje bipolar entre el delirio y la ternura. Este álbum mezcla brutalidad electrónica, pop retorcido y personajes teatrales en un carnaval zef que desconcierta y seduce. Die Antwoord redefine sus límites creativos.",
+        "en": "A bipolar journey between madness and tenderness. This album fuses brutal electronics, twisted pop, and theatrical personas in a zef carnival that both confuses and seduces. Die Antwoord redefines its creative edges."
+      },
+      "image": "imagenes/musica/live.jpg",
+      "tags": ["album", "surreal", "experimental", "pop"],
+      "youtube": "https://www.youtube.com/watch?v=Q77YBmtd2Rw",
+      "spotify": "https://open.spotify.com/album/0gFVsmMr3U0uIn3Yg5jZwR",
+      "masterpiece": true,
+      "year": "2016"
+    },
+    {
+      "id": 969,
+      "category": "music",
+      "subcategory": "electronic",
+      "artist": "Die Antwoord",
+      "title": {
+        "es": "House of Zef",
+        "en": "House of Zef"
+      },
+      "description": {
+        "es": "*House of Zef* es un regreso al caos calculado de sus inicios, con beats duros, humor salvaje y estética grotesca. El álbum es un manifiesto visual y sonoro del universo zef: extremo, satírico y sin filtros.",
+        "en": "*House of Zef* returns to the calculated chaos of their roots, with hard beats, savage humor, and grotesque aesthetics. The album is a visual and sonic manifesto of the zef universe: extreme, satirical, and unfiltered."
+      },
+      "image": "imagenes/musica/live.jpg",
+      "tags": ["album", "return", "bold", "satirical"],
+      "youtube": "https://www.youtube.com/watch?v=emXwNn4TZB8",
+      "spotify": "https://open.spotify.com/album/5pnfW8wfbvXyzV7aztXeYY",
+      "masterpiece": true,
+      "year": "2020"
+    }    
   ]
 }
