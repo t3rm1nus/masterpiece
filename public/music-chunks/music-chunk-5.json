@@ -41,7 +41,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=tTv3uPDoGdk&list=RDtTv3uPDoGdk&start_radio=1",
       "spotify": "https://open.spotify.com/album/2T64N96AVfsrRFJCUXQEoZ",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2017"
     },
     {
@@ -63,7 +63,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=B1lAX8PFPO8&list=RDB1lAX8PFPO8&start_radio=1",
       "spotify": "https://open.spotify.com/album/4KjbNbnTnJ97kZgQkOHr6v",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2022"
     },
     {
@@ -107,7 +107,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=EXP1BwY7YcA&list=RDEXP1BwY7YcA&start_radio=1",
       "spotify": "https://open.spotify.com/album/0dLnnm4PjeyqM4CoHqo6DI",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2011"
     },
     {
@@ -129,7 +129,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=716ZRDeac-s&list=RD716ZRDeac-s&start_radio=1&t=104s",
       "spotify": "https://open.spotify.com/album/6ooBxhsOVedpX4zPTCyL86",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2024"
     },
     {
@@ -151,7 +151,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=AykIpu59Kds&list=RDAykIpu59Kds&start_radio=1",
       "spotify": "https://open.spotify.com/album/7E3c9dmZ1KnZOQLZTgRqWx",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2018"
     },
     {
@@ -197,7 +197,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=hxSaI9xNgIY",
       "spotify": "https://open.spotify.com/album/3ZJErwtxUtDkPlhrrSAw0R",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2013"
     },
     {
@@ -219,7 +219,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=H-v5oHH3iWs&list=RDH-v5oHH3iWs&start_radio=1",
       "spotify": "https://open.spotify.com/album/6SVLH6Z9dRnCfOa0zOPRAr",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2021"
     },
     {
@@ -241,7 +241,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=dC7zzhVXdWI&list=RDdC7zzhVXdWI&start_radio=1",
       "spotify": "https://open.spotify.com/album/0bUTHlWbkSQysoM3VsWldT",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2005"
     },
     {
@@ -263,7 +263,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=8hfkE62WUJk&list=RD8hfkE62WUJk&start_radio=1",
       "spotify": "https://open.spotify.com/album/2dIGnmEIy1WZIcZCFSj6i8",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2010"
     },
     {
@@ -285,7 +285,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=07aYsN9znVM&list=OLAK5uy_lZR3Qu2LcGCD14zIjXioseFJ8H4DqDouc&index=2",
       "spotify": "https://open.spotify.com/album/5jJGGsAztgUEXUHHZ2zrah",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2010"
     },
     {
@@ -307,7 +307,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=f2aPPgSdsKc&list=RDf2aPPgSdsKc&start_radio=1",
       "spotify": "https://open.spotify.com/album/0NvirtaDCaZU5PAW1O5FDE",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2017"
     },
     {
@@ -416,7 +416,7 @@
       ],
       "youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lzkUkrDEgH1yx40LuxfInsMywzexjo0HU&playnext=1&index=1",
       "spotify": "https://open.spotify.com/album/0a8VPhi07ueOcaMpW8Ay0t",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1986"
     },
     {
@@ -438,7 +438,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=gB-Puoc0pik&list=RDgB-Puoc0pik&start_radio=1",
       "spotify": "https://open.spotify.com/album/3LFIRfPTEq7y04pJNlDJ1n",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1987"
     },
     {
@@ -636,7 +636,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=MDVePv8OvJA&list=PLHM1MRwUfb-hzEg1yFxh52gWsPKSUSXnU",
       "spotify": "https://open.spotify.com/album/1Po1bRIZS7PXEF7qyVP0J4",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2006"
     },
     {
@@ -768,7 +768,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=XMn_YFuQd-c&list=PL87E3336A3701683F",
       "spotify": "https://open.spotify.com/album/2hEyYIrm4e6gVgfaYLY00x",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1992"
     },
     {
@@ -856,7 +856,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=L_nN0MnHptw&list=OLAK5uy_mdT8Ojh5wl4x60yO6pm1ovPreIOCqAi0o&index=2",
       "spotify": "https://open.spotify.com/album/13PiGMs22YuX1kq7w8WNGM",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2009"
     },
     {
@@ -906,46 +906,46 @@
     {
       "id": 842,
       "category": "music",
-      "subcategory": "electronic",
-      "artist": "James Shinra",
+      "subcategory": "rock",
+      "artist": "Iron Butterfly",
       "title": {
-        "es": "Vital Heat",
-        "en": "Vital Heat"
+        "es": "In-A-Gadda-Da-Vida",
+        "en": "In-A-Gadda-Da-Vida"
       },
       "description": {
-        "es": "“Vital Heat” es un recorrido atmosférico con ritmos breakbeat e IDM que envuelven sonidos melódicos y paisajes sonoros intensos. James Shinra fusiona texturas sintetizadas con sensibilidad emocional creando una experiencia introspectiva. Fue publicado en 2018 y mantiene relevancia en la escena electrónica.",
-        "en": "“Vital Heat” is an atmospheric journey with breakbeat and IDM rhythms surrounding melodic textures and intense soundscapes. James Shinra blends synthesized textures with emotional sensitivity, creating an introspective experience. Released in 2018, it remains relevant in the electronic scene."
+        "es": "“In-A-Gadda-Da-Vida” (1968) definió el rock psicodélico con su canción de 17 minutos que ocupa toda la cara B del disco y riffs hipnóticos. Fue un éxito comercial, alcanzando el n.º 4 en Billboard y convirtiéndose en uno de los primeros álbumes platinum en EE. UU. Está considerado un hito del rock pesado y experimental.",
+        "en": "“In-A-Gadda-Da-Vida” (1968) defined psychedelic rock with its 17‑minute title track that fills the entire B‑side and hypnotic riffs. It was a commercial hit, reaching No. 4 on Billboard and becoming one of the first platinum albums in the U.S. It is considered a milestone in heavy and experimental rock."
       },
-      "image": "https://i.scdn.co/image/ab67616d0000b2734b072ac4d8e12b52ea7103a9",
+      "image": "https://i.scdn.co/image/ab67616d0000b273df214eac062671ef30c7bb81",
       "tags": [
         "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=hV5mmo5ram4&list=PL2pDitPdxj8e4C8iGr9wBmE5fpUZyaLjh",
-      "spotify": "https://open.spotify.com/album/4wiGplMon4PCRID3QZ4WsM",
+      "youtube": "https://www.youtube.com/watch?v=5QZdITJX6I0&list=PLNPGM2D7aODdNNtotIYryDQdhDDsOrOoj",
+      "spotify": "https://open.spotify.com/album/4L1Qw49gKwFuQwQovBxsKI",
       "masterpiece": true,
-      "year": "2018"
+      "year": "1968"
     },
     {
       "id": 843,
       "category": "music",
-      "subcategory": "electronic",
-      "artist": "James Shinra",
+      "subcategory": "rock",
+      "artist": "Black Sabbath",
       "title": {
-        "es": "Meteorites",
-        "en": "Meteorites"
+        "es": "Paranoid",
+        "en": "Paranoid"
       },
       "description": {
-        "es": "“Meteorites” reúne reworks y nuevas composiciones que profundizan en IDM, braindance y electro con atmósferas evocadoras. Lanzado en 2025, muestra una evolución del sonido de Shinra con texturas pulidas y emoción contenida. Es una obra madura y cohesionada dentro de su discografía.",
-        "en": "“Meteorites” gathers reworks and new compositions delving into IDM, braindance and electro with evocative atmospheres. Released in 2025, it shows an evolution of Shinra’s sound with polished textures and contained emotion. It’s a mature, cohesive work in his discography."
+        "es": "“Paranoid” (1970) fue el primer single de Black Sabbath y se ha convertido en uno de los himnos más grandes del heavy metal, con riffs memorables y mezcla de blues oscuro. Alcanzó el n.º 4 en Reino Unido y el n.º 61 en EE. UU. Es reconocido como clásico esencial del género.",
+        "en": "“Paranoid” (1970) was Black Sabbath’s first single and has become one of heavy metal’s greatest anthems, with memorable riffs and dark blues influence. It reached No. 4 in the UK and No. 61 in the U.S. It is regarded as an essential genre classic."
       },
-      "image": "https://i.scdn.co/image/ab67616d0000b27362c342be532d767d550d8615",
+      "image": "https://i.scdn.co/image/ab67616d0000b2739f0a9474c47a841c6f03e990",
       "tags": [
-        "album"
+        "song"
       ],
-      "youtube": "https://www.youtube.com/watch?v=Yg2o58so04Q&list=PL-9NTuYgU6zMGhtdRrRSOBZiaqkakFtwq",
-      "spotify": "https://open.spotify.com/album/69FiPRgwbHxqNaroCEywuA",
+      "youtube": "https://www.youtube.com/watch?v=0qanF-91aJo&list=RD0qanF-91aJo&start_radio=1",
+      "spotify": "https://open.spotify.com/album/7LGVdC9fFwgWYaIrZwsSv6",
       "masterpiece": true,
-      "year": "2025"
+      "year": "1970"
     },
     {
       "id": 844,
@@ -966,7 +966,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=LIAwe1Jl1os&list=OLAK5uy_m7reBSbQc91u5Oun_sse0rdcvqATrXu78&index=2",
       "spotify": "https://open.spotify.com/album/1L4xGv2ytBkQpOxRR2pqnp",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2024"
     },
     {
@@ -1186,7 +1186,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=H6JR5GT4DSQ&list=PL-hEAJMUhMHQdEFtoIhmUJRGb5jQqRbv3",
       "spotify": "https://open.spotify.com/album/36wHhrCSqXwnmeJl0onKJl",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "1995"
     },
     {
@@ -1230,7 +1230,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=ZK62QP_zA68&list=PLOg7jq5piiXQWXN6FR9WEcVeH_d0MxfYc",
       "spotify": "https://open.spotify.com/album/4GDvxuvYI9ZrnBOiE8of32",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2007"
     },
     {
@@ -1252,7 +1252,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=SM6jiBGSLFY&list=PLOg7jq5piiXRwaS_vwwexOX9UxnTNNsAT",
       "spotify": "https://open.spotify.com/album/17xrJ6CwY9OEtof17QV9OB",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2009"
     },
     {
@@ -1274,7 +1274,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=UY7CSscOxHQ&list=PLNo_eVQ8Re3yBrT3QY-mI8PGTh_04j2vX",
       "spotify": "https://open.spotify.com/album/5YGUW9OJPCoT3bUySE50X7",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2011"
     },
     {
@@ -1296,7 +1296,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=fbB-n7oG5zU&list=PLOg7jq5piiXSV0BXnTZPh7YKwDE9AUK_z",
       "spotify": "https://open.spotify.com/album/6wTQ7zBcv3hwG3jSvBb6nI",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2013"
     },
     {
@@ -1318,7 +1318,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=hHLBtzdrc0g&list=RDhHLBtzdrc0g&start_radio=1",
       "spotify": "https://open.spotify.com/album/1QhYAMuClrXwodJbdWr9kb",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2015"
     },
     {
@@ -1340,7 +1340,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=suylFFH1yWo&list=RDsuylFFH1yWo&start_radio=1",
       "spotify": "https://open.spotify.com/album/1gVTdZJaemKysGPHgMQfvD",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2018"
     },
     {
@@ -1362,7 +1362,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=Sa7eV-7_VKE&list=PLOg7jq5piiXQJ2AtIgjBBd6MIKsk45yDM",
       "spotify": "https://open.spotify.com/album/3gEAJtsVBALtzwpHZGdAMP",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2020"
     },
     {
@@ -1384,7 +1384,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=m5316zbrYAk&list=PLOg7jq5piiXQPPpxxV8dGK8x9x2v4BXA8",
       "spotify": "https://open.spotify.com/album/6V9X2Z1BnzRS5YFGHytLWc",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2022"
     },
     {
@@ -1428,7 +1428,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=dNHnbjiTmBk&list=PL5AsDpj2j71z7Dri_XZORIGX4HE2ijevq",
       "spotify": "https://open.spotify.com/album/6PrcFRlDc651cqABIcmgET",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "1997"
     },
     {
@@ -1450,7 +1450,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=S3sJmLmCITI&list=PLa_qhWo59TZAWPshXP70P3ipir1whzN2_",
       "spotify": "https://open.spotify.com/album/0aRFybustgRXMeOp40A5No",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "1999"
     },
     {
@@ -1472,7 +1472,7 @@
       ],
       "youtube": "/imagenes/musica/another.jpg",
       "spotify": "https://open.spotify.com/album/09HBh8LHnAjxwMPWmIWgDb",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "1992"
     },
     {
@@ -1494,7 +1494,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=lRU8xrWG8E0&list=RDlRU8xrWG8E0&start_radio=1",
       "spotify": "https://open.spotify.com/album/09HBh8LHnAjxwMPWmIWgDb",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "1992"
     },
     {
@@ -1538,7 +1538,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=hn2YGzpp2EA&list=OLAK5uy_lLFa5KbVXv3q76Vra3jCXN50PYYSmbd2E&index=2",
       "spotify": "https://open.spotify.com/album/09HBh8LHnAjxwMPWmIWgDb",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2025"
     },
     {
@@ -1604,7 +1604,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=nHY5f2DYpYc",
       "spotify": "https://open.spotify.com/album/5e6EDDIWF7EfgslBV6Zo18",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2012"
     },
     {
@@ -1714,7 +1714,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=RCgURx6UkoQ&list=PLy5kryT0xrJMwRpHKv7JMsz84wcPOE5et",
       "spotify": "https://open.spotify.com/album/200p7O3raeXT2jNhmzK4TE",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1975"
     },
     {
@@ -1736,7 +1736,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=Y9v-Bpx7hII&list=RDY9v-Bpx7hII&start_radio=1",
       "spotify": "https://open.spotify.com/album/0O6OgkgdNbYYLQj06FLFhf",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1978"
     },
     {
@@ -1846,7 +1846,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=4o64oHEZWkU&list=RD4o64oHEZWkU&start_radio=1",
       "spotify": "https://open.spotify.com/album/3XLjjTf7EkXSD47pmUZl8l",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2015"
     },
     {
@@ -2022,7 +2022,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=FZwe75Cj768&list=RDFZwe75Cj768&start_radio=1",
       "spotify": "https://open.spotify.com/album/6FMqqNJAjqwSyi1z1p3z1P",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2016"
     },
     {
@@ -2154,7 +2154,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=UCVfRmy_9jI&list=RDUCVfRmy_9jI&start_radio=1",
       "spotify": "https://open.spotify.com/album/0yCX5D02wtwF9qvRhu6pgo",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2019"
     },
     {
@@ -2176,7 +2176,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=2uTMTyqQxl4&list=RD2uTMTyqQxl4&start_radio=1",
       "spotify": "https://open.spotify.com/album/018HEkMXoCIIQdnp1f1DnU",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2015"
     },
     {
@@ -2198,7 +2198,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=3OGMrZKIjKU&list=RD3OGMrZKIjKU&start_radio=1",
       "spotify": "https://open.spotify.com/album/0uCWPZ8T5L2Slsw7SQx3Pu",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2016"
     },
     {
@@ -2264,7 +2264,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=RQRL6KBrGfE&list=PL6mpyAioMZGhMksV72HpwpWPb81LfI7va",
       "spotify": "https://open.spotify.com/album/6WnLDOIKWknBeiRuDgtS7y",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "1999"
     },
     {
@@ -2286,7 +2286,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=mBR_6ZP3h5E&list=RDmBR_6ZP3h5E&start_radio=1",
       "spotify": "https://open.spotify.com/album/2Ggsom0l71YHad4M4JK5zG",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "1995"
     },
     {
@@ -2330,7 +2330,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=lrMk--9pJM4&list=OLAK5uy_l5U2i_0Mfb_LPnI9EPoGWjuCD3wDmNCoo&index=2",
       "spotify": "https://open.spotify.com/album/2DYAHEXvShB1baKBYUMjXk",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2015"
     },
     {
@@ -2374,7 +2374,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=m9-pvCac_X4&list=PLn9lVV8Ayrvq5vJlFBPb7j5ay2Z_4MxsJ",
       "spotify": "https://open.spotify.com/album/4OuE24j8sTiI00xk7ulcZd",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2021"
     },
     {
@@ -2418,7 +2418,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=y-_EJBXqmjk&list=PL358hxIPtqko4nRpG9n04WZWH2KDlo-E6",
       "spotify": "https://open.spotify.com/album/3HdBmPeGhpZx7NM076eMiQ",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2025"
     },
     {
@@ -2506,7 +2506,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=FONX8V7qZlw&list=RDFONX8V7qZlw&start_radio=1",
       "spotify": "https://open.spotify.com/album/4cs2w6vZu5FiybB2uJFWlj",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2013"
     },
     {
@@ -2528,7 +2528,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=FacHm4AQZO0&list=PL61CSmcjUDL4u6PW7rIiBv3dEeFqFeI_B",
       "spotify": "https://open.spotify.com/album/2Yg3Rha1y4PDlIWh5vy6rJ",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2023"
     },
     {
@@ -2550,7 +2550,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=AL8IU_peUJQ&list=PLFUPimLxqFdxWD7TO2rlW7KrKfo1cMf4q",
       "spotify": "https://open.spotify.com/album/0sU9Q4Pk9VanilsgnRnVIm",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1994"
     },
     {
@@ -2616,7 +2616,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=ASpCHOsLYqI&list=PL0800EB23A272D5E4",
       "spotify": "https://open.spotify.com/album/1TcdRwrcgOVdORV2XOaHmh",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2012"
     },
     {
@@ -2638,7 +2638,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=XJBUWZsT38c&list=PLMSmPqvJ6siJwH_c2H_N8j9JqDt8ogyny",
       "spotify": "https://open.spotify.com/album/0S0KGZnfBGSIssfF54WSJh",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2019"
     },
     {
@@ -2660,7 +2660,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=7AS9r_E0PY4&list=PLsCPTY_MPoPZLKsjasPhYLuoWG-s-rdKq",
       "spotify": "https://open.spotify.com/album/0JGOiO34nwfUdDrD612dOp",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2021"
     },
     {
@@ -2682,7 +2682,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=fcX8qE6c9Do&list=RDfcX8qE6c9Do&start_radio=1",
       "spotify": "https://open.spotify.com/album/7aJuG4TFXa2hmE4z1yxc3n",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2024"
     },
     {
@@ -2748,7 +2748,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=NaV1itvyHPU&list=RDNaV1itvyHPU&start_radio=1&t=304s",
       "spotify": "https://open.spotify.com/album/2tGiGBHjDW7cgrZkgQUdwn",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1990"
     },
     {
@@ -2770,7 +2770,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=07JtFzpfdF8",
       "spotify": "https://open.spotify.com/album/3qdUtCbIlIF7dBqtNoKLvd",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1997"
     },
     {
@@ -3035,7 +3035,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=kSILwHK1zd8&list=RDkSILwHK1zd8&start_radio=1",
       "spotify": "https://open.spotify.com/album/2JOAaODzVdCQ4tYCCJs1o3",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2017"
     },
     {
@@ -3057,7 +3057,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=Uvh89TfHN-Y&list=RDUvh89TfHN-Y&start_radio=1",
       "spotify": "https://open.spotify.com/album/1wWBq7tWLplVKsSCIVTtkp",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2024"
     },
     {
@@ -3167,7 +3167,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=rf9og-hBM1E&list=PLBnJv6rImVe8vllmokGZUbGFrOEpxAowt",
       "spotify": "https://open.spotify.com/album/3PrS5X3QNdDUlBIE4bz6J2",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2005"
     },
     {
@@ -3189,7 +3189,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=vUA7ff_wLMo&list=PLBnJv6rImVe89Psvjv3Bi5UqOcJ1CZW8V",
       "spotify": "https://open.spotify.com/album/29J0MchD0OWNeiMNbPDwfa",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2009"
     },
     {
@@ -3233,7 +3233,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=QiQKOevyfBc&list=RDQiQKOevyfBc&start_radio=1",
       "spotify": "https://open.spotify.com/album/75OE7M0wduJyffbffehHuR",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2022"
     },
     {
@@ -3300,7 +3300,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=l8kOEeGS0nk&list=PLxvvWIxKPB6mWfpCVF-5Xvbj1q5-pjIwl",
       "spotify": "https://open.spotify.com/album/5S48Ys1MCzpCvqsaVli09T",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2013"
     },
     {
@@ -3410,7 +3410,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=6m3z3IAtlzk&list=PLqSYK4LcLi-ncezIJs6ElnSCZTxDeNZpe",
       "spotify": "https://open.spotify.com/album/2tXkixNWN7fsUMHhr6DbsN",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2005"
     },
     {
@@ -3432,7 +3432,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=1sAV3pBpwis&list=PLo5kBq-8iakdMaIE6NrXzutLGcqBjCfY5",
       "spotify": "https://open.spotify.com/album/4K6vRRzWtEamqGk07R9s3k",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2015"
     },
     {
@@ -3454,7 +3454,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=VzJ2wYYrGMs&list=PLo5kBq-8iakdPbkjG6uXrlq8KKYZQZfsg",
       "spotify": "https://open.spotify.com/album/69lmLKGf3tx0T415Ut1FiY",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2020"
     },
     {
@@ -3498,7 +3498,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=LnlfwZcJXOY&list=RDLnlfwZcJXOY&start_radio=1",
       "spotify": "https://open.spotify.com/album/2xQBCPq2gQ7l8thLUUZSKu",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1979"
     },
     {
@@ -3520,7 +3520,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=-HUfFtCHEzk&list=PL4-oCE2y-CrFJN3O5QzBG-Hyuz3qlZALG",
       "spotify": "https://open.spotify.com/album/3wvclpO3LJmpSQGQ9gBa2a",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1980"
     },
     {
@@ -3542,7 +3542,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=e-FFdiWxzWs&list=RDe-FFdiWxzWs&start_radio=1",
       "spotify": "https://open.spotify.com/album/4hJqOIahWodpSJU6uDgjvN",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1982"
     },
     {
@@ -3586,7 +3586,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=_BuGhfzw5as&list=PLndx1pUIcUR9Yv16JVcMj1dWH5W39FX2b",
       "spotify": "https://open.spotify.com/album/7gk5j9Ok764TbTsmkxthYt",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1991"
     },
     {
@@ -3630,7 +3630,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=7weyghBh6J4&list=PL0ryVRgv4iE0tfpa4941YIyjf7jdvtZql",
       "spotify": "https://open.spotify.com/album/5pCRW9AT4BgoMOS52pRoJq",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1969"
     },
     {
@@ -3652,7 +3652,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=w0VI1zByJ3s&list=PLBnJv6rImVe_-piZIKNnFFdlEl5ekpL4b",
       "spotify": "https://open.spotify.com/album/0i9mOB6mPGqwVvtJEXiwPG",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1969"
     },
     {
@@ -3674,7 +3674,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=q55uXM5G-SE&list=RDq55uXM5G-SE&start_radio=1",
       "spotify": "https://open.spotify.com/album/31q47gQszFt0CddSyMksgO",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1969"
     },
     {
@@ -3696,7 +3696,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=nuEM3s7vxGw&list=PL6ogdCG3tAWg4PBi87_pVGFAwXB57ZU0H",
       "spotify": "https://open.spotify.com/album/5w2X5ZmdE4u0XGkOU7BiLG",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1970"
     },
     {
@@ -3852,50 +3852,7 @@
       "spotify": "https://open.spotify.com/album/3JV6BIIXo3mj6GLIGH9p8a",
       "masterpiece": true,
       "year": "1973"
-    },
-    {
-      "id": 959,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Iron Butterfly",
-      "title": {
-        "es": "In-A-Gadda-Da-Vida",
-        "en": "In-A-Gadda-Da-Vida"
-      },
-      "description": {
-        "es": "“In-A-Gadda-Da-Vida” (1968) definió el rock psicodélico con su canción de 17 minutos que ocupa toda la cara B del disco y riffs hipnóticos. Fue un éxito comercial, alcanzando el n.º 4 en Billboard y convirtiéndose en uno de los primeros álbumes platinum en EE. UU. Está considerado un hito del rock pesado y experimental.",
-        "en": "“In-A-Gadda-Da-Vida” (1968) defined psychedelic rock with its 17‑minute title track that fills the entire B‑side and hypnotic riffs. It was a commercial hit, reaching No. 4 on Billboard and becoming one of the first platinum albums in the U.S. It is considered a milestone in heavy and experimental rock."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b273df214eac062671ef30c7bb81",
-      "tags": [
-        "album"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=5QZdITJX6I0&list=PLNPGM2D7aODdNNtotIYryDQdhDDsOrOoj",
-      "spotify": "https://open.spotify.com/album/4L1Qw49gKwFuQwQovBxsKI",
-      "masterpiece": true,
-      "year": "1968"
-    },
-    {
-      "id": 960,
-      "category": "music",
-      "subcategory": "rock",
-      "artist": "Black Sabbath",
-      "title": {
-        "es": "Paranoid",
-        "en": "Paranoid"
-      },
-      "description": {
-        "es": "“Paranoid” (1970) fue el primer single de Black Sabbath y se ha convertido en uno de los himnos más grandes del heavy metal, con riffs memorables y mezcla de blues oscuro. Alcanzó el n.º 4 en Reino Unido y el n.º 61 en EE. UU. Es reconocido como clásico esencial del género.",
-        "en": "“Paranoid” (1970) was Black Sabbath’s first single and has become one of heavy metal’s greatest anthems, with memorable riffs and dark blues influence. It reached No. 4 in the UK and No. 61 in the U.S. It is regarded as an essential genre classic."
-      },
-      "image": "https://i.scdn.co/image/ab67616d0000b2739f0a9474c47a841c6f03e990",
-      "tags": [
-        "song"
-      ],
-      "youtube": "https://www.youtube.com/watch?v=0qanF-91aJo&list=RD0qanF-91aJo&start_radio=1",
-      "spotify": "https://open.spotify.com/album/7LGVdC9fFwgWYaIrZwsSv6",
-      "masterpiece": true,
-      "year": "1970"
     }
+    
   ]
 }

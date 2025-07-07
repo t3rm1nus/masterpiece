@@ -63,7 +63,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=NLpxDy2MjVQ&list=PLxs2jjSwI-sLxGCbDgcV-PwE6Gu6bZEjt",
       "spotify": "https://open.spotify.com/intl-es/album/4UhEjfIRx4tE1XRY21vwNa",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2025"
     },
     {
@@ -129,7 +129,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=bWp2yY966BA&list=PLrbFUdbfepXUJoPks-2p2o2De8E2tEcbA",
       "spotify": "https://open.spotify.com/album/3rV1aPkrWyMs6YTvTpSbIY",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2002"
     },
     {
@@ -151,7 +151,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=LHAc0mkgqNM&list=PLrbFUdbfepXWcnkO02BRJFiXJUlH1O90G",
       "spotify": "https://open.spotify.com/album/0jghcWTsQzux5T9sAfZO13",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2004"
     },
     {
@@ -173,7 +173,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=xZr_7DJSP5M&list=PL1_oDUgHG-CMJJeuBus4ZzDqpXLrl5PMj",
       "spotify": "https://open.spotify.com/album/7sHrPadM39466NY7DW3s4r",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2007"
     },
     {
@@ -195,7 +195,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=5EVaNXlhZsE&list=PLDG6o20QCj8r1kIyvGC3mzeYtD5M9NuVa",
       "spotify": "https://open.spotify.com/intl-es/track/76MgOZmhAwrzMqqbcTcCHb",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2025"
     },
     {
@@ -239,7 +239,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=HfVJEDYb9Ec&list=PLn7qZ70jqTZFfgUy0NE51SIqefa-dS8p4",
       "spotify": "https://open.spotify.com/album/4dxBNRPePGqky6mIKGAVsr",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1989"
     },
     {
@@ -305,7 +305,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=lqNtjS5M-CY&list=PL5wOgot980nMtknHDIokvew-IpL1lsuVH",
       "spotify": "https://open.spotify.com/album/4TdiCmBKujkiyMeJ1guJJa",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1999"
     },
     {
@@ -591,7 +591,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=byYjgSTnchE&list=PLWlFM6y30qW8MkkMX17q2jYxqbhKEAPYv",
       "spotify": "https://open.spotify.com/intl-es/track/2gjr6Seh7mH5Tsgmo5DqjQ",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2019"
     },
     {
@@ -657,7 +657,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=z_ggdfaQAJI&list=PLLZUjlvnKF07huBe7kgMyuAB_4W0zMMvn",
       "spotify": "https://open.spotify.com/album/0Njhz7ttPzY6oOpqSJVJZl",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2016"
     },
     {
@@ -679,7 +679,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=ZPgZt8m2hnA&list=RDZPgZt8m2hnA&start_radio=1",
       "spotify": "https://open.spotify.com/album/0iDZaOJrkg4YiLS6gPT1sC",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2023"
     },
     {
@@ -767,7 +767,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=xEyCGHKJpPc&list=RDxEyCGHKJpPc&start_radio=1",
       "spotify": "https://open.spotify.com/album/27ftYHLeunzcSzb33Wk1hf",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2002"
     },
     {
@@ -789,7 +789,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=vjr1d-OOq3o&list=RDvjr1d-OOq3o&start_radio=1",
       "spotify": "https://open.spotify.com/album/6o7OzvIJJMkhgB1QtEB1fj",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2007"
     },
     {
@@ -811,7 +811,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=Zmnhit6oKBA&list=RDZmnhit6oKBA&start_radio=1",
       "spotify": "https://open.spotify.com/album/6JiPQzrQs9VTk0cRW9kyS2",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2011"
     },
     {
@@ -833,7 +833,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=V7z3mC4Jn5Q&list=OLAK5uy_nX5Oh2ugrGsIBZl88U9C47h18MJhvXe0A&index=2",
       "spotify": "https://open.spotify.com/album/13NI7jhlyS9RTSv71x3fy2",
-      "masterpiece": false,
+      "masterpiece": true,
       "year": "2016"
     },
     {
@@ -855,7 +855,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=kDIITgnmJS4&list=PLJV2wl0JrIJ7q65DDbxfzjr7vOqoi6OrB",
       "spotify": "https://open.spotify.com/intl-es/album/0JGH1vmAVUaheP1uXknAnl",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2012"
     },
     {
@@ -899,7 +899,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=h73KLlcCGY4&list=PLxnpe4Sbw9RBlEKnUfkUoj5I2qcEtxdq3",
       "spotify": "https://open.spotify.com/album/2T6GmdIEdFRG9enKTM9uTZ",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1987"
     },
     {
@@ -921,7 +921,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=UexhiKFCAAM&list=PLP1lC0FnuI0L5mKZdSVAazv8Os0gk82DX",
       "spotify": "https://open.spotify.com/album/3PxXiYU3PjymOEE22PewGZ",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1988"
     },
     {
@@ -965,7 +965,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=Iw5qxuhI3qE&list=PLP1lC0FnuI0KsVIxWKl_zRLbc1NnXOzqk",
       "spotify": "https://open.spotify.com/album/2UqKqZofb9pdapHk4HzRUo",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1991"
     },
     {
@@ -987,7 +987,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=q4aikvhxb9Q&list=PL-QwWsqHt69WNUQALq28PlgjBDx1FlpHu",
       "spotify": "https://open.spotify.com/album/7imTXPaihwlhOGVqa158ub",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1994"
     },
     {
@@ -1009,7 +1009,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=DOh1mjLT4Fw&list=PLh-TWbS_w28zR6xK7wFqOk2ibZlknZxqk",
       "spotify": "https://open.spotify.com/album/265OEkRcX40ppxgHGuu4cI",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1998"
     },
     {
@@ -1031,7 +1031,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=yAIwkgqrczc&list=PLKD5h9btUEzpeY-8izYk6mzG5SPLcAUCC",
       "spotify": "",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1988"
     },
     {
@@ -1053,7 +1053,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=n38vEB0RjAU&list=PLpo-31liM-GcQvHnvngXgdLV-Xr7tjua8",
       "spotify": "https://open.spotify.com/album/5CcSZeRdn0LluAKEwbI6dS",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2002"
     },
     {
@@ -1097,7 +1097,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=QkM-r4ZdX1o&list=PL0Yz4dINw_VIJ0bkHJe3ZV5ktsFsYxL2K",
       "spotify": "https://open.spotify.com/album/24E6rDvGDuYFjlGewp4ntF",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1996"
     },
     {
@@ -1119,7 +1119,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=sWmog0Ue4Wo&list=RDsWmog0Ue4Wo&start_radio=1",
       "spotify": "https://open.spotify.com/album/2eia0myWFgoHuttJytCxgX",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1999"
     },
     {
@@ -1141,7 +1141,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=lgKOmdY68TU&list=PLiN-7mukU_REkHjzju_Aels1vQ3lEFI2d",
       "spotify": "https://open.spotify.com/album/6iVOwFVjFRoQPgj8GUwSsi",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2000"
     },
     {
@@ -1163,7 +1163,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=st57DcS-C48&list=RDst57DcS-C48&start_radio=1",
       "spotify": "https://open.spotify.com/album/64ub4SfdC8wvPjdUXw8QY9",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1993"
     },
     {
@@ -1207,7 +1207,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=yMTpLmgDYpw&list=PLFUPimLxqFdwjXGbDFsU8sdsglJ_y6zWJ",
       "spotify": "https://open.spotify.com/album/6g9rKb1kKlh0M0mS34kCSS",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1997"
     },
     {
@@ -1229,7 +1229,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=DN3sH52_mNo&list=PL5jqJ2fm-QnglR4hyoGC3CP5X_7Z67EYI",
       "spotify": "https://open.spotify.com/album/5t02YmlCwGQ25AVkFWgWnE",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2003"
     },
     {
@@ -1251,7 +1251,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=2dz9h9QOJgQ&list=PL6OsR81Rk-1w0FbpJYbX2-3YIHDrY44du",
       "spotify": "life krs one",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2000"
     },
     {
@@ -1361,7 +1361,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=h3Q1A0cwUDM&list=PLQWmplCF9sVUbsegi9uxtV5W0TF_GN86G",
       "spotify": "https://open.spotify.com/album/4n6QRAvfVgyH19neC0kHIp",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2007"
     },
     {
@@ -1383,7 +1383,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=ueaocgGyOeQ&list=PL0aQWuymgO4tM27N3wp_sHNeWHsVsY4oa",
       "spotify": "https://open.spotify.com/album/3MdtmwvnKcHvlfRlcTMkUX",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2013"
     },
     {
@@ -1405,7 +1405,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=I3zYaRyicho&list=PLkcTQPz6yzSt_qESLxvqp7T_3A84Y0e-a",
       "spotify": "https://open.spotify.com/album/1tNIlIPXE7pnbm2nFtN5Wg",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2017"
     },
     {
@@ -1427,7 +1427,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=lBC55pG09C0&list=PLubnedJNs38Y8e-FkI2Gz-09KsFUKmRgx",
       "spotify": "https://open.spotify.com/album/215RWH9fPGuxUtHyx65V8L",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2019"
     },
     {
@@ -1471,7 +1471,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=xyjddaw9uPw&list=PLOnPFuSyW6A7HfvoWsD9oLemaJjcCumCe",
       "spotify": "https://open.spotify.com/album/3um5JXs6dZ3fGukr4uMJoV",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1993"
     },
     {
@@ -1538,7 +1538,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=OEAjnqNF5n4&list=PLOnPFuSyW6A7ZtezUHoo2wgPP5wsc-u3f",
       "spotify": "",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2000"
     },
     {
@@ -1560,7 +1560,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=ZYCQP-6XaYI&list=PLwU-TQrYVN3i1lgsdD7jcGm6eoAMhk4Qy",
       "spotify": "https://open.spotify.com/album/6q08XAhUvwQiXkBr3qcJOE",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2005"
     },
     {
@@ -1582,7 +1582,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=EoT1XTrpVqo&list=PLx-v6CN-qPYft_c7AmgF3bG4M1AqMDNXV",
       "spotify": "",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2020"
     },
     {
@@ -1604,7 +1604,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=Ne2ALVhRR98&list=PLLxJ2larDKKxenaMsRet0UwjNyMEM0Hid",
       "spotify": "https://open.spotify.com/album/7arNkuWGhPKDUTFjUQZpXW",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2003"
     },
     {
@@ -1648,7 +1648,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=s5kd8caqt6U&list=PLA_k6jeZLgwGroWgn_LhG5nFLi3PcIy9w",
       "spotify": "https://open.spotify.com/album/5GPkJFN7mq1kggxtC3pUNB",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2012"
     },
     {
@@ -1670,7 +1670,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=i-uC9so_wMQ&list=RDi-uC9so_wMQ&start_radio=1",
       "spotify": "https://open.spotify.com/album/0t0DM6n6xAAiR2PWRYH0ID",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2025"
     },
     {
@@ -1692,7 +1692,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=xvCw_7QaRZE&list=RDxvCw_7QaRZE&start_radio=1",
       "spotify": "https://open.spotify.com/intl-es/track/6GCoeHKH835S0yNJ8dLZSD",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1997"
     },
     {
@@ -1736,7 +1736,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=x7_499IZ8zE&list=RDx7_499IZ8zE&start_radio=1",
       "spotify": "https://open.spotify.com/intl-es/album/3Ekjlh6TVQlOMmfeDIF6OW",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2002"
     },
     {
@@ -1802,7 +1802,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=JYOK0t0gbWw&list=PLsgJZnNTvLu7tYNrbcMzTazfFW_aixc-H",
       "spotify": "https://open.spotify.com/album/4hRPXl1NAKLCmZ5HMmKYvw",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2002"
     },
     {
@@ -1824,7 +1824,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=8yFLlc5wxyw&list=PL67F2_JZe-0j_y-mdN-Xv6JT0OYaykjnq",
       "spotify": "https://open.spotify.com/album/5kQueD7iNwCVmDjYS8Lgtw",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1997"
     },
     {
@@ -1846,7 +1846,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=D2hci3Aza-s&list=RDD2hci3Aza-s&start_radio=1",
       "spotify": "https://open.spotify.com/album/6uebFzY0vo8b8lmKerjxT2",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1996"
     },
     {
@@ -1868,7 +1868,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=EQxBQKXbo4E&list=RDEQxBQKXbo4E&start_radio=1",
       "spotify": "https://open.spotify.com/album/2vsIQw5nIfbO2N4X6pfXU9",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1997"
     },
     {
@@ -1890,7 +1890,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=z4MT_pdG7Kw&list=RDz4MT_pdG7Kw&start_radio=1",
       "spotify": "https://open.spotify.com/album/6v3llx2Ub9jvy94L1oKAEi",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1999"
     },
     {
@@ -1912,7 +1912,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=lTJg4P1zo4E&list=RDlTJg4P1zo4E&start_radio=1",
       "spotify": "https://open.spotify.com/album/6sDdbLoIOzGwR61lL2jGN2",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2001"
     },
     {
@@ -1934,7 +1934,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=TFRwNYPsHwY",
       "spotify": "https://open.spotify.com/album/1tB1LW0Ixyd2OWqmZ9lYjW",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2003"
     },
     {
@@ -1956,7 +1956,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=hO_ibTEZNd0&list=RDhO_ibTEZNd0&start_radio=1",
       "spotify": "https://open.spotify.com/album/4iW5SJA2EZbx5YRfKCUoAm",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2007"
     },
     {
@@ -1978,7 +1978,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=jJt73p6THqA&list=RDjJt73p6THqA&start_radio=1",
       "spotify": "https://open.spotify.com/album/1lAP0ZWj2nDXDHcChtDzSO",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2010"
     },
     {
@@ -2000,7 +2000,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=sqjS0mYxtXs&list=PLsT9douBcx99Qup0-S8MjRpGVV-94EG0D",
       "spotify": "https://open.spotify.com/album/5UWUDx2090yLdH6Aot5x86",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2018"
     },
     {
@@ -2022,7 +2022,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=bWdO_VdrRSw&list=RDbWdO_VdrRSw&start_radio=1",
       "spotify": "https://open.spotify.com/album/15usnPSpMX62IcvbG2PrDN",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1994"
     },
     {
@@ -2044,7 +2044,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=CRxh1g2bl8o&list=PLiN-7mukU_RE86obSSh1ayYoXG-DCXEwm",
       "spotify": "https://open.spotify.com/album/3C4yjvZ7Wh4TtOMaHqBUZJ",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2016"
     },
     {
@@ -2088,7 +2088,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=2U7k1tXqh0E&list=PLkROH3Eqs0T-IRBf4GuLhSGrtEg9vd5d0",
       "spotify": "https://open.spotify.com/album/1eqAIac48qUT6ks2hrccIJ",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2000"
     },
     {
@@ -2110,7 +2110,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=mI2BzcbWuM8&list=PLsT9douBcx9-z1x-1gl1oHs5ScHmNjrff",
       "spotify": "https://open.spotify.com/album/2mPE5GtimrdTiE6WQOn4JD",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2003"
     },
     {
@@ -2132,7 +2132,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=ZesctUiG8Pc&list=RDZesctUiG8Pc&start_radio=1",
       "spotify": "https://open.spotify.com/album/0e5cBxKWQYe52fyu23P01P",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2004"
     },
     {
@@ -2154,7 +2154,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=zVys6IBdlv8&list=PLOkzvPqwC1Gpp5MKHLsyqIJDt4yJPY4tI",
       "spotify": "https://open.spotify.com/album/1BoT8IbQyjrl7qZ2Y9bs3P",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2006"
     },
     {
@@ -2176,7 +2176,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=ds5rfYL7uAU&list=PLsT9douBcx9-LIk72fY6eBAEHsnpwaPpg",
       "spotify": "https://open.spotify.com/album/0xJ16GEk2JX4Hju7stTJ6z",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2008"
     },
     {
@@ -2242,7 +2242,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=e-u0jeEaXio&list=RDe-u0jeEaXio&start_radio=1",
       "spotify": "https://open.spotify.com/album/4aXhX1cye8Aht6IvBrh11Q",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2010"
     },
     {
@@ -2286,7 +2286,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=EBZcKgNmLuc&list=PLEaSuDtBT1gggp-OCDGMEP6L0NwONj3wj",
       "spotify": "https://open.spotify.com/album/1M9OLlIB81ygaauBdOK1sQ",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2018"
     },
     {
@@ -2352,7 +2352,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=fHWAeBDvYog&list=RDfHWAeBDvYog&start_radio=1",
       "spotify": "https://open.spotify.com/album/6uO5B6km2Dco28tOBmZtSU",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2005"
     },
     {
@@ -2374,7 +2374,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=McjFepEpcBE&list=RDMcjFepEpcBE&start_radio=1",
       "spotify": "https://open.spotify.com/album/07Ckd8KDDxcbY5iUXjhuex",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2013"
     },
     {
@@ -2506,7 +2506,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=kwHs3udDsak&list=PLg80sUq63S2vJ9G4OuokmvuQ9KAffAkRn",
       "spotify": "https://open.spotify.com/album/3AGTkAEOaQgFixOs4rLCix",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2020"
     },
     {
@@ -2528,7 +2528,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=XwygTZe100E&list=PLOvr67Rz-Dnwzv5XNzaukq56v8jynddBD",
       "spotify": "https://open.spotify.com/album/28TBy3fqYNUSp4CTzQSJJQ",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2020"
     },
     {
@@ -2550,7 +2550,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=qAMruEZdehw&list=PLOvr67Rz-DnyXh9EjS3motaZgEmlPNuDk",
       "spotify": "https://open.spotify.com/album/2HuxsQYFSvXsKtVOGKZgas",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2023"
     },
     {
@@ -2638,7 +2638,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=QOJUzKh6ZjA&list=OLAK5uy_miiVrfVkPr4rQyX9VkvZwkyerJHH8Bnb0",
       "spotify": "https://open.spotify.com/album/6d1pSrZOj4tUbz93zz7mp8",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2003"
     },
     {
@@ -2704,7 +2704,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=prYBA4Y6oSM&list=PL85VeSY2nyq69Yjqho1Us2XdYCyMEH9dM",
       "spotify": "https://open.spotify.com/album/2mSK8372a3xnprYMhWOn7e",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2013"
     },
     {
@@ -2726,7 +2726,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=lIpvbTpNo6A&list=PLXrFvQiYJeH-AK9ZgnqYqUaE2yiTMcRW6",
       "spotify": "https://open.spotify.com/album/7BZQDrxpHZjSZUtlbOiYwZ",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2024"
     },
     {
@@ -2770,7 +2770,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=fLf2TehvStQ&list=PLFUPimLxqFdw488CrvF31nGPWiJj3A7-Y",
       "spotify": "https://open.spotify.com/album/141ePb40A4thP6Zo89m5Oz",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2001"
     },
     {
@@ -2792,7 +2792,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=a96R4fjfAu8&list=PL4D04170419788036",
       "spotify": "https://open.spotify.com/album/6d5qriM2JlsctpjaBG6UCK",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2003"
     },
     {
@@ -2836,7 +2836,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=BrIMk6s74Aw&list=PLFUPimLxqFdxyhQkYFnbYx15t41KtqLKs",
       "spotify": "https://open.spotify.com/album/1BnYxeARH2d3BmctgEZMgD",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2010"
     },
     {
@@ -2902,7 +2902,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=-rX98O-Y7Ds&list=PL_A6Fay0QT25Vv_riVLTv5CvJhGccAu4d",
       "spotify": "https://open.spotify.com/album/6Qa1AWlz2KnSya41BLPNgx",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2012"
     },
     {
@@ -2924,7 +2924,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=Hb0UMt5b9Gg&list=PLJwXReWAgCbuSR3xDEycYNvzIKApAiZ0M",
       "spotify": "https://open.spotify.com/album/3quV5osCnYCvJzlteeCa3K",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2011"
     },
     {
@@ -3034,7 +3034,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=rbQ8V1Ul67A&list=PL3r1ldjYHlYMHjFGwCgXVgsDMYH_-8wv4",
       "spotify": "https://open.spotify.com/album/4r3TaXjF2b1qwCpxjIpW43",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1997"
     },
     {
@@ -3078,7 +3078,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=e_6T3iHAOXY&list=PLAwgd_whiAX8sR1AiKVFRFWYgBSnHIZYv",
       "spotify": "https://open.spotify.com/album/3zrfdc7xK2ClSRasyBbunq",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2001"
     },
     {
@@ -3100,7 +3100,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=Y1vs1mCXOXw&list=PLn7qZ70jqTZHP0kaIvPFBmELU98pg_b-Q",
       "spotify": "",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1993"
     },
     {
@@ -3122,7 +3122,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=oxwAB3SECtc&list=PLycVTiaj8OI9COuVDJdw_RdBWy11ALc4T",
       "spotify": "https://open.spotify.com/album/3KzAvEXcqJKBF97HrXwlgf",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1963"
     },
     {
@@ -3188,7 +3188,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=YgFo9STa70E&list=PL_O_p_fmCqpYoAIfLW4T7r-yksNnX1cSQ",
       "spotify": "https://open.spotify.com/album/1vANZV20H5B4Fk6yf7Ot9a",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1964"
     },
     {
@@ -3232,7 +3232,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=OsjTO0yZQjk&list=PLycVTiaj8OI9Ptzsl9nzxfwUgZ0jx-Hyb",
       "spotify": "https://open.spotify.com/album/50o7kf2wLwVmOTVYJOTplm",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1965"
     },
     {
@@ -3254,7 +3254,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=l0zaebtU-CA&list=PLL-NbN8uTOijcKsr8WjBqh0tp4HS-Spua",
       "spotify": "https://open.spotify.com/album/3PRoXYsngSwjEQWR5PsHWR",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1966"
     },
     {
@@ -3298,7 +3298,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=l8WMGBuNaus&list=PLycVTiaj8OI8F5vZlwv4NnvGwc84ITnW2",
       "spotify": "https://open.spotify.com/album/2BtE7qm1qzM80p9vLSiXkj",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1967"
     },
     {
@@ -3320,7 +3320,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=0ArlUSVDQIw&list=PLycVTiaj8OI80AsTGjYJAPi7-i8kTH-Bq",
       "spotify": "https://open.spotify.com/album/1klALx0u4AavZNEvC4LrTL",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1968"
     },
     {
@@ -3364,7 +3364,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=1Sb797ajPAw&list=PLP1lC0FnuI0Ia0Zj-2h7S_QwUhRd7YxHq",
       "spotify": "https://open.spotify.com/album/5rFRfDq52l2l5RtS5kxA9A",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1969"
     },
     {
@@ -3452,7 +3452,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=bCaa0Ffpw8k&list=PLDF60662CE667114E",
       "spotify": "https://open.spotify.com/album/58voimEEHwFPYpDHDYCfYE",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2003"
     },
     {
@@ -3694,7 +3694,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=owG_X3Hl6Bo&list=PLSjm-2w14tydKgqfB4AjKM7tofUnWIxOy",
       "spotify": "",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2024"
     },
     {
@@ -3804,7 +3804,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=cDFckvVxiaE&list=PL9D8487B38B009EC3",
       "spotify": "https://open.spotify.com/album/174487jmA12nzD0P6vtR7e",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2009"
     },
     {
@@ -3826,7 +3826,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=l02ajats9Dc&list=OLAK5uy_kvTAVSe3HICOXO6uTStEJacN0ex0nzoXc&index=2",
       "spotify": "https://open.spotify.com/album/4vHUiHMFjrBrZ4C9ofmhhF",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2008"
     },
     {
@@ -3892,7 +3892,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=3wwZ5yQJib8&list=PL7WDyskksnMhfGYxL6bhEdOlX2q3NyIj8",
       "spotify": "https://open.spotify.com/album/5IFOummNcGXY3qCBWRchqP",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1993"
     },
     {
@@ -3914,7 +3914,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=YBiRANI3_Ag&list=PLUEMihO9lT7-TzfyrDORGItyVN6jjzHfR",
       "spotify": "https://open.spotify.com/album/0vOm2bkcuDCXS6AQqWXyAQ",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1996"
     },
     {
@@ -3936,7 +3936,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=iJWaA_2G-Kc&list=PLQeroY7XkiFH0gEWDuZ7M-BfqCvn_qBAd",
       "spotify": "https://open.spotify.com/album/2evskaXutnTkQAaZeT4PQb",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "1999"
     },
     {
@@ -3958,7 +3958,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=sCKukYmym2U&list=PLxs2jjSwI-sJEP_8mkqWqqAGa5f2rpeyL",
       "spotify": "https://open.spotify.com/intl-es/album/7F9hfZKh6WLOKME4LwCPZI",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2025"
     },
     {
@@ -3980,7 +3980,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=sDo1JAHG8XE&list=PLTlz5MMhLagN8XgMxCwttizaijkuSssFI",
       "spotify": "https://open.spotify.com/album/797fkvAtk0iZvP1HHPCWbp",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2004"
     },
     {
@@ -4046,7 +4046,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=CI-L-QyVziw&list=OLAK5uy_n8CkXQQ53zYODh41e718NHnzJmnoQCzQU&index=2",
       "spotify": "https://open.spotify.com/intl-es/album/0O3M7u8gFlE7zaQHa1SbaO",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2020"
     },
     {
@@ -4068,7 +4068,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=mhTBiS44_mQ&list=PL0AD17DBE8B52BC64",
       "spotify": "https://open.spotify.com/album/3ByXNnt6fDXjZdNGHNw82n",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2006"
     },
     {
@@ -4090,7 +4090,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=SeuhEjZx_5o&list=OLAK5uy_lvI5zxSXk1328fXudf6ct6_jh1BQ_hNPE&index=2",
       "spotify": "https://open.spotify.com/album/35dD2uVx9NODFu9Wbk6MaL",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2004"
     },
     {
@@ -4112,7 +4112,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=4w1SGAEGQc4&list=RD4w1SGAEGQc4&start_radio=1",
       "spotify": "https://open.spotify.com/intl-es/album/5e5DMocIkNewyoqbf5D5sM",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2006"
     },
     {
@@ -4134,7 +4134,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=aY5VM3aYjZ4&list=PL_tI9_f9VosxmoVCxaHUKV0TgYLnpGrvf",
       "spotify": "https://open.spotify.com/intl-es/album/2THakG7CPK4ZME7x3XQskJ",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2003"
     },
     {
@@ -4156,7 +4156,7 @@
       ],
       "youtube": "https://www.youtube.com/https://www.youtube.com/watch?v=EpNj-HJWZ00&list=PLvFPizwjl9UrhDhGUiV0Gby6oRZ5ulu00",
       "spotify": "https://open.spotify.com/intl-es/album/5wDDLX0TUR8lkNgBz3DpBR",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2006"
     },
     {
@@ -4178,7 +4178,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=hakOLgdP3X8&list=RDhakOLgdP3X8&start_radio=1",
       "spotify": "https://open.spotify.com/search/The%20Infinity%20Dub%20Sessions",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2014"
     },
     {
@@ -4200,7 +4200,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=oMiPBqPm8to&list=RDoMiPBqPm8to&start_radio=1",
       "spotify": "https://open.spotify.com/album/78ec2w9ZHUYn9W5QDXvUrU",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2017"
     },
     {
@@ -4222,7 +4222,7 @@
       ],
       "youtube": "https://www.youtube.com/results?search_query=Four+Quarters+Of+Love+And+Modern+Lash+full+album",
       "spotify": "https://open.spotify.com/intl-es/album/67Ljepy44OPSzsUxL79URN",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2025"
     },
     {
@@ -4288,7 +4288,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=tc-FFlFhByU&list=OLAK5uy_mDidvTn2khm18HdHEbzgrI-wLH_8ZxLpE",
       "spotify": "https://open.spotify.com/album/4WSwiIpcaIHrTJWosN5NRU",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2006"
     },
     {
@@ -4332,7 +4332,7 @@
       ],
       "youtube": "https://www.youtube.com/watch?v=clsczmHXf9U&list=RDclsczmHXf9U&start_radio=1",
       "spotify": "https://open.spotify.com/album/4fwdKlGLJuEB9UuCHaNKql",
-      "masterpiece": true,
+      "masterpiece": false,
       "year": "2000"
     },
     {
