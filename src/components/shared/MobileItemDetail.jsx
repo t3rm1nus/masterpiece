@@ -168,8 +168,8 @@ const MobileItemDetail = ({
         {/* Tarjeta principal */}
         <UiCard
           sx={{
-            maxWidth: { xs: 380, sm: 500, md: 600 }, // Reducido en móvil
-            width: '96vw', // Un poco menos que el 100% para dejar margen
+            maxWidth: { xs: 360, sm: 500, md: 600 }, // Reducido 20px extra en móvil
+            width: { xs: 'calc(100vw - 20px)', sm: '96vw' }, // 20px menos en móviles
             margin: '0 auto',
             marginTop: 0,
             borderRadius: '16px',
