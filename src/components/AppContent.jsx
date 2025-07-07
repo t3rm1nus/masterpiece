@@ -7,6 +7,7 @@ import { LazyCoffeePage, LazyHowToDownload, LoadingFallback } from './LazyCompon
 import MaterialMobileMenu from './MaterialMobileMenu';
 import HybridMenu from './HybridMenu';
 import { Box, Fade, Slide } from '@mui/material';
+import WelcomePopup, { WELCOME_POPUP_KEY } from "./WelcomePopup";
 
 /**
  * AppContent (migrado a layout moderno con animaciones y overlays accesibles)
@@ -35,6 +36,7 @@ const AppContent = () => {
   const [isClosingDetail, setIsClosingDetail] = useState(false);
   const [isClosingCoffee, setIsClosingCoffee] = useState(false);
   const [isClosingHowToDownload, setIsClosingHowToDownload] = useState(false);
+  const [welcomeOpen, setWelcomeOpen] = useState(false);
 
   // Estado local robusto para el detalle
   const [detailItem, setDetailItem] = useState(null);
@@ -55,6 +57,18 @@ const AppContent = () => {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
+  };
+
+  // Mostrar popup solo la primera vez
+  useEffect(() => {
+    if (!localStorage.getItem(WELCOME_POPUP_KEY)) {
+      setWelcomeOpen(true);
+    }
+  }, []);
+
+  const handleWelcomeClose = () => {
+    setWelcomeOpen(false);
+    localStorage.setItem(WELCOME_POPUP_KEY, "1");
   };
 
   // Scroll al top al volver a la vista 'home' desde 'detail' en desktop
@@ -163,6 +177,7 @@ const AppContent = () => {
 
   return (
     <Box sx={{ minHeight: '100vh', width: '100vw', position: 'relative', background: '#fafbfc' }}>
+      <WelcomePopup open={welcomeOpen} onClose={handleWelcomeClose} />
       {/* Menú superior desktop siempre visible, con onBack dinámico */}
       <HybridMenu
         onSplashOpen={handleSplashOpen}
