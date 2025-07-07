@@ -169,8 +169,8 @@ const MobileItemDetail = ({
         {/* Tarjeta principal */}
         <UiCard
           sx={{
-            maxWidth: { xs: 340, sm: 500, md: 600 }, // Reducido 40px extra en móvil
-            width: { xs: 'calc(100vw - 40px)', sm: '96vw' }, // 40px menos en móviles
+            maxWidth: { xs: 340, sm: 500, md: 600 },
+            width: { xs: 'calc(100vw - 40px)', sm: '96vw' },
             margin: '0 auto',
             marginTop: 0,
             borderRadius: '16px',
@@ -178,8 +178,7 @@ const MobileItemDetail = ({
             border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
             background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
             position: 'relative',
-            overflowX: { xs: 'hidden', sm: undefined },
-            paddingRight: { xs: '32px', sm: 0 } // Añade espacio a la derecha solo en móvil para el badge
+            overflowX: { xs: 'visible', sm: undefined }
           }}
         >
           {/* Badge de masterpiece en la esquina del detalle */}
@@ -190,8 +189,8 @@ const MobileItemDetail = ({
               absolute={true}
               size={40}
               sx={{
-                top: { xs: -17, sm: -17 },
-                right: { xs: -10, sm: -18 }, // Menos desplazado a la derecha en móvil
+                top: -17,
+                right: -18,
                 zIndex: 1201,
                 filter: 'drop-shadow(0 4px 16px rgba(255,215,0,0.5))',
                 background: '#FFD700',
