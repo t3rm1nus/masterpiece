@@ -178,7 +178,8 @@ const MobileItemDetail = ({
             border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
             background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
             position: 'relative',
-            overflowX: { xs: 'hidden', sm: undefined } // Anula scroll horizontal en móviles
+            overflowX: { xs: 'hidden', sm: undefined },
+            paddingRight: { xs: '32px', sm: 0 } // Añade espacio a la derecha solo en móvil para el badge
           }}
         >
           {/* Badge de masterpiece en la esquina del detalle */}
@@ -189,8 +190,8 @@ const MobileItemDetail = ({
               absolute={true}
               size={40}
               sx={{
-                top: -17,
-                right: -18,
+                top: { xs: -17, sm: -17 },
+                right: { xs: -10, sm: -18 }, // Menos desplazado a la derecha en móvil
                 zIndex: 1201,
                 filter: 'drop-shadow(0 4px 16px rgba(255,215,0,0.5))',
                 background: '#FFD700',
