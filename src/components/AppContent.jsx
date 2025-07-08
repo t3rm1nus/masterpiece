@@ -8,6 +8,7 @@ import MaterialMobileMenu from './MaterialMobileMenu';
 import HybridMenu from './HybridMenu';
 import { Box, Fade, Slide } from '@mui/material';
 import WelcomePopup, { WELCOME_POPUP_KEY } from "./WelcomePopup";
+import { safeStorage } from '../utils/safeStorage.js';
 
 /**
  * AppContent (migrado a layout moderno con animaciones y overlays accesibles)
@@ -61,14 +62,15 @@ const AppContent = () => {
 
   // Mostrar popup solo la primera vez
   useEffect(() => {
-    if (!localStorage.getItem(WELCOME_POPUP_KEY)) {
+    const hasSeenWelcome = safeStorage.getItem('welcomeShown');
+    if (!hasSeenWelcome) {
       setWelcomeOpen(true);
     }
   }, []);
 
   const handleWelcomeClose = () => {
     setWelcomeOpen(false);
-    localStorage.setItem(WELCOME_POPUP_KEY, "1");
+    safeStorage.setItem('welcomeShown', true);
   };
 
   // Scroll al top al volver a la vista 'home' desde 'detail' en desktop

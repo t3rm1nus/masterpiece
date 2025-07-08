@@ -20,22 +20,33 @@ import { createLanguageSlice } from './languageStore';
 import { createNavigationSlice } from './navigationStore';
 import { createDataSlice } from './dataStore';
 import { migrateAppStoreState } from '../utils/migrationHelpers';
+import { createPersistConfig, safeStorage } from '../utils/safeStorage';
 
 // --- LIMPIEZA DE PERSISTENCIA ANTES DE CREAR EL STORE ---
 if (typeof window !== 'undefined') {
   try {
-    const persisted = window.localStorage.getItem('masterpiece-data');
-    if (persisted) {
-      const parsed = JSON.parse(persisted);
-      if (parsed.state) {
-        parsed.state.selectedCategory = null;
-        // Elimina scroll guardado si existe
-        if (parsed.state.scrollPosition) delete parsed.state.scrollPosition;
-        window.localStorage.setItem('masterpiece-data', JSON.stringify(parsed));
-      }
+    // Verificar y limpiar si es necesario
+    const debugInfo = safeStorage.getDebugInfo();
+    console.log('Storage status:', debugInfo);
+    
+    // Si el uso de storage es muy alto, hacer limpieza preventiva
+    if (parseFloat(debugInfo.usage) > 80) {
+      console.warn('Storage usage alto, limpiando preventivamente...');
+      safeStorage.cleanupStorage();
+    }
+    
+    const persisted = safeStorage.getState();
+    if (persisted && persisted.state) {
+      // Limpiar campos específicos que pueden causar problemas
+      persisted.state.selectedCategory = null;
+      if (persisted.state.scrollPosition) delete persisted.state.scrollPosition;
+      if (persisted.state.allRecommendations) delete persisted.state.allRecommendations;
+      if (persisted.state.filteredRecommendations) delete persisted.state.filteredRecommendations;
+      safeStorage.setState(persisted);
     }
   } catch (e) {
-    // Ignorar errores de parseo
+    console.warn('Error durante limpieza inicial:', e);
+    safeStorage.clearAll();
   }
 }
 
