@@ -7,6 +7,7 @@ import { ensureString } from '../../utils/stringUtils';
 import UiCard from '../ui/UiCard';
 import { MobileActionButtons } from './ItemActionButtons';
 import MasterpieceBadge from './MasterpieceBadge';
+import { applyDetailScrollFixForIPhone, cleanupScrollFixesForIPhone } from '../../utils/iPhoneScrollFix';
 
 /**
  * MobileItemDetail
@@ -122,16 +123,13 @@ const MobileItemDetail = ({
 
   // Fix específico para iPhone - asegurar scroll en detalle
   React.useEffect(() => {
-    const isIPhone = /iPhone|iPod/.test(navigator.userAgent);
-    if (isIPhone && selectedItem) {
-      // Forzar propiedades de scroll en iPhone solo cuando hay item seleccionado
-      document.body.style.overflowY = 'auto';
-      document.body.style.webkitOverflowScrolling = 'touch';
+    if (selectedItem) {
+      // Aplicar fixes específicos para iPhone usando la utilidad
+      applyDetailScrollFixForIPhone();
       
       return () => {
         // Limpiar al desmontar o cambiar
-        document.body.style.overflowY = '';
-        document.body.style.webkitOverflowScrolling = '';
+        cleanupScrollFixesForIPhone();
       };
     }
   }, [selectedItem]);
@@ -175,6 +173,11 @@ const MobileItemDetail = ({
           padding: '16px',
           pt: { xs: '20px', sm: '36px' },
           overflowX: { xs: 'hidden', sm: undefined }, // Anula scroll horizontal en móviles
+          // Específico para iPhone - asegurar scroll en detalle
+          overflowY: { xs: 'auto', sm: 'visible' },
+          WebkitOverflowScrolling: { xs: 'touch', sm: 'auto' },
+          height: { xs: '100%', sm: 'auto' },
+          maxHeight: { xs: '100%', sm: 'none' },
           ...sx
         }}
         style={{ ...style }}
@@ -194,7 +197,12 @@ const MobileItemDetail = ({
             border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
             background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
             position: 'relative',
-            overflowX: { xs: 'visible', sm: undefined }
+            overflowX: { xs: 'visible', sm: undefined },
+            // Específico para iPhone - card scrolleable
+            overflowY: { xs: 'auto', sm: 'visible' },
+            WebkitOverflowScrolling: { xs: 'touch', sm: 'auto' },
+            height: { xs: 'auto', sm: 'auto' },
+            maxHeight: { xs: 'calc(100vh - 120px)', sm: 'none' },
           }}
         >
           {/* Badge de masterpiece en la esquina del detalle */}

@@ -113,4 +113,103 @@ button,
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
   }
+  
+  /* FIXES AGRESIVOS PARA SCROLL EN IPHONE - DETALLES Y COMO DESCARGAR */
+  
+  /* Contenedor principal de detalle para iPhone */
+  [role="dialog"][aria-modal="true"] {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    position: fixed !important;
+  }
+  
+  /* Contenedor interno de detalle para iPhone */
+  [role="dialog"][aria-modal="true"] > .MuiBox-root {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+  }
+  
+  /* Específicos para página "como descargar" */
+  [data-page="howToDownload"] {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+  }
+  
+  [data-page="howToDownload"] > .MuiBox-root {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+  }
+  
+  /* Contenedor del Paper de "como descargar" */
+  [data-page="howToDownload"] .MuiPaper-root {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: auto !important;
+    max-height: calc(100vh - 100px) !important;
+  }
+  
+  /* Card/UiCard específico para detalles móviles en iPhone */
+  .mp-ui-card.item-detail-mobile-card {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: auto !important;
+    max-height: calc(100vh - 120px) !important;
+  }
+  
+  /* CardContent dentro del detalle móvil */
+  .mp-ui-card.item-detail-mobile-card .MuiCardContent-root {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* Box contenedor del detalle móvil */
+  .slideInUp .mp-ui-card,
+  .slideOutDown .mp-ui-card {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: auto !important;
+    max-height: calc(100vh - 120px) !important;
+  }
+  
+  /* FIXES EXTREMOS - FUERZA SCROLL EN TODO EL ARBOL DOM PARA IPHONE */
+  
+  /* Todos los contenedores MuiBox en iPhone */
+  .MuiBox-root {
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  /* Todos los Paper en iPhone cuando están en modales */
+  [aria-modal="true"] .MuiPaper-root {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: auto !important;
+    max-height: calc(100vh - 80px) !important;
+  }
+  
+  /* Forzar scroll en cualquier contenedor con scroll */
+  * {
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  /* Forzar scroll en body y html */
+  html, body {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: 100% !important;
+  }
+  
+  /* Forzar en cualquier elemento que tenga scroll */
+  [style*="overflow"] {
+    -webkit-overflow-scrolling: touch !important;
+  }
 }

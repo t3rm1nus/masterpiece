@@ -246,10 +246,20 @@ const AppContent = () => {
           background: 'none',
           backdropFilter: 'none',
           overflowY: 'auto',
+          WebkitOverflowScrolling: 'touch', // Añadido para iPhone
           pointerEvents: 'none',
           pt: { xs: '72px', md: '88px' },
+          // Específico para iPhone - fix scroll
+          height: { xs: '100vh', md: 'auto' },
+          maxHeight: { xs: '100vh', md: 'none' },
         }} aria-modal="true" role="dialog">
-          <Box sx={{ pointerEvents: 'auto', width: '100%' }}>
+          <Box sx={{ pointerEvents: 'auto', width: '100%', 
+            // Específico para iPhone - contenedor interno con scroll
+            overflowY: { xs: 'auto', md: 'visible' },
+            WebkitOverflowScrolling: { xs: 'touch', md: 'auto' },
+            height: { xs: '100%', md: 'auto' },
+            maxHeight: { xs: '100%', md: 'none' },
+          }}>
             {selectedItem ? (
               <UnifiedItemDetail
                 key={selectedItem.id}
@@ -302,8 +312,17 @@ const AppContent = () => {
           WebkitOverflowScrolling: 'touch',
           pointerEvents: 'none',
           pt: { xs: '32px', md: '36px' }, // espacio superior aún más reducido en desktop
+          // Específico para iPhone - fix scroll en cómo descargar
+          height: { xs: '100vh', md: 'auto' },
+          maxHeight: { xs: '100vh', md: 'none' },
         }} aria-modal="true" role="dialog" data-page="howToDownload">
-          <Box sx={{ pointerEvents: 'auto', width: '100%' }}>
+          <Box sx={{ pointerEvents: 'auto', width: '100%', 
+            // Específico para iPhone - contenedor interno con scroll para cómo descargar
+            overflowY: { xs: 'auto', md: 'visible' },
+            WebkitOverflowScrolling: { xs: 'touch', md: 'auto' },
+            height: { xs: '100%', md: 'auto' },
+            maxHeight: { xs: '100%', md: 'none' },
+          }}>
             <Suspense fallback={<LoadingFallback message={getTranslation('ui.states.loading_how_to_download', 'Cargando instrucciones de descarga...')} />}>
               <LazyHowToDownload onClose={() => setIsClosingHowToDownload(true)} />
             </Suspense>

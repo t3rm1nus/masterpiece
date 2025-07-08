@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Box, Typography, Button, useTheme, useMediaQuery, Paper } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
+import { applyHowToDownloadScrollFixForIPhone, cleanupScrollFixesForIPhone } from '../utils/iPhoneScrollFix';
 
 const HowToDownload = () => {
   const theme = useTheme();
@@ -26,18 +27,13 @@ const HowToDownload = () => {
 
   // Fix específico para iPhone - asegurar scroll
   useEffect(() => {
-    const isIPhone = /iPhone|iPod/.test(navigator.userAgent);
-    if (isIPhone) {
-      // Forzar propiedades de scroll en iPhone
-      document.body.style.overflowY = 'auto';
-      document.body.style.webkitOverflowScrolling = 'touch';
-      
-      return () => {
-        // Limpiar al desmontar
-        document.body.style.overflowY = '';
-        document.body.style.webkitOverflowScrolling = '';
-      };
-    }
+    // Aplicar fixes específicos para iPhone usando la utilidad
+    applyHowToDownloadScrollFixForIPhone();
+    
+    return () => {
+      // Limpiar al desmontar
+      cleanupScrollFixesForIPhone();
+    };
   }, []);
   
   // Textos traducibles
@@ -107,6 +103,10 @@ const HowToDownload = () => {
       overflow: 'visible',
       WebkitOverflowScrolling: 'touch',
       mt: { xs: 0, lg: 8 }, // 8*8=64px, suficiente para el menú fijo
+      // Específico para iPhone - asegurar scroll
+      overflowY: { xs: 'auto', md: 'visible' },
+      height: { xs: '100%', md: 'auto' },
+      maxHeight: { xs: '100%', md: 'none' },
     }}>
       <Paper elevation={3} sx={{
         width: '100%',
@@ -122,6 +122,10 @@ const HowToDownload = () => {
         overflow: 'visible',
         WebkitOverflowScrolling: 'touch',
         mt: { xs: '64px', md: 0 }, // margen superior en móviles para evitar solapamiento con menú
+        // Específico para iPhone - Paper scrolleable
+        overflowY: { xs: 'auto', md: 'visible' },
+        height: { xs: 'auto', md: 'auto' },
+        maxHeight: { xs: 'calc(100vh - 120px)', md: 'none' },
       }}>
         {/* Imagen Pirate Bay dentro del card */}
         <Box sx={{
