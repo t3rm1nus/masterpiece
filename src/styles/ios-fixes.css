@@ -1,0 +1,78 @@
+/* === FIXES ESPECÍFICOS PARA iOS/Safari === */
+
+/* Habilitar scroll suave en iOS */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Arreglar scroll en containers principales */
+.MuiBox-root,
+.MuiPaper-root,
+.MuiContainer-root {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Asegurar que los overlays/modales permitan scroll en iOS */
+[role="dialog"],
+[aria-modal="true"] {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Específico para páginas de donaciones y cómo descargar */
+[data-page="coffee"],
+[data-page="howToDownload"] {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  height: auto !important;
+  min-height: 100vh;
+}
+
+/* Arreglar scroll en contenedores con position: fixed */
+.MuiBox-root[sx*="position: 'fixed'"],
+.MuiBox-root[sx*='position:"fixed"'] {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Específico para iOS Safari - Forzar scroll en modales */
+@supports (-webkit-touch-callout: none) {
+  /* Detección específica de iOS */
+  
+  .MuiBox-root[aria-modal="true"] {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+  }
+  
+  .MuiBox-root[aria-modal="true"] > .MuiBox-root {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* Asegurar que el contenido dentro de los modales sea scrolleable */
+  .MuiPaper-root {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
+
+/* Prevenir zoom en inputs en iOS */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+  font-size: 16px !important;
+}
+
+/* Mejorar touch targets en iOS */
+button,
+.MuiButton-root,
+.MuiIconButton-root {
+  min-height: 44px;
+  min-width: 44px;
+}

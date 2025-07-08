@@ -22,8 +22,6 @@ const SplashDialog = ({
   DialogContentProps = {},
   audioRef: externalAudioRef
 }) => {
-  // Deshabilitar completamente el SplashDialog para evitar splash blanco
-  return null;
   const { getTranslation } = useLanguage();
   const [animationClass, setAnimationClass] = useState('');
   const [visible, setVisible] = useState(false);

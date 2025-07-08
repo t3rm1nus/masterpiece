@@ -104,7 +104,9 @@ const MaterialCoffeePage = () => {
         backgroundColor: '#fafafa',
         minHeight: '100vh',
         position: 'relative',
-        zIndex: 1
+        zIndex: 1,
+        overflow: 'visible',
+        WebkitOverflowScrolling: 'touch'
       }}
     >
       {/* Card principal con icono de café y color de fondo de café */}

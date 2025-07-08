@@ -1,6 +1,7 @@
 import { StrictMode, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/index.css'
+import './styles/ios-fixes.css'
 import App from './App.jsx'
 import { SplashScreen } from '@capacitor/splash-screen'
 

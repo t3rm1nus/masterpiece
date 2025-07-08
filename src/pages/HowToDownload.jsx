@@ -88,6 +88,8 @@ const HowToDownload = () => {
       minHeight: { xs: 'auto', lg: 'calc(100vh - 120px)' },
       boxSizing: 'border-box',
       zIndex: 2,
+      overflow: 'visible',
+      WebkitOverflowScrolling: 'touch',
       mt: { xs: 0, lg: 8 }, // 8*8=64px, suficiente para el menú fijo
     }}>
       <Paper elevation={3} sx={{
@@ -101,6 +103,8 @@ const HowToDownload = () => {
         paddingTop: { xs: 2, md: '64px' }, // Espacio arriba en desktop para evitar solapamiento con menú
         pb: { xs: 3, md: 5 }, // padding bottom extra para mostrar el borde inferior
         mb: { xs: 3, md: 5 }, // margen inferior extra para separar el card del borde de la página
+        overflow: 'visible',
+        WebkitOverflowScrolling: 'touch',
         mt: { xs: '64px', md: 0 }, // margen superior en móviles para evitar solapamiento con menú
       }}>
         {/* Imagen Pirate Bay dentro del card */}

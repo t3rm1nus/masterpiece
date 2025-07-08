@@ -276,9 +276,10 @@ const AppContent = () => {
           background: 'none',
           backdropFilter: 'none',
           overflowY: 'auto',
+          WebkitOverflowScrolling: 'touch',
           pointerEvents: 'none',
           pt: { xs: '-10px', md: '-10px' }, // 20px menos que antes, margen negativo para pegar aún más
-        }} aria-modal="true" role="dialog">
+        }} aria-modal="true" role="dialog" data-page="coffee">
           <Box sx={{ pointerEvents: 'auto', width: '100%' }}>
             <Suspense fallback={<LoadingFallback message={getTranslation('ui.states.loading_coffee', 'Cargando página de donación...')} />}>
               <LazyCoffeePage onClose={() => setIsClosingCoffee(true)} />
@@ -298,9 +299,10 @@ const AppContent = () => {
           background: 'none',
           backdropFilter: 'none',
           overflowY: 'auto',
+          WebkitOverflowScrolling: 'touch',
           pointerEvents: 'none',
           pt: { xs: '32px', md: '36px' }, // espacio superior aún más reducido en desktop
-        }} aria-modal="true" role="dialog">
+        }} aria-modal="true" role="dialog" data-page="howToDownload">
           <Box sx={{ pointerEvents: 'auto', width: '100%' }}>
             <Suspense fallback={<LoadingFallback message={getTranslation('ui.states.loading_how_to_download', 'Cargando instrucciones de descarga...')} />}>
               <LazyHowToDownload onClose={() => setIsClosingHowToDownload(true)} />

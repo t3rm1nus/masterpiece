@@ -45,7 +45,20 @@ El error `QuotaExceededError: The quota has been exceeded` ocurre específicamen
   - Detección automática de iOS para activar monitoreo enhanced
   - Manejo global de errores de storage a nivel de aplicación
 
-### 6. Archivos de backup renombrados
+### 6. Solucionados problemas específicos de iOS/Safari
+- **Problema**: Popup "Quiénes somos" no funcionaba en iPhone
+  - **Causa**: SplashDialog estaba deshabilitado con `return null;`
+  - **Solución**: Se rehabilitó el componente SplashDialog
+- **Problema**: No se podía hacer scroll en páginas "Donaciones" y "Cómo descargar" en iPhone
+  - **Causa**: Falta de CSS específico para scroll touch en iOS Safari
+  - **Solución**: Se agregó `ios-fixes.css` con `-webkit-overflow-scrolling: touch`
+  - **Ubicación**: `src/styles/ios-fixes.css`
+  - **Modificaciones**: 
+    - AppContent.jsx: agregados atributos `data-page` y `WebkitOverflowScrolling`
+    - HowToDownload.jsx: agregado soporte para scroll touch
+    - MaterialCoffeePage.jsx: habilitado overflow y scroll touch
+
+### 7. Archivos de backup renombrados
 - `src/store/useAppStore_new.js` → `src/store/useAppStore_new.js.bak`
 - Evita conflictos con archivos obsoletos que usaban `sessionStorage` directamente
 
