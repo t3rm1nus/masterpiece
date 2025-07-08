@@ -120,6 +120,22 @@ const MobileItemDetail = ({
     // Eliminada la inyección de estilos globales para h1 móvil
   }, [isClosing, selectedItem]);
 
+  // Fix específico para iPhone - asegurar scroll en detalle
+  React.useEffect(() => {
+    const isIPhone = /iPhone|iPod/.test(navigator.userAgent);
+    if (isIPhone && selectedItem) {
+      // Forzar propiedades de scroll en iPhone solo cuando hay item seleccionado
+      document.body.style.overflowY = 'auto';
+      document.body.style.webkitOverflowScrolling = 'touch';
+      
+      return () => {
+        // Limpiar al desmontar o cambiar
+        document.body.style.overflowY = '';
+        document.body.style.webkitOverflowScrolling = '';
+      };
+    }
+  }, [selectedItem]);
+
   // Botón de volver flotante, fijo respecto a la ventana y fuera del Box animado
   const BackButton = (
     showSections.backButton !== false && (onBack || goBackFromDetail) && (

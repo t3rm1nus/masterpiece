@@ -41,6 +41,22 @@ const MaterialCoffeePage = () => {
     });
   }, [trackSpecialPageView]);
 
+  // Fix específico para iPhone - asegurar scroll
+  useEffect(() => {
+    const isIPhone = /iPhone|iPod/.test(navigator.userAgent);
+    if (isIPhone) {
+      // Forzar propiedades de scroll en iPhone
+      document.body.style.overflowY = 'auto';
+      document.body.style.webkitOverflowScrolling = 'touch';
+      
+      return () => {
+        // Limpiar al desmontar
+        document.body.style.overflowY = '';
+        document.body.style.webkitOverflowScrolling = '';
+      };
+    }
+  }, []);
+
   // Ahora se renderiza en todas las pantallas (móvil Y desktop)
   const benefits = [
     {

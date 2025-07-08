@@ -76,3 +76,41 @@ button,
   min-height: 44px;
   min-width: 44px;
 }
+
+/* === FIXES ESPECÍFICOS PARA iOS/Safari === */
+
+/* Detección específica para iPhone (no iPad ni otros iOS) */
+@supports (-webkit-touch-callout: none) and (max-device-width: 480px) {
+  /* Solo iPhone - Fix para scroll en páginas específicas */
+  
+  /* Página de donaciones específica para iPhone */
+  .MuiContainer-root:has(.donation-title) {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* Página de descargas específica para iPhone */
+  .MuiPaper-root:has(img[alt="Pirate Bay Logo"]) {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* Vista de detalle específica para iPhone */
+  .slideInUp,
+  .slideOutDown {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: auto !important;
+    max-height: 100vh !important;
+  }
+  
+  /* Contenedores modales para iPhone */
+  [aria-modal="true"] {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+}

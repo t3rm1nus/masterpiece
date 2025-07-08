@@ -39,6 +39,9 @@ const SplashDialog = ({
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Detectar si es iPhone específicamente
+  const isIPhone = typeof window !== 'undefined' && /iPhone|iPod/.test(navigator.userAgent);
+
   // Volumen del audio
   useEffect(() => {
     if (audioRef.current) {
@@ -46,18 +49,43 @@ const SplashDialog = ({
     }
   }, [audio]);
 
-  // Control de reproducción
+  // Control de reproducción - mejorado para iPhone
   useEffect(() => {
     if (open && audioRef.current) {
       audioRef.current.currentTime = 0;
-      setTimeout(() => {
-        audioRef.current && audioRef.current.play && audioRef.current.play();
-      }, 50);
+      
+      if (isIPhone) {
+        // Para iPhone: necesita interacción del usuario primero
+        const playForIPhone = async () => {
+          try {
+            await audioRef.current.play();
+          } catch (error) {
+            // Si falla, esperar primer touch
+            const handleFirstTouch = async () => {
+              try {
+                if (audioRef.current) {
+                  await audioRef.current.play();
+                }
+              } catch (e) {
+                console.log('Error reproduciendo audio en iPhone:', e);
+              }
+              document.removeEventListener('touchstart', handleFirstTouch);
+            };
+            document.addEventListener('touchstart', handleFirstTouch, { once: true });
+          }
+        };
+        setTimeout(playForIPhone, 100);
+      } else {
+        // Para otros dispositivos (mantener comportamiento original)
+        setTimeout(() => {
+          audioRef.current && audioRef.current.play && audioRef.current.play();
+        }, 50);
+      }
     } else if (!open && audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
-  }, [open]);
+  }, [open, isIPhone]);
 
   // Animación de entrada/salida
   useEffect(() => {
@@ -272,7 +300,15 @@ const SplashDialog = ({
             </Box>
             {/* No actions or close button for desktop splash */}
           </Paper>
-          <audio ref={audioRef} src={audio} preload="auto" autoPlay loop />
+          <audio 
+            ref={audioRef} 
+            src={audio} 
+            preload="auto" 
+            autoPlay={!isIPhone}
+            loop
+            playsInline={isIPhone}
+            muted={false}
+          />
         </DialogContent>
       )}
     </Dialog>

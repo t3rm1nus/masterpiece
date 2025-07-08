@@ -23,6 +23,22 @@ const HowToDownload = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [isMobile]);
+
+  // Fix específico para iPhone - asegurar scroll
+  useEffect(() => {
+    const isIPhone = /iPhone|iPod/.test(navigator.userAgent);
+    if (isIPhone) {
+      // Forzar propiedades de scroll en iPhone
+      document.body.style.overflowY = 'auto';
+      document.body.style.webkitOverflowScrolling = 'touch';
+      
+      return () => {
+        // Limpiar al desmontar
+        document.body.style.overflowY = '';
+        document.body.style.webkitOverflowScrolling = '';
+      };
+    }
+  }, []);
   
   // Textos traducibles
   const texts = {
