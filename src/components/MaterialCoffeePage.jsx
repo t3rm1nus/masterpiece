@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   CardContent,
   Typography,
@@ -25,11 +25,21 @@ import {
   SentimentVeryDissatisfied as SadIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
+import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 
 const MaterialCoffeePage = () => {
   const { t, getTranslation } = useLanguage();
+  const { trackSpecialPageView } = useGoogleAnalytics();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+
+  // Google Analytics tracking para página de donaciones
+  useEffect(() => {
+    trackSpecialPageView('donations', {
+      page_title: 'Donaciones - Coffee Page',
+      source: 'main_navigation'
+    });
+  }, [trackSpecialPageView]);
 
   // Ahora se renderiza en todas las pantallas (móvil Y desktop)
   const benefits = [

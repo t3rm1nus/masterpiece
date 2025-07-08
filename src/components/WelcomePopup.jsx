@@ -1,12 +1,25 @@
 import React, { useEffect, useRef } from "react";
 import { useLanguage } from "../LanguageContext";
+import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
 import texts from "../data/texts.json";
 
 const WELCOME_POPUP_KEY = "masterpiece_welcome_popup_seen";
 
 export default function WelcomePopup({ open, onClose }) {
   const { language } = useLanguage();
+  const { trackPopupView } = useGoogleAnalytics();
   const overlayRef = useRef();
+
+  // Google Analytics tracking para popup de bienvenida
+  useEffect(() => {
+    if (open) {
+      trackPopupView('welcome_popup', {
+        popup_title: 'Quiénes Somos - Bienvenida',
+        language: language,
+        trigger: 'first_visit'
+      });
+    }
+  }, [open, trackPopupView, language]);
 
   // Detectar móvil solo en cliente
   const [isMobile, setIsMobile] = React.useState(false);

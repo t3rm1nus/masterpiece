@@ -1,11 +1,21 @@
 import React, { useEffect } from 'react';
 import { Box, Typography, Button, useTheme, useMediaQuery, Paper } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
+import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 
 const HowToDownload = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const { lang, t } = useLanguage();
+  const { trackSpecialPageView } = useGoogleAnalytics();
+
+  // Google Analytics tracking para página de descargas
+  useEffect(() => {
+    trackSpecialPageView('downloads', {
+      page_title: 'Cómo Descargar',
+      source: 'main_navigation'
+    });
+  }, [trackSpecialPageView]);
 
   // Scroll automático al inicio en móviles al montar
   useEffect(() => {

@@ -22,8 +22,8 @@ const SplashDialog = ({
   DialogContentProps = {},
   audioRef: externalAudioRef
 }) => {
-  const internalAudioRef = useRef(null);
-  const audioRef = externalAudioRef || internalAudioRef;
+  // Deshabilitar completamente el SplashDialog para evitar splash blanco
+  return null;
   const { getTranslation } = useLanguage();
   const [animationClass, setAnimationClass] = useState('');
   const [visible, setVisible] = useState(false);
@@ -178,7 +178,7 @@ const SplashDialog = ({
         ...PaperProps
       }}
       BackdropProps={{
-        sx: { background: 'rgba(0,0,0,0.65)', ...sx.backdrop }
+        sx: { background: 'rgba(0,0,0,1)', ...sx.backdrop }
       }}
       sx={{
         p: 0,

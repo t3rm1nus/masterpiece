@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppView } from '../store/useAppStore';
 import { useTitleSync } from '../hooks/useTitleSync';
+import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 import { loadRealData } from '../utils/dataLoader';
 import RecommendationsList from './RecommendationsList';
 import ThemeToggle from './ThemeToggle';
@@ -112,6 +113,9 @@ const HomePage = ({
   const { lang, t, getTranslation } = useLanguage();
   // Hook para sincronizar títulos automáticamente
   useTitleSync();
+  // Hook para Google Analytics
+  const { trackCategorySelection, trackSubcategorySelection, trackFilterUsage, trackItemDetailView } = useGoogleAnalytics();
+  
   const [splashOpenLocal, setSplashOpen] = useState(false);
   // Audios disponibles para el splash
   const splashAudios = [
@@ -349,6 +353,9 @@ const HomePage = ({
     updateFilteredItems
   ]);
   const handleCategoryClick = (category) => {
+    // Google Analytics tracking
+    trackCategorySelection(category, 'homepage');
+    
     setCategory(category);
     setActiveSubcategory(null);
     setActiveLanguage('all');
@@ -356,16 +363,26 @@ const HomePage = ({
     setSpanishCinemaActive(false);
     setSpanishSeriesActive(false);
     resetActivePodcastDocumentaryLanguage(); // Reset filtro idioma al cambiar categoría
-  };// Manejar toggle de cine español
+  };  // Manejar toggle de cine español
   const handleSpanishCinemaToggle = () => {
+    // Google Analytics tracking para filtro español
+    trackFilterUsage('spanish_cinema', !isSpanishCinemaActive ? 'enabled' : 'disabled', selectedCategory);
+    
     toggleSpanishCinema();
   };
 
   // Manejar toggle de masterpiece
   const handleMasterpieceToggle = () => {
+    // Google Analytics tracking para filtro masterpiece
+    trackFilterUsage('masterpiece', !isMasterpieceActive ? 'enabled' : 'disabled', selectedCategory);
+    
     toggleMasterpiece();
   };// Manejar clic en elemento
   const handleItemClick = (item) => {
+    // Google Analytics tracking para vista de detalle
+    const itemTitle = typeof item.title === 'object' ? (item.title.es || item.title.en || Object.values(item.title)[0]) : item.title;
+    trackItemDetailView(item.id, itemTitle, selectedCategory, 'homepage');
+    
     goToDetail(item);
   };  // Manejar cierre del detalle
   const handleCloseDetail = () => {
@@ -472,16 +489,13 @@ const HomePage = ({
 
   // Función de cierre animado para detalle
   const handleRequestClose = useCallback(() => {
-    console.log('[HomePage] handleRequestClose: INICIO (usuario pulsa volver)');
     setIsClosingDetail(true);
   }, []);
 
   // Efecto: desmontar el detalle solo después de la animación de salida (0.6s)
   useEffect(() => {
     if (isClosingDetail) {
-      console.log('[HomePage] isClosingDetail=true: Esperando animación de salida...');
       const timeout = setTimeout(() => {
-        console.log('[HomePage] Animación de salida terminada, desmontando detalle y llamando goBackFromDetail');
         goBackFromDetail();
         setIsClosingDetail(false);
       }, 600); // Duración igual que la animación (600ms)
@@ -542,13 +556,27 @@ const HomePage = ({
     window.history.scrollRestoration = 'manual';
   }
 
+  // Función wrapper para tracking de subcategorías desde desktop
+  const handleSubcategoryClick = (subcategory) => {
+    // Google Analytics tracking para subcategoría desde desktop
+    trackSubcategorySelection(selectedCategory, subcategory, 'desktop_bar');
+    
+    setActiveSubcategory(subcategory);
+  };
+
   // Callback unificado para cambios de categoría o subcategoría en móvil
   const handleCategoryOrSubcategoryChange = (category, subcategory) => {
     if (category !== selectedCategory) {
+      // Google Analytics tracking para categoría
+      trackCategorySelection(category, 'mobile_menu');
+      
       setCategory(category);
       setActiveSubcategory(null);
       setActiveLanguage('all');
     } else if (subcategory !== undefined) {
+      // Google Analytics tracking para subcategoría
+      trackSubcategorySelection(selectedCategory, subcategory, 'mobile_menu');
+      
       setActiveSubcategory(subcategory);
     }
   };
@@ -619,7 +647,7 @@ const HomePage = ({
                 selectedCategory={selectedCategory}
                 categorySubcategories={categorySubcategories}
                 activeSubcategory={activeSubcategory}
-                setActiveSubcategory={setActiveSubcategory}
+                setActiveSubcategory={handleSubcategoryClick}
                 renderChip={renderSubcategoryChip}
                 sx={subcategoryBarSx}
                 {...subcategoryBarProps}
@@ -672,7 +700,7 @@ const HomePage = ({
               onCategoryClick={handleCategoryClick}
               subcategories={categorySubcategories}
               activeSubcategory={activeSubcategory}
-              onSubcategoryClick={setActiveSubcategory}
+              onSubcategoryClick={handleSubcategoryClick}
               renderCategoryButton={renderCategoryButton}
               renderSubcategoryChip={renderSubcategoryChip}
               categorySelectSx={materialCategorySelectSx}
@@ -696,7 +724,7 @@ const HomePage = ({
                   onCategoryClick={handleCategoryClick}
                   subcategories={categorySubcategories}
                   activeSubcategory={activeSubcategory}
-                  onSubcategoryClick={setActiveSubcategory}
+                  onSubcategoryClick={handleSubcategoryClick}
                   renderCategoryButton={renderCategoryButton}
                   renderSubcategoryChip={renderSubcategoryChip}
                   categoryBarSx={categoryBarSx}
