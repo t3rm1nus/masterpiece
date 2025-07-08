@@ -70,7 +70,7 @@ const AppContent = () => {
 
   const handleWelcomeClose = () => {
     setWelcomeOpen(false);
-    safeStorage.setItem('welcomeShown', true);
+    safeStorage.setItem('welcomeShown', 'true');
   };
 
   // Scroll al top al volver a la vista 'home' desde 'detail' en desktop

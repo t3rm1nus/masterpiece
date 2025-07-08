@@ -20,33 +20,14 @@ import { createLanguageSlice } from './languageStore';
 import { createNavigationSlice } from './navigationStore';
 import { createDataSlice } from './dataStore';
 import { migrateAppStoreState } from '../utils/migrationHelpers';
-import { createPersistConfig, safeStorage } from '../utils/safeStorage';
 
 // --- LIMPIEZA DE PERSISTENCIA ANTES DE CREAR EL STORE ---
 if (typeof window !== 'undefined') {
   try {
     // Verificar y limpiar si es necesario
-    const debugInfo = safeStorage.getDebugInfo();
-    console.log('Storage status:', debugInfo);
-    
-    // Si el uso de storage es muy alto, hacer limpieza preventiva
-    if (parseFloat(debugInfo.usage) > 80) {
-      console.warn('Storage usage alto, limpiando preventivamente...');
-      safeStorage.cleanupStorage();
-    }
-    
-    const persisted = safeStorage.getState();
-    if (persisted && persisted.state) {
-      // Limpiar campos específicos que pueden causar problemas
-      persisted.state.selectedCategory = null;
-      if (persisted.state.scrollPosition) delete persisted.state.scrollPosition;
-      if (persisted.state.allRecommendations) delete persisted.state.allRecommendations;
-      if (persisted.state.filteredRecommendations) delete persisted.state.filteredRecommendations;
-      safeStorage.setState(persisted);
-    }
+    console.log('Storage inicial disponible');
   } catch (e) {
     console.warn('Error durante limpieza inicial:', e);
-    safeStorage.clearAll();
   }
 }
 
@@ -175,9 +156,6 @@ const useAppStore = create(
       partialize: (state) => ({
         // Solo persistir los campos relevantes
         // Si agregas un nuevo campo persistente, documenta aquí y en el slice correspondiente.
-        recommendations: state.recommendations,
-        categories: state.categories,
-        filteredItems: state.filteredItems,
         selectedCategory: state.selectedCategory,
         activeSubcategory: state.activeSubcategory,
         selectedSubcategory: state.selectedSubcategory,
@@ -186,9 +164,10 @@ const useAppStore = create(
         isMasterpieceActive: state.isMasterpieceActive,
         activePodcastLanguages: state.activePodcastLanguages,
         activeDocumentaryLanguages: state.activeDocumentaryLanguages,
-        title: state.title,
-        allData: state.allData,
-        // Puedes agregar más campos globales si lo deseas
+        // Campos básicos importantes
+        isDarkMode: state.isDarkMode,
+        language: state.language,
+        // Menos datos para evitar QuotaExceededError
       }),
     }
   )
