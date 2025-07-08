@@ -49,6 +49,8 @@ El error `QuotaExceededError: The quota has been exceeded` ocurre específicamen
 - **Problema**: Popup "Quiénes somos" no funcionaba en iPhone
   - **Causa**: SplashDialog estaba deshabilitado con `return null;`
   - **Solución**: Se rehabilitó el componente SplashDialog
+  - **Error adicional**: ReferenceError audioRef is not defined
+  - **Corrección**: Se agregó manejo de audioRef interno/externo con useRef
 - **Problema**: No se podía hacer scroll en páginas "Donaciones" y "Cómo descargar" en iPhone
   - **Causa**: Falta de CSS específico para scroll touch en iOS Safari
   - **Solución**: Se agregó `ios-fixes.css` con `-webkit-overflow-scrolling: touch`
@@ -57,6 +59,7 @@ El error `QuotaExceededError: The quota has been exceeded` ocurre específicamen
     - AppContent.jsx: agregados atributos `data-page` y `WebkitOverflowScrolling`
     - HowToDownload.jsx: agregado soporte para scroll touch
     - MaterialCoffeePage.jsx: habilitado overflow y scroll touch
+    - SplashDialog.jsx: corregida referencia audioRef con useRef interno/externo
 
 ### 7. Archivos de backup renombrados
 - `src/store/useAppStore_new.js` → `src/store/useAppStore_new.js.bak`

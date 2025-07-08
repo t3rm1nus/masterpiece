@@ -26,6 +26,10 @@ const SplashDialog = ({
   const [animationClass, setAnimationClass] = useState('');
   const [visible, setVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  
+  // Usar audioRef externo si se proporciona, sino crear uno interno
+  const internalAudioRef = useRef(null);
+  const audioRef = externalAudioRef || internalAudioRef;
 
   // Detecta si es móvil (SSR safe)
   useEffect(() => {
