@@ -124,8 +124,15 @@ const MaterialContentWrapper = ({
     !!loadingMore
   );
 
+  // Forzar overflow visible y stacking alto SOLO en iPhone/iPad
+  const isIphone = typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent);
+  const wrapperSxFinal = {
+    ...wrapperSx(props.sx, isMobile),
+    ...(isIphone ? { overflow: 'visible !important', zIndex: 50, position: 'relative' } : {}),
+  };
+
   return (
-    <Box sx={wrapperSx(props.sx, isMobile)} {...(() => {
+    <Box sx={wrapperSxFinal} {...(() => {
       // Eliminar props que no deben ir al DOM
       const { showCategoryBar, showSubcategoryBar, showCategorySelect, showSubcategoryChips, ...restProps } = props;
       return restProps;

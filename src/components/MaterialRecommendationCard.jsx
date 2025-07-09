@@ -108,16 +108,26 @@ const MaterialRecommendationCard = memo(({
       cursor: 'pointer',
       transition: 'all 0.3s ease',
       boxShadow: recommendation.masterpiece ? theme.shadows[4] : theme.shadows[2],
-      overflow: 'visible',
+      // SOLO para iPhone: quitar cualquier overflow y padding extra, y asegurar stacking
+      ...(isIphone
+        ? {
+            overflow: 'visible !important',
+            overflowY: 'visible !important',
+            position: 'relative',
+            zIndex: 20,
+            paddingTop: '0px',
+          }
+        : {
+            overflow: 'visible',
+            overflowY: 'visible',
+            position: 'relative',
+          }),
       border: recommendation.masterpiece ? '2px solid #ffd700' : 'none',
       background: recommendation.masterpiece
         ? (theme.palette.mode === 'dark' 
           ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
           : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
         : (sx["--card-gradient"] || getCategoryGradient(recommendation.category)),
-      position: 'relative',
-      overflowY: 'visible',
-      ...(isIphone ? { overflow: 'visible', overflowY: 'visible', paddingTop: '24px' } : {}),
       ...sx
     };
   };
@@ -171,13 +181,12 @@ const MaterialRecommendationCard = memo(({
     fontWeight: 500
   });
 
-  // Detectar iPhone/iPad para aplicar clase de fix visual solo en esos dispositivos
+  // Detectar iPhone/iPad para debug visual
   const isIphone = typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent);
-  const iosBadgeFixClass = isIphone ? 'mp-ios-badge-fix' : '';
 
   return (
     <UiCard
-      className={`mp-card mp-card--material ${iosBadgeFixClass} ${className}`}
+      className={`mp-card mp-card--material ${className}`}
       sx={cardSx(theme)}
       onClick={handleCardClick}
     >
@@ -188,23 +197,34 @@ const MaterialRecommendationCard = memo(({
           sx={{
             ...badgeSx(theme),
             position: 'absolute',
-            top: (() => {
-              if (typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent)) return '-22px';
-              return { xs: '-21px', md: 0 };
-            })(),
-            right: (() => {
-              if (typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent)) return '-22px';
-              return { xs: '-20px', md: 0 };
-            })(),
-            zIndex: 20,
-            pointerEvents: 'none',
-            '& .MuiBadge-badge': {
-              ...badgeSx(theme)['& .MuiBadge-badge'],
-              width: { xs: 38, sm: 32, md: 28 },
-              height: { xs: 38, sm: 32, md: 28 },
-              fontSize: { xs: '1.6rem', sm: '1.2rem', md: '1rem' },
-              animation: { xs: 'pulseGlow 2s ease-in-out infinite', md: 'none' },
-            }
+            // SOLO para iPhone: sobresalir más y asegurar stacking
+            ...(isIphone
+              ? {
+                  top: '-24px',
+                  right: '-24px',
+                  zIndex: 30,
+                  pointerEvents: 'none',
+                  '& .MuiBadge-badge': {
+                    ...badgeSx(theme)['& .MuiBadge-badge'],
+                    width: 40,
+                    height: 40,
+                    fontSize: '1.7rem',
+                    animation: 'pulseGlow 2s ease-in-out infinite',
+                  },
+                }
+              : {
+                  top: { xs: '-21px', md: 0 },
+                  right: { xs: '-20px', md: 0 },
+                  zIndex: 20,
+                  pointerEvents: 'none',
+                  '& .MuiBadge-badge': {
+                    ...badgeSx(theme)['& .MuiBadge-badge'],
+                    width: { xs: 38, sm: 32, md: 28 },
+                    height: { xs: 38, sm: 32, md: 28 },
+                    fontSize: { xs: '1.6rem', sm: '1.2rem', md: '1rem' },
+                    animation: { xs: 'pulseGlow 2s ease-in-out infinite', md: 'none' },
+                  },
+                }),
           }}
         />
       )}
