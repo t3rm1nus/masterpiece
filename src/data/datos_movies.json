@@ -40,7 +40,7 @@
         "es": "https://www.youtube.com/watch?v=xGPAuGUEIeg",
         "en": "https://www.youtube.com/watch?v=xGPAuGUEIeg"
       },
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 3,
@@ -124,7 +124,7 @@
         "es": "https://www.youtube.com/watch?v=BOgm6QTjOmw&t=1s",
         "en": "https://www.youtube.com/watch?v=hEJnMQG9ev8&t=1s"
       },
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 7,
@@ -145,7 +145,7 @@
         "es": "https://www.youtube.com/watch?v=S3Vx7TZ0yZw&t=5s",
         "en": "https://www.youtube.com/watch?v=XJMuhwVlca4&t=2s"
       },
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 8,
@@ -721,7 +721,7 @@
       },
       "director": "Todd Phillips",
       "year": 2009,
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 35,
@@ -742,7 +742,7 @@
       },
       "director": "Todd Phillips",
       "year": 2011,
-      "masterpiece": false
+      "masterpiece": true
     },
     {
       "id": 36,
@@ -2103,24 +2103,24 @@
     {
       "id": 99,
       "category": "movies",
-      "subcategory": "drama",
+      "subcategory": "romance",
       "title": {
-        "es": "Goodfellas",
-        "en": "Goodfellas"
+        "es": "Dirty Dancing",
+        "en": "Dirty Dancing"
       },
-      "description": {
-        "es": "Henry Hill narra su ascenso en la mafia neoyorquina desde joven. Riqueza, crimen y traición definen su vida en el mundo del hampa. Un retrato brutal del crimen organizado.",
-        "en": "Henry Hill tells the story of his rise in the New York mafia. Wealth, crime, and betrayal shape his life in the underworld. A raw portrait of organized crime."
+        "description": {
+        "es": "Durante unas vacaciones familiares, Baby conoce a Johnny,\nun instructor de baile rebelde. A través del baile y la pasión,\nrompen barreras sociales y descubren el valor\nde ser uno mismo frente a las expectativas de los demás.",
+        "en": "While on vacation, Baby meets Johnny,\na rebellious dance instructor. Through music and movement,\nthey challenge class divisions and learn to stand up\nfor love, identity, and freedom."
       },
-      "director": "Martin Scorsese",
-      "image": "/imagenes/peliculas/goodfellas.jpg",
-      "year": 1990,
-      "masterpiece": true,
+      "director": "Emile Ardolino",
+      "image": "/imagenes/peliculas/dirty-dancing.jpg",
+      "year": 1987,
       "trailer": {
-        "es": "https://www.youtube.com/watch?v=Shj-QWYDn_M",
-        "en": "https://www.youtube.com/watch?v=2ilzidi_J8Q"
-      }
-    },
+        "es": "https://www.youtube.com/watch?v=gf9Q0CzABnY",
+        "en": "https://www.youtube.com/watch?v=wcra0-0Gu4U"
+      },
+      "masterpiece": false
+    },    
     {
       "id": 100,
       "category": "movies",
@@ -5777,48 +5777,6 @@
         "en": "https://www.youtube.com/watch?v=2EBAVoN8L_U"
       },
       "masterpiece": true
-    },
-    {
-      "id": 273,
-      "category": "movies",
-      "subcategory": "romance",
-      "title": {
-        "es": "Dirty Dancing",
-        "en": "Dirty Dancing"
-      },
-        "description": {
-        "es": "Durante unas vacaciones familiares, Baby conoce a Johnny,\nun instructor de baile rebelde. A través del baile y la pasión,\nrompen barreras sociales y descubren el valor\nde ser uno mismo frente a las expectativas de los demás.",
-        "en": "While on vacation, Baby meets Johnny,\na rebellious dance instructor. Through music and movement,\nthey challenge class divisions and learn to stand up\nfor love, identity, and freedom."
-      },
-      "director": "Emile Ardolino",
-      "image": "/imagenes/peliculas/dirty-dancing.jpg",
-      "year": 1987,
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=gf9Q0CzABnY",
-        "en": "https://www.youtube.com/watch?v=wcra0-0Gu4U"
-      },
-      "masterpiece": false
-    },
-    {
-      "id": 274,
-      "category": "movies",
-      "subcategory": "thriller",
-      "title": {
-        "es": "Instinto Básico",
-        "en": "Basic Instinct"
-      },
-        "description": {
-        "es": "Un detective investiga el asesinato de una estrella de rock.\nLa principal sospechosa es Catherine Tramell, una escritora\nseductora e inteligente. Mientras avanza el caso,\nel deseo y la paranoia lo arrastran a un juego letal.",
-        "en": "A detective investigates the murder of a rock star.\nThe prime suspect: Catherine Tramell, a brilliant,\nseductive novelist. As obsession deepens,\nhe's drawn into a deadly web of desire and doubt."
-      },
-      "director": "Paul Verhoeven",
-      "image": "/imagenes/peliculas/basic-instinct.jpg",
-      "year": 1992,
-      "trailer": {
-        "es": "https://www.youtube.com/watch?v=R5CUFMJdL4E",
-        "en": "https://www.youtube.com/watch?v=Pz_FrkVUkOs"
-      },
-      "masterpiece": false
     }
     
   ]

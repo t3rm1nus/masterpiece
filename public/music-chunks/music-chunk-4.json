@@ -2566,7 +2566,7 @@
         "es": "Un álbum que fusiona el rap con atmósferas oscuras y soul melancólico. Zarman despliega una producción cuidada y letras profundas que reflexionan sobre la vida y las emociones. Es una obra introspectiva con fuerte carga emocional.",
         "en": "An album blending rap with dark atmospheres and melancholic soul. Zarman delivers careful production and deep lyrics reflecting on life and emotions. It is an introspective work with a strong emotional charge."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/zarman.jpg",
       "tags": [
         "album"
       ],
@@ -3128,7 +3128,7 @@
     {
       "id": 743,
       "category": "music",
-      "subcategory": "rock",
+      "subcategory": "pop",
       "artist": "The Beatles",
       "title": {
         "es": "With the Beatles",
@@ -3996,7 +3996,7 @@
         "es": "Quimeras fusiona ritmos innovadores con letras cargadas de metáforas y reflexiones sobre los sueños y las falsas esperanzas. Rapiphero muestra un lado más introspectivo y experimental, abriendo nuevas puertas dentro del rap contemporáneo.",
         "en": "Quimeras blends innovative rhythms with lyrics full of metaphors and reflections on dreams and false hopes. Rapiphero shows a more introspective and experimental side, opening new doors within contemporary rap."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/quimeras.png",
       "tags": [
         "album"
       ],

@@ -123,7 +123,7 @@
         "es": "Dúo emergente del rap hispano que combina letras urbanas con ritmos contundentes. Hablan de la calle, aspiraciones y cultura urbana. La producción destaca por su energía cruda y autenticidad contemporánea.",
         "en": "Emerging duo in Hispanic rap combining urban lyrics with powerful beats. They talk about street life, aspirations, and urban culture. Production stands out for raw energy and contemporary authenticity."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/javat.jpg",
       "tags": [
         "song"
       ],
@@ -431,7 +431,7 @@
         "es": "Producción cinematográfica con electrónica ambiental y texturas oscuras. Creado por artista audiovisual Steve Cutts, mezcla sonido y narrativa. Pone énfasis en atmósferas tensas y reflexivas.",
         "en": "Cinematic production with ambient electronics and dark textures. Created by audiovisual artist Steve Cutts, it blends sound and narrative. It emphasizes tense and reflective atmospheres."
       },
-      "image": "/imagenes/musica/brief.jpg",
+      "image": "/imagenes/musica/steve.png",
       "tags": [
         "song"
       ],
@@ -2545,7 +2545,7 @@
       },
       "image": "/imagenes/musica/battle.png",
       "tags": [
-        "battle"
+        "song"
       ],
       "youtube": "https://www.youtube.com/watch?v=l_4drTywsio&list=RDl_4drTywsio&start_radio=1",
       "spotify": "",
@@ -3168,27 +3168,27 @@
       "masterpiece": true,
       "year": "2023"
     },
-    {
+   {
       "id": 145,
       "category": "music",
       "subcategory": "rap",
-      "artist": "El Niño Snake",
+      "artist": "FOYONE",
       "title": {
-        "es": "Punki Rap",
-        "en": "Punki Rap"
+        "es": "RapSinCorte XXXIV",
+        "en": "RapSinCorte XXXIV"
       },
       "description": {
-        "es": "Álbum que fusiona el punk y el rap en una explosión de energía y protesta. El Niño Snake combina la crudeza del punk con la lírica directa del rap, generando un sonido único dentro de la escena underground. Letras cargadas de rebeldía y crítica social.",
-        "en": "Album that fuses punk and rap in an explosion of energy and protest. El Niño Snake blends punk's rawness with rap's direct lyrics, creating a unique sound within the underground scene. Lyrics filled with rebellion and social critique."
+        "es": "#RapSinCorte XXXIV es un episodio de freestyle de FOYONE donde demuestra su habilidad lírica y crítica social sin filtros. Este formato en vivo destaca por la espontaneidad y contundencia de sus rimas, convirtiéndose en un referente dentro de la escena underground española. Una muestra de talento y autenticidad.",
+        "en": "#RapSinCorte XXXIV is a freestyle episode by FOYONE showcasing his lyrical skill and unfiltered social criticism. This live format stands out for spontaneity and the strength of his rhymes, becoming a benchmark in the Spanish underground scene. A display of talent and authenticity."
       },
-      "image": "/imagenes/musica/punki.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
       "tags": [
-        "album"
+        "live"
       ],
-      "youtube": "https://www.youtube.com/watch?v=CutB5T8Temc&list=RDCutB5T8Temc&start_radio=1",
-      "spotify": "https://open.spotify.com/album/5bP0j1RmelVeoRv9CnpbKt",
-      "masterpiece": true,
-      "year": "2010"
+      "youtube": "https://www.youtube.com/watch?v=MsLXdEJwGFs&list=RDMsLXdEJwGFs&start_radio=1",
+      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "masterpiece": false,
+      "year": "2021"
     },
     {
       "id": 146,
@@ -3796,7 +3796,7 @@
         "es": "'Hardcore Funk' fusiona el rap con ritmos funk y la colaboración de PMD, mostrando la versatilidad y maestría lírica de KASE.O.",
         "en": "'Hardcore Funk' fuses rap with funk rhythms and features PMD, showcasing KASE.O's lyrical versatility and mastery."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "/imagenes/musica/funk.png",
       "tags": [
         "song"
       ],
@@ -3808,7 +3808,7 @@
     {
       "id": 174,
       "category": "music",
-      "subcategory": "metal",
+      "subcategory": "rap",
       "artist": "Noiseferatu ft. The Equation Beats",
       "title": {
         "es": "Estático",
@@ -4343,8 +4343,8 @@
         "en": "The Anuel Syndrome"
       },
       "description": {
-        "es": "‘El síndrome de Anuel’ es una crítica directa y afilada de Foyone a la industria musical y a la figura del toyaco Jicho Con una lírica mordaz y ritmo potente, Foyone cuestiona las realidades del éxito y la cultura urbana actual. Un tema que genera debate y refleja la realidad del rap español.",
-        "en": "'El síndrome de Anuel' is a direct and sharp critique by Foyone of the music industry and the figure of rap topyaco Jincho With biting lyrics and powerful rhythm, Foyone questions the realities of success and current urban culture. A track that sparks debate and reflects Spanish rap reality."
+        "es": "‘El síndrome de Anuel’ es una crítica directa y afilada de Foyone a la figura del toyaco Jicho Con una lírica mordaz y ritmo potente, Foyone cuestiona las realidades del éxito y la cultura urbana actual. Un tema que genera debate y refleja la realidad del rap español.",
+        "en": "'El síndrome de Anuel' is a direct and sharp critique by Foyone of rap topyaco's Jincho With biting lyrics and powerful rhythm, Foyone questions the realities of success and current urban culture. A track that sparks debate and reflects Spanish rap reality."
       },
       "image": "/imagenes/musica/anuel.png",
       "tags": [
@@ -4377,27 +4377,28 @@
       "masterpiece": true,
       "year": "2011"
     },
-    {
+     {
       "id": 200,
       "category": "music",
-      "subcategory": "rap",
-      "artist": "FOYONE",
+      "subcategory": "pop",
+      "artist": "Billie Eilish",
       "title": {
-        "es": "RapSinCorte XXXIV",
-        "en": "RapSinCorte XXXIV"
+        "es": "Hit Me Hard and Soft",
+        "en": "Hit Me Hard and Soft"
       },
       "description": {
-        "es": "#RapSinCorte XXXIV es un episodio de freestyle de FOYONE donde demuestra su habilidad lírica y crítica social sin filtros. Este formato en vivo destaca por la espontaneidad y contundencia de sus rimas, convirtiéndose en un referente dentro de la escena underground española. Una muestra de talento y autenticidad.",
-        "en": "#RapSinCorte XXXIV is a freestyle episode by FOYONE showcasing his lyrical skill and unfiltered social criticism. This live format stands out for spontaneity and the strength of his rhymes, becoming a benchmark in the Spanish underground scene. A display of talent and authenticity."
+        "es": "“Hit Me Hard and Soft” es un álbum recopilatorio de Billie Eilish que incluye remixes, colaboraciones y temas inéditos que muestran diferentes facetas de su estilo musical. Presenta una mezcla dinámica entre sonidos suaves y ritmos contundentes, reflejando su versatilidad artística.",
+        "en": "“Hit Me Hard and Soft” is a Billie Eilish compilation album including remixes, collaborations, and unreleased tracks that show different facets of her musical style. It presents a dynamic mix between soft sounds and powerful beats, reflecting her artistic versatility."
       },
-      "image": "https://i.scdn.co/image/ab67616d0000b273f850a821776606bd8409154c",
+      "image": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
       "tags": [
-        "live"
+        "album"
       ],
-      "youtube": "https://www.youtube.com/watch?v=MsLXdEJwGFs&list=RDMsLXdEJwGFs&start_radio=1",
-      "spotify": "https://open.spotify.com/album/4UDxfG6GgtDMLQmyQa4opa",
+      "youtube": "https://www.youtube.com/watch?v=fcX8qE6c9Do&list=RDfcX8qE6c9Do&start_radio=1",
+      "spotify": "https://open.spotify.com/album/7aJuG4TFXa2hmE4z1yxc3n",
       "masterpiece": false,
-      "year": "2021"
+      "year": "2024"
     }
+    
   ]
 }
