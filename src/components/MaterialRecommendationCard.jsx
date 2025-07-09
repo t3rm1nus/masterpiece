@@ -98,24 +98,29 @@ const MaterialRecommendationCard = memo(({
     else goToDetail(recommendation);
   };
 
-  const cardSx = theme => ({
-    maxWidth: { xs: '88vw', md: 245 },
-    minWidth: { xs: 0, md: 200 },
-    width: { xs: '82vw', md: undefined },
-    margin: '0 auto 12px auto',
-    cursor: 'pointer',
-    transition: 'all 0.3s ease',
-    boxShadow: recommendation.masterpiece ? theme.shadows[4] : theme.shadows[2],
-    overflow: 'visible',
-    border: recommendation.masterpiece ? '2px solid #ffd700' : 'none',
-    background: recommendation.masterpiece
-      ? (theme.palette.mode === 'dark' 
-        ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
-        : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
-      : (sx["--card-gradient"] || getCategoryGradient(recommendation.category)),
-    position: 'relative',
-    ...sx
-  });
+  const cardSx = theme => {
+    const isIphone = typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent);
+    return {
+      maxWidth: { xs: '88vw', md: 245 },
+      minWidth: { xs: 0, md: 200 },
+      width: { xs: '82vw', md: undefined },
+      margin: '0 auto 12px auto',
+      cursor: 'pointer',
+      transition: 'all 0.3s ease',
+      boxShadow: recommendation.masterpiece ? theme.shadows[4] : theme.shadows[2],
+      overflow: 'visible',
+      border: recommendation.masterpiece ? '2px solid #ffd700' : 'none',
+      background: recommendation.masterpiece
+        ? (theme.palette.mode === 'dark' 
+          ? 'linear-gradient(135deg, #2a2600 60%, #333300 100%)'
+          : 'linear-gradient(135deg, #fffbe6 60%, #ffe066 100%)')
+        : (sx["--card-gradient"] || getCategoryGradient(recommendation.category)),
+      position: 'relative',
+      overflowY: 'visible',
+      ...(isIphone ? { overflow: 'visible', overflowY: 'visible', paddingTop: '24px' } : {}),
+      ...sx
+    };
+  };
 
   const badgeSx = theme => ({
     position: 'absolute',
