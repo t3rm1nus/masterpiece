@@ -179,8 +179,16 @@ const MaterialRecommendationCard = memo(({
           sx={{
             ...badgeSx(theme),
             position: 'absolute',
-            top: { xs: '-21px', md: 0 },
-            right: { xs: '-20px', md: 0 },
+            top: (() => {
+              if (typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent)) return '-22px';
+              return { xs: '-21px', md: 0 };
+            })(),
+            right: (() => {
+              if (typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent)) return '-22px';
+              return { xs: '-20px', md: 0 };
+            })(),
+            zIndex: 20,
+            pointerEvents: 'none',
             '& .MuiBadge-badge': {
               ...badgeSx(theme)['& .MuiBadge-badge'],
               width: { xs: 38, sm: 32, md: 28 },

@@ -176,7 +176,7 @@ const MobileItemDetail = ({
           sx={{
             position: 'relative',
             padding: '16px',
-            width: { xs: 'calc(100vw - 40px)', sm: '96vw' },
+            width: { xs: '100%', sm: '96vw' },
             margin: '0 auto',
             marginTop: 0,
             marginBottom: { xs: '72px', sm: 0 }, // margen inferior extra en móvil
