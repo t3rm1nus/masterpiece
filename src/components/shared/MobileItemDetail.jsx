@@ -7,7 +7,7 @@ import { ensureString } from '../../utils/stringUtils';
 import UiCard from '../ui/UiCard';
 import { MobileActionButtons } from './ItemActionButtons';
 import MasterpieceBadge from './MasterpieceBadge';
-import { applyDetailScrollFixForIPhone, cleanupScrollFixesForIPhone } from '../../utils/iPhoneScrollFix';
+// Eliminado fix iPhone scroll
 
 /**
  * MobileItemDetail
@@ -121,18 +121,7 @@ const MobileItemDetail = ({
     // Eliminada la inyección de estilos globales para h1 móvil
   }, [isClosing, selectedItem]);
 
-  // Fix específico para iPhone - asegurar scroll en detalle
-  React.useEffect(() => {
-    if (selectedItem) {
-      // Aplicar fixes específicos para iPhone usando la utilidad
-      applyDetailScrollFixForIPhone();
-      
-      return () => {
-        // Limpiar al desmontar o cambiar
-        cleanupScrollFixesForIPhone();
-      };
-    }
-  }, [selectedItem]);
+  // Eliminado fix específico para iPhone, el scroll será nativo universal
 
   // Botón de volver flotante, fijo respecto a la ventana y fuera del Box animado
   const BackButton = (
@@ -168,42 +157,49 @@ const MobileItemDetail = ({
       {BackButton}
       <Box
         sx={{
-          position: 'relative',
-          minHeight: '100vh',
-          padding: '16px',
-          pt: { xs: '20px', sm: '36px' },
-          overflowX: { xs: 'hidden', sm: undefined }, // Anula scroll horizontal en móviles
-          // Específico para iPhone - asegurar scroll en detalle
-          overflowY: { xs: 'auto', sm: 'visible' },
-          WebkitOverflowScrolling: { xs: 'touch', sm: 'auto' },
-          height: { xs: '100%', sm: 'auto' },
-          maxHeight: { xs: '100%', sm: 'none' },
-          ...sx
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+          height: { xs: '100dvh', sm: 'auto' },
+          width: '100%',
+          padding: { xs: '16px 0 0 0', sm: '36px 0 0 0' }, // solo padding arriba y lados
+          boxSizing: 'border-box',
+          overflowY: 'auto',
+          WebkitOverflowScrolling: 'touch',
         }}
-        style={{ ...style }}
-        className={isClosing ? 'slideOutDown' : 'slideInUp'}
-        onAnimationEnd={handleAnimationEnd}
-        {...domSafeProps}
       >
-        {/* Tarjeta principal */}
         <UiCard
+          className={
+            'item-detail-mobile-card ' + (isClosing ? 'slideOutDown' : 'slideInUp')
+          }
           sx={{
-            maxWidth: { xs: 340, sm: 500, md: 600 },
+            position: 'relative',
+            padding: '16px',
             width: { xs: 'calc(100vw - 40px)', sm: '96vw' },
             margin: '0 auto',
             marginTop: 0,
-            borderRadius: '16px',
-            boxShadow: theme?.shadows?.[8],
+            marginBottom: { xs: '72px', sm: 0 }, // margen inferior extra en móvil
             border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
             background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
-            position: 'relative',
-            overflowX: { xs: 'visible', sm: undefined },
-            // Específico para iPhone - card scrolleable
-            overflowY: { xs: 'auto', sm: 'visible' },
-            WebkitOverflowScrolling: { xs: 'touch', sm: 'auto' },
-            height: { xs: 'auto', sm: 'auto' },
-            maxHeight: { xs: 'calc(100vh - 120px)', sm: 'none' },
+            // --- iPhone/iOS override hacks ---
+            overflow: 'visible !important',
+            overflowY: 'visible !important',
+            WebkitOverflowScrolling: 'touch',
+            maxHeight: 'none !important',
+            height: 'auto !important',
+            // ---
+            ...sx
           }}
+          style={{
+            overflow: 'visible',
+            overflowY: 'visible',
+            maxHeight: 'none',
+            height: 'auto',
+            ...style
+          }}
+          onAnimationEnd={handleAnimationEnd}
+          {...domSafeProps}
         >
           {/* Badge de masterpiece en la esquina del detalle */}
           {selectedItem.masterpiece && (
@@ -213,6 +209,7 @@ const MobileItemDetail = ({
               absolute={true}
               size={40}
               sx={{
+                position: 'absolute',
                 top: -17,
                 right: -18,
                 zIndex: 1201,
@@ -221,6 +218,7 @@ const MobileItemDetail = ({
                 border: '2.5px solid #111',
                 animation: 'pulseGlow 2s ease-in-out infinite',
                 transition: 'box-shadow 0.3s',
+                pointerEvents: 'none',
               }}
             />
           )}
@@ -239,24 +237,42 @@ const MobileItemDetail = ({
                 />
             )}
           </Box>
-          <CardContent sx={{ padding: '24px', position: 'relative' }}>
+          {/* CardContent principal: NO overflow ni maxHeight aquí, y forzar overflow: visible en mobile para el badge */}
+          <CardContent
+            sx={{
+              padding: { xs: 0, sm: '24px' },
+              position: 'relative',
+              overflow: 'visible !important',
+              overflowY: 'visible !important',
+              maxHeight: 'none !important',
+              height: 'auto !important',
+            }}
+          >
             {/* Título */}
-            {showSections.title !== false && (
-              <Typography 
-                variant="h4" 
-                component="h1" 
-                gutterBottom
-                sx={{ 
-                  fontWeight: { xs: 400, sm: 'bold' }, // 400 en móviles, bold en desktop
-                  fontSize: { xs: '1.5rem', sm: '2rem' },
-                  textAlign: 'center',
-                  marginBottom: '16px',
-                  margin: { xs: '4px 0 32px 7px', sm: undefined },
-                }}
-              >
-                {title}
-              </Typography>
-            )}
+          {showSections.title !== false && (
+            <Typography
+              variant="h4"
+              component="h1"
+              gutterBottom
+              sx={{
+                width: typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent) ? undefined : '90%',
+                mx: 'auto',
+                fontWeight: 400,
+                fontSize: '1.5rem',
+                textAlign: 'center',
+                margin: typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent) ? undefined : '4px 0 0px 7px',
+                position: 'relative',
+                zIndex: 1,
+                background: 'transparent',
+                overflow: 'visible',
+                borderRadius: 0,
+                boxShadow: 'none',
+                color: 'inherit',
+              }}
+            >
+              {title}
+            </Typography>
+          )}
             {/* Chips de categoría y subcategoría */}
             {showSections.category !== false && (
               renderCategory

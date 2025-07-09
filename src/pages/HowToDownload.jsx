@@ -116,13 +116,12 @@ const HowToDownload = () => {
         borderRadius: 3,
         boxSizing: 'border-box',
         position: 'relative',
-        paddingTop: { xs: 2, md: '64px' }, // Espacio arriba en desktop para evitar solapamiento con menú
-        pb: { xs: 3, md: 5 }, // padding bottom extra para mostrar el borde inferior
-        mb: { xs: 3, md: 5 }, // margen inferior extra para separar el card del borde de la página
+        paddingTop: { xs: 2, md: '64px' },
+        pb: { xs: 3, md: 5 },
+        mb: { xs: 3, md: 5 },
         overflow: 'visible',
         WebkitOverflowScrolling: 'touch',
-        mt: { xs: '64px', md: 0 }, // margen superior en móviles para evitar solapamiento con menú
-        // Específico para iPhone - Paper scrolleable
+        mt: { xs: '36px', md: 0 }, // margen superior en móviles reducido a 36px
         overflowY: { xs: 'auto', md: 'visible' },
         height: { xs: 'auto', md: 'auto' },
         maxHeight: { xs: 'calc(100vh - 120px)', md: 'none' },
@@ -162,15 +161,17 @@ const HowToDownload = () => {
         </Box>
         <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step2[lang]}</Typography>
         <Typography variant="body1" sx={{ mb: 2 }}>{texts.step2desc[lang]}</Typography>
-        <Button
-          variant="contained"
-          color="primary"
-          href="https://piratebayproxy.info/"
-          target="_blank"
-          sx={{ fontWeight: 600, mb: 2, display: 'inline-block', mx: { xs: 'auto', md: 0 }, minWidth: 'unset', width: 'auto', px: 2, py: 1, fontSize: '1rem', '&:hover': { color: '#111' } }}
-        >
-          {texts.piratebay[lang]}
-        </Button>
+        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', mb: 2 }}>
+          <Button
+            variant="contained"
+            color="primary"
+            href="https://piratebayproxy.info/"
+            target="_blank"
+            sx={{ fontWeight: 600, mb: 0, minWidth: 'unset', width: 'auto', px: 2, py: 1, fontSize: '1rem', '&:hover': { color: '#111' } }}
+          >
+            {texts.piratebay[lang]}
+          </Button>
+        </Box>
         <Box sx={{ width: { xs: '80%', sm: '60%', md: '50%' }, mx: 'auto', mb: 2, borderRadius: 2, overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
           <img
             src="/imagenes/descargas/pirate1.jpg"

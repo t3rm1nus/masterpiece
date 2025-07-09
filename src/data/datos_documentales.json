@@ -1159,6 +1159,26 @@
       "idioma": "es",
       "link": "https://www.youtube.com/watch?v=fzwT1GGY0Ds",
       "autor": "Cosima Dannoritze"
+    },
+    {
+      "id": 59,
+      "title": {
+        "es": "Skinhead Attitude",
+        "en": "Skinhead Attitude"
+      },
+      "description": {
+        "es": "Skinhead Attitude explora el origen, la evolución y la fragmentación del movimiento skinhead desde sus raíces multiculturales en los años 60 hasta sus derivaciones extremistas. El documental examina cómo una subcultura nacida de la clase obrera se vio dividida entre tendencias antirracistas y neonazis. Incluye testimonios de skinheads de todo el espectro ideológico, revelando tensiones internas y contradicciones del movimiento.",
+        "en": "Skinhead Attitude traces the roots, evolution, and ideological splits within the skinhead movement, from its multicultural beginnings in the 1960s to its extremist offshoots. The documentary examines how a working-class subculture became divided between anti-racist and neo-Nazi factions. Through candid interviews, it exposes the contradictions and inner conflicts of a misunderstood global phenomenon."
+      },
+      "image": "/imagenes/documentales/skinhead.jpg",
+      "category": "documentales",
+      "subcategory": "politics",
+      "duration": "1h 28 min",
+      "episodes": 1,
+      "masterpiece": true,
+      "idioma": "en",
+      "link": "https://www.youtube.com/watch?v=fzwT1GGY0Ds",
+      "autor": "Daniel Schweizer"
     }
   ]
 }

@@ -245,20 +245,20 @@ const AppContent = () => {
           justifyContent: 'center',
           background: 'none',
           backdropFilter: 'none',
-          overflowY: 'auto',
+          // CLAVE: Permitir que el badge sobresalga en mobile
+          overflow: { xs: 'visible', md: 'auto' },
           WebkitOverflowScrolling: 'touch', // Añadido para iPhone
           pointerEvents: 'none',
           pt: { xs: '72px', md: '88px' },
-          // Específico para iPhone - fix scroll
           height: { xs: '100vh', md: 'auto' },
-          maxHeight: { xs: '100vh', md: 'none' },
+          maxHeight: { xs: 'none', md: 'none' },
         }} aria-modal="true" role="dialog">
-          <Box sx={{ pointerEvents: 'auto', width: '100%', 
-            // Específico para iPhone - contenedor interno con scroll
-            overflowY: { xs: 'auto', md: 'visible' },
+          <Box sx={{ pointerEvents: 'auto', width: '100%',
+            // CLAVE: Permitir que el badge sobresalga en mobile
+            overflow: { xs: 'visible', md: 'visible' },
             WebkitOverflowScrolling: { xs: 'touch', md: 'auto' },
             height: { xs: '100%', md: 'auto' },
-            maxHeight: { xs: '100%', md: 'none' },
+            maxHeight: { xs: 'none', md: 'none' },
           }}>
             {selectedItem ? (
               <UnifiedItemDetail

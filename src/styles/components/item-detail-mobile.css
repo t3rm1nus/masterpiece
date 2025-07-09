@@ -7,7 +7,7 @@
     margin-top: 0 !important;
     margin-bottom: 24px !important;
     padding: 0 !important;
-    overflow: hidden !important;
+    overflow: visible !important;
     background: #fff !important;
     background-image: none !important;
   }
