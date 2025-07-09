@@ -1,3 +1,16 @@
+/* Fix para que el badge de masterpiece sobresalga en iPhone/iPad en los listados */
+.mp-ios-badge-fix,
+.mp-ios-badge-fix .MuiCardContent-root,
+.mp-ios-badge-fix .MuiCard-root,
+.mp-ios-badge-fix .mp-card--material {
+  overflow: visible !important;
+  z-index: 30 !important;
+}
+
+.mp-ios-badge-fix .MuiBadge-root,
+.mp-ios-badge-fix .MuiBadge-badge {
+  z-index: 40 !important;
+}
 /* Archivo movido desde src/index.css a src/styles/index.css el 2025-06-27 */
 
 :root {

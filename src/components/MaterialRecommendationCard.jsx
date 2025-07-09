@@ -171,9 +171,13 @@ const MaterialRecommendationCard = memo(({
     fontWeight: 500
   });
 
+  // Detectar iPhone/iPad para aplicar clase de fix visual solo en esos dispositivos
+  const isIphone = typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent);
+  const iosBadgeFixClass = isIphone ? 'mp-ios-badge-fix' : '';
+
   return (
     <UiCard
-      className={`mp-card mp-card--material ${className}`}
+      className={`mp-card mp-card--material ${iosBadgeFixClass} ${className}`}
       sx={cardSx(theme)}
       onClick={handleCardClick}
     >
