@@ -22,23 +22,27 @@ export default function HomeLayout() {
 
   // Actualizar currentView cuando cambie la ruta entre overlays
   useEffect(() => {
+    // Solo sincroniza el estado global si NO estamos en una animación de salida
+    if (isOverlayExiting || isDetailExiting) return;
+
     if (matchPath('/donaciones', location.pathname)) {
       goToCoffee();
     } else if (matchPath('/como-descargar', location.pathname)) {
       goToHowToDownload();
     } else if (matchPath('/detalle/:id', location.pathname)) {
       // goToDetail se maneja automáticamente
-    } else {
-      // Si no es ninguna ruta de overlay, volver a home
+    } else if (location.pathname === '/') {
       goHome();
     }
-  }, [location.pathname, goToCoffee, goToHowToDownload, goHome]);
+    // No hacer nada si la ruta no coincide con ninguna de las anteriores
+  }, [location.pathname, goToCoffee, goToHowToDownload, goHome, isOverlayExiting, isDetailExiting]);
 
   useEffect(() => {
     const onOverlayDetailExit = () => {
       setIsDetailExiting(true);
     };
     const onOverlayExit = () => {
+      console.log('[HomeLayout] Evento overlay-exit recibido (listener)');
       setIsOverlayExiting(true);
     };
     window.addEventListener('overlay-detail-exit', onOverlayDetailExit);
@@ -58,9 +62,10 @@ export default function HomeLayout() {
 
   // Callback para cuando termina la animación de salida del overlay
   const handleOverlayExited = () => {
+    console.log('[HomeLayout] handleOverlayExited llamado - animación terminada');
     setIsOverlayExiting(false);
-    // Navegar directamente a la home en lugar de usar navigate(-1)
-    navigate('/');
+    // Navegar a home usando replace para evitar bucles de historial
+    navigate('/', { replace: true });
   };
 
   const handleSplashOpen = (audio) => {
@@ -125,36 +130,39 @@ export default function HomeLayout() {
             transition: 'box-shadow 0.3s',
           }}
           onAnimationEnd={() => {
+            console.log('[HomeLayout] onAnimationEnd llamado', { isOverlayExiting, className: isOverlayExiting ? 'super-fade-out-down' : overlayAnim });
             if (isOverlayExiting) {
               handleOverlayExited();
             }
           }}
         >
-          {/* Botón de volver para páginas que no son detalle */}
-          {!matchPath('/detalle/:id', location.pathname) && (
-            <Fab
-              color="primary"
-              aria-label="volver"
-              onClick={() => {
-                // Disparar evento para animación de salida
-                window.dispatchEvent(new CustomEvent('overlay-exit'));
-              }}
-              sx={{
-                position: 'fixed',
-                top: isMobile ? 63 : 24,
-                left: 16,
-                zIndex: 1300,
-                backgroundColor: '#1976d2',
-                '&:hover': {
-                  backgroundColor: '#1565c0',
-                }
-              }}
-            >
-              <ArrowBackIcon />
-            </Fab>
-          )}
-          {/* Wrapper para alinear el contenido principal, sin botón volver */}
-          <div style={{ position: 'relative', maxWidth: 900, margin: '0 auto' }} />
+          {/* Wrapper para alinear el contenido principal con botón volver */}
+          <div style={{ position: 'relative', maxWidth: 900, margin: '0 auto', paddingTop: isMobile ? 0 : 24 }}>
+            {/* Botón de volver para páginas que no son detalle - posicionado relativo al contenido */}
+            {!matchPath('/detalle/:id', location.pathname) && (
+              <Fab
+                color="primary"
+                aria-label="volver"
+                onClick={() => {
+                  console.log('[HomeLayout] Botón volver clickeado (azul)');
+                  // Disparar evento para animación de salida
+                  window.dispatchEvent(new CustomEvent('overlay-exit'));
+                }}
+                                  sx={{
+                    position: 'absolute',
+                    top: isMobile ? 16 : 50,
+                    left: isMobile ? 16 : 0,
+                    zIndex: 1300,
+                    backgroundColor: '#1976d2',
+                    '&:hover': {
+                      backgroundColor: '#1565c0',
+                    }
+                  }}
+              >
+                <ArrowBackIcon />
+              </Fab>
+            )}
+          </div>
           {/* Renderizar UnifiedItemDetail manualmente para pasarle isExiting y onExited solo en detalle */}
           {matchPath('/detalle/:id', location.pathname) ? (
             <UnifiedItemDetail isExiting={isDetailExiting} onExited={handleDetailExited} />

@@ -127,6 +127,11 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
       if (onRequestClose) {
         onRequestClose();
       }
+      
+      // Para desktop, también cambiar la clase de animación inmediatamente
+      if (!isMobile) {
+        setCardAnim('slideOutDownFast');
+      }
     } else {
       console.log('[UnifiedItemDetail] triggerExitAnimation: ya está saliendo, ignorado');
     }
@@ -267,8 +272,8 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
             ...(isMasterpiece ? {} : { background: gradientBg })
           }}
           onAnimationEnd={e => {
-            console.log('[UnifiedItemDetail] onAnimationEnd', { isExiting, cardAnim });
-            if (isExiting && cardAnim === 'slideOutDownFast' && typeof onExited === 'function') {
+            console.log('[UnifiedItemDetail] onAnimationEnd', { isExiting, cardAnim, internalClosing });
+            if ((isExiting || internalClosing) && cardAnim === 'slideOutDownFast' && typeof onExited === 'function') {
               console.log('[UnifiedItemDetail] Animación de salida terminada, llamando a onExited');
               onExited();
             }
@@ -409,7 +414,7 @@ const styles = {
     padding: 0,
     margin: 0,
     overflowY: 'auto',
-    marginTop: '-42px',
+    paddingTop: '80px', // Espacio para el menú superior en desktop
   }),
   desktopWrapper: {
     display: 'flex',
@@ -418,7 +423,7 @@ const styles = {
     justifyContent: 'center',
     gap: 40,
     maxWidth: 1000,
-    margin: '80px auto 0 auto', // Aumenta la distancia superior
+    margin: '20px auto 0 auto', // Reducir la distancia superior ya que el paddingTop del page lo maneja
     padding: '32px 24px',
     background: 'rgba(255,255,255,0.03)',
     borderRadius: 24,

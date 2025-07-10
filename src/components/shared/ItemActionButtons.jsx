@@ -3,23 +3,18 @@ import { Box, useTheme } from '@mui/material';
 import { PlayArrow as PlayArrowIcon } from '@mui/icons-material';
 import { getCategoryColor } from '../../utils/categoryPalette';
 import UiButton from '../ui/UiButton';
+import { useNavigate } from 'react-router-dom';
 
-// Función helper para manejar la navegación con cierre de detalle en móvil
+// Función helper para manejar la navegación con cierre de detalle
 const handleNavigationWithDetailClose = (navigationFunction) => {
-  // Verificar si estamos en móvil y hay un detalle abierto
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 900;
-  if (isMobile) {
-    console.log('[ItemActionButtons] Navegación en móvil, cerrando detalle primero');
-    // Disparar evento para cerrar el detalle con animación
-    window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
-    // Esperar a que termine la animación antes de navegar
-    setTimeout(() => {
-      navigationFunction();
-    }, 500);
-  } else {
-    // En desktop, navegar directamente
+  console.log('[ItemActionButtons] Navegación con cierre de detalle');
+  // Disparar evento para cerrar el detalle con animación (tanto móvil como desktop)
+  window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+  // Esperar a que termine la animación antes de navegar
+  setTimeout(() => {
+    console.log('[ItemActionButtons] Ejecutando navegación después del timeout');
     navigationFunction();
-  }
+  }, 500);
 };
 
 // =============================================
@@ -171,6 +166,11 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
 }
 
 export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHowToDownload }) {
+  const navigate = useNavigate();
+  console.log('[DesktopActionButtons] Renderizando con:', { 
+    category: selectedItem?.category, 
+    goToHowToDownload: typeof goToHowToDownload 
+  });
   const theme = useTheme();
   const getButtonSx = {
     mt: 2,
@@ -295,9 +295,10 @@ export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHo
           color="primary"
           startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
           onClick={() => {
-            if (typeof goToHowToDownload === 'function') {
-              handleNavigationWithDetailClose(goToHowToDownload);
-            }
+            window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+            setTimeout(() => {
+              navigate('/como-descargar');
+            }, 500);
           }}
           sx={getButtonSx}
         >

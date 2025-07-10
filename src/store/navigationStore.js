@@ -40,6 +40,20 @@ export const createNavigationSlice = (set, get) => ({
     }
   },
   goToHome: () => set({ currentView: 'home', selectedItem: null }),
-  goToCoffee: () => set({ currentView: 'coffee' }),
-  goToHowToDownload: () => set({ currentView: 'howToDownload' }),
+  goToCoffee: () => {
+    set({ currentView: 'coffee' });
+    // Actualizar la URL para que sea navegable en desktop
+    if (typeof window !== 'undefined' && window.history) {
+      window.history.pushState({}, '', '/donaciones');
+    }
+  },
+  goToHowToDownload: () => {
+    console.log('[navigationStore] goToHowToDownload ejecutado');
+    set({ currentView: 'howToDownload' });
+    // Actualizar la URL para que sea navegable en desktop
+    if (typeof window !== 'undefined' && window.history) {
+      console.log('[navigationStore] Actualizando URL a /como-descargar');
+      window.history.pushState({}, '', '/como-descargar');
+    }
+  },
 });

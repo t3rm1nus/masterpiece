@@ -215,6 +215,18 @@ const HomePage = ({
   console.log('[HomePage] selectedItem:', selectedItem);
   console.log('[HomePage] currentView:', currentView);
   
+  // Event listener para manejar la salida del detalle en desktop
+  useEffect(() => {
+    const handleOverlayDetailExit = () => {
+      console.log('[HomePage] Evento overlay-detail-exit recibido en desktop');
+      console.log('[HomePage] Estado actual:', { isDetailClosing, localSelectedItem });
+      setIsDetailClosing(true);
+    };
+    
+    window.addEventListener('overlay-detail-exit', handleOverlayDetailExit);
+    return () => window.removeEventListener('overlay-detail-exit', handleOverlayDetailExit);
+  }, [isDetailClosing, localSelectedItem]);
+  
   // Sincronizar localSelectedItem con selectedItem del store
   useEffect(() => {
     if (selectedItem) {
@@ -586,6 +598,13 @@ const HomePage = ({
         }}
         selectedCategory={selectedCategory}
         isClosing={isDetailClosing}
+        isExiting={isDetailClosing}
+        onExited={() => {
+          console.log('[HomePage] onExited llamado - animación terminada');
+          setLocalSelectedItem(null);
+          setIsDetailClosing(false);
+          goBackFromDetail();
+        }}
         onRequestClose={() => {
           console.log('[HomePage] onRequestClose llamado');
           setIsDetailClosing(true);
