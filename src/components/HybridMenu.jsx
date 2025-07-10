@@ -148,7 +148,7 @@ function DesktopMenu(props) {
           <ThemeToggle />
           {/* Icono quienes somos (about) como imagen suelta a la izquierda del botón donación */}
           <img
-            src="/imagenes/icono.png"
+            src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/icono.png"
             alt={getTranslation('ui.alt.info', 'info')}
             title={getTranslation('ui.titles.show_info', lang === 'en' ? 'Show info' : 'Mostrar información')}
             onClick={onSplashOpen}

@@ -186,7 +186,7 @@ const MaterialMobileMenu = ({
         audio={splashAudio}
         content={
           <img
-            src="/imagenes/splash_image.png"
+            src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png"
             alt={getTranslation('ui.alt.splash', 'Splash')}
             style={{ width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer', background: 'none' }}
           />

@@ -135,7 +135,7 @@ const HowToDownload = () => {
           boxShadow: 0,
         }}>
           <img
-            src="/imagenes/descargas/pirate.jpg"
+            src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate.jpg"
             alt="Pirate Bay Logo"
             style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
           />
@@ -174,7 +174,7 @@ const HowToDownload = () => {
         </Box>
         <Box sx={{ width: { xs: '80%', sm: '60%', md: '50%' }, mx: 'auto', mb: 2, borderRadius: 2, overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
           <img
-            src="/imagenes/descargas/pirate1.jpg"
+            src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate1.jpg"
             alt="Ejemplo Pirate Bay"
             style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
           />
@@ -187,7 +187,7 @@ const HowToDownload = () => {
         </Typography>
         <Box sx={{ width: '100%', mb: 2, borderRadius: 2, overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
           <img
-            src="/imagenes/descargas/pirate2.jpg"
+            src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate2.jpg"
             alt="Ejemplo Pirate Bay 2"
             style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
           />
@@ -196,7 +196,7 @@ const HowToDownload = () => {
         <Typography variant="body1" sx={{ mb: 2 }}>{texts.step3desc[lang]}</Typography>
         <Box sx={{ width: { xs: '80%', sm: '60%', md: '40%' }, mx: 'auto', mb: 3, display: 'flex', justifyContent: 'center' }}>
           <img
-            src="/imagenes/descargas/magic.gif"
+            src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/magic.gif"
             alt="Magia torrent"
             style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
           />

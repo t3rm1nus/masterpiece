@@ -288,7 +288,7 @@ const SplashDialog = ({
                 : (
                 <img
                   id="splash-image"
-                  src="/imagenes/splash_image.png"
+                  src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png"
                   alt={getTranslation('ui.alt.splash', 'Splash')}
                   style={{
                     ...splashImageStyle,
