@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, createContext, useContext } from 'react';
 import {
   CardContent,
   Typography,
@@ -32,11 +32,23 @@ import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 // Optimizada para móviles y desktop, con integración de analytics y experiencia de usuario moderna.
 // =============================================
 
+// Contexto para animación de salida del card overlay
+export const OverlayCardAnimationContext = createContext({ triggerExitAnimation: () => {} });
+
 const MaterialCoffeePage = () => {
   const { t, getTranslation } = useLanguage();
   const { trackSpecialPageView } = useGoogleAnalytics();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const [cardAnim, setCardAnim] = useState('slideInUpFast');
+  const [isExiting, setIsExiting] = useState(false);
+  // Proveer función para disparar animación de salida
+  const triggerExitAnimation = () => {
+    if (!isExiting) {
+      setIsExiting(true);
+      setCardAnim('slideOutDownFast');
+    }
+  };
 
   // Google Analytics tracking para página de donaciones
   useEffect(() => {
@@ -45,6 +57,38 @@ const MaterialCoffeePage = () => {
       source: 'main_navigation'
     });
   }, [trackSpecialPageView]);
+
+  // Detectar overlay cierre por navegación atrás
+  useEffect(() => {
+    const onPopState = () => {
+      if (!isExiting) {
+        setIsExiting(true);
+        setCardAnim('slideOutDownFast');
+      }
+    };
+    const onOverlayExit = () => {
+      if (!isExiting) {
+        setIsExiting(true);
+        setCardAnim('slideOutDownFast');
+      }
+    };
+    window.addEventListener('popstate', onPopState);
+    window.addEventListener('overlay-exit', onOverlayExit);
+    return () => {
+      window.removeEventListener('popstate', onPopState);
+      window.removeEventListener('overlay-exit', onOverlayExit);
+    };
+  }, [isExiting]);
+
+  // Inyectar keyframes solo una vez
+  useEffect(() => {
+    if (!document.getElementById('coffee-keyframes')) {
+      const style = document.createElement('style');
+      style.id = 'coffee-keyframes';
+      style.innerHTML = `@keyframes scaleFadeIn {0%{opacity:0;transform:scale(0.92);}100%{opacity:1;transform:scale(1);}}@keyframes scaleFadeOut {0%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(0.92);}}.slideInUpFast{animation:scaleFadeIn 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}.slideOutDownFast{animation:scaleFadeOut 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}`;
+      document.head.appendChild(style);
+    }
+  }, []);
 
   // Fix específico para iPhone - asegurar scroll
   useEffect(() => {
@@ -116,250 +160,261 @@ const MaterialCoffeePage = () => {
   };
 
   return (
-    <Container 
-      maxWidth="md" 
-      sx={{ 
-        padding: { xs: '16px', sm: '24px' },
-        paddingTop: { xs: '20px', sm: '80px', md: '100px' }, // Ajuste: separación superior aumentada 10px más
-        paddingBottom: '40px',
-        backgroundColor: '#fafafa',
-        minHeight: '100vh',
-        position: 'relative',
-        zIndex: 1,
-        overflow: 'visible',
-        WebkitOverflowScrolling: 'touch'
-      }}
-    >
-      {/* Card principal con icono de café y color de fondo de café */}
-      <UiCard 
-        elevation={3}
+    <OverlayCardAnimationContext.Provider value={{ triggerExitAnimation }}>
+      <Container 
+        maxWidth="md" 
         sx={{ 
-          marginBottom: '16px',
-          backgroundColor: '#F5F5DC',
-          border: '2px solid #D4A574',
-          borderRadius: '12px',
+          padding: { xs: '16px', sm: '24px' },
+          paddingTop: { xs: '20px', sm: '80px', md: '50px' }, // Padding top reducido a la mitad en desktop
+          paddingBottom: '40px',
+          backgroundColor: '#fafafa',
+          minHeight: '100vh',
+          position: 'relative',
+          zIndex: 1,
+          overflow: 'visible',
+          WebkitOverflowScrolling: 'touch'
         }}
       >
-        <CardContent sx={{ textAlign: 'center', padding: '24px' }}>
-          {/* Icono de café animado */}
-          <Box 
-            sx={{ 
-              fontSize: '3rem',
-              marginBottom: '16px',
-              animation: 'bounce 2s infinite'
-            }}
-          >
-            ☕
-          </Box>
-          {/* Título principal */}
-          <Typography 
-            variant="h4" 
-            component="h1" 
-            className="donation-title"
-            sx={{ 
-              fontWeight: 'bold',
-              marginBottom: '16px',
-              color: '#8B4513',
-              fontSize: { xs: '1.5rem', sm: '1.8rem' },
-              textDecoration: 'none',
-              textShadow: 'none',
-              border: 'none',
-              outline: 'none',
-              background: 'none',
-              backgroundColor: 'transparent',
-              width: { xs: '100%', sm: 'auto' },
-              display: { xs: 'block', sm: 'inline' },
-              textAlign: 'center',
-              padding: { xs: 0, sm: undefined },
-              // Solo en móviles ocupa todo el ancho y sin padding
-              '@media (min-width:600px)': {
-                width: 'auto',
-                display: 'inline',
-                padding: undefined
-              },
-              '&:hover': {
-                background: 'none',
-                backgroundColor: 'transparent',
+        {/* Card principal con icono de café y color de fondo de café */}
+        <UiCard 
+          elevation={3}
+          sx={{ 
+            marginBottom: '16px',
+            backgroundColor: '#F5F5DC',
+            border: '2px solid #D4A574',
+            borderRadius: '12px',
+          }}
+          className={cardAnim}
+          onAnimationEnd={() => {
+            if (cardAnim === 'slideOutDownFast' && isExiting) {
+              // Esperar un poco más para asegurar que la animación CSS haya terminado completamente
+              setTimeout(() => {
+                window.history.back();
+              }, 100);
+            }
+          }}
+        >
+          <CardContent sx={{ textAlign: 'center', padding: '24px' }}>
+            {/* Icono de café animado */}
+            <Box 
+              sx={{ 
+                fontSize: '3rem',
+                marginBottom: '16px',
+                animation: 'bounce 2s infinite'
+              }}
+            >
+              ☕
+            </Box>
+            {/* Título principal */}
+            <Typography 
+              variant="h4" 
+              component="h1" 
+              className="donation-title"
+              sx={{ 
+                fontWeight: 'bold',
+                marginBottom: '16px',
+                color: '#8B4513',
+                fontSize: { xs: '1.5rem', sm: '1.8rem' },
                 textDecoration: 'none',
-                color: '#8B4513'
-              },
-              '&:focus': {
+                textShadow: 'none',
+                border: 'none',
+                outline: 'none',
                 background: 'none',
                 backgroundColor: 'transparent',
-                outline: 'none'
-              }
-            }}
-          >
-            {t.coffee_page_title}
-          </Typography>
-          {/* Subtítulo con emoji de mano */}
-          <Typography 
-            variant="h6" 
-            sx={{ 
-              marginBottom: '16px',
-              color: '#8B4513',
-              fontStyle: 'normal',
-              fontSize: { xs: '1.1rem', sm: '1.3rem' }
-            }}
-          >
-            {t.coffee_page_subtitle}
-          </Typography>
-          {/* Descripción principal */}
-          <Typography 
-            variant="body1" 
-            sx={{ 
-              lineHeight: 1.6,
-              color: '#333333',
-              fontSize: '1rem'
-            }}
-          >
-            {t.coffee_description}
-          </Typography>
-        </CardContent>
-      </UiCard>
-      {/* Card con fondo blanco y borde gris */}
-      <UiCard 
-        elevation={2}
-        sx={{ 
-          marginBottom: '20px',
-          backgroundColor: '#ffffff',
-          border: '1px solid #d0d0d0',
-          borderRadius: '8px'
-        }}
-      >
-        <CardContent>
-          <Typography 
-            variant="h6" 
-            sx={{ 
-              marginBottom: '16px',
-              textAlign: 'center',
-              fontWeight: 'bold',
-              color: '#1976d2',
-              fontSize: '1.1rem'
-            }}
-          >
-            {t.coffee_benefits_title}
-          </Typography>
-          <List dense>
-            {benefits.map((benefit, index) => (
-              <ListItem key={index} sx={{ padding: '8px 0' }}>
-                <ListItemIcon sx={{ minWidth: '40px' }}>
-                  {benefit.icon}
-                </ListItemIcon>
-                <ListItemText 
-                  primary={benefit.text}
-                  primaryTypographyProps={{
-                    fontSize: '0.95rem',
-                    lineHeight: 1.4,
-                    color: '#333333'
-                  }}
-                />
-              </ListItem>
-            ))}
-          </List>
-        </CardContent>
-      </UiCard>
-      {/* Card con borde verde y fondo verde suave */}
-      <UiCard 
-        elevation={3}
-        sx={{ 
-          marginBottom: '20px',
-          backgroundColor: '#e8f5e8',
-          border: '2px solid #4caf50',
-          borderRadius: '8px'
-        }}
-      >
-        <CardContent sx={{ textAlign: 'center' }}>
-          {/* Título en verde */}
-          <Typography 
-            variant="h6" 
-            sx={{ 
-              marginBottom: '8px',
-              fontWeight: 'bold',
-              color: '#2e7d32'
-            }}
-          >
-            {t.coffee_cta}
-          </Typography>
-          {/* Párrafo en gris y cursiva */}
-          <Typography 
-            variant="body2" 
-            sx={{ 
-              marginBottom: '16px',
-              color: '#666666',
-              fontStyle: 'italic'
-            }}
-          >
-            {t.coffee_legend}
-          </Typography>
-          {/* Card interna fondo blanco borde gris */}
-          <Paper 
-            elevation={2}
-            sx={{ 
-              padding: '20px',
-              backgroundColor: '#ffffff',
-              borderRadius: '8px',
-              border: '1px solid #d0d0d0',
-              width: '100%',
-              maxWidth: '100%'
-            }}
-          >
-            {/* Párrafo gris */}
+                width: { xs: '100%', sm: 'auto' },
+                display: { xs: 'block', sm: 'inline' },
+                textAlign: 'center',
+                padding: { xs: 0, sm: undefined },
+                // Solo en móviles ocupa todo el ancho y sin padding
+                '@media (min-width:600px)': {
+                  width: 'auto',
+                  display: 'inline',
+                  padding: undefined
+                },
+                '&:hover': {
+                  background: 'none',
+                  backgroundColor: 'transparent',
+                  textDecoration: 'none',
+                  color: '#8B4513'
+                },
+                '&:focus': {
+                  background: 'none',
+                  backgroundColor: 'transparent',
+                  outline: 'none'
+                }
+              }}
+            >
+              {t.coffee_page_title}
+            </Typography>
+            {/* Subtítulo con emoji de mano */}
+            <Typography 
+              variant="h6" 
+              sx={{ 
+                marginBottom: '16px',
+                color: '#8B4513',
+                fontStyle: 'normal',
+                fontSize: { xs: '1.1rem', sm: '1.3rem' }
+              }}
+            >
+              {t.coffee_page_subtitle}
+            </Typography>
+            {/* Descripción principal */}
+            <Typography 
+              variant="body1" 
+              sx={{ 
+                lineHeight: 1.6,
+                color: '#333333',
+                fontSize: '1rem'
+              }}
+            >
+              {t.coffee_description}
+            </Typography>
+          </CardContent>
+        </UiCard>
+        {/* Card con fondo blanco y borde gris */}
+        <UiCard 
+          elevation={2}
+          sx={{ 
+            marginBottom: '20px',
+            backgroundColor: '#ffffff',
+            border: '1px solid #d0d0d0',
+            borderRadius: '8px'
+          }}
+        >
+          <CardContent>
+            <Typography 
+              variant="h6" 
+              sx={{ 
+                marginBottom: '16px',
+                textAlign: 'center',
+                fontWeight: 'bold',
+                color: '#1976d2',
+                fontSize: '1.1rem'
+              }}
+            >
+              {t.coffee_benefits_title}
+            </Typography>
+            <List dense>
+              {benefits.map((benefit, index) => (
+                <ListItem key={index} sx={{ padding: '8px 0' }}>
+                  <ListItemIcon sx={{ minWidth: '40px' }}>
+                    {benefit.icon}
+                  </ListItemIcon>
+                  <ListItemText 
+                    primary={benefit.text}
+                    primaryTypographyProps={{
+                      fontSize: '0.95rem',
+                      lineHeight: 1.4,
+                      color: '#333333'
+                    }}
+                  />
+                </ListItem>
+              ))}
+            </List>
+          </CardContent>
+        </UiCard>
+        {/* Card con borde verde y fondo verde suave */}
+        <UiCard 
+          elevation={3}
+          sx={{ 
+            marginBottom: '20px',
+            backgroundColor: '#e8f5e8',
+            border: '2px solid #4caf50',
+            borderRadius: '8px'
+          }}
+        >
+          <CardContent sx={{ textAlign: 'center' }}>
+            {/* Título en verde */}
+            <Typography 
+              variant="h6" 
+              sx={{ 
+                marginBottom: '8px',
+                fontWeight: 'bold',
+                color: '#2e7d32'
+              }}
+            >
+              {t.coffee_cta}
+            </Typography>
+            {/* Párrafo en gris y cursiva */}
             <Typography 
               variant="body2" 
               sx={{ 
                 marginBottom: '16px',
                 color: '#666666',
-                fontSize: '0.9rem',
-                textAlign: 'center'
+                fontStyle: 'italic'
               }}
             >
-              Donación segura a través de PayPal
+              {t.coffee_legend}
             </Typography>
-            {/* Botón de donar de PayPal tal y como está */}
-            <form action="https://www.paypal.com/donate" method="post" target="_top">
-              <input type="hidden" name="hosted_button_id" value="SP8LLWVGW7EWC" />
-              <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-                <Button
-                  type="submit"
-                  variant="contained"
-                  sx={paypalButtonSx}
-                  title={getTranslation('ui.paypal.title', 'PayPal - The safer, easier way to pay online!')}
-                  disableElevation
-                  fullWidth
-                >
-                  {getTranslation('ui.paypal.button', 'Invítame a un café')}
-                </Button>
-              </Box>
-            </form>
-          </Paper>
-        </CardContent>
-      </UiCard>
-      {/* Card blanca con borde gris - Footer */}
-      <UiCard 
-        elevation={1}
-        sx={{
-          backgroundColor: '#ffffff',
-          border: '1px solid #d0d0d0',
-          borderRadius: '8px'
-        }}
-      >
-        <CardContent sx={{ textAlign: 'center', padding: '16px' }}>
-          {/* Párrafo gris y cursiva */}
-          <Typography 
-            variant="body2" 
-            sx={{ 
-              color: '#666666',
-              fontStyle: 'italic',
-              lineHeight: 1.4,
-              marginBottom: '16px'
-            }}
-          >
-            {t.coffee_footer}
-          </Typography>
-        </CardContent>
-      </UiCard>
-    </Container>
+            {/* Card interna fondo blanco borde gris */}
+            <Paper 
+              elevation={2}
+              sx={{ 
+                padding: '20px',
+                backgroundColor: '#ffffff',
+                borderRadius: '8px',
+                border: '1px solid #d0d0d0',
+                width: '100%',
+                maxWidth: '100%'
+              }}
+            >
+              {/* Párrafo gris */}
+              <Typography 
+                variant="body2" 
+                sx={{ 
+                  marginBottom: '16px',
+                  color: '#666666',
+                  fontSize: '0.9rem',
+                  textAlign: 'center'
+                }}
+              >
+                Donación segura a través de PayPal
+              </Typography>
+              {/* Botón de donar de PayPal tal y como está */}
+              <form action="https://www.paypal.com/donate" method="post" target="_top">
+                <input type="hidden" name="hosted_button_id" value="SP8LLWVGW7EWC" />
+                <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    sx={paypalButtonSx}
+                    title={getTranslation('ui.paypal.title', 'PayPal - The safer, easier way to pay online!')}
+                    disableElevation
+                    fullWidth
+                  >
+                    {getTranslation('ui.paypal.button', 'Invítame a un café')}
+                  </Button>
+                </Box>
+              </form>
+            </Paper>
+          </CardContent>
+        </UiCard>
+        {/* Card blanca con borde gris - Footer */}
+        <UiCard 
+          elevation={1}
+          sx={{
+            backgroundColor: '#ffffff',
+            border: '1px solid #d0d0d0',
+            borderRadius: '8px'
+          }}
+        >
+          <CardContent sx={{ textAlign: 'center', padding: '16px' }}>
+            {/* Párrafo gris y cursiva */}
+            <Typography 
+              variant="body2" 
+              sx={{ 
+                color: '#666666',
+                fontStyle: 'italic',
+                lineHeight: 1.4,
+                marginBottom: '16px'
+              }}
+            >
+              {t.coffee_footer}
+            </Typography>
+          </CardContent>
+        </UiCard>
+      </Container>
+    </OverlayCardAnimationContext.Provider>
   );
 };
 

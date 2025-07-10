@@ -8,60 +8,51 @@ import { useCallback } from 'react';
 import { Home as HomeIcon, Coffee as CoffeeIcon } from '@mui/icons-material';
 import React from 'react';
 
-export function useMenuItems(handleSplashOpen) {
+export function useMenuItems(handleSplashOpen, navigate) {
   const { t, lang, getTranslation } = useLanguage();
-  const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();
   const { resetAllFilters, generateNewRecommendations } = useAppData();
 
-  // Handlers igual que en el componente original
+  // Audios disponibles para el splash (igual que en MaterialMobileMenu)
+  const splashAudios = [
+    "/sonidos/samurai.mp3",
+    "/sonidos/samurai.wav",
+    "/sonidos/samurai1.mp3",
+    "/sonidos/samurai2.mp3",
+    "/sonidos/samurai3.mp3",
+    "/sonidos/samurai4.mp3"
+  ];
+  // Estado para controlar los audios pendientes (no repetir hasta que suenen todos)
+  const [pendingAudios, setPendingAudios] = React.useState([...splashAudios]);
+
+  // Handlers de navegación usando navigate de React Router
   const handleNewRecommendations = useCallback(() => {
-    console.log('Botón "Nuevas Recomendaciones" clickeado');
     resetAllFilters(lang);
     generateNewRecommendations();
-    goHome();
-  }, [resetAllFilters, generateNewRecommendations, lang, goHome]);
+    navigate('/');
+  }, [resetAllFilters, generateNewRecommendations, lang, navigate]);
 
   const handleCoffeeNavigation = useCallback(() => {
-    goToCoffee();
-  }, [goToCoffee]);
-
-  const handleGoBack = useCallback(() => {
-    if (currentView === 'detail') {
-      goBackFromDetail();
-    } else if (currentView === 'coffee') {
-      goBackFromCoffee();
-    } else if (currentView === 'howToDownload') {
-      goHome();
-    }
-  }, [currentView, goBackFromDetail, goBackFromCoffee, goHome]);
+    navigate('/donaciones');
+  }, [navigate]);
 
   const handleHowToDownload = useCallback(() => {
-    goToHowToDownload();
-  }, [goToHowToDownload]);
+    navigate('/como-descargar');
+  }, [navigate]);
 
   // Splash handler: lo debe pasar el componente como prop si se quiere usar
 
-  const isDetailView = currentView === 'detail';
-  const isCoffeeView = currentView === 'coffee';
-  const isHowToDownloadView = currentView === 'howToDownload';
-  const showBackButton = isDetailView || isCoffeeView || isHowToDownloadView;
-
-  // SVGs deben ir envueltos en un solo elemento React.Fragment
   let menu = [
     {
-      label: getTranslation('ui.titles.home_title', 'Nuevas Recomendaciones'), // Usar el literal correcto
+      label: getTranslation('ui.titles.home_title', 'Nuevas Recomendaciones'),
       icon: <HomeIcon />,
-      action: () => {
-        console.log('Handler de "Nuevas Recomendaciones" ejecutado');
-        handleNewRecommendations();
-      },
+      action: handleNewRecommendations,
       show: true
     },
     {
       label: getTranslation('ui.navigation.buy_me_coffee'),
       icon: <CoffeeIcon />,
       action: handleCoffeeNavigation,
-      show: !isCoffeeView,
+      show: true,
       special: true
     },
     {
@@ -83,7 +74,7 @@ export function useMenuItems(handleSplashOpen) {
         </React.Fragment>
       ),
       action: handleHowToDownload,
-      show: !isHowToDownloadView, // Ocultar en la página de cómo descargar
+      show: true,
       special: false
     },
     {
@@ -97,7 +88,19 @@ export function useMenuItems(handleSplashOpen) {
           </span>
         </React.Fragment>
       ),
-      action: handleSplashOpen || null,
+      action: () => {
+        if (typeof window !== 'undefined' && window.innerWidth < 1024 && handleSplashOpen) {
+          let audiosToUse = pendingAudios.length > 0 ? pendingAudios : [...splashAudios];
+          const randomIdx = Math.floor(Math.random() * audiosToUse.length);
+          const randomAudio = audiosToUse[randomIdx];
+          handleSplashOpen(randomAudio);
+          // Eliminar el audio elegido de los pendientes
+          const newPending = audiosToUse.filter((a, i) => i !== randomIdx);
+          setPendingAudios(newPending);
+        } else if (handleSplashOpen) {
+          handleSplashOpen();
+        }
+      },
       show: true,
       special: false
     }

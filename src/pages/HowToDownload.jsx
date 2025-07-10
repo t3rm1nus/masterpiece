@@ -1,29 +1,58 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, createContext, useContext } from 'react';
 import { Box, Typography, Button, useTheme, useMediaQuery, Paper } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 import { applyHowToDownloadScrollFixForIPhone, cleanupScrollFixesForIPhone } from '../utils/iPhoneScrollFix';
+
+// Contexto para animación de salida del card overlay
+export const OverlayCardAnimationContext = createContext({ triggerExitAnimation: () => {} });
 
 const HowToDownload = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const { lang, t } = useLanguage();
   const { trackSpecialPageView } = useGoogleAnalytics();
-
-  // Google Analytics tracking para página de descargas
-  useEffect(() => {
-    trackSpecialPageView('downloads', {
-      page_title: 'Cómo Descargar',
-      source: 'main_navigation'
-    });
-  }, [trackSpecialPageView]);
-
-  // Scroll automático al inicio en móviles al montar
-  useEffect(() => {
-    if (isMobile) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  const [cardAnim, setCardAnim] = useState('slideInUpFast');
+  const [isExiting, setIsExiting] = useState(false);
+  // Proveer función para disparar animación de salida
+  const triggerExitAnimation = () => {
+    if (!isExiting) {
+      setIsExiting(true);
+      setCardAnim('slideOutDownFast');
     }
-  }, [isMobile]);
+  };
+  // Detectar overlay cierre por navegación atrás
+  useEffect(() => {
+    const onPopState = () => {
+      if (!isExiting) {
+        setIsExiting(true);
+        setCardAnim('slideOutDownFast');
+      }
+    };
+    const onOverlayExit = () => {
+      if (!isExiting) {
+        setIsExiting(true);
+        setCardAnim('slideOutDownFast');
+      }
+    };
+    window.addEventListener('popstate', onPopState);
+    window.addEventListener('overlay-exit', onOverlayExit);
+    return () => {
+      window.removeEventListener('popstate', onPopState);
+      window.removeEventListener('overlay-exit', onOverlayExit);
+    };
+  }, [isExiting]);
+  // Inyectar keyframes solo una vez
+  useEffect(() => {
+    if (!document.getElementById('howtodownload-keyframes')) {
+      const style = document.createElement('style');
+      style.id = 'howtodownload-keyframes';
+      style.innerHTML = `@keyframes scaleFadeIn {0%{opacity:0;transform:scale(0.92);}100%{opacity:1;transform:scale(1);}}@keyframes scaleFadeOut {0%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(0.92);}}.slideInUpFast{animation:scaleFadeIn 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}.slideOutDownFast{animation:scaleFadeOut 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}`;
+      document.head.appendChild(style);
+    }
+  }, []);
+
+  // Eliminar el useEffect que hace window.scrollTo({ top: 0, behavior: 'smooth' }) en móviles al montar
 
   // Fix específico para iPhone - asegurar scroll
   useEffect(() => {
@@ -92,122 +121,134 @@ const HowToDownload = () => {
     }
   };
   return (
-    <Box sx={{
-      width: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      minHeight: { xs: 'auto', lg: 'calc(100vh - 120px)' },
-      boxSizing: 'border-box',
-      zIndex: 2,
-      overflow: 'visible',
-      WebkitOverflowScrolling: 'touch',
-      mt: { xs: 0, lg: 8 }, // 8*8=64px, suficiente para el menú fijo
-      // Específico para iPhone - asegurar scroll
-      overflowY: { xs: 'auto', md: 'visible' },
-      height: { xs: '100%', md: 'auto' },
-      maxHeight: { xs: '100%', md: 'none' },
-    }}>
-      <Paper elevation={3} sx={{
+    <OverlayCardAnimationContext.Provider value={{ triggerExitAnimation }}>
+      <Box sx={{
         width: '100%',
-        maxWidth: { xs: 480, md: '720px', lg: '900px' },
-        margin: '0 auto',
-        padding: { xs: 2, sm: 3, md: 4 },
-        borderRadius: 3,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        minHeight: { xs: 'auto', lg: 'calc(100vh - 120px)' },
         boxSizing: 'border-box',
-        position: 'relative',
-        paddingTop: { xs: 2, md: '64px' },
-        pb: { xs: 3, md: 5 },
-        mb: { xs: 3, md: 5 },
+        zIndex: 2,
         overflow: 'visible',
         WebkitOverflowScrolling: 'touch',
-        mt: { xs: '36px', md: 0 }, // margen superior en móviles reducido a 36px
+        mt: { xs: 0, lg: 8 }, // 8*8=64px, suficiente para el menú fijo
+        // Específico para iPhone - asegurar scroll
         overflowY: { xs: 'auto', md: 'visible' },
-        height: { xs: 'auto', md: 'auto' },
-        maxHeight: { xs: 'calc(100vh - 120px)', md: 'none' },
+        height: { xs: '100%', md: 'auto' },
+        maxHeight: { xs: '100%', md: 'none' },
       }}>
-        {/* Imagen Pirate Bay dentro del card */}
-        <Box sx={{
+        <Paper elevation={3} sx={{
           width: '100%',
-          mb: 2,
-          borderRadius: 0,
-          overflow: 'hidden',
-          boxShadow: 0,
-        }}>
-          <img
-            src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate.jpg"
-            alt="Pirate Bay Logo"
-            style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
-          />
-        </Box>
-        <Typography variant="h4" align="center" gutterBottom sx={{ 
-          fontWeight: 700, mb: 3, mt: 3,
-          fontSize: { xs: '1.4rem', sm: '2rem', md: '2.2rem', lg: '2.4rem' }
-        }}>
-          <span style={{display:'inline-flex',alignItems:'center',gap:8}}>
-            {texts.title[lang]}
-          </span>
-        </Typography>
-        <Typography variant="body1" sx={{ mb: 2 }} dangerouslySetInnerHTML={{__html: texts.intro[lang]}} />
-        <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step1[lang]}</Typography>
-        <Typography variant="body1" sx={{ mb: 1 }}>{texts.step1desc[lang]}</Typography>
-        <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: 2, mb: 2 }}>
-          <Button variant="contained" color="primary" href="https://transmissionbt.com/download" target="_blank" sx={{ fontWeight: 600, mb: isMobile ? 1 : 0, '&:hover': { color: '#111' } }}>
-            Transmission
-          </Button>
-          <Button variant="contained" color="primary" href="https://www.qbittorrent.org/download" target="_blank" sx={{ fontWeight: 600, mb: isMobile ? 1 : 0, '&:hover': { color: '#111' } }}>
-            qBittorrent
-          </Button>
-        </Box>
-        <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step2[lang]}</Typography>
-        <Typography variant="body1" sx={{ mb: 2 }}>{texts.step2desc[lang]}</Typography>
-        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', mb: 2 }}>
-          <Button
-            variant="contained"
-            color="primary"
-            href="https://piratebayproxy.info/"
-            target="_blank"
-            sx={{ fontWeight: 600, mb: 0, minWidth: 'unset', width: 'auto', px: 2, py: 1, fontSize: '1rem', '&:hover': { color: '#111' } }}
-          >
-            {texts.piratebay[lang]}
-          </Button>
-        </Box>
-        <Box sx={{ width: { xs: '80%', sm: '60%', md: '50%' }, mx: 'auto', mb: 2, borderRadius: 2, overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
-          <img
-            src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate1.jpg"
-            alt="Ejemplo Pirate Bay"
-            style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
-          />
-        </Box>
-        <Typography variant="body2" color="warning.main" sx={{ fontWeight: 600, mb: 2 }}>
-          {texts.warning[lang]}
-        </Typography>
-        <Typography variant="body1" sx={{ mb: 2 }}>
-          {lang === 'es' ? 'Una vez seleccionado lo que quieres bajar, haz click sobre el icono del imán y se abrirá automáticamente tu Transmission o qBittorrent. Dale a aceptar para empezar la descarga y...' : 'Once you’ve selected what you want to download, click the magnet icon and your Transmission or qBittorrent will open automatically. Click accept to start the download and...'}
-        </Typography>
-        <Box sx={{ width: '100%', mb: 2, borderRadius: 2, overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
-          <img
-            src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate2.jpg"
-            alt="Ejemplo Pirate Bay 2"
-            style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
-          />
-        </Box>
-        <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step3[lang]}</Typography>
-        <Typography variant="body1" sx={{ mb: 2 }}>{texts.step3desc[lang]}</Typography>
-        <Box sx={{ width: { xs: '80%', sm: '60%', md: '40%' }, mx: 'auto', mb: 3, display: 'flex', justifyContent: 'center' }}>
-          <img
-            src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/magic.gif"
-            alt="Magia torrent"
-            style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
-          />
-        </Box>
-        <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.vpn[lang]}</Typography>
-        <Typography variant="body1" sx={{ mb: 2 }}>{texts.vpndesc[lang]}</Typography>
-        <Typography variant="body1" sx={{ mt: 6, fontWeight: 600, textAlign: 'center' }}>
-          {texts.end[lang]}
-        </Typography>
-      </Paper>
-    </Box>
+          maxWidth: { xs: 480, md: '720px', lg: '900px' },
+          margin: '0 auto',
+          padding: { xs: 2, sm: 3, md: 4 },
+          borderRadius: 3,
+          boxSizing: 'border-box',
+          position: 'relative',
+          paddingTop: { xs: 2, md: '64px' },
+          pb: { xs: 3, md: 5 },
+          mb: { xs: 3, md: 5 },
+          overflow: 'visible',
+          WebkitOverflowScrolling: 'touch',
+          mt: { xs: '36px', md: 0 }, // margen superior en móviles reducido a 36px
+          overflowY: { xs: 'auto', md: 'visible' },
+          height: { xs: 'auto', md: 'auto' },
+          maxHeight: { xs: 'calc(100vh - 120px)', md: 'none' },
+        }}
+        className={cardAnim}
+        onAnimationEnd={() => {
+          if (cardAnim === 'slideOutDownFast' && isExiting) {
+            // Esperar un poco más para asegurar que la animación CSS haya terminado completamente
+            setTimeout(() => {
+              window.history.back();
+            }, 100);
+          }
+        }}
+        >
+          {/* Imagen Pirate Bay dentro del card */}
+          <Box sx={{
+            width: '100%',
+            mb: 2,
+            borderRadius: 0,
+            overflow: 'hidden',
+            boxShadow: 0,
+          }}>
+            <img
+              src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate.jpg"
+              alt="Pirate Bay Logo"
+              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+            />
+          </Box>
+          <Typography variant="h4" align="center" gutterBottom sx={{ 
+            fontWeight: 700, mb: 3, mt: 3,
+            fontSize: { xs: '1.4rem', sm: '2rem', md: '2.2rem', lg: '2.4rem' }
+          }}>
+            <span style={{display:'inline-flex',alignItems:'center',gap:8}}>
+              {texts.title[lang]}
+            </span>
+          </Typography>
+          <Typography variant="body1" sx={{ mb: 2 }} dangerouslySetInnerHTML={{__html: texts.intro[lang]}} />
+          <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step1[lang]}</Typography>
+          <Typography variant="body1" sx={{ mb: 1 }}>{texts.step1desc[lang]}</Typography>
+          <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: 2, mb: 2 }}>
+            <Button variant="contained" color="primary" href="https://transmissionbt.com/download" target="_blank" sx={{ fontWeight: 600, mb: isMobile ? 1 : 0, '&:hover': { color: '#111' } }}>
+              Transmission
+            </Button>
+            <Button variant="contained" color="primary" href="https://www.qbittorrent.org/download" target="_blank" sx={{ fontWeight: 600, mb: isMobile ? 1 : 0, '&:hover': { color: '#111' } }}>
+              qBittorrent
+            </Button>
+          </Box>
+          <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step2[lang]}</Typography>
+          <Typography variant="body1" sx={{ mb: 2 }}>{texts.step2desc[lang]}</Typography>
+          <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', mb: 2 }}>
+            <Button
+              variant="contained"
+              color="primary"
+              href="https://piratebayproxy.info/"
+              target="_blank"
+              sx={{ fontWeight: 600, mb: 0, minWidth: 'unset', width: 'auto', px: 2, py: 1, fontSize: '1rem', '&:hover': { color: '#111' } }}
+            >
+              {texts.piratebay[lang]}
+            </Button>
+          </Box>
+          <Box sx={{ width: { xs: '80%', sm: '60%', md: '50%' }, mx: 'auto', mb: 2, borderRadius: 2, overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
+            <img
+              src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate1.jpg"
+              alt="Ejemplo Pirate Bay"
+              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+            />
+          </Box>
+          <Typography variant="body2" color="warning.main" sx={{ fontWeight: 600, mb: 2 }}>
+            {texts.warning[lang]}
+          </Typography>
+          <Typography variant="body1" sx={{ mb: 2 }}>
+            {lang === 'es' ? 'Una vez seleccionado lo que quieres bajar, haz click sobre el icono del imán y se abrirá automáticamente tu Transmission o qBittorrent. Dale a aceptar para empezar la descarga y...' : 'Once you’ve selected what you want to download, click the magnet icon and your Transmission or qBittorrent will open automatically. Click accept to start the download and...'}
+          </Typography>
+          <Box sx={{ width: '100%', mb: 2, borderRadius: 2, overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
+            <img
+              src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate2.jpg"
+              alt="Ejemplo Pirate Bay 2"
+              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+            />
+          </Box>
+          <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step3[lang]}</Typography>
+          <Typography variant="body1" sx={{ mb: 2 }}>{texts.step3desc[lang]}</Typography>
+          <Box sx={{ width: { xs: '80%', sm: '60%', md: '40%' }, mx: 'auto', mb: 3, display: 'flex', justifyContent: 'center' }}>
+            <img
+              src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/magic.gif"
+              alt="Magia torrent"
+              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+            />
+          </Box>
+          <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.vpn[lang]}</Typography>
+          <Typography variant="body1" sx={{ mb: 2 }}>{texts.vpndesc[lang]}</Typography>
+          <Typography variant="body1" sx={{ mt: 6, fontWeight: 600, textAlign: 'center' }}>
+            {texts.end[lang]}
+          </Typography>
+        </Paper>
+      </Box>
+    </OverlayCardAnimationContext.Provider>
   );
 };
 

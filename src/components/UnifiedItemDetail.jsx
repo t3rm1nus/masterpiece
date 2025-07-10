@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../LanguageContext';
-import { useAppView, useAppTheme } from '../store/useAppStore';
+import { useAppView, useAppTheme, useAppData } from '../store/useAppStore';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 import { ensureString } from '../utils/stringUtils';
 import { useTrailerUrl } from '../hooks/useTrailerUrl';
@@ -8,6 +8,8 @@ import MobileItemDetail from './shared/MobileItemDetail';
 import { MobileActionButtons, DesktopActionButtons } from './shared/ItemActionButtons';
 import { MobileCategorySpecificContent, DesktopCategorySpecificContent } from './shared/CategorySpecificContent';
 import { processTitle, processDescription } from '../store/utils';
+import { useParams, useNavigate } from 'react-router-dom';
+import { findItemByGlobalId } from '../utils/appUtils';
 
 // Material UI imports (solo para mobile)
 import {
@@ -59,19 +61,29 @@ import {
  *   showSections={{ trailer: true, description: false }}
  * />
  */
-const UnifiedItemDetail = ({ item, onClose, selectedCategory, isClosing = false, onRequestClose }) => {
-  // Inyectar keyframes globales SOLO una vez
+const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSelectedCategory, isClosing = false, onRequestClose, isExiting = false, onExited }) => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const { allData, selectedCategory: storeSelectedCategory } = useAppData();
+  // Usar la prop si existe, si no, el valor del store
+  const selectedCategory = propSelectedCategory || storeSelectedCategory;
+  // Buscar el item por id global si no se pasa como prop
+  let selectedItem = propItem;
+  if (!selectedItem && id && allData) {
+    // Buscar en todas las categorías
+    const allItems = Object.values(allData).flat();
+    console.log('[UnifiedItemDetail] id from URL:', id);
+    console.log('[UnifiedItemDetail] allItems sample:', allItems.slice(0, 3));
+    selectedItem = findItemByGlobalId(allItems, id);
+    console.log('[UnifiedItemDetail] findItemByGlobalId result:', selectedItem);
+  }
+
+  // Inyectar keyframes globales SOLO una vez (fade+scale, igual que páginas)
   useEffect(() => {
-    if (!document.getElementById('item-detail-keyframes')) {
+    if (!document.getElementById('detail-scale-keyframes')) {
       const style = document.createElement('style');
-      style.id = 'item-detail-keyframes';
-      style.innerHTML = `@keyframes slideInUp {0%{opacity:0;transform:translateY(60px);}100%{opacity:1;transform:translateY(0);}}
-      @keyframes slideOutDown {0%{opacity:1;transform:translateY(0);}100%{opacity:0;transform:translateY(60px);}}`;
-      // DURACIÓN REDUCIDA
-      style.innerHTML += `
-        .slideInUpFast {animation: slideInUp 0.3s cubic-bezier(0.25,0.46,0.45,0.94);}
-        .slideOutDownFast {animation: slideOutDown 0.3s cubic-bezier(0.25,0.46,0.45,0.94);}
-      `;
+      style.id = 'detail-scale-keyframes';
+      style.innerHTML = `@keyframes scaleFadeIn {0%{opacity:0;transform:scale(0.92);}100%{opacity:1;transform:scale(1);}}@keyframes scaleFadeOut {0%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(0.92);}}.slideInUpFast{animation:scaleFadeIn 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}.slideOutDownFast{animation:scaleFadeOut 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}`;
       document.head.appendChild(style);
     }
   }, []);
@@ -83,17 +95,53 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, isClosing = false,
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   
   const badgeConfig = getMasterpieceBadgeConfig();
-  const selectedItem = item;
-
+  
   const [imgLoaded, setImgLoaded] = React.useState(false);
   const [imageHover, setImageHover] = React.useState(false);
   const [internalClosing, setInternalClosing] = React.useState(false);
+  // Para desktop, usar la prop isExiting para controlar la animación de salida
+  const [cardAnim, setCardAnim] = useState('slideInUpFast');
+  // Al montar, animación de entrada
+  useEffect(() => {
+    setCardAnim('slideInUpFast');
+  }, []);
+  // Cuando isExiting cambia a true, animación de salida
+  useEffect(() => {
+    if (isExiting) {
+      setCardAnim('slideOutDownFast');
+    }
+  }, [isExiting]);
+  // Handler para cerrar con animación
+  const triggerExitAnimation = () => {
+    if (!isExiting) {
+      console.log('[UnifiedItemDetail] triggerExitAnimation: lanzando animación de salida');
+      if (typeof onExited === 'function') {
+        // El layout controla la navegación tras la animación
+        setCardAnim('slideOutDownFast');
+      }
+    } else {
+      console.log('[UnifiedItemDetail] triggerExitAnimation: ya está saliendo, ignorado');
+    }
+  };
+  useEffect(() => {
+    const onOverlayDetailExit = () => {
+      console.log('[UnifiedItemDetail] Evento overlay-detail-exit recibido');
+      triggerExitAnimation();
+    };
+    window.addEventListener('overlay-detail-exit', onOverlayDetailExit);
+    return () => window.removeEventListener('overlay-detail-exit', onOverlayDetailExit);
+  }, [isExiting]);
+  const handleCloseDesktop = (e) => {
+    console.log('[UnifiedItemDetail] handleCloseDesktop: click botón volver interno');
+    e?.preventDefault?.();
+    triggerExitAnimation();
+  };
 
   // Guardar referencia al último item mostrado para animación de cierre
-  const lastItemRef = React.useRef(item);
+  const lastItemRef = React.useRef(selectedItem);
   useEffect(() => {
-    if (item) lastItemRef.current = item;
-  }, [item]);
+    if (selectedItem) lastItemRef.current = selectedItem;
+  }, [selectedItem]);
 
   const handleClose = () => {
     if (onRequestClose) {
@@ -105,12 +153,18 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, isClosing = false,
 
   // Cuando termina la animación de salida, cerrar realmente
   const handleAnimationEnd = () => {
-    if ((isClosing || internalClosing) && onClose) onClose();
+    if ((isClosing || internalClosing)) {
+      if (onClose) {
+        onClose();
+      } else {
+        navigate(-1);
+      }
+    }
   };
 
   if (!selectedItem) {
     console.log('[UnifiedItemDetail] No selectedItem, no se renderiza detalle');
-    return null;
+    return <div style={{padding:32, textAlign:'center'}}>No se encontró el elemento solicitado.</div>;
   }
   
   const rawTitle = processTitle(selectedItem.title || selectedItem.name, lang);
@@ -121,68 +175,102 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, isClosing = false,
   
   const trailerUrl = useTrailerUrl(selectedItem.trailer);
   
+  // Determinar la categoría real del item para color y chip
+  const realCategory = selectedItem.category || selectedCategory;
+  
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
-    const safeItem = item || lastItemRef.current;
+    const safeItem = selectedItem || lastItemRef.current;
     if (isClosing || internalClosing) {
       console.log('[UnifiedItemDetail] Animación de cierre iniciada en móvil (isClosing=true)');
     }
     return (
-      <MobileItemDetail
-        selectedItem={safeItem}
-        title={title}
-        description={description}
-        lang={lang}
-        t={t}
-        theme={theme}
-        getCategoryTranslation={getCategoryTranslation}
-        getSubcategoryTranslation={getSubcategoryTranslation}
-        goBackFromDetail={goBackFromDetail}
-        goToHowToDownload={goToHowToDownload}
-        imgLoaded={imgLoaded}
-        setImgLoaded={setImgLoaded}
-        renderMobileSpecificContent={() => (
-          <MobileCategorySpecificContent selectedItem={safeItem} lang={lang} t={t} />
-        )}
-        renderMobileActionButtons={() => (
-          <MobileActionButtons
-            selectedItem={safeItem}
-            trailerUrl={trailerUrl}
-            lang={lang}
-            t={t}
-            goToHowToDownload={goToHowToDownload}
-          />
-        )}
-        isClosing={isClosing || internalClosing}
-        onClose={() => {
-          console.log('[UnifiedItemDetail] Animación de cierre FINALIZADA en móvil (onClose llamado)');
-          if (onClose) onClose();
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          background: 'rgba(255,255,255,0.98)', // Fondo opaco
+          backdropFilter: 'blur(2px)', // Difuminado opcional
+          overflowY: 'auto',
+          WebkitOverflowScrolling: 'touch',
+          overscrollBehavior: 'contain', // Evita scroll en capa inferior
+          paddingTop: 0, // Pegado al menú
         }}
-        onBack={handleClose} // <-- Añadido para interceptar el botón volver y animar el cierre
-      />
+      >
+        <MobileItemDetail
+          selectedItem={safeItem}
+          title={title}
+          description={description}
+          lang={lang}
+          t={t}
+          theme={theme}
+          getCategoryTranslation={getCategoryTranslation}
+          getSubcategoryTranslation={getSubcategoryTranslation}
+          goBackFromDetail={goBackFromDetail}
+          goToHowToDownload={goToHowToDownload}
+          imgLoaded={imgLoaded}
+          setImgLoaded={setImgLoaded}
+          renderMobileSpecificContent={() => (
+            <MobileCategorySpecificContent selectedItem={safeItem} lang={lang} t={t} />
+          )}
+          renderMobileActionButtons={() => (
+            <MobileActionButtons
+              selectedItem={safeItem}
+              trailerUrl={trailerUrl}
+              lang={lang}
+              t={t}
+              goToHowToDownload={goToHowToDownload}
+            />
+          )}
+          isClosing={isClosing || internalClosing}
+          onClose={() => {
+            console.log('[UnifiedItemDetail] Animación de cierre FINALIZADA en móvil (onClose llamado)');
+            if (onClose) {
+              onClose();
+            } else {
+              navigate(-1);
+            }
+          }}
+          // NO pasar onBack, así el botón usa navigate(-1) por defecto
+        />
+      </Box>
     );
   }
   // Renderizado para desktop usando estilos CSS-in-JS directamente
   if (!isMobile) {
     const isMasterpiece = !!selectedItem.masterpiece;
-    const categoryColor = getCategoryColor(selectedCategory, 'color');
+    const categoryColor = getCategoryColor(realCategory, 'color');
     const gradientBg = `linear-gradient(135deg, ${categoryColor} 0%, ${theme.palette.mode === 'dark' ? 'rgba(24,24,24,0.92)' : 'rgba(255,255,255,0.85)'} 100%)`;
+    // Handler para cerrar con animación
+    const handleCloseDesktop = () => {
+      triggerExitAnimation();
+    };
     return (
       <div style={styles.page(theme)}>
         <div
+          className={cardAnim}
           style={{
             ...styles.desktopWrapper,
             ...(isMasterpiece ? styles.desktopWrapperMasterpiece : {}),
-            ...(isMasterpiece ? {} : { background: gradientBg }), // Solo aplica fondo de categoría si NO es masterpiece
-            animation: isClosing
-              ? 'slideOutDown 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-              : 'slideInUp 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+            ...(isMasterpiece ? {} : { background: gradientBg })
           }}
-          onAnimationEnd={handleAnimationEnd}
+          onAnimationEnd={e => {
+            console.log('[UnifiedItemDetail] onAnimationEnd', { isExiting, cardAnim });
+            if (isExiting && cardAnim === 'slideOutDownFast' && typeof onExited === 'function') {
+              console.log('[UnifiedItemDetail] Animación de salida terminada, llamando a onExited');
+              onExited();
+            }
+          }}
         >
           {/* Botón volver arriba a la izquierda */}
           <button
-            onClick={handleClose}
+            onClick={() => {
+              console.log('[UnifiedItemDetail] Botón volver desktop: disparando overlay-detail-exit');
+              window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+            }}
             style={{
               position: 'absolute',
               top: 18,
@@ -234,11 +322,11 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, isClosing = false,
           <div style={styles.rightCol}>
             <h2 style={styles.title}>{title}</h2>
             <div style={styles.chipRow}>
-              <span style={{...styles.chip, background: getCategoryColor(selectedCategory, 'strong')}}>
-                {getCategoryTranslation(selectedCategory)}
+              <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
+                {getCategoryTranslation(realCategory)}
               </span>
               {selectedItem.subcategory && (
-                <span style={{...styles.chip, background: getCategoryColor(selectedCategory, 'strong')}}>
+                <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
                   {(() => {
                     const subcat = selectedItem.subcategory;
                     if (typeof subcat === 'object' && subcat !== null) {
@@ -298,51 +386,7 @@ const UnifiedItemDetail = ({ item, onClose, selectedCategory, isClosing = false,
     );
   }
   
-  React.useEffect(() => {
-    if (isMobile && selectedItem && imgLoaded) {
-      setTimeout(() => {
-        // Busca el primer .MuiBox-root que contenga un .MuiCard-root
-        let scrollContainer = null;
-        const boxRoots = document.querySelectorAll('.MuiBox-root');
-        for (const box of boxRoots) {
-          if (box.querySelector('.MuiCard-root')) {
-            scrollContainer = box;
-            break;
-          }
-        }
-        if (scrollContainer) {
-          const style = window.getComputedStyle(scrollContainer);
-          const hasScroll = style.overflowY === 'auto' || style.overflowY === 'scroll' || scrollContainer.scrollHeight > scrollContainer.clientHeight;
-          console.log('[UnifiedItemDetail] Scroll container encontrado:', scrollContainer.className, 'overflowY:', style.overflowY, 'scrollHeight:', scrollContainer.scrollHeight, 'clientHeight:', scrollContainer.clientHeight);
-          if (hasScroll) {
-            scrollContainer.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-            scrollContainer.scrollTop = 0;
-            console.log('[UnifiedItemDetail] Scroll aplicado en scrollContainer');
-          } else if (scrollContainer.parentNode) {
-            const parent = scrollContainer.parentNode;
-            const parentStyle = window.getComputedStyle(parent);
-            const parentHasScroll = parent.scrollHeight > parent.clientHeight;
-            console.log('[UnifiedItemDetail] Intentando scroll en parentNode:', parent.className, 'scrollHeight:', parent.scrollHeight, 'clientHeight:', parent.clientHeight);
-            if (parentHasScroll) {
-              parent.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-              parent.scrollTop = 0;
-              console.log('[UnifiedItemDetail] Scroll aplicado en parentNode');
-            } else {
-              console.log('[UnifiedItemDetail] Ni scrollContainer ni parent tienen scroll. Fallback a window.');
-              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-            }
-          } else {
-            console.log('[UnifiedItemDetail] scrollContainer no tiene parentNode. Fallback a window.');
-            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-          }
-        } else {
-          // Fallback a window
-          console.log('[UnifiedItemDetail] Scroll to top en window (no se encontró .MuiBox-root contenedor de .MuiCard-root)');
-          window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-        }
-      }, 0);
-    }
-  }, [isMobile, selectedItem && (selectedItem.id || selectedItem.title || selectedItem.name), imgLoaded]);
+  // Eliminar el useEffect que fuerza el scroll al top en móviles tras mostrar el detalle
 };
 
 // 2. Definir estilos CSS-in-JS
@@ -372,7 +416,6 @@ const styles = {
     boxShadow: '0 8px 32px rgba(0,0,0,0.10)',
     position: 'relative',
     zIndex: 1,
-    animation: 'slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
   },
   desktopWrapperMasterpiece: {
     boxShadow: '0 0 0 4px gold, 0 8px 32px rgba(255,215,0,0.15), 0 8px 32px rgba(0,0,0,0.10)',

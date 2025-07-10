@@ -193,6 +193,7 @@ const SplashDialog = ({
           maxWidth: 'none',
           minWidth: 0,
           minHeight: 0,
+          zIndex: 9999, // El más alto de la app
           ...sx.paper
         },
         style: {
@@ -208,7 +209,7 @@ const SplashDialog = ({
         ...PaperProps
       }}
       BackdropProps={{
-        sx: { background: 'rgba(0,0,0,1)', ...sx.backdrop }
+        sx: { background: 'rgba(0,0,0,0.5)', zIndex: 9998, ...sx.backdrop }
       }}
       sx={{
         p: 0,
@@ -217,6 +218,7 @@ const SplashDialog = ({
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'visible',
+        zIndex: 9999,
         ...sx.dialog
       }}
     >

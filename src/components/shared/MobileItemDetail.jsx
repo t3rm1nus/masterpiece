@@ -7,6 +7,7 @@ import { ensureString } from '../../utils/stringUtils';
 import UiCard from '../ui/UiCard';
 import { MobileActionButtons } from './ItemActionButtons';
 import MasterpieceBadge from './MasterpieceBadge';
+import { useNavigate } from 'react-router-dom';
 // Eliminado fix iPhone scroll
 
 // =============================================
@@ -74,6 +75,7 @@ const MobileItemDetail = ({
   onClose,
   ...props
 }) => {
+  const navigate = useNavigate();
   // Filtrar props internos que no deben ir al DOM
   const domSafeProps = { ...props };
   delete domSafeProps.showCategorySelect;
@@ -137,8 +139,8 @@ const MobileItemDetail = ({
         onClick={() => {
           if (onBack) {
             onBack();
-          } else if (goBackFromDetail) {
-            goBackFromDetail();
+          } else {
+            navigate(-1);
           }
         }}
         sx={{
@@ -184,7 +186,7 @@ const MobileItemDetail = ({
             width: { xs: 'calc(100vw - 40px)', sm: '96vw' },
             margin: '0 auto',
             marginTop: 0,
-            marginBottom: { xs: '72px', sm: 0 }, // margen inferior extra en móvil
+            marginBottom: { xs: '36px', sm: 0 }, // margen inferior reducido a la mitad en móvil
             border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
             background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
             // --- iPhone/iOS override hacks ---

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useMediaQuery, useTheme } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppView } from '../store/useAppStore';
@@ -8,8 +8,12 @@ import DownloadIcon from '@mui/icons-material/Download';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import { useMenuItems } from '../hooks/useMenuItems.jsx';
+import { useNavigate, useLocation, matchPath } from 'react-router-dom';
 import LanguageSelector from './ui/LanguageSelector';
 import SplashDialog from './SplashDialog';
+// Importar el contexto de ambas páginas (ambos exportan el mismo nombre)
+import { OverlayCardAnimationContext as DownloadOverlayContext } from '../pages/HowToDownload';
+import { OverlayCardAnimationContext as CoffeeOverlayContext } from './MaterialCoffeePage';
 
 // =============================================
 // HybridMenu: Menú híbrido adaptable a desktop y móvil
@@ -54,28 +58,33 @@ function DesktopMenu(props) {
   const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();  
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const navigate = useNavigate();
+  const location = useLocation();
   if (isMobile) return null;
 
   // Detectar si estamos en detalle, donación o cómo descargar para mostrar el botón Volver en el menú superior
-  const isDetailView = currentView === 'detail';
-  const isCoffeeView = currentView === 'coffee';
-  const isHowToDownloadView = currentView === 'howToDownload';
+  const isDetailView = currentView === 'detail' || matchPath('/detalle/:id', location.pathname);
+  const isCoffeeView = currentView === 'coffee' || location.pathname === '/donaciones';
+  const isHowToDownloadView = currentView === 'howToDownload' || location.pathname === '/como-descargar';
   const showBackButton = isDetailView || isCoffeeView || isHowToDownloadView;
 
+  // Usar ambos contextos (solo uno será válido según la página)
+  const downloadOverlay = useContext(DownloadOverlayContext);
+  const coffeeOverlay = useContext(CoffeeOverlayContext);
+
   // --- Splash popup handlers ---
-  // El handler y audio vienen de props (HomePage)
-  // const handleSplashOpen = () => {
-  //   setSplashOpen(true);
-  //   setTimeout(() => {
-  //     if (audioRef.current) {
-  //       const audios = ["/sonidos/samurai.mp3", "/sonidos/samurai.wav"];
-  //       const random = Math.floor(Math.random() * audios.length);
-  //       audioRef.current.src = audios[random];
-  //       audioRef.current.currentTime = 0;
-  //       audioRef.current.play();
-  //     }
-  //   }, 100);
-  // };
+  const handleSplashOpenWithAudio = (audio) => {
+    if (typeof onSplashOpen === 'function') {
+      onSplashOpen(audio);
+    }
+    if (audioRef && audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      setTimeout(() => {
+        audioRef.current.play && audioRef.current.play();
+      }, 50);
+    }
+  };
   // const handleSplashClose = () => {
   //   setSplashOpen(false);
   //   if (audioRef.current) {
@@ -85,7 +94,7 @@ function DesktopMenu(props) {
   // };
 
   // Usar items custom si se pasan, si no usar hook por defecto
-  const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems();
+  const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems(onSplashOpen, navigate);
 
   return (
     <nav className="main-menu" style={{
@@ -96,6 +105,7 @@ function DesktopMenu(props) {
       zIndex: 1100,
       background: '#fff',
       boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+      borderBottom: '2px solid #e0e0e0', // Borde inferior gris de 2px
       ...sx.menu
     }}>
       <div style={{ 
@@ -124,17 +134,23 @@ function DesktopMenu(props) {
             <button
               key="back-desktop-detail"
               onClick={e => {
-                if (typeof onBack === 'function') {
-                  onBack();
+                // Si estamos en overlay de descargas o donaciones, lanzar evento global para animación
+                if (isHowToDownloadView || isCoffeeView) {
+                  e.preventDefault();
+                  window.dispatchEvent(new CustomEvent('overlay-exit'));
                 } else if (isDetailView) {
-                  goBackFromDetail();
-                } else if (isCoffeeView) {
-                  goBackFromCoffee();
+                  e.preventDefault();
+                  window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+                  // NO navegar ni llamar a onBack aquí
+                  return;
+                } else if (typeof onBack === 'function') {
+                  onBack();
                 } else {
-                  goHome();
+                  navigate(-1);
                 }
               }}
               style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8, marginLeft: 8 }}
+              type="button"
             >
               <span style={{display:'flex',alignItems:'center'}}>&larr;</span>
               {getTranslation('ui.navigation.back', 'Volver')}
@@ -151,7 +167,7 @@ function DesktopMenu(props) {
             src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/icono.png"
             alt={getTranslation('ui.alt.info', 'info')}
             title={getTranslation('ui.titles.show_info', lang === 'en' ? 'Show info' : 'Mostrar información')}
-            onClick={onSplashOpen}
+            onClick={handleSplashOpenWithAudio}
             style={{
               width: '36px',
               height: '36px',
@@ -176,7 +192,6 @@ function DesktopMenu(props) {
           <SplashDialog
             open={splashOpen}
             onClose={onSplashClose}
-            audio={splashAudio}
             dark={true}
             sx={{
               paper: { borderRadius: 18, background: 'rgba(34,34,34,0.92)', boxShadow: '0 8px 32px rgba(0,0,0,0.18)', overflow: 'hidden', padding: 0, margin: 0, maxWidth: '100vw', maxHeight: '100vh' },

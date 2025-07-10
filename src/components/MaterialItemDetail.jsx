@@ -32,6 +32,7 @@ import useViewStore from '../store/viewStore';
 import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 import { processTitle, processDescription } from '../store/utils';
+import { useNavigate } from 'react-router-dom';
 
 // =============================================
 // MaterialItemDetail: Detalle de ítem Material UI
@@ -71,6 +72,7 @@ const MaterialItemDetail = ({ item }) => {
   const { goBackFromDetail } = useViewStore();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const navigate = useNavigate();
   // Solo renderizar en móviles
   if (!isMobile || !item) {
     return null;
@@ -109,17 +111,7 @@ const MaterialItemDetail = ({ item }) => {
   // Estado para saber si la imagen principal ha cargado
   const [imgLoaded, setImgLoaded] = useState(false);
 
-  // Scroll arriba en móviles solo cuando la imagen esté cargada
-  useEffect(() => {
-    let timeoutId;
-    const isReallyMobile = isMobile || /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
-    if (isReallyMobile && item && imgLoaded) {
-      timeoutId = setTimeout(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-      }, 30); // pequeño retardo tras carga de imagen
-    }
-    return () => clearTimeout(timeoutId);
-  }, [isMobile, item && (item.id || item.title || item.name), imgLoaded]);
+  // Eliminar el useEffect que hace window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }) en móviles tras cargar la imagen principal
 
   // Función para manejar la acción de descarga
   const handleDownloadClick = () => {
@@ -221,7 +213,7 @@ const MaterialItemDetail = ({ item }) => {
       <Fab
         color="primary"
         aria-label="volver"
-        onClick={goBackFromDetail}
+        onClick={() => navigate(-1)}
         sx={{
           position: 'fixed',
           top: '80px',

@@ -97,6 +97,7 @@ const MaterialContentWrapper = ({
   onLoadMore, // NUEVO: callback para infinite scroll
   hasMore,    // NUEVO: si hay más para infinite scroll
   loadingMore, // NUEVO: si está cargando más
+  onItemClick, // <-- NUEVO: handler de click en item
   ...props
 }) => {
   const theme = useTheme();
@@ -177,6 +178,7 @@ const MaterialContentWrapper = ({
               recommendation={recommendation}
               isHome={isHome}
               className={visibleIndexes.includes(index) ? '' : 'entering'}
+              onClick={onItemClick ? () => onItemClick(recommendation) : undefined}
             />
           ))}
           {/* Sentinel para infinite scroll en móvil y desktop */}

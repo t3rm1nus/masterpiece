@@ -51,3 +51,19 @@ Animaciones y transiciones suaves para cards, header y menú móvil
 .material-mobile-menu__overlay.open {
   opacity: 1;
 }
+
+@keyframes superFadeInUp {
+  0% { opacity: 0; transform: translateY(60px) scale(0.96) rotate(-2deg); filter: blur(8px); }
+  60% { opacity: 1; transform: translateY(-8px) scale(1.03) rotate(1deg); filter: blur(1px);}
+  100% { opacity: 1; transform: translateY(0) scale(1) rotate(0deg); filter: blur(0);}
+}
+@keyframes superFadeOutDown {
+  0% { opacity: 1; transform: translateY(0) scale(1) rotate(0deg); filter: blur(0);}
+  100% { opacity: 0; transform: translateY(60px) scale(0.96) rotate(2deg); filter: blur(8px);}
+}
+.super-fade-in-up {
+  animation: superFadeInUp 0.7s cubic-bezier(.4,0,.2,1) both;
+}
+.super-fade-out-down {
+  animation: superFadeOutDown 0.5s cubic-bezier(.4,0,.2,1) both;
+}

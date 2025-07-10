@@ -25,6 +25,8 @@ import DesktopRecommendationsList from './DesktopRecommendationsList';
 import useAppStore from '../store/useAppStore'; // <-- Usar solo el store NUEVO
 import { normalizeSubcategoryInternal } from '../utils/categoryUtils';
 import { keyframes, styled } from '@mui/system';
+import { useNavigate } from 'react-router-dom';
+import { generateUniqueId } from '../utils/appUtils';
 
 // =============================================
 // HomePage: Página principal de recomendaciones
@@ -111,6 +113,7 @@ const HomePage = ({
   audioRef,
   ...rest
 } = {}) => {
+  const navigate = useNavigate();
   // Estado para filtro especial de música (debe ir antes de cualquier uso)
   const [musicFilterType, setMusicFilterType] = React.useState(null);
   // Estado para filtro especial de batalla (battle)
@@ -388,12 +391,11 @@ const HomePage = ({
     // Google Analytics tracking para vista de detalle
     const itemTitle = typeof item.title === 'object' ? (item.title.es || item.title.en || Object.values(item.title)[0]) : item.title;
     trackItemDetailView(item.id, itemTitle, selectedCategory, 'homepage');
-    
-    goToDetail(item);
+    const generatedId = generateUniqueId(item);
+    console.log('[handleItemClick] Item:', item);
+    console.log('[handleItemClick] generateUniqueId:', generatedId);
+    navigate('/detalle/' + generatedId);
   };  // Manejar cierre del detalle
-  const handleCloseDetail = () => {
-    goBackFromDetail();
-  };  // Renderizar el detalle del elemento
   // const renderItemDetail = () => {
   //   if (!selectedItem) {
   //     return null;
@@ -407,38 +409,7 @@ const HomePage = ({
   //   );
   // }
 
-  // Scroll al top al mostrar detalle en móvil (debug exhaustivo: logs y varios intentos)
-  useEffect(() => {
-    if (selectedItem && typeof window !== 'undefined' && window.innerWidth < 900) {
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'auto' });
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-        const main = document.querySelector('main');
-        if (main) main.scrollTop = 0;
-        const root = document.getElementById('root');
-        if (root) root.scrollTop = 0;
-      }, 100);
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'auto' });
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-        const main = document.querySelector('main');
-        if (main) main.scrollTop = 0;
-        const root = document.getElementById('root');
-        if (root) root.scrollTop = 0;
-      }, 300);
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'auto' });
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-        const main = document.querySelector('main');
-        if (main) main.scrollTop = 0;
-        const root = document.getElementById('root');
-        if (root) root.scrollTop = 0;
-      }, 600);
-    }
-  }, [selectedItem]);
+  // Eliminar el useEffect que fuerza el scroll al top al mostrar/cerrar el detalle en móviles
 
   const isMobile = useIsMobile();
   const isCategoryListMobile = isMobile && selectedCategory && selectedCategory !== 'all';
@@ -458,29 +429,7 @@ const HomePage = ({
 
   // HOOKS MOVIDOS - Deben estar antes de cualquier return condicional
   // Subir scroll arriba al volver atrás en móviles
-  useEffect(() => {
-    const handlePopState = () => {
-      if (window.innerWidth < 900) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    };
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
-
-  // Subir scroll arriba al recargar en móviles
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.innerWidth < 900) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  }, []);
-
-  // Scroll al top en el primer render de la home
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }
-  }, []);
+  // Eliminar el useEffect que añade el eventListener 'popstate' y hace window.scrollTo al volver atrás en móviles
 
   // Setea las variables CSS para los gradientes animados
   useEffect(() => {
@@ -502,12 +451,12 @@ const HomePage = ({
   useEffect(() => {
     if (isClosingDetail) {
       const timeout = setTimeout(() => {
-        goBackFromDetail();
+        navigate(-1);
         setIsClosingDetail(false);
       }, 600); // Duración igual que la animación (600ms)
       return () => clearTimeout(timeout);
     }
-  }, [isClosingDetail, goBackFromDetail]);
+  }, [isClosingDetail, navigate]);
 
   // Calcular los ítems a mostrar con paginación (móvil y desktop)
   const paginatedItems = React.useMemo(() => {
@@ -720,6 +669,7 @@ const HomePage = ({
               categoryColor={categoryColor(selectedCategory)}
               showCategorySelect={!isMobile}
               showSubcategoryChips={!isMobile}
+              onItemClick={handleItemClick}
             >
               {/* Desktop: Render the recommendations list as a child */}
               {!isMobile && (
@@ -741,6 +691,7 @@ const HomePage = ({
                   hasMore={hasMore}
                   loadingMore={loadingMoreDesktop}
                   categoryColor={categoryColor(selectedCategory)}
+                  onItemClick={handleItemClick}
                 />
               )}
             </MaterialContentWrapper>
@@ -759,15 +710,6 @@ const HomePage = ({
             />
           )}
         </div>
-      )}
-      {(selectedItem || isClosingDetail) && (
-        <UnifiedItemDetail
-          item={selectedItem}
-          onClose={handleRequestClose}
-          onRequestClose={handleRequestClose} // <-- Añadido para interceptar el botón volver
-          selectedCategory={selectedCategory}
-          isClosing={isClosingDetail}
-        />
       )}
     </UiLayout>
   );

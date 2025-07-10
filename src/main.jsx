@@ -4,6 +4,7 @@ import './styles/index.css'
 import './styles/ios-fixes.css'
 import App from './App.jsx'
 import { SplashScreen } from '@capacitor/splash-screen'
+import { BrowserRouter } from 'react-router-dom';
 
 // Forzar recarga dura al entrar (una vez por sesión) para evitar problemas de caché en móviles reales
 // Usamos una estrategia más segura para evitar QuotaExceededError en iOS
@@ -45,6 +46,8 @@ function AppWithSplashHide() {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AppWithSplashHide />
+    <BrowserRouter>
+      <AppWithSplashHide />
+    </BrowserRouter>
   </StrictMode>,
 )

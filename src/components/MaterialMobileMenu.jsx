@@ -34,6 +34,7 @@ import ThemeToggle from './ui/ThemeToggle';
 import FabBackButton from './ui/FabBackButton';
 import { useNavigationActions } from '../hooks/useNavigationActions';
 import { useMenuItems } from '../hooks/useMenuItems.jsx';
+import { useNavigate } from 'react-router-dom';
 import LanguageSelector from './ui/LanguageSelector';
 import SplashDialog from './SplashDialog';
 import MaterialCategorySelect from './MaterialCategorySelect';
@@ -79,9 +80,22 @@ const MaterialMobileMenu = ({
   const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();
   const { isDarkMode, toggleTheme } = useAppTheme();
   const navigation = useNavigationActions();
+  const navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg')); // Cambiado de 'md' a 'lg' para incluir tablets
+
+  // Audios disponibles para el splash
+  const splashAudios = [
+    "/sonidos/samurai.mp3",
+    "/sonidos/samurai.wav",
+    "/sonidos/samurai1.mp3",
+    "/sonidos/samurai2.mp3",
+    "/sonidos/samurai3.mp3",
+    "/sonidos/samurai4.mp3"
+  ];
+  // Estado para controlar los audios pendientes (no repetir hasta que suenen todos)
+  const [pendingAudios, setPendingAudios] = useState([...splashAudios]);
 
   // Cerrar Drawer al cambiar idioma para forzar recarga de textos
   useEffect(() => {
@@ -89,7 +103,7 @@ const MaterialMobileMenu = ({
   }, [lang]);
   
   // Usar items custom si se pasan, si no usar hook por defecto
-  const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems(onSplashOpen);
+  const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems(onSplashOpen, navigate);
 
   const handleLanguageChange = (lng) => {
     changeLanguage(lng);
@@ -158,7 +172,15 @@ const MaterialMobileMenu = ({
                 m: 0, p: 0
               }}
               onClick={() => {
-                onSplashOpen && onSplashOpen();
+                if (onSplashOpen) {
+                  let audiosToUse = pendingAudios.length > 0 ? pendingAudios : [...splashAudios];
+                  const randomIdx = Math.floor(Math.random() * audiosToUse.length);
+                  const randomAudio = audiosToUse[randomIdx];
+                  onSplashOpen(randomAudio);
+                  // Eliminar el audio elegido de los pendientes
+                  const newPending = audiosToUse.filter((a, i) => i !== randomIdx);
+                  setPendingAudios(newPending);
+                }
               }}
             >
               Masterpiece
@@ -349,9 +371,7 @@ const MaterialMobileMenu = ({
       </Drawer>
       {showFabBackButton && (
         <FabBackButton 
-          onClick={() => {
-            currentView === 'coffee' ? goBackFromCoffee() : goBackFromDetail();
-          }}
+          onClick={() => navigate(-1)}
           sx={{ 
             position: 'fixed',
             bottom: fabTop,

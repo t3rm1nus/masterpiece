@@ -2,6 +2,7 @@ import React from 'react';
 import UiButton from '../ui/UiButton';
 import { getCategoryGradient } from '../../utils/categoryPalette';
 import useAppStore from '../../store/useAppStore';
+import { useNavigate } from 'react-router-dom';
 
 /**
  * SpecialButtons: Botones especiales contextuales para categorías.
@@ -25,6 +26,7 @@ const SpecialButtons = ({
   battleFilterActive,
   setBattleFilterActive
 }) => {
+  const navigate = useNavigate();
   // Botones especiales para música (tipo canción/álbum)
   const showMusicButtons = selectedCategory === 'music';
   // Nuevo: idioma activo para podcasts/documentales
@@ -248,6 +250,10 @@ const SpecialButtons = ({
           {lang === 'es' ? 'Series Españolas' : 'Spanish Series'}
         </UiButton>
       )}
+      {/* Botón de donaciones (ejemplo, si existe) */}
+      {/* <UiButton onClick={() => navigate('/donaciones')}>Donaciones</UiButton> */}
+      {/* Botón de cómo descargar (ejemplo, si existe) */}
+      {/* <UiButton onClick={() => navigate('/como-descargar')}>Cómo descargar</UiButton> */}
     </div>
   );
 };
