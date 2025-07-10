@@ -1,4 +1,7 @@
-// Hook para obtener los items del menú según idioma y contexto
+// =============================================
+// useMenuItems: Hook para generar dinámicamente los items del menú
+// Genera los items del menú según idioma, contexto y vista actual, optimizando la navegación y la experiencia de usuario en móvil y desktop.
+// =============================================
 import { useLanguage } from '../LanguageContext';
 import { useAppView, useAppData } from '../store/useAppStore';
 import { useCallback } from 'react';

@@ -2,19 +2,26 @@ import React from 'react';
 import { Button, Box } from '@mui/material';
 
 /**
- * MaterialCategoryButtons
- * Renderiza una lista de botones de categoría altamente parametrizable.
+ * MaterialCategoryButtons (Material UI Category Button Group)
+ * -----------------------------------------------------------------------------
+ * Highly customizable, accessible group of category buttons using MUI.
+ * - Designed for fast navigation and clear selection in category-based UIs.
+ * - Mobile-first, responsive, and keyboard accessible.
+ * - Supports custom rendering, icons, and flexible styling.
  *
- * Props:
- * - categories: array de objetos { key, label, icon? } (categorías a mostrar)
- * - value: string (categoría seleccionada)
- * - onChange: función (callback al seleccionar categoría)
- * - renderButton: función opcional para customizar el render de cada botón `(cat, selected, idx) => ReactNode`
- * - sx: estilos adicionales para el contenedor
- * - buttonSx: estilos adicionales para cada botón
- * - visible: boolean (si se muestra el componente, default: true)
- * - showIcons: boolean (mostrar iconos si existen)
- * - ...props: cualquier otro prop para el contenedor
+ * Performance & Mobile Optimizations:
+ * - Minimal re-renders, only visible when needed.
+ * - Uses flexbox for responsive wrapping and spacing.
+ * - Button states (contained/outlined) for clear selection feedback.
+ *
+ * Accessibility:
+ * - All buttons are focusable and operable via keyboard.
+ * - Icons are optional and ARIA-compliant.
+ *
+ * Example usage:
+ *   <MaterialCategoryButtons categories={...} value={...} onChange={...} />
+ *
+ * -----------------------------------------------------------------------------
  */
 const MaterialCategoryButtons = ({
   categories = [],

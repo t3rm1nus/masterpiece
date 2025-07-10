@@ -3,6 +3,11 @@ import { useLanguage } from '../../LanguageContext';
 import { MenuItem, Select, Box } from '@mui/material';
 import UiButton from './UiButton';
 
+// =============================================
+// LanguageSelector: Selector de idioma reutilizable y parametrizable
+// Selector de idioma reutilizable y parametrizable. Optimizado para internacionalización, UX y accesibilidad.
+// =============================================
+
 /**
  * LanguageSelector
  * Componente parametrizable para selección de idioma.

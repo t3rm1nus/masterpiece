@@ -9,6 +9,11 @@ import { MobileActionButtons } from './ItemActionButtons';
 import MasterpieceBadge from './MasterpieceBadge';
 // Eliminado fix iPhone scroll
 
+// =============================================
+// MobileItemDetail: Detalle de ítem optimizado para móviles
+// Detalle de ítem optimizado para móviles. Altamente parametrizable, soporta accesibilidad, animaciones y customización avanzada.
+// =============================================
+
 /**
  * MobileItemDetail
  * Detalle de ítem para móvil, altamente parametrizable y unificado con DesktopItemDetail.

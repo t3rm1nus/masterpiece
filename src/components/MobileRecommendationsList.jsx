@@ -2,6 +2,11 @@ import React from 'react';
 import MaterialContentWrapper from './MaterialContentWrapper';
 import { useLanguage } from '../LanguageContext';
 
+// =============================================
+// MobileRecommendationsList: Lista de recomendaciones para móviles
+// Lista de recomendaciones optimizada para móviles. Altamente parametrizable, soporta infinite scroll, filtros y renderizado personalizado.
+// =============================================
+
 /**
  * MobileRecommendationsList
  * Lista de recomendaciones para móvil, altamente parametrizable y reutilizable.

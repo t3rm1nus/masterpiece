@@ -1,3 +1,9 @@
+// =============================================
+// useFilteredItems: Hook para filtrado eficiente de ítems
+// Gestiona el filtrado eficiente de ítems según parámetros y actualiza el estado local.
+// Optimizado para performance y listas dinámicas.
+// =============================================
+
 import { useAppData } from '../store/useAppStore';
 import { useEffect, useState } from 'react';
 

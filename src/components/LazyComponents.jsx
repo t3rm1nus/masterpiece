@@ -1,5 +1,10 @@
 import { lazy } from 'react';
 
+// =============================================
+// LazyComponents: Wrapper de lazy loading para componentes pesados
+// Wrapper de lazy loading para componentes pesados. Optimizado para performance, UX y carga progresiva en móviles/desktop.
+// =============================================
+
 // Lazy loading de componentes pesados
 export const LazyCoffeePage = lazy(() => import('./CoffeePage'));
 export const LazyRecommendationsList = lazy(() => import('./RecommendationsList'));

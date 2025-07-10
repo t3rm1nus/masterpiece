@@ -11,6 +11,11 @@ import { useMenuItems } from '../hooks/useMenuItems.jsx';
 import LanguageSelector from './ui/LanguageSelector';
 import SplashDialog from './SplashDialog';
 
+// =============================================
+// HybridMenu: Menú híbrido adaptable a desktop y móvil
+// Menú híbrido adaptable a desktop y móvil. Optimizado para UX, accesibilidad, navegación moderna y customización avanzada.
+// =============================================
+
 /**
  * HybridMenu: Menú adaptable que muestra menú móvil o desktop según el dispositivo.
  * Permite customizar renderizado de items, estilos y callbacks.

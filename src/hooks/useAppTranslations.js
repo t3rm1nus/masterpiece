@@ -1,9 +1,9 @@
 import { useLanguage } from '../LanguageContext';
 
-/**
- * Hook especializado para manejo de filtros y labels de la aplicación
- * Centraliza todas las traducciones de filtros especiales, idiomas y botones
- */
+// =============================================
+// useAppTranslations: Hook para gestión centralizada de traducciones y labels
+// Centraliza la gestión de traducciones y labels de filtros, idiomas y UI, optimizando la internacionalización y la experiencia de usuario.
+// =============================================
 export const useAppTranslations = () => {
   const { getTranslation, lang } = useLanguage();
 

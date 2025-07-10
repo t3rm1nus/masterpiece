@@ -38,6 +38,11 @@ import LanguageSelector from './ui/LanguageSelector';
 import SplashDialog from './SplashDialog';
 import MaterialCategorySelect from './MaterialCategorySelect';
 
+// =============================================
+// MaterialMobileMenu: Menú de navegación lateral y AppBar para móviles
+// Menú de navegación lateral y AppBar para móviles. Optimizado para UX, accesibilidad, performance y customización avanzada.
+// =============================================
+
 /**
  * MaterialMobileMenu: Menú lateral y AppBar para navegación móvil.
  * Permite customizar renderizado de items, estilos y callbacks.

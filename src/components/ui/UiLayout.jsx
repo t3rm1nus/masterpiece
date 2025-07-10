@@ -2,17 +2,23 @@ import React from 'react';
 import { Container, Box } from '@mui/material';
 
 /**
- * UiLayout: Contenedor base para páginas y secciones.
- * Centraliza el layout principal. Extiende MUI Container.
+ * UiLayout (Modern Material UI Layout Container)
+ * -----------------------------------------------------------------------------
+ * Reusable, responsive base layout container for pages and sections.
+ * - Extends MUI Container for consistent spacing and alignment.
+ * - Mobile-first: removes top padding on mobile, full viewport width.
+ * - Accepts custom styles (sx), className, and all MUI Container props.
+ * - Designed for modularity, performance, and easy composition.
  *
- * Props:
- * - maxWidth: false | 'xs' | 'sm' | 'md' | 'lg' | 'xl' (ancho máximo del contenedor, default: false)
- * - sx: object (estilos adicionales MUI sx)
- * - className: string (clase CSS adicional)
- * - children: contenido del layout
+ * Performance & Mobile Optimizations:
+ * - Uses window.innerWidth to adapt padding for mobile/desktop.
+ * - Ensures 100vw width for edge-to-edge layouts on all devices.
+ * - Minimal re-renders, no unnecessary logic.
  *
- * Ejemplo de uso:
- * <UiLayout maxWidth="md" sx={{ bgcolor: '#fafafa' }}>Contenido</UiLayout>
+ * Example usage:
+ *   <UiLayout maxWidth="md" sx={{ bgcolor: '#fafafa' }}>Content</UiLayout>
+ *
+ * -----------------------------------------------------------------------------
  */
 const UiLayout = ({ children, maxWidth = false, sx = {}, className = '', ...props }) => {
   // Detectar móvil

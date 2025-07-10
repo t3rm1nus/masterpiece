@@ -37,6 +37,11 @@ const getCategoryIcon = (categoryKey) => {
   }
 };
 
+// =============================================
+// MaterialCategorySelect: Selector de categorías Material UI
+// Selector de categorías basado en Material UI. Optimizado para UX, performance y móviles, soporta subcategorías y customización avanzada.
+// =============================================
+
 // Recibe también subcategorías y categoría seleccionada
 const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange, subcategories, activeSubcategory }) => {
   const { t, lang } = useLanguage();

@@ -1,12 +1,8 @@
 // =============================================
 // Slice de idioma y traducciones para Zustand
-// Contiene estado y acciones para la gestión de idioma y traducciones.
-// - language: idioma actual ('es' | 'en')
-// - translations: objeto de traducciones
-// - setLanguage: cambia el idioma
-// - toggleLanguage: alterna idioma
-// - setTranslations: actualiza traducciones
-// - getTranslation: obtiene traducción por clave
+// Gestiona el idioma y las traducciones de la app de forma centralizada.
+// Soporta multilenguaje, alternancia dinámica y actualización de traducciones en caliente.
+// Optimizado para UX y performance, y para facilitar la internacionalización.
 // =============================================
 
 // Slice de idioma y traducciones para Zustand

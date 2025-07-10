@@ -1,6 +1,22 @@
 import React from 'react';
 import { Card, CardHeader, CardContent, CardActions, CardMedia, Box } from '@mui/material';
 
+// =============================================================================
+// UiCard (Reusable, Highly Customizable Card Component)
+// -----------------------------------------------------------------------------
+// Modern, modular, and highly customizable card for all app content.
+// - Extends MUI Card for consistent design and performance.
+// - Supports header, media, actions, footer, and flexible content.
+// - Mobile-first, responsive, and accessible.
+// - Optimized for performance and minimal re-renders.
+//
+// Example usage:
+//   <UiCard header="Title" media={<img ... />} actions={<Button>Go</Button>}>
+//     Content
+//   </UiCard>
+// -----------------------------------------------------------------------------
+// =============================================================================
+
 /**
  * UiCard: Tarjeta base reutilizable y altamente parametrizable para toda la app.
  * Centraliza estilos y variantes. Extiende MUI Card.

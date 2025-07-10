@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
-/**
- * Modal: Modal base personalizable migrado a CSS-in-JS (MUI Box).
- * Permite definir título, acciones, estilos, callbacks y visibilidad de secciones.
- */
+// =============================================
+// Modal: Modal base reutilizable y personalizable
+// Modal base reutilizable y personalizable. Optimizado para UX, accesibilidad y animaciones modernas.
+// =============================================
 export default function Modal({
   open,
   onClose,

@@ -1444,7 +1444,7 @@
         "es": "“A Touch Of Cloth” es un viaje sintético con texturas lavadas y beats suaves que bordean el ambient experimental. Lanzado en 2018, mezcla minimalismo y atmósfera íntima. Es un trabajo sutil, delicado y evocador.",
         "en": "“A Touch Of Cloth” is a synthetic journey with washed textures and soft beats bordering experimental ambient. Released in 2018, it blends minimalism with intimate atmosphere. It’s a subtle, delicate and evocative work."
       },
-      "image": "/imagenes/musica/cloth.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/cloth.jpg",
       "tags": [
         "album"
       ],
@@ -1466,11 +1466,11 @@
         "es": "“Another Late Night” registra una sesión en vivo del colectivo en la galería V&A, capturando la energía del directo con electrónica cruda y espontánea. Publicado en 2019, su carácter documental y vibrante lo hace único. Es pura improvisación y atmósfera en directo.",
         "en": "“Another Late Night” records a live session by the collective at the V&A gallery, capturing live energy with raw and spontaneous electronics. Released in 2019, its documentary and vibrant character makes it unique. It’s pure improvisation and atmosphere live."
       },
-      "image": "/imagenes/musica/anothernight.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/anothernight.jpeg",
       "tags": [
         "live"
       ],
-      "youtube": "/imagenes/musica/another.jpg",
+      "youtube": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/another.jpg",
       "spotify": "https://open.spotify.com/album/09HBh8LHnAjxwMPWmIWgDb",
       "masterpiece": true,
       "year": "1992"
@@ -1488,7 +1488,7 @@
         "es": "“B2” es un EP compacto de electrónica minimal que destaca por sus ritmos pulsantes y bajos profundos. Publicado en 2020, explora repetición y groove hipnótico. Es una pieza concisa pero impactante de la evolución del colectivo.",
         "en": "“B2” is a compact minimal electronic EP that stands out for pulsating rhythms and deep bass. Released in 2020, it explores repetition and hypnotic groove. It’s a concise but impactful piece of the collective’s evolution."
       },
-      "image": "/imagenes/musica/b2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/b2.jpg",
       "tags": [
         "album"
       ],
@@ -1532,7 +1532,7 @@
         "es": "“Dicks” es un experimento sonoro crudo con ritmos rotos y loops agresivos que desafían estructuras convencionales. Publicado en 2022, es una obra corrosiva con texturas ásperas y actitud disruptiva. Ideal para oyentes que buscan innovación radical.",
         "en": "“Dicks” is a raw sonic experiment with broken beats and aggressive loops challenging conventional structures. Released in 2022, it’s a corrosive work with rough textures and disruptive attitude. Ideal for listeners seeking radical innovation."
       },
-      "image": "/imagenes/musica/dicks.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/dicks.jpg",
       "tags": [
         "album"
       ],
@@ -2302,7 +2302,7 @@
         "es": "Solomun lleva su sonido característico a la selva de Tulum en un set hipnótico y emocional. Con transiciones suaves y una selección melódica impecable, fusiona house profundo con atmósferas tribales. El entorno natural y la energía del público elevan la experiencia.",
         "en": "Solomun brings his signature sound to the jungle of Tulum in a hypnotic, emotional set. With smooth transitions and impeccable melodic choices, he blends deep house with tribal atmospheres. The natural setting and crowd energy elevate the experience."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/live.png",
       "tags": [
         "live",
         "djset",
@@ -2326,7 +2326,7 @@
         "es": "Fatima Yamaha desata un directo cargado de sintetizadores cálidos y grooves nostálgicos. Mezclando electro, funk y techno melódico, crea un ambiente íntimo y sofisticado. Su clásico 'What's A Girl To Do' corona una actuación inolvidable.",
         "en": "Fatima Yamaha delivers a live set full of warm synths and nostalgic grooves. Blending electro, funk, and melodic techno, he crafts an intimate, sophisticated atmosphere. His classic 'What's A Girl To Do' crowns an unforgettable performance."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/live.png",
       "tags": [
         "live",
         "djset",
@@ -2351,7 +2351,7 @@
         "es": "Surgeon ofrece una sesión feroz y cerebral en el corazón de Dekmantel. Su enfoque industrial y sin concesiones transforma la pista en una máquina rítmica imparable. Un directo donde la técnica y la tensión conviven con elegancia brutal.",
         "en": "Surgeon delivers a fierce, cerebral session in the heart of Dekmantel. His industrial, no-compromise approach turns the floor into a relentless rhythmic machine. A live performance where tension and technique meet brutal elegance."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/live.png",
       "tags": [
         "live",
         "djset",
@@ -2376,7 +2376,7 @@
         "es": "En Porto, Surgeon despliega su lado más oscuro e hipnótico en un set donde cada golpe resuena como un ritual. Entre capas de drones y percusión quirúrgica, guía al público hacia un trance maquinal. Intensidad pura bajo la estética 'Into The Dark'.",
         "en": "In Porto, Surgeon reveals his darkest, most hypnotic side in a set where every beat resonates like a ritual. Between drone layers and surgical percussion, he leads the crowd into mechanical trance. Pure intensity under the 'Into The Dark' concept."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/live.png",
       "tags": [
         "live",
         "djset",
@@ -2401,7 +2401,7 @@
         "es": "Arcanoid (Dj Muerto) rompe moldes en Zona De Confort con un viaje sonoro que cruza IDM, techno mental y glitch. Su estilo impredecible y denso transforma la pista en un espacio de exploración electrónica profunda.",
         "en": "Arcanoid (Dj Muerto) breaks boundaries at Zona De Confort with a sonic journey blending IDM, mental techno, and glitch. His unpredictable, dense style turns the floor into a deep electronic exploration space."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/live.png",
       "tags": [
         "live",
         "djset",
@@ -2426,7 +2426,7 @@
         "es": "En este DJ set, Arcanoid despliega una sesión cerebral y oscura, llena de texturas industriales y ritmos mutantes. La mezcla fluye como una narrativa distópica, manteniendo una tensión constante que desafía al oyente.",
         "en": "In this DJ set, Arcanoid delivers a cerebral, dark session filled with industrial textures and mutant rhythms. The mix flows like a dystopian narrative, maintaining constant tension that challenges the listener."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/live.png",
       "tags": [
         "live",
         "djset",
@@ -2620,7 +2620,7 @@
         "es": "Sleaford Mods es un álbum de Sleaford Mods que captura su estilo post-punk minimalista, con letras incisivas y crítica social feroz.",
         "en": "Sleaford Mods is a Sleaford Mods album showcasing their minimalist post-punk style, filled with biting lyrics and fierce social commentary."
       },
-      "image": "/imagenes/musica/slaeford.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/slaeford.jpg",
       "tags": [
         "album"
       ],
@@ -2642,7 +2642,7 @@
         "es": "The Mekon es un álbum de Sleaford Mods que captura su estilo post-punk minimalista, con letras incisivas y crítica social feroz.",
         "en": "The Mekon is a Sleaford Mods album showcasing their minimalist post-punk style, filled with biting lyrics and fierce social commentary."
       },
-      "image": "/imagenes/musica/mekon.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/mekon.jpeg",
       "tags": [
         "album"
       ],
@@ -2664,7 +2664,7 @@
         "es": "The Originator es un álbum de Sleaford Mods que captura su estilo post-punk minimalista, con letras incisivas y crítica social feroz.",
         "en": "The Originator is a Sleaford Mods album showcasing their minimalist post-punk style, filled with biting lyrics and fierce social commentary."
       },
-      "image": "/imagenes/musica/origin.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/origin.jpg",
       "tags": [
         "album"
       ],
@@ -2686,7 +2686,7 @@
         "es": "S.P.E.C.T.R.E. es un álbum de Sleaford Mods que captura su estilo post-punk minimalista, con letras incisivas y crítica social feroz.",
         "en": "S.P.E.C.T.R.E. is a Sleaford Mods album showcasing their minimalist post-punk style, filled with biting lyrics and fierce social commentary."
       },
-      "image": "/imagenes/musica/spectre.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/spectre.jpg",
       "tags": [
         "album"
       ],
@@ -2708,7 +2708,7 @@
         "es": "Una breve y contundente alegoría sobre decisiones fatales, narrada con el estilo irónico y sombrío de Cutts.",
         "en": "A short and powerful allegory on fatal decisions, delivered in Cutts' ironic and grim style."
       },
-      "image": "/imagenes/musica/steve.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/steve.png",
       "tags": ["others", "song"],
       "youtube": "https://www.youtube.com/watch?v=A-rEb0KuopI",
       "spotify": "",
@@ -2882,7 +2882,7 @@
         "es": "Costra Rap_Interludio es un ataque frontal al sistema desde el bombo y la caja. Un grito sin filtros desde las entrañas del rap combativo.",
         "en": "Costra Rap_Interludio is a frontal assault on the system, driven by raw drums and rage. An unfiltered cry from the depths of militant rap."
       },
-      "image": "/imagenes/musica/costra.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/costra.png",
       "tags": [
         "album"
       ],
@@ -2992,7 +2992,7 @@
         "es": "Una feroz crítica al impacto destructivo del ser humano sobre el planeta, contada con ironía y animación minimalista.",
         "en": "A fierce critique of humanity’s destructive impact on the planet, told with irony and minimalist animation."
       },
-      "image": "/imagenes/musica/steve.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/steve.png",
       "tags": ["others", "song"],
       "youtube": "https://www.youtube.com/watch?v=mBq5GQkBLbU",
       "spotify": "",
@@ -3012,7 +3012,7 @@
         "es": "Una visión alternativa en la que los roles entre humanos y animales se invierten para mostrar nuestra huella destructiva.",
         "en": "An alternate vision where roles between humans and animals are reversed to expose our destructive footprint."
       },
-      "image": "/imagenes/musica/steve.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/steve.png",
       "tags": ["others", "song"],
       "youtube": "https://www.youtube.com/watch?v=p7LDk4D3Q3U&list=RDp7LDk4D3Q3U&start_radio=1",
       "spotify": "",
@@ -3032,7 +3032,7 @@
         "es": "Una sátira sobre la búsqueda frenética de la felicidad en una sociedad consumista y alienada.",
         "en": "A satire on the frantic pursuit of happiness in a consumerist and alienated society."
       },
-      "image": "/imagenes/musica/steve.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/steve.png",
       "tags": ["others", "song"],
       "youtube": "https://www.youtube.com/watch?v=e9dZQelULDk",
       "spotify": "",
@@ -3052,7 +3052,7 @@
         "es": "Una actualización de su obra más icónica, MAN 2020 lleva la crítica ambiental y social a nuevas alturas en un contexto pandémico.",
         "en": "An update of his iconic work, MAN 2020 pushes environmental and social critique further in a pandemic context."
       },
-      "image": "/imagenes/musica/steve.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/steve.png",
       "tags": ["others", "song"],
       "youtube": "https://www.youtube.com/watch?v=DaFRheiGED0",
       "spotify": "",
@@ -3072,7 +3072,7 @@
         "es": "Una sátira oscura donde el miedo y la caza se invierten en una irónica defensa del mundo animal.",
         "en": "A dark satire where fear and hunting are reversed in an ironic defense of the animal world."
       },
-      "image": "/imagenes/musica/steve.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/steve.png",
       "tags": ["others", "song"],
       "youtube": "https://www.youtube.com/watch?v=J6FPBV_ql6I",
       "spotify": "",
@@ -3092,7 +3092,7 @@
         "es": "Un viaje cotidiano que se convierte en una reflexión sobre la violencia urbana y el miedo colectivo.",
         "en": "A daily walk turns into a reflection on urban violence and collective fear."
       },
-      "image": "/imagenes/musica/steve.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/steve.png",
       "tags": ["others", "song"],
       "youtube": "https://www.youtube.com/watch?v=td2wFcD424Y",
       "spotify": "",

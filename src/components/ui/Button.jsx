@@ -33,8 +33,18 @@ const disabledStyle = css`
   cursor: not-allowed;
 `;
 
-// DEPRECATED: Usa UiButton en vez de este componente para unificación de botones.
-// Este archivo ya no debe usarse y puede eliminarse próximamente.
+// =============================================================================
+// Button (Reusable UI Button Component) [DEPRECATED]
+// -----------------------------------------------------------------------------
+// DEPRECATED: Use UiButton for unified button styles and accessibility.
+// This component is legacy and will be removed in future versions.
+// - Simple, accessible button with variant support (primary, secondary, danger).
+// - Optimized for UX and keyboard accessibility.
+//
+// Example usage:
+//   <Button variant="primary">Click me</Button>
+// -----------------------------------------------------------------------------
+// =============================================================================
 export default function Button({ variant = 'primary', disabled, children, ...props }) {
   return (
     <button

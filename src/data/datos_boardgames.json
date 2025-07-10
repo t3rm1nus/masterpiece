@@ -14,7 +14,7 @@
       "playTime": 60,
       "age": "+10",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/catan.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/catan.jpg"
     },
     {
       "id": 2,
@@ -30,7 +30,7 @@
       "playTime": 60,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/ticket.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/ticket.jpg"
     },
     {
       "id": 3,
@@ -46,7 +46,7 @@
       "playTime": 45,
       "age": "+8",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/azul.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/azul.jpg"
     },
     {
       "id": 4,
@@ -62,7 +62,7 @@
       "playTime": 70,
       "age": "+10",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/wingspan.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/wingspan.jpg"
     },
     {
       "id": 5,
@@ -78,7 +78,7 @@
       "playTime": 30,
       "age": "+10",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/7wonders.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/7wonders.jpg"
     },
     {
       "id": 6,
@@ -94,7 +94,7 @@
       "playTime": 30,
       "age": "+10",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/splendor.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/splendor.jpg"
     },
     {
       "id": 7,
@@ -110,7 +110,7 @@
       "playTime": 45,
       "age": "+8",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/pandemic.png"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/pandemic.png"
     },
     {
       "id": 8,
@@ -126,7 +126,7 @@
       "playTime": 45,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/king.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/king.jpg"
     },
     {
       "id": 9,
@@ -142,7 +142,7 @@
       "playTime": 120,
       "age": "+14",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/gloomhaven.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/gloomhaven.jpg"
     },
     {
       "id": 10,
@@ -158,7 +158,7 @@
       "playTime": 90,
       "age": "+13",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/spirit.png"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/spirit.png"
     },
     {
       "id": 11,
@@ -174,7 +174,7 @@
       "playTime": 120,
       "age": "+12",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/terraforming.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/terraforming.jpg"
     },
     {
       "id": 12,
@@ -190,7 +190,7 @@
       "playTime": 120,
       "age": "+14",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/brass.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/brass.jpg"
     },
     {
       "id": 13,
@@ -206,7 +206,7 @@
       "playTime": 90,
       "age": "+12",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/puertorico.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/puertorico.jpg"
     },
     {
       "id": 14,
@@ -222,7 +222,7 @@
       "playTime": 120,
       "age": "+12",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/power_grid.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/power_grid.jpg"
     },
     {
       "id": 15,
@@ -238,7 +238,7 @@
       "playTime": 115,
       "age": "+14",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/Scythe.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/Scythe.jpg"
     },
     {
       "id": 16,
@@ -254,7 +254,7 @@
       "playTime": 90,
       "age": "+12",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/agricola.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/agricola.jpg"
     },
     {
       "id": 17,
@@ -270,7 +270,7 @@
       "playTime": 30,
       "age": "+12",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/race_for_the_galaxy.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/race_for_the_galaxy.jpg"
     },
     {
       "id": 18,
@@ -286,7 +286,7 @@
       "playTime": 30,
       "age": "+13",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/dominion.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/dominion.jpg"
     },
     {
       "id": 19,
@@ -302,7 +302,7 @@
       "playTime": 45,
       "age": "+10",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/dice_forge.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/dice_forge.jpg"
     },
     {
       "id": 20,
@@ -318,7 +318,7 @@
       "playTime": 60,
       "age": "+12",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/finisterre_flure.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/finisterre_flure.jpg"
     },
     {
       "id": 21,
@@ -334,7 +334,7 @@
       "playTime": 35,
       "age": "+7",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/carcassonne.png"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/carcassonne.png"
     },
     {
       "id": 22,
@@ -350,7 +350,7 @@
       "playTime": 60,
       "age": "+10",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/munchkin.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/munchkin.jpg"
     },
     {
       "id": 23,
@@ -366,7 +366,7 @@
       "playTime": 60,
       "age": "+12",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/dungeon_raiders.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/dungeon_raiders.jpg"
     },
     {
       "id": 24,
@@ -382,7 +382,7 @@
       "playTime": 45,
       "age": "+13",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/magic_the_gathering.png"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/magic_the_gathering.png"
     },
     {
       "id": 25,
@@ -398,7 +398,7 @@
       "playTime": 30,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/monstruo_final.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/monstruo_final.jpg"
     },
     {
       "id": 26,
@@ -414,7 +414,7 @@
       "playTime": 90,
       "age": "+10",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/risk.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/risk.jpg"
     },
     {
       "id": 27,
@@ -430,7 +430,7 @@
       "playTime": 10,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/ghost_blitz.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/ghost_blitz.jpg"
     },
     {
       "id": 28,
@@ -446,7 +446,7 @@
       "playTime": 10,
       "age": "+6",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/dobble.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/dobble.jpg"
     },
     {
       "id": 29,
@@ -462,7 +462,7 @@
       "playTime": 30,
       "age": "+7",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/uno.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/uno.jpg"
     },
     {
       "id": 30,
@@ -478,7 +478,7 @@
       "playTime": 45,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/takenoko.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/takenoko.jpg"
     },
     {
       "id": 31,
@@ -494,7 +494,7 @@
       "playTime": 50,
       "age": "+10",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/villainous.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/villainous.jpg"
     },
     {
       "id": 32,
@@ -510,7 +510,7 @@
       "playTime": 90,
       "age": "+12",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/el_grande.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/el_grande.jpg"
     },
     {
       "id": 33,
@@ -526,7 +526,7 @@
       "playTime": 15,
       "age": "+7",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/exploding_kittens.jpeg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/exploding_kittens.jpeg"
     },
     {
       "id": 34,
@@ -542,7 +542,7 @@
       "playTime": 20,
       "age": "+10",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/hanamikoji.png"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/hanamikoji.png"
     },
     {
       "id": 35,
@@ -558,7 +558,7 @@
       "playTime": 30,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/bang.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/bang.jpg"
     },
     {
       "id": 36,
@@ -574,7 +574,7 @@
       "playTime": 15,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/virus.png"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/virus.png"
     },
     {
       "id": 37,
@@ -590,7 +590,7 @@
       "playTime": 15,
       "age": "+6",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/polilla_tramposa.png"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/polilla_tramposa.png"
     },
     {
       "id": 38,
@@ -606,7 +606,7 @@
       "playTime": 45,
       "age": "+12",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/keyforge.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/keyforge.jpg"
     },
     {
       "id": 39,
@@ -622,7 +622,7 @@
       "playTime": 30,
       "age": "+12",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/hero_realms.png"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/hero_realms.png"
     },
     {
       "id": 40,
@@ -638,7 +638,7 @@
       "playTime": 90,
       "age": "+12",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/castillos_de_borgona.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/castillos_de_borgona.jpg"
     },
     {
       "id": 41,
@@ -654,7 +654,7 @@
       "playTime": 60,
       "age": "+13",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/gloom.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/gloom.jpg"
     },
     {
       "id": 42,
@@ -670,7 +670,7 @@
       "playTime": 45,
       "age": "+8",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/cluedo.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/cluedo.jpg"
     },
     {
       "id": 43,
@@ -686,7 +686,7 @@
       "playTime": 45,
       "age": "+8",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/stratego.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/stratego.jpg"
     },
     {
       "id": 44,
@@ -702,7 +702,7 @@
       "playTime": 30,
       "age": "+8",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/stop_thief.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/stop_thief.jpg"
     },
     {
       "id": 45,
@@ -718,7 +718,7 @@
       "playTime": 80,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/smallworld.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/smallworld.jpg"
     },
     {
       "id": 46,
@@ -734,7 +734,7 @@
       "playTime": 90,
       "age": "+7",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/mice_and_mystics.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/mice_and_mystics.jpg"
     },
     {
       "id": 47,
@@ -750,7 +750,7 @@
       "playTime": 15,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/magic_maze.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/magic_maze.jpg"
     },
     {
       "id": 48,
@@ -766,7 +766,7 @@
       "playTime": 30,
       "age": "+12",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/viernes.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/viernes.jpg"
     },
     {
       "id": 49,
@@ -782,7 +782,7 @@
       "playTime": 15,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/sushi_go.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/sushi_go.jpg"
     },
     {
       "id": 50,
@@ -798,7 +798,7 @@
       "playTime": 30,
       "age": "+12",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/war_chest.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/war_chest.jpg"
     },
     {
       "id": 51,
@@ -814,7 +814,7 @@
       "playTime": 75,
       "age": "+10",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/stone_age.jpeg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/stone_age.jpeg"
     },
     {
       "id": 52,
@@ -830,7 +830,7 @@
       "playTime": 40,
       "age": "+10",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/colt_express.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/colt_express.jpg"
     },
     {
       "id": 53,
@@ -846,7 +846,7 @@
       "playTime": 30,
       "age": "+8",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/patchwork.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/patchwork.jpg"
     },
     {
       "id": 54,
@@ -862,7 +862,7 @@
       "playTime": 20,
       "age": "+9",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/hive.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/hive.jpg"
     },
     {
       "id": 55,
@@ -878,7 +878,7 @@
       "playTime": 30,
       "age": "+10",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/7_wonders_duel.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/7_wonders_duel.jpg"
     },
     {
       "id": 56,
@@ -894,7 +894,7 @@
       "playTime": 30,
       "age": "+12",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/jaipur.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/jaipur.jpg"
     },
     {
       "id": 57,
@@ -910,7 +910,7 @@
       "playTime": 90,
       "age": "+13",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/tzolkin.jpeg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/tzolkin.jpeg"
     },
     {
       "id": 58,
@@ -926,7 +926,7 @@
       "playTime": 45,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/tokaido.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/tokaido.jpg"
     },
     {
       "id": 59,
@@ -942,7 +942,7 @@
       "playTime": 45,
       "age": "+10",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/tuareg.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/tuareg.jpg"
     },
     {
       "id": 60,
@@ -958,7 +958,7 @@
       "playTime": 30,
       "age": "+10",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/la_isla_prohibida.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/la_isla_prohibida.jpg"
     },
     {
       "id": 61,
@@ -974,7 +974,7 @@
       "playTime": 20,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/santorini.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/santorini.jpg"
     },
     {
       "id": 62,
@@ -990,7 +990,7 @@
       "playTime": 20,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/abalone.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/abalone.jpg"
     },
     {
       "id": 63,
@@ -1006,7 +1006,7 @@
       "playTime": 30,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/camel_up.png"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/camel_up.png"
     },
     {
       "id": 64,
@@ -1022,7 +1022,7 @@
       "playTime": 20,
       "age": "+10",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/claim.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/claim.jpg"
     },
     {
       "id": 65,
@@ -1038,7 +1038,7 @@
       "playTime": 30,
       "age": "+8",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/fungi.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/fungi.jpg"
     },
     {
       "id": 66,
@@ -1054,7 +1054,7 @@
       "playTime": 90,
       "age": "+12",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/dungeon_petz.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/dungeon_petz.jpg"
     },
     {
       "id": 67,
@@ -1070,7 +1070,7 @@
       "playTime": 40,
       "age": "+13",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/everdell.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/everdell.jpg"
     },
     {
       "id": 68,
@@ -1086,7 +1086,7 @@
       "playTime": 60,
       "age": "+10",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/the_adventures_of_robin_hood.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/the_adventures_of_robin_hood.jpg"
     },
     {
       "id": 69,
@@ -1102,7 +1102,7 @@
       "playTime": 120,
       "age": "+14",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/la_mansion_de_la_locura.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/la_mansion_de_la_locura.jpg"
     },
     {
       "id": 70,
@@ -1118,7 +1118,7 @@
       "playTime": 60,
       "age": "+12",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/heroquest.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/heroquest.jpg"
     },
     {
       "id": 71,
@@ -1134,7 +1134,7 @@
       "playTime": 45,
       "age": "+8",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/isle_of_skye.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/isle_of_skye.jpg"
     },
     {
       "id": 72,
@@ -1150,7 +1150,7 @@
       "playTime": 60,
       "age": "+12",
       "masterpiece": false,
-      "image": "/imagenes/juegos_de_mesa/asante.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/asante.jpg"
     },
     {
       "id": 73,
@@ -1166,7 +1166,7 @@
       "playTime": 120,
       "age": "+12",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/colditz.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/colditz.jpg"
     },
     {
       "id": 74,
@@ -1182,7 +1182,7 @@
       "playTime": 60,
       "age": "+10",
       "masterpiece": true,
-      "image": "/imagenes/juegos_de_mesa/the_island.jpg"
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/the_island.jpg"
     }
   ]
 }

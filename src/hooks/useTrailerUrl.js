@@ -1,4 +1,7 @@
-// Hook para obtener la URL del trailer según idioma
+// =============================================
+// useTrailerUrl: Hook para obtener la URL del trailer según idioma
+// Devuelve la URL del trailer más adecuada según el idioma activo, optimizando la experiencia multilenguaje.
+// =============================================
 import { useLanguage } from '../LanguageContext';
 
 export function useTrailerUrl(trailer) {

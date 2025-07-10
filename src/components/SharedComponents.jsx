@@ -1,3 +1,9 @@
+// =============================================
+// SharedComponents: Colección de componentes reutilizables y utilitarios
+// Colección de componentes reutilizables y utilitarios para la app.
+// Optimizados para modularidad, performance y accesibilidad.
+// =============================================
+
 import React from 'react';
 import { useLanguage } from '../LanguageContext';
 import { Box, Typography } from '@mui/material';

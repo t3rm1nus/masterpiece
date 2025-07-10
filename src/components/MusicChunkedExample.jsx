@@ -2,6 +2,11 @@ import React from 'react';
 import { useMusicData } from '../hooks/useMusicData.js';
 import { Typography, Box, Card, CardContent, Chip, CircularProgress, Alert } from '@mui/material';
 
+// =============================================
+// MusicChunkedExample: Ejemplo de uso de datos chunked de música
+// Demuestra carga eficiente, filtrado y visualización optimizada para performance y móviles.
+// =============================================
+
 const MusicChunkedExample = () => {
   const { musicData, loading, error, metadata, filter } = useMusicData();
 

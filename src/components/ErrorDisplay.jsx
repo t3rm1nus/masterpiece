@@ -2,6 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useAppError } from '../store/useAppStore';
 
+// =============================================
+// ErrorDisplay: Componente global de visualización de errores
+// Componente global de visualización de errores. Optimizado para UX, accesibilidad y feedback inmediato al usuario.
+// =============================================
+
 /**
  * ErrorDisplay
  * Muestra un mensaje de error flotante.

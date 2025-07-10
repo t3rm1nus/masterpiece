@@ -5,10 +5,10 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { useLanguage } from '../LanguageContext';
 
-/**
- * SplashDialog: Modal/diálogo de splash personalizable.
- * Modernizado a CSS-in-JS, accesibilidad y buenas prácticas.
- */
+// =============================================
+// SplashDialog: Modal/diálogo de splash animado y accesible
+// Optimizado para UX, móviles y desktop, con soporte de audio y animaciones avanzadas.
+// =============================================
 const SplashDialog = ({
   open,
   onClose,

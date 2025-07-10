@@ -1,6 +1,11 @@
 import React from 'react';
 import { Box } from '@mui/material';
 
+// =============================================
+// MasterpieceBadge: Badge visual de obra maestra
+// Badge visual para destacar una obra maestra. Optimizado para accesibilidad y visualización destacada.
+// =============================================
+
 /**
  * MasterpieceBadge
  * Badge visual para destacar una obra maestra sobre la imagen de detalle.

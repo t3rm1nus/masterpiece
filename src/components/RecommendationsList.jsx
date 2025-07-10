@@ -3,6 +3,12 @@ import { useAppView } from '../store/useAppStore';
 import MobileRecommendationsList from './MobileRecommendationsList';
 import DesktopRecommendationsList from './DesktopRecommendationsList';
 
+// =============================================
+// RecommendationsList: Wrapper de lista de recomendaciones adaptable
+// Wrapper de lista de recomendaciones adaptable a móvil y desktop.
+// Optimizado para performance, UX y soporte de renderizado personalizado.
+// =============================================
+
 /**
  * RecommendationsList
  * Wrapper de lista de recomendaciones adaptable a dispositivo.

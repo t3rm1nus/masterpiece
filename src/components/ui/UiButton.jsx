@@ -1,6 +1,11 @@
 import React from 'react';
 import { Button as MuiButton } from '@mui/material';
 
+// =============================================
+// UiButton: Botón de UI reutilizable y moderno
+// Botón de UI reutilizable y moderno. Optimizado para UX, accesibilidad y consistencia visual en toda la app.
+// =============================================
+
 /**
  * UiButton: Botón base reutilizable para toda la app.
  * Migrado a CSS-in-JS usando sx para variantes, tamaños y estados.

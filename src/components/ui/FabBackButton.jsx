@@ -3,18 +3,26 @@ import { Fab } from '@mui/material';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 
 /**
- * FabBackButton
- * Botón flotante de retroceso parametrizable.
+ * FabBackButton (Floating Action Back Button)
+ * -----------------------------------------------------------------------------
+ * Mobile-first floating action button for back navigation.
+ * - Uses MUI Fab and ArrowBackIcon by default.
+ * - Highly visible, fixed position for easy thumb reach on mobile.
+ * - Customizable icon, color, size, and position.
  *
- * Props:
- * - icon: ReactNode (icono personalizado, default: ArrowBackIcon)
- * - color: string (color del botón, default: 'primary')
- * - size: 'small' | 'medium' | 'large' (tamaño, default: 'medium')
- * - sx: objeto de estilos MUI (posición, etc.)
- * - onClick: función (callback al hacer click)
- * - visible: boolean (si se muestra el botón, default: true)
- * - ariaLabel: string (accesibilidad, default: 'volver')
- * - ...props: cualquier otro prop de MUI Fab
+ * Performance & Mobile Optimizations:
+ * - Only renders when visible=true (default).
+ * - Fixed position for persistent access on mobile/desktop.
+ * - Minimal logic, no unnecessary re-renders.
+ *
+ * Accessibility:
+ * - ARIA label for screen readers (default: 'volver').
+ * - Fully keyboard and screen reader accessible.
+ *
+ * Example usage:
+ *   <FabBackButton onClick={...} />
+ *
+ * -----------------------------------------------------------------------------
  */
 const FabBackButton = ({
   icon,

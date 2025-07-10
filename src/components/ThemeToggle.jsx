@@ -1,12 +1,10 @@
 import React from 'react';
 import { useAppTheme } from '../store/useAppStore';
 
-/**
- * Componente para cambiar entre temas claro y oscuro
- * 
- * Este componente muestra un botón que permite al usuario cambiar
- * entre los temas claro y oscuro de la aplicación.
- */
+// =============================================
+// ThemeToggle: Toggle de tema claro/oscuro
+// Toggle de tema claro/oscuro. Optimizado para UX, accesibilidad y experiencia visual moderna.
+// =============================================
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useAppTheme();
   

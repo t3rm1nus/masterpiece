@@ -15,6 +15,11 @@ import {
 import { getCategoryColor } from '../../utils/categoryPalette';
 import { ensureString } from '../../utils/stringUtils';
 
+// =============================================
+// CategorySpecificContent: Renderizado específico por categoría
+// Renderizado específico por categoría para detalles de ítem. Optimizado para modularidad, UX y soporte multilenguaje.
+// =============================================
+
 export function MobileCategorySpecificContent({ selectedItem, lang, t, getTranslation }) {
   // Documentales
   if (selectedItem.category === 'documentales') {

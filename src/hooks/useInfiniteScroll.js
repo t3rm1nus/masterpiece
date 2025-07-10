@@ -1,5 +1,10 @@
 import { useEffect, useRef } from 'react';
 
+// =============================================
+// useInfiniteScroll: Hook para infinite scroll eficiente
+// Implementa infinite scroll usando IntersectionObserver, optimizado para UX y performance en listas largas en móvil y desktop.
+// =============================================
+
 /**
  * useInfiniteScroll
  * Hook para disparar una callback cuando el usuario llega al final de un contenedor (infinite scroll).

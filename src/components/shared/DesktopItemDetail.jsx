@@ -4,10 +4,10 @@ import MasterpieceBadge from './MasterpieceBadge';
 import { getCategoryColor } from '../../utils/categoryPalette';
 import { Box, Typography, Stack } from '@mui/material';
 
-/**
- * DesktopItemDetail
- * Detalle de ítem para desktop, migrado a CSS-in-JS con MUI Box y estilos modernos.
- */
+// =============================================
+// DesktopItemDetail: Detalle de ítem optimizado para desktop
+// Detalle de ítem optimizado para desktop. Altamente parametrizable, soporta accesibilidad, animaciones y customización avanzada.
+// =============================================
 const DesktopItemDetail = ({
   selectedItem,
   title,

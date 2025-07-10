@@ -27,6 +27,11 @@ import { processTitle, processDescription } from '../store/utils';
 import UiCard from './ui/UiCard';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 
+// =============================================
+// MaterialRecommendationCard: Card visual para recomendaciones
+// Optimizada para móviles, performance y accesibilidad. Soporta badges, chips y acciones personalizadas.
+// =============================================
+
 /**
  * MaterialRecommendationCard
  * Card visual para mostrar una recomendación.

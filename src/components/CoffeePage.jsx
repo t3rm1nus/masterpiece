@@ -2,6 +2,11 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext';
 import MaterialCoffeePage from './MaterialCoffeePage';
 
+// =============================================
+// CoffeePage: Página de donación legacy (redirige a MaterialCoffeePage)
+// Página de donación legacy. Ahora redirige/renderiza MaterialCoffeePage para móviles y desktop. Mantener solo por compatibilidad.
+// =============================================
+
 const CoffeePage = () => {
   const { t, getTranslation } = useLanguage();
   

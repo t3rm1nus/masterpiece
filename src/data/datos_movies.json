@@ -13,7 +13,7 @@
         "en": "Based on Frank Miller and Lynn Varley's graphic novel, 300 recounts the epic Battle of Thermopylae in 480 BC. Spartan King Leonidas, defying the ephors and the council, leads 300 of his finest warriors on a near-suicidal mission to halt the vast Persian army of God-King Xerxes at the narrow pass of Thermopylae. Despite being vastly outnumbered, the Spartans and their Greek allies stand firm, displaying unwavering bravery and discipline."
       },
       "director": "Zack Snyder",
-      "image": "/imagenes/peliculas/300.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/300.jpg",
       "year": 2006,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=mi4xUUJSuro",
@@ -34,7 +34,7 @@
         "en": "In this iconic 1973 martial arts film, Bruce Lee stars as Lee, a Shaolin master and intelligence agent recruited to infiltrate a private island compound. The target is the enigmatic and ruthless crime lord Han, who hosts a brutal martial arts tournament as a front for his drug trafficking and prostitution operations. In addition to his mission, Lee seeks to avenge the death of his sister, who was murdered by Han's bodyguard."
       },
       "director": "Robert Clouse",
-      "image": "/imagenes/peliculas/enter_the_dragon.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/enter_the_dragon.jpg",
       "year": 1973,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=xGPAuGUEIeg",
@@ -55,7 +55,7 @@
         "en": "John McClane, a New York cop, visits his wife in L.A. for Christmas. When terrorists seize the building, he becomes the only one who can stop them. A tense, contained-action classic."
       },
       "director": "John McTiernan",
-      "image": "/imagenes/peliculas/die_hard.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/die_hard.jpg",
       "year": 1988,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=GAdvN7KLc2o",
@@ -76,7 +76,7 @@
         "en": "In Qing Dynasty China, a legendary sword goes missing and two expert warriors are drawn into a story of love, honor, and betrayal. Featuring spectacular martial arts scenes and a deep poetic undertone, 'Crouching Tiger, Hidden Dragon' is a modern classic of Asian cinema."
       },
       "director": "Ang Lee",
-      "image": "/imagenes/peliculas/crouching_tiger.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/crouching_tiger.jpg",
       "year": 2000,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=oKItRi-uJIg&pp=ygUuY3JvdWNoaW5nIHRpZ2VyIGhpZGRlbiBkcmFnb24gdHJhaWxleSBlc3Bhw7FvbA%3D%3D",
@@ -97,7 +97,7 @@
         "en": "An elite commando is sent to the Central American jungle on a rescue mission, but soon becomes the prey of an invisible alien hunter. 'Predator' is a classic action and science fiction film, known for its tense atmosphere and iconic antagonist."
       },
       "director": "John McTiernan",
-      "image": "/imagenes/peliculas/predator.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/predator.jpg",
       "year": 1987,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=NICzpXtD-A0",
@@ -117,7 +117,7 @@
         "es": "Una espectacular película de acción postapocalíptica dirigida por George Miller, donde Max y Furiosa luchan por sobrevivir en un mundo desértico y brutal.",
         "en": "A spectacular post-apocalyptic action film directed by George Miller, where Max and Furiosa fight to survive in a brutal desert world."
       },
-      "image": "/imagenes/peliculas/madmax.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/madmax.jpg",
       "director": "George Miller",
       "year": 2015,
       "trailer": {
@@ -138,7 +138,7 @@
         "es": "Antes de conocer a Max, Furiosa es secuestrada de la Tierra Verde de las Muchas Madres. Mientras lucha por regresar a casa, debe sobrevivir en un mundo salvaje dominado por señores de la guerra. Un viaje brutal de origen.",
         "en": "Before meeting Max, Furiosa is taken from the Green Place of Many Mothers. As she fights to return home, she must survive in a wasteland ruled by warlords. A brutal origin journey."
       },
-      "image": "/imagenes/peliculas/madmax2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/madmax2.jpg",
       "director": "George Miller",
       "year": 2023,
       "trailer": {
@@ -160,7 +160,7 @@
         "en": "In feudal Japan, an impoverished samurai requests to commit harakiri at a feudal lord's house. His story uncovers secrets of honor, revenge, and the hypocrisy of the samurai code. An intense drama about dignity and justice."
       },
       "director": "Masaki Kobayashi",
-      "image": "/imagenes/peliculas/harakiri.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/harakiri.jpg",
       "year": 1962,
       "masterpiece": false,
       "trailer": {
@@ -181,7 +181,7 @@
         "en": "A teenager moves to California and becomes the target of a group of karate-trained bullies. With the help of a martial arts master, he'll learn not only how to defend himself, but also valuable life lessons."
       },
       "director": "John G. Avildsen",
-      "image": "/imagenes/peliculas/karate_kid.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/karate_kid.jpg",
       "year": 1984,
       "masterpiece": false,
       "trailer": {
@@ -202,7 +202,7 @@
         "en": "The first part of Quentin Tarantino's revenge epic introduces The Bride (Uma Thurman), a former assassin who awakens from a four-year coma. On her wedding day, her former assassination squad, led by her lover Bill, brutally attacked her, leaving her for dead and seemingly killing her fiancé and unborn child. Now, fueled by an insatiable thirst for vengeance, The Bride compiles a hit list and embarks on a bloody global journey"
       },
       "director": "Quentin Tarantino",
-      "image": "/imagenes/peliculas/kill_bill1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/kill_bill1.jpg",
       "year": 2003,
       "masterpiece": true,
       "trailer": {
@@ -223,7 +223,7 @@
         "en": "Continuation of The Bride's revenge story, as she now faces her final target: Bill, the leader of the organization that betrayed her. An epic conclusion that mixes action, drama and western."
       },
       "director": "Quentin Tarantino",
-      "image": "/imagenes/peliculas/kill_bill2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/kill_bill2.jpg",
       "year": 2004,
       "masterpiece": true,
       "trailer": {
@@ -244,7 +244,7 @@
         "en": "A masterpiece of Japanese cinema that tells the story of a village that hires seven samurai to protect them from bandits. An epic tale about honor, loyalty, and the struggle for survival."
       },
       "director": "Akira Kurosawa",
-      "image": "/imagenes/peliculas/los_siete_samurais.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/los_siete_samurais.jpg",
       "year": 1954,
       "masterpiece": true,
       "trailer": {
@@ -265,7 +265,7 @@
         "en": "A young villager must recover the stolen head of a sacred statue from his village. A martial arts film that showcases authentic Thai Muay Thai with impressive acrobatics and fights without special effects."
       },
       "director": "Prachya Pinkaew",
-      "image": "/imagenes/peliculas/ong_bak.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/ong_bak.jpg",
       "year": 2003,
       "masterpiece": false,
       "trailer": {
@@ -285,7 +285,7 @@
         "es": "El arqueólogo y aventurero Indiana Jones es reclutado por el gobierno estadounidense para encontrar el Arca de la Alianza antes que los nazis. Viajando por el mundo, enfrenta trampas mortales, enemigos implacables y misterios ancestrales. Una aventura épica que combina acción, historia y humor.",
         "en": "Archaeologist and adventurer Indiana Jones is recruited by the U.S. government to find the Ark of the Covenant before the Nazis. Traveling the globe, he faces deadly traps, relentless enemies, and ancient mysteries. An epic adventure blending action, history, and humor."
       },
-      "image": "/imagenes/peliculas/indi1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/indi1.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=htHMMjfefYE",
         "en": "https://www.youtube.com/watch?v=XkkzKHCx154"
@@ -306,7 +306,7 @@
         "es": "Indiana Jones se ve envuelto en una peligrosa aventura en la India, donde debe rescatar a niños esclavizados y recuperar una piedra sagrada robada por una secta. Junto a sus compañeros, enfrenta rituales oscuros, persecuciones y desafíos sobrenaturales. Una entrega llena de acción y exotismo.",
         "en": "Indiana Jones is drawn into a dangerous adventure in India, where he must rescue enslaved children and recover a sacred stone stolen by a cult. Alongside his companions, he faces dark rituals, chases, and supernatural challenges. A thrilling and exotic chapter in the saga."
       },
-      "image": "/imagenes/peliculas/indi2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/indi2.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=EdRx5HPYnlQ",
         "en": "https://www.youtube.com/watch?v=5tK7rcy4k9M"
@@ -327,7 +327,7 @@
         "es": "Indiana Jones y su padre, Henry, se embarcan en la búsqueda del Santo Grial, enfrentándose a los nazis y resolviendo enigmas ancestrales. La relación padre-hijo y la fe serán puestas a prueba en una carrera contrarreloj llena de acción, humor y descubrimientos históricos.",
         "en": "Indiana Jones and his father, Henry, embark on a quest for the Holy Grail, facing Nazis and solving ancient riddles. Their father-son relationship and faith are tested in a race against time filled with action, humor, and historical discoveries."
       },
-      "image": "/imagenes/peliculas/indi3.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/indi3.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=5YbMpOOonJs",
         "en": "https://www.youtube.com/watch?v=sagmdpkWUqc"
@@ -349,7 +349,7 @@
         "en": "Billionaire John Hammond builds a groundbreaking theme park with cloned dinosaurs on a remote island. When a group of experts is invited to inspect it, a security failure unleashes chaos and the visitors must fight to survive. The film explores the dangers of tampering with nature and human ambition, blending action, suspense, and groundbreaking visual effects."
       },
       "director": "Steven Spielberg",
-      "image": "/imagenes/peliculas/jurasic_park.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/jurasic_park.jpg",
       "year": 1993,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=dLDkNge_AhE",
@@ -370,7 +370,7 @@
         "en": "A young man survives a shipwreck and finds himself sharing a lifeboat with a Bengal tiger. A story about survival, faith, and the relationship between man and nature, with impressive visual effects."
       },
       "director": "Ang Lee",
-      "image": "/imagenes/peliculas/la_vida_de_pi.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/la_vida_de_pi.jpg",
       "year": 2012,
       "masterpiece": false,
       "trailer": {
@@ -391,7 +391,7 @@
         "en": "A group of kids finds a treasure map that leads them on an adventure full of dangers, traps, and pirates. An adventure film that captures the magic of childhood and friendship."
       },
       "director": "Richard Donner",
-      "image": "/imagenes/peliculas/goonies.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/goonies.jpg",
       "year": 1985,
       "masterpiece": true,
       "trailer": {
@@ -412,7 +412,7 @@
         "en": "Two teenagers, a city boy and a country girl, discover they are mysteriously connected through their dreams. Japanese animated film directed by Makoto Shinkai."
       },
       "director": "Makoto Shinkai",
-      "image": "/imagenes/peliculas/your_name.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/your_name.jpg",
       "year": 2016,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=xU47nhruN-Q",
@@ -433,7 +433,7 @@
         "en": "A love story between a pianist and a singer in 1940s and 1950s Cuba, with vibrant music and animation. Directed by Fernando Trueba, Javier Mariscal and Tono Errando."
       },
       "director": "Fernando Trueba, Javier Mariscal, Tono Errando",
-      "image": "/imagenes/peliculas/chico_rita.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/chico_rita.jpg",
       "year": 2010,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=vc4PzhZBVLA&pp=ygUbY2hpY28geSByaXRhIHRyYWlsZXIgaW5nbGVz",
@@ -457,7 +457,7 @@
         "en": "An animated film directed by Hayao Miyazaki, following the adventure of two young people in search of a legendary floating city."
       },
       "director": "Hayao Miyazaki",
-      "image": "/imagenes/peliculas/castillo_en_el_cielo.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/castillo_en_el_cielo.jpg",
       "year": 1986,
       "masterpiece": false,
       "trailer": {
@@ -478,7 +478,7 @@
         "en": "An animated film directed by Hayao Miyazaki, telling the story of two sisters who move to the countryside and discover a magical world inhabited by fantastic creatures."
       },
       "director": "Hayao Miyazaki",
-      "image": "/imagenes/peliculas/totoro.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/totoro.jpg",
       "year": 1988,
       "masterpiece": true,
       "trailer": {
@@ -501,7 +501,7 @@
         "es": "Película de animación española basada en el cómic de Paco Roca. Narra la amistad entre dos ancianos en una residencia y su lucha contra el Alzheimer y la soledad.",
         "en": "Spanish animated film based on Paco Roca's comic. It tells the story of the friendship between two elderly men in a nursing home and their struggle with Alzheimer's and loneliness."
       },
-      "image": "/imagenes/peliculas/arrugas.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/arrugas.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=EmqZi01WO-I",
         "en": "https://www.youtube.com/watch?v=EmqZi01WO-I"
@@ -523,7 +523,7 @@
         "en": "Ashitaka, an Emishi prince, is cursed after defending his village from a demon boar. Seeking a cure, he journeys to an ancient forest, becoming entangled in a war between the forest gods, led by the fierce Princess Mononoke (San), and humans exploiting their resources. The film explores the complex relationship between humanity and nature, violence, and the possibility of coexistence."
       },
       "director": "Hayao Miyazaki",
-      "image": "/imagenes/peliculas/mononoke.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/mononoke.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=NixsPRMfqV0",
         "en": "https://www.youtube.com/watch?v=vf6c6n35wr4"
@@ -544,7 +544,7 @@
         "en": "An animated film directed by Hayao Miyazaki, depicting the adventures of a pig-like pilot in interwar Italy."
       },
       "director": "Hayao Miyazaki",
-      "image": "/imagenes/peliculas/porco_rosso.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/porco_rosso.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=oD6yrU1SEuk",
         "en": "https://www.youtube.com/watch?v=d7liHyvmw3k"
@@ -565,7 +565,7 @@
         "en": " In a cybernetic future, Major Motoko Kusanagi leads a police unit specializing in tech crimes. As she investigates a mysterious hacker, she questions her own identity and the boundary between human and machine. A classic sci-fi anime."
       },
       "director": "Mamoru Oshii",
-      "image": "/imagenes/peliculas/ghost_in_the_shell.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/ghost_in_the_shell.jpg",
       "year": 1995,
       "masterpiece": false,
       "trailer": {
@@ -586,7 +586,7 @@
         "en": "Ten-year-old Chihiro and her parents stumble upon an abandoned amusement park that turns out to be a spirit world. When her parents are transformed into pigs, Chihiro must work in a bathhouse run by the enigmatic witch Yubaba to find a way to free them. The film is a magical odyssey of self-discovery, bravery, and coming of age, filled with fantastical creatures and unforgettable challenges."
       },
       "director": "Hayao Miyazaki",
-      "image": "/imagenes/peliculas/chihiro.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/chihiro.jpg",
       "year": 2001,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=5Fgq4Osh6XQ",
@@ -607,7 +607,7 @@
         "en": "An animation masterpiece that tells the story of a planet inhabited by blue giants who keep humans as pets. A political and social allegory with a unique and avant-garde aesthetic."
       },
       "director": "René Laloux",
-      "image": "/imagenes/peliculas/la_planete.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/la_planete.jpg",
       "year": 1973,
       "masterpiece": true,
       "trailer": {
@@ -628,7 +628,7 @@
         "en": "An autobiographical animation that tells the story of an Iranian girl during the Islamic revolution and her subsequent exile in Europe. A moving story about identity, freedom, and adapting to different cultures."
       },
       "director": "Marjane Satrapi, Vincent Paronnaud",
-      "image": "/imagenes/peliculas/persepolis.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/persepolis.jpg",
       "year": 2007,
       "masterpiece": false,
       "trailer": {
@@ -649,7 +649,7 @@
         "en": "A girl discovers a secret door that leads to an alternative version of her life, where everything seems perfect but hides a sinister secret. A stop-motion animation masterpiece."
       },
       "director": "Henry Selick",
-      "image": "/imagenes/peliculas/coraline.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/coraline.jpg",
       "year": 2009,
       "masterpiece": false,
       "trailer": {
@@ -670,7 +670,7 @@
         "en": "A 78-year-old widower fulfills his lifelong dream of traveling to South America, taking his house with balloons. A touching story about love, loss, and adventure."
       },
       "director": "Pete Docter",
-      "image": "/imagenes/peliculas/up.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/up.jpg",
       "year": 2009,
       "masterpiece": false,
       "trailer": {
@@ -694,7 +694,7 @@
         "en": "Surrealist comedy by José Luis Cuerda, considered one of the most original and funniest films in Spanish cinema."
       },
       "director": "José Luis Cuerda",
-      "image": "/imagenes/peliculas/amanece.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/amanece.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=HVkOnINvIMA",
         "en": "https://www.youtube.com/watch?v=HVkOnINvIMA"
@@ -714,7 +714,7 @@
         "es": "Un grupo de amigos despierta tras una despedida de soltero en Las Vegas sin recordar nada de la noche anterior y debe encontrar al novio desaparecido antes de la boda.",
         "en": "A group of friends wakes up after a bachelor party in Las Vegas with no memory of the previous night and must find the missing groom before the wedding."
       },
-      "image": "/imagenes/peliculas/hanghover1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/hanghover1.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=4eYSpIz2FjU",
         "en": "https://www.youtube.com/watch?v=tcdUhdOlz9M"
@@ -735,7 +735,7 @@
         "es": "La pandilla viaja a Tailandia para la boda de Stu, pero una vez más se despiertan sin recuerdos de la noche anterior y deben encontrar a un amigo perdido en Bangkok.",
         "en": "The gang travels to Thailand for Stu's wedding, but once again they wake up with no memory of the previous night and must find a lost friend in Bangkok."
       },
-      "image": "/imagenes/peliculas/hanghover2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/hanghover2.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=1dQ9a5EFZeI",
         "en": "https://www.youtube.com/watch?v=ohF5ZO_zOYU"
@@ -756,7 +756,7 @@
         "es": "En la última entrega, los amigos se embarcan en una nueva aventura que los lleva de vuelta a Las Vegas, enfrentándose a viejos enemigos y situaciones inesperadas.",
         "en": "In the final installment, the friends embark on a new adventure that takes them back to Las Vegas, facing old enemies and unexpected situations."
       },
-      "image": "/imagenes/peliculas/hanghover3.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/hanghover3.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=1Vb7pQ2w1xk",
         "en": "https://www.youtube.com/watch?v=96TelFMZwHc"
@@ -778,7 +778,7 @@
         "en": "A romantic comedy by Woody Allen exploring the complexities of modern relationships in New York. Winner of 4 Oscars, including Best Picture."
       },
       "director": "Woody Allen",
-      "image": "/imagenes/peliculas/annie_hall.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/annie_hall.jpg",
       "year": 1977,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=TBzHphcc2Jw",
@@ -799,7 +799,7 @@
         "en": "Dramatic comedy directed by James L. Brooks, starring Jack Nicholson and Helen Hunt. A misanthropic writer and a waitress form an unexpected friendship."
       },
       "director": "James L. Brooks",
-      "image": "/imagenes/peliculas/as_good.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/as_good.jpg",
       "year": 1997,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=ssMbPxpSoiw",
@@ -820,7 +820,7 @@
         "en": "An irreverent teen comedy about two friends trying to make the most of their last party before graduation. Written by Seth Rogen and Evan Goldberg, directed by Greg Mottola."
       },
       "director": "Greg Mottola",
-      "image": "/imagenes/peliculas/superbad.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/superbad.jpg",
       "year": 2007,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=b8ht6ObDlyQ",
@@ -841,7 +841,7 @@
         "en": "An Indian comedy-drama about friendship, academic pressure, and the search for true passion in university life. Directed by Rajkumar Hirani."
       },
       "director": "Rajkumar Hirani",
-      "image": "/imagenes/peliculas/3idiots.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/3idiots.jpg",
       "year": 2009,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=K0eDlFX9GMc",
@@ -862,7 +862,7 @@
         "en": "A Spanish black comedy directed by Álex de la Iglesia, about an ambitious salesman trapped in an increasingly absurd situation after a crime in a department store."
       },
       "director": "Álex de la Iglesia",
-      "image": "/imagenes/peliculas/crimen_ferpecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/crimen_ferpecto.jpg",
       "year": 2004,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=YEXvOydba1s",
@@ -886,7 +886,7 @@
         "en": "Two friends accidentally erase all the tapes in a video store and decide to remake the movies using creativity and limited resources. Their homemade versions become an unexpected hit in the neighborhood. An original comedy about friendship, creativity, and a love for movies."
       },
       "director": "Michel Gondry",
-      "image": "/imagenes/peliculas/be_kind.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/be_kind.jpg",
       "year": 2008,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=XjwrknarHq0&t=9s",
@@ -907,7 +907,7 @@
         "en": "A recently deceased couple tries to scare away the new residents of their home. They summon Beetlejuice, a chaotic and eccentric ghost, but things quickly spiral. A unique gothic comedy."
       },
       "director": "Tim Burton",
-      "image": "/imagenes/peliculas/beetlejuice1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/beetlejuice1.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=Gpg6OzvwuiA",
         "en": "https://www.youtube.com/watch?v=CoZqL9N6Rx4"
@@ -928,7 +928,7 @@
         "en": "Beetlejuice returns from the afterlife to wreak havoc in the world of the living and the dead. New characters and outrageous situations join this sequel full of dark humor, fantasy, and Tim Burton’s unmistakable style."
       },
       "director": "Tim Burton",
-      "image": "/imagenes/peliculas/beetlejuice2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/beetlejuice2.jpg",
       "year": 2024,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=9SzBZZhN0fQ&t=2s",
@@ -949,7 +949,7 @@
         "en": "A satire about rural Spain and the arrival of the Marshall Plan, where a small village prepares to welcome the Americans. Directed by Luis García Berlanga."
       },
       "director": "Luis García Berlanga",
-      "image": "/imagenes/peliculas/bienvenido_mister.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/bienvenido_mister.jpg",
       "year": 1953,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=pFcaobDW42g&t=34s",
@@ -973,7 +973,7 @@
         "en": "A group of unemployed scientists start a business to catch ghosts in New York City. Soon, they face a supernatural threat that endangers the entire city. An iconic comedy blending humor, action, and innovative special effects."
       },
       "director": "Ivan Reitman",
-      "image": "/imagenes/peliculas/Ghostbusters.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/Ghostbusters.jpg",
       "year": 1984,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=nr3rshIFA_0",
@@ -994,7 +994,7 @@
         "en": "Two fallen angels try to return to heaven by challenging divine laws, which could trigger the end of the universe. 'Dogma' is an irreverent comedy that mixes religion, satire, and absurd humor."
       },
       "director": "Kevin Smith",
-      "image": "/imagenes/peliculas/dogma.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/dogma.jpg",
       "year": 1999,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=m5XqG2tS1XE",
@@ -1015,7 +1015,7 @@
         "en": "A priest believes he has deciphered the secret message of the Apocalypse and, together with a death metal fan and a TV host, tries to prevent the birth of the Antichrist in Madrid. 'The Day of the Beast' is a black comedy and horror film, considered a masterpiece of Spanish cinema."
       },
       "director": "Álex de la Iglesia",
-      "image": "/imagenes/peliculas/dia_bestia.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/dia_bestia.jpg",
       "year": 1995,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=_sOQnTw2K4E",
@@ -1039,7 +1039,7 @@
         "en": "A humble Jewish barber is mistaken for a tyrannical dictator in a scathing satire about fascism and intolerance. 'The Great Dictator' is one of Charles Chaplin's most emblematic works, combining humor and social critique."
       },
       "director": "Charles Chaplin",
-      "image": "/imagenes/peliculas/the_great_dictator.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/the_great_dictator.jpg",
       "year": 1940,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=wNFWcR5dqlw&t=1s",
@@ -1060,7 +1060,7 @@
         "en": "The Dude, a laid-back bowler, gets mistakenly involved in a bizarre criminal plot. 'The Big Lebowski' is a cult comedy by the Coen brothers, famous for its eccentric characters and memorable dialogue."
       },
       "director": "Joel Coen",
-      "image": "/imagenes/peliculas/big_lebowski.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/big_lebowski.jpg",
       "year": 1998,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=tE4--lpy3Pg",
@@ -1084,7 +1084,7 @@
         "en": "A surreal comedy that tells the peculiar life of P. Tinto, a man waiting for a miracle while facing absurd situations and extravagant characters."
       },
       "director": "Javier Fesser",
-      "image": "/imagenes/peliculas/el_milagro_de_p_tinto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_milagro_de_p_tinto.jpg",
       "year": 1998,
       "masterpiece": true,
       "cine_espanol": true,
@@ -1106,7 +1106,7 @@
         "en": "In 1969 Hollywood, a fading actor and his stunt double try to stay afloat. Their lives intersect with real figures like Sharon Tate as fiction and history collide. A love letter to a bygone era of cinema."
       },
       "director": "Quentin Tarantino",
-      "image": "/imagenes/peliculas/once_upon_a_time_in_hollywood.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/once_upon_a_time_in_hollywood.jpg",
       "year": 2019,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=J0rFGJV3cYw",
@@ -1127,7 +1127,7 @@
         "en": "A classic comedy directed by Mel Brooks, parodying Frankenstein horror films with unique humor."
       },
       "director": "Mel Brooks",
-      "image": "/imagenes/peliculas/young_frankenstein.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/young_frankenstein.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=Y8v2YNOdwnM",
         "en": "https://www.youtube.com/watch?v=sO8g8VmFf0M"
@@ -1148,7 +1148,7 @@
         "en": "Four comedic and surreal stories intertwine in a hotel on New Year's Eve. A rookie bellhop gets caught up in absurd situations with eccentric guests. Each episode is directed by a different filmmaker, each with their own style."
       },
       "director": "Quentin Tarantino",
-      "image": "/imagenes/peliculas/four_rooms.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/four_rooms.jpg",
       "year": 1995,
       "masterpiece": false,
       "trailer": {
@@ -1172,7 +1172,7 @@
         "en": "A Spanish black comedy that follows the neighbors of a building when they discover a hidden fortune in a deceased old man's apartment. Greed and madness take over the community as they try to split the loot."
       },
       "director": "Álex de la Iglesia",
-      "image": "/imagenes/peliculas/la_comunidad.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/la_comunidad.jpg",
       "year": 2000,
       "masterpiece": true,
       "trailer": {
@@ -1196,7 +1196,7 @@
         "en": "A Spanish political satire that portrays the intrigues and corruptions of the political class during a hunting trip. Directed by Luis García Berlanga, it's a biting critique of Spanish society of the time."
       },
       "director": "Luis García Berlanga",
-      "image": "/imagenes/peliculas/la_escopeta_nacional.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/la_escopeta_nacional.jpg",
       "year": 1978,
       "masterpiece": true,
       "trailer": {
@@ -1220,7 +1220,7 @@
         "en": "A comedy set during the Spanish Civil War that tells the story of a group of Republican soldiers trying to steal a heifer to celebrate a party. A satire about war and humanity in times of conflict."
       },
       "director": "Luis García Berlanga",
-      "image": "/imagenes/peliculas/la_vaquilla.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/la_vaquilla.jpg",
       "year": 1985,
       "masterpiece": false,
       "trailer": {
@@ -1241,7 +1241,7 @@
         "en": "A satirical comedy by Monty Python that follows the life of Brian, a man born on the same day as Jesus Christ who is mistaken for the Messiah. A brilliant and irreverent satire on religion and society."
       },
       "director": "Terry Jones",
-      "image": "/imagenes/peliculas/brian_life.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/brian_life.jpg",
       "year": 1979,
       "masterpiece": true,
       "trailer": {
@@ -1262,7 +1262,7 @@
         "en": "A comedy that tells the adventures of a Bushman tribe member when he finds a Coca-Cola bottle that falls from the sky. A satire about modern civilization seen from the perspective of a traditional culture."
       },
       "director": "Jamie Uys",
-      "image": "/imagenes/peliculas/dioses_locos.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/dioses_locos.jpg",
       "year": 1980,
       "masterpiece": false,
       "trailer": {
@@ -1283,7 +1283,7 @@
         "en": "A comedy that follows the adventures of a deaf man and a blind man who become unwitting witnesses to a murder. Together they must solve the case while dealing with their own limitations."
       },
       "director": "Arthur Hiller",
-      "image": "/imagenes/peliculas/no_me_chilles.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/no_me_chilles.jpg",
       "year": 1989,
       "masterpiece": false,
       "trailer": {
@@ -1304,7 +1304,7 @@
         "en": "A young waitress in Paris decides to change the lives of those around her while seeking her own happiness. A magical and charming film that captures the essence of bohemian Paris and the beauty of life's small moments."
       },
       "director": "Jean-Pierre Jeunet",
-      "image": "/imagenes/peliculas/amelie.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/amelie.jpg",
       "year": 2001,
       "masterpiece": true,
       "trailer": {
@@ -1325,7 +1325,7 @@
         "en": "A satire on the Cold War where a deranged American general orders a nuclear attack on the Soviet Union. A Stanley Kubrick masterpiece that combines black humor with a biting critique of the arms race."
       },
       "director": "Stanley Kubrick",
-      "image": "/imagenes/peliculas/telefono_rojo.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/telefono_rojo.jpeg",
       "year": 1964,
       "masterpiece": true,
       "trailer": {
@@ -1346,7 +1346,7 @@
         "en": "The fictional story of how Jack Black and Kyle Gass formed the band Tenacious D and their quest for a legendary pick that will give them the power to become the greatest musicians in the world. An irreverent musical comedy full of cameos."
       },
       "director": "Liam Lynch",
-      "image": "/imagenes/peliculas/tenaciusd.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/tenaciusd.jpg",
       "year": 2006,
       "masterpiece": false,
       "trailer": {
@@ -1367,7 +1367,7 @@
         "en": "An American rock singer gets involved in a spy mission in East Germany during the Cold War. An absurd comedy from the creators of 'Airplane!' that parodies spy films and musicals."
       },
       "director": "Jim Abrahams, David Zucker, Jerry Zucker",
-      "image": "/imagenes/peliculas/top_secret.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/top_secret.jpg",
       "year": 1984,
       "masterpiece": true,
       "trailer": {
@@ -1388,7 +1388,7 @@
         "en": "A group of con artists tries to recover stolen jewels, but their plans are complicated by betrayal, love, and a fish called Wanda. A black comedy with witty dialogue and hilarious situations."
       },
       "director": "Charles Crichton",
-      "image": "/imagenes/peliculas/wanda.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/wanda.jpg",
       "year": 1988,
       "masterpiece": false,
       "trailer": {
@@ -1409,7 +1409,7 @@
         "en": "Brazilian film directed by Fernando Meirelles and Kátia Lund, depicting life in the favelas of Rio de Janeiro and the rise of organized crime."
       },
       "director": "Fernando Meirelles, Kátia Lund",
-      "image": "/imagenes/peliculas/ciudad_de_dios.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/ciudad_de_dios.jpg",
       "year": 2002,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=63kaF1n5sz0",
@@ -1430,7 +1430,7 @@
         "en": "Greek film directed by Yorgos Lanthimos, exploring the life of a family isolated from the outside world under strict and absurd rules."
       },
       "director": "Yorgos Lanthimos",
-      "image": "/imagenes/peliculas/dogtooth.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/dogtooth.jpg",
       "year": 2009,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=VQT8LCohdUk",
@@ -1451,7 +1451,7 @@
         "en": "Film directed by Gus Van Sant, starring Matt Damon and Robin Williams. A young man with extraordinary mathematical talent struggles to find his place in the world with the help of an unconventional therapist."
       },
       "director": "Gus Van Sant",
-      "image": "/imagenes/peliculas/good_will_hunting.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/good_will_hunting.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=H4eUj8XLqD0",
         "en": "https://www.youtube.com/watch?v=ReIJ1lbL-Q8"
@@ -1472,7 +1472,7 @@
         "en": "Film directed by Francis Ford Coppola. A cinema classic about the Corleone mafia family and power in mid-20th century America."
       },
       "director": "Francis Ford Coppola",
-      "image": "/imagenes/peliculas/el_padrino_1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_padrino_1.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=XLEnSN99ths",
         "en": "https://www.youtube.com/watch?v=sY1S34973zA"
@@ -1493,7 +1493,7 @@
         "en": "Second part of the saga directed by Francis Ford Coppola. Explores the origins of the Corleone family and Michael's rise as mafia boss."
       },
       "director": "Francis Ford Coppola",
-      "image": "/imagenes/peliculas/el_padrino_2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_padrino_2.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=9O1Iy9od7-A",
         "en": "https://www.youtube.com/watch?v=qJr92K_hKl0"
@@ -1514,7 +1514,7 @@
         "en": "Third installment of the Corleone saga, directed by Francis Ford Coppola. Michael tries to legitimize the family business while facing new threats."
       },
       "director": "Francis Ford Coppola",
-      "image": "/imagenes/peliculas/el_padrino_3.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_padrino_3.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=QJrG2C1b1y0",
         "en": "https://www.youtube.com/watch?v=QJrG2C1b1y0"
@@ -1534,7 +1534,7 @@
         "es": "Película colombiana dirigida por Víctor Gaviria, inspirada en el cuento de Hans Christian Andersen, que retrata la dura vida de los niños en las calles de Medellín.",
         "en": "Colombian film directed by Víctor Gaviria, inspired by Hans Christian Andersen's tale, portraying the harsh life of children on the streets of Medellín."
       },
-      "image": "/imagenes/peliculas/la_vendedora_de_rosas.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/la_vendedora_de_rosas.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=cYZMMRZR90w",
         "en": "https://www.youtube.com/watch?v=cYZMMRZR90w"
@@ -1555,7 +1555,7 @@
         "es": "Basada en la vida real de John Nash, un brillante matemático que lucha contra la esquizofrenia. Su mente extraordinaria lo lleva al borde del genio y la locura. Una historia conmovedora sobre superación y amor.",
         "en": "Based on the true story of John Nash, a brilliant mathematician battling schizophrenia. His extraordinary mind teeters between genius and madness. A moving story of perseverance and love."
       },
-      "image": "/imagenes/peliculas/beautilful_mind.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/beautilful_mind.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=h_B16qD89aM"
       },
@@ -1575,7 +1575,7 @@
         "es": "Película de Stanley Kubrick basada en la novela de Anthony Burgess. Un retrato impactante de la violencia, el control social y la libertad individual.",
         "en": "Stanley Kubrick's film based on Anthony Burgess's novel. A shocking portrait of violence, social control, and individual freedom."
       },
-      "image": "/imagenes/peliculas/naranja.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/naranja.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=MmUhbSZMjOY"
       },
@@ -1595,7 +1595,7 @@
         "es": "Dos hombres mayores, ambos enfermos terminales, escapan del hospital para cumplir una lista de deseos antes de morir. Protagonizada por Jack Nicholson y Morgan Freeman.",
         "en": "Two terminally ill men escape from a hospital to fulfill a bucket list of things to do before they die. Starring Jack Nicholson and Morgan Freeman."
       },
-      "image": "/imagenes/peliculas/ahora_nunca.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/ahora_nunca.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=63kaF1n5sz0",
         "en": "https://www.youtube.com/watch?v=vc3mkG21ob4"
@@ -1616,7 +1616,7 @@
         "es": "Un joven neonazi intenta dejar atrás su pasado de odio y violencia tras salir de prisión, mientras trata de evitar que su hermano menor siga sus pasos. Protagonizada por Edward Norton.",
         "en": "A former neo-Nazi tries to leave behind his past of hate and violence after being released from prison, while trying to prevent his younger brother from following in his footsteps. Starring Edward Norton."
       },
-      "image": "/imagenes/peliculas/american_history.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/american_history.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=oi7bhRmJzec&t=13s",
         "en": "https://www.youtube.com/watch?v=XfQYHqsiN5g"
@@ -1637,7 +1637,7 @@
         "es": "Obra maestra de Francis Ford Coppola que adapta 'El corazón de las tinieblas' al contexto de la guerra de Vietnam. Un viaje al horror y la locura protagonizado por Martin Sheen y Marlon Brando.",
         "en": "Francis Ford Coppola's masterpiece adapts 'Heart of Darkness' to the Vietnam War. A journey into horror and madness starring Martin Sheen and Marlon Brando."
       },
-      "image": "/imagenes/peliculas/apocalipse.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/apocalipse.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=h5iZf5kv354",
         "en": "https://www.youtube.com/watch?v=9l-ViOOFH-s"
@@ -1658,7 +1658,7 @@
         "es": "Una distopía surrealista dirigida por Terry Gilliam, donde un burócrata lucha contra un sistema opresivo y absurdo en un futuro totalitario. Considerada una obra de culto del cine de ciencia ficción.",
         "en": "A surreal dystopia directed by Terry Gilliam, where a bureaucrat struggles against an oppressive and absurd system in a totalitarian future. Considered a cult classic of science fiction cinema."
       },
-      "image": "/imagenes/peliculas/brazil.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/brazil.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=ei1Mov2GTMI",
         "en": "https://www.youtube.com/watch?v=ZKPFC8DA9_8"
@@ -1683,7 +1683,7 @@
         "en": "Film by Fernando Trueba, winner of the Oscar for Best Foreign Language Film. A romantic comedy set in 1930s Spain."
       },
       "director": "Fernando Trueba",
-      "image": "/imagenes/peliculas/belle_epoque.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/belle_epoque.jpg",
       "year": 1992,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=Fej2LCDtcss",
@@ -1704,7 +1704,7 @@
         "en": "A group of young people in Edinburgh navigate heroin addiction and marginal life in the 90s. Directed by Danny Boyle, based on the novel by Irvine Welsh."
       },
       "director": "Danny Boyle",
-      "image": "/imagenes/peliculas/trainspoting1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/trainspoting1.jpg",
       "year": 1996,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=M8jl94mbCJU",
@@ -1725,7 +1725,7 @@
         "en": "Twenty years later, Renton returns to Scotland and reunites with his old friends. Sequel directed by Danny Boyle, based on the novel by Irvine Welsh."
       },
       "director": "Danny Boyle",
-      "image": "/imagenes/peliculas/trainspoting2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/trainspoting2.jpg",
       "year": 2017,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=PPLRVCAWq1Q",
@@ -1746,7 +1746,7 @@
         "en": "A controversial and disturbing Italian film directed by Pier Paolo Pasolini, based on Sade's novel. A group of youths is subjected to torture and humiliation by fascist authorities."
       },
       "director": "Pier Paolo Pasolini",
-      "image": "/imagenes/peliculas/salo.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/salo.jpg",
       "year": 1975,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=0iJYAycEDII",
@@ -1767,7 +1767,7 @@
         "en": "A casino manager in Las Vegas becomes entangled in a web of power, ambition, and betrayal. Directed by Martin Scorsese."
       },
       "director": "Martin Scorsese",
-      "image": "/imagenes/peliculas/casino.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/casino.jpg",
       "year": 1995,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=aFP8CjozpkY",
@@ -1788,7 +1788,7 @@
         "en": "The first part of the biopic about Ernesto 'Che' Guevara, focused on the Cuban Revolution. Directed by Steven Soderbergh."
       },
       "director": "Steven Soderbergh",
-      "image": "/imagenes/peliculas/che.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/che.jpg",
       "year": 2008,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=ImVM0X0YtH8&pp=ygUhY2hlIGVsIGFyZ2VudGlubyB0cmFpbGVyIGVzcGHDsW9s",
@@ -1809,7 +1809,7 @@
         "en": "A man wakes up with no memory in a dark, labyrinthine city, pursued by mysterious forces that manipulate reality. 'Dark City' is a science fiction thriller and film noir, acclaimed for its unique atmosphere and innovative visual approach."
       },
       "director": "Alex Proyas",
-      "image": "/imagenes/peliculas/dark_city.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/dark_city.jpeg",
       "year": 1998,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=ZTldm4vo4mk&pp=ygUaZGFyayBjaXR5IHRyYWlsZXIgZXNwYcOxb2w%3D",
@@ -1830,7 +1830,7 @@
         "en": "Twelve jurors must decide the fate of a young man accused of murder. Through intense debates, prejudices, and tensions, '12 Angry Men' becomes a powerful drama about justice and human nature."
       },
       "director": "Sidney Lumet",
-      "image": "/imagenes/peliculas/12_angry_man.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/12_angry_man.jpg",
       "year": 1957,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=hiyJZP-MlxM",
@@ -1851,7 +1851,7 @@
         "en": "A troubled teenager begins experiencing visions of a mysterious giant rabbit that warns him about the end of the world. 'Donnie Darko' is a cult psychological thriller that blends science fiction, drama, and supernatural elements."
       },
       "director": "Richard Kelly",
-      "image": "/imagenes/peliculas/donnie_darko.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/donnie_darko.jpg",
       "year": 2001,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=EP9L4CzN6to",
@@ -1872,7 +1872,7 @@
         "en": "An old man returns to his hometown seeking the truth about the paternity of his granddaughters, confronting family secrets and the passage of time. 'El abuelo' is an intense and emotional drama from Spanish cinema."
       },
       "director": "José Luis Garci",
-      "image": "/imagenes/peliculas/el_abuelo.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_abuelo.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=MLZepMwQmcw",
         "en": "https://www.youtube.com/watch?v=MLZepMwQmcw"
@@ -1896,7 +1896,7 @@
         "en": "In a Galician forest, the lives of its peculiar inhabitants intertwine in a story full of humor, tenderness, and magical realism. 'El bosque animado' is one of the great gems of Spanish cinema."
       },
       "director": "José Luis Cuerda",
-      "image": "/imagenes/peliculas/el_bosque_animado.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_bosque_animado.jpg",
       "year": 1987,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=Piu3tDDVH9o",
@@ -1920,7 +1920,7 @@
         "en": "At a strict boarding school, a charismatic literature teacher inspires his students to think for themselves and seize the day. 'Dead Poets Society' is an emotional drama about youth, freedom, and the power of poetry."
       },
       "director": "Peter Weir",
-      "image": "/imagenes/peliculas/dead_poets_society.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/dead_poets_society.jpg",
       "year": 1989,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=y2m3OO5clPU",
@@ -1941,7 +1941,7 @@
         "en": "Two con artists plan a complex revenge against a powerful mobster in 1930s Chicago. 'The Sting' is a caper comedy with surprising twists and an unforgettable soundtrack."
       },
       "director": "George Roy Hill",
-      "image": "/imagenes/peliculas/el_golpe.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_golpe.jpg",
       "year": 1973,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=UZ4CuWPnfeM",
@@ -1961,7 +1961,7 @@
         "es": "Una joven fallecida es devuelta a la vida por un científico poco convencional. Con una nueva curiosidad por el mundo, inicia un viaje de autodescubrimiento y liberación. Fábula feminista y visualmente exuberante.",
         "en": "A young woman is brought back to life by an unorthodox scientist. With a renewed sense of curiosity, she embarks on a journey of self-discovery and liberation. A feminist fable with lavish visuals."
       },
-      "image": "/imagenes/peliculas/poor_things.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/poor_things.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=SsEojV8hZ9I",
         "en": "https://www.youtube.com/watch?v=RlbR5N6veqw"
@@ -1982,7 +1982,7 @@
         "es": "Un hombre de mediana edad atraviesa una crisis existencial mientras se obsesiona con la amiga de su hija, en una sátira oscura sobre la vida suburbana estadounidense.",
         "en": "A middle-aged man experiences an existential crisis while becoming infatuated with his daughter's friend, in a dark satire of American suburban life."
       },
-      "image": "/imagenes/peliculas/american_beauty.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/american_beauty.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=2nxHDGMOjgQ",
         "en": "https://www.youtube.com/watch?v=2nxHDGMOjgQ"
@@ -2004,7 +2004,7 @@
         "es": "Épica película histórica dirigida y protagonizada por Mel Gibson, que narra la vida de William Wallace y la lucha por la libertad de Escocia.",
         "en": "Epic historical film directed by and starring Mel Gibson, telling the story of William Wallace and the fight for Scotland's freedom."
       },
-      "image": "/imagenes/peliculas/braveheart.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/braveheart.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=OwJGElRruv8",
         "en": "https://www.youtube.com/watch?v=1NJO0jxBtMo"
@@ -2026,7 +2026,7 @@
         "en": "A satire on capital punishment and bureaucracy in Francoist Spain, directed by Luis García Berlanga."
       },
       "director": "Luis García Berlanga",
-      "image": "/imagenes/peliculas/el_verdugo.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_verdugo.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=lUwO3YDulg0&t=20s",
         "en": "https://www.youtube.com/watch?v=lUwO3YDulg0&t=20s"
@@ -2050,7 +2050,7 @@
         "en": "A film about a man reaching his breaking point on a hot day in Los Angeles."
       },
       "director": "Joel Schumacher",
-      "image": "/imagenes/peliculas/un_dia_de_furia.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/un_dia_de_furia.jpg",
       "year": 1993,
       "masterpiece": true,
       "trailer": {
@@ -2071,7 +2071,7 @@
         "en": "The story of Forrest, a man with a low IQ, who journeys through decades of American history, overcoming obstacles and touching the lives of those around him with his innocence and kindness."
       },
       "director": "Robert Zemeckis",
-      "image": "/imagenes/peliculas/forrest_gump.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/forrest_gump.jpg",
       "year": 1994,
       "masterpiece": false,
       "trailer": {
@@ -2092,7 +2092,7 @@
         "en": "A Roman general is betrayed and enslaved. As a gladiator, he seeks vengeance for his family's death by challenging the emperor. A tale of honor, grief, and redemption in the arena."
       },
       "director": "Ridley Scott",
-      "image": "/imagenes/peliculas/gladiator.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/gladiator.jpg",
       "year": 2000,
       "masterpiece": true,
       "trailer": {
@@ -2113,7 +2113,7 @@
         "en": "While on vacation, Baby meets Johnny,\na rebellious dance instructor. Through music and movement,\nthey challenge class divisions and learn to stand up\nfor love, identity, and freedom."
       },
       "director": "Emile Ardolino",
-      "image": "/imagenes/peliculas/dirty-dancing.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/dirty-dancing.jpg",
       "year": 1987,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=gf9Q0CzABnY",
@@ -2134,7 +2134,7 @@
         "en": "Oskar Schindler, a German businessman, saves over a thousand Jews during the Holocaust. Inspired by humanity amid horror. A powerful story of compassion and resistance."
       },
       "director": "Steven Spielberg",
-      "image": "/imagenes/peliculas/schindlers_list.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/schindlers_list.jpg",
       "year": 1993,
       "masterpiece": true,
       "trailer": {
@@ -2155,7 +2155,7 @@
         "en": "A young Irishman is wrongly imprisoned for an IRA bombing. His fight for justice exposes police and legal corruption. Based on a true story."
       },
       "director": "Jim Sheridan",
-      "image": "/imagenes/peliculas/in_the_name_of_the_father.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/in_the_name_of_the_father.jpg",
       "year": 1993,
       "masterpiece": true,
       "trailer": {
@@ -2176,7 +2176,7 @@
         "en": "An elderly Muslim father and his French son embark on a road trip from France to Mecca. During the journey, they must confront their cultural and personal differences while discovering the true meaning of faith and family."
       },
       "director": "Ismaël Ferroukhi",
-      "image": "/imagenes/peliculas/el_gran_viaje.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_gran_viaje.jpg",
       "year": 2004,
       "masterpiece": true,
       "trailer": {
@@ -2197,7 +2197,7 @@
         "en": "A powerful social drama that follows three young men from different ethnic backgrounds over 24 hours in the Paris suburbs, after their friend is brutally beaten by the police. A raw and realistic look at urban violence and social tension."
       },
       "director": "Mathieu Kassovitz",
-      "image": "/imagenes/peliculas/la_haine.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/la_haine.jpg",
       "year": 1995,
       "masterpiece": true,
       "trailer": {
@@ -2221,7 +2221,7 @@
         "en": "An emotional drama set in 1936 Spain that tells the story of a boy and his teacher, and how the Spanish Civil War affects their friendship. A story about innocence, education, and the consequences of war."
       },
       "director": "José Luis Cuerda",
-      "image": "/imagenes/peliculas/la_lengua_de_las_mariposas.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/la_lengua_de_las_mariposas.jpg",
       "year": 1999,
       "masterpiece": false,
       "trailer": {
@@ -2242,7 +2242,7 @@
         "en": "A young woman with emotional problems gets a job as a lawyer's secretary. A complex relationship develops between them that mixes power, control, and desire, challenging social conventions."
       },
       "director": "Steven Shainberg",
-      "image": "/imagenes/peliculas/secretary.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/secretary.jpg",
       "year": 2002,
       "masterpiece": false,
       "trailer": {
@@ -2263,7 +2263,7 @@
         "en": "A Jewish father uses his imagination to protect his young son from the horrors of a Nazi concentration camp, turning their terrible reality into a game. A moving story about paternal love and hope in the darkest moments."
       },
       "director": "Roberto Benigni",
-      "image": "/imagenes/peliculas/la_vida_es_bella.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/la_vida_es_bella.jpg",
       "year": 1997,
       "masterpiece": true,
       "trailer": {
@@ -2284,7 +2284,7 @@
         "en": "The epic story of Pu Yi, the last emperor of China, from his childhood in the Forbidden City to his life as an ordinary citizen in communist China. A cinematic masterpiece that portrays the transformation of a country and a man."
       },
       "director": "Bernardo Bertolucci",
-      "image": "/imagenes/peliculas/last_emperor.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/last_emperor.jpg",
       "year": 1987,
       "masterpiece": false,
       "trailer": {
@@ -2305,7 +2305,7 @@
         "en": "A racist, grumpy Korean War veteran is forced to confront his prejudices when he befriends his Hmong neighbor. A powerful story about redemption, friendship, and generational change."
       },
       "director": "Clint Eastwood",
-      "image": "/imagenes/peliculas/gran_torino.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/gran_torino.jpg",
       "year": 2008,
       "masterpiece": true,
       "trailer": {
@@ -2329,7 +2329,7 @@
         "en": "A powerful social drama that portrays the life of a peasant family in rural Spain of the 60s, showing the harsh living conditions and their relationship with landowners. A masterpiece of Spanish cinema."
       },
       "director": "Mario Camus",
-      "image": "/imagenes/peliculas/los_santos_inocentes.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/los_santos_inocentes.jpg",
       "year": 1984,
       "masterpiece": true,
       "trailer": {
@@ -2350,7 +2350,7 @@
         "en": "The true story of Karen Blixen, a Danish writer who moves to Kenya to run a coffee plantation. An epic tale of love, adventure, and self-discovery in colonial Africa."
       },
       "director": "Sydney Pollack",
-      "image": "/imagenes/peliculas/memorias_de_africa.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/memorias_de_africa.jpg",
       "year": 1985,
       "masterpiece": true,
       "trailer": {
@@ -2371,7 +2371,7 @@
         "en": "A retired and bitter boxing trainer finds new purpose when a young female boxer asks him to train her. A moving story about determination, redemption, and the sacrifices necessary to achieve dreams."
       },
       "director": "Clint Eastwood",
-      "image": "/imagenes/peliculas/million_dolar_baby.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/million_dolar_baby.jpg",
       "year": 2004,
       "masterpiece": false,
       "trailer": {
@@ -2392,7 +2392,7 @@
         "en": "Three childhood friends reunite when one of their daughters is murdered. A psychological drama that explores the impact of the past on the present and the consequences of childhood trauma."
       },
       "director": "Clint Eastwood",
-      "image": "/imagenes/peliculas/mystic_river.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/mystic_river.jpg",
       "year": 2003,
       "masterpiece": false,
       "trailer": {
@@ -2413,7 +2413,7 @@
         "en": "An epic story that follows the lives of two men born on the same day on an Italian estate, one the son of landowners and the other of peasants, and how their lives intertwine during the social and political changes of the first half of the 20th century."
       },
       "director": "Bernardo Bertolucci",
-      "image": "/imagenes/peliculas/novecento.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/novecento.jpg",
       "year": 1976,
       "masterpiece": false,
       "trailer": {
@@ -2434,7 +2434,7 @@
         "en": "A man is committed to a psychiatric hospital where he faces the rigid authority of Nurse Ratched. A powerful story about freedom, rebellion, and the fight against institutional oppression."
       },
       "director": "Milos Forman",
-      "image": "/imagenes/peliculas/one_flew.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/one_flew.jpg",
       "year": 1975,
       "masterpiece": true,
       "trailer": {
@@ -2455,7 +2455,7 @@
         "en": "Based on the true story of Władysław Szpilman, a Jewish pianist who survives the Holocaust in Warsaw. A moving story about survival, music, and humanity in times of war."
       },
       "director": "Roman Polanski",
-      "image": "/imagenes/peliculas/the_pianist.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/the_pianist.jpg",
       "year": 2002,
       "masterpiece": true,
       "trailer": {
@@ -2476,7 +2476,7 @@
         "en": "An adaptation of Shakespeare's 'King Lear' set in feudal Japan. An aging warlord divides his kingdom among his three sons, unleashing a tragedy of ambition, betrayal, and revenge."
       },
       "director": "Akira Kurosawa",
-      "image": "/imagenes/peliculas/ran.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/ran.jpg",
       "year": 1985,
       "masterpiece": true,
       "trailer": {
@@ -2497,7 +2497,7 @@
         "en": "A crime is told from four different perspectives, each with its own version of the truth. A masterpiece that explores the subjective nature of reality and the difficulty of knowing absolute truth."
       },
       "director": "Akira Kurosawa",
-      "image": "/imagenes/peliculas/rashomon.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/rashomon.jpg",
       "year": 1950,
       "masterpiece": false,
       "trailer": {
@@ -2518,7 +2518,7 @@
         "en": "An anthology of six short stories that explore violence, revenge, and corruption in contemporary Argentine society. A film that combines black humor with social criticism."
       },
       "director": "Damián Szifron",
-      "image": "/imagenes/peliculas/relatos_salvajes.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/relatos_salvajes.jpg",
       "year": 2014,
       "masterpiece": false,
       "trailer": {
@@ -2539,7 +2539,7 @@
         "en": "A Senegalese immigrant in France struggles to obtain his papers while working as a dishwasher. A story about immigration, solidarity, and hope in the midst of difficulties."
       },
       "director": "Olivier Nakache, Éric Toledano",
-      "image": "/imagenes/peliculas/samba.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/samba.jpg",
       "year": 2014,
       "masterpiece": false,
       "trailer": {
@@ -2560,7 +2560,7 @@
         "en": "Based on a true story, it tells the unusual friendship between a quadriplegic millionaire and his caregiver, a young man from the suburbs with a criminal record. A moving story about friendship, overcoming adversity, and human dignity."
       },
       "director": "Olivier Nakache, Éric Toledano",
-      "image": "/imagenes/peliculas/intocables.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/intocables.jpg",
       "year": 2011,
       "masterpiece": true,
       "trailer": {
@@ -2581,7 +2581,7 @@
         "en": "A retired samurai and his son face their feudal lord when he demands the return of their daughter-in-law to his palace. A powerful story about honor, loyalty, and rebellion against injustice in feudal Japan."
       },
       "director": "Masaki Kobayashi",
-      "image": "/imagenes/peliculas/samurai_rebellion.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/samurai_rebellion.jpg",
       "year": 1967,
       "masterpiece": false,
       "trailer": {
@@ -2602,7 +2602,7 @@
         "en": "A Cuban immigrant arrives in Miami and becomes a powerful drug lord. An epic story about ambition, power, and downfall, starring Al Pacino in one of his most iconic roles."
       },
       "director": "Brian De Palma",
-      "image": "/imagenes/peliculas/scarface.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/scarface.jpg",
       "year": 1983,
       "masterpiece": true,
       "trailer": {
@@ -2623,7 +2623,7 @@
         "en": "A Vietnam veteran with insomnia works as a night taxi driver in the streets of New York, where he becomes involved in a world of violence and corruption. A Martin Scorsese masterpiece that explores loneliness and alienation in modern society."
       },
       "director": "Martin Scorsese",
-      "image": "/imagenes/peliculas/taxi_driver.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/taxi_driver.jpg",
       "year": 1976,
       "masterpiece": true,
       "trailer": {
@@ -2644,7 +2644,7 @@
         "en": "A college student takes a job looking after a bitter, blind retired lieutenant colonel over Thanksgiving weekend. A moving story about friendship, integrity, and redemption, featuring a memorable performance by Al Pacino."
       },
       "director": "Martin Brest",
-      "image": "/imagenes/peliculas/scent_of_a_woman.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/scent_of_a_woman.jpg",
       "year": 1992,
       "masterpiece": false,
       "trailer": {
@@ -2665,7 +2665,7 @@
         "en": "The story of friendship between two men imprisoned for several decades in Shawshank prison. A moving story about hope, friendship, and redemption, considered one of the greatest films of all time."
       },
       "director": "Frank Darabont",
-      "image": "/imagenes/peliculas/cadena_perpetua.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/cadena_perpetua.jpg",
       "year": 1994,
       "masterpiece": true,
       "trailer": {
@@ -2686,7 +2686,7 @@
         "en": "Two friends embark on a road trip that turns into a flight when one of them kills a man in self-defense. A road movie that has become an icon of feminism and female friendship."
       },
       "director": "Ridley Scott",
-      "image": "/imagenes/peliculas/thelma_y_louise.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/thelma_y_louise.jpg",
       "year": 1991,
       "masterpiece": false,
       "trailer": {
@@ -2707,7 +2707,7 @@
         "en": "A university professor reveals to his colleagues that he has lived for 14,000 years, triggering an intense philosophical and scientific debate. A minimalist science fiction film that explores deep concepts through dialogue."
       },
       "director": "Richard Schenkman",
-      "image": "/imagenes/peliculas/the_man_from_earth.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/the_man_from_earth.jpg",
       "year": 2007,
       "masterpiece": false,
       "trailer": {
@@ -2728,7 +2728,7 @@
         "en": "A low-ranking samurai in 19th century Japan struggles to support his family as the country modernizes. An intimate and moving story about honor, family, and social change in feudal Japan."
       },
       "director": "Yoji Yamada",
-      "image": "/imagenes/peliculas/the_twilight_samurai.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/the_twilight_samurai.jpg",
       "year": 2002,
       "masterpiece": true,
       "trailer": {
@@ -2749,7 +2749,7 @@
         "en": "The true story of Henry Hill and his life in the New York mafia, from his youth to his downfall. A Martin Scorsese masterpiece that portrays the world of organized crime with rawness and realism."
       },
       "director": "Martin Scorsese",
-      "image": "/imagenes/peliculas/goodfellas.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/goodfellas.jpg",
       "year": 1990,
       "masterpiece": true,
       "trailer": {
@@ -2771,7 +2771,7 @@
       },
       "director": "Walter Hill",
       "year": 1979,
-      "image": "/imagenes/peliculas/the_warriors.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/the_warriors.jpg",
       "masterpiece": true,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=4Tv284k2OkU",
@@ -2791,7 +2791,7 @@
         "en": "A masterless samurai arrives in a town divided by two criminal gangs and decides to pit them against each other. An Akira Kurosawa masterpiece that influenced the western genre and set new standards for action cinema."
       },
       "director": "Akira Kurosawa",
-      "image": "/imagenes/peliculas/yojimbo.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/yojimbo.jpg",
       "year": 1961,
       "masterpiece": true,
       "trailer": {
@@ -2812,7 +2812,7 @@
         "en": "Batman faces his greatest challenge when the Joker sows chaos in Gotham City. A masterpiece that transcends the superhero genre to become a psychological drama."
       },
       "director": "Christopher Nolan",
-      "image": "/imagenes/peliculas/dark_knight.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/dark_knight.jpg",
       "year": 2008,
       "masterpiece": false,
       "trailer": {
@@ -2833,7 +2833,7 @@
         "en": "An insomniac office worker and a charismatic soap salesman form an underground club where men can release their aggression. A critique of consumer society and toxic masculinity."
       },
       "director": "David Fincher",
-      "image": "/imagenes/peliculas/fight_club.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/fight_club.jpg",
       "year": 1999,
       "masterpiece": false,
       "trailer": {
@@ -2854,7 +2854,7 @@
         "en": "A prison guard in the 1930s discovers that one of the death row inmates possesses a supernatural gift. A story about redemption, injustice, and humanity."
       },
       "director": "Frank Darabont",
-      "image": "/imagenes/peliculas/green_mile.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/green_mile.jpg",
       "year": 1999,
       "masterpiece": false,
       "trailer": {
@@ -2875,7 +2875,7 @@
         "en": "A poor family infiltrates the life of a wealthy family, triggering a series of unexpected events. A social satire that explores inequality and classism."
       },
       "director": "Bong Joon-ho",
-      "image": "/imagenes/peliculas/parasite.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/parasite.jpg",
       "year": 2019,
       "masterpiece": false,
       "trailer": {
@@ -2896,7 +2896,7 @@
         "en": "The life and legacy of Charles Foster Kane, a media magnate, are investigated through different perspectives. Considered one of the greatest films in cinema history."
       },
       "director": "Orson Welles",
-      "image": "/imagenes/peliculas/citizen_kane.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/citizen_kane.jpg",
       "year": 1941,
       "masterpiece": true,
       "trailer": {
@@ -2917,7 +2917,7 @@
         "en": "A man discovers that his entire life has been a televised reality show. A satire about media and privacy in the modern era."
       },
       "director": "Peter Weir",
-      "image": "/imagenes/peliculas/truman_show.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/truman_show.jpg",
       "year": 1998,
       "masterpiece": false,
       "trailer": {
@@ -2941,7 +2941,7 @@
         "en": "A girl takes refuge in a fantasy world to escape the harsh reality of post-war Spain. A masterful blend of historical realism and dark fantasy."
       },
       "director": "Guillermo del Toro",
-      "image": "/imagenes/peliculas/pans_labyrinth.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/pans_labyrinth.jpg",
       "year": 2006,
       "masterpiece": false,
       "trailer": {
@@ -2962,7 +2962,7 @@
         "en": " Set in Middle-earth, this first installment of Peter Jackson's trilogy adapts J.R.R. Tolkien's masterpiece. The story begins with the hobbit Frodo Baggins inheriting a mysterious ring from his uncle Bilbo. The wizard Gandalf discovers it is the One Ring, forged by the Dark Lord Sauron to control all of Middle-earth. To prevent the Ring from falling into the wrong hands and restoring Sauron's power, Frodo must travel to Mount Doom in Mordor to destroy it."
       },
       "director": "Peter Jackson",
-      "image": "/imagenes/peliculas/el_senor_1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_senor_1.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=2dlRvAjU_RI",
         "en": "https://www.youtube.com/watch?v=V75dMMIW2B4"
@@ -2983,7 +2983,7 @@
         "en": "The second part of the trilogy picks up after the shattering of the Fellowship of the Ring. Frodo and Sam continue their arduous journey to Mordor to destroy the One Ring, now with the unsettling companionship of Gollum, the Ring's former bearer, who becomes their reluctant guide. Meanwhile, Aragorn, Legolas, and Gimli pursue the Uruk-hai band that has captured Merry and Pippin, leading them to the besieged kingdom of Rohan."
       },
       "director": "Peter Jackson",
-      "image": "/imagenes/peliculas/el_senor_2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_senor_2.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=LbfMDwc4azU",
         "en": "https://www.youtube.com/watch?v=nuTU5XcZTLA"
@@ -3004,7 +3004,7 @@
         "en": "The trilogy's epic finale sees Middle-earth at war against Sauron. Frodo and Sam journey toward Mount Doom to destroy the One Ring, while Aragorn leads the free armies in a desperate last stand at Minas Tirith and the Black Gate—buying time for Frodo. The fate of Middle-earth hangs in the balance."
       },
       "director": "Peter Jackson",
-      "image": "/imagenes/peliculas/el_senor_3.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_senor_3.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=E0nBBwXHfYI",
         "en": "https://www.youtube.com/watch?v=r5X-hFf6Bwo"
@@ -3025,7 +3025,7 @@
         "en": "Harry Potter learns he is a wizard and attends Hogwarts, making friends and enemies. With Ron and Hermione, he investigates the mystery of the Sorcerer's Stone, facing dangers and learning about courage and friendship. His first year marks the start of his fight against evil in the wizarding world."
       },
       "director": "Chris Columbus",
-      "image": "/imagenes/peliculas/harry1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/harry1.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=WE4AJuIvG1Y",
         "en": "https://www.youtube.com/watch?v=VyHV0BRtdxo"
@@ -3046,7 +3046,7 @@
         "en": "In his second year at Hogwarts, Harry and his friends face a series of mysterious attacks. They uncover the legend of the Chamber of Secrets and battle an ancient evil threatening the students. Courage and friendship are key to saving the school."
       },
       "director": "Chris Columbus",
-      "image": "/imagenes/peliculas/harry2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/harry2.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=C8CL5TbiFwY",
         "en": "https://www.youtube.com/watch?v=1bq0qff4iF8"
@@ -3067,7 +3067,7 @@
         "en": "Harry returns to Hogwarts as a dangerous prisoner, Sirius Black, escapes from Azkaban. With his friends, he uncovers secrets from his past and faces new magical challenges. Loyalty and truth are central to this adventure."
       },
       "director": "Alfonso Cuarón",
-      "image": "/imagenes/peliculas/harry3.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/harry3.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=cCC_mdE5rJk",
         "en": "https://www.youtube.com/watch?v=lAxgztbYDbs"
@@ -3088,7 +3088,7 @@
         "en": "Harry is mysteriously chosen to compete in a dangerous magical tournament. As he faces extreme challenges, he uncovers a dark conspiracy tied to Voldemort’s return. A darker and more mature chapter of the saga."
       },
       "director": "Mike Newell",
-      "image": "/imagenes/peliculas/harry4.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/harry4.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=AUMOURumGSo",
         "en": "https://www.youtube.com/watch?v=PFWAOnvMd1Q"
@@ -3109,7 +3109,7 @@
         "en": "The Ministry of Magic denies Voldemort's return, and Harry leads his friends in defending Hogwarts. Together, they form Dumbledore's Army and fight against oppression and injustice. Resistance and unity are essential."
       },
       "director": "David Yates",
-      "image": "/imagenes/peliculas/harry5.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/harry5.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=NaM7nKvX4Es",
         "en": "https://www.youtube.com/watch?v=y6ZW7KXaXYk"
@@ -3130,7 +3130,7 @@
         "en": "Harry and Dumbledore explore Voldemort's past to find the key to his defeat. As danger grows, Hogwarts is no longer safe. Sacrifice and loyalty are put to the test in this dark chapter."
       },
       "director": "David Yates",
-      "image": "/imagenes/peliculas/harry6.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/harry6.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=NaM7nKvX4Es",
         "en": "https://www.youtube.com/watch?v=sg81Lts5kYY"
@@ -3151,7 +3151,7 @@
         "en": "Harry, Ron, and Hermione leave Hogwarts to find and destroy Voldemort's Horcruxes. They face dangers, betrayals, and loss as the wizarding world falls into darkness. Hope and friendship are their greatest strength."
       },
       "director": "David Yates",
-      "image": "/imagenes/peliculas/harry7.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/harry7.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=PtjvAO_NV20&t=10s",
         "en": "https://www.youtube.com/watch?v=MxqsmsA8y5k"
@@ -3172,7 +3172,7 @@
         "en": "The final battle for Hogwarts pits Harry and his friends against Voldemort and his followers. The fate of the wizarding world is decided in an epic showdown where courage, love, and friendship are decisive."
       },
       "director": "David Yates",
-      "image": "/imagenes/peliculas/harry8.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/harry8.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=HguSMW8XveQ",
         "en": "https://www.youtube.com/watch?v=mObK5XD8udk"
@@ -3193,7 +3193,7 @@
         "en": "Second part of the trilogy, where Bilbo and the dwarves continue their journey facing the dragon Smaug. Directed by Peter Jackson."
       },
       "director": "Peter Jackson",
-      "image": "/imagenes/peliculas/hobbit2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/hobbit2.jpg",
       "year": 2013,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=lSv53ZBFpc8",
@@ -3214,7 +3214,7 @@
         "en": "Final part of the trilogy, where a great battle is fought for the Lonely Mountain. Directed by Peter Jackson."
       },
       "director": "Peter Jackson",
-      "image": "/imagenes/peliculas/hobbit3.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/hobbit3.jpg",
       "year": 2014,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=clRX9RXOb64&t=17s",
@@ -3235,7 +3235,7 @@
         "en": "First part of the trilogy based on J.R.R. Tolkien's novel. Bilbo Baggins joins a group of dwarves on an adventure to reclaim their home. Directed by Peter Jackson."
       },
       "director": "Peter Jackson",
-      "image": "/imagenes/peliculas/hobbit1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/hobbit1.jpg",
       "year": 2012,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=sI8OQRXhcZE&t=2s",
@@ -3256,7 +3256,7 @@
         "en": "A cute mythic creature turns into a nightmare when certain rules are broken. Mischievous gremlins bring chaos to Christmas. A mix of horror and comedy."
       },
       "director": "Joe Dante",
-      "image": "/imagenes/peliculas/gremlins.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/gremlins.jpg",
       "year": 1984,
       "masterpiece": false,
       "trailer": {
@@ -3279,7 +3279,7 @@
         "es": "Una película de terror y humor negro española dirigida por Caye Casas, que explora la incomodidad y el absurdo en la vida cotidiana a través de una simple mesa de comedor.",
         "en": "A Spanish horror and dark comedy film directed by Caye Casas, exploring discomfort and absurdity in daily life through a simple dining table."
       },
-      "image": "/imagenes/peliculas/la_mesita_del_comedor.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/la_mesita_del_comedor.jpg",
       "director": "Caye Casas",
       "year": 2019,
       "trailer": {
@@ -3301,7 +3301,7 @@
         "en": "A mother and her son are haunted by a sinister presence emerging from a mysterious children's book. Psychological horror film directed by Jennifer Kent."
       },
       "director": "Jennifer Kent",
-      "image": "/imagenes/peliculas/The_Babadook.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/The_Babadook.jpg",
       "year": 2014,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=29qrvJMui0c",
@@ -3322,7 +3322,7 @@
         "en": "A true-crime writer discovers a box of home movies that reveal how a family was murdered in his new house. Directed by Scott Derrickson."
       },
       "director": "Scott Derrickson",
-      "image": "/imagenes/peliculas/sinister.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/sinister.jpg",
       "year": 2012,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=qcXom7JNKA0",
@@ -3343,7 +3343,7 @@
         "en": "A young girl is possessed by a demonic entity. Two priests attempt to save her through a terrifying exorcism. A horror movie classic."
       },
       "director": "William Friedkin",
-      "image": "/imagenes/peliculas/exorcista.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/exorcista.jpg",
       "year": 1973,
       "masterpiece": true,
       "trailer": {
@@ -3364,7 +3364,7 @@
         "en": "A writer and his family stay at an isolated hotel during the winter, where supernatural forces begin to affect his sanity. A masterpiece of psychological horror directed by Stanley Kubrick, featuring an iconic performance by Jack Nicholson."
       },
       "director": "Stanley Kubrick",
-      "image": "/imagenes/peliculas/el_resplandor.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_resplandor.jpg",
       "year": 1980,
       "masterpiece": true,
       "trailer": {
@@ -3385,7 +3385,7 @@
         "en": "A group of researchers in Antarctica faces an alien life form that can perfectly mimic any living being. A John Carpenter horror classic with revolutionary special effects and an atmosphere of paranoia."
       },
       "director": "John Carpenter",
-      "image": "/imagenes/peliculas/the_thing.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/the_thing.jpg",
       "year": 1982,
       "masterpiece": false,
       "trailer": {
@@ -3406,7 +3406,7 @@
         "en": "A television executive discovers a pirate signal showing extreme violence, leading him into a spiral of hallucinations and bodily transformations. A prophetic vision by David Cronenberg about the relationship between media and reality."
       },
       "director": "David Cronenberg",
-      "image": "/imagenes/peliculas/videodrome.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/videodrome.jpg",
       "year": 1983,
       "masterpiece": false,
       "trailer": {
@@ -3427,7 +3427,7 @@
         "en": "A mysterious puzzle opens the door to a dimension of pain and pleasure, releasing the Cenobites, beings who seek new extreme experiences."
       },
       "director": "Clive Barker",
-      "image": "/imagenes/peliculas/hellraiser.JPG",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/hellraiser.JPG",
       "year": 1987,
       "masterpiece": true,
       "trailer": {
@@ -3448,7 +3448,7 @@
         "en": "A supernatural killer attacks teenagers in their dreams, causing their death in real life. Freddy Krueger has become one of the most iconic villains in horror cinema."
       },
       "director": "Wes Craven",
-      "image": "/imagenes/peliculas/elm_street.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/elm_street.jpg",
       "year": 1984,
       "masterpiece": true,
       "trailer": {
@@ -3469,7 +3469,7 @@
         "en": "Michael Myers, a serial killer, escapes from a psychiatric hospital and returns to his hometown to continue his killing spree. A slasher classic that redefined the genre."
       },
       "director": "John Carpenter",
-      "image": "/imagenes/peliculas/halloween.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/halloween.jpg",
       "year": 1978,
       "masterpiece": false,
       "trailer": {
@@ -3490,7 +3490,7 @@
         "en": "A secretary flees with stolen money and stays at a remote motel run by a young man with a peculiar relationship with his mother. An Alfred Hitchcock masterpiece that revolutionized horror cinema."
       },
       "director": "Alfred Hitchcock",
-      "image": "/imagenes/peliculas/psicosis.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/psicosis.jpg",
       "year": 1960,
       "masterpiece": true,
       "trailer": {
@@ -3511,7 +3511,7 @@
         "en": "A group of friends encounters a family of cannibals in Texas, led by Leatherface. A film that redefined horror and became a genre classic."
       },
       "director": "Tobe Hooper",
-      "image": "/imagenes/peliculas/texas_chainsaw.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/texas_chainsaw.jpeg",
       "year": 1974,
       "masterpiece": false,
       "trailer": {
@@ -3532,7 +3532,7 @@
         "en": "A group of camp counselors is stalked by a masked killer at Camp Crystal Lake. The film that launched Jason Voorhees as a horror icon."
       },
       "director": "Sean S. Cunningham",
-      "image": "/imagenes/peliculas/viernes13.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/viernes13.jpg",
       "year": 1980,
       "masterpiece": true,
       "trailer": {
@@ -3553,7 +3553,7 @@
         "en": "A young couple moves into a building with a dark past, where the woman becomes pregnant and begins to suspect her baby is not normal. A masterpiece of psychological horror."
       },
       "director": "Roman Polanski",
-      "image": "/imagenes/peliculas/rosemarys_baby.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/rosemarys_baby.jpg",
       "year": 1968,
       "masterpiece": true,
       "trailer": {
@@ -3574,7 +3574,7 @@
         "en": "An American diplomat adopts a child who turns out to be the Antichrist. A film that mixes supernatural horror with family drama."
       },
       "director": "Richard Donner",
-      "image": "/imagenes/peliculas/the_omen.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/the_omen.jpg",
       "year": 1976,
       "masterpiece": false,
       "trailer": {
@@ -3595,7 +3595,7 @@
         "en": "A widowed composer moves into a historic mansion where he begins to experience paranormal phenomena. A supernatural horror classic with a disturbing atmosphere."
       },
       "director": "Peter Medak",
-      "image": "/imagenes/peliculas/changeling.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/changeling.jpg",
       "year": 1979,
       "masterpiece": false,
       "trailer": {
@@ -3616,7 +3616,7 @@
         "en": "A masked killer terrorizes a group of teenagers while referencing the rules of horror movies. A film that revitalized the slasher genre with its metatextual approach."
       },
       "director": "Wes Craven",
-      "image": "/imagenes/peliculas/scream.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/scream.jpg",
       "year": 1996,
       "masterpiece": false,
       "trailer": {
@@ -3637,7 +3637,7 @@
         "en": "A group of people takes refuge in a farm while the dead come back to life. The film that defined the zombie genre and established its fundamental rules."
       },
       "director": "George A. Romero",
-      "image": "/imagenes/peliculas/night_living_dead.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/night_living_dead.jpg",
       "year": 1968,
       "masterpiece": true,
       "trailer": {
@@ -3658,7 +3658,7 @@
         "en": "A young woman seeks revenge for the abuse she suffered as a child, triggering a spiral of violence and torture. A film that explores the limits of physical and psychological horror."
       },
       "director": "Pascal Laugier",
-      "image": "/imagenes/peliculas/martyrs.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/martyrs.jpg",
       "year": 2008,
       "masterpiece": false,
       "trailer": {
@@ -3679,7 +3679,7 @@
         "en": "A lonely boy befriends a mysterious neighbor who turns out to be a vampire. A story of love and friendship in a supernatural horror context."
       },
       "director": "Tomas Alfredson",
-      "image": "/imagenes/peliculas/let_right_one_in.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/let_right_one_in.jpg",
       "year": 2008,
       "masterpiece": false,
       "trailer": {
@@ -3700,7 +3700,7 @@
         "en": "A family faces paranormal phenomena in their new home, which turn out to be more dangerous than they seem. A supernatural horror classic produced by Steven Spielberg."
       },
       "director": "Tobe Hooper",
-      "image": "/imagenes/peliculas/poltergeist.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/poltergeist.jpg",
       "year": 1982,
       "masterpiece": true,
       "trailer": {
@@ -3721,7 +3721,7 @@
         "en": "Two men wake up chained in a bathroom, being part of a macabre game designed by a serial killer known as Jigsaw. The film that started one of the most successful horror franchises."
       },
       "director": "James Wan",
-      "image": "/imagenes/peliculas/saw.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/saw.jpeg",
       "year": 2004,
       "masterpiece": false,
       "trailer": {
@@ -3742,7 +3742,7 @@
         "en": "A group of children faces their worst nightmares when an evil clown begins to terrorize their town. An adaptation of Stephen King's novel that explores the power of fear and friendship."
       },
       "director": "Tommy Lee Wallace",
-      "image": "/imagenes/peliculas/it.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/it.jpg",
       "year": 1990,
       "masterpiece": false,
       "trailer": {
@@ -3763,7 +3763,7 @@
         "en": "A young dancer joins a prestigious dance academy in Germany, where she discovers something sinister lurking behind its walls. A Dario Argento visual horror masterpiece."
       },
       "director": "Dario Argento",
-      "image": "/imagenes/peliculas/suspiria.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/suspiria.jpg",
       "year": 1977,
       "masterpiece": false,
       "trailer": {
@@ -3784,7 +3784,7 @@
         "en": "A writer is rescued by his biggest fan after an accident, but soon discovers he is a prisoner of a dangerous obsession. A Stephen King adaptation directed by Rob Reiner."
       },
       "director": "Rob Reiner",
-      "image": "/imagenes/peliculas/misery.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/misery.jpg",
       "year": 1990,
       "masterpiece": false,
       "trailer": {
@@ -3805,7 +3805,7 @@
         "en": "A family faces paranormal phenomena when their son enters an unexplained coma. A film that revitalized the supernatural horror genre."
       },
       "director": "James Wan",
-      "image": "/imagenes/peliculas/insidious.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/insidious.jpg",
       "year": 2010,
       "masterpiece": false,
       "trailer": {
@@ -3826,7 +3826,7 @@
         "en": "A family faces their sinister doppelgängers in a coordinated attack. A film that explores themes of identity, social class, and the dark side of humanity."
       },
       "director": "Jordan Peele",
-      "image": "/imagenes/peliculas/us.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/us.jpg",
       "year": 2019,
       "masterpiece": false,
       "trailer": {
@@ -3847,7 +3847,7 @@
         "en": "A journalist investigates a cursed video tape that causes the death of whoever watches it after seven days. The original Japanese film that started the Asian horror phenomenon."
       },
       "director": "Hideo Nakata",
-      "image": "/imagenes/peliculas/ringu.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/ringu.jpg",
       "year": 1998,
       "masterpiece": true,
       "trailer": {
@@ -3868,7 +3868,7 @@
         "en": "A single mother and her daughter move into an apartment where they begin to experience paranormal phenomena related to water. A psychological horror that explores motherhood and abandonment."
       },
       "director": "Hideo Nakata",
-      "image": "/imagenes/peliculas/dark_water.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/dark_water.jpg",
       "year": 2002,
       "masterpiece": true,
       "trailer": {
@@ -3889,7 +3889,7 @@
         "en": "Justine, a 16-year-old girl, lives in a family where everyone is a veterinarian and a vegetarian. She is a brilliant and promising student, but upon entering veterinary school, she discovers a decadent, ruthless, and dangerously seductive world. During the first week, obsessed with fitting in with her classmates, she strays from the principles her family has instilled in her and eats raw meat for the first time. The consequences come quickly, and the young woman begins to uncover her true nature."
       },
       "director": "Julia Ducournau",
-      "image": "/imagenes/peliculas/raw.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/raw.jpg",
       "year": 2016,
       "masterpiece": true,
       "trailer": {
@@ -3910,7 +3910,7 @@
         "en": "In a dystopian future, a former cop must hunt down rebellious androids known as replicants. As he pursues them, he grapples with deep questions about humanity, memory, and identity. A visually iconic science fiction classic."
       },
       "director": "Ridley Scott",
-      "image": "/imagenes/peliculas/blade_runner.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/blade_runner.jpg",
       "year": 1982,
       "masterpiece": true,
       "trailer": {
@@ -3931,7 +3931,7 @@
         "en": "The crew of a spaceship responds to a mysterious signal and discovers a deadly organism. Trapped with the creature, they must survive in isolation. Pure suspense, horror, and science fiction."
       },
       "director": "Ridley Scott",
-      "image": "/imagenes/peliculas/alien.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/alien.jpg",
       "year": 1979,
       "masterpiece": true,
       "trailer": {
@@ -3952,7 +3952,7 @@
         "en": "Science fiction film directed by Denis Villeneuve, about first contact with an alien civilization and the importance of language."
       },
       "director": "Denis Villeneuve",
-      "image": "/imagenes/peliculas/arrival.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/arrival.jpg",
       "year": 2016,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=uWs5lsWXLbo",
@@ -3973,7 +3973,7 @@
         "en": "Science fiction film directed by James Cameron, famous for its innovative use of visual effects and set on the world of Pandora."
       },
       "director": "James Cameron",
-      "image": "/imagenes/peliculas/avatar.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/avatar.jpg",
       "year": 2009,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=Xg8kYk6uHN0&t=3s",
@@ -3994,7 +3994,7 @@
         "en": "Science fiction film directed by Robert Zemeckis and starring Jodie Foster, based on Carl Sagan's novel about first contact with extraterrestrial life."
       },
       "director": "Robert Zemeckis",
-      "image": "/imagenes/peliculas/contact.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/contact.jpg",
       "year": 1997,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=2uMnZJFUX8c",
@@ -4014,7 +4014,7 @@
         "es": "Una epopeya de ciencia ficción dirigida por Christopher Nolan, donde un grupo de exploradores viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad.",
         "en": "A science fiction epic directed by Christopher Nolan, where a group of explorers travel through a wormhole in search of a new home for humanity."
       },
-      "image": "/imagenes/peliculas/interstellar.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/interstellar.jpg",
       "director": "Christopher Nolan",
       "year": 2014,
       "trailer": {
@@ -4036,7 +4036,7 @@
         "en": "Revolutionary science fiction film directed by the Wachowski sisters, where Neo discovers the truth about reality and the fight against the machines."
       },
       "director": "Lana Wachowski, Lilly Wachowski",
-      "image": "/imagenes/peliculas/matrix1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/matrix1.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=Pl_H2Lmjn6k&t=16s",
         "en": "https://www.youtube.com/watch?v=m8e-FF8MsqU"
@@ -4057,7 +4057,7 @@
         "en": "Second part of the Matrix saga, where Neo and his allies fight to save Zion and face new challenges inside and outside the Matrix."
       },
       "director": "Lana Wachowski, Lilly Wachowski",
-      "image": "/imagenes/peliculas/matrix2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/matrix2.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=dvauYuYX4Jc&t=1s",
         "en": "https://www.youtube.com/watch?v=kYzz0FSgpSU"
@@ -4078,7 +4078,7 @@
         "en": "The conclusion of the Matrix trilogy, where the war between humans and machines reaches its climax and Neo must make a final decision."
       },
       "director": "Lana Wachowski, Lilly Wachowski",
-      "image": "/imagenes/peliculas/matrix3.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/matrix3.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=L2CdRlEJ7_Q",
         "en": "https://www.youtube.com/watch?v=hMbexEPAOQI"
@@ -4099,7 +4099,7 @@
         "en": "Science fiction comedy where two secret agents oversee alien activity on Earth."
       },
       "director": "Barry Sonnenfeld",
-      "image": "/imagenes/peliculas/men_in_black_1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/men_in_black_1.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=j9ReysSdQzc",
         "en": "https://www.youtube.com/watch?v=UxUTTrU6PA4"
@@ -4120,7 +4120,7 @@
         "en": "Agents J and K face a new alien threat that endangers Earth. With humor and action, they embark on a mission to save the planet once again. A fun and fast-paced sequel."
       },
       "director": "Barry Sonnenfeld",
-      "image": "/imagenes/peliculas/men_in_black_2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/men_in_black_2.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=Y2iscsPp26Y",
         "en": "https://www.youtube.com/watch?v=DMHlNR6x2Sw"
@@ -4141,7 +4141,7 @@
         "en": "Agent J travels to the past to save his partner K and the future of humanity."
       },
       "director": "Barry Sonnenfeld",
-      "image": "/imagenes/peliculas/men_in_black_3.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/men_in_black_3.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=wNFWcR5dqlw&t=1s",
         "en": "https://www.youtube.com/watch?v=IyaFEBI_L24"
@@ -4161,7 +4161,7 @@
         "es": "Dos pasajeros de una nave espacial rumbo a un nuevo planeta despiertan 90 años antes de lo previsto y deben enfrentarse juntos a la soledad y a un fallo crítico en la nave.",
         "en": "Two passengers on a spaceship bound for a new planet wake up 90 years too early and must face loneliness and a critical failure on the ship together."
       },
-      "image": "/imagenes/peliculas/passengers.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/passengers.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=8JuGv5xI52w",
         "en": "https://www.youtube.com/watch?v=7BWWWQzTpNU"
@@ -4183,7 +4183,7 @@
         "en": "Marty McFly accidentally travels to the past in a modified DeLorean and must ensure his parents meet so he can return to the future."
       },
       "director": "Robert Zemeckis",
-      "image": "/imagenes/peliculas/regreso_futuro_1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/regreso_futuro_1.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=NDS1myoYUzs",
         "en": "https://www.youtube.com/watch?v=qvsgGtivCgs"
@@ -4204,7 +4204,7 @@
         "en": "Marty and Doc travel to the future and then to an alternate past, facing the consequences of altering the timeline."
       },
       "director": "Robert Zemeckis",
-      "image": "/imagenes/peliculas/regreso_futuro_2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/regreso_futuro_2.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=xOZuTdIKB0A",
         "en": "https://www.youtube.com/watch?v=MdENmefJRpw"
@@ -4225,7 +4225,7 @@
         "en": "Marty travels to the Old West to save Doc and find a way back to his own time."
       },
       "director": "Robert Zemeckis",
-      "image": "/imagenes/peliculas/regreso_futuro_3.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/regreso_futuro_3.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=WmBX7CA-AAc",
         "en": "https://www.youtube.com/watch?v=3C8c3EoEfw4"
@@ -4245,7 +4245,7 @@
         "es": "Película de ciencia ficción filosófica dirigida por Andréi Tarkovski. Un guía conocido como 'Stalker' conduce a dos hombres a través de una misteriosa Zona que supuestamente cumple los deseos más profundos.",
         "en": "Philosophical science fiction film directed by Andrei Tarkovsky. A guide known as the 'Stalker' leads two men through a mysterious Zone that supposedly fulfills one's deepest wishes."
       },
-      "image": "/imagenes/peliculas/stalker.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/stalker.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=88P-XojbX4o",
         "en": "https://www.youtube.com/watch?v=YuOnfQd-aTw"
@@ -4266,7 +4266,7 @@
         "es": "Obra maestra de Stanley Kubrick que explora la evolución humana, la inteligencia artificial y el misterio del universo.",
         "en": "Stanley Kubrick's masterpiece exploring human evolution, artificial intelligence, and the mystery of the universe."
       },
-      "image": "/imagenes/peliculas/2001.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/2001.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=yf52KZnje_8"
       },
@@ -4287,7 +4287,7 @@
         "en": "A young farm boy named Luke joins the Rebellion against the Empire. With new allies, he fights to restore freedom. The start of a modern myth."
       },
       "director": "George Lucas",
-      "image": "/imagenes/peliculas/starwars4.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/starwars4.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=1g3_CFmnU7k",
         "en": "https://www.youtube.com/watch?v=vZ734NWnAHA"
@@ -4308,7 +4308,7 @@
         "en": "The rebellion faces its greatest challenge."
       },
       "director": "Irvin Kershner",
-      "image": "/imagenes/peliculas/starwars5.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/starwars5.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=JNwNXF9Y6kY",
         "en": "https://www.youtube.com/watch?v=JNwNXF9Y6kY"
@@ -4329,7 +4329,7 @@
         "en": "The final battle against the Empire."
       },
       "director": "Richard Marquand",
-      "image": "/imagenes/peliculas/starwars6.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/starwars6.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=7L8p7_SLzvU",
         "en": "https://www.youtube.com/watch?v=5UfA_aKBGMc"
@@ -4350,7 +4350,7 @@
         "en": "The Republic faces a hidden threat as a boy named Anakin is discovered. His destiny will change the galaxy forever. The start of the Skywalker saga."
       },
       "director": "George Lucas",
-      "image": "/imagenes/peliculas/starwars1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/starwars1.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=bD7bpG-zDJQ",
         "en": "https://www.youtube.com/watch?v=bD7bpG-zDJQ"
@@ -4371,7 +4371,7 @@
         "en": "The Republic falters and the clones emerge."
       },
       "director": "George Lucas",
-      "image": "/imagenes/peliculas/starwars2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/starwars2.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=gYbW1F_c9eM",
         "en": "https://www.youtube.com/watch?v=gYbW1F_c9eM"
@@ -4392,7 +4392,7 @@
         "en": "The fall of Anakin and the rise of Darth Vader."
       },
       "director": "George Lucas",
-      "image": "/imagenes/peliculas/starwars3.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/starwars3.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=5UnjrG_N8hU",
         "en": "https://www.youtube.com/watch?v=5UnjrG_N8hU"
@@ -4413,7 +4413,7 @@
         "en": "A new generation of heroes and villains."
       },
       "director": "J.J. Abrams",
-      "image": "/imagenes/peliculas/starwars7.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/starwars7.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=sGbxmsDFVnE",
         "en": "https://www.youtube.com/watch?v=sGbxmsDFVnE"
@@ -4434,7 +4434,7 @@
         "en": "The Resistance fights to survive."
       },
       "director": "Rian Johnson",
-      "image": "/imagenes/peliculas/starwars8.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/starwars8.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=Q0CbN8sfihY",
         "en": "https://www.youtube.com/watch?v=Q0CbN8sfihY"
@@ -4455,7 +4455,7 @@
         "en": "The Resistance faces its final battle against the First Order. Rey must confront her origins as Emperor Palpatine returns to threaten the galaxy. A finale filled with action, legacy, and redemption."
       },
       "director": "J.J. Abrams",
-      "image": "/imagenes/peliculas/starwars9.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/starwars9.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=8Qn_spdM5Zg",
         "en": "https://www.youtube.com/watch?v=8Qn_spdM5Zg"
@@ -4476,7 +4476,7 @@
         "en": "A group of rebels embarks on a mission to steal the plans for the Death Star, the Empire's ultimate weapon."
       },
       "director": "Gareth Edwards",
-      "image": "/imagenes/peliculas/starwars_roge.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/starwars_roge.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=Xcs4OpUJWrM&t=2s",
         "en": "https://www.youtube.com/watch?v=frdj1zb9sMY"
@@ -4497,7 +4497,7 @@
         "en": "A killer cyborg is sent from the future to eliminate Sarah Connor. Directed by James Cameron."
       },
       "director": "James Cameron",
-      "image": "/imagenes/peliculas/terminator1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/terminator1.jpg",
       "year": 1984,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=tMqGy1J0y6E",
@@ -4518,7 +4518,7 @@
         "en": "A new Terminator is sent to protect John Connor from the relentless T-1000. Directed by James Cameron."
       },
       "director": "James Cameron",
-      "image": "/imagenes/peliculas/terminator2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/terminator2.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=mVbYhayCdm0",
         "en": "https://www.youtube.com/watch?v=CRRlbK5w8AE"
@@ -4539,7 +4539,7 @@
         "en": "John Connor must face a new cybernetic threat, the T-X, as Judgment Day approaches. Directed by Jonathan Mostow."
       },
       "director": "Jonathan Mostow",
-      "image": "/imagenes/peliculas/terminator3.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/terminator3.jpg",
       "year": 2003,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=vphJKzT0IWs",
@@ -4560,7 +4560,7 @@
         "en": "An ordinary man gets caught up in a complex web of corporate espionage and mind manipulation. 'Cypher' is a science fiction thriller that explores identity, paranoia, and reality in a high-tech world."
       },
       "director": "Vincenzo Natali",
-      "image": "/imagenes/peliculas/cypher.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/cypher.jpg",
       "year": 2002,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=7jlZqlqtY-Q",
@@ -4581,7 +4581,7 @@
         "en": "In a dystopian future, a worker begins to suspect that his life is a sham after undergoing a memory implant. 'Total Recall' is a sci-fi classic filled with action, twists, and an exploration of identity and memory."
       },
       "director": "Paul Verhoeven",
-      "image": "/imagenes/peliculas/desafio_total.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/desafio_total.jpg",
       "year": 1990,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=25OjH_B-Nfw",
@@ -4602,7 +4602,7 @@
         "en": "In 2045, reality is so terrible that people seek refuge in the OASIS, a virtual universe where everything is possible. When the creator of OASIS dies, he leaves his fortune hidden in the game."
       },
       "director": "Steven Spielberg",
-      "image": "/imagenes/peliculas/ready_player_one.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/ready_player_one.jpg",
       "year": 2018,
       "masterpiece": false,
       "trailer": {
@@ -4623,7 +4623,7 @@
         "en": "After a space disaster, an astronaut is left drifting in Earth’s orbit. With limited oxygen, she struggles to return home. A visually stunning and emotionally intense space thriller."
       },
       "director": "Alfonso Cuarón",
-      "image": "/imagenes/peliculas/gravity.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/gravity.jpg",
       "year": 2013,
       "masterpiece": false,
       "trailer": {
@@ -4644,7 +4644,7 @@
         "en": "In a world where humanity can no longer reproduce, society collapses. A disillusioned man must protect the only pregnant woman. A powerful reflection on hope in dark times."
       },
       "director": "Alfonso Cuarón",
-      "image": "/imagenes/peliculas/children_of_men.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/children_of_men.jpg",
       "year": 2006,
       "masterpiece": false,
       "trailer": {
@@ -4664,7 +4664,7 @@
         "es": "Película de Christopher Nolan que explora los sueños y la realidad con una narrativa compleja y visualmente impresionante.",
         "en": "Christopher Nolan's film exploring dreams and reality with a complex and visually stunning narrative."
       },
-      "image": "/imagenes/peliculas/inception.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/inception.jpg",
       "year": 2010,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
@@ -4686,7 +4686,7 @@
         "en": "An ambitious science fiction film that tells the story of a space expedition that colonizes a distant planet. A visionary work that explores themes of evolution, religion, and human nature."
       },
       "director": "Andrzej Żuławski",
-      "image": "/imagenes/peliculas/on_the_silver_globe.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/on_the_silver_globe.jpg",
       "year": 1988,
       "masterpiece": false,
       "trailer": {
@@ -4707,7 +4707,7 @@
         "en": "A drifter discovers sunglasses that allow him to see the true nature of society: an alien conspiracy controlling humanity through media and advertising. A social satire and critique of consumerism."
       },
       "director": "John Carpenter",
-      "image": "/imagenes/peliculas/they_live.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/they_live.jpg",
       "year": 1988,
       "masterpiece": true,
       "trailer": {
@@ -4728,7 +4728,7 @@
         "en": "In a dystopian future, a mysterious revolutionary known as V fights against a totalitarian government in a fear-controlled Britain. A story about freedom, resistance, and justice."
       },
       "director": "James McTeigue",
-      "image": "/imagenes/peliculas/v_de_vendetta.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/v_de_vendetta.jpg",
       "year": 2005,
       "masterpiece": true,
       "trailer": {
@@ -4749,7 +4749,7 @@
         "en": "In an alternate world where superheroes exist and have been outlawed, the death of one of them triggers an investigation that reveals a conspiracy that could change the world. A faithful adaptation of Alan Moore's graphic novel."
       },
       "director": "Zack Snyder",
-      "image": "/imagenes/peliculas/watchmen.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/watchmen.jpg",
       "year": 2009,
       "masterpiece": true,
       "trailer": {
@@ -4770,7 +4770,7 @@
         "en": "A severely injured police officer is turned into a cyborg to fight crime in a futuristic Detroit. A social satire and critique of capitalism disguised as an action movie."
       },
       "director": "Paul Verhoeven",
-      "image": "/imagenes/peliculas/robocop.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/robocop.jpg",
       "year": 1987,
       "masterpiece": false,
       "trailer": {
@@ -4791,7 +4791,7 @@
         "en": "In a futuristic city, a wealthy young man discovers the harsh reality of the workers who keep the city running. A silent film masterpiece that influenced generations of filmmakers."
       },
       "director": "Fritz Lang",
-      "image": "/imagenes/peliculas/metropolis.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/metropolis.jpg",
       "year": 1927,
       "masterpiece": true,
       "trailer": {
@@ -4812,7 +4812,7 @@
         "en": "In a medieval abbey, a series of mysterious deaths draws the attention of a Franciscan monk. Amid religious intrigue, he investigates secrets hidden within the library. Based on Umberto Eco’s novel."
       },
       "director": "Jean-Jacques Annaud",
-      "image": "/imagenes/peliculas/nombre_de_la_rosa.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/nombre_de_la_rosa.jpg",
       "year": 1986,
       "masterpiece": true,
       "trailer": {
@@ -4835,7 +4835,7 @@
         "es": "Película española que explora el concepto de la suerte y el destino en un thriller psicológico único.",
         "en": "Spanish film exploring the concept of luck and fate in a unique psychological thriller."
       },
-      "image": "/imagenes/peliculas/intacto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/intacto.jpg",
       "year": 2001,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=0x2H2a7tP5w",
@@ -4860,7 +4860,7 @@
         "en": "A group of people is trapped in a Madrid bar after a mysterious shooting outside. Soon, paranoia and fear take over as they try to figure out what is happening outside."
       },
       "director": "Álex de la Iglesia",
-      "image": "/imagenes/peliculas/el_bar.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_bar.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=vBeL7crOfB8",
         "en": "https://www.youtube.com/watch?v=wcOqUb5Z7xg"
@@ -4881,7 +4881,7 @@
         "en": "A disturbing psychological thriller directed by David Lynch, exploring identity, memory, and paranoia through a fragmented, dreamlike narrative."
       },
       "director": "David Lynch",
-      "image": "/imagenes/peliculas/carretera_perdida.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/carretera_perdida.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=fivLYRuTUhY",
         "en": "https://www.youtube.com/watch?v=fivLYRuTUhY"
@@ -4903,7 +4903,7 @@
         "en": "An iconic police thriller starring Clint Eastwood as tough inspector Harry Callahan, facing a serial killer in San Francisco. Directed by Don Siegel."
       },
       "director": "Don Siegel",
-      "image": "/imagenes/peliculas/dirty_harry.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/dirty_harry.jpg",
       "year": 1971,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=y2ODwwI03OY",
@@ -4924,7 +4924,7 @@
         "en": "In a dystopian future, a group of students is forced to fight to the death on an island. Japanese cult film directed by Kinji Fukasaku."
       },
       "director": "Kinji Fukasaku",
-      "image": "/imagenes/peliculas/battle_royale.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/battle_royale.jpg",
       "year": 2000,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=oKCN6hzD5J4",
@@ -4945,7 +4945,7 @@
         "en": "A group of strangers wakes up in a maze of deadly trap-filled cubes. Canadian cult thriller directed by Vincenzo Natali."
       },
       "director": "Vincenzo Natali",
-      "image": "/imagenes/peliculas/cube1.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/cube1.jpg",
       "year": 1997,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=rZgXB2A9qnI",
@@ -4966,7 +4966,7 @@
         "en": "Sequel where new prisoners must survive a cube with even more complex traps and alternate realities. Directed by Andrzej Sekuła."
       },
       "director": "Andrzej Sekuła",
-      "image": "/imagenes/peliculas/cube2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/cube2.jpg",
       "year": 2002,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=Uxl5NfehNU4",
@@ -4987,7 +4987,7 @@
         "en": "Prequel exploring the origins of the cube and the role of the operators who control it. Directed by Ernie Barbarash."
       },
       "director": "Ernie Barbarash",
-      "image": "/imagenes/peliculas/cube3.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/cube3.jpg",
       "year": 2004,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=onZW1Wx8Jpk",
@@ -5008,7 +5008,7 @@
         "en": "A poorly planned kidnapping leads to a chain of absurd crimes in snowy Minnesota. A pregnant detective investigates with calm precision. Black comedy and tragedy in true Coen style."
       },
       "director": "Joel Coen",
-      "image": "/imagenes/peliculas/fargo.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/fargo.jpg",
       "year": 1996,
       "masterpiece": true,
       "trailer": {
@@ -5029,7 +5029,7 @@
         "en": "A flight attendant gets caught up in a criminal plot when she's caught transporting money for a gun runner. With the help of a bail bondsman, she'll try to get out of this situation in the smartest way possible."
       },
       "director": "Quentin Tarantino",
-      "image": "/imagenes/peliculas/jackie_brown.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/jackie_brown.jpg",
       "year": 1997,
       "masterpiece": true,
       "trailer": {
@@ -5050,7 +5050,7 @@
         "en": "A professional bank robber is recruited by an old friend to participate in a heist in Paris. What starts as a routine job turns into a nightmare when things start going wrong."
       },
       "director": "Roger Avary",
-      "image": "/imagenes/peliculas/killing_zoe.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/killing_zoe.jpg",
       "year": 1993,
       "masterpiece": false,
       "trailer": {
@@ -5071,7 +5071,7 @@
         "en": "A family on vacation at their country house is taken hostage by two seemingly well-mannered young men. A disturbing psychological thriller that questions violence in cinema and the relationship between the viewer and the screen."
       },
       "director": "Michael Haneke",
-      "image": "/imagenes/peliculas/funny_games.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/funny_games.jpg",
       "year": 1997,
       "masterpiece": false,
       "trailer": {
@@ -5092,7 +5092,7 @@
         "en": "A couple of serial killers become media celebrities as they commit their crimes. A violent and visually striking satire about the media's obsession with violence and fame."
       },
       "director": "Oliver Stone",
-      "image": "/imagenes/peliculas/natural_born_killers.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/natural_born_killers.jpg",
       "year": 1994,
       "masterpiece": false,
       "trailer": {
@@ -5113,7 +5113,7 @@
         "en": "A cinematic masterpiece that intertwines several criminal stories in Los Angeles, with a memorable cast and iconic dialogue. A film that revolutionized independent cinema and became a cultural reference."
       },
       "director": "Quentin Tarantino",
-      "image": "/imagenes/peliculas/pulp_fiction.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/pulp_fiction.jpg",
       "year": 1994,
       "masterpiece": true,
       "trailer": {
@@ -5134,7 +5134,7 @@
         "en": "Quentin Tarantino's feature film debut, which tells the aftermath of a botched armed robbery. A film that revolutionized independent cinema with its non-linear narrative, sharp dialogue, and stylized violence."
       },
       "director": "Quentin Tarantino",
-      "image": "/imagenes/peliculas/reservoir_dogs.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/reservoir_dogs.jpg",
       "year": 1992,
       "masterpiece": true,
       "trailer": {
@@ -5155,7 +5155,7 @@
         "en": "A young FBI agent seeks the help of a brilliant but dangerous serial killer to catch another murderer who is terrorizing the population. A masterful psychological thriller that combines suspense, horror, and police drama."
       },
       "director": "Jonathan Demme",
-      "image": "/imagenes/peliculas/el_silencio_de_los_corderos.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_silencio_de_los_corderos.jpg",
       "year": 1991,
       "masterpiece": true,
       "trailer": {
@@ -5176,7 +5176,7 @@
         "en": "A homicide detective investigates the murder of a former rock star, becoming involved with a seductive novelist who may be the prime suspect. A psychological thriller that explores seduction, power, and manipulation."
       },
       "director": "Paul Verhoeven",
-      "image": "/imagenes/peliculas/instinto_basico.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/instinto_basico.jpg",
       "year": 1992,
       "masterpiece": false,
       "trailer": {
@@ -5197,7 +5197,7 @@
         "en": "A journalism student finds a video tape showing a real murder while researching for her thesis on violence in the media. A psychological thriller that explores the boundaries of journalistic ethics and the fascination with violence."
       },
       "director": "Alejandro Amenábar",
-      "image": "/imagenes/peliculas/tesis.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/tesis.jpg",
       "year": 1996,
       "masterpiece": true,
       "trailer": {
@@ -5221,7 +5221,7 @@
         "en": "A child serial killer terrorizes Berlin, leading both the police and organized crime to hunt him down. A German cinema masterpiece that explores the psychology of evil."
       },
       "director": "Fritz Lang",
-      "image": "/imagenes/peliculas/m.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/m.jpg",
       "year": 1931,
       "masterpiece": true,
       "trailer": {
@@ -5241,7 +5241,7 @@
         "es": "Un clásico del cine bélico y de aventuras, dirigido por David Lean, que narra la construcción de un puente por prisioneros británicos en la Segunda Guerra Mundial. Una reflexión sobre el honor, la obediencia y el absurdo de la guerra.",
         "en": "A classic war and adventure film directed by David Lean, depicting British POWs forced to build a bridge for their Japanese captors in WWII. A powerful reflection on honor, obedience, and the absurdity of war."
       },
-      "image": "/imagenes/peliculas/bridge_kwai.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/bridge_kwai.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=sIJd4_QQWxM&t=16s",
         "en": "https://www.youtube.com/watch?v=PDVjulgOjrE"
@@ -5263,7 +5263,7 @@
         "en": "During World War II, a group of prisoners is recruited for a suicide mission behind enemy lines. 'The Dirty Dozen' is a war classic that blends action, suspense, and an unforgettable cast."
       },
       "director": "Robert Aldrich",
-      "image": "/imagenes/peliculas/dirty_dozen.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/dirty_dozen.jpg",
       "year": 1967,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=Y5Uk8D_a-eY",
@@ -5284,7 +5284,7 @@
         "en": "During World War II, a group of Allied commandos must destroy a German artillery position on a Greek island to allow the rescue of British soldiers. 'The Guns of Navarone' is a classic war film, known for its action and suspense."
       },
       "director": "J. Lee Thompson",
-      "image": "/imagenes/peliculas/navarone.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/navarone.jpg",
       "year": 1961,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=whEtAW17_XI",
@@ -5305,7 +5305,7 @@
         "en": "During World War II, hundreds of thousands of Allied soldiers are trapped on the beaches of Dunkirk, surrounded by the enemy. 'Dunkerque' is an intense war thriller directed by Christopher Nolan, depicting the evacuation by land, sea, and air."
       },
       "director": "Christopher Nolan",
-      "image": "/imagenes/peliculas/dunkerque.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/dunkerque.jpg",
       "year": 2017,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=DsRcqwGOmUU",
@@ -5326,7 +5326,7 @@
         "en": "In the final days of the Third Reich, Adolf Hitler and his inner circle take refuge in the Berlin bunker. 'Downfall' is an intense historical drama depicting the collapse of the Nazi regime."
       },
       "director": "Oliver Hirschbiegel",
-      "image": "/imagenes/peliculas/downfall.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/downfall.jpg",
       "year": 2004,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=Fb0Fb31LECY",
@@ -5347,7 +5347,7 @@
         "en": "From boot camp to Vietnam, young soldiers face horror and dehumanization. A stark critique of modern warfare from Stanley Kubrick."
       },
       "director": "Stanley Kubrick",
-      "image": "/imagenes/peliculas/full_metal_jacket.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/full_metal_jacket.jpg",
       "year": 1987,
       "masterpiece": true,
       "trailer": {
@@ -5368,7 +5368,7 @@
         "en": "A young soldier finds himself in the middle of the Vietnam War, where he must face not only the enemy but also the internal tensions of his own platoon. A raw and realistic view of the horrors of war."
       },
       "director": "Oliver Stone",
-      "image": "/imagenes/peliculas/platoon.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/platoon.jpg",
       "year": 1986,
       "masterpiece": false,
       "trailer": {
@@ -5389,7 +5389,7 @@
         "en": "During World War II, a group of soldiers is sent behind enemy lines to find and rescue a soldier, the last of four brothers still alive. An epic film that shows the horrors of war with striking realism."
       },
       "director": "Steven Spielberg",
-      "image": "/imagenes/peliculas/salvar_ryan.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/salvar_ryan.jpg",
       "year": 1998,
       "masterpiece": false,
       "trailer": {
@@ -5410,7 +5410,7 @@
         "en": "A group of Jewish soldiers and a young cinema owner plan revenge against the Nazis during World War II. A history rewrite with Tarantino's unique style."
       },
       "director": "Quentin Tarantino",
-      "image": "/imagenes/peliculas/inglourious_basterds.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/inglourious_basterds.jpg",
       "year": 2009,
       "masterpiece": true,
       "trailer": {
@@ -5431,7 +5431,7 @@
         "en": "A Union lieutenant is sent to a remote outpost on the American frontier, where he befriends a Sioux tribe and discovers a new way of life. 'Dances with Wolves' is an epic tale of cultural encounter and personal transformation."
       },
       "director": "Kevin Costner",
-      "image": "/imagenes/peliculas/dances_with_wolves.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/dances_with_wolves.jpg",
       "trailer": {
         "es": "https://www.youtube.com/watch?v=g2P5QuLP7GE&pp=ygUbYmFpbGFuZG8gY29uIGxvYm9zIHRyYWlsZXIg0gcJCbIJAYcqIYzv",
         "en": "https://www.youtube.com/watch?v=DZe9L0yCyas&pp=ygUhYmFpbGFuZG8gY29uIGxvYm9zIHRyYWlsZXIgaW5nbGVz"
@@ -5452,7 +5452,7 @@
         "en": "A mysterious gunslinger arrives in a border town dragging a coffin and gets involved in the fight between Mexican bandits and racist fanatics. 'Django' is a classic of the spaghetti western, famous for its dark atmosphere and iconic protagonist."
       },
       "director": "Sergio Corbucci",
-      "image": "/imagenes/peliculas/django.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/django.jpg",
       "year": 1966,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=CLofzNkIqAc",
@@ -5476,7 +5476,7 @@
         "en": "Three rival gunslingers search for hidden treasure amidst the chaos of the American Civil War. 'The Good, the Bad and the Ugly' is a classic spaghetti western, renowned for its direction, music, and iconic scenes."
       },
       "director": "Sergio Leone",
-      "image": "/imagenes/peliculas/bueno_feo_malo.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/bueno_feo_malo.jpg",
       "year": 1966,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=exJOy6uTkek",
@@ -5497,7 +5497,7 @@
         "en": "A rancher must escort a dangerous outlaw to a prison-bound train. Along the way, moral dilemmas and tension mount. A modern classic western."
       },
       "director": "James Mangold",
-      "image": "/imagenes/peliculas/tren_310.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/tren_310.jpg",
       "year": 2007,
       "masterpiece": false,
       "trailer": {
@@ -5518,7 +5518,7 @@
         "en": "Eight strangers seek shelter in a snowstorm at a remote lodge. Tensions rise and trust vanishes. Tarantino at his most claustrophobic."
       },
       "director": "Quentin Tarantino",
-      "image": "/imagenes/peliculas/hateful_eight.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/hateful_eight.jpg",
       "year": 2015,
       "masterpiece": true,
       "trailer": {
@@ -5539,7 +5539,7 @@
         "en": "An aging gunslinger and former outlaw, now a farmer and widower, takes on one last job to avenge a battered prostitute. A thoughtful and powerful revision of the western genre that demystifies violence and the legend of the West."
       },
       "director": "Clint Eastwood",
-      "image": "/imagenes/peliculas/sin_perdon.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/sin_perdon.jpg",
       "year": 1992,
       "masterpiece": true,
       "trailer": {
@@ -5560,7 +5560,7 @@
         "en": "A remote police station is besieged by a vengeful gang. Cops and inmates must join forces to survive the night. A cult thriller directed by John Carpenter."
       },
       "director": "John Carpenter",
-      "image": "/imagenes/peliculas/assault_13.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/assault_13.jpg",
       "year": 1976,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=jSQtiebF_n0",
@@ -5581,7 +5581,7 @@
         "en": "Classic war film about a daring mass escape plan by Allied prisoners from a German concentration camp during World War II."
       },
       "director": "John Sturges",
-      "image": "/imagenes/peliculas/great_escape.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/great_escape.jpg",
       "year": 1963,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=M2bEzJFVdQ4",
@@ -5602,7 +5602,7 @@
         "en": "A surreal parody of the Arthurian legend, where King Arthur and his knights embark on an absurd quest for the Holy Grail. Full of absurd humor, visual gags, and memorable dialogue, it's one of the most influential comedies in British film history."
       },
       "director": "Terry Gilliam, Terry Jones",
-      "image": "/imagenes/peliculas/holy_grail.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/holy_grail.jpg",
       "year": 1975,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=WGidnQmVTVQ",
@@ -5623,7 +5623,7 @@
         "en": "An FBI agent investigates a series of murders linked to a mysterious killer known as 'Long Legs'. As the investigation progresses, she uncovers disturbing connections to her own past."
       },
       "director": "Osgood Perkins",
-      "image": "/imagenes/peliculas/longlegs.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/longlegs.jpeg",
       "year": 2024,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=I0Uq-HcmKII",
@@ -5644,7 +5644,7 @@
         "en": "After the death of their aunt, a mother and her two daughters inherit a house where they are soon threatened by intruders. Years later, the traumas and horrors they experienced resurface unexpectedly."
       },
       "director": "Pascal Laugier",
-      "image": "/imagenes/peliculas/ghostland.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/ghostland.jpg",
       "year": 2018,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=ni_DF8waeDE",
@@ -5665,7 +5665,7 @@
         "en": "Sophie, a young hat maker, is cursed by a witch and transformed into an old woman. Desperate, she finds refuge in the whimsical moving castle of the mysterious and powerful wizard Howl. There, Sophie becomes the new cleaner, while unraveling the castle's secrets, the curse, and Howl's heart, amidst an impending war. It's a story about acceptance, love, and fighting against superficiality."
       },
       "director": "Hayao Miyazaki",
-      "image": "/imagenes/peliculas/el_castillo_ambulante.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/el_castillo_ambulante.jpg",
       "year": 2004,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=TioZt2aBZVE",
@@ -5686,7 +5686,7 @@
         "en": "Ponyo, a goldfish princess, escapes her underwater home and is rescued by a boy named Sōsuke. Desiring to be human, Ponyo transforms into a girl, but her unstable magic causes an imbalance in the world. Sōsuke and Ponyo must embark on an adventure to restore nature's balance. It's a heartwarming tale about friendship, innocent love, and environmental responsibility."
       },
       "director": "Hayao Miyazaki",
-      "image": "/imagenes/peliculas/ponyo.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/ponyo.jpg",
       "year": 2008,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=89LbtkHG0c4",
@@ -5707,7 +5707,7 @@
         "en": "In the summer of 1979, a group of kids shooting a Super 8 film\nwitness a violent train derailment. Strange things begin to happen:\npeople vanish, electronics fail, and secrets unravel.\nThey soon realize something otherworldly escaped that wreck.\nMystery, danger, and childhood collide in this nostalgic tale."
       },
       "director": "J.J. Abrams",
-      "image": "/imagenes/peliculas/super8.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/super8.jpg",
       "year": 2011,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=89u6eSBSZmw",
@@ -5728,7 +5728,7 @@
         "en": "After several UFO sightings, a man becomes obsessed with a vision\nhe can't explain. Meanwhile, scientists decode strange signals\nfrom space pointing to an imminent contact.\nAn emotional, majestic encounter awaits,\nforever altering what it means to be human."
       },
       "director": "Steven Spielberg",
-      "image": "/imagenes/peliculas/close_encounters.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/close_encounters.jpg",
       "year": 1977,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=S8Grh29Rnng",
@@ -5749,7 +5749,7 @@
         "en": "An alien stranded on Earth is discovered by Elliott,\na lonely boy who helps him hide and find a way home.\nAs government agents close in, the bond between them grows.\nA touching journey of friendship, innocence,\nand the universal need to belong."
       },
       "director": "Steven Spielberg",
-      "image": "/imagenes/peliculas/et.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/et.jpg",
       "year": 1982,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=F8QgAwuxXtg",
@@ -5770,7 +5770,7 @@
         "en": "Edward, a wealthy but lonely businessman, meets Vivian,\na spirited prostitute. Their arrangement evolves into something\ndeeper, challenging social expectations\nand revealing the transformative power of love."
       },
       "director": "Garry Marshall",
-      "image": "/imagenes/peliculas/pretty-woman.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/pretty-woman.jpg",
       "year": 1990,
       "trailer": {
         "es": "https://www.youtube.com/watch?v=DvPEFrTBu_0",

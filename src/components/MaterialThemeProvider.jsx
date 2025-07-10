@@ -3,6 +3,11 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useAppTheme } from '../store/useAppStore';
 
+// =============================================
+// MaterialThemeProvider: Provider de tema Material UI
+// Provider de tema Material UI. Optimizado para performance, soporte de temas dinámicos y experiencia visual consistente.
+// =============================================
+
 const MaterialThemeProvider = ({ children }) => {
   const { isDarkMode, theme: currentTheme } = useAppTheme();
   

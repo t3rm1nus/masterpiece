@@ -1,3 +1,10 @@
+// =============================================
+// View slice para Zustand
+// Gestiona el estado responsive (isMobile, isTablet, isDesktop), estilos adaptativos y navegación unificada.
+// Permite adaptar la UI y la experiencia a móvil, tablet y desktop de forma centralizada.
+// Optimizado para UX móvil y desktop, y para facilitar la evolución de la app.
+// =============================================
+
 export const viewSlice = (set, get) => ({
   // Viewport state
   isMobile: typeof window !== 'undefined' ? window.innerWidth <= 768 : false,

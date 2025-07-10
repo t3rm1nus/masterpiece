@@ -2,19 +2,26 @@ import React from 'react';
 import { Chip, Box } from '@mui/material';
 
 /**
- * MaterialSubcategoryChips
- * Renderiza una lista de chips de subcategoría altamente parametrizable.
+ * MaterialSubcategoryChips (Material UI Subcategory Chip Group)
+ * -----------------------------------------------------------------------------
+ * Highly customizable, accessible group of subcategory chips using MUI.
+ * - Designed for quick filtering and selection in subcategory UIs.
+ * - Mobile-first, responsive, and keyboard accessible.
+ * - Supports custom rendering, icons, and flexible styling.
  *
- * Props:
- * - subcategories: array de objetos { key, label, icon? } (subcategorías a mostrar)
- * - value: string (subcategoría seleccionada)
- * - onChange: función (callback al seleccionar subcategoría)
- * - renderChip: función opcional para customizar el render de cada chip `(subcat, selected, idx) => ReactNode`
- * - sx: estilos adicionales para el contenedor
- * - chipSx: estilos adicionales para cada chip
- * - visible: boolean (si se muestra el componente, default: true)
- * - showIcons: boolean (mostrar iconos si existen)
- * - ...props: cualquier otro prop para el contenedor
+ * Performance & Mobile Optimizations:
+ * - Minimal re-renders, only visible when needed.
+ * - Uses flexbox for responsive wrapping and spacing.
+ * - Chip states (filled/outlined) for clear selection feedback.
+ *
+ * Accessibility:
+ * - All chips are focusable and operable via keyboard.
+ * - Icons are optional and ARIA-compliant.
+ *
+ * Example usage:
+ *   <MaterialSubcategoryChips subcategories={...} value={...} onChange={...} />
+ *
+ * -----------------------------------------------------------------------------
  */
 const MaterialSubcategoryChips = ({
   subcategories = [],

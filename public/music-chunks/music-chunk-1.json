@@ -35,7 +35,7 @@
         "es": "Una sátira musical hilarante y provocadora, donde Mojinos Escozíos fusionan rock cañero con un humor irreverente. La letra ridiculiza el esfuerzo laboral con referencias absurdas a los romanos. Es un ejemplo clásico del estilo único de la banda: ruidoso, directo y sin filtros.",
         "en": "A hilarious and provocative musical satire where Mojinos Escozíos blend heavy rock with irreverent humor. The lyrics mock hard work with absurd references to the Romans. It's a classic example of the band's unique style: loud, direct, and unapologetic."
       },
-      "image": "/imagenes/musica/mojinos.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/mojinos.jpg",
       "tags": [
         "song"
       ],
@@ -57,7 +57,7 @@
         "es": "Una sesión envolvente desde el corazón de Nueva York donde Bonobo despliega su mezcla única de electrónica, downtempo y house. Con una selección exquisita, el set fluye con elegancia entre texturas sonoras, ritmos suaves y una atmósfera introspectiva. Ideal para dejarse llevar.",
         "en": "An immersive session from the heart of New York where Bonobo showcases his unique blend of electronica, downtempo, and house. With an exquisite selection, the set flows elegantly through sonic textures, smooth rhythms, and a contemplative atmosphere. Perfect for getting lost in the sound."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/live.png",
       "tags": [
         "djset"
       ],
@@ -123,7 +123,7 @@
         "es": "Dúo emergente del rap hispano que combina letras urbanas con ritmos contundentes. Hablan de la calle, aspiraciones y cultura urbana. La producción destaca por su energía cruda y autenticidad contemporánea.",
         "en": "Emerging duo in Hispanic rap combining urban lyrics with powerful beats. They talk about street life, aspirations, and urban culture. Production stands out for raw energy and contemporary authenticity."
       },
-      "image": "/imagenes/musica/javat.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/javat.jpg",
       "tags": [
         "song"
       ],
@@ -277,7 +277,7 @@
         "es": "Tema surrealista con tonos de punk y electrónica minimalista. La letra juega con imágenes disparatadas y humor underground. Ritmo frenético y bailable, muy representativo del estilo ecléctico de Los Ganglios.",
         "en": "A surreal track with punk tones and minimalist electronics. Its lyrics use absurd imagery and underground humor. Fast-paced and danceable, truly representative of Los Ganglios' eclectic style."
       },
-      "image": "/imagenes/musica/guapa.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/guapa.jpg",
       "tags": [
         "album"
       ],
@@ -299,7 +299,7 @@
         "es": "Fusión de electrónica oscura y ritmos hipnóticos con la voz de Sensational. Pista atmosférica que evoluciona hacia pasajes melódicos. Ideal para ambientes introspectivos y sonoridades profundas.",
         "en": "A fusion of dark electronics and hypnotic rhythms featuring Sensational's vocals. An atmospheric track that evolves into melodic passages. Perfect for introspective settings and deep soundscapes."
       },
-      "image": "/imagenes/musica/pillars.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pillars.jpg",
       "tags": [
         "song"
       ],
@@ -343,7 +343,7 @@
         "es": "Colaboración urbana con ritmo pausado y líricas directas sobre identidad y comunicación. FJ.Ramos y Kultama exploran temas cotidianos con versos claros y ritmo sólido. Ambiente íntimo y sincero.",
         "en": "Urban collaboration with a slow rhythm and direct lyrics about identity and communication. FJ.Ramos and Kultama explore everyday themes with clear verses and solid beats. An intimate and sincere atmosphere."
       },
-      "image": "/imagenes/musica/fjkultama.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/fjkultama.png",
       "tags": [
         "song"
       ],
@@ -365,7 +365,7 @@
         "es": "Álbum que mezcla dub, reggae, electrónica y sonidos pausados. Panda Dub crea paisajes sonoros envolventes con bajo marcado y atmósfera nocturna. Ideal para sesiones de relajación profunda.",
         "en": "An album mixing dub, reggae, electronics, and slow sounds. Panda Dub creates immersive soundscapes with pronounced bass and a nocturnal atmosphere. Perfect for deep relaxation sessions."
       },
-      "image": "/imagenes/musica/panda.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/panda.jpg",
       "tags": [
         "album"
       ],
@@ -409,7 +409,7 @@
         "es": "Canción atmosférica de rock indie que mezcla sonidos densos y letra evocadora. Manta Ray juega con imágenes urbanas y metáforas de soledad. El crescendo instrumental transmite tensión emocional.",
         "en": "An atmospheric indie-rock song that blends dense sounds and evocative lyrics. Manta Ray uses urban imagery and metaphors of loneliness. The instrumental crescendo conveys emotional tension."
       },
-      "image": "/imagenes/musica/torres.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/torres.jpg",
       "tags": [
         "song"
       ],
@@ -431,7 +431,7 @@
         "es": "Producción cinematográfica con electrónica ambiental y texturas oscuras. Creado por artista audiovisual Steve Cutts, mezcla sonido y narrativa. Pone énfasis en atmósferas tensas y reflexivas.",
         "en": "Cinematic production with ambient electronics and dark textures. Created by audiovisual artist Steve Cutts, it blends sound and narrative. It emphasizes tense and reflective atmospheres."
       },
-      "image": "/imagenes/musica/steve.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/steve.png",
       "tags": [
         "song"
       ],
@@ -453,7 +453,7 @@
         "es": "Tema potente del rap underground, con letras de lucha y resiliencia. Souljah Jerome y BadFame muestran desafío y orgullo colectivo. Beat crudo con percusión marcada y actitud combativa.",
         "en": "A powerful underground rap track with lyrics about struggle and resilience. Souljah Jerome and BadFame show defiance and collective pride. A raw beat with strong percussion and combative attitude."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -497,7 +497,7 @@
         "es": "Remix jazz-rap con toque melancólico y beat sofisticado. Foyone revisita su tema con arreglos de jazz y producción depurada por cutyjazz. Ambiente introspectivo y elegante.",
         "en": "A jazz-rap remix with a melancholic touch and sophisticated beat. Foyone revisits his track with jazz arrangements and refined production by cutyjazz. Introspective and elegant atmosphere."
       },
-      "image": "/imagenes/musica/foyone.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/foyone.png",
       "tags": [
         "song"
       ],
@@ -519,7 +519,7 @@
         "es": "Álbum instrumental de Vangelis de 1978 que mezcla electrónica, new age y sinfonismo. Paisajes sonoros épicos y melódicos que crean una narrativa auditiva exuberante. Ejemplo temprano de música electrónica cinematográfica.",
         "en": "A 1978 instrumental album by Vangelis blending electronics, new age, and symphonic elements. Epic and melodic soundscapes create an exuberant auditory narrative. An early example of cinematic electronic music."
       },
-      "image": "/imagenes/musica/dragon.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/dragon.jpeg",
       "tags": [
         "album"
       ],
@@ -541,7 +541,7 @@
         "es": "Tema surrealista con sonidos de synth-pop, electrónica y humor absurdo. Los Ganglios ofrecen ritmo bailable con letra irreverente. Una pieza divertida y ecléctica representativa de su estilo.",
         "en": "A surreal track with synth-pop sounds, electronics, and absurd humor. Los Ganglios deliver a danceable rhythm with irreverent lyrics. A fun and eclectic piece representative of their style."
       },
-      "image": "/imagenes/musica/noruega.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/noruega.png",
       "tags": [
         "song"
       ],
@@ -585,7 +585,7 @@
         "es": "Rap agresivo que describe el entorno urbano como campo de batalla. Meko presenta líricas duras sobre violencia y supervivencia. Ritmo contundente con percussion marcada.",
         "en": "Aggressive rap depicting the urban environment as a battlefield. Meko presents hard lyrics about violence and survival. A powerful beat with marked percussion."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -607,7 +607,7 @@
         "es": "Tema introspectivo y oscuro de Sho-Hai con lirismo maduro. Su flow reflexivo explora la vida, la muerte y el sentido. Beat sobrio que acompaña una lírica profunda y personal.",
         "en": "An introspective and dark track by Sho-Hai with mature lyricism. His reflective flow explores life, death, and meaning. A sober beat accompanies deep, personal lyrics."
       },
-      "image": "/imagenes/musica/sho_hai.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/sho_hai.jpg",
       "tags": [
         "song"
       ],
@@ -651,7 +651,7 @@
         "es": "A Bag of Blue Sparks es una exploración cruda y minimalista de la electrónica experimental. Two Lone Swordsmen combinan ritmos lo-fi, sintetizadores ásperos y una atmósfera densa que invita a perderse en un universo sonoro introspectivo y urbano.",
         "en": "A Bag of Blue Sparks is a raw, minimalist journey through experimental electronica. Two Lone Swordsmen blend lo-fi rhythms, gritty synths, and a dense atmosphere that pulls the listener into an introspective, urban sonic world."
       },
-      "image": "/imagenes/musica/bag.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/bag.jpeg",
       "tags": [
         "album"
       ],
@@ -695,7 +695,7 @@
         "es": "Ácida crítica punk-rock sobre la desgastante espera del final. Ilegales canaliza frustración y rebeldía con energía cruda. Guitarras agresivas y estribillos directos definen su estilo único.",
         "en": "A sharp punk-rock critique about the exhausting wait for the end. Ilegales channels frustration and rebellion with raw energy. Aggressive guitars and direct choruses define their unique style."
       },
-      "image": "/imagenes/musica/ilegales2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/ilegales2.jpg",
       "tags": [
         "song"
       ],
@@ -717,7 +717,7 @@
         "es": "Tema rápido y enérgico que refleja el caos urbano y la alienación. Letras directas con ritmo acelerado y guitarras cortantes. Representa la actitud rebelde de la España ochentera.",
         "en": "A fast, energetic track reflecting urban chaos and alienation. Direct lyrics with a rapid rhythm and sharp guitars. It captures the rebellious attitude of 80s Spain."
       },
-      "image": "/imagenes/musica/ilegales.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/ilegales.jpg",
       "tags": [
         "song"
       ],
@@ -739,7 +739,7 @@
         "es": "Rock potente con lírica poética sobre la carrera vital y el afán de superación. Guitarras intensas y emotivas al servicio de la narrativa personal. Uno de los temas más emblemáticos de Extremoduro.",
         "en": "Powerful rock with poetic lyrics about life's race and the drive to overcome. Intense and emotional guitars support the personal narrative. One of Extremoduro's most emblematic tracks."
       },
-      "image": "/imagenes/musica/minoria.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/minoria.jpg",
       "tags": [
         "song"
       ],
@@ -783,7 +783,7 @@
         "es": "Toda la puta vida igual es uno de los himnos más furiosos y certeros de La Polla Records. Con una letra incendiaria, la canción retrata la monotonía, el hastío y la resignación de una sociedad atrapada en un ciclo sin sentido. Punk directo, sin concesiones, que escupe verdad tras verdad.",
         "en": "Toda la puta vida igual (“The Fucking Same Life Forever”) is one of La Polla Records' most furious and sharp anthems. With incendiary lyrics, the song portrays monotony, frustration, and the resignation of a society trapped in a meaningless cycle. Raw, uncompromising punk that spits truth after truth."
       },
-      "image": "/imagenes/musica/toda.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/toda.jpg",
       "tags": [
         "song"
       ],
@@ -805,7 +805,7 @@
         "es": "Rock melódico con letra emotiva sobre soñar y escapar de la rutina. Cráneo y Escandaloso Xpósito imprimen sensibilidad urbana y reflexión personal. Melodías envolventes acompañadas de guitarras cálidas.",
         "en": "Melodic rock with an emotional lyric about dreaming and escaping routine. Cráneo and Escandaloso Xpósito bring urban sensitivity and personal reflection. Enveloping melodies accompanied by warm guitars."
       },
-      "image": "/imagenes/musica/picnic.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/picnic.jpg",
       "tags": [
         "album"
       ],
@@ -828,7 +828,7 @@
         "en": "Alternative rap with playful flow and clever lyrics. Bejo mixes linguistic resources with a catchy rhythm. Humor and gentle critique define his unique urban style."
       },
       "year": "2020",
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -850,7 +850,7 @@
         "en": "Live concert recording with festive energy and rock-infused rap-hiphop. A powerful fusion moment between urban rock and festival culture. Vibrant audience and artists in top form."
       },
       "year": "2021",
-      "image": "/imagenes/musica/live.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -872,7 +872,7 @@
         "en": "Hay alguien ahí is a raw, melancholic cry from loneliness. With powerful guitars and Yosi’s broken voice, Los Suaves turn existential emptiness into emotional electricity. A visceral anthem of Spanish rock."
       },
       "year": "2002",
-      "image": "/imagenes/musica/suaves.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/suaves.jpg",
       "tags": [
         "live"
       ],
@@ -894,7 +894,7 @@
         "es": "Rock con atmósfera nocturna y melancólica, muy sugestivo. Voces rasgadas y guitarras densas generan tensión emocional. Un tema que cautiva por su intensidad y oscuridad.",
         "en": "Rock with a nocturnal, melancholic atmosphere, very evocative. Raspy vocals and dense guitars generate emotional tension. A track that captivates with its intensity and darkness."
       },
-      "image": "/imagenes/musica/suaves.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/suaves.jpg",
       "tags": [
         "song"
       ],
@@ -915,7 +915,7 @@
         "es": "Colaboración del rap español que aborda la vigilancia social y colectiva. Letras crudas y conscientes con ritmo pausado y grave. Beat sólido que da peso al mensaje crítico.",
         "en": "A collaboration in Spanish rap addressing social and collective surveillance. Raw, conscious lyrics with a slow, heavy rhythm. A solid beat that gives weight to the critical message."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -937,7 +937,7 @@
         "es": "Colaboración legendaria de rap: Nas y Eminem junto a EPMD 2 en tema con barras afiladas. Flow impecable y producción clásica. Versos potentes sobre ritmo entrante y pegadizo.",
         "en": "Legendary rap collaboration: Nas and Eminem alongside EPMD 2 in a track with razor-sharp bars. Impeccable flow and classic production. Powerful verses over an engaging, catchy beat."
       },
-      "image": "/imagenes/musica/epmd2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/epmd2.jpg",
       "tags": [
         "song"
       ],
@@ -959,7 +959,7 @@
         "es": "Tema representativo del rap mexicano con letras crudas que reflejan la realidad social. La producción combina ritmos urbanos con melodías pegajosas, creando un ambiente intenso y auténtico. El videoclip oficial potencia la narrativa visual del mensaje.",
         "en": "Representative track of Mexican rap with raw lyrics reflecting social reality. The production mixes urban beats with catchy melodies, creating an intense and authentic atmosphere. The official video enhances the visual narrative of the message."
       },
-      "image": "/imagenes/musica/tornillo.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/tornillo.png",
       "tags": [
         "song"
       ],
@@ -981,7 +981,7 @@
         "es": "Pieza electrónica ambiental que envuelve con texturas sonoras profundas y ritmos pausados. Ideal para la relajación o introspección, su atmósfera evoca paisajes sonoros urbanos y naturales. Una composición minimalista y envolvente.",
         "en": "Ambient electronic piece that envelops with deep sound textures and slow rhythms. Ideal for relaxation or introspection, its atmosphere evokes urban and natural soundscapes. A minimalist and immersive composition."
       },
-      "image": "/imagenes/musica/brasov.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/brasov.jpeg",
       "tags": [
         "song"
       ],
@@ -1025,7 +1025,7 @@
         "es": "Tema con profunda carga emocional y filosófica, que reflexiona sobre la vida y la muerte. Letras poéticas acompañadas de ritmos cadenciosos que invitan a la meditación. Es una de las obras más emblemáticas de Canserbero.",
         "en": "Track with deep emotional and philosophical charge, reflecting on life and death. Poetic lyrics accompanied by steady rhythms that invite meditation. One of Canserbero's most emblematic works."
       },
-      "image": "/imagenes/musica/lasanimas.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/lasanimas.png",
       "tags": [
         "song"
       ],
@@ -1113,7 +1113,7 @@
         "es": "Pieza electrónica con atmósferas oscuras y sonidos envolventes que transmiten misterio y tensión. Ideal para ambientes introspectivos o de suspenso, destaca por su producción cuidada y original.",
         "en": "Electronic piece with dark atmospheres and enveloping sounds conveying mystery and tension. Ideal for introspective or suspenseful environments, it stands out for its careful and original production."
       },
-      "image": "/imagenes/musica/elegido.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/elegido.png",
       "tags": [
         "song"
       ],
@@ -1201,7 +1201,7 @@
         "es": "Tema potente que reúne a tres pesos pesados del rap español y reggae. Letras directas sobre la vida en la calle y el esfuerzo personal, acompañadas de un ritmo pegajoso y mezcla de estilos urbanos. El videoclip oficial refleja la fuerza y unidad del colectivo.",
         "en": "Powerful track bringing together three heavyweights of Spanish rap and reggae. Direct lyrics about street life and personal struggle, backed by a catchy rhythm and urban style mix. The official video reflects the strength and unity of the collective."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -1311,7 +1311,7 @@
         "es": "Track energético y bailable con fuertes líneas de bajo y ritmos contundentes. Ideal para sesiones de DJ y fiestas, destaca por su producción potente y ritmo contagioso. Un ejemplo claro del estilo bass en la música electrónica.",
         "en": "Energetic and danceable track with strong bass lines and powerful rhythms. Ideal for DJ sets and parties, it stands out for its potent production and catchy beat. A clear example of bass style in electronic music."
       },
-      "image": "/imagenes/musica/electro.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/electro.jpg",
       "tags": [
         "djset"
       ],
@@ -1333,7 +1333,7 @@
         "es": "BlackStar es un manifiesto del hip hop consciente, nacido de la unión de Mos Def y Talib Kweli. Con letras agudas y beats orgánicos, el álbum se alza como una respuesta poética a la violencia, el racismo y el materialismo. Es una joya underground que marcó una era.",
         "en": "Black Star is a manifesto of conscious hip hop, born from the union of Mos Def and Talib Kweli. With sharp lyrics and organic beats, the album stands as a poetic response to violence, racism, and materialism. It's an underground gem that defined an era."
       },
-      "image": "/imagenes/musica/blackstar.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/blackstar.jpg",
       "tags": [
         "song"
       ],
@@ -1443,7 +1443,7 @@
         "es": "Actuación en vivo del grupo noruego Dimmu Borgir en el Ozzfest 2004, donde mostraron su metal sinfónico oscuro y agresivo. La energía en el escenario y la calidad instrumental consolidaron su posición como referentes del metal extremo.",
         "en": "Live performance by Norwegian band Dimmu Borgir at Ozzfest 2004, showcasing their dark and aggressive symphonic metal. The stage energy and instrumental quality cemented their status as extreme metal icons."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -1509,7 +1509,7 @@
         "es": "Tema de rap urbano producido por XINKOA que mezcla ritmos contagiosos con letras sobre disfrutar la vida y superar adversidades. 06 SHOTTA destaca por su flow enérgico y su estilo directo, ideal para el ambiente de fiesta y buen rollo.",
         "en": "Urban rap track produced by XINKOA mixing catchy rhythms with lyrics about enjoying life and overcoming adversity. 06 SHOTTA stands out for energetic flow and direct style, perfect for party vibes and good mood."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -1531,7 +1531,7 @@
         "es": "Pieza instrumental de Aphex Twin que combina texturas electrónicas atmosféricas con un ritmo minimalista y envolvente. 'Stone In Focus' es un viaje introspectivo dentro del IDM, mostrando la habilidad del artista para crear ambientes sonoros únicos.",
         "en": "Instrumental piece by Aphex Twin combining atmospheric electronic textures with a minimalist and immersive rhythm. 'Stone In Focus' is an introspective journey within IDM, showcasing the artist's skill for creating unique soundscapes."
       },
-      "image": "/imagenes/musica/stone.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/stone.png",
       "tags": [
         "song"
       ],
@@ -1575,7 +1575,7 @@
         "es": "Clásico tema trance de 1994 que marcó la escena electrónica con su atmósfera hipnótica y sintetizadores envolventes. 'Point Zero' es un himno del trance temprano que sigue influenciando a productores actuales con su energía etérea y melódica.",
         "en": "'Point Zero' is a 1994 classic trance track that shaped the electronic scene with hypnotic atmosphere and immersive synths. It remains an anthem of early trance, influencing current producers with its ethereal and melodic energy."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -1773,7 +1773,7 @@
         "es": "Video oficial de esta intensa batalla de rap entre Dollar y Jefe Yisus. Un enfrentamiento lleno de ingenio, ritmo y líricas afiladas que muestran la pasión por el freestyle y la cultura del hip hop.",
         "en": "Official video of this intense rap battle between Dollar and Jefe Yisus. A confrontation full of wit, rhythm, and sharp lyrics that showcase passion for freestyle and hip hop culture."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -1817,7 +1817,7 @@
         "es": "Tema clásico de 1999 que resalta la importancia del respeto y la humildad en el rap. Geronación mezcla letras conscientes con un ritmo cadencioso que invita a la reflexión dentro del panorama del hip hop en español.",
         "en": "Classic 1999 track highlighting the importance of respect and humility in rap. Geronación mixes conscious lyrics with a steady rhythm inviting reflection within the Spanish hip hop scene."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -1839,7 +1839,7 @@
         "es": "Exhibición internacional de batalla de rap en el MACBA entre Baron y FD. Una demostración de técnica, rapidez mental y creatividad que refleja la esencia de las competiciones de freestyle más respetadas.",
         "en": "International rap battle exhibition at MACBA between Baron and FD. A showcase of technique, quick wit, and creativity reflecting the essence of the most respected freestyle competitions."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -1861,7 +1861,7 @@
         "es": "Final histórica de la Batalla de los Gallos en Barcelona 2006 entre Teko y Noult. Una confrontación legendaria que muestra lo mejor del freestyle con rimas afiladas y un ambiente cargado de tensión y energía.",
         "en": "Historic final of Batalla de los Gallos Barcelona 2006 between Teko and Noult. A legendary confrontation showcasing the best of freestyle with sharp rhymes and a tense, energetic atmosphere."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -1883,7 +1883,7 @@
         "es": "Canción de rap con letras introspectivas y un ritmo envolvente. Picolo, La Gato y Gecko combinan sus estilos para crear un tema lleno de emociones y crítica social, representando la voz de la calle con autenticidad.",
         "en": "Rap song with introspective lyrics and an immersive rhythm. Picolo, La Gato, and Gecko combine their styles to create a track full of emotion and social critique, representing the street's authentic voice."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -1905,7 +1905,7 @@
         "es": "Colaboración de rap con energía y letras contundentes. 'A mansalva' fusiona estilos urbanos con mensajes directos, mostrando la fuerza del hip hop colaborativo en la escena underground.",
         "en": "'A mansalva' is a rap collaboration with energy and powerful lyrics. It fuses urban styles with direct messages, showcasing the strength of collaborative hip hop in the underground scene."
       },
-      "image": "/imagenes/musica/artes.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/artes.jpg",
       "tags": [
         "song"
       ],
@@ -1927,7 +1927,7 @@
         "es": "Cuéntenos su caso es un álbum que recoge testimonios del margen, mezclando rap con crítica social y vivencias reales. Artes Verbales transforma cada verso en una denuncia y cada pista en un relato crudo y directo. Una obra comprometida, nacida desde abajo.",
         "en": "Cuéntenos su caso is an album that captures stories from the margins, blending rap with social critique and raw life experiences. Artes Verbales turns each verse into a protest and every track into a powerful tale. A committed work, born from the ground up."
       },
-      "image": "/imagenes/musica/artes.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/artes.jpg",
       "tags": [
         "album"
       ],
@@ -1971,7 +1971,7 @@
         "es": "Himno del rap español producido por el mismo Zarman, que reafirma el amor y la dedicación por el hip hop. Letras directas y contundentes acompañadas de un beat clásico y efectivo.",
         "en": "Spanish rap anthem produced by Zarman himself, reaffirming love and dedication to hip hop. Direct and powerful lyrics accompanied by a classic and effective beat."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -1993,7 +1993,7 @@
         "es": "Canción que mezcla rap con elementos folclóricos, expresando las heridas emocionales y la resiliencia. Inspira Flowklorikos ofrece una producción original y letras cargadas de sentimiento.",
         "en": "Song mixing rap with folk elements, expressing emotional wounds and resilience. Inspira Flowklorikos offers original production and deeply emotional lyrics."
       },
-      "image": "/imagenes/musica/dondeduele.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/dondeduele.jpg",
       "tags": [
         "album"
       ],
@@ -2015,7 +2015,7 @@
         "es": "Colaboración de dos grandes del rap español con producción de Stash House. 'Brindis' celebra la amistad, la lucha y el éxito con rimas potentes y un beat envolvente.",
         "en": "Collaboration of two Spanish rap greats with production by Stash House. 'Brindis' celebrates friendship, struggle, and success with powerful rhymes and an immersive beat."
       },
-      "image": "/imagenes/musica/brindis.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/brindis.jpg",
       "tags": [
         "song"
       ],
@@ -2059,7 +2059,7 @@
         "es": "Canción emotiva que rememora experiencias pasadas y las huellas que dejan en el presente. Jefe De La M y Titó combinan sus estilos para crear un tema nostálgico y profundo.",
         "en": "Emotional song that recalls past experiences and their marks on the present. Jefe De La M and Titó combine their styles to create a nostalgic and deep track."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -2103,7 +2103,7 @@
         "es": "Canción de rap que utiliza la metáfora de las serpientes para hablar de traiciones y peligros en el entorno urbano. Chinatown ofrece letras agudas y un ritmo intenso que captura la atención.",
         "en": "Rap song using the metaphor of snakes to talk about betrayals and dangers in the urban environment. Chinatown offers sharp lyrics and an intense rhythm that captures attention."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -2125,7 +2125,7 @@
         "es": "Canción en francés con un mensaje potente y reflexivo. Furax Barbarossa presenta letras densas y un ritmo que combina agresividad con ritmo, acompañado de subtítulos para el público hispanohablante.",
         "en": "French song with a powerful and reflective message. Furax Barbarossa presents dense lyrics and a rhythm combining aggression and flow, accompanied by subtitles for Spanish-speaking audiences."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -2213,7 +2213,7 @@
         "es": "Tema clásico del grupo francés IAM que explora otras dimensiones del rap con letras profundas y producción impecable. Un videoclip oficial que acompaña esta obra imprescindible del hip hop francés.",
         "en": "Classic track from French group IAM exploring other dimensions of rap with deep lyrics and flawless production. An official video accompanies this essential French hip hop work."
       },
-      "image": "/imagenes/musica/electro.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/electro.jpg",
       "tags": [
         "song"
       ],
@@ -2235,7 +2235,7 @@
         "es": "Canción potente de Keny Arkana con mensajes de protesta social y esperanza. La versión con subtítulos en español permite comprender mejor sus letras conscientes y comprometidas.",
         "en": "Powerful song by Keny Arkana with messages of social protest and hope. The Spanish-subtitled version helps better understand her conscious and committed lyrics."
       },
-      "image": "/imagenes/musica/keny.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/keny.png",
       "tags": [
         "song"
       ],
@@ -2279,7 +2279,7 @@
         "es": "Canción con un ritmo agresivo y letras combativas que reflejan la rabia social de Keny Arkana. La versión con subtítulos en español facilita la comprensión de su mensaje revolucionario.",
         "en": "Song with aggressive rhythm and combative lyrics reflecting Keny Arkana's social anger. The Spanish-subtitled version makes her revolutionary message easier to understand."
       },
-      "image": "/imagenes/musica/larage.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/larage.png",
       "tags": [
         "song"
       ],
@@ -2301,7 +2301,7 @@
         "es": "Tema intenso que aborda la guerra y sus consecuencias desde la perspectiva del colectivo Mafia K'1 Fry. La versión con subtítulos en español facilita la comprensión del mensaje.",
         "en": "Intense track addressing war and its consequences from Mafia K'1 Fry collective's perspective. The Spanish-subtitled version facilitates message understanding."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -2367,7 +2367,7 @@
         "es": "Track energético de LOS LOCOS que combina ritmos urbanos con letras incisivas. Su estilo dinámico se refleja en un videoclip visualmente impactante y una producción pulida.",
         "en": "Energetic track by LOS LOCOS combining urban rhythms with incisive lyrics. Their dynamic style is reflected in a visually impactful video and polished production."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -2433,7 +2433,7 @@
         "es": "Clásico del rap español, 'Apache' de 360 Grados destaca por su flow auténtico y letras urbanas. Representa una época dorada del hip hop con un estilo inconfundible y ritmo envolvente.",
         "en": "'Apache' by 360 Grados is a Spanish rap classic, featuring authentic flow and urban lyrics. It represents a golden era of hip hop with an unmistakable style and immersive rhythm."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -2477,7 +2477,7 @@
         "es": "Canción emotiva de Canserbero junto a Zoo Indigos que mezcla rap con mensajes profundos sobre la vida y la sociedad. Letras cargadas de sentimiento y ritmo envolvente que capturan al oyente.",
         "en": "Emotional song by Canserbero with Zoo Indigos mixing rap with deep messages about life and society. Lyrics full of feeling and an immersive rhythm that captivate the listener."
       },
-      "image": "/imagenes/musica/can.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/can.jpeg",
       "tags": [
         "song"
       ],
@@ -2521,7 +2521,7 @@
         "es": "Tema explosivo de MESWY & NUTSO producido por Jameson Killah, con letras contundentes y un ritmo que no da tregua. Representa el rap callejero con energía pura y mensajes intensos.",
         "en": "Explosive track by MESWY & NUTSO produced by Jameson Killah, featuring powerful lyrics and relentless rhythm. Represents street rap with pure energy and intense messages."
       },
-      "image": "/imagenes/musica/rabiosomente.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/rabiosomente.png",
       "tags": [
         "song"
       ],
@@ -2543,7 +2543,7 @@
         "es": "Participación de PIEL ROJA en la batalla 'One Shot 4 Elementos #14', demostrando habilidad y estilo en el freestyle. Ritmo y letras que reflejan la esencia del rap competitivo y callejero.",
         "en": "PIEL ROJA's participation in the 'One Shot 4 Elementos #14' battle, showcasing skill and style in freestyle. Rhythm and lyrics that reflect the essence of competitive and street rap."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "song"
       ],
@@ -2565,7 +2565,7 @@
         "es": "Canción potente de Sicario que mezcla letras directas con un ritmo envolvente. Explora temas de identidad y desafío con un enfoque lírico profundo. Video oficial con imágenes urbanas y energía cruda.",
         "en": "Powerful song by Sicario mixing direct lyrics with an immersive rhythm. Explores themes of identity and challenge with a deep lyrical focus. Official video with urban imagery and raw energy."
       },
-      "image": "/imagenes/musica/sicario.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/sicario.png",
       "tags": [
         "song"
       ],
@@ -2675,7 +2675,7 @@
         "es": "Vídeo subtitulado en español de KRS-One junto a Marley Marl que celebra la esencia del hip hop. Rimas clásicas y un homenaje a la cultura que mantiene viva la música urbana.",
         "en": "Spanish-subtitled video of KRS-One with Marley Marl celebrating the essence of hip hop. Classic rhymes and a tribute to the culture that keeps urban music alive."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -2697,7 +2697,7 @@
         "es": "Tema de rock alternativo con toques intensos y lírica introspectiva. JOSELE (ZNP) ofrece una interpretación cargada de emociones y energía cruda que conecta con el oyente.",
         "en": "Alternative rock track with intense touches and introspective lyrics. JOSELE (ZNP) delivers a performance full of emotions and raw energy that connects with the listener."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -2719,7 +2719,7 @@
         "es": "Álbum completo de Cloaka Company publicado en 2001, que destaca por su estilo crudo y letras comprometidas. Una obra que captura la esencia del rap underground con beats potentes y mensajes claros.",
         "en": "Full album by Cloaka Company released in 2001, notable for its raw style and committed lyrics. A work capturing the essence of underground rap with powerful beats and clear messages."
       },
-      "image": "/imagenes/musica/cloacka.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/cloacka.jpg",
       "tags": [
         "album"
       ],
@@ -2763,7 +2763,7 @@
         "es": "Canción de reggae con Snoop Lion, Mavado y Pocaan que mezcla ritmos caribeños con letras sobre la resistencia y la unidad. Producción vibrante y un video subtitulado en español que potencia su mensaje.",
         "en": "Reggae song by Snoop Lion, Mavado, and Pocaan mixing Caribbean rhythms with lyrics about resistance and unity. Vibrant production and a Spanish-subtitled video that enhances its message."
       },
-      "image": "/imagenes/musica/ligthers.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/ligthers.png",
       "tags": [
         "song"
       ],
@@ -2785,7 +2785,7 @@
         "es": "Video oficial de Tha Shiznit para el tema 'SnoopDoggTV', que combina el rap clásico con una producción audiovisual potente. Letras directas y una energía enérgica que reflejan el estilo West Coast. Un homenaje a la cultura hip hop.",
         "en": "'SnoopDoggTV' official video by Tha Shiznit, blending classic rap with strong audiovisual production. Direct lyrics and energetic vibe reflecting West Coast style. A tribute to hip hop culture."
       },
-      "image": "/imagenes/musica/tha.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/tha.png",
       "tags": [
         "song"
       ],
@@ -2829,7 +2829,7 @@
         "es": "'Entropía' es un tema electrónico experimental de Funkferatu que juega con estructuras rítmicas complejas y sonidos envolventes. Una exploración sonora que desafía las convenciones y crea atmósferas futuristas.",
         "en": "'Entropy' is an experimental electronic track by Funkferatu playing with complex rhythmic structures and immersive sounds. A sonic exploration challenging conventions and creating futuristic atmospheres."
       },
-      "image": "/imagenes/musica/entropia.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/entropia.jpg",
       "tags": [
         "song"
       ],
@@ -2851,7 +2851,7 @@
         "es": "Pista electrónica intensa y energética de Funkferatu que combina beats dinámicos con texturas sintéticas. 'No Sleep' es una invitación a la vigilia sonora, perfecta para ambientes nocturnos y vibrantes.",
         "en": "'No Sleep' is an intense and energetic electronic track by Funkferatu, combining dynamic beats with synthetic textures. It invites a sonic wakefulness, perfect for vibrant nighttime settings."
       },
-      "image": "/imagenes/musica/entropia.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/entropia.jpg",
       "tags": [
         "song"
       ],
@@ -2917,7 +2917,7 @@
         "es": "Colaboración entre El Coleta y Mueveloreina que mezcla pop con sonidos electrónicos y elementos urbanos. 'Camaradas Cañeros' destaca por su ritmo bailable y letras que celebran la amistad y la fiesta.",
         "en": "Collaboration between El Coleta and Mueveloreina mixing pop with electronic sounds and urban elements. 'Camaradas Cañeros' stands out for its danceable rhythm and lyrics celebrating friendship and partying."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -2983,7 +2983,7 @@
         "es": "Tema colaborativo que reúne a destacados raperos Jack Russell, Foyone, Akapellah, Big Soto y Trainer. La canción ofrece letras potentes y flows variados que reflejan la diversidad del rap en español.",
         "en": "Collaborative track featuring prominent rappers Jack Russell, Foyone, Akapellah, Big Soto, and Trainer. The song delivers powerful lyrics and varied flows showcasing the diversity of Spanish rap."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -3027,7 +3027,7 @@
         "es": "'Fugitivo' es un tema de Pielroja que explora la huida interior y la búsqueda de libertad. Su producción combina sonidos urbanos con letras profundas, consolidando su estilo único dentro del rap contemporáneo.",
         "en": "'Fugitivo' is a track by Pielroja exploring inner escape and the search for freedom. Its production combines urban sounds with deep lyrics, cementing her unique style in contemporary rap."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -3049,7 +3049,7 @@
         "es": "'El Mundito del Rap' reúne a Canserbero con Solo Soul, IceOd y Mcklopedia en una canción que rinde tributo al rap consciente. Letras que invitan a la reflexión sobre la realidad social y el poder de la palabra.",
         "en": "'El Mundito del Rap' brings together Canserbero with Solo Soul, IceOd, and Mcklopedia in a song paying tribute to conscious rap. Lyrics invite reflection on social reality and the power of words."
       },
-      "image": "/imagenes/musica/mundito.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/mundito.jpg",
       "tags": [
         "song"
       ],
@@ -3071,7 +3071,7 @@
         "es": "Batalla de freestyle semis entre Nitro & Pepe Grillo contra Xinako & Sof en la competición '4 Elementos'. Exhibición de habilidad lírica, ingenio y energía competitiva en el rap improvisado.",
         "en": "Freestyle battle semifinals between Nitro & Pepe Grillo and Xinako & Sof in the '4 Elements' competition. Showcasing lyrical skill, wit, and competitive energy in improvised rap."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3093,7 +3093,7 @@
         "es": "Vídeo oficial de la batalla 'Linea Dieciséis Sin Límite' entre Lobo Estepario y Mcklopedia. Una confrontación de estilos y técnicas en el circuito underground de batallas de rap.",
         "en": "Official video of the battle 'Linea Dieciséis Sin Límite' between Lobo Estepario and Mcklopedia. A confrontation of styles and techniques in the underground rap battle circuit."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3115,7 +3115,7 @@
         "es": "Batalla oficial 'Callejón sin Salida' entre Muelas y Shotta en la liga L16XL. Rimas afiladas y fuerte presencia escénica en uno de los encuentros más intensos del circuito.",
         "en": "'Callejón sin Salida' official battle between Muelas and Shotta in the L16XL league. Sharp rhymes and strong stage presence in one of the most intense battles of the circuit."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3137,7 +3137,7 @@
         "es": "Una batalla intensa de rap en la que se enfrentan dos estilos y creencias opuestas: el ateísmo y el cristianismo. Letras cargadas de crítica social y filosofía, demostrando la destreza lírica de ambos competidores. Esta batalla es un clásico del circuito underground hispano.",
         "en": "An intense rap battle confronting two opposing beliefs: atheism and Christianity. Loaded with social critique and philosophy, showcasing the lyrical skill of both competitors. This battle is a classic in the Spanish underground scene."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3159,7 +3159,7 @@
         "es": "El enfrentamiento final de la liga femenina de batallas de rap, con dos de las mejores MCs del momento. Sara Socas y Kharma entregan una batalla vibrante, con rimas contundentes y presencia escénica inigualable. Un momento histórico para la escena femenina.",
         "en": "The final showdown of the female rap battle league, featuring two of the best MCs currently. Sara Socas and Kharma deliver a vibrant battle with powerful rhymes and unmatched stage presence. A historic moment for the female scene."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3203,7 +3203,7 @@
         "es": "Una exhibición memorable en el BDM Logroño 2019 donde Sara Socas y NG demostraron gran habilidad lírica y presencia escénica. La batalla en formato FMS destacó por su energía y respeto entre competidores, dejando claro el nivel del freestyle nacional.",
         "en": "A memorable exhibition at BDM Logroño 2019 where Sara Socas and NG showcased great lyrical skill and stage presence. The FMS format battle stood out for its energy and mutual respect between competitors, highlighting the level of national freestyle."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3225,7 +3225,7 @@
         "es": "Batalla de 16avos en la fase clasificatoria nacional de rap en el evento Batallón, con NG y Dragma mostrando rimas agudas y mucha técnica. Esta pelea puso a prueba la creatividad y la capacidad de improvisación de ambos competidores.",
         "en": "Round of 16 battle in the national rap qualifying phase at the Batallón event, featuring NG and Dragma showcasing sharp rhymes and strong technique. This fight tested both competitors' creativity and improvisation skills."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3247,7 +3247,7 @@
         "es": "Batalla por el tercer puesto en la segunda clasificatoria de Flowrap Alicante. El Perillas y HeySaki se enfrentan con rimas cargadas de humor y agresividad controlada. Un encuentro lleno de risas, técnica y mucho carisma.",
         "en": "Battle for third place in the second qualifier of Flowrap Alicante. El Perillas and HeySaki face off with rhymes full of humor and controlled aggressiveness. A match full of laughs, technique, and charisma."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3269,7 +3269,7 @@
         "es": "Intensa batalla de octavos de final en el circuito nacional de rap Batallón. Salcedo y Souljah Jerome mostraron un duelo de estilos muy marcado, donde la destreza verbal y la estrategia fueron clave para dominar el escenario.",
         "en": "Intense round of 8 battle in the national rap circuit Batallón. Salcedo and Souljah Jerome displayed a clash of distinct styles, where verbal skill and strategy were key to dominating the stage."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3291,7 +3291,7 @@
         "es": "Cuartos de final en el torneo nacional de rap Batallón. Souljah Jerome y Sola entregan una batalla electrizante con letras potentes y mucha improvisación. La rivalidad y el respeto se mezclan en este enfrentamiento memorable.",
         "en": "Quarterfinals in the national rap tournament Batallón. Souljah Jerome and Sola deliver an electrifying battle with powerful lyrics and lots of improvisation. Rivalry and respect mix in this memorable confrontation."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3313,7 +3313,7 @@
         "es": "Duelo de equipos en los cuartos de final del torneo MACBA 2vs2, parte de la famosa competición 4 Elementos. Nitro y Stigma enfrentan a Rastachai y Souljah con mucho nivel, ritmo y conexión en escena, brindando un espectáculo intenso para los fanáticos.",
         "en": "Team duel in the quarterfinals of the MACBA 2vs2 tournament, part of the famous 4 Elements competition. Nitro and Stigma face Rastachai and Souljah with high skill, rhythm, and stage connection, delivering an intense show for fans."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3335,7 +3335,7 @@
         "es": "La final del torneo MACBA 2vs2 dentro de la competencia 4 Elementos. Nitro & Stigma se enfrentan a Xinako & Sof en una batalla épica, con habilidades excepcionales, entrega total y un nivel de improvisación que dejó huella en el público.",
         "en": "The final of the MACBA 2vs2 tournament within the 4 Elements competition. Nitro & Stigma face Xinako & Sof in an epic battle, with exceptional skills, full commitment, and improvisation level that left a mark on the audience."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3357,7 +3357,7 @@
         "es": "Batalla triple en los octavos de final de la Pre Gold Battle, con Swit Eme, El Perillas y Azor. Una competencia llena de talento, agresividad controlada y versatilidad para dominar el escenario. Destaca por la energía y la técnica de los tres MCs.",
         "en": "Triple battle in the round of 16 of the Pre Gold Battle, featuring Swit Eme, El Perillas, and Azor. A competition full of talent, controlled aggressiveness, and versatility to dominate the stage. Notable for the energy and technique of the three MCs."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3379,7 +3379,7 @@
         "es": "Final decisiva en Flowrap Alicante donde Lato Efe y El Perillas se enfrentan por el título Oro. Una batalla repleta de técnica, ingenio y estilo personal, que definió al campeón con una presentación inolvidable.",
         "en": "Decisive final at Flowrap Alicante where Lato Efe and El Perillas face off for the Gold title. A battle full of technique, wit, and personal style that defined the champion with an unforgettable performance."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3401,7 +3401,7 @@
         "es": "Una batalla por los cuartos de final en la fase nacional del circuito Batallón entre MNAK y BTA. Se destaca la creatividad y la capacidad de improvisación en este enfrentamiento cargado de intensidad y técnica.",
         "en": "A battle for the quarterfinals in the national phase of the Batallón circuit between MNAK and BTA. Creativity and improvisation ability stand out in this intense and technical confrontation."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3423,7 +3423,7 @@
         "es": "Batalla intensa en el circuito Batallón donde Sara Socas, El Perillas y Viler compiten por avanzar a la siguiente ronda. Esta contienda destaca por la versatilidad y la rapidez en el flow de los tres MCs. Un espectáculo de talento puro en el escenario de Flowrap Alicante.",
         "en": "Intense battle in the Batallón circuit where Sara Socas, El Perillas, and Viler compete to advance to the next round. This contest stands out for the versatility and speed in the flow of the three MCs. A pure talent showcase at Flowrap Alicante."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3445,7 +3445,7 @@
         "es": "El Camino de la Serpiente es un ritual sonoro donde el hip hop se funde con la naturaleza, la poesía ancestral y paisajes sonoros chamánicos. Hijos de las Hojas invoca una espiritualidad terrenal con beats orgánicos y letras que despiertan conciencia.",
         "en": "El Camino de la Serpiente is a sonic ritual where hip hop blends with nature, ancestral poetry, and shamanic soundscapes. Hijos de las Hojas invoke an earthy spirituality through organic beats and lyrics that awaken consciousness."
       },
-      "image": "/imagenes/musica/hijos.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/hijos.png",
       "tags": [
         "album"
       ],
@@ -3467,7 +3467,7 @@
         "es": "Videoclip oficial del tema 'Escupiéndolo', donde Toteking y Dheformer muestran su habilidad lírica con una producción contundente de Drama Theme. El vídeo destaca por su estética urbana y su energía directa al mensaje del rap.",
         "en": "Official music video for 'Escupiéndolo', where Toteking and Dheformer showcase their lyrical skills with a strong production by Drama Theme. The video stands out for its urban aesthetic and direct energy to the rap message."
       },
-      "image": "/imagenes/musica/tyson.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/tyson.png",
       "tags": [
         "song"
       ],
@@ -3489,7 +3489,7 @@
         "es": "Actuación en vivo de Julia Bondar con un set de techno modular. Una experiencia sonora que combina sintetizadores analógicos y beats profundos, mostrando la creatividad y el dominio técnico de la artista. Ideal para amantes de la electrónica experimental.",
         "en": "Live performance by Julia Bondar featuring a modular techno set. A sonic experience combining analog synthesizers and deep beats, showcasing the artist's creativity and technical mastery. Perfect for lovers of experimental electronic music."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -3511,7 +3511,7 @@
         "es": "Grabación en vivo del evento Awakenings durante el Amsterdam Dance Event 2021, con Tale Of Us presentando su característico sonido melódico y envolvente. Una sesión que captura la esencia del techno contemporáneo y la energía del público.",
         "en": "Live recording of the Awakenings event during Amsterdam Dance Event 2021, featuring Tale Of Us presenting their characteristic melodic and immersive sound. A session that captures the essence of contemporary techno and crowd energy."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/live.png",
       "tags": [
         "live"
       ],
@@ -3533,7 +3533,7 @@
         "es": "Concierto en vivo del grupo El Sicario en Barcelona, 2008, donde interpretan 'La Ley de Ohm' con toda su energía y fuerza rockera. Un tema que mezcla riffs potentes con letras contundentes y un ambiente intenso en directo.",
         "en": "Live concert by the band El Sicario in Barcelona, 2008, performing 'La Ley de Ohm' with full energy and rock strength. A song blending powerful riffs with strong lyrics and an intense live atmosphere."
       },
-      "image": "/imagenes/musica/live.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/live.png",
       "tags": [
         "live",
         "song"
@@ -3556,7 +3556,7 @@
         "es": "Videoclip oficial de 'Colateral' de Mueveloreina, grupo que mezcla ritmos latinos y urbanos con una producción fresca y moderna. El video destaca por su estética colorida y vibrante, acompañando la energía del tema.",
         "en": "Official music video for 'Colateral' by Mueveloreina, a group that mixes Latin and urban rhythms with fresh and modern production. The video stands out for its colorful and vibrant aesthetics, matching the energy of the track."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -3578,7 +3578,7 @@
         "es": "Tema de rap con letras introspectivas y ritmo cadencioso que refleja la voz auténtica del artista abocajarro. La producción es minimalista pero efectiva, creando una atmósfera íntima para conectar con el oyente.",
         "en": "Rap track with introspective lyrics and steady rhythm reflecting abocajarro's authentic voice. The production is minimalist yet effective, creating an intimate atmosphere to connect with the listener."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -3600,7 +3600,7 @@
         "es": "Colaboración entre RABIOSOMENTE, El Meswy y Nutso, un tema de rap cargado de energía, técnica y lírica potente. La canción destaca por sus versos dinámicos y un beat agresivo que mantiene la intensidad durante todo el track.",
         "en": "Collaboration between RABIOSOMENTE, El Meswy, and Nutso, a rap track full of energy, technique, and powerful lyrics. The song stands out for its dynamic verses and an aggressive beat maintaining intensity throughout."
       },
-      "image": "/imagenes/musica/rabioso.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/rabioso.png",
       "tags": [
         "album"
       ],
@@ -3622,7 +3622,7 @@
         "es": "Participación de PURE NEGGA en la batalla de rap '4 Elementos' edición número 10. Un enfrentamiento lleno de punchlines y habilidad improvisatoria que resalta el talento del MC en la escena nacional.",
         "en": "PURE NEGGA's participation in the rap battle '4 Elementos' edition number 10. A confrontation full of punchlines and improvisational skills highlighting the MC's talent in the national scene."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [],
       "youtube": "https://www.youtube.com/watch?v=L_FXquG6H3s&list=RDL_FXquG6H3s&start_radio=1",
       "spotify": "",
@@ -3642,7 +3642,7 @@
         "es": "Videoclip oficial de ABOCAJARRO para el tema 'De día y de noche', una producción que mezcla ritmos urbanos con letras profundas y un enfoque audiovisual cuidado. La dirección estuvo a cargo de Juan Miguel del Castillo y Caliche Films.",
         "en": "Official music video by ABOCAJARRO for the track 'De día y de noche', a production mixing urban rhythms with deep lyrics and a well-crafted audiovisual approach. Directed by Juan Miguel del Castillo and Caliche Films."
       },
-      "image": "/imagenes/musica/abocajarro.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/abocajarro.jpg",
       "tags": [
         "song"
       ],
@@ -3664,7 +3664,7 @@
         "es": "Una colaboración poderosa entre Damian Marley y NAS, que mezcla reggae con hip-hop de forma magistral. 'Sabali' transmite un mensaje de paciencia y resistencia. La letra y el ritmo evocan reflexiones sobre la lucha y la esperanza.",
         "en": "A powerful collaboration between Damian Marley and NAS blending reggae and hip-hop masterfully. 'Sabali' conveys a message of patience and resilience. The lyrics and rhythm evoke reflections on struggle and hope."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -3686,7 +3686,7 @@
         "es": "Un tema de reggae contemporáneo que une el estilo de O.B.F con la voz inconfundible de Charlie P. 'FUFU LALA' combina ritmos vibrantes con letras positivas y conscientes.",
         "en": "'FUFU LALA' is a contemporary reggae track uniting O.B.F's style with Charlie P's unmistakable voice. It blends vibrant rhythms with positive and conscious lyrics."
       },
-      "image": "/imagenes/musica/fufu.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/fufu.jpg",
       "tags": [
         "song"
       ],
@@ -3708,7 +3708,7 @@
         "es": "EDICION: SieteTreinta @andreeagirimia GRABACION: @kikereptilcorp @guillermanhedo gradecimentos a DIOS Y A @the.cheshire.cat",
         "en": "EDITING: SieteTreinta @andreeagirimia RECORDING: @kikereptilcorp @guillermanhedo Thanks to GOD and @the.cheshire.cat"
       },
-      "image": "/imagenes/musica/brasov.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/brasov.jpeg",
       "tags": [
         "song"
       ],
@@ -3730,7 +3730,7 @@
         "es": "Un clásico del reggae interpretado por Nah Ina It y Paul St. Hilaire, con un ritmo contagioso y una letra que invita a la unidad y la reflexión.",
         "en": "A reggae classic performed by Nah Ina It and Paul St. Hilaire, featuring a catchy rhythm and lyrics inviting unity and reflection."
       },
-      "image": "/imagenes/musica/NahInaIt.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/NahInaIt.png",
       "tags": [
         "song"
       ],
@@ -3774,7 +3774,7 @@
         "es": "Crucificado es un viaje lírico y existencial donde Domenica y Dheformer despliegan versos cargados de dolor, fe y redención. Con una base sombría y minimalista, la canción ahonda en la cruz personal que cada uno lleva a cuestas, en medio de un mundo hostil. Galinier aporta un coro etéreo que eleva el mensaje a un plano casi espiritual.",
         "en": "Crucificado is a lyrical and existential journey where Domenica and Dheformer unfold verses filled with pain, faith, and redemption. Backed by a dark and minimalist beat, the track dives into the personal cross each carries in a hostile world. Galinier adds an ethereal chorus that lifts the message to an almost spiritual level."
       },
-      "image": "/imagenes/musica/galinier.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/galinier.jpg",
       "tags": [
         "song"
       ],
@@ -3796,7 +3796,7 @@
         "es": "'Hardcore Funk' fusiona el rap con ritmos funk y la colaboración de PMD, mostrando la versatilidad y maestría lírica de KASE.O.",
         "en": "'Hardcore Funk' fuses rap with funk rhythms and features PMD, showcasing KASE.O's lyrical versatility and mastery."
       },
-      "image": "/imagenes/musica/funk.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/funk.png",
       "tags": [
         "song"
       ],
@@ -3840,7 +3840,7 @@
         "es": "Un freestyle puro donde McKlopedia y YOSHI muestran su habilidad lírica y dominio del ritmo. 'Freestyle #4' es un ejemplo claro de improvisación y talento en el rap underground español.",
         "en": "'Freestyle #4' showcases McKlopedia and YOSHI's lyrical skill and rhythm mastery. It is a clear example of improvisation and talent in Spanish underground rap."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -3862,7 +3862,7 @@
         "es": "Batalla completa entre FOYONE y TKILLA en la emblemática escena de Línea Dieciséis. Un duelo de ingenio, ritmo y lírica que refleja la esencia del rap competitivo y la cultura battle.",
         "en": "Complete battle between FOYONE and TKILLA in the iconic Línea Dieciséis scene. A duel of wit, rhythm, and lyrics reflecting the essence of competitive rap and battle culture."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -3906,7 +3906,7 @@
         "es": "Duelo intenso entre McKlopedia y Danger en la segunda ronda de Línea 16 XL. Una batalla que combina habilidad lírica con ritmo dinámico, representando la esencia del freestyle competitivo.",
         "en": "Intense duel between McKlopedia and Danger in Round 2 of Línea 16 XL. A battle combining lyrical skill with dynamic rhythm, embodying the essence of competitive freestyle."
       },
-      "image": "/imagenes/musica/battle.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/battle.png",
       "tags": [
         "battle"
       ],
@@ -4038,7 +4038,7 @@
         "es": "Un tema que fusiona la esencia del flamenco con sonidos tradicionales gitanos y toques modernos. 'Gitano Antón' es una pieza emotiva que transmite la identidad cultural y la pasión por la música folklórica.",
         "en": "'Gitano Antón' merges flamenco essence with traditional gypsy sounds and modern touches. It's an emotional piece that conveys cultural identity and passion for folk music."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -4082,7 +4082,7 @@
         "es": "'Still Hungry', producido por Tru Comers, es una colaboración que destaca por su energía cruda y letras directas. Ergo Pro y Lou Fresco entregan un tema potente dentro del rap contemporáneo.",
         "en": "'Still Hungry', produced by Tru Comers, is a collaboration that stands out for its raw energy and direct lyrics. Ergo Pro and Lou Fresco deliver a powerful track within contemporary rap."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],
@@ -4192,7 +4192,7 @@
         "es": "Un homenaje especial a FJ.Ramos VKR con una recopilación de temas que resaltan la influencia y legado dentro del rap de la costa oeste española.",
         "en": "A special tribute to FJ.Ramos VKR featuring a collection of tracks highlighting his influence and legacy within the Spanish west coast rap scene."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "album"
       ],
@@ -4302,7 +4302,7 @@
         "es": "Dominican Gang Star es el álbum completo de Original Juan que refleja la vida y las luchas del rap dominicano. Con ritmos contundentes y letras llenas de fuerza y autenticidad, este trabajo se ha convertido en un referente del género en el Caribe.",
         "en": "Dominican Gang Star is Original Juan's full album that reflects the life and struggles of Dominican rap. With strong rhythms and lyrics full of power and authenticity, this work has become a reference in the Caribbean genre."
       },
-      "image": "/imagenes/musica/dominican.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/dominican.jpg",
       "tags": [
         "album"
       ],
@@ -4324,7 +4324,7 @@
         "es": "‘Hombre rico hombre pobre’ es un tema emblemático de Verdaderos Kreyentes de la Religión del Hip-Hop que expone con sinceridad las desigualdades sociales a través del rap consciente. Sus letras cargadas de crítica social y ritmo contundente lo convierten en una pieza clave del rap en español. El tema refleja la realidad y lucha de las clases populares.",
         "en": "'Hombre rico hombre pobre' is an emblematic track by Verdaderos Kreyentes de la Religión del Hip-Hop that honestly exposes social inequalities through conscious rap. Its lyrics loaded with social criticism and strong rhythm make it a key piece in Spanish rap. The song reflects the reality and struggle of the working class."
       },
-      "image": "/imagenes/musica/enlascalles.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/enlascalles.png",
       "tags": [
         "song"
       ],
@@ -4346,7 +4346,7 @@
         "es": "‘El síndrome de Anuel’ es una crítica directa y afilada de Foyone a la figura del toyaco Jicho Con una lírica mordaz y ritmo potente, Foyone cuestiona las realidades del éxito y la cultura urbana actual. Un tema que genera debate y refleja la realidad del rap español.",
         "en": "'El síndrome de Anuel' is a direct and sharp critique by Foyone of rap topyaco's Jincho With biting lyrics and powerful rhythm, Foyone questions the realities of success and current urban culture. A track that sparks debate and reflects Spanish rap reality."
       },
-      "image": "/imagenes/musica/anuel.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/anuel.png",
       "tags": [
         "song"
       ],
@@ -4368,7 +4368,7 @@
         "es": "‘Tripolar’ es una canción profunda y emotiva de Canserbero que explora la complejidad de los estados emocionales y la lucha interna. Con una letra introspectiva y una mezcla de rap y rock, se ha convertido en un himno para quienes enfrentan sus demonios personales. Un clásico del rap latinoamericano.",
         "en": "'Tripolar' is a deep and emotional song by Canserbero that explores the complexity of emotional states and internal struggle. With introspective lyrics and a blend of rap and rock, it has become an anthem for those facing personal demons. A classic of Latin American rap."
       },
-      "image": "/imagenes/musica/pordefecto.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/pordefecto.jpg",
       "tags": [
         "song"
       ],

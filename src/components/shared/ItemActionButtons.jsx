@@ -4,6 +4,11 @@ import { PlayArrow as PlayArrowIcon } from '@mui/icons-material';
 import { getCategoryColor } from '../../utils/categoryPalette';
 import UiButton from '../ui/UiButton';
 
+// =============================================
+// ItemActionButtons: Grupo de botones de acción para ítems
+// Grupo de botones de acción para ítems. Optimizado para UX, accesibilidad y soporte de acciones contextuales.
+// =============================================
+
 // Botones de acción para mobile y desktop
 export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHowToDownload }) {
   const theme = useTheme();

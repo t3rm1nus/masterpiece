@@ -11,6 +11,12 @@ import { randomNotFoundImage } from '../store/utils';
 import useInfiniteScroll from '../hooks/useInfiniteScroll';
 import { CircularProgress, Box } from '@mui/material';
 
+// =============================================
+// DesktopRecommendationsList: Lista de recomendaciones para desktop
+// Lista de recomendaciones para desktop, altamente parametrizable y reutilizable.
+// Optimizada para performance, UX y soporte de infinite scroll y filtros avanzados.
+// =============================================
+
 /**
  * DesktopRecommendationsList
  * Lista de recomendaciones para desktop, altamente parametrizable y reutilizable.

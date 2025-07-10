@@ -10,7 +10,7 @@
         "es": "Revive el legendario combate de boxeo entre Muhammad Ali y George Foreman en Zaire, 1974. Este documental explora el contexto político, social y cultural que rodeó 'The Rumble in the Jungle'. A través de imágenes inéditas y testimonios, se revela la preparación, la tensión y el impacto global del evento. Una mirada profunda a la figura de Ali y su lucha dentro y fuera del ring. Un clásico imprescindible del cine documental deportivo.",
         "en": "Relive the legendary boxing match between Muhammad Ali and George Foreman in Zaire, 1974. This documentary explores the political, social, and cultural context surrounding 'The Rumble in the Jungle'. Through unseen footage and interviews, it reveals the preparation, tension, and global impact of the event. A deep look at Ali's figure and his fight inside and outside the ring. An essential classic of sports documentary cinema."
       },
-      "image": "/imagenes/documentales/kings.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/kings.jpg",
       "category": "documentales",
       "subcategory": "sports",
       "duration": "88 min",
@@ -30,7 +30,7 @@
         "es": "Sigue la lucha de las víctimas del franquismo en España por la justicia y la memoria histórica. El documental muestra testimonios conmovedores, procesos judiciales y el esfuerzo por romper el silencio impuesto durante décadas. Una obra que denuncia la impunidad y reivindica la dignidad de quienes buscan verdad y reparación. Ganador de múltiples premios internacionales.",
         "en": "Follows the struggle of Franco's victims in Spain for justice and historical memory. The documentary presents moving testimonies, legal battles, and the effort to break decades of silence. It denounces impunity and vindicates the dignity of those seeking truth and reparation. Winner of multiple international awards."
       },
-      "image": "/imagenes/documentales/silencio_de_otros.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/silencio_de_otros.jpg",
       "category": "documentales",
       "subcategory": "history",
       "duration": "96 min",
@@ -50,7 +50,7 @@
         "es": "Explora el papel de España como pionera en la globalización durante la Edad Moderna. A través de expertos, archivos y recreaciones, el documental revela cómo el Imperio Español conectó continentes, culturas y economías. Analiza los logros, controversias y el legado de esta etapa histórica. Una visión integral y didáctica sobre la influencia global de España.",
         "en": "Explores Spain's role as a pioneer in globalization during the Modern Age. Through experts, archives, and reenactments, the documentary reveals how the Spanish Empire connected continents, cultures, and economies. It analyzes achievements, controversies, and the legacy of this historical period. An educational and comprehensive vision of Spain's global influence."
       },
-      "image": "/imagenes/documentales/espania_la_primera.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/espania_la_primera.jpg",
       "category": "documentales",
       "subcategory": "history",
       "duration": "90 min",
@@ -70,7 +70,7 @@
         "es": "Serie documental de Ken Burns que narra la Guerra Civil Americana con rigor y emoción. Utiliza fotografías históricas, cartas, testimonios y música para sumergir al espectador en los acontecimientos, personajes y dilemas de la época. Considerada una obra maestra del género, ofrece una visión profunda sobre el conflicto que definió a Estados Unidos.",
         "en": "Ken Burns' documentary series narrates the American Civil War with rigor and emotion. Using historical photographs, letters, testimonies, and music, it immerses viewers in the events, characters, and dilemmas of the era. Considered a masterpiece of the genre, it offers a profound vision of the conflict that defined the United States."
       },
-      "image": "/imagenes/documentales/civil_war.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/civil_war.jpg",
       "category": "history",
       "duration": "11 episodios",
       "episodes": 11,
@@ -90,7 +90,7 @@
         "es": "Examina la historia del colonialismo y el genocidio desde una perspectiva crítica y global. El documental recorre siglos de opresión, violencia y resistencia, combinando animaciones, archivos y análisis contemporáneos. Una obra impactante que invita a reflexionar sobre las raíces del racismo y la desigualdad en el mundo actual.",
         "en": "Examines the history of colonialism and genocide from a critical and global perspective. The documentary spans centuries of oppression, violence, and resistance, combining animation, archives, and contemporary analysis. A powerful work that invites reflection on the roots of racism and inequality in today's world."
       },
-      "image": "/imagenes/documentales/exterminate.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/exterminate.jpg",
       "category": "history",
       "duration": "4 episodios",
       "episodes": 4,
@@ -110,7 +110,7 @@
         "es": "Serie documental que recorre la historia de España desde sus orígenes hasta la actualidad. A través de imágenes, entrevistas y análisis, se abordan los grandes hitos, personajes y transformaciones del país. Una obra didáctica y exhaustiva, ideal para comprender la evolución de la sociedad española.",
         "en": "A documentary series that traces the history of Spain from its origins to the present day. Through images, interviews, and analysis, it covers the major milestones, figures, and transformations of the country. An educational and comprehensive work, ideal for understanding the evolution of Spanish society."
       },
-      "image": "/imagenes/documentales/memoria.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/memoria.png",
       "category": "history",
       "duration": "27 episodios",
       "episodes": 27,
@@ -130,7 +130,7 @@
         "es": "Ken Burns explora la historia y el significado de la Estatua de la Libertad, símbolo de esperanza y libertad. El documental analiza su construcción, impacto cultural y el papel que ha jugado en la identidad estadounidense. Incluye testimonios, imágenes de archivo y reflexiones sobre el sueño americano.",
         "en": "Ken Burns explores the history and meaning of the Statue of Liberty, a symbol of hope and freedom. The documentary analyzes its construction, cultural impact, and the role it has played in American identity. Includes testimonies, archival footage, and reflections on the American dream."
       },
-      "image": "/imagenes/documentales/the_statue.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/the_statue.jpg",
       "category": "history",
       "duration": "60 min",
       "episodes": 1,
@@ -150,7 +150,7 @@
         "es": "La serie clásica de Carl Sagan que explora el universo, la ciencia y el lugar de la humanidad en el cosmos. A través de episodios fascinantes, se abordan temas como el origen de la vida, la evolución de las estrellas y la importancia del pensamiento científico. Un viaje visual y filosófico que ha inspirado a generaciones.",
         "en": "Carl Sagan's classic series explores the universe, science, and humanity's place in the cosmos. Through fascinating episodes, it covers topics such as the origin of life, the evolution of stars, and the importance of scientific thinking. A visual and philosophical journey that has inspired generations."
       },
-      "image": "/imagenes/documentales/cosmos.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/cosmos.jpg",
       "category": "science",
       "duration": "13 episodios",
       "episodes": 13,
@@ -170,7 +170,7 @@
         "es": "Serie documental de Netflix que muestra la belleza natural de la Tierra y los desafíos ambientales que enfrenta. Con imágenes espectaculares y narración envolvente, destaca la biodiversidad, los ecosistemas y la urgencia de proteger nuestro planeta. Una llamada a la conciencia ecológica global.",
         "en": "Netflix documentary series showcasing Earth's natural beauty and the environmental challenges it faces. With stunning footage and immersive narration, it highlights biodiversity, ecosystems, and the urgency of protecting our planet. A call for global ecological awareness."
       },
-      "image": "/imagenes/documentales/our_planet.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/our_planet.jpg",
       "category": "wildlife",
       "duration": "8 episodios",
       "episodes": 8,
@@ -190,7 +190,7 @@
         "es": "Un recorrido por la historia cultural musical española y su evolución a lo largo de las décadas. El documental explora géneros, artistas y movimientos que han marcado la identidad sonora del país. Incluye entrevistas, archivos y actuaciones emblemáticas. Una celebración de la música como reflejo de la sociedad.",
         "en": "A journey through Spanish musical cultural history and its evolution over the decades. The documentary explores genres, artists, and movements that have shaped the country's sonic identity. Includes interviews, archives, and iconic performances. A celebration of music as a reflection of society."
       },
-      "image": "/imagenes/documentales/megamix.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/megamix.jpg",
       "category": "music",
       "duration": "90 min",
       "episodes": 1,
@@ -210,7 +210,7 @@
         "es": "Un retrato íntimo del activismo LGTBI en España a través de la vida de un hombre comprometido con la igualdad y la visibilidad. El documental explora los desafíos, logros y luchas personales en un contexto social en transformación. Incluye testimonios, imágenes de archivo y reflexiones sobre la diversidad y los derechos humanos. Una historia de valentía y esperanza.",
         "en": "An intimate portrait of LGTBI activism in Spain through the life of a man committed to equality and visibility. The documentary explores challenges, achievements, and personal struggles in a changing social context. Includes testimonies, archival footage, and reflections on diversity and human rights. A story of courage and hope."
       },
-      "image": "/imagenes/documentales/un_hombre.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/un_hombre.jpg",
       "category": "culture",
       "duration": "60 min",
       "episodes": 1,
@@ -230,7 +230,7 @@
         "es": "Sigue la vida de dos jóvenes jugadores de baloncesto en Chicago mientras persiguen el sueño de llegar a la NBA. El documental muestra sus desafíos familiares, sociales y académicos, así como la pasión y sacrificio necesarios para triunfar. Una mirada honesta y conmovedora sobre el deporte, la desigualdad y la esperanza.",
         "en": "Follows the lives of two young basketball players in Chicago as they pursue the dream of reaching the NBA. The documentary shows their family, social, and academic challenges, as well as the passion and sacrifice required to succeed. An honest and moving look at sports, inequality, and hope."
       },
-      "image": "/imagenes/documentales/hoop_dreams.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/hoop_dreams.jpg",
       "category": "culture",
       "duration": "170 min",
       "episodes": 1,
@@ -250,7 +250,7 @@
         "es": "Explora casos reales de personas injustamente acusadas y condenadas, revelando los errores y fallos del sistema judicial. El documental presenta testimonios de víctimas, abogados y expertos, y analiza el impacto emocional y social de la injusticia. Una denuncia poderosa sobre la importancia de la presunción de inocencia y la revisión de condenas.",
         "en": "Explores real cases of people unjustly accused and convicted, revealing errors and failures in the justice system. The documentary presents testimonies from victims, lawyers, and experts, and analyzes the emotional and social impact of injustice. A powerful denunciation of the importance of the presumption of innocence and sentence review."
       },
-      "image": "/imagenes/documentales/falsos_culpables.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/falsos_culpables.jpg",
       "category": "crime",
       "duration": "90 min",
       "episodes": 1,
@@ -270,7 +270,7 @@
         "es": "Serie documental que analiza casos criminales reales desde una perspectiva psicológica y forense. A través de entrevistas, reconstrucciones y análisis de expertos, se desentrañan los motivos, perfiles y consecuencias de los crímenes. Una aproximación rigurosa y fascinante al mundo de la mente criminal.",
         "en": "Documentary series analyzing real criminal cases from a psychological and forensic perspective. Through interviews, reconstructions, and expert analysis, it unravels the motives, profiles, and consequences of crimes. A rigorous and fascinating approach to the world of the criminal mind."
       },
-      "image": "/imagenes/documentales/sac.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/sac.jpg",
       "category": "crime",
       "duration": "6 episodios",
       "episodes": 6,
@@ -290,7 +290,7 @@
         "es": "Examina el controvertido caso de Steven Avery y su sobrino Brendan Dassey, acusados de asesinato en Wisconsin. El documental sigue el proceso judicial, las pruebas y las dudas sobre la imparcialidad del sistema. Una serie que cuestiona la justicia y la verdad en los crímenes mediáticos.",
         "en": "Examines the controversial case of Steven Avery and his nephew Brendan Dassey, accused of murder in Wisconsin. The documentary follows the trial, evidence, and doubts about the fairness of the system. A series that questions justice and truth in high-profile crimes."
       },
-      "image": "/imagenes/documentales/making_murderer.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/making_murderer.jpg",
       "category": "crime",
       "duration": "10 episodios",
       "episodes": 10,
@@ -310,7 +310,7 @@
         "es": "Retrato de la vida y el legado político de José Mujica, expresidente de Uruguay. El documental explora su filosofía, humildad y compromiso social, mostrando su influencia en la política latinoamericana. Incluye entrevistas, imágenes personales y reflexiones sobre el poder, la libertad y la felicidad.",
         "en": "Portrait of the life and political legacy of José Mujica, former president of Uruguay. The documentary explores his philosophy, humility, and social commitment, showing his influence on Latin American politics. Includes interviews, personal footage, and reflections on power, freedom, and happiness."
       },
-      "image": "/imagenes/documentales/el_pepe.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/el_pepe.jpg",
       "category": "politics",
       "duration": "60 min",
       "episodes": 1,
@@ -330,7 +330,7 @@
         "es": "Investiga la Iglesia de la Cienciología y sus prácticas a través de testimonios de exmiembros, documentos y análisis periodístico. El documental revela los mecanismos de control, las polémicas y el impacto en la vida de los seguidores. Una investigación profunda sobre el poder de las organizaciones cerradas.",
         "en": "Investigates the Church of Scientology and its practices through testimonies from former members, documents, and journalistic analysis. The documentary reveals control mechanisms, controversies, and the impact on followers' lives. An in-depth investigation into the power of closed organizations."
       },
-      "image": "/imagenes/documentales/going_clear.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/going_clear.jpg",
       "category": "politics",
       "duration": "120 min",
       "episodes": 1,
@@ -350,7 +350,7 @@
         "es": "Analiza las causas y consecuencias de la crisis financiera global de 2008, desvelando la corrupción, la avaricia y la falta de regulación en el sistema financiero. El documental incluye entrevistas con economistas, políticos y afectados, y explica de forma clara un tema complejo. Un llamado a la responsabilidad y la transparencia.",
         "en": "Analyzes the causes and consequences of the 2008 global financial crisis, exposing corruption, greed, and lack of regulation in the financial system. The documentary includes interviews with economists, politicians, and those affected, and clearly explains a complex topic. A call for responsibility and transparency."
       },
-      "image": "/imagenes/documentales/inside_job.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/inside_job.jpg",
       "category": "politics",
       "duration": "109 min",
       "episodes": 1,
@@ -370,7 +370,7 @@
         "es": "Un viaje por la vida y obra del diseñador de moda Paco Rabanne, icono de la creatividad y la innovación. El documental repasa sus orígenes, éxitos y el impacto de sus creaciones en la moda internacional. Incluye entrevistas, desfiles y anécdotas personales. Una mirada al arte de vestir y transformar la identidad.",
         "en": "A journey through the life and work of fashion designer Paco Rabanne, an icon of creativity and innovation. The documentary reviews his origins, successes, and the impact of his creations on international fashion. Includes interviews, runway shows, and personal anecdotes. A look at the art of dressing and transforming identity."
       },
-      "image": "/imagenes/documentales/paco_rabanne.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/paco_rabanne.jpg",
       "category": "art",
       "duration": "60 min",
       "episodes": 1,
@@ -390,7 +390,7 @@
         "es": "Documental que recorre la vida y carrera musical de Sole Giménez, destacando su voz, talento y contribución a la música española. Incluye actuaciones, entrevistas y recuerdos personales que muestran su evolución artística y humana. Una celebración de la pasión y la autenticidad en el arte.",
         "en": "Documentary tracing the life and musical career of Sole Giménez, highlighting her voice, talent, and contribution to Spanish music. Includes performances, interviews, and personal memories that show her artistic and human evolution. A celebration of passion and authenticity in art."
       },
-      "image": "/imagenes/documentales/sole_gimenez.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/sole_gimenez.jpg",
       "category": "art",
       "duration": "60 min",
       "episodes": 1,
@@ -410,7 +410,7 @@
         "es": "Un fascinante documental que se adentra en el mundo del arte callejero a través de la mirada de Thierry Guetta, un videógrafo obsesionado con Banksy. La película explora la autenticidad, el mercado del arte y la transformación de Guetta en el artista 'Mr. Brainwash'. Una obra ingeniosa que desafía los límites entre arte y fraude, realidad y ficción. Imprescindible para entender la cultura urbana contemporánea.",
         "en": "A fascinating documentary that delves into the world of street art through the eyes of Thierry Guetta, a videographer obsessed with Banksy. The film explores authenticity, the art market, and Guetta's transformation into the artist 'Mr. Brainwash'. A clever work that blurs the lines between art and fraud, reality and fiction. Essential for understanding contemporary urban culture."
       },
-      "image": "/imagenes/documentales/exit.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/exit.jpg",
       "category": "art",
       "duration": "87 min",
       "episodes": 1,
@@ -430,7 +430,7 @@
         "es": "Este documental impactante muestra la vida dentro de un campamento evangélico en Estados Unidos, donde niños son entrenados para convertirse en 'soldados de Dios'. A través de escenas íntimas y entrevistas, se exploran las creencias, rituales y el adoctrinamiento religioso. Una mirada crítica a la influencia de la religión en la infancia y la sociedad estadounidense. Nominado al Oscar al mejor documental.",
         "en": "This powerful documentary takes viewers inside an evangelical camp in the United States, where children are trained to become 'God's soldiers'. Through intimate scenes and interviews, it explores beliefs, rituals, and religious indoctrination. A critical look at the influence of religion on childhood and American society. Nominated for the Academy Award for Best Documentary."
       },
-      "image": "/imagenes/documentales/jesus_camp.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/jesus_camp.jpg",
       "category": "spirituality",
       "duration": "84 min",
       "episodes": 1,
@@ -450,7 +450,7 @@
         "es": "Un documental que explora el impacto psicológico y social de los desastres naturales, centrándose en las inundaciones provocadas por una DANA en España. A través de testimonios de afectados, expertos y voluntarios, se analiza la resiliencia de las comunidades y los desafíos de la recuperación. Una obra que invita a la reflexión sobre la vulnerabilidad humana ante la naturaleza.",
         "en": "A documentary exploring the psychological and social impact of natural disasters, focusing on the floods caused by a DANA in Spain. Through testimonies from those affected, experts, and volunteers, it analyzes community resilience and the challenges of recovery. A work that invites reflection on human vulnerability to nature."
       },
-      "image": "/imagenes/documentales/heridas.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/heridas.jpg",
       "category": "psychology",
       "duration": "39 min",
       "episodes": 1,
@@ -470,7 +470,7 @@
         "es": "Retrato íntimo de Edith Bouvier Beale y su hija, parientes de Jackie Kennedy, que viven aisladas en una mansión en decadencia. El documental revela su excéntrica relación, la lucha contra el abandono y la nostalgia de tiempos mejores. Una obra de culto que explora la soledad, la familia y la resistencia ante la adversidad. Considerado un clásico del cine documental.",
         "en": "An intimate portrait of Edith Bouvier Beale and her daughter, relatives of Jackie Kennedy, living in a decaying mansion. The documentary reveals their eccentric relationship, struggle against neglect, and nostalgia for better times. A cult classic exploring loneliness, family, and resilience in the face of adversity."
       },
-      "image": "/imagenes/documentales/grey_gardens.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/grey_gardens.jpg",
       "category": "psychology",
       "duration": "94 min",
       "episodes": 1,
@@ -490,7 +490,7 @@
         "es": "Serie documental que analiza cómo las teorías de Sigmund Freud y sus descendientes influyeron en la publicidad, la política y la cultura de masas. A través de archivos y entrevistas, se explora la manipulación de las emociones y deseos colectivos en el siglo XX. Una obra fundamental para entender la sociedad de consumo y la psicología moderna.",
         "en": "Documentary series analyzing how Sigmund Freud's theories and those of his descendants influenced advertising, politics, and mass culture. Through archives and interviews, it explores the manipulation of collective emotions and desires in the 20th century. Essential for understanding consumer society and modern psychology."
       },
-      "image": "/imagenes/documentales/the_century.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/the_century.jpg",
       "category": "psychology",
       "duration": "4 episodios",
       "episodes": 4,
@@ -510,7 +510,7 @@
         "es": "Un viaje a través de la cultura, la historia y la sociedad finlandesa, explorando cómo la defensa y la resiliencia forman parte de su identidad nacional. El documental muestra paisajes, tradiciones y testimonios que revelan el espíritu de Finlandia ante los desafíos del pasado y el presente. Una mirada profunda a un país único en Europa.",
         "en": "A journey through Finnish culture, history, and society, exploring how defense and resilience are part of its national identity. The documentary showcases landscapes, traditions, and testimonies that reveal Finland's spirit in the face of past and present challenges. A deep look at a unique country in Europe."
       },
-      "image": "/imagenes/documentales/finland.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/finland.jpg",
       "category": "travel",
       "duration": "60 min",
       "episodes": 1,
@@ -530,7 +530,7 @@
         "es": "Serie documental que narra la apasionante exploración del río Nilo en el siglo XIX. A través de recreaciones, mapas y testimonios, se revive la carrera por descubrir las fuentes del legendario río. Una aventura histórica llena de peligros, descubrimientos y rivalidades entre exploradores europeos. Ideal para amantes de la historia y la geografía.",
         "en": "Documentary series narrating the thrilling exploration of the Nile River in the 19th century. Through reenactments, maps, and testimonies, it relives the race to discover the sources of the legendary river. A historical adventure full of dangers, discoveries, and rivalries among European explorers. Perfect for history and geography enthusiasts."
       },
-      "image": "/imagenes/documentales/search_nile.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/search_nile.jpg",
       "category": "travel",
       "duration": "6 episodios",
       "episodes": 6,
@@ -550,7 +550,7 @@
         "es": "Serie documental que sigue el histórico viaje de Charles Darwin a bordo del Beagle y el desarrollo de su teoría de la evolución. A través de paisajes exóticos, diarios y experimentos, se exploran los descubrimientos que cambiaron la ciencia para siempre. Una obra educativa y apasionante sobre la curiosidad y el método científico.",
         "en": "Documentary series following Charles Darwin's historic voyage on the Beagle and the development of his theory of evolution. Through exotic landscapes, diaries, and experiments, it explores the discoveries that changed science forever. An educational and fascinating work about curiosity and the scientific method."
       },
-      "image": "/imagenes/documentales/darwin.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/darwin.jpg",
       "category": "travel",
       "duration": "7 episodios",
       "episodes": 7,
@@ -570,7 +570,7 @@
         "es": "La increíble vida de Lucio Urtubia, un albañil anarquista que desafió a bancos y autoridades con ingenio y valentía. El documental narra sus hazañas como falsificador y activista, así como su compromiso con la justicia social. Una historia real de resistencia, solidaridad y lucha por la libertad en el siglo XX.",
         "en": "The incredible life of Lucio Urtubia, an anarchist bricklayer who challenged banks and authorities with ingenuity and courage. The documentary tells of his exploits as a forger and activist, as well as his commitment to social justice. A true story of resistance, solidarity, and the fight for freedom in the 20th century."
       },
-      "image": "/imagenes/documentales/lucio.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/lucio.jpeg",
       "category": "politics",
       "duration": "90 min",
       "episodes": 1,
@@ -590,7 +590,7 @@
         "es": "Un documental que explora el surgimiento de WikiLeaks y la figura de Julian Assange, analizando el impacto de la organización en el periodismo, la transparencia y la política global. Incluye entrevistas, archivos y análisis sobre la filtración de documentos secretos. Una obra clave para entender la era de la información y la libertad de prensa.",
         "en": "A documentary exploring the rise of WikiLeaks and the figure of Julian Assange, analyzing the organization's impact on journalism, transparency, and global politics. Includes interviews, archives, and analysis on the leaking of secret documents. Essential for understanding the information age and press freedom."
       },
-      "image": "/imagenes/documentales/wikirebels.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/wikirebels.jpg",
       "category": "politics",
       "duration": "58 min",
       "episodes": 1,
@@ -610,7 +610,7 @@
         "es": "Documental que narra el encuentro entre la directora Laura Poitras y Edward Snowden, quien revela el programa de vigilancia masiva de la NSA. A través de grabaciones reales, se muestra la tensión, el riesgo y las implicaciones éticas de las filtraciones. Una obra imprescindible sobre privacidad, poder y periodismo en la era digital.",
         "en": "Documentary narrating the meeting between director Laura Poitras and Edward Snowden, who reveals the NSA's mass surveillance program. Through real footage, it shows the tension, risk, and ethical implications of the leaks. An essential work about privacy, power, and journalism in the digital age."
       },
-      "image": "/imagenes/documentales/snowden.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/snowden.jpg",
       "category": "politics",
       "duration": "94 min",
       "episodes": 1,
@@ -630,7 +630,7 @@
         "es": "Documental de Michael Moore que explora las causas de la masacre de Columbine y la cultura de las armas en Estados Unidos.",
         "en": "Michael Moore's documentary exploring the causes of the Columbine massacre and gun culture in the United States."
       },
-      "image": "/imagenes/documentales/bowling.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/bowling.jpg",
       "category": "politics",
       "duration": "120 min",
       "episodes": 1,
@@ -650,7 +650,7 @@
         "es": "Documental de Michael Moore que examina el sistema de salud estadounidense y lo compara con otros sistemas de salud en el mundo.",
         "en": "Michael Moore's documentary examining the American healthcare system and comparing it to other healthcare systems around the world."
       },
-      "image": "/imagenes/documentales/Sicko.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/Sicko.jpg",
       "category": "politics",
       "duration": "123 min",
       "episodes": 1,
@@ -670,7 +670,7 @@
         "es": "Documental que sigue a siete niños palestinos e israelíes durante tres años, explorando sus vidas y perspectivas sobre el conflicto en Oriente Medio.",
         "en": "Documentary that follows seven Palestinian and Israeli children over three years, exploring their lives and perspectives on the Middle East conflict."
       },
-      "image": "/imagenes/documentales/promises.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/promises.jpg",
       "category": "politics",
       "duration": "106 min",
       "episodes": 1,
@@ -690,7 +690,7 @@
         "es": "Secuela de la aclamada serie documental que muestra la vida salvaje en diferentes hábitats de nuestro planeta.",
         "en": "Sequel to the acclaimed documentary series showcasing wildlife in different habitats of our planet."
       },
-      "image": "/imagenes/documentales/planet2.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/planet2.jpg",
       "category": "wildlife",
       "duration": "6 episodios",
       "episodes": 6,
@@ -710,7 +710,7 @@
         "es": "Documental sobre la última temporada de Michael Jordan con los Chicago Bulls y su sexto campeonato de la NBA.",
         "en": "Documentary about Michael Jordan's last season with the Chicago Bulls and their sixth NBA championship."
       },
-      "image": "/imagenes/documentales/last_dance.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/last_dance.jpg",
       "category": "sports",
       "duration": "10 episodios",
       "episodes": 10,
@@ -730,7 +730,7 @@
         "es": "Documental sobre el escalador Alex Honnold y su intento de escalar El Capitán sin cuerda de seguridad.",
         "en": "Documentary about climber Alex Honnold and his attempt to climb El Capitan without a safety rope."
       },
-      "image": "/imagenes/documentales/free_solo.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/free_solo.jpg",
       "category": "sports",
       "duration": "100 min",
       "episodes": 1,
@@ -750,7 +750,7 @@
         "es": "Documental sobre la búsqueda del misterioso músico Sixto Rodriguez, que fue famoso en Sudáfrica sin saberlo.",
         "en": "Documentary about the search for the mysterious musician Sixto Rodriguez, who was famous in South Africa without knowing it."
       },
-      "image": "/imagenes/documentales/searching.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/searching.jpg",
       "category": "music",
       "duration": "86 min",
       "episodes": 1,
@@ -770,7 +770,7 @@
         "es": "Documental que explora la historia de la desigualdad racial en Estados Unidos, centrándose en el sistema penitenciario.",
         "en": "Documentary exploring the history of racial inequality in the United States, focusing on the prison system."
       },
-      "image": "/imagenes/documentales/13th.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/13th.jpg",
       "category": "politics",
       "duration": "100 min",
       "episodes": 1,
@@ -790,7 +790,7 @@
         "es": "Documental sobre la vida y el legado de Fred Rogers, el presentador del programa infantil 'Mister Rogers' Neighborhood'.",
         "en": "Documentary about the life and legacy of Fred Rogers, the host of the children's show 'Mister Rogers' Neighborhood'."
       },
-      "image": "/imagenes/documentales/wont.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/wont.jpg",
       "category": "biography",
       "duration": "94 min",
       "episodes": 1,
@@ -810,7 +810,7 @@
         "es": "Documental sobre Jiro Ono, un maestro del sushi de 85 años y su restaurante en Tokio.",
         "en": "Documentary about Jiro Ono, an 85-year-old sushi master and his restaurant in Tokyo."
       },
-      "image": "/imagenes/documentales/jiro.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/jiro.jpg",
       "category": "food",
       "duration": "81 min",
       "episodes": 1,
@@ -830,7 +830,7 @@
         "es": "Documental que expone la caza anual de delfines en un parque nacional de Taiji, Japón.",
         "en": "Documentary exposing the annual dolphin hunt in a national park in Taiji, Japan."
       },
-      "image": "/imagenes/documentales/the_cove.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/the_cove.jpg",
       "category": "wildlife",
       "duration": "92 min",
       "episodes": 1,
@@ -850,7 +850,7 @@
         "es": "Documental que muestra la riqueza natural y la biodiversidad de la península ibérica.",
         "en": "Documentary showcasing the natural wealth and biodiversity of the Iberian Peninsula."
       },
-      "image": "/imagenes/documentales/iberia.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/iberia.jpg",
       "category": "wildlife",
       "duration": "4 episodios",
       "episodes": 4,
@@ -870,7 +870,7 @@
         "es": "Documental que sigue el curso del río Guadalquivir y su ecosistema.",
         "en": "Documentary following the course of the Guadalquivir River and its ecosystem."
       },
-      "image": "/imagenes/documentales/guadalquivir.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/guadalquivir.jpg",
       "category": "wildlife",
       "duration": "90 min",
       "episodes": 1,
@@ -890,7 +890,7 @@
         "es": "Documental que muestra el proceso creativo de Ferran Adrià y su equipo en el restaurante El Bulli.",
         "en": "Documentary showing the creative process of Ferran Adrià and his team at El Bulli restaurant."
       },
-      "image": "/imagenes/documentales/el_bulli.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/el_bulli.jpg",
       "category": "food",
       "duration": "108 min",
       "episodes": 1,
@@ -910,7 +910,7 @@
         "es": "Un documental que analiza el conflicto del Sáhara Occidental y el papel de España en la descolonización. A través de entrevistas, archivos y testimonios, se exploran las causas, consecuencias y la situación actual del pueblo saharaui. Una obra que denuncia la injusticia, el exilio y la lucha por la autodeterminación. Narrado por Javier Bardem, es un llamado a la conciencia internacional.",
         "en": "A documentary analyzing the Western Sahara conflict and Spain's role in decolonization. Through interviews, archives, and testimonies, it explores the causes, consequences, and current situation of the Sahrawi people. The film denounces injustice, exile, and the struggle for self-determination. Narrated by Javier Bardem, it is a call for international awareness."
       },
-      "image": "/imagenes/documentales/sons_clouds.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/sons_clouds.jpg",
       "category": "politics",
       "duration": "90 min",
       "episodes": 1,
@@ -930,7 +930,7 @@
         "es": "Obra maestra de Alain Resnais que combina imágenes de archivo y tomas actuales para retratar el horror de los campos de concentración nazis. El documental reflexiona sobre la memoria, la responsabilidad y la deshumanización, invitando a no olvidar los crímenes del Holocausto. Una pieza fundamental en la historia del cine documental y la conciencia europea.",
         "en": "A masterpiece by Alain Resnais that combines archival footage and present-day shots to portray the horror of Nazi concentration camps. The documentary reflects on memory, responsibility, and dehumanization, urging us not to forget the crimes of the Holocaust. A fundamental work in the history of documentary cinema and European consciousness."
       },
-      "image": "/imagenes/documentales/night.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/night.jpg",
       "category": "history",
       "duration": "32 min",
       "episodes": 1,
@@ -950,7 +950,7 @@
         "es": "Un documental que explora el conflicto vasco a través de múltiples voces y perspectivas. Julio Medem reúne testimonios de políticos, víctimas, intelectuales y ciudadanos para analizar la identidad, la violencia y la reconciliación en el País Vasco. Una obra polémica y profunda sobre la complejidad de la convivencia y la memoria colectiva.",
         "en": "A documentary exploring the Basque conflict through multiple voices and perspectives. Julio Medem gathers testimonies from politicians, victims, intellectuals, and citizens to analyze identity, violence, and reconciliation in the Basque Country. A controversial and profound work on the complexity of coexistence and collective memory."
       },
-      "image": "/imagenes/documentales/la_pelota.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/la_pelota.jpg",
       "category": "politics",
       "duration": "115 min",
       "episodes": 1,
@@ -970,7 +970,7 @@
         "es": "Sigue el proceso creativo del pintor Antonio López mientras intenta capturar la esencia de un membrillo en su jardín. El documental muestra la paciencia, la observación y la lucha del artista con el tiempo y la naturaleza. Una reflexión poética sobre el arte, la inspiración y la búsqueda de la perfección.",
         "en": "Follows the creative process of painter Antonio López as he tries to capture the essence of a quince tree in his garden. The documentary shows the artist's patience, observation, and struggle with time and nature. A poetic reflection on art, inspiration, and the pursuit of perfection."
       },
-      "image": "/imagenes/documentales/el_sol.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/el_sol.jpg",
       "category": "art",
       "duration": "138 min",
       "episodes": 1,
@@ -990,7 +990,7 @@
         "es": "Serie documental emblemática presentada por Félix Rodríguez de la Fuente, que explora la naturaleza y la vida salvaje de la península ibérica y otros lugares del mundo. A través de imágenes impactantes y relatos apasionados, se promueve la conservación y el respeto por el medio ambiente. Un referente de la divulgación científica en España.",
         "en": "An iconic documentary series presented by Félix Rodríguez de la Fuente, exploring the nature and wildlife of the Iberian Peninsula and other parts of the world. Through stunning images and passionate storytelling, it promotes conservation and respect for the environment. A benchmark of scientific outreach in Spain."
       },
-      "image": "/imagenes/documentales/hombre_tierra.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/hombre_tierra.jpg",
       "category": "wildlife",
       "duration": "124 episodios",
       "episodes": 124,
@@ -1010,7 +1010,7 @@
         "es": "Una serie documental que muestra la belleza natural de nuestro planeta y la vida salvaje que lo habita. A través de imágenes espectaculares y tecnología innovadora, se exploran hábitats diversos y especies sorprendentes. Una obra que despierta admiración y conciencia ecológica en el espectador.",
         "en": "A documentary series showcasing the natural beauty of our planet and the wildlife that inhabits it. Through spectacular images and innovative technology, it explores diverse habitats and amazing species. A work that inspires admiration and ecological awareness in viewers."
       },
-      "image": "/imagenes/documentales/planeta_tierra.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/planeta_tierra.jpg",
       "category": "documentales",
       "subcategory": "wildlife",
       "duration": "60 min",
@@ -1030,7 +1030,7 @@
         "es": "Michael Moore examina la presidencia de George W. Bush, la guerra contra el terrorismo y las consecuencias de los atentados del 11 de septiembre. El documental utiliza imágenes de archivo, entrevistas y análisis crítico para cuestionar la política exterior estadounidense y los intereses económicos detrás de la guerra. Una obra polémica y galardonada internacionalmente.",
         "en": "Michael Moore examines the presidency of George W. Bush, the War on Terror, and the consequences of the September 11 attacks. The documentary uses archival footage, interviews, and critical analysis to question U.S. foreign policy and the economic interests behind the war. A controversial and internationally awarded work."
       },
-      "image": "/imagenes/documentales/fahrenheit.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/fahrenheit.jpg",
       "category": "documentales",
       "subcategory": "politics",
       "duration": "122 min",
@@ -1050,7 +1050,7 @@
         "es": "Documental clásico que explora la cultura del graffiti, el breakdance y el hip hop en el Nueva York de los años 80. A través de entrevistas, batallas y escenas urbanas, se muestra la creatividad, la rivalidad y el impacto social de estos movimientos. Una obra fundamental para entender el arte urbano y la identidad juvenil.",
         "en": "Classic documentary exploring graffiti, breakdancing, and hip hop culture in 1980s New York. Through interviews, battles, and urban scenes, it showcases the creativity, rivalry, and social impact of these movements. Essential for understanding urban art and youth identity."
       },
-      "image": "/imagenes/documentales/style_wars.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/style_wars.jpg",
       "category": "documentales",
       "subcategory": "culture",
       "duration": "69 min",
@@ -1070,7 +1070,7 @@
         "es": "Un documental que recorre la historia y la vida cotidiana en la mítica dirección Calle Real 70. A través de sus personajes, anécdotas y transformaciones, se explora el impacto de este lugar en la cultura local. Una obra entrañable sobre la memoria colectiva y la identidad de un barrio.",
         "en": "A documentary that traces the history and daily life at the legendary address Calle Real 70. Through its characters, anecdotes, and transformations, it explores the impact of this place on local culture. A touching work about collective memory and the identity of a neighborhood."
       },
-      "image": "/imagenes/documentales/real70.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/real70.jpg",
       "category": "documentales",
       "subcategory": "culture",
       "duration": "80 min",
@@ -1090,7 +1090,7 @@
         "es": "Un documental sobre la legendaria rivalidad entre los artistas urbanos Robbo y Banksy. A través de entrevistas, imágenes y análisis, se explora el impacto del graffiti en la cultura contemporánea y la transformación del arte callejero en fenómeno global. Una mirada apasionante al arte, la competencia y la controversia.",
         "en": "A documentary about the legendary rivalry between street artists Robbo and Banksy. Through interviews, images, and analysis, it explores the impact of graffiti on contemporary culture and the transformation of street art into a global phenomenon. A fascinating look at art, competition, and controversy."
       },
-      "image": "/imagenes/documentales/grafity_wars.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/grafity_wars.png",
       "category": "documentales",
       "subcategory": "culture",
       "duration": "47 min",
@@ -1110,7 +1110,7 @@
         "es": "Fandub realizado por Kainkrup de la película The American Dream Film en la que se nos explican los motivos de la crisis y el funcionamiento de los bancos y la reserva federal.",
         "en": "Fandub by Kainkrup of the film The American Dream Film, which explains the causes of the crisis and how banks and the Federal Reserve operate."
       },
-      "image": "/imagenes/documentales/american.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/american.jpg",
       "category": "documentales",
       "subcategory": "politics",
       "duration": "39 min",
@@ -1130,7 +1130,7 @@
         "es": "Dark Star: El Universo de H.R. Giger explora la obra del icónico artista suizo H.R. Giger, conocido por su estilo oscuro y biomecánico. La película muestra sus creaciones más impactantes, que influyeron en el cine y el arte contemporáneo. Un viaje visual por su mente inquietante y fascinante.",
         "en": "Dark Star: The Universe of H.R. Giger explores the work of the iconic Swiss artist H.R. Giger, famous for his dark, biomechanical style. The film showcases his most striking creations that influenced cinema and contemporary art. A visual journey through his haunting and captivating mind."
       },
-      "image": "/imagenes/documentales/dark.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/dark.jpg",
       "category": "documentales",
       "subcategory": "art",
       "duration": "1 h 35 min",
@@ -1150,7 +1150,7 @@
         "es": "Obsolescencia Programada es un documental que revela cómo las empresas diseñan productos para que tengan una vida útil limitada, fomentando el consumo constante. Analiza el impacto económico y ambiental de esta práctica en la sociedad moderna. Una crítica profunda al modelo de consumo actual.",
         "en": "Planned Obsolescence is a documentary that exposes how companies design products with a limited lifespan, encouraging constant consumption. It examines the economic and environmental impact of this practice on modern society. A deep critique of today’s consumer model."
       },
-      "image": "/imagenes/documentales/comprar.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/comprar.jpg",
       "category": "documentales",
       "subcategory": "science",
       "duration": "52 min",
@@ -1170,7 +1170,7 @@
         "es": "Skinhead Attitude explora el origen, la evolución y la fragmentación del movimiento skinhead desde sus raíces multiculturales en los años 60 hasta sus derivaciones extremistas. El documental examina cómo una subcultura nacida de la clase obrera se vio dividida entre tendencias antirracistas y neonazis. Incluye testimonios de skinheads de todo el espectro ideológico, revelando tensiones internas y contradicciones del movimiento.",
         "en": "Skinhead Attitude traces the roots, evolution, and ideological splits within the skinhead movement, from its multicultural beginnings in the 1960s to its extremist offshoots. The documentary examines how a working-class subculture became divided between anti-racist and neo-Nazi factions. Through candid interviews, it exposes the contradictions and inner conflicts of a misunderstood global phenomenon."
       },
-      "image": "/imagenes/documentales/skinhead.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/documentales/skinhead.jpg",
       "category": "documentales",
       "subcategory": "politics",
       "duration": "1h 28 min",

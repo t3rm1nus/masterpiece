@@ -31,6 +31,11 @@ import {
   PlaylistPlay as PlaylistPlayIcon
 } from '@mui/icons-material';
 
+// =============================================
+// UnifiedItemDetail: Componente de detalle unificado para ítems
+// Optimizado para móviles y desktop, soporta accesibilidad, animaciones y customización avanzada por categoría.
+// =============================================
+
 /**
  * UnifiedItemDetail: Detalle unificado de ítem para todas las categorías.
  * Permite pasar acciones extra, customizar layout y mostrar/ocultar secciones.

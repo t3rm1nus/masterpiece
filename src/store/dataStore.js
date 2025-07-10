@@ -1,9 +1,9 @@
 // =============================================
 // Data slice para Zustand
-// Contiene estado y acciones para datos principales de la app.
-// - recommendations, categories, filteredItems, selectedCategory, activeSubcategory, title, isDataInitialized, allData
-// - updateWithRealData: actualiza datos desde fuente real
-// - Otros helpers y migraciones
+// Gestiona todos los datos principales de la app (recomendaciones, categorías, filtros, etc.)
+// Integra datos chunked (por ejemplo, música) para optimizar performance y evitar cuellos de botella en móviles.
+// Es la única fuente de datos global y está optimizada para performance y experiencia móvil.
+// Incluye helpers para migración, filtrado y actualización dinámica de datos.
 // =============================================
 
 import { processTitle, processDescription, randomNotFoundImage } from './utils';

@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { safeStorage } from '../utils/safeStorage.js';
 
-// Componente para monitorear el estado del localStorage en desarrollo
+// =============================================
+// StorageMonitor: Monitor y depurador de almacenamiento local
+// Componente para monitorear y depurar el estado del almacenamiento local.
+// Optimizado para móviles, robustez ante errores de storage y soporte de limpieza automática.
+// =============================================
+
 export function StorageMonitor({ enabled = false }) {
   const [storageInfo, setStorageInfo] = useState(null);
   const [isVisible, setIsVisible] = useState(false);

@@ -26,6 +26,12 @@ import useAppStore from '../store/useAppStore'; // <-- Usar solo el store NUEVO
 import { normalizeSubcategoryInternal } from '../utils/categoryUtils';
 import { keyframes, styled } from '@mui/system';
 
+// =============================================
+// HomePage: Página principal de recomendaciones
+// Gestiona filtros, categorías, subcategorías y estado responsive.
+// Optimizada para performance, móviles y desktop, con integración de stores y hooks avanzados.
+// =============================================
+
 // Hook para detectar si es móvil SOLO por ancho de pantalla (robusto y compatible móvil)
 function useIsMobile() {
   const getIsMobile = () => typeof window !== 'undefined' ? window.innerWidth < 900 : false;

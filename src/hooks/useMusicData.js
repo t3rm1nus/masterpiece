@@ -1,4 +1,9 @@
-// Hook React para usar los datos de música chunked
+// =============================================
+// useMusicData: Hook React para datos de música chunked
+// Gestiona la carga, filtrado y búsqueda de datos de música usando chunking para optimizar performance y evitar cuellos de botella en móviles.
+// Expone utilidades avanzadas de filtrado, búsqueda y acceso a metadatos.
+// Incluye hooks auxiliares para carga por chunk e ID.
+// =============================================
 import { useState, useEffect, useMemo } from 'react';
 import { MusicDataLoader } from '../utils/musicDataLoader.js';
 

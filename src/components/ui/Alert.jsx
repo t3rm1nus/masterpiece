@@ -30,6 +30,20 @@ const alertTypes = {
   `
 };
 
+// =============================================================================
+// Alert (Customizable UI Alert Component)
+// -----------------------------------------------------------------------------
+// Modern, accessible, and customizable alert for user feedback.
+// - Supports info, success, warning, error types.
+// - Mobile-first, visually clear, and keyboard accessible.
+// - Customizable icons, actions, and close button for accessibility.
+// - Minimal re-renders, only visible when needed.
+//
+// Example usage:
+//   <Alert type="success" title="Done!">Operation completed</Alert>
+// -----------------------------------------------------------------------------
+// =============================================================================
+
 /**
  * Alert: Alerta base personalizable.
  * Permite definir título, acciones, icono, estilos, visibilidad y callbacks.

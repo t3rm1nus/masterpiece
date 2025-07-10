@@ -18,8 +18,17 @@ const cardStyle = css`
   }
 `;
 
-// DEPRECATED: Usa UiCard en vez de este componente para unificación de cards.
-// Este archivo ya no debe usarse y puede eliminarse próximamente.
+// =============================================================================
+// Card (Simple UI Card Component) [DEPRECATED]
+// -----------------------------------------------------------------------------
+// DEPRECATED: Use UiCard for unified card styles and modularity.
+// This component is legacy and will be removed in future versions.
+// - Simple, accessible card for legacy layouts.
+//
+// Example usage:
+//   <Card>Content</Card>
+// -----------------------------------------------------------------------------
+// =============================================================================
 export default function Card({ children, ...props }) {
   return <div css={cardStyle} {...props}>{children}</div>;
 }

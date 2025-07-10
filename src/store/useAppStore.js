@@ -1,16 +1,17 @@
 // =============================================
-// STORE PRINCIPAL DE OFICIAL
-// Este archivo es el único store global de la app.
-// Usa slices, soporta persistencia y migración.
-// No usar ni mantener otros stores globales.
+// STORE GLOBAL ÚNICO DE MASTERPIECE
+// Este archivo implementa el único store global de la app, usando Zustand con slices modulares.
+// Toda la navegación, estado global y configuración se gestiona aquí mediante slices modernos.
+// No existen stores legacy ni duplicados: cualquier estado global debe estar en un slice y documentado.
 //
-// CONVENCIONES DE NOMBRES Y ESTRUCTURA:
+// CONVENCIONES Y BUENAS PRÁCTICAS:
 // - Todos los estados y funciones globales deben estar en slices (ver ./themeStore, ./languageStore, ./navigationStore, ./dataStore).
 // - No duplicar estados/funciones en el objeto principal: si un campo existe en un slice, no debe declararse aquí.
 // - Utilidades globales deben importarse desde './utils'.
 // - Los nombres de campos deben ser consistentes en todo el store y la app (ej: 'language', 'selectedCategory', 'activeSubcategory').
 // - Si se agregan nuevos estados globales, documentar aquí y en el slice correspondiente.
 // - Cada slice debe estar documentado en su propio archivo.
+// - El store está optimizado para performance y móviles, y soporta persistencia y migración.
 // =============================================
 
 import { create } from 'zustand';

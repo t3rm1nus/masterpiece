@@ -2,7 +2,10 @@ import { useEffect } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { useAppData } from '../store/useAppStore';
 
-// Hook personalizado para sincronizar el título con el idioma
+// =============================================
+// useTitleSync: Hook para sincronizar dinámicamente el título de la página
+// Sincroniza el título con el idioma y la categoría seleccionada, optimizando para SEO y experiencia de usuario.
+// =============================================
 export const useTitleSync = () => {
   const { lang } = useLanguage();
   const { updateTitleForLanguage, selectedCategory, title, getDefaultTitle, setTitle } = useAppData();

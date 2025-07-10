@@ -33,6 +33,11 @@ import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 import { processTitle, processDescription } from '../store/utils';
 
+// =============================================
+// MaterialItemDetail: Detalle de ítem Material UI
+// Optimizado para móviles, soporta accesibilidad, animaciones y layout avanzado.
+// =============================================
+
 // --- Animación de gradiente para el título ---
 const animatedGradientKeyframes = {
   '@keyframes animatedGradientBG': {

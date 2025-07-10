@@ -1,6 +1,19 @@
 import React from 'react';
 import { Box } from '@mui/material';
 
+// =============================================================================
+// Chip (Reusable UI Chip Component)
+// -----------------------------------------------------------------------------
+// Modern, accessible, and consistent UI chip for selection/filtering.
+// - Mobile-first, keyboard accessible, and visually clear.
+// - Supports icon, label, variant (outlined/filled), and selected state.
+// - Optimized for performance and minimal re-renders.
+//
+// Example usage:
+//   <Chip label="Drama" selected variant="outlined" icon={<Icon />} />
+// -----------------------------------------------------------------------------
+// =============================================================================
+
 export default function Chip({
   icon,
   label,

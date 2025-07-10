@@ -1,3 +1,8 @@
+// =============================================
+// ZustandDebug: Herramienta de debug para Zustand
+// Muestra el estado seleccionado en el store. Usar solo en desarrollo.
+// =============================================
+
 import React from 'react';
 import useAppStore from '../store/useAppStore';
 

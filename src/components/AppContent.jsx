@@ -10,6 +10,12 @@ import { Box, Fade, Slide } from '@mui/material';
 import WelcomePopup, { WELCOME_POPUP_KEY } from "./WelcomePopup";
 import { safeStorage } from '../utils/safeStorage.js';
 
+// =============================================
+// AppContent: Componente principal de layout y navegación
+// Orquesta la navegación, overlays, animaciones y lazy loading de páginas pesadas.
+// Optimizado para móviles y desktop, gestionando transiciones y experiencia de usuario moderna.
+// =============================================
+
 /**
  * AppContent (migrado a layout moderno con animaciones y overlays accesibles)
  */

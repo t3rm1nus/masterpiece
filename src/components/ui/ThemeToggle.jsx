@@ -5,6 +5,11 @@ import { useLanguage } from '../../LanguageContext';
 import UiButton from './UiButton';
 import { Tooltip } from '@mui/material';
 
+// =============================================
+// ThemeToggle: Toggle de tema claro/oscuro reutilizable
+// Toggle de tema claro/oscuro reutilizable. Optimizado para UX, accesibilidad y experiencia visual moderna.
+// =============================================
+
 /**
  * ThemeToggle
  * Botón para alternar entre tema claro y oscuro.

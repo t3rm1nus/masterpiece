@@ -14,7 +14,7 @@
         "en": "Sacred Whispers is an intimate audio blog where AnaLo shares deep reflections and unfiltered personal moments. Each episode invites introspection, spirituality, and inner growth, exploring emotions, lessons, and the search for meaning. The space fosters authentic connection and mindful listening, addressing vulnerability and self-discovery. A podcast for those seeking inspiration and calm in daily life. A sincere and transformative experience."
       },
       "author": "Analo",
-      "image": "/imagenes/podcasts/sacred.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/sacred.jpg",
       "link": "https://open.spotify.com/show/5XCcrAQ9LGeCRgmyNSkjJr",
       "masterpiece": true
     },
@@ -32,7 +32,7 @@
         "en": "Andreu Buenafuente and Berto Romero improvise hilarious conversations on any topic, with no script or boundaries. The podcast stands out for its spontaneous humor, the hosts' chemistry, and audience participation. Each episode is a surprise, blending the absurd and the everyday in a relaxed, fun atmosphere. A benchmark of Spanish-language comedy that has won over thousands of listeners. Laughter guaranteed in every show."
       },
       "author": "Andreu Buenafuente y Berto Romero",
-      "image": "/imagenes/podcasts/nadie_sabe_nada.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/nadie_sabe_nada.png",
       "link": "https://open.spotify.com/show/1jXeGsr1X2gpss332C8cAw?si=8132d85b01054d2a&nd=1&dlsi=990d7522d54f46e0",
       "masterpiece": true
     },
@@ -50,7 +50,7 @@
         "en": "Carolina Iglesias and Victoria Martín tackle current affairs, culture, and society from a feminist perspective and with plenty of humor. The podcast combines interviews, debates, and personal anecdotes, creating a safe and fun space for reflection and laughter. It stands out for its irreverent tone and ability to address serious topics with warmth and boldness. A phenomenon that has revolutionized podcasting in Spain. Essential for those seeking humor and critical thinking."
       },
       "author": "Carolina Iglesias y Victoria Martín",
-      "image": "/imagenes/podcasts/estirando.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/estirando.jpg",
       "link": "https://open.spotify.com/show/6V1DDzXVZg6wFXFo0SanY2",
       "masterpiece": true
     },
@@ -68,7 +68,7 @@
         "en": "A National Geographic podcast that explores the most fascinating and little-known episodes of world history. Each episode reveals surprising anecdotes, forgotten characters, and unusual facts, with rigor and entertainment. Perfect for the curious and history lovers, the show combines education, fun, and learning. An invitation to discover history's hidden side and question what we thought we knew. Learning has never been so enjoyable."
       },
       "author": "National Geographic",
-      "image": "/imagenes/podcasts/curiosidades.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/curiosidades.jpg",
       "link": "https://open.spotify.com/show/5LpYg29KE8rckzwEj2JGmS",
       "masterpiece": false
     },
@@ -86,7 +86,7 @@
         "en": "David Broncano, Quequé, and Ignatius Farray analyze current affairs and modern society with sharp, provocative humor. The podcast stands out for its irreverent style, improvisation, and social critique, tackling controversial and everyday topics without censorship. Each episode blends satire, reflection, and laughter, becoming a benchmark of radio comedy. A space to question the status quo and laugh at everything."
       },
       "author": "David Broncano, Quequé e Ignatius Farray",
-      "image": "/imagenes/podcasts/vida_moderna.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/vida_moderna.png",
       "link": "https://open.spotify.com/show/2VQlKTlbrsuAYHD4RvICbS",
       "masterpiece": true
     },
@@ -104,7 +104,7 @@
         "en": "Jordi Wild hosts in-depth interviews with guests from various fields, from science and sports to entertainment and current affairs. The podcast stands out for its long-form format, honest conversations, and wide range of topics. Each episode offers unique perspectives and open debates on social, personal, and cultural issues. A space for learning, reflection, and unfiltered entertainment. Perfect for curious minds."
       },
       "author": "Jordi Wild",
-      "image": "/imagenes/podcasts/wild.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/wild.jpg",
       "link": "https://open.spotify.com/show/5iKz9gAsyuQ1xLG6MFLtQg",
       "masterpiece": false
     },
@@ -122,7 +122,7 @@
         "en": "Nieves Concostrina narrates the most unusual and little-known episodes in history with humor and rigor. The podcast blends anecdotes, curiosities, and historical analysis, demystifying characters and events. Its approachable and fun style turns learning into an enjoyable and memorable experience. A benchmark of historical outreach in Spanish, perfect for those who enjoy history told in an original and entertaining way."
       },
       "author": "Nieves Concostrina",
-      "image": "/imagenes/podcasts/tiempo_pasado.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/tiempo_pasado.png",
       "link": "https://open.spotify.com/show/5mZbYo1FEL4pS6Exp6RK6q",
       "masterpiece": false
     },
@@ -140,7 +140,7 @@
         "en": "Cristina Mitre interviews experts in health, beauty, wellness, and personal development, sharing practical tips and inspiring experiences. The podcast stands out for its scientific approach, quality guests, and the warmth of its conversations. Each episode is an opportunity to learn how to take better care of yourself and discover new perspectives on self-care and healthy living. A space to grow and feel good."
       },
       "author": "Cristina Mitre",
-      "image": "/imagenes/podcasts/cristina.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/cristina.jpg",
       "link": "https://open.spotify.com/show/17zwEnaa9Em2z3hHE5LuZT",
       "masterpiece": false
     },
@@ -158,7 +158,7 @@
         "en": "Clara Tiscar delves deeply into real criminal cases, exploring the psychology of those involved, the details of investigations, and the social impact of crime. The podcast combines journalistic rigor, immersive storytelling, and reflection on justice and human nature. Each episode invites listeners to question the nature of evil and the complexity of the criminal mind. A benchmark of true crime in Spanish."
       },
       "author": "Clara Tiscar",
-      "image": "/imagenes/podcasts/Criminopatia.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/Criminopatia.jpeg",
       "link": "https://open.spotify.com/show/7yqiEjCXTX4Lqi0xD8RF87",
       "masterpiece": false
     },
@@ -176,7 +176,7 @@
         "en": "A podcast of sharp humor that analyzes everyday situations and social behaviors that irritate us with irony and sarcasm. The hosts tackle universal topics with a laid-back approach, sharing anecdotes and reflections that invite laughter and identification. Each episode is a collective catharsis for those who enjoy dark humor and social critique. Perfect for laughing at yourself and the world."
       },
       "author": "Odio a la gente",
-      "image": "/imagenes/podcasts/odio.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/odio.jpg",
       "link": "https://open.spotify.com/show/1sYunv4SXt1HOmoDdvhOOp",
       "masterpiece": false
     },
@@ -194,7 +194,7 @@
         "en": "Inés Hernand and Nerea Pérez de las Heras analyze political and social current affairs with rigor, humor, and a critical perspective. The podcast encourages questioning mainstream information, delving into relevant topics with expert voices and direct testimonies. Each episode is a space for reflection, debate, and learning about contemporary challenges. A fresh and bold proposal to understand the world beyond the headlines. Perfect for curious minds."
       },
       "author": "Inés Hernand y Nerea Pérez de las Heras",
-      "image": "/imagenes/podcasts/saldremos_mejores.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/saldremos_mejores.jpg",
       "link": "https://open.spotify.com/show/7x5Q0B2ZWIot59Ah6NWoar",
       "masterpiece": false
     },
@@ -212,7 +212,7 @@
         "en": "Fernando Arancón and Alba Leiva take the drama out of international news, explaining geopolitics and major world events in a clear and accessible way. The podcast combines analysis, interviews, and data to offer an optimistic and realistic view of the world. Winner of the Ondas Award, it is a reference for those seeking to understand global complexity without falling into catastrophism. An invitation to stay informed and think positively."
       },
       "author": "Fernando Arancón y Alba Leiva",
-      "image": "/imagenes/podcasts/no_es_el_fin.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/no_es_el_fin.jpg",
       "link": "https://open.spotify.com/show/5dbvpKwtqz3X3hcX1BSEzf",
       "masterpiece": false
     },
@@ -230,7 +230,7 @@
         "en": "Manu Marlasca and Luis Rendueles investigate Spain's most shocking crimes, breaking down the details of each case and its social implications. The podcast stands out for its journalistic rigor, in-depth interviews, and analysis of crime from multiple perspectives. Each episode is a journey into the dark side of society, with real stories that invite reflection. A benchmark of true crime in Spanish."
       },
       "author": "Manu Marlasca y Luis Rendueles",
-      "image": "/imagenes/podcasts/territorio_negro.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/territorio_negro.jpg",
       "link": "https://open.spotify.com/show/6uXc6iDpBopOgUr8Osc4x7",
       "masterpiece": false
     },
@@ -248,7 +248,7 @@
         "en": "Tomàs Fuentes and Ignasi Taltavull invite listeners and celebrities to share their worst anecdotes and most embarrassing moments. The podcast turns misfortunes into laughter, creating a relaxed and empathetic atmosphere where humor arises from vulnerability. Each episode is a celebration of human imperfection and the ability to laugh at oneself. A must-listen show for comedy and real story lovers."
       },
       "author": "Tomàs Fuentes e Ignasi Taltavull",
-      "image": "/imagenes/podcasts/la_ruina.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/la_ruina.jpg",
       "link": "https://open.spotify.com/show/2hH5wXIG5SCCSxbcbKsyg8",
       "masterpiece": false
     },
@@ -266,7 +266,7 @@
         "en": "A historic radio program that explores mysteries, science, history, and paranormal phenomena with rigor and entertainment. Bruno Cardeñosa and his team tackle fascinating topics, from unsolved enigmas to scientific breakthroughs, blending outreach and curiosity. Each episode is a journey through knowledge and the unknown, perfect for curious minds and mystery lovers. A classic of Spanish radio."
       },
       "author": "Bruno Cardeñosa",
-      "image": "/imagenes/podcasts/la_rosa.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/la_rosa.jpg",
       "link": "https://open.spotify.com/show/2JZHytA0SZciOGkTRwWMyS",
       "masterpiece": false
     },
@@ -284,7 +284,7 @@
         "en": "A psychology podcast that covers topics such as anxiety, stress, relationships, and self-awareness. Hosted by experts, each episode provides practical tools and clear explanations to better understand our mind and emotions. Perfect for those seeking to improve their psychological well-being and understand human behavior. Every episode encourages reflection and personal growth. A benchmark in Spanish-language psychology outreach."
       },
       "author": "Molo Cebrián",
-      "image": "/imagenes/podcasts/entiende_tu_mente.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/entiende_tu_mente.jpg",
       "link": "https://open.spotify.com/show/0sGGLIDnnijRPLef7InllD",
       "masterpiece": false
     },
@@ -302,7 +302,7 @@
         "en": "Jorge Carrión explores surprising and little-known stories from art, literature, and global culture. Each episode invites listeners to discover unusual characters, objects, and tales that have shaped cultural history. The podcast stands out for its narrative tone and ability to spark curiosity. A sonic journey through cabinets filled with wonders and oddities. Perfect for culture lovers and the unexpected."
       },
       "author": "Jorge Carrión",
-      "image": "/imagenes/podcasts/gabinete.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/gabinete.jpg",
       "link": "https://open.spotify.com/show/3yi00lEL8NqhEnJNmt2yaF",
       "masterpiece": false
     },
@@ -320,7 +320,7 @@
         "en": "An interview podcast hosted by Javier Aznar, covering topics of culture, lifestyle, and society. Guests from various fields share their experiences and insights, leading to deep and engaging conversations. The intimate and elegant hotel setting provides a backdrop for reflections on trends, creativity, and current affairs. A space to discover new perspectives and enjoy the art of conversation."
       },
       "author": "Jorge Juan",
-      "image": "/imagenes/podcasts/hotel_jorge_juan.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/hotel_jorge_juan.jpg",
       "link": "https://open.spotify.com/show/42B1tQQzD6j9mCX6DNi4xQ",
       "masterpiece": false
     },
@@ -338,7 +338,7 @@
         "en": "Arturo González-Campos reviews the lives and works of great music icons, revealing anecdotes, influences, and key moments in their careers. The podcast blends documentary rigor and passion for music, bringing listeners closer to the human stories behind the legends. Each episode is a tribute to the creativity and cultural impact of musical idols. Perfect for music lovers and the curious."
       },
       "author": "Arturo González-Campos",
-      "image": "/imagenes/podcasts/idolos.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/idolos.jpg",
       "link": "https://open.spotify.com/show/6mthH0RnhXG8Fpa33uvRxT",
       "masterpiece": false
     },    
@@ -356,7 +356,7 @@
         "en": "Manu Marlasca narrates the most shocking crimes in Spanish history, analyzing their causes, consequences, and social context. The podcast stands out for its journalistic approach, in-depth investigations, and quality interviews. Each episode reconstructs emblematic cases, inviting reflection on justice and human nature. A benchmark for true crime and criminal history enthusiasts."
       },
       "author": "Manu Marlasca",
-      "image": "/imagenes/podcasts/cronica.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/cronica.jpg",
       "link": "https://open.spotify.com/show/0Cx6uRV7UEh8U4tSGRHiYg",
       "masterpiece": false
     },
@@ -374,7 +374,7 @@
         "en": "A selection of the best TED talks translated into Spanish, presenting innovative ideas in technology, science, art, and society. Each episode offers inspiring perspectives and creative solutions to current challenges. The podcast stands out for its diversity of voices and quality content. Perfect for those who want to learn and broaden their worldview. A space for curiosity and knowledge."
       },
       "author": "TED",
-      "image": "/imagenes/podcasts/ted.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/ted.jpg",
       "link": "https://open.spotify.com/show/524qliZmwyXLOClyk8gV9T",
       "masterpiece": false
     },
@@ -392,7 +392,7 @@
         "en": "Nerea Pérez de las Heras reflects on human nature through personal stories, interviews, and analysis of contemporary life. The podcast addresses topics such as vulnerability, identity, and emotions, inviting empathy and self-criticism. Each episode is an opportunity to question what makes us human and explore the challenges of today's society. An honest and thought-provoking space."
       },
       "author": "Nerea Pérez de las Heras",
-      "image": "/imagenes/podcasts/la_fucking.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/la_fucking.jpg",
       "link": "https://open.spotify.com/show/2xCbUret67qUXJWK2lp8jl",
       "masterpiece": false
     },
@@ -410,7 +410,7 @@
         "en": "A podcast dedicated to pop culture, science fiction, and technology, with in-depth analysis of movies, series, comics, and video games. Antonio Runa and his team discuss great classics and the latest geek news, sharing facts, curiosities, and passionate opinions. Each episode is a celebration of entertainment and creativity. Perfect for science fiction and pop culture fans."
       },
       "author": "Antonio Runa",
-      "image": "/imagenes/podcasts/la_orbita.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/la_orbita.jpg",
       "link": "https://open.spotify.com/show/1S9ADiefiSIzsEYV5QZzSm",
       "masterpiece": false
     },
@@ -428,7 +428,7 @@
         "en": "Ana Medina explores the intersection of technology, millennial culture, and paranormal phenomena, tackling current topics with humor and rigor. The podcast blends interviews, analysis, and surprising stories, creating a unique space for reflection and entertainment. Each episode invites listeners to question reality and discover new perspectives on the digital world and the unexplained. A fresh and original show."
       },
       "author": "Ana Medina",
-      "image": "/imagenes/podcasts/cuarto_milenial.jpeg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/cuarto_milenial.jpeg",
       "link": "https://open.spotify.com/episode/4b33BHhH4A7cE3xQvuQ5gU",
       "masterpiece": false
     },
@@ -446,7 +446,7 @@
         "en": "NPR's innovative podcast that contextualizes today's news through history, offering in-depth research and unique perspectives on how the past shapes our present. Each episode connects historical events with contemporary issues, helping listeners better understand the modern world. Perfect for curious minds and history lovers. A benchmark in international historical outreach."
       },
       "author": "NPR",
-      "image": "/imagenes/podcasts/throughline.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/throughline.jpg",
       "link": "https://open.spotify.com/show/0vYTIMav7el5VXq5n5pxhI?si=2VSfhedvTPS3Ent2x2YeDg&nd=1&dlsi=a7989695a0ff4b01",
       "masterpiece": true
     },
@@ -464,7 +464,7 @@
         "en": "Jenna Kutcher shares practical strategies, inspiring interviews, and actionable tips for entrepreneurs and creatives. Each episode delves into marketing, productivity, and personal growth, helping listeners achieve their professional and personal goals. The podcast stands out for its motivational tone and useful resources for those seeking to grow in the digital world. An essential guide for anyone wanting to turn dreams into reality. Inspiration and tools to move forward every day."
       },
       "author": "Jenna Kutcher",
-      "image": "/imagenes/podcasts/goal_digger.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/goal_digger.jpg",
       "link": "https://open.spotify.com/show/0U11V31OMwksj3mg8gS0jX",
       "masterpiece": false
     },
@@ -482,7 +482,7 @@
         "en": "Ashley Flowers narrates real crime cases with an immersive and detailed style, keeping the tension high in every episode. The podcast explores unsolved mysteries, disappearances, and murders, presenting facts with rigor and empathy. It stands out for its clear storytelling and ability to hook listeners from the start. A benchmark of true crime in English, perfect for fans of suspense and investigation. Each story invites reflection on justice and truth."
       },
       "author": "Ashley Flowers",
-      "image": "/imagenes/podcasts/crimejunkie.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/crimejunkie.png",
       "link": "https://open.spotify.com/show/3DgfoleqaW61T2amZQKINx",
       "masterpiece": true
     },
@@ -500,7 +500,7 @@
         "en": "The New York Times presents an in-depth analysis of the day's most relevant news, with exclusive reports and expert interviews. Each episode provides context, research, and diverse perspectives on current events. The podcast stands out for its journalistic rigor and high production quality. An essential tool for those who want to stay informed in a clear and understandable way. Perfect for starting the day well-informed."
       },
       "author": "The New York Times",
-      "image": "/imagenes/podcasts/the_daily.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/the_daily.jpg",
       "link": "https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g",
       "masterpiece": true
     },
@@ -518,7 +518,7 @@
         "en": "Joe Rogan hosts long-form interviews with guests from all walks of life, from scientists and athletes to celebrities and thinkers. The podcast is known for its free-form style, deep conversations, and debates on topics ranging from science and culture to politics and humor. Each episode is an unfiltered exploration of ideas and experiences. A global podcasting benchmark, perfect for those seeking diverse perspectives and authentic conversations."
       },
       "author": "Joe Rogan",
-      "image": "/imagenes/podcasts/joe_rogan.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/joe_rogan.jpg",
       "link": "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk",
       "masterpiece": true
     },
@@ -536,7 +536,7 @@
         "en": "Theo Von shares personal stories, funny anecdotes, and reflections on everyday life with his signature Southern humor. The podcast combines interviews, monologues, and audience participation, creating a warm and spontaneous atmosphere. It stands out for its authenticity and ability to connect with listeners worldwide. An original show for those seeking entertainment, nostalgia, and genuine laughter. A space to unwind and enjoy."
       },
       "author": "Theo Von",
-      "image": "/imagenes/podcasts/this_past_weekend.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/this_past_weekend.jpg",
       "link": "https://open.spotify.com/show/6PwE1CIZsgfrhX6Bw96PUN",
       "masterpiece": false
     },
@@ -554,7 +554,7 @@
         "en": "Steven Bartlett interviews business leaders, entrepreneurs, and influential figures, exploring their journeys, failures, and successes. The podcast offers valuable lessons on leadership, innovation, and personal growth, with an honest and in-depth approach. Each episode reveals the challenges and learnings behind business success. A source of inspiration for those seeking professional growth and an inside look at the business world."
       },
       "author": "Steven Bartlett",
-      "image": "/imagenes/podcasts/diary_ceo.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/diary_ceo.jpg",
       "link": "https://open.spotify.com/show/5y0Ko4rh7Ux9lZYzRxuIdH",
       "masterpiece": false
     },
@@ -572,7 +572,7 @@
         "en": "Guy Raz interviews founders of successful companies, uncovering the stories behind their achievements and the challenges they overcame. The podcast stands out for its inspiring narrative and in-depth conversations, offering lessons on innovation, perseverance, and creativity. Each episode is a window into the world of entrepreneurship and building great ideas. Perfect for those who dream of forging their own business path."
       },
       "author": "Guy Raz",
-      "image": "/imagenes/podcasts/how_i_build.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/how_i_build.jpg",
       "link": "https://open.spotify.com/show/6E709HRH7XaiZrMfgtNCun",
       "masterpiece": true
     },
@@ -590,7 +590,7 @@
         "en": "Alie Ward interviews experts in various scientific fields, demystifying complex concepts with humor and clarity. The podcast explores everything from biology and astronomy to psychology and paleontology, making science accessible and entertaining. Each episode is an invitation to curiosity and continuous learning. Perfect for those who enjoy discovering the world through science. A fascinating journey through human knowledge."
       },
       "author": "Alie Ward",
-      "image": "/imagenes/podcasts/ologies.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/ologies.jpg",
       "link": "https://open.spotify.com/show/5nvRkVMH58SelKZYZFZx1S",
       "masterpiece": true
     },
@@ -608,7 +608,7 @@
         "en": "Aubrey Gordon and Michael Hobbes debunk myths about health, nutrition, and pop culture with humor and critical analysis. The podcast examines diets, trends, and popular beliefs, backing up arguments with solid research. Each episode encourages questioning what we take for granted about wellness and body image. A refreshing and educational show for those seeking reliable information and smart entertainment."
       },
       "author": "Aubrey Gordon & Michael Hobbes",
-      "image": "/imagenes/podcasts/maintenance.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/maintenance.jpg",
       "link": "https://open.spotify.com/show/3rDR8CfpIEMpITG2UC3w5W",
       "masterpiece": false
     },
@@ -626,7 +626,7 @@
         "en": "Michael Hobbes and Peter Shamshiri analyze popular bestsellers, unraveling their cultural impact and the messages they convey. The podcast blends humor, literary criticism, and social reflection, encouraging listeners to question publishing success and its consequences. Each episode examines books that have influenced public opinion and contemporary culture. An original show for book lovers and deep analysis fans. Entertainment and critical thinking in every episode."
       },
       "author": "Michael Hobbes & Peter Shamshiri",
-      "image": "/imagenes/podcasts/if_books_could_kill.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/if_books_could_kill.jpg",
       "link": "https://open.spotify.com/show/2khJBoF73ujIATWUFtSxLD",
       "masterpiece": false
     },
@@ -644,7 +644,7 @@
         "en": "Nate Sloan and Charlie Harding explore contemporary pop music, analyzing its structures, lyrics, and cultural significance. The podcast breaks down current hits and classics, revealing the secrets behind the songs that top the charts. It stands out for its educational and entertaining approach, perfect for music lovers and the curious. Each episode invites listeners to hear music with new ears and discover what makes it special."
       },
       "author": "Nate Sloan & Charlie Harding",
-      "image": "/imagenes/podcasts/switched_on_pop.png",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/switched_on_pop.png",
       "link": "https://open.spotify.com/show/1sgWaKtQxwfjUpZnnK8r7J",
       "masterpiece": false
     },
@@ -662,7 +662,7 @@
         "en": "Hrishikesh Hirway invites musicians to break down their songs, revealing the creative process behind each track. The podcast features intimate interviews, lyric and production analysis, and untold stories about music creation. Each episode is an immersion into the art of composing and producing music, perfect for fans and professionals alike. A unique window into the inner world of artists and their most iconic works."
       },
       "author": "Hrishikesh Hirway",
-      "image": "/imagenes/podcasts/song_exploder.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/song_exploder.jpg",
       "link": "https://open.spotify.com/show/10lMwCjvzLCLwth2AW6cLG",
       "masterpiece": true
     },
@@ -680,7 +680,7 @@
         "en": "Tom Holland and Dominic Sandbrook explore world history with rigor and humor, covering everything from major battles to contemporary cultural phenomena. Each episode offers in-depth analysis, surprising anecdotes, and debates about the events that have shaped humanity. The podcast stands out for its engaging storytelling and ability to connect the past with the present. Perfect for the curious and history lovers. An educational and entertaining journey through the ages."
       },
       "author": "Tom Holland & Dominic Sandbrook",
-      "image": "/imagenes/podcasts/the_rest.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/the_rest.jpg",
       "link": "https://open.spotify.com/show/7Cvsbcjhtur7nplC148TWy",
       "masterpiece": true
     },
@@ -698,7 +698,7 @@
         "en": "Dr. Laurie Santos explores the science of happiness, debunking common myths and offering practical strategies to improve emotional well-being. The podcast blends academic research, personal stories, and actionable advice for everyday life. Each episode encourages reflection on what truly makes us happy and how to cultivate a more fulfilling life. An essential guide for those seeking to understand and achieve authentic happiness."
       },
       "author": "Dr. Laurie Santos",
-      "image": "/imagenes/podcasts/the_happiness.jpg",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/podcasts/the_happiness.jpg",
       "link": "https://open.spotify.com/show/3i5TCKhc6GY42pOWkpWveG",
       "masterpiece": true
     }

@@ -27,6 +27,11 @@ import {
 import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 
+// =============================================
+// MaterialCoffeePage: Página de donación (Coffee) Material UI
+// Optimizada para móviles y desktop, con integración de analytics y experiencia de usuario moderna.
+// =============================================
+
 const MaterialCoffeePage = () => {
   const { t, getTranslation } = useLanguage();
   const { trackSpecialPageView } = useGoogleAnalytics();

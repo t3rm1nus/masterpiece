@@ -1,9 +1,14 @@
 // =============================================
 // Navigation slice para Zustand
-// Contiene estado y acciones para la navegación de vistas y selección de ítems.
-// - currentView: vista actual ('home', 'detail', etc.)
-// - selectedItem: ítem seleccionado
-// - goHome, resetToHome, setView, setSelectedItem, goToDetail, goToHome, goToCoffee, goToHowToDownload: acciones de navegación
+// Gestiona el estado y las acciones de navegación de la app de forma centralizada.
+// Toda la navegación (home, detalle, donaciones, etc.) se gestiona por store global, no por router tradicional.
+// Compatible y optimizado para móviles y desktop, soportando overlays y transiciones modernas.
+//
+// Estado principal:
+// - currentView: vista actual ('home', 'detail', 'coffee', 'howToDownload', etc.)
+// - selectedItem: ítem seleccionado para detalle
+// Acciones principales:
+// - goHome, resetToHome, setView, setSelectedItem, goToDetail, goToHome, goToCoffee, goToHowToDownload
 // =============================================
 
 // Navigation slice for Zustand

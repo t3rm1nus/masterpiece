@@ -9,6 +9,12 @@ import useInfiniteScroll from '../hooks/useInfiniteScroll';
 import CircularProgress from '@mui/material/CircularProgress';
 import { randomNotFoundImage } from '../store/utils';
 
+// =============================================
+// MaterialContentWrapper: Wrapper de contenido Material UI
+// Gestiona layout responsive, animaciones y soporte para infinite scroll y empty states.
+// Optimizado para móviles y desktop.
+// =============================================
+
 // --- Estilos centralizados ---
 const wrapperSx = (propsSx = {}, isMobile = false) => ({
   width: '100%',

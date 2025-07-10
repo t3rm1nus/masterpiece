@@ -11,6 +11,11 @@ import { useAppData } from '../store/useAppStore';
 import { getCategoryColor } from '../utils/categoryPalette';
 import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 
+// =============================================
+// MaterialSubcategoryChips: Chips de subcategoría Material UI
+// Chips de subcategoría Material UI. Optimizado para UX, performance y móviles, soporta customización avanzada y botones especiales.
+// =============================================
+
 /**
  * MaterialSubcategoryChips
  * Lista de chips de subcategorías altamente parametrizable y reutilizable.
