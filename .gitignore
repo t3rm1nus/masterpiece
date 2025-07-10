@@ -34,14 +34,4 @@ dist/
 *.ipa
 
 # Ignorar todas las subcarpetas de imágenes en public/imagenes/
-/public/imagenes/comics/
-/public/imagenes/descargas/
-/public/imagenes/documentales/
-/public/imagenes/juegos_de_mesa/
-/public/imagenes/libros/
-/public/imagenes/musica/
-/public/imagenes/notfound/
-/public/imagenes/peliculas/
-/public/imagenes/podcasts/
-/public/imagenes/series/
-/public/imagenes/videojuegos/
+
