@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { useMediaQuery, useTheme } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppView } from '../store/useAppStore';
-import ThemeToggle from './ui/ThemeToggle';
 import MaterialMobileMenu from './MaterialMobileMenu';
 import DownloadIcon from '@mui/icons-material/Download';
 import Dialog from '@mui/material/Dialog';
@@ -160,8 +159,6 @@ function DesktopMenu(props) {
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
           {/* Selector de idioma (LanguageSelector) siempre visible en desktop */}
           <LanguageSelector variant="desktop" sx={{}} />
-          {/* Botón ThemeToggle a la derecha del selector de idioma */}
-          <ThemeToggle />
           {/* Icono quienes somos (about) como imagen suelta a la izquierda del botón donación */}
           <img
             src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/icono.png"

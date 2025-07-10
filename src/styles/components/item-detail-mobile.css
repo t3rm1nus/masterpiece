@@ -1,6 +1,6 @@
 /* ESTILOS MEJORADOS PARA DETALLE EN MÓVIL */
 @media (max-width: 900px) {
-  .mp-ui-card.item-detail-mobile-card {
+  .mp-ui-card.item-detail-mobile-card:not(.slideOutDown):not(.slideInUp) {
     border-radius: 16px !important;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10) !important;
     border: none !important;

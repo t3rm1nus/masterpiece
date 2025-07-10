@@ -83,7 +83,7 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
     if (!document.getElementById('detail-scale-keyframes')) {
       const style = document.createElement('style');
       style.id = 'detail-scale-keyframes';
-      style.innerHTML = `@keyframes scaleFadeIn {0%{opacity:0;transform:scale(0.92);}100%{opacity:1;transform:scale(1);}}@keyframes scaleFadeOut {0%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(0.92);}}.slideInUpFast{animation:scaleFadeIn 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}.slideOutDownFast{animation:scaleFadeOut 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}`;
+      style.innerHTML = `@keyframes scaleFadeIn {0%{opacity:0;transform:scale(0.92);}100%{opacity:1;transform:scale(1);}}@keyframes scaleFadeOut {0%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(0.92);}}.slideInUpFast{animation:scaleFadeIn 0.4s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}.slideOutDownFast{animation:scaleFadeOut 0.4s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}`;
       document.head.appendChild(style);
     }
   }, []);
@@ -101,6 +101,11 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
   const [internalClosing, setInternalClosing] = React.useState(false);
   // Para desktop, usar la prop isExiting para controlar la animación de salida
   const [cardAnim, setCardAnim] = useState('slideInUpFast');
+  
+  // Debug: monitorear cambios en internalClosing
+  useEffect(() => {
+    console.log('[UnifiedItemDetail] internalClosing cambió:', internalClosing);
+  }, [internalClosing]);
   // Al montar, animación de entrada
   useEffect(() => {
     setCardAnim('slideInUpFast');
@@ -113,11 +118,14 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
   }, [isExiting]);
   // Handler para cerrar con animación
   const triggerExitAnimation = () => {
-    if (!isExiting) {
+    console.log('[UnifiedItemDetail] triggerExitAnimation llamado', { isExiting, internalClosing });
+    if (!isExiting && !internalClosing) {
       console.log('[UnifiedItemDetail] triggerExitAnimation: lanzando animación de salida');
-      if (typeof onExited === 'function') {
-        // El layout controla la navegación tras la animación
-        setCardAnim('slideOutDownFast');
+      setInternalClosing(true); // Activar animación de cierre interna
+      
+      // Notificar al componente padre que está cerrando
+      if (onRequestClose) {
+        onRequestClose();
       }
     } else {
       console.log('[UnifiedItemDetail] triggerExitAnimation: ya está saliendo, ignorado');
@@ -130,7 +138,7 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
     };
     window.addEventListener('overlay-detail-exit', onOverlayDetailExit);
     return () => window.removeEventListener('overlay-detail-exit', onOverlayDetailExit);
-  }, [isExiting]);
+  }, [isExiting, internalClosing]);
   const handleCloseDesktop = (e) => {
     console.log('[UnifiedItemDetail] handleCloseDesktop: click botón volver interno');
     e?.preventDefault?.();
@@ -151,16 +159,7 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
     }
   };
 
-  // Cuando termina la animación de salida, cerrar realmente
-  const handleAnimationEnd = () => {
-    if ((isClosing || internalClosing)) {
-      if (onClose) {
-        onClose();
-      } else {
-        navigate(-1);
-      }
-    }
-  };
+  // Eliminado: handleAnimationEnd redundante - se maneja en MobileItemDetail
 
   if (!selectedItem) {
     console.log('[UnifiedItemDetail] No selectedItem, no se renderiza detalle');
@@ -181,23 +180,31 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
     const safeItem = selectedItem || lastItemRef.current;
-    if (isClosing || internalClosing) {
+    const isClosingOrInternal = isClosing || internalClosing;
+    console.log('[UnifiedItemDetail] Renderizando móvil:', { isClosing, internalClosing, isClosingOrInternal });
+    
+    // Si está cerrando, mantener el componente montado pero oculto
+    if (isClosingOrInternal) {
       console.log('[UnifiedItemDetail] Animación de cierre iniciada en móvil (isClosing=true)');
     }
     return (
       <Box
         sx={{
-          position: 'absolute',
+          position: 'fixed',
           top: 0,
           left: 0,
-          width: '100%',
-          height: '100%',
+          width: '100vw',
+          height: '100vh',
           background: 'rgba(255,255,255,0.98)', // Fondo opaco
           backdropFilter: 'blur(2px)', // Difuminado opcional
           overflowY: 'auto',
           WebkitOverflowScrolling: 'touch',
           overscrollBehavior: 'contain', // Evita scroll en capa inferior
-          paddingTop: 0, // Pegado al menú
+          zIndex: 1100, // Por debajo del menú superior (1200) pero por encima del contenido
+          // Prevenir que el overlay afecte el scroll del documento
+          isolation: 'isolate',
+          // Forzar que el scroll se mantenga en el documento principal
+          transform: 'translateZ(0)',
         }}
       >
         <MobileItemDetail
@@ -225,16 +232,18 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
               goToHowToDownload={goToHowToDownload}
             />
           )}
-          isClosing={isClosing || internalClosing}
+          isClosing={isClosing}
           onClose={() => {
             console.log('[UnifiedItemDetail] Animación de cierre FINALIZADA en móvil (onClose llamado)');
+            // Usar el store para navegar en lugar de navigate(-1)
             if (onClose) {
               onClose();
-            } else {
-              navigate(-1);
             }
           }}
-          // NO pasar onBack, así el botón usa navigate(-1) por defecto
+          onBack={() => {
+            console.log('[UnifiedItemDetail] Botón volver móvil: disparando overlay-detail-exit');
+            window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+          }}
         />
       </Box>
     );

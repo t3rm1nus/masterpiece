@@ -157,7 +157,7 @@ button,
   }
   
   /* Card/UiCard específico para detalles móviles en iPhone */
-  .mp-ui-card.item-detail-mobile-card {
+  .mp-ui-card.item-detail-mobile-card:not(.slideOutDown):not(.slideInUp) {
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
     height: auto !important;
@@ -165,7 +165,7 @@ button,
   }
   
   /* CardContent dentro del detalle móvil */
-  .mp-ui-card.item-detail-mobile-card .MuiCardContent-root {
+  .mp-ui-card.item-detail-mobile-card:not(.slideOutDown):not(.slideInUp) .MuiCardContent-root {
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
     height: auto !important;

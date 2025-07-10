@@ -1,5 +1,5 @@
 import React, { useEffect, useState, createContext, useContext } from 'react';
-import { Box, Typography, Button, useTheme, useMediaQuery, Paper } from '@mui/material';
+import { Box, Typography, Button, useTheme, useMediaQuery, Paper, Container } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 import { applyHowToDownloadScrollFixForIPhone, cleanupScrollFixesForIPhone } from '../utils/iPhoneScrollFix';
@@ -122,22 +122,20 @@ const HowToDownload = () => {
   };
   return (
     <OverlayCardAnimationContext.Provider value={{ triggerExitAnimation }}>
-      <Box sx={{
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        minHeight: { xs: 'auto', lg: 'calc(100vh - 120px)' },
-        boxSizing: 'border-box',
-        zIndex: 2,
-        overflow: 'visible',
-        WebkitOverflowScrolling: 'touch',
-        mt: { xs: 0, lg: 8 }, // 8*8=64px, suficiente para el menú fijo
-        // Específico para iPhone - asegurar scroll
-        overflowY: { xs: 'auto', md: 'visible' },
-        height: { xs: '100%', md: 'auto' },
-        maxHeight: { xs: '100%', md: 'none' },
-      }}>
+      <Container 
+        maxWidth="md" 
+        sx={{ 
+          padding: { xs: '16px', sm: '24px' },
+          paddingTop: { xs: '36px', sm: '80px', md: '50px' },
+          paddingBottom: '40px',
+          backgroundColor: '#fafafa',
+          minHeight: '100vh',
+          position: 'relative',
+          zIndex: 1200, // Por encima del overlay del detalle (1100)
+          overflow: 'visible',
+          WebkitOverflowScrolling: 'touch'
+        }}
+      >
         <Paper elevation={3} sx={{
           width: '100%',
           maxWidth: { xs: 480, md: '720px', lg: '900px' },
@@ -146,15 +144,15 @@ const HowToDownload = () => {
           borderRadius: 3,
           boxSizing: 'border-box',
           position: 'relative',
-          paddingTop: { xs: 2, md: '64px' },
+          paddingTop: { xs: 2, md: 4 },
           pb: { xs: 3, md: 5 },
           mb: { xs: 3, md: 5 },
           overflow: 'visible',
           WebkitOverflowScrolling: 'touch',
-          mt: { xs: '36px', md: 0 }, // margen superior en móviles reducido a 36px
+          mt: { xs: 0, md: 0 },
           overflowY: { xs: 'auto', md: 'visible' },
           height: { xs: 'auto', md: 'auto' },
-          maxHeight: { xs: 'calc(100vh - 120px)', md: 'none' },
+          maxHeight: { xs: 'none', md: 'none' },
         }}
         className={cardAnim}
         onAnimationEnd={() => {
@@ -247,7 +245,7 @@ const HowToDownload = () => {
             {texts.end[lang]}
           </Typography>
         </Paper>
-      </Box>
+      </Container>
     </OverlayCardAnimationContext.Provider>
   );
 };

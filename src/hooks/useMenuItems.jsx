@@ -4,6 +4,7 @@
 // =============================================
 import { useLanguage } from '../LanguageContext';
 import { useAppView, useAppData } from '../store/useAppStore';
+import useAppStore from '../store/useAppStore';
 import { useCallback } from 'react';
 import { Home as HomeIcon, Coffee as CoffeeIcon } from '@mui/icons-material';
 import React from 'react';
@@ -11,6 +12,7 @@ import React from 'react';
 export function useMenuItems(handleSplashOpen, navigate) {
   const { t, lang, getTranslation } = useLanguage();
   const { resetAllFilters, generateNewRecommendations } = useAppData();
+  const { goToCoffee, goToHowToDownload } = useAppView();
 
   // Audios disponibles para el splash (igual que en MaterialMobileMenu)
   const splashAudios = [
@@ -32,12 +34,42 @@ export function useMenuItems(handleSplashOpen, navigate) {
   }, [resetAllFilters, generateNewRecommendations, lang, navigate]);
 
   const handleCoffeeNavigation = useCallback(() => {
-    navigate('/donaciones');
-  }, [navigate]);
+    // Verificar si hay un detalle abierto y cerrarlo primero
+    const currentState = useAppStore.getState();
+    if (currentState.currentView === 'detail' && currentState.selectedItem) {
+      console.log('[useMenuItems] Detalle abierto detectado, cerrando antes de navegar a donaciones');
+      // Disparar evento para cerrar el detalle con animación
+      window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+      // Esperar a que termine la animación antes de navegar
+      setTimeout(() => {
+        goToCoffee();
+        navigate('/donaciones');
+      }, 500); // Tiempo suficiente para que termine la animación
+    } else {
+      // No hay detalle abierto, navegar directamente
+      goToCoffee();
+      navigate('/donaciones');
+    }
+  }, [goToCoffee, navigate]);
 
   const handleHowToDownload = useCallback(() => {
-    navigate('/como-descargar');
-  }, [navigate]);
+    // Verificar si hay un detalle abierto y cerrarlo primero
+    const currentState = useAppStore.getState();
+    if (currentState.currentView === 'detail' && currentState.selectedItem) {
+      console.log('[useMenuItems] Detalle abierto detectado, cerrando antes de navegar a descargas');
+      // Disparar evento para cerrar el detalle con animación
+      window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+      // Esperar a que termine la animación antes de navegar
+      setTimeout(() => {
+        goToHowToDownload();
+        navigate('/como-descargar');
+      }, 500); // Tiempo suficiente para que termine la animación
+    } else {
+      // No hay detalle abierto, navegar directamente
+      goToHowToDownload();
+      navigate('/como-descargar');
+    }
+  }, [goToHowToDownload, navigate]);
 
   // Splash handler: lo debe pasar el componente como prop si se quiere usar
 

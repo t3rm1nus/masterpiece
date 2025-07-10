@@ -5,7 +5,6 @@ import { useTitleSync } from '../hooks/useTitleSync';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 import { loadRealData } from '../utils/dataLoader';
 import RecommendationsList from './RecommendationsList';
-import ThemeToggle from './ThemeToggle';
 import UnifiedItemDetail from './UnifiedItemDetail';
 import MaterialCategorySelect from './MaterialCategorySelect';
 import { useTheme } from '@mui/material/styles';
@@ -69,7 +68,7 @@ const AnimatedH1 = styled('h1')(({ isMobile, h1Gradient }) => ({
   color: 'black',
   borderRadius: 0,
   position: 'relative',
-  zIndex: 2,
+  zIndex: 1, // Por debajo del menú superior (1200)
   border: 'none',
   width: isMobile ? '100vw' : '99vw',
   maxWidth: isMobile ? '100vw' : '1600px',
@@ -118,6 +117,8 @@ const HomePage = ({
   const [musicFilterType, setMusicFilterType] = React.useState(null);
   // Estado para filtro especial de batalla (battle)
   const [battleFilterActive, setBattleFilterActive] = React.useState(false);
+  const [isDetailClosing, setIsDetailClosing] = React.useState(false);
+  const [localSelectedItem, setLocalSelectedItem] = React.useState(null);
 
   const { lang, t, getTranslation } = useLanguage();
   // Hook para sincronizar títulos automáticamente
@@ -186,6 +187,12 @@ const HomePage = ({
     setSpanishCinemaActive,
     setSpanishSeriesActive,
     setMasterpieceActive,
+    // Estado de paginación del store global
+    mobilePage,
+    desktopPage,
+    setMobilePage,
+    setDesktopPage,
+    resetPagination,
   } = useAppData();
   
   // Efecto para actualizar título cuando cambia el idioma
@@ -199,8 +206,50 @@ const HomePage = ({
   // Usar Zustand directo para selectedItem y navegación
   const selectedItem = useAppStore(state => state.selectedItem);
   const goToDetail = useAppStore(state => state.goToDetail);
-  const goBackFromDetail = useAppStore(state => state.goBackFromDetail);
   const currentView = useAppStore(state => state.currentView);
+  
+  // Obtener goBackFromDetail del hook useAppView
+  const { goBackFromDetail } = useAppView();
+  
+  // Debug: Log cuando selectedItem cambia
+  console.log('[HomePage] selectedItem:', selectedItem);
+  console.log('[HomePage] currentView:', currentView);
+  
+  // Sincronizar localSelectedItem con selectedItem del store
+  useEffect(() => {
+    if (selectedItem) {
+      setLocalSelectedItem(selectedItem);
+    }
+  }, [selectedItem]);
+  
+  // Preservar posición del scroll solo cuando navegamos al detalle
+  const scrollPositionRef = useRef(0);
+  const isNavigatingToDetailRef = useRef(false);
+  
+  // Guardar posición del scroll solo cuando vamos al detalle
+  useEffect(() => {
+    if (selectedItem && !isNavigatingToDetailRef.current) {
+      isNavigatingToDetailRef.current = true;
+      scrollPositionRef.current = window.scrollY;
+      console.log('[HomePage] Guardando posición del scroll al ir al detalle:', scrollPositionRef.current);
+    }
+  }, [selectedItem]);
+  
+  // Restaurar posición del scroll solo cuando volvemos del detalle
+  useEffect(() => {
+    if (!selectedItem && isNavigatingToDetailRef.current && scrollPositionRef.current > 0) {
+      console.log('[HomePage] Restaurando posición del scroll al volver del detalle:', scrollPositionRef.current);
+      // Usar un delay más largo para asegurar que el overlay se ha desmontado completamente
+      setTimeout(() => {
+        window.scrollTo({
+          top: scrollPositionRef.current,
+          behavior: 'instant'
+        });
+        scrollPositionRef.current = 0;
+        isNavigatingToDetailRef.current = false;
+      }, 100);
+    }
+  }, [selectedItem]);
   const activePodcastDocumentaryLanguage = useAppStore(state => state.activePodcastDocumentaryLanguage);
   const resetActivePodcastDocumentaryLanguage = useAppStore(state => state.resetActivePodcastDocumentaryLanguage);
   // LOGS DE DEPURACIÓN
@@ -386,15 +435,16 @@ const HomePage = ({
     trackFilterUsage('masterpiece', !isMasterpieceActive ? 'enabled' : 'disabled', selectedCategory);
     
     toggleMasterpiece();
-  };// Manejar clic en elemento
+  };  // Manejar clic en elemento
   const handleItemClick = (item) => {
     // Google Analytics tracking para vista de detalle
     const itemTitle = typeof item.title === 'object' ? (item.title.es || item.title.en || Object.values(item.title)[0]) : item.title;
     trackItemDetailView(item.id, itemTitle, selectedCategory, 'homepage');
-    const generatedId = generateUniqueId(item);
     console.log('[handleItemClick] Item:', item);
-    console.log('[handleItemClick] generateUniqueId:', generatedId);
-    navigate('/detalle/' + generatedId);
+    console.log('[handleItemClick] Llamando a goToDetail...');
+    // Usar el store para navegación consistente
+    goToDetail(item);
+    console.log('[handleItemClick] goToDetail ejecutado');
   };  // Manejar cierre del detalle
   // const renderItemDetail = () => {
   //   if (!selectedItem) {
@@ -415,17 +465,17 @@ const HomePage = ({
   const isCategoryListMobile = isMobile && selectedCategory && selectedCategory !== 'all';
 
   // Estado de paginación para móvil y desktop (independientes)
-  const [mobilePage, setMobilePage] = useState(1);
-  const [desktopPage, setDesktopPage] = useState(1);
   const [loadingMoreMobile, setLoadingMoreMobile] = useState(false);
   const [loadingMoreDesktop, setLoadingMoreDesktop] = useState(false);
   const pageSize = 10; // Ajusta a 10 para cumplir el requerimiento
 
-  // Resetear página al cambiar de categoría, subcategoría o filtros relevantes
+  // Resetear página solo al cambiar de categoría o subcategoría, no al volver del detalle
   useEffect(() => {
+    // Solo resetear si realmente cambió la categoría o subcategoría
+    // No resetear por filtros que se mantienen al volver del detalle
     if (isMobile) setMobilePage(1);
     else setDesktopPage(1);
-  }, [selectedCategory, activeSubcategory, isSpanishCinemaActive, isMasterpieceActive, isMobile]);
+  }, [selectedCategory, activeSubcategory, isMobile, setMobilePage, setDesktopPage]);
 
   // HOOKS MOVIDOS - Deben estar antes de cualquier return condicional
   // Subir scroll arriba al volver atrás en móviles
@@ -439,24 +489,9 @@ const HomePage = ({
     root.style.setProperty('--category-animated-gradient', getCategoryAnimatedGradient(selectedCategory));
   }, [selectedCategory]);
 
-  // Estado para animación de cierre de detalle
-  const [isClosingDetail, setIsClosingDetail] = useState(false);
+  // Eliminado: estado redundante para animación de cierre
 
-  // Función de cierre animado para detalle
-  const handleRequestClose = useCallback(() => {
-    setIsClosingDetail(true);
-  }, []);
-
-  // Efecto: desmontar el detalle solo después de la animación de salida (0.6s)
-  useEffect(() => {
-    if (isClosingDetail) {
-      const timeout = setTimeout(() => {
-        navigate(-1);
-        setIsClosingDetail(false);
-      }, 600); // Duración igual que la animación (600ms)
-      return () => clearTimeout(timeout);
-    }
-  }, [isClosingDetail, navigate]);
+  // Eliminado: timeout redundante - el cierre se maneja en UnifiedItemDetail
 
   // Calcular los ítems a mostrar con paginación (móvil y desktop)
   const paginatedItems = React.useMemo(() => {
@@ -479,7 +514,7 @@ const HomePage = ({
       if (hasMore && !loadingMoreMobile) {
         setLoadingMoreMobile(true);
         setTimeout(() => {
-          setMobilePage(p => p + 1);
+          setMobilePage(mobilePage + 1);
           setLoadingMoreMobile(false);
         }, 600); // Simula carga para mostrar el loader
       }
@@ -487,12 +522,12 @@ const HomePage = ({
       if (hasMore && !loadingMoreDesktop) {
         setLoadingMoreDesktop(true);
         setTimeout(() => {
-          setDesktopPage(p => p + 1);
+          setDesktopPage(desktopPage + 1);
           setLoadingMoreDesktop(false);
         }, 600); // Simula carga para mostrar el loader
       }
     }
-  }, [hasMore, loadingMoreMobile, loadingMoreDesktop, isMobile]);
+  }, [hasMore, loadingMoreMobile, loadingMoreDesktop, isMobile, mobilePage, desktopPage, setMobilePage, setDesktopPage]);
 
   // Verificar si hay datos disponibles
   if (!allData || Object.keys(allData).length === 0) {
@@ -506,10 +541,7 @@ const HomePage = ({
     );
   }
 
-  // Desactiva la restauración automática de scroll del navegador
-  if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
-    window.history.scrollRestoration = 'manual';
-  }
+  // Eliminado: desactivación de scrollRestoration que podía causar problemas
 
   // Función wrapper para tracking de subcategorías desde desktop
   const handleSubcategoryClick = (subcategory) => {
@@ -541,6 +573,27 @@ const HomePage = ({
     ? getMasterpieceAnimatedGradient()
     : getCategoryAnimatedGradient(selectedCategory);
 
+  // Si hay un item seleccionado localmente, renderizar el detalle
+  if (localSelectedItem) {
+    return (
+      <UnifiedItemDetail
+        item={localSelectedItem}
+        onClose={() => {
+          console.log('[HomePage] onClose llamado desde UnifiedItemDetail');
+          setLocalSelectedItem(null);
+          setIsDetailClosing(false);
+          goBackFromDetail();
+        }}
+        selectedCategory={selectedCategory}
+        isClosing={isDetailClosing}
+        onRequestClose={() => {
+          console.log('[HomePage] onRequestClose llamado');
+          setIsDetailClosing(true);
+        }}
+      />
+    );
+  }
+
   return (
     <UiLayout sx={{ marginTop: 8, width: '100vw', maxWidth: '100vw', px: 0 }}>
       {/* Título principal */}
@@ -554,7 +607,7 @@ const HomePage = ({
           </AnimatedH1>
           {/* SOLO MÓVIL: Selector de categorías justo debajo del h1 */}
           {isMobile && (
-            <div style={{ width: '96vw', maxWidth: '96vw', margin: '0 auto', marginBottom: 4, marginTop: 4, zIndex: 2, position: 'relative', marginLeft: '10px' }}>
+            <div style={{ width: '96vw', maxWidth: '96vw', margin: '0 auto', marginBottom: 4, marginTop: 4, zIndex: 1, position: 'relative', marginLeft: '10px' }}>
               <MaterialCategorySelect
                 categories={categories}
                 selectedCategory={selectedCategory}
@@ -631,9 +684,8 @@ const HomePage = ({
           )}
         </>
       )}
-      {/* Render either the recommendations list OR the item detail, not both */}
-      {!selectedItem && (
-        <div
+      {/* Render the recommendations list */}
+      <div
           style={{
             width: isMobile ? '96vw' : '100%',
             maxWidth: isMobile ? '96vw' : undefined,
@@ -710,7 +762,6 @@ const HomePage = ({
             />
           )}
         </div>
-      )}
     </UiLayout>
   );
 };

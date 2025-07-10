@@ -64,7 +64,7 @@ const MaterialCategorySelect = ({ categories, selectedCategory, onCategoryChange
         position: 'relative',
         left: 'unset',
         transform: 'unset',
-        zIndex: 900
+        zIndex: 1 // Por debajo del menú superior (1200)
       }}
     >
       <FormControl

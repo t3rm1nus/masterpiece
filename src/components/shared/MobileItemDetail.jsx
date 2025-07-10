@@ -76,6 +76,40 @@ const MobileItemDetail = ({
   ...props
 }) => {
   const navigate = useNavigate();
+  const cardRef = React.useRef(null);
+  
+  // Inyectar keyframes globales para las animaciones móviles
+  React.useEffect(() => {
+    if (!document.getElementById('mobile-detail-keyframes')) {
+      const style = document.createElement('style');
+      style.id = 'mobile-detail-keyframes';
+      style.innerHTML = `
+        @keyframes slideInUpMobile {
+          0% {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+        
+        @keyframes slideOutDownMobile {
+          0% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }, []);
+  
   // Filtrar props internos que no deben ir al DOM
   const domSafeProps = { ...props };
   delete domSafeProps.showCategorySelect;
@@ -113,20 +147,38 @@ const MobileItemDetail = ({
 
   // Lógica para desmontar tras animación de salida
   const handleAnimationEnd = () => {
+    console.log('[MobileItemDetail] handleAnimationEnd llamado', { isClosing, onClose: typeof onClose });
     if (isClosing) {
       console.log('[MobileItemDetail] Animación de cierre FINALIZADA (onAnimationEnd)');
     }
     if (isClosing && typeof onClose === 'function') {
+      console.log('[MobileItemDetail] Llamando a onClose() desde onAnimationEnd');
       onClose();
     }
   };
 
   React.useEffect(() => {
+    console.log('[MobileItemDetail] isClosing cambió:', { isClosing, selectedItem: selectedItem?.title });
     if (isClosing) {
       console.log('[MobileItemDetail] Animación de cierre INICIADA (isClosing=true)', { selectedItem });
+      // Forzar la aplicación de la animación después de un pequeño delay
+      setTimeout(() => {
+        if (cardRef.current) {
+          console.log('[MobileItemDetail] Forzando aplicación de animación de cierre');
+          cardRef.current.style.animation = 'none';
+          cardRef.current.offsetHeight; // Trigger reflow
+          cardRef.current.style.animation = 'slideOutDownMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards';
+        }
+      }, 10);
     }
-    // Eliminada la inyección de estilos globales para h1 móvil
   }, [isClosing, selectedItem]);
+
+  // Monitorear desmontaje del componente
+  React.useEffect(() => {
+    return () => {
+      console.log('[MobileItemDetail] Componente desmontado');
+    };
+  }, []);
 
   // Eliminado fix específico para iPhone, el scroll será nativo universal
 
@@ -140,12 +192,13 @@ const MobileItemDetail = ({
           if (onBack) {
             onBack();
           } else {
-            navigate(-1);
+            // Disparar evento para animación de salida
+            window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
           }
         }}
         sx={{
           position: 'fixed',
-          top: { xs: '63px', sm: 24 },
+          top: { xs: '63px', sm: 24 }, // Bajado 30px en móviles (de 33px a 63px)
           left: 16,
           zIndex: 1300,
           backgroundColor: theme?.palette?.primary?.main,
@@ -170,16 +223,30 @@ const MobileItemDetail = ({
           justifyContent: 'flex-start',
           height: { xs: '100dvh', sm: 'auto' },
           width: '100%',
-          padding: { xs: '16px 0 0 0', sm: '36px 0 0 0' }, // solo padding arriba y lados
+          padding: { xs: '90px 0 0 0', sm: '36px 0 0 0' }, // más separación del menú superior en móviles
           boxSizing: 'border-box',
           overflowY: 'auto',
           WebkitOverflowScrolling: 'touch',
+          zIndex: 1, // Por debajo del menú superior (z-index 1100)
+          position: 'relative',
         }}
       >
         <UiCard
-          className={
-            'item-detail-mobile-card ' + (isClosing ? 'slideOutDown' : 'slideInUp')
-          }
+          className="item-detail-mobile-card"
+          ref={(el) => {
+            cardRef.current = el;
+            if (el) {
+              console.log('[MobileItemDetail] Clases CSS aplicadas:', el.className);
+              console.log('[MobileItemDetail] isClosing:', isClosing);
+              // Verificar si la animación está activa
+              const computedStyle = window.getComputedStyle(el);
+              console.log('[MobileItemDetail] animation-name:', computedStyle.animationName);
+              console.log('[MobileItemDetail] animation-duration:', computedStyle.animationDuration);
+              console.log('[MobileItemDetail] opacity:', computedStyle.opacity);
+              console.log('[MobileItemDetail] transform:', computedStyle.transform);
+              console.log('[MobileItemDetail] animation-play-state:', computedStyle.animationPlayState);
+            }
+          }}
           sx={{
             position: 'relative',
             padding: '16px',
@@ -189,6 +256,7 @@ const MobileItemDetail = ({
             marginBottom: { xs: '36px', sm: 0 }, // margen inferior reducido a la mitad en móvil
             border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
             background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
+            zIndex: 1, // Por debajo del menú superior (z-index 1100)
             // --- iPhone/iOS override hacks ---
             overflow: 'visible !important',
             overflowY: 'visible !important',
@@ -199,13 +267,19 @@ const MobileItemDetail = ({
             ...sx
           }}
           style={{
-            overflow: 'visible',
-            overflowY: 'visible',
-            maxHeight: 'none',
-            height: 'auto',
-            ...style
+            // Forzar animación inline para asegurar que funcione
+            animation: isClosing 
+              ? 'slideOutDownMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
+              : 'slideInUpMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
           }}
-          onAnimationEnd={handleAnimationEnd}
+          onAnimationEnd={(e) => {
+            console.log('[MobileItemDetail] onAnimationEnd event disparado:', e);
+            console.log('[MobileItemDetail] onAnimationEnd - isClosing:', isClosing);
+            console.log('[MobileItemDetail] onAnimationEnd - onClose type:', typeof onClose);
+            console.log('[MobileItemDetail] onAnimationEnd - animationName:', e.animationName);
+            console.log('[MobileItemDetail] onAnimationEnd - elapsedTime:', e.elapsedTime);
+            handleAnimationEnd();
+          }}
           {...domSafeProps}
         >
           {/* Badge de masterpiece en la esquina del detalle */}

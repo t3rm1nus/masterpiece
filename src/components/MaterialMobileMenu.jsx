@@ -16,7 +16,8 @@ import {
   Divider,
   Button,
   Dialog,
-  DialogContent
+  DialogContent,
+  Fab
 } from '@mui/material';
 import {
   Menu as MenuIcon,
@@ -24,14 +25,10 @@ import {
   ArrowBack as ArrowBackIcon,
   Coffee as CoffeeIcon,
   Close as CloseIcon,
-  Lightbulb as LightbulbIcon,
-  DarkMode as DarkModeIcon,
   Download as DownloadIcon
 } from '@mui/icons-material';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppView, useAppTheme } from '../store/useAppStore';
-import ThemeToggle from './ui/ThemeToggle';
-import FabBackButton from './ui/FabBackButton';
 import { useNavigationActions } from '../hooks/useNavigationActions';
 import { useMenuItems } from '../hooks/useMenuItems.jsx';
 import { useNavigate } from 'react-router-dom';
@@ -78,7 +75,7 @@ const MaterialMobileMenu = ({
   const { t, lang, changeLanguage, getTranslation } = useLanguage();
   const { resetAllFilters } = useAppData();
   const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();
-  const { isDarkMode, toggleTheme } = useAppTheme();
+  const { isDarkMode } = useAppTheme();
   const navigation = useNavigationActions();
   const navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -118,8 +115,6 @@ const MaterialMobileMenu = ({
 
   // Mostrar FAB de volver solo en móvil y solo en las páginas de donaciones y cómo descargar
   const showFabBackButton = isMobile && (currentView === 'coffee' || currentView === 'howToDownload');
-  // Determinar el top dinámico para el botón
-  const fabTop = (currentView === 'coffee' || currentView === 'howToDownload') ? 63 : 16;
 
   // Solo renderizar si estamos en móvil
   // (El AppBar debe mostrarse siempre en móvil, independientemente de la vista)
@@ -144,7 +139,7 @@ const MaterialMobileMenu = ({
           right: '0 !important',
           margin: 0,
           padding: 0,
-          zIndex: theme.zIndex.appBar || 1100,
+          zIndex: 1200, // Más alto que el detalle móvil (z-index 1)
           position: 'fixed !important',
           ...sx.appBar
         }}
@@ -237,6 +232,7 @@ const MaterialMobileMenu = ({
             width: 'min(80vw, 320px)',
             backgroundColor: isDarkMode ? '#2d2d2d' : '#ffffff',
             color: isDarkMode ? '#ffffff' : '#000000',
+            zIndex: 1300, // Más alto que el AppBar (1200) y el detalle móvil (1)
             ...sx.drawer
           }
         }}
@@ -310,31 +306,7 @@ const MaterialMobileMenu = ({
         </List>
         
         <Box sx={{ padding: 2, display: 'flex', flexDirection: 'column', gap: 1 }}>
-          {/* <Divider /> Eliminado para quitar borde superior */}
-          <Button 
-            variant="contained" 
-            onClick={toggleTheme} 
-            sx={{ 
-              borderRadius: 14, 
-              height: 32,
-              minWidth: 32,
-              fontSize: '0.95rem',
-              px: 1.5,
-              alignSelf: 'flex-start',
-              boxShadow: isDarkMode ? 'none' : '0 2px 12px rgba(0,0,0,0.1)',
-              backgroundColor: isDarkMode ? '#0078d4' : '#f0f0f0',
-              color: isDarkMode ? '#ffffff' : '#000000',
-              mt: 1.2, // Espacio arriba
-              mb: 1.2, // Espacio abajo
-              '&:hover': {
-                backgroundColor: isDarkMode ? '#005ea6' : '#e0e0e0',
-              },
-              ...sx.themeButton
-            }}
-          >
-            {isDarkMode ? <LightbulbIcon sx={{ mr: 1 }} /> : <DarkModeIcon sx={{ mr: 1 }} />}
-            {getTranslation(isDarkMode ? 'ui.light_mode' : 'ui.dark_mode')}
-          </Button>
+          {/* Botón de tema eliminado */}
           {/* <Divider /> Eliminado para quitar borde inferior */}
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, alignItems: 'flex-start' }}>
             <Typography 
@@ -370,21 +342,32 @@ const MaterialMobileMenu = ({
         </Box>
       </Drawer>
       {showFabBackButton && (
-        <FabBackButton 
-          onClick={() => navigate(-1)}
-          sx={{ 
-            position: 'fixed',
-            bottom: fabTop,
-            right: 16,
-            zIndex: 1200,
-            backgroundColor: isDarkMode ? '#0078d4' : '#005ea6',
-            color: '#ffffff',
-            '&:hover': {
-              backgroundColor: isDarkMode ? '#005ea6' : '#004080',
-            },
-            ...sx.fabBackButton
+        <Fab
+          color="primary"
+          aria-label="volver"
+          onClick={() => {
+            // Actualizar currentView a home para ocultar el botón
+            if (currentView === 'coffee') {
+              goBackFromCoffee();
+            } else if (currentView === 'howToDownload') {
+              goBackFromDetail(); // Usar goBackFromDetail para howToDownload también
+            }
+            // Disparar evento para animación de salida
+            window.dispatchEvent(new CustomEvent('overlay-exit'));
           }}
-        />
+          sx={{
+            position: 'fixed',
+            top: '63px',
+            left: 16,
+            zIndex: 1300, // Igual que el botón de volver en MobileItemDetail
+            backgroundColor: theme?.palette?.primary?.main,
+            '&:hover': {
+              backgroundColor: theme?.palette?.primary?.dark,
+            }
+          }}
+        >
+          <ArrowBackIcon />
+        </Fab>
       )}
     </>
   );

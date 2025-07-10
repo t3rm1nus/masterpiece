@@ -165,12 +165,12 @@ const MaterialCoffeePage = () => {
         maxWidth="md" 
         sx={{ 
           padding: { xs: '16px', sm: '24px' },
-          paddingTop: { xs: '20px', sm: '80px', md: '50px' }, // Padding top reducido a la mitad en desktop
+          paddingTop: { xs: '36px', sm: '80px', md: '50px' }, // Consistente con HowToDownload
           paddingBottom: '40px',
           backgroundColor: '#fafafa',
           minHeight: '100vh',
           position: 'relative',
-          zIndex: 1,
+          zIndex: 1200, // Por encima del overlay del detalle (1100)
           overflow: 'visible',
           WebkitOverflowScrolling: 'touch'
         }}

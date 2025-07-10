@@ -4,6 +4,24 @@ import { PlayArrow as PlayArrowIcon } from '@mui/icons-material';
 import { getCategoryColor } from '../../utils/categoryPalette';
 import UiButton from '../ui/UiButton';
 
+// Función helper para manejar la navegación con cierre de detalle en móvil
+const handleNavigationWithDetailClose = (navigationFunction) => {
+  // Verificar si estamos en móvil y hay un detalle abierto
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 900;
+  if (isMobile) {
+    console.log('[ItemActionButtons] Navegación en móvil, cerrando detalle primero');
+    // Disparar evento para cerrar el detalle con animación
+    window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+    // Esperar a que termine la animación antes de navegar
+    setTimeout(() => {
+      navigationFunction();
+    }, 500);
+  } else {
+    // En desktop, navegar directamente
+    navigationFunction();
+  }
+};
+
 // =============================================
 // ItemActionButtons: Grupo de botones de acción para ítems
 // Grupo de botones de acción para ítems. Optimizado para UX, accesibilidad y soporte de acciones contextuales.
@@ -138,7 +156,9 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
           color="primary"
           startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
           onClick={() => {
-            if (typeof goToHowToDownload === 'function') goToHowToDownload();
+            if (typeof goToHowToDownload === 'function') {
+              handleNavigationWithDetailClose(goToHowToDownload);
+            }
           }}
           sx={getButtonSx}
         >
@@ -275,7 +295,9 @@ export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHo
           color="primary"
           startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
           onClick={() => {
-            if (typeof goToHowToDownload === 'function') goToHowToDownload();
+            if (typeof goToHowToDownload === 'function') {
+              handleNavigationWithDetailClose(goToHowToDownload);
+            }
           }}
           sx={getButtonSx}
         >

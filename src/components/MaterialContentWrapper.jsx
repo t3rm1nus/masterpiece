@@ -135,7 +135,7 @@ const MaterialContentWrapper = ({
   const isIphone = typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent);
   const wrapperSxFinal = {
     ...wrapperSx(props.sx, isMobile),
-    ...(isIphone ? { overflow: 'visible !important', zIndex: 50, position: 'relative' } : {}),
+    ...(isIphone ? { overflow: 'visible !important', zIndex: 1, position: 'relative' } : {}), // Por debajo del menú superior (1200)
   };
 
   return (

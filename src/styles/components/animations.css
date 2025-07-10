@@ -52,6 +52,47 @@ Animaciones y transiciones suaves para cards, header y menú móvil
   opacity: 1;
 }
 
+/* === ANIMACIONES SUAVES PARA DETALLE MÓVIL === */
+@keyframes slideInUpMobile {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideOutDownMobile {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+}
+
+/* Clases específicas para móvil con duración suave */
+.item-detail-mobile-card.slideInUp {
+  animation: slideInUpMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+.item-detail-mobile-card.slideOutDown {
+  animation: slideOutDownMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+/* Forzar animaciones incluso si hay estilos que las sobrescriben */
+.mp-ui-card.item-detail-mobile-card.slideInUp {
+  animation: slideInUpMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+.mp-ui-card.item-detail-mobile-card.slideOutDown {
+  animation: slideOutDownMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
 @keyframes superFadeInUp {
   0% { opacity: 0; transform: translateY(60px) scale(0.96) rotate(-2deg); filter: blur(8px); }
   60% { opacity: 1; transform: translateY(-8px) scale(1.03) rotate(1deg); filter: blur(1px);}

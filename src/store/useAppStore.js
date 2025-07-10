@@ -143,6 +143,13 @@ const useAppStore = create(
       setActivePodcastDocumentaryLanguage: (lang) => set({ activePodcastDocumentaryLanguage: lang }),
       resetActivePodcastDocumentaryLanguage: () => set({ activePodcastDocumentaryLanguage: null }),
 
+      // --- Estado de paginación para persistir entre navegaciones ---
+      mobilePage: 1,
+      desktopPage: 1,
+      setMobilePage: (page) => set({ mobilePage: page }),
+      setDesktopPage: (page) => set({ desktopPage: page }),
+      resetPagination: () => set({ mobilePage: 1, desktopPage: 1 }),
+
       // --- Slices externos ---
       // Todos los estados y funciones principales deben estar en slices.
       ...createThemeSlice(set, get),
@@ -195,12 +202,24 @@ export const useAppView = () => {
 
   // Funciones adicionales para compatibilidad
   const goBackFromDetail = () => {
+    // Preservar el estado de categoría y paginación al volver del detalle
+    const currentState = useAppStore.getState();
     useAppStore.getState().setView('home');
     useAppStore.getState().setSelectedItem(null);
+    // Actualizar la URL para volver a la home, marcando que venimos del detalle
+    if (typeof window !== 'undefined' && window.history) {
+      window.history.pushState({ fromDetail: true }, '', '/');
+    }
+    // NO resetear selectedCategory, activeSubcategory, mobilePage, desktopPage
+    // para mantener el estado de la vista anterior
   };
 
   const goBackFromCoffee = () => {
     useAppStore.getState().setView('home');
+    // Actualizar la URL para volver a la home
+    if (typeof window !== 'undefined' && window.history) {
+      window.history.pushState({}, '', '/');
+    }
   };
 
   // Limpieza: eliminados wrappers de retrocompatibilidad innecesarios
@@ -256,6 +275,13 @@ export const useAppData = () => {
   const activePodcastDocumentaryLanguage = useAppStore(state => state.activePodcastDocumentaryLanguage);
   const setActivePodcastDocumentaryLanguage = useAppStore(state => state.setActivePodcastDocumentaryLanguage);
   const resetActivePodcastDocumentaryLanguage = useAppStore(state => state.resetActivePodcastDocumentaryLanguage);
+  
+  // Estado de paginación
+  const mobilePage = useAppStore(state => state.mobilePage);
+  const desktopPage = useAppStore(state => state.desktopPage);
+  const setMobilePage = useAppStore(state => state.setMobilePage);
+  const setDesktopPage = useAppStore(state => state.setDesktopPage);
+  const resetPagination = useAppStore(state => state.resetPagination);
 
   return {
     recommendations, categories, filteredItems, selectedCategory, selectedSubcategory,
@@ -272,7 +298,9 @@ export const useAppData = () => {
     setMasterpieceActive,
     setActivePodcastLanguages,
     setActiveDocumentaryLanguages,
-    activePodcastDocumentaryLanguage, setActivePodcastDocumentaryLanguage, resetActivePodcastDocumentaryLanguage
+    activePodcastDocumentaryLanguage, setActivePodcastDocumentaryLanguage, resetActivePodcastDocumentaryLanguage,
+    // Estado de paginación
+    mobilePage, desktopPage, setMobilePage, setDesktopPage, resetPagination
   };
 };
 

@@ -33,6 +33,11 @@ export const createNavigationSlice = (set, get) => ({
   setSelectedItem: (item) => set({ selectedItem: item }),
   goToDetail: (item) => {
     set({ currentView: 'detail', selectedItem: item });
+    // Actualizar la URL para que sea navegable
+    if (typeof window !== 'undefined' && window.history && item?.id) {
+      const url = `/detalle/${item.id}`;
+      window.history.pushState({ itemId: item.id }, '', url);
+    }
   },
   goToHome: () => set({ currentView: 'home', selectedItem: null }),
   goToCoffee: () => set({ currentView: 'coffee' }),
