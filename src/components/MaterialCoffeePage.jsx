@@ -11,9 +11,10 @@ import {
   Container,
   Button,
   useTheme,
-  useMediaQuery
+  useMediaQuery,
+  Fab
 } from '@mui/material';
-import UiCard from './ui/UiCard';
+import { useNavigate } from 'react-router-dom';
 import {
   Coffee as CoffeeIcon,
   Favorite as HeartIcon,
@@ -22,8 +23,10 @@ import {
   Update as UpdateIcon,
   Wifi as WifiIcon,
   Psychology as BrainIcon,
-  SentimentVeryDissatisfied as SadIcon
+  SentimentVeryDissatisfied as SadIcon,
+  ArrowBack as ArrowBackIcon
 } from '@mui/icons-material';
+import UiCard from './ui/UiCard';
 import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 
@@ -45,10 +48,13 @@ const MaterialCoffeePage = () => {
   // Proveer función para disparar animación de salida
   const triggerExitAnimation = () => {
     if (!isExiting) {
+      console.log('[MaterialCoffeePage] triggerExitAnimation: activando animación de salida');
       setIsExiting(true);
       setCardAnim('slideOutDownFast');
     }
   };
+
+  const navigate = useNavigate();
 
   // Google Analytics tracking para página de donaciones
   useEffect(() => {
@@ -105,6 +111,10 @@ const MaterialCoffeePage = () => {
       };
     }
   }, []);
+
+  const handleBack = () => {
+    triggerExitAnimation();
+  };
 
   // Ahora se renderiza en todas las pantallas (móvil Y desktop)
   const benefits = [
@@ -174,7 +184,36 @@ const MaterialCoffeePage = () => {
           overflow: 'visible',
           WebkitOverflowScrolling: 'touch'
         }}
+        className={cardAnim}
+        onAnimationEnd={() => {
+          console.log('[MaterialCoffeePage] onAnimationEnd:', cardAnim, isExiting);
+          if (cardAnim === 'slideOutDownFast' && isExiting) {
+            setTimeout(() => {
+              navigate('/');
+            }, 100);
+          }
+        }}
       >
+        {/* FAB volver solo en móvil, z-index 2100 */}
+        {isMobile && (
+          <Fab
+            color="primary"
+            aria-label="volver"
+            onClick={triggerExitAnimation}
+            sx={{
+              position: 'fixed',
+              top: '23px', // Bajado 20px respecto a antes
+              left: 16,
+              zIndex: 2100,
+              backgroundColor: theme.palette.primary.main,
+              '&:hover': {
+                backgroundColor: theme.palette.primary.dark,
+              }
+            }}
+          >
+            <ArrowBackIcon />
+          </Fab>
+        )}
         {/* Card principal con icono de café y color de fondo de café */}
         <UiCard 
           elevation={3}
@@ -184,16 +223,25 @@ const MaterialCoffeePage = () => {
             border: '2px solid #D4A574',
             borderRadius: '12px',
           }}
-          className={cardAnim}
-          onAnimationEnd={() => {
-            if (cardAnim === 'slideOutDownFast' && isExiting) {
-              // Esperar un poco más para asegurar que la animación CSS haya terminado completamente
-              setTimeout(() => {
-                window.history.back();
-              }, 100);
-            }
-          }}
         >
+          {/* Botón volver solo en desktop */}
+          {!isMobile && (
+            <Button
+              variant="outlined"
+              color="primary"
+              startIcon={<ArrowBackIcon />}
+              onClick={() => navigate('/')}
+              sx={{
+                position: 'absolute',
+                top: 16,
+                left: 16,
+                zIndex: 1201,
+                fontWeight: 700
+              }}
+            >
+              Volver
+            </Button>
+          )}
           <CardContent sx={{ textAlign: 'center', padding: '24px' }}>
             {/* Icono de café animado */}
             <Box 

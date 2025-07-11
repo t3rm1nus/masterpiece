@@ -35,6 +35,7 @@ import { useNavigate } from 'react-router-dom';
 import LanguageSelector from './ui/LanguageSelector';
 import SplashDialog from './SplashDialog';
 import MaterialCategorySelect from './MaterialCategorySelect';
+import useBackNavigation from '../hooks/useBackNavigation';
 
 // =============================================
 // MaterialMobileMenu: Menú de navegación lateral y AppBar para móviles
@@ -71,6 +72,7 @@ const MaterialMobileMenu = ({
   splashOpen,
   onSplashClose,
   audioRef,
+  onOverlayNavigate,
 } = {}) => {
   const { t, lang, changeLanguage, getTranslation } = useLanguage();
   const { resetAllFilters } = useAppData();
@@ -81,6 +83,7 @@ const MaterialMobileMenu = ({
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg')); // Cambiado de 'md' a 'lg' para incluir tablets
+  const { handleBack, isAnimating } = useBackNavigation();
 
   // Audios disponibles para el splash
   const splashAudios = [
@@ -115,6 +118,26 @@ const MaterialMobileMenu = ({
 
   // Mostrar FAB de volver solo en móvil y solo en las páginas de donaciones y cómo descargar
   const showFabBackButton = isMobile && (currentView === 'coffee' || currentView === 'howToDownload');
+
+  // Botón de donaciones y cómo descargar en menú móvil
+  const handleGoToCoffee = () => {
+    if (typeof onOverlayNavigate === 'function') {
+      console.log('[MaterialMobileMenu] Navegando a /donaciones vía onOverlayNavigate');
+      onOverlayNavigate('/donaciones');
+    } else {
+      console.log('[MaterialMobileMenu] Navegando a /donaciones vía navigate directo');
+      navigate('/donaciones');
+    }
+  };
+  const handleGoToHowToDownload = () => {
+    if (typeof onOverlayNavigate === 'function') {
+      console.log('[MaterialMobileMenu] Navegando a /como-descargar vía onOverlayNavigate');
+      onOverlayNavigate('/como-descargar');
+    } else {
+      console.log('[MaterialMobileMenu] Navegando a /como-descargar vía navigate directo');
+      navigate('/como-descargar');
+    }
+  };
 
   // Solo renderizar si estamos en móvil
   // (El AppBar debe mostrarse siempre en móvil, independientemente de la vista)
@@ -345,22 +368,15 @@ const MaterialMobileMenu = ({
         <Fab
           color="primary"
           aria-label="volver"
-          onClick={() => {
-            // Actualizar currentView a home para ocultar el botón
-            if (currentView === 'coffee') {
-              goBackFromCoffee();
-            } else if (currentView === 'howToDownload') {
-              goBackFromDetail(); // Usar goBackFromDetail para howToDownload también
-            }
-            // Disparar evento para animación de salida
-            window.dispatchEvent(new CustomEvent('overlay-exit'));
-          }}
+          onClick={handleBack}
+          disabled={isAnimating}
           sx={{
             position: 'fixed',
             top: '63px',
             left: 16,
             zIndex: 1300, // Igual que el botón de volver en MobileItemDetail
             backgroundColor: theme?.palette?.primary?.main,
+            opacity: isAnimating ? 0.5 : 1,
             '&:hover': {
               backgroundColor: theme?.palette?.primary?.dark,
             }

@@ -16,10 +16,8 @@ export default function AppContent() {
   useEffect(() => {
     const handlePopState = (event) => {
       console.log('[AppContent] Popstate event:', location.pathname);
-      
-      // Solo limpiar el detalle si venimos de una ruta diferente a detalle
-      // Esto evita que se altere el estado cuando volvemos del detalle
-      if (location.pathname === '/' && !event.state?.fromDetail) {
+      // Siempre que la ruta sea '/', forzar estado home y limpiar detalle
+      if (location.pathname === '/') {
         setView('home');
         setSelectedItem(null);
       }

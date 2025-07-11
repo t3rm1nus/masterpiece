@@ -13,6 +13,7 @@ import SplashDialog from './SplashDialog';
 // Importar el contexto de ambas páginas (ambos exportan el mismo nombre)
 import { OverlayCardAnimationContext as DownloadOverlayContext } from '../pages/HowToDownload';
 import { OverlayCardAnimationContext as CoffeeOverlayContext } from './MaterialCoffeePage';
+import useBackNavigation from '../hooks/useBackNavigation';
 
 // =============================================
 // HybridMenu: Menú híbrido adaptable a desktop y móvil
@@ -59,6 +60,7 @@ function DesktopMenu(props) {
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const navigate = useNavigate();
   const location = useLocation();
+  const { handleBack, isAnimating } = useBackNavigation();
   if (isMobile) return null;
 
   // Detectar si estamos en detalle, donación o cómo descargar para mostrar el botón Volver en el menú superior
@@ -132,23 +134,9 @@ function DesktopMenu(props) {
           {showBackButton && (
             <button
               key="back-desktop-detail"
-              onClick={e => {
-                // Si estamos en overlay de descargas o donaciones, lanzar evento global para animación
-                if (isHowToDownloadView || isCoffeeView) {
-                  e.preventDefault();
-                  window.dispatchEvent(new CustomEvent('overlay-exit'));
-                } else if (isDetailView) {
-                  e.preventDefault();
-                  window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
-                  // NO navegar ni llamar a onBack aquí
-                  return;
-                } else if (typeof onBack === 'function') {
-                  onBack();
-                } else {
-                  navigate(-1);
-                }
-              }}
-              style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8, marginLeft: 8 }}
+              onClick={handleBack}
+              disabled={isAnimating}
+              style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8, marginLeft: 8, opacity: isAnimating ? 0.5 : 1 }}
               type="button"
             >
               <span style={{display:'flex',alignItems:'center'}}>&larr;</span>
@@ -214,7 +202,8 @@ const HybridMenu = ({
   splashOpen,
   onSplashClose,
   audioRef,
-  onBack // <-- AGREGADO para evitar ReferenceError
+  onBack, // <-- AGREGADO para evitar ReferenceError
+  onOverlayNavigate // <-- NUEVO para navegación robusta entre overlays
 } = {}) => {
   const { lang } = useLanguage();
   const theme = useTheme();
@@ -235,6 +224,7 @@ const HybridMenu = ({
       splashOpen={splashOpen}
       onSplashClose={onSplashClose}
       audioRef={audioRef}
+      onOverlayNavigate={onOverlayNavigate}
     />;
   } else {
     return <DesktopMenu renderMenuItem={renderMenuItem} menuItems={menuItems} sx={sx} onSplashOpen={onSplashOpen} splashAudio={splashAudio} splashOpen={splashOpen} onSplashClose={onSplashClose} audioRef={audioRef} onBack={onBack} />;

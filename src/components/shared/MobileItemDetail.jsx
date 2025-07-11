@@ -182,23 +182,31 @@ const MobileItemDetail = ({
 
   // Eliminado fix específico para iPhone, el scroll será nativo universal
 
+  // Handler robusto para el botón volver
+  const handleBackClick = () => {
+    if (onBack) {
+      onBack();
+    } else if (onClose) {
+      onClose(); // Esto debería activar la animación de salida
+    } else {
+      try {
+        window.history.back();
+      } catch {
+        window.location.assign('/');
+      }
+    }
+  };
+
   // Botón de volver flotante, fijo respecto a la ventana y fuera del Box animado
   const BackButton = (
-    showSections.backButton !== false && (onBack || goBackFromDetail) && (
+    showSections.backButton !== false && (
       <Fab
         color="primary"
         aria-label="volver"
-        onClick={() => {
-          if (onBack) {
-            onBack();
-          } else {
-            // Disparar evento para animación de salida
-            window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
-          }
-        }}
+        onClick={handleBackClick}
         sx={{
           position: 'fixed',
-          top: { xs: '63px', sm: 24 }, // Bajado 30px en móviles (de 33px a 63px)
+          top: { xs: '63px', sm: 24 },
           left: 16,
           zIndex: 1300,
           backgroundColor: theme?.palette?.primary?.main,

@@ -587,6 +587,7 @@ const HomePage = ({
 
   // Si hay un item seleccionado localmente, renderizar el detalle
   if (localSelectedItem) {
+    console.log('[HomePage] Pasando onOverlayNavigate a UnifiedItemDetail:', typeof rest.onOverlayNavigate);
     return (
       <UnifiedItemDetail
         item={localSelectedItem}
@@ -609,6 +610,7 @@ const HomePage = ({
           console.log('[HomePage] onRequestClose llamado');
           setIsDetailClosing(true);
         }}
+        onOverlayNavigate={rest.onOverlayNavigate}
       />
     );
   }

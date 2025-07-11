@@ -61,14 +61,14 @@ import {
  *   showSections={{ trailer: true, description: false }}
  * />
  */
-const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSelectedCategory, isClosing = false, onRequestClose, isExiting = false, onExited }) => {
+export default function UnifiedItemDetail(props) {
   const { id } = useParams();
   const navigate = useNavigate();
   const { allData, selectedCategory: storeSelectedCategory } = useAppData();
   // Usar la prop si existe, si no, el valor del store
-  const selectedCategory = propSelectedCategory || storeSelectedCategory;
+  const selectedCategory = props.selectedCategory || storeSelectedCategory;
   // Buscar el item por id global si no se pasa como prop
-  let selectedItem = propItem;
+  let selectedItem = props.item;
   if (!selectedItem && id && allData) {
     // Buscar en todas las categorías
     const allItems = Object.values(allData).flat();
@@ -112,20 +112,20 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
   }, []);
   // Cuando isExiting cambia a true, animación de salida
   useEffect(() => {
-    if (isExiting) {
+    if (props.isExiting) {
       setCardAnim('slideOutDownFast');
     }
-  }, [isExiting]);
+  }, [props.isExiting]);
   // Handler para cerrar con animación
   const triggerExitAnimation = () => {
-    console.log('[UnifiedItemDetail] triggerExitAnimation llamado', { isExiting, internalClosing });
-    if (!isExiting && !internalClosing) {
+    console.log('[UnifiedItemDetail] triggerExitAnimation llamado', { isExiting: props.isExiting, internalClosing });
+    if (!props.isExiting && !internalClosing) {
       console.log('[UnifiedItemDetail] triggerExitAnimation: lanzando animación de salida');
       setInternalClosing(true); // Activar animación de cierre interna
       
       // Notificar al componente padre que está cerrando
-      if (onRequestClose) {
-        onRequestClose();
+      if (props.onRequestClose) {
+        props.onRequestClose();
       }
       
       // Para desktop, también cambiar la clase de animación inmediatamente
@@ -143,7 +143,7 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
     };
     window.addEventListener('overlay-detail-exit', onOverlayDetailExit);
     return () => window.removeEventListener('overlay-detail-exit', onOverlayDetailExit);
-  }, [isExiting, internalClosing]);
+  }, [props.isExiting, internalClosing]);
   const handleCloseDesktop = (e) => {
     console.log('[UnifiedItemDetail] handleCloseDesktop: click botón volver interno');
     e?.preventDefault?.();
@@ -157,8 +157,8 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
   }, [selectedItem]);
 
   const handleClose = () => {
-    if (onRequestClose) {
-      onRequestClose();
+    if (props.onRequestClose) {
+      props.onRequestClose();
     } else {
       setInternalClosing(true);
     }
@@ -182,16 +182,12 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
   // Determinar la categoría real del item para color y chip
   const realCategory = selectedItem.category || selectedCategory;
   
+  const handleBack = () => navigate('/');
+
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
     const safeItem = selectedItem || lastItemRef.current;
-    const isClosingOrInternal = isClosing || internalClosing;
-    console.log('[UnifiedItemDetail] Renderizando móvil:', { isClosing, internalClosing, isClosingOrInternal });
-    
-    // Si está cerrando, mantener el componente montado pero oculto
-    if (isClosingOrInternal) {
-      console.log('[UnifiedItemDetail] Animación de cierre iniciada en móvil (isClosing=true)');
-    }
+    console.log('[UnifiedItemDetail] Pasando onOverlayNavigate a MobileActionButtons:', typeof props.onOverlayNavigate);
     return (
       <Box
         sx={{
@@ -200,15 +196,13 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
           left: 0,
           width: '100vw',
           height: '100vh',
-          background: 'rgba(255,255,255,0.98)', // Fondo opaco
-          backdropFilter: 'blur(2px)', // Difuminado opcional
+          background: 'rgba(255,255,255,0.98)',
+          backdropFilter: 'blur(2px)',
           overflowY: 'auto',
           WebkitOverflowScrolling: 'touch',
-          overscrollBehavior: 'contain', // Evita scroll en capa inferior
-          zIndex: 1100, // Por debajo del menú superior (1200) pero por encima del contenido
-          // Prevenir que el overlay afecte el scroll del documento
+          overscrollBehavior: 'contain',
+          zIndex: 1100,
           isolation: 'isolate',
-          // Forzar que el scroll se mantenga en el documento principal
           transform: 'translateZ(0)',
         }}
       >
@@ -235,20 +229,14 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
               lang={lang}
               t={t}
               goToHowToDownload={goToHowToDownload}
+              onOverlayNavigate={props.onOverlayNavigate}
             />
           )}
-          isClosing={isClosing}
+          isClosing={props.isClosing}
           onClose={() => {
-            console.log('[UnifiedItemDetail] Animación de cierre FINALIZADA en móvil (onClose llamado)');
-            // Usar el store para navegar en lugar de navigate(-1)
-            if (onClose) {
-              onClose();
-            }
+            if (props.onClose) props.onClose();
           }}
-          onBack={() => {
-            console.log('[UnifiedItemDetail] Botón volver móvil: disparando overlay-detail-exit');
-            window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
-          }}
+          onBack={props.onBack}
         />
       </Box>
     );
@@ -272,19 +260,16 @@ const UnifiedItemDetail = ({ item: propItem, onClose, selectedCategory: propSele
             ...(isMasterpiece ? {} : { background: gradientBg })
           }}
           onAnimationEnd={e => {
-            console.log('[UnifiedItemDetail] onAnimationEnd', { isExiting, cardAnim, internalClosing });
-            if ((isExiting || internalClosing) && cardAnim === 'slideOutDownFast' && typeof onExited === 'function') {
+            console.log('[UnifiedItemDetail] onAnimationEnd', { isExiting: props.isExiting, cardAnim, internalClosing });
+            if ((props.isExiting || internalClosing) && cardAnim === 'slideOutDownFast' && typeof props.onExited === 'function') {
               console.log('[UnifiedItemDetail] Animación de salida terminada, llamando a onExited');
-              onExited();
+              props.onExited();
             }
           }}
         >
           {/* Botón volver arriba a la izquierda */}
           <button
-            onClick={() => {
-              console.log('[UnifiedItemDetail] Botón volver desktop: disparando overlay-detail-exit');
-              window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
-            }}
+            onClick={handleBack}
             style={{
               position: 'absolute',
               top: 18,
@@ -615,8 +600,6 @@ const styles = {
     width: '100%',
   },
 };
-
-export default UnifiedItemDetail;
 
 // Ejemplo de uso de los estilos migrados en UnifiedItemDetail.jsx
 // En el render principal:
