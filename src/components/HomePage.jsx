@@ -62,7 +62,7 @@ const animatedGradientBG = keyframes`
 const AnimatedH1 = styled('h1')(({ isMobile, h1Gradient }) => ({
   textTransform: 'capitalize',
   textAlign: 'center',
-  margin: isMobile ? '4px 0 32px 0' : '20px auto 32px auto',
+  margin: isMobile ? '-8px 0 32px 0' : '20px auto 32px auto', // margen superior reducido 10px más en móvil
   fontWeight: 700,
   fontSize: isMobile ? '1.4rem' : '2.2rem',
   color: 'black',
@@ -70,9 +70,9 @@ const AnimatedH1 = styled('h1')(({ isMobile, h1Gradient }) => ({
   position: 'relative',
   zIndex: 1, // Por debajo del menú superior (1200)
   border: 'none',
-  width: isMobile ? '100vw' : '99vw',
-  maxWidth: isMobile ? '100vw' : '1600px',
-  minWidth: isMobile ? '100vw' : '0',
+  width: isMobile ? '102%' : '99vw',
+  maxWidth: isMobile ? '102%' : '1600px',
+  minWidth: isMobile ? '102%' : '0',
   minHeight: isMobile ? 0 : '70px',
   padding: isMobile ? '12px 0 10px 0' : '32px 0 28px 0',
   display: 'block',
