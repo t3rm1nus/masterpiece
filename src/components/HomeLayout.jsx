@@ -23,12 +23,10 @@ export default function HomeLayout() {
 
   // Refuerzo: logs y protección para que el splash solo se cierre por acción explícita
   const openSplash = (audio) => {
-    console.log('[HomeLayout] openSplash llamado', audio);
     setSplashAudio(audio || null);
     setSplashOpen(true);
   };
   const closeSplash = () => {
-    console.log('[HomeLayout] closeSplash llamado');
     setSplashOpen(false);
     if (audioRef.current) {
       audioRef.current.pause();
@@ -52,15 +50,12 @@ export default function HomeLayout() {
 
   // Sincroniza el estado local con la ruta
   useEffect(() => {
-    console.log('[HomeLayout] useEffect overlays', { isMobile, isOverlay, showDetailOverlay, isClosing, location: location.pathname });
     if (isMobile && isOverlay && !showDetailOverlay) {
-      console.log('[HomeLayout] Abriendo overlay móvil para ruta:', location.pathname);
       setShowDetailOverlay(true);
       setIsClosing(false);
       setLastOverlayRoute(location.pathname); // Guardar la ruta actual al abrir overlay
     }
     if (isMobile && !isOverlay && showDetailOverlay && !isClosing) {
-      console.log('[HomeLayout] Cerrando overlay móvil (no hay overlay en la ruta)');
       setShowDetailOverlay(false);
     }
     // Desktop: no usar overlay local
@@ -73,7 +68,6 @@ export default function HomeLayout() {
   // Cuando se inicia el cierre, mantener la ruta del overlay anterior hasta que termine la animación
   useEffect(() => {
     if (isClosing && isMobile && isOverlay) {
-      console.log('[HomeLayout] isClosing=true, manteniendo lastOverlayRoute:', location.pathname);
       setLastOverlayRoute(location.pathname);
     }
   }, [isClosing, isMobile, isOverlay, location.pathname]);
@@ -81,24 +75,24 @@ export default function HomeLayout() {
   // Botón volver: en móvil, activa cierre; en desktop, navega directo
   const handleBack = () => {
     if (isMobile && (isDetail || lastOverlayRoute?.startsWith('/detalle/'))) {
-      console.log('[HomeLayout] handleBack: activando animación de cierre de detalle');
       setIsClosing(true);
     } else {
-      console.log('[HomeLayout] handleBack: navegando a home');
       navigate('/');
     }
   };
 
   // Navegación robusta entre overlays
   const handleOverlayNavigate = (targetPath) => {
-    console.log('[HomeLayout] handleOverlayNavigate llamado', { isMobile, isOverlay, isClosing, showDetailOverlay, targetPath });
     if (isMobile && (isOverlay || isClosing)) {
-      console.log('[HomeLayout] handleOverlayNavigate: overlay abierto, primero cerrar con animación. Destino:', targetPath);
       setIsClosing(true);
       setPendingOverlayRoute(targetPath);
     } else {
-      console.log('[HomeLayout] handleOverlayNavigate: navegación directa a', targetPath);
-      navigate(targetPath);
+      // En desktop, siempre navegar con replace: true entre overlays
+      if (!isMobile && (isOverlay || ['/como-descargar','/donaciones'].includes(targetPath) || targetPath.startsWith('/detalle/'))) {
+        navigate(targetPath, { replace: true });
+      } else {
+        navigate(targetPath);
+      }
     }
   };
 
@@ -107,14 +101,25 @@ export default function HomeLayout() {
     setIsClosing(false);
     setShowDetailOverlay(false);
     if (pendingOverlayRoute) {
-      console.log('[HomeLayout] handleMobileDetailExited: animación terminada, navegando a ruta pendiente', pendingOverlayRoute);
       navigate(pendingOverlayRoute);
       setPendingOverlayRoute(null);
     } else {
-      console.log('[HomeLayout] handleMobileDetailExited: animación terminada, navegando a home');
       navigate('/');
     }
     setLastOverlayRoute(null);
+  };
+
+  // Handler robusto para navegación atrás tras animación (desktop)
+  const handleDetailExitedDesktop = () => {
+    // Si hay historial suficiente, volver atrás; si no, ir a home
+    // En overlays que no son detalle, siempre ir a home con replace: true
+    if (isHowToDownload || isDonaciones) {
+      navigate('/', { replace: true });
+    } else if (window.history.length > 2) {
+      navigate(-1);
+    } else {
+      navigate('/', { replace: true });
+    }
   };
 
   // Sincroniza el estado global con la ruta
@@ -128,9 +133,8 @@ export default function HomeLayout() {
   // Determinar qué contenido mostrar en el overlay móvil
   let overlayContent = null;
   const effectiveOverlayRoute = isClosing && lastOverlayRoute ? lastOverlayRoute : location.pathname;
-  console.log('[HomeLayout] Render overlay. isClosing:', isClosing, 'showDetailOverlay:', showDetailOverlay, 'effectiveOverlayRoute:', effectiveOverlayRoute);
   if (effectiveOverlayRoute.startsWith('/detalle/')) {
-    overlayContent = <UnifiedItemDetail isClosing={isClosing} onBack={handleBack} />;
+    overlayContent = <UnifiedItemDetail isClosing={isClosing} onBack={handleBack} onExited={handleDetailExitedDesktop} />;
   } else if (effectiveOverlayRoute === '/como-descargar') {
     overlayContent = <HowToDownload />;
   } else if (effectiveOverlayRoute === '/donaciones') {
@@ -140,9 +144,7 @@ export default function HomeLayout() {
   // Overlay robusto: siempre cubre toda la pantalla, z-index muy alto, logs de ciclo de vida
   const OverlayWrapper = ({ children }) => {
     React.useEffect(() => {
-      console.log('[OverlayWrapper] MONTADO');
       return () => {
-        console.log('[OverlayWrapper] DESMONTADO');
       };
     }, []);
     return (
@@ -243,25 +245,7 @@ export default function HomeLayout() {
           >
             <div style={{ position: 'relative', maxWidth: 900, margin: '0 auto', paddingTop: 24 }}>
               {/* Botón de volver para overlays que no son detalle */}
-              {!isDetail && (
-                <Fab
-                  color="primary"
-                  aria-label="volver"
-                  onClick={handleBack}
-                  sx={{
-                    position: 'absolute',
-                    top: 50,
-                    left: 0,
-                    zIndex: 1300,
-                    backgroundColor: '#1976d2',
-                    '&:hover': {
-                      backgroundColor: '#1565c0',
-                    }
-                  }}
-                >
-                  <ArrowBackIcon />
-                </Fab>
-              )}
+              {/* ELIMINADO: FAB duplicado en overlays desktop para donaciones y otros overlays */}
             </div>
             {/* Renderizar UnifiedItemDetail manualmente para detalle, Outlet para el resto */}
             {isDetail ? (

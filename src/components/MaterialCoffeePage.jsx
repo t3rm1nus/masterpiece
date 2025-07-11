@@ -48,7 +48,6 @@ const MaterialCoffeePage = () => {
   // Proveer función para disparar animación de salida
   const triggerExitAnimation = () => {
     if (!isExiting) {
-      console.log('[MaterialCoffeePage] triggerExitAnimation: activando animación de salida');
       setIsExiting(true);
       setCardAnim('slideOutDownFast');
     }
@@ -175,9 +174,9 @@ const MaterialCoffeePage = () => {
         maxWidth="md" 
         sx={{ 
           padding: { xs: '16px', sm: '24px' },
-          paddingTop: { xs: '36px', sm: '80px', md: '50px' }, // Consistente con HowToDownload
+          paddingTop: isMobile ? { xs: '36px', sm: '80px', md: '50px' } : '40px', // Reducido a la mitad en desktop
           paddingBottom: '40px',
-          backgroundColor: '#fafafa',
+          backgroundColor: isMobile ? '#fafafa' : '#fff',
           minHeight: '100vh',
           position: 'relative',
           zIndex: 1200, // Por encima del overlay del detalle (1100)
@@ -186,7 +185,6 @@ const MaterialCoffeePage = () => {
         }}
         className={cardAnim}
         onAnimationEnd={() => {
-          console.log('[MaterialCoffeePage] onAnimationEnd:', cardAnim, isExiting);
           if (cardAnim === 'slideOutDownFast' && isExiting) {
             setTimeout(() => {
               navigate('/');
@@ -194,26 +192,24 @@ const MaterialCoffeePage = () => {
           }
         }}
       >
-        {/* FAB volver solo en móvil, z-index 2100 */}
-        {isMobile && (
-          <Fab
-            color="primary"
-            aria-label="volver"
-            onClick={triggerExitAnimation}
-            sx={{
-              position: 'fixed',
-              top: '23px', // Bajado 20px respecto a antes
-              left: 16,
-              zIndex: 2100,
-              backgroundColor: theme.palette.primary.main,
-              '&:hover': {
-                backgroundColor: theme.palette.primary.dark,
-              }
-            }}
-          >
-            <ArrowBackIcon />
-          </Fab>
-        )}
+        {/* FAB volver visible en móvil y desktop, z-index 2100 */}
+        <Fab
+          color="primary"
+          aria-label="volver"
+          onClick={handleBack}
+          sx={{
+            position: 'fixed',
+            top: '8px',
+            left: 16,
+            zIndex: 2100,
+            backgroundColor: theme.palette.primary.main,
+            '&:hover': {
+              backgroundColor: theme.palette.primary.dark,
+            }
+          }}
+        >
+          <ArrowBackIcon />
+        </Fab>
         {/* Card principal con icono de café y color de fondo de café */}
         <UiCard 
           elevation={3}
@@ -225,23 +221,7 @@ const MaterialCoffeePage = () => {
           }}
         >
           {/* Botón volver solo en desktop */}
-          {!isMobile && (
-            <Button
-              variant="outlined"
-              color="primary"
-              startIcon={<ArrowBackIcon />}
-              onClick={() => navigate('/')}
-              sx={{
-                position: 'absolute',
-                top: 16,
-                left: 16,
-                zIndex: 1201,
-                fontWeight: 700
-              }}
-            >
-              Volver
-            </Button>
-          )}
+          {/* ELIMINADO: Botón rectangular duplicado en desktop */}
           <CardContent sx={{ textAlign: 'center', padding: '24px' }}>
             {/* Icono de café animado */}
             <Box 

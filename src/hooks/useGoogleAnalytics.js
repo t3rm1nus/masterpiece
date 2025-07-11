@@ -14,7 +14,6 @@ export const useGoogleAnalytics = () => {
         // Añadir timestamp para mejor tracking
         timestamp: new Date().toISOString()
       });
-      console.log(`🔍 GA Event: ${eventName}`, parameters);
     }
   };
 
@@ -26,7 +25,6 @@ export const useGoogleAnalytics = () => {
         page_location: window.location.href,
         page_path: pagePath || window.location.pathname
       });
-      console.log(`🔍 GA Page View: ${pageTitle} - ${pagePath}`);
     }
   };
 

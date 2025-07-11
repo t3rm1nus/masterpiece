@@ -211,22 +211,6 @@ const HomePage = ({
   // Obtener goBackFromDetail del hook useAppView
   const { goBackFromDetail } = useAppView();
   
-  // Debug: Log cuando selectedItem cambia
-  console.log('[HomePage] selectedItem:', selectedItem);
-  console.log('[HomePage] currentView:', currentView);
-  
-  // Event listener para manejar la salida del detalle en desktop
-  useEffect(() => {
-    const handleOverlayDetailExit = () => {
-      console.log('[HomePage] Evento overlay-detail-exit recibido en desktop');
-      console.log('[HomePage] Estado actual:', { isDetailClosing, localSelectedItem });
-      setIsDetailClosing(true);
-    };
-    
-    window.addEventListener('overlay-detail-exit', handleOverlayDetailExit);
-    return () => window.removeEventListener('overlay-detail-exit', handleOverlayDetailExit);
-  }, [isDetailClosing, localSelectedItem]);
-  
   // Sincronizar localSelectedItem con selectedItem del store
   useEffect(() => {
     if (selectedItem) {
@@ -243,14 +227,12 @@ const HomePage = ({
     if (selectedItem && !isNavigatingToDetailRef.current) {
       isNavigatingToDetailRef.current = true;
       scrollPositionRef.current = window.scrollY;
-      console.log('[HomePage] Guardando posición del scroll al ir al detalle:', scrollPositionRef.current);
     }
   }, [selectedItem]);
   
   // Restaurar posición del scroll solo cuando volvemos del detalle
   useEffect(() => {
     if (!selectedItem && isNavigatingToDetailRef.current && scrollPositionRef.current > 0) {
-      console.log('[HomePage] Restaurando posición del scroll al volver del detalle:', scrollPositionRef.current);
       // Usar un delay más largo para asegurar que el overlay se ha desmontado completamente
       setTimeout(() => {
         window.scrollTo({
@@ -452,11 +434,8 @@ const HomePage = ({
     // Google Analytics tracking para vista de detalle
     const itemTitle = typeof item.title === 'object' ? (item.title.es || item.title.en || Object.values(item.title)[0]) : item.title;
     trackItemDetailView(item.id, itemTitle, selectedCategory, 'homepage');
-    console.log('[handleItemClick] Item:', item);
-    console.log('[handleItemClick] Llamando a goToDetail...');
     // Usar el store para navegación consistente
     goToDetail(item);
-    console.log('[handleItemClick] goToDetail ejecutado');
   };  // Manejar cierre del detalle
   // const renderItemDetail = () => {
   //   if (!selectedItem) {
@@ -587,12 +566,10 @@ const HomePage = ({
 
   // Si hay un item seleccionado localmente, renderizar el detalle
   if (localSelectedItem) {
-    console.log('[HomePage] Pasando onOverlayNavigate a UnifiedItemDetail:', typeof rest.onOverlayNavigate);
     return (
       <UnifiedItemDetail
         item={localSelectedItem}
         onClose={() => {
-          console.log('[HomePage] onClose llamado desde UnifiedItemDetail');
           setLocalSelectedItem(null);
           setIsDetailClosing(false);
           goBackFromDetail();
@@ -601,13 +578,11 @@ const HomePage = ({
         isClosing={isDetailClosing}
         isExiting={isDetailClosing}
         onExited={() => {
-          console.log('[HomePage] onExited llamado - animación terminada');
           setLocalSelectedItem(null);
           setIsDetailClosing(false);
           goBackFromDetail();
         }}
         onRequestClose={() => {
-          console.log('[HomePage] onRequestClose llamado');
           setIsDetailClosing(true);
         }}
         onOverlayNavigate={rest.onOverlayNavigate}

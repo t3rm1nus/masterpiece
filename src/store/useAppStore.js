@@ -26,7 +26,6 @@ import { migrateAppStoreState } from '../utils/migrationHelpers';
 if (typeof window !== 'undefined') {
   try {
     // Verificar y limpiar si es necesario
-    console.log('Storage inicial disponible');
   } catch (e) {
     console.warn('Error durante limpieza inicial:', e);
   }

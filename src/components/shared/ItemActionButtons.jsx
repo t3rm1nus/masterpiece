@@ -7,12 +7,10 @@ import { useNavigate } from 'react-router-dom';
 
 // Función helper para manejar la navegación con cierre de detalle
 const handleNavigationWithDetailClose = (navigationFunction) => {
-  console.log('[ItemActionButtons] Navegación con cierre de detalle');
   // Disparar evento para cerrar el detalle con animación (tanto móvil como desktop)
   window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
   // Esperar a que termine la animación antes de navegar
   setTimeout(() => {
-    console.log('[ItemActionButtons] Ejecutando navegación después del timeout');
     navigationFunction();
   }, 500);
 };
@@ -26,7 +24,6 @@ const handleNavigationWithDetailClose = (navigationFunction) => {
 export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHowToDownload, onOverlayNavigate }) {
   const theme = useTheme();
   const navigate = useNavigate();
-  console.log('[MobileActionButtons] Recibido onOverlayNavigate:', typeof onOverlayNavigate);
   const getButtonSx = {
     fontWeight: 700,
     fontSize: { xs: '0.95rem', md: '1.05rem' },
@@ -152,15 +149,11 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
           color="primary"
           startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
           onClick={() => {
-            console.log('[MobileActionButtons] Botón Descargar pulsado. onOverlayNavigate:', typeof onOverlayNavigate);
             if (typeof onOverlayNavigate === 'function') {
-              console.log('[ItemActionButtons] Descargar: usando onOverlayNavigate a /como-descargar');
               onOverlayNavigate('/como-descargar');
             } else if (typeof goToHowToDownload === 'function') {
-              console.log('[ItemActionButtons] Descargar: usando goToHowToDownload');
               goToHowToDownload();
             } else {
-              console.log('[ItemActionButtons] Descargar: usando navigate directo');
               navigate('/como-descargar');
             }
           }}
@@ -176,10 +169,6 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
 
 export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHowToDownload }) {
   const navigate = useNavigate();
-  console.log('[DesktopActionButtons] Renderizando con:', { 
-    category: selectedItem?.category, 
-    goToHowToDownload: typeof goToHowToDownload 
-  });
   const theme = useTheme();
   const getButtonSx = {
     mt: 2,
@@ -303,7 +292,7 @@ export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHo
           variant="contained"
           color="primary"
           startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
-          onClick={() => navigate('/como-descargar')}
+          onClick={() => navigate('/como-descargar', { replace: true })}
           sx={getButtonSx}
         >
           {t?.ui?.actions?.download || (lang === 'en' ? 'Download' : 'Descargar')}

@@ -39,7 +39,6 @@ export const errorSlice = (set, get) => ({
    * Establecer un error
    */
   setError: (message, source = null) => {
-    console.error('[ErrorSlice] Error set:', { message, source });
     set({ 
       hasError: true,
       errorMessage: message,
@@ -51,7 +50,6 @@ export const errorSlice = (set, get) => ({
    * Limpiar error actual
    */
   clearError: () => {
-    console.log('[ErrorSlice] Error cleared');
     set({ 
       hasError: false,
       errorMessage: '',
@@ -71,7 +69,6 @@ export const errorSlice = (set, get) => ({
    * Resetear slice de errores
    */
   resetError: () => {
-    console.log('[ErrorSlice] Resetting error state');
     set({ 
       hasError: false,
       errorMessage: '',

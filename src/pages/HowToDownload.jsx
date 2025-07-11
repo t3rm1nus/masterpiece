@@ -19,7 +19,6 @@ const HowToDownload = () => {
   // Proveer función para disparar animación de salida
   const triggerExitAnimation = () => {
     if (!isExiting) {
-      console.log('[HowToDownload] triggerExitAnimation: activando animación de salida');
       setIsExiting(true);
       setCardAnim('slideOutDownFast');
     }
@@ -133,9 +132,9 @@ const HowToDownload = () => {
         maxWidth="md" 
         sx={{ 
           padding: { xs: '16px', sm: '24px' },
-          paddingTop: { xs: '36px', sm: '80px', md: '50px' },
+          paddingTop: isMobile ? { xs: '36px', sm: '80px', md: '50px' } : '40px',
           paddingBottom: '40px',
-          backgroundColor: '#fafafa',
+          backgroundColor: isMobile ? '#fafafa' : '#fff',
           minHeight: '100vh',
           position: 'relative',
           zIndex: 1200, // Por encima del overlay del detalle (1100)
@@ -144,7 +143,6 @@ const HowToDownload = () => {
         }}
         className={cardAnim}
         onAnimationEnd={() => {
-          console.log('[HowToDownload] onAnimationEnd:', cardAnim, isExiting);
           if (cardAnim === 'slideOutDownFast' && isExiting) {
             setTimeout(() => {
               navigate('/');
@@ -152,15 +150,15 @@ const HowToDownload = () => {
           }
         }}
       >
-        {/* FAB volver solo en móvil, z-index 2100 */}
-        {isMobile && (
+        {/* FAB volver visible solo en desktop, z-index 2100 */}
+        {!isMobile && (
           <Fab
             color="primary"
             aria-label="volver"
-            onClick={handleBack}
+            onClick={() => navigate('/', { replace: true })}
             sx={{
               position: 'fixed',
-              top: '23px', // Bajado 20px respecto a antes
+              top: '8px',
               left: 16,
               zIndex: 2100,
               backgroundColor: theme.palette.primary.main,
@@ -191,24 +189,6 @@ const HowToDownload = () => {
             maxHeight: { xs: 'none', md: 'none' },
           }}
           >
-            {/* Botón volver solo en desktop */}
-            {!isMobile && (
-              <Button
-                variant="outlined"
-                color="primary"
-                startIcon={<ArrowBackIcon />}
-                onClick={() => navigate('/')}
-                sx={{
-                  position: 'absolute',
-                  top: 16,
-                  left: 16,
-                  zIndex: 1201,
-                  fontWeight: 700
-                }}
-              >
-                Volver
-              </Button>
-            )}
             {/* Imagen Pirate Bay dentro del card */}
             <Box sx={{
               width: '100%',

@@ -136,7 +136,7 @@ function DesktopMenu(props) {
               key="back-desktop-detail"
               onClick={handleBack}
               disabled={isAnimating}
-              style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8, marginLeft: 8, opacity: isAnimating ? 0.5 : 1 }}
+              style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8, marginLeft: 8, opacity: isAnimating ? 0.5 : 1, cursor: isAnimating ? 'not-allowed' : 'pointer' }}
               type="button"
             >
               <span style={{display:'flex',alignItems:'center'}}>&larr;</span>

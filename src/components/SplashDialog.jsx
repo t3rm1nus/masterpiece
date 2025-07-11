@@ -67,7 +67,6 @@ const SplashDialog = ({
                   await audioRef.current.play();
                 }
               } catch (e) {
-                console.log('Error reproduciendo audio en iPhone:', e);
               }
               document.removeEventListener('touchstart', handleFirstTouch);
             };

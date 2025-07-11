@@ -10,6 +10,8 @@ import { MobileCategorySpecificContent, DesktopCategorySpecificContent } from '.
 import { processTitle, processDescription } from '../store/utils';
 import { useParams, useNavigate } from 'react-router-dom';
 import { findItemByGlobalId } from '../utils/appUtils';
+import useBackNavigation from '../hooks/useBackNavigation';
+import { CircularProgress } from '@mui/material';
 
 // Material UI imports (solo para mobile)
 import {
@@ -64,7 +66,7 @@ import {
 export default function UnifiedItemDetail(props) {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { allData, selectedCategory: storeSelectedCategory } = useAppData();
+  const { allData, selectedCategory: storeSelectedCategory, isDataInitialized } = useAppData();
   // Usar la prop si existe, si no, el valor del store
   const selectedCategory = props.selectedCategory || storeSelectedCategory;
   // Buscar el item por id global si no se pasa como prop
@@ -72,10 +74,8 @@ export default function UnifiedItemDetail(props) {
   if (!selectedItem && id && allData) {
     // Buscar en todas las categorías
     const allItems = Object.values(allData).flat();
-    console.log('[UnifiedItemDetail] id from URL:', id);
-    console.log('[UnifiedItemDetail] allItems sample:', allItems.slice(0, 3));
-    selectedItem = findItemByGlobalId(allItems, id);
-    console.log('[UnifiedItemDetail] findItemByGlobalId result:', selectedItem);
+    // Buscar por id numérico o string, generando el globalId esperado
+    selectedItem = allItems.find(item => `${item.category}_${item.id}` === `movies_${id}` || `${item.id}` === `${id}`) || null;
   }
 
   // Inyectar keyframes globales SOLO una vez (fade+scale, igual que páginas)
@@ -104,7 +104,6 @@ export default function UnifiedItemDetail(props) {
   
   // Debug: monitorear cambios en internalClosing
   useEffect(() => {
-    console.log('[UnifiedItemDetail] internalClosing cambió:', internalClosing);
   }, [internalClosing]);
   // Al montar, animación de entrada
   useEffect(() => {
@@ -118,9 +117,7 @@ export default function UnifiedItemDetail(props) {
   }, [props.isExiting]);
   // Handler para cerrar con animación
   const triggerExitAnimation = () => {
-    console.log('[UnifiedItemDetail] triggerExitAnimation llamado', { isExiting: props.isExiting, internalClosing });
     if (!props.isExiting && !internalClosing) {
-      console.log('[UnifiedItemDetail] triggerExitAnimation: lanzando animación de salida');
       setInternalClosing(true); // Activar animación de cierre interna
       
       // Notificar al componente padre que está cerrando
@@ -132,22 +129,20 @@ export default function UnifiedItemDetail(props) {
       if (!isMobile) {
         setCardAnim('slideOutDownFast');
       }
-    } else {
-      console.log('[UnifiedItemDetail] triggerExitAnimation: ya está saliendo, ignorado');
     }
   };
   useEffect(() => {
     const onOverlayDetailExit = () => {
-      console.log('[UnifiedItemDetail] Evento overlay-detail-exit recibido');
       triggerExitAnimation();
     };
     window.addEventListener('overlay-detail-exit', onOverlayDetailExit);
     return () => window.removeEventListener('overlay-detail-exit', onOverlayDetailExit);
   }, [props.isExiting, internalClosing]);
+  const { handleBack, isAnimating } = useBackNavigation();
+  // Handler para cerrar con animación (desktop)
   const handleCloseDesktop = (e) => {
-    console.log('[UnifiedItemDetail] handleCloseDesktop: click botón volver interno');
     e?.preventDefault?.();
-    triggerExitAnimation();
+    handleBack();
   };
 
   // Guardar referencia al último item mostrado para animación de cierre
@@ -166,8 +161,17 @@ export default function UnifiedItemDetail(props) {
 
   // Eliminado: handleAnimationEnd redundante - se maneja en MobileItemDetail
 
+  // Mostrar loader si los datos no están listos
+  if (!isDataInitialized) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '60vh' }}>
+        <CircularProgress color="primary" size={48} />
+        <div style={{ marginTop: 16, fontSize: 18, color: '#888' }}>Cargando datos...</div>
+      </div>
+    );
+  }
+
   if (!selectedItem) {
-    console.log('[UnifiedItemDetail] No selectedItem, no se renderiza detalle');
     return <div style={{padding:32, textAlign:'center'}}>No se encontró el elemento solicitado.</div>;
   }
   
@@ -182,12 +186,11 @@ export default function UnifiedItemDetail(props) {
   // Determinar la categoría real del item para color y chip
   const realCategory = selectedItem.category || selectedCategory;
   
-  const handleBack = () => navigate('/');
+  // Eliminado: handleBack redundante - se maneja en useBackNavigation
 
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
     const safeItem = selectedItem || lastItemRef.current;
-    console.log('[UnifiedItemDetail] Pasando onOverlayNavigate a MobileActionButtons:', typeof props.onOverlayNavigate);
     return (
       <Box
         sx={{
@@ -246,10 +249,6 @@ export default function UnifiedItemDetail(props) {
     const isMasterpiece = !!selectedItem.masterpiece;
     const categoryColor = getCategoryColor(realCategory, 'color');
     const gradientBg = `linear-gradient(135deg, ${categoryColor} 0%, ${theme.palette.mode === 'dark' ? 'rgba(24,24,24,0.92)' : 'rgba(255,255,255,0.85)'} 100%)`;
-    // Handler para cerrar con animación
-    const handleCloseDesktop = () => {
-      triggerExitAnimation();
-    };
     return (
       <div style={styles.page(theme)}>
         <div
@@ -260,40 +259,31 @@ export default function UnifiedItemDetail(props) {
             ...(isMasterpiece ? {} : { background: gradientBg })
           }}
           onAnimationEnd={e => {
-            console.log('[UnifiedItemDetail] onAnimationEnd', { isExiting: props.isExiting, cardAnim, internalClosing });
             if ((props.isExiting || internalClosing) && cardAnim === 'slideOutDownFast' && typeof props.onExited === 'function') {
-              console.log('[UnifiedItemDetail] Animación de salida terminada, llamando a onExited');
               props.onExited();
             }
           }}
         >
-          {/* Botón volver arriba a la izquierda */}
-          <button
-            onClick={handleBack}
-            style={{
+          {/* Botón volver FAB azul arriba a la izquierda, igual que en donaciones/descargar */}
+          <Fab
+            color="primary"
+            size="large"
+            aria-label={typeof t === 'function' ? t('Volver') : 'Volver'}
+            onClick={handleCloseDesktop}
+            disabled={isAnimating}
+            sx={{
               position: 'absolute',
               top: 18,
               left: 18,
               zIndex: 50,
-              background: 'rgba(255,255,255,0.85)',
-              border: 'none',
-              borderRadius: '50%',
-              width: 40,
-              height: 40,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
               boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
-              cursor: 'pointer',
-              transition: 'background 0.2s',
-              outline: 'none',
-              padding: 0
+              opacity: isAnimating ? 0.5 : 1,
+              cursor: isAnimating ? 'not-allowed' : 'pointer',
             }}
-            aria-label={typeof t === 'function' ? t('Volver') : 'Volver'}
             tabIndex={0}
           >
-            <ArrowBackIcon style={{ fontSize: 24, color: '#222' }} />
-          </button>
+            <ArrowBackIcon style={{ fontSize: 28, color: '#fff' }} />
+          </Fab>
           {isMasterpiece && (
             <div style={styles.desktopBadgeRight}>
               {/* SVG estrella solo negro */}
@@ -306,15 +296,16 @@ export default function UnifiedItemDetail(props) {
               </svg>
             </div>
           )}
+          {/* MAQUETACIÓN CORRECTA: leftCol (imagen) y rightCol (textos) como hermanos */}
           <div style={styles.leftCol}>
             <div style={styles.imageContainer}>
               <img
                 src={selectedItem.image}
                 alt={title}
                 style={imageHover ? { ...styles.image, ...styles.imageHover } : styles.image}
+                onLoad={() => setImgLoaded(true)}
                 onMouseEnter={() => setImageHover(true)}
                 onMouseLeave={() => setImageHover(false)}
-                onLoad={() => setImgLoaded(true)}
               />
             </div>
           </div>

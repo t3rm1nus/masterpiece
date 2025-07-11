@@ -122,19 +122,15 @@ const MaterialMobileMenu = ({
   // Botón de donaciones y cómo descargar en menú móvil
   const handleGoToCoffee = () => {
     if (typeof onOverlayNavigate === 'function') {
-      console.log('[MaterialMobileMenu] Navegando a /donaciones vía onOverlayNavigate');
       onOverlayNavigate('/donaciones');
     } else {
-      console.log('[MaterialMobileMenu] Navegando a /donaciones vía navigate directo');
       navigate('/donaciones');
     }
   };
   const handleGoToHowToDownload = () => {
     if (typeof onOverlayNavigate === 'function') {
-      console.log('[MaterialMobileMenu] Navegando a /como-descargar vía onOverlayNavigate');
       onOverlayNavigate('/como-descargar');
     } else {
-      console.log('[MaterialMobileMenu] Navegando a /como-descargar vía navigate directo');
       navigate('/como-descargar');
     }
   };

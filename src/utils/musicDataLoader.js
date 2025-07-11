@@ -19,8 +19,6 @@ export class MusicDataLoader {
         return acc.concat(chunk.recommendations);
       }, []);
       
-      console.log(`✅ Loaded ${allRecommendations.length} music recommendations from ${chunks.length} chunks`);
-      
       return {
         recommendations: allRecommendations,
         metadata: {
@@ -52,7 +50,6 @@ export class MusicDataLoader {
     try {
       const response = await fetch(`/music-chunks/music-chunk-${chunkNumber}.json`);
       const data = await response.json();
-      console.log(`✅ Loaded chunk ${chunkNumber} with ${data.recommendations.length} items`);
       return data;
     } catch (error) {
       console.error(`❌ Error loading chunk ${chunkNumber}:`, error);

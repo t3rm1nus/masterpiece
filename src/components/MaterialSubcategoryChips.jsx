@@ -89,10 +89,6 @@ const MaterialSubcategoryChips = ({
   // Obtener color de categoría para móvil
   const categoryColorFinal = getCategoryColor(selectedCategory);
 
-  // LOG para depuración de subcategorías
-  console.log('[MaterialSubcategoryChips] subcategories prop:', subcategories);
-  console.log('[MaterialSubcategoryChips] selectedCategory:', selectedCategory);
-
   // Estilos centralizados
   const chipsContainerSx = {
     display: 'flex',
@@ -157,8 +153,6 @@ const MaterialSubcategoryChips = ({
       {Array.isArray(subcategories) && subcategories.length > 0 && (
         <Box sx={chipsContainerSx} {...props}>
           {subcategories.map(({ sub, label }, idx) => {
-            // LOG para cada chip
-            console.log('[MaterialSubcategoryChips] Render chip:', { sub, label, idx });
             const isActive = activeSubcategory === sub;
             // Usar siempre el literal traducido
             const chipLabel = getSubcategoryLabel(sub, selectedCategory, useLanguage().t, useLanguage().lang);

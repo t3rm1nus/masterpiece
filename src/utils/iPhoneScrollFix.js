@@ -22,8 +22,6 @@ export const forceScrollOnIPhone = (selectors = [], delay = 100) => {
     return; // Solo ejecutar en iPhones
   }
   
-  console.log('[iPhone ScrollFix] Aplicando fixes de scroll específicos para iPhone');
-  
   // Forzar propiedades de scroll en el body
   document.body.style.overflowY = 'auto';
   document.body.style.webkitOverflowScrolling = 'touch';
@@ -41,8 +39,6 @@ export const forceScrollOnIPhone = (selectors = [], delay = 100) => {
             element.style.height = '100vh';
             element.style.maxHeight = '100vh';
           }
-          
-          console.log('[iPhone ScrollFix] Aplicado scroll fix a:', selector);
         }
       });
     });
@@ -54,8 +50,6 @@ export const forceScrollOnIPhone = (selectors = [], delay = 100) => {
  */
 export const applyDetailScrollFixForIPhone = () => {
   if (!isIPhone()) return;
-  
-  console.log('[iPhone ScrollFix] Aplicando fixes para vista de detalle');
   
   const selectors = [
     '[role="dialog"][aria-modal="true"]',
@@ -76,8 +70,6 @@ export const applyDetailScrollFixForIPhone = () => {
 export const applyHowToDownloadScrollFixForIPhone = () => {
   if (!isIPhone()) return;
   
-  console.log('[iPhone ScrollFix] Aplicando fixes para página "Cómo descargar"');
-  
   const selectors = [
     '[data-page="howToDownload"]',
     '[data-page="howToDownload"] > .MuiBox-root',
@@ -92,8 +84,6 @@ export const applyHowToDownloadScrollFixForIPhone = () => {
  */
 export const cleanupScrollFixesForIPhone = () => {
   if (!isIPhone()) return;
-  
-  console.log('[iPhone ScrollFix] Limpiando fixes de scroll');
   
   document.body.style.overflowY = '';
   document.body.style.webkitOverflowScrolling = '';

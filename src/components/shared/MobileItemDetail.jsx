@@ -147,24 +147,18 @@ const MobileItemDetail = ({
 
   // Lógica para desmontar tras animación de salida
   const handleAnimationEnd = () => {
-    console.log('[MobileItemDetail] handleAnimationEnd llamado', { isClosing, onClose: typeof onClose });
     if (isClosing) {
-      console.log('[MobileItemDetail] Animación de cierre FINALIZADA (onAnimationEnd)');
-    }
-    if (isClosing && typeof onClose === 'function') {
-      console.log('[MobileItemDetail] Llamando a onClose() desde onAnimationEnd');
-      onClose();
+      if (typeof onClose === 'function') {
+        onClose();
+      }
     }
   };
 
   React.useEffect(() => {
-    console.log('[MobileItemDetail] isClosing cambió:', { isClosing, selectedItem: selectedItem?.title });
     if (isClosing) {
-      console.log('[MobileItemDetail] Animación de cierre INICIADA (isClosing=true)', { selectedItem });
       // Forzar la aplicación de la animación después de un pequeño delay
       setTimeout(() => {
         if (cardRef.current) {
-          console.log('[MobileItemDetail] Forzando aplicación de animación de cierre');
           cardRef.current.style.animation = 'none';
           cardRef.current.offsetHeight; // Trigger reflow
           cardRef.current.style.animation = 'slideOutDownMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards';
@@ -176,7 +170,6 @@ const MobileItemDetail = ({
   // Monitorear desmontaje del componente
   React.useEffect(() => {
     return () => {
-      console.log('[MobileItemDetail] Componente desmontado');
     };
   }, []);
 
@@ -243,17 +236,6 @@ const MobileItemDetail = ({
           className="item-detail-mobile-card"
           ref={(el) => {
             cardRef.current = el;
-            if (el) {
-              console.log('[MobileItemDetail] Clases CSS aplicadas:', el.className);
-              console.log('[MobileItemDetail] isClosing:', isClosing);
-              // Verificar si la animación está activa
-              const computedStyle = window.getComputedStyle(el);
-              console.log('[MobileItemDetail] animation-name:', computedStyle.animationName);
-              console.log('[MobileItemDetail] animation-duration:', computedStyle.animationDuration);
-              console.log('[MobileItemDetail] opacity:', computedStyle.opacity);
-              console.log('[MobileItemDetail] transform:', computedStyle.transform);
-              console.log('[MobileItemDetail] animation-play-state:', computedStyle.animationPlayState);
-            }
           }}
           sx={{
             position: 'relative',
@@ -281,11 +263,6 @@ const MobileItemDetail = ({
               : 'slideInUpMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
           }}
           onAnimationEnd={(e) => {
-            console.log('[MobileItemDetail] onAnimationEnd event disparado:', e);
-            console.log('[MobileItemDetail] onAnimationEnd - isClosing:', isClosing);
-            console.log('[MobileItemDetail] onAnimationEnd - onClose type:', typeof onClose);
-            console.log('[MobileItemDetail] onAnimationEnd - animationName:', e.animationName);
-            console.log('[MobileItemDetail] onAnimationEnd - elapsedTime:', e.elapsedTime);
             handleAnimationEnd();
           }}
           {...domSafeProps}

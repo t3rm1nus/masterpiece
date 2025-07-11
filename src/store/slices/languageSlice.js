@@ -42,11 +42,9 @@ export const languageSlice = (set, get) => ({
     const supportedLanguages = ['es', 'en']; // Valores fijos para evitar get()
     
     if (!supportedLanguages.includes(newLang)) {
-      console.warn('[LanguageSlice] Unsupported language:', newLang);
       return;
     }
     
-    console.log('[LanguageSlice] Changing language to:', newLang);
     set({ language: newLang });
     
     // Actualizar título de la página si es necesario
@@ -101,7 +99,6 @@ export const languageSlice = (set, get) => ({
    * Resetear slice de idioma al español
    */
   resetLanguage: () => {
-    console.log('[LanguageSlice] Resetting language to Spanish');
     set({ language: 'es' });
   }
 });

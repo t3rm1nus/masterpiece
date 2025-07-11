@@ -6,12 +6,6 @@
 const isDevelopment = import.meta.env.DEV;
 
 export const logger = {
-  log: (...args) => {
-    if (isDevelopment) {
-      console.log(...args);
-    }
-  },
-  
   error: (...args) => {
     // Los errores siempre se muestran
     console.error(...args);
