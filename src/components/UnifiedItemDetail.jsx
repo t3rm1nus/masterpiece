@@ -186,10 +186,10 @@ export default function UnifiedItemDetail(props) {
       <Box
         sx={{
           position: 'fixed',
-          top: 0,
+          top: '48px', // Dejar espacio para el AppBar móvil
           left: 0,
           width: '100vw',
-          height: '100vh',
+          height: 'calc(100vh - 48px)', // Ajustar altura para no cubrir el AppBar
           background: 'rgba(255,255,255,0.98)',
           backdropFilter: 'blur(2px)',
           overflowY: 'auto',
