@@ -111,6 +111,13 @@ const MaterialCoffeePage = () => {
     }
   }, []);
 
+  // Evitar animación de entrada si está saliendo
+  useEffect(() => {
+    if (!isExiting) {
+      setCardAnim('slideInUpFast');
+    }
+  }, [isExiting]);
+
   const handleBack = () => {
     triggerExitAnimation();
   };
@@ -183,7 +190,7 @@ const MaterialCoffeePage = () => {
           overflow: 'visible',
           WebkitOverflowScrolling: 'touch'
         }}
-        className={cardAnim}
+        className={isExiting ? 'slideOutDownFast' : cardAnim}
         onAnimationEnd={() => {
           if (cardAnim === 'slideOutDownFast' && isExiting) {
             setTimeout(() => {

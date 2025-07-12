@@ -122,6 +122,9 @@ const MobileItemDetail = ({
   const shouldRender = selectedItem || isClosing;
   if (!shouldRender) return null;
 
+  // Evitar animación de entrada si está cerrando
+  const shouldAnimateIn = !isClosing && selectedItem;
+
   // Helper para iconos por categoría
   const getCategoryIcon = (category) => {
     switch (category) {
@@ -263,7 +266,9 @@ const MobileItemDetail = ({
             // Forzar animación inline para asegurar que funcione
             animation: isClosing 
               ? 'slideOutDownMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
-              : 'slideInUpMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+              : shouldAnimateIn 
+                ? 'slideInUpMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
+                : 'none',
             visibility: isClosing ? 'hidden' : 'visible'
           }}
           onAnimationEnd={(e) => {

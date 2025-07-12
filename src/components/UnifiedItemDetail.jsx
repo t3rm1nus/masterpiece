@@ -131,8 +131,10 @@ export default function UnifiedItemDetail(props) {
   useEffect(() => {}, [internalClosing]);
   // Al montar, animación de entrada
   useEffect(() => {
-    setCardAnim('slideInUpFast');
-  }, []);
+    if (!props.isExiting && !internalClosing) {
+      setCardAnim('slideInUpFast');
+    }
+  }, [props.isExiting, internalClosing]);
   // Cuando isExiting cambia a true, animación de salida
   useEffect(() => {
     if (props.isExiting) {
