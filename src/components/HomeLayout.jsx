@@ -35,7 +35,7 @@ export default function HomeLayout() {
   };
 
   // Detecta si la ruta es detalle, como-descargar o donaciones
-  const isDetail = !!matchPath('/detalle/:id', location.pathname);
+  const isDetail = !!matchPath('/detalle/:category/:id', location.pathname);
   const isHowToDownload = !!matchPath('/como-descargar', location.pathname);
   const isDonaciones = !!matchPath('/donaciones', location.pathname);
   const isOverlay = isDetail || isHowToDownload || isDonaciones;
@@ -133,7 +133,7 @@ export default function HomeLayout() {
   // Determinar qué contenido mostrar en el overlay móvil
   let overlayContent = null;
   const effectiveOverlayRoute = isClosing && lastOverlayRoute ? lastOverlayRoute : location.pathname;
-  if (effectiveOverlayRoute.startsWith('/detalle/')) {
+  if (matchPath('/detalle/:category/:id', effectiveOverlayRoute)) {
     overlayContent = <UnifiedItemDetail isClosing={isClosing} onBack={handleBack} onExited={handleDetailExitedDesktop} />;
   } else if (effectiveOverlayRoute === '/como-descargar') {
     overlayContent = <HowToDownload />;

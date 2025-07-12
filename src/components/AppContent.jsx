@@ -33,7 +33,7 @@ export default function AppContent() {
       <Routes>
         <Route path="/" element={<HomeLayout />}>
           <Route index element={null} />
-          <Route path="detalle/:id" element={<UnifiedItemDetail />} />
+          <Route path="detalle/:category/:id" element={<UnifiedItemDetail />} />
           <Route path="como-descargar" element={<HowToDownload />} />
           <Route path="donaciones" element={<CoffeePage />} />
         </Route>

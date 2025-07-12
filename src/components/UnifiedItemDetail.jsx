@@ -64,19 +64,58 @@ import {
  * />
  */
 export default function UnifiedItemDetail(props) {
-  const { id } = useParams();
+  // 1. TODOS los hooks y variables aquí arriba
+  const { category, id } = useParams();
   const navigate = useNavigate();
   const { allData, selectedCategory: storeSelectedCategory, isDataInitialized } = useAppData();
-  // Usar la prop si existe, si no, el valor del store
   const selectedCategory = props.selectedCategory || storeSelectedCategory;
-  // Buscar el item por id global si no se pasa como prop
+  const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
+  const { goBackFromDetail, goToHowToDownload } = useAppView();
+  const { getMasterpieceBadgeConfig } = useAppTheme();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const badgeConfig = getMasterpieceBadgeConfig();
+  const [imgLoaded, setImgLoaded] = React.useState(false);
+  const [imageHover, setImageHover] = React.useState(false);
+  const [internalClosing, setInternalClosing] = React.useState(false);
+  const [cardAnim, setCardAnim] = useState('slideInUpFast');
+  const lastItemRef = React.useRef(null);
+  const { handleBack, isAnimating } = useBackNavigation();
+
+  // 2. Lógica de obtención de selectedItem DESPUÉS de los hooks
   let selectedItem = props.item;
-  if (!selectedItem && id && allData) {
-    // Buscar en todas las categorías
-    const allItems = Object.values(allData).flat();
-    // Buscar por id numérico o string, generando el globalId esperado
-    selectedItem = allItems.find(item => `${item.category}_${item.id}` === `movies_${id}` || `${item.id}` === `${id}`) || null;
+  if (!selectedItem && id && allData && category && allData[category]) {
+    selectedItem = allData[category].find(item => `${item.id}` === `${id}`) || null;
   }
+
+  // 3. Returns condicionales después de los hooks
+  if (!isDataInitialized) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '60vh' }}>
+        <CircularProgress color="primary" size={48} />
+        <div style={{ marginTop: 16, fontSize: 18, color: '#888' }}>Cargando datos...</div>
+      </div>
+    );
+  }
+  if (!selectedItem && id && category && allData && !allData[category]) {
+    return <div style={{padding:32, textAlign:'center'}}>Categoría no encontrada.</div>;
+  }
+  if (!selectedItem) {
+    return <div style={{padding:32, textAlign:'center'}}>No se encontró el elemento solicitado.</div>;
+  }
+  
+  const rawTitle = processTitle(selectedItem.title || selectedItem.name, lang);
+  const rawDescription = processDescription(selectedItem.description, lang);
+  
+  const title = ensureString(rawTitle, lang);
+  const description = ensureString(rawDescription, lang);
+  
+  const trailerUrl = useTrailerUrl(selectedItem ? selectedItem.trailer : undefined);
+  
+  // Determinar la categoría real del item para color y chip
+  const realCategory = selectedItem.category || selectedCategory;
+  
+  // Eliminado: handleBack redundante - se maneja en useBackNavigation
 
   // Inyectar keyframes globales SOLO una vez (fade+scale, igual que páginas)
   useEffect(() => {
@@ -88,23 +127,8 @@ export default function UnifiedItemDetail(props) {
     }
   }, []);
 
-  const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
-  const { goBackFromDetail, goToHowToDownload } = useAppView();
-  const { getMasterpieceBadgeConfig } = useAppTheme();
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
-  
-  const badgeConfig = getMasterpieceBadgeConfig();
-  
-  const [imgLoaded, setImgLoaded] = React.useState(false);
-  const [imageHover, setImageHover] = React.useState(false);
-  const [internalClosing, setInternalClosing] = React.useState(false);
-  // Para desktop, usar la prop isExiting para controlar la animación de salida
-  const [cardAnim, setCardAnim] = useState('slideInUpFast');
-  
   // Debug: monitorear cambios en internalClosing
-  useEffect(() => {
-  }, [internalClosing]);
+  useEffect(() => {}, [internalClosing]);
   // Al montar, animación de entrada
   useEffect(() => {
     setCardAnim('slideInUpFast');
@@ -119,13 +143,9 @@ export default function UnifiedItemDetail(props) {
   const triggerExitAnimation = () => {
     if (!props.isExiting && !internalClosing) {
       setInternalClosing(true); // Activar animación de cierre interna
-      
-      // Notificar al componente padre que está cerrando
       if (props.onRequestClose) {
         props.onRequestClose();
       }
-      
-      // Para desktop, también cambiar la clase de animación inmediatamente
       if (!isMobile) {
         setCardAnim('slideOutDownFast');
       }
@@ -138,19 +158,15 @@ export default function UnifiedItemDetail(props) {
     window.addEventListener('overlay-detail-exit', onOverlayDetailExit);
     return () => window.removeEventListener('overlay-detail-exit', onOverlayDetailExit);
   }, [props.isExiting, internalClosing]);
-  const { handleBack, isAnimating } = useBackNavigation();
   // Handler para cerrar con animación (desktop)
   const handleCloseDesktop = (e) => {
     e?.preventDefault?.();
     handleBack();
   };
-
   // Guardar referencia al último item mostrado para animación de cierre
-  const lastItemRef = React.useRef(selectedItem);
   useEffect(() => {
     if (selectedItem) lastItemRef.current = selectedItem;
   }, [selectedItem]);
-
   const handleClose = () => {
     if (props.onRequestClose) {
       props.onRequestClose();
@@ -161,32 +177,7 @@ export default function UnifiedItemDetail(props) {
 
   // Eliminado: handleAnimationEnd redundante - se maneja en MobileItemDetail
 
-  // Mostrar loader si los datos no están listos
-  if (!isDataInitialized) {
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '60vh' }}>
-        <CircularProgress color="primary" size={48} />
-        <div style={{ marginTop: 16, fontSize: 18, color: '#888' }}>Cargando datos...</div>
-      </div>
-    );
-  }
-
-  if (!selectedItem) {
-    return <div style={{padding:32, textAlign:'center'}}>No se encontró el elemento solicitado.</div>;
-  }
-  
-  const rawTitle = processTitle(selectedItem.title || selectedItem.name, lang);
-  const rawDescription = processDescription(selectedItem.description, lang);
-  
-  const title = ensureString(rawTitle, lang);
-  const description = ensureString(rawDescription, lang);
-  
-  const trailerUrl = useTrailerUrl(selectedItem.trailer);
-  
-  // Determinar la categoría real del item para color y chip
-  const realCategory = selectedItem.category || selectedCategory;
-  
-  // Eliminado: handleBack redundante - se maneja en useBackNavigation
+  // Eliminar el useEffect que fuerza el scroll al top en móviles tras mostrar el detalle
 
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
@@ -376,7 +367,6 @@ export default function UnifiedItemDetail(props) {
     );
   }
   
-  // Eliminar el useEffect que fuerza el scroll al top en móviles tras mostrar el detalle
 };
 
 // 2. Definir estilos CSS-in-JS

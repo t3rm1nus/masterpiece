@@ -156,13 +156,14 @@ const MaterialSubcategoryChips = ({
             const isActive = activeSubcategory === sub;
             // Usar siempre el literal traducido
             const chipLabel = getSubcategoryLabel(sub, selectedCategory, useLanguage().t, useLanguage().lang);
+            const handleClick = onSubcategoryClick ? () => onSubcategoryClick(sub) : undefined;
             return renderChip ? (
-              renderChip({ sub, label: chipLabel, isActive, idx })
+              renderChip({ sub, label: chipLabel, isActive, idx, onClick: handleClick })
             ) : (
               <Chip
                 key={sub}
                 label={chipLabel}
-                onClick={onSubcategoryClick ? () => onSubcategoryClick(sub) : undefined}
+                onClick={handleClick}
                 variant={isActive ? 'filled' : 'outlined'}
                 sx={chipBaseSx(isActive)}
               />

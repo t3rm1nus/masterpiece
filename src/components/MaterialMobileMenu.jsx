@@ -251,7 +251,7 @@ const MaterialMobileMenu = ({
             width: 'min(80vw, 320px)',
             backgroundColor: isDarkMode ? '#2d2d2d' : '#ffffff',
             color: isDarkMode ? '#ffffff' : '#000000',
-            zIndex: 1300, // Más alto que el AppBar (1200) y el detalle móvil (1)
+            zIndex: 1400, // Más alto que el AppBar (1200), páginas (1100) y el detalle móvil (1)
             ...sx.drawer
           }
         }}
@@ -370,7 +370,7 @@ const MaterialMobileMenu = ({
             position: 'fixed',
             top: '63px',
             left: 16,
-            zIndex: 1300, // Igual que el botón de volver en MobileItemDetail
+            zIndex: 1400, // Igual que el Drawer del menú móvil
             backgroundColor: theme?.palette?.primary?.main,
             opacity: isAnimating ? 0.5 : 1,
             '&:hover': {

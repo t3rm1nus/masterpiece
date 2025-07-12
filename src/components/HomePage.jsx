@@ -26,6 +26,7 @@ import { normalizeSubcategoryInternal } from '../utils/categoryUtils';
 import { keyframes, styled } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 import { generateUniqueId } from '../utils/appUtils';
+import Chip from '@mui/material/Chip'; // Added for renderSubcategoryChip
 
 // =============================================
 // HomePage: Página principal de recomendaciones
@@ -435,7 +436,7 @@ const HomePage = ({
     const itemTitle = typeof item.title === 'object' ? (item.title.es || item.title.en || Object.values(item.title)[0]) : item.title;
     trackItemDetailView(item.id, itemTitle, selectedCategory, 'homepage');
     // Usar el store para navegación consistente
-    goToDetail(item);
+    navigate(`/detalle/${item.category}/${item.id}`);
   };  // Manejar cierre del detalle
   // const renderItemDetail = () => {
   //   if (!selectedItem) {
@@ -559,6 +560,17 @@ const HomePage = ({
     }
   };
 
+  // Definir renderizador seguro para chips de subcategoría
+  const safeRenderSubcategoryChip = ({ sub, label, isActive, idx, onClick }) => (
+    <Chip
+      key={sub}
+      label={label}
+      color={isActive ? 'primary' : 'default'}
+      onClick={typeof onClick === 'function' ? onClick : undefined}
+      // Puedes añadir más props o estilos aquí si lo necesitas
+    />
+  );
+
   // Obtener gradiente animado según categoría
   const h1Gradient = (!selectedCategory || selectedCategory === 'all')
     ? getMasterpieceAnimatedGradient()
@@ -652,7 +664,7 @@ const HomePage = ({
                 categorySubcategories={categorySubcategories}
                 activeSubcategory={activeSubcategory}
                 setActiveSubcategory={handleSubcategoryClick}
-                renderChip={renderSubcategoryChip}
+                renderChip={safeRenderSubcategoryChip}
                 sx={subcategoryBarSx}
                 {...subcategoryBarProps}
                 allData={allData}
@@ -705,7 +717,7 @@ const HomePage = ({
               activeSubcategory={activeSubcategory}
               onSubcategoryClick={handleSubcategoryClick}
               renderCategoryButton={renderCategoryButton}
-              renderSubcategoryChip={renderSubcategoryChip}
+              renderSubcategoryChip={safeRenderSubcategoryChip}
               categorySelectSx={materialCategorySelectSx}
               subcategoryChipsSx={subcategoryBarSx}
               categorySelectProps={materialCategorySelectProps}
@@ -730,7 +742,7 @@ const HomePage = ({
                   activeSubcategory={activeSubcategory}
                   onSubcategoryClick={handleSubcategoryClick}
                   renderCategoryButton={renderCategoryButton}
-                  renderSubcategoryChip={renderSubcategoryChip}
+                  renderSubcategoryChip={safeRenderSubcategoryChip}
                   categoryBarSx={categoryBarSx}
                   subcategoryBarSx={subcategoryBarSx}
                   showCategoryBar={false}

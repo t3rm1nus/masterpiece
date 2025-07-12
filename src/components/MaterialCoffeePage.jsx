@@ -179,7 +179,7 @@ const MaterialCoffeePage = () => {
           backgroundColor: isMobile ? '#fafafa' : '#fff',
           minHeight: '100vh',
           position: 'relative',
-          zIndex: 1200, // Por encima del overlay del detalle (1100)
+          zIndex: isMobile ? 1100 : 1200, // En móvil por debajo del menú (1300), en desktop por encima del detalle (1100)
           overflow: 'visible',
           WebkitOverflowScrolling: 'touch'
         }}
@@ -199,7 +199,7 @@ const MaterialCoffeePage = () => {
           onClick={handleBack}
           sx={{
             position: 'fixed',
-            top: '8px',
+            top: isMobile ? '63px' : '8px',
             left: 16,
             zIndex: 2100,
             backgroundColor: theme.palette.primary.main,

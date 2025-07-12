@@ -137,7 +137,7 @@ const HowToDownload = () => {
           backgroundColor: isMobile ? '#fafafa' : '#fff',
           minHeight: '100vh',
           position: 'relative',
-          zIndex: 1200, // Por encima del overlay del detalle (1100)
+          zIndex: isMobile ? 1100 : 1200, // En móvil por debajo del menú (1300), en desktop por encima del detalle (1100)
           overflow: 'visible',
           WebkitOverflowScrolling: 'touch'
         }}
@@ -150,26 +150,24 @@ const HowToDownload = () => {
           }
         }}
       >
-        {/* FAB volver visible solo en desktop, z-index 2100 */}
-        {!isMobile && (
-          <Fab
-            color="primary"
-            aria-label="volver"
-            onClick={() => navigate('/', { replace: true })}
-            sx={{
-              position: 'fixed',
-              top: '8px',
-              left: 16,
-              zIndex: 2100,
-              backgroundColor: theme.palette.primary.main,
-              '&:hover': {
-                backgroundColor: theme.palette.primary.dark,
-              }
-            }}
-          >
-            <ArrowBackIcon />
-          </Fab>
-        )}
+        {/* FAB volver visible en móvil y desktop, z-index 2100 */}
+        <Fab
+          color="primary"
+          aria-label="volver"
+          onClick={() => navigate('/', { replace: true })}
+          sx={{
+            position: 'fixed',
+            top: isMobile ? '63px' : '8px',
+            left: 16,
+            zIndex: 2100,
+            backgroundColor: theme.palette.primary.main,
+            '&:hover': {
+              backgroundColor: theme.palette.primary.dark,
+            }
+          }}
+        >
+          <ArrowBackIcon />
+        </Fab>
           <Paper elevation={3} sx={{
             width: '100%',
             maxWidth: { xs: 480, md: '720px', lg: '900px' },

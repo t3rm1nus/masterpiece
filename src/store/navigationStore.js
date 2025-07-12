@@ -34,8 +34,8 @@ export const createNavigationSlice = (set, get) => ({
   goToDetail: (item) => {
     set({ currentView: 'detail', selectedItem: item });
     // Actualizar la URL para que sea navegable
-    if (typeof window !== 'undefined' && window.history && item?.id) {
-      const url = `/detalle/${item.id}`;
+    if (typeof window !== 'undefined' && window.history && item?.id && item?.category) {
+      const url = `/detalle/${item.category}/${item.id}`;
       window.history.pushState({ itemId: item.id }, '', url);
     }
   },
