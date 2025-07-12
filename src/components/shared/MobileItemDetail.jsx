@@ -199,7 +199,7 @@ const MobileItemDetail = ({
         onClick={handleBackClick}
         sx={{
           position: 'fixed',
-          top: { xs: '3px', sm: 24 },
+          top: { xs: '43px', sm: 24 },
           left: 16,
           zIndex: 1300,
           backgroundColor: theme?.palette?.primary?.main,
@@ -224,7 +224,7 @@ const MobileItemDetail = ({
           justifyContent: 'flex-start',
           height: { xs: '100dvh', sm: 'auto' },
           width: '100%',
-          padding: { xs: '70px 0 0 0', sm: '36px 0 0 0' }, // separación reducida del menú superior en móviles
+          padding: { xs: '35px 0 0 0', sm: '36px 0 0 0' }, // separación reducida a la mitad del menú superior en móviles
           boxSizing: 'border-box',
           overflowY: 'auto',
           WebkitOverflowScrolling: 'touch',
