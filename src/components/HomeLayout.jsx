@@ -216,10 +216,12 @@ export default function HomeLayout() {
                 <Fab
                   color="primary"
                   aria-label="volver"
-                  onClick={() => navigate('/', { replace: true })}
+                  onClick={() => {
+                    setIsClosing(true);
+                  }}
                   sx={{
                     position: 'fixed',
-                    top: '3px',
+                    top: '73px',
                     left: 16,
                     zIndex: 2100,
                     backgroundColor: '#1976d2',

@@ -152,13 +152,8 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
             // Cerrar el detalle con animación antes de navegar
             window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
             setTimeout(() => {
-              if (typeof onOverlayNavigate === 'function') {
-                onOverlayNavigate('/como-descargar');
-              } else if (typeof goToHowToDownload === 'function') {
-                goToHowToDownload();
-              } else {
-                navigate('/como-descargar');
-              }
+              // Usar navegación directa para asegurar que funcione en móviles
+              navigate('/como-descargar');
             }, 400);
           }}
           sx={getButtonSx}
