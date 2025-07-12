@@ -47,21 +47,26 @@ export default function HomeLayout() {
   const [pendingOverlayRoute, setPendingOverlayRoute] = useState(null);
   // Nuevo: guardar la última ruta de overlay para renderizar el contenido correcto durante la animación de salida
   const [lastOverlayRoute, setLastOverlayRoute] = useState(null);
+  // Nuevo: controlar el estado de animación interna
+  const [internalAnimationComplete, setInternalAnimationComplete] = useState(false);
 
   // Sincroniza el estado local con la ruta
   useEffect(() => {
     if (isMobile && isOverlay && !showDetailOverlay) {
       setShowDetailOverlay(true);
       setIsClosing(false);
+      setInternalAnimationComplete(false);
       setLastOverlayRoute(location.pathname); // Guardar la ruta actual al abrir overlay
     }
     if (isMobile && !isOverlay && showDetailOverlay && !isClosing) {
       setShowDetailOverlay(false);
+      setInternalAnimationComplete(false);
     }
     // Desktop: no usar overlay local
     if (!isMobile) {
       setShowDetailOverlay(false);
       setIsClosing(false);
+      setInternalAnimationComplete(false);
     }
   }, [isMobile, isOverlay, showDetailOverlay, isClosing, location.pathname]);
 
@@ -109,6 +114,18 @@ export default function HomeLayout() {
     setLastOverlayRoute(null);
   };
 
+  // Handler para cuando termina la animación de salida del componente interno
+  const handleInternalAnimationEnd = () => {
+    // Solo desmontar el overlay después de que termine la animación interna
+    if (isClosing) {
+      setInternalAnimationComplete(true);
+      // Pequeño delay para asegurar que la animación interna haya terminado completamente
+      setTimeout(() => {
+        setShowDetailOverlay(false);
+      }, 100);
+    }
+  };
+
   // Handler robusto para navegación atrás tras animación (desktop)
   const handleDetailExitedDesktop = () => {
     // Si hay historial suficiente, volver atrás; si no, ir a home
@@ -134,11 +151,11 @@ export default function HomeLayout() {
   let overlayContent = null;
   const effectiveOverlayRoute = isClosing && lastOverlayRoute ? lastOverlayRoute : location.pathname;
   if (matchPath('/detalle/:category/:id', effectiveOverlayRoute)) {
-    overlayContent = <UnifiedItemDetail isClosing={isClosing} onBack={handleBack} onExited={handleDetailExitedDesktop} />;
+    overlayContent = <UnifiedItemDetail isClosing={isClosing} onBack={handleBack} onExited={handleInternalAnimationEnd} />;
   } else if (effectiveOverlayRoute === '/como-descargar') {
-    overlayContent = <HowToDownload />;
+    overlayContent = <HowToDownload onAnimationEnd={handleInternalAnimationEnd} />;
   } else if (effectiveOverlayRoute === '/donaciones') {
-    overlayContent = <CoffeePage />;
+    overlayContent = <CoffeePage onAnimationEnd={handleInternalAnimationEnd} />;
   }
 
   // Overlay robusto: siempre cubre toda la pantalla, z-index muy alto, logs de ciclo de vida
@@ -187,7 +204,7 @@ export default function HomeLayout() {
         onOverlayNavigate={handleOverlayNavigate}
       />
       {/* Overlay de detalle móvil con animación de salida robusta */}
-      {isMobile && (isOverlay || (isClosing && showDetailOverlay)) && showDetailOverlay && (
+      {isMobile && (isOverlay || (isClosing && showDetailOverlay)) && showDetailOverlay && !internalAnimationComplete && (
         <CSSTransition
           in={!isClosing}
           timeout={400}
@@ -283,6 +300,13 @@ export default function HomeLayout() {
         .overlay-fade-enter-active { opacity: 1; transform: translateY(0); transition: opacity 400ms, transform 400ms; }
         .overlay-fade-exit { opacity: 1; transform: translateY(0); }
         .overlay-fade-exit-active { opacity: 0; transform: translateY(40px); transition: opacity 400ms, transform 400ms; }
+        
+        /* Evitar flash durante transiciones */
+        .overlay-fade-exit-done {
+          opacity: 0 !important;
+          visibility: hidden !important;
+          pointer-events: none !important;
+        }
       `}</style>
     </div>
   );

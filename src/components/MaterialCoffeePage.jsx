@@ -38,7 +38,7 @@ import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 // Contexto para animación de salida del card overlay
 export const OverlayCardAnimationContext = createContext({ triggerExitAnimation: () => {} });
 
-const MaterialCoffeePage = () => {
+const MaterialCoffeePage = ({ onAnimationEnd }) => {
   const { t, getTranslation } = useLanguage();
   const { trackSpecialPageView } = useGoogleAnalytics();
   const theme = useTheme();
@@ -193,9 +193,15 @@ const MaterialCoffeePage = () => {
         className={isExiting ? 'slideOutDownFast' : cardAnim}
         onAnimationEnd={() => {
           if (cardAnim === 'slideOutDownFast' && isExiting) {
-            setTimeout(() => {
-              navigate('/');
-            }, 100);
+            // Llamar al callback externo si existe
+            if (onAnimationEnd) {
+              onAnimationEnd();
+            } else {
+              // Fallback para navegación directa si no hay callback
+              setTimeout(() => {
+                navigate('/');
+              }, 100);
+            }
           }
         }}
       >

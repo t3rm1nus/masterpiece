@@ -154,6 +154,7 @@ const MobileItemDetail = ({
   // Lógica para desmontar tras animación de salida
   const handleAnimationEnd = () => {
     if (isClosing) {
+      // Llamar al callback onClose que manejará la navegación
       if (typeof onClose === 'function') {
         onClose();
       }

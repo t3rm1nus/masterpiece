@@ -9,7 +9,7 @@ import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 // Contexto para animación de salida del card overlay
 export const OverlayCardAnimationContext = createContext({ triggerExitAnimation: () => {} });
 
-const HowToDownload = () => {
+const HowToDownload = ({ onAnimationEnd }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const { lang, t } = useLanguage();
@@ -151,9 +151,15 @@ const HowToDownload = () => {
         className={isExiting ? 'slideOutDownFast' : cardAnim}
         onAnimationEnd={() => {
           if (cardAnim === 'slideOutDownFast' && isExiting) {
-            setTimeout(() => {
-              navigate('/');
-            }, 100);
+            // Llamar al callback externo si existe
+            if (onAnimationEnd) {
+              onAnimationEnd();
+            } else {
+              // Fallback para navegación directa si no hay callback
+              setTimeout(() => {
+                navigate('/');
+              }, 100);
+            }
           }
         }}
       >
