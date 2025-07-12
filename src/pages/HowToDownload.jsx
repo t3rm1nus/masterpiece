@@ -150,24 +150,26 @@ const HowToDownload = () => {
           }
         }}
       >
-        {/* FAB volver visible en móvil y desktop, z-index 2100 */}
-        <Fab
-          color="primary"
-          aria-label="volver"
-          onClick={() => navigate('/', { replace: true })}
-          sx={{
-            position: 'fixed',
-            top: isMobile ? '3px' : '8px',
-            left: 16,
-            zIndex: 2100,
-            backgroundColor: theme.palette.primary.main,
-            '&:hover': {
-              backgroundColor: theme.palette.primary.dark,
-            }
-          }}
-        >
-          <ArrowBackIcon />
-        </Fab>
+        {/* FAB volver visible solo en desktop, z-index 2100 */}
+        {!isMobile && (
+          <Fab
+            color="primary"
+            aria-label="volver"
+            onClick={() => navigate('/', { replace: true })}
+            sx={{
+              position: 'fixed',
+              top: '8px',
+              left: 16,
+              zIndex: 2100,
+              backgroundColor: theme.palette.primary.main,
+              '&:hover': {
+                backgroundColor: theme.palette.primary.dark,
+              }
+            }}
+          >
+            <ArrowBackIcon />
+          </Fab>
+        )}
           <Paper elevation={3} sx={{
             width: '100%',
             maxWidth: { xs: 480, md: '720px', lg: '900px' },

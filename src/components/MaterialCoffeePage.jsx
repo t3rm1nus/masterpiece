@@ -192,24 +192,26 @@ const MaterialCoffeePage = () => {
           }
         }}
       >
-        {/* FAB volver visible en móvil y desktop, z-index 2100 */}
-        <Fab
-          color="primary"
-          aria-label="volver"
-          onClick={handleBack}
-          sx={{
-            position: 'fixed',
-            top: isMobile ? '3px' : '8px',
-            left: 16,
-            zIndex: 2100,
-            backgroundColor: theme.palette.primary.main,
-            '&:hover': {
-              backgroundColor: theme.palette.primary.dark,
-            }
-          }}
-        >
-          <ArrowBackIcon />
-        </Fab>
+        {/* FAB volver visible solo en desktop, z-index 2100 */}
+        {!isMobile && (
+          <Fab
+            color="primary"
+            aria-label="volver"
+            onClick={handleBack}
+            sx={{
+              position: 'fixed',
+              top: '8px',
+              left: 16,
+              zIndex: 2100,
+              backgroundColor: theme.palette.primary.main,
+              '&:hover': {
+                backgroundColor: theme.palette.primary.dark,
+              }
+            }}
+          >
+            <ArrowBackIcon />
+          </Fab>
+        )}
         {/* Card principal con icono de café y color de fondo de café */}
         <UiCard 
           elevation={3}
