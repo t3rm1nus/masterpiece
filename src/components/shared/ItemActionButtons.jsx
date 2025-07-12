@@ -149,13 +149,17 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
           color="primary"
           startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
           onClick={() => {
-            if (typeof onOverlayNavigate === 'function') {
-              onOverlayNavigate('/como-descargar');
-            } else if (typeof goToHowToDownload === 'function') {
-              goToHowToDownload();
-            } else {
-              navigate('/como-descargar');
-            }
+            // Cerrar el detalle con animación antes de navegar
+            window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+            setTimeout(() => {
+              if (typeof onOverlayNavigate === 'function') {
+                onOverlayNavigate('/como-descargar');
+              } else if (typeof goToHowToDownload === 'function') {
+                goToHowToDownload();
+              } else {
+                navigate('/como-descargar');
+              }
+            }, 400);
           }}
           sx={getButtonSx}
         >

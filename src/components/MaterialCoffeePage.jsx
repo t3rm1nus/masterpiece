@@ -199,7 +199,7 @@ const MaterialCoffeePage = () => {
           onClick={handleBack}
           sx={{
             position: 'fixed',
-            top: isMobile ? '63px' : '8px',
+            top: isMobile ? '3px' : '8px',
             left: 16,
             zIndex: 2100,
             backgroundColor: theme.palette.primary.main,

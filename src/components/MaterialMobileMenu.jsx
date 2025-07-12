@@ -117,7 +117,10 @@ const MaterialMobileMenu = ({
   }, [isDarkMode]);
 
   // Mostrar FAB de volver solo en móvil y solo en las páginas de donaciones y cómo descargar
-  const showFabBackButton = isMobile && (currentView === 'coffee' || currentView === 'howToDownload');
+  // Evitar mostrar el FAB durante la transición de navegación
+  const showFabBackButton = isMobile && 
+    (currentView === 'coffee' || currentView === 'howToDownload') && 
+    !isAnimating;
 
   // Botón de donaciones y cómo descargar en menú móvil
   const handleGoToCoffee = () => {
@@ -368,7 +371,7 @@ const MaterialMobileMenu = ({
           disabled={isAnimating}
           sx={{
             position: 'fixed',
-            top: '63px',
+            top: '3px',
             left: 16,
             zIndex: 1400, // Igual que el Drawer del menú móvil
             backgroundColor: theme?.palette?.primary?.main,
