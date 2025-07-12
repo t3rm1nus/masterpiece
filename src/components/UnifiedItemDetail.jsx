@@ -229,9 +229,7 @@ export default function UnifiedItemDetail(props) {
             />
           )}
           isClosing={props.isClosing}
-          onClose={() => {
-            if (props.onClose) props.onClose();
-          }}
+          onClose={props.onExited}
           onBack={props.onBack}
         />
       </Box>

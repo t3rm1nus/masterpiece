@@ -171,8 +171,8 @@ export default function HomeLayout() {
         onOverlayNavigate={handleOverlayNavigate}
       />
       
-      {/* Overlay móvil simplificado */}
-      {isMobile && showDetailOverlay && (
+      {/* Overlay móvil simplificado - mantener visible durante animación de salida */}
+      {isMobile && (showDetailOverlay || isClosing) && (
         <OverlayWrapper>
           {overlayContent}
         </OverlayWrapper>
