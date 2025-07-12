@@ -62,8 +62,10 @@ export default function HomeLayout() {
         setShowDetailOverlay(true);
         setIsClosing(false);
       }
-    } else if (isMobile && !isOverlay && showDetailOverlay && !isClosing) {
+    } else if (isMobile && !isOverlay && showDetailOverlay) {
+      // Móvil: ocultar overlay inmediatamente al salir
       setShowDetailOverlay(false);
+      setIsClosing(false);
     }
     // Desktop: manejar overlay de forma más simple
     if (!isMobile) {
@@ -85,15 +87,15 @@ export default function HomeLayout() {
 
 
 
-  // Botón volver: en móvil, activa cierre; en desktop, navegación instantánea
+  // Botón volver: en móvil, navegación instantánea; en desktop, navegación instantánea
   const handleBack = () => {
     if (isMobile && isOverlay) {
-      setIsClosing(true);
-      setIsNavigating(true);
-      // Navegar después de que termine la animación CSS
-      setTimeout(() => {
-        handleMobileDetailExited();
-      }, 300);
+      // Móvil: navegación instantánea sin animación
+      if (isHowToDownload || isDonaciones) {
+        navigate('/', { replace: true });
+      } else {
+        navigate('/');
+      }
     } else if (!isMobile && isOverlay) {
       // Desktop: navegación instantánea sin animación
       // Para páginas de descargas y donaciones, usar replace para evitar historial
@@ -193,7 +195,7 @@ export default function HomeLayout() {
   // Determinar qué contenido mostrar en el overlay móvil
   let overlayContent = null;
   if (matchPath('/detalle/:category/:id', location.pathname)) {
-    overlayContent = <UnifiedItemDetail isClosing={isClosing} onBack={handleBack} onExited={handleMobileDetailExited} />;
+    overlayContent = <UnifiedItemDetail isClosing={false} onBack={handleBack} onExited={handleMobileDetailExited} />;
   } else if (location.pathname === '/como-descargar') {
     overlayContent = <HowToDownload onAnimationEnd={handleMobileDetailExited} />;
   } else if (location.pathname === '/donaciones') {
@@ -224,8 +226,7 @@ export default function HomeLayout() {
           background: 'rgba(255,255,255,0.98)',
           overflowY: 'auto',
           boxSizing: 'border-box',
-          transition: 'opacity 0.3s ease-in-out',
-          opacity: isClosing ? 0 : 1,
+          // Sin transición de opacidad para navegación instantánea
         }}
       >
         {children}
@@ -265,8 +266,8 @@ export default function HomeLayout() {
         audioRef={audioRef}
         onOverlayNavigate={handleOverlayNavigate}
       />
-      {/* HomePage siempre visible excepto durante transiciones de overlay en móvil */}
-      {(!isMobile || (!showDetailOverlay && !isClosing)) && (
+      {/* HomePage siempre visible excepto cuando hay overlay activo en móvil */}
+      {(!isMobile || !showDetailOverlay) && (
         <HomePage
           onSplashOpen={openSplash}
           splashOpen={splashOpen}
@@ -277,8 +278,8 @@ export default function HomeLayout() {
         />
       )}
       
-      {/* Overlay móvil simplificado sin Material-UI Fade */}
-      {isMobile && (showDetailOverlay || isClosing) && (
+      {/* Overlay móvil simplificado sin animación de salida */}
+      {isMobile && showDetailOverlay && (
         <OverlayWrapper>
           {overlayContent}
         </OverlayWrapper>
