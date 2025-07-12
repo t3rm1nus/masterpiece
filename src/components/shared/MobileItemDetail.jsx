@@ -92,6 +92,7 @@ const MobileItemDetail = ({
           100% {
             opacity: 1;
             transform: translateY(0) scale(1);
+            visibility: visible;
           }
         }
         
@@ -99,10 +100,12 @@ const MobileItemDetail = ({
           0% {
             opacity: 1;
             transform: translateY(0) scale(1);
+            visibility: visible;
           }
           100% {
             opacity: 0;
             transform: translateY(40px) scale(0.95);
+            visibility: hidden;
           }
         }
       `;
@@ -260,7 +263,8 @@ const MobileItemDetail = ({
             // Forzar animación inline para asegurar que funcione
             animation: isClosing 
               ? 'slideOutDownMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
-              : 'slideInUpMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
+              : 'slideInUpMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+            visibility: isClosing ? 'hidden' : 'visible'
           }}
           onAnimationEnd={(e) => {
             handleAnimationEnd();

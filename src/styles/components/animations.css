@@ -68,10 +68,12 @@ Animaciones y transiciones suaves para cards, header y menú móvil
   0% {
     opacity: 1;
     transform: translateY(0) scale(1);
+    visibility: visible;
   }
   100% {
     opacity: 0;
     transform: translateY(40px) scale(0.95);
+    visibility: hidden;
   }
 }
 
@@ -91,6 +93,59 @@ Animaciones y transiciones suaves para cards, header y menú móvil
 
 .mp-ui-card.item-detail-mobile-card.slideOutDown {
   animation: slideOutDownMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+/* Animaciones para páginas de descargas y donaciones */
+@keyframes scaleFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }
+}
+
+@keyframes scaleFadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.92);
+    visibility: hidden;
+  }
+}
+
+.slideInUpFast {
+  animation: scaleFadeIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+.slideOutDownFast {
+  animation: scaleFadeOut 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+/* Asegurar que los elementos se oculten completamente después de las animaciones de salida */
+.slideOutDownFast,
+.slideOutDown,
+.mp-ui-card.item-detail-mobile-card.slideOutDown {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Asegurar que los elementos sean visibles durante las animaciones de entrada */
+.slideInUpFast,
+.slideInUp,
+.mp-ui-card.item-detail-mobile-card.slideInUp {
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 @keyframes superFadeInUp {
