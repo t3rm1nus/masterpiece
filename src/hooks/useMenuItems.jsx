@@ -34,14 +34,14 @@ export function useMenuItems(handleSplashOpen, navigate) {
   }, [resetAllFilters, generateNewRecommendations, lang, navigate]);
 
   const handleCoffeeNavigation = useCallback(() => {
-    goToCoffee();
+    // Solo usar navigate, no duplicar navegación
     navigate('/donaciones');
-  }, [goToCoffee, navigate]);
+  }, [navigate]);
 
   const handleHowToDownload = useCallback(() => {
-    goToHowToDownload();
+    // Solo usar navigate, no duplicar navegación
     navigate('/como-descargar');
-  }, [goToHowToDownload, navigate]);
+  }, [navigate]);
 
   // Splash handler: lo debe pasar el componente como prop si se quiere usar
 

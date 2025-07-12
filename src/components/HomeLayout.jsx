@@ -211,6 +211,26 @@ export default function HomeLayout() {
                 zIndex: 2001,
               }}
             >
+              {/* Botón volver para páginas de descargas y donaciones en móvil */}
+              {(effectiveOverlayRoute === '/como-descargar' || effectiveOverlayRoute === '/donaciones') && (
+                <Fab
+                  color="primary"
+                  aria-label="volver"
+                  onClick={() => navigate('/', { replace: true })}
+                  sx={{
+                    position: 'fixed',
+                    top: '3px',
+                    left: 16,
+                    zIndex: 2100,
+                    backgroundColor: '#1976d2',
+                    '&:hover': {
+                      backgroundColor: '#1565c0',
+                    }
+                  }}
+                >
+                  <ArrowBackIcon />
+                </Fab>
+              )}
               {overlayContent}
             </div>
           </OverlayWrapper>
