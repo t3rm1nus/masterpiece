@@ -90,7 +90,7 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
     if (!document.getElementById('coffee-keyframes')) {
       const style = document.createElement('style');
       style.id = 'coffee-keyframes';
-      style.innerHTML = `@keyframes scaleFadeIn {0%{opacity:0;transform:scale(0.92);visibility:visible;}100%{opacity:1;transform:scale(1);visibility:visible;}}@keyframes scaleFadeOut {0%{opacity:1;transform:scale(1);visibility:visible;}100%{opacity:0;transform:scale(0.92);visibility:hidden;}}.slideInUpFast{animation:scaleFadeIn 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}.slideOutDownFast{animation:scaleFadeOut 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}`;
+      style.innerHTML = `@keyframes scaleFadeIn {0%{opacity:0;transform:scale(0.92);}100%{opacity:1;transform:scale(1);}}@keyframes scaleFadeOut {0%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(0.92);visibility:hidden;}}.slideInUpFast{animation:scaleFadeIn 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}.slideOutDownFast{animation:scaleFadeOut 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}`;
       document.head.appendChild(style);
     }
   }, []);
@@ -190,7 +190,7 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
           overflow: 'visible',
           WebkitOverflowScrolling: 'touch'
         }}
-        className={isExiting ? 'slideOutDownFast' : cardAnim}
+        className={cardAnim}
         onAnimationEnd={() => {
           if (cardAnim === 'slideOutDownFast' && isExiting) {
             // Llamar al callback externo si existe

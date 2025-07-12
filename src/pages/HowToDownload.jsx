@@ -16,6 +16,7 @@ const HowToDownload = ({ onAnimationEnd }) => {
   const { trackSpecialPageView } = useGoogleAnalytics();
   const [cardAnim, setCardAnim] = useState('slideInUpFast');
   const [isExiting, setIsExiting] = useState(false);
+  
   // Proveer función para disparar animación de salida
   const triggerExitAnimation = () => {
     if (!isExiting) {
@@ -23,6 +24,7 @@ const HowToDownload = ({ onAnimationEnd }) => {
       setCardAnim('slideOutDownFast');
     }
   };
+  
   // Detectar overlay cierre por navegación atrás
   useEffect(() => {
     const onPopState = () => {
@@ -44,17 +46,16 @@ const HowToDownload = ({ onAnimationEnd }) => {
       window.removeEventListener('overlay-exit', onOverlayExit);
     };
   }, [isExiting]);
+  
   // Inyectar keyframes solo una vez
   useEffect(() => {
     if (!document.getElementById('howtodownload-keyframes')) {
       const style = document.createElement('style');
       style.id = 'howtodownload-keyframes';
-      style.innerHTML = `@keyframes scaleFadeIn {0%{opacity:0;transform:scale(0.92);visibility:visible;}100%{opacity:1;transform:scale(1);visibility:visible;}}@keyframes scaleFadeOut {0%{opacity:1;transform:scale(1);visibility:visible;}100%{opacity:0;transform:scale(0.92);visibility:hidden;}}.slideInUpFast{animation:scaleFadeIn 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}.slideOutDownFast{animation:scaleFadeOut 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}`;
+      style.innerHTML = `@keyframes scaleFadeIn {0%{opacity:0;transform:scale(0.92);}100%{opacity:1;transform:scale(1);}}@keyframes scaleFadeOut {0%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(0.92);visibility:hidden;}}.slideInUpFast{animation:scaleFadeIn 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}.slideOutDownFast{animation:scaleFadeOut 0.55s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}`;
       document.head.appendChild(style);
     }
   }, []);
-
-  // Eliminar el useEffect que hace window.scrollTo({ top: 0, behavior: 'smooth' }) en móviles al montar
 
   // Fix específico para iPhone - asegurar scroll
   useEffect(() => {
@@ -114,11 +115,11 @@ const HowToDownload = ({ onAnimationEnd }) => {
     },
     step3desc: {
       es: 'Ahora solo queda dejar que la magia fluya. Verás cómo el archivo empieza a descargarse poco a poco gracias a una red de gente compartiendo pedacitos. Es como una fondue colectiva, pero con bits.',
-      en: 'Now just let the magic happen. You’ll see the file start downloading bit by bit thanks to a network of people sharing pieces. It’s like a collective fondue, but with bits.'
+      en: "Now just let the magic happen. You'll see the file start downloading bit by bit thanks to a network of people sharing pieces. It's like a collective fondue, but with bits."
     },
     vpn: {
       es: '🛡️ Bonus: Usa VPN si no quieres que tu proveedor de internet te mire feo',
-      en: '🛡️ Bonus: Use a VPN if you don’t want your internet provider giving you the stink eye'
+      en: "🛡️ Bonus: Use a VPN if you don't want your internet provider giving you the stink eye"
     },
     vpndesc: {
       es: 'No es obligatorio, pero si te mola la privacidad o estás en un país donde se ponen intensos con los torrents, un VPN es tu mejor amigo.',
@@ -126,7 +127,7 @@ const HowToDownload = ({ onAnimationEnd }) => {
     },
     end: {
       es: 'Y listo. Ya puedes decir con orgullo que sabes bajar torrents sin naufragar en un mar de pop-ups, spyware y desesperación. ¡Feliz navegación, capitán! 🏴‍☠️',
-      en: 'And that’s it. Now you can proudly say you know how to download torrents without sinking in a sea of pop-ups, spyware, and despair. Happy sailing, captain! 🏴‍☠️'
+      en: "And that's it. Now you can proudly say you know how to download torrents without sinking in a sea of pop-ups, spyware, and despair. Happy sailing, captain! 🏴‍☠️"
     }
   };
   const navigate = useNavigate();
@@ -148,7 +149,7 @@ const HowToDownload = ({ onAnimationEnd }) => {
           overflow: 'visible',
           WebkitOverflowScrolling: 'touch'
         }}
-        className={isExiting ? 'slideOutDownFast' : cardAnim}
+        className={cardAnim}
         onAnimationEnd={() => {
           if (cardAnim === 'slideOutDownFast' && isExiting) {
             // Llamar al callback externo si existe

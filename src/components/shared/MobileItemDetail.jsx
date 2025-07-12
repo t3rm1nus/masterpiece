@@ -92,7 +92,6 @@ const MobileItemDetail = ({
           100% {
             opacity: 1;
             transform: translateY(0) scale(1);
-            visibility: visible;
           }
         }
         
@@ -100,7 +99,6 @@ const MobileItemDetail = ({
           0% {
             opacity: 1;
             transform: translateY(0) scale(1);
-            visibility: visible;
           }
           100% {
             opacity: 0;
@@ -153,41 +151,17 @@ const MobileItemDetail = ({
 
   // Lógica para desmontar tras animación de salida
   const handleAnimationEnd = () => {
-    if (isClosing) {
-      // Llamar al callback onClose que manejará la navegación
-      if (typeof onClose === 'function') {
-        onClose();
-      }
+    if (isClosing && onClose) {
+      onClose();
     }
   };
-
-  React.useEffect(() => {
-    if (isClosing) {
-      // Forzar la aplicación de la animación después de un pequeño delay
-      setTimeout(() => {
-        if (cardRef.current) {
-          cardRef.current.style.animation = 'none';
-          cardRef.current.offsetHeight; // Trigger reflow
-          cardRef.current.style.animation = 'slideOutDownMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards';
-        }
-      }, 10);
-    }
-  }, [isClosing, selectedItem]);
-
-  // Monitorear desmontaje del componente
-  React.useEffect(() => {
-    return () => {
-    };
-  }, []);
-
-  // Eliminado fix específico para iPhone, el scroll será nativo universal
 
   // Handler robusto para el botón volver
   const handleBackClick = () => {
     if (onBack) {
       onBack();
     } else if (onClose) {
-      onClose(); // Esto debería activar la animación de salida
+      onClose();
     } else {
       try {
         window.history.back();
@@ -269,12 +243,9 @@ const MobileItemDetail = ({
               ? 'slideOutDownMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
               : shouldAnimateIn 
                 ? 'slideInUpMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
-                : 'none',
-            visibility: isClosing ? 'hidden' : 'visible'
+                : 'none'
           }}
-          onAnimationEnd={(e) => {
-            handleAnimationEnd();
-          }}
+          onAnimationEnd={handleAnimationEnd}
           {...domSafeProps}
         >
           {/* Badge de masterpiece en la esquina del detalle */}

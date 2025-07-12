@@ -41,45 +41,30 @@ export default function HomeLayout() {
   const isOverlay = isDetail || isHowToDownload || isDonaciones;
   const isMobile = window.innerWidth < 900;
 
-  // --- Animación de salida robusta en móvil ---
+  // --- Animación de salida simplificada ---
   const [showDetailOverlay, setShowDetailOverlay] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [pendingOverlayRoute, setPendingOverlayRoute] = useState(null);
-  // Nuevo: guardar la última ruta de overlay para renderizar el contenido correcto durante la animación de salida
-  const [lastOverlayRoute, setLastOverlayRoute] = useState(null);
-  // Nuevo: controlar el estado de animación interna
-  const [internalAnimationComplete, setInternalAnimationComplete] = useState(false);
 
   // Sincroniza el estado local con la ruta
   useEffect(() => {
     if (isMobile && isOverlay && !showDetailOverlay) {
       setShowDetailOverlay(true);
       setIsClosing(false);
-      setInternalAnimationComplete(false);
-      setLastOverlayRoute(location.pathname); // Guardar la ruta actual al abrir overlay
     }
     if (isMobile && !isOverlay && showDetailOverlay && !isClosing) {
       setShowDetailOverlay(false);
-      setInternalAnimationComplete(false);
     }
     // Desktop: no usar overlay local
     if (!isMobile) {
       setShowDetailOverlay(false);
       setIsClosing(false);
-      setInternalAnimationComplete(false);
     }
   }, [isMobile, isOverlay, showDetailOverlay, isClosing, location.pathname]);
 
-  // Cuando se inicia el cierre, mantener la ruta del overlay anterior hasta que termine la animación
-  useEffect(() => {
-    if (isClosing && isMobile && isOverlay) {
-      setLastOverlayRoute(location.pathname);
-    }
-  }, [isClosing, isMobile, isOverlay, location.pathname]);
-
   // Botón volver: en móvil, activa cierre; en desktop, navega directo
   const handleBack = () => {
-    if (isMobile && (isDetail || lastOverlayRoute?.startsWith('/detalle/'))) {
+    if (isMobile && isOverlay) {
       setIsClosing(true);
     } else {
       navigate('/');
@@ -111,19 +96,6 @@ export default function HomeLayout() {
     } else {
       navigate('/');
     }
-    setLastOverlayRoute(null);
-  };
-
-  // Handler para cuando termina la animación de salida del componente interno
-  const handleInternalAnimationEnd = () => {
-    // Solo desmontar el overlay después de que termine la animación interna
-    if (isClosing) {
-      setInternalAnimationComplete(true);
-      // Pequeño delay para asegurar que la animación interna haya terminado completamente
-      setTimeout(() => {
-        setShowDetailOverlay(false);
-      }, 100);
-    }
   };
 
   // Handler robusto para navegación atrás tras animación (desktop)
@@ -149,21 +121,16 @@ export default function HomeLayout() {
 
   // Determinar qué contenido mostrar en el overlay móvil
   let overlayContent = null;
-  const effectiveOverlayRoute = isClosing && lastOverlayRoute ? lastOverlayRoute : location.pathname;
-  if (matchPath('/detalle/:category/:id', effectiveOverlayRoute)) {
-    overlayContent = <UnifiedItemDetail isClosing={isClosing} onBack={handleBack} onExited={handleInternalAnimationEnd} />;
-  } else if (effectiveOverlayRoute === '/como-descargar') {
-    overlayContent = <HowToDownload onAnimationEnd={handleInternalAnimationEnd} />;
-  } else if (effectiveOverlayRoute === '/donaciones') {
-    overlayContent = <CoffeePage onAnimationEnd={handleInternalAnimationEnd} />;
+  if (matchPath('/detalle/:category/:id', location.pathname)) {
+    overlayContent = <UnifiedItemDetail isClosing={isClosing} onBack={handleBack} onExited={handleMobileDetailExited} />;
+  } else if (location.pathname === '/como-descargar') {
+    overlayContent = <HowToDownload onAnimationEnd={handleMobileDetailExited} />;
+  } else if (location.pathname === '/donaciones') {
+    overlayContent = <CoffeePage onAnimationEnd={handleMobileDetailExited} />;
   }
 
-  // Overlay robusto: siempre cubre toda la pantalla, z-index muy alto, logs de ciclo de vida
+  // Overlay simplificado: siempre cubre toda la pantalla, z-index muy alto
   const OverlayWrapper = ({ children }) => {
-    React.useEffect(() => {
-      return () => {
-      };
-    }, []);
     return (
       <div
         style={{
@@ -203,111 +170,18 @@ export default function HomeLayout() {
         audioRef={audioRef}
         onOverlayNavigate={handleOverlayNavigate}
       />
-      {/* Overlay de detalle móvil con animación de salida robusta */}
-      {isMobile && (isOverlay || (isClosing && showDetailOverlay)) && showDetailOverlay && !internalAnimationComplete && (
-        <CSSTransition
-          in={!isClosing}
-          timeout={400}
-          classNames="overlay-fade"
-          unmountOnExit
-          nodeRef={overlayRef}
-          onExited={handleMobileDetailExited}
-        >
-          <OverlayWrapper>
-            <div
-              ref={overlayRef}
-              key={effectiveOverlayRoute}
-              style={{
-                minHeight: '100vh',
-                width: '100vw',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'flex-start',
-                position: 'relative',
-                zIndex: 1401, // Contenido del overlay para detalles - por encima del overlay base
-              }}
-            >
-              {/* Botón volver para páginas de descargas y donaciones en móvil */}
-              {(effectiveOverlayRoute === '/como-descargar' || effectiveOverlayRoute === '/donaciones') && (
-                <Fab
-                  color="primary"
-                  aria-label="volver"
-                  onClick={() => {
-                    setIsClosing(true);
-                  }}
-                  sx={{
-                    position: 'fixed',
-                    top: '73px',
-                    left: 16,
-                    zIndex: 1402, // FAB del overlay para detalles - por encima del contenido del overlay
-                    backgroundColor: '#1976d2',
-                    '&:hover': {
-                      backgroundColor: '#1565c0',
-                    }
-                  }}
-                >
-                  <ArrowBackIcon />
-                </Fab>
-              )}
-              {overlayContent}
-            </div>
-          </OverlayWrapper>
-        </CSSTransition>
+      
+      {/* Overlay móvil simplificado */}
+      {isMobile && showDetailOverlay && (
+        <OverlayWrapper>
+          {overlayContent}
+        </OverlayWrapper>
       )}
-      {/* Overlay para desktop y otros overlays */}
+      
+      {/* Desktop: renderizado directo sin overlay */}
       {!isMobile && (
-        <CSSTransition
-          in={isOverlay}
-          timeout={400}
-          classNames="overlay-fade"
-          unmountOnExit
-          nodeRef={overlayRef}
-          onExited={() => goHome()}
-        >
-          <div
-            ref={overlayRef}
-            key={location.pathname}
-            style={{
-              position: 'fixed',
-              top: 64,
-              left: 0,
-              width: '100vw',
-              height: 'calc(100vh - 64px)',
-              background: 'rgba(255,255,255,0.98)',
-              zIndex: 1400, // Overlay desktop - por encima del menú móvil (1300)
-              overflowY: 'auto',
-              paddingTop: 0,
-              boxSizing: 'border-box',
-              transition: 'box-shadow 0.3s',
-            }}
-          >
-            <div style={{ position: 'relative', maxWidth: 900, margin: '0 auto', paddingTop: 24 }}>
-              {/* Botón de volver para overlays que no son detalle */}
-              {/* ELIMINADO: FAB duplicado en overlays desktop para donaciones y otros overlays */}
-            </div>
-            {/* Renderizar UnifiedItemDetail manualmente para detalle, Outlet para el resto */}
-            {isDetail ? (
-              <UnifiedItemDetail />
-            ) : (
-              <Outlet key={location.pathname} />
-            )}
-          </div>
-        </CSSTransition>
+        <Outlet />
       )}
-      <style>{`
-        .overlay-fade-enter { opacity: 0; transform: translateY(40px); }
-        .overlay-fade-enter-active { opacity: 1; transform: translateY(0); transition: opacity 400ms, transform 400ms; }
-        .overlay-fade-exit { opacity: 1; transform: translateY(0); }
-        .overlay-fade-exit-active { opacity: 0; transform: translateY(40px); transition: opacity 400ms, transform 400ms; }
-        
-        /* Evitar flash durante transiciones */
-        .overlay-fade-exit-done {
-          opacity: 0 !important;
-          visibility: hidden !important;
-          pointer-events: none !important;
-        }
-      `}</style>
     </div>
   );
 } 
