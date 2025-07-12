@@ -11,7 +11,8 @@ import { processTitle, processDescription } from '../store/utils';
 import { useParams, useNavigate } from 'react-router-dom';
 import { findItemByGlobalId } from '../utils/appUtils';
 import useBackNavigation from '../hooks/useBackNavigation';
-import { CircularProgress } from '@mui/material';
+import { CircularProgress, Zoom } from '@mui/material';
+import { useMaterialAnimation } from '../hooks/useMaterialAnimation';
 
 // Material UI imports (solo para mobile)
 import {
@@ -78,9 +79,11 @@ export default function UnifiedItemDetail(props) {
   const [imgLoaded, setImgLoaded] = React.useState(false);
   const [imageHover, setImageHover] = React.useState(false);
   const [internalClosing, setInternalClosing] = React.useState(false);
-  const [cardAnim, setCardAnim] = useState('slideInUpFast');
   const lastItemRef = React.useRef(null);
   const { handleBack, isAnimating } = useBackNavigation();
+
+  // Usar hook de animación de Material-UI
+  const animationProps = useMaterialAnimation(props.isClosing || internalClosing, 400, 'zoom');
 
   // 2. Lógica de obtención de selectedItem DESPUÉS de los hooks
   let selectedItem = props.item;
@@ -114,42 +117,13 @@ export default function UnifiedItemDetail(props) {
   
   // Determinar la categoría real del item para color y chip
   const realCategory = selectedItem.category || selectedCategory;
-  
-  // Eliminado: handleBack redundante - se maneja en useBackNavigation
 
-  // Inyectar keyframes globales SOLO una vez (fade+scale, igual que páginas)
-  useEffect(() => {
-    if (!document.getElementById('detail-scale-keyframes')) {
-      const style = document.createElement('style');
-      style.id = 'detail-scale-keyframes';
-      style.innerHTML = `@keyframes scaleFadeIn {0%{opacity:0;transform:scale(0.92);}100%{opacity:1;transform:scale(1);}}@keyframes scaleFadeOut {0%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(0.92);visibility:hidden;}}.slideInUpFast{animation:scaleFadeIn 0.4s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}.slideOutDownFast{animation:scaleFadeOut 0.4s cubic-bezier(0.25,0.46,0.45,0.94) forwards;}`;
-      document.head.appendChild(style);
-    }
-  }, []);
-
-  // Debug: monitorear cambios en internalClosing
-  useEffect(() => {}, [internalClosing]);
-  // Al montar, animación de entrada
-  useEffect(() => {
-    if (!props.isExiting && !internalClosing) {
-      setCardAnim('slideInUpFast');
-    }
-  }, [props.isExiting, internalClosing]);
-  // Cuando isExiting cambia a true, animación de salida
-  useEffect(() => {
-    if (props.isExiting) {
-      setCardAnim('slideOutDownFast');
-    }
-  }, [props.isExiting]);
   // Handler para cerrar con animación
   const triggerExitAnimation = () => {
     if (!props.isExiting && !internalClosing) {
       setInternalClosing(true); // Activar animación de cierre interna
       if (props.onRequestClose) {
         props.onRequestClose();
-      }
-      if (!isMobile) {
-        setCardAnim('slideOutDownFast');
       }
     }
   };
@@ -176,10 +150,6 @@ export default function UnifiedItemDetail(props) {
       setInternalClosing(true);
     }
   };
-
-  // Eliminado: handleAnimationEnd redundante - se maneja en MobileItemDetail
-
-  // Eliminar el useEffect que fuerza el scroll al top en móviles tras mostrar el detalle
 
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
@@ -241,129 +211,125 @@ export default function UnifiedItemDetail(props) {
     const categoryColor = getCategoryColor(realCategory, 'color');
     const gradientBg = `linear-gradient(135deg, ${categoryColor} 0%, ${theme.palette.mode === 'dark' ? 'rgba(24,24,24,0.92)' : 'rgba(255,255,255,0.85)'} 100%)`;
     return (
-      <div style={styles.page(theme)}>
-        <div
-          className={cardAnim}
-          style={{
-            ...styles.desktopWrapper,
-            ...(isMasterpiece ? styles.desktopWrapperMasterpiece : {}),
-            ...(isMasterpiece ? {} : { background: gradientBg })
-          }}
-          onAnimationEnd={e => {
-            if ((props.isExiting || internalClosing) && cardAnim === 'slideOutDownFast' && typeof props.onExited === 'function') {
-              props.onExited();
-            }
-          }}
-        >
-          {/* Botón volver FAB azul arriba a la izquierda, igual que en donaciones/descargar */}
-          <Fab
-            color="primary"
-            size="large"
-            aria-label={typeof t === 'function' ? t('Volver') : 'Volver'}
-            onClick={handleCloseDesktop}
-            disabled={isAnimating}
-            sx={{
-              position: 'absolute',
-              top: 18,
-              left: 18,
-              zIndex: 50,
-              boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
-              opacity: isAnimating ? 0.5 : 1,
-              cursor: isAnimating ? 'not-allowed' : 'pointer',
+      <Zoom {...animationProps} onExited={props.onExited}>
+        <div style={styles.page(theme)}>
+          <div
+            style={{
+              ...styles.desktopWrapper,
+              ...(isMasterpiece ? styles.desktopWrapperMasterpiece : {}),
+              ...(isMasterpiece ? {} : { background: gradientBg })
             }}
-            tabIndex={0}
           >
-            <ArrowBackIcon style={{ fontSize: 28, color: '#fff' }} />
-          </Fab>
-          {isMasterpiece && (
-            <div style={styles.desktopBadgeRight}>
-              {/* SVG estrella solo negro */}
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="22" cy="22" r="22" fill="#FFD700"/>
-                <path
-                  d="M22 10l3.6 7.3 8.1 1.2-5.85 5.7 1.38 8.06L22 28.1l-7.23 3.8 1.38-8.06L10.3 18.5l8.1-1.2L22 10z"
-                  fill="#111"
+            {/* Botón volver FAB azul arriba a la izquierda, igual que en donaciones/descargar */}
+            <Fab
+              color="primary"
+              size="large"
+              aria-label={typeof t === 'function' ? t('Volver') : 'Volver'}
+              onClick={handleCloseDesktop}
+              disabled={isAnimating}
+              sx={{
+                position: 'absolute',
+                top: 18,
+                left: 18,
+                zIndex: 50,
+                boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+                opacity: isAnimating ? 0.5 : 1,
+                cursor: isAnimating ? 'not-allowed' : 'pointer',
+              }}
+              tabIndex={0}
+            >
+              <ArrowBackIcon style={{ fontSize: 28, color: '#fff' }} />
+            </Fab>
+            {isMasterpiece && (
+              <div style={styles.desktopBadgeRight}>
+                {/* SVG estrella solo negro */}
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="22" cy="22" r="22" fill="#FFD700"/>
+                  <path
+                    d="M22 10l3.6 7.3 8.1 1.2-5.85 5.7 1.38 8.06L22 28.1l-7.23 3.8 1.38-8.06L10.3 18.5l8.1-1.2L22 10z"
+                    fill="#111"
+                  />
+                </svg>
+              </div>
+            )}
+            {/* MAQUETACIÓN CORRECTA: leftCol (imagen) y rightCol (textos) como hermanos */}
+            <div style={styles.leftCol}>
+              <div style={styles.imageContainer}>
+                <img
+                  src={selectedItem.image}
+                  alt={title}
+                  style={imageHover ? { ...styles.image, ...styles.imageHover } : styles.image}
+                  onLoad={() => setImgLoaded(true)}
+                  onMouseEnter={() => setImageHover(true)}
+                  onMouseLeave={() => setImageHover(false)}
                 />
-              </svg>
+              </div>
             </div>
-          )}
-          {/* MAQUETACIÓN CORRECTA: leftCol (imagen) y rightCol (textos) como hermanos */}
-          <div style={styles.leftCol}>
-            <div style={styles.imageContainer}>
-              <img
-                src={selectedItem.image}
-                alt={title}
-                style={imageHover ? { ...styles.image, ...styles.imageHover } : styles.image}
-                onLoad={() => setImgLoaded(true)}
-                onMouseEnter={() => setImageHover(true)}
-                onMouseLeave={() => setImageHover(false)}
-              />
-            </div>
-          </div>
-          <div style={styles.rightCol}>
-            <h2 style={styles.title}>{title}</h2>
-            <div style={styles.chipRow}>
-              <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
-                {getCategoryTranslation(realCategory)}
-              </span>
-              {selectedItem.subcategory && (
+            <div style={styles.rightCol}>
+              <h2 style={styles.title}>{title}</h2>
+              <div style={styles.chipRow}>
                 <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
-                  {(() => {
-                    const subcat = selectedItem.subcategory;
-                    if (typeof subcat === 'object' && subcat !== null) {
-                      if (subcat[lang]) return ensureString(subcat[lang], lang);
-                      const firstValue = Object.values(subcat)[0];
-                      return ensureString(firstValue, lang);
-                    }
-                    return ensureString(getSubcategoryTranslation(subcat), lang);
-                  })()}
+                  {getCategoryTranslation(realCategory)}
                 </span>
-              )}
-            </div>
-            <div style={styles.metaRow}>
-              {/* Mostrar autor/artista para música */}
-              {selectedItem.category === 'music' && selectedItem.artist && (
-                <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {selectedItem.artist}</span>
-              )}
-              {/* Mostrar autor para otras categorías */}
-              {selectedItem.category !== 'music' && selectedItem.author && (
-                <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {selectedItem.author}</span>
-              )}
-              {selectedItem.year && (
-                <span style={styles.meta}><AccessTimeIcon style={styles.metaIcon}/> {selectedItem.year}</span>
-              )}
-              {selectedItem.duration && (
-                <span style={styles.meta}><PlaylistPlayIcon style={styles.metaIcon}/> {selectedItem.duration}</span>
-              )}
-              {selectedItem.language && (
-                <span style={styles.meta}><TranslateIcon style={styles.metaIcon}/> {selectedItem.language}</span>
-              )}
-              {selectedItem.platform && (
-                <span style={styles.meta}><PlatformIcon style={styles.metaIcon}/> {selectedItem.platform}</span>
-              )}
-              {selectedItem.age && (
-                <span style={styles.meta}><ChildCareIcon style={styles.metaIcon}/> {selectedItem.age}+</span>
-              )}
-              {selectedItem.developer && (
-                <span style={styles.meta}><DeveloperIcon style={styles.metaIcon}/> {selectedItem.developer}</span>
-              )}
-            </div>
-            <div style={styles.extraContentRow}>
-              <DesktopCategorySpecificContent selectedItem={selectedItem} lang={lang} t={t} />
-            </div>
-            <p style={styles.description}>{description}</p>
-            <div style={styles.actionsRow}>
-              <DesktopActionButtons
-                selectedItem={selectedItem}
-                trailerUrl={trailerUrl}
-                lang={lang}
-                t={t}
-                goToHowToDownload={goToHowToDownload}
-              />
+                {selectedItem.subcategory && (
+                  <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
+                    {(() => {
+                      const subcat = selectedItem.subcategory;
+                      if (typeof subcat === 'object' && subcat !== null) {
+                        if (subcat[lang]) return ensureString(subcat[lang], lang);
+                        const firstValue = Object.values(subcat)[0];
+                        return ensureString(firstValue, lang);
+                      }
+                      return ensureString(getSubcategoryTranslation(subcat), lang);
+                    })()}
+                  </span>
+                )}
+              </div>
+              <div style={styles.metaRow}>
+                {/* Mostrar autor/artista para música */}
+                {selectedItem.category === 'music' && selectedItem.artist && (
+                  <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {selectedItem.artist}</span>
+                )}
+                {/* Mostrar autor para otras categorías */}
+                {selectedItem.category !== 'music' && selectedItem.author && (
+                  <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {selectedItem.author}</span>
+                )}
+                {selectedItem.year && (
+                  <span style={styles.meta}><AccessTimeIcon style={styles.metaIcon}/> {selectedItem.year}</span>
+                )}
+                {selectedItem.duration && (
+                  <span style={styles.meta}><PlaylistPlayIcon style={styles.metaIcon}/> {selectedItem.duration}</span>
+                )}
+                {selectedItem.language && (
+                  <span style={styles.meta}><TranslateIcon style={styles.metaIcon}/> {selectedItem.language}</span>
+                )}
+                {selectedItem.platform && (
+                  <span style={styles.meta}><PlatformIcon style={styles.metaIcon}/> {selectedItem.platform}</span>
+                )}
+                {selectedItem.age && (
+                  <span style={styles.meta}><ChildCareIcon style={styles.metaIcon}/> {selectedItem.age}+</span>
+                )}
+                {selectedItem.developer && (
+                  <span style={styles.meta}><DeveloperIcon style={styles.metaIcon}/> {selectedItem.developer}</span>
+                )}
+              </div>
+              <div style={styles.extraContentRow}>
+                <DesktopCategorySpecificContent selectedItem={selectedItem} lang={lang} t={t} />
+              </div>
+              <p style={styles.description}>{description}</p>
+              <div style={styles.actionsRow}>
+                <DesktopActionButtons
+                  selectedItem={selectedItem}
+                  trailerUrl={trailerUrl}
+                  lang={lang}
+                  t={t}
+                  goToHowToDownload={goToHowToDownload}
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Zoom>
     );
   }
   

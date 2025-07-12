@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button } from '@mui/material';
+import { CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button, Slide } from '@mui/material';
 import { ArrowBack as ArrowBackIcon, Category as CategoryIcon, Extension as ExtensionIcon, Movie as MovieIcon, Book as BookIcon, MusicNote as MusicNoteIcon, SportsEsports as SportsEsportsIcon, Mic as MicIcon, Tv as TvIcon, AutoStories as ComicIcon } from '@mui/icons-material';
 import { OndemandVideoIcon, LiveTvIcon } from './CategoryCustomIcons';
 import { getCategoryColor, getCategoryGradient } from '../../utils/categoryPalette';
@@ -8,7 +8,7 @@ import UiCard from '../ui/UiCard';
 import { MobileActionButtons } from './ItemActionButtons';
 import MasterpieceBadge from './MasterpieceBadge';
 import { useNavigate } from 'react-router-dom';
-// Eliminado fix iPhone scroll
+import { useMobileDetailAnimation } from '../../hooks/useMaterialAnimation';
 
 // =============================================
 // MobileItemDetail: Detalle de ítem optimizado para móviles
@@ -70,7 +70,7 @@ const MobileItemDetail = ({
   className = '',
   style = {},
   onBack,
-  getTranslation, // <-- Añadido correctamente como prop
+  getTranslation,
   isClosing = false,
   onClose,
   ...props
@@ -78,38 +78,8 @@ const MobileItemDetail = ({
   const navigate = useNavigate();
   const cardRef = React.useRef(null);
   
-  // Inyectar keyframes globales para las animaciones móviles
-  React.useEffect(() => {
-    if (!document.getElementById('mobile-detail-keyframes')) {
-      const style = document.createElement('style');
-      style.id = 'mobile-detail-keyframes';
-      style.innerHTML = `
-        @keyframes slideInUpMobile {
-          0% {
-            opacity: 0;
-            transform: translateY(40px) scale(0.95);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
-        
-        @keyframes slideOutDownMobile {
-          0% {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-          100% {
-            opacity: 0;
-            transform: translateY(40px) scale(0.95);
-            visibility: hidden;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    }
-  }, []);
+  // Usar hook de animación de Material-UI
+  const animationProps = useMobileDetailAnimation(isClosing);
   
   // Filtrar props internos que no deben ir al DOM
   const domSafeProps = { ...props };
@@ -119,9 +89,6 @@ const MobileItemDetail = ({
   // Permitir renderizar el detalle durante la animación de cierre aunque selectedItem sea null
   const shouldRender = selectedItem || isClosing;
   if (!shouldRender) return null;
-
-  // Evitar animación de entrada si está cerrando
-  const shouldAnimateIn = !isClosing && selectedItem;
 
   // Helper para iconos por categoría
   const getCategoryIcon = (category) => {
@@ -146,13 +113,6 @@ const MobileItemDetail = ({
         return <ComicIcon />;
       default:
         return <CategoryIcon />;
-    }
-  };
-
-  // Lógica para desmontar tras animación de salida
-  const handleAnimationEnd = () => {
-    if (isClosing && onClose) {
-      onClose();
     }
   };
 
@@ -213,179 +173,172 @@ const MobileItemDetail = ({
           position: 'relative',
         }}
       >
-        <UiCard
-          className="item-detail-mobile-card"
-          ref={(el) => {
-            cardRef.current = el;
-          }}
-          sx={{
-            position: 'relative',
-            padding: '16px',
-            width: { xs: 'calc(100vw - 40px)', sm: '96vw' },
-            margin: '0 auto',
-            marginTop: 0,
-            marginBottom: { xs: '36px', sm: 0 }, // margen inferior reducido a la mitad en móvil
-            border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
-            background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
-            zIndex: 1, // Por debajo del AppBar (1200)
-            // --- iPhone/iOS override hacks ---
-            overflow: 'visible !important',
-            overflowY: 'visible !important',
-            WebkitOverflowScrolling: 'touch',
-            maxHeight: 'none !important',
-            height: 'auto !important',
-            // ---
-            ...sx
-          }}
-          style={{
-            // Forzar animación inline para asegurar que funcione
-            animation: isClosing 
-              ? 'slideOutDownMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
-              : shouldAnimateIn 
-                ? 'slideInUpMobile 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
-                : 'none'
-          }}
-          onAnimationEnd={handleAnimationEnd}
-          {...domSafeProps}
-        >
-          {/* Badge de masterpiece en la esquina del detalle */}
-          {selectedItem.masterpiece && (
-            <MasterpieceBadge
-              alt={getTranslation ? getTranslation('ui.alt.masterpiece', 'Obra maestra') : 'Obra maestra'}
-              title={getTranslation ? getTranslation('ui.badges.masterpiece', 'Obra maestra') : 'Obra maestra'}
-              absolute={true}
-              size={40}
-              sx={{
-                position: 'absolute',
-                top: -17,
-                right: -18,
-                zIndex: 1101, // Por encima del detalle (1100) pero por debajo del AppBar (1200)
-                filter: 'drop-shadow(0 4px 16px rgba(255,215,0,0.5))',
-                background: '#FFD700',
-                border: '2.5px solid #111',
-                animation: 'pulseGlow 2s ease-in-out infinite',
-                transition: 'box-shadow 0.3s',
-                pointerEvents: 'none',
-              }}
-            />
-          )}
-          {/* Header custom */}
-          {renderHeader && renderHeader(selectedItem)}
-          {/* Imagen principal + badge masterpiece */}
-          <Box sx={{ position: 'relative' }}>
-            {showSections.image !== false && (renderImage
-              ? renderImage(selectedItem)
-              : <CardMedia
-                  component="img"
-                  sx={{ height: 300, objectFit: 'cover', position: 'relative', border: '2px solid #111' }}
-                  image={selectedItem.image}
-                  alt={title}
-                  onLoad={() => setImgLoaded && setImgLoaded(true)}
-                />
-            )}
-          </Box>
-          {/* CardContent principal: NO overflow ni maxHeight aquí, y forzar overflow: visible en mobile para el badge */}
-          <CardContent
+        <Slide {...animationProps}>
+          <UiCard
+            className="item-detail-mobile-card"
+            ref={(el) => {
+              cardRef.current = el;
+            }}
             sx={{
-              padding: { xs: 0, sm: '24px' },
               position: 'relative',
+              padding: '16px',
+              width: { xs: 'calc(100vw - 40px)', sm: '96vw' },
+              margin: '0 auto',
+              marginTop: 0,
+              marginBottom: { xs: '36px', sm: 0 }, // margen inferior reducido a la mitad en móvil
+              border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
+              background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
+              zIndex: 1, // Por debajo del AppBar (1200)
+              // --- iPhone/iOS override hacks ---
               overflow: 'visible !important',
               overflowY: 'visible !important',
+              WebkitOverflowScrolling: 'touch',
               maxHeight: 'none !important',
               height: 'auto !important',
+              // ---
+              ...sx
             }}
+            {...domSafeProps}
           >
-            {/* Título */}
-          {showSections.title !== false && (
-            <Typography
-              variant="h4"
-              component="h1"
-              gutterBottom
+            {/* Badge de masterpiece en la esquina del detalle */}
+            {selectedItem.masterpiece && (
+              <MasterpieceBadge
+                alt={getTranslation ? getTranslation('ui.alt.masterpiece', 'Obra maestra') : 'Obra maestra'}
+                title={getTranslation ? getTranslation('ui.badges.masterpiece', 'Obra maestra') : 'Obra maestra'}
+                absolute={true}
+                size={40}
+                sx={{
+                  position: 'absolute',
+                  top: -17,
+                  right: -18,
+                  zIndex: 1101, // Por encima del detalle (1100) pero por debajo del AppBar (1200)
+                  filter: 'drop-shadow(0 4px 16px rgba(255,215,0,0.5))',
+                  background: '#FFD700',
+                  border: '2.5px solid #111',
+                  animation: 'pulseGlow 2s ease-in-out infinite',
+                  transition: 'box-shadow 0.3s',
+                  pointerEvents: 'none',
+                }}
+              />
+            )}
+            {/* Header custom */}
+            {renderHeader && renderHeader(selectedItem)}
+            {/* Imagen principal + badge masterpiece */}
+            <Box sx={{ position: 'relative' }}>
+              {showSections.image !== false && (renderImage
+                ? renderImage(selectedItem)
+                : <CardMedia
+                    component="img"
+                    sx={{ height: 300, objectFit: 'cover', position: 'relative', border: '2px solid #111' }}
+                    image={selectedItem.image}
+                    alt={title}
+                    onLoad={() => setImgLoaded && setImgLoaded(true)}
+                  />
+              )}
+            </Box>
+            {/* CardContent principal: NO overflow ni maxHeight aquí, y forzar overflow: visible en mobile para el badge */}
+            <CardContent
               sx={{
-                width: typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent) ? undefined : '90%',
-                mx: 'auto',
-                fontWeight: 400,
-                fontSize: '1.5rem',
-                textAlign: 'center',
-                margin: typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent) ? undefined : '4px 0 0px 7px',
+                padding: { xs: 0, sm: '24px' },
                 position: 'relative',
-                zIndex: 1,
-                background: 'transparent',
-                overflow: 'visible',
-                borderRadius: 0,
-                boxShadow: 'none',
-                color: 'inherit',
+                overflow: 'visible !important',
+                overflowY: 'visible !important',
+                maxHeight: 'none !important',
+                height: 'auto !important',
               }}
             >
-              {title}
-            </Typography>
-          )}
-            {/* Chips de categoría y subcategoría */}
-            {showSections.category !== false && (
-              renderCategory
-                ? renderCategory(selectedItem)
-                : <Stack direction="row" spacing={1} justifyContent="center" sx={{ marginBottom: '16px' }}>
-                    <Chip
-                      icon={getCategoryIcon(selectedItem.category)}
-                      label={getCategoryTranslation(selectedItem.category)}
-                      sx={{
-                        backgroundColor: selectedItem.category === 'boardgames' ? 'transparent' : getCategoryColor(selectedItem.category, 'strong'),
-                        color: selectedItem.category === 'boardgames' ? getCategoryColor(selectedItem.category, 'strong') : 'white',
-                        borderColor: selectedItem.category === 'boardgames' ? getCategoryColor(selectedItem.category, 'strong') : 'transparent',
-                        border: selectedItem.category === 'boardgames' ? '1.5px solid' : 'none',
-                        fontSize: '0.7rem',
-                        fontWeight: 600,
-                        letterSpacing: 0.2,
-                        alignSelf: 'flex-start',
-                        boxShadow: selectedItem.category === 'boardgames' ? undefined : '0 0 0 2px rgba(0,0,0,0.04)',
-                        '& .MuiChip-icon': {
-                          color: selectedItem.category === 'boardgames' ? '#fff' : 'white',
-                        }
-                      }}
-                    />
-                    {selectedItem.subcategory && (renderSubcategory
-                      ? renderSubcategory(selectedItem)
-                      : <Chip
-                          label={getSubcategoryTranslation(selectedItem.subcategory, selectedItem.category)}
-                          variant="outlined"
-                          sx={{
-                            fontSize: '0.68rem',
-                            borderColor: getCategoryColor(selectedItem.category, 'strong'),
-                            color: '#666',
-                            alignSelf: 'flex-start',
-                            marginTop: '0px',
-                            borderWidth: 2,
-                            borderStyle: 'solid',
-                            fontWeight: 500
-                          }}
-                        />
-                    )}
-                  </Stack>
+              {/* Título */}
+            {showSections.title !== false && (
+              <Typography
+                variant="h4"
+                component="h1"
+                gutterBottom
+                sx={{
+                  width: typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent) ? undefined : '90%',
+                  mx: 'auto',
+                  fontWeight: 400,
+                  fontSize: '1.5rem',
+                  textAlign: 'center',
+                  margin: typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent) ? undefined : '4px 0 0px 7px',
+                  position: 'relative',
+                  zIndex: 1,
+                  background: 'transparent',
+                  overflow: 'visible',
+                  borderRadius: 0,
+                  boxShadow: 'none',
+                  color: 'inherit',
+                }}
+              >
+                {title}
+              </Typography>
             )}
-            {/* Información específica por categoría */}
-            {renderMobileSpecificContent && renderMobileSpecificContent(selectedItem)}
-            {/* Descripción */}
-            {showSections.description !== false && (
-              renderDescription
-                ? renderDescription(selectedItem)
-                : <Typography 
-                    variant="body1" 
-                    sx={{ fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '24px', color: 'text.primary' }}
-                  >
-                    {description}
-                  </Typography>
-            )}
-            {/* Botones de acción */}
-            {showSections.actions !== false && (renderActions
-              ? renderActions(selectedItem)
-              : renderMobileActionButtons
-                ? renderMobileActionButtons(selectedItem)
-                : <MobileActionButtons selectedItem={selectedItem} lang={lang} t={t} />
-            )}
-            {/* Footer custom */}
-            {showSections.footer !== false && renderFooter && renderFooter(selectedItem)}
-          </CardContent>
-        </UiCard>
+              {/* Chips de categoría y subcategoría */}
+              {showSections.category !== false && (
+                renderCategory
+                  ? renderCategory(selectedItem)
+                  : <Stack direction="row" spacing={1} justifyContent="center" sx={{ marginBottom: '16px' }}>
+                      <Chip
+                        icon={getCategoryIcon(selectedItem.category)}
+                        label={getCategoryTranslation(selectedItem.category)}
+                        sx={{
+                          backgroundColor: selectedItem.category === 'boardgames' ? 'transparent' : getCategoryColor(selectedItem.category, 'strong'),
+                          color: selectedItem.category === 'boardgames' ? getCategoryColor(selectedItem.category, 'strong') : 'white',
+                          borderColor: selectedItem.category === 'boardgames' ? getCategoryColor(selectedItem.category, 'strong') : 'transparent',
+                          border: selectedItem.category === 'boardgames' ? '1.5px solid' : 'none',
+                          fontSize: '0.7rem',
+                          fontWeight: 600,
+                          letterSpacing: 0.2,
+                          alignSelf: 'flex-start',
+                          boxShadow: selectedItem.category === 'boardgames' ? undefined : '0 0 0 2px rgba(0,0,0,0.04)',
+                          '& .MuiChip-icon': {
+                            color: selectedItem.category === 'boardgames' ? '#fff' : 'white',
+                          }
+                        }}
+                      />
+                      {selectedItem.subcategory && (renderSubcategory
+                        ? renderSubcategory(selectedItem)
+                        : <Chip
+                            label={getSubcategoryTranslation(selectedItem.subcategory, selectedItem.category)}
+                            variant="outlined"
+                            sx={{
+                              fontSize: '0.68rem',
+                              borderColor: getCategoryColor(selectedItem.category, 'strong'),
+                              color: '#666',
+                              alignSelf: 'flex-start',
+                              marginTop: '0px',
+                              borderWidth: 2,
+                              borderStyle: 'solid',
+                              fontWeight: 500
+                            }}
+                          />
+                      )}
+                    </Stack>
+              )}
+              {/* Información específica por categoría */}
+              {renderMobileSpecificContent && renderMobileSpecificContent(selectedItem)}
+              {/* Descripción */}
+              {showSections.description !== false && (
+                renderDescription
+                  ? renderDescription(selectedItem)
+                  : <Typography 
+                      variant="body1" 
+                      sx={{ fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '24px', color: 'text.primary' }}
+                    >
+                      {description}
+                    </Typography>
+              )}
+              {/* Botones de acción */}
+              {showSections.actions !== false && (renderActions
+                ? renderActions(selectedItem)
+                : renderMobileActionButtons
+                  ? renderMobileActionButtons(selectedItem)
+                  : <MobileActionButtons selectedItem={selectedItem} lang={lang} t={t} />
+              )}
+              {/* Footer custom */}
+              {showSections.footer !== false && renderFooter && renderFooter(selectedItem)}
+            </CardContent>
+          </UiCard>
+        </Slide>
       </Box>
     </>
   );

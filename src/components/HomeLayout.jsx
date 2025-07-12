@@ -4,12 +4,11 @@ import HybridMenu from './HybridMenu';
 import { Outlet, useLocation, matchPath, useNavigate } from 'react-router-dom';
 import UnifiedItemDetail from './UnifiedItemDetail';
 import { useAppView } from '../store/useAppStore';
-import { Fab } from '@mui/material';
-import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
-import { CSSTransition } from 'react-transition-group';
+import { Fade } from '@mui/material';
 import { useEffect } from 'react';
 import HowToDownload from '../pages/HowToDownload';
 import CoffeePage from './CoffeePage';
+import { useOverlayAnimation } from '../hooks/useMaterialAnimation';
 
 export default function HomeLayout() {
   const location = useLocation();
@@ -45,6 +44,9 @@ export default function HomeLayout() {
   const [showDetailOverlay, setShowDetailOverlay] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [pendingOverlayRoute, setPendingOverlayRoute] = useState(null);
+
+  // Usar hook de animación para overlays
+  const overlayAnimationProps = useOverlayAnimation(showDetailOverlay || isClosing);
 
   // Sincroniza el estado local con la ruta
   useEffect(() => {
@@ -171,12 +173,14 @@ export default function HomeLayout() {
         onOverlayNavigate={handleOverlayNavigate}
       />
       
-      {/* Overlay móvil simplificado - mantener visible durante animación de salida */}
-      {isMobile && (showDetailOverlay || isClosing) && (
-        <OverlayWrapper>
-          {overlayContent}
-        </OverlayWrapper>
-      )}
+      {/* Overlay móvil con Material-UI Fade */}
+      <Fade {...overlayAnimationProps} onExited={() => setShowDetailOverlay(false)}>
+        {isMobile && (showDetailOverlay || isClosing) && (
+          <OverlayWrapper>
+            {overlayContent}
+          </OverlayWrapper>
+        )}
+      </Fade>
       
       {/* Desktop: renderizado directo sin overlay */}
       {!isMobile && (
