@@ -19,15 +19,15 @@ Esta documentación establece la jerarquía coherente de z-index para toda la ap
 - **1200**: AppBar móvil (MaterialMobileMenu)
 - **1250**: Menús de navegación secundarios
 
-#### 3. Menú Móvil (1300-1399)
-- **1300**: Menú móvil (Drawer)
-- **1350**: Elementos internos del menú móvil
-
-#### 4. Overlays y Modales (1400-1499)
+#### 3. Overlays y Modales (1400-1499)
 - **1400**: Overlay base para detalles (móvil y desktop)
 - **1401**: Contenido del overlay para detalles
 - **1402**: FABs del overlay para detalles
 - **1450**: Otros overlays menores
+
+#### 4. Menú Móvil (1600-1699)
+- **1600**: Menú móvil (Drawer) - por encima de detalles y páginas descargar/donaciones
+- **1650**: Elementos internos del menú móvil
 
 #### 5. Modales y Popups (1500-1999)
 - **1500**: Modales, popups de bienvenida, displays de error
@@ -66,7 +66,7 @@ zIndex: 1402, // FAB del overlay
 
 - **Splash**: Siempre el más alto (9999) para cubrir toda la app
 - **AppBar**: Alto pero no máximo (1200) para permitir overlays
-- **Menú Móvil**: Por encima del AppBar pero por debajo de overlays (1300)
+- **Menú Móvil**: Por encima de detalles y páginas descargar/donaciones (1600)
 - **Detalles**: Por debajo del AppBar pero por encima del contenido (1100)
 
 ### Mantenimiento

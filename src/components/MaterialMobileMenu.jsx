@@ -254,7 +254,7 @@ const MaterialMobileMenu = ({
         }}
       />
       <Drawer
-        anchor="right"
+        anchor="left"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
         PaperProps={{
@@ -262,14 +262,14 @@ const MaterialMobileMenu = ({
             width: { xs: '280px', sm: '320px' },
             backgroundColor: isDarkMode ? '#1a1a1a' : '#ffffff',
             color: isDarkMode ? '#ffffff' : '#000000',
-            borderLeft: isDarkMode ? '1px solid #333' : '1px solid #e0e0e0',
-            boxShadow: '-4px 0 16px rgba(0,0,0,0.15)',
-            zIndex: 1300, // Menú móvil - por encima del AppBar pero por debajo de overlays importantes
+            borderRight: isDarkMode ? '1px solid #333' : '1px solid #e0e0e0',
+            boxShadow: '4px 0 16px rgba(0,0,0,0.15)',
+            zIndex: 1600, // Menú móvil - por encima de detalles (1100) y páginas descargar/donaciones (1000)
             ...sx.drawer
           }
         }}
         sx={{
-          zIndex: 1300, // Igual que el Drawer del menú móvil
+          zIndex: 1600, // Igual que el Drawer del menú móvil
           ...sx
         }}
       >
