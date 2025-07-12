@@ -201,7 +201,7 @@ const MobileItemDetail = ({
           position: 'fixed',
           top: { xs: '25px', sm: 24 },
           left: 16,
-          zIndex: 1300,
+          zIndex: 2000, // FAB de detalle móvil - igual que el detalle
           backgroundColor: theme?.palette?.primary?.main,
           '&:hover': {
             backgroundColor: theme?.palette?.primary?.dark,

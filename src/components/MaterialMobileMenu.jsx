@@ -40,6 +40,14 @@ import useBackNavigation from '../hooks/useBackNavigation';
 // =============================================
 // MaterialMobileMenu: Menú de navegación lateral y AppBar para móviles
 // Menú de navegación lateral y AppBar para móviles. Optimizado para UX, accesibilidad, performance y customización avanzada.
+// 
+// JERARQUÍA DE Z-INDEX EN MÓVILES (CRÍTICO - NO CAMBIAR SIN CONSULTAR):
+// 1. Splash: 9999 (por encima de todo)
+// 2. Menú móvil (Drawer): 4000 (por encima de páginas)
+// 3. AppBar móvil: 3500 (alto pero por debajo del menú)
+// 4. Páginas descargar y donaciones: 3000
+// 5. Páginas detalles: 2000
+// 6. El resto: 1-1500
 // =============================================
 
 /**
@@ -170,7 +178,7 @@ const MaterialMobileMenu = ({
           right: '0 !important',
           margin: 0,
           padding: 0,
-          zIndex: 1200, // Más alto que el detalle móvil (z-index 1)
+          zIndex: 3500, // 3. AppBar móvil - alto pero por debajo del menú (4000)
           position: 'fixed !important',
           ...sx.appBar
         }}
@@ -263,7 +271,7 @@ const MaterialMobileMenu = ({
             width: 'min(80vw, 320px)',
             backgroundColor: isDarkMode ? '#2d2d2d' : '#ffffff',
             color: isDarkMode ? '#ffffff' : '#000000',
-            zIndex: 1400, // Más alto que el AppBar (1200), páginas (1100) y el detalle móvil (1)
+            zIndex: 4000, // 2. Menú móvil - por encima de páginas descargar/donaciones (3000)
             ...sx.drawer
           }
         }}
@@ -382,7 +390,7 @@ const MaterialMobileMenu = ({
             position: 'fixed',
             top: '3px',
             left: 16,
-            zIndex: 1400, // Igual que el Drawer del menú móvil
+            zIndex: 4000, // Igual que el Drawer del menú móvil
             backgroundColor: theme?.palette?.primary?.main,
             opacity: isAnimating ? 0.5 : 1,
             '&:hover': {

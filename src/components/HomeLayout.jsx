@@ -155,7 +155,7 @@ export default function HomeLayout() {
           left: 0,
           width: '100vw',
           height: 'calc(100vh - 49px)', // Ajusta la altura para no tapar el menú
-          zIndex: 2000,
+          zIndex: 2000, // 5. Overlay base para detalles - por debajo de páginas descargar/donaciones (3000)
           background: 'rgba(255,255,255,0.98)',
           overflowY: 'auto',
           boxSizing: 'border-box',
@@ -208,7 +208,7 @@ export default function HomeLayout() {
                 alignItems: 'center',
                 justifyContent: 'flex-start',
                 position: 'relative',
-                zIndex: 2001,
+                zIndex: 2001, // 5. Contenido del overlay para detalles - por debajo de páginas descargar/donaciones (3000)
               }}
             >
               {/* Botón volver para páginas de descargas y donaciones en móvil */}
@@ -223,7 +223,7 @@ export default function HomeLayout() {
                     position: 'fixed',
                     top: '73px',
                     left: 16,
-                    zIndex: 2100,
+                    zIndex: 2100, // FAB del overlay para detalles - por debajo de páginas descargar/donaciones (3000)
                     backgroundColor: '#1976d2',
                     '&:hover': {
                       backgroundColor: '#1565c0',

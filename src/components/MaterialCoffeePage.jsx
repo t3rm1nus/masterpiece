@@ -179,7 +179,7 @@ const MaterialCoffeePage = () => {
           backgroundColor: isMobile ? '#fafafa' : '#fff',
           minHeight: '100vh',
           position: 'relative',
-          zIndex: isMobile ? 1100 : 1200, // En móvil por debajo del menú (1300), en desktop por encima del detalle (1100)
+          zIndex: isMobile ? 3000 : 1200, // 4. Páginas descargar/donaciones en móvil - por debajo del menú (4000)
           overflow: 'visible',
           WebkitOverflowScrolling: 'touch'
         }}
@@ -202,7 +202,7 @@ const MaterialCoffeePage = () => {
               position: 'fixed',
               top: '8px',
               left: 16,
-              zIndex: 2100,
+              zIndex: 3000, // FAB de página donaciones - igual que la página
               backgroundColor: theme.palette.primary.main,
               '&:hover': {
                 backgroundColor: theme.palette.primary.dark,

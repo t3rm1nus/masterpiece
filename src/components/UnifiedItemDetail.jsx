@@ -195,7 +195,7 @@ export default function UnifiedItemDetail(props) {
           overflowY: 'auto',
           WebkitOverflowScrolling: 'touch',
           overscrollBehavior: 'contain',
-          zIndex: 1100,
+          zIndex: 2000, // 5. Páginas detalles en móvil - por debajo de páginas descargar/donaciones (3000)
           isolation: 'isolate',
           transform: 'translateZ(0)',
         }}
