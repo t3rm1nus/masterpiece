@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   CardContent,
   Typography,
@@ -12,8 +12,7 @@ import {
   Button,
   useTheme,
   useMediaQuery,
-  Fab,
-  Zoom
+  Fab
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -30,32 +29,23 @@ import {
 import UiCard from './ui/UiCard';
 import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
-import { usePageAnimation } from '../hooks/useMaterialAnimation';
+
 
 // =============================================
 // MaterialCoffeePage: Página de donación (Coffee) Material UI
 // Optimizada para móviles y desktop, con integración de analytics y experiencia de usuario moderna.
 // =============================================
 
-// Contexto para animación de salida del card overlay
-export const OverlayCardAnimationContext = createContext({ triggerExitAnimation: () => {} });
+
 
 const MaterialCoffeePage = ({ onAnimationEnd }) => {
   const { t, getTranslation } = useLanguage();
   const { trackSpecialPageView } = useGoogleAnalytics();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
-  const [isExiting, setIsExiting] = useState(false);
+
   
-  // Usar hook de animación de Material-UI
-  const animationProps = usePageAnimation(isExiting);
-  
-  // Proveer función para disparar animación de salida
-  const triggerExitAnimation = () => {
-    if (!isExiting) {
-      setIsExiting(true);
-    }
-  };
+
 
   const navigate = useNavigate();
 
@@ -67,25 +57,7 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
     });
   }, [trackSpecialPageView]);
 
-  // Detectar overlay cierre por navegación atrás
-  useEffect(() => {
-    const onPopState = () => {
-      if (!isExiting) {
-        setIsExiting(true);
-      }
-    };
-    const onOverlayExit = () => {
-      if (!isExiting) {
-        setIsExiting(true);
-      }
-    };
-    window.addEventListener('popstate', onPopState);
-    window.addEventListener('overlay-exit', onOverlayExit);
-    return () => {
-      window.removeEventListener('popstate', onPopState);
-      window.removeEventListener('overlay-exit', onOverlayExit);
-    };
-  }, [isExiting]);
+
 
   // Fix específico para iPhone - asegurar scroll
   useEffect(() => {
@@ -104,7 +76,12 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
   }, []);
 
   const handleBack = () => {
-    triggerExitAnimation();
+    // En desktop, navegación directa; en móvil, usar callback
+    if (isMobile && typeof onAnimationEnd === 'function') {
+      onAnimationEnd();
+    } else {
+      navigate('/', { replace: true });
+    }
   };
 
   // Ahora se renderiza en todas las pantallas (móvil Y desktop)
@@ -161,8 +138,7 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
   };
 
   return (
-    <OverlayCardAnimationContext.Provider value={{ triggerExitAnimation }}>
-      <Zoom {...animationProps} onExited={onAnimationEnd}>
+      <div>
         <Container 
           maxWidth="md" 
           sx={{ 
@@ -177,28 +153,8 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
             WebkitOverflowScrolling: 'touch'
           }}
         >
-          {/* FAB volver visible solo en desktop */}
-          {!isMobile && (
-            <Fab
-              color="primary"
-              aria-label="volver"
-              onClick={() => navigate('/', { replace: true })}
-              sx={{
-                position: 'fixed',
-                top: '8px',
-                left: 16,
-                zIndex: 1001, // FAB de página donaciones - por encima de la página pero por debajo del AppBar
-                backgroundColor: theme.palette.primary.main,
-                '&:hover': {
-                  backgroundColor: theme.palette.primary.dark,
-                }
-              }}
-            >
-              <ArrowBackIcon />
-            </Fab>
-          )}
-          
-          {/* Botón volver para móviles */}
+
+          {/* FAB volver para móviles */}
           {isMobile && (
             <Fab
               color="primary"
@@ -206,7 +162,7 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
               onClick={handleBack}
               sx={{
                 position: 'fixed',
-                top: '73px', // 70px más abajo que el botón de detalles
+                top: '73px',
                 left: 16,
                 zIndex: 1402, // FAB del overlay para páginas - por encima del contenido del overlay
                 backgroundColor: theme.palette.primary.main,
@@ -226,10 +182,30 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
             backgroundColor: '#F5F5DC',
             border: '2px solid #D4A574',
             borderRadius: '12px',
+            position: 'relative',
           }}
         >
-          {/* Botón volver solo en desktop */}
-          {/* ELIMINADO: Botón rectangular duplicado en desktop */}
+          {/* FAB volver dentro del card principal para desktop */}
+          {!isMobile && (
+            <Fab
+              color="primary"
+              aria-label="volver"
+              onClick={handleBack}
+              sx={{
+                position: 'absolute',
+                top: 18,
+                left: 18,
+                zIndex: 50,
+                boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+                backgroundColor: theme.palette.primary.main,
+                '&:hover': {
+                  backgroundColor: theme.palette.primary.dark,
+                }
+              }}
+            >
+              <ArrowBackIcon />
+            </Fab>
+          )}
           <CardContent sx={{ textAlign: 'center', padding: '24px' }}>
             {/* Icono de café animado */}
             <Box 
@@ -450,8 +426,7 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
           </CardContent>
         </UiCard>
       </Container>
-    </Zoom>
-    </OverlayCardAnimationContext.Provider>
+        </div>
   );
 };
 

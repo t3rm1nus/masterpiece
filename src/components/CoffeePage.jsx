@@ -7,13 +7,13 @@ import MaterialCoffeePage from './MaterialCoffeePage';
 // Página de donación legacy. Ahora redirige/renderiza MaterialCoffeePage para móviles y desktop. Mantener solo por compatibilidad.
 // =============================================
 
-const CoffeePage = () => {
+const CoffeePage = ({ onAnimationEnd }) => {
   const { t, getTranslation } = useLanguage();
   
     return (
     <>
       {/* Componente Material UI para móviles Y desktop */}
-      <MaterialCoffeePage />
+      <MaterialCoffeePage onAnimationEnd={onAnimationEnd} />
       
       {/* Página clásica DESHABILITADA - ahora usamos MaterialCoffeePage para todo */}
       {false && (

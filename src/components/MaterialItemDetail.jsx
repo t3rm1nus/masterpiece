@@ -9,7 +9,8 @@ import {
   useTheme,
   useMediaQuery,
   Stack,
-  Fab
+  Fab,
+  Zoom
 } from '@mui/material';
 import UiCard from './ui/UiCard';
 import {
@@ -33,6 +34,7 @@ import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 import { processTitle, processDescription } from '../store/utils';
 import { useNavigate } from 'react-router-dom';
+import { useMaterialAnimation } from '../hooks/useMaterialAnimation';
 
 // =============================================
 // MaterialItemDetail: Detalle de ítem Material UI
@@ -67,7 +69,7 @@ const getCategoryAnimatedGradient = (category) => {
   }
 };
 
-const MaterialItemDetail = ({ item }) => {
+const MaterialItemDetail = ({ item, onOverlayNavigate }) => {
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation, getTranslation } = useLanguage();
   const { goBackFromDetail } = useViewStore();
   const theme = useTheme();
@@ -110,12 +112,36 @@ const MaterialItemDetail = ({ item }) => {
 
   // Estado para saber si la imagen principal ha cargado
   const [imgLoaded, setImgLoaded] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
+  // Usar hook de animación de Material-UI
+  const animationProps = useMaterialAnimation(isClosing, 400, 'zoom');
 
   // Eliminar el useEffect que hace window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }) en móviles tras cargar la imagen principal
 
-  // Función para manejar la acción de descarga
-  const handleDownloadClick = () => {
-    alert('Descarga iniciada (aquí va tu lógica)');
+  // Manejar animación de salida y navegación al volver
+  const handleBack = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      if (onOverlayNavigate) {
+        onOverlayNavigate('/');
+      } else {
+        navigate('/');
+      }
+    }, 400); // Duración de la animación
+  };
+
+  // Manejar navegación a la página de descarga con animación
+  const handleDownloadClick = (e) => {
+    e.preventDefault();
+    setIsClosing(true);
+    setTimeout(() => {
+      if (onOverlayNavigate) {
+        onOverlayNavigate('/como-descargar');
+      } else {
+        navigate('/como-descargar');
+      }
+    }, 400);
   };
 
   // --- Estilos centralizados ---
@@ -208,147 +234,149 @@ const MaterialItemDetail = ({ item }) => {
   };
 
   return (
-    <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px', zIndex: 1 }}>
-      {/* Botón de volver flotante */}
-      <Fab
-        color="primary"
-        aria-label="volver"
-        onClick={() => navigate(-1)}
-        sx={{
-          position: 'fixed',
-          top: '80px',
-          left: '16px',
-          zIndex: 1201, // Asegura que el botón esté por encima del AppBar
-          backgroundColor: theme.palette.primary.main,
-          '&:hover': {
-            backgroundColor: theme.palette.primary.dark,
-          }
-        }}
-      >
-        <ArrowBackIcon />
-      </Fab>
-      {/* Tarjeta principal */}
-      <UiCard
-        sx={cardSx}
-      >
-        {/* Imagen principal */}
-        <Box sx={{ position: 'relative' }}>
-          <CardMedia
-            component="img"
-            sx={{
-              height: 300,
-              objectFit: 'cover',
-              width: '100%',
-              borderRadius: 0,
-              boxShadow: 'none',
-              border: '2px solid #111', // Borde negro en todos los dispositivos
-            }}
-            image={item.image}
-            alt={title}
-            onLoad={() => setImgLoaded(true)}
-          />
-          {/* Badge de masterpiece solo móviles, overlay absoluto sobre la imagen */}
-          {item.masterpiece && (
-            <Box
-              title={getTranslation('ui.badges.masterpiece', 'Obra maestra')}
-              sx={badgeSx}
+    <Zoom {...animationProps}>
+      <Box sx={{ position: 'relative', minHeight: '100vh', padding: '16px', zIndex: 1 }}>
+        {/* Botón de volver flotante */}
+        <Fab
+          color="primary"
+          aria-label="volver"
+          onClick={handleBack}
+          sx={{
+            position: 'fixed',
+            top: '80px',
+            left: '16px',
+            zIndex: 1201, // Asegura que el botón esté por encima del AppBar
+            backgroundColor: theme.palette.primary.main,
+            '&:hover': {
+              backgroundColor: theme.palette.primary.dark,
+            }
+          }}
+        >
+          <ArrowBackIcon />
+        </Fab>
+        {/* Tarjeta principal */}
+        <UiCard
+          sx={cardSx}
+        >
+          {/* Imagen principal */}
+          <Box sx={{ position: 'relative' }}>
+            <CardMedia
+              component="img"
+              sx={{
+                height: 300,
+                objectFit: 'cover',
+                width: '100%',
+                borderRadius: 0,
+                boxShadow: 'none',
+                border: '2px solid #111', // Borde negro en todos los dispositivos
+              }}
+              image={item.image}
+              alt={title}
+              onLoad={() => setImgLoaded(true)}
+            />
+            {/* Badge de masterpiece solo móviles, overlay absoluto sobre la imagen */}
+            {item.masterpiece && (
+              <Box
+                title={getTranslation('ui.badges.masterpiece', 'Obra maestra')}
+                sx={badgeSx}
+              >
+                <img
+                  alt={getTranslation('ui.alt.masterpiece', 'Obra maestra')}
+                  src="/imagenes/masterpiece-star.png"
+                  style={{ width: 32, height: 32, display: 'block' }}
+                />
+              </Box>
+            )}
+          </Box>
+          <CardContent sx={{ padding: { xs: '12px 8px', md: '24px' } }}>
+            {/* Título */}
+            <Typography 
+              variant="h4" 
+              component="h1" 
+              id="item-detail-mobile-title"
+              gutterBottom
+              sx={titleSx}
             >
-              <img
-                alt={getTranslation('ui.alt.masterpiece', 'Obra maestra')}
-                src="/imagenes/masterpiece-star.png"
-                style={{ width: 32, height: 32, display: 'block' }}
-              />
-            </Box>
-          )}
-        </Box>
-        <CardContent sx={{ padding: { xs: '12px 8px', md: '24px' } }}>
-          {/* Título */}
-          <Typography 
-            variant="h4" 
-            component="h1" 
-            id="item-detail-mobile-title"
-            gutterBottom
-            sx={titleSx}
-          >
-            {title}
-          </Typography>
-          {/* Detalles adicionales (chips, descripción, botones, etc.) */}
-          <Stack spacing={1} sx={{ mb: 2 }}>
-            {/* Chips de categoría y subcategoría */}
-            <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '8px' }}>
-              <Chip 
-                label={getCategoryTranslation(item.category, lang)} 
-                sx={{ 
-                  backgroundColor: getCategoryColor(item.category),
-                  color: 'white',
-                  ...chipSx
-                }}
-                icon={
-                  <CategoryIcon sx={{ mr: 0.5, fontSize: { xs: '1rem', sm: '1.2rem' } }} />
-                }
-              />
-              {item.subcategory && (
+              {title}
+            </Typography>
+            {/* Detalles adicionales (chips, descripción, botones, etc.) */}
+            <Stack spacing={1} sx={{ mb: 2 }}>
+              {/* Chips de categoría y subcategoría */}
+              <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '8px' }}>
                 <Chip 
-                  label={getSubcategoryLabel(item.subcategory, item.category || 'series', t, lang)} 
+                  label={getCategoryTranslation(item.category, lang)} 
                   sx={{ 
-                    backgroundColor: theme.palette.secondary.main,
+                    backgroundColor: getCategoryColor(item.category),
                     color: 'white',
                     ...chipSx
                   }}
                   icon={
-                    <TranslateIcon sx={{ mr: 0.5, fontSize: { xs: '1rem', sm: '1.2rem' } }} />
+                    <CategoryIcon sx={{ mr: 0.5, fontSize: { xs: '1rem', sm: '1.2rem' } }} />
                   }
                 />
-              )}
-            </Box>
-            {/* Descripción */}
-            <Typography 
-              variant="body1" 
-              component="div"
-              sx={descSx}
-            >
-              {description}
-            </Typography>
-            {/* Botones de acción */}
-            <Stack spacing={2} sx={{ alignItems: 'center', width: '100%' }}>
-              {/* Botón Ver Trailer */}
-              {trailerUrl && (
-                <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', p: 0, m: 0 }}>
-                  <Button
-                    component="a"
-                    href={trailerUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variant="contained"
-                    color="primary"
-                    sx={actionBtnSx}
-                    startIcon={<PlayArrowIcon sx={{ ml: '-2px', mr: '2px', fontSize: '1.3em' }} />}
-                  >
-                    <span style={{ display: 'inline-block', verticalAlign: 'middle', lineHeight: 1 }}>{t?.ui?.actions?.watchTrailer ? t.ui.actions.watchTrailer : (lang === 'en' ? 'Watch Trailer' : 'Ver Trailer')}</span>
-                  </Button>
-                </Box>
-              )}
-              {/* Botón Descargar Película (solo para películas) */}
-              {item.category === 'movies' && (
-                <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', p: 0, m: 0 }}>
-                  <Button
-                    component="a"
-                    href="#descargar"
-                    variant="contained"
-                    color="primary"
-                    sx={actionBtnSx}
-                    onClick={e => { e.preventDefault(); handleDownloadClick(); }}
-                    startIcon={<LaunchIcon sx={{ ml: '-2px', mr: '2px', fontSize: '1.3em' }} />}
-                  >
-                    <span style={{ display: 'inline-block', verticalAlign: 'middle', lineHeight: 1 }}>{t?.ui?.actions?.download ? `${t.ui.actions.download} ${t.ui.categories?.movies?.toLowerCase?.() || ''}`.trim() : (lang === 'en' ? 'Download movie' : 'Descargar película')}</span>
-                  </Button>
-                </Box>
-              )}
+                {item.subcategory && (
+                  <Chip 
+                    label={getSubcategoryLabel(item.subcategory, item.category || 'series', t, lang)} 
+                    sx={{ 
+                      backgroundColor: theme.palette.secondary.main,
+                      color: 'white',
+                      ...chipSx
+                    }}
+                    icon={
+                      <TranslateIcon sx={{ mr: 0.5, fontSize: { xs: '1rem', sm: '1.2rem' } }} />
+                    }
+                  />
+                )}
+              </Box>
+              {/* Descripción */}
+              <Typography 
+                variant="body1" 
+                component="div"
+                sx={descSx}
+              >
+                {description}
+              </Typography>
+              {/* Botones de acción */}
+              <Stack spacing={2} sx={{ alignItems: 'center', width: '100%' }}>
+                {/* Botón Ver Trailer */}
+                {trailerUrl && (
+                  <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', p: 0, m: 0 }}>
+                    <Button
+                      component="a"
+                      href={trailerUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      variant="contained"
+                      color="primary"
+                      sx={actionBtnSx}
+                      startIcon={<PlayArrowIcon sx={{ ml: '-2px', mr: '2px', fontSize: '1.3em' }} />}
+                    >
+                      <span style={{ display: 'inline-block', verticalAlign: 'middle', lineHeight: 1 }}>{t?.ui?.actions?.watchTrailer ? t.ui.actions.watchTrailer : (lang === 'en' ? 'Watch Trailer' : 'Ver Trailer')}</span>
+                    </Button>
+                  </Box>
+                )}
+                {/* Botón Descargar Película (solo para películas) */}
+                {item.category === 'movies' && (
+                  <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', p: 0, m: 0 }}>
+                    <Button
+                      component="a"
+                      href="/como-descargar"
+                      variant="contained"
+                      color="primary"
+                      sx={actionBtnSx}
+                      onClick={handleDownloadClick}
+                      startIcon={<LaunchIcon sx={{ ml: '-2px', mr: '2px', fontSize: '1.3em' }} />}
+                    >
+                      <span style={{ display: 'inline-block', verticalAlign: 'middle', lineHeight: 1 }}>{t?.ui?.actions?.download ? `${t.ui.actions.download} ${t.ui.categories?.movies?.toLowerCase?.() || ''}`.trim() : (lang === 'en' ? 'Download movie' : 'Descargar película')}</span>
+                    </Button>
+                  </Box>
+                )}
+              </Stack>
             </Stack>
-          </Stack>
-        </CardContent>
-      </UiCard>
-    </Box>
+          </CardContent>
+        </UiCard>
+      </Box>
+    </Zoom>
   );
 };
 

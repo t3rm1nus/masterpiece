@@ -561,15 +561,23 @@ const HomePage = ({
   };
 
   // Definir renderizador seguro para chips de subcategoría
-  const safeRenderSubcategoryChip = ({ sub, label, isActive, idx, onClick }) => (
-    <Chip
-      key={sub}
-      label={label}
-      color={isActive ? 'primary' : 'default'}
-      onClick={typeof onClick === 'function' ? onClick : undefined}
-      // Puedes añadir más props o estilos aquí si lo necesitas
-    />
-  );
+  const safeRenderSubcategoryChip = (sub, isActive, idx) => {
+    // Obtener la traducción del texto
+    const label = t?.subcategories?.[selectedCategory]?.[sub] || sub || 'Sin texto';
+    
+    return (
+      <Chip
+        key={sub}
+        label={label}
+        color={isActive ? 'primary' : 'default'}
+        onClick={() => handleSubcategoryClick(sub)}
+        sx={{
+          margin: '0 4px',
+          fontWeight: isActive ? 700 : 500
+        }}
+      />
+    );
+  };
 
   // Obtener gradiente animado según categoría
   const h1Gradient = (!selectedCategory || selectedCategory === 'all')

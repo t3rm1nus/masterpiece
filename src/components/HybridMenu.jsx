@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useMediaQuery, useTheme } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppView } from '../store/useAppStore';
@@ -10,9 +10,7 @@ import { useMenuItems } from '../hooks/useMenuItems.jsx';
 import { useNavigate, useLocation, matchPath } from 'react-router-dom';
 import LanguageSelector from './ui/LanguageSelector';
 import SplashDialog from './SplashDialog';
-// Importar el contexto de ambas páginas (ambos exportan el mismo nombre)
-import { OverlayCardAnimationContext as DownloadOverlayContext } from '../pages/HowToDownload';
-import { OverlayCardAnimationContext as CoffeeOverlayContext } from './MaterialCoffeePage';
+
 import useBackNavigation from '../hooks/useBackNavigation';
 
 // =============================================
@@ -69,9 +67,7 @@ function DesktopMenu(props) {
   const isHowToDownloadView = currentView === 'howToDownload' || location.pathname === '/como-descargar';
   const showBackButton = isDetailView || isCoffeeView || isHowToDownloadView;
 
-  // Usar ambos contextos (solo uno será válido según la página)
-  const downloadOverlay = useContext(DownloadOverlayContext);
-  const coffeeOverlay = useContext(CoffeeOverlayContext);
+
 
   // --- Splash popup handlers ---
   const handleSplashOpenWithAudio = (audio) => {

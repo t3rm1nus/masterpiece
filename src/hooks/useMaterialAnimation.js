@@ -14,10 +14,13 @@ export const useMaterialAnimation = (isClosing, timeout = 400, type = 'slide') =
     const baseProps = {
       in: !isClosing,
       timeout,
-      easing: { 
-        enter: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-        exit: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-      }
+      // Configuración mínima para evitar errores
+      mountOnEnter: true,
+      unmountOnExit: true,
+      // Agregar configuración para evitar re-renderizados innecesarios
+      appear: false,
+      enter: true,
+      exit: true
     };
 
     // Props específicos según el tipo de animación
@@ -25,28 +28,14 @@ export const useMaterialAnimation = (isClosing, timeout = 400, type = 'slide') =
       case 'slide':
         return {
           ...baseProps,
-          direction: 'up',
-          mountOnEnter: true,
-          unmountOnExit: true
+          direction: 'up'
         };
       case 'zoom':
-        return {
-          ...baseProps,
-          mountOnEnter: true,
-          unmountOnExit: true
-        };
+        return baseProps;
       case 'fade':
-        return {
-          ...baseProps,
-          mountOnEnter: true,
-          unmountOnExit: true
-        };
+        return baseProps;
       case 'grow':
-        return {
-          ...baseProps,
-          mountOnEnter: true,
-          unmountOnExit: true
-        };
+        return baseProps;
       default:
         return baseProps;
     }

@@ -1,51 +1,24 @@
-import React, { useEffect, useState, createContext, useContext } from 'react';
-import { Box, Typography, Button, useTheme, useMediaQuery, Paper, Container, Fab, Zoom } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { Box, Typography, Button, useTheme, useMediaQuery, Paper, Container, Fab } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 import { applyHowToDownloadScrollFixForIPhone, cleanupScrollFixesForIPhone } from '../utils/iPhoneScrollFix';
 import { useNavigate } from 'react-router-dom';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
-import { usePageAnimation } from '../hooks/useMaterialAnimation';
 
-// Contexto para animación de salida del card overlay
-export const OverlayCardAnimationContext = createContext({ triggerExitAnimation: () => {} });
+
+
 
 const HowToDownload = ({ onAnimationEnd }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const { lang, t } = useLanguage();
   const { trackSpecialPageView } = useGoogleAnalytics();
-  const [isExiting, setIsExiting] = useState(false);
+
   
-  // Usar hook de animación de Material-UI
-  const animationProps = usePageAnimation(isExiting);
+
   
-  // Proveer función para disparar animación de salida
-  const triggerExitAnimation = () => {
-    if (!isExiting) {
-      setIsExiting(true);
-    }
-  };
-  
-  // Detectar overlay cierre por navegación atrás
-  useEffect(() => {
-    const onPopState = () => {
-      if (!isExiting) {
-        setIsExiting(true);
-      }
-    };
-    const onOverlayExit = () => {
-      if (!isExiting) {
-        setIsExiting(true);
-      }
-    };
-    window.addEventListener('popstate', onPopState);
-    window.addEventListener('overlay-exit', onOverlayExit);
-    return () => {
-      window.removeEventListener('popstate', onPopState);
-      window.removeEventListener('overlay-exit', onOverlayExit);
-    };
-  }, [isExiting]);
+
 
   // Fix específico para iPhone - asegurar scroll
   useEffect(() => {
@@ -115,11 +88,15 @@ const HowToDownload = ({ onAnimationEnd }) => {
   };
   const navigate = useNavigate();
   const handleBack = () => {
-    triggerExitAnimation();
+    // En desktop, navegación directa; en móvil, usar callback
+    if (isMobile && typeof onAnimationEnd === 'function') {
+      onAnimationEnd();
+    } else {
+      navigate('/', { replace: true });
+    }
   };
   return (
-    <OverlayCardAnimationContext.Provider value={{ triggerExitAnimation }}>
-      <Zoom {...animationProps} onExited={onAnimationEnd}>
+      <div>
         <Container 
           maxWidth="md" 
           sx={{ 
@@ -134,26 +111,7 @@ const HowToDownload = ({ onAnimationEnd }) => {
             WebkitOverflowScrolling: 'touch'
           }}
         >
-          {/* FAB volver visible solo en desktop, z-index 2100 */}
-          {!isMobile && (
-            <Fab
-              color="primary"
-              aria-label="volver"
-              onClick={() => navigate('/', { replace: true })}
-              sx={{
-                position: 'fixed',
-                top: '8px',
-                left: 16,
-                zIndex: 1001, // FAB de página descargar - por encima de la página pero por debajo del AppBar
-                backgroundColor: theme.palette.primary.main,
-                '&:hover': {
-                  backgroundColor: theme.palette.primary.dark,
-                }
-              }}
-            >
-              <ArrowBackIcon />
-            </Fab>
-          )}
+
           
           {/* Botón volver para móviles */}
           {isMobile && (
@@ -194,6 +152,27 @@ const HowToDownload = ({ onAnimationEnd }) => {
               maxHeight: { xs: 'none', md: 'none' },
             }}
             >
+              {/* FAB volver dentro del Paper para desktop */}
+              {!isMobile && (
+                <Fab
+                  color="primary"
+                  aria-label="volver"
+                  onClick={handleBack}
+                  sx={{
+                    position: 'absolute',
+                    top: 18,
+                    left: 18,
+                    zIndex: 50,
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+                    backgroundColor: theme.palette.primary.main,
+                    '&:hover': {
+                      backgroundColor: theme.palette.primary.dark,
+                    }
+                  }}
+                >
+                  <ArrowBackIcon />
+                </Fab>
+              )}
               {/* Imagen Pirate Bay dentro del card */}
               <Box sx={{
                 width: '100%',
@@ -275,10 +254,9 @@ const HowToDownload = ({ onAnimationEnd }) => {
                 {texts.end[lang]}
               </Typography>
             </Paper>
-          </Container>
-        </Zoom>
-      </OverlayCardAnimationContext.Provider>
-    );
-  };
+                  </Container>
+        </div>
+  );
+};
 
   export default HowToDownload;

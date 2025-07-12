@@ -4,11 +4,10 @@ import HybridMenu from './HybridMenu';
 import { Outlet, useLocation, matchPath, useNavigate } from 'react-router-dom';
 import UnifiedItemDetail from './UnifiedItemDetail';
 import { useAppView } from '../store/useAppStore';
-import { Fade } from '@mui/material';
 import { useEffect } from 'react';
 import HowToDownload from '../pages/HowToDownload';
 import CoffeePage from './CoffeePage';
-import { useOverlayAnimation } from '../hooks/useMaterialAnimation';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function HomeLayout() {
   const location = useLocation();
@@ -44,30 +43,65 @@ export default function HomeLayout() {
   const [showDetailOverlay, setShowDetailOverlay] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [pendingOverlayRoute, setPendingOverlayRoute] = useState(null);
+  const [isNavigating, setIsNavigating] = useState(false);
+  
+  // Estado de animación para desktop
+  const [showDesktopOverlay, setShowDesktopOverlay] = useState(false);
+  const [isDesktopClosing, setIsDesktopClosing] = useState(false);
 
-  // Usar hook de animación para overlays
-  const overlayAnimationProps = useOverlayAnimation(showDetailOverlay || isClosing);
+
 
   // Sincroniza el estado local con la ruta
   useEffect(() => {
-    if (isMobile && isOverlay && !showDetailOverlay) {
-      setShowDetailOverlay(true);
-      setIsClosing(false);
-    }
-    if (isMobile && !isOverlay && showDetailOverlay && !isClosing) {
+    // Evitar cambios de estado durante la navegación
+    if (isNavigating) return;
+    
+    // Si estamos en móvil y hay una ruta de overlay, mostrar el overlay inmediatamente
+    if (isMobile && isOverlay) {
+      if (!showDetailOverlay && !isClosing) {
+        setShowDetailOverlay(true);
+        setIsClosing(false);
+      }
+    } else if (isMobile && !isOverlay && showDetailOverlay && !isClosing) {
       setShowDetailOverlay(false);
     }
-    // Desktop: no usar overlay local
+    // Desktop: manejar overlay de forma más simple
     if (!isMobile) {
-      setShowDetailOverlay(false);
-      setIsClosing(false);
+      if (isOverlay && !showDesktopOverlay) {
+        setShowDesktopOverlay(true);
+      } else if (!isOverlay && showDesktopOverlay) {
+        // Para páginas de descargas y donaciones, ocultar inmediatamente
+        if (isHowToDownload || isDonaciones) {
+          setShowDesktopOverlay(false);
+        } else {
+          // Para detalles, mantener el estado hasta que termine la animación
+          if (!isDesktopClosing) {
+            setShowDesktopOverlay(false);
+          }
+        }
+      }
     }
-  }, [isMobile, isOverlay, showDetailOverlay, isClosing, location.pathname]);
+  }, [isMobile, isOverlay, showDetailOverlay, isClosing, showDesktopOverlay, isDesktopClosing, location.pathname, isDetail, isHowToDownload, isDonaciones, isNavigating]);
 
-  // Botón volver: en móvil, activa cierre; en desktop, navega directo
+
+
+  // Botón volver: en móvil, activa cierre; en desktop, navegación instantánea
   const handleBack = () => {
     if (isMobile && isOverlay) {
       setIsClosing(true);
+      setIsNavigating(true);
+      // Navegar después de que termine la animación CSS
+      setTimeout(() => {
+        handleMobileDetailExited();
+      }, 300);
+    } else if (!isMobile && isOverlay) {
+      // Desktop: navegación instantánea sin animación
+      // Para páginas de descargas y donaciones, usar replace para evitar historial
+      if (isHowToDownload || isDonaciones) {
+        navigate('/', { replace: true });
+      } else {
+        navigate('/');
+      }
     } else {
       navigate('/');
     }
@@ -77,9 +111,18 @@ export default function HomeLayout() {
   const handleOverlayNavigate = (targetPath) => {
     if (isMobile && (isOverlay || isClosing)) {
       setIsClosing(true);
+      setIsNavigating(true);
       setPendingOverlayRoute(targetPath);
+    } else if (!isMobile && (isOverlay || isDesktopClosing)) {
+      // Desktop: activar animación de salida antes de navegar
+      setIsDesktopClosing(true);
+      setIsNavigating(true);
+      setPendingOverlayRoute(targetPath);
+      setTimeout(() => {
+        handleDesktopDetailExited();
+      }, 400);
     } else {
-      // En desktop, siempre navegar con replace: true entre overlays
+      // Navegación directa
       if (!isMobile && (isOverlay || ['/como-descargar','/donaciones'].includes(targetPath) || targetPath.startsWith('/detalle/'))) {
         navigate(targetPath, { replace: true });
       } else {
@@ -92,11 +135,37 @@ export default function HomeLayout() {
   const handleMobileDetailExited = () => {
     setIsClosing(false);
     setShowDetailOverlay(false);
+    // Navegar inmediatamente sin delay adicional
     if (pendingOverlayRoute) {
       navigate(pendingOverlayRoute);
       setPendingOverlayRoute(null);
     } else {
       navigate('/');
+    }
+    // Resetear el estado de navegación después de un breve delay
+    setTimeout(() => {
+      setIsNavigating(false);
+    }, 100);
+  };
+
+  // Handler para navegación tras animación en desktop
+  const handleDesktopDetailExited = () => {
+    // Para páginas de descargas y donaciones, navegación instantánea
+    if (isHowToDownload || isDonaciones) {
+      navigate('/', { replace: true });
+    } else {
+      // Para detalles, manejar animación de salida
+      setIsDesktopClosing(false);
+      setShowDesktopOverlay(false);
+      if (pendingOverlayRoute) {
+        navigate(pendingOverlayRoute);
+        setPendingOverlayRoute(null);
+      } else {
+        navigate('/');
+      }
+      setTimeout(() => {
+        setIsNavigating(false);
+      }, 200);
     }
   };
 
@@ -131,6 +200,16 @@ export default function HomeLayout() {
     overlayContent = <CoffeePage onAnimationEnd={handleMobileDetailExited} />;
   }
 
+  // Determinar qué contenido mostrar en el overlay desktop
+  let desktopOverlayContent = null;
+  if (matchPath('/detalle/:category/:id', location.pathname)) {
+    desktopOverlayContent = <UnifiedItemDetail isClosing={isDesktopClosing} onBack={handleBack} onExited={handleDesktopDetailExited} />;
+  } else if (location.pathname === '/como-descargar') {
+    desktopOverlayContent = <HowToDownload onAnimationEnd={handleDesktopDetailExited} />;
+  } else if (location.pathname === '/donaciones') {
+    desktopOverlayContent = <CoffeePage onAnimationEnd={handleDesktopDetailExited} />;
+  }
+
   // Overlay simplificado: siempre cubre toda la pantalla, z-index muy alto
   const OverlayWrapper = ({ children }) => {
     return (
@@ -145,7 +224,29 @@ export default function HomeLayout() {
           background: 'rgba(255,255,255,0.98)',
           overflowY: 'auto',
           boxSizing: 'border-box',
-          transition: 'box-shadow 0.3s',
+          transition: 'opacity 0.3s ease-in-out',
+          opacity: isClosing ? 0 : 1,
+        }}
+      >
+        {children}
+      </div>
+    );
+  };
+
+  // Overlay para desktop sin animaciones
+  const DesktopOverlayWrapper = ({ children }) => {
+    return (
+      <div
+        style={{
+          position: 'fixed',
+          top: 70, // Exactamente debajo del menú híbrido (70px de altura)
+          left: 0,
+          width: '100vw',
+          height: 'calc(100vh - 70px)', // Ajusta la altura para no tapar el menú
+          zIndex: 1200, // Por encima de la home pero por debajo del menú
+          background: 'rgba(255,255,255,0.98)',
+          overflowY: 'auto',
+          boxSizing: 'border-box',
         }}
       >
         {children}
@@ -164,27 +265,30 @@ export default function HomeLayout() {
         audioRef={audioRef}
         onOverlayNavigate={handleOverlayNavigate}
       />
-      <HomePage
-        onSplashOpen={openSplash}
-        splashOpen={splashOpen}
-        splashAudio={splashAudio}
-        onSplashClose={closeSplash}
-        audioRef={audioRef}
-        onOverlayNavigate={handleOverlayNavigate}
-      />
+      {/* HomePage siempre visible excepto durante transiciones de overlay en móvil */}
+      {(!isMobile || (!showDetailOverlay && !isClosing)) && (
+        <HomePage
+          onSplashOpen={openSplash}
+          splashOpen={splashOpen}
+          splashAudio={splashAudio}
+          onSplashClose={closeSplash}
+          audioRef={audioRef}
+          onOverlayNavigate={handleOverlayNavigate}
+        />
+      )}
       
-      {/* Overlay móvil con Material-UI Fade */}
-      <Fade {...overlayAnimationProps} onExited={() => setShowDetailOverlay(false)}>
-        {isMobile && (showDetailOverlay || isClosing) && (
-          <OverlayWrapper>
-            {overlayContent}
-          </OverlayWrapper>
-        )}
-      </Fade>
+      {/* Overlay móvil simplificado sin Material-UI Fade */}
+      {isMobile && (showDetailOverlay || isClosing) && (
+        <OverlayWrapper>
+          {overlayContent}
+        </OverlayWrapper>
+      )}
       
-      {/* Desktop: renderizado directo sin overlay */}
-      {!isMobile && (
-        <Outlet />
+      {/* Overlay desktop sin animaciones */}
+      {!isMobile && showDesktopOverlay && desktopOverlayContent && (
+        <DesktopOverlayWrapper>
+          {desktopOverlayContent}
+        </DesktopOverlayWrapper>
       )}
     </div>
   );

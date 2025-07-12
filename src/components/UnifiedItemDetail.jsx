@@ -11,8 +11,9 @@ import { processTitle, processDescription } from '../store/utils';
 import { useParams, useNavigate } from 'react-router-dom';
 import { findItemByGlobalId } from '../utils/appUtils';
 import useBackNavigation from '../hooks/useBackNavigation';
-import { CircularProgress, Zoom } from '@mui/material';
-import { useMaterialAnimation } from '../hooks/useMaterialAnimation';
+import { CircularProgress } from '@mui/material';
+import { motion } from 'framer-motion';
+import { useFramerAnimation } from '../hooks/useFramerAnimation';
 
 // Material UI imports (solo para mobile)
 import {
@@ -82,14 +83,65 @@ export default function UnifiedItemDetail(props) {
   const lastItemRef = React.useRef(null);
   const { handleBack, isAnimating } = useBackNavigation();
 
-  // Usar hook de animación de Material-UI
-  const animationProps = useMaterialAnimation(props.isClosing || internalClosing, 400, 'zoom');
-
   // 2. Lógica de obtención de selectedItem DESPUÉS de los hooks
   let selectedItem = props.item;
   if (!selectedItem && id && allData && category && allData[category]) {
     selectedItem = allData[category].find(item => `${item.id}` === `${id}`) || null;
   }
+  
+  // Usar el item actual o el último item mostrado durante la animación de salida
+  const itemForCalculations = isMobile ? selectedItem : (selectedItem || lastItemRef.current);
+  
+  // Usar hook de animación de Framer Motion
+  const animationProps = useFramerAnimation(isMobile ? (props.isClosing || internalClosing) : (props.isClosing || internalClosing), 0.4, 'zoom');
+  
+  // Hook para trailer URL - debe estar antes de cualquier return condicional
+  const trailerUrl = useTrailerUrl(itemForCalculations ? itemForCalculations.trailer : undefined);
+  
+  // Handler para cuando termina la animación de salida
+  const handleExitComplete = () => {
+    console.log('handleExitComplete called');
+    if (props.onExited) {
+      console.log('Calling props.onExited');
+      props.onExited();
+    } else {
+      console.log('Calling handleBack');
+      handleBack();
+    }
+  };
+  
+  // Verificar si realmente necesitamos re-renderizar el componente
+  const shouldRender = React.useMemo(() => {
+    // Si estamos cerrando y ya no hay item seleccionado, no renderizar
+    if ((props.isClosing || internalClosing) && !selectedItem) {
+      return false;
+    }
+    return true;
+  }, [props.isClosing, internalClosing, selectedItem]);
+
+  // Handler para cerrar con animación
+  const triggerExitAnimation = () => {
+    if (!props.isExiting && !internalClosing) {
+      setInternalClosing(true); // Activar animación de cierre interna
+      if (props.onRequestClose) {
+        props.onRequestClose();
+      }
+    }
+  };
+
+  // useEffect para eventos de overlay - debe estar antes de cualquier return condicional
+  useEffect(() => {
+    const onOverlayDetailExit = () => {
+      triggerExitAnimation();
+    };
+    window.addEventListener('overlay-detail-exit', onOverlayDetailExit);
+    return () => window.removeEventListener('overlay-detail-exit', onOverlayDetailExit);
+  }, [props.isExiting, internalClosing]);
+
+  // Guardar referencia al último item mostrado para animación de cierre - debe estar antes de cualquier return condicional
+  useEffect(() => {
+    if (selectedItem) lastItemRef.current = selectedItem;
+  }, [selectedItem]);
 
   // 3. Returns condicionales después de los hooks
   if (!isDataInitialized) {
@@ -107,42 +159,28 @@ export default function UnifiedItemDetail(props) {
     return <div style={{padding:32, textAlign:'center'}}>No se encontró el elemento solicitado.</div>;
   }
   
-  const rawTitle = processTitle(selectedItem.title || selectedItem.name, lang);
-  const rawDescription = processDescription(selectedItem.description, lang);
+  const rawTitle = processTitle(itemForCalculations?.title || itemForCalculations?.name, lang);
+  const rawDescription = processDescription(itemForCalculations?.description, lang);
   
   const title = ensureString(rawTitle, lang);
   const description = ensureString(rawDescription, lang);
   
-  const trailerUrl = useTrailerUrl(selectedItem ? selectedItem.trailer : undefined);
-  
   // Determinar la categoría real del item para color y chip
-  const realCategory = selectedItem.category || selectedCategory;
-
-  // Handler para cerrar con animación
-  const triggerExitAnimation = () => {
-    if (!props.isExiting && !internalClosing) {
-      setInternalClosing(true); // Activar animación de cierre interna
-      if (props.onRequestClose) {
-        props.onRequestClose();
+  const realCategory = itemForCalculations?.category || selectedCategory;
+  // Handler para cerrar con animación (desktop) - Nuevo patrón Framer Motion
+  const handleCloseDesktop = (e) => {
+    e?.preventDefault?.();
+    console.log('handleCloseDesktop called', { internalClosing, isClosing: props.isClosing });
+    if (!internalClosing && !props.isClosing) {
+      console.log('Setting internalClosing to true');
+      setInternalClosing(true);
+      // Llamar al callback de navegación del HomeLayout
+      if (props.onBack) {
+        props.onBack();
       }
     }
   };
-  useEffect(() => {
-    const onOverlayDetailExit = () => {
-      triggerExitAnimation();
-    };
-    window.addEventListener('overlay-detail-exit', onOverlayDetailExit);
-    return () => window.removeEventListener('overlay-detail-exit', onOverlayDetailExit);
-  }, [props.isExiting, internalClosing]);
-  // Handler para cerrar con animación (desktop)
-  const handleCloseDesktop = (e) => {
-    e?.preventDefault?.();
-    handleBack();
-  };
-  // Guardar referencia al último item mostrado para animación de cierre
-  useEffect(() => {
-    if (selectedItem) lastItemRef.current = selectedItem;
-  }, [selectedItem]);
+
   const handleClose = () => {
     if (props.onRequestClose) {
       props.onRequestClose();
@@ -207,39 +245,50 @@ export default function UnifiedItemDetail(props) {
   }
   // Renderizado para desktop usando estilos CSS-in-JS directamente
   if (!isMobile) {
-    const isMasterpiece = !!selectedItem.masterpiece;
+    // Usar el item actual o el último item mostrado durante la animación de salida
+    const safeItem = selectedItem || lastItemRef.current;
+    
+    if (!safeItem) {
+      return null;
+    }
+    
+    const isMasterpiece = !!safeItem.masterpiece;
     const categoryColor = getCategoryColor(realCategory, 'color');
     const gradientBg = `linear-gradient(135deg, ${categoryColor} 0%, ${theme.palette.mode === 'dark' ? 'rgba(24,24,24,0.92)' : 'rgba(255,255,255,0.85)'} 100%)`;
+    
     return (
-      <Zoom {...animationProps} onExited={props.onExited}>
-        <div style={styles.page(theme)}>
-          <div
-            style={{
-              ...styles.desktopWrapper,
-              ...(isMasterpiece ? styles.desktopWrapperMasterpiece : {}),
-              ...(isMasterpiece ? {} : { background: gradientBg })
-            }}
-          >
-            {/* Botón volver FAB azul arriba a la izquierda, igual que en donaciones/descargar */}
-            <Fab
-              color="primary"
-              size="large"
-              aria-label={typeof t === 'function' ? t('Volver') : 'Volver'}
-              onClick={handleCloseDesktop}
-              disabled={isAnimating}
-              sx={{
-                position: 'absolute',
-                top: 18,
-                left: 18,
-                zIndex: 50,
-                boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
-                opacity: isAnimating ? 0.5 : 1,
-                cursor: isAnimating ? 'not-allowed' : 'pointer',
+      <motion.div
+        key={safeItem.id}
+        {...animationProps}
+        style={styles.page(theme)}
+      >
+                      <motion.div
+              style={{
+                ...styles.desktopWrapper,
+                ...(isMasterpiece ? styles.desktopWrapperMasterpiece : {}),
+                ...(isMasterpiece ? {} : { background: gradientBg })
               }}
-              tabIndex={0}
             >
-              <ArrowBackIcon style={{ fontSize: 28, color: '#fff' }} />
-            </Fab>
+              {/* Botón volver FAB azul arriba a la izquierda, igual que en donaciones/descargar */}
+              <Fab
+                color="primary"
+                size="large"
+                aria-label={typeof t === 'function' ? t('Volver') : 'Volver'}
+                onClick={handleCloseDesktop}
+                sx={{
+                  position: 'absolute',
+                  top: 18,
+                  left: 18,
+                  zIndex: 50,
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+                  opacity: (internalClosing || props.isClosing) ? 0.5 : 1,
+                  cursor: (internalClosing || props.isClosing) ? 'not-allowed' : 'pointer',
+                }}
+                tabIndex={0}
+                disabled={internalClosing || props.isClosing}
+              >
+                <ArrowBackIcon style={{ fontSize: 28, color: '#fff' }} />
+              </Fab>
             {isMasterpiece && (
               <div style={styles.desktopBadgeRight}>
                 {/* SVG estrella solo negro */}
@@ -256,7 +305,7 @@ export default function UnifiedItemDetail(props) {
             <div style={styles.leftCol}>
               <div style={styles.imageContainer}>
                 <img
-                  src={selectedItem.image}
+                  src={safeItem.image}
                   alt={title}
                   style={imageHover ? { ...styles.image, ...styles.imageHover } : styles.image}
                   onLoad={() => setImgLoaded(true)}
@@ -271,10 +320,10 @@ export default function UnifiedItemDetail(props) {
                 <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
                   {getCategoryTranslation(realCategory)}
                 </span>
-                {selectedItem.subcategory && (
+                {safeItem.subcategory && (
                   <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
                     {(() => {
-                      const subcat = selectedItem.subcategory;
+                      const subcat = safeItem.subcategory;
                       if (typeof subcat === 'object' && subcat !== null) {
                         if (subcat[lang]) return ensureString(subcat[lang], lang);
                         const firstValue = Object.values(subcat)[0];
@@ -287,39 +336,39 @@ export default function UnifiedItemDetail(props) {
               </div>
               <div style={styles.metaRow}>
                 {/* Mostrar autor/artista para música */}
-                {selectedItem.category === 'music' && selectedItem.artist && (
-                  <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {selectedItem.artist}</span>
+                {safeItem.category === 'music' && safeItem.artist && (
+                  <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {safeItem.artist}</span>
                 )}
                 {/* Mostrar autor para otras categorías */}
-                {selectedItem.category !== 'music' && selectedItem.author && (
-                  <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {selectedItem.author}</span>
+                {safeItem.category !== 'music' && safeItem.author && (
+                  <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {safeItem.author}</span>
                 )}
-                {selectedItem.year && (
-                  <span style={styles.meta}><AccessTimeIcon style={styles.metaIcon}/> {selectedItem.year}</span>
+                {safeItem.year && (
+                  <span style={styles.meta}><AccessTimeIcon style={styles.metaIcon}/> {safeItem.year}</span>
                 )}
-                {selectedItem.duration && (
-                  <span style={styles.meta}><PlaylistPlayIcon style={styles.metaIcon}/> {selectedItem.duration}</span>
+                {safeItem.duration && (
+                  <span style={styles.meta}><PlaylistPlayIcon style={styles.metaIcon}/> {safeItem.duration}</span>
                 )}
-                {selectedItem.language && (
-                  <span style={styles.meta}><TranslateIcon style={styles.metaIcon}/> {selectedItem.language}</span>
+                {safeItem.language && (
+                  <span style={styles.meta}><TranslateIcon style={styles.metaIcon}/> {safeItem.language}</span>
                 )}
-                {selectedItem.platform && (
-                  <span style={styles.meta}><PlatformIcon style={styles.metaIcon}/> {selectedItem.platform}</span>
+                {safeItem.platform && (
+                  <span style={styles.meta}><PlatformIcon style={styles.metaIcon}/> {safeItem.platform}</span>
                 )}
-                {selectedItem.age && (
-                  <span style={styles.meta}><ChildCareIcon style={styles.metaIcon}/> {selectedItem.age}+</span>
+                {safeItem.age && (
+                  <span style={styles.meta}><ChildCareIcon style={styles.metaIcon}/> {safeItem.age}+</span>
                 )}
-                {selectedItem.developer && (
-                  <span style={styles.meta}><DeveloperIcon style={styles.metaIcon}/> {selectedItem.developer}</span>
+                {safeItem.developer && (
+                  <span style={styles.meta}><DeveloperIcon style={styles.metaIcon}/> {safeItem.developer}</span>
                 )}
               </div>
               <div style={styles.extraContentRow}>
-                <DesktopCategorySpecificContent selectedItem={selectedItem} lang={lang} t={t} />
+                <DesktopCategorySpecificContent selectedItem={safeItem} lang={lang} t={t} />
               </div>
               <p style={styles.description}>{description}</p>
               <div style={styles.actionsRow}>
                 <DesktopActionButtons
-                  selectedItem={selectedItem}
+                  selectedItem={safeItem}
                   trailerUrl={trailerUrl}
                   lang={lang}
                   t={t}
@@ -327,11 +376,10 @@ export default function UnifiedItemDetail(props) {
                 />
               </div>
             </div>
-          </div>
-        </div>
-      </Zoom>
-    );
-  }
+          </motion.div>
+        </motion.div>
+      );
+    }
   
 };
 
@@ -346,7 +394,7 @@ const styles = {
     padding: 0,
     margin: 0,
     overflowY: 'auto',
-    paddingTop: '80px', // Espacio para el menú superior en desktop
+    paddingTop: '40px', // Espacio para el menú superior en desktop
   }),
   desktopWrapper: {
     display: 'flex',
