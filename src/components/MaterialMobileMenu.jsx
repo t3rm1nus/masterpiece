@@ -128,11 +128,8 @@ const MaterialMobileMenu = ({
 
   // Mostrar FAB de volver solo en móvil y solo en las páginas de donaciones y cómo descargar
   // Evitar mostrar el FAB durante la transición de navegación y carga inicial
-  const showFabBackButton = isMobile && 
-    (currentView === 'coffee' || currentView === 'howToDownload') && 
-    !isAnimating &&
-    currentView !== 'home' && // Asegurar que no estemos en home
-    isPageLoaded; // Asegurar que la página esté cargada
+  // ELIMINADO: No mostrar FAB en páginas de descargas y donaciones para evitar duplicación
+  const showFabBackButton = false; // Deshabilitado para evitar duplicación con botones de las páginas
 
   // Botón de donaciones y cómo descargar en menú móvil
   const handleGoToCoffee = () => {
