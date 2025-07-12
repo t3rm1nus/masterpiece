@@ -117,10 +117,9 @@ export const createDataSlice = (set, get) => ({
       set({ 
         recommendations: finalRecommendations,
         filteredItems: finalRecommendations,
-        selectedCategory: null,
-        selectedSubcategory: null,
         currentView: 'home',
         selectedItem: null
+        // NO resetear selectedCategory ni selectedSubcategory para preservar el estado
       });
     }
   },

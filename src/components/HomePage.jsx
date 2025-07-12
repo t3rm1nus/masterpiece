@@ -111,6 +111,7 @@ const HomePage = ({
   onSplashOpen,
   onSplashClose,
   audioRef,
+
   ...rest
 } = {}) => {
   const navigate = useNavigate();
@@ -219,32 +220,7 @@ const HomePage = ({
     }
   }, [selectedItem]);
   
-  // Preservar posición del scroll solo cuando navegamos al detalle
-  const scrollPositionRef = useRef(0);
-  const isNavigatingToDetailRef = useRef(false);
-  
-  // Guardar posición del scroll solo cuando vamos al detalle
-  useEffect(() => {
-    if (selectedItem && !isNavigatingToDetailRef.current) {
-      isNavigatingToDetailRef.current = true;
-      scrollPositionRef.current = window.scrollY;
-    }
-  }, [selectedItem]);
-  
-  // Restaurar posición del scroll solo cuando volvemos del detalle
-  useEffect(() => {
-    if (!selectedItem && isNavigatingToDetailRef.current && scrollPositionRef.current > 0) {
-      // Usar un delay más largo para asegurar que el overlay se ha desmontado completamente
-      setTimeout(() => {
-        window.scrollTo({
-          top: scrollPositionRef.current,
-          behavior: 'instant'
-        });
-        scrollPositionRef.current = 0;
-        isNavigatingToDetailRef.current = false;
-      }, 100);
-    }
-  }, [selectedItem]);
+  // Eliminado: lógica de scroll local - ahora se maneja globalmente en el store
   const activePodcastDocumentaryLanguage = useAppStore(state => state.activePodcastDocumentaryLanguage);
   const resetActivePodcastDocumentaryLanguage = useAppStore(state => state.resetActivePodcastDocumentaryLanguage);
   // LOGS DE DEPURACIÓN
@@ -738,6 +714,10 @@ const HomePage = ({
               showCategorySelect={!isMobile}
               showSubcategoryChips={!isMobile}
               onItemClick={handleItemClick}
+
+              // Pasar información adicional para preservar el estado de infinite scroll
+              currentPage={isMobile ? mobilePage : desktopPage}
+              totalItems={filteredItems.length}
             >
               {/* Desktop: Render the recommendations list as a child */}
               {!isMobile && (

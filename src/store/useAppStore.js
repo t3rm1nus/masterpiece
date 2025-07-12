@@ -149,6 +149,61 @@ const useAppStore = create(
       setDesktopPage: (page) => set({ desktopPage: page }),
       resetPagination: () => set({ mobilePage: 1, desktopPage: 1 }),
 
+      // --- Estado de la home que se preserva al navegar a overlays ---
+      homeState: {
+        scrollY: 0,
+        selectedCategory: null,
+        activeSubcategory: null,
+        mobilePage: 1,
+        desktopPage: 1,
+        isSpanishCinemaActive: false,
+        isMasterpieceActive: false,
+        isSpanishSeriesActive: false,
+        activePodcastDocumentaryLanguage: null,
+        searchTerm: '',
+        isSearchActive: false,
+      },
+      saveHomeState: () => set(state => ({
+        homeState: {
+          scrollY: typeof window !== 'undefined' ? window.scrollY : 0,
+          selectedCategory: state.selectedCategory,
+          activeSubcategory: state.activeSubcategory,
+          mobilePage: state.mobilePage || 1,
+          desktopPage: state.desktopPage || 1,
+          isSpanishCinemaActive: state.isSpanishCinemaActive,
+          isMasterpieceActive: state.isMasterpieceActive,
+          isSpanishSeriesActive: state.isSpanishSeriesActive,
+          activePodcastDocumentaryLanguage: state.activePodcastDocumentaryLanguage,
+          searchTerm: state.searchTerm,
+          isSearchActive: state.isSearchActive,
+        }
+      })),
+      restoreHomeState: () => set(state => {
+        const saved = state.homeState;
+        // Restaurar otros estados primero
+        const newState = {
+          selectedCategory: saved.selectedCategory,
+          activeSubcategory: saved.activeSubcategory,
+          mobilePage: saved.mobilePage,
+          desktopPage: saved.desktopPage,
+          isSpanishCinemaActive: saved.isSpanishCinemaActive,
+          isMasterpieceActive: saved.isMasterpieceActive,
+          isSpanishSeriesActive: saved.isSpanishSeriesActive,
+          activePodcastDocumentaryLanguage: saved.activePodcastDocumentaryLanguage,
+          searchTerm: saved.searchTerm,
+          isSearchActive: saved.isSearchActive,
+        };
+        
+        // Restaurar scroll después de que se hayan restaurado todos los estados
+        if (typeof window !== 'undefined' && saved.scrollY > 0) {
+          setTimeout(() => {
+            window.scrollTo({ top: saved.scrollY, behavior: 'auto' });
+          }, 150); // Delay más largo para asegurar que el DOM esté listo
+        }
+        
+        return newState;
+      }),
+
       // --- Slices externos ---
       // Todos los estados y funciones principales deben estar en slices.
       ...createThemeSlice(set, get),
@@ -198,6 +253,8 @@ export const useAppView = () => {
   const desktopStyles = useAppStore(state => state.desktopStyles);
   const baseRecommendationCardClasses = useAppStore(state => state.baseRecommendationCardClasses);
   const isTablet = useAppStore(state => state.isTablet);
+  const saveHomeState = useAppStore(state => state.saveHomeState);
+  const restoreHomeState = useAppStore(state => state.restoreHomeState);
 
   // Funciones adicionales para compatibilidad
   const goBackFromDetail = () => {
@@ -226,7 +283,7 @@ export const useAppView = () => {
     currentView, selectedItem, isMobile, setView, setSelectedItem,
     goToDetail, goToHome, goHome, goToCoffee, goToHowToDownload, setViewport,
     mobileHomeStyles, desktopStyles, baseRecommendationCardClasses, isTablet,
-    goBackFromDetail, goBackFromCoffee
+    goBackFromDetail, goBackFromCoffee, saveHomeState, restoreHomeState
   };
 };
 

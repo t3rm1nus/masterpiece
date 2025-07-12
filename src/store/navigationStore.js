@@ -18,16 +18,14 @@ export const createNavigationSlice = (set, get) => ({
   goHome: () => {
     set({ 
       currentView: 'home',
-      selectedItem: null,
-      selectedCategory: null, // CRÍTICO: null para mostrar todas las recomendaciones
-      selectedSubcategory: null
+      selectedItem: null
+      // NO resetear selectedCategory ni selectedSubcategory para preservar el estado
     });
   },
   resetToHome: () => set({ 
     currentView: 'home', 
-    selectedItem: null, 
-    selectedCategory: null, // CRÍTICO: null para mostrar todas las recomendaciones
-    selectedSubcategory: null
+    selectedItem: null
+    // NO resetear selectedCategory ni selectedSubcategory para preservar el estado
   }),
   setView: (view) => set({ currentView: view }),
   setSelectedItem: (item) => set({ selectedItem: item }),

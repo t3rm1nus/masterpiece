@@ -19,6 +19,7 @@ export default function HomeLayout() {
   const audioRef = useRef(null);
   const overlayRef = useRef(null);
 
+
   // Refuerzo: logs y protección para que el splash solo se cierre por acción explícita
   const openSplash = (audio) => {
     setSplashAudio(audio || null);
@@ -150,6 +151,8 @@ export default function HomeLayout() {
     }, 100);
   };
 
+
+
   // Handler para navegación tras animación en desktop
   const handleDesktopDetailExited = () => {
     // Para páginas de descargas y donaciones, navegación instantánea
@@ -189,8 +192,8 @@ export default function HomeLayout() {
     if (isDonaciones) goToCoffee();
     else if (isHowToDownload) goToHowToDownload();
     else if (isDetail) {/* goToDetail se maneja automáticamente */}
-    else if (location.pathname === '/') goHome();
-  }, [location.pathname, goToCoffee, goToHowToDownload, goHome, isDonaciones, isHowToDownload, isDetail]);
+    // NO llamar goHome() automáticamente para preservar el estado de la home
+  }, [location.pathname, goToCoffee, goToHowToDownload, isDonaciones, isHowToDownload, isDetail]);
 
   // Determinar qué contenido mostrar en el overlay móvil
   let overlayContent = null;
@@ -222,7 +225,7 @@ export default function HomeLayout() {
           left: 0,
           width: '100vw',
           height: 'calc(100vh - 49px)', // Ajusta la altura para no tapar el menú
-          zIndex: 1400, // Overlay base para detalles - por encima del menú móvil (1300)
+          zIndex: 1500, // Overlay base para detalles - por encima de todo excepto splash
           background: 'rgba(255,255,255,0.98)',
           overflowY: 'auto',
           boxSizing: 'border-box',
@@ -266,8 +269,14 @@ export default function HomeLayout() {
         audioRef={audioRef}
         onOverlayNavigate={handleOverlayNavigate}
       />
-      {/* HomePage siempre visible excepto cuando hay overlay activo en móvil */}
-      {(!isMobile || !showDetailOverlay) && (
+      {/* HomePage SIEMPRE visible - solo se oculta visualmente con el overlay */}
+      <div style={{
+        position: 'relative',
+        zIndex: 1,
+        opacity: (isMobile && showDetailOverlay) ? 0 : 1,
+        pointerEvents: (isMobile && showDetailOverlay) ? 'none' : 'auto',
+        transition: 'opacity 0.2s ease-in-out'
+      }}>
         <HomePage
           onSplashOpen={openSplash}
           splashOpen={splashOpen}
@@ -275,8 +284,9 @@ export default function HomeLayout() {
           onSplashClose={closeSplash}
           audioRef={audioRef}
           onOverlayNavigate={handleOverlayNavigate}
+          disableEntryAnimation={false} // Ya no necesitamos esta prop
         />
-      )}
+      </div>
       
       {/* Overlay móvil simplificado sin animación de salida */}
       {isMobile && showDetailOverlay && (

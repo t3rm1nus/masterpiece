@@ -98,6 +98,8 @@ const MaterialContentWrapper = ({
   hasMore,    // NUEVO: si hay más para infinite scroll
   loadingMore, // NUEVO: si está cargando más
   onItemClick, // <-- NUEVO: handler de click en item
+  currentPage = 1, // <--- NUEVA PROP para preservar estado de infinite scroll
+  totalItems = 0, // <--- NUEVA PROP para preservar estado de infinite scroll
   ...props
 }) => {
   const theme = useTheme();
@@ -114,15 +116,32 @@ const MaterialContentWrapper = ({
 
   useEffect(() => {
     if (recommendations && Array.isArray(recommendations)) {
-      // Animación de entrada secuencial
-      setVisibleIndexes([]);
-      recommendations.forEach((_, idx) => {
-        setTimeout(() => {
-          setVisibleIndexes(prev => [...prev, idx]);
-        }, 60 * idx);
-      });
+      if (isMobile && visibleIndexes.length === 0) {
+        // Solo hacer animación secuencial si no hay índices visibles (primera carga)
+        setVisibleIndexes([]);
+        recommendations.forEach((_, idx) => {
+          setTimeout(() => {
+            setVisibleIndexes(prev => [...prev, idx]);
+          }, 60 * idx);
+        });
+      } else if (!isMobile && visibleIndexes.length === 0) {
+        // Desktop: animación secuencial solo en primera carga
+        setVisibleIndexes([]);
+        recommendations.forEach((_, idx) => {
+          setTimeout(() => {
+            setVisibleIndexes(prev => [...prev, idx]);
+          }, 60 * idx);
+        });
+      }
     }
-  }, [recommendations]);
+  }, [recommendations, isMobile, visibleIndexes.length, selectedCategory]);
+
+  // Resetear animaciones cuando cambia la categoría
+  useEffect(() => {
+    if (recommendations && Array.isArray(recommendations)) {
+      setVisibleIndexes([]);
+    }
+  }, [selectedCategory]);
 
   // Infinite scroll para móvil y desktop cuando hay categorías específicas
   const { sentinelRef } = useInfiniteScroll(
