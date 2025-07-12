@@ -224,7 +224,7 @@ const MobileItemDetail = ({
           justifyContent: 'flex-start',
           height: { xs: '100dvh', sm: 'auto' },
           width: '100%',
-          padding: { xs: '500px 0 0 0', sm: '36px 0 0 0' }, // separación reducida a la mitad del menú superior en móviles
+          padding: { xs: '45px 0 0 0', sm: '36px 0 0 0' }, // separación de 45px del menú superior en móviles
           boxSizing: 'border-box',
           overflowY: 'auto',
           WebkitOverflowScrolling: 'touch',
