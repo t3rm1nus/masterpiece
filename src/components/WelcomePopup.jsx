@@ -73,7 +73,7 @@ export default function WelcomePopup({ open, onClose }) {
       onClick={handleOverlayClick}
       style={{
         position: "fixed",
-        zIndex: 2000,
+        zIndex: 1500, // Popup de bienvenida - por encima de overlays pero por debajo del splash
         top: 0,
         left: 0,
         width: "100vw",

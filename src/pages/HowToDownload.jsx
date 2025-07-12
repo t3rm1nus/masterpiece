@@ -137,7 +137,7 @@ const HowToDownload = () => {
           backgroundColor: isMobile ? '#fafafa' : '#fff',
           minHeight: '100vh',
           position: 'relative',
-          zIndex: isMobile ? 3000 : 1200, // 4. Páginas descargar/donaciones en móvil - por debajo del menú (4000)
+          zIndex: isMobile ? 1000 : 1200, // Páginas descargar/donaciones - por debajo del AppBar (1200) en móvil
           overflow: 'visible',
           WebkitOverflowScrolling: 'touch'
         }}
@@ -160,7 +160,7 @@ const HowToDownload = () => {
               position: 'fixed',
               top: '8px',
               left: 16,
-              zIndex: 3000, // FAB de página descargar - igual que la página
+              zIndex: 1001, // FAB de página descargar - por encima de la página pero por debajo del AppBar
               backgroundColor: theme.palette.primary.main,
               '&:hover': {
                 backgroundColor: theme.palette.primary.dark,

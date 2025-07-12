@@ -228,7 +228,7 @@ const MobileItemDetail = ({
           boxSizing: 'border-box',
           overflowY: 'auto',
           WebkitOverflowScrolling: 'touch',
-          zIndex: 1, // Por debajo del menú superior (z-index 1100)
+          zIndex: 1, // Por debajo del AppBar (1200)
           position: 'relative',
         }}
       >
@@ -246,7 +246,7 @@ const MobileItemDetail = ({
             marginBottom: { xs: '36px', sm: 0 }, // margen inferior reducido a la mitad en móvil
             border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
             background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
-            zIndex: 1, // Por debajo del menú superior (z-index 1100)
+            zIndex: 1, // Por debajo del AppBar (1200)
             // --- iPhone/iOS override hacks ---
             overflow: 'visible !important',
             overflowY: 'visible !important',
@@ -278,7 +278,7 @@ const MobileItemDetail = ({
                 position: 'absolute',
                 top: -17,
                 right: -18,
-                zIndex: 1201,
+                zIndex: 1101, // Por encima del detalle (1100) pero por debajo del AppBar (1200)
                 filter: 'drop-shadow(0 4px 16px rgba(255,215,0,0.5))',
                 background: '#FFD700',
                 border: '2.5px solid #111',

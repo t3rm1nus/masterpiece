@@ -166,21 +166,13 @@ const MaterialMobileMenu = ({
       {/* AppBar siempre visible en móvil para acceso al splash */}
       <AppBar 
         position="fixed" 
-        elevation={1}
         sx={{ 
-          backgroundColor: isDarkMode ? '#1e1e1e' : '#ffffff',
+          backgroundColor: isDarkMode ? '#1a1a1a' : '#ffffff',
           color: isDarkMode ? '#ffffff' : '#000000',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
           borderBottom: isDarkMode ? '1px solid #333' : '1px solid #e0e0e0',
-          height: 'auto',
-          minHeight: '48px',
-          top: '0 !important',
-          left: '0 !important',
-          right: '0 !important',
-          margin: 0,
-          padding: 0,
-          zIndex: 3500, // 3. AppBar móvil - alto pero por debajo del menú (4000)
-          position: 'fixed !important',
-          ...sx.appBar
+          zIndex: 1200, // AppBar móvil - por encima del contenido pero por debajo de overlays
+          ...sx
         }}
       >
         <Toolbar 
@@ -262,18 +254,23 @@ const MaterialMobileMenu = ({
         }}
       />
       <Drawer
-        key={lang} // Solo key={lang} para forzar desmontaje/montaje al cambiar idioma
-        anchor="left"
+        anchor="right"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-        sx={{
-          '& .MuiDrawer-paper': {
-            width: 'min(80vw, 320px)',
-            backgroundColor: isDarkMode ? '#2d2d2d' : '#ffffff',
+        PaperProps={{
+          sx: {
+            width: { xs: '280px', sm: '320px' },
+            backgroundColor: isDarkMode ? '#1a1a1a' : '#ffffff',
             color: isDarkMode ? '#ffffff' : '#000000',
-            zIndex: 4000, // 2. Menú móvil - por encima de páginas descargar/donaciones (3000)
+            borderLeft: isDarkMode ? '1px solid #333' : '1px solid #e0e0e0',
+            boxShadow: '-4px 0 16px rgba(0,0,0,0.15)',
+            zIndex: 1300, // Menú móvil - por encima del AppBar pero por debajo de overlays importantes
             ...sx.drawer
           }
+        }}
+        sx={{
+          zIndex: 1300, // Igual que el Drawer del menú móvil
+          ...sx
         }}
       >
         <Box sx={{ padding: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

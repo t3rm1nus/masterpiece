@@ -59,7 +59,7 @@ const ErrorDisplay = ({
         padding: '12px 20px',
         borderRadius: '4px',
         boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
-        zIndex: 1000,
+        zIndex: 1500, // Display de errores - por encima de overlays pero por debajo del splash
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',

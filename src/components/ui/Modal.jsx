@@ -25,7 +25,7 @@ export default function Modal({
         position: 'fixed',
         top: 0, left: 0, right: 0, bottom: 0,
         background: 'rgba(0,0,0,0.35)',
-        zIndex: 1000,
+        zIndex: 1500, // Modal - por encima de overlays pero por debajo del splash
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

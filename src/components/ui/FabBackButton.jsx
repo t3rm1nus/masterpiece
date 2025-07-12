@@ -1,6 +1,7 @@
 import React from 'react';
 import { Fab } from '@mui/material';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
+import { useTheme } from '@mui/material/styles';
 
 /**
  * FabBackButton (Floating Action Back Button)
@@ -34,6 +35,7 @@ const FabBackButton = ({
   ariaLabel = 'volver',
   ...props
 }) => {
+  const theme = useTheme();
   if (!visible) return null;
   return (
     <Fab
@@ -45,7 +47,8 @@ const FabBackButton = ({
         position: 'fixed',
         top: '80px',
         left: '16px',
-        zIndex: 1000,
+        zIndex: 1100, // FAB de volver - por encima del contenido pero por debajo del AppBar
+        backgroundColor: theme.palette.primary.main,
         ...sx
       }}
       {...props}
