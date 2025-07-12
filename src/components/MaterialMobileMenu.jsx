@@ -112,15 +112,27 @@ const MaterialMobileMenu = ({
 
   // Forzar rerender al cambiar tema para actualizar el literal del botón
   const [, forceUpdate] = useState(false);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+  
   useEffect(() => {
     forceUpdate(f => !f);
   }, [isDarkMode]);
+  
+  // Delay para evitar mostrar el FAB durante la carga inicial
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsPageLoaded(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Mostrar FAB de volver solo en móvil y solo en las páginas de donaciones y cómo descargar
-  // Evitar mostrar el FAB durante la transición de navegación
+  // Evitar mostrar el FAB durante la transición de navegación y carga inicial
   const showFabBackButton = isMobile && 
     (currentView === 'coffee' || currentView === 'howToDownload') && 
-    !isAnimating;
+    !isAnimating &&
+    currentView !== 'home' && // Asegurar que no estemos en home
+    isPageLoaded; // Asegurar que la página esté cargada
 
   // Botón de donaciones y cómo descargar en menú móvil
   const handleGoToCoffee = () => {
