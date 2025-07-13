@@ -1,15 +1,24 @@
 /**
- * translationUtils.js
+ * translationUtils.ts
  *
  * Utilidades avanzadas para la gestión de traducciones en la app Masterpiece.
  * Incluye validación de claves, pluralización, interpolación, merge profundo y extracción de claves.
  */
+import { Language } from '../types';
+
+// Tipos para traducciones
+type TranslationObject = Record<string, any>;
+type TranslationValidator = {
+  validate: (key: string) => boolean;
+  getMissingKeys: () => string[];
+  clearMissingKeys: () => void;
+};
 
 /**
  * Crea un validador de claves de traducción.
  * Permite detectar claves faltantes durante el desarrollo.
  */
-export const createTranslationValidator = (translations) => {
+export const createTranslationValidator = (translations: TranslationObject): TranslationValidator => {
   const missingKeys = new Set();
   return {
     /**
@@ -31,7 +40,7 @@ export const createTranslationValidator = (translations) => {
     /**
      * Devuelve todas las claves faltantes detectadas.
      */
-    getMissingKeys: () => Array.from(missingKeys),
+    getMissingKeys: () => Array.from(missingKeys) as string[],
     /**
      * Limpia el cache de claves faltantes.
      */
@@ -43,7 +52,7 @@ export const createTranslationValidator = (translations) => {
  * Pluralización básica para inglés y español.
  * Devuelve la forma singular o plural según el conteo y el idioma.
  */
-export const pluralize = (count, singular, plural = null, language = 'es') => {
+export const pluralize = (count: number, singular: string, plural: string | null = null, language: Language = 'es'): string => {
   if (typeof count !== 'number') return singular;
   if (language === 'en') {
     return count === 1 ? singular : (plural || `${singular}s`);
@@ -57,7 +66,7 @@ export const pluralize = (count, singular, plural = null, language = 'es') => {
  * Interpola variables en una cadena de traducción.
  * Ejemplo: formatTranslation('Hola {name}!', { name: 'Mundo' }) => 'Hola Mundo!'
  */
-export const formatTranslation = (template, variables = {}) => {
+export const formatTranslation = (template: string, variables: Record<string, any> = {}): string => {
   if (!template || typeof template !== 'string') return template;
   if (!variables || typeof variables !== 'object') return template;
   return template.replace(/\{(\w+)\}/g, (match, key) => {
@@ -69,7 +78,7 @@ export const formatTranslation = (template, variables = {}) => {
  * Realiza un merge profundo entre dos objetos de traducción.
  * Útil para combinar traducciones parciales o aplicar fallbacks.
  */
-export const mergeTranslations = (target, source) => {
+export const mergeTranslations = (target: TranslationObject, source: TranslationObject): TranslationObject => {
   if (!target || typeof target !== 'object') return source;
   if (!source || typeof source !== 'object') return target;
   const result = { ...target };
@@ -95,8 +104,8 @@ export const mergeTranslations = (target, source) => {
  * Extrae todas las claves de traducción de un objeto de traducciones.
  * Útil para generar listas de claves o detectar claves no usadas.
  */
-export const extractTranslationKeys = (translations, prefix = '') => {
-  const keys = [];
+export const extractTranslationKeys = (translations: TranslationObject, prefix: string = ''): string[] => {
+  const keys: string[] = [];
   if (!translations || typeof translations !== 'object') {
     return keys;
   }
@@ -117,8 +126,8 @@ export const extractTranslationKeys = (translations, prefix = '') => {
  * Crea un wrapper de namespace para traducciones.
  * Útil para componentes que necesitan traducciones de un namespace específico.
  */
-export const createTranslationNamespace = (getTranslation, namespace) => {
-  return (key, fallback = null) => {
+export const createTranslationNamespace = (getTranslation: (key: string, fallback?: any) => string, namespace: string) => {
+  return (key: string, fallback: any = null): string => {
     const namespacedKey = namespace ? `${namespace}.${key}` : key;
     return getTranslation(namespacedKey, fallback);
   };
@@ -128,9 +137,9 @@ export const createTranslationNamespace = (getTranslation, namespace) => {
  * Obtiene múltiples traducciones en una sola llamada.
  * Útil para optimizar el rendimiento en componentes.
  */
-export const batchGetTranslations = (getTranslation, keys = []) => {
+export const batchGetTranslations = (getTranslation: (key: string) => string, keys: string[] = []): Record<string, string> => {
   if (!Array.isArray(keys)) return {};
-  const result = {};
+  const result: Record<string, string> = {};
   for (const key of keys) {
     if (typeof key === 'string') {
       result[key] = getTranslation(key);
@@ -144,12 +153,12 @@ export const batchGetTranslations = (getTranslation, keys = []) => {
  * Permite almacenar en caché resultados de traducciones para mejorar el rendimiento.
  */
 export const createTranslationCache = () => {
-  const cache = new Map();
+  const cache = new Map<string, any>();
   return {
     /**
      * Obtiene una traducción del caché o la calcula y almacena en caché.
      */
-    get: (key, computeFn) => {
+    get: (key: string, computeFn: () => any) => {
       if (cache.has(key)) {
         return cache.get(key);
       }
@@ -168,7 +177,7 @@ export const createTranslationCache = () => {
     /**
      * Verifica si una clave está en el caché.
      */
-    has: (key) => cache.has(key)
+    has: (key: string) => cache.has(key)
   };
 };
 
