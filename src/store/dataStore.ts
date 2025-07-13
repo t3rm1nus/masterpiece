@@ -61,9 +61,9 @@ export const createDataSlice = (set: any, get: any) => ({
 
     let recommendations14 = realData.recommendations?.slice(0, 14) || [];
     if (recommendations14.length < 14 && realData.allData) {
-      const allItems = Object.values(realData.allData).flat();
-      const existingIds = new Set(recommendations14.map(item => item.id));
-      const candidates = allItems.filter(item => !existingIds.has(item.id));
+      const allItems = Object.values(realData.allData).flat() as Item[];
+      const existingIds = new Set(recommendations14.map((item: Item) => item.id));
+      const candidates = allItems.filter((item: Item) => !existingIds.has(item.id));
       for (let i = candidates.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [candidates[i], candidates[j]] = [candidates[j], candidates[i]];
@@ -98,7 +98,6 @@ export const createDataSlice = (set: any, get: any) => ({
   },
   setCategory: (category: Category) => set({ selectedCategory: category }),
   // Alias de compatibilidad para subcategoría
-  activeSubcategory: null as string | null,
   setActiveSubcategory: (subcategory: string) => set({ selectedSubcategory: subcategory, activeSubcategory: subcategory }),
   generateNewRecommendations: (): void => {
     const { allData } = get();

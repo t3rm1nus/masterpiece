@@ -13,10 +13,12 @@
 
 import { Item } from '../types/data';
 
+type ItemWithCategory = Item & { category: string };
+
 // Navigation slice for Zustand
 export const createNavigationSlice = (set: any, get: any) => ({
   currentView: 'home',
-  selectedItem: null as Item | null,
+  selectedItem: null as ItemWithCategory | null,
   goHome: (): void => {
     set((state: any) => {
       if (state.currentView === 'home' && state.selectedItem === null) {
@@ -41,7 +43,7 @@ export const createNavigationSlice = (set: any, get: any) => ({
       return { currentView: view };
     });
   },
-  setSelectedItem: (item: Item | null): void => {
+  setSelectedItem: (item: ItemWithCategory | null): void => {
     set((state: any) => {
       if (state.selectedItem === item) {
         return state;
@@ -49,7 +51,7 @@ export const createNavigationSlice = (set: any, get: any) => ({
       return { selectedItem: item };
     });
   },
-  goToDetail: (item: Item): void => {
+  goToDetail: (item: ItemWithCategory): void => {
     set({ currentView: 'detail', selectedItem: item });
     // Actualizar la URL para que sea navegable
     if (typeof window !== 'undefined' && window.history && item?.id && item?.category) {
