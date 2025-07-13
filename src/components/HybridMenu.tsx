@@ -53,9 +53,9 @@ function DesktopMenu(props: HybridMenuProps & { splashOpen?: boolean; onSplashCl
     onBack,
     onOverlayNavigate
   } = props;
-  const { t, lang, getTranslation } = useLanguage();
+  const { t, lang, getTranslation, changeLanguage } = useLanguage();
   const { resetAllFilters, generateNewRecommendations } = useAppData();
-  const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();  
+  const { currentView, goHome, goToCoffee, goToHowToDownload } = useAppView();  
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const navigate = useNavigate();
@@ -122,7 +122,12 @@ function DesktopMenu(props: HybridMenuProps & { splashOpen?: boolean; onSplashCl
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
           {/* Selector de idioma (LanguageSelector) siempre visible en desktop */}
-          <LanguageSelector variant="desktop" sx={{}} />
+          <LanguageSelector 
+            variant="desktop" 
+            value={lang}
+            onChange={changeLanguage}
+            sx={{}} 
+          />
           {/* Icono quienes somos (about) como imagen suelta a la izquierda del botón donación */}
           <img
             src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/icono.png"
