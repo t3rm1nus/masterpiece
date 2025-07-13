@@ -7,9 +7,11 @@
 // =============================================
 
 import { processTitle, processDescription, randomNotFoundImage } from './utils';
+import { Category, Language } from '../types';
+import { Item } from '../types/data';
 
 // Migration helper for persisted state
-function migrateDataSliceState(state, version) {
+function migrateDataSliceState(state: any, version: number): any {
   // Example: migrate from v0 to v1 (add new fields, rename, etc.)
   // if (version === 0) {
   //   return { ...state, newField: defaultValue };
@@ -18,16 +20,16 @@ function migrateDataSliceState(state, version) {
 }
 
 // Data slice for Zustand store (NO persist here)
-export const createDataSlice = (set, get) => ({
-  recommendations: [],
-  categories: [],
-  filteredItems: [],
-  selectedCategory: null,
-  activeSubcategory: null,
+export const createDataSlice = (set: any, get: any) => ({
+  recommendations: [] as Item[],
+  categories: [] as any[],
+  filteredItems: [] as Item[],
+  selectedCategory: null as Category | null,
+  activeSubcategory: null as string | null,
   title: 'Recomendaciones diarias',
   isDataInitialized: false,
-  allData: {},
-  updateWithRealData: (realData) => {
+  allData: {} as Record<string, Item[]>,
+  updateWithRealData: (realData: any) => {
     const catSeries = realData.categories?.find(cat => cat.id === 'series');
 
     // --- CORRECCIÓN: Generar subcategorías únicas de series a partir de los datos reales ---
@@ -79,26 +81,26 @@ export const createDataSlice = (set, get) => ({
     });
     const catSeriesAfter = categoriesFixed?.find(cat => cat.id === 'series');
   },
-  getRecommendations: () => get().recommendations,
-  getCategories: () => {
+  getRecommendations: (): Item[] => get().recommendations,
+  getCategories: (): any[] => {
     const categories = get().categories;
     const translations = get().translations;
     const language = get().language;
-    return categories.map(cat => ({
+    return categories.map((cat: any) => ({
       key: cat.id,
       label: translations?.[language]?.categories?.[cat.id] || cat.name
     }));
   },
-  getSubcategoriesForCategory: (categoryId) => {
+  getSubcategoriesForCategory: (categoryId: string): any[] => {
     const categories = get().categories;
     const category = categories.find(cat => cat.id === categoryId);
     return category?.subcategories || [];
   },
-  setCategory: (category) => set({ selectedCategory: category }),
+  setCategory: (category: Category) => set({ selectedCategory: category }),
   // Alias de compatibilidad para subcategoría
-  activeSubcategory: null,
-  setActiveSubcategory: (subcategory) => set({ selectedSubcategory: subcategory, activeSubcategory: subcategory }),
-  generateNewRecommendations: () => {
+  activeSubcategory: null as string | null,
+  setActiveSubcategory: (subcategory: string) => set({ selectedSubcategory: subcategory, activeSubcategory: subcategory }),
+  generateNewRecommendations: (): void => {
     const { allData } = get();
     if (allData && Object.keys(allData).length > 0) {
       const categories = ['movies', 'books', 'videogames', 'music', 'comics', 'boardgames', 'podcast', 'series', 'documentales'];
@@ -123,7 +125,7 @@ export const createDataSlice = (set, get) => ({
       });
     }
   },
-  updateTitleForLanguage: (lang) => {
+  updateTitleForLanguage: (lang: Language) => {
     const selectedCategory = get().selectedCategory;
     const categories = get().getCategories ? get().getCategories(lang) : [];
     if (selectedCategory && categories.length > 0) {
@@ -136,23 +138,23 @@ export const createDataSlice = (set, get) => ({
     }
   },
   isSpanishCinemaActive: false,
-  toggleSpanishCinema: () => set(state => ({ isSpanishCinemaActive: !state.isSpanishCinemaActive })),
+  toggleSpanishCinema: () => set((state: any) => ({ isSpanishCinemaActive: !state.isSpanishCinemaActive })),
   isMasterpieceActive: false,
-  toggleMasterpiece: () => set(state => ({ isMasterpieceActive: !state.isMasterpieceActive })),
-  activePodcastLanguages: [],
-  togglePodcastLanguage: (lang) => set(state => ({
+  toggleMasterpiece: () => set((state: any) => ({ isMasterpieceActive: !state.isMasterpieceActive })),
+  activePodcastLanguages: [] as string[],
+  togglePodcastLanguage: (lang: string) => set((state: any) => ({
     activePodcastLanguages: state.activePodcastLanguages.includes(lang)
-      ? state.activePodcastLanguages.filter(l => l !== lang)
+      ? state.activePodcastLanguages.filter((l: string) => l !== lang)
       : [...state.activePodcastLanguages, lang]
   })),
-  activeDocumentaryLanguages: [],
-  toggleDocumentaryLanguage: (lang) => set(state => ({
+  activeDocumentaryLanguages: [] as string[],
+  toggleDocumentaryLanguage: (lang: string) => set((state: any) => ({
     activeDocumentaryLanguages: state.activeDocumentaryLanguages.includes(lang)
-      ? state.activeDocumentaryLanguages.filter(l => l !== lang)
+      ? state.activeDocumentaryLanguages.filter((l: string) => l !== lang)
       : [...state.activeDocumentaryLanguages, lang]
   })),
-  activeLanguage: 'all',
-  setActiveLanguage: (lang) => set({ activeLanguage: lang }),
+  activeLanguage: 'all' as string,
+  setActiveLanguage: (lang: string) => set({ activeLanguage: lang }),
   resetAllFilters: () => set({
     selectedCategory: null,
     activeSubcategory: null,
@@ -168,5 +170,5 @@ export const createDataSlice = (set, get) => ({
     title: 'Recomendaciones diarias',
     selectedItem: null
   }),
-  updateFilteredItems: (items) => set({ filteredItems: items }),
+  updateFilteredItems: (items: Item[]) => set({ filteredItems: items }),
 });
