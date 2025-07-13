@@ -21,6 +21,122 @@ import { createLanguageSlice } from './languageStore';
 import { createNavigationSlice } from './navigationStore';
 import { createDataSlice } from './dataStore';
 import { migrateAppStoreState } from '../utils/migrationHelpers';
+import { Language, Category } from '../types';
+import { Item } from '../types/data';
+
+// Tipos para el store
+type HomeState = {
+  selectedCategory: Category | null;
+  activeSubcategory: string | null;
+  mobilePage: number;
+  desktopPage: number;
+  isSpanishCinemaActive: boolean;
+  isMasterpieceActive: boolean;
+  isSpanishSeriesActive: boolean;
+  activePodcastDocumentaryLanguage: string | null;
+  searchTerm: string;
+  isSearchActive: boolean;
+};
+
+type MobileHomeStyles = {
+  cardStyle: React.CSSProperties;
+  imageStyle: React.CSSProperties;
+};
+
+type DesktopStyles = {
+  cardStyle: React.CSSProperties;
+  categoryStyle: React.CSSProperties;
+  subcategoryStyle: React.CSSProperties;
+  imageStyle: React.CSSProperties;
+  categoryContainer: React.CSSProperties;
+};
+
+type MasterpieceBadgeConfig = {
+  color: string;
+  icon: string;
+  svg: {
+    width: number;
+    height: number;
+    viewBox: string;
+    fill: string;
+    xmlns: string;
+  };
+  circle: {
+    cx: number;
+    cy: number;
+    r: number;
+    fill: string;
+  };
+  star: {
+    d: string;
+    fill: string;
+  };
+};
+
+// Tipo para el store completo
+type AppStore = {
+  // Estados básicos
+  isMobile: boolean;
+  isTablet: boolean;
+  isDarkMode: boolean;
+  theme: string;
+  searchTerm: string;
+  isSearchActive: boolean;
+  error: string | null;
+  language: Language;
+  translations: Record<string, any>;
+
+  // Estilos
+  mobileHomeStyles: MobileHomeStyles;
+  desktopStyles: DesktopStyles;
+  baseRecommendationCardClasses: string;
+
+  // Funciones UI
+  setViewport: (width: number | boolean) => void;
+  setSearchTerm: (term: string) => void;
+  setSearchActive: (active: boolean) => void;
+  clearSearch: () => void;
+  setError: (error: string | null) => void;
+  clearError: () => void;
+
+  // Traducción
+  setLanguage: (language: Language) => void;
+  toggleLanguage: () => void;
+  setTranslations: (translations: Record<string, any>) => void;
+  getTranslation: (key: string, fallback?: string) => string;
+  getMasterpieceBadgeConfig: () => MasterpieceBadgeConfig;
+
+  // Filtros especiales
+  isSpanishCinemaActive: boolean;
+  toggleSpanishCinema: () => void;
+  setSpanishCinemaActive: (active: boolean) => void;
+  isSpanishSeriesActive: boolean;
+  toggleSpanishSeries: () => void;
+  setSpanishSeriesActive: (active: boolean) => void;
+  isMasterpieceActive: boolean;
+  toggleMasterpiece: () => void;
+  setMasterpieceActive: (active: boolean) => void;
+
+  // Filtro de idioma
+  activePodcastDocumentaryLanguage: string | null;
+  setActivePodcastDocumentaryLanguage: (lang: string | null) => void;
+  resetActivePodcastDocumentaryLanguage: () => void;
+
+  // Paginación
+  mobilePage: number;
+  desktopPage: number;
+  setMobilePage: (page: number) => void;
+  setDesktopPage: (page: number) => void;
+  resetPagination: () => void;
+
+  // Estado de home
+  homeState: HomeState;
+  saveHomeState: () => void;
+  restoreHomeState: () => void;
+
+  // Campos de slices (se agregarán dinámicamente)
+  [key: string]: any;
+};
 
 // --- LIMPIEZA DE PERSISTENCIA ANTES DE CREAR EL STORE ---
 if (typeof window !== 'undefined') {
@@ -43,7 +159,7 @@ const useAppStore = create(
       searchTerm: '',
       isSearchActive: false,
       error: null,
-      language: 'es',
+      language: 'es' as Language,
       translations: {},
 
       // --- UI/Compatibilidad ---
@@ -61,7 +177,7 @@ const useAppStore = create(
       baseRecommendationCardClasses: 'recommendation-card transition-all duration-300 hover:shadow-lg cursor-pointer border border-gray-200 rounded-lg overflow-hidden',
 
       // --- Funciones UI/Compatibilidad ---
-      setViewport: (width) => {
+      setViewport: (width: number | boolean) => {
         // width puede ser un número (px) o booleano (legacy)
         if (typeof width === 'number') {
           set({
@@ -72,24 +188,25 @@ const useAppStore = create(
           set({ isMobile: !!width });
         }
       },
-      setSearchTerm: (term) => set({ searchTerm: term }),
-      setSearchActive: (active) => set({ isSearchActive: active }),
+      setSearchTerm: (term: string) => set({ searchTerm: term }),
+      setSearchActive: (active: boolean) => set({ isSearchActive: active }),
       clearSearch: () => set({ searchTerm: '', isSearchActive: false }),
-      setError: (error) => set({ error }),
+      setError: (error: string | null) => set({ error }),
       clearError: () => set({ error: null }),
 
       // --- Traducción centralizada ---
-      setLanguage: (language) => set({ language }),
+      setLanguage: (language: Language) => set({ language }),
       toggleLanguage: () => set(state => ({ language: state.language === 'es' ? 'en' : 'es' })),
-      setTranslations: (translations) => {
+      setTranslations: (translations: Record<string, any>) => {
         set({ translations });
         // Actualizar título cuando se cargan las traducciones
-        const state = get();
+        const state = get() as any;
         state.updateTitleForLanguage && state.updateTitleForLanguage();
       },
-      getTranslation: (key, fallback) => {
-        const translations = get().translations;
-        const language = get().language;
+      getTranslation: (key: string, fallback?: string) => {
+        const state = get() as any;
+        const translations = state.translations;
+        const language = state.language;
         if (!translations || !language) return fallback || key;
         const keys = key.split('.');
         let value = translations[language];
@@ -104,7 +221,7 @@ const useAppStore = create(
       },
 
       // --- Badge config ---
-      getMasterpieceBadgeConfig: () => ({
+      getMasterpieceBadgeConfig: (): MasterpieceBadgeConfig => ({
         color: 'gold',
         icon: '★',
         svg: {
@@ -129,40 +246,40 @@ const useAppStore = create(
       // --- Estados especiales de filtros ---
       isSpanishCinemaActive: false,
       toggleSpanishCinema: () => set(state => ({ isSpanishCinemaActive: !state.isSpanishCinemaActive })),
-      setSpanishCinemaActive: (active) => set({ isSpanishCinemaActive: !!active }),
+      setSpanishCinemaActive: (active: boolean) => set({ isSpanishCinemaActive: !!active }),
       isSpanishSeriesActive: false,
       toggleSpanishSeries: () => set(state => ({ isSpanishSeriesActive: !state.isSpanishSeriesActive })),
-      setSpanishSeriesActive: (active) => set({ isSpanishSeriesActive: !!active }),
+      setSpanishSeriesActive: (active: boolean) => set({ isSpanishSeriesActive: !!active }),
       isMasterpieceActive: false,
       toggleMasterpiece: () => set(state => ({ isMasterpieceActive: !state.isMasterpieceActive })),
-      setMasterpieceActive: (active) => set({ isMasterpieceActive: !!active }),
+      setMasterpieceActive: (active: boolean) => set({ isMasterpieceActive: !!active }),
 
       // --- Filtro de idioma para podcasts/documentales ---
-      activePodcastDocumentaryLanguage: null, // 'es', 'en' o null
-      setActivePodcastDocumentaryLanguage: (lang) => set({ activePodcastDocumentaryLanguage: lang }),
+      activePodcastDocumentaryLanguage: null as string | null, // 'es', 'en' o null
+      setActivePodcastDocumentaryLanguage: (lang: string | null) => set({ activePodcastDocumentaryLanguage: lang }),
       resetActivePodcastDocumentaryLanguage: () => set({ activePodcastDocumentaryLanguage: null }),
 
       // --- Estado de paginación para persistir entre navegaciones ---
       mobilePage: 1,
       desktopPage: 1,
-      setMobilePage: (page) => set({ mobilePage: page }),
-      setDesktopPage: (page) => set({ desktopPage: page }),
+      setMobilePage: (page: number) => set({ mobilePage: page }),
+      setDesktopPage: (page: number) => set({ desktopPage: page }),
       resetPagination: () => set({ mobilePage: 1, desktopPage: 1 }),
 
       // --- Estado de la home que se preserva al navegar a overlays ---
       homeState: {
-        selectedCategory: null,
-        activeSubcategory: null,
+        selectedCategory: null as Category | null,
+        activeSubcategory: null as string | null,
         mobilePage: 1,
         desktopPage: 1,
         isSpanishCinemaActive: false,
         isMasterpieceActive: false,
         isSpanishSeriesActive: false,
-        activePodcastDocumentaryLanguage: null,
+        activePodcastDocumentaryLanguage: null as string | null,
         searchTerm: '',
         isSearchActive: false,
-      },
-      saveHomeState: () => set(state => ({
+      } as HomeState,
+      saveHomeState: () => set((state: any) => ({
         homeState: {
           selectedCategory: state.selectedCategory,
           activeSubcategory: state.activeSubcategory,
@@ -176,7 +293,7 @@ const useAppStore = create(
           isSearchActive: state.isSearchActive,
         }
       })),
-      restoreHomeState: () => set(state => {
+      restoreHomeState: () => set((state: any) => {
         const saved = state.homeState;
         // Restaurar otros estados (sin scroll)
         return {
@@ -204,7 +321,7 @@ const useAppStore = create(
       name: 'masterpiece-data', // storage key
       version: 1,
       migrate: migrateAppStoreState,
-      partialize: (state) => ({
+      partialize: (state: any) => ({
         // Solo persistir los campos relevantes
         // Si agregas un nuevo campo persistente, documenta aquí y en el slice correspondiente.
         selectedCategory: state.selectedCategory,
@@ -227,23 +344,23 @@ const useAppStore = create(
 // ✅ HOOKS PARA ACCEDER AL STORE
 // Si agregas nuevos campos/funciones, asegúrate de exponerlos aquí y mantener la consistencia de nombres.
 export const useAppView = () => {
-  const currentView = useAppStore(state => state.currentView);
-  const selectedItem = useAppStore(state => state.selectedItem);
-  const isMobile = useAppStore(state => state.isMobile);
-  const setView = useAppStore(state => state.setView);
-  const setSelectedItem = useAppStore(state => state.setSelectedItem);
-  const goToDetail = useAppStore(state => state.goToDetail);
-  const goToHome = useAppStore(state => state.goToHome);
-  const goHome = useAppStore(state => state.goHome);
-  const goToCoffee = useAppStore(state => state.goToCoffee);
-  const goToHowToDownload = useAppStore(state => state.goToHowToDownload);
-  const setViewport = useAppStore(state => state.setViewport);
-  const mobileHomeStyles = useAppStore(state => state.mobileHomeStyles);
-  const desktopStyles = useAppStore(state => state.desktopStyles);
-  const baseRecommendationCardClasses = useAppStore(state => state.baseRecommendationCardClasses);
-  const isTablet = useAppStore(state => state.isTablet);
-  const saveHomeState = useAppStore(state => state.saveHomeState);
-  const restoreHomeState = useAppStore(state => state.restoreHomeState);
+  const currentView = useAppStore((state: any) => state.currentView);
+  const selectedItem = useAppStore((state: any) => state.selectedItem);
+  const isMobile = useAppStore((state: any) => state.isMobile);
+  const setView = useAppStore((state: any) => state.setView);
+  const setSelectedItem = useAppStore((state: any) => state.setSelectedItem);
+  const goToDetail = useAppStore((state: any) => state.goToDetail);
+  const goToHome = useAppStore((state: any) => state.goToHome);
+  const goHome = useAppStore((state: any) => state.goHome);
+  const goToCoffee = useAppStore((state: any) => state.goToCoffee);
+  const goToHowToDownload = useAppStore((state: any) => state.goToHowToDownload);
+  const setViewport = useAppStore((state: any) => state.setViewport);
+  const mobileHomeStyles = useAppStore((state: any) => state.mobileHomeStyles);
+  const desktopStyles = useAppStore((state: any) => state.desktopStyles);
+  const baseRecommendationCardClasses = useAppStore((state: any) => state.baseRecommendationCardClasses);
+  const isTablet = useAppStore((state: any) => state.isTablet);
+  const saveHomeState = useAppStore((state: any) => state.saveHomeState);
+  const restoreHomeState = useAppStore((state: any) => state.restoreHomeState);
 
   // Limpieza: eliminados wrappers de retrocompatibilidad innecesarios
   return {

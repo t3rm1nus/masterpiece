@@ -25,7 +25,7 @@ type FilterParams = {
 };
 
 export function useFilteredItems(params: FilterParams): Item[] {
-  const { getFilteredItems } = useAppData();
+  const { getFilteredItems } = useAppData() as any;
   const [localFiltered, setLocalFiltered] = useState<Item[]>([]);
 
   useEffect(() => {
