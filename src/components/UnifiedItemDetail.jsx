@@ -83,6 +83,7 @@ export default function UnifiedItemDetail(props) {
   const [internalClosing, setInternalClosing] = React.useState(false);
   const [isVisible, setIsVisible] = React.useState(false);
   const lastItemRef = React.useRef(null);
+  
   // 2. Lógica de obtención de selectedItem DESPUÉS de los hooks
   let selectedItem = props.item;
   if (!selectedItem && id && allData && category && allData[category]) {
@@ -122,7 +123,21 @@ export default function UnifiedItemDetail(props) {
     }
   }, [selectedItem]);
 
-  // 3. Returns condicionales después de los hooks
+  // Handler simplificado para cerrar - DEBE estar antes de cualquier return condicional
+  const handleClose = useCallback(() => {
+    if (internalClosing) return;
+    setInternalClosing(true);
+    
+    // Usar el callback de navegación si está disponible
+    if (typeof props.onBack === 'function') {
+      props.onBack();
+    } else {
+      // Fallback: usar la función del store
+      goBackFromDetail();
+    }
+  }, [internalClosing, props.onBack, goBackFromDetail]);
+
+  // 3. Returns condicionales después de TODOS los hooks
   if (!isDataInitialized) {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '60vh' }}>
@@ -146,20 +161,6 @@ export default function UnifiedItemDetail(props) {
   
   // Determinar la categoría real del item para color y chip
   const realCategory = selectedItem?.category || selectedCategory;
-  
-  // Handler simplificado para cerrar
-  const handleClose = useCallback(() => {
-    if (internalClosing) return;
-    setInternalClosing(true);
-    
-    // Usar el callback de navegación si está disponible
-    if (typeof props.onBack === 'function') {
-      props.onBack();
-    } else {
-      // Fallback: usar la función del store
-      goBackFromDetail();
-    }
-  }, [internalClosing, props.onBack, goBackFromDetail]);
 
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
@@ -371,7 +372,9 @@ export default function UnifiedItemDetail(props) {
               <div style={styles.extraContentRow}>
                 <DesktopCategorySpecificContent selectedItem={safeItem} lang={lang} t={t} />
               </div>
-              <p style={styles.description}>{description}</p>
+              <div style={styles.descriptionRow}>
+                <p style={styles.description}>{description}</p>
+              </div>
               <div style={styles.actionsRow}>
                 <DesktopActionButtons
                   selectedItem={safeItem}
@@ -384,11 +387,13 @@ export default function UnifiedItemDetail(props) {
               </div>
             </div>
           </div>
-        </div>
-      );
-    }
+      </div>
+    );
+  }
   
-};
+  // Fallback - nunca debería llegar aquí
+  return null;
+}
 
 // 2. Definir estilos CSS-in-JS
 const styles = {
@@ -600,6 +605,9 @@ const styles = {
   extraContentRow: {
     marginTop: 10,
     width: '100%',
+  },
+  descriptionRow: {
+    marginBottom: 22,
   },
 };
 
