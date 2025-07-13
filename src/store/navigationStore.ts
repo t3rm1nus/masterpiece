@@ -11,12 +11,14 @@
 // - goHome, resetToHome, setView, setSelectedItem, goToDetail, goToHome, goToCoffee, goToHowToDownload
 // =============================================
 
+import { Item } from '../types/data';
+
 // Navigation slice for Zustand
-export const createNavigationSlice = (set, get) => ({
+export const createNavigationSlice = (set: any, get: any) => ({
   currentView: 'home',
-  selectedItem: null,
-  goHome: () => {
-    set((state) => {
+  selectedItem: null as Item | null,
+  goHome: (): void => {
+    set((state: any) => {
       if (state.currentView === 'home' && state.selectedItem === null) {
         return state;
       }
@@ -26,28 +28,28 @@ export const createNavigationSlice = (set, get) => ({
       };
     });
   },
-  resetToHome: () => set({ 
+  resetToHome: (): void => set({ 
     currentView: 'home', 
     selectedItem: null
     // NO resetear selectedCategory ni selectedSubcategory para preservar el estado
   }),
-  setView: (view) => {
-    set((state) => {
+  setView: (view: string): void => {
+    set((state: any) => {
       if (state.currentView === view) {
         return state;
       }
       return { currentView: view };
     });
   },
-  setSelectedItem: (item) => {
-    set((state) => {
+  setSelectedItem: (item: Item | null): void => {
+    set((state: any) => {
       if (state.selectedItem === item) {
         return state;
       }
       return { selectedItem: item };
     });
   },
-  goToDetail: (item) => {
+  goToDetail: (item: Item): void => {
     set({ currentView: 'detail', selectedItem: item });
     // Actualizar la URL para que sea navegable
     if (typeof window !== 'undefined' && window.history && item?.id && item?.category) {
@@ -55,8 +57,8 @@ export const createNavigationSlice = (set, get) => ({
       window.history.pushState({ itemId: item.id }, '', url);
     }
   },
-  goToHome: () => set({ currentView: 'home', selectedItem: null }),
-  goToCoffee: () => {
+  goToHome: (): void => set({ currentView: 'home', selectedItem: null }),
+  goToCoffee: (): void => {
     set({ currentView: 'coffee' });
     // Actualizar la URL para que sea navegable en desktop
     if (typeof window !== 'undefined' && window.history) {
@@ -68,7 +70,7 @@ export const createNavigationSlice = (set, get) => ({
       }, '', '/donaciones');
     }
   },
-  goToHowToDownload: () => {
+  goToHowToDownload: (): void => {
     set({ currentView: 'howToDownload' });
     // Actualizar la URL para que sea navegable en desktop
     if (typeof window !== 'undefined' && window.history) {
