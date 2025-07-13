@@ -165,6 +165,20 @@ const MobileItemDetail = ({
     )
   );
 
+  // Añadir handler para compartir
+  const handleShare = () => {
+    const url = window.location.href;
+    if (navigator.share) {
+      navigator.share({
+        title: document.title,
+        url,
+      }).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(url);
+      alert('Enlace copiado');
+    }
+  };
+
   return (
     <>
       {BackButton}
@@ -380,6 +394,20 @@ const MobileItemDetail = ({
               {/* Footer custom */}
               {showSections.footer !== false && renderFooter && renderFooter(selectedItem)}
             </CardContent>
+            <img
+              src="/icons/share.png"
+              alt="Compartir"
+              style={{
+                position: 'absolute',
+                bottom: 12,
+                right: 12,
+                width: 48,
+                height: 48,
+                zIndex: 1200,
+                cursor: 'pointer',
+              }}
+              onClick={handleShare}
+            />
           </UiCard>
         </Box>
     </>

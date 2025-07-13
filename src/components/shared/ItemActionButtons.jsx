@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, useTheme } from '@mui/material';
 import { PlayArrow as PlayArrowIcon } from '@mui/icons-material';
 import { getCategoryColor } from '../../utils/categoryPalette';

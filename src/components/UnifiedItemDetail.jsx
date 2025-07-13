@@ -137,6 +137,20 @@ export default function UnifiedItemDetail(props) {
     }
   }, [internalClosing, props.onBack, goBackFromDetail]);
 
+  // Añadir handler para compartir
+  const handleShare = () => {
+    const url = window.location.href;
+    if (navigator.share) {
+      navigator.share({
+        title: document.title,
+        url,
+      }).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(url);
+      alert('Enlace copiado');
+    }
+  };
+
   // 3. Returns condicionales después de TODOS los hooks
   if (!isDataInitialized) {
     return (
@@ -383,6 +397,20 @@ export default function UnifiedItemDetail(props) {
                   t={t}
                   goToHowToDownload={goToHowToDownload}
                   onOverlayNavigate={props.onOverlayNavigate}
+                />
+                <img
+                  src="/icons/share.png"
+                  alt="Compartir"
+                  style={{
+                    position: 'absolute',
+                    bottom: 12,
+                    right: 12,
+                    width: 48,
+                    height: 48,
+                    zIndex: 1200,
+                    cursor: 'pointer',
+                  }}
+                  onClick={handleShare}
                 />
               </div>
             </div>
