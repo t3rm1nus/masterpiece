@@ -5,21 +5,23 @@
 // Optimizado para UX y performance, y para facilitar la internacionalización.
 // =============================================
 
+import { Language } from '../types';
+
 // Slice de idioma y traducciones para Zustand
-export const createLanguageSlice = (set, get) => ({
-  language: 'es',
-  translations: {},
-  setLanguage: (language) => set({ language }),
-  toggleLanguage: () => set(state => ({
+export const createLanguageSlice = (set: any, get: any) => ({
+  language: 'es' as Language,
+  translations: {} as Record<string, any>,
+  setLanguage: (language: Language): void => set({ language }),
+  toggleLanguage: (): void => set((state: any) => ({
     language: state.language === 'es' ? 'en' : 'es'
   })),
-  setTranslations: (translations) => {
+  setTranslations: (translations: Record<string, any>): void => {
     set({ translations });
     // Actualizar título cuando se cargan las traducciones
     const state = get();
     if (state.updateTitleForLanguage) state.updateTitleForLanguage();
   },
-  getTranslation: (key, fallback) => {
+  getTranslation: (key: string, fallback?: string): string => {
     const translations = get().translations;
     const language = get().language;
     if (!translations || !language) return fallback || key;

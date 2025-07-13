@@ -5,15 +5,39 @@
 // Incluye helpers para configuración visual avanzada (badges, SVG, etc.).
 // =============================================
 
-export const createThemeSlice = (set, get) => ({
+import { Theme } from '../types';
+
+type MasterpieceBadgeConfig = {
+  color: string;
+  icon: string;
+  svg: {
+    width: number;
+    height: number;
+    viewBox: string;
+    fill: string;
+    xmlns: string;
+  };
+  circle: {
+    cx: number;
+    cy: number;
+    r: number;
+    fill: string;
+  };
+  star: {
+    d: string;
+    fill: string;
+  };
+};
+
+export const createThemeSlice = (set: any, get: any) => ({
   isDarkMode: false,
-  theme: 'light',
-  toggleTheme: () => set(state => ({
+  theme: 'light' as Theme,
+  toggleTheme: (): void => set((state: any) => ({
     isDarkMode: !state.isDarkMode,
     theme: state.isDarkMode ? 'light' : 'dark'
   })),
-  setTheme: (theme) => set({ theme, isDarkMode: theme === 'dark' }),
-  getMasterpieceBadgeConfig: () => ({
+  setTheme: (theme: Theme): void => set({ theme, isDarkMode: theme === 'dark' }),
+  getMasterpieceBadgeConfig: (): MasterpieceBadgeConfig => ({
     color: 'gold',
     icon: '★',
     svg: {
