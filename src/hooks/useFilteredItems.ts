@@ -6,10 +6,27 @@
 
 import { useAppData } from '../store/useAppStore';
 import { useEffect, useState } from 'react';
+import { Category, Language } from '../types';
+import { Item } from '../types/data';
 
-export function useFilteredItems(params) {
+// Tipos para los parámetros de filtrado
+type FilterParams = {
+  selectedCategory: Category;
+  activeSubcategory: string;
+  activeLanguage: Language;
+  allData: Item[];
+  recommendations: Item[];
+  isSpanishCinemaActive: boolean;
+  isMasterpieceActive: boolean;
+  activePodcastLanguages: string[];
+  activeDocumentaryLanguages: string[];
+  isDataInitialized: boolean;
+  updateFilteredItems?: (items: Item[]) => void;
+};
+
+export function useFilteredItems(params: FilterParams): Item[] {
   const { getFilteredItems } = useAppData();
-  const [localFiltered, setLocalFiltered] = useState([]);
+  const [localFiltered, setLocalFiltered] = useState<Item[]>([]);
 
   useEffect(() => {
     const filtered = getFilteredItems(params);

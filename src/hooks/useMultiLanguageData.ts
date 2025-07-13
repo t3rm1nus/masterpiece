@@ -8,21 +8,46 @@
 
 import { useCallback } from 'react';
 import { useLanguage } from '../LanguageContext';
+import { Language } from '../types';
+import { Item } from '../types/data';
+
+// Tipos para contenido localizado
+type LocalizedContent = string | Record<Language, string> | Record<string, string>;
+
+// Tipo para item localizado
+type LocalizedItem = Item & {
+  localizedTitle: string;
+  localizedDescription: string;
+  localizedTrailer: string;
+};
+
+// Tipo de retorno del hook
+type MultiLanguageDataReturn = {
+  getLocalizedContent: (content: LocalizedContent, fallback?: string) => string;
+  getTitle: (title: LocalizedContent, name?: string | null, fallback?: string) => string;
+  getDescription: (description: LocalizedContent, fallback?: string) => string;
+  getString: (value: any, fallback?: string) => string;
+  getTrailerUrl: (trailer: LocalizedContent) => string;
+  getItemField: (item: any, field: string, fallback?: string) => string;
+  getLocalizedItem: (item: any) => LocalizedItem | null;
+  truncateText: (text: string, maxLength?: number, suffix?: string) => string;
+  currentLanguage: Language;
+};
 
 /**
  * Hook centralizado para manejar datos multiidioma de manera consistente
  * Reemplaza las funciones duplicadas processTitle, processDescription, ensureString, etc.
  */
-export const useMultiLanguageData = () => {
+export const useMultiLanguageData = (): MultiLanguageDataReturn => {
   const { lang } = useLanguage();
 
   /**
    * Extrae contenido localizado de un campo que puede ser string o objeto {es, en}
-   * @param {string|Object} content - El contenido que puede ser string o objeto
-   * @param {string} fallback - Valor por defecto si no se encuentra contenido
-   * @returns {string} - El contenido en el idioma actual
+   * @param content - El contenido que puede ser string o objeto
+   * @param fallback - Valor por defecto si no se encuentra contenido
+   * @returns El contenido en el idioma actual
    */
-  const getLocalizedContent = useCallback((content, fallback = '') => {
+  const getLocalizedContent = useCallback((content: LocalizedContent, fallback: string = ''): string => {
     // Si es null o undefined, devolver fallback
     if (content == null) {
       return fallback;
@@ -49,62 +74,62 @@ export const useMultiLanguageData = () => {
 
   /**
    * Procesa títulos de items (reemplaza processTitle)
-   * @param {string|Object} title - El título del item
-   * @param {string} name - Nombre alternativo si no hay título
-   * @param {string} fallback - Texto por defecto
-   * @returns {string} - El título procesado
+   * @param title - El título del item
+   * @param name - Nombre alternativo si no hay título
+   * @param fallback - Texto por defecto
+   * @returns El título procesado
    */
-  const getTitle = useCallback((title, name = null, fallback = 'Sin título') => {
+  const getTitle = useCallback((title: LocalizedContent, name: string | null = null, fallback: string = 'Sin título'): string => {
     return getLocalizedContent(title || name, fallback);
   }, [getLocalizedContent]);
 
   /**
    * Procesa descripciones de items (reemplaza processDescription)
-   * @param {string|Object} description - La descripción del item
-   * @param {string} fallback - Texto por defecto
-   * @returns {string} - La descripción procesada
+   * @param description - La descripción del item
+   * @param fallback - Texto por defecto
+   * @returns La descripción procesada
    */
-  const getDescription = useCallback((description, fallback = '') => {
+  const getDescription = useCallback((description: LocalizedContent, fallback: string = ''): string => {
     return getLocalizedContent(description, fallback);
   }, [getLocalizedContent]);
 
   /**
    * Procesa cualquier campo de texto (reemplaza ensureString)
-   * @param {any} value - El valor a procesar
-   * @param {string} fallback - Valor por defecto
-   * @returns {string} - El valor como string
+   * @param value - El valor a procesar
+   * @param fallback - Valor por defecto
+   * @returns El valor como string
    */
-  const getString = useCallback((value, fallback = '') => {
+  const getString = useCallback((value: any, fallback: string = ''): string => {
     return getLocalizedContent(value, fallback);
   }, [getLocalizedContent]);
 
   /**
    * Procesa URLs de trailers con idioma
-   * @param {string|Object} trailer - La URL del trailer
-   * @returns {string} - La URL del trailer en el idioma actual
+   * @param trailer - La URL del trailer
+   * @returns La URL del trailer en el idioma actual
    */
-  const getTrailerUrl = useCallback((trailer) => {
+  const getTrailerUrl = useCallback((trailer: LocalizedContent): string => {
     return getLocalizedContent(trailer, '');
   }, [getLocalizedContent]);
 
   /**
    * Procesa cualquier campo de un item con soporte multiidioma
-   * @param {Object} item - El item completo
-   * @param {string} field - El campo a extraer (ej: 'title', 'description')
-   * @param {string} fallback - Valor por defecto
-   * @returns {string} - El valor del campo procesado
+   * @param item - El item completo
+   * @param field - El campo a extraer (ej: 'title', 'description')
+   * @param fallback - Valor por defecto
+   * @returns El valor del campo procesado
    */
-  const getItemField = useCallback((item, field, fallback = '') => {
+  const getItemField = useCallback((item: any, field: string, fallback: string = ''): string => {
     if (!item || !field) return fallback;
     return getLocalizedContent(item[field], fallback);
   }, [getLocalizedContent]);
 
   /**
    * Procesa un item completo, devolviendo un objeto con todos los campos localizados
-   * @param {Object} item - El item original
-   * @returns {Object} - Item con campos localizados
+   * @param item - El item original
+   * @returns Item con campos localizados
    */
-  const getLocalizedItem = useCallback((item) => {
+  const getLocalizedItem = useCallback((item: any): LocalizedItem | null => {
     if (!item) return null;
 
     return {
@@ -120,12 +145,12 @@ export const useMultiLanguageData = () => {
 
   /**
    * Trunca texto a una longitud específica
-   * @param {string} text - Texto a truncar
-   * @param {number} maxLength - Longitud máxima
-   * @param {string} suffix - Sufijo para indicar truncamiento
-   * @returns {string} - Texto truncado
+   * @param text - Texto a truncar
+   * @param maxLength - Longitud máxima
+   * @param suffix - Sufijo para indicar truncamiento
+   * @returns Texto truncado
    */
-  const truncateText = useCallback((text, maxLength = 150, suffix = '...') => {
+  const truncateText = useCallback((text: string, maxLength: number = 150, suffix: string = '...'): string => {
     if (!text || typeof text !== 'string') return '';
     
     if (text.length <= maxLength) return text;
