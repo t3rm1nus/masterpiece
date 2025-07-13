@@ -4,6 +4,7 @@ import { ArrowBack as ArrowBackIcon, Category as CategoryIcon, Extension as Exte
 import { OndemandVideoIcon, LiveTvIcon } from './CategoryCustomIcons';
 import { getCategoryColor, getCategoryGradient } from '../../utils/categoryPalette';
 import { ensureString } from '../../utils/stringUtils';
+import { applyDetailScrollFixForIPhone, isIPhone } from '../../utils/iPhoneScrollFix';
 import UiCard from '../ui/UiCard';
 import { MobileActionButtons } from './ItemActionButtons';
 import MasterpieceBadge from './MasterpieceBadge';
@@ -75,6 +76,18 @@ const MobileItemDetail = ({
   ...props
 }) => {
   const cardRef = React.useRef(null);
+
+  // Aplicar fixes específicos para iPhone cuando el componente se monta
+  React.useEffect(() => {
+    if (isIPhone()) {
+      // Aplicar fixes con un pequeño delay para asegurar que el DOM esté listo
+      const timer = setTimeout(() => {
+        applyDetailScrollFixForIPhone();
+      }, 100);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [selectedItem]);
 
   // Filtrar props internos que no deben ir al DOM
   const domSafeProps = { ...props };
@@ -161,14 +174,44 @@ const MobileItemDetail = ({
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'flex-start',
-          height: { xs: '100dvh', sm: 'auto' },
+          height: '100%',
           width: '100%',
           padding: { xs: '45px 0 0 0', sm: '36px 0 0 0' }, // separación de 45px del menú superior en móviles
           boxSizing: 'border-box',
           overflowY: 'auto',
           WebkitOverflowScrolling: 'touch',
+          overscrollBehavior: 'contain',
+          scrollBehavior: 'smooth',
           zIndex: 1, // Por debajo del AppBar (1200)
           position: 'relative',
+          // Mejoras específicas para iOS/iPhone
+          ...(isIPhone() && {
+            WebkitOverflowScrolling: 'touch',
+            overflowY: 'auto',
+            height: '100vh',
+            maxHeight: '100vh',
+            // Forzar scroll en iPhone
+            '&::-webkit-scrollbar': {
+              width: '0px',
+              background: 'transparent',
+            },
+            '&': {
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+              // Asegurar que el scroll funcione en iPhone
+              WebkitOverflowScrolling: 'touch',
+              overflowY: 'auto',
+            },
+          }),
+          // Mejoras para evitar problemas de scroll en móviles
+          '&::-webkit-scrollbar': {
+            width: '0px',
+            background: 'transparent',
+          },
+          '&': {
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+          },
         }}
       >
         <UiCard
@@ -186,13 +229,13 @@ const MobileItemDetail = ({
             border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
             background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
             zIndex: 1, // Por debajo del AppBar (1200)
-            // --- iPhone/iOS override hacks ---
-            overflow: 'visible !important',
-            overflowY: 'visible !important',
-            WebkitOverflowScrolling: 'touch',
-            maxHeight: 'none !important',
-            height: 'auto !important',
-            // ---
+            overflow: 'visible',
+            // Mejoras específicas para iPhone
+            ...(isIPhone() && {
+              overflowY: 'auto',
+              WebkitOverflowScrolling: 'touch',
+              maxHeight: 'calc(100vh - 120px)',
+            }),
             ...sx
           }}
           {...domSafeProps}
@@ -238,10 +281,13 @@ const MobileItemDetail = ({
               sx={{
                 padding: { xs: 0, sm: '24px' },
                 position: 'relative',
-                overflow: 'visible !important',
-                overflowY: 'visible !important',
-                maxHeight: 'none !important',
-                height: 'auto !important',
+                overflow: 'visible',
+                // Mejoras específicas para iPhone
+                ...(isIPhone() && {
+                  overflowY: 'auto',
+                  WebkitOverflowScrolling: 'touch',
+                  maxHeight: 'none',
+                }),
               }}
             >
               {/* Título */}

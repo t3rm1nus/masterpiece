@@ -6,6 +6,32 @@ import App from './App.jsx'
 import { SplashScreen } from '@capacitor/splash-screen'
 import { BrowserRouter } from 'react-router-dom';
 
+// Función para detectar iPhone
+const isIPhone = () => {
+  return typeof window !== 'undefined' && /iPhone|iPod/.test(navigator.userAgent);
+};
+
+// Aplicar fixes específicos para iPhone al inicio
+const applyIPhoneFixes = () => {
+  if (isIPhone()) {
+    // Forzar propiedades de scroll en el body para iPhone
+    document.body.style.overflowY = 'auto';
+    document.body.style.webkitOverflowScrolling = 'touch';
+    
+    // Forzar en html también
+    document.documentElement.style.overflowY = 'auto';
+    document.documentElement.style.webkitOverflowScrolling = 'touch';
+    
+    // Asegurar que el viewport esté configurado correctamente
+    const viewport = document.querySelector('meta[name="viewport"]');
+    if (viewport) {
+      viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover');
+    }
+    
+    console.log('📱 [iPhone] Aplicados fixes específicos para iPhone');
+  }
+};
+
 // Forzar recarga dura al entrar (una vez por sesión) para evitar problemas de caché en móviles reales
 // Usamos una estrategia más segura para evitar QuotaExceededError en iOS
 if (typeof window !== 'undefined') {
@@ -39,12 +65,24 @@ if (typeof window !== 'undefined') {
   if ('scrollRestoration' in window.history) {
     window.history.scrollRestoration = 'manual';
   }
+  
+  // Aplicar fixes específicos para iPhone
+  applyIPhoneFixes();
 }
 
 // Ocultar splash de Capacitor al montar la app
 function AppWithSplashHide() {
   useEffect(() => {
     SplashScreen.hide()
+    
+    // Aplicar fixes de iPhone también después del montaje
+    if (isIPhone()) {
+      const timer = setTimeout(() => {
+        applyIPhoneFixes();
+      }, 100);
+      
+      return () => clearTimeout(timer);
+    }
   }, [])
   return <App />
 }

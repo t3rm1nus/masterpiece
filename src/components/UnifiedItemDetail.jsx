@@ -4,6 +4,7 @@ import { useAppView, useAppTheme, useAppData } from '../store/useAppStore';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
 import { ensureString } from '../utils/stringUtils';
 import { useTrailerUrl } from '../hooks/useTrailerUrl';
+import { applyDetailScrollFixForIPhone, isIPhone } from '../utils/iPhoneScrollFix';
 import MobileItemDetail from './shared/MobileItemDetail';
 import { MobileActionButtons, DesktopActionButtons } from './shared/ItemActionButtons';
 import { MobileCategorySpecificContent, DesktopCategorySpecificContent } from './shared/CategorySpecificContent';
@@ -80,6 +81,7 @@ export default function UnifiedItemDetail(props) {
   const [imgLoaded, setImgLoaded] = React.useState(false);
   const [imageHover, setImageHover] = React.useState(false);
   const [internalClosing, setInternalClosing] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(false);
   const lastItemRef = React.useRef(null);
   // 2. Lógica de obtención de selectedItem DESPUÉS de los hooks
   let selectedItem = props.item;
@@ -93,6 +95,31 @@ export default function UnifiedItemDetail(props) {
   // Guardar referencia al último item mostrado
   useEffect(() => {
     if (selectedItem) lastItemRef.current = selectedItem;
+  }, [selectedItem]);
+
+  // Animación fade in al cargar el detalle
+  useEffect(() => {
+    if (selectedItem) {
+      // Reset del estado de visibilidad
+      setIsVisible(false);
+      // Pequeño delay para asegurar que el DOM esté listo
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      }, 50);
+      return () => clearTimeout(timer);
+    }
+  }, [selectedItem]);
+
+  // Aplicar fixes específicos para iPhone cuando el componente se monta
+  useEffect(() => {
+    if (isIPhone() && selectedItem) {
+      // Aplicar fixes con un pequeño delay para asegurar que el DOM esté listo
+      const timer = setTimeout(() => {
+        applyDetailScrollFixForIPhone();
+      }, 150);
+      
+      return () => clearTimeout(timer);
+    }
   }, [selectedItem]);
 
   // 3. Returns condicionales después de los hooks
@@ -150,9 +177,31 @@ export default function UnifiedItemDetail(props) {
           overflowY: 'auto',
           WebkitOverflowScrolling: 'touch',
           overscrollBehavior: 'contain',
+          scrollBehavior: 'smooth',
           zIndex: 1100, // Detalle móvil - por debajo del AppBar (1200) pero por encima del contenido base
           isolation: 'isolate',
-          transform: 'translateZ(0)',
+          transform: isVisible ? 'translateZ(0) scale(1)' : 'translateZ(0) scale(0.95)',
+          opacity: isVisible ? 1 : 0,
+          transition: 'opacity 0.3s ease-in-out, transform 0.3s ease-out',
+          // Mejoras específicas para iOS/iPhone
+          ...(isIPhone() && {
+            WebkitOverflowScrolling: 'touch',
+            overflowY: 'auto',
+            height: 'calc(100vh - 49px)',
+            maxHeight: 'calc(100vh - 49px)',
+            // Forzar scroll en iPhone
+            '&::-webkit-scrollbar': {
+              width: '0px',
+              background: 'transparent',
+            },
+            '&': {
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+              // Asegurar que el scroll funcione en iPhone
+              WebkitOverflowScrolling: 'touch',
+              overflowY: 'auto',
+            },
+          }),
         }}
       >
         <MobileItemDetail
@@ -206,7 +255,12 @@ export default function UnifiedItemDetail(props) {
     return (
       <div
         key={safeItem.id}
-        style={styles.page(theme)}
+        style={{
+          ...styles.page(theme),
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? 'scale(1)' : 'scale(0.95)',
+          transition: 'opacity 0.3s ease-in-out, transform 0.3s ease-out',
+        }}
       >
                       <div
               style={{
