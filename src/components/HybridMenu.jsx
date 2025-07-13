@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useMediaQuery, useTheme } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppView } from '../store/useAppStore';
@@ -11,7 +11,7 @@ import { useNavigate, useLocation, matchPath } from 'react-router-dom';
 import LanguageSelector from './ui/LanguageSelector';
 import SplashDialog from './SplashDialog';
 
-import useBackNavigation from '../hooks/useBackNavigation';
+
 
 // =============================================
 // HybridMenu: Menú híbrido adaptable a desktop y móvil
@@ -49,7 +49,8 @@ function DesktopMenu(props) {
     splashOpen,
     onSplashClose,
     audioRef,
-    onBack // <-- aseguramos que se desestructura correctamente
+    onBack,
+    onOverlayNavigate
   } = props;
   const { t, lang, getTranslation } = useLanguage();
   const { resetAllFilters, generateNewRecommendations } = useAppData();
@@ -58,19 +59,18 @@ function DesktopMenu(props) {
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const navigate = useNavigate();
   const location = useLocation();
-  const { handleBack, isAnimating } = useBackNavigation();
   if (isMobile) return null;
 
   // Detectar si estamos en detalle, donación o cómo descargar para mostrar el botón Volver en el menú superior
   const isDetailView = currentView === 'detail' || matchPath('/detalle/:id', location.pathname);
   const isCoffeeView = currentView === 'coffee' || location.pathname === '/donaciones';
   const isHowToDownloadView = currentView === 'howToDownload' || location.pathname === '/como-descargar';
-  const showBackButton = isDetailView || isCoffeeView || isHowToDownloadView;
+  const showBackButton = false; // Ocultar completamente el botón volver del menú superior
 
 
 
   // --- Splash popup handlers ---
-  const handleSplashOpenWithAudio = (audio) => {
+  const handleSplashOpenWithAudio = useCallback((audio) => {
     if (typeof onSplashOpen === 'function') {
       onSplashOpen(audio);
     }
@@ -81,7 +81,7 @@ function DesktopMenu(props) {
         audioRef.current.play && audioRef.current.play();
       }, 50);
     }
-  };
+  }, [onSplashOpen, audioRef]);
   // const handleSplashClose = () => {
   //   setSplashOpen(false);
   //   if (audioRef.current) {
@@ -91,7 +91,7 @@ function DesktopMenu(props) {
   // };
 
   // Usar items custom si se pasan, si no usar hook por defecto
-  const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems(onSplashOpen, navigate);
+  const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems(onSplashOpen, onOverlayNavigate);
 
   return (
     <nav className="main-menu" style={{
@@ -126,19 +126,7 @@ function DesktopMenu(props) {
               }
             </React.Fragment>
           ))}
-          {/* Botón Volver visible en detalle, donación o cómo descargar (desktop) */}
-          {showBackButton && (
-            <button
-              key="back-desktop-detail"
-              onClick={handleBack}
-              disabled={isAnimating}
-              style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 8, marginLeft: 8, opacity: isAnimating ? 0.5 : 1, cursor: isAnimating ? 'not-allowed' : 'pointer' }}
-              type="button"
-            >
-              <span style={{display:'flex',alignItems:'center'}}>&larr;</span>
-              {getTranslation('ui.navigation.back', 'Volver')}
-            </button>
-          )}
+
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
           {/* Selector de idioma (LanguageSelector) siempre visible en desktop */}
@@ -221,9 +209,10 @@ const HybridMenu = ({
       onSplashClose={onSplashClose}
       audioRef={audioRef}
       onOverlayNavigate={onOverlayNavigate}
+      onBack={onBack}
     />;
   } else {
-    return <DesktopMenu renderMenuItem={renderMenuItem} menuItems={menuItems} sx={sx} onSplashOpen={onSplashOpen} splashAudio={splashAudio} splashOpen={splashOpen} onSplashClose={onSplashClose} audioRef={audioRef} onBack={onBack} />;
+    return <DesktopMenu renderMenuItem={renderMenuItem} menuItems={menuItems} sx={sx} onSplashOpen={onSplashOpen} splashAudio={splashAudio} splashOpen={splashOpen} onSplashClose={onSplashClose} audioRef={audioRef} onBack={onBack} onOverlayNavigate={onOverlayNavigate} />;
   }
 };
 

@@ -10,6 +10,11 @@ function App() {
   // Hook para manejar errores de storage globalmente
   useStorageErrorHandler();
 
+  // Forzar scroll al top en cada carga
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Detectar si estamos en desarrollo o si hay problemas de storage
   const isDevelopment = process.env.NODE_ENV === 'development';
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);

@@ -29,28 +29,36 @@ export default function useBackNavigation() {
 
   // Lógica unificada para volver
   const handleBack = useCallback(() => {
-    if (isAnimating) return;
     const context = getContext();
-    setIsAnimating(true);
-    // Lanzar el evento de animación adecuado
-    if (context === 'detail') {
-      window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
-    } else if (context === 'coffee' || context === 'howToDownload') {
-      window.dispatchEvent(new CustomEvent('overlay-exit'));
-    } else {
-      // Si no es overlay, simplemente navega atrás
-      setIsAnimating(false);
-      navigate(-1);
+    console.log('🔄 [useBackNavigation] handleBack llamado - context:', context, 'isAnimating:', isAnimating, 'location.pathname:', location.pathname, 'currentView:', currentView);
+    
+    // Si es coffee o howToDownload, navegar instantáneo sin llamar goHome para evitar parpadeo
+    if (context === 'coffee' || context === 'howToDownload') {
+      console.log('🔄 [useBackNavigation] Navegando instantáneo a home');
+      navigate('/', { replace: true });
       return;
     }
-    // Esperar a que termine la animación antes de navegar
-    animTimeout.current = setTimeout(() => {
-      setIsAnimating(false);
-      // Navegar a home usando replace para evitar bucles
-      navigate('/', { replace: true });
-      goHome();
-    }, 500); // Duración igual a la animación
-  }, [isAnimating, location.pathname, currentView, navigate, goHome]);
+    // Si es detalle, mantener animación (si se desea)
+    if (isAnimating) {
+      console.log('🔄 [useBackNavigation] Ya está animando, ignorando');
+      return;
+    }
+    setIsAnimating(true);
+    if (context === 'detail') {
+      console.log('🔄 [useBackNavigation] Disparando evento overlay-detail-exit');
+      window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+      animTimeout.current = setTimeout(() => {
+        console.log('🔄 [useBackNavigation] Timeout completado, navegando a home');
+        setIsAnimating(false);
+        navigate('/', { replace: true });
+      }, 500);
+      return;
+    }
+    // Si no es overlay, simplemente navega atrás
+    console.log('🔄 [useBackNavigation] Navegando atrás');
+    setIsAnimating(false);
+    navigate(-1);
+  }, [isAnimating, location.pathname, currentView, navigate]);
 
   // Limpiar timeout si el componente se desmonta
   // (Evita memory leaks)

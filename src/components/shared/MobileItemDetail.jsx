@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button, Slide } from '@mui/material';
+import { CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button } from '@mui/material';
 import { ArrowBack as ArrowBackIcon, Category as CategoryIcon, Extension as ExtensionIcon, Movie as MovieIcon, Book as BookIcon, MusicNote as MusicNoteIcon, SportsEsports as SportsEsportsIcon, Mic as MicIcon, Tv as TvIcon, AutoStories as ComicIcon } from '@mui/icons-material';
 import { OndemandVideoIcon, LiveTvIcon } from './CategoryCustomIcons';
 import { getCategoryColor, getCategoryGradient } from '../../utils/categoryPalette';
@@ -7,8 +7,7 @@ import { ensureString } from '../../utils/stringUtils';
 import UiCard from '../ui/UiCard';
 import { MobileActionButtons } from './ItemActionButtons';
 import MasterpieceBadge from './MasterpieceBadge';
-import { useNavigate } from 'react-router-dom';
-import { useMobileDetailAnimation } from '../../hooks/useMaterialAnimation';
+
 
 // =============================================
 // MobileItemDetail: Detalle de ítem optimizado para móviles
@@ -75,12 +74,8 @@ const MobileItemDetail = ({
   onClose,
   ...props
 }) => {
-  const navigate = useNavigate();
   const cardRef = React.useRef(null);
-  
-  // Usar hook de animación de Material-UI
-  const animationProps = useMobileDetailAnimation(isClosing);
-  
+
   // Filtrar props internos que no deben ir al DOM
   const domSafeProps = { ...props };
   delete domSafeProps.showCategorySelect;
@@ -144,8 +139,11 @@ const MobileItemDetail = ({
           left: 16,
           zIndex: 2000, // FAB de detalle móvil - igual que el detalle
           backgroundColor: theme?.palette?.primary?.main,
+          transition: 'none',
           '&:hover': {
-            backgroundColor: theme?.palette?.primary?.dark,
+            backgroundColor: theme?.palette?.primary?.main,
+            transform: 'none',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
           }
         }}
       >
@@ -173,33 +171,32 @@ const MobileItemDetail = ({
           position: 'relative',
         }}
       >
-        <Slide {...animationProps}>
-          <UiCard
-            className="item-detail-mobile-card"
-            ref={(el) => {
-              cardRef.current = el;
-            }}
-            sx={{
-              position: 'relative',
-              padding: '16px',
-              width: { xs: 'calc(100vw - 40px)', sm: '96vw' },
-              margin: '0 auto',
-              marginTop: 0,
-              marginBottom: { xs: '36px', sm: 0 }, // margen inferior reducido a la mitad en móvil
-              border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
-              background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
-              zIndex: 1, // Por debajo del AppBar (1200)
-              // --- iPhone/iOS override hacks ---
-              overflow: 'visible !important',
-              overflowY: 'visible !important',
-              WebkitOverflowScrolling: 'touch',
-              maxHeight: 'none !important',
-              height: 'auto !important',
-              // ---
-              ...sx
-            }}
-            {...domSafeProps}
-          >
+        <UiCard
+          className="item-detail-mobile-card"
+          ref={(el) => {
+            cardRef.current = el;
+          }}
+          sx={{
+            position: 'relative',
+            padding: '16px',
+            width: { xs: 'calc(100vw - 40px)', sm: '96vw' },
+            margin: '0 auto',
+            marginTop: 0,
+            marginBottom: { xs: '36px', sm: 0 }, // margen inferior reducido a la mitad en móvil
+            border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
+            background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
+            zIndex: 1, // Por debajo del AppBar (1200)
+            // --- iPhone/iOS override hacks ---
+            overflow: 'visible !important',
+            overflowY: 'visible !important',
+            WebkitOverflowScrolling: 'touch',
+            maxHeight: 'none !important',
+            height: 'auto !important',
+            // ---
+            ...sx
+          }}
+          {...domSafeProps}
+        >
             {/* Badge de masterpiece en la esquina del detalle */}
             {selectedItem.masterpiece && (
               <MasterpieceBadge
@@ -338,8 +335,7 @@ const MobileItemDetail = ({
               {showSections.footer !== false && renderFooter && renderFooter(selectedItem)}
             </CardContent>
           </UiCard>
-        </Slide>
-      </Box>
+        </Box>
     </>
   );
 };

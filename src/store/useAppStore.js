@@ -151,7 +151,6 @@ const useAppStore = create(
 
       // --- Estado de la home que se preserva al navegar a overlays ---
       homeState: {
-        scrollY: 0,
         selectedCategory: null,
         activeSubcategory: null,
         mobilePage: 1,
@@ -165,7 +164,6 @@ const useAppStore = create(
       },
       saveHomeState: () => set(state => ({
         homeState: {
-          scrollY: typeof window !== 'undefined' ? window.scrollY : 0,
           selectedCategory: state.selectedCategory,
           activeSubcategory: state.activeSubcategory,
           mobilePage: state.mobilePage || 1,
@@ -180,8 +178,8 @@ const useAppStore = create(
       })),
       restoreHomeState: () => set(state => {
         const saved = state.homeState;
-        // Restaurar otros estados primero
-        const newState = {
+        // Restaurar otros estados (sin scroll)
+        return {
           selectedCategory: saved.selectedCategory,
           activeSubcategory: saved.activeSubcategory,
           mobilePage: saved.mobilePage,
@@ -193,15 +191,6 @@ const useAppStore = create(
           searchTerm: saved.searchTerm,
           isSearchActive: saved.isSearchActive,
         };
-        
-        // Restaurar scroll después de que se hayan restaurado todos los estados
-        if (typeof window !== 'undefined' && saved.scrollY > 0) {
-          setTimeout(() => {
-            window.scrollTo({ top: saved.scrollY, behavior: 'auto' });
-          }, 150); // Delay más largo para asegurar que el DOM esté listo
-        }
-        
-        return newState;
       }),
 
       // --- Slices externos ---
@@ -256,34 +245,12 @@ export const useAppView = () => {
   const saveHomeState = useAppStore(state => state.saveHomeState);
   const restoreHomeState = useAppStore(state => state.restoreHomeState);
 
-  // Funciones adicionales para compatibilidad
-  const goBackFromDetail = () => {
-    // Preservar el estado de categoría y paginación al volver del detalle
-    const currentState = useAppStore.getState();
-    useAppStore.getState().setView('home');
-    useAppStore.getState().setSelectedItem(null);
-    // Actualizar la URL para volver a la home, marcando que venimos del detalle
-    if (typeof window !== 'undefined' && window.history) {
-      window.history.pushState({ fromDetail: true }, '', '/');
-    }
-    // NO resetear selectedCategory, activeSubcategory, mobilePage, desktopPage
-    // para mantener el estado de la vista anterior
-  };
-
-  const goBackFromCoffee = () => {
-    useAppStore.getState().setView('home');
-    // Actualizar la URL para volver a la home
-    if (typeof window !== 'undefined' && window.history) {
-      window.history.pushState({}, '', '/');
-    }
-  };
-
   // Limpieza: eliminados wrappers de retrocompatibilidad innecesarios
   return {
     currentView, selectedItem, isMobile, setView, setSelectedItem,
     goToDetail, goToHome, goHome, goToCoffee, goToHowToDownload, setViewport,
     mobileHomeStyles, desktopStyles, baseRecommendationCardClasses, isTablet,
-    goBackFromDetail, goBackFromCoffee, saveHomeState, restoreHomeState
+    saveHomeState, restoreHomeState
   };
 };
 

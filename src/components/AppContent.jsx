@@ -1,10 +1,7 @@
 import React, { Suspense, useEffect } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import HomeLayout from './HomeLayout';
-import UnifiedItemDetail from './UnifiedItemDetail';
 import { LoadingFallback } from './LazyComponents';
-import HowToDownload from '../pages/HowToDownload';
-import CoffeePage from './CoffeePage';
 import useAppStore from '../store/useAppStore';
 
 export default function AppContent() {
@@ -28,16 +25,11 @@ export default function AppContent() {
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, [location.pathname, setView, setSelectedItem]);
+  
   return (
     <Suspense fallback={<LoadingFallback />}>
       <Routes>
-        <Route path="/" element={<HomeLayout />}>
-          <Route index element={null} />
-          <Route path="detalle/:category/:id" element={<UnifiedItemDetail />} />
-          <Route path="como-descargar" element={<HowToDownload />} />
-          <Route path="donaciones" element={<CoffeePage />} />
-        </Route>
-        {/* Otras rutas globales si las tienes */}
+        <Route path="/*" element={<HomeLayout />} />
       </Routes>
     </Suspense>
   );

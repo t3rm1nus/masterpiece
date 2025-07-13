@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import {
   CardContent,
   Typography,
@@ -14,7 +14,6 @@ import {
   useMediaQuery,
   Fab
 } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 import {
   Coffee as CoffeeIcon,
   Favorite as HeartIcon,
@@ -47,8 +46,6 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
   
 
 
-  const navigate = useNavigate();
-
   // Google Analytics tracking para página de donaciones
   useEffect(() => {
     trackSpecialPageView('donations', {
@@ -75,14 +72,12 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
     }
   }, []);
 
-  const handleBack = () => {
-    // En desktop, navegación directa; en móvil, usar callback
-    if (isMobile && typeof onAnimationEnd === 'function') {
+  const handleBack = useCallback(() => {
+    // Solo usar el callback, sin navegación propia
+    if (typeof onAnimationEnd === 'function') {
       onAnimationEnd();
-    } else {
-      navigate('/', { replace: true });
     }
-  };
+  }, [onAnimationEnd]);
 
   // Ahora se renderiza en todas las pantallas (móvil Y desktop)
   const benefits = [
@@ -164,7 +159,7 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
                 position: 'fixed',
                 top: '73px',
                 left: 16,
-                zIndex: 1402, // FAB del overlay para páginas - por encima del contenido del overlay
+                zIndex: 1402,
                 backgroundColor: theme.palette.primary.main,
                 '&:hover': {
                   backgroundColor: theme.palette.primary.dark,

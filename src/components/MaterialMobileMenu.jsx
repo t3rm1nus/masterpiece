@@ -81,6 +81,7 @@ const MaterialMobileMenu = ({
   onSplashClose,
   audioRef,
   onOverlayNavigate,
+  onBack, // Nuevo prop para recibir handleBack del HomeLayout
 } = {}) => {
   const { t, lang, changeLanguage, getTranslation } = useLanguage();
   const { resetAllFilters } = useAppData();
@@ -91,7 +92,10 @@ const MaterialMobileMenu = ({
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg')); // Cambiado de 'md' a 'lg' para incluir tablets
-  const { handleBack, isAnimating } = useBackNavigation();
+  const { handleBack: useBackNavigationHandleBack, isAnimating } = useBackNavigation();
+
+  // Usar el handleBack del HomeLayout si está disponible, si no usar el del hook
+  const handleBack = onBack || useBackNavigationHandleBack;
 
   // Audios disponibles para el splash
   const splashAudios = [
@@ -111,7 +115,7 @@ const MaterialMobileMenu = ({
   }, [lang]);
   
   // Usar items custom si se pasan, si no usar hook por defecto
-  const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems(onSplashOpen, navigate);
+  const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems(onSplashOpen, onOverlayNavigate);
 
   const handleLanguageChange = (lng) => {
     changeLanguage(lng);
@@ -136,8 +140,8 @@ const MaterialMobileMenu = ({
 
   // Mostrar FAB de volver solo en móvil y solo en las páginas de donaciones y cómo descargar
   // Evitar mostrar el FAB durante la transición de navegación y carga inicial
-  // ELIMINADO: No mostrar FAB en páginas de descargas y donaciones para evitar duplicación
-  const showFabBackButton = false; // Deshabilitado para evitar duplicación con botones de las páginas
+  // DESHABILITADO: Las páginas especiales ya tienen sus propios FABs
+  const showFabBackButton = false; // Deshabilitado para evitar duplicación con FABs de las páginas especiales
 
   // Botón de donaciones y cómo descargar en menú móvil
   const handleGoToCoffee = () => {

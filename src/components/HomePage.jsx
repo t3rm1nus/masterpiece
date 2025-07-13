@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppView } from '../store/useAppStore';
 import { useTitleSync } from '../hooks/useTitleSync';
@@ -24,7 +24,7 @@ import DesktopRecommendationsList from './DesktopRecommendationsList';
 import useAppStore from '../store/useAppStore'; // <-- Usar solo el store NUEVO
 import { normalizeSubcategoryInternal } from '../utils/categoryUtils';
 import { keyframes, styled } from '@mui/system';
-import { useNavigate } from 'react-router-dom';
+
 import { generateUniqueId } from '../utils/appUtils';
 import Chip from '@mui/material/Chip'; // Added for renderSubcategoryChip
 
@@ -40,16 +40,29 @@ function useIsMobile() {
   const [isMobile, setIsMobile] = React.useState(getIsMobile);
 
   React.useEffect(() => {
-    const handleResize = () => setIsMobile(getIsMobile());
+    const handleResize = () => {
+      const newIsMobile = getIsMobile();
+      setIsMobile(prev => {
+        if (prev !== newIsMobile) {
+          return newIsMobile;
+        }
+        return prev;
+      });
+    };
+    
     window.addEventListener('resize', handleResize);
     window.addEventListener('orientationchange', handleResize);
+    
     // Forzar comprobación tras el primer render (por si el valor inicial es incorrecto)
-    setTimeout(handleResize, 100);
+    const timeoutId = setTimeout(handleResize, 100);
+    
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('orientationchange', handleResize);
+      clearTimeout(timeoutId);
     };
   }, []);
+  
   return isMobile; 
 }
 
@@ -96,7 +109,7 @@ const AnimatedH1 = styled('h1')(({ isMobile, h1Gradient }) => ({
   },
 }));
 
-const HomePage = ({
+const HomePageComponent = ({
   categoryBarProps = {},
   subcategoryBarProps = {},
   materialCategorySelectProps = {},
@@ -114,7 +127,6 @@ const HomePage = ({
 
   ...rest
 } = {}) => {
-  const navigate = useNavigate();
   // Estado para filtro especial de música (debe ir antes de cualquier uso)
   const [musicFilterType, setMusicFilterType] = React.useState(null);
   // Estado para filtro especial de batalla (battle)
@@ -127,6 +139,8 @@ const HomePage = ({
   useTitleSync();
   // Hook para Google Analytics
   const { trackCategorySelection, trackSubcategorySelection, trackFilterUsage, trackItemDetailView } = useGoogleAnalytics();
+  // Hook para detectar si es móvil
+  const isMobile = useIsMobile();
   
   const [splashOpenLocal, setSplashOpen] = useState(false);
   // Audios disponibles para el splash
@@ -189,6 +203,8 @@ const HomePage = ({
     setSpanishCinemaActive,
     setSpanishSeriesActive,
     setMasterpieceActive,
+    resetAllFilters,
+    generateNewRecommendations,
     // Estado de paginación del store global
     mobilePage,
     desktopPage,
@@ -203,9 +219,8 @@ const HomePage = ({
       updateTitleForLanguage();
     }
   }, [lang, selectedCategory, updateTitleForLanguage]);
-    // Obtener funciones de procesamiento del store de vista
-  // const { goBackFromDetail, selectedItem, goToDetail } = useAppView();
-  // Usar Zustand directo para selectedItem y navegación
+
+  // Obtener funciones de procesamiento del store de vista
   const selectedItem = useAppStore(state => state.selectedItem);
   const goToDetail = useAppStore(state => state.goToDetail);
   const currentView = useAppStore(state => state.currentView);
@@ -213,18 +228,32 @@ const HomePage = ({
   // Obtener goBackFromDetail del hook useAppView
   const { goBackFromDetail } = useAppView();
   
-  // Sincronizar localSelectedItem con selectedItem del store
+  // Función para manejar clic en el título principal (solo en móvil)
+  const handleTitleClick = useCallback(() => {
+    if (isMobile && (!selectedCategory || selectedCategory === 'all')) {
+      console.log('🔄 [HomePage] Título clickeado en móvil - generando nuevas recomendaciones');
+      resetAllFilters(lang);
+      generateNewRecommendations();
+      // Hacer scroll al top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [isMobile, selectedCategory, resetAllFilters, generateNewRecommendations, lang]);
+  
+  // Optimizado: solo actualizar cuando realmente cambie
   useEffect(() => {
-    if (selectedItem) {
+    if (selectedItem && selectedItem !== localSelectedItem) {
       setLocalSelectedItem(selectedItem);
     }
   }, [selectedItem]);
-  
-  // Eliminado: lógica de scroll local - ahora se maneja globalmente en el store
+
+  useEffect(() => {
+    if (currentView === 'home' && localSelectedItem !== null) {
+      setLocalSelectedItem(null);
+    }
+  }, [currentView]);
+
   const activePodcastDocumentaryLanguage = useAppStore(state => state.activePodcastDocumentaryLanguage);
   const resetActivePodcastDocumentaryLanguage = useAppStore(state => state.resetActivePodcastDocumentaryLanguage);
-  // LOGS DE DEPURACIÓN
-  // Eliminado: console.log('[HomePage] currentView:', currentView, 'selectedItem:', selectedItem);
 
   // Obtener categorías traducidas (se actualizará cuando cambie el idioma)
   const categoriesFromStore = getCategories();
@@ -235,6 +264,7 @@ const HomePage = ({
     color: categoryColor(cat.key),
     gradient: getCategoryGradient(cat.key)
   }));
+
   // Obtener subcategorías del store para la categoría seleccionada
   const categorySubcategories = React.useMemo(() => {
     let subs = getSubcategoriesForCategory(selectedCategory);
@@ -261,7 +291,10 @@ const HomePage = ({
     }
     return [];
   }, [selectedCategory, getSubcategoriesForCategory, t, lang]);
-  const [isRecommendedActive, setIsRecommendedActive] = useState(false);  // Efecto para cargar datos reales - solo una vez
+
+  const [isRecommendedActive, setIsRecommendedActive] = useState(false);
+
+  // Efecto para cargar datos reales - solo una vez
   useEffect(() => {
     let mounted = true;
     if (!isDataInitialized && mounted) {
@@ -281,107 +314,122 @@ const HomePage = ({
     return () => {
       mounted = false;
     };
-  }, [isDataInitialized, updateWithRealData]);  // Efecto para actualizar los items filtrados cuando cambian los filtros
-  useEffect(() => {
-    if (allData && Object.keys(allData).length > 0) {
-      let filteredData = [];
-      if (!selectedCategory || selectedCategory === 'all') {
-        filteredData = recommendations;
-      } else {
-        filteredData = allData[selectedCategory] || [];
+  }, [isDataInitialized, updateWithRealData]);
+
+  // Reemplazar con useMemo para mejor rendimiento
+  const filteredItemsMemo = React.useMemo(() => {
+    if (!allData || Object.keys(allData).length === 0) {
+      return [];
+    }
+
+    let filteredData = [];
+    if (!selectedCategory || selectedCategory === 'all') {
+      filteredData = recommendations;
+    } else {
+      filteredData = allData[selectedCategory] || [];
+    }
+    
+    if (selectedCategory && selectedCategory !== 'all') {
+      if (selectedCategory === 'movies' && isSpanishCinemaActive) {
+        filteredData = filteredData.filter(item => {
+          const isSpanish = 
+            item.spanish_cinema === true || 
+            item.spanishCinema === true ||
+            (item.tags && item.tags.includes('spanish')) ||
+            (item.director && (
+              item.director.includes('Luis García Berlanga') ||
+              item.director.includes('Pedro Almodóvar') ||
+              item.director.includes('Alejandro Amenábar') ||
+              item.director.includes('Fernando Trueba') ||
+              item.director.includes('Icíar Bollaín') ||
+              item.director.includes('Carlos Saura') ||
+              item.director.includes('Víctor Erice')
+            )) ||
+            (item.country && item.country === 'España') ||
+            (item.pais && item.pais === 'España') ||
+            (item.description && (
+              item.description.es?.includes('español') ||
+              item.description.es?.includes('España')
+            ));
+          
+          return isSpanish;
+        });
       }
-      if (selectedCategory && selectedCategory !== 'all') {
-        if (selectedCategory === 'movies' && isSpanishCinemaActive) {
-          filteredData = filteredData.filter(item => {
-            // Verificar múltiples propiedades que puedan indicar cine español
-            const isSpanish = 
-              item.spanish_cinema === true || 
-              item.spanishCinema === true ||
-              (item.tags && item.tags.includes('spanish')) ||
-              (item.director && (
-                item.director.includes('Luis García Berlanga') ||
-                item.director.includes('Pedro Almodóvar') ||
-                item.director.includes('Alejandro Amenábar') ||
-                item.director.includes('Fernando Trueba') ||
-                item.director.includes('Icíar Bollaín') ||
-                item.director.includes('Carlos Saura') ||
-                item.director.includes('Víctor Erice')
-              )) ||
-              (item.country && item.country === 'España') ||
-              (item.pais && item.pais === 'España') ||
-              (item.description && (
-                item.description.es?.includes('español') ||
-                item.description.es?.includes('España')
-              ));
-            
-            return isSpanish;
-          });
-        }
-        if (isMasterpieceActive) {
-          filteredData = filteredData.filter(item => 
-            item.masterpiece === true || 
-            item.obra_maestra === true
-          );
-        }
-        // Filtro de Series Españolas (solo para series)
-        if (selectedCategory === 'series' && isSpanishSeriesActive) {
-          filteredData = filteredData.filter(item =>
-            (item.tags && item.tags.includes('spanish'))
-          );
-        }
-        // Filtro de idioma para Podcasts/Documentales
-        if ((selectedCategory === 'podcast' || selectedCategory === 'documentales') && activePodcastDocumentaryLanguage) {
-          filteredData = filteredData.filter(item => item.idioma === activePodcastDocumentaryLanguage);
-        }
-        // Filtro especial para música: song/album/session (session busca djset)
-        if (selectedCategory === 'music' && musicFilterType) {
-          if (musicFilterType === 'session') {
-            filteredData = filteredData.filter(item => item.tags && item.tags.includes('djset'));
-          } else {
-            filteredData = filteredData.filter(item => item.tags && item.tags.includes(musicFilterType));
-          }
-        }
-        // Filtro especial para batalla: solo si está activo
-        if (selectedCategory === 'music' && activeSubcategory === 'rap' && battleFilterActive) {
-          filteredData = filteredData.filter(item => item.tags && item.tags.includes('battle'));
-        }
-        // Filtro de subcategoría (AJUSTE PARA MÓVIL TAMBIÉN)
-        if (activeSubcategory && activeSubcategory !== 'all') {
-          const normalizedActiveSubcat = normalizeSubcategoryInternal(activeSubcategory);
-          filteredData = filteredData.filter(item => {
-            // Prioridad: subcategoria (sin tilde), luego subcategory, categoria, genre, genero
-            return (
-              (item.subcategory && normalizeSubcategoryInternal(item.subcategory) === normalizedActiveSubcat)
-              || (item.categoria && normalizeSubcategoryInternal(item.categoria) === normalizedActiveSubcat)
-              || (item.genre && normalizeSubcategoryInternal(item.genre) === normalizedActiveSubcat)
-              || (item.genero && normalizeSubcategoryInternal(item.genero) === normalizedActiveSubcat)
-            );
-          });
+      
+      if (isMasterpieceActive) {
+        filteredData = filteredData.filter(item => 
+          item.masterpiece === true || 
+          item.obra_maestra === true
+        );
+      }
+      
+      // Filtro de Series Españolas (solo para series)
+      if (selectedCategory === 'series' && isSpanishSeriesActive) {
+        filteredData = filteredData.filter(item =>
+          (item.tags && item.tags.includes('spanish'))
+        );
+      }
+      
+      // Filtro de idioma para Podcasts/Documentales
+      if ((selectedCategory === 'podcast' || selectedCategory === 'documentales') && activePodcastDocumentaryLanguage) {
+        filteredData = filteredData.filter(item => item.idioma === activePodcastDocumentaryLanguage);
+      }
+      
+      // Filtro especial para música: song/album/session (session busca djset)
+      if (selectedCategory === 'music' && musicFilterType) {
+        if (musicFilterType === 'session') {
+          filteredData = filteredData.filter(item => item.tags && item.tags.includes('djset'));
+        } else {
+          filteredData = filteredData.filter(item => item.tags && item.tags.includes(musicFilterType));
         }
       }
-      // Ordenar alfabéticamente por título (soporta objetos multiidioma)
-      filteredData = filteredData.slice().sort((a, b) => {
-        const titleA = typeof a.title === 'object' ? (a.title.es || a.title.en || Object.values(a.title)[0] || '') : (a.title || '');
-        const titleB = typeof b.title === 'object' ? (b.title.es || b.title.en || Object.values(b.title)[0] || '') : (b.title || '');
-        return titleA.localeCompare(titleB, 'es', { sensitivity: 'base' });
-      });
-      updateFilteredItems(filteredData);
-    } 
+      
+      // Filtro especial para batalla: solo si está activo
+      if (selectedCategory === 'music' && activeSubcategory === 'rap' && battleFilterActive) {
+        filteredData = filteredData.filter(item => item.tags && item.tags.includes('battle'));
+      }
+      
+      // Filtro de subcategoría
+      if (activeSubcategory && activeSubcategory !== 'all') {
+        const normalizedActiveSubcat = normalizeSubcategoryInternal(activeSubcategory);
+        filteredData = filteredData.filter(item => {
+          return (
+            (item.subcategory && normalizeSubcategoryInternal(item.subcategory) === normalizedActiveSubcat)
+            || (item.categoria && normalizeSubcategoryInternal(item.categoria) === normalizedActiveSubcat)
+            || (item.genre && normalizeSubcategoryInternal(item.genre) === normalizedActiveSubcat)
+            || (item.genero && normalizeSubcategoryInternal(item.genero) === normalizedActiveSubcat)
+          );
+        });
+      }
+    }
+    
+    // Ordenar alfabéticamente por título
+    filteredData = filteredData.slice().sort((a, b) => {
+      const titleA = typeof a.title === 'object' ? (a.title.es || a.title.en || Object.values(a.title)[0] || '') : (a.title || '');
+      const titleB = typeof b.title === 'object' ? (b.title.es || b.title.en || Object.values(b.title)[0] || '') : (b.title || '');
+      return titleA.localeCompare(titleB, 'es', { sensitivity: 'base' });
+    });
+    
+    return filteredData;
   }, [
     selectedCategory, 
     activeSubcategory, 
-    activeLanguage, 
     allData, 
     recommendations, 
     isSpanishCinemaActive,
-    isSpanishSeriesActive, // <-- añadido para que el filtro reaccione al cambio
+    isSpanishSeriesActive,
     isMasterpieceActive,
     activePodcastDocumentaryLanguage,
-    musicFilterType, // <-- para que reaccione al filtro de música
-    battleFilterActive, // <-- para que reaccione al filtro de batalla
-    updateFilteredItems
+    musicFilterType,
+    battleFilterActive
   ]);
-  const handleCategoryClick = (category) => {
+
+  // Actualizar el store solo cuando cambie el resultado del filtro
+  useEffect(() => {
+    updateFilteredItems(filteredItemsMemo);
+  }, [filteredItemsMemo, updateFilteredItems]);
+
+  const handleCategoryClick = useCallback((category) => {
     // Google Analytics tracking
     trackCategorySelection(category, 'homepage');
     
@@ -392,28 +440,34 @@ const HomePage = ({
     setSpanishCinemaActive(false);
     setSpanishSeriesActive(false);
     resetActivePodcastDocumentaryLanguage(); // Reset filtro idioma al cambiar categoría
-  };  // Manejar toggle de cine español
-  const handleSpanishCinemaToggle = () => {
+  }, [trackCategorySelection, setCategory, setActiveSubcategory, setActiveLanguage, setMasterpieceActive, setSpanishCinemaActive, setSpanishSeriesActive, resetActivePodcastDocumentaryLanguage]);
+
+  // Manejar toggle de cine español
+  const handleSpanishCinemaToggle = useCallback(() => {
     // Google Analytics tracking para filtro español
     trackFilterUsage('spanish_cinema', !isSpanishCinemaActive ? 'enabled' : 'disabled', selectedCategory);
     
     toggleSpanishCinema();
-  };
+  }, [trackFilterUsage, isSpanishCinemaActive, selectedCategory, toggleSpanishCinema]);
 
   // Manejar toggle de masterpiece
-  const handleMasterpieceToggle = () => {
+  const handleMasterpieceToggle = useCallback(() => {
     // Google Analytics tracking para filtro masterpiece
     trackFilterUsage('masterpiece', !isMasterpieceActive ? 'enabled' : 'disabled', selectedCategory);
     
     toggleMasterpiece();
-  };  // Manejar clic en elemento
-  const handleItemClick = (item) => {
+  }, [trackFilterUsage, isMasterpieceActive, selectedCategory, toggleMasterpiece]);
+
+  // Manejar clic en elemento
+  const handleItemClick = useCallback((item) => {
     // Google Analytics tracking para vista de detalle
     const itemTitle = typeof item.title === 'object' ? (item.title.es || item.title.en || Object.values(item.title)[0]) : item.title;
     trackItemDetailView(item.id, itemTitle, selectedCategory, 'homepage');
-    // Usar el store para navegación consistente
-    navigate(`/detalle/${item.category}/${item.id}`);
-  };  // Manejar cierre del detalle
+    // Usar el callback de navegación del HomeLayout
+    if (rest.onOverlayNavigate) {
+      rest.onOverlayNavigate(`/detalle/${item.category}/${item.id}`);
+    }
+  }, [trackItemDetailView, selectedCategory, rest.onOverlayNavigate]);
   // const renderItemDetail = () => {
   //   if (!selectedItem) {
   //     return null;
@@ -429,7 +483,6 @@ const HomePage = ({
 
   // Eliminar el useEffect que fuerza el scroll al top al mostrar/cerrar el detalle en móviles
 
-  const isMobile = useIsMobile();
   const isCategoryListMobile = isMobile && selectedCategory && selectedCategory !== 'all';
 
   // Estado de paginación para móvil y desktop (independientes)
@@ -476,8 +529,33 @@ const HomePage = ({
   // Calcular si hay más para infinite scroll (móvil y desktop)
   const hasMore = (selectedCategory && selectedCategory !== 'all') && (paginatedItems.length < filteredItems.length);
 
+  // Función wrapper para tracking de subcategorías desde desktop
+  const handleSubcategoryClick = useCallback((subcategory) => {
+    // Google Analytics tracking para subcategoría desde desktop
+    trackSubcategorySelection(selectedCategory, subcategory, 'desktop_bar');
+    
+    setActiveSubcategory(subcategory);
+  }, [trackSubcategorySelection, selectedCategory, setActiveSubcategory]);
+
+  // Callback unificado para cambios de categoría o subcategoría en móvil
+  const handleCategoryOrSubcategoryChange = useCallback((category, subcategory) => {
+    if (category !== selectedCategory) {
+      // Google Analytics tracking para categoría
+      trackCategorySelection(category, 'mobile_menu');
+      
+      setCategory(category);
+      setActiveSubcategory(null);
+      setActiveLanguage('all');
+    } else if (subcategory !== undefined) {
+      // Google Analytics tracking para subcategoría
+      trackSubcategorySelection(selectedCategory, subcategory, 'mobile_menu');
+      
+      setActiveSubcategory(subcategory);
+    }
+  }, [selectedCategory, trackCategorySelection, trackSubcategorySelection, setCategory, setActiveSubcategory, setActiveLanguage]);
+
   // Callback para cargar más (móvil y desktop)
-  const handleLoadMore = React.useCallback(() => {
+  const handleLoadMore = useCallback(() => {
     if (isMobile) {
       if (hasMore && !loadingMoreMobile) {
         setLoadingMoreMobile(true);
@@ -497,47 +575,8 @@ const HomePage = ({
     }
   }, [hasMore, loadingMoreMobile, loadingMoreDesktop, isMobile, mobilePage, desktopPage, setMobilePage, setDesktopPage]);
 
-  // Verificar si hay datos disponibles
-  if (!allData || Object.keys(allData).length === 0) {
-    return (
-      <div
-        style={{ width: '100vw', height: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}
-      >
-        <div style={{ width: 48, height: 48, border: '4px solid #ccc', borderTop: '4px solid #888', borderRadius: '50%', animation: 'spin 1s linear infinite' }} />
-        <p style={{ marginTop: 16 }}>{getTranslation('ui.states.loading', 'Cargando...')}</p>
-      </div>
-    );
-  }
-
-  // Eliminado: desactivación de scrollRestoration que podía causar problemas
-
-  // Función wrapper para tracking de subcategorías desde desktop
-  const handleSubcategoryClick = (subcategory) => {
-    // Google Analytics tracking para subcategoría desde desktop
-    trackSubcategorySelection(selectedCategory, subcategory, 'desktop_bar');
-    
-    setActiveSubcategory(subcategory);
-  };
-
-  // Callback unificado para cambios de categoría o subcategoría en móvil
-  const handleCategoryOrSubcategoryChange = (category, subcategory) => {
-    if (category !== selectedCategory) {
-      // Google Analytics tracking para categoría
-      trackCategorySelection(category, 'mobile_menu');
-      
-      setCategory(category);
-      setActiveSubcategory(null);
-      setActiveLanguage('all');
-    } else if (subcategory !== undefined) {
-      // Google Analytics tracking para subcategoría
-      trackSubcategorySelection(selectedCategory, subcategory, 'mobile_menu');
-      
-      setActiveSubcategory(subcategory);
-    }
-  };
-
-  // Definir renderizador seguro para chips de subcategoría
-  const safeRenderSubcategoryChip = (sub, isActive, idx) => {
+  // Definir renderizador seguro para chips de subcategoría - DEBE estar ANTES de cualquier return
+  const safeRenderSubcategoryChip = useCallback((sub, isActive, idx) => {
     // Obtener la traducción del texto
     const label = t?.subcategories?.[selectedCategory]?.[sub] || sub || 'Sin texto';
     
@@ -553,33 +592,49 @@ const HomePage = ({
         }}
       />
     );
-  };
+  }, [t, selectedCategory, handleSubcategoryClick]);
 
-  // Obtener gradiente animado según categoría
-  const h1Gradient = (!selectedCategory || selectedCategory === 'all')
-    ? getMasterpieceAnimatedGradient()
-    : getCategoryAnimatedGradient(selectedCategory);
+  // Obtener gradiente animado según categoría - DEBE estar ANTES de cualquier return
+  const h1Gradient = useMemo(() => {
+    return (!selectedCategory || selectedCategory === 'all')
+      ? getMasterpieceAnimatedGradient()
+      : getCategoryAnimatedGradient(selectedCategory);
+  }, [selectedCategory]);
+
+  // Verificar si hay datos disponibles
+  if (!allData || Object.keys(allData).length === 0) {
+    return (
+      <div
+        style={{ width: '100vw', height: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}
+      >
+        <div style={{ width: 48, height: 48, border: '4px solid #ccc', borderTop: '4px solid #888', borderRadius: '50%', animation: 'spin 1s linear infinite' }} />
+        <p style={{ marginTop: 16 }}>{getTranslation('ui.states.loading', 'Cargando...')}</p>
+      </div>
+    );
+  }
+
+  // Eliminado: desactivación de scrollRestoration que podía causar problemas
 
   // Si hay un item seleccionado localmente, renderizar el detalle
-  if (localSelectedItem) {
+  if (localSelectedItem && currentView !== 'home') {
     return (
       <UnifiedItemDetail
+        key={`detail-${localSelectedItem.id}`}
         item={localSelectedItem}
         onClose={() => {
           setLocalSelectedItem(null);
-          setIsDetailClosing(false);
           goBackFromDetail();
         }}
         selectedCategory={selectedCategory}
-        isClosing={isDetailClosing}
-        isExiting={isDetailClosing}
+        isClosing={false}
+        isExiting={false}
         onExited={() => {
           setLocalSelectedItem(null);
-          setIsDetailClosing(false);
           goBackFromDetail();
         }}
         onRequestClose={() => {
-          setIsDetailClosing(true);
+          setLocalSelectedItem(null);
+          goBackFromDetail();
         }}
         onOverlayNavigate={rest.onOverlayNavigate}
       />
@@ -587,11 +642,11 @@ const HomePage = ({
   }
 
   return (
-    <UiLayout sx={{ marginTop: 8, width: '100vw', maxWidth: '100vw', px: 0 }}>
+    <UiLayout key={`homepage-${currentView}`} sx={{ marginTop: 8, width: '100vw', maxWidth: '100vw', px: 0 }}>
       {/* Título principal */}
-      {!selectedItem && (
+      {currentView === 'home' && (
         <>
-          <AnimatedH1 isMobile={isMobile} h1Gradient={h1Gradient}>
+          <AnimatedH1 isMobile={isMobile} h1Gradient={h1Gradient} onClick={handleTitleClick}>
             {(!selectedCategory || selectedCategory === 'all')
               ? (t?.ui?.titles?.home_title || 'Lista de recomendados')
               : (t?.categories?.[selectedCategory] || selectedCategory)
@@ -787,4 +842,4 @@ function categoryColor(categoryKey) {
 // - Esta lógica está centralizada en el store y reflejada en el UI.
 // =============================================================
 
-export default HomePage;
+export default React.memo(HomePageComponent);

@@ -243,12 +243,15 @@ const MaterialItemDetail = ({ item, onOverlayNavigate }) => {
           onClick={handleBack}
           sx={{
             position: 'fixed',
-            top: '80px',
-            left: '16px',
-            zIndex: 1201, // Asegura que el botón esté por encima del AppBar
+            top: '25px',
+            left: 16,
+            zIndex: 2000, // FAB de detalle móvil - igual que el detalle
             backgroundColor: theme.palette.primary.main,
+            transition: 'none',
             '&:hover': {
-              backgroundColor: theme.palette.primary.dark,
+              backgroundColor: theme.palette.primary.main,
+              transform: 'none',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
             }
           }}
         >

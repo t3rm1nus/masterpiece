@@ -49,6 +49,12 @@ const FabBackButton = ({
         left: '16px',
         zIndex: 1100, // FAB de volver - por encima del contenido pero por debajo del AppBar
         backgroundColor: theme.palette.primary.main,
+        transition: 'none',
+        '&:hover': {
+          backgroundColor: theme.palette.primary.main,
+          transform: 'none',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
+        },
         ...sx
       }}
       {...props}

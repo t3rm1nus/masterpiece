@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { useAppView, useAppTheme, useAppData } from '../store/useAppStore';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
@@ -8,12 +8,11 @@ import MobileItemDetail from './shared/MobileItemDetail';
 import { MobileActionButtons, DesktopActionButtons } from './shared/ItemActionButtons';
 import { MobileCategorySpecificContent, DesktopCategorySpecificContent } from './shared/CategorySpecificContent';
 import { processTitle, processDescription } from '../store/utils';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { findItemByGlobalId } from '../utils/appUtils';
-import useBackNavigation from '../hooks/useBackNavigation';
+
 import { CircularProgress } from '@mui/material';
-import { motion } from 'framer-motion';
-import { useFramerAnimation } from '../hooks/useFramerAnimation';
+
 
 // Material UI imports (solo para mobile)
 import {
@@ -67,8 +66,9 @@ import {
  */
 export default function UnifiedItemDetail(props) {
   // 1. TODOS los hooks y variables aquí arriba
-  const { category, id } = useParams();
-  const navigate = useNavigate();
+  // Usar props en lugar de useParams para funcionar como overlay
+  const category = props.category;
+  const id = props.id;
   const { allData, selectedCategory: storeSelectedCategory, isDataInitialized } = useAppData();
   const selectedCategory = props.selectedCategory || storeSelectedCategory;
   const { lang, t, getCategoryTranslation, getSubcategoryTranslation } = useLanguage();
@@ -81,64 +81,16 @@ export default function UnifiedItemDetail(props) {
   const [imageHover, setImageHover] = React.useState(false);
   const [internalClosing, setInternalClosing] = React.useState(false);
   const lastItemRef = React.useRef(null);
-  const { handleBack, isAnimating } = useBackNavigation();
-
   // 2. Lógica de obtención de selectedItem DESPUÉS de los hooks
   let selectedItem = props.item;
   if (!selectedItem && id && allData && category && allData[category]) {
     selectedItem = allData[category].find(item => `${item.id}` === `${id}`) || null;
   }
   
-  // Usar el item actual o el último item mostrado durante la animación de salida
-  const itemForCalculations = isMobile ? selectedItem : (selectedItem || lastItemRef.current);
-  
-  // Usar hook de animación de Framer Motion
-  const animationProps = useFramerAnimation(isMobile ? (props.isClosing || internalClosing) : (props.isClosing || internalClosing), 0.4, 'zoom');
-  
   // Hook para trailer URL - debe estar antes de cualquier return condicional
-  const trailerUrl = useTrailerUrl(itemForCalculations ? itemForCalculations.trailer : undefined);
+  const trailerUrl = useTrailerUrl(selectedItem ? selectedItem.trailer : undefined);
   
-  // Handler para cuando termina la animación de salida
-  const handleExitComplete = () => {
-    console.log('handleExitComplete called');
-    if (props.onExited) {
-      console.log('Calling props.onExited');
-      props.onExited();
-    } else {
-      console.log('Calling handleBack');
-      handleBack();
-    }
-  };
-  
-  // Verificar si realmente necesitamos re-renderizar el componente
-  const shouldRender = React.useMemo(() => {
-    // Si estamos cerrando y ya no hay item seleccionado, no renderizar
-    if ((props.isClosing || internalClosing) && !selectedItem) {
-      return false;
-    }
-    return true;
-  }, [props.isClosing, internalClosing, selectedItem]);
-
-  // Handler para cerrar con animación
-  const triggerExitAnimation = () => {
-    if (!props.isExiting && !internalClosing) {
-      setInternalClosing(true); // Activar animación de cierre interna
-      if (props.onRequestClose) {
-        props.onRequestClose();
-      }
-    }
-  };
-
-  // useEffect para eventos de overlay - debe estar antes de cualquier return condicional
-  useEffect(() => {
-    const onOverlayDetailExit = () => {
-      triggerExitAnimation();
-    };
-    window.addEventListener('overlay-detail-exit', onOverlayDetailExit);
-    return () => window.removeEventListener('overlay-detail-exit', onOverlayDetailExit);
-  }, [props.isExiting, internalClosing]);
-
-  // Guardar referencia al último item mostrado para animación de cierre - debe estar antes de cualquier return condicional
+  // Guardar referencia al último item mostrado
   useEffect(() => {
     if (selectedItem) lastItemRef.current = selectedItem;
   }, [selectedItem]);
@@ -159,35 +111,28 @@ export default function UnifiedItemDetail(props) {
     return <div style={{padding:32, textAlign:'center'}}>No se encontró el elemento solicitado.</div>;
   }
   
-  const rawTitle = processTitle(itemForCalculations?.title || itemForCalculations?.name, lang);
-  const rawDescription = processDescription(itemForCalculations?.description, lang);
+  const rawTitle = processTitle(selectedItem?.title || selectedItem?.name, lang);
+  const rawDescription = processDescription(selectedItem?.description, lang);
   
   const title = ensureString(rawTitle, lang);
   const description = ensureString(rawDescription, lang);
   
   // Determinar la categoría real del item para color y chip
-  const realCategory = itemForCalculations?.category || selectedCategory;
-  // Handler para cerrar con animación (desktop) - Nuevo patrón Framer Motion
-  const handleCloseDesktop = (e) => {
-    e?.preventDefault?.();
-    console.log('handleCloseDesktop called', { internalClosing, isClosing: props.isClosing });
-    if (!internalClosing && !props.isClosing) {
-      console.log('Setting internalClosing to true');
-      setInternalClosing(true);
-      // Llamar al callback de navegación del HomeLayout
-      if (props.onBack) {
-        props.onBack();
-      }
-    }
-  };
-
-  const handleClose = () => {
-    if (props.onRequestClose) {
-      props.onRequestClose();
+  const realCategory = selectedItem?.category || selectedCategory;
+  
+  // Handler simplificado para cerrar
+  const handleClose = useCallback(() => {
+    if (internalClosing) return;
+    setInternalClosing(true);
+    
+    // Usar el callback de navegación si está disponible
+    if (typeof props.onBack === 'function') {
+      props.onBack();
     } else {
-      setInternalClosing(true);
+      // Fallback: usar la función del store
+      goBackFromDetail();
     }
-  };
+  }, [internalClosing, props.onBack, goBackFromDetail]);
 
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
@@ -252,17 +197,18 @@ export default function UnifiedItemDetail(props) {
       return null;
     }
     
+    console.log('🔄 [UnifiedItemDetail] props.onOverlayNavigate disponible:', !!props.onOverlayNavigate);
+    
     const isMasterpiece = !!safeItem.masterpiece;
     const categoryColor = getCategoryColor(realCategory, 'color');
     const gradientBg = `linear-gradient(135deg, ${categoryColor} 0%, ${theme.palette.mode === 'dark' ? 'rgba(24,24,24,0.92)' : 'rgba(255,255,255,0.85)'} 100%)`;
     
     return (
-      <motion.div
+      <div
         key={safeItem.id}
-        {...animationProps}
         style={styles.page(theme)}
       >
-                      <motion.div
+                      <div
               style={{
                 ...styles.desktopWrapper,
                 ...(isMasterpiece ? styles.desktopWrapperMasterpiece : {}),
@@ -274,7 +220,7 @@ export default function UnifiedItemDetail(props) {
                 color="primary"
                 size="large"
                 aria-label={typeof t === 'function' ? t('Volver') : 'Volver'}
-                onClick={handleCloseDesktop}
+                onClick={handleClose}
                 sx={{
                   position: 'absolute',
                   top: 18,
@@ -283,6 +229,12 @@ export default function UnifiedItemDetail(props) {
                   boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
                   opacity: (internalClosing || props.isClosing) ? 0.5 : 1,
                   cursor: (internalClosing || props.isClosing) ? 'not-allowed' : 'pointer',
+                  transition: 'none',
+                  '&:hover': {
+                    backgroundColor: theme.palette.primary.main,
+                    transform: 'none',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
+                  }
                 }}
                 tabIndex={0}
                 disabled={internalClosing || props.isClosing}
@@ -373,11 +325,12 @@ export default function UnifiedItemDetail(props) {
                   lang={lang}
                   t={t}
                   goToHowToDownload={goToHowToDownload}
+                  onOverlayNavigate={props.onOverlayNavigate}
                 />
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       );
     }
   

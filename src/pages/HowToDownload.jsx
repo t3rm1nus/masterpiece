@@ -1,24 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Box, Typography, Button, useTheme, useMediaQuery, Paper, Container, Fab } from '@mui/material';
 import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 import { applyHowToDownloadScrollFixForIPhone, cleanupScrollFixesForIPhone } from '../utils/iPhoneScrollFix';
-import { useNavigate } from 'react-router-dom';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
-
-
-
 
 const HowToDownload = ({ onAnimationEnd }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const { lang, t } = useLanguage();
   const { trackSpecialPageView } = useGoogleAnalytics();
-
-  
-
-  
-
 
   // Fix específico para iPhone - asegurar scroll
   useEffect(() => {
@@ -54,12 +45,12 @@ const HowToDownload = ({ onAnimationEnd }) => {
       en: '🧙‍♂️ Step 2: Find the .torrent or magnet link'
     },
     step2desc: {
-      es: 'No, no necesitas una brújula mágica. Solo ve a una web decente (de esas que no te lanzan 37 ventanas con casinos y princesas nigerianas) y busca el archivo que te interesa.',
-      en: "No, you don't need a magic compass. Just go to a decent website (one that doesn't throw 37 popups with casinos and Nigerian princesses) and look for the file you want."
+      es: 'Aquí es donde empieza la aventura. Necesitas encontrar el archivo .torrent o el magnet link de lo que quieres bajar. Es como buscar un tesoro, pero en internet.',
+      en: "This is where the adventure begins. You need to find the .torrent file or magnet link of what you want to download. It's like treasure hunting, but on the internet."
     },
     piratebay: {
-      es: 'Busca tu bahía pirata',
-      en: 'Find your Pirate Bay'
+      es: '🏴‍☠️ The Pirate Bay',
+      en: '🏴‍☠️ The Pirate Bay'
     },
     warning: {
       es: '⚠️ Consejo de sabio: si la web te pide que instales algo raro o te dice que eres el visitante número 1.000.000... huye.',
@@ -86,15 +77,16 @@ const HowToDownload = ({ onAnimationEnd }) => {
       en: "And that's it. Now you can proudly say you know how to download torrents without sinking in a sea of pop-ups, spyware, and despair. Happy sailing, captain! 🏴‍☠️"
     }
   };
-  const navigate = useNavigate();
-  const handleBack = () => {
-    // En desktop, navegación directa; en móvil, usar callback
-    if (isMobile && typeof onAnimationEnd === 'function') {
+
+  const handleBack = useCallback(() => {
+    console.log('🔄 [HowToDownload] handleBack llamado');
+    console.log('🔄 [HowToDownload] onAnimationEnd disponible:', !!onAnimationEnd);
+    // Solo usar el callback, sin navegación propia
+    if (typeof onAnimationEnd === 'function') {
+      console.log('🔄 [HowToDownload] Llamando onAnimationEnd');
       onAnimationEnd();
-    } else {
-      navigate('/', { replace: true });
     }
-  };
+  }, [onAnimationEnd]);
   return (
       <div>
         <Container 
@@ -121,9 +113,9 @@ const HowToDownload = ({ onAnimationEnd }) => {
               onClick={handleBack}
               sx={{
                 position: 'fixed',
-                top: '73px', // 70px más abajo que el botón de detalles
+                top: '73px',
                 left: 16,
-                zIndex: 1402, // FAB del overlay para páginas - por encima del contenido del overlay
+                zIndex: 1402,
                 backgroundColor: theme.palette.primary.main,
                 '&:hover': {
                   backgroundColor: theme.palette.primary.dark,

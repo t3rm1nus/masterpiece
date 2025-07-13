@@ -16,10 +16,14 @@ export const createNavigationSlice = (set, get) => ({
   currentView: 'home',
   selectedItem: null,
   goHome: () => {
-    set({ 
-      currentView: 'home',
-      selectedItem: null
-      // NO resetear selectedCategory ni selectedSubcategory para preservar el estado
+    set((state) => {
+      if (state.currentView === 'home' && state.selectedItem === null) {
+        return state;
+      }
+      return { 
+        currentView: 'home',
+        selectedItem: null
+      };
     });
   },
   resetToHome: () => set({ 
@@ -27,8 +31,22 @@ export const createNavigationSlice = (set, get) => ({
     selectedItem: null
     // NO resetear selectedCategory ni selectedSubcategory para preservar el estado
   }),
-  setView: (view) => set({ currentView: view }),
-  setSelectedItem: (item) => set({ selectedItem: item }),
+  setView: (view) => {
+    set((state) => {
+      if (state.currentView === view) {
+        return state;
+      }
+      return { currentView: view };
+    });
+  },
+  setSelectedItem: (item) => {
+    set((state) => {
+      if (state.selectedItem === item) {
+        return state;
+      }
+      return { selectedItem: item };
+    });
+  },
   goToDetail: (item) => {
     set({ currentView: 'detail', selectedItem: item });
     // Actualizar la URL para que sea navegable
@@ -42,14 +60,24 @@ export const createNavigationSlice = (set, get) => ({
     set({ currentView: 'coffee' });
     // Actualizar la URL para que sea navegable en desktop
     if (typeof window !== 'undefined' && window.history) {
-      window.history.pushState({}, '', '/donaciones');
+      const currentState = get();
+      const fromDetail = currentState.currentView === 'detail';
+      window.history.pushState({ 
+        fromDetail,
+        previousPath: window.location.pathname
+      }, '', '/donaciones');
     }
   },
   goToHowToDownload: () => {
     set({ currentView: 'howToDownload' });
     // Actualizar la URL para que sea navegable en desktop
     if (typeof window !== 'undefined' && window.history) {
-      window.history.pushState({}, '', '/como-descargar');
+      const currentState = get();
+      const fromDetail = currentState.currentView === 'detail';
+      window.history.pushState({ 
+        fromDetail,
+        previousPath: window.location.pathname
+      }, '', '/como-descargar');
     }
   },
 });

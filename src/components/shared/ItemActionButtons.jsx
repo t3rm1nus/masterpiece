@@ -149,11 +149,20 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
           color="primary"
           startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
           onClick={() => {
+            console.log('🔄 [MobileActionButtons] Botón descargar clickeado');
+            console.log('🔄 [MobileActionButtons] onOverlayNavigate disponible:', !!onOverlayNavigate);
+            
             // Cerrar el detalle con animación antes de navegar
             window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
             setTimeout(() => {
-              // Usar navegación directa para asegurar que funcione en móviles
-              navigate('/como-descargar');
+              // Usar onOverlayNavigate si está disponible, sino fallback a navigate
+              if (onOverlayNavigate) {
+                console.log('🔄 [MobileActionButtons] Usando onOverlayNavigate para navegar a /como-descargar');
+                onOverlayNavigate('/como-descargar');
+              } else {
+                console.log('🔄 [MobileActionButtons] Fallback a navigate directo');
+                navigate('/como-descargar');
+              }
             }, 400);
           }}
           sx={getButtonSx}
@@ -166,7 +175,7 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
   return buttons;
 }
 
-export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHowToDownload }) {
+export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHowToDownload, onOverlayNavigate }) {
   const navigate = useNavigate();
   const theme = useTheme();
   const getButtonSx = {
@@ -291,7 +300,19 @@ export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHo
           variant="contained"
           color="primary"
           startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
-          onClick={() => navigate('/como-descargar', { replace: true })}
+          onClick={() => {
+            console.log('🔄 [DesktopActionButtons] Botón descargar clickeado');
+            console.log('🔄 [DesktopActionButtons] onOverlayNavigate disponible:', !!onOverlayNavigate);
+            
+            // Usar onOverlayNavigate si está disponible, sino fallback a navigate
+            if (onOverlayNavigate) {
+              console.log('🔄 [DesktopActionButtons] Usando onOverlayNavigate para navegar a /como-descargar');
+              onOverlayNavigate('/como-descargar');
+            } else {
+              console.log('🔄 [DesktopActionButtons] Fallback a navigate directo');
+              navigate('/como-descargar', { replace: true });
+            }
+          }}
           sx={getButtonSx}
         >
           {t?.ui?.actions?.download || (lang === 'en' ? 'Download' : 'Descargar')}

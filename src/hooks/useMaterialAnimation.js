@@ -53,9 +53,19 @@ export const usePageAnimation = (isClosing, timeout = 550) => {
 
 /**
  * Hook específico para animaciones de detalles móviles
+ * SIN ANIMACIONES DE SLIDE para evitar parpadeo al volver
  */
-export const useMobileDetailAnimation = (isClosing, timeout = 400) => {
-  return useMaterialAnimation(isClosing, timeout, 'slide');
+export const useMobileDetailAnimation = (isClosing, timeout = 0) => {
+  // Retornar props sin animación para evitar parpadeo
+  return {
+    in: !isClosing,
+    timeout: 0,
+    mountOnEnter: true,
+    unmountOnExit: true,
+    appear: false,
+    enter: false, // Sin animación de entrada
+    exit: false   // Sin animación de salida
+  };
 };
 
 /**

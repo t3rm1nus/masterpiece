@@ -31,6 +31,14 @@ if (typeof window !== 'undefined') {
       window.location.reload()
     }
   }
+  
+  // Forzar scroll al top en cada carga para evitar que el navegador recuerde la posición
+  window.scrollTo(0, 0);
+  
+  // También deshabilitar scrollRestoration del navegador
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
 }
 
 // Ocultar splash de Capacitor al montar la app
