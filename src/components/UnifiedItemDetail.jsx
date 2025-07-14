@@ -272,6 +272,7 @@ export default function UnifiedItemDetail(props) {
         key={safeItem.id}
         style={{
           ...styles.page(theme),
+          marginTop: '70px', // Añadido margen superior para dejar espacio al menú híbrido
           opacity: isVisible ? 1 : 0,
           transform: isVisible ? 'scale(1)' : 'scale(0.95)',
           transition: 'opacity 0.3s ease-in-out, transform 0.3s ease-out',
