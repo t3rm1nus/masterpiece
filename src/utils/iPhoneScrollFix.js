@@ -52,12 +52,13 @@ export const applyDetailScrollFixForIPhone = () => {
   if (!isIPhone()) return;
   
   const selectors = [
-    '[role="dialog"][aria-modal="true"]',
-    '[role="dialog"][aria-modal="true"] > .MuiBox-root',
-    '.slideInUp',
-    '.slideOutDown',
+    // '[role="dialog"][aria-modal="true"]', // Eliminado: solo para Dialogs de MUI
+    // '[role="dialog"][aria-modal="true"] > .MuiBox-root', // Eliminado
+    '.mp-detail-overlay',
     '.mp-ui-card',
     '.item-detail-mobile-card',
+    '.slideInUp',
+    '.slideOutDown',
     '.MuiCardContent-root'
   ];
   

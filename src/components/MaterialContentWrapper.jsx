@@ -100,6 +100,7 @@ const MaterialContentWrapper = ({
   onItemClick, // <-- NUEVO: handler de click en item
   currentPage = 1, // <--- NUEVA PROP para preservar estado de infinite scroll
   totalItems = 0, // <--- NUEVA PROP para preservar estado de infinite scroll
+  skipEntryAnimation = false,
   ...props
 }) => {
   const theme = useTheme();
@@ -115,17 +116,28 @@ const MaterialContentWrapper = ({
   const [visibleIndexes, setVisibleIndexes] = useState([]);
 
   useEffect(() => {
+    if (skipEntryAnimation) {
+      if (recommendations && Array.isArray(recommendations)) {
+        setVisibleIndexes(recommendations.map((_, idx) => idx));
+      }
+      return;
+    }
+    const hasPendingScroll = !!sessionStorage.getItem('homeScrollY');
     if (recommendations && Array.isArray(recommendations)) {
       if (isMobile && visibleIndexes.length === 0) {
-        // Solo hacer animación secuencial si no hay índices visibles (primera carga)
-        setVisibleIndexes([]);
-        recommendations.forEach((_, idx) => {
-          setTimeout(() => {
-            setVisibleIndexes(prev => [...prev, idx]);
-          }, 60 * idx);
-        });
+        if (hasPendingScroll) {
+          // Si hay scroll pendiente, mostrar todo de golpe
+          setVisibleIndexes(recommendations.map((_, idx) => idx));
+        } else {
+          // Animación secuencial normal
+          setVisibleIndexes([]);
+          recommendations.forEach((_, idx) => {
+            setTimeout(() => {
+              setVisibleIndexes(prev => [...prev, idx]);
+            }, 60 * idx);
+          });
+        }
       } else if (!isMobile && visibleIndexes.length === 0) {
-        // Desktop: animación secuencial solo en primera carga
         setVisibleIndexes([]);
         recommendations.forEach((_, idx) => {
           setTimeout(() => {
@@ -134,7 +146,7 @@ const MaterialContentWrapper = ({
         });
       }
     }
-  }, [recommendations, isMobile, visibleIndexes.length, selectedCategory]);
+  }, [recommendations, isMobile, visibleIndexes.length, selectedCategory, skipEntryAnimation]);
 
   // Resetear animaciones cuando cambia la categoría
   useEffect(() => {

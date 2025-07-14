@@ -52,6 +52,10 @@ export default function WelcomePopup({ open, onClose }) {
   };
 
   useEffect(() => {
+    console.log('[WelcomePopup] open:', open);
+  }, [open]);
+
+  useEffect(() => {
     function onKeyDown(e) {
       if (e.key === "Escape") onClose();
     }
@@ -61,7 +65,10 @@ export default function WelcomePopup({ open, onClose }) {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [open, onClose]);
 
-  if (!open) return null;
+  if (!open) {
+    console.log('[WelcomePopup] NO renderiza popup porque open es false');
+    return null;
+  }
 
   function handleOverlayClick(e) {
     if (e.target === overlayRef.current) onClose();
@@ -84,6 +91,7 @@ export default function WelcomePopup({ open, onClose }) {
         justifyContent: "center"
       }}
     >
+      {console.log('[WelcomePopup] Renderizando contenido del popup')}
       <div
         onClick={onClose}
         style={{

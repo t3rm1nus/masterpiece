@@ -1,13 +1,13 @@
 import React from 'react';
 import { CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button } from '@mui/material';
 import { ArrowBack as ArrowBackIcon, Category as CategoryIcon, Extension as ExtensionIcon, Movie as MovieIcon, Book as BookIcon, MusicNote as MusicNoteIcon, SportsEsports as SportsEsportsIcon, Mic as MicIcon, Tv as TvIcon, AutoStories as ComicIcon } from '@mui/icons-material';
-import { OndemandVideoIcon, LiveTvIcon } from './CategoryCustomIcons';
+import { OndemandVideoIcon, LiveTvIcon } from './CategoryCustomIcons.ts';
 import { getCategoryColor, getCategoryGradient } from '../../utils/categoryPalette';
 import { ensureString } from '../../utils/stringUtils';
 import { applyDetailScrollFixForIPhone, isIPhone } from '../../utils/iPhoneScrollFix';
 import UiCard from '../ui/UiCard';
 import { MobileActionButtons } from './ItemActionButtons';
-import MasterpieceBadge from './MasterpieceBadge';
+import MasterpieceBadge from './MasterpieceBadge.tsx';
 
 
 // =============================================
@@ -183,6 +183,7 @@ const MobileItemDetail = ({
     <>
       {BackButton}
       <Box
+        className={`mp-detail-overlay ${className}`}
         sx={{
           display: 'flex',
           flexDirection: 'column',

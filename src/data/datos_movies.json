@@ -1275,7 +1275,7 @@
       "category": "movies",
       "subcategory": "comedy",
       "title": {
-        "es": "Veo, Veo... ¿Qué Ves?",
+        "es": "No me chilles que no te veo",
         "en": "See No Evil, Hear No Evil"
       },
       "description": {
@@ -2550,7 +2550,7 @@
     {
       "id": 120,
       "category": "movies",
-      "subcategory": "drama",
+      "subcategory": "comedy",
       "title": {
         "es": "Intocables",
         "en": "The Intouchables"

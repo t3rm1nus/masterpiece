@@ -20,7 +20,7 @@ import {
   Extension as BoardGameIcon,
   AutoStories as ComicIcon
 } from '@mui/icons-material';
-import { OndemandVideoIcon, LiveTvIcon } from './shared/CategoryCustomIcons';
+import { OndemandVideoIcon, LiveTvIcon } from './shared/CategoryCustomIcons.ts';
 import { useLanguage } from '../LanguageContext';
 import { useAppView } from '../store/useAppStore';
 import { processTitle, processDescription } from '../store/utils';

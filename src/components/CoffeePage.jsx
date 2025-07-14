@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLanguage } from '../LanguageContext';
 import MaterialCoffeePage from './MaterialCoffeePage';
 
@@ -9,9 +9,13 @@ import MaterialCoffeePage from './MaterialCoffeePage';
 
 const CoffeePage = ({ onAnimationEnd }) => {
   const { t, getTranslation } = useLanguage();
-  
-    return (
-    <>
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div style={{ marginTop: '70px' }}>
       {/* Componente Material UI para móviles Y desktop */}
       <MaterialCoffeePage onAnimationEnd={onAnimationEnd} />
       
@@ -94,7 +98,7 @@ const CoffeePage = ({ onAnimationEnd }) => {
         <p className="coffee-footer">{t.coffee_footer}</p>
       </div>
       )}
-    </>
+    </div>
   );
 };
 

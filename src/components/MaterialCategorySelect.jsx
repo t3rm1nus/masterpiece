@@ -1,7 +1,7 @@
 import React from 'react';
 import { Select, MenuItem, InputLabel, FormControl, useTheme, useMediaQuery, ListSubheader, Box } from '@mui/material';
 import { Movie as MovieIcon, SportsEsports as GameIcon, MenuBook as BookIcon, LibraryMusic as MusicIcon, Mic as PodcastIcon, Extension as BoardGameIcon, AutoStories as ComicIcon, Category as CategoryIcon, Star as StarIcon } from '@mui/icons-material';
-import { OndemandVideoIcon, LiveTvIcon } from './shared/CategoryCustomIcons';
+import { OndemandVideoIcon, LiveTvIcon } from './shared/CategoryCustomIcons.ts';
 import { useLanguage } from '../LanguageContext';
 import { getCategoryColor, getCategoryGradient, getCategoryColorForSelect } from '../utils/categoryPalette';
 import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';

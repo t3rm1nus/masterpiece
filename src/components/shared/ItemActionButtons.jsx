@@ -149,21 +149,11 @@ export function MobileActionButtons({ selectedItem, trailerUrl, lang, t, goToHow
           color="primary"
           startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
           onClick={() => {
-            console.log('🔄 [MobileActionButtons] Botón descargar clickeado');
-            console.log('🔄 [MobileActionButtons] onOverlayNavigate disponible:', !!onOverlayNavigate);
-            
-            // Cerrar el detalle con animación antes de navegar
-            window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
-            setTimeout(() => {
-              // Usar onOverlayNavigate si está disponible, sino fallback a navigate
-              if (onOverlayNavigate) {
-                console.log('🔄 [MobileActionButtons] Usando onOverlayNavigate para navegar a /como-descargar');
-                onOverlayNavigate('/como-descargar');
-              } else {
-                console.log('🔄 [MobileActionButtons] Fallback a navigate directo');
-                navigate('/como-descargar');
-              }
-            }, 400);
+            if (onOverlayNavigate) {
+              onOverlayNavigate('/como-descargar');
+            } else {
+              navigate('/como-descargar');
+            }
           }}
           sx={getButtonSx}
         >
@@ -301,16 +291,10 @@ export function DesktopActionButtons({ selectedItem, trailerUrl, lang, t, goToHo
           color="primary"
           startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
           onClick={() => {
-            console.log('🔄 [DesktopActionButtons] Botón descargar clickeado');
-            console.log('🔄 [DesktopActionButtons] onOverlayNavigate disponible:', !!onOverlayNavigate);
-            
-            // Usar onOverlayNavigate si está disponible, sino fallback a navigate
             if (onOverlayNavigate) {
-              console.log('🔄 [DesktopActionButtons] Usando onOverlayNavigate para navegar a /como-descargar');
               onOverlayNavigate('/como-descargar');
             } else {
-              console.log('🔄 [DesktopActionButtons] Fallback a navigate directo');
-              navigate('/como-descargar', { replace: true });
+              navigate('/como-descargar');
             }
           }}
           sx={getButtonSx}

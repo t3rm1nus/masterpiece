@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMusicData } from '../hooks/useMusicData.js';
+import { useMusicData } from '../hooks/useMusicData';
 import { Typography, Box, Card, CardContent, Chip, CircularProgress, Alert } from '@mui/material';
 
 // =============================================

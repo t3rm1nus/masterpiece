@@ -30,12 +30,13 @@ import {
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppView, useAppTheme } from '../store/useAppStore';
 import { useNavigationActions } from '../hooks/useNavigationActions';
-import { useMenuItems } from '../hooks/useMenuItems.jsx';
+import { useMenuItems } from '../hooks/useMenuItems';
 import { useNavigate } from 'react-router-dom';
 import LanguageSelector from './ui/LanguageSelector';
 import SplashDialog from './SplashDialog';
 import MaterialCategorySelect from './MaterialCategorySelect';
 import useBackNavigation from '../hooks/useBackNavigation';
+import PropTypes from 'prop-types';
 
 // =============================================
 // MaterialMobileMenu: Menú de navegación lateral y AppBar para móviles
@@ -70,19 +71,27 @@ import useBackNavigation from '../hooks/useBackNavigation';
  * />
  */
 const MaterialMobileMenu = ({
+  onSplashOpen,
+  splashOpen,
+  onSplashClose,
+  splashAudio,
+  audioRef,
+  onOverlayNavigate,
   renderMenuItem,
   menuItems: menuItemsProp,
   onMenuOpen,
   onMenuClose,
   sx = {},
-  onSplashOpen,
-  splashAudio,
-  splashOpen,
-  onSplashClose,
-  audioRef,
-  onOverlayNavigate,
   onBack, // Nuevo prop para recibir handleBack del HomeLayout
 } = {}) => {
+  console.log('[MaterialMobileMenu] PROPS:', {
+    onSplashOpen: !!onSplashOpen,
+    splashOpen,
+    onSplashClose: !!onSplashClose,
+    splashAudio,
+    audioRef,
+    onOverlayNavigate: !!onOverlayNavigate
+  });
   const { t, lang, changeLanguage, getTranslation } = useLanguage();
   const { resetAllFilters } = useAppData();
   const { currentView, goBackFromDetail, goBackFromCoffee, goHome, goToCoffee, goToHowToDownload } = useAppView();
@@ -115,7 +124,20 @@ const MaterialMobileMenu = ({
   }, [lang]);
   
   // Usar items custom si se pasan, si no usar hook por defecto
-  const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems(onSplashOpen, onOverlayNavigate);
+  const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems((audio) => {
+    if (onSplashOpen) {
+      console.log('[MaterialMobileMenu] handleSplashOpen desde useMenuItems');
+      onSplashOpen(audio);
+    }
+  }, (ruta) => {
+    if (onOverlayNavigate) {
+      console.log('[MaterialMobileMenu] Navegando con onOverlayNavigate a', ruta);
+      onOverlayNavigate(ruta);
+    } else {
+      console.log('[MaterialMobileMenu] Navegando con navigate() a', ruta);
+      navigate(ruta);
+    }
+  });
 
   const handleLanguageChange = (lng) => {
     changeLanguage(lng);
@@ -202,6 +224,7 @@ const MaterialMobileMenu = ({
                 m: 0, p: 0
               }}
               onClick={() => {
+                console.log('[MaterialMobileMenu] Click en header Masterpiece. onSplashOpen existe:', !!onSplashOpen);
                 if (onSplashOpen) {
                   let audiosToUse = pendingAudios.length > 0 ? pendingAudios : [...splashAudios];
                   const randomIdx = Math.floor(Math.random() * audiosToUse.length);
@@ -210,6 +233,9 @@ const MaterialMobileMenu = ({
                   // Eliminar el audio elegido de los pendientes
                   const newPending = audiosToUse.filter((a, i) => i !== randomIdx);
                   setPendingAudios(newPending);
+                  setTimeout(() => {
+                    console.log('[MaterialMobileMenu] splashOpen debería ser true tras onSplashOpen');
+                  }, 100);
                 }
               }}
             >
@@ -232,31 +258,34 @@ const MaterialMobileMenu = ({
         </Toolbar>
       </AppBar>
       {/* Splash Dialog */}
-      <SplashDialog
-        open={splashOpen}
-        onClose={onSplashClose}
-        audio={splashAudio}
-        content={
-          <img
-            src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png"
-            alt={getTranslation('ui.alt.splash', 'Splash')}
-            style={{ width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer', background: 'none' }}
-          />
-        }
-        sx={{
-          content: {
-            background: isDarkMode ? '#222' : '#fff',
-            border: 'none',
-            borderRadius: 18,
-            boxShadow: '0 8px 32px rgba(0,0,0,0.18)'
-          },
-          paper: {
-            borderRadius: 18,
-            background: isDarkMode ? '#222' : '#fff',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.18)'
+      {splashOpen && (
+        <SplashDialog
+          open={splashOpen}
+          onClose={onSplashClose}
+          audio={splashAudio}
+          audioRef={audioRef}
+          content={
+            <img
+              src="/imagenes/splash_image.png"
+              alt={getTranslation('ui.alt.splash', 'Splash')}
+              style={{ width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer', background: 'none' }}
+            />
           }
-        }}
-      />
+          sx={{
+            content: {
+              background: isDarkMode ? '#222' : '#fff',
+              border: 'none',
+              borderRadius: 18,
+              boxShadow: '0 8px 32px rgba(0,0,0,0.18)'
+            },
+            paper: {
+              borderRadius: 18,
+              background: isDarkMode ? '#222' : '#fff',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.18)'
+            }
+          }}
+        />
+      )}
       <Drawer
         anchor="left"
         open={drawerOpen}
@@ -327,7 +356,13 @@ const MaterialMobileMenu = ({
               ? renderMenuItem(item, index)
               : (
                 <ListItem key={index} disablePadding>
-                  <ListItemButton onClick={() => { item.action && item.action(); setDrawerOpen(false); }}
+                  <ListItemButton onClick={() => {
+                    setDrawerOpen(false);
+                    console.log('[MaterialMobileMenu] Click en botón de menú:', item.label);
+                    if (item && item.action) {
+                      item.action();
+                    }
+                  }}
                     sx={{
                       borderRadius: 2,
                       my: 0.5,
@@ -404,6 +439,21 @@ const MaterialMobileMenu = ({
       )}
     </>
   );
+};
+
+MaterialMobileMenu.propTypes = {
+  onSplashOpen: PropTypes.func,
+  splashOpen: PropTypes.bool,
+  onSplashClose: PropTypes.func,
+  splashAudio: PropTypes.string,
+  audioRef: PropTypes.any,
+  onOverlayNavigate: PropTypes.func,
+  renderMenuItem: PropTypes.func,
+  menuItems: PropTypes.array,
+  onMenuOpen: PropTypes.func,
+  onMenuClose: PropTypes.func,
+  sx: PropTypes.object,
+  onBack: PropTypes.func,
 };
 
 export default MaterialMobileMenu;

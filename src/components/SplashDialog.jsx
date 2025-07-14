@@ -86,23 +86,23 @@ const SplashDialog = ({
     }
   }, [open, isIPhone]);
 
-  // Animación de entrada/salida
+  // Animación de entrada/salida SIN timeout ni animación de salida
   useEffect(() => {
     if (open) {
       setVisible(true);
       setAnimationClass('splash-animate-in');
-    } else if (animationClass === 'splash-animate-in') {
-      setAnimationClass('splash-animate-out');
-      const timeout = setTimeout(() => {
-        setAnimationClass('');
-        setVisible(false);
-      }, 700);
-      return () => clearTimeout(timeout);
     } else {
       setAnimationClass('');
-      setVisible(false);
+      setVisible(false); // Desmonta inmediatamente
     }
+    return () => {
+      setVisible(false); // Limpieza forzada
+    };
   }, [open]);
+
+  useEffect(() => {
+    console.log('[SplashDialog] open:', open, 'visible:', visible);
+  }, [open, visible]);
 
   // Elimina la clase y el id de la imagen splash, y aplica la animación directamente con sx
   function addIdToImg(element) {
@@ -172,6 +172,9 @@ const SplashDialog = ({
     boxSizing: 'border-box',
   };
 
+  // Render condicional: solo renderiza el Dialog si visible es true
+  if (!visible) return null;
+
   return (
     <Dialog
       open={visible}
@@ -208,7 +211,8 @@ const SplashDialog = ({
         ...PaperProps
       }}
       BackdropProps={{
-        sx: { background: 'rgba(0,0,0,0.5)', zIndex: 9998, ...sx.backdrop }
+        sx: { background: 'rgba(0,0,0,0.5)', zIndex: 9998, ...sx.backdrop },
+        onClick: isMobile ? (e => { if (typeof onClose === 'function') onClose(); }) : undefined
       }}
       sx={{
         p: 0,
@@ -221,6 +225,7 @@ const SplashDialog = ({
         ...sx.dialog
       }}
     >
+      {console.log('[SplashDialog] Render DialogContent, visible:', visible)}
       {visible && (
         <DialogContent
           sx={{
@@ -261,6 +266,7 @@ const SplashDialog = ({
             }
           }) : undefined}
         >
+          {console.log('[SplashDialog] Render DialogContent CONTENT, visible:', visible)}
           <Paper elevation={0} sx={{
             borderRadius: 0,
             background: 'transparent',
@@ -289,8 +295,14 @@ const SplashDialog = ({
                 : (
                 <img
                   id="splash-image"
-                  src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png"
+                  src="/imagenes/splash_image.png"
                   alt={getTranslation('ui.alt.splash', 'Splash')}
+                  onError={(e) => {
+                    // Si falla la imagen principal, usar una imagen de respaldo
+                    if (e.target.src !== '/favicon.png') {
+                      e.target.src = '/favicon.png';
+                    }
+                  }}
                   style={{
                     ...splashImageStyle,
                     ...(animationClass === 'splash-animate-in' && splashInStyle),

@@ -13,10 +13,9 @@
 }
 
 /* Asegurar que los overlays/modales permitan scroll en iOS */
-[role="dialog"],
-[aria-modal="true"] {
-  -webkit-overflow-scrolling: touch;
-}
+/* [role="dialog"], [aria-modal="true"] { - Eliminado: solo para Dialogs de MUI */
+/*   -webkit-overflow-scrolling: touch; */
+/* } */
 
 /* Específico para páginas de donaciones y cómo descargar */
 [data-page="coffee"],
@@ -109,29 +108,29 @@ button,
   }
   
   /* Contenedores modales para iPhone */
-  [aria-modal="true"] {
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
+  /* [aria-modal="true"] { - Eliminado */
+  /*   overflow-y: auto !important; */
+  /*   -webkit-overflow-scrolling: touch !important; */
+  /* } */
   
   /* FIXES AGRESIVOS PARA SCROLL EN IPHONE - DETALLES Y COMO DESCARGAR */
   
   /* Contenedor principal de detalle para iPhone */
-  [role="dialog"][aria-modal="true"] {
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    height: 100vh !important;
-    max-height: 100vh !important;
-    position: fixed !important;
-  }
+  /* [role="dialog"][aria-modal="true"] { - Eliminado */
+  /*   overflow-y: auto !important; */
+  /*   -webkit-overflow-scrolling: touch !important; */
+  /*   height: 100vh !important; */
+  /*   max-height: 100vh !important; */
+  /*   position: fixed !important; */
+  /* } */
   
   /* Contenedor interno de detalle para iPhone */
-  [role="dialog"][aria-modal="true"] > .MuiBox-root {
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    height: 100vh !important;
-    max-height: 100vh !important;
-  }
+  /* [role="dialog"][aria-modal="true"] > .MuiBox-root { - Eliminado */
+  /*   overflow-y: auto !important; */
+  /*   -webkit-overflow-scrolling: touch !important; */
+  /*   height: 100vh !important; */
+  /*   max-height: 100vh !important; */
+  /* } */
   
   /* Específicos para página "como descargar" */
   [data-page="howToDownload"] {
@@ -157,6 +156,7 @@ button,
   }
   
   /* Card/UiCard específico para detalles móviles en iPhone */
+  .mp-detail-overlay,
   .mp-ui-card.item-detail-mobile-card:not(.slideOutDown):not(.slideInUp) {
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
@@ -189,12 +189,12 @@ button,
   }
   
   /* Todos los Paper en iPhone cuando están en modales */
-  [aria-modal="true"] .MuiPaper-root {
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    height: auto !important;
-    max-height: calc(100vh - 80px) !important;
-  }
+  /* [aria-modal="true"] .MuiPaper-root { - Eliminado */
+  /*   overflow-y: auto !important; */
+  /*   -webkit-overflow-scrolling: touch !important; */
+  /*   height: auto !important; */
+  /*   max-height: calc(100vh - 80px) !important; */
+  /* } */
   
   /* Forzar scroll en cualquier contenedor con scroll */
   * {

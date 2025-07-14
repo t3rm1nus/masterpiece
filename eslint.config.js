@@ -10,6 +10,28 @@ export default [
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parser: '@typescript-eslint/parser',
+      plugins: [
+        'react',
+        'react-hooks',
+        '@typescript-eslint',
+      ],
+      extends: [
+        'plugin:react/recommended',
+        'plugin:react-hooks/recommended',
+        'plugin:@typescript-eslint/recommended',
+      ],
+      overrides: [
+        {
+          files: ['*.ts', '*.tsx'],
+          parser: '@typescript-eslint/parser',
+          plugins: ['@typescript-eslint'],
+          extends: ['plugin:@typescript-eslint/recommended'],
+          rules: {
+            // Puedes personalizar reglas específicas aquí
+          },
+        },
+      ],
       parserOptions: {
         ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },

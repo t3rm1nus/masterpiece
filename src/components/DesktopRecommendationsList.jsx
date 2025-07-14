@@ -3,13 +3,14 @@ import { useLanguage } from '../LanguageContext';
 import { useAppView, useAppData, useAppTheme } from '../store/useAppStore';
 import { generateRecommendationKey } from '../utils/appUtils';
 import { getCategoryGradient } from '../utils/categoryPalette';
-import CategoryBar from './home/CategoryBar';
-import SubcategoryBar from './home/SubcategoryBar';
+import CategoryBar from './home/CategoryBar.tsx';
+import SubcategoryBar from './home/SubcategoryBar.tsx';
 import { NoResults } from './SharedComponents';
 import MaterialRecommendationCard from './MaterialRecommendationCard';
 import { randomNotFoundImage } from '../store/utils';
 import useInfiniteScroll from '../hooks/useInfiniteScroll';
 import { CircularProgress, Box } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 // =============================================
 // DesktopRecommendationsList: Lista de recomendaciones para desktop
@@ -115,6 +116,7 @@ const DesktopRecommendationsList = ({
   const { goToDetail } = useAppView();
   const { getMasterpieceBadgeConfig } = useAppTheme();
   const badgeConfig = getMasterpieceBadgeConfig();
+  const navigate = useNavigate();
 
   // Infinite scroll hook
   const { sentinelRef } = useInfiniteScroll(
@@ -158,12 +160,13 @@ const DesktopRecommendationsList = ({
   }, []);
 
   const handleItemClick = useCallback((item) => {
+    console.log('[DesktopRecommendationsList] handleItemClick', item);
     if (onItemClick) {
       onItemClick(item);
     } else {
-      goToDetail(item);
+      navigate(`/detalle/${item.category}/${item.id}`);
     }
-  }, [goToDetail, onItemClick]);
+  }, [navigate, onItemClick]);
 
   // Renderizador para vista home de desktop (sin título)
   const renderDesktopHomeCard = useCallback((rec, title, description) => (

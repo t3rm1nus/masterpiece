@@ -49,6 +49,7 @@ export const viewSlice = (set, get) => ({
   },
 
   goBackFromDetail: () => {
+    console.log('[viewSlice] goBackFromDetail ejecutado: cambiando a home y limpiando selectedItem');
     set({ 
       currentView: 'home', 
       selectedItem: null
