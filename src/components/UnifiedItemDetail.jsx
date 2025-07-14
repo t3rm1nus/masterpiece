@@ -272,19 +272,23 @@ export default function UnifiedItemDetail(props) {
         key={safeItem.id}
         style={{
           ...styles.page(theme),
-          marginTop: '70px', // Añadido margen superior para dejar espacio al menú híbrido
+          marginTop: 0, // Eliminar margen superior del wrapper
           opacity: isVisible ? 1 : 0,
           transform: isVisible ? 'scale(1)' : 'scale(0.95)',
           transition: 'opacity 0.3s ease-in-out, transform 0.3s ease-out',
+          background: 'transparent', // Fondo transparente en el wrapper principal
+          pointerEvents: 'none', // No bloquear clics en la zona superior
         }}
       >
-                      <div
-              style={{
-                ...styles.desktopWrapper,
-                ...(isMasterpiece ? styles.desktopWrapperMasterpiece : {}),
-                ...(isMasterpiece ? {} : { background: gradientBg })
-              }}
-            >
+        <div
+          style={{
+            ...styles.desktopWrapper,
+            ...(isMasterpiece ? styles.desktopWrapperMasterpiece : {}),
+            ...(isMasterpiece ? {} : { background: gradientBg }),
+            marginTop: '70px', // El contenido sí baja para dejar espacio al menú
+            pointerEvents: 'auto', // El contenido sí permite interacción
+          }}
+        >
               {/* Botón volver FAB azul arriba a la izquierda, igual que en donaciones/descargar */}
               <Fab
                 color="primary"
