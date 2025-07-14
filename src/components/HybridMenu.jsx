@@ -99,7 +99,7 @@ function DesktopMenu(props) {
       top: 0,
       left: 0,
       width: '100vw',
-      zIndex: 1100,
+      zIndex: 2000, // Asegurado que esté por encima del detalle
       background: '#fff',
       boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
       borderBottom: '2px solid #e0e0e0', // Borde inferior gris de 2px
