@@ -16,6 +16,7 @@ interface MenuItem {
   action: () => void;
   show: boolean;
   special?: boolean;
+  path?: string; // NUEVO: ruta asociada para navegación robusta
 }
 
 interface UseMenuItemsProps {
@@ -114,7 +115,8 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
         icon: <CoffeeIcon />,
         action: handleCoffeeNavigation,
         show: true,
-        special: true
+        special: true,
+        path: '/donaciones' // <-- Añadido path fijo
       },
       {
         label: getTranslation('ui.navigation.how_to_download'),
@@ -136,7 +138,8 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
         ),
         action: handleHowToDownload,
         show: true,
-        special: false
+        special: false,
+        path: '/como-descargar' // <-- Añadido path fijo
       },
       {
         label: getTranslation('ui.navigation.about'),

@@ -18,6 +18,7 @@ interface MenuItem {
   action: () => void;
   show: boolean;
   special?: boolean;
+  path?: string; // Nuevo campo para la ruta de navegación
 }
 
 interface HybridMenuProps {
@@ -137,19 +138,11 @@ function DesktopMenu(props: DesktopMenuProps): React.JSX.Element | null {
               {renderMenuItem
                 ? renderMenuItem(item, idx)
                 : <button onClick={() => {
-                    const label = item.label.toLowerCase();
-                    console.log('[HybridMenu] Click en botón:', label);
-                    if (label.includes('descargar')) {
+                    if (item.path) {
                       if (onOverlayNavigate) {
-                        onOverlayNavigate('/como-descargar');
+                        onOverlayNavigate(item.path);
                       } else {
-                        navigate('/como-descargar');
-                      }
-                    } else if (label.includes('donacion') || label.includes('café') || label.includes('cafe')) {
-                      if (onOverlayNavigate) {
-                        onOverlayNavigate('/donaciones');
-                      } else {
-                        navigate('/donaciones');
+                        navigate(item.path);
                       }
                     } else if (item.action) {
                       item.action();
@@ -191,13 +184,11 @@ function DesktopMenu(props: DesktopMenuProps): React.JSX.Element | null {
             renderMenuItem
               ? renderMenuItem(item, idx)
               : <button key={idx} className="donation-btn" onClick={() => {
-                  const label = item.label.toLowerCase();
-                  console.log('[HybridMenu] Click en botón especial:', label);
-                  if (label.includes('donacion') || label.includes('café') || label.includes('cafe')) {
+                  if (item.path) {
                     if (onOverlayNavigate) {
-                      onOverlayNavigate('/donaciones');
+                      onOverlayNavigate(item.path);
                     } else {
-                      navigate('/donaciones');
+                      navigate(item.path);
                     }
                   } else if (item.action) {
                     item.action();
