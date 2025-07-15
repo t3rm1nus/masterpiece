@@ -5,21 +5,26 @@ import texts from "../data/texts.json";
 
 const WELCOME_POPUP_KEY = "masterpiece_welcome_popup_seen";
 
-export default function WelcomePopup({ open, onClose }) {
-  const { language } = useLanguage();
+interface WelcomePopupProps {
+  open: boolean;
+  onClose: () => void;
+}
+
+const WelcomePopup: React.FC<WelcomePopupProps> = ({ open, onClose }) => {
+  const { lang } = useLanguage();
   const { trackPopupView } = useGoogleAnalytics();
-  const overlayRef = useRef();
+  const overlayRef = useRef<HTMLDivElement>(null);
 
   // Google Analytics tracking para popup de bienvenida
   useEffect(() => {
     if (open) {
       trackPopupView('welcome_popup', {
         popup_title: 'Quiénes Somos - Bienvenida',
-        language: language,
+        language: lang,
         trigger: 'first_visit'
       });
     }
-  }, [open, trackPopupView, language]);
+  }, [open, trackPopupView, lang]);
 
   // Detectar móvil solo en cliente
   const [isMobile, setIsMobile] = React.useState(false);
@@ -28,9 +33,9 @@ export default function WelcomePopup({ open, onClose }) {
   }, []);
 
   // Mostrar español por defecto si el idioma no es 'en'
-  const popupLang = language === 'en' ? 'en' : 'es';
+  const popupLang = lang === 'en' ? 'en' : 'es';
 
-  const messages = {
+  const messages: Record<'es' | 'en', React.ReactNode> = {
     es: (
       <>
         <div style={{ fontSize: "1.1em", lineHeight: 1.6 }}>
@@ -56,7 +61,7 @@ export default function WelcomePopup({ open, onClose }) {
   }, [open]);
 
   useEffect(() => {
-    function onKeyDown(e) {
+    function onKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") onClose();
     }
     if (open) {
@@ -70,7 +75,7 @@ export default function WelcomePopup({ open, onClose }) {
     return null;
   }
 
-  function handleOverlayClick(e) {
+  function handleOverlayClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
     if (e.target === overlayRef.current) onClose();
   }
 
@@ -91,7 +96,6 @@ export default function WelcomePopup({ open, onClose }) {
         justifyContent: "center"
       }}
     >
-      {console.log('[WelcomePopup] Renderizando contenido del popup')}
       <div
         onClick={onClose}
         style={{
@@ -116,6 +120,7 @@ export default function WelcomePopup({ open, onClose }) {
       </div>
     </div>
   );
-}
+};
 
-export { WELCOME_POPUP_KEY };
+export default WelcomePopup;
+export { WELCOME_POPUP_KEY }; 
