@@ -1,1 +1,1 @@
- 
+export { default } from './ui/MaterialSubcategoryChips'; 
