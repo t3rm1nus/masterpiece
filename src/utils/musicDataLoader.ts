@@ -1,24 +1,50 @@
 // Utilidad para cargar datos de música divididos en chunks
+
+interface MusicRecommendation {
+  id: number;
+  [key: string]: any;
+}
+
+interface MusicChunk {
+  recommendations: MusicRecommendation[];
+}
+
+interface ChunkInfo {
+  fileName: string;
+  startId: number;
+  endId: number;
+}
+
+interface ChunksIndex {
+  chunks: ChunkInfo[];
+  totalItems: number;
+  totalChunks: number;
+  chunkSize: number;
+}
+
+interface AllMusicData {
+  recommendations: MusicRecommendation[];
+  metadata: {
+    totalItems: number;
+    totalChunks: number;
+    chunkSize: number;
+    loadedAt: string;
+  };
+}
+
 export class MusicDataLoader {
-  static async loadAllMusicData() {
+  static async loadAllMusicData(): Promise<AllMusicData | any> {
     try {
-      // Primero cargar el índice para saber qué chunks cargar
       const indexResponse = await fetch('/music-chunks/index.json');
-      const indexData = await indexResponse.json();
-      
-      // Cargar todos los chunks en paralelo
+      const indexData: ChunksIndex = await indexResponse.json();
       const chunkPromises = indexData.chunks.map(async (chunkInfo) => {
         const response = await fetch(`/music-chunks/${chunkInfo.fileName}`);
-        return response.json();
+        return response.json() as Promise<MusicChunk>;
       });
-      
-      const chunks = await Promise.all(chunkPromises);
-      
-      // Combinar todos los chunks en un solo array
-      const allRecommendations = chunks.reduce((acc, chunk) => {
+      const chunks: MusicChunk[] = await Promise.all(chunkPromises);
+      const allRecommendations = chunks.reduce<MusicRecommendation[]>((acc, chunk) => {
         return acc.concat(chunk.recommendations);
       }, []);
-      
       return {
         recommendations: allRecommendations,
         metadata: {
@@ -30,8 +56,6 @@ export class MusicDataLoader {
       };
     } catch (error) {
       console.error('❌ Error loading music data:', error);
-      
-      // Fallback: intentar cargar el archivo original
       try {
         console.log('🔄 Attempting to load from original file as fallback...');
         const response = await fetch('/datos_music.json');
@@ -44,21 +68,19 @@ export class MusicDataLoader {
       }
     }
   }
-  
-  // Método para cargar un chunk específico
-  static async loadMusicChunk(chunkNumber) {
+
+  static async loadMusicChunk(chunkNumber: number): Promise<MusicChunk> {
     try {
       const response = await fetch(`/music-chunks/music-chunk-${chunkNumber}.json`);
-      const data = await response.json();
+      const data: MusicChunk = await response.json();
       return data;
     } catch (error) {
       console.error(`❌ Error loading chunk ${chunkNumber}:`, error);
       throw error;
     }
   }
-  
-  // Método para obtener información de los chunks
-  static async getChunksInfo() {
+
+  static async getChunksInfo(): Promise<ChunksIndex> {
     try {
       const response = await fetch('/music-chunks/index.json');
       return await response.json();
@@ -67,33 +89,27 @@ export class MusicDataLoader {
       throw error;
     }
   }
-  
-  // Método para cargar chunks de forma lazy (bajo demanda)
+
   static async loadMusicDataLazy() {
-    const chunksInfo = await this.getChunksInfo();
-    
+    const chunksInfo: ChunksIndex = await this.getChunksInfo();
     return {
-      async getAllRecommendations() {
+      async getAllRecommendations(): Promise<MusicRecommendation[]> {
         return (await MusicDataLoader.loadAllMusicData()).recommendations;
       },
-      
-      async getChunk(chunkNumber) {
+      async getChunk(chunkNumber: number): Promise<MusicChunk> {
         return await MusicDataLoader.loadMusicChunk(chunkNumber);
       },
-      
-      async getRecommendationById(id) {
-        // Buscar en qué chunk está el ID
+      async getRecommendationById(id: number): Promise<MusicRecommendation | null> {
         for (const chunkInfo of chunksInfo.chunks) {
           if (id >= chunkInfo.startId && id <= chunkInfo.endId) {
             const chunk = await MusicDataLoader.loadMusicChunk(
               chunksInfo.chunks.indexOf(chunkInfo) + 1
             );
-            return chunk.recommendations.find(item => item.id === id);
+            return chunk.recommendations.find(item => item.id === id) || null;
           }
         }
         return null;
       },
-      
       getMetadata() {
         return {
           totalItems: chunksInfo.totalItems,
@@ -104,4 +120,4 @@ export class MusicDataLoader {
       }
     };
   }
-}
+} 
