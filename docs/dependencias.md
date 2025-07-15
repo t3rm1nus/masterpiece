@@ -1,6 +1,6 @@
 # Dependencias y Tecnologías
 
-La aplicación Masterpiece utiliza las siguientes tecnologías y librerías principales:
+La aplicación Masterpiece utiliza las siguientes tecnologías y librerías principales, todas integradas en un stack 100% TypeScript:
 
 - **React 19**: Framework de UI para construir interfaces de usuario modernas y reactivas.
 - **Vite**: Bundler y servidor de desarrollo rápido.
@@ -9,6 +9,7 @@ La aplicación Masterpiece utiliza las siguientes tecnologías y librerías prin
 - **Zustand**: Gestión de estado global sencilla, eficiente y escalable.
 - **Emotion**: CSS-in-JS para estilos dinámicos y personalizados.
 - **ESLint**: Linter para mantener la calidad y consistencia del código.
+- **TypeScript**: Tipado estático y moderno para todo el código fuente.
 
 ### Dependencias principales (`package.json`)
 - @capacitor/android, @capacitor/cli, @capacitor/core, @capacitor/splash-screen
@@ -16,6 +17,7 @@ La aplicación Masterpiece utiliza las siguientes tecnologías y librerías prin
 - @mui/icons-material, @mui/material
 - react, react-dom
 - zustand
+- typescript
 
 ### Dependencias de desarrollo
 - @eslint/js, @types/react, @types/react-dom
@@ -23,4 +25,4 @@ La aplicación Masterpiece utiliza las siguientes tecnologías y librerías prin
 - eslint, eslint-plugin-react-hooks, eslint-plugin-react-refresh
 - globals, terser, vite
 
-La integración entre estas tecnologías permite una experiencia fluida tanto en web como en móvil, con un stack moderno y mantenible.
+La integración entre estas tecnologías permite una experiencia fluida tanto en web como en móvil, con un stack moderno, tipado y mantenible.

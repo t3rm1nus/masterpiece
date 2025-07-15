@@ -1,20 +1,4 @@
-/**
- * THEME SLICE OFICIAL
- * Centraliza la gestión del tema visual (dark/light mode, colores, etc).
- * - Todos los estados y funciones de tema deben declararse aquí, no en el store principal.
- * - Usar siempre 'theme' y 'isDarkMode' como nombres de campos globales.
- * - Si se agregan nuevos campos globales de tema, documentar aquí y en el store principal.
- */
-
-// =============================================
-// SLICE DE TEMA PRINCIPAL
-// Este slice contiene la lógica y estados relacionados con el tema visual (dark/light mode, etc).
-//
-// CONVENCIONES:
-// - Todos los estados y funciones de tema deben declararse aquí, no en el store principal.
-// - Usar siempre 'theme' y 'isDarkMode' como nombres de campos globales.
-// - Si se agregan nuevos campos globales de tema, documentar aquí y en el store principal.
-// =============================================
+import { StateCreator } from 'zustand';
 
 // Static theme configurations - defined outside to prevent infinite loops
 const THEME_COLORS = {
@@ -75,36 +59,42 @@ const MASTERPIECE_BADGE_CONFIG = {
   }
 };
 
-export const themeSlice = (set, get) => ({
+export interface ThemeSlice {
+  theme: 'light' | 'dark';
+  isDarkMode: boolean;
+  toggleTheme: () => void;
+  setTheme: (newTheme: 'light' | 'dark') => void;
+  getThemeColors: () => typeof THEME_COLORS;
+  getMasterpieceBadgeConfig: () => typeof MASTERPIECE_BADGE_CONFIG;
+  getSpecialButtonLabel: (category: string, isActive: boolean) => string;
+}
+
+export const themeSlice: StateCreator<ThemeSlice> = (set, get) => ({
   theme: 'light',
   isDarkMode: false,
-  
-  // Cache static values to prevent infinite loops
   _themeColors: THEME_COLORS,
-  _masterpieceBadgeConfig: MASTERPIECE_BADGE_CONFIG,  toggleTheme: () => {
-    set((state) => {
+  _masterpieceBadgeConfig: MASTERPIECE_BADGE_CONFIG,
+  toggleTheme: () => {
+    set((state: ThemeSlice) => {
       const newIsDarkMode = !state.isDarkMode;
       return {
+        ...state,
         isDarkMode: newIsDarkMode,
-        theme: newIsDarkMode ? 'dark' : 'light'
+        theme: newIsDarkMode ? 'dark' : 'light',
       };
     });
   },
-
-  setTheme: (newTheme) => {
-    set({ theme: newTheme });
+  setTheme: (newTheme: 'light' | 'dark') => {
+    set((state: ThemeSlice) => ({ ...state, theme: newTheme, isDarkMode: newTheme === 'dark' }));
   },
-
   getThemeColors: () => THEME_COLORS,
-  
   getMasterpieceBadgeConfig: () => MASTERPIECE_BADGE_CONFIG,
-
-  getSpecialButtonLabel: (category, isActive) => {
-    const labels = {
+  getSpecialButtonLabel: (category: string, isActive: boolean) => {
+    const labels: Record<string, string> = {
       peliculas: isActive ? 'Solo Español' : 'Español & Internacional',
       podcast: isActive ? 'Solo Español' : 'Español & Inglés',
       documentales: isActive ? 'Solo Español' : 'Español & Inglés',
     };
     return labels[category] || 'Toggle';
   },
-});
+}); 

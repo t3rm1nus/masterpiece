@@ -3,7 +3,7 @@
 /**
  * Devuelve el título en el idioma actual o un fallback.
  */
-export function processTitle(title, lang = 'es') {
+export function processTitle(title: string | Record<string, string> | null | undefined, lang: string = 'es'): string {
   if (typeof title === 'object' && title !== null) {
     return title[lang] || title.es || title.en || 'Sin título';
   }
@@ -13,7 +13,7 @@ export function processTitle(title, lang = 'es') {
 /**
  * Devuelve la descripción en el idioma actual o un fallback.
  */
-export function processDescription(description, lang = 'es') {
+export function processDescription(description: string | Record<string, string> | null | undefined, lang: string = 'es'): string {
   if (typeof description === 'object' && description !== null) {
     return description[lang] || description.es || description.en || 'Sin descripción';
   }
@@ -23,7 +23,7 @@ export function processDescription(description, lang = 'es') {
 /**
  * Devuelve una imagen aleatoria para not found.
  */
-export function randomNotFoundImage() {
+export function randomNotFoundImage(): string {
   const images = [
     'notfound.webp',
     'notfound2.webp',
@@ -38,4 +38,4 @@ export function randomNotFoundImage() {
   ];
   const idx = Math.floor(Math.random() * images.length);
   return `/imagenes/notfound/${images[idx]}`;
-}
+} 
