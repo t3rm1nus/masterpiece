@@ -174,7 +174,7 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
           elevation={3}
           sx={{ 
             marginBottom: '16px',
-            backgroundColor: isMobile ? '#fff' : '#F5F5DC',
+            backgroundColor: '#F5F5DC',
             border: '2px solid #D4A574',
             borderRadius: '12px',
             position: 'relative',
@@ -201,7 +201,7 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
               <ArrowBackIcon />
             </Fab>
           )}
-          <CardContent sx={{ textAlign: 'center', padding: '24px' }}>
+          <CardContent sx={{ textAlign: 'center', padding: '24' }}>
             {/* Icono de café animado */}
             <Box 
               sx={{ 

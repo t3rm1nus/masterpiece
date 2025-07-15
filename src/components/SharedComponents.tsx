@@ -4,12 +4,20 @@
 // Optimizados para modularidad, performance y accesibilidad.
 // =============================================
 
-import React from 'react';
+import React, { ReactNode, ImgHTMLAttributes, CSSProperties } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { Box, Typography } from '@mui/material';
 
 // Componente de imagen optimizada
-export const OptimizedImage = ({ src, alt, sx = {}, loading = 'lazy', decoding = 'async', fallback, border = false, borderColor = '#eee', borderWidth = 2, ...props }) => (
+type OptimizedImageProps = ImgHTMLAttributes<HTMLImageElement> & {
+  sx?: CSSProperties;
+  fallback?: string;
+  border?: boolean;
+  borderColor?: string;
+  borderWidth?: number;
+};
+
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, sx = {}, loading = 'lazy', decoding = 'async', fallback, border = false, borderColor = '#eee', borderWidth = 2, ...props }) => (
   <Box
     sx={{
       display: 'inline-block',
@@ -28,7 +36,7 @@ export const OptimizedImage = ({ src, alt, sx = {}, loading = 'lazy', decoding =
       alt={alt}
       loading={loading}
       decoding={decoding}
-      onError={e => { if (fallback) e.target.src = fallback; }}
+      onError={e => { if (fallback) (e.target as HTMLImageElement).src = fallback; }}
       sx={{
         display: 'block',
         width: '100%',
@@ -42,8 +50,22 @@ export const OptimizedImage = ({ src, alt, sx = {}, loading = 'lazy', decoding =
   </Box>
 );
 
-// Componente del badge de obra maestra
-export const MasterpieceBadge = ({ config, tooltip, size = 56, sx = {}, ...props }) => {
+// Tipos para el badge de obra maestra
+interface MasterpieceBadgeConfig {
+  svg: { viewBox: string; fill?: string; xmlns?: string };
+  circle: { cx: number; cy: number; r: number; fill: string };
+  star: { d: string; fill: string };
+}
+
+interface MasterpieceBadgeProps {
+  config: MasterpieceBadgeConfig;
+  tooltip?: string;
+  size?: number;
+  sx?: CSSProperties;
+  [key: string]: any;
+}
+
+export const MasterpieceBadge: React.FC<MasterpieceBadgeProps> = ({ config, tooltip, size = 56, sx = {}, ...props }) => {
   const { getTranslation } = useLanguage();
   return (
     <Box
@@ -73,8 +95,19 @@ export const MasterpieceBadge = ({ config, tooltip, size = 56, sx = {}, ...props
   );
 };
 
-// Componente para mostrar categorías
-export const CategoryLabels = ({ category, subcategory, getCategoryTranslation, getSubcategoryTranslation, renderCategory, renderSubcategory, sx = {}, ...props }) => (
+// Tipos para etiquetas de categoría
+interface CategoryLabelsProps {
+  category: string;
+  subcategory?: string;
+  getCategoryTranslation: (cat: string) => string;
+  getSubcategoryTranslation: (subcat: string, cat: string) => string;
+  renderCategory?: (cat: string) => ReactNode;
+  renderSubcategory?: (subcat: string, cat: string) => ReactNode;
+  sx?: CSSProperties;
+  [key: string]: any;
+}
+
+export const CategoryLabels: React.FC<CategoryLabelsProps> = ({ category, subcategory, getCategoryTranslation, getSubcategoryTranslation, renderCategory, renderSubcategory, sx = {}, ...props }) => (
   <Box sx={{ textAlign: 'center', ...sx }} {...props}>
     {renderCategory
       ? renderCategory(category)
@@ -87,8 +120,19 @@ export const CategoryLabels = ({ category, subcategory, getCategoryTranslation, 
   </Box>
 );
 
-// Componente para vista "sin resultados"
-export const NoResults = ({ t, randomNotFoundImage, image, text, subtext, children, sx = {}, ...props }) => {
+// Tipos para NoResults
+interface NoResultsProps {
+  t?: any;
+  randomNotFoundImage?: () => string;
+  image?: string;
+  text?: string;
+  subtext?: string;
+  children?: ReactNode;
+  sx?: CSSProperties;
+  [key: string]: any;
+}
+
+export const NoResults: React.FC<NoResultsProps> = ({ t, randomNotFoundImage, image, text, subtext, children, sx = {}, ...props }) => {
   const { getTranslation } = useLanguage();
   const notFoundImageUrl = image || (randomNotFoundImage?.() || '/favicon.png');
   return (
@@ -104,4 +148,4 @@ export const NoResults = ({ t, randomNotFoundImage, image, text, subtext, childr
       {children}
     </Box>
   );
-};
+}; 
