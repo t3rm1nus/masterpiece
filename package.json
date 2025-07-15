@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "split-music": "node scripts/split-music-data.js",
     "regenerate-music": "node scripts/regenerate-music-chunks.js",
-    "generate-sitemap": "node scripts/generate-sitemap.mjs"
+    "generate-sitemap": "node scripts/generate-sitemap.mjs",
+    "vercel-build": "npm install --legacy-peer-deps && npm run build"
   },
   "dependencies": {
     "@capacitor/android": "^7.3.0",
