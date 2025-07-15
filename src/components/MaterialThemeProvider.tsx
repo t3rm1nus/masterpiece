@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, ReactNode } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useAppTheme } from '../store/useAppStore';
@@ -8,7 +8,11 @@ import { useAppTheme } from '../store/useAppStore';
 // Provider de tema Material UI. Optimizado para performance, soporte de temas dinámicos y experiencia visual consistente.
 // =============================================
 
-const MaterialThemeProvider = ({ children }) => {
+interface MaterialThemeProviderProps {
+  children: ReactNode;
+}
+
+const MaterialThemeProvider: React.FC<MaterialThemeProviderProps> = ({ children }) => {
   const { isDarkMode, theme: currentTheme } = useAppTheme();
   
   // Aplicar el tema al HTML para CSS customizado
@@ -16,14 +20,16 @@ const MaterialThemeProvider = ({ children }) => {
     document.documentElement.setAttribute('data-theme', currentTheme);
   }, [currentTheme]);
   
-  const theme = createTheme({    palette: {
+  const theme = createTheme({
+    palette: {
       mode: isDarkMode ? 'dark' : 'light',
       primary: {
         main: '#0078d4',
       },
       secondary: {
         main: '#ffc439',
-      },      background: {
+      },
+      background: {
         default: isDarkMode ? '#1e1e1e' : '#ffffff',
         paper: isDarkMode ? '#2d2d2d' : '#ffffff',
       },
@@ -61,7 +67,8 @@ const MaterialThemeProvider = ({ children }) => {
         styleOverrides: {
           root: {
             borderRadius: '8px',
-            margin: '2px 8px',            '&:hover': {
+            margin: '2px 8px',
+            '&:hover': {
               backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.04)',
             },
           },
@@ -86,4 +93,4 @@ const MaterialThemeProvider = ({ children }) => {
   );
 };
 
-export default MaterialThemeProvider;
+export default MaterialThemeProvider; 
