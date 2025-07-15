@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "split-music": "node scripts/split-music-data.js",
-    "regenerate-music": "node scripts/regenerate-music-chunks.js"
+    "regenerate-music": "node scripts/regenerate-music-chunks.js",
+    "generate-sitemap": "node scripts/generate-sitemap.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^7.3.0",
@@ -23,6 +24,7 @@
     "framer-motion": "^12.23.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^7.6.3",
     "react-transition-group": "^4.4.5",
     "zustand": "^5.0.5"

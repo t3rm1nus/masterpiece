@@ -4,6 +4,7 @@ import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 import { applyHowToDownloadScrollFixForIPhone, cleanupScrollFixesForIPhone } from '../utils/iPhoneScrollFix';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
+import { Helmet } from 'react-helmet-async';
 
 interface HowToDownloadProps {
   onAnimationEnd?: () => void;
@@ -97,74 +98,47 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
     }
   }, [onAnimationEnd]);
 
+  const url = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.com/como-descargar';
+
   return (
-    <div style={{ marginTop: '70px' }}>
-      <Container 
-        maxWidth="md" 
-        sx={{ 
-          padding: { xs: '16px', sm: '24px' },
-          paddingTop: isMobile ? { xs: '36px', sm: '80px', md: '50px' } : '40px',
-          paddingBottom: '40px',
-          backgroundColor: isMobile ? '#fff' : '#fff',
-          minHeight: '100vh',
-          position: 'relative',
-          zIndex: isMobile ? 1000 : 1200, // Páginas descargar/donaciones - por debajo del AppBar (1200) en móvil
-          overflow: 'visible',
-          WebkitOverflowScrolling: 'touch'
-        }}
-      >
-        {/* Botón volver para móviles */}
-        {isMobile && (
-          <Fab
-            color="primary"
-            aria-label="volver"
-            onClick={handleBack}
-            sx={{
-              position: 'fixed',
-              top: '73px',
-              left: 16,
-              zIndex: 1402,
-              backgroundColor: theme.palette.primary.main,
-              '&:hover': {
-                backgroundColor: theme.palette.primary.dark,
-              }
-            }}
-          >
-            <ArrowBackIcon />
-          </Fab>
-        )}
-        <Paper elevation={3} sx={{
-          width: '100%',
-          maxWidth: { xs: 480, md: '720px', lg: '900px' },
-          margin: '0 auto',
-          padding: { xs: 2, sm: 3, md: 4 },
-          borderRadius: 3,
-          boxSizing: 'border-box',
-          position: 'relative',
-          paddingTop: { xs: 2, md: 4 },
-          pb: { xs: 3, md: 5 },
-          mb: { xs: 3, md: 5 },
-          overflow: 'visible',
-          WebkitOverflowScrolling: 'touch',
-          mt: { xs: 0, md: 0 },
-          overflowY: { xs: 'auto', md: 'visible' },
-          height: { xs: 'auto', md: 'auto' },
-          maxHeight: { xs: 'none', md: 'none' },
-          backgroundColor: isMobile ? '#fff' : '#fff',
-        }}
+    <>
+      <Helmet>
+        <title>¿Cómo descargar? | Masterpiece</title>
+        <meta name="description" content="Instrucciones para descargar contenido de Masterpiece de forma segura y sencilla." />
+        <meta property="og:title" content="¿Cómo descargar? | Masterpiece" />
+        <meta property="og:description" content="Instrucciones para descargar contenido de Masterpiece de forma segura y sencilla." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/favicon.png" />
+        <meta property="og:url" content={url} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href={url} />
+      </Helmet>
+      <div style={{ marginTop: '70px' }}>
+        <Container 
+          maxWidth="md" 
+          sx={{ 
+            padding: { xs: '16px', sm: '24px' },
+            paddingTop: isMobile ? { xs: '36px', sm: '80px', md: '50px' } : '40px',
+            paddingBottom: '40px',
+            backgroundColor: isMobile ? '#fff' : '#fff',
+            minHeight: '100vh',
+            position: 'relative',
+            zIndex: isMobile ? 1000 : 1200, // Páginas descargar/donaciones - por debajo del AppBar (1200) en móvil
+            overflow: 'visible',
+            WebkitOverflowScrolling: 'touch'
+          }}
         >
-          {/* FAB volver dentro del Paper para desktop */}
-          {!isMobile && (
+          {/* Botón volver para móviles */}
+          {isMobile && (
             <Fab
               color="primary"
               aria-label="volver"
               onClick={handleBack}
               sx={{
-                position: 'absolute',
-                top: 18,
-                left: 18,
-                zIndex: 50,
-                boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+                position: 'fixed',
+                top: '73px',
+                left: 16,
+                zIndex: 1402,
                 backgroundColor: theme.palette.primary.main,
                 '&:hover': {
                   backgroundColor: theme.palette.primary.dark,
@@ -174,89 +148,131 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
               <ArrowBackIcon />
             </Fab>
           )}
-          {/* Imagen Pirate Bay dentro del card */}
-          <Box sx={{
+          <Paper elevation={3} sx={{
             width: '100%',
-            mb: 2,
-            borderRadius: 0,
-            overflow: 'hidden',
-            boxShadow: 0,
-          }}>
-            <img
-              src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate.jpg"
-              alt="Pirate Bay Logo"
-              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
-            />
-          </Box>
-          <Typography variant="h4" align="center" gutterBottom sx={{ 
-            fontWeight: 700, mb: 3, mt: 3,
-            fontSize: { xs: '1.4rem', sm: '2rem', md: '2.2rem', lg: '2.4rem' }
-          }}>
-            <span style={{display:'inline-flex',alignItems:'center',gap:8}}>
-              {texts.title[lang]}
-            </span>
-          </Typography>
-          <Typography variant="body1" sx={{ mb: 2 }} dangerouslySetInnerHTML={{__html: texts.intro[lang]}} />
-          <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step1[lang]}</Typography>
-          <Typography variant="body1" sx={{ mb: 1 }}>{texts.step1desc[lang]}</Typography>
-          <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: 2, mb: 2 }}>
-            <Button variant="contained" color="primary" href="https://transmissionbt.com/download" target="_blank" sx={{ fontWeight: 600, mb: isMobile ? 1 : 0, '&:hover': { color: '#111' } }}>
-              Transmission
-            </Button>
-            <Button variant="contained" color="primary" href="https://www.qbittorrent.org/download" target="_blank" sx={{ fontWeight: 600, mb: isMobile ? 1 : 0, '&:hover': { color: '#111' } }}>
-              qBittorrent
-            </Button>
-          </Box>
-          <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step2[lang]}</Typography>
-          <Typography variant="body1" sx={{ mb: 2 }}>{texts.step2desc[lang]}</Typography>
-          <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', mb: 2 }}>
-            <Button
-              variant="contained"
-              color="primary"
-              href="https://piratebayproxy.info/"
-              target="_blank"
-              sx={{ fontWeight: 600, mb: 0, minWidth: 'unset', width: 'auto', px: 2, py: 1, fontSize: '1rem', '&:hover': { color: '#111' } }}
-            >
-              {texts.piratebay[lang]}
-            </Button>
-          </Box>
-          <Box sx={{ width: { xs: '80%', sm: '60%', md: '50%' }, mx: 'auto', mb: 2, borderRadius: 2, overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
-            <img
-              src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate1.jpg"
-              alt="Ejemplo Pirate Bay"
-              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
-            />
-          </Box>
-          <Typography variant="body2" color="warning.main" sx={{ fontWeight: 600, mb: 2 }}>
-            {texts.warning[lang]}
-          </Typography>
-          <Typography variant="body1" sx={{ mb: 2 }}>
-            {lang === 'es' ? 'Una vez seleccionado lo que quieres bajar, haz click sobre el icono del imán y se abrirá automáticamente tu Transmission o qBittorrent. Dale a aceptar para empezar la descarga y...' : 'Once you have selected what you want to download, click the magnet icon and your Transmission or qBittorrent will open automatically. Click accept to start the download and...'}
-          </Typography>
-          <Box sx={{ width: '100%', mb: 2, borderRadius: 2, overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
-            <img
-              src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate2.jpg"
-              alt="Ejemplo Pirate Bay 2"
-              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
-            />
-          </Box>
-          <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step3[lang]}</Typography>
-          <Typography variant="body1" sx={{ mb: 2 }}>{texts.step3desc[lang]}</Typography>
-          <Box sx={{ width: { xs: '80%', sm: '60%', md: '40%' }, mx: 'auto', mb: 3, display: 'flex', justifyContent: 'center' }}>
-            <img
-              src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/magic.gif"
-              alt="Magia torrent"
-              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
-            />
-          </Box>
-          <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.vpn[lang]}</Typography>
-          <Typography variant="body1" sx={{ mb: 2 }}>{texts.vpndesc[lang]}</Typography>
-          <Typography variant="body1" sx={{ mt: 6, fontWeight: 600, textAlign: 'center' }}>
-            {texts.end[lang]}
-          </Typography>
-        </Paper>
-      </Container>
-    </div>
+            maxWidth: { xs: 480, md: '720px', lg: '900px' },
+            margin: '0 auto',
+            padding: { xs: 2, sm: 3, md: 4 },
+            borderRadius: 3,
+            boxSizing: 'border-box',
+            position: 'relative',
+            paddingTop: { xs: 2, md: 4 },
+            pb: { xs: 3, md: 5 },
+            mb: { xs: 3, md: 5 },
+            overflow: 'visible',
+            WebkitOverflowScrolling: 'touch',
+            mt: { xs: 0, md: 0 },
+            overflowY: { xs: 'auto', md: 'visible' },
+            height: { xs: 'auto', md: 'auto' },
+            maxHeight: { xs: 'none', md: 'none' },
+            backgroundColor: isMobile ? '#fff' : '#fff',
+          }}
+          >
+            {/* FAB volver dentro del Paper para desktop */}
+            {!isMobile && (
+              <Fab
+                color="primary"
+                aria-label="volver"
+                onClick={handleBack}
+                sx={{
+                  position: 'absolute',
+                  top: 18,
+                  left: 18,
+                  zIndex: 50,
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+                  backgroundColor: theme.palette.primary.main,
+                  '&:hover': {
+                    backgroundColor: theme.palette.primary.dark,
+                  }
+                }}
+              >
+                <ArrowBackIcon />
+              </Fab>
+            )}
+            {/* Imagen Pirate Bay dentro del card */}
+            <Box sx={{
+              width: '100%',
+              mb: 2,
+              borderRadius: 0,
+              overflow: 'hidden',
+              boxShadow: 0,
+            }}>
+              <img
+                src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate.jpg"
+                alt="Pirate Bay Logo"
+                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+              />
+            </Box>
+            <Typography variant="h4" align="center" gutterBottom sx={{ 
+              fontWeight: 700, mb: 3, mt: 3,
+              fontSize: { xs: '1.4rem', sm: '2rem', md: '2.2rem', lg: '2.4rem' }
+            }}>
+              <span style={{display:'inline-flex',alignItems:'center',gap:8}}>
+                {texts.title[lang]}
+              </span>
+            </Typography>
+            <Typography variant="body1" sx={{ mb: 2 }} dangerouslySetInnerHTML={{__html: texts.intro[lang]}} />
+            <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step1[lang]}</Typography>
+            <Typography variant="body1" sx={{ mb: 1 }}>{texts.step1desc[lang]}</Typography>
+            <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: 2, mb: 2 }}>
+              <Button variant="contained" color="primary" href="https://transmissionbt.com/download" target="_blank" sx={{ fontWeight: 600, mb: isMobile ? 1 : 0, '&:hover': { color: '#111' } }}>
+                Transmission
+              </Button>
+              <Button variant="contained" color="primary" href="https://www.qbittorrent.org/download" target="_blank" sx={{ fontWeight: 600, mb: isMobile ? 1 : 0, '&:hover': { color: '#111' } }}>
+                qBittorrent
+              </Button>
+            </Box>
+            <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step2[lang]}</Typography>
+            <Typography variant="body1" sx={{ mb: 2 }}>{texts.step2desc[lang]}</Typography>
+            <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', mb: 2 }}>
+              <Button
+                variant="contained"
+                color="primary"
+                href="https://piratebayproxy.info/"
+                target="_blank"
+                sx={{ fontWeight: 600, mb: 0, minWidth: 'unset', width: 'auto', px: 2, py: 1, fontSize: '1rem', '&:hover': { color: '#111' } }}
+              >
+                {texts.piratebay[lang]}
+              </Button>
+            </Box>
+            <Box sx={{ width: { xs: '80%', sm: '60%', md: '50%' }, mx: 'auto', mb: 2, borderRadius: 2, overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
+              <img
+                src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate1.jpg"
+                alt="Ejemplo Pirate Bay"
+                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+              />
+            </Box>
+            <Typography variant="body2" color="warning.main" sx={{ fontWeight: 600, mb: 2 }}>
+              {texts.warning[lang]}
+            </Typography>
+            <Typography variant="body1" sx={{ mb: 2 }}>
+              {lang === 'es' ? 'Una vez seleccionado lo que quieres bajar, haz click sobre el icono del imán y se abrirá automáticamente tu Transmission o qBittorrent. Dale a aceptar para empezar la descarga y...' : 'Once you have selected what you want to download, click the magnet icon and your Transmission or qBittorrent will open automatically. Click accept to start the download and...'}
+            </Typography>
+            <Box sx={{ width: '100%', mb: 2, borderRadius: 2, overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
+              <img
+                src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate2.jpg"
+                alt="Ejemplo Pirate Bay 2"
+                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+              />
+            </Box>
+            <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step3[lang]}</Typography>
+            <Typography variant="body1" sx={{ mb: 2 }}>{texts.step3desc[lang]}</Typography>
+            <Box sx={{ width: { xs: '80%', sm: '60%', md: '40%' }, mx: 'auto', mb: 3, display: 'flex', justifyContent: 'center' }}>
+              <img
+                src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/magic.gif"
+                alt="Magia torrent"
+                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+              />
+            </Box>
+            <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.vpn[lang]}</Typography>
+            <Typography variant="body1" sx={{ mb: 2 }}>{texts.vpndesc[lang]}</Typography>
+            <Typography variant="body1" sx={{ mt: 6, fontWeight: 600, textAlign: 'center' }}>
+              {texts.end[lang]}
+            </Typography>
+          </Paper>
+        </Container>
+      </div>
+    </>
   );
 };
 

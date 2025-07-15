@@ -28,6 +28,7 @@ import {
 import UiCard from './ui/UiCard';
 import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
+import { Helmet } from 'react-helmet-async';
 
 interface MaterialCoffeePageProps {
   onAnimationEnd?: () => void;
@@ -118,7 +119,21 @@ const MaterialCoffeePage: React.FC<MaterialCoffeePageProps> = ({ onAnimationEnd 
     }
   };
 
+  const url = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.com/donaciones';
+
   return (
+    <>
+      <Helmet>
+        <title>Invítame a un café | Masterpiece</title>
+        <meta name="description" content="Apoya el proyecto Masterpiece invitándome a un café. ¡Gracias por tu colaboración!" />
+        <meta property="og:title" content="Invítame a un café | Masterpiece" />
+        <meta property="og:description" content="Apoya el proyecto Masterpiece invitándome a un café. ¡Gracias por tu colaboración!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/favicon.png" />
+        <meta property="og:url" content={url} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href={url} />
+      </Helmet>
       <div>
         <Container 
           maxWidth="md" 
@@ -406,6 +421,7 @@ const MaterialCoffeePage: React.FC<MaterialCoffeePageProps> = ({ onAnimationEnd 
         </UiCard>
       </Container>
         </div>
+    </>
   );
 };
 

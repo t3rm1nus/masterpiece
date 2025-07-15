@@ -5,6 +5,7 @@ import MaterialThemeProvider from './components/MaterialThemeProvider';
 import AppContent from './components/AppContent';
 import ErrorDisplay from './components/ErrorDisplay';
 import { StorageMonitor, useStorageErrorHandler } from './components/StorageMonitor';
+import { HelmetProvider } from 'react-helmet-async';
 
 const App: React.FC = () => {
   // Hook para manejar errores de storage globalmente
@@ -20,16 +21,18 @@ const App: React.FC = () => {
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
   
   return (
-    <LanguageProvider>
-      <MaterialThemeProvider>
-        <div className="App" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
-          <AppContent />
-          <ErrorDisplay />
-          {/* Monitor de storage, especialmente útil en iOS */}
-          <StorageMonitor enabled={isDevelopment || isIOS} />
-        </div>
-      </MaterialThemeProvider>
-    </LanguageProvider>
+    <HelmetProvider>
+      <LanguageProvider>
+        <MaterialThemeProvider>
+          <div className="App" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
+            <AppContent />
+            <ErrorDisplay />
+            {/* Monitor de storage, especialmente útil en iOS */}
+            <StorageMonitor enabled={isDevelopment || isIOS} />
+          </div>
+        </MaterialThemeProvider>
+      </LanguageProvider>
+    </HelmetProvider>
   );
 };
 

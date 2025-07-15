@@ -13,6 +13,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { findItemByGlobalId } from '../utils/appUtils';
 import { CircularProgress } from '@mui/material';
 import DesktopItemDetail from './shared/DesktopItemDetail';
+import { Helmet } from 'react-helmet-async';
 
 // Material UI imports (solo para mobile)
 import {
@@ -438,6 +439,87 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
   // Determinar la categoría real del item para color y chip
   const realCategory = selectedItem?.category || selectedCategory;
 
+  const item = props.item || {};
+  const itemTitle = item.title || item.name || 'Detalle - Masterpiece';
+  const itemDescription = item.description || 'Descubre detalles de esta obra recomendada en Masterpiece.';
+  const itemImage = item.image || '/favicon.png';
+  const itemUrl = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.com/';
+
+  const getJsonLd = () => {
+    const base = {
+      '@context': 'https://schema.org',
+      name: itemTitle,
+      description: itemDescription,
+      image: itemImage,
+      url: itemUrl,
+      inLanguage: 'es',
+      publisher: {
+        '@type': 'Organization',
+        name: 'Masterpiece',
+        url: 'https://masterpiece.com/'
+      }
+    };
+    switch ((item.category || '').toLowerCase()) {
+      case 'movies':
+      case 'documentales':
+        return {
+          ...base,
+          '@type': 'Movie',
+          datePublished: item.year || undefined,
+          director: item.director ? { '@type': 'Person', name: item.director } : undefined,
+          actor: item.actors ? item.actors.map(a => ({ '@type': 'Person', name: a })) : undefined
+        };
+      case 'books':
+        return {
+          ...base,
+          '@type': 'Book',
+          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+          datePublished: item.year || undefined,
+          isbn: item.isbn || undefined
+        };
+      case 'comics':
+        return {
+          ...base,
+          '@type': 'Book',
+          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+          datePublished: item.year || undefined
+        };
+      case 'music':
+        return {
+          ...base,
+          '@type': 'MusicAlbum',
+          byArtist: item.author ? { '@type': 'MusicGroup', name: item.author } : undefined,
+          datePublished: item.year || undefined
+        };
+      case 'videogames':
+        return {
+          ...base,
+          '@type': 'VideoGame',
+          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+          datePublished: item.year || undefined
+        };
+      case 'juegos_de_mesa':
+        return {
+          ...base,
+          '@type': 'Game',
+          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+          datePublished: item.year || undefined
+        };
+      case 'podcasts':
+        return {
+          ...base,
+          '@type': 'PodcastSeries',
+          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+          datePublished: item.year || undefined
+        };
+      default:
+        return {
+          ...base,
+          '@type': 'CreativeWork'
+        };
+    }
+  };
+
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
     // Restaurado: desmontaje inmediato, sin animaciones de opacidad/escala ni isVisible
@@ -460,6 +542,20 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           isolation: 'isolate',
         }}
       >
+        <Helmet>
+          <title>{itemTitle} | Masterpiece</title>
+          <meta name="description" content={itemDescription} />
+          <meta property="og:title" content={itemTitle + ' | Masterpiece'} />
+          <meta property="og:description" content={itemDescription} />
+          <meta property="og:type" content="article" />
+          <meta property="og:image" content={itemImage} />
+          <meta property="og:url" content={itemUrl} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <link rel="canonical" href={itemUrl} />
+          <script type="application/ld+json">
+            {JSON.stringify(getJsonLd())}
+          </script>
+        </Helmet>
         {safeItem && (
           <MobileItemDetail
             selectedItem={safeItem}
@@ -518,6 +614,20 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           transition: 'opacity 0.3s ease-in-out, transform 0.3s ease-out',
         }}
       >
+        <Helmet>
+          <title>{itemTitle} | Masterpiece</title>
+          <meta name="description" content={itemDescription} />
+          <meta property="og:title" content={itemTitle + ' | Masterpiece'} />
+          <meta property="og:description" content={itemDescription} />
+          <meta property="og:type" content="article" />
+          <meta property="og:image" content={itemImage} />
+          <meta property="og:url" content={itemUrl} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <link rel="canonical" href={itemUrl} />
+          <script type="application/ld+json">
+            {JSON.stringify(getJsonLd())}
+          </script>
+        </Helmet>
         <div
           style={{
             ...styles.desktopWrapper,
