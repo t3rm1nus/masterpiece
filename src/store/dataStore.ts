@@ -34,9 +34,12 @@ export interface DataSlice {
   filteredItems: any[];
   selectedCategory: string | null;
   activeSubcategory: string | null;
+  selectedSubcategory?: string | null;
   title: string;
   isDataInitialized: boolean;
   allData: Record<string, any[]>;
+  mobilePage: number;
+  desktopPage: number;
   
   // Funciones
   updateWithRealData: (realData: RealData) => void;
@@ -67,6 +70,7 @@ export interface DataSlice {
   setActiveLanguage: (lang: string) => void;
   resetAllFilters: () => void;
   updateFilteredItems: (items: any[]) => void;
+  resetPagination: () => void;
 }
 
 // Migration helper for persisted state
@@ -85,9 +89,12 @@ export const createDataSlice = (set: any, get: any): DataSlice => ({
   filteredItems: [],
   selectedCategory: null,
   activeSubcategory: null,
+  selectedSubcategory: null,
   title: 'Recomendaciones diarias',
   isDataInitialized: false,
   allData: {},
+  mobilePage: 1,
+  desktopPage: 1,
   updateWithRealData: (realData: RealData) => {
     const catSeries = realData.categories?.find(cat => cat.id === 'series');
 
@@ -241,4 +248,8 @@ export const createDataSlice = (set: any, get: any): DataSlice => ({
     selectedItem: null
   }),
   updateFilteredItems: (items: any[]) => set({ filteredItems: items }),
+  resetPagination: () => set({
+    mobilePage: 1,
+    desktopPage: 1,
+  }),
 }); 
