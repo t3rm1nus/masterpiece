@@ -20,6 +20,8 @@ interface UiButtonProps extends Omit<ButtonProps, 'variant' | 'color' | 'size'> 
   icon?: React.ReactNode;
   sx?: SxProps<Theme>;
   className?: string;
+  target?: string;
+  rel?: string;
 }
 
 const variantStyles: Record<string, SxProps<Theme>> = {

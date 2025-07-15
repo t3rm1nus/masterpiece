@@ -292,7 +292,7 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
                     icon={<CategoryIcon sx={{ mr: 0.5, fontSize: { xs: '1rem', sm: '1.2rem' } }} />}
                     sx={{
                       backgroundColor: getCategoryColor(selectedItem.category),
-                      color: 'white',
+                      color: 'black',
                       ...chipSx
                     }}
                   />
@@ -305,7 +305,7 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
                     icon={<TranslateIcon sx={{ mr: 0.5, fontSize: { xs: '1rem', sm: '1.2rem' } }} />}
                     sx={{
                       backgroundColor: getCategoryColor(selectedItem.category),
-                      color: 'white',
+                      color: 'black',
                       ...chipSx
                     }}
                   />
