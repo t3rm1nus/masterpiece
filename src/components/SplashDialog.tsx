@@ -1,10 +1,9 @@
-import React, { useRef, useEffect, useState, ReactNode, MutableRefObject } from 'react';
-import Dialog from '@mui/material/Dialog';
-import DialogContent from '@mui/material/DialogContent';
-import Paper from '@mui/material/Paper';
+import React, { useRef, useEffect, useState, ReactNode, RefObject } from 'react';
+import Dialog, { DialogProps } from '@mui/material/Dialog';
+import DialogContent, { DialogContentProps } from '@mui/material/DialogContent';
+import Paper, { PaperProps } from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { useLanguage } from '../LanguageContext';
-import { SxProps, Theme } from '@mui/material/styles';
 
 // =============================================
 // SplashDialog: Modal/diálogo de splash animado y accesible
@@ -14,22 +13,22 @@ import { SxProps, Theme } from '@mui/material/styles';
 export interface SplashDialogProps {
   open: boolean;
   onClose?: () => void;
-  title?: string;
+  title?: ReactNode;
   content?: ReactNode;
   actions?: ReactNode;
   audio?: string;
   dark?: boolean;
   sx?: {
-    paper?: SxProps<Theme>;
+    paper?: React.CSSProperties;
     paperStyle?: React.CSSProperties;
-    backdrop?: SxProps<Theme>;
-    dialog?: SxProps<Theme>;
-    content?: SxProps<Theme>;
+    backdrop?: React.CSSProperties;
+    dialog?: React.CSSProperties;
+    content?: React.CSSProperties;
     contentStyle?: React.CSSProperties;
   };
-  PaperProps?: Partial<React.ComponentProps<typeof Paper>>;
-  DialogContentProps?: Partial<React.ComponentProps<typeof DialogContent>>;
-  audioRef?: MutableRefObject<HTMLAudioElement | null>;
+  PaperProps?: Partial<PaperProps>;
+  DialogContentProps?: Partial<DialogContentProps>;
+  audioRef?: RefObject<HTMLAudioElement>;
 }
 
 const SplashDialog: React.FC<SplashDialogProps> = ({
@@ -49,9 +48,9 @@ const SplashDialog: React.FC<SplashDialogProps> = ({
   const [animationClass, setAnimationClass] = useState('');
   const [visible, setVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
+  
   // Usar audioRef externo si se proporciona, sino crear uno interno
-  const internalAudioRef = useRef<HTMLAudioElement | null>(null);
+  const internalAudioRef = useRef<HTMLAudioElement>(null);
   const audioRef = externalAudioRef || internalAudioRef;
 
   // Detecta si es móvil (SSR safe)
@@ -70,12 +69,13 @@ const SplashDialog: React.FC<SplashDialogProps> = ({
     if (audioRef.current) {
       audioRef.current.volume = 0.75;
     }
-  }, [audio, audioRef]);
+  }, [audio]);
 
   // Control de reproducción - mejorado para iPhone
   useEffect(() => {
     if (open && audioRef.current) {
       audioRef.current.currentTime = 0;
+      
       if (isIPhone) {
         // Para iPhone: necesita interacción del usuario primero
         const playForIPhone = async () => {
@@ -105,7 +105,7 @@ const SplashDialog: React.FC<SplashDialogProps> = ({
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
-  }, [open, isIPhone, audioRef]);
+  }, [open, isIPhone]);
 
   // Animación de entrada/salida SIN timeout ni animación de salida
   useEffect(() => {
@@ -124,23 +124,24 @@ const SplashDialog: React.FC<SplashDialogProps> = ({
   // Elimina la clase y el id de la imagen splash, y aplica la animación directamente con sx
   function addIdToImg(element: ReactNode): ReactNode {
     if (!React.isValidElement(element)) return element;
-    // Forzar el tipo para acceder a props.style y props.children
-    const el = element as React.ReactElement<{ style?: React.CSSProperties; children?: ReactNode }>;
-    if ((el.type as any) === 'img') {
-      return React.cloneElement(el, {
+    // Type guard para acceder a props.style y props.children
+    const hasStyle = (el: any): el is React.ReactElement<{ style?: React.CSSProperties }> => 'style' in (el.props || {});
+    const hasChildren = (el: any): el is React.ReactElement<{ children?: ReactNode }> => 'children' in (el.props || {});
+    if (element.type === 'img' && hasStyle(element)) {
+      return React.cloneElement(element, {
         style: {
-          ...el.props.style,
+          ...element.props.style,
           ...splashImageStyle,
           ...(animationClass === 'splash-animate-in' && splashInStyle),
           ...(animationClass === 'splash-animate-out' && splashOutStyle),
         }
       });
     }
-    if (el.props && el.props.children) {
-      const children = React.Children.map(el.props.children, addIdToImg);
-      return React.cloneElement(el, {}, children);
+    if (hasChildren(element) && element.props.children) {
+      const children = React.Children.map(element.props.children, addIdToImg);
+      return React.cloneElement(element, {}, children);
     }
-    return el;
+    return element;
   }
 
   // Animaciones CSS-in-JS para splash
@@ -314,10 +315,10 @@ const SplashDialog: React.FC<SplashDialogProps> = ({
                   id="splash-image"
                   src="/imagenes/splash_image.png"
                   alt={getTranslation('ui.alt.splash', 'Splash')}
-                  onError={(e) => {
+                  onError={(e: any) => {
                     // Si falla la imagen principal, usar una imagen de respaldo
-                    if ((e.target as HTMLImageElement).src !== '/favicon.png') {
-                      (e.target as HTMLImageElement).src = '/favicon.png';
+                    if (e.target.src !== '/favicon.png') {
+                      e.target.src = '/favicon.png';
                     }
                   }}
                   style={{
