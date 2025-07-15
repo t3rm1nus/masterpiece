@@ -140,7 +140,7 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
             padding: { xs: '16px', sm: '24px' },
             paddingTop: isMobile ? { xs: '36px', sm: '80px', md: '50px' } : '40px', // Reducido a la mitad en desktop
             paddingBottom: '40px',
-            backgroundColor: isMobile ? '#fafafa' : '#fff',
+            backgroundColor: isMobile ? '#fff' : '#fff',
             minHeight: '100vh',
             position: 'relative',
             zIndex: isMobile ? 1000 : 1200, // Páginas descargar/donaciones - por debajo del AppBar (1200) en móvil
@@ -174,7 +174,7 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
           elevation={3}
           sx={{ 
             marginBottom: '16px',
-            backgroundColor: '#F5F5DC',
+            backgroundColor: isMobile ? '#fff' : '#F5F5DC',
             border: '2px solid #D4A574',
             borderRadius: '12px',
             position: 'relative',
@@ -358,7 +358,7 @@ const MaterialCoffeePage = ({ onAnimationEnd }) => {
               elevation={2}
               sx={{ 
                 padding: '20px',
-                backgroundColor: '#ffffff',
+                backgroundColor: isMobile ? '#fff' : '#ffffff',
                 borderRadius: '8px',
                 border: '1px solid #d0d0d0',
                 width: '100%',

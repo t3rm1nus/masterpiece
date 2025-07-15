@@ -105,7 +105,7 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
           padding: { xs: '16px', sm: '24px' },
           paddingTop: isMobile ? { xs: '36px', sm: '80px', md: '50px' } : '40px',
           paddingBottom: '40px',
-          backgroundColor: isMobile ? '#fafafa' : '#fff',
+          backgroundColor: isMobile ? '#fff' : '#fff',
           minHeight: '100vh',
           position: 'relative',
           zIndex: isMobile ? 1000 : 1200, // Páginas descargar/donaciones - por debajo del AppBar (1200) en móvil
@@ -150,6 +150,7 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
           overflowY: { xs: 'auto', md: 'visible' },
           height: { xs: 'auto', md: 'auto' },
           maxHeight: { xs: 'none', md: 'none' },
+          backgroundColor: isMobile ? '#fff' : '#fff',
         }}
         >
           {/* FAB volver dentro del Paper para desktop */}

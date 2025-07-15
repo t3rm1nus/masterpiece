@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+import React, { lazy, FC } from 'react';
 
 // =============================================
 // LazyComponents: Wrapper de lazy loading para componentes pesados
@@ -8,10 +8,14 @@ import { lazy } from 'react';
 // Lazy loading de componentes pesados
 export const LazyCoffeePage = lazy(() => import('./CoffeePage'));
 export const LazyRecommendationsList = lazy(() => import('./RecommendationsList'));
-export const LazyHowToDownload = lazy(() => import('../pages/HowToDownload.tsx'));
+export const LazyHowToDownload = lazy(() => import('../pages/HowToDownload'));
 
 // Componente de loading fallback
-export const LoadingFallback = ({ message = "Cargando..." }) => (
+interface LoadingFallbackProps {
+  message?: string;
+}
+
+export const LoadingFallback: FC<LoadingFallbackProps> = ({ message = "Cargando..." }) => (
   <div style={{
     display: 'flex',
     justifyContent: 'center',
@@ -39,12 +43,15 @@ export const LoadingFallback = ({ message = "Cargando..." }) => (
   </div>
 );
 
-// Agregar estilos CSS para la animación de loading
-const styleTag = document.createElement('style');
-styleTag.textContent = `
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-`;
-document.head.appendChild(styleTag);
+// Agregar estilos CSS para la animación de loading solo una vez
+if (typeof document !== 'undefined' && !document.getElementById('lazycomponents-spin-style')) {
+  const styleTag = document.createElement('style');
+  styleTag.id = 'lazycomponents-spin-style';
+  styleTag.textContent = `
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  `;
+  document.head.appendChild(styleTag);
+} 
