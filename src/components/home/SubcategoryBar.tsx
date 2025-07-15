@@ -5,6 +5,7 @@ import { getCategoryColor, getCategoryGradient } from '../../utils/categoryPalet
 interface Subcategory {
   sub: string;
   order?: number;
+  label?: string;
 }
 
 interface SubcategoryBarProps {
@@ -68,6 +69,9 @@ const SubcategoryBar: React.FC<SubcategoryBarProps> = ({
   visible = true, 
   ...props 
 }) => {
+  // Log para depuración
+  // eslint-disable-next-line no-console
+  console.log('[SubcategoryBar] categorySubcategories:', categorySubcategories);
   if (!visible || !selectedCategory) return null;
   
   if (selectedCategory !== 'documentales') {
@@ -76,11 +80,14 @@ const SubcategoryBar: React.FC<SubcategoryBarProps> = ({
         {Array.isArray(categorySubcategories) && categorySubcategories.length > 0 && (
           categorySubcategories
             .sort((a, b) => (a.order || 0) - (b.order || 0))
-            .map(({ sub }, idx) => {
+            .map(({ sub, label }, idx) => {
               const isActive = activeSubcategory === sub;
               if (renderChip) {
-                return renderChip(sub, isActive, idx);
+                return renderChip(label || sub, isActive, idx); // <-- Pasar label traducido al renderChip
               }
+              // Log para depuración en el render del botón
+              // eslint-disable-next-line no-console
+              console.log('[SubcategoryBar][Button]', { sub, label });
               return (
                 <UiButton
                   key={`subcat-${idx}-${typeof sub === 'string' ? sub : 'sub'}`}
@@ -102,12 +109,9 @@ const SubcategoryBar: React.FC<SubcategoryBarProps> = ({
                     minWidth: 80,
                     transition: 'all 0.2s',
                     boxShadow: isActive ? '0 2px 8px 0 rgba(0,0,0,0.08)' : 'none',
-                    // El degradado ya está en el estado normal
                   }}
                 >
-                  {typeof t?.subcategories?.[selectedCategory]?.[sub] === 'string' 
-                    ? t.subcategories[selectedCategory][sub] 
-                    : (typeof sub === 'string' ? sub : 'Subcategory')}
+                  {label}
                 </UiButton>
               );
             })

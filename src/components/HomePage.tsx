@@ -349,7 +349,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         const normalized = normalizeSubcategoryInternal(sub);
         return {
           sub: normalized,
-          label: getSubcategoryLabel(normalized, 'boardgames', t, lang),
+          label: getSubcategoryLabel(normalized, 'boardgames', t),
           ...rest
         };
       });
@@ -358,9 +358,21 @@ const HomePageComponent: React.FC<HomePageProps> = ({
     if (Array.isArray(subs)) {
       return subs.map((s: any) => {
         const normalized = typeof s === 'string' ? normalizeSubcategoryInternal(s) : s.sub;
+        const label = getSubcategoryLabel(normalized, selectedCategory, t);
+        // Log temporal para depuración
+        if (selectedCategory && normalized) {
+          // eslint-disable-next-line no-console
+          console.log('[Subcat DEBUG]', {
+            category: selectedCategory,
+            normalized,
+            label,
+            exists: t?.subcategories?.[selectedCategory]?.[normalized],
+            tSubcats: t?.subcategories?.[selectedCategory]
+          });
+        }
         return {
           sub: normalized,
-          label: getSubcategoryLabel(normalized, selectedCategory, t, lang),
+          label,
           ...(typeof s === 'object' ? s : {})
         };
       });
@@ -605,26 +617,20 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   }, [renderSubcategoryChip]);
 
   // Función para renderizar chips en SubcategoryBar (firma compatible)
-  const renderSubcategoryChipForBar = useCallback((subcategory: string, isActive: boolean, index: number) => {
-    // Crear un objeto Subcategory compatible
-    const subcategoryObj: Subcategory = {
-      sub: subcategory,
-      label: subcategory
-    };
-    
-    if (renderSubcategoryChip) {
-      return renderSubcategoryChip(subcategoryObj);
-    }
-    
+  const renderSubcategoryChipForBar = useCallback((subcategory: any, isActive: boolean, index: number) => {
+    // Si subcategory es string, lo convertimos a objeto
+    const subcategoryObj: Subcategory = typeof subcategory === 'string'
+      ? { sub: subcategory, label: subcategory }
+      : subcategory;
     return (
       <UiButton
-        key={`chip-sub-${subcategory}-${index}`}
+        key={`chip-sub-${subcategoryObj.sub}-${index}`}
         className={`subcategory-btn${isActive ? ' active' : ''}`}
         variant="outlined"
         color="secondary"
         size="medium"
         icon={null}
-        onClick={() => handleSubcategoryClick(subcategory)}
+        onClick={() => handleSubcategoryClick(subcategoryObj.sub)}
         sx={{
           background: isActive ? getCategoryGradient(selectedCategory || '') : 'var(--background-secondary)',
           color: isActive ? '#222' : 'var(--text-color)',
@@ -639,10 +645,10 @@ const HomePageComponent: React.FC<HomePageProps> = ({
           boxShadow: isActive ? '0 2px 8px 0 rgba(0,0,0,0.08)' : 'none',
         }}
       >
-        {subcategory}
+        {subcategoryObj.label || subcategoryObj.sub}
       </UiButton>
     );
-  }, [renderSubcategoryChip, handleSubcategoryClick, selectedCategory]);
+  }, [handleSubcategoryClick, selectedCategory]);
 
   // Calcular gradiente del título
   const h1Gradient = useMemo(() => {
@@ -774,8 +780,8 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         {/* Detail Overlay SOLO en desktop */}
 
         {/* Contenido principal */}
-        {currentView === 'home' && (
-          <>
+        <main>
+          <header>
             <AnimatedH1 isMobile={isMobile} h1Gradient={h1Gradient} onClick={handleTitleClick}>
               {(!selectedCategory || selectedCategory === 'all')
                 ? (t?.ui?.titles?.home_title || 'Lista de recomendados')
@@ -858,25 +864,25 @@ const HomePageComponent: React.FC<HomePageProps> = ({
                 />
               </>
             )}
-          </>
-        )}
-        {/* Render the recommendations list */}
-        <div
-            style={{
-              width: isMobile ? '96vw' : '100%',
-              maxWidth: isMobile ? '96vw' : undefined,
-              margin: isMobile ? '0 auto' : undefined,
-              display: 'flex',
-              justifyContent: 'center',
-              ...(isMobile ? { marginTop: 28, marginLeft: '10px' } : {}),
-              ...(isMobile && (!selectedCategory || selectedCategory === 'all')
-                ? { paddingTop: 0 }
-                : {})
-            }}
-          >
-            {/* Renderizado condicional: para listado de categorías específicas, usar MaterialContentWrapper con infinite scroll */}
-            {(selectedCategory && selectedCategory !== 'all') ? (
-                            <MaterialContentWrapper
+          </header>
+          <section>
+            {/* Render the recommendations list */}
+            <div
+                style={{
+                  width: isMobile ? '96vw' : '100%',
+                  maxWidth: isMobile ? '96vw' : undefined,
+                  margin: isMobile ? '0 auto' : undefined,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  ...(isMobile ? { marginTop: 28, marginLeft: '10px' } : {}),
+                  ...(isMobile && (!selectedCategory || selectedCategory === 'all')
+                    ? { paddingTop: 0 }
+                    : {})
+                }}
+              >
+                {/* Renderizado condicional: para listado de categorías específicas, usar MaterialContentWrapper con infinite scroll */}
+                {(selectedCategory && selectedCategory !== 'all') ? (
+                                <MaterialContentWrapper
                   recommendations={isMobile ? paginatedItems : undefined}
                   categories={categories}
                   selectedCategory={selectedCategory}
@@ -909,7 +915,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
                     categories={categories}
                     selectedCategory={selectedCategory}
                     onCategoryClick={handleCategoryClick}
-                    subcategories={categorySubcategories}
+                    subcategories={materialSubcategories} // <-- Usar siempre el array con label
                     activeSubcategory={activeSubcategory}
                     onSubcategoryClick={handleSubcategoryClick}
                     renderCategoryButton={renderCategoryButton}
@@ -945,6 +951,8 @@ const HomePageComponent: React.FC<HomePageProps> = ({
               />
             )}
           </div>
+          </section>
+        </main>
       </UiLayout>
     </>
   );

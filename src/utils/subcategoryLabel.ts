@@ -14,16 +14,24 @@ interface TranslationObject {
 export function getSubcategoryLabel(
   subKey: string, 
   category: string, 
-  t: TranslationObject, 
-  lang: string
+  t: any
 ): string {
-  if (!subKey || !category || !t) return subKey;
+  if (!subKey || !category || !t) return capitalize(subKey);
   // Normaliza la key
   const key = normalizeKey(subKey);
-  // Busca el literal en texts.json
-  if (t.subcategories && t.subcategories[category] && t.subcategories[category][key]) {
+  // Busca el literal en t.subcategories[category][key]
+  if (
+    t.subcategories &&
+    t.subcategories[category] &&
+    t.subcategories[category][key]
+  ) {
     return t.subcategories[category][key];
   }
-  // Fallback: solo la key
-  return key;
+  // Fallback: solo la key, capitalizada
+  return capitalize(subKey);
+}
+
+function capitalize(str: string): string {
+  if (!str) return '';
+  return str.charAt(0).toUpperCase() + str.slice(1);
 } 
