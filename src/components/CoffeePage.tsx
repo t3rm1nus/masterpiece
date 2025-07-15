@@ -7,7 +7,11 @@ import MaterialCoffeePage from './MaterialCoffeePage';
 // Página de donación legacy. Ahora redirige/renderiza MaterialCoffeePage para móviles y desktop. Mantener solo por compatibilidad.
 // =============================================
 
-const CoffeePage = ({ onAnimationEnd }) => {
+interface CoffeePageProps {
+  onAnimationEnd?: () => void;
+}
+
+const CoffeePage: React.FC<CoffeePageProps> = ({ onAnimationEnd }) => {
   const { t, getTranslation } = useLanguage();
 
   useEffect(() => {
@@ -28,7 +32,7 @@ const CoffeePage = ({ onAnimationEnd }) => {
         {/* Título principal */}
         <h1 className="coffee-title animated-gradient-title"
             style={{
-              background: getAllCategoriesAnimatedGradient(),
+              background: 'linear-gradient(90deg, #f3ec78, #af4261)', // Placeholder, reemplazar si es necesario
               backgroundSize: '200% 200%',
               animation: 'animatedGradientBG 6s ease-in-out infinite',
               color: '#222',
@@ -102,4 +106,4 @@ const CoffeePage = ({ onAnimationEnd }) => {
   );
 };
 
-export default CoffeePage;
+export default CoffeePage; 

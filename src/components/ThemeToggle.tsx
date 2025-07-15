@@ -1,13 +1,15 @@
 import React from 'react';
 import { useAppTheme } from '../store/useAppStore';
+import { useLanguage } from '../LanguageContext';
 
 // =============================================
 // ThemeToggle: Toggle de tema claro/oscuro
 // Toggle de tema claro/oscuro. Optimizado para UX, accesibilidad y experiencia visual moderna.
 // =============================================
-export default function ThemeToggle() {
+const ThemeToggle: React.FC = () => {
   const { theme, toggleTheme } = useAppTheme();
-  
+  const { getTranslation } = useLanguage();
+
   return (
     <button 
       onClick={toggleTheme}
@@ -42,4 +44,6 @@ export default function ThemeToggle() {
       )}
     </button>
   );
-}
+};
+
+export default ThemeToggle; 
