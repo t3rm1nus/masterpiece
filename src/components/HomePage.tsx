@@ -220,6 +220,14 @@ const HomePageComponent: React.FC<HomePageProps> = ({
     }
   }, []);
 
+  // Si se entra directamente a una URL de detalle, marcar splashShown para evitar mostrar el splash al volver a la Home
+  useEffect(() => {
+    const isDetailRoute = /^\/detalle\/[^/]+\/[^/]+/.test(location.pathname);
+    if (isDetailRoute && !sessionStorage.getItem('splashShown')) {
+      sessionStorage.setItem('splashShown', '1');
+    }
+  }, [location.pathname]);
+
   // Restaurar scroll al volver de un detalle SOLO cuando la ruta es '/'
   useEffect(() => {
     if (location.pathname === '/') {
@@ -748,21 +756,35 @@ const HomePageComponent: React.FC<HomePageProps> = ({
       </Helmet>
     <UiLayout>
       {/* Splash Dialog */}
-      <SplashDialog
-        open={splashOpenLocal}
-        onClose={handleSplashClose}
-        audio={splashAudioLocal}
-        audioRef={audioRef}
-        content={
-          <img
-            src="/imagenes/splash_image.png"
-            alt="Splash"
-            style={{ width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer', background: 'none' }}
-          />
-        }
-        title={null}
-        actions={null}
-      />
+      {(
+        // Solo mostrar splash en iPhone si es la primera vez
+        !(typeof window !== 'undefined' && /iPhone|iPod/.test(navigator.userAgent)) ||
+        (!sessionStorage.getItem('splashShown'))
+      ) && (
+        <SplashDialog
+          open={splashOpenLocal}
+          onClose={handleSplashClose}
+          audio={splashAudioLocal}
+          audioRef={audioRef}
+          content={
+            (() => {
+              const isIPhone = typeof window !== 'undefined' && /iPhone|iPod/.test(navigator.userAgent);
+              return (
+                <img
+                  src="/imagenes/splash_image.png"
+                  alt="Splash"
+                  style={isIPhone
+                    ? { width: '100vw', height: '100vh', objectFit: 'contain', borderRadius: 0, margin: 0, cursor: 'pointer', background: 'none', display: 'block' }
+                    : { width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer', background: 'none' }
+                  }
+                />
+              );
+            })()
+          }
+          title={null}
+          actions={null}
+        />
+      )}
       
       {/* Hybrid Menu */}
       <HybridMenu />

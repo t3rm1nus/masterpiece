@@ -246,17 +246,18 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
           ref={cardRef}
           sx={{
             position: 'relative',
-            padding: '16px',
+            padding: isIPhone() ? 0 : '16px',
             width: { xs: 'calc(100vw - 40px)', sm: '96vw' },
-            margin: '0 auto',
-            marginTop: 0,
-            marginBottom: { xs: '36px', sm: 0 },
+            margin: isIPhone() ? '0 0 8px 0' : '0 auto',
+            marginTop: isIPhone() ? 0 : 0,
+            marginBottom: isIPhone() ? 0 : { xs: '36px', sm: 0 },
             border: selectedItem.masterpiece ? '3px solid #ffd700' : 'none',
             background: selectedItem.masterpiece ? '#fffbe6' : getCategoryGradient(selectedItem.category),
             zIndex: 1,
             overflow: 'visible',
             ...(isIPhone() && {
               overflowY: 'auto',
+              borderBottom: '2px solid #bbb',
             }),
             ...sx
           }}
@@ -340,21 +341,32 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
                   <MobileActionButtons selectedItem={selectedItem} trailerUrl={selectedItem.trailerUrl} lang={lang} t={t} goToHowToDownload={goToHowToDownload} onOverlayNavigate={undefined} />
                 </Box>
           )}
-          {/* Botón de compartir con imagen flotante, igual que desktop */}
-          <img
-            src="/icons/share.png"
-            alt="Compartir"
-            style={{
-              position: 'absolute',
-              bottom: 12,
-              right: 12,
-              width: 48,
-              height: 48,
-              zIndex: 1200,
-              cursor: 'pointer',
-            }}
-            onClick={handleShare}
-          />
+          {/* Botón de compartir: sticky abajo SOLO en iPhone, absoluto en el resto */}
+          {isIPhone() ? (
+            <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
+              <img
+                src="/icons/share.png"
+                alt="Compartir"
+                style={{ width: 48, height: 48, zIndex: 1200, cursor: 'pointer' }}
+                onClick={handleShare}
+              />
+            </Box>
+          ) : (
+            <img
+              src="/icons/share.png"
+              alt="Compartir"
+              style={{
+                position: 'absolute',
+                bottom: 12,
+                right: 12,
+                width: 48,
+                height: 48,
+                zIndex: 1200,
+                cursor: 'pointer',
+              }}
+              onClick={handleShare}
+            />
+          )}
           {showSections.footer !== false && renderFooter && renderFooter(selectedItem)}
         </UiCard>
       </Box>
