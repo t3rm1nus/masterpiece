@@ -68,7 +68,7 @@ interface UiCardProps extends Omit<CardProps, 'elevation' | 'variant'> {
   contentProps?: Partial<CardContentProps>;
 }
 
-const UiCard: React.FC<UiCardProps> = ({
+const UiCard = React.forwardRef<HTMLDivElement, UiCardProps>(({
   children,
   elevation = 2,
   variant = 'elevation',
@@ -86,7 +86,7 @@ const UiCard: React.FC<UiCardProps> = ({
   footerProps = {},
   contentProps = {},
   ...props
-}) => {
+}, ref) => {
   // Permite forzar el background o backgroundImage según el valor de sx.background
   const mergedStyle: React.CSSProperties = { ...style };
   
@@ -109,6 +109,7 @@ const UiCard: React.FC<UiCardProps> = ({
   
   return (
     <Card
+      ref={ref}
       elevation={variant === 'elevation' ? elevation : 0}
       variant={variant}
       className={`mp-ui-card ${className}`}
@@ -125,6 +126,6 @@ const UiCard: React.FC<UiCardProps> = ({
       {footer && <Box {...footerProps}>{footer}</Box>}
     </Card>
   );
-};
+});
 
 export default UiCard; 

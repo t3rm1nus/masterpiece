@@ -3,7 +3,7 @@
  * En producción, los logs se omiten automáticamente
  */
 
-const isDevelopment = (import.meta as any).env?.DEV || false;
+const isDevelopment = process.env.NODE_ENV !== 'production';
 
 interface Logger {
   error: (...args: any[]) => void;

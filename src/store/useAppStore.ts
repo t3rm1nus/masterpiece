@@ -54,6 +54,18 @@ export interface AppStoreState {
   // selectedItem para debug y navegación
   selectedItem?: any;
 
+  // Funciones de navegación
+  goHome: () => void;
+  goToHome: () => void;
+  goToDetail: (item: any) => void;
+  goToCoffee: () => void;
+  goToHowToDownload: () => void;
+  resetToHome: () => void;
+  setView: (view: any) => void;
+  setSelectedItem: (item: any | null) => void;
+  goBackFromDetail: () => void;
+  goBackFromCoffee: () => void;
+
   // DataSlice
   recommendations: any[];
   categories: any[];
@@ -264,10 +276,17 @@ export const useAppView = () => {
   const saveHomeState = useAppStore(state => state.saveHomeState);
   const restoreHomeState = useAppStore(state => state.restoreHomeState);
   const selectedItem = useAppStore(state => state.selectedItem);
+  // Funciones de navegación
+  const goHome = useAppStore(state => state.goHome);
+  const goBackFromDetail = useAppStore(state => state.goBackFromDetail);
+  const goBackFromCoffee = useAppStore(state => state.goBackFromCoffee);
+  const goToCoffee = useAppStore(state => state.goToCoffee);
+  const goToHowToDownload = useAppStore(state => state.goToHowToDownload);
 
   return {
     isMobile, mobileHomeStyles, desktopStyles, baseRecommendationCardClasses,
-    isTablet, saveHomeState, restoreHomeState, selectedItem
+    isTablet, saveHomeState, restoreHomeState, selectedItem,
+    goHome, goBackFromDetail, goBackFromCoffee, goToCoffee, goToHowToDownload
   };
 };
 

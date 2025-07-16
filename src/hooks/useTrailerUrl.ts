@@ -2,7 +2,7 @@ import { useLanguage } from '../LanguageContext';
 
 type TrailerType = string | { es?: string; en?: string; [key: string]: string | undefined };
 
-export function useTrailerUrl(trailer: TrailerType): string | null {
+export function useTrailerUrl(trailer: TrailerType | null | undefined): string | null {
   const { lang } = useLanguage();
   if (!trailer) return null;
   if (typeof trailer === 'object') {

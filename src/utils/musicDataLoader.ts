@@ -120,4 +120,8 @@ export class MusicDataLoader {
       }
     };
   }
-} 
+}
+
+export const loadAllMusicData = MusicDataLoader.loadAllMusicData;
+export const loadMusicChunk = MusicDataLoader.loadMusicChunk;
+export const loadMusicDataLazy = MusicDataLoader.loadMusicDataLazy; 

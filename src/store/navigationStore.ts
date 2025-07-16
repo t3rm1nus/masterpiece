@@ -30,6 +30,8 @@ export interface NavigationSlice {
   goToHome: () => void;
   goToCoffee: () => void;
   goToHowToDownload: () => void;
+  goBackFromDetail: () => void;
+  goBackFromCoffee: () => void;
 }
 
 // Navigation slice for Zustand
@@ -101,4 +103,6 @@ export const createNavigationSlice = (set: any, get: any): NavigationSlice => ({
       }, '', '/como-descargar');
     }
   },
+  goBackFromDetail: () => {},
+  goBackFromCoffee: () => {},
 }); 

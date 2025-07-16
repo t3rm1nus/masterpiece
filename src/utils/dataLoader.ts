@@ -38,6 +38,9 @@ interface LoadedData {
   };
 }
 
+export const getDataByCategory = () => {};
+export const getDataById = () => {};
+
 export const loadRealData = async (): Promise<LoadedData> => {
   try {
     // Cargar datos de música de forma chunked
@@ -252,3 +255,5 @@ export const loadRealData = async (): Promise<LoadedData> => {
     };
   }
 }; 
+
+export const loadAllData = loadRealData; 
