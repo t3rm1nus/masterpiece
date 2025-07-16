@@ -336,7 +336,9 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
           {showSections.actions !== false && (
             renderActions
               ? renderActions(selectedItem)
-              : <MobileActionButtons selectedItem={selectedItem} trailerUrl={selectedItem.trailerUrl} lang={lang} t={t} goToHowToDownload={goToHowToDownload} onOverlayNavigate={undefined} />
+              : <Box sx={{ pb: '56px' /* Espacio extra para el botón de compartir */ }}>
+                  <MobileActionButtons selectedItem={selectedItem} trailerUrl={selectedItem.trailerUrl} lang={lang} t={t} goToHowToDownload={goToHowToDownload} onOverlayNavigate={undefined} />
+                </Box>
           )}
           {/* Botón de compartir con imagen flotante, igual que desktop */}
           <img

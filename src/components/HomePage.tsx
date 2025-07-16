@@ -747,104 +747,60 @@ const HomePageComponent: React.FC<HomePageProps> = ({
           `}
         </script>
       </Helmet>
-      <UiLayout>
-        {/* Splash Dialog */}
-        <SplashDialog
-          open={splashOpenLocal}
-          onClose={handleSplashClose}
-          audio={splashAudioLocal}
-          audioRef={audioRef}
-          content={
-            <img
-              src="/imagenes/splash_image.png"
-              alt="Splash"
-              style={{ width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer', background: 'none' }}
-            />
-          }
-          title={null}
-          actions={null}
-        />
-        
-        {/* Hybrid Menu */}
-        <HybridMenu />
-        
-        {/* Detail Dialog SOLO en móvil */}
-        {isMobile && currentView === 'detail' && !!selectedItem ? (
-          <UnifiedItemDetail
-            item={selectedItem}
-            onClose={goBackFromDetail}
-            isClosing={isDetailClosing}
+    <UiLayout>
+      {/* Splash Dialog */}
+      <SplashDialog
+        open={splashOpenLocal}
+        onClose={handleSplashClose}
+        audio={splashAudioLocal}
+        audioRef={audioRef}
+        content={
+          <img
+            src="/imagenes/splash_image.png"
+            alt="Splash"
+            style={{ width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer', background: 'none' }}
           />
-        ) : null}
+        }
+        title={null}
+        actions={null}
+      />
+      
+      {/* Hybrid Menu */}
+      <HybridMenu />
+      
+      {/* Detail Dialog SOLO en móvil */}
+      {isMobile && currentView === 'detail' && !!selectedItem ? (
+        <UnifiedItemDetail
+          item={selectedItem}
+          onClose={goBackFromDetail}
+          isClosing={isDetailClosing}
+        />
+      ) : null}
 
-        {/* Detail Overlay SOLO en desktop */}
+      {/* Detail Overlay SOLO en desktop */}
 
-        {/* Contenido principal */}
+      {/* Contenido principal */}
         <main>
           <header>
-            <AnimatedH1 isMobile={isMobile} h1Gradient={h1Gradient} onClick={handleTitleClick}>
-              {(!selectedCategory || selectedCategory === 'all')
-                ? (t?.ui?.titles?.home_title || 'Lista de recomendados')
-                : (t?.categories?.[selectedCategory] || selectedCategory)
-              }
-            </AnimatedH1>
-            {/* SOLO MÓVIL: Selector de categorías justo debajo del h1 */}
-            {isMobile && categories.length > 0 && (
-              <div style={{ width: '96vw', maxWidth: '96vw', margin: '0 auto', marginBottom: 4, marginTop: 4, zIndex: 1, position: 'relative', marginLeft: '10px' }}>
-                <MaterialCategorySelect
-                  categories={categories}
-                  selectedCategory={selectedCategory}
-                  onCategoryChange={handleCategoryOrSubcategoryChange}
-                  subcategories={categorySubcategories}
-                  activeSubcategory={activeSubcategory}
-                  {...materialCategorySelectProps}
-                />
-                {/* Botones especiales SOLO en móvil y SOLO si hay categoría seleccionada */}
-                {selectedCategory && selectedCategory !== 'all' && (
-                  <SpecialButtons
-                    selectedCategory={selectedCategory}
-                    isSpanishCinemaActive={isSpanishCinemaActive}
-                    handleSpanishCinemaToggle={handleSpanishCinemaToggle}
-                    isMasterpieceActive={isMasterpieceActive}
-                    handleMasterpieceToggle={handleMasterpieceToggle}
-                    lang={lang}
-                    isRecommendedActive={isRecommendedActive}
-                    isSpanishSeriesActive={isSpanishSeriesActive}
-                    handleSpanishSeriesToggle={toggleSpanishSeries}
-                    isMobile={true}
-                    musicFilterType={musicFilterType}
-                    setMusicFilterType={setMusicFilterType}
-                    activeSubcategory={activeSubcategory}
-                    battleFilterActive={battleFilterActive}
-                    setBattleFilterActive={setBattleFilterActive}
-                    {...specialButtonsProps}
-                  />
-                )}
-              </div>
-            )}
-            {/* SOLO DESKTOP: Categorías, subcategorías y botones especiales */}
-            {!isMobile && categories.length > 0 && (
-              <>
-                <CategoryBar
-                  categories={categories}
-                  selectedCategory={selectedCategory}
-                  onCategoryClick={handleCategoryClick}
-                  renderButton={renderCategoryButton}
-                  sx={categoryBarSx}
-                  {...categoryBarProps}
-                />
-                <SubcategoryBar
-                  selectedCategory={selectedCategory}
-                  categorySubcategories={categorySubcategories}
-                  activeSubcategory={activeSubcategory}
-                  setActiveSubcategory={handleSubcategoryClick}
-                  renderChip={renderSubcategoryChipForBar}
-                  sx={subcategoryBarSx}
-                  {...subcategoryBarProps}
-                  allData={allData}
-                  t={t}
-                  lang={lang}
-                />
+          <AnimatedH1 isMobile={isMobile} h1Gradient={h1Gradient} onClick={handleTitleClick}>
+            {(!selectedCategory || selectedCategory === 'all')
+              ? (t?.ui?.titles?.home_title || 'Lista de recomendados')
+              : (t?.categories?.[selectedCategory] || selectedCategory)
+            }
+          </AnimatedH1>
+          {/* SOLO MÓVIL: Selector de categorías justo debajo del h1 */}
+          {isMobile && categories.length > 0 && (
+            <div style={{ width: '96vw', maxWidth: '96vw', margin: '0 auto', marginBottom: 4, marginTop: 4, zIndex: 1, position: 'relative', marginLeft: '10px' }}>
+              <MaterialCategorySelect
+                categories={categories}
+                selectedCategory={selectedCategory}
+                onCategoryChange={handleCategoryOrSubcategoryChange}
+                subcategories={categorySubcategories}
+                activeSubcategory={activeSubcategory}
+                {...materialCategorySelectProps}
+              />
+              {/* Botones especiales SOLO en móvil y SOLO si hay categoría seleccionada */}
+              {selectedCategory && selectedCategory !== 'all' && (
                 <SpecialButtons
                   selectedCategory={selectedCategory}
                   isSpanishCinemaActive={isSpanishCinemaActive}
@@ -855,105 +811,149 @@ const HomePageComponent: React.FC<HomePageProps> = ({
                   isRecommendedActive={isRecommendedActive}
                   isSpanishSeriesActive={isSpanishSeriesActive}
                   handleSpanishSeriesToggle={toggleSpanishSeries}
-                  {...specialButtonsProps}
+                  isMobile={true}
                   musicFilterType={musicFilterType}
                   setMusicFilterType={setMusicFilterType}
                   activeSubcategory={activeSubcategory}
                   battleFilterActive={battleFilterActive}
                   setBattleFilterActive={setBattleFilterActive}
+                  {...specialButtonsProps}
                 />
-              </>
-            )}
+              )}
+            </div>
+          )}
+          {/* SOLO DESKTOP: Categorías, subcategorías y botones especiales */}
+          {!isMobile && categories.length > 0 && (
+            <>
+              <CategoryBar
+                categories={categories}
+                selectedCategory={selectedCategory}
+                onCategoryClick={handleCategoryClick}
+                renderButton={renderCategoryButton}
+                sx={categoryBarSx}
+                {...categoryBarProps}
+              />
+              <SubcategoryBar
+                selectedCategory={selectedCategory}
+                categorySubcategories={categorySubcategories}
+                activeSubcategory={activeSubcategory}
+                setActiveSubcategory={handleSubcategoryClick}
+                renderChip={renderSubcategoryChipForBar}
+                sx={subcategoryBarSx}
+                {...subcategoryBarProps}
+                allData={allData}
+                t={t}
+                lang={lang}
+              />
+              <SpecialButtons
+                selectedCategory={selectedCategory}
+                isSpanishCinemaActive={isSpanishCinemaActive}
+                handleSpanishCinemaToggle={handleSpanishCinemaToggle}
+                isMasterpieceActive={isMasterpieceActive}
+                handleMasterpieceToggle={handleMasterpieceToggle}
+                lang={lang}
+                isRecommendedActive={isRecommendedActive}
+                isSpanishSeriesActive={isSpanishSeriesActive}
+                handleSpanishSeriesToggle={toggleSpanishSeries}
+                {...specialButtonsProps}
+                musicFilterType={musicFilterType}
+                setMusicFilterType={setMusicFilterType}
+                activeSubcategory={activeSubcategory}
+                battleFilterActive={battleFilterActive}
+                setBattleFilterActive={setBattleFilterActive}
+              />
+            </>
+          )}
           </header>
           <section>
-            {/* Render the recommendations list */}
-            <div
-                style={{
-                  width: isMobile ? '96vw' : '100%',
-                  maxWidth: isMobile ? '96vw' : undefined,
-                  margin: isMobile ? '0 auto' : undefined,
-                  display: 'flex',
-                  justifyContent: 'center',
-                  ...(isMobile ? { marginTop: 28, marginLeft: '10px' } : {}),
-                  ...(isMobile && (!selectedCategory || selectedCategory === 'all')
-                    ? { paddingTop: 0 }
-                    : {})
-                }}
+      {/* Render the recommendations list */}
+      <div
+          style={{
+            width: isMobile ? '96vw' : '100%',
+            maxWidth: isMobile ? '96vw' : undefined,
+            margin: isMobile ? '0 auto' : undefined,
+            display: 'flex',
+            justifyContent: 'center',
+            ...(isMobile ? { marginTop: 28, marginLeft: '10px' } : {}),
+            ...(isMobile && (!selectedCategory || selectedCategory === 'all')
+              ? { paddingTop: 0 }
+              : {})
+          }}
+        >
+          {/* Renderizado condicional: para listado de categorías específicas, usar MaterialContentWrapper con infinite scroll */}
+          {(selectedCategory && selectedCategory !== 'all') ? (
+                          <MaterialContentWrapper
+                recommendations={isMobile ? paginatedItems : undefined}
+                categories={categories}
+                selectedCategory={selectedCategory}
+                onCategoryClick={handleCategoryClick}
+                subcategories={isMobile ? categorySubcategories : materialSubcategories}
+                activeSubcategory={activeSubcategory}
+                onSubcategoryClick={handleSubcategoryClick}
+                renderCategoryButton={renderCategoryButton}
+                renderSubcategoryChip={safeRenderSubcategoryChip}
+                categorySelectSx={materialCategorySelectSx}
+                subcategoryChipsSx={subcategoryBarSx}
+                categorySelectProps={materialCategorySelectProps}
+                subcategoryChipsProps={subcategoryBarProps}
+                isHome={false}
+                onLoadMore={handleLoadMore}
+                hasMore={hasMore}
+                loadingMore={isMobile ? loadingMoreMobile : loadingMoreDesktop}
+                categoryColor={categoryColor(selectedCategory)}
+                showCategorySelect={!isMobile}
+                showSubcategoryChips={!isMobile}
+                onItemClick={handleItemClick}
+                currentPage={isMobile ? mobilePage : desktopPage}
+                totalItems={filteredItemsMemo.length}
+                skipEntryAnimation={false}
               >
-                {/* Renderizado condicional: para listado de categorías específicas, usar MaterialContentWrapper con infinite scroll */}
-                {(selectedCategory && selectedCategory !== 'all') ? (
-                                <MaterialContentWrapper
-                  recommendations={isMobile ? paginatedItems : undefined}
+              {/* Desktop: Render the recommendations list as a child */}
+              {!isMobile && (
+                <DesktopRecommendationsList
+                  items={paginatedItems}
                   categories={categories}
                   selectedCategory={selectedCategory}
                   onCategoryClick={handleCategoryClick}
-                  subcategories={isMobile ? categorySubcategories : materialSubcategories}
+                    subcategories={materialSubcategories} // <-- Usar siempre el array con label
                   activeSubcategory={activeSubcategory}
                   onSubcategoryClick={handleSubcategoryClick}
                   renderCategoryButton={renderCategoryButton}
                   renderSubcategoryChip={safeRenderSubcategoryChip}
-                  categorySelectSx={materialCategorySelectSx}
-                  subcategoryChipsSx={subcategoryBarSx}
-                  categorySelectProps={materialCategorySelectProps}
-                  subcategoryChipsProps={subcategoryBarProps}
-                  isHome={false}
+                  categoryBarSx={categoryBarSx}
+                  subcategoryBarSx={subcategoryBarSx}
+                  showCategoryBar={false}
+                  showSubcategoryBar={false}
                   onLoadMore={handleLoadMore}
                   hasMore={hasMore}
-                  loadingMore={isMobile ? loadingMoreMobile : loadingMoreDesktop}
+                  loadingMore={loadingMoreDesktop}
                   categoryColor={categoryColor(selectedCategory)}
-                  showCategorySelect={!isMobile}
-                  showSubcategoryChips={!isMobile}
                   onItemClick={handleItemClick}
-                  currentPage={isMobile ? mobilePage : desktopPage}
-                  totalItems={filteredItemsMemo.length}
-                  skipEntryAnimation={false}
-                >
-                {/* Desktop: Render the recommendations list as a child */}
-                {!isMobile && (
-                  <DesktopRecommendationsList
-                    items={paginatedItems}
-                    categories={categories}
-                    selectedCategory={selectedCategory}
-                    onCategoryClick={handleCategoryClick}
-                    subcategories={materialSubcategories} // <-- Usar siempre el array con label
-                    activeSubcategory={activeSubcategory}
-                    onSubcategoryClick={handleSubcategoryClick}
-                    renderCategoryButton={renderCategoryButton}
-                    renderSubcategoryChip={safeRenderSubcategoryChip}
-                    categoryBarSx={categoryBarSx}
-                    subcategoryBarSx={subcategoryBarSx}
-                    showCategoryBar={false}
-                    showSubcategoryBar={false}
-                    onLoadMore={handleLoadMore}
-                    hasMore={hasMore}
-                    loadingMore={loadingMoreDesktop}
-                    categoryColor={categoryColor(selectedCategory)}
-                    onItemClick={handleItemClick}
-                    recommendations={paginatedItems}
-                    isHome={false}
-                    showCategorySelect={false}
-                    showSubcategoryChips={false}
-                  />
-                )}
-              </MaterialContentWrapper>
-            ) : (
-              <RecommendationsList            
-                items={filteredItemsMemo}
-                onItemClick={handleItemClick}
-                categories={categories}
-                selectedCategory={selectedCategory}
-                onCategoryClick={handleCategoryClick}
-                showCategoryBar={false}
-                showSubcategoryBar={false}
-                showCategorySelect={isMobile ? false : undefined}
-                showSubcategoryChips={isMobile ? false : undefined}
-                loading={!isDataInitialized || !allData || Object.keys(allData).length === 0}
-              />
-            )}
-          </div>
+                  recommendations={paginatedItems}
+                  isHome={false}
+                  showCategorySelect={false}
+                  showSubcategoryChips={false}
+                />
+              )}
+            </MaterialContentWrapper>
+          ) : (
+            <RecommendationsList            
+              items={filteredItemsMemo}
+              onItemClick={handleItemClick}
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onCategoryClick={handleCategoryClick}
+              showCategoryBar={false}
+              showSubcategoryBar={false}
+              showCategorySelect={isMobile ? false : undefined}
+              showSubcategoryChips={isMobile ? false : undefined}
+              loading={!isDataInitialized || !allData || Object.keys(allData).length === 0}
+            />
+          )}
+        </div>
           </section>
         </main>
-      </UiLayout>
+    </UiLayout>
     </>
   );
 };

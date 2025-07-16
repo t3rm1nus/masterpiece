@@ -606,15 +606,15 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     
     return (
       <article>
-        <div
-          key={safeItem.id}
-          style={{
-            ...styles.page(theme),
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible ? 'scale(1)' : 'scale(0.95)',
-            transition: 'opacity 0.3s ease-in-out, transform 0.3s ease-out',
-          }}
-        >
+      <div
+        key={safeItem.id}
+        style={{
+          ...styles.page(theme),
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? 'scale(1)' : 'scale(0.95)',
+          transition: 'opacity 0.3s ease-in-out, transform 0.3s ease-out',
+        }}
+      >
           <Helmet>
             <title>{itemTitle} | Masterpiece</title>
             <meta name="description" content={itemDescription} />
@@ -629,149 +629,149 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
               {JSON.stringify(getJsonLd())}
             </script>
           </Helmet>
-          <div
-            style={{
-              ...styles.desktopWrapper,
-              ...(isMasterpiece ? styles.desktopWrapperMasterpiece : {}),
-              ...(isMasterpiece ? {} : { background: gradientBg })
+        <div
+          style={{
+            ...styles.desktopWrapper,
+            ...(isMasterpiece ? styles.desktopWrapperMasterpiece : {}),
+            ...(isMasterpiece ? {} : { background: gradientBg })
+          }}
+        >
+          {/* Botón volver FAB azul arriba a la izquierda, igual que en donaciones/descargar */}
+          <Fab
+            color="primary"
+            size="large"
+            aria-label={typeof t === 'function' ? t('Volver') : 'Volver'}
+            onClick={handleClose}
+            sx={{
+              position: 'absolute',
+              top: 18,
+              left: 18,
+              zIndex: 50,
+              boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+              opacity: (internalClosing || props.isClosing) ? 0.5 : 1,
+              cursor: (internalClosing || props.isClosing) ? 'not-allowed' : 'pointer',
+              transition: 'none',
+              '&:hover': {
+                backgroundColor: theme.palette.primary.main,
+                transform: 'none',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
+              }
             }}
+            tabIndex={0}
+            disabled={internalClosing || props.isClosing}
           >
-            {/* Botón volver FAB azul arriba a la izquierda, igual que en donaciones/descargar */}
-            <Fab
-              color="primary"
-              size="large"
-              aria-label={typeof t === 'function' ? t('Volver') : 'Volver'}
-              onClick={handleClose}
-              sx={{
-                position: 'absolute',
-                top: 18,
-                left: 18,
-                zIndex: 50,
-                boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
-                opacity: (internalClosing || props.isClosing) ? 0.5 : 1,
-                cursor: (internalClosing || props.isClosing) ? 'not-allowed' : 'pointer',
-                transition: 'none',
-                '&:hover': {
-                  backgroundColor: theme.palette.primary.main,
-                  transform: 'none',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
-                }
-              }}
-              tabIndex={0}
-              disabled={internalClosing || props.isClosing}
-            >
-              <ArrowBackIcon style={{ fontSize: 28, color: '#fff' }} />
-            </Fab>
-            {isMasterpiece && (
-              <div style={styles.desktopBadgeRight}>
-                {/* SVG estrella solo negro */}
-                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="22" cy="22" r="22" fill="#FFD700"/>
-                  <path
-                    d="M22 10l3.6 7.3 8.1 1.2-5.85 5.7 1.38 8.06L22 28.1l-7.23 3.8 1.38-8.06L10.3 18.5l8.1-1.2L22 10z"
-                    fill="#111"
-                  />
-                </svg>
-              </div>
-            )}
-            {/* MAQUETACIÓN CORRECTA: leftCol (imagen) y rightCol (textos) como hermanos */}
-            <div style={styles.leftCol}>
-              <figure style={styles.imageContainer}>
-                <img
-                  src={safeItem.image}
-                  alt={`Portada de ${title}`}
-                  style={imageHover ? { ...styles.image, ...styles.imageHover } : styles.image}
-                  onLoad={() => setImgLoaded(true)}
-                  onMouseEnter={() => setImageHover(true)}
-                  onMouseLeave={() => setImageHover(false)}
+            <ArrowBackIcon style={{ fontSize: 28, color: '#fff' }} />
+          </Fab>
+          {isMasterpiece && (
+            <div style={styles.desktopBadgeRight}>
+              {/* SVG estrella solo negro */}
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="22" cy="22" r="22" fill="#FFD700"/>
+                <path
+                  d="M22 10l3.6 7.3 8.1 1.2-5.85 5.7 1.38 8.06L22 28.1l-7.23 3.8 1.38-8.06L10.3 18.5l8.1-1.2L22 10z"
+                  fill="#111"
                 />
+              </svg>
+            </div>
+          )}
+          {/* MAQUETACIÓN CORRECTA: leftCol (imagen) y rightCol (textos) como hermanos */}
+          <div style={styles.leftCol}>
+              <figure style={styles.imageContainer}>
+              <img
+                src={safeItem.image}
+                  alt={`Portada de ${title}`}
+                style={imageHover ? { ...styles.image, ...styles.imageHover } : styles.image}
+                onLoad={() => setImgLoaded(true)}
+                onMouseEnter={() => setImageHover(true)}
+                onMouseLeave={() => setImageHover(false)}
+              />
                 <figcaption style={{ textAlign: 'center', fontSize: '0.95em', color: '#666' }}>{title}</figcaption>
               </figure>
             </div>
-            <div style={styles.rightCol}>
+          <div style={styles.rightCol}>
               <header>
                 {/* Título y metadatos */}
-                <h2 style={styles.title}>{title}</h2>
-                <div style={styles.chipRow}>
-                  <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
-                    {getCategoryTranslation(realCategory)}
-                  </span>
-                  {safeItem.subcategory && (
-                    <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
-                      {(() => {
-                        const subcat = safeItem.subcategory;
-                        if (typeof subcat === 'object' && subcat !== null) {
-                          if (subcat[lang]) return ensureString(subcat[lang], lang);
-                          const firstValue = Object.values(subcat)[0];
-                          return ensureString(firstValue, lang);
-                        }
-                        return ensureString(getSubcategoryTranslation(subcat), lang);
-                      })()}
-                    </span>
-                  )}
-                </div>
-                <div style={styles.metaRow}>
-                  {/* Mostrar autor/artista para música */}
-                  {safeItem.category === 'music' && safeItem.artist && (
-                    <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {safeItem.artist}</span>
-                  )}
-                  {/* Mostrar autor para otras categorías */}
-                  {safeItem.category !== 'music' && safeItem.author && (
-                    <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {safeItem.author}</span>
-                  )}
-                  {safeItem.year && (
-                    <span style={styles.meta}><AccessTimeIcon style={styles.metaIcon}/> {safeItem.year}</span>
-                  )}
-                  {safeItem.duration && (
-                    <span style={styles.meta}><PlaylistPlayIcon style={styles.metaIcon}/> {safeItem.duration}</span>
-                  )}
-                  {safeItem.language && (
-                    <span style={styles.meta}><TranslateIcon style={styles.metaIcon}/> {safeItem.language}</span>
-                  )}
-                  {safeItem.platform && (
-                    <span style={styles.meta}><PlatformIcon style={styles.metaIcon}/> {safeItem.platform}</span>
-                  )}
-                  {safeItem.age && (
-                    <span style={styles.meta}><ChildCareIcon style={styles.metaIcon}/> {safeItem.age}+</span>
-                  )}
-                  {safeItem.developer && (
-                    <span style={styles.meta}><DeveloperIcon style={styles.metaIcon}/> {safeItem.developer}</span>
-                  )}
-                </div>
+            <h2 style={styles.title}>{title}</h2>
+            <div style={styles.chipRow}>
+              <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
+                {getCategoryTranslation(realCategory)}
+              </span>
+              {safeItem.subcategory && (
+                <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
+                  {(() => {
+                    const subcat = safeItem.subcategory;
+                    if (typeof subcat === 'object' && subcat !== null) {
+                      if (subcat[lang]) return ensureString(subcat[lang], lang);
+                      const firstValue = Object.values(subcat)[0];
+                      return ensureString(firstValue, lang);
+                    }
+                    return ensureString(getSubcategoryTranslation(subcat), lang);
+                  })()}
+                </span>
+              )}
+            </div>
+            <div style={styles.metaRow}>
+              {/* Mostrar autor/artista para música */}
+              {safeItem.category === 'music' && safeItem.artist && (
+                <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {safeItem.artist}</span>
+              )}
+              {/* Mostrar autor para otras categorías */}
+              {safeItem.category !== 'music' && safeItem.author && (
+                <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {safeItem.author}</span>
+              )}
+              {safeItem.year && (
+                <span style={styles.meta}><AccessTimeIcon style={styles.metaIcon}/> {safeItem.year}</span>
+              )}
+              {safeItem.duration && (
+                <span style={styles.meta}><PlaylistPlayIcon style={styles.metaIcon}/> {safeItem.duration}</span>
+              )}
+              {safeItem.language && (
+                <span style={styles.meta}><TranslateIcon style={styles.metaIcon}/> {safeItem.language}</span>
+              )}
+              {safeItem.platform && (
+                <span style={styles.meta}><PlatformIcon style={styles.metaIcon}/> {safeItem.platform}</span>
+              )}
+              {safeItem.age && (
+                <span style={styles.meta}><ChildCareIcon style={styles.metaIcon}/> {safeItem.age}+</span>
+              )}
+              {safeItem.developer && (
+                <span style={styles.meta}><DeveloperIcon style={styles.metaIcon}/> {safeItem.developer}</span>
+              )}
+            </div>
               </header>
               <section style={styles.descriptionRow}>
                 <p style={styles.description}>{description}</p>
               </section>
-              <div style={styles.extraContentRow}>
-                <DesktopCategorySpecificContent selectedItem={safeItem} lang={lang} t={t} getTranslation={getTranslation} />
-              </div>
-              <div style={styles.actionsRow}>
-                <DesktopActionButtons
-                  selectedItem={safeItem}
-                  trailerUrl={trailerUrl}
-                  lang={lang}
-                  t={t}
-                  goToHowToDownload={goToHowToDownload}
-                  onOverlayNavigate={props.onOverlayNavigate}
-                />
-                <img
-                  src="/icons/share.png"
-                  alt="Compartir"
-                  style={{
-                    position: 'absolute',
-                    bottom: 12,
-                    right: 12,
-                    width: 48,
-                    height: 48,
-                    zIndex: 1200,
-                    cursor: 'pointer',
-                  }}
-                  onClick={handleShare}
-                />
-              </div>
+            <div style={styles.extraContentRow}>
+              <DesktopCategorySpecificContent selectedItem={safeItem} lang={lang} t={t} getTranslation={getTranslation} />
+            </div>
+            <div style={styles.actionsRow}>
+              <DesktopActionButtons
+                selectedItem={safeItem}
+                trailerUrl={trailerUrl}
+                lang={lang}
+                t={t}
+                goToHowToDownload={goToHowToDownload}
+                onOverlayNavigate={props.onOverlayNavigate}
+              />
+              <img
+                src="/icons/share.png"
+                alt="Compartir"
+                style={{
+                  position: 'absolute',
+                  bottom: 12,
+                  right: 12,
+                  width: 48,
+                  height: 48,
+                  zIndex: 1200,
+                  cursor: 'pointer',
+                }}
+                onClick={handleShare}
+              />
             </div>
           </div>
         </div>
+      </div>
       </article>
     );
   }
