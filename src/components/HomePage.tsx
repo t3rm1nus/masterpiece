@@ -249,8 +249,6 @@ const HomePageComponent: React.FC<HomePageProps> = ({
     isMasterpieceActive,
     title,
     updateFilteredItems,
-    setActiveLanguage,
-    activeLanguage,    
     allData,
     isDataInitialized,
     updateWithRealData,
@@ -343,7 +341,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
 
   // Obtener subcategorías del store para la categoría seleccionada
   const categorySubcategories = React.useMemo(() => {
-    let subs = getSubcategoriesForCategory(selectedCategory);
+    let subs = getSubcategoriesForCategory(selectedCategory || '');
     if (selectedCategory === 'boardgames' && Array.isArray(subs)) {
       return subs.map(({ sub, ...rest }: any) => {
         const normalized = normalizeSubcategoryInternal(sub);
@@ -358,7 +356,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
     if (Array.isArray(subs)) {
       return subs.map((s: any) => {
         const normalized = typeof s === 'string' ? normalizeSubcategoryInternal(s) : s.sub;
-        const label = getSubcategoryLabel(normalized, selectedCategory, t);
+        const label = getSubcategoryLabel(normalized, selectedCategory || '', t);
         // Log temporal para depuración
         if (selectedCategory && normalized) {
           // eslint-disable-next-line no-console
@@ -423,7 +421,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
     if (!selectedCategory || selectedCategory === 'all') {
       filteredData = recommendations;
     } else {
-      filteredData = allData[selectedCategory] || [];
+      filteredData = allData[selectedCategory || ''] || [];
     }
     
     if (selectedCategory && selectedCategory !== 'all') {
@@ -554,7 +552,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   const handleSubcategoryClick = useCallback((subcategory: string) => {
     setActiveSubcategory(subcategory);
     resetPagination();
-    trackSubcategorySelection(selectedCategory, subcategory);
+    trackSubcategorySelection(selectedCategory || '', subcategory);
   }, [setActiveSubcategory, resetPagination, trackSubcategorySelection, selectedCategory]);
 
   // Función para manejar cambio de categoría o subcategoría (móvil)
@@ -653,7 +651,8 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   // Calcular gradiente del título
   const h1Gradient = useMemo(() => {
     if (!selectedCategory || selectedCategory === 'all') {
-      return getAllCategoriesAnimatedGradient();
+      // Paleta de grises oscuros, blanco y gris claro, evitando negro puro
+      return 'linear-gradient(270deg, #222, #fff, #888, #444, #eee, #222)';
     }
     if (selectedCategory === 'masterpiece') {
       return getMasterpieceAnimatedGradient();
