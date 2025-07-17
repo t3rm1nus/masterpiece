@@ -8,7 +8,9 @@
  * @returns true si es iPhone
  */
 export const isIPhone = (): boolean => {
-  return typeof window !== 'undefined' && /iPhone|iPod/.test(navigator.userAgent);
+  return typeof window !== 'undefined' && 
+         typeof navigator !== 'undefined' && 
+         /iPhone|iPod/.test(navigator.userAgent);
 };
 
 /**

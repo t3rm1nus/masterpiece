@@ -29,6 +29,7 @@ import UiCard from './ui/UiCard';
 import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 import { Helmet } from 'react-helmet-async';
+import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
 interface MaterialCoffeePageProps {
   onAnimationEnd?: () => void;
@@ -41,23 +42,25 @@ const MaterialCoffeePage: React.FC<MaterialCoffeePageProps> = ({ onAnimationEnd 
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
   // Google Analytics tracking para página de donaciones
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     trackSpecialPageView('donations', {
       page_title: 'Donaciones - Coffee Page',
       source: 'main_navigation'
     });
   }, [trackSpecialPageView]);
 
-  // Fix específico para iPhone - asegurar scroll
-  useEffect(() => {
-    const isIPhone = /iPhone|iPod/.test(navigator.userAgent);
-    if (isIPhone) {
-      document.body.style.overflowY = 'auto';
-      (document.body.style as any).webkitOverflowScrolling = 'touch';
-      return () => {
-        document.body.style.overflowY = '';
-        (document.body.style as any).webkitOverflowScrolling = '';
-      };
+  // Fix específico para iPhone - asegurar scroll (SSR safe)
+  useIsomorphicLayoutEffect(() => {
+    if (typeof window !== 'undefined' && typeof navigator !== 'undefined') {
+      const isIPhone = /iPhone|iPod/.test(navigator.userAgent);
+      if (isIPhone) {
+        document.body.style.overflowY = 'auto';
+        (document.body.style as any).webkitOverflowScrolling = 'touch';
+        return () => {
+          document.body.style.overflowY = '';
+          (document.body.style as any).webkitOverflowScrolling = '';
+        };
+      }
     }
   }, []);
 

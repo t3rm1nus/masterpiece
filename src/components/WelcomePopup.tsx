@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useLanguage } from "../LanguageContext";
 import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
 import texts from "../data/texts.json";
+import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
 const WELCOME_POPUP_KEY = "masterpiece_welcome_popup_seen";
 
@@ -26,10 +27,12 @@ const WelcomePopup: React.FC<WelcomePopupProps> = ({ open, onClose }) => {
     }
   }, [open, trackPopupView, lang]);
 
-  // Detectar móvil solo en cliente
+  // Detectar móvil solo en cliente (SSR-safe)
   const [isMobile, setIsMobile] = React.useState(false);
-  React.useEffect(() => {
-    setIsMobile(window.innerWidth <= 600);
+  useIsomorphicLayoutEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsMobile(window.innerWidth <= 600);
+    }
   }, []);
 
   // Mostrar español por defecto si el idioma no es 'en'

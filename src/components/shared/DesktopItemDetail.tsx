@@ -193,7 +193,15 @@ const DesktopItemDetail: React.FC<DesktopItemDetailProps> = ({
                           border: `1.5px solid ${getCategoryColor(selectedItem.category)}`,
                           marginLeft: '8px'
                         }}>
-                          {getSubcategoryTranslation(selectedItem.subcategory, selectedItem.category)}
+                          {(() => {
+                            const subcat = selectedItem.subcategory;
+                            if (typeof subcat === 'object' && subcat !== null) {
+                              // Si es objeto, tomar la primera clave
+                              const firstKey = Object.keys(subcat)[0];
+                              return getSubcategoryTranslation(firstKey, selectedItem.category);
+                            }
+                            return getSubcategoryTranslation(subcat, selectedItem.category);
+                          })()}
                         </span>
                     )}
                   </div>

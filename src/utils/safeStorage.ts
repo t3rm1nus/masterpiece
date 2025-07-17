@@ -11,7 +11,10 @@ interface SafeStorage {
 const safeStorage: SafeStorage = {
   getItem(key: string): string | null {
     try {
-      return localStorage.getItem(key);
+      if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+        return localStorage.getItem(key);
+      }
+      return null;
     } catch (e) {
       console.warn('Error al leer localStorage:', e);
       return null;
@@ -20,16 +23,22 @@ const safeStorage: SafeStorage = {
 
   setItem(key: string, value: string): boolean {
     try {
-      localStorage.setItem(key, value);
-      return true;
+      if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+        localStorage.setItem(key, value);
+        return true;
+      }
+      return false;
     } catch (e: any) {
       if (e.name === 'QuotaExceededError') {
         console.warn('QuotaExceededError - Limpiando storage y reintentando');
         try {
-          // Limpiar localStorage y reintentar
-          localStorage.clear();
-          localStorage.setItem(key, value);
-          return true;
+          if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+            // Limpiar localStorage y reintentar
+            localStorage.clear();
+            localStorage.setItem(key, value);
+            return true;
+          }
+          return false;
         } catch (e2) {
           console.error('No se pudo guardar tras limpiar:', e2);
           return false;
@@ -42,8 +51,11 @@ const safeStorage: SafeStorage = {
 
   removeItem(key: string): boolean {
     try {
-      localStorage.removeItem(key);
-      return true;
+      if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+        localStorage.removeItem(key);
+        return true;
+      }
+      return false;
     } catch (e) {
       console.warn('Error al eliminar de localStorage:', e);
       return false;
@@ -52,8 +64,11 @@ const safeStorage: SafeStorage = {
 
   clear(): boolean {
     try {
-      localStorage.clear();
-      return true;
+      if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+        localStorage.clear();
+        return true;
+      }
+      return false;
     } catch (e) {
       console.warn('Error al limpiar localStorage:', e);
       return false;

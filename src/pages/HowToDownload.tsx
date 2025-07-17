@@ -27,9 +27,11 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
     };
   }, []);
 
-  // Efecto para hacer scroll al top al montar la página
+  // Efecto para hacer scroll al top al montar la página (SSR safe)
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   // Textos traducibles

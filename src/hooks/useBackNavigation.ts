@@ -53,7 +53,9 @@ export default function useBackNavigation(): UseBackNavigationReturn {
     setIsAnimating(true);
     if (context === 'detail') {
       console.log('🔄 [useBackNavigation] Disparando evento overlay-detail-exit');
-      window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+      }
       animTimeout.current = setTimeout(() => {
         console.log('🔄 [useBackNavigation] Timeout completado, navegando a home');
         setIsAnimating(false);

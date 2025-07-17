@@ -2,6 +2,7 @@ import React, { useEffect, ReactNode } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useAppTheme } from '../store/useAppStore';
+import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
 // =============================================
 // MaterialThemeProvider: Provider de tema Material UI
@@ -15,9 +16,15 @@ interface MaterialThemeProviderProps {
 const MaterialThemeProvider: React.FC<MaterialThemeProviderProps> = ({ children }) => {
   const { isDarkMode, theme: currentTheme } = useAppTheme();
   
-  // Aplicar el tema al HTML para CSS customizado
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', currentTheme);
+  // Aplicar el tema al HTML para CSS customizado (SSR-safe y robusto)
+  useIsomorphicLayoutEffect(() => {
+    if (
+      typeof document !== 'undefined' &&
+      document.documentElement &&
+      typeof document.documentElement.setAttribute === 'function'
+    ) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+    }
   }, [currentTheme]);
   
   const theme = createTheme({

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { safeStorage } from '../utils/safeStorage';
+import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
 // =============================================
 // StorageMonitor: Monitor y depurador de almacenamiento local
@@ -25,8 +26,13 @@ export function StorageMonitor({ enabled = false }: StorageMonitorProps) {
   // Mostrar solo en desarrollo
   if (!enabled) return null;
 
-  // Detectar si es móvil
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 900;
+  // Detectar si es móvil (SSR-safe)
+  const [isMobile, setIsMobile] = useState(false);
+  useIsomorphicLayoutEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsMobile(window.innerWidth < 900);
+    }
+  }, []);
 
   return (
     <div 
@@ -81,49 +87,45 @@ export function StorageMonitor({ enabled = false }: StorageMonitorProps) {
 
 // Hook para detectar errores de storage
 export function useStorageErrorHandler(): void {
-  useEffect(() => {
-    const originalError = window.onerror;
-    const originalUnhandledRejection = window.onunhandledrejection;
-
-    window.onerror = function(message: string | Event, source?: string, lineno?: number, colno?: number, error?: Error): boolean | undefined {
-      if (typeof message === 'string' && message.includes('QuotaExceededError')) {
-        console.error('QuotaExceededError detectado por window.onerror:', {
-          message,
-          source,
-          lineno,
-          colno,
-          error
-        });
-        
-        // Ejecutar limpieza de emergencia
-        safeStorage.clear();
-      }
-      
-      if (originalError) {
-        return originalError(message, source, lineno, colno, error);
-      }
-      return false;
-    };
-
-    window.onunhandledrejection = function(event: PromiseRejectionEvent): void {
-      if (event.reason && (event.reason as any).name === 'QuotaExceededError') {
-        console.error('QuotaExceededError detectado por unhandledrejection:', event.reason);
-        
-        // Ejecutar limpieza de emergencia
-        safeStorage.clear();
-        
-        // Prevenir que el error se propague
-        event.preventDefault();
-      }
-      
-      if (originalUnhandledRejection) {
-        originalUnhandledRejection.call(window, event);
-      }
-    };
-
+  useIsomorphicLayoutEffect(() => {
+    const originalError = typeof window !== 'undefined' ? window.onerror : null;
+    const originalUnhandledRejection = typeof window !== 'undefined' ? window.onunhandledrejection : null;
+    if (typeof window !== 'undefined') {
+      window.onerror = function(message: string | Event, source?: string, lineno?: number, colno?: number, error?: Error): boolean | undefined {
+        if (typeof message === 'string' && message.includes('QuotaExceededError')) {
+          console.error('QuotaExceededError detectado por window.onerror:', {
+            message,
+            source,
+            lineno,
+            colno,
+            error
+          });
+          // Ejecutar limpieza de emergencia
+          safeStorage.clear();
+        }
+        if (originalError) {
+          return originalError(message, source, lineno, colno, error);
+        }
+        return false;
+      };
+      window.onunhandledrejection = function(event: PromiseRejectionEvent): void {
+        if (event.reason && (event.reason as any).name === 'QuotaExceededError') {
+          console.error('QuotaExceededError detectado por unhandledrejection:', event.reason);
+          // Ejecutar limpieza de emergencia
+          safeStorage.clear();
+          // Prevenir que el error se propague
+          event.preventDefault();
+        }
+        if (originalUnhandledRejection) {
+          originalUnhandledRejection.call(window, event);
+        }
+      };
+    }
     return () => {
-      window.onerror = originalError;
-      window.onunhandledrejection = originalUnhandledRejection;
+      if (typeof window !== 'undefined') {
+        window.onerror = originalError;
+        window.onunhandledrejection = originalUnhandledRejection;
+      }
     };
   }, []);
 } 

@@ -9,6 +9,7 @@ import { useCallback, useMemo, useState } from 'react';
 import { Home as HomeIcon, Coffee as CoffeeIcon } from '@mui/icons-material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import useIsomorphicLayoutEffect from './useIsomorphicLayoutEffect';
 
 interface MenuItem {
   label: string;
@@ -42,6 +43,21 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
   // Estado para controlar los audios pendientes (no repetir hasta que suenen todos)
   const [pendingAudios, setPendingAudios] = useState<string[]>([...splashAudios]);
 
+  // Estado para controlar si es móvil (SSR-safe)
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  useIsomorphicLayoutEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsMobile(window.innerWidth < 1024);
+    }
+    const handleResize = () => {
+      if (typeof window !== 'undefined') {
+        setIsMobile(window.innerWidth < 1024);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Handlers de navegación usando callback del HomeLayout
   const handleNewRecommendations = useCallback(() => {
     console.log('🔄 [useMenuItems] handleNewRecommendations llamado');
@@ -51,12 +67,16 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
       console.log('🔄 [useMenuItems] Navegando a home y haciendo scroll al top');
       onOverlayNavigate('/');
       setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (typeof window !== 'undefined') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
       }, 100);
     } else {
       navigate('/');
       setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (typeof window !== 'undefined') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
       }, 100);
     }
   }, [resetAllFilters, generateNewRecommendations, lang, onOverlayNavigate, navigate]);
@@ -71,7 +91,9 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
     console.log('🔄 [useMenuItems] handleHowToDownload llamado');
     console.log('🔄 [useMenuItems] onOverlayNavigate disponible:', !!onOverlayNavigate);
     console.log('🔄 [useMenuItems] onOverlayNavigate función:', typeof onOverlayNavigate);
-    console.log('🔄 [useMenuItems] URL actual:', window.location.pathname);
+    if (typeof window !== 'undefined') {
+      console.log('🔄 [useMenuItems] URL actual:', window.location.pathname);
+    }
     if (onOverlayNavigate) {
       console.log('🔄 [useMenuItems] Navegando a /como-descargar desde menú');
       console.log('🔄 [useMenuItems] Llamando onOverlayNavigate...');
@@ -159,7 +181,7 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
     ];
 
     // Reordenar menú SOLO en móvil: '¿Quiénes somos?' antes que 'Invítame a un café'
-    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+    if (isMobile) {
       const aboutIdx = menuItems.findIndex(item => item.label === getTranslation('ui.navigation.about'));
       const coffeeIdx = menuItems.findIndex(item => item.label === getTranslation('ui.navigation.buy_me_coffee'));
       if (aboutIdx !== -1 && coffeeIdx !== -1 && coffeeIdx < aboutIdx) {
@@ -169,7 +191,7 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
     }
     
     return menuItems;
-  }, [getTranslation, handleNewRecommendations, handleCoffeeNavigation, handleHowToDownload, handleAbout]);
+  }, [getTranslation, handleNewRecommendations, handleCoffeeNavigation, handleHowToDownload, handleAbout, isMobile]);
 
   return menu;
 } 

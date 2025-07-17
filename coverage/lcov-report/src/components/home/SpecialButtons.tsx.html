@@ -351,11 +351,11 @@
 <a name='L286'></a><a href='#L286'>286</a>
 <a name='L287'></a><a href='#L287'>287</a>
 <a name='L288'></a><a href='#L288'>288</a>
-<a name='L289'></a><a href='#L289'>289</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<a name='L289'></a><a href='#L289'>289</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -380,7 +380,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -397,17 +397,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">31x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">31x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
-<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">68x</span>
+<span class="cline-any cline-yes">68x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">31x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">31x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -639,7 +639,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+<span class="cline-any cline-yes">5x</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 import UiButton from '../ui/UiButton';
 import { getCategoryGradient } from '../../utils/categoryPalette';
 import useAppStore from '../../store/useAppStore';
@@ -656,8 +656,8 @@ interface SpecialButtonsProps {
   isMobile: boolean;
   isSpanishSeriesActive: boolean;
   handleSpanishSeriesToggle: () =&gt; void;
-  musicFilterType: string | null;
-  setMusicFilterType: (type: string | null) =&gt; void;
+  musicFilterType?: string;
+  setMusicFilterType: (type?: string) =&gt; void;
   activeSubcategory: string | null;
   battleFilterActive: boolean;
   setBattleFilterActive: (active: boolean) =&gt; void;
@@ -707,7 +707,7 @@ const SpecialButtons: React.FC&lt;SpecialButtonsProps&gt; = ({
             size="small"
             icon={null}
             onClick={() =&gt; {
-              setMusicFilterType(musicFilterType === 'song' ? <span class="branch-0 cbranch-no" title="branch not covered" >null </span>: 'song');
+              setMusicFilterType(musicFilterType === 'song' ? <span class="branch-0 cbranch-no" title="branch not covered" >undefined </span>: 'song');
               if (battleFilterActive) setBattleFilterActive(false);
             }}
             sx={{
@@ -728,7 +728,7 @@ const SpecialButtons: React.FC&lt;SpecialButtonsProps&gt; = ({
             size="small"
             icon={null}
             onClick={() =&gt; {
-              setMusicFilterType(musicFilterType === 'album' ? <span class="branch-0 cbranch-no" title="branch not covered" >null </span>: 'album');
+              setMusicFilterType(musicFilterType === 'album' ? <span class="branch-0 cbranch-no" title="branch not covered" >undefined </span>: 'album');
               <span class="missing-if-branch" title="if path not taken" >I</span>if (battleFilterActive) <span class="cstat-no" title="statement not covered" >setBattleFilterActive(false);</span>
             }}
             sx={{
@@ -752,7 +752,7 @@ const SpecialButtons: React.FC&lt;SpecialButtonsProps&gt; = ({
               icon={null}
               onClick={() =&gt; {
                 setBattleFilterActive(!battleFilterActive);
-                <span class="missing-if-branch" title="if path not taken" >I</span>if (musicFilterType) <span class="cstat-no" title="statement not covered" >setMusicFilterType(null);</span>
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (musicFilterType) <span class="cstat-no" title="statement not covered" >setMusicFilterType(undefined);</span>
               }}
               sx={{
                 margin: '0 4px',
@@ -775,7 +775,7 @@ const SpecialButtons: React.FC&lt;SpecialButtonsProps&gt; = ({
               size="small"
               icon={null}
               onClick={<span class="fstat-no" title="function not covered" >() =</span>&gt; {
-<span class="cstat-no" title="statement not covered" >                setMusicFilterType(musicFilterType === 'session' ? null : 'session');</span>
+<span class="cstat-no" title="statement not covered" >                setMusicFilterType(musicFilterType === 'session' ? undefined : 'session');</span>
 <span class="cstat-no" title="statement not covered" >                if (battleFilterActive) <span class="cstat-no" title="statement not covered" >setBattleFilterActive(false);</span></span>
               }}
               sx={{
@@ -934,7 +934,7 @@ export default SpecialButtons; </pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-07-16T21:45:59.022Z
+                at 2025-07-17T13:10:50.779Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

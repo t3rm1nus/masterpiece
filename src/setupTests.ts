@@ -1,3 +1,8 @@
+// Mock global para window.scrollTo en entorno de test
+if (typeof window !== 'undefined' && !window.scrollTo) {
+  window.scrollTo = jest.fn();
+}
+
 // Polyfill para TextEncoder/TextDecoder en Node.js
 global.TextEncoder = require('util').TextEncoder;
 global.TextDecoder = require('util').TextDecoder;

@@ -28,6 +28,7 @@ import UiButton from './ui/UiButton';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { findItemByGlobalId } from '../utils/appUtils';
 import { Helmet } from 'react-helmet-async';
+import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
 // =============================================
 // HomePage: Página principal de recomendaciones
@@ -70,9 +71,9 @@ interface HomePageProps {
 // Hook para detectar si es móvil SOLO por ancho de pantalla (robusto y compatible móvil)
 function useIsMobile(): boolean {
   const getIsMobile = (): boolean => typeof window !== 'undefined' ? window.innerWidth < 900 : false;
-  const [isMobile, setIsMobile] = React.useState<boolean>(getIsMobile);
+  const [isMobile, setIsMobile] = React.useState<boolean>(getIsMobile());
 
-  React.useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const handleResize = (): void => {
       const newIsMobile = getIsMobile();
       setIsMobile(prev => {
@@ -82,21 +83,16 @@ function useIsMobile(): boolean {
         return prev;
       });
     };
-    
     window.addEventListener('resize', handleResize);
     window.addEventListener('orientationchange', handleResize);
-    
-    // Forzar comprobación tras el primer render (por si el valor inicial es incorrecto)
     const timeoutId = setTimeout(handleResize, 100);
-    
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('orientationchange', handleResize);
       clearTimeout(timeoutId);
     };
   }, []);
-  
-  return isMobile; 
+  return isMobile;
 }
 
 // Definir keyframes para el gradiente animado de fondo
@@ -166,7 +162,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
 }) => {
   const location = useLocation();
   // Estado para filtro especial de música (debe ir antes de cualquier uso)
-  const [musicFilterType, setMusicFilterType] = React.useState<string | null>(null);
+  const [musicFilterType, setMusicFilterType] = React.useState<string | undefined>(undefined);
   // Estado para filtro especial de batalla (battle)
   const [battleFilterActive, setBattleFilterActive] = React.useState<boolean>(false);
   const [isDetailClosing, setIsDetailClosing] = React.useState<boolean>(false);
@@ -212,31 +208,37 @@ const HomePageComponent: React.FC<HomePageProps> = ({
     }
   };
 
-  // Apertura automática del Splash al cargar la Home la primera vez en la sesión
+  // Apertura automática del Splash al cargar la Home la primera vez en la sesión (SSR safe)
   useEffect(() => {
-    if (!sessionStorage.getItem('splashShown')) {
-      handleSplashOpen();
-      sessionStorage.setItem('splashShown', '1');
+    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+      if (!sessionStorage.getItem('splashShown')) {
+        handleSplashOpen();
+        sessionStorage.setItem('splashShown', '1');
+      }
     }
   }, []);
 
-  // Si se entra directamente a una URL de detalle, marcar splashShown para evitar mostrar el splash al volver a la Home
+  // Si se entra directamente a una URL de detalle, marcar splashShown para evitar mostrar el splash al volver a la Home (SSR safe)
   useEffect(() => {
-    const isDetailRoute = /^\/detalle\/[^/]+\/[^/]+/.test(location.pathname);
-    if (isDetailRoute && !sessionStorage.getItem('splashShown')) {
-      sessionStorage.setItem('splashShown', '1');
+    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+      const isDetailRoute = /^\/detalle\/[^/]+\/[^/]+/.test(location.pathname);
+      if (isDetailRoute && !sessionStorage.getItem('splashShown')) {
+        sessionStorage.setItem('splashShown', '1');
+      }
     }
   }, [location.pathname]);
 
-  // Restaurar scroll al volver de un detalle SOLO cuando la ruta es '/'
+  // Restaurar scroll al volver de un detalle SOLO cuando la ruta es '/' (SSR safe)
   useEffect(() => {
-    if (location.pathname === '/') {
-      const y = sessionStorage.getItem('homeScrollY');
-      if (y) {
-        setTimeout(() => {
-          window.scrollTo(0, parseInt(y, 10));
-          sessionStorage.removeItem('homeScrollY');
-        }, 50);
+    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+      if (location.pathname === '/') {
+        const y = sessionStorage.getItem('homeScrollY');
+        if (y) {
+          setTimeout(() => {
+            window.scrollTo(0, parseInt(y, 10));
+            sessionStorage.removeItem('homeScrollY');
+          }, 50);
+        }
       }
     }
   }, [location.pathname]);
@@ -297,7 +299,9 @@ const HomePageComponent: React.FC<HomePageProps> = ({
       resetAllFilters(lang);
       generateNewRecommendations();
       // Hacer scroll al top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof window !== 'undefined') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
   }, [isMobile, selectedCategory, resetAllFilters, generateNewRecommendations, lang]);
   
@@ -563,12 +567,11 @@ const HomePageComponent: React.FC<HomePageProps> = ({
     trackSubcategorySelection(selectedCategory || '', subcategory);
   }, [setActiveSubcategory, resetPagination, trackSubcategorySelection, selectedCategory]);
 
-  // Función para manejar cambio de categoría o subcategoría (móvil)
-  const handleCategoryOrSubcategoryChange = useCallback((category: string, subcategory?: string) => {
+  // Ajuste de firma para handleCategoryOrSubcategoryChange
+  const handleCategoryOrSubcategoryChange = useCallback((category: string, subcategory: string | null) => {
     if (category !== selectedCategory) {
       handleCategoryClick(category);
-    }
-    if (subcategory && subcategory !== activeSubcategory) {
+    } else if (subcategory && subcategory !== activeSubcategory) {
       handleSubcategoryClick(subcategory);
     }
   }, [selectedCategory, activeSubcategory, handleCategoryClick, handleSubcategoryClick]);
@@ -593,12 +596,12 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   // Funciones para filtros especiales
   const handleSpanishCinemaToggle = useCallback(() => {
     toggleSpanishCinema();
-    trackFilterUsage('spanish_cinema', selectedCategory);
+    trackFilterUsage('spanish_cinema', selectedCategory || '');
   }, [toggleSpanishCinema, trackFilterUsage, selectedCategory]);
 
   const handleMasterpieceToggle = useCallback(() => {
     toggleMasterpiece();
-    trackFilterUsage('masterpiece', selectedCategory);
+    trackFilterUsage('masterpiece', selectedCategory || '');
   }, [toggleMasterpiece, trackFilterUsage, selectedCategory]);
 
   // Función segura para renderizar subcategorías
@@ -636,7 +639,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         color="secondary"
         size="medium"
         icon={null}
-        onClick={() => handleSubcategoryClick(subcategoryObj.sub)}
+        onClick={() => handleSubcategoryClick(subcategoryObj.sub || '')}
         sx={{
           background: isActive ? getCategoryGradient(selectedCategory || '') : 'var(--background-secondary)',
           color: isActive ? '#222' : 'var(--text-color)',
@@ -668,38 +671,42 @@ const HomePageComponent: React.FC<HomePageProps> = ({
     return getCategoryAnimatedGradient(selectedCategory);
   }, [selectedCategory]);
 
-  // Elimina todos los console.log relacionados con ScrollRestore y depuración
+  // Elimina todos los console.log relacionados con ScrollRestore y depuración (SSR safe)
   useEffect(() => {
-    if (location.pathname === '/' && sessionStorage.getItem('homeScrollY')) {
-      const y = sessionStorage.getItem('homeScrollY');
-      if (y) {
-        const targetY = parseInt(y, 10);
-        let restored = false;
-        const tryRestore = () => {
-          if (document.body.scrollHeight > targetY + window.innerHeight) {
-            window.scrollTo(0, targetY);
-            sessionStorage.removeItem('homeScrollY');
-            return true;
+    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+      if (location.pathname === '/' && sessionStorage.getItem('homeScrollY')) {
+        const y = sessionStorage.getItem('homeScrollY');
+        if (y) {
+          const targetY = parseInt(y, 10);
+          let restored = false;
+          const tryRestore = () => {
+            if (document.body.scrollHeight > targetY + window.innerHeight) {
+              window.scrollTo(0, targetY);
+              sessionStorage.removeItem('homeScrollY');
+              return true;
+            }
+            return false;
+          };
+          if (!tryRestore()) {
+            const interval = setInterval(() => {
+              if (tryRestore()) {
+                clearInterval(interval);
+              }
+            }, 50);
+            setTimeout(() => {
+              if (!restored) {
+                clearInterval(interval);
+              }
+            }, 1000); // Máximo 1s
           }
-          return false;
-        };
-        if (!tryRestore()) {
-          const interval = setInterval(() => {
-            if (tryRestore()) {
-              clearInterval(interval);
-            }
-          }, 50);
-          setTimeout(() => {
-            if (!restored) {
-              clearInterval(interval);
-            }
-          }, 1000); // Máximo 1s
         }
       }
     }
   }, [location.pathname, filteredItemsMemo.length]);
   // Renderizar el componente
   const url = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.com/';
+  const isIPhone = typeof navigator !== 'undefined' && /iPhone|iPod/.test(navigator.userAgent);
+  const splashShown = typeof sessionStorage !== 'undefined' && sessionStorage.getItem('splashShown');
   const isCategory = selectedCategory && selectedCategory !== 'all';
   const isSubcategory = isCategory && activeSubcategory && activeSubcategory !== 'all';
   const categoryLabel = isCategory ? (t?.categories?.[selectedCategory] || selectedCategory) : '';
@@ -756,11 +763,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
       </Helmet>
     <UiLayout>
       {/* Splash Dialog */}
-      {(
-        // Solo mostrar splash en iPhone si es la primera vez
-        !(typeof window !== 'undefined' && /iPhone|iPod/.test(navigator.userAgent)) ||
-        (!sessionStorage.getItem('splashShown'))
-      ) && (
+      {(!isIPhone || !splashShown) && (
         <SplashDialog
           open={splashOpenLocal}
           onClose={handleSplashClose}
@@ -768,12 +771,12 @@ const HomePageComponent: React.FC<HomePageProps> = ({
           audioRef={audioRef}
           content={
             (() => {
-              const isIPhone = typeof window !== 'undefined' && /iPhone|iPod/.test(navigator.userAgent);
+              const isIPhoneSplash = typeof navigator !== 'undefined' && /iPhone|iPod/.test(navigator.userAgent);
               return (
                 <img
                   src="/imagenes/splash_image.png"
                   alt="Splash"
-                  style={isIPhone
+                  style={isIPhoneSplash
                     ? { width: '100vw', height: '100vh', objectFit: 'contain', borderRadius: 0, margin: 0, cursor: 'pointer', background: 'none', display: 'block' }
                     : { width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer', background: 'none' }
                   }
@@ -785,10 +788,8 @@ const HomePageComponent: React.FC<HomePageProps> = ({
           actions={null}
         />
       )}
-      
       {/* Hybrid Menu */}
       <HybridMenu />
-      
       {/* Detail Dialog SOLO en móvil */}
       {isMobile && currentView === 'detail' && !!selectedItem ? (
         <UnifiedItemDetail
@@ -797,9 +798,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
           isClosing={isDetailClosing}
         />
       ) : null}
-
       {/* Detail Overlay SOLO en desktop */}
-
       {/* Contenido principal */}
         <main>
           <header>
@@ -814,10 +813,10 @@ const HomePageComponent: React.FC<HomePageProps> = ({
             <div style={{ width: '96vw', maxWidth: '96vw', margin: '0 auto', marginBottom: 4, marginTop: 4, zIndex: 1, position: 'relative', marginLeft: '10px' }}>
               <MaterialCategorySelect
                 categories={categories}
-                selectedCategory={selectedCategory}
+                selectedCategory={selectedCategory || ''}
                 onCategoryChange={handleCategoryOrSubcategoryChange}
                 subcategories={categorySubcategories}
-                activeSubcategory={activeSubcategory}
+                activeSubcategory={activeSubcategory || ''}
                 {...materialCategorySelectProps}
               />
               {/* Botones especiales SOLO en móvil y SOLO si hay categoría seleccionada */}
@@ -876,12 +875,13 @@ const HomePageComponent: React.FC<HomePageProps> = ({
                 isRecommendedActive={isRecommendedActive}
                 isSpanishSeriesActive={isSpanishSeriesActive}
                 handleSpanishSeriesToggle={toggleSpanishSeries}
-                {...specialButtonsProps}
+                isMobile={false}
                 musicFilterType={musicFilterType}
                 setMusicFilterType={setMusicFilterType}
                 activeSubcategory={activeSubcategory}
                 battleFilterActive={battleFilterActive}
                 setBattleFilterActive={setBattleFilterActive}
+                {...specialButtonsProps}
               />
             </>
           )}

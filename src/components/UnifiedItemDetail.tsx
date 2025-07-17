@@ -14,6 +14,7 @@ import { findItemByGlobalId } from '../utils/appUtils';
 import { CircularProgress } from '@mui/material';
 import DesktopItemDetail from './shared/DesktopItemDetail';
 import { Helmet } from 'react-helmet-async';
+import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
 // Material UI imports (solo para mobile)
 import {
@@ -338,7 +339,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
   }, [selectedItem]);
 
   // Animación fade in al cargar el detalle
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (selectedItem) {
       setIsVisible(false);
       const timer = setTimeout(() => {
@@ -349,7 +350,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
   }, [selectedItem]);
 
   // Aplicar fixes específicos para iPhone cuando el componente se monta
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (isIPhone() && selectedItem) {
       const timer = setTimeout(() => {
         applyDetailScrollFixForIPhone();

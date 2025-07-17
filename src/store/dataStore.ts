@@ -71,6 +71,8 @@ export interface DataSlice {
   resetAllFilters: () => void;
   updateFilteredItems: (items: any[]) => void;
   resetPagination: () => void;
+  setMobilePage: (page: number) => void;
+  setDesktopPage: (page: number) => void;
 }
 
 // Migration helper for persisted state
@@ -96,7 +98,7 @@ export const createDataSlice = (set: any, get: any): DataSlice => ({
   mobilePage: 1,
   desktopPage: 1,
   updateWithRealData: (realData: RealData) => {
-    const catSeries = realData.categories?.find(cat => cat.id === 'series');
+    const catSeries = realData.categories?.find((cat: any) => cat.id === 'series');
 
     // --- CORRECCIÓN: Generar subcategorías únicas de series a partir de los datos reales ---
     let seriesSubcats: Array<{ sub: string; label: string }> = [];
@@ -117,7 +119,7 @@ export const createDataSlice = (set: any, get: any): DataSlice => ({
     // --- FIN CORRECCIÓN ---
 
     // --- CORRECCIÓN: Reemplazar subcategorías de series en las categorías ---
-    let categoriesFixed: Category[] = realData.categories ? realData.categories.map((cat: Category) => {
+    let categoriesFixed: Category[] = realData.categories ? realData.categories.map((cat: any) => {
       if (cat.id === 'series') {
         return { ...cat, subcategories: seriesSubcats };
       }
@@ -145,7 +147,7 @@ export const createDataSlice = (set: any, get: any): DataSlice => ({
       selectedCategory: null,
       isDataInitialized: true
     });
-    const catSeriesAfter = categoriesFixed?.find(cat => cat.id === 'series');
+    const catSeriesAfter = categoriesFixed?.find((cat: any) => cat.id === 'series');
   },
   getRecommendations: () => get().recommendations,
   getCategories: () => {
@@ -159,7 +161,7 @@ export const createDataSlice = (set: any, get: any): DataSlice => ({
   },
   getSubcategoriesForCategory: (categoryId: string) => {
     const categories = get().categories;
-    const category = categories.find(cat => cat.id === categoryId);
+    const category = categories.find((cat: any) => cat.id === categoryId);
     return category?.subcategories || [];
   },
   setCategory: (category: string) => set({ selectedCategory: category }),
@@ -252,4 +254,6 @@ export const createDataSlice = (set: any, get: any): DataSlice => ({
     mobilePage: 1,
     desktopPage: 1,
   }),
+  setMobilePage: (page: number) => set({ mobilePage: page }),
+  setDesktopPage: (page: number) => set({ desktopPage: page }),
 }); 

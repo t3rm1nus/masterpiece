@@ -20,7 +20,9 @@ export const handleMasterpieceToggle = (toggleMasterpiece: () => void) => () => 
 
 export const handleItemClick = <T>(goToDetail: (item: T) => void) => (item: T) => {
   goToDetail(item);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (typeof window !== 'undefined') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 };
 
 export const handleCloseDetail = (goBackFromDetail: () => void) => () => {

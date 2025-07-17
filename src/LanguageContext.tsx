@@ -111,9 +111,15 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
 
   const getSubcategoryTranslation = (subcategory: string, category: string | null = null, fallback: string = subcategory): string => {
     if (category) {
-      return getTranslation(`subcategories.${category}.${subcategory}`, fallback);
+      const result = getTranslation(`subcategories.${category}.${subcategory}`, fallback);
+      // Asegurar que nunca devuelva un objeto
+      if (typeof result === 'object' && result !== null) {
+        return fallback;
+      }
+      return result;
     }
-    return getTranslation(`subcategories.${subcategory}`, fallback);
+    // Si no hay categoría, devolver el fallback directamente
+    return fallback;
   };
 
   // Método de conveniencia para traducir con fallback automático a la clave

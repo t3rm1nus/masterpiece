@@ -1,4 +1,5 @@
 import React, { lazy, FC } from 'react';
+import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
 // =============================================
 // LazyComponents: Wrapper de lazy loading para componentes pesados
@@ -9,6 +10,24 @@ import React, { lazy, FC } from 'react';
 export const LazyCoffeePage = lazy(() => import('./CoffeePage'));
 export const LazyRecommendationsList = lazy(() => import('./RecommendationsList'));
 export const LazyHowToDownload = lazy(() => import('../pages/HowToDownload'));
+
+// Componente para inyectar el estilo del spinner solo una vez (SSR-safe)
+const SpinnerStyleInjector: FC = () => {
+  useIsomorphicLayoutEffect(() => {
+    if (typeof document !== 'undefined' && !document.getElementById('lazycomponents-spin-style')) {
+      const styleTag = document.createElement('style');
+      styleTag.id = 'lazycomponents-spin-style';
+      styleTag.textContent = `
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `;
+      document.head.appendChild(styleTag);
+    }
+  }, []);
+  return null;
+};
 
 // Componente de loading fallback
 interface LoadingFallbackProps {
@@ -24,6 +43,7 @@ export const LoadingFallback: FC<LoadingFallbackProps> = ({ message = "Cargando.
     fontSize: '1.1rem',
     color: '#666'
   }}>
+    <SpinnerStyleInjector />
     <div style={{
       display: 'flex',
       flexDirection: 'column',
@@ -41,17 +61,4 @@ export const LoadingFallback: FC<LoadingFallbackProps> = ({ message = "Cargando.
       <span>{message}</span>
     </div>
   </div>
-);
-
-// Agregar estilos CSS para la animación de loading solo una vez
-if (typeof document !== 'undefined' && !document.getElementById('lazycomponents-spin-style')) {
-  const styleTag = document.createElement('style');
-  styleTag.id = 'lazycomponents-spin-style';
-  styleTag.textContent = `
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  `;
-  document.head.appendChild(styleTag);
-} 
+); 

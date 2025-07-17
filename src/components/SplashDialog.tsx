@@ -4,6 +4,7 @@ import DialogContent, { DialogContentProps } from '@mui/material/DialogContent';
 import Paper, { PaperProps } from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { useLanguage } from '../LanguageContext';
+import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
 // =============================================
 // SplashDialog: Modal/diálogo de splash animado y accesible
@@ -54,15 +55,23 @@ const SplashDialog: React.FC<SplashDialogProps> = ({
   const audioRef = externalAudioRef || internalAudioRef;
 
   // Detecta si es móvil (SSR safe)
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 600);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+  useIsomorphicLayoutEffect(() => {
+    if (typeof window !== 'undefined') {
+      const checkMobile = () => setIsMobile(window.innerWidth <= 600);
+      checkMobile();
+      window.addEventListener('resize', checkMobile);
+      return () => window.removeEventListener('resize', checkMobile);
+    }
   }, []);
 
-  // Detectar si es iPhone específicamente
-  const isIPhone = typeof window !== 'undefined' && /iPhone|iPod/.test(navigator.userAgent);
+  // Detectar si es iPhone específicamente (SSR safe)
+  const [isIPhone, setIsIPhone] = useState(false);
+  
+  useIsomorphicLayoutEffect(() => {
+    if (typeof window !== 'undefined' && typeof navigator !== 'undefined') {
+      setIsIPhone(/iPhone|iPod/.test(navigator.userAgent));
+    }
+  }, []);
 
   // Volumen del audio
   useEffect(() => {
@@ -166,8 +175,8 @@ const SplashDialog: React.FC<SplashDialogProps> = ({
   `;
 
   // Inyecta los keyframes globalmente una sola vez
-  useEffect(() => {
-    if (!document.getElementById('splash-keyframes')) {
+  useIsomorphicLayoutEffect(() => {
+    if (typeof document !== 'undefined' && !document.getElementById('splash-keyframes')) {
       const style = document.createElement('style');
       style.id = 'splash-keyframes';
       style.innerHTML = splashKeyframes;

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLanguage } from '../LanguageContext';
 import MaterialCoffeePage from './MaterialCoffeePage';
+import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
 // =============================================
 // CoffeePage: Página de donación legacy (redirige a MaterialCoffeePage)
@@ -14,8 +15,10 @@ interface CoffeePageProps {
 const CoffeePage: React.FC<CoffeePageProps> = ({ onAnimationEnd }) => {
   const { t, getTranslation } = useLanguage();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
+  useIsomorphicLayoutEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   return (

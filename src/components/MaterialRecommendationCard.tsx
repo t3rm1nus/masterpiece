@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import {
   CardContent,
   CardMedia,
@@ -25,6 +25,7 @@ import { useAppView } from '../store/useAppStore';
 import { processTitle, processDescription } from '../store/utils';
 import UiCard from './ui/UiCard';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
+import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
 // Tipos para props
 interface Recommendation {
@@ -110,7 +111,6 @@ const MaterialRecommendationCard: React.FC<MaterialRecommendationCardProps> = me
   };
 
   const cardSx = (theme: any) => {
-    const isIphone = typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent);
     return {
       maxWidth: { xs: '88vw', md: 245 },
       minWidth: { xs: 0, md: 200 },
@@ -191,7 +191,13 @@ const MaterialRecommendationCard: React.FC<MaterialRecommendationCardProps> = me
     fontWeight: 500
   });
 
-  const isIphone = typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent);
+  // Detectar iPhone de forma SSR-safe
+  const [isIphone, setIsIphone] = useState(false);
+  useIsomorphicLayoutEffect(() => {
+    if (typeof window !== 'undefined' && typeof navigator !== 'undefined') {
+      setIsIphone(/iPhone|iPad|iPod/.test(navigator.userAgent));
+    }
+  }, []);
 
   return (
     <UiCard

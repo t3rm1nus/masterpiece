@@ -17,7 +17,9 @@ interface ActionButtonsProps {
 
 // Función helper para manejar la navegación con cierre de detalle
 const handleNavigationWithDetailClose = (navigationFunction: () => void) => {
-  window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('overlay-detail-exit'));
+  }
   setTimeout(() => {
     navigationFunction();
   }, 500);

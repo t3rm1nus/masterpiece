@@ -8,6 +8,7 @@ import { useLanguage } from '../LanguageContext';
 import useInfiniteScroll from '../hooks/useInfiniteScroll';
 import CircularProgress from '@mui/material/CircularProgress';
 import { randomNotFoundImage } from '../store/utils';
+import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
 // =============================================
 // MaterialContentWrapper: Wrapper de contenido Material UI
@@ -155,7 +156,10 @@ const MaterialContentWrapper: React.FC<MaterialContentWrapperProps> = ({
       }
       return;
     }
-    const hasPendingScroll = !!sessionStorage.getItem('homeScrollY');
+    let hasPendingScroll = false;
+    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+      hasPendingScroll = !!sessionStorage.getItem('homeScrollY');
+    }
     if (recommendations && Array.isArray(recommendations)) {
       if (isMobile && visibleIndexes.length === 0) {
         if (hasPendingScroll) {
@@ -195,8 +199,14 @@ const MaterialContentWrapper: React.FC<MaterialContentWrapperProps> = ({
     !!loadingMore
   );
 
-  // Forzar overflow visible y stacking alto SOLO en iPhone/iPad
-  const isIphone = typeof window !== 'undefined' && /iPhone|iPad|iPod/.test(window.navigator.userAgent);
+  // Forzar overflow visible y stacking alto SOLO en iPhone/iPad (SSR-safe)
+  const [isIphone, setIsIphone] = useState(false);
+  useIsomorphicLayoutEffect(() => {
+    if (typeof window !== 'undefined' && window.navigator) {
+      setIsIphone(/iPhone|iPad|iPod/.test(window.navigator.userAgent));
+    }
+  }, []);
+
   const wrapperSxFinal = {
     ...wrapperSx(props.sx, isMobile),
     ...(isIphone ? { overflow: 'visible !important', zIndex: 1, position: 'relative' } : {}), // Por debajo del menú superior (1200)

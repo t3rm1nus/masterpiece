@@ -117,9 +117,15 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
       onClose();
     } else {
       try {
-        window.history.back();
+        if (typeof window !== 'undefined' && window.history) {
+          window.history.back();
+        } else if (typeof window !== 'undefined' && window.location) {
+          window.location.assign('/');
+        }
       } catch {
-        window.location.assign('/');
+        if (typeof window !== 'undefined' && window.location) {
+          window.location.assign('/');
+        }
       }
     }
   };
@@ -150,15 +156,19 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
   );
 
   const handleShare = () => {
-    const url = window.location.href;
-    if (navigator.share) {
-      navigator.share({
-        title: document.title,
-        url,
-      }).catch(() => {});
-    } else {
-      navigator.clipboard.writeText(url);
-      alert('Enlace copiado');
+    if (typeof window !== 'undefined') {
+      const url = window.location.href;
+      if (typeof navigator !== 'undefined' && navigator.share) {
+        if (typeof document !== 'undefined') {
+          navigator.share({
+            title: document.title,
+            url,
+          }).catch(() => {});
+        }
+      } else if (typeof navigator !== 'undefined' && navigator.clipboard) {
+        navigator.clipboard.writeText(url);
+        alert('Enlace copiado');
+      }
     }
   };
 

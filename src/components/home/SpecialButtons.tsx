@@ -15,8 +15,8 @@ interface SpecialButtonsProps {
   isMobile: boolean;
   isSpanishSeriesActive: boolean;
   handleSpanishSeriesToggle: () => void;
-  musicFilterType: string | null;
-  setMusicFilterType: (type: string | null) => void;
+  musicFilterType?: string;
+  setMusicFilterType: (type?: string) => void;
   activeSubcategory: string | null;
   battleFilterActive: boolean;
   setBattleFilterActive: (active: boolean) => void;
@@ -66,7 +66,7 @@ const SpecialButtons: React.FC<SpecialButtonsProps> = ({
             size="small"
             icon={null}
             onClick={() => {
-              setMusicFilterType(musicFilterType === 'song' ? null : 'song');
+              setMusicFilterType(musicFilterType === 'song' ? undefined : 'song');
               if (battleFilterActive) setBattleFilterActive(false);
             }}
             sx={{
@@ -87,7 +87,7 @@ const SpecialButtons: React.FC<SpecialButtonsProps> = ({
             size="small"
             icon={null}
             onClick={() => {
-              setMusicFilterType(musicFilterType === 'album' ? null : 'album');
+              setMusicFilterType(musicFilterType === 'album' ? undefined : 'album');
               if (battleFilterActive) setBattleFilterActive(false);
             }}
             sx={{
@@ -111,7 +111,7 @@ const SpecialButtons: React.FC<SpecialButtonsProps> = ({
               icon={null}
               onClick={() => {
                 setBattleFilterActive(!battleFilterActive);
-                if (musicFilterType) setMusicFilterType(null);
+                if (musicFilterType) setMusicFilterType(undefined);
               }}
               sx={{
                 margin: '0 4px',
@@ -134,7 +134,7 @@ const SpecialButtons: React.FC<SpecialButtonsProps> = ({
               size="small"
               icon={null}
               onClick={() => {
-                setMusicFilterType(musicFilterType === 'session' ? null : 'session');
+                setMusicFilterType(musicFilterType === 'session' ? undefined : 'session');
                 if (battleFilterActive) setBattleFilterActive(false);
               }}
               sx={{

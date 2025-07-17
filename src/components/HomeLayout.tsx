@@ -7,6 +7,7 @@ import HowToDownload from '../pages/HowToDownload';
 import CoffeePage from './CoffeePage';
 import WelcomePopup, { WELCOME_POPUP_KEY } from './WelcomePopup';
 import MaterialMobileMenu from './MaterialMobileMenu';
+import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
 export default function HomeLayout(): React.JSX.Element {
   const location = useLocation();
@@ -27,18 +28,22 @@ export default function HomeLayout(): React.JSX.Element {
     navigate(-1);
   }, [navigate]);
 
-  // Estado para WelcomePopup
+  // Estado para WelcomePopup (SSR safe)
   const [welcomePopupOpen, setWelcomePopupOpen] = React.useState(false);
-  React.useEffect(() => {
-    const hasSeenWelcomePopup = localStorage.getItem(WELCOME_POPUP_KEY);
-    if (!hasSeenWelcomePopup && !welcomePopupOpen) {
-      const timer = setTimeout(() => setWelcomePopupOpen(true), 1500);
-      return () => clearTimeout(timer);
+  useIsomorphicLayoutEffect(() => {
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+      const hasSeenWelcomePopup = localStorage.getItem(WELCOME_POPUP_KEY);
+      if (!hasSeenWelcomePopup && !welcomePopupOpen) {
+        const timer = setTimeout(() => setWelcomePopupOpen(true), 1500);
+        return () => clearTimeout(timer);
+      }
     }
   }, [welcomePopupOpen]);
   const closeWelcomePopup = React.useCallback(() => {
     setWelcomePopupOpen(false);
-    localStorage.setItem(WELCOME_POPUP_KEY, 'true');
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+      localStorage.setItem(WELCOME_POPUP_KEY, 'true');
+    }
   }, []);
 
   // Estado y lógica del Splash (antes en HomePage)
