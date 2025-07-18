@@ -61,11 +61,6 @@ interface HomePageProps {
   categoryBarSx?: Record<string, any>;
   subcategoryBarSx?: Record<string, any>;
   materialCategorySelectSx?: Record<string, any>;
-  splashAudio?: string;
-  splashOpen?: boolean;
-  onSplashOpen?: () => void;
-  onSplashClose?: () => void;
-  audioRef?: React.RefObject<HTMLAudioElement>;
   [key: string]: any;
 }
 
@@ -154,11 +149,6 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   categoryBarSx,
   subcategoryBarSx,
   materialCategorySelectSx,
-  splashAudio,
-  splashOpen,
-  onSplashOpen,
-  onSplashClose,
-  audioRef,
   ...rest
 }) => {
   const location = useLocation();
@@ -178,56 +168,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   // Hook para detectar si es móvil
   const isMobile = useIsMobile();
   
-  // Estado para el Splash
-  const [splashOpenLocal, setSplashOpen] = useState<boolean>(false);
-  const splashAudios = [
-    "/sonidos/samurai.mp3",
-    "/sonidos/samurai.wav",
-    "/sonidos/samurai1.mp3",
-    "/sonidos/samurai2.mp3",
-    "/sonidos/samurai3.mp3",
-    "/sonidos/samurai4.mp3"
-  ];
-  const [pendingAudios, setPendingAudios] = useState<string[]>([...splashAudios]);
-  const [splashAudioLocal, setSplashAudio] = useState<string>(splashAudios[0]);
-
-  const handleSplashOpen = (): void => {
-    let audiosToUse = pendingAudios.length > 0 ? pendingAudios : [...splashAudios];
-    const randomIdx = Math.floor(Math.random() * audiosToUse.length);
-    const randomAudio = audiosToUse[randomIdx];
-    setSplashAudio(randomAudio);
-    setSplashOpen(true);
-    const newPending = audiosToUse.filter((a, i) => i !== randomIdx);
-    setPendingAudios(newPending);
-  };
-
-  const handleSplashClose = (): void => {
-    setSplashOpen(false);
-    if (audioRef?.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    }
-  };
-
-  // Apertura automática del Splash al cargar la Home la primera vez en la sesión (SSR safe)
-  useEffect(() => {
-    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
-      if (!sessionStorage.getItem('splashShown')) {
-        handleSplashOpen();
-        sessionStorage.setItem('splashShown', '1');
-      }
-    }
-  }, []);
-
-  // Si se entra directamente a una URL de detalle, marcar splashShown para evitar mostrar el splash al volver a la Home (SSR safe)
-  useEffect(() => {
-    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
-      const isDetailRoute = /^\/detalle\/[^/]+\/[^/]+/.test(location.pathname);
-      if (isDetailRoute && !sessionStorage.getItem('splashShown')) {
-        sessionStorage.setItem('splashShown', '1');
-      }
-    }
-  }, [location.pathname]);
+  // Estado para el Splash - ELIMINADO: Solo se maneja desde HomeLayout
 
   // Restaurar scroll al volver de un detalle SOLO cuando la ruta es '/' (SSR safe)
   useEffect(() => {
@@ -700,7 +641,6 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   // Renderizar el componente
   const url = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.com/';
   const isIPhone = typeof navigator !== 'undefined' && /iPhone|iPod/.test(navigator.userAgent);
-  const splashShown = typeof sessionStorage !== 'undefined' && sessionStorage.getItem('splashShown');
   const isCategory = selectedCategory && selectedCategory !== 'all';
   const isSubcategory = isCategory && activeSubcategory && activeSubcategory !== 'all';
   const categoryLabel = isCategory ? (t?.categories?.[selectedCategory] || selectedCategory) : '';
@@ -787,32 +727,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
       <img src="/imagenes/splash.png" alt="" style={{ display: 'none' }} aria-hidden="true" />
       <img src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate.jpg" alt="" style={{ display: 'none' }} aria-hidden="true" />
     <UiLayout>
-      {/* Splash Dialog */}
-      {(!isIPhone || !splashShown) && (
-        <SplashDialog
-          open={splashOpenLocal}
-          onClose={handleSplashClose}
-          audio={splashAudioLocal}
-          audioRef={audioRef}
-          content={
-            (() => {
-              const isIPhoneSplash = typeof navigator !== 'undefined' && /iPhone|iPod/.test(navigator.userAgent);
-              return (
-                <img
-                  src="/imagenes/splash_image.png"
-                  alt="Splash"
-                  style={isIPhoneSplash
-                    ? { width: '100vw', height: '100vh', objectFit: 'contain', borderRadius: 0, margin: 0, cursor: 'pointer', background: 'none', display: 'block' }
-                    : { width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer', background: 'none' }
-                  }
-                />
-              );
-            })()
-          }
-          title=""
-          actions={null}
-        />
-      )}
+      {/* Splash Dialog - ELIMINADO: Solo se muestra desde HomeLayout cuando el usuario hace clic en "Quiénes Somos" */}
       {/* Hybrid Menu */}
       <HybridMenu />
       {/* Detail Dialog SOLO en móvil */}
