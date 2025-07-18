@@ -718,6 +718,8 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   return (
     <>
       <Helmet>
+        <link rel="preload" as="image" href="/imagenes/splash.png" />
+        <link rel="preload" as="image" href="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate.jpg" />
         <title>{pageTitle || 'Masterpiece'}</title>
         <meta name="description" content={pageDescription} />
         <meta property="og:title" content={pageTitle} />
@@ -781,6 +783,9 @@ const HomePageComponent: React.FC<HomePageProps> = ({
           `}
         </script>
       </Helmet>
+      {/* Precarga invisible para asegurar caché en cliente (SSR safe) */}
+      <img src="/imagenes/splash.png" alt="" style={{ display: 'none' }} aria-hidden="true" />
+      <img src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate.jpg" alt="" style={{ display: 'none' }} aria-hidden="true" />
     <UiLayout>
       {/* Splash Dialog */}
       {(!isIPhone || !splashShown) && (
