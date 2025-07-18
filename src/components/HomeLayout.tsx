@@ -46,7 +46,8 @@ export default function HomeLayout({ forcedLang }: { forcedLang?: string }): Rea
     if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
       const hasSeenWelcomePopup = localStorage.getItem(WELCOME_POPUP_KEY);
       if (!hasSeenWelcomePopup && !welcomePopupOpen) {
-        const timer = setTimeout(() => setWelcomePopupOpen(true), 1500);
+        // Mostrar WelcomePopup inmediatamente en primera visita (no splash de quienes somos)
+        const timer = setTimeout(() => setWelcomePopupOpen(true), 500);
         return () => clearTimeout(timer);
       }
     }
@@ -60,6 +61,8 @@ export default function HomeLayout({ forcedLang }: { forcedLang?: string }): Rea
 
   // Estado y lógica del Splash (antes en HomePage)
   const [splashOpenLocal, setSplashOpen] = useState(false);
+  // El splash de "quienes somos" SOLO se muestra manualmente desde el menú
+  // NO se muestra automáticamente en la primera visita
   const splashAudios = [
     "/sonidos/samurai.mp3",
     "/sonidos/samurai.wav",
@@ -70,7 +73,7 @@ export default function HomeLayout({ forcedLang }: { forcedLang?: string }): Rea
   ];
   const [pendingAudios, setPendingAudios] = useState([...splashAudios]);
   const [splashAudioLocal, setSplashAudio] = useState(splashAudios[0]);
-  const audioRef = useRef(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const handleSplashOpen = () => {
     let audiosToUse = pendingAudios.length > 0 ? pendingAudios : [...splashAudios];
     const randomIdx = Math.floor(Math.random() * audiosToUse.length);
@@ -97,8 +100,7 @@ export default function HomeLayout({ forcedLang }: { forcedLang?: string }): Rea
           onSplashOpen={handleSplashOpen}
           splashOpen={splashOpenLocal}
           onSplashClose={handleSplashClose}
-          splashAudio={splashAudioLocal}
-          audioRef={audioRef}
+          audioRef={audioRef as React.RefObject<HTMLAudioElement>}
         />
       </div>
       {/* AppBar y menú móvil siempre visibles en móvil */}
@@ -106,7 +108,6 @@ export default function HomeLayout({ forcedLang }: { forcedLang?: string }): Rea
         onSplashOpen={handleSplashOpen}
         splashOpen={splashOpenLocal}
         onSplashClose={handleSplashClose}
-        splashAudio={splashAudioLocal}
         audioRef={audioRef}
       />
       {/* Overlay para detalle SOLO si isDetail y category/id definidos */}
