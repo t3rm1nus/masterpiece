@@ -1,3 +1,4 @@
 public/imagenes/*
 !public/imagenes/og/**
-!public/imagenes/notfound/** 
+!public/imagenes/notfound/**
+!public/imagenes/splash_image.png 
