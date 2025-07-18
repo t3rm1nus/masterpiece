@@ -47,8 +47,9 @@ export default function AppContent(): React.JSX.Element {
   }, [isDataInitialized, updateWithRealData]);
   
   return (
-    <Suspense fallback={<LoadingFallback />}>
+    <Suspense fallback={<LoadingFallback />}> 
       <Routes>
+        <Route path="/en/*" element={<HomeLayout forcedLang="en" />} />
         <Route path="/*" element={<HomeLayout />} />
       </Routes>
     </Suspense>

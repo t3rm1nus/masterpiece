@@ -3,15 +3,13 @@ import {
   Box,
   Typography
 } from '@mui/material';
-import {
-  Person as PersonIcon,
-  AccessTime as AccessTimeIcon,
-  ChildCare as ChildCareIcon,
-  Code as DeveloperIcon,
-  Gamepad as PlatformIcon,
-  Translate as TranslateIcon,
-  PlaylistPlay as PlaylistPlayIcon
-} from '@mui/icons-material';
+import PersonIcon from '@mui/icons-material/Person';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import ChildCareIcon from '@mui/icons-material/ChildCare';
+import CodeIcon from '@mui/icons-material/Code';
+import GamepadIcon from '@mui/icons-material/Gamepad';
+import TranslateIcon from '@mui/icons-material/Translate';
+import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
 import { getCategoryColor } from '../../utils/categoryPalette';
 import { ensureString } from '../../utils/stringUtils';
 
@@ -123,7 +121,7 @@ export const MobileCategorySpecificContent: React.FC<CategorySpecificContentProp
       <Box sx={{ marginBottom: '16px', width: '100%' }}>
         {selectedItem.author && (
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '8px' }}>
-            <DeveloperIcon sx={{ marginRight: '8px', color: getCategoryColor(selectedItem.category) }} />
+            <CodeIcon sx={{ marginRight: '8px', color: getCategoryColor(selectedItem.category) }} />
             <Typography variant="h6" sx={{ color: getCategoryColor(selectedItem.category), fontWeight: 500, textAlign: 'left' }}>
               <strong>{lang === 'es' ? 'Desarrollador' : 'Developer'}:</strong> {ensureString(selectedItem.author)}
             </Typography>
@@ -131,7 +129,7 @@ export const MobileCategorySpecificContent: React.FC<CategorySpecificContentProp
         )}
         {selectedItem.platforms && (
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '8px' }}>
-            <PlatformIcon sx={{ marginRight: '8px', color: getCategoryColor(selectedItem.category) }} />
+            <GamepadIcon sx={{ marginRight: '8px', color: getCategoryColor(selectedItem.category) }} />
             <Typography variant="h6" sx={{ color: getCategoryColor(selectedItem.category), fontWeight: 500, textAlign: 'left' }}>
               <strong>{lang === 'es' ? 'Plataformas' : 'Platforms'}:</strong> {ensureString(selectedItem.platforms)}
             </Typography>

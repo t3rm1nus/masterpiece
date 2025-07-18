@@ -9,16 +9,14 @@ import {
   useTheme,
   useMediaQuery
 } from '@mui/material';
-import {
-  Star as StarIcon,
-  Movie as MovieIcon,
-  SportsEsports as GameIcon,
-  MenuBook as BookIcon,
-  LibraryMusic as MusicIcon,
-  Mic as PodcastIcon,
-  Extension as BoardGameIcon,
-  AutoStories as ComicIcon
-} from '@mui/icons-material';
+import StarIcon from '@mui/icons-material/Star';
+import MovieIcon from '@mui/icons-material/Movie';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+import MicIcon from '@mui/icons-material/Mic';
+import ExtensionIcon from '@mui/icons-material/Extension';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import { OndemandVideoIcon, LiveTvIcon } from './shared/CategoryCustomIcons';
 import { useLanguage } from '../LanguageContext';
 import { useAppView } from '../store/useAppStore';
@@ -82,21 +80,21 @@ const MaterialRecommendationCard: React.FC<MaterialRecommendationCardProps> = me
         return <MovieIcon fontSize="small" />;
       case 'videogames':
       case 'videojuegos':
-        return <GameIcon fontSize="small" />;
+        return <SportsEsportsIcon fontSize="small" />;
       case 'books':
       case 'libros':
-        return <BookIcon fontSize="small" />;
+        return <MenuBookIcon fontSize="small" />;
       case 'music':
       case 'musica':
-        return <MusicIcon fontSize="small" />;
+        return <LibraryMusicIcon fontSize="small" />;
       case 'podcast':
       case 'podcasts':
-        return <PodcastIcon fontSize="small" />;
+        return <MicIcon fontSize="small" />;
       case 'boardgames':
       case 'juegos de mesa':
-        return <BoardGameIcon fontSize="small" />;
+        return <ExtensionIcon fontSize="small" />;
       case 'comics':
-        return <ComicIcon fontSize="small" />;
+        return <AutoStoriesIcon fontSize="small" />;
       case 'series':
         return <LiveTvIcon fontSize="small" />;
       case 'documentales':

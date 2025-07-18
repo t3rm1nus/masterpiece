@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">44.11% </span>
+                <span class="strong">55.81% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>15/34</span>
+                <span class='fraction'>24/43</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">1.88% </span>
+                <span class="strong">1.98% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/159</span>
+                <span class='fraction'>3/151</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">43.75% </span>
+                <span class="strong">56.09% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/32</span>
+                <span class='fraction'>23/41</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -411,7 +411,25 @@
 <a name='L346'></a><a href='#L346'>346</a>
 <a name='L347'></a><a href='#L347'>347</a>
 <a name='L348'></a><a href='#L348'>348</a>
-<a name='L349'></a><a href='#L349'>349</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">7x</span>
+<a name='L349'></a><a href='#L349'>349</a>
+<a name='L350'></a><a href='#L350'>350</a>
+<a name='L351'></a><a href='#L351'>351</a>
+<a name='L352'></a><a href='#L352'>352</a>
+<a name='L353'></a><a href='#L353'>353</a>
+<a name='L354'></a><a href='#L354'>354</a>
+<a name='L355'></a><a href='#L355'>355</a>
+<a name='L356'></a><a href='#L356'>356</a>
+<a name='L357'></a><a href='#L357'>357</a>
+<a name='L358'></a><a href='#L358'>358</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
@@ -761,8 +779,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7x</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 import { Select, MenuItem, InputLabel, FormControl, useTheme, useMediaQuery, Box } from '@mui/material';
-import { Movie as MovieIcon, SportsEsports as GameIcon, MenuBook as BookIcon, LibraryMusic as MusicIcon, Mic as PodcastIcon, Extension as BoardGameIcon, AutoStories as ComicIcon, Category as CategoryIcon, Star as StarIcon } from '@mui/icons-material';
-import { OndemandVideoIcon, LiveTvIcon } from './shared/CategoryCustomIcons.ts';
+import CategoryIcon from '@mui/icons-material/Category';
+import StarIcon from '@mui/icons-material/Star';
+import MovieIcon from '@mui/icons-material/Movie';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+import MicIcon from '@mui/icons-material/Mic';
+import ExtensionIcon from '@mui/icons-material/Extension';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
 import { useLanguage } from '../LanguageContext';
 import { getCategoryColor, getCategoryGradient, getCategoryColorForSelect } from '../utils/categoryPalette';
 import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
@@ -796,21 +823,21 @@ const getCategoryIcon = <span class="fstat-no" title="function not covered" >(c<
 <span class="cstat-no" title="statement not covered" >      return &lt;MovieIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
     case 'videogames':
     case 'videojuegos':
-<span class="cstat-no" title="statement not covered" >      return &lt;GameIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
+<span class="cstat-no" title="statement not covered" >      return &lt;SportsEsportsIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
     case 'books':
     case 'libros':
-<span class="cstat-no" title="statement not covered" >      return &lt;BookIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
+<span class="cstat-no" title="statement not covered" >      return &lt;MenuBookIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
     case 'music':
     case 'musica':
-<span class="cstat-no" title="statement not covered" >      return &lt;MusicIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
+<span class="cstat-no" title="statement not covered" >      return &lt;LibraryMusicIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
     case 'podcast':
     case 'podcasts':
-<span class="cstat-no" title="statement not covered" >      return &lt;PodcastIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
+<span class="cstat-no" title="statement not covered" >      return &lt;MicIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
     case 'boardgames':
     case 'juegos de mesa':
-<span class="cstat-no" title="statement not covered" >      return &lt;BoardGameIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
+<span class="cstat-no" title="statement not covered" >      return &lt;ExtensionIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
     case 'comics':
-<span class="cstat-no" title="statement not covered" >      return &lt;ComicIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
+<span class="cstat-no" title="statement not covered" >      return &lt;AutoStoriesIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
     case 'series':
 <span class="cstat-no" title="statement not covered" >      return &lt;LiveTvIcon fontSize="small" sx={{ mr: 1 }} /&gt;;</span>
     case 'documentales':
@@ -843,7 +870,7 @@ const MaterialCategorySelect: React.FC&lt;MaterialCategorySelectProps&gt; = ({
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  return (</span>
     &lt;div
-      sx={{
+      style={{
         width: isMobile ? '80vw' : '100vw',
         maxWidth: isMobile ? '80vw' : '100vw',
         margin: isMobile ? '0 auto' : '0',
@@ -1092,10 +1119,10 @@ const MaterialCategorySelect: React.FC&lt;MaterialCategorySelectProps&gt; = ({
               &lt;MenuItem key="all" value="all"&gt;{t?.ui?.navigation?.all_subcategories || (lang === 'en' ? 'All subcategories' : 'Todas las subcategorías')}&lt;/MenuItem&gt;
               {subcategories.map(<span class="fstat-no" title="function not covered" >(s</span>ub, idx) =&gt; (
 <span class="cstat-no" title="statement not covered" >                renderSubcategoryChip</span>
-                  ? renderSubcategoryChip(sub, activeSubcategory === (sub.sub || sub), idx)
+                  ? renderSubcategoryChip(sub, activeSubcategory === sub.sub, idx)
                   : (
-                    &lt;MenuItem key={sub.sub || sub} value={sub.sub || sub}&gt;
-                      {getSubcategoryLabel(sub.sub || sub, selectedCategory, t, lang)}
+                    &lt;MenuItem key={sub.sub} value={sub.sub}&gt;
+                      {getSubcategoryLabel(sub.sub, selectedCategory, t, lang)}
                     &lt;/MenuItem&gt;
                   )
               ))}
@@ -1114,7 +1141,7 @@ export default MaterialCategorySelect; </pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-07-18T11:35:22.735Z
+                at 2025-07-18T20:29:37.572Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

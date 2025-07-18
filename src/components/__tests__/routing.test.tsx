@@ -4,7 +4,7 @@ import HomePage from '../HomePage';
 import UnifiedItemDetail from '../UnifiedItemDetail';
 import { LanguageProvider } from "../../LanguageContext";
 import MaterialThemeProvider from "../MaterialThemeProvider";
-import { HelmetProvider } from "react-helmet-async";
+import { HelmetProvider } from 'react-helmet-async';
 import { act } from 'react';
 
 describe('Routing', () => {

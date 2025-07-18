@@ -14,17 +14,15 @@ import {
   useMediaQuery,
   Fab
 } from '@mui/material';
-import {
-  Coffee as CoffeeIcon,
-  Favorite as HeartIcon,
-  Star as StarIcon,
-  Code as CodeIcon,
-  Update as UpdateIcon,
-  Wifi as WifiIcon,
-  Psychology as BrainIcon,
-  SentimentVeryDissatisfied as SadIcon,
-  ArrowBack as ArrowBackIcon
-} from '@mui/icons-material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import StarIcon from '@mui/icons-material/Star';
+import CoffeeIcon from '@mui/icons-material/Coffee';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import CodeIcon from '@mui/icons-material/Code';
+import UpdateIcon from '@mui/icons-material/Update';
+import WifiIcon from '@mui/icons-material/Wifi';
+import PsychologyIcon from '@mui/icons-material/Psychology';
+import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
 import UiCard from './ui/UiCard';
 import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
@@ -73,7 +71,7 @@ const MaterialCoffeePage: React.FC<MaterialCoffeePageProps> = ({ onAnimationEnd 
   const benefits = [
     {
       text: t.coffee_benefit_1,
-      icon: <HeartIcon sx={{ color: '#e74c3c' }} />
+      icon: <FavoriteIcon sx={{ color: '#e74c3c' }} />
     },
     {
       text: t.coffee_benefit_2,
@@ -83,12 +81,12 @@ const MaterialCoffeePage: React.FC<MaterialCoffeePageProps> = ({ onAnimationEnd 
       text: t.coffee_benefit_3,
       icon: <Box sx={{ display: 'flex', gap: 0.5 }}>
         <CoffeeIcon sx={{ color: '#8b4513', fontSize: '1.2rem' }} />
-        <BrainIcon sx={{ color: '#3498db', fontSize: '1.2rem' }} />
+        <PsychologyIcon sx={{ color: '#3498db', fontSize: '1.2rem' }} />
       </Box>
     },
     {
       text: t.coffee_benefit_4,
-      icon: <SadIcon sx={{ color: '#9b59b6' }} />
+      icon: <SentimentVeryDissatisfiedIcon sx={{ color: '#9b59b6' }} />
     }
   ];
 
@@ -132,10 +130,14 @@ const MaterialCoffeePage: React.FC<MaterialCoffeePageProps> = ({ onAnimationEnd 
         <meta property="og:title" content="Invítame a un café | Masterpiece" />
         <meta property="og:description" content="Apoya el proyecto Masterpiece invitándome a un café. ¡Gracias por tu colaboración!" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/favicon.png" />
+        <meta property="og:image" content="/imagenes/splash_image.png" />
         <meta property="og:url" content={url} />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href={url} />
+        {/* Etiquetas hreflang para SEO multilingüe */}
+        <link rel="alternate" href="https://masterpiece.com/donaciones" hrefLang="es" />
+        <link rel="alternate" href="https://masterpiece.com/en/donaciones" hrefLang="en" />
+        <link rel="alternate" href="https://masterpiece.com/donaciones" hrefLang="x-default" />
       </Helmet>
       <div>
         <Container 

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Box, useTheme } from '@mui/material';
-import { PlayArrow as PlayArrowIcon } from '@mui/icons-material';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { getCategoryColor } from '../../utils/categoryPalette';
 import UiButton from '../ui/UiButton';
 import { useNavigate } from 'react-router-dom';
+import { getLocalizedPath } from '../../utils/urlHelpers';
 
 // Tipos de props
 interface ActionButtonsProps {
@@ -156,9 +157,9 @@ export const MobileActionButtons: React.FC<ActionButtonsProps> = ({ selectedItem
           startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
           onClick={() => {
             if (onOverlayNavigate) {
-              onOverlayNavigate('/como-descargar');
+              onOverlayNavigate(getLocalizedPath('/como-descargar', lang));
             } else {
-              navigate('/como-descargar');
+              navigate(getLocalizedPath('/como-descargar', lang));
             }
           }}
           sx={getButtonSx}
@@ -301,9 +302,9 @@ export const DesktopActionButtons: React.FC<ActionButtonsProps> = ({ selectedIte
           startIcon={<PlayArrowIcon sx={{ marginRight: '6px', minWidth: 0, fontSize: '1.1em' }} />}
           onClick={() => {
             if (onOverlayNavigate) {
-              onOverlayNavigate('/como-descargar');
+              onOverlayNavigate(getLocalizedPath('/como-descargar', lang));
             } else {
-              navigate('/como-descargar');
+              navigate(getLocalizedPath('/como-descargar', lang));
             }
           }}
           sx={getButtonSx}

@@ -74,21 +74,26 @@ if (typeof window !== 'undefined') {
 }
 */
 
-// Ocultar splash de Capacitor al montar la app
+function detectInitialLangFromUrl() {
+  if (typeof window !== 'undefined') {
+    return window.location.pathname.startsWith('/en/') ? 'en' : 'es';
+  }
+  return 'es';
+}
+
 const AppWithSplashHide: React.FC = () => {
   useEffect(() => {
     SplashScreen.hide()
-    
     // Aplicar fixes de iPhone también después del montaje
     if (isIPhone()) {
       const timer = setTimeout(() => {
         applyIPhoneFixes();
       }, 100);
-      
       return () => clearTimeout(timer);
     }
   }, [])
-  return <App />
+  const initialLang = detectInitialLangFromUrl();
+  return <App initialLang={initialLang} />
 }
 
 // Note: Splash screen handling is done natively in Android via SplashActivity

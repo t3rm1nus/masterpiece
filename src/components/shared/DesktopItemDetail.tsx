@@ -3,7 +3,7 @@ import UiButton from '../ui/UiButton';
 import MasterpieceBadge from './MasterpieceBadge';
 import { getCategoryColor } from '../../utils/categoryPalette';
 import { Box, Typography, Stack, Fab } from '@mui/material';
-import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { DesktopActionButtons } from './ItemActionButtons';
 import { DesktopCategorySpecificContent } from './CategorySpecificContent';
 

@@ -44,6 +44,37 @@ npm run preview # Previsualización
 - Revisar accesibilidad y performance
 - Mantener dependencias actualizadas
 
+## Internacionalización y URLs multilingües
+
+### Uso del helper de URLs
+
+Para garantizar que todas las rutas internas respeten el idioma actual (por ejemplo, `/en/...` para inglés), **debes usar siempre el helper**:
+
+```js
+import { getLocalizedPath } from './src/utils/urlHelpers';
+
+// Ejemplo para <Link> o navigate:
+<Link to={getLocalizedPath(`/detalle/${item.category}/${item.id}`, lang)}>Ver detalle</Link>
+// o
+navigate(getLocalizedPath('/donaciones', lang));
+```
+
+- **Nunca uses rutas hardcodeadas** como `/detalle/...`, `/donaciones`, `/como-descargar`, etc. Usa siempre el helper.
+- El helper añade el prefijo de idioma (`/en/`) si el idioma es inglés, o lo elimina si es español.
+- Esto aplica a menús, botones, breadcrumbs y cualquier navegación interna.
+
+### Lógica de rutas multilingües
+
+- El router soporta rutas `/en/*` para inglés y `/*` para español.
+- El idioma se fuerza automáticamente según el prefijo de la URL, tanto en SSR como en cliente.
+- Las etiquetas SEO (`<link rel="alternate">`, canonical, OG, etc.) se generan en el idioma y la URL correctos.
+
+### Para el equipo
+
+- **Obligatorio:** Usa siempre el helper `getLocalizedPath` para cualquier enlace o navegación interna.
+- Si añades un nuevo idioma, amplía el helper y la lógica de rutas siguiendo el mismo patrón.
+- Si tienes dudas, revisa este README o consulta con el responsable de internacionalización.
+
 ## Documentación adicional
 - Estructura: `docs/estructura.md`
 - Componentes: `docs/componentes.md`

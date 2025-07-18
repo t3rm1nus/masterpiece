@@ -29,6 +29,7 @@ import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { findItemByGlobalId } from '../utils/appUtils';
 import { Helmet } from 'react-helmet-async';
 import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
+import { getLocalizedPath } from '../utils/urlHelpers';
 
 // =============================================
 // HomePage: Página principal de recomendaciones
@@ -170,6 +171,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   // const [localSelectedItem, setLocalSelectedItem] = React.useState<any>(null);
 
   const { lang, t, getTranslation } = useLanguage();
+  console.log('lang:', lang);
   // Hook para sincronizar títulos automáticamente
   useTitleSync();
   // Hook para Google Analytics
@@ -589,11 +591,11 @@ const HomePageComponent: React.FC<HomePageProps> = ({
       // Solo en móviles, guardar scroll antes de navegar
       sessionStorage.setItem('homeScrollY', String(window.scrollY));
     }
-    navigate(`/detalle/${item.category}/${item.id}`);
+    navigate(getLocalizedPath(`/detalle/${item.category}/${item.id}`, lang));
     if (typeof trackItemDetailView === 'function') {
       trackItemDetailView(String(item.id), item.title || item.name, item.category);
     }
-  }, [navigate, trackItemDetailView]);
+  }, [navigate, trackItemDetailView, lang]);
 
   // Funciones para filtros especiales
   const handleSpanishCinemaToggle = useCallback(() => {
@@ -728,15 +730,41 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   return (
     <>
       <Helmet>
-        <title>{pageTitle}</title>
+        <title>{pageTitle || 'Masterpiece'}</title>
         <meta name="description" content={pageDescription} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/public/favicon.png" />
+        <meta property="og:image" content={(() => {
+          if (isCategory && selectedCategory) {
+            // Mapeo de categorías a nombres de archivo OG
+            const ogMap = {
+              books: 'books',
+              comics: 'comics',
+              documentales: 'documentaries',
+              boardgames: 'gameboard',
+              movies: 'movies',
+              music: 'music',
+              podcast: 'podcasts',
+              podcasts: 'podcasts',
+              series: 'series',
+              videogames: 'videogames',
+              videogame: 'videogames',
+            };
+            const ogKey = ogMap[selectedCategory] || null;
+            if (ogKey) {
+              return `/imagenes/og_${ogKey}.png`;
+            }
+          }
+          return "/imagenes/splash_image.png";
+        })()} />
         <meta property="og:url" content={url} />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href={url} />
+        {/* Etiquetas hreflang para SEO multilingüe */}
+        <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="es" />
+        <link rel="alternate" href={`https://masterpiece.com/en${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="en" />
+        <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="x-default" />
         <script type="application/ld+json">
           {`
             {
@@ -788,7 +816,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
               );
             })()
           }
-          title={null}
+          title=""
           actions={null}
         />
       )}
@@ -808,7 +836,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
           <header>
           <AnimatedH1 isMobile={isMobile} h1Gradient={h1Gradient} onClick={handleTitleClick}>
             {(!selectedCategory || selectedCategory === 'all')
-              ? (t?.ui?.titles?.home_title || 'Lista de recomendados')
+              ? (t?.ui?.titles?.home_title || t?.home_title || 'Nuevas Recomendaciones')
               : (t?.categories?.[selectedCategory] || selectedCategory)
             }
           </AnimatedH1>

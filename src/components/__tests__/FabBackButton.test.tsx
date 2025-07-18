@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import FabBackButton from '../ui/FabBackButton';
-import { ArrowBack } from '@mui/icons-material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 describe('FabBackButton', () => {
   it('renderiza el botón por defecto', () => {
@@ -15,7 +15,7 @@ describe('FabBackButton', () => {
   });
 
   it('usa un icono custom si se provee', () => {
-    render(<FabBackButton icon={<ArrowBack data-testid="custom-icon" />} />);
+    render(<FabBackButton icon={<ArrowBackIcon data-testid="custom-icon" />} />);
     expect(screen.getByTestId('custom-icon')).toBeInTheDocument();
   });
 

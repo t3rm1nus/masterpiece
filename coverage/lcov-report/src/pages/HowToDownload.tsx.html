@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>29/29</span>
+                <span class='fraction'>30/30</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>29/29</span>
+                <span class='fraction'>30/30</span>
             </div>
         
             
@@ -343,7 +343,18 @@
 <a name='L278'></a><a href='#L278'>278</a>
 <a name='L279'></a><a href='#L279'>279</a>
 <a name='L280'></a><a href='#L280'>280</a>
-<a name='L281'></a><a href='#L281'>281</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+<a name='L281'></a><a href='#L281'>281</a>
+<a name='L282'></a><a href='#L282'>282</a>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a>
+<a name='L286'></a><a href='#L286'>286</a>
+<a name='L287'></a><a href='#L287'>287</a>
+<a name='L288'></a><a href='#L288'>288</a>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
@@ -434,6 +445,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -448,6 +460,16 @@
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -628,7 +650,7 @@ import { Box, Typography, Button, useTheme, useMediaQuery, Paper, Container, Fab
 import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 import { applyHowToDownloadScrollFixForIPhone, cleanupScrollFixesForIPhone } from '../utils/iPhoneScrollFix';
-import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Helmet } from 'react-helmet-async';
 &nbsp;
 interface HowToDownloadProps {
@@ -713,7 +735,8 @@ const HowToDownload: React.FC&lt;HowToDownloadProps&gt; = ({ onAnimationEnd }) =
       es: 'Y listo. Ya puedes decir con orgullo que sabes bajar torrents sin naufragar en un mar de pop-ups, spyware y desesperación. ¡Feliz navegación, capitán! 🏴‍☠️',
       en: "And that's it. Now you can proudly say you know how to download torrents without sinking in a sea of pop-ups, spyware, and despair. Happy sailing, captain! 🏴‍☠️"
     }
-  };
+  } as const;
+  const langKey = lang as keyof typeof texts.title;
 &nbsp;
   const handleBack = useCallback(() =&gt; {
     console.log('🔄 [HowToDownload] handleBack llamado');
@@ -735,11 +758,17 @@ const HowToDownload: React.FC&lt;HowToDownloadProps&gt; = ({ onAnimationEnd }) =
         &lt;meta property="og:title" content="¿Cómo descargar? | Masterpiece" /&gt;
         &lt;meta property="og:description" content="Instrucciones para descargar contenido de Masterpiece de forma segura y sencilla." /&gt;
         &lt;meta property="og:type" content="website" /&gt;
-        &lt;meta property="og:image" content="/favicon.png" /&gt;
+        &lt;meta property="og:image" content="/imagenes/splash_image.png" /&gt;
         &lt;meta property="og:url" content={url} /&gt;
         &lt;meta name="twitter:card" content="summary_large_image" /&gt;
         &lt;link rel="canonical" href={url} /&gt;
+        {/* Etiquetas hreflang para SEO multilingüe */}
+        &lt;link rel="alternate" href="https://masterpiece.com/como-descargar" hrefLang="es" /&gt;
+        &lt;link rel="alternate" href="https://masterpiece.com/en/como-descargar" hrefLang="en" /&gt;
+        &lt;link rel="alternate" href="https://masterpiece.com/como-descargar" hrefLang="x-default" /&gt;
       &lt;/Helmet&gt;
+      {/* H1 oculto para SEO y accesibilidad */}
+      &lt;h1 style={{ position: 'absolute', left: '-10000px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden' }}&gt;¿Cómo descargar?&lt;/h1&gt;
       &lt;div style={{ marginTop: '70px' }}&gt;
         &lt;Container 
           maxWidth="md" 
@@ -828,6 +857,7 @@ const HowToDownload: React.FC&lt;HowToDownloadProps&gt; = ({ onAnimationEnd }) =
                 src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate.jpg"
                 alt="Pirate Bay Logo"
                 style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                loading="lazy"
               /&gt;
             &lt;/Box&gt;
             &lt;Typography variant="h4" align="center" gutterBottom sx={{ 
@@ -835,12 +865,12 @@ const HowToDownload: React.FC&lt;HowToDownloadProps&gt; = ({ onAnimationEnd }) =
               fontSize: { xs: '1.4rem', sm: '2rem', md: '2.2rem', lg: '2.4rem' }
             }}&gt;
               &lt;span style={{display:'inline-flex',alignItems:'center',gap:8}}&gt;
-                {texts.title[lang]}
+                {texts.title[langKey]}
               &lt;/span&gt;
             &lt;/Typography&gt;
-            &lt;Typography variant="body1" sx={{ mb: 2 }} dangerouslySetInnerHTML={{__html: texts.intro[lang]}} /&gt;
-            &lt;Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}&gt;{texts.step1[lang]}&lt;/Typography&gt;
-            &lt;Typography variant="body1" sx={{ mb: 1 }}&gt;{texts.step1desc[lang]}&lt;/Typography&gt;
+            &lt;Typography variant="body1" sx={{ mb: 2 }} dangerouslySetInnerHTML={{__html: texts.intro[langKey]}} /&gt;
+            &lt;Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}&gt;{texts.step1[langKey]}&lt;/Typography&gt;
+            &lt;Typography variant="body1" sx={{ mb: 1 }}&gt;{texts.step1desc[langKey]}&lt;/Typography&gt;
             &lt;Box sx={{ display: 'flex', flexDirection: isMobile ? <span class="branch-0 cbranch-no" title="branch not covered" >'column' </span>: 'row', gap: 2, mb: 2 }}&gt;
               &lt;Button variant="contained" color="primary" href="https://transmissionbt.com/download" target="_blank" sx={{ fontWeight: 600, mb: isMobile ? <span class="branch-0 cbranch-no" title="branch not covered" >1 </span>: 0, '&amp;:hover': { color: '#111' } }}&gt;
                 Transmission
@@ -849,8 +879,8 @@ const HowToDownload: React.FC&lt;HowToDownloadProps&gt; = ({ onAnimationEnd }) =
                 qBittorrent
               &lt;/Button&gt;
             &lt;/Box&gt;
-            &lt;Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}&gt;{texts.step2[lang]}&lt;/Typography&gt;
-            &lt;Typography variant="body1" sx={{ mb: 2 }}&gt;{texts.step2desc[lang]}&lt;/Typography&gt;
+            &lt;Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}&gt;{texts.step2[langKey]}&lt;/Typography&gt;
+            &lt;Typography variant="body1" sx={{ mb: 2 }}&gt;{texts.step2desc[langKey]}&lt;/Typography&gt;
             &lt;Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', mb: 2 }}&gt;
               &lt;Button
                 variant="contained"
@@ -859,7 +889,7 @@ const HowToDownload: React.FC&lt;HowToDownloadProps&gt; = ({ onAnimationEnd }) =
                 target="_blank"
                 sx={{ fontWeight: 600, mb: 0, minWidth: 'unset', width: 'auto', px: 2, py: 1, fontSize: '1rem', '&amp;:hover': { color: '#111' } }}
               &gt;
-                {texts.piratebay[lang]}
+                {texts.piratebay[langKey]}
               &lt;/Button&gt;
             &lt;/Box&gt;
             &lt;Box sx={{ width: { xs: '80%', sm: '60%', md: '50%' }, mx: 'auto', mb: 2, borderRadius: 2, overflow: 'hidden', display: 'flex', justifyContent: 'center' }}&gt;
@@ -867,10 +897,11 @@ const HowToDownload: React.FC&lt;HowToDownloadProps&gt; = ({ onAnimationEnd }) =
                 src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate1.jpg"
                 alt="Ejemplo Pirate Bay"
                 style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                loading="lazy"
               /&gt;
             &lt;/Box&gt;
             &lt;Typography variant="body2" color="warning.main" sx={{ fontWeight: 600, mb: 2 }}&gt;
-              {texts.warning[lang]}
+              {texts.warning[langKey]}
             &lt;/Typography&gt;
             &lt;Typography variant="body1" sx={{ mb: 2 }}&gt;
               {lang === 'es' ? 'Una vez seleccionado lo que quieres bajar, haz click sobre el icono del imán y se abrirá automáticamente tu Transmission o qBittorrent. Dale a aceptar para empezar la descarga y...' : <span class="branch-1 cbranch-no" title="branch not covered" >'Once you have selected what you want to download, click the magnet icon and your Transmission or qBittorrent will open automatically. Click accept to start the download and...'}</span>
@@ -880,21 +911,23 @@ const HowToDownload: React.FC&lt;HowToDownloadProps&gt; = ({ onAnimationEnd }) =
                 src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate2.jpg"
                 alt="Ejemplo Pirate Bay 2"
                 style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                loading="lazy"
               /&gt;
             &lt;/Box&gt;
-            &lt;Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}&gt;{texts.step3[lang]}&lt;/Typography&gt;
-            &lt;Typography variant="body1" sx={{ mb: 2 }}&gt;{texts.step3desc[lang]}&lt;/Typography&gt;
+            &lt;Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}&gt;{texts.step3[langKey]}&lt;/Typography&gt;
+            &lt;Typography variant="body1" sx={{ mb: 2 }}&gt;{texts.step3desc[langKey]}&lt;/Typography&gt;
             &lt;Box sx={{ width: { xs: '80%', sm: '60%', md: '40%' }, mx: 'auto', mb: 3, display: 'flex', justifyContent: 'center' }}&gt;
               &lt;img
                 src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/magic.gif"
                 alt="Magia torrent"
                 style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                loading="lazy"
               /&gt;
             &lt;/Box&gt;
-            &lt;Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}&gt;{texts.vpn[lang]}&lt;/Typography&gt;
-            &lt;Typography variant="body1" sx={{ mb: 2 }}&gt;{texts.vpndesc[lang]}&lt;/Typography&gt;
+            &lt;Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}&gt;{texts.vpn[langKey]}&lt;/Typography&gt;
+            &lt;Typography variant="body1" sx={{ mb: 2 }}&gt;{texts.vpndesc[langKey]}&lt;/Typography&gt;
             &lt;Typography variant="body1" sx={{ mt: 6, fontWeight: 600, textAlign: 'center' }}&gt;
-              {texts.end[lang]}
+              {texts.end[langKey]}
             &lt;/Typography&gt;
           &lt;/Paper&gt;
         &lt;/Container&gt;
@@ -910,7 +943,7 @@ export default HowToDownload; </pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-07-18T11:35:22.735Z
+                at 2025-07-18T20:29:37.572Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

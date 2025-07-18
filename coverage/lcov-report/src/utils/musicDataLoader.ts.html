@@ -225,10 +225,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -246,16 +246,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -352,10 +352,10 @@ interface AllMusicData {
 export class MusicDataLoader {
   static async loadAllMusicData(): Promise&lt;AllMusicData | any&gt; {
     try {
-      const indexResponse = await fetch('/music-chunks/index.json');
+      const indexResponse = await fetch('/data/music-chunks/index.json');
       const indexData: ChunksIndex = await indexResponse.json();
       const chunkPromises = indexData.chunks.map(<span class="fstat-no" title="function not covered" >async </span>(chunkInfo) =&gt; {
-        const response = <span class="cstat-no" title="statement not covered" >await fetch(`/music-chunks/${chunkInfo.fileName}`);</span>
+        const response = <span class="cstat-no" title="statement not covered" >await fetch(`/data/music-chunks/${chunkInfo.fileName}`);</span>
 <span class="cstat-no" title="statement not covered" >        return response.json() as Promise&lt;MusicChunk&gt;;</span>
       });
       const chunks: MusicChunk[] = <span class="cstat-no" title="statement not covered" >await Promise.all(chunkPromises);</span>
@@ -375,7 +375,7 @@ export class MusicDataLoader {
       console.error('❌ Error loading music data:', error);
       try {
         console.log('🔄 Attempting to load from original file as fallback...');
-        const response = await fetch('/datos_music.json');
+        const response = await fetch('/data/datos_music.json');
         const data = await response.json();
         console.log(`⚠️ Loaded ${data.recommendations.length} recommendations from original file`);
 <span class="cstat-no" title="statement not covered" >        return data;</span>
@@ -388,7 +388,7 @@ export class MusicDataLoader {
 &nbsp;
 <span class="fstat-no" title="function not covered" >  static </span>async loadMusicChunk(chunkNumber: number): Promise&lt;MusicChunk&gt; {
 <span class="cstat-no" title="statement not covered" >    try {</span>
-      const response = <span class="cstat-no" title="statement not covered" >await fetch(`/music-chunks/music-chunk-${chunkNumber}.json`);</span>
+      const response = <span class="cstat-no" title="statement not covered" >await fetch(`/data/music-chunks/music-chunk-${chunkNumber}.json`);</span>
       const data: MusicChunk = <span class="cstat-no" title="statement not covered" >await response.json();</span>
 <span class="cstat-no" title="statement not covered" >      return data;</span>
     } catch (error) {
@@ -399,7 +399,7 @@ export class MusicDataLoader {
 &nbsp;
 <span class="fstat-no" title="function not covered" >  static </span>async getChunksInfo(): Promise&lt;ChunksIndex&gt; {
 <span class="cstat-no" title="statement not covered" >    try {</span>
-      const response = <span class="cstat-no" title="statement not covered" >await fetch('/music-chunks/index.json');</span>
+      const response = <span class="cstat-no" title="statement not covered" >await fetch('/data/music-chunks/index.json');</span>
 <span class="cstat-no" title="statement not covered" >      return await response.json();</span>
     } catch (error) {
 <span class="cstat-no" title="statement not covered" >      console.error('❌ Error loading chunks info:', error);</span>
@@ -448,7 +448,7 @@ export const loadMusicDataLazy = MusicDataLoader.loadMusicDataLazy; </pre></td><
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-07-18T11:35:22.735Z
+                at 2025-07-18T20:29:37.572Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

@@ -15,6 +15,7 @@ import { CircularProgress } from '@mui/material';
 import DesktopItemDetail from './shared/DesktopItemDetail';
 import { Helmet } from 'react-helmet-async';
 import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
+import { getLocalizedPath } from '../utils/urlHelpers';
 
 // Material UI imports (solo para mobile)
 import {
@@ -27,16 +28,22 @@ import {
   Stack,
   Button
 } from '@mui/material';
-import {
-  ArrowBack as ArrowBackIcon,
-  Person as PersonIcon,
-  AccessTime as AccessTimeIcon,
-  ChildCare as ChildCareIcon,
-  Code as DeveloperIcon,
-  Gamepad as PlatformIcon,
-  Translate as TranslateIcon,
-  PlaylistPlay as PlaylistPlayIcon
-} from '@mui/icons-material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import StarIcon from '@mui/icons-material/Star';
+import MovieIcon from '@mui/icons-material/Movie';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+import MicIcon from '@mui/icons-material/Mic';
+import ExtensionIcon from '@mui/icons-material/Extension';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import PersonIcon from '@mui/icons-material/Person';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import ChildCareIcon from '@mui/icons-material/ChildCare';
+import CodeIcon from '@mui/icons-material/Code';
+import GamepadIcon from '@mui/icons-material/Gamepad';
+import TranslateIcon from '@mui/icons-material/Translate';
+import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
 
 // =============================================
 // UnifiedItemDetail: Componente de detalle unificado para ítems
@@ -366,7 +373,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     
     if (props.onOverlayNavigate) {
       // No guardar scroll al cerrar, solo al abrir
-      props.onOverlayNavigate('/');
+      props.onOverlayNavigate(getLocalizedPath('/', lang));
       return;
     }
     if (typeof props.onBack === 'function') {
@@ -375,8 +382,8 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
       goBackFromDetail();
     }
     // Navegar siempre a la Home para limpiar la URL
-    navigate('/');
-  }, [internalClosing, props.onOverlayNavigate, props.onBack, goBackFromDetail, navigate]);
+    navigate(getLocalizedPath('/', lang));
+  }, [internalClosing, props.onOverlayNavigate, props.onBack, goBackFromDetail, navigate, lang]);
 
   // Handler para navegación con overlay
   const handleOverlayNavigate = useCallback((path: string): void => {
@@ -440,7 +447,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
   // Determinar la categoría real del item para color y chip
   const realCategory = selectedItem?.category || selectedCategory;
 
-  const item = props.item || {};
+  const item = selectedItem || {};
   const itemTitle = item.title || item.name || 'Detalle - Masterpiece';
   const itemDescription = item.description || 'Descubre detalles de esta obra recomendada en Masterpiece.';
   const itemImage = item.image || '/favicon.png';
@@ -460,15 +467,43 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         url: 'https://masterpiece.com/'
       }
     };
+    // Obtener subcategoría traducida si existe
+    let translatedSubcat: string | undefined = undefined;
+    if (item.subcategory) {
+      if (typeof getSubcategoryTranslation === 'function') {
+        translatedSubcat = getSubcategoryTranslation(item.subcategory, item.category || null);
+      } else if (typeof item.subcategory === 'string') {
+        translatedSubcat = item.subcategory;
+      }
+    }
     switch ((item.category || '').toLowerCase()) {
       case 'movies':
-      case 'documentales':
         return {
           ...base,
           '@type': 'Movie',
           datePublished: item.year || undefined,
           director: item.director ? { '@type': 'Person', name: item.director } : undefined,
-          actor: item.actors ? item.actors.map(a => ({ '@type': 'Person', name: a })) : undefined
+          actor: item.actors ? item.actors.map((a: any) => ({ '@type': 'Person', name: a })) : undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+        };
+      case 'documentales':
+        return {
+          ...base,
+          '@type': 'Movie',
+          genre: 'Documentary',
+          datePublished: item.year || undefined,
+          director: item.director ? { '@type': 'Person', name: item.director } : undefined,
+          actor: item.actors ? item.actors.map((a: any) => ({ '@type': 'Person', name: a })) : undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+        };
+      case 'series':
+        return {
+          ...base,
+          '@type': 'TVSeries',
+          datePublished: item.year || undefined,
+          actor: item.actors ? item.actors.map((a: any) => ({ '@type': 'Person', name: a })) : undefined,
+          director: item.director ? { '@type': 'Person', name: item.director } : undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
         };
       case 'books':
         return {
@@ -476,47 +511,56 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           '@type': 'Book',
           author: item.author ? { '@type': 'Person', name: item.author } : undefined,
           datePublished: item.year || undefined,
-          isbn: item.isbn || undefined
+          isbn: item.isbn || undefined,
+          ...(translatedSubcat ? { bookGenre: translatedSubcat } : {})
         };
       case 'comics':
         return {
           ...base,
           '@type': 'Book',
+          bookFormat: 'GraphicNovel',
           author: item.author ? { '@type': 'Person', name: item.author } : undefined,
-          datePublished: item.year || undefined
+          datePublished: item.year || undefined,
+          ...(translatedSubcat ? { bookGenre: translatedSubcat } : {})
         };
       case 'music':
         return {
           ...base,
           '@type': 'MusicAlbum',
           byArtist: item.author ? { '@type': 'MusicGroup', name: item.author } : undefined,
-          datePublished: item.year || undefined
+          datePublished: item.year || undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
         };
       case 'videogames':
         return {
           ...base,
           '@type': 'VideoGame',
           author: item.author ? { '@type': 'Person', name: item.author } : undefined,
-          datePublished: item.year || undefined
+          datePublished: item.year || undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
         };
-      case 'juegos_de_mesa':
+      case 'boardgames':
         return {
           ...base,
-          '@type': 'Game',
+          '@type': 'BoardGame',
           author: item.author ? { '@type': 'Person', name: item.author } : undefined,
-          datePublished: item.year || undefined
+          datePublished: item.year || undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
         };
+      case 'podcast':
       case 'podcasts':
         return {
           ...base,
           '@type': 'PodcastSeries',
           author: item.author ? { '@type': 'Person', name: item.author } : undefined,
-          datePublished: item.year || undefined
+          datePublished: item.year || undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
         };
       default:
         return {
           ...base,
-          '@type': 'CreativeWork'
+          '@type': 'CreativeWork',
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
         };
     }
   };
@@ -544,7 +588,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         }}
       >
         <Helmet>
-          <title>{itemTitle} | Masterpiece</title>
+          <title>{(title || 'Detalle') + ' | Masterpiece'}</title>
           <meta name="description" content={itemDescription} />
           <meta property="og:title" content={itemTitle + ' | Masterpiece'} />
           <meta property="og:description" content={itemDescription} />
@@ -553,6 +597,10 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           <meta property="og:url" content={itemUrl} />
           <meta name="twitter:card" content="summary_large_image" />
           <link rel="canonical" href={itemUrl} />
+          {/* Etiquetas hreflang para SEO multilingüe */}
+          <link rel="alternate" href={`https://masterpiece.com/${item.category || 'detalle'}/${item.id}`} hrefLang="es" />
+          <link rel="alternate" href={`https://masterpiece.com/en/${item.category || 'detalle'}/${item.id}`} hrefLang="en" />
+          <link rel="alternate" href={`https://masterpiece.com/${item.category || 'detalle'}/${item.id}`} hrefLang="x-default" />
           <script type="application/ld+json">
             {JSON.stringify(getJsonLd())}
           </script>
@@ -617,7 +665,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         }}
       >
           <Helmet>
-            <title>{itemTitle} | Masterpiece</title>
+            <title>{(title || 'Detalle') + ' | Masterpiece'}</title>
             <meta name="description" content={itemDescription} />
             <meta property="og:title" content={itemTitle + ' | Masterpiece'} />
             <meta property="og:description" content={itemDescription} />
@@ -626,6 +674,10 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
             <meta property="og:url" content={itemUrl} />
             <meta name="twitter:card" content="summary_large_image" />
             <link rel="canonical" href={itemUrl} />
+            {/* Etiquetas hreflang para SEO multilingüe */}
+            <link rel="alternate" href={`https://masterpiece.com/${item.category || 'detalle'}/${item.id}`} hrefLang="es" />
+            <link rel="alternate" href={`https://masterpiece.com/en/${item.category || 'detalle'}/${item.id}`} hrefLang="en" />
+            <link rel="alternate" href={`https://masterpiece.com/${item.category || 'detalle'}/${item.id}`} hrefLang="x-default" />
             <script type="application/ld+json">
               {JSON.stringify(getJsonLd())}
             </script>
@@ -685,6 +737,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
                 onLoad={() => setImgLoaded(true)}
                 onMouseEnter={() => setImageHover(true)}
                 onMouseLeave={() => setImageHover(false)}
+                loading="lazy"
               />
                 <figcaption style={{ textAlign: 'center', fontSize: '0.95em', color: '#666' }}>{title}</figcaption>
               </figure>
@@ -730,13 +783,13 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
                 <span style={styles.meta}><TranslateIcon style={styles.metaIcon}/> {safeItem.language}</span>
               )}
               {safeItem.platform && (
-                <span style={styles.meta}><PlatformIcon style={styles.metaIcon}/> {safeItem.platform}</span>
+                <span style={styles.meta}><GamepadIcon style={styles.metaIcon}/> {safeItem.platform}</span>
               )}
               {safeItem.age && (
                 <span style={styles.meta}><ChildCareIcon style={styles.metaIcon}/> {safeItem.age}+</span>
               )}
               {safeItem.developer && (
-                <span style={styles.meta}><DeveloperIcon style={styles.metaIcon}/> {safeItem.developer}</span>
+                <span style={styles.meta}><CodeIcon style={styles.metaIcon}/> {safeItem.developer}</span>
               )}
             </div>
               </header>

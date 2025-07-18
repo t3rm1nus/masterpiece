@@ -1,6 +1,6 @@
 import React from 'react';
 import { Fab, FabProps } from '@mui/material';
-import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useTheme } from '@mui/material/styles';
 import { SxProps, Theme } from '@mui/material/styles';
 

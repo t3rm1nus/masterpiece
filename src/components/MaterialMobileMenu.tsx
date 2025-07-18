@@ -19,21 +19,23 @@ import {
   DialogContent,
   Fab
 } from '@mui/material';
-import {
-  Menu as MenuIcon,
-  Home as HomeIcon,
-  ArrowBack as ArrowBackIcon,
-  Coffee as CoffeeIcon,
-  Close as CloseIcon,
-  Download as DownloadIcon
-} from '@mui/icons-material';
+import HomeIcon from '@mui/icons-material/Home';
+import CategoryIcon from '@mui/icons-material/Category';
+import StarIcon from '@mui/icons-material/Star';
+import CoffeeIcon from '@mui/icons-material/Coffee';
+import DownloadIcon from '@mui/icons-material/Download';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useLanguage } from '../LanguageContext';
 import { useAppData, useAppTheme } from '../store/useAppStore';
 import { useNavigationActions } from '../hooks/useNavigationActions';
 import { useMenuItems } from '../hooks/useMenuItems';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import SplashDialog from './SplashDialog';
 import useBackNavigation from '../hooks/useBackNavigation';
+import LanguageSelector from './LanguageSelector';
+import { getLocalizedPath } from '../utils/urlHelpers';
 
 // Tipos para props
 interface MenuItem {
@@ -77,6 +79,7 @@ const MaterialMobileMenu: React.FC<MaterialMobileMenuProps> = ({
   const { isDarkMode } = useAppTheme();
   const navigation = useNavigationActions();
   const navigate = useNavigate();
+  const location = useLocation();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
@@ -100,11 +103,22 @@ const MaterialMobileMenu: React.FC<MaterialMobileMenuProps> = ({
   const menuItems = Array.isArray(menuItemsProp) ? menuItemsProp : useMenuItems((audio?: string) => {
     if (audio && onSplashOpen) onSplashOpen(audio);
   }, (ruta: string) => {
-    if (onOverlayNavigate) onOverlayNavigate(ruta);
-    else navigate(ruta);
+    const localizedPath = getLocalizedPath(ruta, lang);
+    if (onOverlayNavigate) onOverlayNavigate(localizedPath);
+    else navigate(localizedPath);
   });
 
   const handleLanguageChange = (lng: string) => {
+    const currentPath = location.pathname + location.search + location.hash;
+    if (lng === 'en') {
+      if (!currentPath.startsWith('/en/')) {
+        navigate('/en' + (currentPath.startsWith('/') ? currentPath : '/' + currentPath));
+      }
+    } else {
+      if (currentPath.startsWith('/en/')) {
+        navigate(currentPath.replace(/^\/en/, '') || '/');
+      }
+    }
     changeLanguage(lng);
     setDrawerOpen(false);
   };

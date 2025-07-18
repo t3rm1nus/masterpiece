@@ -95,7 +95,7 @@ const CoffeePage: React.FC<CoffeePageProps> = ({ onAnimationEnd }) => {
             Donar con PayPal
           </button>
           <img 
-            alt="" 
+            alt="Pixel de seguimiento de PayPal" 
             src="https://www.paypal.com/en_ES/i/scr/pixel.gif" 
             width="1" 
             height="1" 

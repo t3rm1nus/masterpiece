@@ -8,20 +8,32 @@ import CoffeePage from './CoffeePage';
 import WelcomePopup, { WELCOME_POPUP_KEY } from './WelcomePopup';
 import MaterialMobileMenu from './MaterialMobileMenu';
 import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
+import { useLanguage } from '../LanguageContext';
 
-export default function HomeLayout(): React.JSX.Element {
+export default function HomeLayout({ forcedLang }: { forcedLang?: string }): React.JSX.Element {
   const location = useLocation();
   const navigate = useNavigate();
+  const { lang, setLanguage } = useLanguage();
+
+  React.useEffect(() => {
+    if (forcedLang && lang !== forcedLang) {
+      setLanguage(forcedLang);
+    }
+    if (!forcedLang && lang !== 'es') {
+      setLanguage('es');
+    }
+  }, [forcedLang, lang, setLanguage]);
 
   // Detectar si estamos en detalle
-  const match = matchPath('/detalle/:category/:id', location.pathname);
+  const cleanPath = location.pathname.startsWith('/en/') ? location.pathname.replace(/^\/en/, '') : location.pathname;
+  const match = matchPath('/detalle/:category/:id', cleanPath);
   const isDetail = !!match;
   const category = match?.params?.category;
   const id = match?.params?.id;
 
   // Detectar overlays especiales
-  const isHowToDownload = location.pathname === '/como-descargar';
-  const isDonaciones = location.pathname === '/donaciones';
+  const isHowToDownload = cleanPath === '/como-descargar';
+  const isDonaciones = cleanPath === '/donaciones';
 
   // Handler para volver atrás (cerrar detalle)
   const handleBack = React.useCallback(() => {

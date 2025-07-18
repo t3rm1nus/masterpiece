@@ -1,6 +1,16 @@
 import React, { ReactNode, CSSProperties } from 'react';
 import { CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button } from '@mui/material';
-import { ArrowBack as ArrowBackIcon, Category as CategoryIcon, Extension as ExtensionIcon, Movie as MovieIcon, Book as BookIcon, MusicNote as MusicNoteIcon, SportsEsports as SportsEsportsIcon, Mic as MicIcon, Tv as TvIcon, AutoStories as ComicIcon, Translate as TranslateIcon } from '@mui/icons-material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import CategoryIcon from '@mui/icons-material/Category';
+import ExtensionIcon from '@mui/icons-material/Extension';
+import MovieIcon from '@mui/icons-material/Movie';
+import BookIcon from '@mui/icons-material/Book';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import MicIcon from '@mui/icons-material/Mic';
+import TvIcon from '@mui/icons-material/Tv';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import TranslateIcon from '@mui/icons-material/Translate';
 import { OndemandVideoIcon, LiveTvIcon } from './CategoryCustomIcons';
 import { getCategoryColor, getCategoryGradient } from '../../utils/categoryPalette';
 import { ensureString } from '../../utils/stringUtils';
@@ -105,7 +115,7 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
       case 'podcasts': return <MicIcon />;
       case 'series': return <LiveTvIcon />;
       case 'documentales': return <OndemandVideoIcon />;
-      case 'comics': return <ComicIcon />;
+      case 'comics': return <AutoStoriesIcon />;
       default: return <CategoryIcon />;
     }
   };

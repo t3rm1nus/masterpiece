@@ -1,27 +1,9 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "installCommand": "npm install",
-  "framework": "vite",
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Permissions-Policy",
-          "value": "geolocation=*, camera=*, microphone=*, payment=*, accelerometer=*, gyroscope=*"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    }
+  "version": 2,
+  "builds": [
+    { "src": "server.js", "use": "@vercel/node" }
   ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+  "routes": [
+    { "src": "/(.*)", "dest": "server.js" }
   ]
 }

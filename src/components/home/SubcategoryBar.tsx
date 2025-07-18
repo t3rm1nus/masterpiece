@@ -69,9 +69,6 @@ const SubcategoryBar: React.FC<SubcategoryBarProps> = ({
   visible = true, 
   ...props 
 }) => {
-  // Log para depuración
-  // eslint-disable-next-line no-console
-  console.log('[SubcategoryBar] categorySubcategories:', categorySubcategories);
   if (!visible || !selectedCategory) return null;
   
   if (selectedCategory !== 'documentales') {
@@ -85,9 +82,6 @@ const SubcategoryBar: React.FC<SubcategoryBarProps> = ({
               if (renderChip) {
                 return renderChip(label || sub, isActive, idx); // <-- Pasar label traducido al renderChip
               }
-              // Log para depuración en el render del botón
-              // eslint-disable-next-line no-console
-              console.log('[SubcategoryBar][Button]', { sub, label });
               return (
                 <UiButton
                   key={`subcat-${idx}-${typeof sub === 'string' ? sub : 'sub'}`}

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useLanguage } from "../LanguageContext";
 import { useGoogleAnalytics } from "../hooks/useGoogleAnalytics";
-import texts from "../data/texts.json";
 import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
 const WELCOME_POPUP_KEY = "masterpiece_welcome_popup_seen";
@@ -12,7 +11,7 @@ interface WelcomePopupProps {
 }
 
 const WelcomePopup: React.FC<WelcomePopupProps> = ({ open, onClose }) => {
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
   const { trackPopupView } = useGoogleAnalytics();
   const overlayRef = useRef<HTMLDivElement>(null);
 
@@ -42,25 +41,24 @@ const WelcomePopup: React.FC<WelcomePopupProps> = ({ open, onClose }) => {
     es: (
       <>
         <div style={{ fontSize: "1.1em", lineHeight: 1.6 }}>
-         <span role="img" aria-label="art">🎨📚🎶🎬</span> {texts.es.ui.welcome_popup.intro}<br />
-         <span role="img" aria-label="target">🎯📲</span> {texts.es.ui.welcome_popup.objective}<br />
-        <span role="img" aria-label="welcome">🌟🎁</span> <b>{texts.es.ui.welcome_popup.welcome}</b>
+         <span role="img" aria-label="art">🎨📚🎶🎬</span> {t.ui?.welcome_popup?.intro}<br />
+         <span role="img" aria-label="target">🎯📲</span> {t.ui?.welcome_popup?.objective}<br />
+        <span role="img" aria-label="welcome">🌟🎁</span> <b>{t.ui?.welcome_popup?.welcome}</b>
         </div>
       </>
     ),
     en: (
       <>
         <div style={{ fontSize: "1.1em", lineHeight: 1.6 }}>
-          <span role="img" aria-label="art">🎨📚🎶🎬</span> {texts.en.ui.welcome_popup.intro}<br /><br />
-          <span role="img" aria-label="target">🎯📲</span> {texts.en.ui.welcome_popup.objective}<br /><br />
-          <span role="img" aria-label="welcome">🌟🎁</span> <b>{texts.en.ui.welcome_popup.welcome}</b>
+          <span role="img" aria-label="art">🎨📚🎶🎬</span> {t.ui?.welcome_popup?.intro}<br /><br />
+          <span role="img" aria-label="target">🎯📲</span> {t.ui?.welcome_popup?.objective}<br /><br />
+          <span role="img" aria-label="welcome">🌟🎁</span> <b>{t.ui?.welcome_popup?.welcome}</b>
         </div>
       </>
     )
   };
 
   useEffect(() => {
-    console.log('[WelcomePopup] open:', open);
   }, [open]);
 
   useEffect(() => {
@@ -74,7 +72,6 @@ const WelcomePopup: React.FC<WelcomePopupProps> = ({ open, onClose }) => {
   }, [open, onClose]);
 
   if (!open) {
-    console.log('[WelcomePopup] NO renderiza popup porque open es false');
     return null;
   }
 

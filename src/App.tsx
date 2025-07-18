@@ -7,7 +7,11 @@ import ErrorDisplay from './components/ErrorDisplay';
 import { StorageMonitor, useStorageErrorHandler } from './components/StorageMonitor';
 import { HelmetProvider } from 'react-helmet-async';
 
-const App: React.FC = () => {
+interface AppProps {
+  initialLang?: string;
+}
+
+const App: React.FC<AppProps> = ({ initialLang }) => {
   // Hook para manejar errores de storage globalmente
   useStorageErrorHandler();
 
@@ -24,7 +28,7 @@ const App: React.FC = () => {
   
   return (
     <HelmetProvider>
-      <LanguageProvider>
+      <LanguageProvider initialLang={initialLang}>
         <MaterialThemeProvider>
           <div className="App" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
             <AppContent />

@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import { useAppLanguage } from "./store/useAppStore";
-import textsData from "./data/texts.json";
+// Eliminar: import textsData from "./data/texts.json";
+// Usar fetch para cargar texts.json dinámicamente si es necesario.
 
 /**
  * Robust Language Context
@@ -48,11 +49,12 @@ interface LanguageContextType {
 
 interface LanguageProviderProps {
   children: ReactNode;
+  initialLang?: string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: LanguageProviderProps) {
+export function LanguageProvider({ children, initialLang }: LanguageProviderProps) {
   // Usamos el store de idioma unificado
   const { 
     language, 
@@ -60,23 +62,40 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     setTranslations: updateStoreTranslations
   } = useAppLanguage();
 
+  // Sincronizar solo una vez el idioma inicial (SSR)
+  useEffect(() => {
+    if (initialLang && initialLang !== language) {
+      setLanguage(initialLang);
+    }
+    // eslint-disable-next-line
+  }, []);
+
   // Estado para las traducciones cargadas
   const [translations, setTranslations] = useState<TranslationData>({});
 
   // Cargar traducciones al inicio
   useEffect(() => {
-    if (textsData && (textsData as any)[language]) {
-      setTranslations((textsData as any)[language]);
-      // Actualizar el store con las traducciones completas
-      updateStoreTranslations(textsData as any);
-    } else {
-      console.warn('No se encontraron traducciones para:', language);
-    }
+    const fetchTranslations = async () => {
+      try {
+        const response = await fetch('/data/texts.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data: TranslationData = await response.json();
+        setTranslations(data);
+        // Actualizar el store con las traducciones completas
+        updateStoreTranslations(data);
+      } catch (error) {
+        console.error('Error fetching translations:', error);
+      }
+    };
+
+    fetchTranslations();
   }, [language, updateStoreTranslations]);
 
   // Crear objeto t con las traducciones
-  const t = translations;
   const lang = language; // Alias para compatibilidad
+  const t = translations[lang] || {};
   const availableLanguages = ['es', 'en'];
 
   // Wrapper function para setLanguage con validación adicional
@@ -85,7 +104,6 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       console.warn('[LanguageContext] Invalid language provided to changeLanguage:', lng);
       return;
     }
-    
     setLanguage(lng as 'es' | 'en');
   };
 
@@ -93,7 +111,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const getTranslation = (key: string, fallback: string = key): string => {
     try {
       const keys = key.split('.');
-      let value: any = translations;
+      let value: any = translations[lang]; // <-- Corregido: buscar en el idioma activo
       for (const k of keys) {
         value = value?.[k];
         if (value === undefined) break;

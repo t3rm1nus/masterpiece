@@ -6,10 +6,12 @@ import { useLanguage } from '../LanguageContext';
 import { useAppView, useAppData } from '../store/useAppStore';
 import useAppStore from '../store/useAppStore';
 import { useCallback, useMemo, useState } from 'react';
-import { Home as HomeIcon, Coffee as CoffeeIcon } from '@mui/icons-material';
+import HomeIcon from '@mui/icons-material/Home';
+import CoffeeIcon from '@mui/icons-material/Coffee';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import useIsomorphicLayoutEffect from './useIsomorphicLayoutEffect';
+import { getLocalizedPath } from '../utils/urlHelpers';
 
 interface MenuItem {
   label: string;
@@ -60,19 +62,17 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
 
   // Handlers de navegación usando callback del HomeLayout
   const handleNewRecommendations = useCallback(() => {
-    console.log('🔄 [useMenuItems] handleNewRecommendations llamado');
     resetAllFilters(lang);
     generateNewRecommendations();
     if (onOverlayNavigate) {
-      console.log('🔄 [useMenuItems] Navegando a home y haciendo scroll al top');
-      onOverlayNavigate('/');
+      onOverlayNavigate(getLocalizedPath('/', lang));
       setTimeout(() => {
         if (typeof window !== 'undefined') {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       }, 100);
     } else {
-      navigate('/');
+      navigate(getLocalizedPath('/', lang));
       setTimeout(() => {
         if (typeof window !== 'undefined') {
           window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -83,30 +83,15 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
 
   const handleCoffeeNavigation = useCallback(() => {
     if (onOverlayNavigate) {
-      onOverlayNavigate('/donaciones');
+      onOverlayNavigate(getLocalizedPath('/donaciones', lang));
     }
-  }, [onOverlayNavigate]);
+  }, [onOverlayNavigate, lang]);
 
   const handleHowToDownload = useCallback(() => {
-    console.log('🔄 [useMenuItems] handleHowToDownload llamado');
-    console.log('🔄 [useMenuItems] onOverlayNavigate disponible:', !!onOverlayNavigate);
-    console.log('🔄 [useMenuItems] onOverlayNavigate función:', typeof onOverlayNavigate);
-    if (typeof window !== 'undefined') {
-      console.log('🔄 [useMenuItems] URL actual:', window.location.pathname);
-    }
     if (onOverlayNavigate) {
-      console.log('🔄 [useMenuItems] Navegando a /como-descargar desde menú');
-      console.log('🔄 [useMenuItems] Llamando onOverlayNavigate...');
-      try {
-        onOverlayNavigate('/como-descargar');
-        console.log('🔄 [useMenuItems] onOverlayNavigate ejecutado exitosamente');
-      } catch (error) {
-        console.error('🔄 [useMenuItems] Error al ejecutar onOverlayNavigate:', error);
-      }
-    } else {
-      console.log('🔄 [useMenuItems] onOverlayNavigate NO disponible');
+      onOverlayNavigate(getLocalizedPath('/como-descargar', lang));
     }
-  }, [onOverlayNavigate]);
+  }, [onOverlayNavigate, lang]);
 
   const handleAbout = useCallback(() => {
     if (typeof window !== 'undefined' && window.innerWidth < 1024 && handleSplashOpen) {
@@ -138,7 +123,7 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
         action: handleCoffeeNavigation,
         show: true,
         special: true,
-        path: '/donaciones' // <-- Añadido path fijo
+        path: getLocalizedPath('/donaciones', lang) // <-- Path multilingüe
       },
       {
         label: getTranslation('ui.navigation.how_to_download'),
@@ -161,7 +146,7 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
         action: handleHowToDownload,
         show: true,
         special: false,
-        path: '/como-descargar' // <-- Añadido path fijo
+        path: getLocalizedPath('/como-descargar', lang) // <-- Path multilingüe
       },
       {
         label: getTranslation('ui.navigation.about'),
@@ -191,7 +176,7 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
     }
     
     return menuItems;
-  }, [getTranslation, handleNewRecommendations, handleCoffeeNavigation, handleHowToDownload, handleAbout, isMobile]);
+  }, [getTranslation, handleNewRecommendations, handleCoffeeNavigation, handleHowToDownload, handleAbout, isMobile, lang]);
 
   return menu;
 } 

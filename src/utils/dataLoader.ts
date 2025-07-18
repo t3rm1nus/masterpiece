@@ -46,6 +46,16 @@ export const loadRealData = async (): Promise<LoadedData> => {
     // Cargar datos de música de forma chunked
     const musicDataPromise = MusicDataLoader.loadAllMusicData();
     
+    const isProd = typeof window === 'undefined' || process.env.NODE_ENV === 'production';
+    const assetPrefix = '/data/';
+
+    // Reemplazar imports dinámicos de JSON por fetch
+    async function fetchJson(file) {
+      const response = await fetch(assetPrefix + file);
+      if (!response.ok) throw new Error('Error cargando ' + file);
+      return response.json();
+    }
+
     // Importar todos los demás archivos JSON
     const [
       moviesData,
@@ -58,15 +68,15 @@ export const loadRealData = async (): Promise<LoadedData> => {
       seriesData,
       documentalesData
     ] = await Promise.all([
-      import('/src/data/datos_movies.json'),
-      import('/src/data/datos_books.json'),
-      import('/src/data/datos_videogames.json'),
-      musicDataPromise, // Usar la nueva carga chunked
-      import('/src/data/datos_comics.json'),
-      import('/src/data/datos_boardgames.json'),
-      import('/src/data/datos_podcast.json'),
-      import('/src/data/datos_series.json'),
-      import('/src/data/datos_documentales.json')
+      fetchJson('datos_movies.json'),
+      fetchJson('datos_books.json'),
+      fetchJson('datos_videogames.json'),
+      musicDataPromise, // Si musicDataPromise ya usa fetch, déjalo igual
+      fetchJson('datos_comics.json'),
+      fetchJson('datos_boardgames.json'),
+      fetchJson('datos_podcast.json'),
+      fetchJson('datos_series.json'),
+      fetchJson('datos_documentales.json')
     ]);
 
     // Función helper para procesar categoría
@@ -83,6 +93,14 @@ export const loadRealData = async (): Promise<LoadedData> => {
         itemsArray = data.default[categoryName];
       } else if (data?.default && Array.isArray(data.default)) {
         itemsArray = data.default;
+      } else if (data?.recommendations && Array.isArray(data.recommendations)) {
+        itemsArray = data.recommendations;
+      } else {
+        // Buscar cualquier propiedad que sea un array
+        const arrKey = Object.keys(data || {}).find(k => Array.isArray(data[k]));
+        if (arrKey) {
+          itemsArray = data[arrKey];
+        }
       }
       
       if (!itemsArray) {

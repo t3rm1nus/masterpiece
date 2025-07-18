@@ -10,6 +10,7 @@ import { useMenuItems } from '../hooks/useMenuItems';
 import { useNavigate, useLocation, matchPath } from 'react-router-dom';
 import LanguageSelector from './ui/LanguageSelector';
 import SplashDialog from './SplashDialog';
+import { getLocalizedPath } from '../utils/urlHelpers';
 
 // Tipos para las props del menú
 interface MenuItem {
@@ -86,6 +87,21 @@ function DesktopMenu(props: DesktopMenuProps): React.JSX.Element | null {
   const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const navigate = useNavigate();
   const location = useLocation();
+  const handleLanguageChange = (newLang: string) => {
+    const currentPath = location.pathname + location.search + location.hash;
+    if (newLang === 'en') {
+      if (!currentPath.startsWith('/en/')) {
+        navigate('/en' + (currentPath.startsWith('/') ? currentPath : '/' + currentPath));
+      }
+    } else {
+      if (currentPath.startsWith('/en/')) {
+        navigate(currentPath.replace(/^\/en/, '') || '/');
+      }
+    }
+    // Assuming ctx is available in this scope, otherwise this line would cause an error.
+    // For now, commenting out as it's not defined in the provided context.
+    // ctx.changeLanguage(newLang); 
+  };
   if (isMobile) return null;
 
   // Detectar si estamos en detalle, donación o cómo descargar para mostrar el botón Volver en el menú superior
@@ -140,9 +156,9 @@ function DesktopMenu(props: DesktopMenuProps): React.JSX.Element | null {
                 : <button onClick={() => {
                     if (item.path) {
                       if (onOverlayNavigate) {
-                        onOverlayNavigate(item.path);
+                        onOverlayNavigate(getLocalizedPath(item.path, lang));
                       } else {
-                        navigate(item.path);
+                        navigate(getLocalizedPath(item.path, lang));
                       }
                     } else if (item.action) {
                       item.action();
@@ -158,7 +174,7 @@ function DesktopMenu(props: DesktopMenuProps): React.JSX.Element | null {
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
           {/* Selector de idioma (LanguageSelector) siempre visible en desktop */}
-          <LanguageSelector variant="desktop" sx={{}} />
+          <LanguageSelector variant="desktop" sx={{}} value={lang} onChange={handleLanguageChange} />
           {/* Icono quienes somos (about) como imagen suelta a la izquierda del botón donación */}
           <img
             src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/icono.png"
@@ -186,9 +202,9 @@ function DesktopMenu(props: DesktopMenuProps): React.JSX.Element | null {
               : <button key={idx} className="donation-btn" onClick={() => {
                   if (item.path) {
                     if (onOverlayNavigate) {
-                      onOverlayNavigate(item.path);
+                      onOverlayNavigate(getLocalizedPath(item.path, lang));
                     } else {
-                      navigate(item.path);
+                      navigate(getLocalizedPath(item.path, lang));
                     }
                   } else if (item.action) {
                     item.action();

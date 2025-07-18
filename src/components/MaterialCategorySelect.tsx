@@ -1,7 +1,16 @@
 import React from 'react';
 import { Select, MenuItem, InputLabel, FormControl, useTheme, useMediaQuery, Box } from '@mui/material';
-import { Movie as MovieIcon, SportsEsports as GameIcon, MenuBook as BookIcon, LibraryMusic as MusicIcon, Mic as PodcastIcon, Extension as BoardGameIcon, AutoStories as ComicIcon, Category as CategoryIcon, Star as StarIcon } from '@mui/icons-material';
-import { OndemandVideoIcon, LiveTvIcon } from './shared/CategoryCustomIcons.ts';
+import CategoryIcon from '@mui/icons-material/Category';
+import StarIcon from '@mui/icons-material/Star';
+import MovieIcon from '@mui/icons-material/Movie';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+import MicIcon from '@mui/icons-material/Mic';
+import ExtensionIcon from '@mui/icons-material/Extension';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
 import { useLanguage } from '../LanguageContext';
 import { getCategoryColor, getCategoryGradient, getCategoryColorForSelect } from '../utils/categoryPalette';
 import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
@@ -35,21 +44,21 @@ const getCategoryIcon = (categoryKey: string) => {
       return <MovieIcon fontSize="small" sx={{ mr: 1 }} />;
     case 'videogames':
     case 'videojuegos':
-      return <GameIcon fontSize="small" sx={{ mr: 1 }} />;
+      return <SportsEsportsIcon fontSize="small" sx={{ mr: 1 }} />;
     case 'books':
     case 'libros':
-      return <BookIcon fontSize="small" sx={{ mr: 1 }} />;
+      return <MenuBookIcon fontSize="small" sx={{ mr: 1 }} />;
     case 'music':
     case 'musica':
-      return <MusicIcon fontSize="small" sx={{ mr: 1 }} />;
+      return <LibraryMusicIcon fontSize="small" sx={{ mr: 1 }} />;
     case 'podcast':
     case 'podcasts':
-      return <PodcastIcon fontSize="small" sx={{ mr: 1 }} />;
+      return <MicIcon fontSize="small" sx={{ mr: 1 }} />;
     case 'boardgames':
     case 'juegos de mesa':
-      return <BoardGameIcon fontSize="small" sx={{ mr: 1 }} />;
+      return <ExtensionIcon fontSize="small" sx={{ mr: 1 }} />;
     case 'comics':
-      return <ComicIcon fontSize="small" sx={{ mr: 1 }} />;
+      return <AutoStoriesIcon fontSize="small" sx={{ mr: 1 }} />;
     case 'series':
       return <LiveTvIcon fontSize="small" sx={{ mr: 1 }} />;
     case 'documentales':
@@ -82,7 +91,7 @@ const MaterialCategorySelect: React.FC<MaterialCategorySelectProps> = ({
 
   return (
     <div
-      sx={{
+      style={{
         width: isMobile ? '80vw' : '100vw',
         maxWidth: isMobile ? '80vw' : '100vw',
         margin: isMobile ? '0 auto' : '0',
@@ -331,10 +340,10 @@ const MaterialCategorySelect: React.FC<MaterialCategorySelectProps> = ({
               <MenuItem key="all" value="all">{t?.ui?.navigation?.all_subcategories || (lang === 'en' ? 'All subcategories' : 'Todas las subcategorías')}</MenuItem>
               {subcategories.map((sub, idx) => (
                 renderSubcategoryChip
-                  ? renderSubcategoryChip(sub, activeSubcategory === (sub.sub || sub), idx)
+                  ? renderSubcategoryChip(sub, activeSubcategory === sub.sub, idx)
                   : (
-                    <MenuItem key={sub.sub || sub} value={sub.sub || sub}>
-                      {getSubcategoryLabel(sub.sub || sub, selectedCategory, t, lang)}
+                    <MenuItem key={sub.sub} value={sub.sub}>
+                      {getSubcategoryLabel(sub.sub, selectedCategory, t, lang)}
                     </MenuItem>
                   )
               ))}

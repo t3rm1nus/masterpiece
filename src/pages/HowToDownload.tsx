@@ -3,7 +3,7 @@ import { Box, Typography, Button, useTheme, useMediaQuery, Paper, Container, Fab
 import { useLanguage } from '../LanguageContext';
 import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 import { applyHowToDownloadScrollFixForIPhone, cleanupScrollFixesForIPhone } from '../utils/iPhoneScrollFix';
-import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Helmet } from 'react-helmet-async';
 
 interface HowToDownloadProps {
@@ -88,7 +88,8 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
       es: 'Y listo. Ya puedes decir con orgullo que sabes bajar torrents sin naufragar en un mar de pop-ups, spyware y desesperación. ¡Feliz navegación, capitán! 🏴‍☠️',
       en: "And that's it. Now you can proudly say you know how to download torrents without sinking in a sea of pop-ups, spyware, and despair. Happy sailing, captain! 🏴‍☠️"
     }
-  };
+  } as const;
+  const langKey = lang as keyof typeof texts.title;
 
   const handleBack = useCallback(() => {
     console.log('🔄 [HowToDownload] handleBack llamado');
@@ -110,11 +111,17 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
         <meta property="og:title" content="¿Cómo descargar? | Masterpiece" />
         <meta property="og:description" content="Instrucciones para descargar contenido de Masterpiece de forma segura y sencilla." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/favicon.png" />
+        <meta property="og:image" content="/imagenes/splash_image.png" />
         <meta property="og:url" content={url} />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href={url} />
+        {/* Etiquetas hreflang para SEO multilingüe */}
+        <link rel="alternate" href="https://masterpiece.com/como-descargar" hrefLang="es" />
+        <link rel="alternate" href="https://masterpiece.com/en/como-descargar" hrefLang="en" />
+        <link rel="alternate" href="https://masterpiece.com/como-descargar" hrefLang="x-default" />
       </Helmet>
+      {/* H1 oculto para SEO y accesibilidad */}
+      <h1 style={{ position: 'absolute', left: '-10000px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden' }}>¿Cómo descargar?</h1>
       <div style={{ marginTop: '70px' }}>
         <Container 
           maxWidth="md" 
@@ -203,6 +210,7 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
                 src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate.jpg"
                 alt="Pirate Bay Logo"
                 style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                loading="lazy"
               />
             </Box>
             <Typography variant="h4" align="center" gutterBottom sx={{ 
@@ -210,12 +218,12 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
               fontSize: { xs: '1.4rem', sm: '2rem', md: '2.2rem', lg: '2.4rem' }
             }}>
               <span style={{display:'inline-flex',alignItems:'center',gap:8}}>
-                {texts.title[lang]}
+                {texts.title[langKey]}
               </span>
             </Typography>
-            <Typography variant="body1" sx={{ mb: 2 }} dangerouslySetInnerHTML={{__html: texts.intro[lang]}} />
-            <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step1[lang]}</Typography>
-            <Typography variant="body1" sx={{ mb: 1 }}>{texts.step1desc[lang]}</Typography>
+            <Typography variant="body1" sx={{ mb: 2 }} dangerouslySetInnerHTML={{__html: texts.intro[langKey]}} />
+            <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step1[langKey]}</Typography>
+            <Typography variant="body1" sx={{ mb: 1 }}>{texts.step1desc[langKey]}</Typography>
             <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: 2, mb: 2 }}>
               <Button variant="contained" color="primary" href="https://transmissionbt.com/download" target="_blank" sx={{ fontWeight: 600, mb: isMobile ? 1 : 0, '&:hover': { color: '#111' } }}>
                 Transmission
@@ -224,8 +232,8 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
                 qBittorrent
               </Button>
             </Box>
-            <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step2[lang]}</Typography>
-            <Typography variant="body1" sx={{ mb: 2 }}>{texts.step2desc[lang]}</Typography>
+            <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step2[langKey]}</Typography>
+            <Typography variant="body1" sx={{ mb: 2 }}>{texts.step2desc[langKey]}</Typography>
             <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', mb: 2 }}>
               <Button
                 variant="contained"
@@ -234,7 +242,7 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
                 target="_blank"
                 sx={{ fontWeight: 600, mb: 0, minWidth: 'unset', width: 'auto', px: 2, py: 1, fontSize: '1rem', '&:hover': { color: '#111' } }}
               >
-                {texts.piratebay[lang]}
+                {texts.piratebay[langKey]}
               </Button>
             </Box>
             <Box sx={{ width: { xs: '80%', sm: '60%', md: '50%' }, mx: 'auto', mb: 2, borderRadius: 2, overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
@@ -242,10 +250,11 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
                 src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate1.jpg"
                 alt="Ejemplo Pirate Bay"
                 style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                loading="lazy"
               />
             </Box>
             <Typography variant="body2" color="warning.main" sx={{ fontWeight: 600, mb: 2 }}>
-              {texts.warning[lang]}
+              {texts.warning[langKey]}
             </Typography>
             <Typography variant="body1" sx={{ mb: 2 }}>
               {lang === 'es' ? 'Una vez seleccionado lo que quieres bajar, haz click sobre el icono del imán y se abrirá automáticamente tu Transmission o qBittorrent. Dale a aceptar para empezar la descarga y...' : 'Once you have selected what you want to download, click the magnet icon and your Transmission or qBittorrent will open automatically. Click accept to start the download and...'}
@@ -255,21 +264,23 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
                 src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/pirate2.jpg"
                 alt="Ejemplo Pirate Bay 2"
                 style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                loading="lazy"
               />
             </Box>
-            <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step3[lang]}</Typography>
-            <Typography variant="body1" sx={{ mb: 2 }}>{texts.step3desc[lang]}</Typography>
+            <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.step3[langKey]}</Typography>
+            <Typography variant="body1" sx={{ mb: 2 }}>{texts.step3desc[langKey]}</Typography>
             <Box sx={{ width: { xs: '80%', sm: '60%', md: '40%' }, mx: 'auto', mb: 3, display: 'flex', justifyContent: 'center' }}>
               <img
                 src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/descargas/magic.gif"
                 alt="Magia torrent"
                 style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                loading="lazy"
               />
             </Box>
-            <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.vpn[lang]}</Typography>
-            <Typography variant="body1" sx={{ mb: 2 }}>{texts.vpndesc[lang]}</Typography>
+            <Typography variant="h6" sx={{ mt: 7, mb: 1, fontWeight: 600 }}>{texts.vpn[langKey]}</Typography>
+            <Typography variant="body1" sx={{ mb: 2 }}>{texts.vpndesc[langKey]}</Typography>
             <Typography variant="body1" sx={{ mt: 6, fontWeight: 600, textAlign: 'center' }}>
-              {texts.end[lang]}
+              {texts.end[langKey]}
             </Typography>
           </Paper>
         </Container>
