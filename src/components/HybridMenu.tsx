@@ -181,7 +181,6 @@ function DesktopMenu(props: DesktopMenuProps): React.JSX.Element | null {
             alt={getTranslation('ui.alt.info', 'info')}
             title={getTranslation('ui.titles.show_info', lang === 'en' ? 'Show info' : 'Mostrar información')}
             onClick={() => {
-              console.log('[HybridMenu] Click en imagen info, onSplashOpen existe:', !!onSplashOpen);
               if (onSplashOpen) onSplashOpen();
             }}
             style={{

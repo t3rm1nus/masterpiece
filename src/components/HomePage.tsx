@@ -171,7 +171,6 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   // const [localSelectedItem, setLocalSelectedItem] = React.useState<any>(null);
 
   const { lang, t, getTranslation } = useLanguage();
-  console.log('lang:', lang);
   // Hook para sincronizar títulos automáticamente
   useTitleSync();
   // Hook para Google Analytics
@@ -373,17 +372,6 @@ const HomePageComponent: React.FC<HomePageProps> = ({
       return subs.map((s: any) => {
         const normalized = typeof s === 'string' ? normalizeSubcategoryInternal(s) : s.sub;
         const label = getSubcategoryLabel(normalized, selectedCategory || '', t);
-        // Log temporal para depuración
-        if (selectedCategory && normalized) {
-          // eslint-disable-next-line no-console
-          console.log('[Subcat DEBUG]', {
-            category: selectedCategory,
-            normalized,
-            label,
-            exists: t?.subcategories?.[selectedCategory]?.[normalized],
-            tSubcats: t?.subcategories?.[selectedCategory]
-          });
-        }
         return {
           sub: normalized,
           label,

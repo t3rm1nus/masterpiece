@@ -92,11 +92,8 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
   const langKey = lang as keyof typeof texts.title;
 
   const handleBack = useCallback(() => {
-    console.log('🔄 [HowToDownload] handleBack llamado');
-    console.log('🔄 [HowToDownload] onAnimationEnd disponible:', !!onAnimationEnd);
     // Solo usar el callback, sin navegación propia
     if (typeof onAnimationEnd === 'function') {
-      console.log('🔄 [HowToDownload] Llamando onAnimationEnd');
       onAnimationEnd();
     }
   }, [onAnimationEnd]);

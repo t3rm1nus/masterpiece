@@ -16,7 +16,6 @@ export default function AppContent(): React.JSX.Element {
   useIsomorphicLayoutEffect(() => {
     if (typeof window !== 'undefined') {
       const handlePopState = (event: PopStateEvent): void => {
-        console.log('[AppContent] Popstate event:', location.pathname);
         // Siempre que la ruta sea '/', forzar estado home y limpiar detalle
         if (location.pathname === '/') {
           setView('home');
