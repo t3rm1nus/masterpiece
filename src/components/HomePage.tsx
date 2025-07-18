@@ -235,7 +235,9 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         const y = sessionStorage.getItem('homeScrollY');
         if (y) {
           setTimeout(() => {
-            window.scrollTo(0, parseInt(y, 10));
+            if (typeof window !== 'undefined') {
+              window.scrollTo(0, parseInt(y, 10));
+            }
             sessionStorage.removeItem('homeScrollY');
           }, 50);
         }
@@ -681,7 +683,9 @@ const HomePageComponent: React.FC<HomePageProps> = ({
           let restored = false;
           const tryRestore = () => {
             if (document.body.scrollHeight > targetY + window.innerHeight) {
-              window.scrollTo(0, targetY);
+              if (typeof window !== 'undefined') {
+                window.scrollTo(0, targetY);
+              }
               sessionStorage.removeItem('homeScrollY');
               return true;
             }

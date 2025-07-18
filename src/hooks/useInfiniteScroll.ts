@@ -25,6 +25,7 @@ export default function useInfiniteScroll(
   const sentinelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return; // Solo en cliente
     if (!hasMore || loading) return;
     const observer = new window.IntersectionObserver(
       entries => {

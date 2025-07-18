@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">59.39% </span>
+                <span class="strong">59% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>177/298</span>
+                <span class='fraction'>177/300</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30.4% </span>
+                <span class="strong">30.07% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>114/375</span>
+                <span class='fraction'>114/379</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">59.35% </span>
+                <span class="strong">58.92% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>165/278</span>
+                <span class='fraction'>165/280</span>
             </div>
         
             
@@ -1069,7 +1069,11 @@
 <a name='L1004'></a><a href='#L1004'>1004</a>
 <a name='L1005'></a><a href='#L1005'>1005</a>
 <a name='L1006'></a><a href='#L1006'>1006</a>
-<a name='L1007'></a><a href='#L1007'>1007</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
+<a name='L1007'></a><a href='#L1007'>1007</a>
+<a name='L1008'></a><a href='#L1008'>1008</a>
+<a name='L1009'></a><a href='#L1009'>1009</a>
+<a name='L1010'></a><a href='#L1010'>1010</a>
+<a name='L1011'></a><a href='#L1011'>1011</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
@@ -1282,7 +1286,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1292,8 +1296,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1302,11 +1306,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1745,7 +1751,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -1753,6 +1759,8 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -2312,7 +2320,9 @@ const HomePageComponent: React.FC&lt;HomePageProps&gt; = ({
         const y = sessionStorage.getItem('homeScrollY');
         <span class="missing-if-branch" title="if path not taken" >I</span>if (y) {
 <span class="cstat-no" title="statement not covered" >          setTimeout(<span class="fstat-no" title="function not covered" >() =</span>&gt; {</span>
-<span class="cstat-no" title="statement not covered" >            window.scrollTo(0, parseInt(y, 10));</span>
+<span class="cstat-no" title="statement not covered" >            if (typeof window !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >              window.scrollTo(0, parseInt(y, 10));</span>
+            }
 <span class="cstat-no" title="statement not covered" >            sessionStorage.removeItem('homeScrollY');</span>
           }, 50);
         }
@@ -2758,7 +2768,9 @@ const HomePageComponent: React.FC&lt;HomePageProps&gt; = ({
           let restored = <span class="cstat-no" title="statement not covered" >false;</span>
           const tryRestore = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =</span>&gt; {</span>
 <span class="cstat-no" title="statement not covered" >            if (document.body.scrollHeight &gt; targetY + window.innerHeight) {</span>
-<span class="cstat-no" title="statement not covered" >              window.scrollTo(0, targetY);</span>
+<span class="cstat-no" title="statement not covered" >              if (typeof window !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >                window.scrollTo(0, targetY);</span>
+              }
 <span class="cstat-no" title="statement not covered" >              sessionStorage.removeItem('homeScrollY');</span>
 <span class="cstat-no" title="statement not covered" >              return true;</span>
             }
@@ -3088,7 +3100,7 @@ export default React.memo(HomePageComponent); </pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-07-17T13:10:50.779Z
+                at 2025-07-18T11:35:22.735Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

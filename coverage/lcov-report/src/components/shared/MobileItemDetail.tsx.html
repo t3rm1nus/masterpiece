@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">64.28% </span>
+                <span class="strong">60.31% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>36/56</span>
+                <span class='fraction'>38/63</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">76.04% </span>
+                <span class="strong">66.94% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>73/96</span>
+                <span class='fraction'>79/118</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">64.81% </span>
+                <span class="strong">60.65% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>35/54</span>
+                <span class='fraction'>37/61</span>
             </div>
         
             
@@ -439,7 +439,17 @@
 <a name='L374'></a><a href='#L374'>374</a>
 <a name='L375'></a><a href='#L375'>375</a>
 <a name='L376'></a><a href='#L376'>376</a>
-<a name='L377'></a><a href='#L377'>377</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">7x</span>
+<a name='L377'></a><a href='#L377'>377</a>
+<a name='L378'></a><a href='#L378'>378</a>
+<a name='L379'></a><a href='#L379'>379</a>
+<a name='L380'></a><a href='#L380'>380</a>
+<a name='L381'></a><a href='#L381'>381</a>
+<a name='L382'></a><a href='#L382'>382</a>
+<a name='L383'></a><a href='#L383'>383</a>
+<a name='L384'></a><a href='#L384'>384</a>
+<a name='L385'></a><a href='#L385'>385</a>
+<a name='L386'></a><a href='#L386'>386</a>
+<a name='L387'></a><a href='#L387'>387</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
@@ -559,8 +569,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -593,6 +609,8 @@
 <span class="cline-any cline-yes">24x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -600,6 +618,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -934,9 +954,15 @@ const MobileItemDetail: React.FC&lt;MobileItemDetailProps&gt; = ({
       onClose();
     } else <span class="missing-if-branch" title="else path not taken" >E</span>{
 <span class="cstat-no" title="statement not covered" >      try {</span>
-<span class="cstat-no" title="statement not covered" >        window.history.back();</span>
+<span class="cstat-no" title="statement not covered" >        if (typeof window !== 'undefined' &amp;&amp; window.history) {</span>
+<span class="cstat-no" title="statement not covered" >          window.history.back();</span>
+        } else <span class="cstat-no" title="statement not covered" >if (typeof window !== 'undefined' &amp;&amp; window.location) {</span>
+<span class="cstat-no" title="statement not covered" >          window.location.assign('/');</span>
+        }
       } catch {
-<span class="cstat-no" title="statement not covered" >        window.location.assign('/');</span>
+<span class="cstat-no" title="statement not covered" >        if (typeof window !== 'undefined' &amp;&amp; window.location) {</span>
+<span class="cstat-no" title="statement not covered" >          window.location.assign('/');</span>
+        }
       }
     }
   };
@@ -967,15 +993,19 @@ const MobileItemDetail: React.FC&lt;MobileItemDetailProps&gt; = ({
   );
 &nbsp;
   const handleShare = () =&gt; {
-    const url = window.location.href;
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (navigator.share) {
-<span class="cstat-no" title="statement not covered" >      navigator.share({</span>
-        title: document.title,
-        url,
-      }).catch(<span class="fstat-no" title="function not covered" >() =</span>&gt; {});
-    } else {
-      navigator.clipboard.writeText(url);
-      alert('Enlace copiado');
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof window !== 'undefined') {
+      const url = window.location.href;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof navigator !== 'undefined' &amp;&amp; navigator.share) {
+<span class="cstat-no" title="statement not covered" >        if (typeof document !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >          navigator.share({</span>
+            title: document.title,
+            url,
+          }).catch(<span class="fstat-no" title="function not covered" >() =</span>&gt; {});
+        }
+      } else <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof navigator !== 'undefined' &amp;&amp; navigator.clipboard) {
+        navigator.clipboard.writeText(url);
+        alert('Enlace copiado');
+      }
     }
   };
 &nbsp;
@@ -1198,7 +1228,7 @@ export default MobileItemDetail; </pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-07-17T13:10:50.779Z
+                at 2025-07-18T11:35:22.735Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
