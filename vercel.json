@@ -6,10 +6,5 @@
   "routes": [
     { "src": "/(.*)", "dest": "server.js" }
   ],
-  "outputDirectory": "dist/client",
-  "ignoreFiles": [
-    "public/imagenes/*",
-    "!public/imagenes/og/**",
-    "!public/imagenes/notfound/**"
-  ]
+  "outputDirectory": "dist/client"
 }

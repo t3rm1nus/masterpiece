@@ -1,0 +1,3 @@
+public/imagenes/*
+!public/imagenes/og/**
+!public/imagenes/notfound/** 
