@@ -16,6 +16,9 @@ app.use((req, res, next) => {
   next();
 });
 
+// Servir archivos estáticos desde public (Vercel los sirve automáticamente)
+app.use(express.static(path.join(process.cwd(), 'public')));
+
 // Servir estáticos
 app.use(express.static(resolve('dist/client')));
 
