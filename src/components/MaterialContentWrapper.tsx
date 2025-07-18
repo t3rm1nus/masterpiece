@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ReactNode } from 'react';
-import { useMediaQuery, useTheme, Box, Typography } from '@mui/material';
+import { useMediaQuery, useTheme, Box, Typography, CardMedia } from '@mui/material';
 import MaterialRecommendationCard from './MaterialRecommendationCard';
 import MaterialCategorySelect from './MaterialCategorySelect';
 import MaterialSubcategoryChips from './MaterialSubcategoryChips';
@@ -291,9 +291,9 @@ const MaterialContentWrapper: React.FC<MaterialContentWrapperProps> = ({
           <Typography variant="body2" sx={{ margin: 0, padding: 0 }}>
             {t.try_different_filters || 'Intenta cambiar los filtros seleccionados'}
           </Typography>
-          <Box
+          <CardMedia
             component="img"
-            src={randomNotFoundImage()}
+            image={randomNotFoundImage()}
             alt={getTranslation('ui.states.noResults', 'No se encontraron resultados')}
             sx={emptyImgSx}
           />
