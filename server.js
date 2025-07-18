@@ -21,7 +21,7 @@ app.use(express.static(resolve('dist/client')));
 
 // SSR handler
 app.get('*', async (req, res) => {
-  let template = fs.readFileSync(resolve('dist/client/index.html'), 'utf-8');
+  let template = fs.readFileSync(path.join(process.cwd(), 'dist/client/index.html'), 'utf-8');
   const render = (await import('./dist/server/entry-server.js')).render;
   // Detectar idioma por la URL
   const lang = req.url.startsWith('/en/') ? 'en' : 'es';
