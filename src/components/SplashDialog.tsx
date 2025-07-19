@@ -322,7 +322,7 @@ const SplashDialog: React.FC<SplashDialogProps> = ({
                 : (
                 <img
                   id="splash-image"
-                  src="/imagenes/splash_image.png"
+                  src="https://github.com/t3rm1nus/masterpiece/raw/main/public/imagenes/splash_image.png"
                   alt={getTranslation('ui.alt.splash', 'Splash')}
                   onError={(e: any) => {
                     // Si falla la imagen principal, usar una imagen de respaldo

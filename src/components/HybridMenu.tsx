@@ -177,7 +177,7 @@ function DesktopMenu(props: DesktopMenuProps): React.JSX.Element | null {
           <LanguageSelector variant="desktop" sx={{}} value={lang} onChange={handleLanguageChange} />
           {/* Icono quienes somos (about) como imagen suelta a la izquierda del botón donación */}
           <img
-            src="/imagenes/icono.png"
+            src="https://github.com/t3rm1nus/masterpiece/raw/main/public/imagenes/icono.png"
             alt={getTranslation('ui.alt.info', 'info')}
             title={getTranslation('ui.titles.show_info', lang === 'en' ? 'Show info' : 'Mostrar información')}
             onClick={() => {

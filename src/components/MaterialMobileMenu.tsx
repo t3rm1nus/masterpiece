@@ -203,11 +203,7 @@ const MaterialMobileMenu: React.FC<MaterialMobileMenuProps> = ({
           audio={splashAudio}
           audioRef={audioRef as any}
           content={
-            <img
-              src="/imagenes/splash_image.png"
-              alt={getTranslation('ui.alt.splash', 'Splash')}
-              style={{ width: '100%', maxWidth: 320, borderRadius: 16, margin: 0, cursor: 'pointer', background: 'none' }}
-            />
+            <img src="https://github.com/t3rm1nus/masterpiece/raw/main/public/imagenes/splash_image.png" alt="Splash" style={{ width: 48, height: 48, marginRight: 8, borderRadius: 12 }} />
           }
           sx={{
             content: {

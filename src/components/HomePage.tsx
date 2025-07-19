@@ -725,7 +725,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
       </Helmet>
       {/* Precarga invisible para asegurar caché en cliente (SSR safe) */}
       <img src="/imagenes/splash.png" alt="" style={{ display: 'none' }} aria-hidden="true" />
-      <img src="/imagenes/descargas/pirate.jpg" alt="" style={{ display: 'none' }} aria-hidden="true" />
+      <img src="https://github.com/t3rm1nus/masterpiece/raw/main/public/imagenes/descargas/pirate.jpg" alt="" style={{ display: 'none' }} aria-hidden="true" />
     <UiLayout>
       {/* Splash Dialog - ELIMINADO: Solo se muestra desde HomeLayout cuando el usuario hace clic en "Quiénes Somos" */}
       {/* Hybrid Menu */}
