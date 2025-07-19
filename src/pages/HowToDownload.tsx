@@ -108,7 +108,7 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
         <meta property="og:title" content="¿Cómo descargar? | Masterpiece" />
         <meta property="og:description" content="Instrucciones para descargar contenido de Masterpiece de forma segura y sencilla." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://github.com/t3rm1nus/masterpiece/raw/main/public/imagenes/splash_image.png" />
+        <meta property="og:image" content="https://masterpiece.es/imagenes/splash_image.png" />
         <meta property="og:url" content={url} />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href={url} />
