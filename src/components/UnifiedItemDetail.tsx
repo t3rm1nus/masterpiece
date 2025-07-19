@@ -451,7 +451,32 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
   const item = selectedItem || {};
   const itemTitle = item.title || item.name || 'Detalle - Masterpiece';
   const itemDescription = item.description || 'Descubre detalles de esta obra recomendada en Masterpiece.';
-  const itemImage = item.image || '/favicon.png';
+  
+  // Usar imagen OG de la categoría para las meta tags
+  const getOgImage = () => {
+    if (item.category) {
+      const ogMap: Record<string, string> = {
+        books: 'books',
+        comics: 'comics',
+        documentales: 'documentaries',
+        boardgames: 'gameboard',
+        movies: 'movies',
+        music: 'music',
+        podcast: 'podcasts',
+        podcasts: 'podcasts',
+        series: 'series',
+        videogames: 'videogames',
+        videogame: 'videogames',
+      };
+      const ogKey = ogMap[item.category] || null;
+      if (ogKey) {
+        return `https://masterpiece.es/og/${ogKey}.png`;
+      }
+    }
+    return "https://masterpiece.es/imagenes/splash_image.png";
+  };
+  
+  const itemImage = getOgImage();
   const itemUrl = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.com/';
 
   const getJsonLd = () => {

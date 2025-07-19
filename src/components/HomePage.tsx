@@ -665,7 +665,29 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://masterpiece.es/imagenes/splash_image.png" />
+        <meta property="og:image" content={(() => {
+          if (isCategory && selectedCategory) {
+            // Mapeo de categorías a nombres de archivo OG
+            const ogMap: Record<string, string> = {
+              books: 'books',
+              comics: 'comics',
+              documentales: 'documentaries',
+              boardgames: 'gameboard',
+              movies: 'movies',
+              music: 'music',
+              podcast: 'podcasts',
+              podcasts: 'podcasts',
+              series: 'series',
+              videogames: 'videogames',
+              videogame: 'videogames',
+            };
+            const ogKey = ogMap[selectedCategory];
+            if (ogKey) {
+              return `https://masterpiece.es/og/${ogKey}.png`;
+            }
+          }
+          return "https://masterpiece.es/imagenes/splash_image.png";
+        })()} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/png" />
