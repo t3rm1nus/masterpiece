@@ -1,0 +1,26 @@
+# Excluir imágenes de categorías específicas del control de versiones
+# Estas carpetas se llenan dinámicamente y no deben estar en el repositorio
+
+# Carpetas de categorías específicas
+comics/
+movies/
+musica/
+peliculas/
+podcasts/
+documentales/
+videojuegos/
+series/
+libros/
+juegos_de_mesa/
+
+# Mantener solo archivos .gitkeep para preservar la estructura
+!comics/.gitkeep
+!movies/.gitkeep
+!musica/.gitkeep
+!peliculas/.gitkeep
+!podcasts/.gitkeep
+!documentales/.gitkeep
+!videojuegos/.gitkeep
+!series/.gitkeep
+!libros/.gitkeep
+!juegos_de_mesa/.gitkeep 

@@ -53,7 +53,7 @@ const MasterpieceBadge: React.FC<MasterpieceBadgeProps> = ({
     }}
   >
     <img
-      src="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/masterpiece-star.png"
+      src="/imagenes/masterpiece-star.png"
       alt={alt}
       style={{ width: '80%', height: '80%', display: 'block' }}
       loading="lazy"

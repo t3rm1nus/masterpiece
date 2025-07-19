@@ -1,7 +1,7 @@
 {
   "appId": "com.masterpiece.app",
   "appName": "Masterpiece",
-  "webDir": "dist",
+  "webDir": "dist/client",
   "server": {
     "androidScheme": "https"
   },
@@ -17,6 +17,23 @@
       "splashImmersive": true,
       "useDialog": false
     }
+  },
+  "android": {
+    "webContentsDebuggingEnabled": false
+  },
+  "copy": {
+    "exclude": [
+      "**/imagenes/comics/**",
+      "**/imagenes/movies/**",
+      "**/imagenes/musica/**",
+      "**/imagenes/peliculas/**",
+      "**/imagenes/podcasts/**",
+      "**/imagenes/documentales/**",
+      "**/imagenes/videojuegos/**",
+      "**/imagenes/series/**",
+      "**/imagenes/libros/**",
+      "**/imagenes/juegos_de_mesa/**"
+    ]
   }
 }
 

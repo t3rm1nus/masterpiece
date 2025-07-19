@@ -37,5 +37,5 @@ export function randomNotFoundImage(): string {
     'notfound10.webp',
   ];
   const idx = Math.floor(Math.random() * images.length);
-  return `https://raw.githubusercontent.com/t3rm1nus/masterpiece/refs/heads/main/public/imagenes/notfound/${images[idx]}`;
+  return `/imagenes/notfound/${images[idx]}`;
 } 

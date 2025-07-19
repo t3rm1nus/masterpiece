@@ -1,4 +1,4 @@
-import React, { ReactNode, CSSProperties } from 'react';
+import React, { ReactNode, useRef, useCallback, CSSProperties } from 'react';
 import { CardContent, CardMedia, Typography, Chip, Box, Stack, Fab, Button } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CategoryIcon from '@mui/icons-material/Category';
@@ -18,6 +18,7 @@ import { applyDetailScrollFixForIPhone, isIPhone } from '../../utils/iPhoneScrol
 import UiCard from '../ui/UiCard';
 import { MobileActionButtons } from './ItemActionButtons';
 import MasterpieceBadge from './MasterpieceBadge';
+import { useShare } from '../../hooks/useShare';
 
 // Tipos de props
 interface MobileItemDetailProps {
@@ -140,6 +141,8 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
     }
   };
 
+  const { share } = useShare();
+
   const BackButton = (
     showSections.backButton !== false && (
       <Fab
@@ -166,20 +169,14 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
   );
 
   const handleShare = () => {
-    if (typeof window !== 'undefined') {
-      const url = window.location.href;
-      if (typeof navigator !== 'undefined' && navigator.share) {
-        if (typeof document !== 'undefined') {
-          navigator.share({
-            title: document.title,
-            url,
-          }).catch(() => {});
-        }
-      } else if (typeof navigator !== 'undefined' && navigator.clipboard) {
-        navigator.clipboard.writeText(url);
-        alert('Enlace copiado');
-      }
-    }
+    const title = selectedItem?.title || selectedItem?.name || 'Recomendación de Masterpiece';
+    const description = selectedItem?.description || 'Mira esta recomendación en Masterpiece';
+    
+    share({
+      title,
+      text: description,
+      dialogTitle: 'Compartir recomendación'
+    });
   };
 
   // --- Estilos legacy para chips y botones de acción ---

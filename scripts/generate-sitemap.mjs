@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const baseUrl = 'https://masterpiece.com';
+const baseUrl = 'https://masterpiece.es';
 const dataDir = path.join(process.cwd(), 'public', 'data');
 const output = path.join(process.cwd(), 'public', 'sitemap.xml');
 const textsPath = path.join(dataDir, 'texts.json');

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { useAppView, useAppTheme, useAppData } from '../store/useAppStore';
 import { getCategoryColor, getCategoryGradient } from '../utils/categoryPalette';
@@ -16,6 +16,7 @@ import DesktopItemDetail from './shared/DesktopItemDetail';
 import { Helmet } from 'react-helmet-async';
 import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 import { getLocalizedPath } from '../utils/urlHelpers';
+import { useShare } from '../hooks/useShare';
 
 // Material UI imports (solo para mobile)
 import {
@@ -393,18 +394,18 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     }, 400);
   }, []);
 
+  const { share } = useShare();
+
   // Añadir handler para compartir
   const handleShare = () => {
-    const url = window.location.href;
-    if (navigator.share) {
-      navigator.share({
-        title: document.title,
-        url,
-      }).catch(() => {});
-    } else {
-      navigator.clipboard.writeText(url);
-      alert('Enlace copiado');
-    }
+    const title = selectedItem?.title || selectedItem?.name || 'Recomendación de Masterpiece';
+    const description = selectedItem?.description || 'Mira esta recomendación en Masterpiece';
+    
+    share({
+      title,
+      text: description,
+      dialogTitle: 'Compartir recomendación'
+    });
   };
 
   // Guardar scroll al navegar al detalle (solo en móviles)
