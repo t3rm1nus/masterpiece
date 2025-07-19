@@ -25,48 +25,57 @@ const EXCLUDED_FOLDERS = [
 function createBuildWithoutCategoryImages() {
   const publicDir = path.join(__dirname, '..', 'public', 'imagenes');
   const buildDir = path.join(__dirname, '..', 'dist', 'client', 'imagenes');
-  
+  const publicTargetDir = publicDir; // Copiar también a public/imagenes
+
   console.log('🏗️  Creando build sin imágenes de categorías...');
-  
+
   // Crear directorio de build si no existe
   if (!fs.existsSync(path.dirname(buildDir))) {
     fs.mkdirSync(path.dirname(buildDir), { recursive: true });
   }
-  
+
   // Copiar todas las carpetas de imágenes
   const allFolders = fs.readdirSync(publicDir);
-  
+
   allFolders.forEach(folder => {
     const sourcePath = path.join(publicDir, folder);
     const destPath = path.join(buildDir, folder);
-    
+    const publicDestPath = path.join(publicTargetDir, folder);
+
     if (fs.statSync(sourcePath).isDirectory()) {
       // Si es una carpeta excluida, crear solo con .gitkeep
       if (EXCLUDED_FOLDERS.includes(folder)) {
         fs.mkdirSync(destPath, { recursive: true });
+        fs.mkdirSync(publicDestPath, { recursive: true });
         const gitkeepPath = path.join(destPath, '.gitkeep');
+        const gitkeepPathPublic = path.join(publicDestPath, '.gitkeep');
         fs.writeFileSync(gitkeepPath, '');
-        console.log(`📁 Carpeta ${folder} excluida del build (solo .gitkeep)`);
+        fs.writeFileSync(gitkeepPathPublic, '');
+        console.log(`📁 Carpeta ${folder} excluida del build y public (solo .gitkeep)`);
       } else {
-        // Si no es excluida, copiar todo el contenido
+        // Si no es excluida, copiar todo el contenido a build y a public
         fs.mkdirSync(destPath, { recursive: true });
+        fs.mkdirSync(publicDestPath, { recursive: true });
         copyDirectory(sourcePath, destPath);
-        console.log(`✅ Carpeta ${folder} copiada al build`);
+        copyDirectory(sourcePath, publicDestPath);
+        console.log(`✅ Carpeta ${folder} copiada al build y a public`);
       }
     }
   });
-  
+
   // También copiar archivos individuales importantes
   const importantFiles = ['splash_image.png', 'icono.png', 'favicon.png', 'masterpiece-star.png'];
   importantFiles.forEach(file => {
     const sourceFile = path.join(publicDir, file);
     const destFile = path.join(buildDir, file);
+    const publicDestFile = path.join(publicTargetDir, file);
     if (fs.existsSync(sourceFile)) {
       fs.copyFileSync(sourceFile, destFile);
-      console.log(`✅ Archivo ${file} copiado al build`);
+      fs.copyFileSync(sourceFile, publicDestFile);
+      console.log(`✅ Archivo ${file} copiado al build y a public`);
     }
   });
-  
+
   console.log('🎉 Build sin imágenes de categorías creado');
 }
 
