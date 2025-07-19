@@ -448,13 +448,18 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
   // Determinar la categoría real del item para color y chip
   const realCategory = selectedItem?.category || selectedCategory;
 
-  const item = selectedItem || {};
+  // Verificar que tenemos un item válido antes de continuar
+  if (!selectedItem && !lastItemRef.current) {
+    return null;
+  }
+  
+  const item = selectedItem || lastItemRef.current || {};
   const itemTitle = item.title || item.name || 'Detalle - Masterpiece';
   const itemDescription = item.description || 'Descubre detalles de esta obra recomendada en Masterpiece.';
   
   // Usar imagen OG de la categoría para las meta tags
-  const getOgImage = () => {
-    if (item.category) {
+  const itemImage = (() => {
+    if (item && item.category) {
       const ogMap: Record<string, string> = {
         books: 'books',
         comics: 'comics',
@@ -474,9 +479,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
       }
     }
     return "https://masterpiece.es/imagenes/splash_image.png";
-  };
-  
-  const itemImage = getOgImage();
+  })();
   const itemUrl = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.com/';
 
   const getJsonLd = () => {
@@ -595,6 +598,12 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
   if (isMobile) {
     // Restaurado: desmontaje inmediato, sin animaciones de opacidad/escala ni isVisible
     const safeItem = selectedItem || lastItemRef.current;
+    
+    // No renderizar si no hay item
+    if (!safeItem) {
+      return null;
+    }
+    
     return (
       <Box
         sx={{
