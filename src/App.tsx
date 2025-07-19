@@ -5,6 +5,8 @@ import MaterialThemeProvider from './components/MaterialThemeProvider';
 import AppContent from './components/AppContent';
 import ErrorDisplay from './components/ErrorDisplay';
 import { StorageMonitor, useStorageErrorHandler } from './components/StorageMonitor';
+import { HelmetProvider } from 'react-helmet-async';
+
 interface AppProps {
   initialLang?: string;
 }
@@ -25,16 +27,18 @@ const App: React.FC<AppProps> = ({ initialLang }) => {
   const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
   
   return (
-    <LanguageProvider initialLang={initialLang}>
-      <MaterialThemeProvider>
-        <div className="App" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
-          <AppContent />
-          <ErrorDisplay />
-          {/* Monitor de storage, especialmente útil en iOS */}
-          <StorageMonitor enabled={isDevelopment || isIOS} />
-        </div>
-      </MaterialThemeProvider>
-    </LanguageProvider>
+    <HelmetProvider>
+      <LanguageProvider initialLang={initialLang}>
+        <MaterialThemeProvider>
+          <div className="App" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
+            <AppContent />
+            <ErrorDisplay />
+            {/* Monitor de storage, especialmente útil en iOS */}
+            <StorageMonitor enabled={isDevelopment || isIOS} />
+          </div>
+        </MaterialThemeProvider>
+      </LanguageProvider>
+    </HelmetProvider>
   );
 };
 
