@@ -3098,6 +3098,26 @@
       "spotify": "",
       "masterpiece": false,
       "year": ""
+    },
+    {
+      "id": 939,
+      "category": "music",
+      "subcategory": "punk",
+      "artist": "The exploited",
+      "title": {
+        "es": "The Massacre",
+        "en": "The Massacre"
+      },
+      "description": {
+        "es": "Un torbellino sonoro de pura agresividad, The Massacre (1990) canaliza la furia del thrash y el death metal de la vieja escuela. Guitarras afiladas, voces demoníacas y una batería implacable convierten este álbum en una pieza brutal e icónica del underground noventero.",
+        "en": "A sonic whirlwind of pure aggression, The Massacre (1990) channels the fury of old-school thrash and death metal. Razor-sharp guitars, demonic vocals, and relentless drumming make this album a brutal, iconic gem of the '90s underground scene."
+      },
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/musica/the_massacre.png",
+      "tags": ["album"],
+      "youtube": "https://www.youtube.com/watch?v=hQQXpMApj4E&list=RDhQQXpMApj4E",
+      "spotify": "",
+      "masterpiece": true,
+      "year": "1990"
     }
     
     

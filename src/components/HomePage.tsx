@@ -683,10 +683,10 @@ const HomePageComponent: React.FC<HomePageProps> = ({
             };
             const ogKey = ogMap[selectedCategory] || null;
             if (ogKey) {
-              return `/imagenes/og_${ogKey}.png`;
+              return `https://github.com/t3rm1nus/masterpiece/raw/main/public/imagenes/og/${ogKey}.png`;
             }
           }
-          return "/imagenes/splash_image.png";
+          return "https://github.com/t3rm1nus/masterpiece/raw/main/public/imagenes/splash_image.png";
         })()} />
         <meta property="og:url" content={url} />
         <meta name="twitter:card" content="summary_large_image" />
