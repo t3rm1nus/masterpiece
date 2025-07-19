@@ -56,6 +56,17 @@ function createBuildWithoutCategoryImages() {
     }
   });
   
+  // También copiar archivos individuales importantes
+  const importantFiles = ['splash_image.png', 'icono.png', 'favicon.png', 'masterpiece-star.png'];
+  importantFiles.forEach(file => {
+    const sourceFile = path.join(publicDir, file);
+    const destFile = path.join(buildDir, file);
+    if (fs.existsSync(sourceFile)) {
+      fs.copyFileSync(sourceFile, destFile);
+      console.log(`✅ Archivo ${file} copiado al build`);
+    }
+  });
+  
   console.log('🎉 Build sin imágenes de categorías creado');
 }
 
