@@ -16,11 +16,11 @@ app.use((req, res, next) => {
   next();
 });
 
-// Servir archivos estáticos desde public (Vercel los sirve automáticamente)
-app.use(express.static(path.join(process.cwd(), 'public')));
-
-// Servir estáticos
+// Servir archivos estáticos desde dist/client (build de producción)
 app.use(express.static(resolve('dist/client')));
+
+// Servir archivos estáticos desde public (para desarrollo)
+app.use(express.static(path.join(process.cwd(), 'public')));
 
 // SSR handler
 app.get('*', async (req, res) => {

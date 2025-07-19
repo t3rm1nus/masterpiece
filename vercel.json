@@ -4,12 +4,6 @@
     { "src": "server.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/imagenes/(.*)", "dest": "/dist/client/imagenes/$1" },
-    { "src": "/assets/(.*)", "dest": "/dist/client/assets/$1" },
-    { "src": "/favicon.png", "dest": "/dist/client/favicon.png" },
-    { "src": "/manifest.json", "dest": "/dist/client/manifest.json" },
-    { "src": "/robots.txt", "dest": "/dist/client/robots.txt" },
-    { "src": "/sitemap.xml", "dest": "/dist/client/sitemap.xml" },
     { "src": "/(.*)", "dest": "server.js" }
   ], 
   "outputDirectory": "dist/client"
