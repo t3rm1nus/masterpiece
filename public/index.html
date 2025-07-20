@@ -11,8 +11,11 @@
     <link rel="canonical" href="https://masterpiece.es/" />
     <meta name="ssr-debug-home" content="SSR_HELMET_HOME_OK" />
     <script>
+      // Eliminar meta tags hardcodeados en todas las rutas excepto home
       if (typeof window !== 'undefined' && window.location.pathname !== '/') {
-        document.querySelectorAll('meta[property^="og:"], link[rel="canonical"], meta[name="ssr-debug-home"], title').forEach(el => el.remove());
+        // Eliminar TODOS los meta tags hardcodeados inmediatamente
+        const metaTagsToRemove = document.querySelectorAll('meta[property^="og:"], link[rel="canonical"], meta[name="ssr-debug-home"], title, meta[name="description"]');
+        metaTagsToRemove.forEach(el => el.remove());
       }
     </script>
   </head> 

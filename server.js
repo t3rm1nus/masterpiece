@@ -81,6 +81,7 @@ app.get('*', async (req, res) => {
       });
       // Log visible en Vercel
       console.log('🔍 SSR DEBUG - URL:', req.url, '| Found:', !!initialItem, '| Image:', initialItem?.image || 'NO_IMAGE');
+      console.log('🔍 SSR DEBUG - OG Image will be:', initialItem?.image || 'SPLASH_FALLBACK');
     } else {
       console.log('SSR detalle: archivo de datos no encontrado', { url: req.url, category, id, dataPath });
     }
