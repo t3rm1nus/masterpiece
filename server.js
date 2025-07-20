@@ -26,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('*', async (req, res) => {
   let template = fs.readFileSync(path.join(__dirname, 'dist/client/index.html'), 'utf-8');
   const renderModule = await import('./dist/server/entry-server.js');
+  console.log('SSR: TEST LOG 987654321', Object.keys(renderModule)); // Log único para rastreo de deploy
   console.log('SSR: renderModule keys', Object.keys(renderModule));
   const render = renderModule.render;
   if (!render) {
