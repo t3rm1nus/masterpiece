@@ -60,7 +60,7 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
   selectedItem,
   title,
   description,
-  lang,
+  lang: propLang,
   t,
   theme,
   getCategoryTranslation,
@@ -144,7 +144,7 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
 
   const { share } = useShare();
   const { lang } = useLanguage();
-  const currentLang = lang || 'es';
+  const currentLang = propLang || lang || 'es';
 
   const BackButton = (
     showSections.backButton !== false && (
