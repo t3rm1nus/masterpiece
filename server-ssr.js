@@ -56,8 +56,10 @@ app.get('*', async (req, res) => {
   }
   if (category && id) {
     console.log('NUEVO LOG 4 *************************************************************************************');
+    console.log('🔍 SSR DEBUG - Buscando item:', { category, id });
     // Cargar el JSON de la categoría
     const dataPath = path.join(__dirname, `public/data/datos_${category}.json`);
+    console.log('🔍 SSR DEBUG - Ruta del archivo:', dataPath);
     if (fs.existsSync(dataPath)) {
       const dataRaw = fs.readFileSync(dataPath, 'utf-8');
       let data;
@@ -68,7 +70,10 @@ app.get('*', async (req, res) => {
       }
       // Soportar tanto array plano como { recommendations: [...] }
       const items = Array.isArray(data) ? data : data.recommendations || [];
+      console.log('🔍 SSR DEBUG - Total items en archivo:', items.length);
+      console.log('🔍 SSR DEBUG - Buscando item con ID:', id, 'tipo:', typeof id);
       initialItem = items.find(item => String(item.id) === id);
+      console.log('🔍 SSR DEBUG - Item encontrado:', !!initialItem);
       console.log('SSR detalle:', { 
         url: req.url, 
         category, 
