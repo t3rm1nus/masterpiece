@@ -35,3 +35,4 @@ dist/
 
 # Ignorar todas las subcarpetas de imágenes en public/imagenes/
 
+.vercel

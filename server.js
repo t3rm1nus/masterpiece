@@ -70,6 +70,7 @@ app.get('*', async (req, res) => {
   template = template
     .replace('<!--app-head-->', head || '')
     .replace('<!--app-html-->', html);
+  console.log('SSR HTML HEAD:', head); // Log de depuración para ver el head generado
   res.status(200).set({ 'Content-Type': 'text/html' }).end(template);
 });
 
