@@ -10,4 +10,9 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://masterpiece.es/" />
     <meta name="ssr-debug-home" content="SSR_HELMET_HOME_OK" />
+    <script>
+      if (typeof window !== 'undefined' && window.location.pathname !== '/') {
+        document.querySelectorAll('meta[property^="og:"], link[rel="canonical"], meta[name="ssr-debug-home"], title').forEach(el => el.remove());
+      }
+    </script>
   </head> 
