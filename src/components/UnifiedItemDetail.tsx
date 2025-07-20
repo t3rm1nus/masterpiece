@@ -660,10 +660,13 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
       return null;
     }
     const realCategory = safeItem?.category || selectedCategory;
-    const ogTitle = safeItem.title || safeItem.name || 'Masterpiece';
-    const ogDescription = typeof safeItem.description === 'string'
+    // Asegurar que ogTitle y ogDescription sean siempre strings
+    const ogTitle = typeof (safeItem?.title || safeItem?.name) === 'string'
+      ? (safeItem?.title || safeItem?.name)
+      : (safeItem?.title?.es || safeItem?.title?.en || safeItem?.name?.es || safeItem?.name?.en || 'Masterpiece');
+    const ogDescription = typeof safeItem?.description === 'string'
       ? safeItem.description
-      : (safeItem.description?.es || safeItem.description?.en || 'Descubre detalles de esta obra recomendada en Masterpiece.');
+      : (safeItem?.description?.es || safeItem?.description?.en || 'Descubre detalles de esta obra recomendada en Masterpiece.');
     const ogImage = getOgImage(safeItem);
     const ogUrl = typeof window !== 'undefined' ? window.location.href : `https://masterpiece.es/detalle/${safeItem.category || 'detalle'}/${safeItem.id}`;
     const isMasterpiece = !!safeItem.masterpiece;
