@@ -10,6 +10,18 @@ const resolve = p => path.resolve(__dirname, p);
 
 const app = express();
 
+// Redirige /[lang]/assets/* a /assets/* para servir correctamente los assets en rutas internacionalizadas
+app.use((req, res, next) => {
+  req.url = req.url.replace(/^\/[a-z]{2}(?:-[A-Z]{2})?(?=\/assets\/)/, '');
+  next();
+});
+
+// Servir archivos estáticos desde dist/client (build de producción)
+app.use(express.static(resolve('dist/client')));
+
+// Servir archivos estáticos desde public (para desarrollo)
+app.use(express.static(path.join(process.cwd(), 'public')));
+
 // SSR handler
 app.get('*', async (req, res) => {
   let template = fs.readFileSync(path.join(process.cwd(), 'dist/client/index.html'), 'utf-8');
@@ -45,18 +57,6 @@ app.get('*', async (req, res) => {
     .replace('<!--app-html-->', html);
   res.status(200).set({ 'Content-Type': 'text/html' }).end(template);
 });
-
-// Redirige /[lang]/assets/* a /assets/* para servir correctamente los assets en rutas internacionalizadas
-app.use((req, res, next) => {
-  req.url = req.url.replace(/^\/[a-z]{2}(?:-[A-Z]{2})?(?=\/assets\/)/, '');
-  next();
-});
-
-// Servir archivos estáticos desde dist/client (build de producción)
-app.use(express.static(resolve('dist/client')));
-
-// Servir archivos estáticos desde public (para desarrollo)
-app.use(express.static(path.join(process.cwd(), 'public')));
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
