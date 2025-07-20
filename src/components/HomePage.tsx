@@ -658,42 +658,15 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   return (
     <>
       <Helmet>
-        <link rel="preload" as="image" href="/imagenes/splash.png" />
-        <link rel="preload" as="image" href="/imagenes/descargas/pirate.jpg" />
-        <title>{pageTitle || 'Masterpiece'}</title>
-        <meta name="description" content={pageDescription} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <title>Masterpiece</title>
+        <meta name="description" content="Masterpiece - Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts" />
+        <meta property="og:title" content="Masterpiece" />
+        <meta property="og:description" content="Masterpiece - Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={(() => {
-          if (isCategory && selectedCategory) {
-            // Mapeo de categorías a nombres de archivo OG
-            const ogMap: Record<string, string> = {
-              books: 'books',
-              comics: 'comics',
-              documentales: 'documentaries',
-              boardgames: 'gameboard',
-              movies: 'movies',
-              music: 'music',
-              podcast: 'podcasts',
-              podcasts: 'podcasts',
-              series: 'series',
-              videogames: 'videogames',
-              videogame: 'videogames',
-            };
-            const ogKey = ogMap[selectedCategory];
-            if (ogKey) {
-              return `https://masterpiece.es/og/${ogKey}.png`;
-            }
-          }
-          return "https://masterpiece.es/imagenes/splash_image.png";
-        })()} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:url" content={url} />
+        <meta property="og:image" content="https://masterpiece.es/imagenes/splash_image.png" />
+        <meta property="og:url" content="https://masterpiece.es/" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={url} />
+        <link rel="canonical" href="https://masterpiece.es/" />
         {/* Etiquetas hreflang para SEO multilingüe */}
         <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="es" />
         <link rel="alternate" href={`https://masterpiece.com/en${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="en" />
