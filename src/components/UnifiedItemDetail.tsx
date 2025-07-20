@@ -688,6 +688,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     // Helmet siempre presente
     const helmetMeta = (
       <Helmet>
+        <meta name="ssr-debug-detail" content="SSR_HELMET_DETAIL_OK" />
         <title>{(ogTitle || 'Detalle') + ' | Masterpiece'}</title>
         <meta name="description" content={ogDescription} />
         <meta property="og:title" content={ogTitle} />
