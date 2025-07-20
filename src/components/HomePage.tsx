@@ -295,9 +295,10 @@ const HomePageComponent: React.FC<HomePageProps> = ({
 
   // Obtener categorías traducidas (se actualizará cuando cambie el idioma)
   const categoriesFromStore = getCategories();
+  // Al mapear categorías y subcategorías, asegurar que los labels sean strings
   const categories = categoriesFromStore.map((cat: any) => ({
     ...cat,
-    label: t?.categories?.[cat.key] || cat.label,
+    label: ensureString(t?.categories?.[cat.key] || cat.label, lang),
     isMasterpiece: cat.key === 'masterpiece' || cat.masterpiece === true,
     color: categoryColor(cat.key),
     gradient: getCategoryGradient(cat.key)
@@ -311,7 +312,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         const normalized = normalizeSubcategoryInternal(sub);
         return {
           sub: normalized,
-          label: getSubcategoryLabel(normalized, 'boardgames', t),
+          label: ensureString(getSubcategoryLabel(normalized, 'boardgames', t), lang),
           ...rest
         };
       });
@@ -320,7 +321,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
     if (Array.isArray(subs)) {
       return subs.map((s: any) => {
         const normalized = typeof s === 'string' ? normalizeSubcategoryInternal(s) : s.sub;
-        const label = getSubcategoryLabel(normalized, selectedCategory || '', t);
+        const label = ensureString(getSubcategoryLabel(normalized, selectedCategory || '', t), lang);
         return {
           sub: normalized,
           label,
