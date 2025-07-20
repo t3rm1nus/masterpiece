@@ -745,6 +745,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
 
   return (
     <>
+      <HelmetHomeFallback />
       {helmetMeta}
       {/* Precarga invisible para asegurar caché en cliente (SSR safe) */}
       <img src="/imagenes/splash.png" alt="" style={{ display: 'none' }} aria-hidden="true" />
