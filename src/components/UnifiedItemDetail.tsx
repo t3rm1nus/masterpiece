@@ -398,7 +398,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
 
   // Añadir handler para compartir
   const handleShare = () => {
-    const lang = props.lang || 'es';
+    const lang = typeof props.lang === 'string' ? props.lang : 'es';
     const title = selectedItem?.title || selectedItem?.name || 'Recomendación de Masterpiece';
     let description = 'Mira esta recomendación en Masterpiece';
     if (selectedItem?.description) {
@@ -616,14 +616,27 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
 
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
-    // Restaurado: desmontaje inmediato, sin animaciones de opacidad/escala ni isVisible
     const safeItem = selectedItem || lastItemRef.current;
-    
-    // No renderizar si no hay item
     if (!safeItem) {
       return null;
     }
-    
+    // Calcular valores OG usando safeItem
+    const ogTitle = safeItem.title || safeItem.name || 'Masterpiece';
+    const ogDescription = typeof safeItem.description === 'string'
+      ? safeItem.description
+      : (safeItem.description?.es || safeItem.description?.en || 'Descubre detalles de esta obra recomendada en Masterpiece.');
+    const ogImage = (safeItem.image && typeof safeItem.image === 'string' && safeItem.image.startsWith('http'))
+      ? safeItem.image
+      : (safeItem.category ? (() => {
+          const ogMap = {
+            books: 'books', comics: 'comics', documentales: 'documentaries', boardgames: 'gameboard', movies: 'movies', music: 'music', podcast: 'podcasts', podcasts: 'podcasts', series: 'series', videogames: 'videogames', videogame: 'videogames',
+          };
+          const ogKey = ogMap[safeItem.category] || null;
+          if (ogKey) return `https://masterpiece.es/og/${ogKey}.png`;
+          return "https://masterpiece.es/imagenes/splash_image.png";
+        })() : "https://masterpiece.es/imagenes/splash_image.png");
+    const ogUrl = typeof window !== 'undefined' ? window.location.href : `https://masterpiece.es/detalle/${safeItem.category || 'detalle'}/${safeItem.id}`;
+
     return (
       <Box
         sx={{
@@ -643,19 +656,19 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         }}
       >
         <Helmet>
-          <title>{(title || 'Detalle') + ' | Masterpiece'}</title>
-          <meta name="description" content={itemDescription} />
-          <meta property="og:title" content={itemOgTitle} />
-          <meta property="og:description" content={itemDescription} />
+          <title>{(ogTitle || 'Detalle') + ' | Masterpiece'}</title>
+          <meta name="description" content={ogDescription} />
+          <meta property="og:title" content={ogTitle} />
+          <meta property="og:description" content={ogDescription} />
           <meta property="og:type" content="article" />
-          <meta property="og:image" content={itemImage} />
-          <meta property="og:url" content={itemUrl} />
+          <meta property="og:image" content={ogImage} />
+          <meta property="og:url" content={ogUrl} />
           <meta name="twitter:card" content="summary_large_image" />
-          <link rel="canonical" href={itemUrl} />
+          <link rel="canonical" href={ogUrl} />
           {/* Etiquetas hreflang para SEO multilingüe */}
-          <link rel="alternate" href={`https://masterpiece.com/${item.category || 'detalle'}/${item.id}`} hrefLang="es" />
-          <link rel="alternate" href={`https://masterpiece.com/en/${item.category || 'detalle'}/${item.id}`} hrefLang="en" />
-          <link rel="alternate" href={`https://masterpiece.com/${item.category || 'detalle'}/${item.id}`} hrefLang="x-default" />
+          <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="es" />
+          <link rel="alternate" href={`https://masterpiece.com/en/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="en" />
+          <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="x-default" />
           <script type="application/ld+json">
             {JSON.stringify(getJsonLd())}
           </script>
@@ -697,17 +710,26 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
 
   // Renderizado para desktop usando estilos CSS-in-JS directamente
   if (!isMobile) {
-    // Usar el item actual o el último item mostrado durante la animación de salida
     const safeItem = selectedItem || lastItemRef.current;
-    
     if (!safeItem) {
       return null;
     }
-    
-    const isMasterpiece = !!safeItem.masterpiece;
-    const categoryColor = getCategoryColor(realCategory, 'color');
-    const gradientBg = `linear-gradient(135deg, ${categoryColor} 0%, ${theme.palette.mode === 'dark' ? 'rgba(24,24,24,0.92)' : 'rgba(255,255,255,0.85)'} 100%)`;
-    
+    const ogTitle = safeItem.title || safeItem.name || 'Masterpiece';
+    const ogDescription = typeof safeItem.description === 'string'
+      ? safeItem.description
+      : (safeItem.description?.es || safeItem.description?.en || 'Descubre detalles de esta obra recomendada en Masterpiece.');
+    const ogImage = (safeItem.image && typeof safeItem.image === 'string' && safeItem.image.startsWith('http'))
+      ? safeItem.image
+      : (safeItem.category ? (() => {
+          const ogMap = {
+            books: 'books', comics: 'comics', documentales: 'documentaries', boardgames: 'gameboard', movies: 'movies', music: 'music', podcast: 'podcasts', podcasts: 'podcasts', series: 'series', videogames: 'videogames', videogame: 'videogames',
+          };
+          const ogKey = ogMap[safeItem.category] || null;
+          if (ogKey) return `https://masterpiece.es/og/${ogKey}.png`;
+          return "https://masterpiece.es/imagenes/splash_image.png";
+        })() : "https://masterpiece.es/imagenes/splash_image.png");
+    const ogUrl = typeof window !== 'undefined' ? window.location.href : `https://masterpiece.es/detalle/${safeItem.category || 'detalle'}/${safeItem.id}`;
+
     return (
       <article>
       <div
@@ -720,19 +742,19 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         }}
       >
           <Helmet>
-            <title>{(title || 'Detalle') + ' | Masterpiece'}</title>
-            <meta name="description" content={itemDescription} />
-            <meta property="og:title" content={itemOgTitle} />
-            <meta property="og:description" content={itemDescription} />
+            <title>{(ogTitle || 'Detalle') + ' | Masterpiece'}</title>
+            <meta name="description" content={ogDescription} />
+            <meta property="og:title" content={ogTitle} />
+            <meta property="og:description" content={ogDescription} />
             <meta property="og:type" content="article" />
-            <meta property="og:image" content={itemImage} />
-            <meta property="og:url" content={itemUrl} />
+            <meta property="og:image" content={ogImage} />
+            <meta property="og:url" content={ogUrl} />
             <meta name="twitter:card" content="summary_large_image" />
-            <link rel="canonical" href={itemUrl} />
+            <link rel="canonical" href={ogUrl} />
             {/* Etiquetas hreflang para SEO multilingüe */}
-            <link rel="alternate" href={`https://masterpiece.com/${item.category || 'detalle'}/${item.id}`} hrefLang="es" />
-            <link rel="alternate" href={`https://masterpiece.com/en/${item.category || 'detalle'}/${item.id}`} hrefLang="en" />
-            <link rel="alternate" href={`https://masterpiece.com/${item.category || 'detalle'}/${item.id}`} hrefLang="x-default" />
+            <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="es" />
+            <link rel="alternate" href={`https://masterpiece.com/en/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="en" />
+            <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="x-default" />
             <script type="application/ld+json">
               {JSON.stringify(getJsonLd())}
             </script>
