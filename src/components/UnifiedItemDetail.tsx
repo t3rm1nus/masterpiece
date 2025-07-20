@@ -457,8 +457,11 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
   const itemTitle = item.title || item.name || 'Detalle - Masterpiece';
   const itemDescription = item.description || 'Descubre detalles de esta obra recomendada en Masterpiece.';
   
-  // Usar imagen OG de la categoría para las meta tags
+  // Determinar la imagen OG para el detalle
   const itemImage = (() => {
+    if (item && item.image && typeof item.image === 'string' && item.image.startsWith('http')) {
+      return item.image; // Usa la imagen real (raw GitHub o URL absoluta)
+    }
     if (item && item.category) {
       const ogMap: Record<string, string> = {
         books: 'books',
@@ -480,6 +483,9 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     }
     return "https://masterpiece.es/imagenes/splash_image.png";
   })();
+
+  // Determinar el título OG para el detalle
+  const itemOgTitle = item.title || item.name || 'Masterpiece';
   const itemUrl = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.com/';
 
   const getJsonLd = () => {
@@ -625,7 +631,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         <Helmet>
           <title>{(title || 'Detalle') + ' | Masterpiece'}</title>
           <meta name="description" content={itemDescription} />
-          <meta property="og:title" content={itemTitle + ' | Masterpiece'} />
+          <meta property="og:title" content={itemOgTitle} />
           <meta property="og:description" content={itemDescription} />
           <meta property="og:type" content="article" />
           <meta property="og:image" content={itemImage} />
@@ -702,7 +708,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           <Helmet>
             <title>{(title || 'Detalle') + ' | Masterpiece'}</title>
             <meta name="description" content={itemDescription} />
-            <meta property="og:title" content={itemTitle + ' | Masterpiece'} />
+            <meta property="og:title" content={itemOgTitle} />
             <meta property="og:description" content={itemDescription} />
             <meta property="og:type" content="article" />
             <meta property="og:image" content={itemImage} />
