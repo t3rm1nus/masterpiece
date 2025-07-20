@@ -79,6 +79,8 @@ app.get('*', async (req, res) => {
           imageStartsWithHttp: initialItem.image ? initialItem.image.startsWith('http') : false
         } : null 
       });
+      // Log visible en Vercel
+      console.log('🔍 SSR DEBUG - URL:', req.url, '| Found:', !!initialItem, '| Image:', initialItem?.image || 'NO_IMAGE');
     } else {
       console.log('SSR detalle: archivo de datos no encontrado', { url: req.url, category, id, dataPath });
     }
