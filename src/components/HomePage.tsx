@@ -139,6 +139,14 @@ const AnimatedH1 = styled('h1')<AnimatedH1Props>(({ isMobile, h1Gradient }) => (
   },
 }));
 
+function ensureString(val, lang = 'es') {
+  if (typeof val === 'string') return val;
+  if (val && typeof val === 'object') {
+    return val[lang] || val.es || val.en || Object.values(val)[0] || '';
+  }
+  return '';
+}
+
 const HomePageComponent: React.FC<HomePageProps> = ({
   categoryBarProps = {},
   subcategoryBarProps = {},
