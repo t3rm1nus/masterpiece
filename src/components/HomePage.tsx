@@ -20,6 +20,7 @@ import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 import MaterialContentWrapper from './MaterialContentWrapper';
 import DesktopRecommendationsList from './DesktopRecommendationsList';
 import useAppStore from '../store/useAppStore';
+import { useAppView } from '../store/useAppStore';
 import { normalizeSubcategoryInternal } from '../utils/categoryUtils';
 import { keyframes, styled } from '@mui/system';
 import { generateUniqueId } from '../utils/appUtils';
@@ -61,6 +62,7 @@ interface HomePageProps {
   categoryBarSx?: Record<string, any>;
   subcategoryBarSx?: Record<string, any>;
   materialCategorySelectSx?: Record<string, any>;
+  initialItem?: any; // NUEVO: para hidratar SSR
   [key: string]: any;
 }
 
@@ -157,8 +159,12 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   categoryBarSx,
   subcategoryBarSx,
   materialCategorySelectSx,
+  initialItem,
   ...rest
 }) => {
+  if (typeof window === 'undefined') {
+    console.log('SSR initialItem en HomePage:', initialItem);
+  }
   const location = useLocation();
   // Estado para filtro especial de música (debe ir antes de cualquier uso)
   const [musicFilterType, setMusicFilterType] = React.useState<string | undefined>(undefined);
@@ -230,10 +236,13 @@ const HomePageComponent: React.FC<HomePageProps> = ({
     resetPagination,
   } = useAppData();
 
+  // Extraer setSelectedItem correctamente dentro del componente
+  const { setSelectedItem } = useAppView();
+
   // Efecto para actualizar título cuando cambia el idioma
   useEffect(() => {
     if (lang) {
-      updateTitleForLanguage();
+      updateTitleForLanguage(lang);
     }
   }, [lang, selectedCategory, updateTitleForLanguage]);
 
@@ -654,39 +663,57 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   const isSubcategory = isCategory && activeSubcategory && activeSubcategory !== 'all';
   const categoryLabel = isCategory ? (t?.categories?.[selectedCategory] || selectedCategory) : '';
   const subcategoryLabel = isSubcategory ? (categorySubcategories.find(s => s.sub === activeSubcategory)?.label || activeSubcategory) : '';
-  const pageTitle = isCategory
+  // Helmet: si hay initialItem, usar sus datos para el título/meta SIEMPRE en el render
+  let pageTitle = isCategory
     ? (isSubcategory
         ? `${categoryLabel} - ${subcategoryLabel} | Masterpiece`
         : `${categoryLabel} | Masterpiece`)
     : 'Masterpiece - Recomendaciones culturales';
-  const pageDescription = isCategory
+  let pageDescription = isCategory
     ? (isSubcategory
         ? `Explora las mejores recomendaciones de ${categoryLabel} en la subcategoría ${subcategoryLabel}.`
         : `Explora las mejores recomendaciones de ${categoryLabel}.`)
     : 'Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts.';
+  let ogImage = 'https://masterpiece.es/imagenes/splash_image.png';
+  let ogUrl = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.com/';
+  if (initialItem) {
+    const itemTitle = initialItem.title || initialItem.name || '';
+    const itemCategory = initialItem.category || '';
+    pageTitle = `${itemTitle} | Masterpiece`;
+    pageDescription = initialItem.description?.es || initialItem.description?.en || initialItem.description || `Descubre ${itemTitle} en la categoría ${itemCategory} en Masterpiece.`;
+    ogImage = initialItem.image || initialItem.cover || ogImage;
+    ogUrl = `https://masterpiece.com/detalle/${itemCategory}/${initialItem.id}`;
+  }
   const safeCategoryLabel = ensureString(categoryLabel, lang);
   const safeSubcategoryLabel = ensureString(subcategoryLabel, lang);
   const safePageTitle = ensureString(pageTitle, lang);
   const safePageDescription = ensureString(pageDescription, lang);
+
+  // Hidratar el store Zustand con initialItem en SSR/primer render
+  React.useEffect(() => {
+    if (initialItem) {
+      setSelectedItem(initialItem);
+    }
+  }, [initialItem, setSelectedItem]);
+
   return (
     <>
       <Helmet>
-        <title>Masterpiece</title>
-        <meta name="description" content="Masterpiece - Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts" />
-        <meta property="og:title" content="Masterpiece" />
-        <meta property="og:description" content="Masterpiece - Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts" />
+        <title>{safePageTitle}</title>
+        <meta name="description" content={safePageDescription} />
+        <meta property="og:title" content={safePageTitle} />
+        <meta property="og:description" content={safePageDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://masterpiece.es/imagenes/splash_image.png" />
-        <meta property="og:url" content="https://masterpiece.es/" />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={ogUrl} />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://masterpiece.es/" />
+        <link rel="canonical" href={ogUrl} />
         {/* Etiquetas hreflang para SEO multilingüe */}
         <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="es" />
         <link rel="alternate" href={`https://masterpiece.com/en${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="en" />
         <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="x-default" />
         {/* SSR DEBUG: Marca oculta para confirmar que Helmet se procesa en la Home */}
         <meta name="ssr-debug-home" content="SSR_HELMET_HOME_OK" />
-        {/* O también como comentario HTML: */}
         {/* eslint-disable-next-line react/no-danger */}
         <script type="text/plain" dangerouslySetInnerHTML={{ __html: '<!-- SSR_HELMET_HOME_OK -->' }} />
         <script type="application/ld+json">
@@ -737,7 +764,11 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         <main>
           <header>
           <AnimatedH1 isMobile={isMobile} h1Gradient={h1Gradient} onClick={handleTitleClick}>
-            {ensureString(t?.ui?.titles?.home_title, lang) || 'Nuevas Recomendaciones'}
+            {isCategory
+              ? (isSubcategory
+                  ? `${safeCategoryLabel} - ${safeSubcategoryLabel}`
+                  : safeCategoryLabel)
+              : (ensureString(t?.ui?.titles?.home_title, lang) || 'Nuevas Recomendaciones')}
           </AnimatedH1>
           {/* SOLO MÓVIL: Selector de categorías justo debajo del h1 */}
           {isMobile && categories.length > 0 && (
@@ -852,7 +883,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
                 onLoadMore={handleLoadMore}
                 hasMore={hasMore}
                 loadingMore={isMobile ? loadingMoreMobile : loadingMoreDesktop}
-                categoryColor={categoryColor(selectedCategory)}
+                categoryColor={categoryColor(selectedCategory || '')}
                 showCategorySelect={!isMobile}
                 showSubcategoryChips={!isMobile}
                 onItemClick={handleItemClick}
@@ -879,7 +910,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
                   onLoadMore={handleLoadMore}
                   hasMore={hasMore}
                   loadingMore={loadingMoreDesktop}
-                  categoryColor={categoryColor(selectedCategory)}
+                  categoryColor={categoryColor(selectedCategory || '')}
                   onItemClick={handleItemClick}
                   recommendations={paginatedItems}
                   isHome={false}

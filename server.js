@@ -25,7 +25,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // SSR handler
 app.get('*', async (req, res) => {
   let template = fs.readFileSync(path.join(__dirname, 'dist/client/index.html'), 'utf-8');
-  const render = (await import('./dist/server/entry-server.js')).render;
+  const renderModule = await import('./dist/server/entry-server.js');
+  console.log('SSR: renderModule keys', Object.keys(renderModule));
+  const render = renderModule.render;
+  if (!render) {
+    console.error('SSR: ¡No se encontró la función render en entry-server.js!');
+  }
   const lang = req.url.startsWith('/en/') ? 'en' : 'es';
 
   // Detectar si es una URL de detalle
@@ -65,12 +70,15 @@ app.get('*', async (req, res) => {
     }
   }
 
+  console.log('SSR: antes de render', { url: req.url, lang, initialItem });
   // Pasar initialItem al render
   const { html, head } = render(req.url, lang, initialItem);
+  console.log('SSR: después de render', { url: req.url, lang, initialItem, head });
   template = template
     .replace('<!--app-head-->', head || '')
     .replace('<!--app-html-->', html);
-  console.log('SSR HTML HEAD:', head); // Log de depuración para ver el head generado
+  // Log detallado para depuración SSR HEAD
+  console.log('SSR HEAD DEBUG:', { url: req.url, head });
   res.status(200).set({ 'Content-Type': 'text/html' }).end(template);
 });
 

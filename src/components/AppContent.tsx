@@ -11,6 +11,9 @@ interface AppContentProps {
 }
 
 export default function AppContent({ initialItem }: AppContentProps): React.JSX.Element {
+  if (typeof window === 'undefined') {
+    console.log('SSR initialItem en AppContent:', initialItem);
+  }
   const navigate = useNavigate();
   const location = useLocation();
   const { setView, setSelectedItem } = useAppView();

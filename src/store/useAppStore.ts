@@ -282,11 +282,13 @@ export const useAppView = () => {
   const goBackFromCoffee = useAppStore(state => state.goBackFromCoffee);
   const goToCoffee = useAppStore(state => state.goToCoffee);
   const goToHowToDownload = useAppStore(state => state.goToHowToDownload);
+  const setSelectedItem = useAppStore(state => state.setSelectedItem);
 
   return {
     isMobile, mobileHomeStyles, desktopStyles, baseRecommendationCardClasses,
     isTablet, saveHomeState, restoreHomeState, selectedItem,
-    goHome, goBackFromDetail, goBackFromCoffee, goToCoffee, goToHowToDownload
+    goHome, goBackFromDetail, goBackFromCoffee, goToCoffee, goToHowToDownload,
+    setSelectedItem
   };
 };
 

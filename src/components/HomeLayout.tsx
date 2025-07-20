@@ -16,6 +16,9 @@ interface HomeLayoutProps {
 }
 
 export default function HomeLayout({ forcedLang, initialItem }: HomeLayoutProps): React.JSX.Element {
+  if (typeof window === 'undefined') {
+    console.log('SSR initialItem en HomeLayout:', initialItem);
+  }
   const location = useLocation();
   const navigate = useNavigate();
   const { lang, setLanguage } = useLanguage();
@@ -124,7 +127,7 @@ export default function HomeLayout({ forcedLang, initialItem }: HomeLayoutProps)
         <CoffeePage onAnimationEnd={handleBack} />
       ) : (
         <div style={{ position: 'relative', zIndex: 1, transition: 'none' }}>
-          <HomePage onOverlayNavigate={navigate} />
+          <HomePage onOverlayNavigate={navigate} initialItem={initialItem} />
         </div>
       )}
       {/* WelcomePopup */}

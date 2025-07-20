@@ -573,16 +573,16 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
 
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
-    const safeItem = selectedItem || lastItemRef.current;
+    const safeItem: Item | undefined = props.item || selectedItem || lastItemRef.current;
     if (!safeItem) {
       return null;
     }
     // Calcular valores OG usando safeItem o valores por defecto
     const ogTitle = safeItem?.title || safeItem?.name || 'Masterpiece';
     const ogDescription = typeof safeItem?.description === 'string'
-      ? safeItem.description
+      ? safeItem?.description
       : (safeItem?.description?.es || safeItem?.description?.en || 'Descubre detalles de esta obra recomendada en Masterpiece.');
-    const ogImage = getOgImage(safeItem || {});
+    const ogImage = getOgImage(safeItem ? safeItem : { id: '' });
     const ogUrl = typeof window !== 'undefined' ? window.location.href : (safeItem ? `https://masterpiece.es/detalle/${safeItem.category || 'detalle'}/${safeItem.id}` : 'https://masterpiece.es/');
 
     // Helmet siempre presente
@@ -600,7 +600,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         <link rel="alternate" href={`https://masterpiece.com/${safeItem?.category || 'detalle'}/${safeItem?.id || ''}`} hrefLang="es" />
         <link rel="alternate" href={`https://masterpiece.com/en/${safeItem?.category || 'detalle'}/${safeItem?.id || ''}`} hrefLang="en" />
         <link rel="alternate" href={`https://masterpiece.com/${safeItem?.category || 'detalle'}/${safeItem?.id || ''}`} hrefLang="x-default" />
-        <script type="application/ld+json">{JSON.stringify(getJsonLd())}</script>
+        <script type="application/ld+json">{JSON.stringify(getJsonLd(safeItem ? safeItem : { id: '' }))}</script>
       </Helmet>
     );
 
@@ -662,7 +662,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
 
   // Renderizado para desktop usando estilos CSS-in-JS directamente
   if (!isMobile) {
-    const safeItem = selectedItem || lastItemRef.current;
+    const safeItem: Item | undefined = props.item || selectedItem || lastItemRef.current;
     if (!safeItem) {
       return null;
     }
@@ -701,7 +701,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="es" />
         <link rel="alternate" href={`https://masterpiece.com/en/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="en" />
         <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="x-default" />
-        <script type="application/ld+json">{JSON.stringify(getJsonLd())}</script>
+        <script type="application/ld+json">{JSON.stringify(getJsonLd(safeItem ? safeItem : { id: '' }))}</script>
       </Helmet>
     );
 

@@ -13,6 +13,9 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = ({ initialLang, initialItem }) => {
+  if (typeof window === 'undefined') {
+    console.log('SSR initialItem en App:', initialItem);
+  }
   // Hook para manejar errores de storage globalmente
   useStorageErrorHandler();
 

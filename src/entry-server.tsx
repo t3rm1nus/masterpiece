@@ -5,6 +5,9 @@ import { StaticRouter } from 'react-router-dom/server';
 import App from './App';
 
 export function render(url: string, lang: string, initialItem?: any) {
+  if (typeof window === 'undefined') {
+    console.log('SSR render ejecutado', { url, lang, initialItem });
+  }
   // Crear un contexto para Helmet
   const helmetContext: any = {};
   const app = (
