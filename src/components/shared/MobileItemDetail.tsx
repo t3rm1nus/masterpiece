@@ -19,6 +19,7 @@ import UiCard from '../ui/UiCard';
 import { MobileActionButtons } from './ItemActionButtons';
 import MasterpieceBadge from './MasterpieceBadge';
 import { useShare } from '../../hooks/useShare';
+import { useLanguage } from '../../LanguageContext';
 
 // Tipos de props
 interface MobileItemDetailProps {
@@ -142,6 +143,7 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
   };
 
   const { share } = useShare();
+  const { lang: contextLang } = useLanguage();
 
   const BackButton = (
     showSections.backButton !== false && (
@@ -169,7 +171,7 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
   );
 
   const handleShare = () => {
-    const lang = typeof props.lang === 'string' ? props.lang : 'es';
+    const lang = contextLang || 'es';
     const title = selectedItem?.title || selectedItem?.name || 'Recomendación de Masterpiece';
     let description = 'Mira esta recomendación en Masterpiece';
     if (selectedItem?.description) {
@@ -186,9 +188,9 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
     }
     const url = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.es/';
     share({
-      title,
-      text: description,
-      url,
+      title: String(title),
+      text: String(description),
+      url: String(url),
       dialogTitle: 'Compartir recomendación'
     });
   };

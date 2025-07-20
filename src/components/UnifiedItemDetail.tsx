@@ -398,7 +398,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
 
   // Añadir handler para compartir
   const handleShare = () => {
-    const lang = typeof props.lang === 'string' ? props.lang : 'es';
+    const lang = lang || 'es';
     const title = selectedItem?.title || selectedItem?.name || 'Recomendación de Masterpiece';
     let description = 'Mira esta recomendación en Masterpiece';
     if (selectedItem?.description) {
@@ -415,9 +415,9 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     }
     const url = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.es/';
     share({
-      title,
-      text: description,
-      url,
+      title: String(title),
+      text: String(description),
+      url: String(url),
       dialogTitle: 'Compartir recomendación'
     });
   };
@@ -614,6 +614,21 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     }
   };
 
+  // Centralizar lógica de imagen OG
+  function getOgImage(item: Item) {
+    if (item && item.image && typeof item.image === 'string' && item.image.startsWith('http')) {
+      return item.image;
+    }
+    if (item && item.category) {
+      const ogMap = {
+        books: 'books', comics: 'comics', documentales: 'documentaries', boardgames: 'gameboard', movies: 'movies', music: 'music', podcast: 'podcasts', podcasts: 'podcasts', series: 'series', videogames: 'videogames', videogame: 'videogames',
+      };
+      const ogKey = ogMap[item.category] || null;
+      if (ogKey) return `https://masterpiece.es/og/${ogKey}.png`;
+    }
+    return 'https://masterpiece.es/imagenes/splash_image.png';
+  }
+
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
     const safeItem = selectedItem || lastItemRef.current;
@@ -625,16 +640,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     const ogDescription = typeof safeItem.description === 'string'
       ? safeItem.description
       : (safeItem.description?.es || safeItem.description?.en || 'Descubre detalles de esta obra recomendada en Masterpiece.');
-    const ogImage = (safeItem.image && typeof safeItem.image === 'string' && safeItem.image.startsWith('http'))
-      ? safeItem.image
-      : (safeItem.category ? (() => {
-          const ogMap = {
-            books: 'books', comics: 'comics', documentales: 'documentaries', boardgames: 'gameboard', movies: 'movies', music: 'music', podcast: 'podcasts', podcasts: 'podcasts', series: 'series', videogames: 'videogames', videogame: 'videogames',
-          };
-          const ogKey = ogMap[safeItem.category] || null;
-          if (ogKey) return `https://masterpiece.es/og/${ogKey}.png`;
-          return "https://masterpiece.es/imagenes/splash_image.png";
-        })() : "https://masterpiece.es/imagenes/splash_image.png");
+    const ogImage = getOgImage(safeItem);
     const ogUrl = typeof window !== 'undefined' ? window.location.href : `https://masterpiece.es/detalle/${safeItem.category || 'detalle'}/${safeItem.id}`;
 
     return (
@@ -718,16 +724,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     const ogDescription = typeof safeItem.description === 'string'
       ? safeItem.description
       : (safeItem.description?.es || safeItem.description?.en || 'Descubre detalles de esta obra recomendada en Masterpiece.');
-    const ogImage = (safeItem.image && typeof safeItem.image === 'string' && safeItem.image.startsWith('http'))
-      ? safeItem.image
-      : (safeItem.category ? (() => {
-          const ogMap = {
-            books: 'books', comics: 'comics', documentales: 'documentaries', boardgames: 'gameboard', movies: 'movies', music: 'music', podcast: 'podcasts', podcasts: 'podcasts', series: 'series', videogames: 'videogames', videogame: 'videogames',
-          };
-          const ogKey = ogMap[safeItem.category] || null;
-          if (ogKey) return `https://masterpiece.es/og/${ogKey}.png`;
-          return "https://masterpiece.es/imagenes/splash_image.png";
-        })() : "https://masterpiece.es/imagenes/splash_image.png");
+    const ogImage = getOgImage(safeItem);
     const ogUrl = typeof window !== 'undefined' ? window.location.href : `https://masterpiece.es/detalle/${safeItem.category || 'detalle'}/${safeItem.id}`;
 
     return (
