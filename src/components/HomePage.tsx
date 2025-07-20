@@ -663,6 +663,10 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         ? `Explora las mejores recomendaciones de ${categoryLabel} en la subcategoría ${subcategoryLabel}.`
         : `Explora las mejores recomendaciones de ${categoryLabel}.`)
     : 'Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts.';
+  const safeCategoryLabel = ensureString(categoryLabel, lang);
+  const safeSubcategoryLabel = ensureString(subcategoryLabel, lang);
+  const safePageTitle = ensureString(pageTitle, lang);
+  const safePageDescription = ensureString(pageDescription, lang);
   return (
     <>
       <Helmet>
@@ -727,7 +731,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         <main>
           <header>
           <AnimatedH1 isMobile={isMobile} h1Gradient={h1Gradient} onClick={handleTitleClick}>
-            {ensureString(t?.ui?.titles?.home_title, lang) || 'Nuevas Recomendaciones'}
+            {safePageTitle || 'Nuevas Recomendaciones'}
           </AnimatedH1>
           {/* SOLO MÓVIL: Selector de categorías justo debajo del h1 */}
           {isMobile && categories.length > 0 && (
