@@ -727,6 +727,8 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     const ogImage = getOgImage(safeItem);
     const ogUrl = typeof window !== 'undefined' ? window.location.href : `https://masterpiece.es/detalle/${safeItem.category || 'detalle'}/${safeItem.id}`;
     const isMasterpiece = !!safeItem.masterpiece;
+    const categoryColor = getCategoryColor(safeItem.category, 'color');
+    const gradientBg = `linear-gradient(135deg, ${categoryColor} 0%, ${theme.palette.mode === 'dark' ? 'rgba(24,24,24,0.92)' : 'rgba(255,255,255,0.85)'} 100%)`;
 
     return (
       <article>
