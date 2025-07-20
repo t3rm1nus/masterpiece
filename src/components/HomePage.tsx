@@ -148,6 +148,22 @@ function ensureString(val: string | Record<string, string> | undefined, lang: st
   return '';
 }
 
+// --- Fallback Helmet para la home ---
+const HelmetHomeFallback = () => (
+  <Helmet>
+    <title>Masterpiece - Recomendaciones culturales</title>
+    <meta name="description" content="Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts." />
+    <meta property="og:title" content="Masterpiece - Recomendaciones culturales" />
+    <meta property="og:description" content="Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://masterpiece.es/imagenes/splash_image.png" />
+    <meta property="og:url" content="https://masterpiece.es/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://masterpiece.es/" />
+    <meta name="ssr-debug-home" content="SSR_HELMET_HOME_OK" />
+  </Helmet>
+);
+
 const HomePageComponent: React.FC<HomePageProps> = ({
   categoryBarProps = {},
   subcategoryBarProps = {},
@@ -745,8 +761,8 @@ const HomePageComponent: React.FC<HomePageProps> = ({
 
   return (
     <>
-      <HelmetHomeFallback />
       {helmetMeta}
+      <HelmetHomeFallback />
       {/* Precarga invisible para asegurar caché en cliente (SSR safe) */}
       <img src="/imagenes/splash.png" alt="" style={{ display: 'none' }} aria-hidden="true" />
       <img src="https://github.com/t3rm1nus/masterpiece/raw/main/public/imagenes/descargas/pirate.jpg" alt="" style={{ display: 'none' }} aria-hidden="true" />
