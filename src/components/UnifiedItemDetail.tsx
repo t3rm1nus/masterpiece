@@ -614,6 +614,15 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     const ogImage = getOgImage(safeItem ? safeItem : { id: '' });
     const ogUrl = typeof window !== 'undefined' ? window.location.href : (safeItem ? `https://masterpiece.es/detalle/${safeItem.category || 'detalle'}/${safeItem.id}` : 'https://masterpiece.es/');
 
+    if (typeof window === 'undefined') {
+      console.log('SSR UnifiedItemDetail MOBILE - Item:', { 
+        id: safeItem?.id, 
+        title: safeItem?.title, 
+        image: safeItem?.image,
+        ogImage: ogImage 
+      });
+    }
+
     // Helmet siempre presente
     const helmetMeta = (
       <Helmet>
@@ -708,9 +717,10 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         || 'Descubre detalles de esta obra recomendada en Masterpiece.';
     const ogImage = getOgImage(safeItem);
     if (typeof window === 'undefined') {
-      console.log('SSR Helmet OG Image:', { 
-        itemId: safeItem?.id, 
-        itemTitle: ogTitle,
+      console.log('SSR UnifiedItemDetail DESKTOP - Item:', { 
+        id: safeItem?.id, 
+        title: ogTitle,
+        image: safeItem?.image,
         ogImage: ogImage 
       });
     }
