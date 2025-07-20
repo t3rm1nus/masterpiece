@@ -430,190 +430,6 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
   //   }
   // }, []);
 
-  // 3. Returns condicionales después de TODOS los hooks
-  if (!isDataInitialized) {
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '60vh' }}>
-        <CircularProgress color="primary" size={48} />
-        <div style={{ marginTop: 16, fontSize: 18, color: '#888' }}>Cargando datos...</div>
-      </div>
-    );
-  }
-  
-  if (!selectedItem && id && category && allData && !allData[category]) {
-    return <div style={{padding:32, textAlign:'center'}}>Categoría no encontrada.</div>;
-  }
-  
-  if (!selectedItem) {
-    return <div style={{padding:32, textAlign:'center', color:'red', fontWeight:'bold'}}>
-      No se encontró el elemento solicitado.<br/>
-      category: {category}<br/>
-      id: {id}<br/>
-      allData[category] existe: {allData && allData[category] ? 'sí' : 'no'}
-    </div>;
-  }
-  
-  const rawTitle = processTitle(selectedItem?.title || selectedItem?.name, lang);
-  const rawDescription = processDescription(selectedItem?.description, lang);
-  
-  const title = ensureString(rawTitle, lang);
-  const description = ensureString(rawDescription, lang);
-  
-  // Determinar la categoría real del item para color y chip
-  const realCategory = selectedItem?.category || selectedCategory;
-
-  // Verificar que tenemos un item válido antes de continuar
-  if (!selectedItem && !lastItemRef.current) {
-    return null;
-  }
-  
-  const item = selectedItem || lastItemRef.current || {};
-  const itemTitle = item.title || item.name || 'Detalle - Masterpiece';
-  const itemDescription = item.description || 'Descubre detalles de esta obra recomendada en Masterpiece.';
-  
-  // Determinar la imagen OG para el detalle
-  const itemImage = (() => {
-    if (item && item.image && typeof item.image === 'string' && item.image.startsWith('http')) {
-      return item.image; // Usa la imagen real (raw GitHub o URL absoluta)
-    }
-    if (item && item.category) {
-      const ogMap: Record<string, string> = {
-        books: 'books',
-        comics: 'comics',
-        documentales: 'documentaries',
-        boardgames: 'gameboard',
-        movies: 'movies',
-        music: 'music',
-        podcast: 'podcasts',
-        podcasts: 'podcasts',
-        series: 'series',
-        videogames: 'videogames',
-        videogame: 'videogames',
-      };
-      const ogKey = ogMap[item.category] || null;
-      if (ogKey) {
-        return `https://masterpiece.es/og/${ogKey}.png`;
-      }
-    }
-    return "https://masterpiece.es/imagenes/splash_image.png";
-  })();
-
-  // Determinar el título OG para el detalle
-  const itemOgTitle = item.title || item.name || 'Masterpiece';
-  const itemUrl = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.com/';
-
-  const getJsonLd = () => {
-    const base = {
-      '@context': 'https://schema.org',
-      name: itemTitle,
-      description: itemDescription,
-      image: itemImage,
-      url: itemUrl,
-      inLanguage: 'es',
-      publisher: {
-        '@type': 'Organization',
-        name: 'Masterpiece',
-        url: 'https://masterpiece.com/'
-      }
-    };
-    // Obtener subcategoría traducida si existe
-    let translatedSubcat: string | undefined = undefined;
-    if (item.subcategory) {
-      if (typeof getSubcategoryTranslation === 'function') {
-        translatedSubcat = getSubcategoryTranslation(item.subcategory, item.category || null);
-      } else if (typeof item.subcategory === 'string') {
-        translatedSubcat = item.subcategory;
-      }
-    }
-    switch ((item.category || '').toLowerCase()) {
-      case 'movies':
-        return {
-          ...base,
-          '@type': 'Movie',
-          datePublished: item.year || undefined,
-          director: item.director ? { '@type': 'Person', name: item.director } : undefined,
-          actor: item.actors ? item.actors.map((a: any) => ({ '@type': 'Person', name: a })) : undefined,
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
-        };
-      case 'documentales':
-        return {
-          ...base,
-          '@type': 'Movie',
-          genre: 'Documentary',
-          datePublished: item.year || undefined,
-          director: item.director ? { '@type': 'Person', name: item.director } : undefined,
-          actor: item.actors ? item.actors.map((a: any) => ({ '@type': 'Person', name: a })) : undefined,
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
-        };
-      case 'series':
-        return {
-          ...base,
-          '@type': 'TVSeries',
-          datePublished: item.year || undefined,
-          actor: item.actors ? item.actors.map((a: any) => ({ '@type': 'Person', name: a })) : undefined,
-          director: item.director ? { '@type': 'Person', name: item.director } : undefined,
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
-        };
-      case 'books':
-        return {
-          ...base,
-          '@type': 'Book',
-          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
-          datePublished: item.year || undefined,
-          isbn: item.isbn || undefined,
-          ...(translatedSubcat ? { bookGenre: translatedSubcat } : {})
-        };
-      case 'comics':
-        return {
-          ...base,
-          '@type': 'Book',
-          bookFormat: 'GraphicNovel',
-          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
-          datePublished: item.year || undefined,
-          ...(translatedSubcat ? { bookGenre: translatedSubcat } : {})
-        };
-      case 'music':
-        return {
-          ...base,
-          '@type': 'MusicAlbum',
-          byArtist: item.author ? { '@type': 'MusicGroup', name: item.author } : undefined,
-          datePublished: item.year || undefined,
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
-        };
-      case 'videogames':
-        return {
-          ...base,
-          '@type': 'VideoGame',
-          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
-          datePublished: item.year || undefined,
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
-        };
-      case 'boardgames':
-        return {
-          ...base,
-          '@type': 'BoardGame',
-          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
-          datePublished: item.year || undefined,
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
-        };
-      case 'podcast':
-      case 'podcasts':
-        return {
-          ...base,
-          '@type': 'PodcastSeries',
-          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
-          datePublished: item.year || undefined,
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
-        };
-      default:
-        return {
-          ...base,
-          '@type': 'CreativeWork',
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
-        };
-    }
-  };
-
   // Centralizar lógica de imagen OG
   function getOgImage(item: Item) {
     if (item && item.image && typeof item.image === 'string' && item.image.startsWith('http')) {
@@ -635,82 +451,86 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     if (!safeItem) {
       return null;
     }
-    // Calcular valores OG usando safeItem
-    const ogTitle = safeItem.title || safeItem.name || 'Masterpiece';
-    const ogDescription = typeof safeItem.description === 'string'
+    // Calcular valores OG usando safeItem o valores por defecto
+    const ogTitle = safeItem?.title || safeItem?.name || 'Masterpiece';
+    const ogDescription = typeof safeItem?.description === 'string'
       ? safeItem.description
-      : (safeItem.description?.es || safeItem.description?.en || 'Descubre detalles de esta obra recomendada en Masterpiece.');
-    const ogImage = getOgImage(safeItem);
-    const ogUrl = typeof window !== 'undefined' ? window.location.href : `https://masterpiece.es/detalle/${safeItem.category || 'detalle'}/${safeItem.id}`;
+      : (safeItem?.description?.es || safeItem?.description?.en || 'Descubre detalles de esta obra recomendada en Masterpiece.');
+    const ogImage = getOgImage(safeItem || {});
+    const ogUrl = typeof window !== 'undefined' ? window.location.href : (safeItem ? `https://masterpiece.es/detalle/${safeItem.category || 'detalle'}/${safeItem.id}` : 'https://masterpiece.es/');
+
+    // Helmet siempre presente
+    const helmetMeta = (
+      <Helmet>
+        <title>{(ogTitle || 'Detalle') + ' | Masterpiece'}</title>
+        <meta name="description" content={ogDescription} />
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={ogUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href={ogUrl} />
+        <link rel="alternate" href={`https://masterpiece.com/${safeItem?.category || 'detalle'}/${safeItem?.id || ''}`} hrefLang="es" />
+        <link rel="alternate" href={`https://masterpiece.com/en/${safeItem?.category || 'detalle'}/${safeItem?.id || ''}`} hrefLang="en" />
+        <link rel="alternate" href={`https://masterpiece.com/${safeItem?.category || 'detalle'}/${safeItem?.id || ''}`} hrefLang="x-default" />
+        <script type="application/ld+json">{JSON.stringify(getJsonLd())}</script>
+      </Helmet>
+    );
 
     return (
-      <Box
-        sx={{
-          position: 'fixed',
-          top: '49px',
-          left: 0,
-          width: '100vw',
-          height: 'calc(100vh - 49px)',
-          background: 'rgba(255,255,255,0.98)',
-          backdropFilter: 'blur(2px)',
-          overflowY: 'auto',
-          WebkitOverflowScrolling: 'touch',
-          overscrollBehavior: 'contain',
-          scrollBehavior: 'smooth',
-          zIndex: 1100,
-          isolation: 'isolate',
-        }}
-      >
-        <Helmet>
-          <title>{(ogTitle || 'Detalle') + ' | Masterpiece'}</title>
-          <meta name="description" content={ogDescription} />
-          <meta property="og:title" content={ogTitle} />
-          <meta property="og:description" content={ogDescription} />
-          <meta property="og:type" content="article" />
-          <meta property="og:image" content={ogImage} />
-          <meta property="og:url" content={ogUrl} />
-          <meta name="twitter:card" content="summary_large_image" />
-          <link rel="canonical" href={ogUrl} />
-          {/* Etiquetas hreflang para SEO multilingüe */}
-          <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="es" />
-          <link rel="alternate" href={`https://masterpiece.com/en/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="en" />
-          <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="x-default" />
-          <script type="application/ld+json">
-            {JSON.stringify(getJsonLd())}
-          </script>
-        </Helmet>
-        {safeItem && (
-          <MobileItemDetail
-            selectedItem={safeItem}
-            title={title}
-            description={description}
-            lang={lang}
-            t={t}
-            theme={theme}
-            getCategoryTranslation={getCategoryTranslation}
-            getSubcategoryTranslation={getSubcategoryTranslation}
-            getTranslation={getTranslation}
-            goBackFromDetail={goBackFromDetail}
-            goToHowToDownload={goToHowToDownload}
-            imgLoaded={imgLoaded}
-            setImgLoaded={setImgLoaded}
-            renderMobileSpecificContent={props.renderMobileSpecificContent}
-            renderMobileActionButtons={props.renderMobileActionButtons}
-            showSections={props.showSections || {}}
-            isClosing={props.isClosing || false}
-            onClose={handleClose}
-            onBack={handleClose}
-            renderHeader={undefined}
-            renderImage={undefined}
-            renderCategory={undefined}
-            renderSubcategory={undefined}
-            renderYear={undefined}
-            renderDescription={undefined}
-            renderActions={undefined}
-            renderFooter={undefined}
-          />
-        )}
-      </Box>
+      <>
+        {helmetMeta}
+        <Box
+          sx={{
+            position: 'fixed',
+            top: '49px',
+            left: 0,
+            width: '100vw',
+            height: 'calc(100vh - 49px)',
+            background: 'rgba(255,255,255,0.98)',
+            backdropFilter: 'blur(2px)',
+            overflowY: 'auto',
+            WebkitOverflowScrolling: 'touch',
+            overscrollBehavior: 'contain',
+            scrollBehavior: 'smooth',
+            zIndex: 1100,
+            isolation: 'isolate',
+          }}
+        >
+          {safeItem && (
+            <MobileItemDetail
+              selectedItem={safeItem}
+              title={title}
+              description={description}
+              lang={lang}
+              t={t}
+              theme={theme}
+              getCategoryTranslation={getCategoryTranslation}
+              getSubcategoryTranslation={getSubcategoryTranslation}
+              getTranslation={getTranslation}
+              goBackFromDetail={goBackFromDetail}
+              goToHowToDownload={goToHowToDownload}
+              imgLoaded={imgLoaded}
+              setImgLoaded={setImgLoaded}
+              renderMobileSpecificContent={props.renderMobileSpecificContent}
+              renderMobileActionButtons={props.renderMobileActionButtons}
+              showSections={props.showSections || {}}
+              isClosing={props.isClosing || false}
+              onClose={handleClose}
+              onBack={handleClose}
+              renderHeader={undefined}
+              renderImage={undefined}
+              renderCategory={undefined}
+              renderSubcategory={undefined}
+              renderYear={undefined}
+              renderDescription={undefined}
+              renderActions={undefined}
+              renderFooter={undefined}
+            />
+          )}
+        </Box>
+      </>
     );
   }
 
@@ -730,8 +550,29 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     const categoryColor = getCategoryColor(safeItem.category, 'color');
     const gradientBg = `linear-gradient(135deg, ${categoryColor} 0%, ${theme.palette.mode === 'dark' ? 'rgba(24,24,24,0.92)' : 'rgba(255,255,255,0.85)'} 100%)`;
 
+    // Helmet siempre presente
+    const helmetMeta = (
+      <Helmet>
+        <title>{(ogTitle || 'Detalle') + ' | Masterpiece'}</title>
+        <meta name="description" content={ogDescription} />
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={ogUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href={ogUrl} />
+        <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="es" />
+        <link rel="alternate" href={`https://masterpiece.com/en/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="en" />
+        <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="x-default" />
+        <script type="application/ld+json">{JSON.stringify(getJsonLd())}</script>
+      </Helmet>
+    );
+
     return (
-      <article>
+      <>
+        {helmetMeta}
+        <article>
       <div
         key={safeItem.id}
         style={{
@@ -741,169 +582,152 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           transition: 'opacity 0.3s ease-in-out, transform 0.3s ease-out',
         }}
       >
-          <Helmet>
-            <title>{(ogTitle || 'Detalle') + ' | Masterpiece'}</title>
-            <meta name="description" content={ogDescription} />
-            <meta property="og:title" content={ogTitle} />
-            <meta property="og:description" content={ogDescription} />
-            <meta property="og:type" content="article" />
-            <meta property="og:image" content={ogImage} />
-            <meta property="og:url" content={ogUrl} />
-            <meta name="twitter:card" content="summary_large_image" />
-            <link rel="canonical" href={ogUrl} />
-            {/* Etiquetas hreflang para SEO multilingüe */}
-            <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="es" />
-            <link rel="alternate" href={`https://masterpiece.com/en/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="en" />
-            <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="x-default" />
-            <script type="application/ld+json">
-              {JSON.stringify(getJsonLd())}
-            </script>
-          </Helmet>
-        <div
-          style={{
-            ...styles.desktopWrapper,
-            ...(isMasterpiece ? styles.desktopWrapperMasterpiece : {}),
-            ...(isMasterpiece ? {} : { background: gradientBg })
-          }}
-        >
-          {/* Botón volver FAB azul arriba a la izquierda, igual que en donaciones/descargar */}
-          <Fab
-            color="primary"
-            size="large"
-            aria-label={typeof t === 'function' ? t('Volver') : 'Volver'}
-            onClick={handleClose}
-            sx={{
-              position: 'absolute',
-              top: 18,
-              left: 18,
-              zIndex: 50,
-              boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
-              opacity: (internalClosing || props.isClosing) ? 0.5 : 1,
-              cursor: (internalClosing || props.isClosing) ? 'not-allowed' : 'pointer',
-              transition: 'none',
-              '&:hover': {
-                backgroundColor: theme.palette.primary.main,
-                transform: 'none',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
-              }
+          <div
+            style={{
+              ...styles.desktopWrapper,
+              ...(isMasterpiece ? styles.desktopWrapperMasterpiece : {}),
+              ...(isMasterpiece ? {} : { background: gradientBg })
             }}
-            tabIndex={0}
-            disabled={internalClosing || props.isClosing}
           >
-            <ArrowBackIcon style={{ fontSize: 28, color: '#fff' }} />
-          </Fab>
-          {isMasterpiece && (
-            <div style={styles.desktopBadgeRight}>
-              {/* SVG estrella solo negro */}
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="22" cy="22" r="22" fill="#FFD700"/>
-                <path
-                  d="M22 10l3.6 7.3 8.1 1.2-5.85 5.7 1.38 8.06L22 28.1l-7.23 3.8 1.38-8.06L10.3 18.5l8.1-1.2L22 10z"
-                  fill="#111"
+            {/* Botón volver FAB azul arriba a la izquierda, igual que en donaciones/descargar */}
+            <Fab
+              color="primary"
+              size="large"
+              aria-label={typeof t === 'function' ? t('Volver') : 'Volver'}
+              onClick={handleClose}
+              sx={{
+                position: 'absolute',
+                top: 18,
+                left: 18,
+                zIndex: 50,
+                boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+                opacity: (internalClosing || props.isClosing) ? 0.5 : 1,
+                cursor: (internalClosing || props.isClosing) ? 'not-allowed' : 'pointer',
+                transition: 'none',
+                '&:hover': {
+                  backgroundColor: theme.palette.primary.main,
+                  transform: 'none',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
+                }
+              }}
+              tabIndex={0}
+              disabled={internalClosing || props.isClosing}
+            >
+              <ArrowBackIcon style={{ fontSize: 28, color: '#fff' }} />
+            </Fab>
+            {isMasterpiece && (
+              <div style={styles.desktopBadgeRight}>
+                {/* SVG estrella solo negro */}
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="22" cy="22" r="22" fill="#FFD700"/>
+                  <path
+                    d="M22 10l3.6 7.3 8.1 1.2-5.85 5.7 1.38 8.06L22 28.1l-7.23 3.8 1.38-8.06L10.3 18.5l8.1-1.2L22 10z"
+                    fill="#111"
+                  />
+                </svg>
+              </div>
+            )}
+            {/* MAQUETACIÓN CORRECTA: leftCol (imagen) y rightCol (textos) como hermanos */}
+            <div style={styles.leftCol}>
+                <figure style={styles.imageContainer}>
+                <img
+                  src={safeItem.image}
+                    alt={`Portada de ${title}`}
+                  style={imageHover ? { ...styles.image, ...styles.imageHover } : styles.image}
+                  onLoad={() => setImgLoaded(true)}
+                  onMouseEnter={() => setImageHover(true)}
+                  onMouseLeave={() => setImageHover(false)}
+                  loading="lazy"
                 />
-              </svg>
-            </div>
-          )}
-          {/* MAQUETACIÓN CORRECTA: leftCol (imagen) y rightCol (textos) como hermanos */}
-          <div style={styles.leftCol}>
-              <figure style={styles.imageContainer}>
-              <img
-                src={safeItem.image}
-                  alt={`Portada de ${title}`}
-                style={imageHover ? { ...styles.image, ...styles.imageHover } : styles.image}
-                onLoad={() => setImgLoaded(true)}
-                onMouseEnter={() => setImageHover(true)}
-                onMouseLeave={() => setImageHover(false)}
-                loading="lazy"
-              />
-                <figcaption style={{ textAlign: 'center', fontSize: '0.95em', color: '#666' }}>{title}</figcaption>
-              </figure>
-            </div>
-          <div style={styles.rightCol}>
-              <header>
-                {/* Título y metadatos */}
-            <h2 style={styles.title}>{title}</h2>
-            <div style={styles.chipRow}>
-              <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
-                {getCategoryTranslation(realCategory)}
-              </span>
-              {safeItem.subcategory && (
+                  <figcaption style={{ textAlign: 'center', fontSize: '0.95em', color: '#666' }}>{title}</figcaption>
+                </figure>
+              </div>
+            <div style={styles.rightCol}>
+                <header>
+                  {/* Título y metadatos */}
+              <h2 style={styles.title}>{title}</h2>
+              <div style={styles.chipRow}>
                 <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
-                  {(() => {
-                    const subcat = safeItem.subcategory;
-                    if (typeof subcat === 'object' && subcat !== null) {
-                      if (subcat[lang]) return ensureString(subcat[lang], lang);
-                      const firstValue = Object.values(subcat)[0];
-                      return ensureString(firstValue, lang);
-                    }
-                    return ensureString(getSubcategoryTranslation(subcat), lang);
-                  })()}
+                  {getCategoryTranslation(realCategory)}
                 </span>
-              )}
-            </div>
-            <div style={styles.metaRow}>
-              {/* Mostrar autor/artista para música */}
-              {safeItem.category === 'music' && safeItem.artist && (
-                <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {safeItem.artist}</span>
-              )}
-              {/* Mostrar autor para otras categorías */}
-              {safeItem.category !== 'music' && safeItem.author && (
-                <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {safeItem.author}</span>
-              )}
-              {safeItem.year && (
-                <span style={styles.meta}><AccessTimeIcon style={styles.metaIcon}/> {safeItem.year}</span>
-              )}
-              {safeItem.duration && (
-                <span style={styles.meta}><PlaylistPlayIcon style={styles.metaIcon}/> {safeItem.duration}</span>
-              )}
-              {safeItem.language && (
-                <span style={styles.meta}><TranslateIcon style={styles.metaIcon}/> {safeItem.language}</span>
-              )}
-              {safeItem.platform && (
-                <span style={styles.meta}><GamepadIcon style={styles.metaIcon}/> {safeItem.platform}</span>
-              )}
-              {safeItem.age && (
-                <span style={styles.meta}><ChildCareIcon style={styles.metaIcon}/> {safeItem.age}+</span>
-              )}
-              {safeItem.developer && (
-                <span style={styles.meta}><CodeIcon style={styles.metaIcon}/> {safeItem.developer}</span>
-              )}
-            </div>
-              </header>
-              <section style={styles.descriptionRow}>
-                <p style={styles.description}>{description}</p>
-              </section>
-            <div style={styles.extraContentRow}>
-              <DesktopCategorySpecificContent selectedItem={safeItem} lang={lang} t={t} getTranslation={getTranslation} />
-            </div>
-            <div style={styles.actionsRow}>
-              <DesktopActionButtons
-                selectedItem={safeItem}
-                trailerUrl={trailerUrl}
-                lang={lang}
-                t={t}
-                goToHowToDownload={goToHowToDownload}
-                onOverlayNavigate={props.onOverlayNavigate}
-              />
-              <img
-                src="/icons/share.png"
-                alt="Compartir"
-                style={{
-                  position: 'absolute',
-                  bottom: 12,
-                  right: 12,
-                  width: 48,
-                  height: 48,
-                  zIndex: 1200,
-                  cursor: 'pointer',
-                }}
-                onClick={handleShare}
-              />
+                {safeItem.subcategory && (
+                  <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
+                    {(() => {
+                      const subcat = safeItem.subcategory;
+                      if (typeof subcat === 'object' && subcat !== null) {
+                        if (subcat[lang]) return ensureString(subcat[lang], lang);
+                        const firstValue = Object.values(subcat)[0];
+                        return ensureString(firstValue, lang);
+                      }
+                      return ensureString(getSubcategoryTranslation(subcat), lang);
+                    })()}
+                  </span>
+                )}
+              </div>
+              <div style={styles.metaRow}>
+                {/* Mostrar autor/artista para música */}
+                {safeItem.category === 'music' && safeItem.artist && (
+                  <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {safeItem.artist}</span>
+                )}
+                {/* Mostrar autor para otras categorías */}
+                {safeItem.category !== 'music' && safeItem.author && (
+                  <span style={styles.meta}><PersonIcon style={styles.metaIcon}/> {safeItem.author}</span>
+                )}
+                {safeItem.year && (
+                  <span style={styles.meta}><AccessTimeIcon style={styles.metaIcon}/> {safeItem.year}</span>
+                )}
+                {safeItem.duration && (
+                  <span style={styles.meta}><PlaylistPlayIcon style={styles.metaIcon}/> {safeItem.duration}</span>
+                )}
+                {safeItem.language && (
+                  <span style={styles.meta}><TranslateIcon style={styles.metaIcon}/> {safeItem.language}</span>
+                )}
+                {safeItem.platform && (
+                  <span style={styles.meta}><GamepadIcon style={styles.metaIcon}/> {safeItem.platform}</span>
+                )}
+                {safeItem.age && (
+                  <span style={styles.meta}><ChildCareIcon style={styles.metaIcon}/> {safeItem.age}+</span>
+                )}
+                {safeItem.developer && (
+                  <span style={styles.meta}><CodeIcon style={styles.metaIcon}/> {safeItem.developer}</span>
+                )}
+              </div>
+                </header>
+                <section style={styles.descriptionRow}>
+                  <p style={styles.description}>{description}</p>
+                </section>
+              <div style={styles.extraContentRow}>
+                <DesktopCategorySpecificContent selectedItem={safeItem} lang={lang} t={t} getTranslation={getTranslation} />
+              </div>
+              <div style={styles.actionsRow}>
+                <DesktopActionButtons
+                  selectedItem={safeItem}
+                  trailerUrl={trailerUrl}
+                  lang={lang}
+                  t={t}
+                  goToHowToDownload={goToHowToDownload}
+                  onOverlayNavigate={props.onOverlayNavigate}
+                />
+                <img
+                  src="/icons/share.png"
+                  alt="Compartir"
+                  style={{
+                    position: 'absolute',
+                    bottom: 12,
+                    right: 12,
+                    width: 48,
+                    height: 48,
+                    zIndex: 1200,
+                    cursor: 'pointer',
+                  }}
+                  onClick={handleShare}
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </article>
+      </>
     );
   }
 
