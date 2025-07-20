@@ -719,10 +719,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         <main>
           <header>
           <AnimatedH1 isMobile={isMobile} h1Gradient={h1Gradient} onClick={handleTitleClick}>
-            {(!selectedCategory || selectedCategory === 'all')
-              ? (t?.ui?.titles?.home_title || t?.home_title || 'Nuevas Recomendaciones')
-              : (t?.categories?.[selectedCategory] || selectedCategory)
-            }
+            {ensureString(t?.ui?.titles?.home_title, lang) || 'Nuevas Recomendaciones'}
           </AnimatedH1>
           {/* SOLO MÓVIL: Selector de categorías justo debajo del h1 */}
           {isMobile && categories.length > 0 && (
