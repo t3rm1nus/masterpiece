@@ -620,8 +620,8 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           {safeItem && (
             <MobileItemDetail
               selectedItem={safeItem}
-              title={title}
-              description={description}
+              title={ogTitle}
+              description={ogDescription}
               lang={lang}
               t={t}
               theme={theme}
@@ -751,20 +751,20 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
                 <figure style={styles.imageContainer}>
                 <img
                   src={safeItem.image}
-                    alt={`Portada de ${title}`}
+                    alt={`Portada de ${ogTitle}`}
                   style={imageHover ? { ...styles.image, ...styles.imageHover } : styles.image}
                   onLoad={() => setImgLoaded(true)}
                   onMouseEnter={() => setImageHover(true)}
                   onMouseLeave={() => setImageHover(false)}
                   loading="lazy"
                 />
-                  <figcaption style={{ textAlign: 'center', fontSize: '0.95em', color: '#666' }}>{title}</figcaption>
+                  <figcaption style={{ textAlign: 'center', fontSize: '0.95em', color: '#666' }}>{ogTitle}</figcaption>
                 </figure>
               </div>
             <div style={styles.rightCol}>
                 <header>
                   {/* Título y metadatos */}
-              <h2 style={styles.title}>{title}</h2>
+              <h2 style={styles.title}>{ogTitle}</h2>
               <div style={styles.chipRow}>
                 <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
                   {getCategoryTranslation(realCategory)}
@@ -813,7 +813,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
               </div>
                 </header>
                 <section style={styles.descriptionRow}>
-                  <p style={styles.description}>{description}</p>
+                  <p style={styles.description}>{ogDescription}</p>
                 </section>
               <div style={styles.extraContentRow}>
                 <DesktopCategorySpecificContent selectedItem={safeItem} lang={lang} t={t} getTranslation={getTranslation} />
