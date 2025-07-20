@@ -77,7 +77,7 @@ app.get('*', async (req, res) => {
   template = template
     .replace('<!--app-head-->', head || '')
     .replace('<!--app-html-->', html);
-  // Log detallado para depuración SSR HEAD
+  // Log detallado para depuración SSR HEAD 
   console.log('SSR HEAD DEBUG:', { url: req.url, head });
   res.status(200).set({ 'Content-Type': 'text/html' }).end(template);
 });
