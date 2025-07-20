@@ -726,6 +726,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
       : (safeItem.description?.es || safeItem.description?.en || 'Descubre detalles de esta obra recomendada en Masterpiece.');
     const ogImage = getOgImage(safeItem);
     const ogUrl = typeof window !== 'undefined' ? window.location.href : `https://masterpiece.es/detalle/${safeItem.category || 'detalle'}/${safeItem.id}`;
+    const isMasterpiece = !!safeItem.masterpiece;
 
     return (
       <article>
