@@ -20,7 +20,6 @@ import { getSubcategoryLabel } from '../utils/getSubcategoryLabel';
 import MaterialContentWrapper from './MaterialContentWrapper';
 import DesktopRecommendationsList from './DesktopRecommendationsList';
 import useAppStore from '../store/useAppStore';
-import { useAppView } from '../store/useAppStore';
 import { normalizeSubcategoryInternal } from '../utils/categoryUtils';
 import { keyframes, styled } from '@mui/system';
 import { generateUniqueId } from '../utils/appUtils';
@@ -162,8 +161,16 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   initialItem,
   ...rest
 }) => {
+  const { lang, t, getTranslation } = useLanguage();
+  // Hook para sincronizar títulos automáticamente
+  useTitleSync();
+  // Hook para Google Analytics
+  const { trackCategorySelection, trackSubcategorySelection, trackFilterUsage, trackItemDetailView } = useGoogleAnalytics();
+  // Hook para detectar si es móvil
+  const isMobile = useIsMobile();
+
   if (typeof window === 'undefined') {
-    console.log('SSR initialItem en HomePage:', initialItem);
+    console.log('SSR HomePage render ejecutado', { lang, initialItem });
   }
   const location = useLocation();
   // Estado para filtro especial de música (debe ir antes de cualquier uso)
@@ -174,14 +181,6 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   // Eliminar localSelectedItem y su lógica
   // const [localSelectedItem, setLocalSelectedItem] = React.useState<any>(null);
 
-  const { lang, t, getTranslation } = useLanguage();
-  // Hook para sincronizar títulos automáticamente
-  useTitleSync();
-  // Hook para Google Analytics
-  const { trackCategorySelection, trackSubcategorySelection, trackFilterUsage, trackItemDetailView } = useGoogleAnalytics();
-  // Hook para detectar si es móvil
-  const isMobile = useIsMobile();
-  
   // Estado para el Splash - ELIMINADO: Solo se maneja desde HomeLayout
 
   // Restaurar scroll al volver de un detalle SOLO cuando la ruta es '/' (SSR safe)
@@ -235,8 +234,6 @@ const HomePageComponent: React.FC<HomePageProps> = ({
     setDesktopPage,
     resetPagination,
   } = useAppData();
-
-  // Extraer setSelectedItem correctamente dentro del componente
   const { setSelectedItem } = useAppView();
 
   // Efecto para actualizar título cuando cambia el idioma
@@ -709,9 +706,9 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href={ogUrl} />
         {/* Etiquetas hreflang para SEO multilingüe */}
-        <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="es" />
-        <link rel="alternate" href={`https://masterpiece.com/en${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="en" />
-        <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="x-default" />
+        <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}` ?? undefined} hrefLang="es" />
+        <link rel="alternate" href={`https://masterpiece.com/en${isCategory && selectedCategory ? `/${selectedCategory}` : ''}` ?? undefined} hrefLang="en" />
+        <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}` ?? undefined} hrefLang="x-default" />
         {/* SSR DEBUG: Marca oculta para confirmar que Helmet se procesa en la Home */}
         <meta name="ssr-debug-home" content="SSR_HELMET_HOME_OK" />
         {/* eslint-disable-next-line react/no-danger */}
