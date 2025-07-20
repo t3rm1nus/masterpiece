@@ -596,10 +596,10 @@ const HomePageComponent: React.FC<HomePageProps> = ({
           boxShadow: isActive ? '0 2px 8px 0 rgba(0,0,0,0.08)' : 'none',
         }}
       >
-        {subcategoryObj.label || subcategoryObj.sub}
+        {ensureString(subcategoryObj.label, lang) || ensureString(subcategoryObj.sub, lang)}
       </UiButton>
     );
-  }, [handleSubcategoryClick, selectedCategory]);
+  }, [handleSubcategoryClick, selectedCategory, lang]);
 
   // Calcular gradiente del título
   const h1Gradient = useMemo(() => {

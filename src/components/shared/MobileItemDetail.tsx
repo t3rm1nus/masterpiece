@@ -144,6 +144,7 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
 
   const { share } = useShare();
   const { lang: contextLang } = useLanguage();
+  const lang = contextLang || 'es';
 
   const BackButton = (
     showSections.backButton !== false && (
@@ -228,8 +229,12 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
     m: 0
   };
 
-  const safeTitle = ensureString(selectedItem?.title || selectedItem?.name, lang);
-  const safeDescription = ensureString(selectedItem?.description, lang);
+  const safeTitle = typeof (selectedItem?.title || selectedItem?.name) === 'string'
+    ? (selectedItem?.title || selectedItem?.name)
+    : (selectedItem?.title?.[lang] || selectedItem?.title?.es || selectedItem?.title?.en || selectedItem?.name?.[lang] || selectedItem?.name?.es || selectedItem?.name?.en || '');
+  const safeDescription = typeof selectedItem?.description === 'string'
+    ? selectedItem.description
+    : (selectedItem?.description?.[lang] || selectedItem?.description?.es || selectedItem?.description?.en || '');
   const safeCategory = ensureString(selectedItem?.category, lang);
   const safeSubcategory = ensureString(selectedItem?.subcategory, lang);
 
