@@ -143,8 +143,8 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
   };
 
   const { share } = useShare();
-  const { lang: contextLang } = useLanguage();
-  const lang = contextLang || 'es';
+  const { lang } = useLanguage();
+  const currentLang = lang || 'es';
 
   const BackButton = (
     showSections.backButton !== false && (
@@ -172,7 +172,7 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
   );
 
   const handleShare = () => {
-    const lang = contextLang || 'es';
+    const lang = currentLang;
     const title = selectedItem?.title || selectedItem?.name || 'Recomendación de Masterpiece';
     let description = 'Mira esta recomendación en Masterpiece';
     if (selectedItem?.description) {
@@ -231,12 +231,12 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
 
   const safeTitle = typeof (selectedItem?.title || selectedItem?.name) === 'string'
     ? (selectedItem?.title || selectedItem?.name)
-    : (selectedItem?.title?.[lang] || selectedItem?.title?.es || selectedItem?.title?.en || selectedItem?.name?.[lang] || selectedItem?.name?.es || selectedItem?.name?.en || '');
+    : (selectedItem?.title?.[currentLang] || selectedItem?.title?.es || selectedItem?.title?.en || selectedItem?.name?.[currentLang] || selectedItem?.name?.es || selectedItem?.name?.en || '');
   const safeDescription = typeof selectedItem?.description === 'string'
     ? selectedItem.description
-    : (selectedItem?.description?.[lang] || selectedItem?.description?.es || selectedItem?.description?.en || '');
-  const safeCategory = ensureString(selectedItem?.category, lang);
-  const safeSubcategory = ensureString(selectedItem?.subcategory, lang);
+    : (selectedItem?.description?.[currentLang] || selectedItem?.description?.es || selectedItem?.description?.en || '');
+  const safeCategory = ensureString(selectedItem?.category, currentLang);
+  const safeSubcategory = ensureString(selectedItem?.subcategory, currentLang);
 
   return (
     <>
@@ -381,7 +381,7 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
             renderActions
               ? renderActions(selectedItem)
               : <Box sx={{ pb: '56px' /* Espacio extra para el botón de compartir */ }}>
-                  <MobileActionButtons selectedItem={selectedItem} trailerUrl={selectedItem.trailerUrl} lang={lang} t={t} goToHowToDownload={goToHowToDownload} onOverlayNavigate={undefined} />
+                  <MobileActionButtons selectedItem={selectedItem} trailerUrl={selectedItem.trailerUrl} lang={currentLang} t={t} goToHowToDownload={goToHowToDownload} onOverlayNavigate={undefined} />
                 </Box>
           )}
           {/* Botón de compartir: sticky abajo SOLO en iPhone, absoluto en el resto */}
