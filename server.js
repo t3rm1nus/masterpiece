@@ -65,7 +65,20 @@ app.get('*', async (req, res) => {
       // Soportar tanto array plano como { recommendations: [...] }
       const items = Array.isArray(data) ? data : data.recommendations || [];
       initialItem = items.find(item => String(item.id) === id);
-      console.log('SSR detalle:', { url: req.url, category, id, found: !!initialItem, initialItem });
+      console.log('SSR detalle:', { 
+        url: req.url, 
+        category, 
+        id, 
+        found: !!initialItem, 
+        initialItem: initialItem ? {
+          id: initialItem.id,
+          title: initialItem.title,
+          category: initialItem.category,
+          image: initialItem.image,
+          hasImage: !!initialItem.image,
+          imageStartsWithHttp: initialItem.image ? initialItem.image.startsWith('http') : false
+        } : null 
+      });
     } else {
       console.log('SSR detalle: archivo de datos no encontrado', { url: req.url, category, id, dataPath });
     }

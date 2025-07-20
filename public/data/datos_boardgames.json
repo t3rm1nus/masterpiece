@@ -190,7 +190,7 @@
       "playTime": 120,
       "age": "+14",
       "masterpiece": false,
-      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/juegos_de_mesa/brass.jpg"
+      "image": "https://masterpiece.es/imagenes/juegos_de_mesa/brass.jpg"
     },
     {
       "id": 13,
@@ -471,7 +471,7 @@
       "subcategory": "family",
       "description": {
         "es": "En Takenoko, los jugadores cultivan un jardín de bambú para alimentar a un panda imperial. Deberás gestionar parcelas, irrigarlas y hacer crecer bambú de diferentes colores, mientras el jardinero y el panda recorren el tablero. Cumple objetivos secretos y equilibra el crecimiento del jardín con el apetito del panda. Un juego familiar de estrategia, gestión y mucha ternura visual..",
-        "en": "In Takenoko, players cultivate a bamboo garden to feed an imperial panda. Manage plots, irrigate them, and grow bamboo in different colors as the gardener and panda move across the board. Complete secret objectives and balance garden growth with the panda’s appetite. A family-friendly game of strategy, management, and charming visuals."
+        "en": "In Takenoko, players cultivate a bamboo garden to feed an imperial panda. Manage plots, irrigate them, and grow bamboo in different colors as the gardener and panda move across the board. Complete secret objectives and balance garden growth with the panda's appetite. A family-friendly game of strategy, management, and charming visuals."
       },
       "minPlayers": 2,
       "maxPlayers": 4,

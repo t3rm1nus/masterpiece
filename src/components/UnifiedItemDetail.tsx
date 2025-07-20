@@ -445,7 +445,20 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
 
   // Centralizar lógica de imagen OG
   function getOgImage(item: Item) {
+    if (typeof window === 'undefined') {
+      console.log('SSR getOgImage:', { 
+        itemId: item?.id, 
+        itemTitle: item?.title, 
+        itemCategory: item?.category,
+        itemImage: item?.image,
+        hasImage: !!item?.image,
+        imageStartsWithHttp: item?.image ? item.image.startsWith('http') : false
+      });
+    }
     if (item && item.image && typeof item.image === 'string' && item.image.startsWith('http')) {
+      if (typeof window === 'undefined') {
+        console.log('SSR getOgImage: usando imagen del item:', item.image);
+      }
       return item.image;
     }
     if (item && item.category) {
@@ -453,9 +466,18 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         books: 'books', comics: 'comics', documentales: 'documentaries', boardgames: 'gameboard', movies: 'movies', music: 'music', podcast: 'podcasts', podcasts: 'podcasts', series: 'series', videogames: 'videogames', videogame: 'videogames',
       };
       const ogKey = ogMap[item.category as string] || null;
-      if (ogKey) return `https://masterpiece.es/og/${ogKey}.png`;
+      if (ogKey) {
+        const categoryImage = `https://masterpiece.es/og/${ogKey}.png`;
+        if (typeof window === 'undefined') {
+          console.log('SSR getOgImage: usando imagen de categoría:', categoryImage);
+        }
+        return categoryImage;
+      }
     }
     // Solo usar el splash si no hay imagen de categoría ni de item
+    if (typeof window === 'undefined') {
+      console.log('SSR getOgImage: usando splash por defecto');
+    }
     return 'https://masterpiece.es/imagenes/splash_image.png';
   }
 
@@ -685,6 +707,13 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
       : (typeof safeItem?.description === 'object' && safeItem?.description !== null ? (safeItem?.description[lang] || (safeItem?.description as any).es || (safeItem?.description as any).en) : undefined)
         || 'Descubre detalles de esta obra recomendada en Masterpiece.';
     const ogImage = getOgImage(safeItem);
+    if (typeof window === 'undefined') {
+      console.log('SSR Helmet OG Image:', { 
+        itemId: safeItem?.id, 
+        itemTitle: ogTitle,
+        ogImage: ogImage 
+      });
+    }
     // Construir la URL canónica pública preferida
     const baseUrl = 'https://masterpiece.es';
     const currentLang = lang || 'es';
