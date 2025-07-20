@@ -228,6 +228,11 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
     m: 0
   };
 
+  const safeTitle = ensureString(selectedItem?.title || selectedItem?.name, lang);
+  const safeDescription = ensureString(selectedItem?.description, lang);
+  const safeCategory = ensureString(selectedItem?.category, lang);
+  const safeSubcategory = ensureString(selectedItem?.subcategory, lang);
+
   return (
     <>
       {BackButton}
@@ -353,7 +358,7 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
           </Box>
           {showSections.title !== false && (
             <Typography variant="h5" sx={{ fontWeight: 700, mt: 1, mb: 1, textAlign: 'center' }}>
-              {title || selectedItem.title}
+              {safeTitle}
               {showSections.year !== false && selectedItem.year && (
                 <span style={{ color: '#888', fontWeight: 400, marginLeft: 8, fontSize: '0.85em' }}>
                   ({selectedItem.year})
@@ -363,8 +368,8 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
           )}
           {showSections.description !== false && (
             renderDescription
-              ? renderDescription(description || selectedItem.description, selectedItem)
-              : <Typography variant="body2" sx={{ color: '#444', mb: 2, textAlign: 'center', fontSize: '1.05em', lineHeight: 1.6 }}>{description || selectedItem.description}</Typography>
+              ? renderDescription(safeDescription, selectedItem)
+              : <Typography variant="body2" sx={{ color: '#444', mb: 2, textAlign: 'center', fontSize: '1.05em', lineHeight: 1.6 }}>{safeDescription}</Typography>
           )}
           {renderMobileSpecificContent && renderMobileSpecificContent(selectedItem)}
           {showSections.actions !== false && (

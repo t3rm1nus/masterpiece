@@ -731,7 +731,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         <main>
           <header>
           <AnimatedH1 isMobile={isMobile} h1Gradient={h1Gradient} onClick={handleTitleClick}>
-            {safePageTitle || 'Nuevas Recomendaciones'}
+            {ensureString(t?.ui?.titles?.home_title, lang) || 'Nuevas Recomendaciones'}
           </AnimatedH1>
           {/* SOLO MÓVIL: Selector de categorías justo debajo del h1 */}
           {isMobile && categories.length > 0 && (
