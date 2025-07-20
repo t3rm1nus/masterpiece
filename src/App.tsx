@@ -10,9 +10,10 @@ import { HelmetProvider } from 'react-helmet-async';
 interface AppProps {
   initialLang?: string;
   initialItem?: any;
+  helmetContext?: any; // Añadido para SSR
 }
 
-const App: React.FC<AppProps> = ({ initialLang, initialItem }) => {
+const App: React.FC<AppProps> = ({ initialLang, initialItem, helmetContext }) => {
   if (typeof window === 'undefined') {
     console.log('SSR initialItem en App:', initialItem);
   }
@@ -31,7 +32,7 @@ const App: React.FC<AppProps> = ({ initialLang, initialItem }) => {
   const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
   
   return (
-    <HelmetProvider>
+    <HelmetProvider context={helmetContext}>
       <LanguageProvider initialLang={initialLang}>
         <MaterialThemeProvider>
           <div className="App" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>

@@ -13,7 +13,7 @@ export function render(url: string, lang: string, initialItem?: any) {
   const app = (
     <HelmetProvider context={helmetContext}>
       <StaticRouter location={url}>
-        <App initialLang={lang} initialItem={initialItem} />
+        <App initialLang={lang} initialItem={initialItem} helmetContext={helmetContext} />
       </StaticRouter>
     </HelmetProvider>
   );
