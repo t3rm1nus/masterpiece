@@ -21,7 +21,22 @@ export function render(url: string, lang: string, initialItem?: any) {
   const html = renderToString(app);
   // Recoger las meta tags de Helmet
   const { helmet } = helmetContext;
-  const head = helmet ? `${helmet.title.toString()}${helmet.meta.toString()}${helmet.link.toString()}` : '';
+  let head = helmet ? `${helmet.title.toString()}${helmet.meta.toString()}${helmet.link.toString()}` : '';
+  // --- FIX: Forzar head por defecto en la home si está vacío ---
+  if ((!head || head.trim() === '') && url === '/') {
+    head = `
+      <title>Masterpiece - Recomendaciones culturales</title>
+      <meta name="description" content="Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts." />
+      <meta property="og:title" content="Masterpiece - Recomendaciones culturales" />
+      <meta property="og:description" content="Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts." />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://masterpiece.es/imagenes/splash_image.png" />
+      <meta property="og:url" content="https://masterpiece.es/" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <link rel="canonical" href="https://masterpiece.es/" />
+      <meta name="ssr-debug-home" content="SSR_HELMET_HOME_OK" />
+    `;
+  }
   // LOGS para depuración SSR
   console.log('SSR: DESPUÉS DE renderToString', { url, lang, initialItem, head });
   if (!head) {
