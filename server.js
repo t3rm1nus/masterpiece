@@ -20,11 +20,11 @@ app.use((req, res, next) => {
 app.use(express.static(resolve('dist/client')));
 
 // Servir archivos estáticos desde public (para desarrollo)
-app.use(express.static(path.join(process.cwd(), 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // SSR handler
 app.get('*', async (req, res) => {
-  let template = fs.readFileSync(path.join(process.cwd(), 'dist/client/index.html'), 'utf-8');
+  let template = fs.readFileSync(path.join(__dirname, 'dist/client/index.html'), 'utf-8');
   const render = (await import('./dist/server/entry-server.js')).render;
   const lang = req.url.startsWith('/en/') ? 'en' : 'es';
 
@@ -47,7 +47,7 @@ app.get('*', async (req, res) => {
   }
   if (category && id) {
     // Cargar el JSON de la categoría
-    const dataPath = path.join(process.cwd(), `public/data/datos_${category}.json`);
+    const dataPath = path.join(__dirname, `public/data/datos_${category}.json`);
     if (fs.existsSync(dataPath)) {
       const dataRaw = fs.readFileSync(dataPath, 'utf-8');
       let data;
@@ -73,7 +73,5 @@ app.get('*', async (req, res) => {
   res.status(200).set({ 'Content-Type': 'text/html' }).end(template);
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`SSR server running at http://localhost:${port}`);
-}); 
+// ¡NO uses app.listen en Vercel!
+export default app; 
