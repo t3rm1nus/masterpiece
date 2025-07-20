@@ -402,10 +402,15 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
   }, []);
 
   const { share } = useShare();
+  const canShare = typeof share === 'function';
 
   // Añadir handler para compartir
   const handleShare = () => {
-    const lang = lang || 'es';
+    if (!canShare) {
+      alert('La función de compartir no está disponible en este dispositivo o navegador.');
+      return;
+    }
+    const currentLang = lang || 'es';
     const title = selectedItem?.title || selectedItem?.name || 'Recomendación de Masterpiece';
     let description = 'Mira esta recomendación en Masterpiece';
     if (selectedItem?.description) {
@@ -413,7 +418,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         description = selectedItem.description;
       } else if (typeof selectedItem.description === 'object') {
         description =
-          (lang && selectedItem.description[lang] && typeof selectedItem.description[lang] === 'string' && selectedItem.description[lang]) ||
+          (currentLang && selectedItem.description[currentLang] && typeof selectedItem.description[currentLang] === 'string' && selectedItem.description[currentLang]) ||
           selectedItem.description.es ||
           selectedItem.description.en ||
           Object.values(selectedItem.description).find(v => typeof v === 'string') ||
@@ -844,20 +849,22 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
                   goToHowToDownload={goToHowToDownload}
                   onOverlayNavigate={props.onOverlayNavigate}
                 />
-                <img
-                  src="/icons/share.png"
-                  alt="Compartir"
-                  style={{
-                    position: 'absolute',
-                    bottom: 12,
-                    right: 12,
-                    width: 48,
-                    height: 48,
-                    zIndex: 1200,
-                    cursor: 'pointer',
-                  }}
-                  onClick={handleShare}
-                />
+                {canShare && (
+                  <img
+                    src="/icons/share.png"
+                    alt="Compartir"
+                    style={{
+                      position: 'absolute',
+                      bottom: 12,
+                      right: 12,
+                      width: 48,
+                      height: 48,
+                      zIndex: 1200,
+                      cursor: 'pointer',
+                    }}
+                    onClick={handleShare}
+                  />
+                )}
               </div>
             </div>
           </div>
