@@ -139,7 +139,7 @@ const AnimatedH1 = styled('h1')<AnimatedH1Props>(({ isMobile, h1Gradient }) => (
   },
 }));
 
-function ensureString(val, lang = 'es') {
+function ensureString(val: string | Record<string, string> | undefined, lang: string = 'es'): string {
   if (typeof val === 'string') return val;
   if (val && typeof val === 'object') {
     return val[lang] || val.es || val.en || Object.values(val)[0] || '';
@@ -248,14 +248,14 @@ const HomePageComponent: React.FC<HomePageProps> = ({
   // Función para manejar clic en el título principal (solo en móvil)
   const handleTitleClick = useCallback(() => {
     if (isMobile && (!selectedCategory || selectedCategory === 'all')) {
-      resetAllFilters(lang);
+      resetAllFilters(); // Sin argumentos
       generateNewRecommendations();
       // Hacer scroll al top
       if (typeof window !== 'undefined') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
-  }, [isMobile, selectedCategory, resetAllFilters, generateNewRecommendations, lang]);
+  }, [isMobile, selectedCategory, resetAllFilters, generateNewRecommendations]);
   
   // Eliminar efectos de sincronización localSelectedItem
   // useEffect(() => {
@@ -684,6 +684,11 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="es" />
         <link rel="alternate" href={`https://masterpiece.com/en${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="en" />
         <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}`} hrefLang="x-default" />
+        {/* SSR DEBUG: Marca oculta para confirmar que Helmet se procesa en la Home */}
+        <meta name="ssr-debug-home" content="SSR_HELMET_HOME_OK" />
+        {/* O también como comentario HTML: */}
+        {/* eslint-disable-next-line react/no-danger */}
+        <script type="text/plain" dangerouslySetInnerHTML={{ __html: '<!-- SSR_HELMET_HOME_OK -->' }} />
         <script type="application/ld+json">
           {`
             {
@@ -742,7 +747,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
                 selectedCategory={selectedCategory || ''}
                 onCategoryChange={handleCategoryOrSubcategoryChange}
                 subcategories={categorySubcategories}
-                activeSubcategory={activeSubcategory || ''}
+                activeSubcategory={activeSubcategory ?? undefined}
                 {...materialCategorySelectProps}
               />
               {/* Botones especiales SOLO en móvil y SOLO si hay categoría seleccionada */}
