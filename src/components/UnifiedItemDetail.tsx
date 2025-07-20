@@ -668,7 +668,12 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
       ? safeItem.description
       : (safeItem?.description?.[lang] || safeItem?.description?.es || safeItem?.description?.en || 'Descubre detalles de esta obra recomendada en Masterpiece.');
     const ogImage = getOgImage(safeItem);
-    const ogUrl = typeof window !== 'undefined' ? window.location.href : `https://masterpiece.es/detalle/${safeItem.category || 'detalle'}/${safeItem.id}`;
+    // Construir la URL canónica pública preferida
+    const baseUrl = 'https://masterpiece.es';
+    const currentLang = lang || 'es';
+    const ogUrl = currentLang === 'en'
+      ? `${baseUrl}/en/${safeItem.category || 'detalle'}/${safeItem.id}`
+      : `${baseUrl}/${safeItem.category || 'detalle'}/${safeItem.id}`;
     const isMasterpiece = !!safeItem.masterpiece;
     const categoryColor = getCategoryColor(realCategory, 'color');
     const gradientBg = `linear-gradient(135deg, ${categoryColor} 0%, ${theme.palette.mode === 'dark' ? 'rgba(24,24,24,0.92)' : 'rgba(255,255,255,0.85)'} 100%)`;
