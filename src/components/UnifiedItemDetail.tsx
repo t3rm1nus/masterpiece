@@ -445,6 +445,125 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     return 'https://masterpiece.es/imagenes/splash_image.png';
   }
 
+  // Definir getJsonLd al principio para que esté disponible siempre
+  function getJsonLd(item = {}) {
+    const itemTitle = item.title || item.name || 'Detalle - Masterpiece';
+    const itemDescription = item.description || 'Descubre detalles de esta obra recomendada en Masterpiece.';
+    const itemImage = getOgImage(item);
+    const itemUrl = typeof window !== 'undefined'
+      ? window.location.href
+      : (item ? `https://masterpiece.es/detalle/${item.category || 'detalle'}/${item.id}` : 'https://masterpiece.es/');
+    const base = {
+      '@context': 'https://schema.org',
+      name: itemTitle,
+      description: itemDescription,
+      image: itemImage,
+      url: itemUrl,
+      inLanguage: 'es',
+      publisher: {
+        '@type': 'Organization',
+        name: 'Masterpiece',
+        url: 'https://masterpiece.com/'
+      }
+    };
+    // Obtener subcategoría traducida si existe
+    let translatedSubcat: string | undefined = undefined;
+    if (item.subcategory) {
+      if (typeof props.getSubcategoryTranslation === 'function') {
+        translatedSubcat = props.getSubcategoryTranslation(item.subcategory, item.category || null);
+      } else if (typeof item.subcategory === 'string') {
+        translatedSubcat = item.subcategory;
+      }
+    }
+    switch ((item.category || '').toLowerCase()) {
+      case 'movies':
+        return {
+          ...base,
+          '@type': 'Movie',
+          datePublished: item.year || undefined,
+          director: item.director ? { '@type': 'Person', name: item.director } : undefined,
+          actor: item.actors ? item.actors.map((a: any) => ({ '@type': 'Person', name: a })) : undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+        };
+      case 'documentales':
+        return {
+          ...base,
+          '@type': 'Movie',
+          genre: 'Documentary',
+          datePublished: item.year || undefined,
+          director: item.director ? { '@type': 'Person', name: item.director } : undefined,
+          actor: item.actors ? item.actors.map((a: any) => ({ '@type': 'Person', name: a })) : undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+        };
+      case 'series':
+        return {
+          ...base,
+          '@type': 'TVSeries',
+          datePublished: item.year || undefined,
+          actor: item.actors ? item.actors.map((a: any) => ({ '@type': 'Person', name: a })) : undefined,
+          director: item.director ? { '@type': 'Person', name: item.director } : undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+        };
+      case 'books':
+        return {
+          ...base,
+          '@type': 'Book',
+          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+          datePublished: item.year || undefined,
+          isbn: item.isbn || undefined,
+          ...(translatedSubcat ? { bookGenre: translatedSubcat } : {})
+        };
+      case 'comics':
+        return {
+          ...base,
+          '@type': 'Book',
+          bookFormat: 'GraphicNovel',
+          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+          datePublished: item.year || undefined,
+          ...(translatedSubcat ? { bookGenre: translatedSubcat } : {})
+        };
+      case 'music':
+        return {
+          ...base,
+          '@type': 'MusicAlbum',
+          byArtist: item.author ? { '@type': 'MusicGroup', name: item.author } : undefined,
+          datePublished: item.year || undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+        };
+      case 'videogames':
+        return {
+          ...base,
+          '@type': 'VideoGame',
+          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+          datePublished: item.year || undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+        };
+      case 'boardgames':
+        return {
+          ...base,
+          '@type': 'BoardGame',
+          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+          datePublished: item.year || undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+        };
+      case 'podcast':
+      case 'podcasts':
+        return {
+          ...base,
+          '@type': 'PodcastSeries',
+          author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+          datePublished: item.year || undefined,
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+        };
+      default:
+        return {
+          ...base,
+          '@type': 'CreativeWork',
+          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+        };
+    }
+  }
+
   // Renderizado para móviles usando subcomponente
   if (isMobile) {
     const safeItem = selectedItem || lastItemRef.current;
