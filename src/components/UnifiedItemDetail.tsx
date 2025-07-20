@@ -474,11 +474,11 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         return categoryImage;
       }
     }
-    // Solo usar el splash si no hay imagen de categoría ni de item
+    // Usar imagen raw de GitHub como fallback en lugar del splash
     if (typeof window === 'undefined') {
-      console.log('SSR getOgImage: usando splash por defecto');
+      console.log('SSR getOgImage: usando imagen raw de GitHub como fallback');
     }
-    return 'https://masterpiece.es/imagenes/splash_image.png';
+    return 'https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png';
   }
 
   // Definir getJsonLd al principio para que esté disponible siempre

@@ -156,7 +156,7 @@ const HelmetHomeFallback = () => (
     <meta property="og:title" content="Masterpiece - Recomendaciones culturales" />
     <meta property="og:description" content="Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://masterpiece.es/imagenes/splash_image.png" />
+          <meta property="og:image" content="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png" />
     <meta property="og:url" content="https://masterpiece.es/" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://masterpiece.es/" />
@@ -687,7 +687,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         ? `Explora las mejores recomendaciones de ${categoryLabel} en la subcategoría ${subcategoryLabel}.`
         : `Explora las mejores recomendaciones de ${categoryLabel}.`)
     : 'Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts.';
-  let ogImage = 'https://masterpiece.es/imagenes/splash_image.png';
+      let ogImage = 'https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png';
   let ogUrl = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.es/';
   if (initialItem) {
     const itemTitle = initialItem.title || initialItem.name || '';
@@ -710,7 +710,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
       <meta property="og:title" content={safePageTitle || 'Masterpiece - Recomendaciones culturales'} />
       <meta property="og:description" content={safePageDescription || 'Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts.'} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content={ogImage || 'https://masterpiece.es/imagenes/splash_image.png'} />
+              <meta property="og:image" content={ogImage || 'https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png'} />
       <meta property="og:url" content={ogUrl || 'https://masterpiece.es/'} />
       <meta name="twitter:card" content="summary_large_image" />
       <link rel="canonical" href={ogUrl || 'https://masterpiece.es/'} />

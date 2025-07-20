@@ -130,7 +130,7 @@ const MaterialCoffeePage: React.FC<MaterialCoffeePageProps> = ({ onAnimationEnd 
         <meta property="og:title" content="Invítame a un café | Masterpiece" />
         <meta property="og:description" content="Apoya el proyecto Masterpiece invitándome a un café. ¡Gracias por tu colaboración!" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://masterpiece.es/imagenes/splash_image.png" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png" />
         <meta property="og:url" content={url} />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href={url} />

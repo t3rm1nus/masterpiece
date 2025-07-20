@@ -30,7 +30,7 @@ export function render(url: string, lang: string, initialItem?: any) {
       <meta property="og:title" content="Masterpiece - Recomendaciones culturales" />
       <meta property="og:description" content="Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts." />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content="https://masterpiece.es/imagenes/splash_image.png" />
+      <meta property="og:image" content="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png" />
       <meta property="og:url" content="https://masterpiece.es/" />
       <meta name="twitter:card" content="summary_large_image" />
       <link rel="canonical" href="https://masterpiece.es/" />
