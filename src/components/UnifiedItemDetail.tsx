@@ -338,6 +338,13 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     selectedItem = allData[category].find((item: Item) => `${item.id}` === `${id}`) || null;
   }
   
+  if (!selectedItem) {
+    if (typeof window === 'undefined') {
+      // Solo log en SSR
+      console.log('SSR UnifiedItemDetail: selectedItem es null', { category, id, allDataKeys: allData ? Object.keys(allData) : null });
+    }
+  }
+  
   // Hook para trailer URL - debe estar antes de cualquier return condicional
   const trailerUrl = useTrailerUrl(selectedItem?.trailer || '');
   
