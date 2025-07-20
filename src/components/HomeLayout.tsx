@@ -10,7 +10,12 @@ import MaterialMobileMenu from './MaterialMobileMenu';
 import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 import { useLanguage } from '../LanguageContext';
 
-export default function HomeLayout({ forcedLang }: { forcedLang?: string }): React.JSX.Element {
+interface HomeLayoutProps {
+  forcedLang?: string;
+  initialItem?: any;
+}
+
+export default function HomeLayout({ forcedLang, initialItem }: HomeLayoutProps): React.JSX.Element {
   const location = useLocation();
   const navigate = useNavigate();
   const { lang, setLanguage } = useLanguage();
@@ -112,7 +117,7 @@ export default function HomeLayout({ forcedLang }: { forcedLang?: string }): Rea
       />
       {/* Overlay para detalle SOLO si isDetail y category/id definidos */}
       {isDetail && category && id ? (
-        <UnifiedItemDetail category={category} id={id} onClose={handleBack} onBack={handleBack} />
+        <UnifiedItemDetail category={category} id={id} onClose={handleBack} onBack={handleBack} item={initialItem} />
       ) : isHowToDownload ? (
         <HowToDownload onAnimationEnd={handleBack} />
       ) : isDonaciones ? (

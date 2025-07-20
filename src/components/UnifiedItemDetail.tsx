@@ -398,13 +398,19 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
 
   // Añadir handler para compartir
   const handleShare = () => {
+    const lang = props.lang || 'es';
     const title = selectedItem?.title || selectedItem?.name || 'Recomendación de Masterpiece';
     let description = 'Mira esta recomendación en Masterpiece';
     if (selectedItem?.description) {
       if (typeof selectedItem.description === 'string') {
         description = selectedItem.description;
       } else if (typeof selectedItem.description === 'object') {
-        description = selectedItem.description.es || selectedItem.description.en || description;
+        description =
+          (lang && selectedItem.description[lang] && typeof selectedItem.description[lang] === 'string' && selectedItem.description[lang]) ||
+          selectedItem.description.es ||
+          selectedItem.description.en ||
+          Object.values(selectedItem.description).find(v => typeof v === 'string') ||
+          description;
       }
     }
     const url = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.es/';

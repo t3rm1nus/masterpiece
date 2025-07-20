@@ -26,9 +26,32 @@ app.use(express.static(path.join(process.cwd(), 'public')));
 app.get('*', async (req, res) => {
   let template = fs.readFileSync(path.join(process.cwd(), 'dist/client/index.html'), 'utf-8');
   const render = (await import('./dist/server/entry-server.js')).render;
-  // Detectar idioma por la URL
   const lang = req.url.startsWith('/en/') ? 'en' : 'es';
-  const { html, head } = render(req.url, lang);
+
+  // Detectar si es una URL de detalle
+  const match = req.url.match(/^\/detalle\/(\w+)\/(\d+)/);
+  let initialItem = null;
+  if (match) {
+    const category = match[1];
+    const id = match[2];
+    // Cargar el JSON de la categoría
+    const dataPath = path.join(process.cwd(), `public/data/datos_${category}.json`);
+    if (fs.existsSync(dataPath)) {
+      const dataRaw = fs.readFileSync(dataPath, 'utf-8');
+      let data;
+      try {
+        data = JSON.parse(dataRaw);
+      } catch (e) {
+        data = dataRaw.recommendations || dataRaw;
+      }
+      // Soportar tanto array plano como { recommendations: [...] }
+      const items = Array.isArray(data) ? data : data.recommendations || [];
+      initialItem = items.find(item => String(item.id) === id);
+    }
+  }
+
+  // Pasar initialItem al render
+  const { html, head } = render(req.url, lang, initialItem);
   template = template
     .replace('<!--app-head-->', head || '')
     .replace('<!--app-html-->', html);

@@ -6,7 +6,11 @@ import { useAppView, useAppData } from '../store/useAppStore';
 import { loadRealData } from '../utils/dataLoader';
 import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 
-export default function AppContent(): React.JSX.Element {
+interface AppContentProps {
+  initialItem?: any;
+}
+
+export default function AppContent({ initialItem }: AppContentProps): React.JSX.Element {
   const navigate = useNavigate();
   const location = useLocation();
   const { setView, setSelectedItem } = useAppView();
@@ -48,8 +52,8 @@ export default function AppContent(): React.JSX.Element {
   return (
     <Suspense fallback={<LoadingFallback />}> 
       <Routes>
-        <Route path="/en/*" element={<HomeLayout forcedLang="en" />} />
-        <Route path="/*" element={<HomeLayout />} />
+        <Route path="/en/*" element={<HomeLayout forcedLang="en" initialItem={initialItem} />} />
+        <Route path="/*" element={<HomeLayout initialItem={initialItem} />} />
       </Routes>
     </Suspense>
   );

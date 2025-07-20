@@ -4,13 +4,13 @@ import { HelmetProvider } from 'react-helmet-async';
 import { StaticRouter } from 'react-router-dom/server';
 import App from './App';
 
-export function render(url: string, lang: string) {
+export function render(url: string, lang: string, initialItem?: any) {
   // Crear un contexto para Helmet
   const helmetContext: any = {};
   const app = (
     <HelmetProvider context={helmetContext}>
       <StaticRouter location={url}>
-        <App initialLang={lang} />
+        <App initialLang={lang} initialItem={initialItem} />
       </StaticRouter>
     </HelmetProvider>
   );
