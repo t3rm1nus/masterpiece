@@ -399,11 +399,19 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
   // Añadir handler para compartir
   const handleShare = () => {
     const title = selectedItem?.title || selectedItem?.name || 'Recomendación de Masterpiece';
-    const description = selectedItem?.description || 'Mira esta recomendación en Masterpiece';
-    
+    let description = 'Mira esta recomendación en Masterpiece';
+    if (selectedItem?.description) {
+      if (typeof selectedItem.description === 'string') {
+        description = selectedItem.description;
+      } else if (typeof selectedItem.description === 'object') {
+        description = selectedItem.description.es || selectedItem.description.en || description;
+      }
+    }
+    const url = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.es/';
     share({
       title,
       text: description,
+      url,
       dialogTitle: 'Compartir recomendación'
     });
   };
