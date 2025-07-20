@@ -29,11 +29,23 @@ app.get('*', async (req, res) => {
   const lang = req.url.startsWith('/en/') ? 'en' : 'es';
 
   // Detectar si es una URL de detalle
-  const match = req.url.match(/^\/detalle\/(\w+)\/(\d+)/);
+  // Soportar tanto /detalle/:category/:id como /movies/:id, /books/:id, etc.
   let initialItem = null;
+  let category = null;
+  let id = null;
+  let match = req.url.match(/^\/detalle\/(\w+)\/(\d+)/);
   if (match) {
-    const category = match[1];
-    const id = match[2];
+    category = match[1];
+    id = match[2];
+  } else {
+    // Detectar /movies/:id, /books/:id, etc.
+    match = req.url.match(/^\/(\w+)\/(\d+)/);
+    if (match) {
+      category = match[1];
+      id = match[2];
+    }
+  }
+  if (category && id) {
     // Cargar el JSON de la categoría
     const dataPath = path.join(process.cwd(), `public/data/datos_${category}.json`);
     if (fs.existsSync(dataPath)) {
