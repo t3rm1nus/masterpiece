@@ -672,19 +672,69 @@ const HomePageComponent: React.FC<HomePageProps> = ({
         : `Explora las mejores recomendaciones de ${categoryLabel}.`)
     : 'Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts.';
   let ogImage = 'https://masterpiece.es/imagenes/splash_image.png';
-  let ogUrl = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.com/';
+  let ogUrl = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.es/';
   if (initialItem) {
     const itemTitle = initialItem.title || initialItem.name || '';
     const itemCategory = initialItem.category || '';
     pageTitle = `${itemTitle} | Masterpiece`;
     pageDescription = initialItem.description?.es || initialItem.description?.en || initialItem.description || `Descubre ${itemTitle} en la categoría ${itemCategory} en Masterpiece.`;
     ogImage = initialItem.image || initialItem.cover || ogImage;
-    ogUrl = `https://masterpiece.com/detalle/${itemCategory}/${initialItem.id}`;
+    ogUrl = `https://masterpiece.es/detalle/${itemCategory}/${initialItem.id}`;
   }
   const safeCategoryLabel = ensureString(categoryLabel, lang);
   const safeSubcategoryLabel = ensureString(subcategoryLabel, lang);
   const safePageTitle = ensureString(pageTitle, lang);
   const safePageDescription = ensureString(pageDescription, lang);
+
+  // --- FIX: Helmet siempre presente con valores por defecto para la home ---
+  const helmetMeta = (
+    <Helmet>
+      <title>{safePageTitle || 'Masterpiece - Recomendaciones culturales'}</title>
+      <meta name="description" content={safePageDescription || 'Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts.'} />
+      <meta property="og:title" content={safePageTitle || 'Masterpiece - Recomendaciones culturales'} />
+      <meta property="og:description" content={safePageDescription || 'Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts.'} />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content={ogImage || 'https://masterpiece.es/imagenes/splash_image.png'} />
+      <meta property="og:url" content={ogUrl || 'https://masterpiece.es/'} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <link rel="canonical" href={ogUrl || 'https://masterpiece.es/'} />
+      {/* Etiquetas hreflang para SEO multilingüe */}
+      <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}` ?? undefined} hrefLang="es" />
+      <link rel="alternate" href={`https://masterpiece.com/en${isCategory && selectedCategory ? `/${selectedCategory}` : ''}` ?? undefined} hrefLang="en" />
+      <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}` ?? undefined} hrefLang="x-default" />
+      {/* SSR DEBUG: Marca oculta para confirmar que Helmet se procesa en la Home */}
+      <meta name="ssr-debug-home" content="SSR_HELMET_HOME_OK" />
+      {/* eslint-disable-next-line react/no-danger */}
+      <script type="text/plain" dangerouslySetInnerHTML={{ __html: '<!-- SSR_HELMET_HOME_OK -->' }} />
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Masterpiece",
+            "url": "https://masterpiece.com/",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://masterpiece.com/?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            },
+            "description": "Recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts."
+          }
+        `}
+      </script>
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Masterpiece",
+            "url": "https://masterpiece.com/",
+            "logo": "https://masterpiece.com/favicon.png"
+          }
+        `}
+      </script>
+    </Helmet>
+  );
 
   // Hidratar el store Zustand con initialItem en SSR/primer render
   React.useEffect(() => {
@@ -695,52 +745,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
 
   return (
     <>
-      <Helmet>
-        <title>{safePageTitle}</title>
-        <meta name="description" content={safePageDescription} />
-        <meta property="og:title" content={safePageTitle} />
-        <meta property="og:description" content={safePageDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={ogUrl} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={ogUrl} />
-        {/* Etiquetas hreflang para SEO multilingüe */}
-        <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}` ?? undefined} hrefLang="es" />
-        <link rel="alternate" href={`https://masterpiece.com/en${isCategory && selectedCategory ? `/${selectedCategory}` : ''}` ?? undefined} hrefLang="en" />
-        <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}` ?? undefined} hrefLang="x-default" />
-        {/* SSR DEBUG: Marca oculta para confirmar que Helmet se procesa en la Home */}
-        <meta name="ssr-debug-home" content="SSR_HELMET_HOME_OK" />
-        {/* eslint-disable-next-line react/no-danger */}
-        <script type="text/plain" dangerouslySetInnerHTML={{ __html: '<!-- SSR_HELMET_HOME_OK -->' }} />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Masterpiece",
-              "url": "https://masterpiece.com/",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://masterpiece.com/?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              },
-              "description": "Recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts."
-            }
-          `}
-        </script>
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Masterpiece",
-              "url": "https://masterpiece.com/",
-              "logo": "https://masterpiece.com/favicon.png"
-            }
-          `}
-        </script>
-      </Helmet>
+      {helmetMeta}
       {/* Precarga invisible para asegurar caché en cliente (SSR safe) */}
       <img src="/imagenes/splash.png" alt="" style={{ display: 'none' }} aria-hidden="true" />
       <img src="https://github.com/t3rm1nus/masterpiece/raw/main/public/imagenes/descargas/pirate.jpg" alt="" style={{ display: 'none' }} aria-hidden="true" />

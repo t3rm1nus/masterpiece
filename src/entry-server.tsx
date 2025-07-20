@@ -17,13 +17,13 @@ export function render(url: string, lang: string, initialItem?: any) {
       </StaticRouter>
     </HelmetProvider>
   );
+  console.log('SSR: ANTES DE renderToString', { url, lang, initialItem });
   const html = renderToString(app);
   // Recoger las meta tags de Helmet
   const { helmet } = helmetContext;
   const head = helmet ? `${helmet.title.toString()}${helmet.meta.toString()}${helmet.link.toString()}` : '';
   // LOGS para depuración SSR
-  console.log('SSR RENDER URL:', url);
-  console.log('SSR HEAD:', head);
+  console.log('SSR: DESPUÉS DE renderToString', { url, lang, initialItem, head });
   if (!head) {
     console.warn('⚠️ SSR: HEAD está vacío para', url);
   } else {
