@@ -190,7 +190,7 @@ const MobileItemDetail: React.FC<MobileItemDetailProps> = ({
     const url = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.es/';
     share({
       title: String(title),
-      text: String(description),
+      text: 'Descubre más detalles en Masterpiece:',
       url: String(url),
       dialogTitle: 'Compartir recomendación'
     });
