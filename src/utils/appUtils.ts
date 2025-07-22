@@ -61,7 +61,7 @@ export const getRandomNotFoundImage = (): string => {
   ];
   
   const randomIndex = Math.floor(Math.random() * notFoundImages.length);
-  return `/imagenes/notfound/${notFoundImages[randomIndex]}`;
+  return `https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/notfound/${notFoundImages[randomIndex]}`;
 };
 
 /**
