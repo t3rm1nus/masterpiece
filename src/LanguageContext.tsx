@@ -91,7 +91,7 @@ export function LanguageProvider({ children, initialLang }: LanguageProviderProp
         }
         const data: TranslationData = await response.json();
         const normalizedLang = normalizeLang(language);
-        setTranslations(data[normalizedLang]);
+        setTranslations(data);
         // Actualizar el store con las traducciones completas
         updateStoreTranslations(data);
       } catch (error) {

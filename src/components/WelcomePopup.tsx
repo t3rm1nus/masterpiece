@@ -12,6 +12,9 @@ interface WelcomePopupProps {
 
 const WelcomePopup: React.FC<WelcomePopupProps> = ({ open, onClose }) => {
   const { lang, getTranslation } = useLanguage();
+  // LOGS TEMPORALES DE DEPURACIÓN
+  console.log('LANG:', lang);
+  console.log('INTRO:', getTranslation('ui.welcome_popup.intro'));
   const { trackPopupView } = useGoogleAnalytics();
   const overlayRef = useRef<HTMLDivElement>(null);
 
