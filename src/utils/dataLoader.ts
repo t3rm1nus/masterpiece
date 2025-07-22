@@ -50,8 +50,9 @@ export const loadRealData = async (): Promise<LoadedData> => {
     const assetPrefix = '/data/';
 
     // Reemplazar imports dinámicos de JSON por fetch
-    async function fetchJson(file) {
-      const response = await fetch(assetPrefix + file);
+    async function fetchJson(file: string) {
+      const DATA_BASE_URL = 'https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/data/';
+      const response = await fetch(DATA_BASE_URL + file);
       if (!response.ok) throw new Error('Error cargando ' + file);
       return response.json();
     }

@@ -98,7 +98,7 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
     }
   }, [onAnimationEnd]);
 
-  const url = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.com/como-descargar';
+  const url = 'https://masterpiece.es/como-descargar';
 
   return (
     <>
@@ -113,9 +113,9 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href={url} />
         {/* Etiquetas hreflang para SEO multilingüe */}
-        <link rel="alternate" href="https://masterpiece.com/como-descargar" hrefLang="es" />
-        <link rel="alternate" href="https://masterpiece.com/en/como-descargar" hrefLang="en" />
-        <link rel="alternate" href="https://masterpiece.com/como-descargar" hrefLang="x-default" />
+        <link rel="alternate" href="https://masterpiece.es/como-descargar" hrefLang="es" />
+        <link rel="alternate" href="https://masterpiece.es/en/como-descargar" hrefLang="en" />
+        <link rel="alternate" href="https://masterpiece.es/como-descargar" hrefLang="x-default" />
       </Helmet>
       {/* H1 oculto para SEO y accesibilidad */}
       <h1 style={{ position: 'absolute', left: '-10000px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden' }}>¿Cómo descargar?</h1>

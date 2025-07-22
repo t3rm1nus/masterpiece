@@ -35,10 +35,10 @@ interface AllMusicData {
 export class MusicDataLoader {
   static async loadAllMusicData(): Promise<AllMusicData | any> {
     try {
-      const indexResponse = await fetch('/data/music-chunks/index.json');
+      const indexResponse = await fetch('https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/data/music-chunks/index.json');
       const indexData: ChunksIndex = await indexResponse.json();
       const chunkPromises = indexData.chunks.map(async (chunkInfo) => {
-        const response = await fetch(`/data/music-chunks/${chunkInfo.fileName}`);
+        const response = await fetch(`https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/data/music-chunks/${chunkInfo.fileName}`);
         return response.json() as Promise<MusicChunk>;
       });
       const chunks: MusicChunk[] = await Promise.all(chunkPromises);
@@ -58,7 +58,7 @@ export class MusicDataLoader {
       console.error('❌ Error loading music data:', error);
       try {
         console.log('🔄 Attempting to load from original file as fallback...');
-        const response = await fetch('/data/datos_music.json');
+        const response = await fetch('https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/data/datos_music.json');
         const data = await response.json();
         console.log(`⚠️ Loaded ${data.recommendations.length} recommendations from original file`);
         return data;
@@ -71,7 +71,7 @@ export class MusicDataLoader {
 
   static async loadMusicChunk(chunkNumber: number): Promise<MusicChunk> {
     try {
-      const response = await fetch(`/data/music-chunks/music-chunk-${chunkNumber}.json`);
+      const response = await fetch(`https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/data/music-chunks/music-chunk-${chunkNumber}.json`);
       const data: MusicChunk = await response.json();
       return data;
     } catch (error) {
@@ -82,7 +82,7 @@ export class MusicDataLoader {
 
   static async getChunksInfo(): Promise<ChunksIndex> {
     try {
-      const response = await fetch('/data/music-chunks/index.json');
+      const response = await fetch('https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/data/music-chunks/index.json');
       return await response.json();
     } catch (error) {
       console.error('❌ Error loading chunks info:', error);

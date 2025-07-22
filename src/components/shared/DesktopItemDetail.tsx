@@ -37,6 +37,14 @@ interface DesktopItemDetailProps {
   [key: string]: any;
 }
 
+// Utilidad para normalizar el idioma a 'es' o 'en'
+function normalizeLang(lang: string): 'es' | 'en' {
+  if (typeof lang !== 'string') return 'es';
+  const l = lang.toLowerCase();
+  if (l.startsWith('en')) return 'en';
+  return 'es';
+}
+
 const DesktopItemDetail: React.FC<DesktopItemDetailProps> = ({
   selectedItem,
   title,
@@ -160,8 +168,10 @@ const DesktopItemDetail: React.FC<DesktopItemDetailProps> = ({
 
             {/* Título */}
             {showSections.title !== false && (
-              <h1 className="item-detail-title">
-                {title}
+              <h1 className="item-detail-title" lang={normalizeLang(lang || '')}>
+                {typeof title === 'object' && title !== null && !Array.isArray(title)
+                  ? (title as Record<string, string>)[normalizeLang(lang || '')] || (title as Record<string, string>).es || (title as Record<string, string>).en || ''
+                  : title}
               </h1>
             )}
 
@@ -196,9 +206,10 @@ const DesktopItemDetail: React.FC<DesktopItemDetailProps> = ({
                           {(() => {
                             const subcat = selectedItem.subcategory;
                             if (typeof subcat === 'object' && subcat !== null) {
-                              // Si es objeto, tomar la primera clave
-                              const firstKey = Object.keys(subcat)[0];
-                              return getSubcategoryTranslation(firstKey, selectedItem.category);
+                              // Si es objeto, intentar traducir por idioma
+                              const normLang = normalizeLang(lang || '');
+                              const subcatObj = subcat as Record<string, string>;
+                              return subcatObj[normLang] || subcatObj.es || subcatObj.en || getSubcategoryTranslation(Object.keys(subcatObj)[0], selectedItem.category);
                             }
                             return getSubcategoryTranslation(subcat, selectedItem.category);
                           })()}

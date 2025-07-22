@@ -118,7 +118,7 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
         show: true
       },
       {
-        label: getTranslation('ui.navigation.buy_me_coffee'),
+        label: getTranslation('ui.navigation.buy_me_coffee', 'Invítame a un café'),
         icon: <CoffeeIcon />,
         action: handleCoffeeNavigation,
         show: true,
@@ -126,7 +126,7 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
         path: getLocalizedPath('/donaciones', lang) // <-- Path multilingüe
       },
       {
-        label: getTranslation('ui.navigation.how_to_download'),
+        label: getTranslation('ui.navigation.how_to_download', '¿Cómo descargar?'),
         icon: (
           <React.Fragment>
             <span style={{display:'flex',alignItems:'center'}}>
@@ -149,7 +149,7 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
         path: getLocalizedPath('/como-descargar', lang) // <-- Path multilingüe
       },
       {
-        label: getTranslation('ui.navigation.about'),
+        label: getTranslation('ui.navigation.about', '¿Quiénes somos?'),
         icon: (
           <React.Fragment>
             <span style={{display:'flex',alignItems:'center'}}>
@@ -160,7 +160,7 @@ export function useMenuItems(handleSplashOpen?: (audio?: string) => void, onOver
           </React.Fragment>
         ),
         action: handleAbout,
-        show: true,
+        show: isMobile,
         special: false
       }
     ];

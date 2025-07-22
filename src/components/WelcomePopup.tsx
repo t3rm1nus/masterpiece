@@ -11,7 +11,7 @@ interface WelcomePopupProps {
 }
 
 const WelcomePopup: React.FC<WelcomePopupProps> = ({ open, onClose }) => {
-  const { lang, t } = useLanguage();
+  const { lang, getTranslation } = useLanguage();
   const { trackPopupView } = useGoogleAnalytics();
   const overlayRef = useRef<HTMLDivElement>(null);
 
@@ -37,22 +37,23 @@ const WelcomePopup: React.FC<WelcomePopupProps> = ({ open, onClose }) => {
   // Mostrar español por defecto si el idioma no es 'en'
   const popupLang = lang === 'en' ? 'en' : 'es';
 
+  const getSafe = (val: any, fallback: string) => (typeof val === 'string' && val.trim() !== '' ? val : fallback);
   const messages: Record<'es' | 'en', React.ReactNode> = {
     es: (
       <>
         <div style={{ fontSize: "1.1em", lineHeight: 1.6 }}>
-         <span role="img" aria-label="art">🎨📚🎶🎬</span> {t.ui?.welcome_popup?.intro}<br />
-         <span role="img" aria-label="target">🎯📲</span> {t.ui?.welcome_popup?.objective}<br />
-        <span role="img" aria-label="welcome">🌟🎁</span> <b>{t.ui?.welcome_popup?.welcome}</b>
+         <span role="img" aria-label="art">🎨📚🎶🎬</span> {getTranslation('ui.welcome_popup.intro', '¡Bienvenido a Masterpiece!')}<br />
+         <span role="img" aria-label="target">🎯📲</span> {getTranslation('ui.welcome_popup.objective', 'Descubre y comparte cultura de forma sencilla.')}<br />
+        <span role="img" aria-label="welcome">🌟🎁</span> <b>{getTranslation('ui.welcome_popup.welcome', '¡Disfruta la experiencia!')}</b>
         </div>
       </>
     ),
     en: (
       <>
         <div style={{ fontSize: "1.1em", lineHeight: 1.6 }}>
-          <span role="img" aria-label="art">🎨📚🎶🎬</span> {t.ui?.welcome_popup?.intro}<br /><br />
-          <span role="img" aria-label="target">🎯📲</span> {t.ui?.welcome_popup?.objective}<br /><br />
-          <span role="img" aria-label="welcome">🌟🎁</span> <b>{t.ui?.welcome_popup?.welcome}</b>
+          <span role="img" aria-label="art">🎨📚🎶🎬</span> {getTranslation('ui.welcome_popup.intro', 'Welcome to Masterpiece!')}<br /><br />
+          <span role="img" aria-label="target">🎯📲</span> {getTranslation('ui.welcome_popup.objective', 'Discover and share culture easily.')}<br /><br />
+          <span role="img" aria-label="welcome">🌟🎁</span> <b>{getTranslation('ui.welcome_popup.welcome', 'Enjoy the experience!')}</b>
         </div>
       </>
     )

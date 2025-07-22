@@ -120,7 +120,7 @@ const MaterialCoffeePage: React.FC<MaterialCoffeePageProps> = ({ onAnimationEnd 
     }
   };
 
-  const url = typeof window !== 'undefined' ? window.location.href : 'https://masterpiece.com/donaciones';
+  const url = 'https://masterpiece.es/donaciones';
 
   return (
     <>
@@ -135,9 +135,9 @@ const MaterialCoffeePage: React.FC<MaterialCoffeePageProps> = ({ onAnimationEnd 
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href={url} />
         {/* Etiquetas hreflang para SEO multilingüe */}
-        <link rel="alternate" href="https://masterpiece.com/donaciones" hrefLang="es" />
-        <link rel="alternate" href="https://masterpiece.com/en/donaciones" hrefLang="en" />
-        <link rel="alternate" href="https://masterpiece.com/donaciones" hrefLang="x-default" />
+        <link rel="alternate" href="https://masterpiece.es/donaciones" hrefLang="es" />
+        <link rel="alternate" href="https://masterpiece.es/en/donaciones" hrefLang="en" />
+        <link rel="alternate" href="https://masterpiece.es/donaciones" hrefLang="x-default" />
       </Helmet>
       <div>
         <Container 

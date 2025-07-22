@@ -715,9 +715,9 @@ const HomePageComponent: React.FC<HomePageProps> = ({
       <meta name="twitter:card" content="summary_large_image" />
       <link rel="canonical" href={ogUrl || 'https://masterpiece.es/'} />
       {/* Etiquetas hreflang para SEO multilingüe */}
-      <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}` ?? undefined} hrefLang="es" />
-      <link rel="alternate" href={`https://masterpiece.com/en${isCategory && selectedCategory ? `/${selectedCategory}` : ''}` ?? undefined} hrefLang="en" />
-      <link rel="alternate" href={`https://masterpiece.com${isCategory && selectedCategory ? `/${selectedCategory}` : ''}` ?? undefined} hrefLang="x-default" />
+      <link rel="alternate" href="https://masterpiece.es/" hrefLang="es" />
+      <link rel="alternate" href="https://masterpiece.es/en/" hrefLang="en" />
+      <link rel="alternate" href="https://masterpiece.es/" hrefLang="x-default" />
       {/* SSR DEBUG: Marca oculta para confirmar que Helmet se procesa en la Home */}
       <meta name="ssr-debug-home" content="SSR_HELMET_HOME_OK" />
       {/* eslint-disable-next-line react/no-danger */}

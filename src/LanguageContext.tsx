@@ -54,6 +54,14 @@ interface LanguageProviderProps {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+// Utilidad para normalizar el idioma a 'es' o 'en'
+function normalizeLang(lang: string): 'es' | 'en' {
+  if (typeof lang !== 'string') return 'es';
+  const l = lang.toLowerCase();
+  if (l.startsWith('en')) return 'en';
+  return 'es';
+}
+
 export function LanguageProvider({ children, initialLang }: LanguageProviderProps) {
   // Usamos el store de idioma unificado
   const { 
@@ -77,12 +85,13 @@ export function LanguageProvider({ children, initialLang }: LanguageProviderProp
   useEffect(() => {
     const fetchTranslations = async () => {
       try {
-        const response = await fetch('/data/texts.json');
+        const response = await fetch('https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/data/texts.json');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data: TranslationData = await response.json();
-        setTranslations(data);
+        const normalizedLang = normalizeLang(language);
+        setTranslations(data[normalizedLang]);
         // Actualizar el store con las traducciones completas
         updateStoreTranslations(data);
       } catch (error) {
@@ -94,7 +103,7 @@ export function LanguageProvider({ children, initialLang }: LanguageProviderProp
   }, [language, updateStoreTranslations]);
 
   // Crear objeto t con las traducciones
-  const lang = language; // Alias para compatibilidad
+  const lang = normalizeLang(language); // Siempre normalizado
   const t = translations[lang] || {};
   const availableLanguages = ['es', 'en'];
 

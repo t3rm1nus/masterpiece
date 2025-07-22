@@ -499,7 +499,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
       publisher: {
         '@type': 'Organization',
         name: 'Masterpiece',
-        url: 'https://masterpiece.com/'
+        url: 'https://masterpiece.es/'
       }
     };
     // Obtener subcategoría traducida si existe
@@ -634,10 +634,10 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={ogUrl} />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={ogUrl} />
-        <link rel="alternate" href={`https://masterpiece.com/${safeItem?.category || 'detalle'}/${safeItem?.id || ''}`} hrefLang="es" />
-        <link rel="alternate" href={`https://masterpiece.com/en/${safeItem?.category || 'detalle'}/${safeItem?.id || ''}`} hrefLang="en" />
-        <link rel="alternate" href={`https://masterpiece.com/${safeItem?.category || 'detalle'}/${safeItem?.id || ''}`} hrefLang="x-default" />
+        <link rel="canonical" href={ogUrl || 'https://masterpiece.es/'} />
+        <link rel="alternate" href={`https://masterpiece.es/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} hrefLang="es" />
+        <link rel="alternate" href={`https://masterpiece.es/en/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} hrefLang="en" />
+        <link rel="alternate" href={`https://masterpiece.es/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} hrefLang="x-default" />
         <script type="application/ld+json">{JSON.stringify(getJsonLd(safeItem ? safeItem : { id: '' }))}</script>
       </Helmet>
     );
@@ -706,11 +706,18 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
     }
     const realCategory = safeItem?.category || selectedCategory;
     // Asegurar que ogTitle y ogDescription sean siempre strings
-    const ogTitle = typeof (safeItem?.title || safeItem?.name) === 'string'
-      ? (safeItem?.title || safeItem?.name)
-      : (typeof safeItem?.title === 'object' && safeItem?.title !== null ? (safeItem?.title[lang] || (safeItem?.title as any).es || (safeItem?.title as any).en) : undefined)
-        || (typeof safeItem?.name === 'object' && safeItem?.name !== null ? (safeItem?.name[lang] || (safeItem?.name as any).es || (safeItem?.name as any).en) : undefined)
-        || 'Masterpiece';
+    const normalizedLang = typeof lang === 'string' && lang.startsWith('en') ? 'en' : 'es';
+    let ogTitle = '';
+    if (safeItem?.title && typeof safeItem.title === 'object' && safeItem.title !== null && !Array.isArray(safeItem.title)) {
+      const titleObj = safeItem.title as Record<string, string>;
+      ogTitle = titleObj[normalizedLang] || titleObj.es || titleObj.en || '';
+    } else if (typeof safeItem?.title === 'string') {
+      ogTitle = safeItem.title;
+    } else if (typeof safeItem?.name === 'string') {
+      ogTitle = safeItem.name;
+    } else {
+      ogTitle = 'Masterpiece';
+    }
     const ogDescription = typeof safeItem?.description === 'string'
       ? safeItem.description
       : (typeof safeItem?.description === 'object' && safeItem?.description !== null ? (safeItem?.description[lang] || (safeItem?.description as any).es || (safeItem?.description as any).en) : undefined)
@@ -724,14 +731,14 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         ogImage: ogImage 
       });
     }
+    const isMasterpiece = !!safeItem.masterpiece;
     // Construir la URL canónica pública preferida
     const baseUrl = 'https://masterpiece.es';
     const currentLang = lang || 'es';
     const ogUrl = currentLang === 'en'
-      ? `${baseUrl}/en/${safeItem.category || 'detalle'}/${safeItem.id}`
-      : `${baseUrl}/${safeItem.category || 'detalle'}/${safeItem.id}`;
-    const isMasterpiece = !!safeItem.masterpiece;
-    const categoryColor = getCategoryColor(realCategory, 'color');
+      ? `${baseUrl}/en/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`
+      : `${baseUrl}/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`;
+    const categoryColor = getCategoryColor(realCategory || '', 'color');
     const gradientBg = `linear-gradient(135deg, ${categoryColor} 0%, ${theme.palette.mode === 'dark' ? 'rgba(24,24,24,0.92)' : 'rgba(255,255,255,0.85)'} 100%)`;
 
     // Helmet siempre presente
@@ -747,9 +754,9 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         <meta property="og:url" content={ogUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href={ogUrl} />
-        <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="es" />
-        <link rel="alternate" href={`https://masterpiece.com/en/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="en" />
-        <link rel="alternate" href={`https://masterpiece.com/${safeItem.category || 'detalle'}/${safeItem.id}`} hrefLang="x-default" />
+        <link rel="alternate" href={`https://masterpiece.es/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} hrefLang="es" />
+        <link rel="alternate" href={`https://masterpiece.es/en/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} hrefLang="en" />
+        <link rel="alternate" href={`https://masterpiece.es/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} hrefLang="x-default" />
         <script type="application/ld+json">{JSON.stringify(getJsonLd(safeItem ? safeItem : { id: '' }))}</script>
       </Helmet>
     );
@@ -832,11 +839,11 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
                   {/* Título y metadatos */}
                   <h2 style={styles.title}>{ogTitle}</h2>
                   <div style={styles.chipRow}>
-                    <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
-                      {getCategoryTranslation(realCategory)}
+                    <span style={{...styles.chip, background: getCategoryColor(realCategory || '', 'strong')}}>
+                      {getCategoryTranslation(realCategory || '')}
                     </span>
                     {safeItem.subcategory && (
-                      <span style={{...styles.chip, background: getCategoryColor(realCategory, 'strong')}}>
+                      <span style={{...styles.chip, background: getCategoryColor(realCategory || '', 'strong')}}>
                         {(() => {
                           const subcat = safeItem.subcategory;
                           if (typeof subcat === 'object' && subcat !== null) {
@@ -844,7 +851,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
                             const firstValue = Object.values(subcat)[0];
                             return ensureString(firstValue, lang);
                           }
-                          return ensureString(getSubcategoryTranslation(subcat), lang);
+                          return ensureString(getSubcategoryTranslation(subcat || ''), lang);
                         })()}
                       </span>
                     )}
@@ -882,7 +889,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
                   <p style={styles.description}>{ogDescription}</p>
                 </section>
                 <div style={styles.extraContentRow}>
-                  <DesktopCategorySpecificContent selectedItem={safeItem} lang={lang} t={t} getTranslation={getTranslation} />
+                  <DesktopCategorySpecificContent selectedItem={safeItem || {}} lang={lang || ''} t={t} getTranslation={getTranslation} />
                 </div>
                 <div style={styles.actionsRow}>
                   <DesktopActionButtons
