@@ -68,7 +68,8 @@ export default function AppContent({ initialItem }: AppContentProps): React.JSX.
         <Route path="/videogames/*" element={<HomeLayout initialItem={initialItem} />} />
         <Route path="/boardgames/*" element={<HomeLayout initialItem={initialItem} />} />
         <Route path="/podcast/*" element={<HomeLayout initialItem={initialItem} />} />
-        <Route path="/como-descargar" element={<HomeLayout initialItem={initialItem} />} />
+        <Route path="/como-descargar" element={<HomeLayout forcedLang="en" initialItem={initialItem} />} />
+        <Route path="/donaciones" element={<HomeLayout forcedLang="en" initialItem={initialItem} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
