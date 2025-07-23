@@ -5,6 +5,7 @@ import { LoadingFallback } from './LazyComponents';
 import { useAppView, useAppData } from '../store/useAppStore';
 import { loadRealData } from '../utils/dataLoader';
 import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
+import NotFound from '../pages/NotFound';
 
 interface AppContentProps {
   initialItem?: any;
@@ -57,6 +58,7 @@ export default function AppContent({ initialItem }: AppContentProps): React.JSX.
       <Routes>
         <Route path="/en/*" element={<HomeLayout forcedLang="en" initialItem={initialItem} />} />
         <Route path="/*" element={<HomeLayout initialItem={initialItem} />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
   );

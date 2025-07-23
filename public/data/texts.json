@@ -87,7 +87,14 @@
         "footer": "Pie"
       },
       "errors": {
-        "page_not_found": "Página no encontrada"
+        "page_not_found": "Página no encontrada",
+        "not_found_page": {
+          "title": "404 - Página no encontrada",
+          "message": "Lo sentimos, la página que buscas no existe.",
+          "helpful_links": "Aquí tienes algunos enlaces útiles para seguir explorando Masterpiece:",
+          "contact": "Si crees que esto es un error, contáctanos.",
+          "thanks": "¡Gracias por visitar Masterpiece!"
+        }
       },
       "badges": {
         "masterpiece": "Obra maestra"
@@ -481,7 +488,14 @@
         "footer": "Footer"
       },
       "errors": {
-        "page_not_found": "Page not found"
+        "page_not_found": "Page not found",
+        "not_found_page": {
+          "title": "404 - Page not found",
+          "message": "Sorry, the page you are looking for does not exist.",
+          "helpful_links": "Here are some helpful links to keep exploring Masterpiece:",
+          "contact": "If you think this is a mistake, contact us.",
+          "thanks": "Thanks for visiting Masterpiece!"
+        }
       },
       "badges": {
         "masterpiece": "Masterpiece"
