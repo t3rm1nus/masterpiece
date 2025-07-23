@@ -713,7 +713,7 @@ const HomePageComponent: React.FC<HomePageProps> = ({
               <meta property="og:image" content={ogImage || 'https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png'} />
       <meta property="og:url" content={ogUrl || 'https://masterpiece.es/'} />
       <meta name="twitter:card" content="summary_large_image" />
-      <link rel="canonical" href={ogUrl || 'https://masterpiece.es/'} />
+      <link rel="canonical" href="https://masterpiece.es/" />
       {/* Etiquetas hreflang para SEO multilingüe */}
       <link rel="alternate" href="https://masterpiece.es/" hrefLang="es" />
       <link rel="alternate" href="https://masterpiece.es/en/" hrefLang="en" />

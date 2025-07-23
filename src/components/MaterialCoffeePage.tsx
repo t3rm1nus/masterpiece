@@ -133,7 +133,7 @@ const MaterialCoffeePage: React.FC<MaterialCoffeePageProps> = ({ onAnimationEnd 
         <meta property="og:image" content="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png" />
         <meta property="og:url" content={url} />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={url} />
+        <link rel="canonical" href="https://masterpiece.es/cafe" />
         {/* Etiquetas hreflang para SEO multilingüe */}
         <link rel="alternate" href="https://masterpiece.es/donaciones" hrefLang="es" />
         <link rel="alternate" href="https://masterpiece.es/en/donaciones" hrefLang="en" />

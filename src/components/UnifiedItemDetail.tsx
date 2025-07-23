@@ -634,7 +634,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={ogUrl} />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={ogUrl || 'https://masterpiece.es/'} />
+        <link rel="canonical" href={`https://masterpiece.es/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} />
         <link rel="alternate" href={`https://masterpiece.es/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} hrefLang="es" />
         <link rel="alternate" href={`https://masterpiece.es/en/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} hrefLang="en" />
         <link rel="alternate" href={`https://masterpiece.es/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} hrefLang="x-default" />
@@ -753,7 +753,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={ogUrl} />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={ogUrl} />
+        <link rel="canonical" href={`https://masterpiece.es/${String(safeItem.category || 'detalle')}/${String(safeItem.id ?? '')}`} />
         <link rel="alternate" href={`https://masterpiece.es/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} hrefLang="es" />
         <link rel="alternate" href={`https://masterpiece.es/en/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} hrefLang="en" />
         <link rel="alternate" href={`https://masterpiece.es/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} hrefLang="x-default" />
