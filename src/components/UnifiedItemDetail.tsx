@@ -519,7 +519,16 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           datePublished: item.year || undefined,
           director: item.director ? { '@type': 'Person', name: item.director } : undefined,
           actor: item.actors ? item.actors.map((a: any) => ({ '@type': 'Person', name: a })) : undefined,
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+          ...(translatedSubcat ? { genre: translatedSubcat } : {}),
+          review: {
+            '@type': 'Review',
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '5'
+            },
+            author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+            reviewBody: item.review || undefined
+          }
         };
       case 'documentales':
         return {
@@ -529,7 +538,16 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           datePublished: item.year || undefined,
           director: item.director ? { '@type': 'Person', name: item.director } : undefined,
           actor: item.actors ? item.actors.map((a: any) => ({ '@type': 'Person', name: a })) : undefined,
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+          ...(translatedSubcat ? { genre: translatedSubcat } : {}),
+          review: {
+            '@type': 'Review',
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '5'
+            },
+            author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+            reviewBody: item.review || undefined
+          }
         };
       case 'series':
         return {
@@ -538,7 +556,16 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           datePublished: item.year || undefined,
           actor: item.actors ? item.actors.map((a: any) => ({ '@type': 'Person', name: a })) : undefined,
           director: item.director ? { '@type': 'Person', name: item.director } : undefined,
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+          ...(translatedSubcat ? { genre: translatedSubcat } : {}),
+          review: {
+            '@type': 'Review',
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '5'
+            },
+            author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+            reviewBody: item.review || undefined
+          }
         };
       case 'books':
         return {
@@ -547,7 +574,16 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           author: item.author ? { '@type': 'Person', name: item.author } : undefined,
           datePublished: item.year || undefined,
           isbn: item.isbn || undefined,
-          ...(translatedSubcat ? { bookGenre: translatedSubcat } : {})
+          ...(translatedSubcat ? { bookGenre: translatedSubcat } : {}),
+          review: {
+            '@type': 'Review',
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '5'
+            },
+            author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+            reviewBody: item.review || undefined
+          }
         };
       case 'comics':
         return {
@@ -556,7 +592,16 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           bookFormat: 'GraphicNovel',
           author: item.author ? { '@type': 'Person', name: item.author } : undefined,
           datePublished: item.year || undefined,
-          ...(translatedSubcat ? { bookGenre: translatedSubcat } : {})
+          ...(translatedSubcat ? { bookGenre: translatedSubcat } : {}),
+          review: {
+            '@type': 'Review',
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '5'
+            },
+            author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+            reviewBody: item.review || undefined
+          }
         };
       case 'music':
         return {
@@ -564,7 +609,16 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           '@type': 'MusicAlbum',
           byArtist: item.author ? { '@type': 'MusicGroup', name: item.author } : undefined,
           datePublished: item.year || undefined,
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+          ...(translatedSubcat ? { genre: translatedSubcat } : {}),
+          review: {
+            '@type': 'Review',
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '5'
+            },
+            author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+            reviewBody: item.review || undefined
+          }
         };
       case 'videogames':
         return {
@@ -572,7 +626,16 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           '@type': 'VideoGame',
           author: item.author ? { '@type': 'Person', name: item.author } : undefined,
           datePublished: item.year || undefined,
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+          ...(translatedSubcat ? { genre: translatedSubcat } : {}),
+          review: {
+            '@type': 'Review',
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '5'
+            },
+            author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+            reviewBody: item.review || undefined
+          }
         };
       case 'boardgames':
         return {
@@ -580,7 +643,16 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
           '@type': 'BoardGame',
           author: item.author ? { '@type': 'Person', name: item.author } : undefined,
           datePublished: item.year || undefined,
-          ...(translatedSubcat ? { genre: translatedSubcat } : {})
+          ...(translatedSubcat ? { genre: translatedSubcat } : {}),
+          review: {
+            '@type': 'Review',
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '5'
+            },
+            author: item.author ? { '@type': 'Person', name: item.author } : undefined,
+            reviewBody: item.review || undefined
+          }
         };
       case 'podcast':
       case 'podcasts':
