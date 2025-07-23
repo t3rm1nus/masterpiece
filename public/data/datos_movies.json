@@ -5777,6 +5777,27 @@
         "en": "https://www.youtube.com/watch?v=2EBAVoN8L_U"
       },
       "masterpiece": true
+    },
+    {
+      "id": 273,
+      "category": "movies",
+      "subcategory": "drama",
+      "title": {
+        "es": "Leaving las vegas",
+        "en": "Leaving las vegas"
+      },
+        "description": {
+        "es": "Un descenso perturbador hacia la adicción y la desesperación, 'Leaving Las Vegas' sigue a un guionista suicida que forma un lazo trágico con una trabajadora sexual compasiva. Ambientada en la soledad neón de Las Vegas, la película ofrece una mirada cruda e implacable a la autodestrucción y la conexión efímera.",
+        "en": "A haunting descent into addiction and despair, 'Leaving Las Vegas' follows a suicidal screenwriter who forms a tragic bond with a compassionate sex worker. Set against the neon loneliness of Las Vegas, the film delivers a raw, unflinching look at self-destruction and fleeting connection."
+      },
+      "director": "Mike Figgis",
+      "image": "https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/peliculas/leaving.jpg",
+      "year": 1995,
+      "trailer": {
+        "es": "https://www.youtube.com/watch?v=yxVJOSwxty4",
+        "en": "https://www.youtube.com/watch?v=O4HrGa2-RLc"
+      },
+      "masterpiece": true
     }
     
   ]
