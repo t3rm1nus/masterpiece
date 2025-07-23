@@ -57,7 +57,16 @@ export default function AppContent({ initialItem }: AppContentProps): React.JSX.
     <Suspense fallback={<LoadingFallback />}> 
       <Routes>
         <Route path="/en/*" element={<HomeLayout forcedLang="en" initialItem={initialItem} />} />
-        <Route path="/*" element={<HomeLayout initialItem={initialItem} />} />
+        <Route path="/" element={<HomeLayout initialItem={initialItem} />} />
+        <Route path="/movies/*" element={<HomeLayout initialItem={initialItem} />} />
+        <Route path="/series/*" element={<HomeLayout initialItem={initialItem} />} />
+        <Route path="/books/*" element={<HomeLayout initialItem={initialItem} />} />
+        <Route path="/comics/*" element={<HomeLayout initialItem={initialItem} />} />
+        <Route path="/music/*" element={<HomeLayout initialItem={initialItem} />} />
+        <Route path="/videogames/*" element={<HomeLayout initialItem={initialItem} />} />
+        <Route path="/boardgames/*" element={<HomeLayout initialItem={initialItem} />} />
+        <Route path="/podcast/*" element={<HomeLayout initialItem={initialItem} />} />
+        <Route path="/como-descargar" element={<HomeLayout initialItem={initialItem} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
