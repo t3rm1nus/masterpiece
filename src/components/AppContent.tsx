@@ -56,6 +56,8 @@ export default function AppContent({ initialItem }: AppContentProps): React.JSX.
   return (
     <Suspense fallback={<LoadingFallback />}> 
       <Routes>
+        <Route path="/en/detalle/:category/:id" element={<HomeLayout forcedLang="en" initialItem={initialItem} />} />
+        <Route path="/detalle/:category/:id" element={<HomeLayout initialItem={initialItem} />} />
         <Route path="/en/*" element={<HomeLayout forcedLang="en" initialItem={initialItem} />} />
         <Route path="/" element={<HomeLayout initialItem={initialItem} />} />
         <Route path="/movies/*" element={<HomeLayout initialItem={initialItem} />} />
