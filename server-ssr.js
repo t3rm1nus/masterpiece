@@ -10,6 +10,16 @@ const resolve = p => path.resolve(__dirname, p);
 
 const app = express();
 
+// Redirección 301 de /detalle/:category/:id/ (con slash final) a /detalle/:category/:id (sin slash)
+app.use((req, res, next) => {
+  const match = req.url.match(/^\/detalle\/([\w-]+)\/(\d+)\/$/);
+  if (match) {
+    const newUrl = `/detalle/${match[1]}/${match[2]}`;
+    return res.redirect(301, newUrl);
+  }
+  next();
+});
+
 // Redirige /[lang]/assets/* a /assets/* para servir correctamente los assets en rutas internacionalizadas
 app.use((req, res, next) => {
   console.log('NUEVO LOG 1 *************************************************************************************');
