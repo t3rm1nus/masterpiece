@@ -156,10 +156,21 @@ const HelmetHomeFallback = () => (
     <meta property="og:title" content="Masterpiece - Recomendaciones culturales" />
     <meta property="og:description" content="Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts." />
     <meta property="og:type" content="website" />
-          <meta property="og:image" content="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png" />
+    
+    
     <meta property="og:url" content="https://masterpiece.es/" />
+    
     <meta name="twitter:card" content="summary_large_image" />
+    
+   
     <link rel="canonical" href="https://masterpiece.es/" />
+    
+  
+    <link rel="alternate" href="https://masterpiece.es/" hrefLang="es" />
+    <link rel="alternate" href="https://masterpiece.es/en/" hrefLang="en" />
+    <link rel="alternate" href="https://masterpiece.es/" hrefLang="x-default" />
+    
     <meta name="ssr-debug-home" content="SSR_HELMET_HOME_OK" />
   </Helmet>
 );
@@ -710,42 +721,49 @@ const HomePageComponent: React.FC<HomePageProps> = ({
       <meta property="og:title" content={safePageTitle || 'Masterpiece - Recomendaciones culturales'} />
       <meta property="og:description" content={safePageDescription || 'Descubre las mejores recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts.'} />
       <meta property="og:type" content="website" />
-              <meta property="og:image" content={ogImage || 'https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png'} />
-      <meta property="og:url" content={ogUrl || 'https://masterpiece.es/'} />
+      <meta property="og:image" content={ogImage || 'https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png'} />
+  
+      <meta property="og:url" content="https://masterpiece.es/" />
+      
       <meta name="twitter:card" content="summary_large_image" />
+      
+ 
       <link rel="canonical" href="https://masterpiece.es/" />
-      {/* Etiquetas hreflang para SEO multilingüe */}
+      
+   
       <link rel="alternate" href="https://masterpiece.es/" hrefLang="es" />
       <link rel="alternate" href="https://masterpiece.es/en/" hrefLang="en" />
       <link rel="alternate" href="https://masterpiece.es/" hrefLang="x-default" />
-      {/* SSR DEBUG: Marca oculta para confirmar que Helmet se procesa en la Home */}
+      
       <meta name="ssr-debug-home" content="SSR_HELMET_HOME_OK" />
-      {/* eslint-disable-next-line react/no-danger */}
+      
       <script type="text/plain" dangerouslySetInnerHTML={{ __html: '<!-- SSR_HELMET_HOME_OK -->' }} />
+      
       <script type="application/ld+json">
         {`
           {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "Masterpiece",
-            "url": "https://masterpiece.com/",
+            "url": "https://masterpiece.es/",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://masterpiece.com/?q={search_term_string}",
+              "target": "https://masterpiece.es/?q={search_term_string}",
               "query-input": "required name=search_term_string"
             },
             "description": "Recomendaciones de películas, cómics, libros, música, videojuegos, juegos de mesa y podcasts."
           }
         `}
       </script>
+      
       <script type="application/ld+json">
         {`
           {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Masterpiece",
-            "url": "https://masterpiece.com/",
-            "logo": "https://masterpiece.com/favicon.png"
+            "url": "https://masterpiece.es/",
+            "logo": "https://masterpiece.es/favicon.png"
           }
         `}
       </script>

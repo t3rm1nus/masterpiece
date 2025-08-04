@@ -131,12 +131,15 @@ const MaterialCoffeePage: React.FC<MaterialCoffeePageProps> = ({ onAnimationEnd 
         <meta property="og:description" content="Apoya el proyecto Masterpiece invitándome a un café. ¡Gracias por tu colaboración!" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png" />
-        <meta property="og:url" content={url} />
+        
+        <meta property="og:url" content="https://masterpiece.es/donaciones" />
+        
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://masterpiece.es/cafe" />
-        {/* Etiquetas hreflang para SEO multilingüe */}
+        
+        <link rel="canonical" href="https://masterpiece.es/donaciones" />
+        
         <link rel="alternate" href="https://masterpiece.es/donaciones" hrefLang="es" />
-        <link rel="alternate" href="https://masterpiece.es/en/donaciones" hrefLang="en" />
+        <link rel="alternate" href="https://masterpiece.es/en/donate" hrefLang="en" />
         <link rel="alternate" href="https://masterpiece.es/donaciones" hrefLang="x-default" />
       </Helmet>
       <div>

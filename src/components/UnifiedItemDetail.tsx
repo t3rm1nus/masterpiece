@@ -831,6 +831,7 @@ const UnifiedItemDetail: React.FC<UnifiedItemDetailProps> = (props) => {
         <link rel="alternate" href={`https://masterpiece.es/${safeItem.category ? safeItem.category : 'detalle'}/${safeItem.id ? safeItem.id : ''}`} hrefLang="x-default" />
         <script type="application/ld+json">{JSON.stringify(getJsonLd(safeItem ? safeItem : { id: '' }))}</script>
       </Helmet>
+    
     );
 
     return (

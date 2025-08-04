@@ -109,12 +109,18 @@ const HowToDownload: React.FC<HowToDownloadProps> = ({ onAnimationEnd }) => {
         <meta property="og:description" content="Instrucciones para descargar contenido de Masterpiece de forma segura y sencilla." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://raw.githubusercontent.com/t3rm1nus/masterpiece/main/public/imagenes/splash_image.png" />
-        <meta property="og:url" content={url} />
+        
+        {/* OG:URL siempre apunta al canonical (español) */}
+        <meta property="og:url" content="https://masterpiece.es/como-descargar" />
+        
         <meta name="twitter:card" content="summary_large_image" />
+        
+        {/* CANONICAL siempre al español */}
         <link rel="canonical" href="https://masterpiece.es/como-descargar" />
-        {/* Etiquetas hreflang para SEO multilingüe */}
+        
+        {/* HREFLANG con URLs diferentes para cada idioma */}
         <link rel="alternate" href="https://masterpiece.es/como-descargar" hrefLang="es" />
-        <link rel="alternate" href="https://masterpiece.es/en/como-descargar" hrefLang="en" />
+        <link rel="alternate" href="https://masterpiece.es/en/how-to-download" hrefLang="en" />
         <link rel="alternate" href="https://masterpiece.es/como-descargar" hrefLang="x-default" />
       </Helmet>
       {/* H1 oculto para SEO y accesibilidad */}
